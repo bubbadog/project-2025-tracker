@@ -4,9 +4,9 @@
     "No known legal block; the collection is renewed through OMB's Paperwork Reduction Act process."
   ],
   "chapter": "11",
-  "confidence": 70,
+  "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; OMB approval read on the primary reginfo.gov record and the notice read in the Federal Register, but the content of the change (nonbinary removal) rests on reputable trade press and a comment letter on the proposal, and the athletics items are unverified.",
+  "confidence_reason": "Document text on pages 331 and 332 checked; the Federal Register notice and two news reports (K-12 Dive, NPR via GPB) were fetched, and the OMB approval rests on the reginfo.gov record already in the file, while the element-level changes are known only from reporting. This call is not evenly balanced; implemented follows from the rule that an ask operative in substance through agency action but short of the full recommendation is implemented, since the approved collection without the nonbinary category is in force and being collected while the athletics and enforcement-focus elements are unconfirmed.",
   "durability": {
     "level": "medium",
     "why": "A collection form can be revised by a later administration, but the Paperwork Reduction Act process takes months and the executive order supports the change."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Second independent review on 2026-10-13 kept implemented 70; an NPR report carried by GPB confirmed the nonbinary category's removal and that collection for the next cycles has begun, while the athletics and enforcement-focus elements stay unconfirmed."
     }
   ],
   "id": "c11-18",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-13",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -55,14 +59,25 @@
   "research_agent": "N11",
   "review": {
     "flags": [
-      "judgment call: implemented 70 rests on the nonbinary removal; athletics items and enforcement focus unconfirmed",
-      "supporting statement on reginfo.gov not readable"
+      "second review: implemented 70 kept; the approved collection is in force and being fielded, and an NPR report of 2026-09-04 was added",
+      "second review: athletics items still unconfirmed in either direction; the supporting statement remains unreadable",
+      "second review: operative ask: The Department of Education should rescind the 2021 CRDC changes that added a nonbinary sex category and retired high school single-sex athletics data, and issue a new CRDC limited to data relevant to OCR's statutory enforcement authority (pages 331 to 332).",
+      "second review: rule applied: Implemented. Test (a): yes in substance; OMB approved the revised 2025-26 and 2027-28 CRDC on 2026-07-20 without the nonbinary category, ED has begun collecting for the next cycles, and the 2023-24 data release omitted nonbinary information, per NPR via GPB. Test (b): not different from the ask; the athletics and enforcement-focus elements are unconfirmed, which makes it short of the full recommendation rather than opposite. Test (c): no congressional action is required. Completed is not reached because the athletics retention and the enforcement-tied redesign are not shown.",
+      "second review: not evenly balanced"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Pages 331 to 332 describe the December 2021 CRDC proposal (nonbinary category; retiring single-sex athletics data) and recommend rescinding those changes and issuing a CRDC tied to OCR enforcement authority; paraphrase accurate.",
+    "mandate_note": "Page 331 cites the December 2021 CRDC notice; page 332 describes the added nonbinary category and the retirement of three high school single-sex athletics items, and asks the administration to rescind those changes and issue a new CRDC focused on OCR's statutory enforcement authority. The paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9f",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "Y9f, U13-4",
+    "second_review": {
+      "balanced": false,
+      "date": "2026-10-13",
+      "decision": "keep",
+      "operative_ask": "The Department of Education should rescind the 2021 CRDC changes that added a nonbinary sex category and retired high school single-sex athletics data, and issue a new CRDC limited to data relevant to OCR's statutory enforcement authority (pages 331 to 332).",
+      "reviewer": "U13-4",
+      "rule_applied": "Implemented. Test (a): yes in substance; OMB approved the revised 2025-26 and 2027-28 CRDC on 2026-07-20 without the nonbinary category, ED has begun collecting for the next cycles, and the 2023-24 data release omitted nonbinary information, per NPR via GPB. Test (b): not different from the ask; the athletics and enforcement-focus elements are unconfirmed, which makes it short of the full recommendation rather than opposite. Test (c): no congressional action is required. Completed is not reached because the athletics retention and the enforcement-tied redesign are not shown."
+    },
     "source_checks": [
       {
         "note": "90 FR 38137, docket ED-2024-SCC-0128, OMB 1870-0504, 2025-26 and 2027-28 CRDCs, comments to 2025-09-08; no element-level detail.",
@@ -88,6 +103,26 @@
         "note": "Not refetched; same URL verified in sibling record c11-06.",
         "result": "supports",
         "url": "https://www.whitehouse.gov/presidential-actions/2025/01/defending-women-from-gender-ideology-extremism-and-restoring-biological-truth-to-the-federal-government/"
+      },
+      {
+        "note": "Confirms the submission, docket ED-2024-SCC-0128 and the 2025-26 and 2027-28 scope; the abstract does not name nonbinary, athletics or enforcement changes.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/08/07/2025-15038/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for"
+      },
+      {
+        "note": "Dated 2026-07-31; approved changes drop the nonbinary category, LGBTQ harassment items and gender identity in the rape definition; no athletics change mentioned.",
+        "result": "supports",
+        "url": "https://www.k12dive.com/news/education-department-stops-collecting-some-lgbtq-student-data/826762/"
+      },
+      {
+        "note": "NPR story of 2026-09-04; 2023-24 release omitted nonbinary data; 2025-26 eliminates the category; collection for next cycles has begun; no athletics change.",
+        "result": "supports",
+        "url": "https://www.gpb.org/node/1538666"
+      },
+      {
+        "note": "Fetch error.",
+        "result": "unreachable",
+        "url": "https://www.ed.gov/about/ed-offices/ocr/civil-rights-data"
       }
     ]
   },
@@ -155,10 +190,17 @@
       "publisher": "White House",
       "title": "Executive Order 14168, Defending Women From Gender Ideology Extremism and Restoring Biological Truth to the Federal Government",
       "url": "https://www.whitehouse.gov/presidential-actions/2025/01/defending-women-from-gender-ideology-extremism-and-restoring-biological-truth-to-the-federal-government/"
+    },
+    {
+      "date": "2026-09-04",
+      "kind": "news",
+      "publisher": "NPR via GPB",
+      "title": "Federal civil rights data about students is finally out. It's different under Trump",
+      "url": "https://www.gpb.org/node/1538666"
     }
   ],
   "stage": "implemented",
-  "status_summary": "ED submitted a revised Civil Rights Data Collection for the 2025-26 and 2027-28 school years to OMB, with a 30-day notice published 2025-08-07 (comments closed 2025-09-08). OMB's reginfo.gov record shows the revision (OMB control number 1870-0504) approved with change on 2026-07-20, with an expiration of 2029-07-31. According to K-12 Dive on 2026-07-31, the approved collection drops the nonbinary category, so schools report students as male or female, and removes gender identity from the rape and sexual assault definitions, with ED citing costs outweighing benefits and Executive Order 14168. Whether the single-sex athletics items are in the approved collection was not confirmed, and no ED statement tying the collection to OCR's statutory enforcement authority, as the Mandate asks, was located; the stage rests on the removal of the nonbinary category, which is the change the text names.",
+  "status_summary": "ED submitted a revised Civil Rights Data Collection for the 2025-26 and 2027-28 school years to OMB, with a 30-day notice published 2025-08-07 (comments closed 2025-09-08). OMB's reginfo.gov record shows the revision (OMB control number 1870-0504) approved with change on 2026-07-20, with an expiration of 2029-07-31. According to K-12 Dive on 2026-07-31, the approved collection drops the nonbinary category, so schools report students as male or female, and removes gender identity from the rape and sexual assault definitions, with ED citing costs outweighing benefits and Executive Order 14168; NPR reported on 2026-09-04 that the delayed 2023-24 data release omitted nonbinary information and that ED had begun collecting data for the next cycles. Whether the single-sex athletics items are in the approved collection was not confirmed, and no ED statement tying the collection to OCR's statutory enforcement authority was located; the stage rests on the removal of the nonbinary category, which is the change the text names.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -194,10 +236,17 @@
       "kind": "news",
       "source": "K-12 Dive",
       "url": "https://www.k12dive.com/news/education-department-stops-collecting-some-lgbtq-student-data/826762/"
+    },
+    {
+      "date": "2026-09-04",
+      "event": "NPR reported that the 2023-24 CRDC data released by ED omitted information on nonbinary students, that the 2025-26 collection eliminates the nonbinary category, and that a department spokesperson confirmed data collection for the next cycles had begun.",
+      "kind": "news",
+      "source": "NPR via GPB",
+      "url": "https://www.gpb.org/node/1538666"
     }
   ],
   "title": "Drop the CRDC nonbinary category, keep athletics data, refocus CRDC on OCR enforcement",
   "tracked": true,
-  "uncertainties": "The Federal Register notice and the reginfo.gov ICR page do not list individual data elements; the specific changes (nonbinary category, rape and sexual assault definitions) come from K-12 Dive reporting and from a multistate attorneys general comment letter on the proposal (oag.ca.gov), while the supporting statement and the 30-day comment response posted on reginfo.gov on 2026-07-16 could not be opened (no document links were readable, and regulations.gov could not be reached). The reginfo.gov page shows the approval date 2026-07-20 and an approval with change, but no terms of clearance text. No source read in this review mentions athletics in the 2025-26 proposal or approval: the K-12 Dive, EdSurge and multistate letter coverage is silent on it. A vendor help page (kb.infinitecampus.com) shows the single-sex athletics questions (ATHL-2, ATHL-3) in the 2021-22 collection, which suggests the retirement the Mandate objected to may not have taken effect, but this was not confirmed from ED documents. EdSurge (2025-10-06) also reported removal of some state-level discipline disproportionality data, which is outside this recommendation. The Mandate refers to the December 2021 notice for the 2021-22 collection.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "The Federal Register notice of 2025-08-07 (re-read in the second review) and the reginfo.gov ICR page do not list individual data elements; the notice abstract says only that ED will refine, add or remove elements and points to the supporting statement and attachments. The specific changes (nonbinary category, rape and sexual assault definitions, LGBTQ harassment items) come from K-12 Dive and NPR reporting and from a multistate attorneys general comment letter on the proposal (oag.ca.gov); the supporting statement and the comment response on reginfo.gov could not be opened, and the ED CRDC page on ed.gov returned an error. No source read mentions athletics in the 2025-26 proposal or approval: K-12 Dive and NPR are silent on it. A vendor help page (kb.infinitecampus.com) shows single-sex athletics questions in the 2021-22 collection, which suggests the retirement the Mandate objected to may not have taken effect, but this was not confirmed from ED documents. The Mandate refers to the December 2021 notice for the 2021-22 collection.",
+  "updated_at": "2026-10-13"
 }
