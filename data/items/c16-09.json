@@ -8,7 +8,7 @@
   "chapter": "16",
   "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Document text checked; the Solicitor opinion and the Federal Register withdrawal were fetched and read, and an FWS 2026 presentation confirms the policy is still applied.",
+  "confidence_reason": "Document text checked; M-37085 and the Federal Register withdrawal were fetched and read, and a Federal Register API check and the Unified Agenda entry confirm no codifying rule. This call is not evenly balanced; implemented follows from test (a), since the incidental take position is operative in substance through a binding Solicitor opinion even though the instrument is not the rule the Mandate names.",
   "durability": {
     "level": "low",
     "why": "A Solicitor opinion can be withdrawn by a future administration, and a prior court vacated the same legal reading."
@@ -30,6 +30,10 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Second independent review on 2026-10-13 kept implemented 65 because the binding Solicitor opinion on doi.gov makes the incidental take position operative in substance; a Federal Register and Unified Agenda check found no codifying rule."
     }
   ],
   "id": "c16-09",
@@ -52,13 +56,24 @@
   "research_agent": "N16",
   "review": {
     "flags": [
-      "judgment call: the Mandate asks for rulemaking; the opinion is operative in substance, so implemented 65 rather than in_progress"
+      "second review: kept implemented 65 partial; opinion is operative in substance, rule absent; Unified Agenda checked and holds no incidental take rulemaking.",
+      "second review: operative ask: Interior and FWS should, by rulemaking, rescind the Biden-era Migratory Bird Treaty Act rule and reinstate the Trump-era rule reading the Act as not prohibiting incidental take (page 524, endnote 42).",
+      "second review: rule applied: Implemented (65 to 90), match partial: test (a) the incidental take position is in effect department-wide through Solicitor opinion M-37085 (except the Southern District of New York), a different instrument than the rule the Mandate names; test (b) nothing opposite occurred, the 2021 permit ANPRM was withdrawn and no contrary action exists; test (c) no congressional action required. The missing rule keeps progress at the bottom of the band rather than moving the stage.",
+      "second review: not evenly balanced"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 524 lists the Migratory Bird Treaty Act among Biden rules to rescind and Trump rules to reinstate by rulemaking; endnote 42 cites the FWS rule governing take of migratory birds. Paraphrase accurate.",
+    "mandate_note": "Page 524 lists the Migratory Bird Treaty Act among Biden rules to rescind and Trump rules to reinstate, under policy reversals that require rulemaking; endnote 42. Paraphrase accurate.",
     "model": "Claude Opus",
     "reviewed_at": "2026-10-13",
-    "reviewer": "Y16a",
+    "reviewer": "Y16a, U13-5",
+    "second_review": {
+      "balanced": false,
+      "date": "2026-10-13",
+      "decision": "keep",
+      "operative_ask": "Interior and FWS should, by rulemaking, rescind the Biden-era Migratory Bird Treaty Act rule and reinstate the Trump-era rule reading the Act as not prohibiting incidental take (page 524, endnote 42).",
+      "reviewer": "U13-5",
+      "rule_applied": "Implemented (65 to 90), match partial: test (a) the incidental take position is in effect department-wide through Solicitor opinion M-37085 (except the Southern District of New York), a different instrument than the rule the Mandate names; test (b) nothing opposite occurred, the 2021 permit ANPRM was withdrawn and no contrary action exists; test (c) no congressional action required. The missing rule keeps progress at the bottom of the band rather than moving the stage."
+    },
     "source_checks": [
       {
         "note": "M-37085 dated 2025-04-11 repeals M-37065, makes M-37050 binding, carve-out for S.D.N.Y.; silent on rulemaking.",
@@ -84,6 +99,21 @@
         "note": "Tracker (lead only) last updated 2025-07-29; lists no lawsuit against M-37085.",
         "result": "partial",
         "url": "https://eelp.law.harvard.edu/tracker/migratory-bird-treaty-act/"
+      },
+      {
+        "note": "2025-04-11; repeals M-37065, makes M-37050 binding on all bureaus, carve-out for S.D.N.Y.; no mention of rulemaking.",
+        "result": "supports",
+        "url": "https://doi.gov/sites/default/files/documents/2025-04/m-37085.pdf"
+      },
+      {
+        "note": "26 documents; none defines MBTA incidental take scope; only the 2025-04-21 ANPRM withdrawal.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22incidental%20take%22%20migratory%20bird&conditions[publication_date][gte]=2025-01-20"
+      },
+      {
+        "note": "RIN 1018-BF58 covers general permits and depredation orders, NPRM projected 07/2026; not incidental take.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1018-BF58"
       }
     ]
   },
@@ -166,6 +196,6 @@
   ],
   "title": "Reinstate the Trump-era Migratory Bird Treaty Act incidental take position",
   "tracked": true,
-  "uncertainties": "A Federal Register API search of FWS documents since 2025-01-20 found no rule reinstating the 2021 incidental take regulation or rescinding the October 2021 revocation; no lawsuit against M-37085 was found in a news search or in the Harvard tracker, which is used only as a lead and was last updated in July 2025. The FWS presentation is undated beyond May 2026 and gives no dates for the steps it lists.",
+  "uncertainties": "A Federal Register API search on 2026-10-13 of documents since 2025-01-20 mentioning incidental take of migratory birds found no rule reinstating the January 2021 incidental take regulation or rescinding the October 2021 revocation; the Unified Agenda entry for migratory bird and eagle permit deregulatory actions (reginfo.gov) concerns general permits and depredation orders, not the scope of incidental take. No lawsuit against M-37085 was found in a news search or in the Harvard tracker, which is used only as a lead and was last updated in July 2025. The FWS presentation is undated beyond May 2026 and gives no dates for the steps it lists.",
   "updated_at": "2026-10-13"
 }
