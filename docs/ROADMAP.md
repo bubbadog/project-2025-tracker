@@ -1,6 +1,6 @@
 # Roadmap
 
-Living document. Status as of 2026-10-13: one headline over 373 counted recommendations (389 records; Foreword items listed, not counted), 100 in effect; confidence 111 high, 243 medium, 35 low; chapters 00 to 16 read in full, the rest still at their key objectives. Labels: **Fact** is measured from the data; **Estimate** and **Opinion** are the maintainer's.
+Living document. Status as of 2026-10-13: one headline over 373 counted recommendations (389 records; Foreword items listed, not counted), 101 in effect after the 2026-10-13 update run; confidence 108 high, 245 medium, 36 low; chapters 00 to 16 read in full, the rest still at their key objectives. Labels: **Fact** is measured from the data; **Estimate** and **Opinion** are the maintainer's.
 
 ## A. Enumeration and depth (the data work)
 
