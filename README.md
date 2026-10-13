@@ -4,7 +4,7 @@ An apolitical, source-linked scorecard of how closely the recommendations in the
 
 It takes no position on whether any recommendation is good or bad policy, and it does not claim the document caused any action. It can be read from the right or the left.
 
-**Live site:** https://claude.ai/artifact/G1M6Gd5HPzWMXXMXBgqC2X (the GitHub Pages address is listed in the repository's About box once the first deploy has run)
+**Live site:** https://bubbadog.github.io/project-2025-tracker/ (deployed from `main` on every merge). The same record is mirrored at https://claude.ai/artifact/G1M6Gd5HPzWMXXMXBgqC2X .
 
 Status: **beta**. The fuller enumeration of the document is being completed chapter by chapter; the headline count grows as chapters are read in full, and the page says so. Corrections are welcome and are the most useful help.
 

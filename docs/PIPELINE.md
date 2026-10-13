@@ -25,9 +25,7 @@ The runs write to a working database (the artifact's database). The repository i
 2. It dumps `items`, `meta/state`, `meta/chapters`, `meta/sig_raters` and `runs` to a directory and runs `python3 scripts/import_dump.py DUMP_DIR` in a fresh clone of this repository. The script writes only public documents, in canonical form, so the diff is only what changed.
 3. It runs `python3 scripts/validate.py --strict`. A failure is fixed in the database first (the database is upstream), then re-exported.
 4. It commits on a branch `run/<date>-<kind>` with the GitHub noreply identity, signs off, pushes, and opens a pull request whose body is the run's digest minus anything private.
-5. The checks run; with auto-merge enabled on run pull requests, the merge happens when `validate` and `build` pass, and `deploy-pages.yml` publishes the result. The maintainer reads the digest and can revert by pull request.
-
-Until the runs are connected to GitHub, the maintainer performs steps 2 to 4 from a session; the result is the same.
+5. The run polls the check runs; when `validate` and `build` have passed it merges its own pull request by squash, and `deploy-pages.yml` publishes the result. If a check fails, the pull request stays open and the digest says so. The maintainer reads the digest and can revert by pull request.
 
 Two runs can fire close together (the two nightly firings). The second to open its pull request rebases on `main` first, and the pull-request ruleset's strict status checks refuse a merge from a stale branch, so the second run's export always includes the first's.
 
