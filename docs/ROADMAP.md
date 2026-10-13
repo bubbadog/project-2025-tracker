@@ -1,6 +1,6 @@
 # Roadmap
 
-Living document. Status as of 2026-10-13: one headline over 373 counted recommendations (389 records; Foreword items listed, not counted), 101 in effect after the 2026-10-13 update run; confidence 108 high, 245 medium, 36 low; chapters 00 to 16 read in full, the rest still at their key objectives. Labels: **Fact** is measured from the data; **Estimate** and **Opinion** are the maintainer's.
+Living document. Status as of 2026-10-13: one headline over 373 counted recommendations (389 records; Foreword items listed, not counted), 103 in effect after the 2026-10-13 runs; confidence 108 high, 245 medium, 36 low; chapters 00 to 16 read in full, the rest still at their key objectives. Labels: **Fact** is measured from the data; **Estimate** and **Opinion** are the maintainer's.
 
 ## A. Enumeration and depth (the data work)
 
@@ -47,7 +47,7 @@ See [OPEN_SOURCE_PLAN.md](OPEN_SOURCE_PLAN.md).
 
 | Phase | Contents | State |
 | --- | --- | --- |
-| 1 | Repository public; checks on every pull request; Pages deploy on merge; rulesets; runs export by pull request | Files ready 2026-10-13; push, settings and rulesets pending |
+| 1 | Repository public; checks on every pull request; Pages deploy on merge; rulesets; runs export by pull request | Done 2026-10-13: site live at https://bubbadog.github.io/project-2025-tracker/ ; run pull requests merge once the checks pass; contributor pull requests are merged by hand |
 | 2 | Site: design pass, social preview, change feed, share stubs, downloads, custom domain | After Phase 1 |
 | 3 | Contributors: labels, board, triage role, monthly note | From week 2 |
 | 4 | Assistant: record-grounded Q&A first; Stage 1 to 5 questions before any architecture | After Phase 2 |
@@ -61,6 +61,7 @@ See [OPEN_SOURCE_PLAN.md](OPEN_SOURCE_PLAN.md).
 
 ## F. Decisions log
 
+- 2026-10-13: Repository and GitHub Pages site live; run pull requests merge automatically once `validate` and `build` pass, contributor pull requests by hand; public announcement targeted for 2026-10-21.
 - 2026-10-13: Open source under Apache-2.0 (code) and CC BY 4.0 (data), DCO sign-off, pull requests for every change with the maintainer's admin bypass only; GitHub Pages as the canonical site; runs export by pull request. No election-week freeze: the headline changes as evidence changes and the page says so. Assistant: record-grounded Q&A first, after the method's Stage 1 to 5 questions.
 - 2026-10-12: Enumeration deadline set (first pass 2026-10-18, second pass 2026-10-21). Per-rater significance scores stored on every record; weekly recomputation of the band. Confidence rubric addition: documented systematic absence checks lift the cap on no-action records to 70. Six judgment-call records sent to a second independent review; all held.
 - 2026-10-11: One headline counts every tracked record except Foreword items and records that restate chapter objectives. Freshness run added Monday, Wednesday, Friday.
