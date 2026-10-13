@@ -37,7 +37,7 @@ Three rulesets, defined in `.github/rulesets/*.json` and applied through the API
 | Ruleset | Rules | Bypass |
 | --- | --- | --- |
 | `main: no force push, no delete` | Deletion and non-fast-forward blocked on the default branch | None. Nobody rewrites `main`, including the maintainer. |
-| `main: changes arrive by pull request` | Pull request required (0 approvals, stale reviews dismissed, review threads resolved, squash only); required status checks `validate` and `build`, strict (branch up to date) | Repository admin, always. The maintainer can push directly in an emergency; everyone else, AI runs included, opens a pull request. |
+| `main: changes arrive by pull request` | Pull request required (0 approvals, stale reviews dismissed, review threads resolved, squash only); required status checks `validate` and `build`, strict (branch up to date) | Repository admin, always. The maintainer can push directly in an emergency; everyone else, AI runs included, opens a pull request. A merge queue is not offered on a repository owned by a personal account (checked in the ruleset editor 2026-10-13); the strict up-to-date requirement gives contributors the same guarantee one pull request at a time. |
 | `tags: releases are permanent` | Tags `v*` cannot be deleted, moved or updated | None. |
 
 The required checks can only be attached after each check has run at least once on the repository, so the order is: push the files, let `check.yml` run on `main`, then create the pull request ruleset.
@@ -56,7 +56,7 @@ Tag a release when the record reaches a milestone (a chapter pass completed, a m
 
 ## 6. Pull requests from the research runs
 
-Each run opens one pull request from `run/<date>-<kind>` with the records it changed, its run log under `data/runs/`, and `data/meta/state.json`. Recommended policy (decide and record here): enable auto-merge on run pull requests, so they merge as soon as `validate` and `build` pass, and read the run's private digest as the review; revert by pull request if a run was wrong. Human contributor pull requests are merged by hand after reading the source behind any stage change. Until the runs are connected to GitHub, the maintainer exports from the working database with the steps in [docs/PIPELINE.md](docs/PIPELINE.md) and opens the pull request from a session.
+Each run opens one pull request from `run/<date>-<kind>` with the records it changed, its run log under `data/runs/`, and `data/meta/state.json`. Policy (decided 2026-10-13): auto-merge on run pull requests opened by the maintainer or the maintainer's sessions, so they merge as soon as `validate` and `build` pass, with the run's private digest as the review; revert by pull request if a run was wrong. Pull requests from other contributors are merged by hand after reading the source behind any stage change, one at a time against an up-to-date branch (the ruleset enforces this; a merge queue would automate the rebasing but is only offered to organization-owned repositories). Until the runs are connected to GitHub, the maintainer exports from the working database with the steps in [docs/PIPELINE.md](docs/PIPELINE.md) and opens the pull request from a session.
 
 Two runs can fire within hours of each other. Each exports against current `main`, so their branches can conflict on `data/meta/state.json`; the second one rebases before opening its pull request (the export script does this), and the strict status check forces an up-to-date branch before merge.
 
@@ -77,6 +77,7 @@ No other secrets. The deploy job authenticates to Pages with the job's OIDC toke
 
 | Date | What | Evidence |
 | --- | --- | --- |
-| 2026-10-13 | Repository created on GitHub, public, empty. Files prepared locally and validated (389 records, 0 errors). Settings, rulesets, secret and Pages not yet applied: pushes from the preparing session were refused until the Claude GitHub App is installed for the owner. | `gh api repos/bubbadog/project-2025-tracker`: size 0, no rulesets, no pull requests |
+| 2026-10-13 | Repository created on GitHub, public, empty. Files prepared locally and validated (389 records, 0 errors). | `gh api repos/bubbadog/project-2025-tracker`: size 0, no rulesets |
+| 2026-10-13 | `main` pushed; `check` green on `main`. Applied in the owner's browser: Pages source GitHub Actions with HTTPS enforced; Actions limited to bubbadog plus GitHub and verified creators, pinned SHAs required, read-only workflow token, approval for first-time contributors; Wikis and Projects off; squash only, auto-merge on, head branches deleted, sign-off required on web commits; private vulnerability reporting, dependency graph, Dependabot alerts and security updates, CodeQL default setup, secret scanning and push protection on; secret `TRACKER_FORBIDDEN_WORDS` set. Three rulesets imported from the files and active (ids 25031452, 25031477, 25031553); `tools/check_rulesets.py` passes. | API reads of the rulesets by id; settings pages read back after saving |
 
 Update this table whenever a setting is applied, with the API read or screenshot that proves it.
