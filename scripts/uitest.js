@@ -1,6 +1,7 @@
 // Browser test of the site. Usage: python3 -m http.server 8765 --directory site & node scripts/uitest.js
 // Opens every record, checks every link is https and opens in a new tab, checks contrast and phone layout.
-// Env: UITEST_BASE (default http://127.0.0.1:8765/index.html), UITEST_SNAPSHOT (default site/snapshot.json).
+// Env: UITEST_BASE (default http://127.0.0.1:8765/index.html), UITEST_SNAPSHOT (default site/snapshot.json),
+// UITEST_CHROME (optional path to a Chromium binary when Playwright's own download is not available).
 const { chromium } = require('playwright');
 const fs = require('fs');
 const BASE = process.env.UITEST_BASE || 'http://127.0.0.1:8765/index.html';
@@ -10,7 +11,7 @@ const fails = [], notes = [];
 const ok = (c, m) => { if (!c) fails.push(m); };
 
 (async () => {
-  const browser = await chromium.launch();
+  const browser = await chromium.launch(process.env.UITEST_CHROME ? { executablePath: process.env.UITEST_CHROME } : {});
   async function open(opts, route) {
     const ctx = await browser.newContext(opts);
     const page = await ctx.newPage();
