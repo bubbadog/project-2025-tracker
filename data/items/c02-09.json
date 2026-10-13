@@ -1,0 +1,124 @@
+{
+  "agency": "OMB",
+  "blockers": [],
+  "chapter": "02",
+  "confidence": 40,
+  "confidence_label": "low",
+  "confidence_reason": "Chapter text checked and both OMB notices fetched, but the not_started finding rests on absence of evidence from limited searches; OMB's internal organization is not fully public.",
+  "durability": {
+    "level": "low",
+    "why": "An internal OMB organization choice that any later Director could reverse."
+  },
+  "est_completion": {
+    "basis": "Inference: an internal reorganization needs no outside approval, but no public signal of one was found.",
+    "window": "unknown"
+  },
+  "headline": false,
+  "history": [
+    {
+      "date": "2026-10-10",
+      "note": "Added in the layer 3 enumeration pass; researched and sent to independent review."
+    },
+    {
+      "date": "2026-10-10",
+      "note": "Independent review: confirmed not_started 0; reworded the April 2025 notice event (not stated to supersede the February notice); added the rerun Federal Register check to uncertainties."
+    }
+  ],
+  "id": "c02-09",
+  "last_checked": "2026-10-10",
+  "layer": 3,
+  "match": "direct",
+  "mechanism": "agency_action",
+  "pages": [
+    47
+  ],
+  "position": "OMB, Budget",
+  "progress": 0,
+  "proposal": "The Mandate recommends dividing OMB's six Resource Management Offices into smaller subject-matter areas, creating more political Program Associate Director posts, each paired with a Deputy PAD, to give the Director more direction over policy at agencies.",
+  "related_ids": [
+    "c02-01"
+  ],
+  "remaining": [
+    "OMB would have to announce or staff additional PAD and Deputy PAD positions covering narrower subject areas."
+  ],
+  "requires_congress": "no",
+  "research_agent": "N02a",
+  "review": {
+    "flags": [
+      "not_started rests on absence of public evidence; internal OMB staffing changes may not be published."
+    ],
+    "mandate_check": "verified",
+    "mandate_note": "Page 47 lists the six resource management offices and says they should be divided into smaller subject-matter areas with more PADs, each with a Deputy PAD. The proposal matches and is a firm recommendation.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-10",
+    "reviewer": "Y5",
+    "source_checks": [
+      {
+        "note": "OMB notice effective 2025-02-11 delegates apportionment authority to the Program Associate Directors; names no new offices.",
+        "result": "supports",
+        "url": "https://public-inspection.federalregister.gov/2025-02720.pdf"
+      },
+      {
+        "note": "Effective 2025-04-18; succession through DADs, Branch Chiefs, other PADs and the Assistant Director for Budget; no new or split offices. Does not say it supersedes the February notice, so 'successor' was reworded.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06953/notice-delegation-of-apportionment-authority-pursuant-to-31-usc-1513b"
+      },
+      {
+        "note": "Reviewer rerun: two results, neither creating PAD positions.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Program+Associate+Director%22&conditions[publication_date][gte]=2025-01-20&order=newest&per_page=20"
+      }
+    ]
+  },
+  "self_confidence": 45,
+  "significance": {
+    "B": 2,
+    "F": 1,
+    "F_estimated": true,
+    "M": 2,
+    "R": 2,
+    "adjudicated": false,
+    "raters": 2,
+    "rationale": "Restructures OMB internal offices to add political posts, changing how presidential direction reaches agencies.",
+    "version": "2026-10-10",
+    "weight": 1.75
+  },
+  "sources": [
+    {
+      "date": "2025-02-11",
+      "kind": "primary",
+      "publisher": "Office of Management and Budget",
+      "title": "Delegation of Apportionment Authority (OMB notice)",
+      "url": "https://public-inspection.federalregister.gov/2025-02720.pdf"
+    },
+    {
+      "date": "2025-04-23",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Notice; Delegation of Apportionment Authority Pursuant to 31 U.S.C. 1513(b)",
+      "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06953/notice-delegation-of-apportionment-authority-pursuant-to-31-usc-1513b"
+    }
+  ],
+  "stage": "not_started",
+  "status_summary": "No public record was found of OMB splitting its six Resource Management Offices or creating additional PAD and Deputy PAD positions since 2025-01-20. OMB's apportionment delegation notices (effective 2025-02-11 and 2025-04-18) refer to the existing Program Associate Director and Deputy Associate Director structure without describing new offices.",
+  "timeline": [
+    {
+      "date": "2025-02-11",
+      "event": "OMB delegated apportionment authority to its Program Associate Directors; the notice names no new or split offices.",
+      "kind": "primary",
+      "source": "OMB notice (Federal Register public inspection)",
+      "url": "https://public-inspection.federalregister.gov/2025-02720.pdf"
+    },
+    {
+      "date": "2025-04-18",
+      "event": "A second OMB delegation notice took effect, setting a succession order through Deputy Associate Directors, Branch Chiefs and other PADs of the existing structure; it names no new or split offices.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06953/notice-delegation-of-apportionment-authority-pursuant-to-31-usc-1513b"
+    }
+  ],
+  "title": "Divide OMB's six resource management offices into smaller areas with more political PADs",
+  "tracked": true,
+  "uncertainties": "The whitehouse.gov OMB pages fetched did not list leadership or offices, and the OMB leadership page could not be fetched. News searches returned no reporting on a split of the resource management offices or new deputy PAD roles. Absence of public evidence is not proof that no internal reorganization or hiring occurred. A reviewer rerun on 2026-10-10 of a Federal Register API query for Program Associate Director since 2025-01-20 returned only the April 2025 OMB notice and an unrelated OPM notice, and one web search found no report of a reorganization. Whether the April notice replaced the February one is not stated in it.",
+  "updated_at": "2026-10-10"
+}

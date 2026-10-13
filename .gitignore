@@ -1,0 +1,26 @@
+# build output (CI rebuilds it from data/)
+site/snapshot.json
+
+# dependencies and tool output
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+test-results/
+playwright-report/
+
+# secrets and local config: never commit
+.env
+.env.*
+*.pem
+*.key
+
+# editor and OS files
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# private, never committed: the identifier list the validator scans for
+.private/

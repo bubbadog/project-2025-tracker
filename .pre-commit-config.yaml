@@ -1,0 +1,21 @@
+# Optional local hooks: pip install pre-commit && pre-commit install
+# They run the same validator CI runs, plus a secret scan of staged changes.
+repos:
+  - repo: local
+    hooks:
+      - id: validate-records
+        name: validate records (scripts/validate.py --strict)
+        entry: python3 scripts/validate.py --strict
+        language: system
+        pass_filenames: false
+        files: ^(data/|scripts/validate\.py)
+      - id: no-em-dashes
+        name: no em or en dashes
+        entry: python3 -c "import sys; D=(chr(0x2014),chr(0x2013)); bad=[f for f in sys.argv[1:] if any(ch in open(f,encoding='utf-8',errors='ignore').read() for ch in D)]; print(chr(10).join(bad)); sys.exit(1 if bad else 0)"
+        language: system
+        types: [text]
+        exclude: ^(LICENSE|LICENSE-DATA)$
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.28.0
+    hooks:
+      - id: gitleaks

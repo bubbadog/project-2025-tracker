@@ -1,0 +1,227 @@
+{
+  "agency": "HUD",
+  "blockers": [
+    "No court order against the interim rule was found.",
+    "The Fair Housing Act's statutory duty to affirmatively further fair housing remains in law, and state attorneys general have argued the interim rule does not satisfy it."
+  ],
+  "chapter": "15",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "The Mandate text, the operative interim final rule, and a Federal Register listing showing no later final rule were all confirmed in primary sources. Litigation in 2026 was not searched, and the special-purpose credit part of the recommendation was not researched.",
+  "durability": {
+    "level": "medium",
+    "why": "An interim final rule in the Code of Federal Regulations; a later administration would need new rulemaking to restore a planning-based AFFH rule, but the interim status makes it more exposed than a final rule."
+  },
+  "est_completion": {
+    "basis": "The operative text is already in effect; a final rule following the 2025 comment period has not appeared in 19 months, so finalization (if any) is likely within the next year or two.",
+    "window": "2027"
+  },
+  "history": [
+    {
+      "date": "2026-10-07",
+      "note": "Red-team check found nothing that undercuts the status."
+    }
+  ],
+  "id": "c15-01",
+  "last_checked": "2026-10-07",
+  "layer": 1,
+  "match": "direct",
+  "mechanism": "agency_rule",
+  "pages": [
+    509,
+    515
+  ],
+  "position": null,
+  "progress": 80,
+  "proposal": "The Mandate recommends that HUD repeal the AFFH regulation that the Biden Administration reinstated, along with other uses of special-purpose credit authorities to advance equity. It treats this as a first-year administrative action and notes in a footnote that the Biden Administration had proposed a replacement for the 2020 Trump-era rule.",
+  "redteam": {
+    "date": "2026-10-07",
+    "evidence": [
+      {
+        "date": "2026-10-01",
+        "kind": "primary",
+        "note": "First 20 of 33 HUD fair housing documents from 2025-06-01 to 2026-10-01 show no AFFH final rule and no rescission of the interim rule; the only AFFH mention is in a 2026-09-01 Moving to Work notice.",
+        "source": "Federal Register API (HUD documents)",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22fair+housing%22&conditions[agencies][]=housing-and-urban-development-department&conditions[publication_date][gte]=2025-06-01&order=newest&per_page=20"
+      },
+      {
+        "date": "2026-08-25",
+        "kind": "primary",
+        "note": "Eight agencies including HUD, DOJ, CFPB, Treasury and FHFA rescind the 2022 Interagency Statement on Special Purpose Credit Programs under ECOA and Regulation B (document 2026-17307).",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/08/25/2026-17307/interagency-rescission-of-the-interagency-statement-on-special-purpose-credit-programs-under-the"
+      },
+      {
+        "date": "2026-04-22",
+        "kind": "primary",
+        "note": "CFPB final rule amending Regulation B on disparate impact, discouragement of applicants and special purpose credit programs.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/04/22/2026-07804/equal-credit-opportunity-act-regulation-b"
+      },
+      {
+        "date": "2026-04-06",
+        "kind": "primary",
+        "note": "HUD's fair housing office withdraws listed guidance, including its statement on the Fair Housing Act and special purpose credit programs.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/04/06/2026-06624/notification-of-withdrawal-of-fair-housing-and-equal-opportunity-guidance-documents"
+      }
+    ],
+    "note": "No lawsuit or reversal found; the companion special-purpose credit recommendation, previously unchecked, was acted on by several agencies in 2026.",
+    "verdict": "holds",
+    "what_was_tested": "Whether the AFFH interim rule was sued over, replaced or reversed in 2026, and whether the Mandate's companion special-purpose credit recommendation (previously unchecked) had been acted on, by searching for litigation and querying the Federal Register for HUD fair housing and special purpose credit documents."
+  },
+  "related_ids": [
+    "c15-05",
+    "c15-09",
+    "c15-10"
+  ],
+  "remaining": [
+    "Publish a final rule that replaces the interim final rule, or leave the interim rule in place indefinitely.",
+    "Finalize or abandon the proposed rescission of the Affirmative Fair Housing Marketing regulations."
+  ],
+  "requires_congress": "no",
+  "research_agent": "A11",
+  "review": {
+    "flags": [
+      "wording: first-person phrasing in status summary replaced",
+      "special-purpose credit component not researched",
+      "2026 litigation not searched"
+    ],
+    "mandate_check": "verified",
+    "mandate_note": "Page 509 lists repeal of the AFFH regulation reinstituted under the Biden Administration and of other special-purpose credit uses to further equity; footnote 30 on page 515 notes the 2023 Biden proposed replacement of the 2020 rule.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "R06",
+    "source_checks": [
+      {
+        "note": "Confirms the interim final rule at 90 FR 11020, published 2025-03-03, effective 2025-04-02, comments due 2025-05-02, repealing the 2021 interim final rule and the 1994 Analysis of Impediments requirements, with a certification met by any action rationally related to promoting fair housing; it also notes the 2023 proposed rule had been withdrawn on 2025-01-16.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/03/03/2025-03360/affirmatively-furthering-fair-housing-revisions"
+      },
+      {
+        "note": "Fetch proxy rejected the URL as too long.",
+        "result": "unreachable",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22affirmatively%20furthering%20fair%20housing%22&conditions[agencies][]=housing-and-urban-development-department&conditions[publication_date][gte]=2025-01-20&order=newest&per_page=20"
+      },
+      {
+        "note": "HUD documents matching AFFH sorted newest first: the most recent AFFH rule is the 2025-03-03 interim final rule, preceded by the 2025-01-16 withdrawal of the 2023 proposal; no later final rule appears.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=housing-and-urban-development-department&conditions[term]=AFFH&order=newest"
+      }
+    ]
+  },
+  "self_confidence": 85,
+  "significance": {
+    "B": 1,
+    "F": 1,
+    "F_estimated": true,
+    "M": 1,
+    "R": 2,
+    "adjudicated": false,
+    "raters": 2,
+    "rationale": "Repealing the AFFH rule removes planning requirements for HUD grantee jurisdictions.",
+    "version": "2026-10-08",
+    "weight": 1.25
+  },
+  "sources": [
+    {
+      "date": "2025-03-03",
+      "kind": "primary",
+      "publisher": "Federal Register / HUD",
+      "title": "Affirmatively Furthering Fair Housing Revisions (interim final rule)",
+      "url": "https://www.federalregister.gov/documents/2025/03/03/2025-03360/affirmatively-furthering-fair-housing-revisions"
+    },
+    {
+      "date": "2025-02-27",
+      "kind": "primary",
+      "publisher": "HUD",
+      "title": "Secretary Scott Turner Cuts Red Tape by Terminating AFFH Rule (HUD press release 25-034)",
+      "url": "https://www.hud.gov/press/press_releases_media_advisories/hud_no_25_034"
+    },
+    {
+      "date": "2025-05-07",
+      "kind": "primary",
+      "publisher": "Federal Register / HUD",
+      "title": "Affirmatively Furthering Fair Housing Revisions; Extension of Comment Period",
+      "url": "https://www.federalregister.gov/documents/2025/05/07/2025-07961/affirmatively-furthering-fair-housing-revisions-extension-of-comment-period"
+    },
+    {
+      "date": "2025-05-09",
+      "kind": "news",
+      "publisher": "Orrick InfoBytes",
+      "title": "Nineteen attorneys general challenge HUD's fair housing rule change",
+      "url": "https://infobytes.orrick.com/2025-05-09/nineteen-attorneys-general-challenge-huds-fair-housing-rule-change/"
+    },
+    {
+      "date": "2025-02-28",
+      "kind": "news",
+      "publisher": "NAHRO",
+      "title": "HUD Publishes Interim Final Rule Implementing AFFH",
+      "url": "https://www.nahro.org/news/hud-publishes-interim-final-rule-implementing-affh"
+    }
+  ],
+  "stage": "implemented",
+  "status_summary": "HUD announced on 2025-02-27 that it was terminating the AFFH rule and published an interim final rule on 2025-03-03 (90 FR 11020, effective 2025-04-02) that repeals the 2021 interim final rule and the 1994 Analysis of Impediments requirements. Under the interim rule, a grantee's certification is met if it took any action rationally related to promoting fair housing, and no specific planning process is required. The comment period closed 2025-05-09, and a Federal Register search of HUD documents through 2026-10-01 showed no final rule, so the interim rule remains the operative text. No court challenge to the interim rule was found; 19 state attorneys general filed a comment letter opposing it. The Mandate's companion call to end other equity-related uses of special-purpose credit authorities has also been acted on: HUD withdrew its special purpose credit guidance (2026-04-06 and 2026-07-17), the CFPB amended Regulation B's special purpose credit provisions (2026-04-22) and rescinded a 2020 advisory opinion on for-profit programs (2026-06-17), and eight agencies including HUD jointly rescinded the 2022 Interagency Statement (2026-08-25).",
+  "timeline": [
+    {
+      "date": "2025-02-27",
+      "event": "HUD Secretary Scott Turner announces HUD is terminating the AFFH rule (HUD press release No. 25-034; date taken from a trade-group report published 2025-02-28).",
+      "kind": "primary",
+      "source": "HUD",
+      "url": "https://www.hud.gov/press/press_releases_media_advisories/hud_no_25_034"
+    },
+    {
+      "date": "2025-03-03",
+      "event": "HUD publishes the interim final rule 'Affirmatively Furthering Fair Housing Revisions' (90 FR 11020; effective 2025-04-02; comments due 2025-05-02), repealing the 2021 interim final rule.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/03/03/2025-03360/affirmatively-furthering-fair-housing-revisions"
+    },
+    {
+      "date": "2025-05-02",
+      "event": "A coalition of 19 state attorneys general, led by California, Massachusetts and New York, files a comment letter urging HUD to withdraw the interim rule (a comment letter, not a lawsuit).",
+      "kind": "news",
+      "source": "Orrick InfoBytes",
+      "url": "https://infobytes.orrick.com/2025-05-09/nineteen-attorneys-general-challenge-huds-fair-housing-rule-change/"
+    },
+    {
+      "date": "2025-05-07",
+      "event": "HUD extends the comment deadline on the interim rule to 2025-05-09 after a Regulations.gov technical problem.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/05/07/2025-07961/affirmatively-furthering-fair-housing-revisions-extension-of-comment-period"
+    },
+    {
+      "date": "2025-06-03",
+      "event": "Related action: HUD proposes to rescind its Affirmative Fair Housing Marketing regulations (24 CFR part 108 and part of part 200), a separate rule from AFFH (90 FR 23491; comments closed 2025-07-03).",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/06/03/2025-09991/rescission-of-affirmative-fair-housing-marketing-regulations"
+    },
+    {
+      "date": "2026-04-22",
+      "event": "CFPB publishes a final rule amending Regulation B, including its special purpose credit program provisions.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/04/22/2026-07804/equal-credit-opportunity-act-regulation-b"
+    },
+    {
+      "date": "2026-06-17",
+      "event": "CFPB publishes a rule rescinding its December 2020 advisory opinion on certain special purpose credit programs run by for-profit organizations.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/06/17/2026-12149/equal-credit-opportunity-regulation-b-special-purpose-credit-programs-rescission"
+    },
+    {
+      "date": "2026-08-25",
+      "event": "Eight federal agencies including HUD, DOJ, CFPB and Treasury rescind the 2022 Interagency Statement on Special Purpose Credit Programs.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/08/25/2026-17307/interagency-rescission-of-the-interagency-statement-on-special-purpose-credit-programs-under-the"
+    }
+  ],
+  "title": "Repeal the Biden-era Affirmatively Furthering Fair Housing (AFFH) rule",
+  "tracked": true,
+  "uncertainties": "A 2026 litigation search returned only 2018-era suits over the earlier rule suspension and the 2025 attorneys general comment letter, so no suit against the 2025 interim rule was found, but the search was one query. The Federal Register listing reviewed shows the first 20 of 33 matching HUD documents. The special purpose credit documents were identified from titles and abstracts and were not read in full, and their scope relative to the Mandate's wording was not compared. The HUD press release page loaded without body text, so the 2025-02-27 date comes from a trade-group article.",
+  "updated_at": "2026-10-08"
+}

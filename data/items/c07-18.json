@@ -1,0 +1,144 @@
+{
+  "agency": "ODNI (IC CIO), NSA, OMB and White House",
+  "blockers": [
+    "Timelines in the order run to 2030 and 2031 for non-national-security systems, and the national security systems schedule is set through the NSA report."
+  ],
+  "chapter": "07",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Text checked and both stage-deciding executive orders were read on the Federal Register; the remaining judgment concerns how far the directed report counts as the review the text asks for.",
+  "durability": {
+    "level": "medium",
+    "why": "The orders are executive actions that a later President could amend, although cryptographic migration deadlines are likely to persist across administrations."
+  },
+  "est_completion": {
+    "basis": "Inference: the first NSA report is due about December 2026, but full migration deadlines run to 2030 and 2031.",
+    "window": "2027"
+  },
+  "headline": false,
+  "history": [
+    {
+      "date": "2026-10-12",
+      "note": "Added in the layer 3 enumeration pass; researched and sent to independent review."
+    },
+    {
+      "date": "2026-10-12",
+      "note": "Independent review: confirmed EO 14412 and EO 14413 numbers, signing date 2026-06-22 and publication 2026-06-25 on the Federal Register; clarified that EO 14412's deadlines exclude national security systems; corrected the leadership page description (no principal-staff label); lowered progress from 35 to 25."
+    },
+    {
+      "date": "2026-10-12",
+      "note": "Significance scored blind by two AI raters from the recommendation text only."
+    }
+  ],
+  "id": "c07-18",
+  "last_checked": "2026-10-12",
+  "layer": 3,
+  "match": "partial",
+  "mechanism": "executive_order",
+  "pages": [
+    227,
+    228
+  ],
+  "position": "Additional Areas for Reform (IC Chief Information Officer)",
+  "progress": 25,
+  "proposal": "The Mandate recommends appointing the Intelligence Community Chief Information Officer as a primary member of the DNI's staff alongside the ODNI General Counsel, IC Chief Financial Officer and ODNI Chief Operating Officer. It also calls for immediate reviews of progress implementing post-quantum encryption at least for IC and Defense systems, and for revising the national security memorandum's goal of mitigating quantum risk by 2035 in light of the threat.",
+  "related_ids": [
+    "c07-15",
+    "c02-03"
+  ],
+  "remaining": [
+    "The first NSA report on national security system migration, due about 2026-12-19.",
+    "An explicit revision of National Security Memorandum 10's 2035 goal, which neither order mentions.",
+    "An immediate review of post-quantum progress for IC and Defense systems.",
+    "Public confirmation that the IC CIO holds the primary staff status described, and when it began."
+  ],
+  "requires_congress": "no",
+  "research_agent": "N07a",
+  "review": {
+    "flags": [
+      "progress lowered from 35 to 25",
+      "EO numbers, dates and content confirmed on the Federal Register",
+      "leadership page wording corrected"
+    ],
+    "mandate_check": "verified",
+    "mandate_note": "Pages 227 to 228 ask that the IC CIO be a primary member of the DNI staff with the ODNI General Counsel, IC CFO and ODNI COO, that immediate reviews of post-quantum progress at least for IC and Defense systems be required, and that the national security memorandum's 2035 goal be revised; the paraphrase is accurate.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-12",
+    "reviewer": "Y8b",
+    "source_checks": [
+      {
+        "note": "EO 14412, signed 2026-06-22, 91 FR 38483, published 2026-06-25; HVA and high-impact PQC deadlines 2030-12-31 and 2031-12-31 excluding NSS; NSA NSS status report within 180 days then annually; no NSM-10 or 2035.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12909/securing-the-nation-against-advanced-cryptographic-attacks"
+      },
+      {
+        "note": "EO 14413, signed 2026-06-22, 91 FR 38487; Sec. 4(f) DNI and Secretary of War task; report within one year.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12910/ushering-in-the-next-frontier-of-quantum-innovation"
+      },
+      {
+        "note": "IC CIO Douglas Cossa listed under ODNI Officials after the COO and IC CFO; no principal-staff label; General Counsel not listed; metadata date 2026-09-29.",
+        "result": "partial",
+        "url": "https://www.odni.gov/leadership/"
+      }
+    ]
+  },
+  "self_confidence": 50,
+  "significance": {
+    "B": 2,
+    "F": 1,
+    "F_estimated": true,
+    "M": 2,
+    "R": 1,
+    "adjudicated": false,
+    "raters": 2,
+    "rationale": "Adding a CIO to DNI staff and reviewing post-quantum encryption for IC and defense systems affects security systems in a few agencies.",
+    "version": "2026-10-12",
+    "weight": 1.5
+  },
+  "sources": [
+    {
+      "date": "2026-06-25",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Securing the Nation Against Advanced Cryptographic Attacks (EO 14412)",
+      "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12909/securing-the-nation-against-advanced-cryptographic-attacks"
+    },
+    {
+      "date": "2026-06-25",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Ushering in the Next Frontier of Quantum Innovation (EO 14413)",
+      "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12910/ushering-in-the-next-frontier-of-quantum-innovation"
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "primary",
+      "publisher": "Office of the Director of National Intelligence",
+      "title": "ODNI leadership (page dated 2026-09-29 in its metadata)",
+      "url": "https://www.odni.gov/leadership/"
+    }
+  ],
+  "stage": "in_progress",
+  "status_summary": "Executive Order 14412 (signed 2026-06-22, published 2026-06-25) directs OMB guidance requiring agencies to move high-value assets and high-impact systems, excluding national security systems, to post-quantum cryptography for key establishment by 2030-12-31 and for digital signatures by 2031-12-31, and directs the NSA Director, as National Manager for National Security Systems, to report to the President through the Committee on National Security Systems within 180 days (about 2026-12-19) and annually on migration status for national security systems. The order does not mention National Security Memorandum 10 or its 2035 goal and does not use the term intelligence community; Executive Order 14413 of the same date has the DNI and the Secretary of War identify national security implications of commercial quantum computing, including for post-quantum migration, with a report due within a year. ODNI's leadership page lists the IC Chief Information Officer among ODNI officials immediately after the Chief Operating Officer and the IC Chief Financial Officer, without a principal-staff label and without showing when that placement began.",
+  "timeline": [
+    {
+      "date": "2026-06-22",
+      "event": "Executive Order 14412 (Securing the Nation Against Advanced Cryptographic Attacks) was signed, setting post-quantum migration deadlines of 2030 and 2031 for non-national-security high-value and high-impact systems and a first NSA status report on national security systems due within 180 days (published in the Federal Register 2026-06-25).",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12909/securing-the-nation-against-advanced-cryptographic-attacks"
+    },
+    {
+      "date": "2026-06-22",
+      "event": "Executive Order 14413 (Ushering in the Next Frontier of Quantum Innovation) was signed; section 4(f) has the DNI and the Secretary of War identify national security implications of commercial quantum computer scale, naming post-quantum cryptography migration as one (published 2026-06-25).",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12910/ushering-in-the-next-frontier-of-quantum-innovation"
+    }
+  ],
+  "title": "Make the IC CIO a DNI primary staff member; review post-quantum progress; revise 2035 goal",
+  "tracked": true,
+  "uncertainties": "Both orders were read on the Federal Register; neither mentions NSM-10 or 2035. EO 14412's 2030 and 2031 deadlines for non-national-security systems are earlier than the 2035 goal, which is in line with the text's call to revise the goal, but the order does not revise the memorandum itself (an inference). Whether the NSA status report amounts to the Mandate's immediate review of IC and Defense progress is a judgment: it is a first report due six months after the order and about two years into the term. The leadership page does not label principal staff and does not list the General Counsel; the IC CIO's placement there may predate 2025, so it is not counted as an action. The cybersecurity order published in the Federal Register on 2025-06-11 was not checked for post-quantum text. Progress was lowered from 35 to 25 because the operative steps so far are directives and deadlines, with the review report not yet due.",
+  "updated_at": "2026-10-12"
+}

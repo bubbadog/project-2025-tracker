@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Project 2025: Mandate for Leadership Tracker</title>
+<meta name="description" content="An apolitical, source-linked scorecard of how closely the 2023 Mandate for Leadership recommendations align with federal actions since January 20, 2025. Every objective carries its status, evidence, and an independent confidence rating.">
+<meta property="og:title" content="Project 2025: Mandate for Leadership Tracker">
+<meta property="og:description" content="Which recommendations are in effect, underway, blocked, or untouched, with linked evidence and a confidence rating on every objective.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<style>
+/* Layout: a docket. A ledger header with the stage tally, then one working surface that switches
+   between a quarter-by-quarter timeline and a chapter list; a side sheet holds the full record for one item. */
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --surface-2:#eaeef3; --ink:#15202c; --ink-2:#465364; --ink-3:#586474;
+  --line:#d5dbe3; --line-2:#e7ebf0; --accent:#1c5cab; --accent-ink:#ffffff; --shade:rgba(12,20,30,.45);
+  --st-proposed:#86b6ef; --st-progress:#3987e5; --st-implemented:#1c5cab; --st-completed:#0d366b;
+  --st-blocked:#eb6834; --st-diverged:#4a3aa7; --st-none:#8a95a3;
+  --f-ui:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-display:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#11151a; --surface:#1a1f26; --surface-2:#242b34; --ink:#eef2f6; --ink-2:#bcc6d2; --ink-3:#8d99a8;
+    --line:#343d49; --line-2:#272e38; --accent:#7fb2ee; --accent-ink:#0b1420; --shade:rgba(0,0,0,.6);
+    --st-proposed:#184f95; --st-progress:#256abf; --st-implemented:#3987e5; --st-completed:#9ec5f4;
+    --st-blocked:#d95926; --st-diverged:#9085e9; --st-none:#7c8896; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11151a; --surface:#1a1f26; --surface-2:#242b34; --ink:#eef2f6; --ink-2:#bcc6d2; --ink-3:#8d99a8;
+  --line:#343d49; --line-2:#272e38; --accent:#7fb2ee; --accent-ink:#0b1420; --shade:rgba(0,0,0,.6);
+  --st-proposed:#184f95; --st-progress:#256abf; --st-implemented:#3987e5; --st-completed:#9ec5f4;
+  --st-blocked:#d95926; --st-diverged:#9085e9; --st-none:#7c8896; color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.5;margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:20px;padding-block:28px 64px;display:flex;flex-direction:column;gap:22px}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button{font:inherit;color:inherit}
+.mono{font-family:var(--f-mono);font-size:.86em;font-variant-numeric:tabular-nums}
+.muted{color:var(--ink-3)}
+.eyebrow{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+
+/* header */
+.head{display:flex;flex-direction:column;gap:10px}
+.head h1{font-family:var(--f-display);font-weight:600;font-size:clamp(28px,4.2vw,40px);line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+.head p{margin:0;max-width:68ch;color:var(--ink-2)}
+.beta{font-family:var(--f-ui);font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;border:1.5px solid var(--ink);border-radius:5px;padding:2px 8px;vertical-align:middle;position:relative;top:-5px;margin-left:8px;white-space:nowrap}
+.head p.betanote{font-size:13.5px;color:var(--ink-3)}
+.asof{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--ink-2)}
+.live{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:2px 10px;background:var(--surface);font-weight:600;font-size:12px}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--st-none)}
+.live.on i{background:var(--st-progress)}
+
+/* summary ledger */
+.ledger{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:14px}
+.ledger-top{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center}
+.hero{display:flex;align-items:center;gap:18px;min-width:0;flex:1 1 380px}
+.hero-n{font-family:var(--f-display);font-weight:600;font-size:clamp(60px,10vw,92px);line-height:.9;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.hero-t{display:flex;flex-direction:column;gap:5px;min-width:0}
+.hero-t b{font-size:19px;line-height:1.25}
+.hero-t span{font-size:13.5px;color:var(--ink-2);max-width:44ch}
+.hero-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 30px;flex:1 1 340px}
+.stat{display:flex;flex-direction:column;gap:2px;min-width:0}
+.stat b{font-family:var(--f-display);font-weight:600;font-size:26px;line-height:1.05;font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2)}
+.ledger-top .big{font-family:var(--f-display);font-size:26px;font-weight:600;line-height:1.1}
+.ledger-top .fact{font-size:13.5px;color:var(--ink-2)}
+.ledger-top .fact b{color:var(--ink);font-variant-numeric:tabular-nums}
+.stack{display:flex;gap:3px;height:34px;width:100%}
+.stack button{border:0;padding:0;height:100%;min-width:10px;cursor:pointer;border-radius:2px}
+.stack button.fill-pending{border:1.5px dotted var(--st-none)}
+.stack button:first-child{border-radius:7px 2px 2px 7px}.stack button:last-child{border-radius:2px 7px 7px 2px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 8px}
+.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 11px;font-size:13px;cursor:pointer;color:var(--ink)}
+.chip b{font-variant-numeric:tabular-nums;font-weight:600}
+.chip[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.chip:hover{background:var(--surface-2)}
+
+/* stage marks: one hue runs light to dark as action firms up; blocked and diverged get their own hue and shape */
+.gl{display:inline-block;width:11px;height:11px;border-radius:3px;flex:none;background:var(--st-none)}
+.gl-completed,.fill-completed{background:var(--st-completed)}
+.gl-implemented,.fill-implemented{background:var(--st-implemented)}
+.gl-in_progress,.fill-in_progress{background:var(--st-progress)}
+.gl-proposed,.fill-proposed{background:var(--st-proposed);box-shadow:inset 0 0 0 1.5px var(--st-progress)}
+.gl-blocked,.fill-blocked{background:repeating-linear-gradient(135deg,var(--st-blocked) 0 3px,transparent 3px 5px);box-shadow:inset 0 0 0 1.5px var(--st-blocked)}
+.gl-diverged{background:var(--st-diverged);transform:rotate(45deg);border-radius:2px;width:9px;height:9px;margin:1px}
+.fill-diverged{background:var(--st-diverged)}
+.gl-not_started,.fill-not_started{background:transparent;box-shadow:inset 0 0 0 1.5px var(--st-none)}
+.gl-pending,.fill-pending{background:transparent;box-shadow:none;border:1.5px dotted var(--st-none)}
+
+/* toolbar */
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.tabs{display:flex;flex-wrap:wrap;gap:2px;background:var(--surface-2);border-radius:9px;padding:3px}
+.tabs button{border:0;background:transparent;padding:7px 14px;border-radius:7px;cursor:pointer;font-weight:600;font-size:14px;color:var(--ink-2)}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;flex:1 1 320px;min-width:0}
+.filters input[type=search]{flex:1 1 200px;min-width:0}
+input[type=search],select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+select{max-width:100%}
+.filters select{flex:0 1 auto;max-width:230px}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 13px;cursor:pointer;font-weight:600;font-size:14px}
+.btn:hover{background:var(--surface-2)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.small{padding:4px 10px;font-size:13px}
+.count{font-size:13px;color:var(--ink-3)}
+
+/* panels */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;min-width:0}
+.empty{padding:36px 20px;text-align:center;color:var(--ink-3)}
+
+/* timeline */
+.tl-scroll{overflow-x:auto;border-radius:10px}
+.tl-inner{min-width:980px;position:relative;--label-w:340px}
+.tl-row{display:grid;grid-template-columns:var(--label-w) minmax(0,1fr);border-top:1px solid var(--line-2)}
+.tl-row:first-child{border-top:0}
+.tl-label{position:sticky;left:0;z-index:3;background:var(--surface);padding:7px 12px 7px 16px;display:flex;gap:9px;align-items:flex-start;min-width:0;border-right:1px solid var(--line)}
+.tl-track{position:relative;min-height:40px;background-image:
+  repeating-linear-gradient(to right,var(--line) 0 1px,transparent 1px calc(100% / 5)),
+  repeating-linear-gradient(to right,var(--line-2) 0 1px,transparent 1px calc(100% / 20))}
+.tl-axis .tl-label{font-size:12px;color:var(--ink-3);align-items:center}
+.tl-axis .tl-track{min-height:30px;background-image:none}
+.tl-axis .yr{position:absolute;top:7px;font-size:12px;font-weight:600;color:var(--ink-2);padding-left:6px;border-left:1px solid var(--line);height:16px;line-height:16px;font-variant-numeric:tabular-nums}
+.tl-today{position:absolute;top:0;bottom:0;width:0;border-left:1.5px solid var(--ink);z-index:2;pointer-events:none;left:calc(var(--label-w) + (100% - var(--label-w)) * var(--x))}
+.tl-today span{position:absolute;top:2px;left:5px;font-size:11px;font-weight:600;background:var(--ink);color:var(--surface);padding:0 5px;border-radius:3px;white-space:nowrap}
+.tl-term{position:absolute;top:31px;bottom:0;z-index:1;pointer-events:none;left:calc(var(--label-w) + (100% - var(--label-w)) * var(--x));right:0;background:repeating-linear-gradient(135deg,transparent 0 6px,var(--line-2) 6px 7px);border-left:1px dashed var(--ink-3)}
+.tl-axis .termlab{position:absolute;top:8px;margin-left:50px;font-size:11.5px;color:var(--ink-3);white-space:nowrap}
+.tl-ch{cursor:pointer;background:var(--surface)}
+.tl-ch .tl-label{background:var(--surface-2);font-weight:600;align-items:center}
+.tl-ch .tl-track{background-color:var(--surface-2)}
+.tl-ch .num{font-family:var(--f-mono);font-size:12px;color:var(--ink-3);width:20px;flex:none}
+.tl-ch .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tl-ch .ct{font-size:12px;color:var(--ink-3);font-weight:500;flex:none}
+.caret{width:0;height:0;border-left:5px solid var(--ink-2);border-top:4px solid transparent;border-bottom:4px solid transparent;flex:none;transition:transform .12s}
+.open>.tl-label .caret,.open>.caret{transform:rotate(90deg)}
+.tick{position:absolute;top:10px;bottom:10px;width:2.5px;margin-left:-1px;background:var(--ink-3);opacity:.55;border-radius:1px}
+.tl-item{cursor:pointer}
+.tl-item:hover .tl-label,.tl-item:hover .tl-track{background-color:var(--surface-2)}
+.tl-item .gl{margin-top:5px}
+.tl-item .t{font-size:13.5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-width:0}
+.sp-bar{position:absolute;top:50%;height:11px;margin-top:-5.5px;border-radius:5px;min-width:3px}
+.sp-ev{position:absolute;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 2px var(--surface)}
+.sp-ev.court{border-radius:1px;transform:rotate(45deg);width:11px;height:11px;margin:-5.5px 0 0 -5.5px}
+.sp-ev.news,.sp-ev.tracker{background:var(--surface);box-shadow:inset 0 0 0 2px var(--ink),0 0 0 2px var(--surface)}
+.sp-proj{position:absolute;top:50%;height:0;border-top:2px dashed var(--ink-3)}
+.sp-win{position:absolute;top:50%;height:18px;margin-top:-9px;border:1.5px dashed var(--ink-2);border-radius:4px;background:repeating-linear-gradient(135deg,transparent 0 4px,var(--line) 4px 5px)}
+.sp-note{position:absolute;top:50%;transform:translateY(-50%);font-size:11.5px;color:var(--ink-3);white-space:nowrap;padding-left:8px}
+.tl-key{display:flex;flex-wrap:wrap;gap:6px 18px;padding:12px 16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-2)}
+.tl-key span{display:inline-flex;align-items:center;gap:7px}
+.tl-key i{position:static;display:inline-block;margin:0;transform:none}
+.tl-key i.sp-ev.court{transform:rotate(45deg)}
+.tl-key i.sp-proj{width:22px}.tl-key i.sp-win{width:22px}.tl-key i.sp-bar{width:22px}
+
+/* list */
+.ch-head{display:flex;gap:10px;align-items:center;padding:11px 16px;background:var(--surface-2);cursor:pointer;border-top:1px solid var(--line)}
+.ch-block:first-child .ch-head{border-top:0;border-radius:10px 10px 0 0}
+.ch-head .num{font-family:var(--f-mono);font-size:12px;color:var(--ink-3);width:20px;flex:none}
+.ch-head .nm{font-weight:600;flex:1;min-width:0}
+.ch-head .meta{font-size:12.5px;color:var(--ink-3);flex:none;font-variant-numeric:tabular-nums}
+.mini{display:flex;gap:1px;height:12px;width:110px;flex:none}
+.mini i{display:block;height:100%;border-radius:1px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 150px 120px 104px;gap:14px;align-items:center;padding:10px 16px;border-top:1px solid var(--line-2);cursor:pointer}
+.row:hover{background:var(--surface-2)}
+.row .main{display:flex;gap:9px;align-items:flex-start;min-width:0}
+.row .main .gl{margin-top:5px}
+.row .t{font-size:14.5px;line-height:1.35;min-width:0;overflow-wrap:anywhere}
+.row .sub{font-size:12.5px;color:var(--ink-3);margin-top:1px}
+.meter{display:flex;align-items:center;gap:8px;min-width:0}
+.meter .trk{flex:1;height:9px;border-radius:4.5px;background:var(--surface-2);overflow:hidden;min-width:30px}
+.meter .trk i{display:block;height:100%;border-radius:4.5px}
+.meter .v{font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--ink-2);width:64px;flex:none}
+.conf{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-2);white-space:nowrap}
+.conf .pips{display:inline-flex;gap:2px}
+.conf .pips i{width:5px;height:11px;border-radius:1px;background:var(--line)}
+.conf .pips i.on{background:var(--ink-2)}
+.win{font-size:12.5px;color:var(--ink-2)}
+@media (max-width:820px){
+  .row{grid-template-columns:minmax(0,1fr) 96px}
+  .row .c-conf,.row .c-win{display:none}
+  .meter .v{width:52px}
+  .row{gap:10px}
+  .tl-inner{--label-w:176px;min-width:820px}
+  .tl-label{padding-left:10px}
+  .mini{display:none}
+}
+
+/* sheet */
+dialog.sheet{margin:0 0 0 auto;height:100%;max-height:100%;width:min(660px,100%);max-width:100%;border:0;padding:0;background:var(--surface);color:var(--ink);box-shadow:-8px 0 30px rgba(0,0,0,.18)}
+dialog.sheet[open]{display:flex;flex-direction:column}
+dialog.sheet::backdrop{background:var(--shade)}
+.sh-head{position:sticky;top:0;background:var(--surface);z-index:2;display:flex;gap:12px;align-items:flex-start;padding:calc(14px + env(safe-area-inset-top,0px)) 20px 12px;border-bottom:1px solid var(--line)}
+.sh-head .k{flex:1;min-width:0;font-size:12.5px;color:var(--ink-3)}
+.sh-body{padding:18px 20px 40px;display:flex;flex-direction:column;gap:20px;flex:1 0 auto}
+.sh-body h2{font-family:var(--f-display);font-weight:600;font-size:24px;line-height:1.2;margin:0;text-wrap:balance}
+.sh-body h3{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin:0 0 6px}
+.sh-body p{margin:0;max-width:66ch;overflow-wrap:anywhere}
+.sh-body ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
+.sh-body li,.sh-body p,.sh-body div{overflow-wrap:anywhere;min-width:0}
+.statline{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:13px;font-weight:600;background:var(--surface)}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:5px;padding:1px 7px;font-size:12px;color:var(--ink-2);background:var(--surface-2)}
+.box{border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:var(--bg);display:flex;flex-direction:column;gap:6px}
+.inf{font-weight:700}
+.events{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0}
+.events li{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;padding:9px 0;border-top:1px solid var(--line-2)}
+.events li:first-child{border-top:0}
+.events .d{font-family:var(--f-mono);font-size:12.5px;color:var(--ink-2);padding-top:2px}
+.events .s{font-size:12.5px;color:var(--ink-3);margin-top:3px;overflow-wrap:anywhere}
+.srcs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.srcs li{overflow-wrap:anywhere}
+.srcs .s{font-size:12.5px;color:var(--ink-3)}
+.chk{font-size:12px;font-weight:600;border-radius:4px;padding:0 6px;border:1px solid var(--line);white-space:nowrap}
+
+/* prose views */
+.prose{padding:22px 24px;display:flex;flex-direction:column;gap:18px}
+.prose h2{font-family:var(--f-display);font-size:21px;font-weight:600;margin:0}
+.prose p,.prose li{max-width:70ch}
+.prose p{margin:0}
+.prose ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.tbl-wrap{overflow-x:auto}
+table{border-collapse:collapse;font-size:14px;min-width:520px}
+th,td{text-align:left;padding:7px 12px 7px 0;border-bottom:1px solid var(--line-2);vertical-align:top}
+th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.run{padding:16px 0;border-top:1px solid var(--line-2);display:flex;flex-direction:column;gap:8px}
+.run:first-of-type{border-top:0;padding-top:0}
+.run h3{margin:0;font-size:16px}
+.form{display:flex;flex-direction:column;gap:10px;max-width:640px}
+.form textarea{min-height:88px;resize:vertical;width:100%}
+.form .line{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.msg{font-size:13.5px;color:var(--ink-2)}
+.req{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line-2)}
+.req .tx{flex:1;min-width:0;overflow-wrap:anywhere}
+.support{margin-left:auto}.support a.btn{text-decoration:none;display:inline-block}
+.asof{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.ch-head .meta .sub{display:block;font-size:11.5px;color:var(--ink-3);font-weight:400;white-space:normal}
+.ch-head .meta{text-align:right;max-width:46%;min-width:0}
+@media (max-width:640px){.ch-head{flex-wrap:wrap}.ch-head .meta{flex:1 0 100%;max-width:none;text-align:left;padding-left:30px}}
+.foot{margin:28px 0 12px;font-size:12.5px;color:var(--ink-3);line-height:1.5}
+.wline{font-size:13px;color:var(--ink-2);margin-top:2px}.wline b{font-variant-numeric:tabular-nums;color:var(--ink)}
+.linkbtn{background:none;border:0;padding:0;margin:0;color:var(--accent);text-decoration:underline;text-underline-offset:2px;cursor:pointer;font:inherit}
+.tag.court{border-color:var(--st-blocked);color:var(--st-blocked)}
+.ch-sum{padding:10px 16px 12px 46px;font-size:13.5px;color:var(--ink-2);background:var(--surface);border-top:1px solid var(--line-2);max-width:none}
+.ch-sum p{margin:0;max-width:80ch}
+.sigbar{display:inline-flex;gap:3px;vertical-align:middle;margin-right:6px}.sigbar i{width:6px;height:11px;border-radius:1px;background:var(--line)}.sigbar i.on{background:var(--ink-2)}
+.dual{flex:1 0 100%;display:flex;align-items:center;gap:16px;border-top:1px solid var(--line-2);padding-top:14px;min-width:0}
+.dual-n{font-family:var(--f-display);font-weight:600;font-size:40px;line-height:1;font-variant-numeric:tabular-nums;flex:none}
+.dual-t{display:flex;flex-direction:column;gap:3px;min-width:0}
+.dual-t b{font-size:15.5px;line-height:1.3}
+.dual-t span{font-size:13px;color:var(--ink-2);max-width:86ch}
+.prev{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;border:1.5px dashed var(--ink-3);border-radius:10px;padding:10px 14px;background:var(--surface);font-size:13.5px;color:var(--ink-2)}
+.prev b{color:var(--ink)}
+.prev span{flex:1 1 300px;min-width:0}
+.tag.l3{margin-left:8px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="head">
+    <div class="eyebrow">Mandate for Leadership (2023) against the federal record</div>
+    <h1>Project 2025: Mandate for Leadership Tracker <span class="beta">Beta</span></h1>
+    <p>What the Heritage Foundation's 2023 policy document recommends, and what the federal government has done since January 20, 2025. Each objective shows its status, the evidence, what would still have to happen, and a confidence rating from an independent review.</p>
+    <p class="betanote">Beta. Sources are still being verified, and every objective carries its own confidence rating. Corrections and missing objectives are welcome in the thread where you found this link.</p>
+    <div class="asof">
+      <span class="live" id="live"><i></i><span id="live-t">Snapshot</span></span>
+      <span id="asof">Loading the record</span>
+      <span id="support" class="support"></span>
+    </div>
+  </header>
+
+  <section class="ledger" aria-label="Summary">
+    <div class="ledger-top" id="ledger-top"></div>
+    <div class="stack" id="stack" role="group" aria-label="Objectives by status"></div>
+    <div class="legend" id="legend"></div>
+  </section>
+
+  <div class="bar">
+    <div class="tabs" role="tablist" id="tabs">
+      <button role="tab" data-view="timeline" aria-selected="true">Timeline</button>
+      <button role="tab" data-view="list" aria-selected="false">By chapter</button>
+      <button role="tab" data-view="changes" aria-selected="false">Changes</button>
+      <button role="tab" data-view="method" aria-selected="false">Method</button>
+      <button role="tab" data-view="manage" aria-selected="false" id="tab-manage" hidden>Requirements</button>
+    </div>
+    <div class="filters" id="filters">
+      <input type="search" id="q" placeholder="Search objectives, agencies, actions" aria-label="Search">
+      <select id="f-section" aria-label="Section"></select>
+      <select id="f-conf" aria-label="Confidence">
+        <option value="">Any confidence</option><option value="high">High confidence</option><option value="medium">Medium confidence</option><option value="low">Low or unverified</option>
+      </select>
+      <select id="f-congress" aria-label="Needs Congress">
+        <option value="">Any route</option><option value="no">Executive branch alone</option><option value="partial">Partly needs Congress</option><option value="yes">Needs Congress</option>
+      </select>
+      <button class="btn small" id="clear" hidden>Clear filters</button>
+    </div>
+  </div>
+  <div class="count" id="count"></div>
+
+  <main id="main"><div class="panel empty">Loading the record</div></main>
+  <footer class="foot" id="foot"></footer>
+</div>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sh-title">
+  <div class="sh-head"><div class="k" id="sh-k"></div><button class="btn small" id="sh-close">Close</button></div>
+  <div class="sh-body" id="sh-body"></div>
+</dialog>
+
+<script>
+(function(){
+'use strict';
+var T0=Date.UTC(2025,0,1), T1=Date.UTC(2030,0,1), TERM_END=Date.UTC(2029,0,20);
+var ARCHIVE='https://archive.org/details/2025_MandateForLeadership_FULL';
+var SUPPORT_URL='';  /* set to the project's donation page once a creator account exists; meta.support_url in the live record overrides it */
+var SHOW_NO_ADS=false;  /* when true, the footer and Method tab state "No ads, no tracking"; meta.show_no_ads in the live record overrides it */
+function showNoAds(){ var m=S.meta||{}; return typeof m.show_no_ads==='boolean'?m.show_no_ads:SHOW_NO_ADS; }
+var REPO_URL='https://github.com/bubbadog/project-2025-tracker';
+function renderFoot(){ var el=document.getElementById('foot'); if(!el) return; el.textContent='';
+  el.appendChild(document.createTextNode('Independent, non-partisan public-interest project, not affiliated with the Heritage Foundation or any campaign, party, or government body. Compiled from public sources by AI research with linked evidence and independent AI review. May contain errors; corrections are welcome.'+(showNoAds()?' No ads, no tracking.':'')+' '));
+  el.appendChild(link(REPO_URL,'Source code and data on GitHub')); el.appendChild(document.createTextNode(' (code Apache-2.0, data CC BY 4.0). ')); el.appendChild(link(REPO_URL+'/issues/new/choose','Report an error')); el.appendChild(document.createTextNode('.')); }
+function supportUrl(){ return safeUrl(S.meta&&S.meta.support_url)||safeUrl(SUPPORT_URL); }
+function renderSupport(){ var el=document.getElementById('support'); if(!el) return; el.textContent=''; var u=supportUrl(); if(!u) return;
+  el.appendChild(h('a',{class:'btn small',href:u,target:'_blank',rel:'noopener noreferrer',text:'Support the project'})); }
+var STAGES=[
+  {k:'completed',label:'Completed',desc:'Done as the document specified and in effect.'},
+  {k:'implemented',label:'Implemented',desc:'Operative in substance through executive or agency action, but reversible or short of the full recommendation.'},
+  {k:'in_progress',label:'In progress',desc:'Formally underway and partly operative.'},
+  {k:'proposed',label:'Proposed',desc:'Announced, proposed, or introduced, with nothing operative yet.'},
+  {k:'blocked',label:'Blocked',desc:'Enjoined, vacated, or stalled. Progress shown is what was reached before the block.'},
+  {k:'diverged',label:'Diverged',desc:'The administration did something materially different from the recommendation.'},
+  {k:'not_started',label:'No action found',desc:'Research found no qualifying government action.'},
+  {k:'pending',label:'Research pending',desc:'Not yet researched well enough to assign a status.'}
+];
+var STAGE=Object.create(null); STAGES.forEach(function(s,i){s.i=i;STAGE[s.k]=s;});
+var SECTIONS=[
+  {k:'0',name:'Foreword',ch:['00']},
+  {k:'1',name:'Section 1: Taking the Reins of Government',ch:['01','02','03']},
+  {k:'2',name:'Section 2: The Common Defense',ch:['04','05','06','07','08','09']},
+  {k:'3',name:'Section 3: The General Welfare',ch:['10','11','12','13','14','15','16','17','18','19','20']},
+  {k:'4',name:'Section 4: The Economy',ch:['21','22','23','24','25','26']},
+  {k:'5',name:'Section 5: Independent Regulatory Agencies',ch:['27','28','29','30']}
+];
+var CH=Object.create(null); SECTIONS.forEach(function(s){ s.ch.forEach(function(n){ CH[n]=1; }); });
+var S={snap:Object.create(null),live:Object.create(null),liveOn:false,chapters:[],meta:{},runs:[],requests:[],view:'timeline',
+  f:{q:'',stages:{},section:'',conf:'',congress:''},open:{},openF:{},draft:'',loadError:false,reqSub:false,canWrite:false,db:null,sel:null,msg:'',l3prev:true};
+
+/* ---------- helpers ---------- */
+function h(tag,attrs){
+  var el=document.createElement(tag),i,k;
+  if(attrs){for(k in attrs){ if(attrs[k]==null||attrs[k]===false) continue;
+    if(k==='class') el.className=attrs[k];
+    else if(k==='text') el.textContent=attrs[k];
+    else if(k.slice(0,2)==='on') el.addEventListener(k.slice(2),attrs[k]);
+    else if(k==='style') el.setAttribute('style',attrs[k]);
+    else el.setAttribute(k,attrs[k]===true?'':attrs[k]); }}
+  for(i=2;i<arguments.length;i++){var c=arguments[i]; if(c==null||c===false) continue;
+    if(Array.isArray(c)) c.forEach(function(x){ if(x!=null&&x!==false) el.appendChild(typeof x==='string'?document.createTextNode(x):x); });
+    else el.appendChild(typeof c==='string'||typeof c==='number'?document.createTextNode(String(c)):c); }
+  return el;
+}
+function safeUrl(u){ return (typeof u==='string' && /^https?:\/\//i.test(u)) ? u : null; }
+function link(u,text){ var s=safeUrl(u); if(!s) return h('span',{text:text||''}); return h('a',{href:s,target:'_blank',rel:'noopener noreferrer',text:text||host(s)}); }
+function host(u){ try{ return new URL(u).hostname.replace(/^www\./,''); }catch(e){ return 'source'; } }
+function ms(d){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(d||'')); return m?Date.UTC(+m[1],+m[2]-1,+m[3]):NaN; }
+function x(t){ return Math.max(0,Math.min(1,(t-T0)/(T1-T0))); }
+function pct(v){ return (v*100).toFixed(3)+'%'; }
+var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmtDate(d){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(d||'')); return m?(MON[+m[2]-1]+' '+(+m[3])+', '+m[1]):String(d||''); }
+function arr(v){ return Array.isArray(v)?v:[]; }
+function str(v){ return v==null?'':String(v); }
+function objs(a){ return arr(a).filter(function(o){ return o&&typeof o==='object'; }); }
+function prog(v){ v=+v; return isFinite(v)?Math.max(0,Math.min(100,Math.round(v))):0; }
+function norm(o){
+  if(!o||typeof o!=='object') return null;
+  var c={},k; for(k in o) c[k]=o[k];
+  c.id=str(c.id); if(!/^c\d\d-\d\d[\w-]{0,8}$/.test(c.id)) return null;
+  c.chapter=str(c.chapter); if(!CH[c.chapter]) return null;
+  c.timeline=objs(c.timeline); c.sources=objs(c.sources); c.history=objs(c.history);
+  c.remaining=arr(c.remaining); c.blockers=arr(c.blockers); c.pages=arr(c.pages);
+  c.est_completion=(c.est_completion&&typeof c.est_completion==='object')?c.est_completion:{};
+  c.durability=(c.durability&&typeof c.durability==='object')?c.durability:{};
+  c.review=(c.review&&typeof c.review==='object')?c.review:null;
+  c.progress=prog(c.progress);
+  if(typeof c.confidence!=='number'||!isFinite(c.confidence)) delete c.confidence;
+  return c;
+}
+function winRange(w){
+  var m; w=str(w);
+  if((m=/^(\d{4})-Q([1-4])$/.exec(w))) return [Date.UTC(+m[1],(+m[2]-1)*3,1),Date.UTC(+m[1],(+m[2])*3,1)];
+  if((m=/^(\d{4})-H([12])$/.exec(w))) return [Date.UTC(+m[1],(+m[2]-1)*6,1),Date.UTC(+m[1],(+m[2])*6,1)];
+  if((m=/^(\d{4})$/.exec(w))) return [Date.UTC(+m[1],0,1),Date.UTC(+m[1]+1,0,1)];
+  return null;
+}
+function fmtWin(w){
+  var m; w=str(w);
+  if(/^done/i.test(w)) return 'Done';
+  if(w==='unknown'||!w) return 'Timing unknown';
+  if(/unlikely/i.test(w)) return 'Unlikely this term';
+  if((m=/^(\d{4})-Q([1-4])$/.exec(w))) return 'Q'+m[2]+' '+m[1];
+  if((m=/^(\d{4})-H([12])$/.exec(w))) return (m[2]==='1'?'First':'Second')+' half '+m[1];
+  return w;
+}
+function confLabel(it){
+  var l=str(it.confidence_label).toLowerCase();
+  if(l==='high'||l==='medium'||l==='low'||l==='unverified') return l;
+  var c=typeof it.confidence==='number'?it.confidence:null;
+  if(c==null) return '';
+  return c>=80?'high':c>=55?'medium':c>20?'low':'unverified';
+}
+function confEl(it){
+  var l=confLabel(it);
+  if(!l) return h('span',{class:'conf muted',text:'Not reviewed'});
+  var n=l==='high'?3:l==='medium'?2:l==='low'?1:0;
+  var pips=h('span',{class:'pips','aria-hidden':'true'}); for(var i=0;i<3;i++) pips.appendChild(h('i',{class:i<n?'on':''}));
+  var name=l.charAt(0).toUpperCase()+l.slice(1);
+  return h('span',{class:'conf',title:'Reviewer confidence that the status is accurate'},pips,name+(typeof it.confidence==='number'?' '+Math.round(it.confidence):''));
+}
+function stageOf(it){ return STAGE[it.stage]?it.stage:'pending'; }
+function courtTag(it){ var c=it.court_status; if(!c||typeof c!=='object') return null; var st=str(c.state); if(st!=='enjoined'&&st!=='stayed'&&st!=='vacated') return null;
+  return h('span',{class:'tag court',style:'margin-left:8px',title:'Latest court event in the timeline',text:'Court: '+st+(c.date?' '+fmtDate(c.date):'')}); }
+function sigEl(it){ var g=it.significance; if(!g||typeof g!=='object'||typeof g.weight!=='number') return null;
+  var w=g.weight, n=w<=1.5?1:w<=2.25?2:3, bar=h('span',{class:'sigbar','aria-hidden':'true'}); for(var i=0;i<3;i++) bar.appendChild(h('i',{class:i<n?'on':''}));
+  return h('span',{class:'tag',title:'Significance weight, 1 to 3 (reach, magnitude, breadth of government, fiscal scale)'},bar,'Significance '+w.toFixed(2)+' of 3'); }
+function chTitle(num){ for(var i=0;i<S.chapters.length;i++) if(S.chapters[i].num===num) return S.chapters[i].title; return 'Chapter '+num; }
+function secOf(num){ for(var i=0;i<SECTIONS.length;i++) if(SECTIONS[i].ch.indexOf(num)>=0) return SECTIONS[i].k; return ''; }
+
+/* ---------- data ---------- */
+function allItems(){
+  var out=[],k;
+  for(k in S.snap) out.push(S.live[k]||S.snap[k]);
+  for(k in S.live) if(!S.snap[k]) out.push(S.live[k]);
+  out.sort(function(a,b){ return str(a.id)<str(b.id)?-1:1; });
+  return out;
+}
+/* One headline. It counts every tracked recommendation except Foreword items (chapter 00) and any record that
+   restates objectives tracked elsewhere; those stay listed but are not counted, so one action is not counted twice. */
+function notCounted(i){ return str(i.chapter)==='00' || arr(i.restates_ids).length>0; }
+function shown(i){ return i.tracked!==false; }
+function tracked(){ return allItems().filter(shown); }
+function counted(){ return tracked().filter(function(i){ return !notCounted(i); }); }
+function l3Tag(it){ if(!notCounted(it)) return null;
+  return h('span',{class:'tag l3',title:'Listed for completeness. The chapters cover the same ground, so it is left out of the headline and one action is not counted twice.',text:str(it.chapter)==='00'?'Not counted: Foreword item covered in the chapters':'Not counted: restates chapter objectives'}); }
+function sigShares(){ var c=counted(), w=0, we=0, n=0, ne=0, wn=0;
+  c.forEach(function(it){ var g=it.significance, st=stageOf(it), eff=(st==='completed'||st==='implemented'); n++; if(eff) ne++;
+    if(g&&typeof g.weight==='number'){ wn++; w+=g.weight; if(eff) we+=g.weight; } });
+  return {n:n, wn:wn, weighted:w?we/w*100:null, unweighted:n?ne/n*100:null}; }
+function hiddenCount(){ return 0; }
+function goMethod(anchor){ setView('method'); setTimeout(function(){ var el=document.getElementById(anchor); if(el){ try{ el.scrollIntoView({block:'start'}); }catch(e){} } },80); }
+function passes(it){
+  var f=S.f, st=stageOf(it), any=false, k;
+  for(k in f.stages) if(f.stages[k]) any=true;
+  if(any && !f.stages[st]) return false;
+  if(f.section && secOf(str(it.chapter))!==f.section) return false;
+  if(f.congress && str(it.requires_congress)!==f.congress) return false;
+  if(f.conf){ var l=confLabel(it); if(f.conf==='low'){ if(l==='high'||l==='medium') return false; } else if(l!==f.conf) return false; }
+  if(f.q){ var q=f.q.toLowerCase();
+    var hay=[it.id,it.title,it.agency,it.proposal,it.status_summary,chTitle(str(it.chapter))].map(str).join(' ').toLowerCase();
+    if(hay.indexOf(q)<0) return false; }
+  return true;
+}
+function filtersOn(){ var f=S.f,k; if(f.q||f.section||f.conf||f.congress) return true; for(k in f.stages) if(f.stages[k]) return true; return false; }
+
+/* ---------- summary ---------- */
+function renderSummary(){
+  var items=counted(), n=items.length, counts={}, sum=0, sumN=0, confs=[], rev=0;
+  STAGES.forEach(function(s){counts[s.k]=0;});
+  items.forEach(function(it){ var st=stageOf(it); counts[st]++; if(st!=='pending'){ sum+=prog(it.progress); sumN++; }
+    if(typeof it.confidence==='number'){ confs.push(it.confidence); rev++; } });
+  confs.sort(function(a,b){return a-b;});
+  var med=confs.length?(confs.length%2?confs[(confs.length-1)/2]:(confs[confs.length/2-1]+confs[confs.length/2])/2):null;
+  var top=document.getElementById('ledger-top'); top.textContent='';
+  if(!n){ document.getElementById('stack').textContent=''; document.getElementById('legend').textContent='';
+    top.appendChild(h('div',{class:'stat'},h('span',{text:S.loadError?'The record could not be loaded. Reload the page to try again.':'Loading the record'})));
+    document.getElementById('asof').textContent=''; return; }
+  var op=counts.completed+counts.implemented, under=counts.in_progress+counts.proposed, off=counts.not_started+counts.diverged+counts.blocked;
+  function share(v){ return n?Math.round(v/n*100):0; }
+  top.appendChild(h('div',{class:'hero'},h('div',{class:'hero-n',text:share(op)+'%'}),
+    h('div',{class:'hero-t'},h('b',{text:'of '+n+' tracked objectives are now in effect'}),
+      h('span',{text:op+' are implemented or completed. The count covers every recommendation tracked so far. Chapters are still being read in full, so it will grow.'}),
+      (function(){ var sh=sigShares(); if(sh.weighted==null) return null;
+        var d=h('div',{class:'wline'}), bd=(S.meta&&S.meta.significance&&S.meta.significance.band_5_95); d.appendChild(document.createTextNode('Weighted by significance: ')); d.appendChild(h('b',{text:Math.round(sh.weighted)+'%'})); d.appendChild(document.createTextNode((Array.isArray(bd)&&bd.length===2&&isFinite(+bd[0])&&isFinite(+bd[1]))?' (range '+(+bd[0]).toFixed(1)+' to '+(+bd[1]).toFixed(1)+'). ':'. '));
+        d.appendChild(h('button',{class:'linkbtn',type:'button',text:'How the weights work',onclick:function(){goMethod('sig-method');}})); return d; })())));
+  var side=h('div',{class:'hero-side'});
+  side.appendChild(h('div',{class:'stat'},h('b',{text:share(under)+'%'}),h('span',{text:'underway ('+under+')'})));
+  side.appendChild(h('div',{class:'stat'},h('b',{text:share(off)+'%'}),h('span',{text:'blocked, diverged, or no action found ('+off+')'})));
+  if(sumN) side.appendChild(h('div',{class:'stat',title:'Unweighted mean of the rubric score for each researched objective. Objectives differ in importance, so read it as a rough gauge.'},h('b',{text:Math.round(sum/sumN)+'%'}),h('span',{text:'overall progress score (unweighted average)'})));
+  if(med!=null) side.appendChild(h('div',{class:'stat'},h('b',{text:String(Math.round(med))}),h('span',{text:'median reviewer confidence, out of 100'})));
+  top.appendChild(side);
+  var stack=document.getElementById('stack'), leg=document.getElementById('legend'); stack.textContent=''; leg.textContent='';
+  STAGES.forEach(function(s){
+    if(counts[s.k]){ stack.appendChild(h('button',{class:'fill-'+s.k,'data-key':'seg-'+s.k,style:'flex:'+counts[s.k]+' 1 0',title:s.label+': '+counts[s.k],'aria-label':s.label+': '+counts[s.k]+'. Filter.',onclick:function(){toggleStage(s.k);}})); }
+    if(s.k==='pending' && !counts[s.k] && !S.f.stages[s.k]) return;
+    leg.appendChild(h('button',{class:'chip','data-key':'chip-'+s.k,'aria-pressed':S.f.stages[s.k]?'true':'false',title:s.desc,onclick:function(){toggleStage(s.k);}},h('span',{class:'gl gl-'+s.k,'aria-hidden':'true'}),s.label+' ',h('b',{text:String(counts[s.k])})));
+  });
+  var a=document.getElementById('asof'); a.textContent='';
+  var asof=S.meta.as_of?('Evidence checked through '+fmtDate(S.meta.as_of)+'.'):'';
+  a.appendChild(document.createTextNode(asof+' Tracks alignment with the document, not causation.'));
+  var lv=document.getElementById('live'); lv.className='live'+(S.liveOn?' on':''); document.getElementById('live-t').textContent=S.liveOn?'Live record':'Snapshot';
+}
+function toggleStage(k){ S.f.stages[k]=!S.f.stages[k]; render(); }
+
+/* ---------- timeline ---------- */
+function evMarks(track,it){
+  var evs=arr(it.timeline).map(function(e){return {t:ms(e.date),e:e};}).filter(function(o){return !isNaN(o.t);}).sort(function(a,b){return a.t-b.t;});
+  var st=stageOf(it), now=Date.now(), last=null;
+  if(evs.length){
+    var a=Math.max(evs[0].t,T0), b=evs[evs.length-1].t; last=b;
+    if(b>a && st!=='not_started' && st!=='pending') track.appendChild(h('span',{class:'sp-bar fill-'+st,style:'left:'+pct(x(a))+';width:'+pct(x(b)-x(a))}));
+  }
+  var w=str(it.est_completion&&it.est_completion.window), r=winRange(w), from=Math.max(last||now,Math.min(now,T1));
+  if(r && r[1]>from){
+    var ws=Math.max(r[0],from);
+    if(ws>from) track.appendChild(h('span',{class:'sp-proj',style:'left:'+pct(x(from))+';width:'+pct(x(ws)-x(from))}));
+    track.appendChild(h('span',{class:'sp-win',title:'Estimated window (inference): '+fmtWin(w),style:'left:'+pct(x(ws))+';width:'+pct(Math.max(x(r[1])-x(ws),0.006))}));
+  } else if(r && st!=='completed'){
+    track.appendChild(h('span',{class:'sp-note',style:'left:'+pct(x(from)),text:'past its estimated window'}));
+  } else if(/unlikely/i.test(w)){
+    track.appendChild(h('span',{class:'sp-proj',style:'left:'+pct(x(from))+';width:'+pct(x(TERM_END)-x(from))}));
+    track.appendChild(h('span',{class:'sp-note',style:'left:'+pct(x(from)),text:'unlikely this term'}));
+  } else if(!/^done/i.test(w) && st!=='completed'){
+    track.appendChild(h('span',{class:'sp-note',style:'left:'+pct(x(from)),text:evs.length?'timing unknown':(st==='pending'?'research pending':'no dated action')}));
+  }
+  evs.forEach(function(o){ if(o.t<T0) return; var kind=str(o.e.kind);
+    track.appendChild(h('span',{class:'sp-ev '+(kind==='court'?'court':kind==='news'||kind==='tracker'?'news':''),style:'left:'+pct(x(o.t)),title:fmtDate(o.e.date)+': '+str(o.e.event)})); });
+}
+function renderTimeline(main,items){
+  var panel=h('div',{class:'panel'}), sc=h('div',{class:'tl-scroll'}), inner=h('div',{class:'tl-inner'});
+  var axis=h('div',{class:'tl-row tl-axis'},h('div',{class:'tl-label',text:'Chapter and objective'}));
+  var at=h('div',{class:'tl-track'}); [2025,2026,2027,2028,2029].forEach(function(y){ at.appendChild(h('span',{class:'yr',style:'left:'+pct(x(Date.UTC(y,0,1))),text:String(y)})); });
+  axis.appendChild(at); inner.appendChild(axis);
+  at.appendChild(h('span',{class:'termlab',style:'left:'+pct(x(TERM_END)),text:'term ends Jan 20'}));
+  inner.appendChild(h('div',{class:'tl-term',style:'--x:'+x(TERM_END).toFixed(5)}));
+  var now=Date.now(); if(now>T0&&now<T1) inner.appendChild(h('div',{class:'tl-today',style:'--x:'+x(now).toFixed(5)},h('span',{text:'Today'})));
+  var by=Object.create(null); items.forEach(function(it){ var c=str(it.chapter); (by[c]=by[c]||[]).push(it); });
+  var shown=0;
+  SECTIONS.forEach(function(sec){ sec.ch.forEach(function(num){
+    var list=by[num]; if(!list||!list.length) return; shown++;
+    var fo=filtersOn(), open=fo?(S.openF[num]!==false):!!S.open[num];
+    var tog=function(){ if(fo) S.openF[num]=!open; else S.open[num]=!open; render(); };
+    var row=h('div',{class:'tl-row tl-ch'+(open?' open':''),tabindex:'0',role:'button','data-key':'tch-'+num,'aria-expanded':open?'true':'false',
+      onclick:tog,onkeydown:function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tog();}}},
+      h('div',{class:'tl-label'},h('span',{class:'caret'}),h('span',{class:'num',text:num}),h('span',{class:'nm',text:chTitle(num),title:chTitle(num)}),h('span',{class:'ct',text:String(list.length)})));
+    var tr=h('div',{class:'tl-track'});
+    list.forEach(function(it){ arr(it.timeline).forEach(function(e){ var t=ms(e.date); if(!isNaN(t)&&t>=T0&&t<=T1) tr.appendChild(h('span',{class:'tick',style:'left:'+pct(x(t))})); }); });
+    row.appendChild(tr); inner.appendChild(row);
+    if(open) list.forEach(function(it){
+      var r=h('div',{class:'tl-row tl-item',tabindex:'0',role:'button',onclick:function(){openItem(it.id);},onkeydown:function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openItem(it.id);}}},
+        h('div',{class:'tl-label'},h('span',{class:'gl gl-'+stageOf(it),title:STAGE[stageOf(it)].label}),h('span',{class:'vh',text:STAGE[stageOf(it)].label+'. '}),h('span',{class:'t',text:str(it.title)})));
+      var t2=h('div',{class:'tl-track'}); evMarks(t2,it); r.appendChild(t2); inner.appendChild(r);
+    });
+  }); });
+  if(!shown){ main.appendChild(h('div',{class:'panel empty',text:'No objectives match these filters.'})); return; }
+  sc.appendChild(inner); panel.appendChild(sc);
+  panel.appendChild(h('div',{class:'tl-key'},
+    h('span',null,h('i',{class:'sp-ev'}),'Official action (order, rule, law)'),
+    h('span',null,h('i',{class:'sp-ev court'}),'Court ruling'),
+    h('span',null,h('i',{class:'sp-ev news'}),'Reported in the press'),
+    h('span',null,h('i',{class:'sp-bar fill-implemented'}),'Span of action so far, shaded by status'),
+    h('span',null,h('i',{class:'sp-proj'}),h('i',{class:'sp-win'}),'Estimated completion window (inference)'),
+    h('span',null,'Select a chapter to open its objectives, then an objective for the full record.')));
+  main.appendChild(panel);
+}
+
+/* ---------- list ---------- */
+function renderList(main,items){
+  var by=Object.create(null); items.forEach(function(it){ var c=str(it.chapter); (by[c]=by[c]||[]).push(it); });
+  var panel=h('div',{class:'panel'}), shown=0;
+  SECTIONS.forEach(function(sec){ sec.ch.forEach(function(num){
+    var list=by[num]; if(!list||!list.length) return; shown++;
+    var fo=filtersOn(), open=fo?(S.openF[num]!==false):(S.open[num]!==false), sum=0,n=0, mini=h('span',{class:'mini','aria-hidden':'true'}), cs={eff:0,und:0,blk:0,none:0};
+    list.slice().sort(function(a,b){return STAGE[stageOf(a)].i-STAGE[stageOf(b)].i;}).forEach(function(it){ var st=stageOf(it); if(st!=='pending'){sum+=prog(it.progress);n++;} mini.appendChild(h('i',{class:'fill-'+st,style:'flex:1'}));
+      if(st==='completed'||st==='implemented') cs.eff++; else if(st==='in_progress'||st==='proposed') cs.und++; else if(st==='blocked'||st==='diverged') cs.blk++; else cs.none++; });
+    var csTxt=[cs.eff+' in effect',cs.und+' underway',cs.blk?cs.blk+' blocked or diverged':'',cs.none?cs.none+' no action':''].filter(Boolean).join(' · ');
+    var block=h('div',{class:'ch-block'}), csum=S.meta&&S.meta.chapter_summaries&&S.meta.chapter_summaries[num];
+    var tog=function(){ if(fo) S.openF[num]=!open; else S.open[num]=!open; render(); };
+    block.appendChild(h('div',{class:'ch-head'+(open?' open':''),tabindex:'0',role:'button','data-key':'lch-'+num,'aria-expanded':open?'true':'false',
+      onclick:tog,onkeydown:function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tog();}}},
+      h('span',{class:'caret'}),h('span',{class:'num',text:num}),h('span',{class:'nm',text:chTitle(num)}),mini,
+      h('span',{class:'meta'},h('span',{text:list.length+(list.length===1?' objective':' objectives')+(n?' · avg '+Math.round(sum/n)+'%':'')}),h('span',{class:'sub',text:csTxt}))));
+    if(open&&csum&&csum.summary&&!filtersOn()) block.appendChild(h('div',{class:'ch-sum'},h('p',{text:str(csum.summary)})));
+    if(open) list.forEach(function(it){
+      var st=stageOf(it), p=Math.max(0,Math.min(100,+it.progress||0));
+      var v=st==='diverged'?'Diverged':st==='pending'?'Pending':st==='not_started'?'No action':p+'%';
+      block.appendChild(h('div',{class:'row',tabindex:'0',role:'button',onclick:function(){openItem(it.id);},onkeydown:function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openItem(it.id);}}},
+        h('div',{class:'main'},h('span',{class:'gl gl-'+st,title:STAGE[st].label}),h('div',{style:'min-width:0'},h('div',{class:'t',text:str(it.title)}),h('div',{class:'sub'},STAGE[st].label+' · '+str(it.agency),courtTag(it),l3Tag(it)))),
+        h('div',{class:'meter'},h('span',{class:'trk'},h('i',{class:'fill-'+st,style:'width:'+p+'%'})),h('span',{class:'v',text:v})),
+        h('div',{class:'c-conf'},confEl(it)),
+        h('div',{class:'win c-win',text:fmtWin(it.est_completion&&it.est_completion.window)})));
+    });
+    panel.appendChild(block);
+  }); });
+  if(!shown){ main.appendChild(h('div',{class:'panel empty',text:'No objectives match these filters.'})); return; }
+  main.appendChild(panel);
+}
+
+/* ---------- item sheet ---------- */
+function getItem(id){ return S.live[id]||S.snap[id]||null; }
+function openItem(id){ S.sel=id; renderSheet(); var d=document.getElementById('sheet'); if(!d.open){ try{d.showModal();}catch(e){d.setAttribute('open','');} } d.scrollTop=0; try{history.replaceState(null,'','#'+id);}catch(e){} }
+function closeSheet(){ var d=document.getElementById('sheet'); S.sel=null; if(d.open){ try{d.close();}catch(e){d.removeAttribute('open');} } try{history.replaceState(null,'','#'+S.view);}catch(e){} }
+function sec(title){ var d=h('section',null,h('h3',{text:title})); for(var i=1;i<arguments.length;i++) if(arguments[i]) d.appendChild(arguments[i]); return d; }
+function ul(list){ var u=h('ul'); arr(list).forEach(function(t){ u.appendChild(h('li',{text:str(t)})); }); return u; }
+function renderSheet(){ try{ renderSheetInner(); }catch(e){ var b=document.getElementById('sh-body'); b.textContent=''; b.appendChild(h('p',{text:'This objective could not be displayed.'})); } }
+function renderSheetInner(){
+  var it=S.sel&&getItem(S.sel), body=document.getElementById('sh-body'), k=document.getElementById('sh-k');
+  body.textContent=''; k.textContent='';
+  if(!it){ body.appendChild(h('p',{text:'This objective is no longer in the record.'})); return; }
+  var st=stageOf(it), p=Math.max(0,Math.min(100,+it.progress||0)), ch=str(it.chapter);
+  k.appendChild(h('span',{class:'mono',text:str(it.id)})); k.appendChild(document.createTextNode('  ·  '+(ch==='00'?'Foreword':'Chapter '+(+ch)+', '+chTitle(ch))+'  ·  '+str(it.agency)));
+  body.appendChild(h('h2',{id:'sh-title',text:str(it.title)}));
+  var match={direct:'Direct match',partial:'Partial match',parallel:'Parallel action'}[str(it.match)];
+  var cong={yes:'Needs Congress',partial:'Partly needs Congress',no:'Executive branch alone'}[str(it.requires_congress)];
+  var mech=str(it.mechanism).replace(/_/g,' ');
+  body.appendChild(h('div',{class:'statline'},
+    h('span',{class:'pill'},h('span',{class:'gl gl-'+st}),STAGE[st].label),
+    st!=='pending'&&st!=='not_started'&&st!=='diverged'?h('span',{class:'meter',style:'width:150px'},h('span',{class:'trk'},h('i',{class:'fill-'+st,style:'width:'+p+'%'})),h('span',{class:'v',text:p+'%'})):null,
+    match?h('span',{class:'tag',title:'How closely the action tracks the specific recommendation',text:match}):null,
+    cong?h('span',{class:'tag',text:cong}):null, mech?h('span',{class:'tag',text:'Route: '+mech}):null,
+    l3Tag(it),
+    it.tracked===false?h('span',{class:'tag',text:'Not tracked'}):null));
+  body.appendChild(h('p',{class:'muted',style:'font-size:13px',text:STAGE[st].desc}));
+  /* confidence */
+  var cb=h('div',{class:'box'}), rv=it.review||{};
+  if(confLabel(it)){
+    cb.appendChild(h('div',{class:'statline'},confEl(it),h('span',{class:'muted',style:'font-size:12.5px',text:'Independent AI review'+(rv.reviewed_at?' on '+fmtDate(rv.reviewed_at):'')})));
+    if(it.confidence_reason) cb.appendChild(h('p',{text:str(it.confidence_reason)}));
+    if(arr(rv.flags).length){ var fl=h('div',{class:'statline'}); arr(rv.flags).forEach(function(f){ fl.appendChild(h('span',{class:'tag',text:str(f)})); }); cb.appendChild(fl); }
+  } else {
+    cb.appendChild(h('p',{text:'Not independently reviewed yet.'+(typeof it.self_confidence==='number'?' Researcher self-rating: '+it.self_confidence+' of 100.':'')}));
+  }
+  body.appendChild(sec('Confidence',cb));
+  /* proposal */
+  var pg=h('p',{class:'muted',style:'font-size:13px'}); var pages=arr(it.pages);
+  if(pages.length){ pg.appendChild(document.createTextNode('Mandate for Leadership, printed page'+(pages.length>1?'s ':' ')));
+    pages.forEach(function(n,i){ if(i) pg.appendChild(document.createTextNode(', ')); n=+n; if(n>0&&n<900) pg.appendChild(link(ARCHIVE+'/page/n'+(n+31)+'/mode/1up',String(n))); else pg.appendChild(document.createTextNode(String(n))); });
+    pg.appendChild(document.createTextNode(' (Internet Archive scan).')); }
+  body.appendChild(sec('What the document recommends',h('p',{text:str(it.proposal)}),it.position?h('p',{class:'muted',style:'font-size:13px;margin-top:6px',text:'Position in the document: '+str(it.position)}):null,pg));
+  body.appendChild(sec('Where it stands',h('p',{text:str(it.status_summary)})));
+  if(it.court_status&&typeof it.court_status==='object'){ var cs=it.court_status, cp=h('p',{class:'muted',style:'font-size:13px'});
+    cp.appendChild(document.createTextNode('Latest court event: '+str(cs.state)+(cs.date?' as of '+fmtDate(cs.date):'')+' (')); cp.appendChild(link(cs.url,'source')); cp.appendChild(document.createTextNode('). Derived from the timeline; see the dated events below.')); body.appendChild(cp); }
+  /* events */
+  var evs=arr(it.timeline).slice().sort(function(a,b){return str(a.date)<str(b.date)?-1:1;});
+  if(evs.length){ var ol=h('ol',{class:'events'});
+    evs.forEach(function(e){ var kind=str(e.kind);
+      ol.appendChild(h('li',null,h('div',{class:'d',text:str(e.date)}),h('div',null,h('div',{text:str(e.event)}),h('div',{class:'s'},link(e.url,str(e.source)||null),(safeUrl(e.url)&&str(e.source))?' ('+host(e.url)+')':'',kind?' · '+({primary:'official source',court:'court',news:'press',tracker:'secondary reference'}[kind]||kind):'')))); });
+    body.appendChild(sec('Actions to date',ol)); }
+  if(arr(it.remaining).length) body.appendChild(sec('What would still have to happen',ul(it.remaining)));
+  if(arr(it.blockers).length) body.appendChild(sec('Obstacles',ul(it.blockers)));
+  var ec=it.est_completion||{}, du=it.durability||{};
+  var eb=h('div',{class:'box'}); eb.appendChild(h('div',null,h('b',{text:fmtWin(ec.window)})));
+  if(ec.basis) eb.appendChild(h('p',null,h('span',{class:'inf',text:'Inference: '}),str(ec.basis)));
+  if(du.level) eb.appendChild(h('p',null,h('b',{text:'Durability: '+str(du.level)+'. '}),str(du.why)));
+  body.appendChild(sec('Estimated timeframe',eb));
+  if(it.significance&&typeof it.significance==='object'&&typeof it.significance.weight==='number'){ var g=it.significance, gb=h('div',{class:'box'});
+    gb.appendChild(h('div',{class:'statline'},sigEl(it),h('span',{class:'muted',style:'font-size:12.5px',text:'reach '+g.R+', magnitude '+g.M+', breadth of government '+g.B+', fiscal scale '+g.F+(g.F_estimated?' (fiscal anchor estimated)':'')+(g.adjudicated?' · adjudicated by a third rater':'')})));
+    if(g.rationale) gb.appendChild(h('p',{text:str(g.rationale)}));
+    var gl=h('p',{class:'muted',style:'font-size:12.5px'}); gl.appendChild(document.createTextNode('Scored blind by two independent AI raters from the recommendation text only; it says nothing about whether the objective is good or bad. ')); gl.appendChild(h('button',{class:'linkbtn',type:'button',text:'How the weights work',onclick:function(){closeSheet();goMethod('sig-method');}})); gb.appendChild(gl);
+    body.appendChild(sec('Significance',gb)); }
+  if(arr(it.related_ids).length){ var rl2=h('ul'); arr(it.related_ids).forEach(function(rid){ rid=str(rid); var o=getItem(rid); if(!o||!shown(o)) return; var li=h('li'); li.appendChild(h('button',{class:'linkbtn mono',type:'button',text:rid,onclick:function(){openItem(rid);}})); li.appendChild(document.createTextNode(' '+str(o.title)+' ('+STAGE[stageOf(o)].label+')')); rl2.appendChild(li); });
+    if(rl2.childNodes.length) body.appendChild(sec('Related objectives (one action can count toward several)',rl2)); }
+  if(it.uncertainties) body.appendChild(sec('Not verified or uncertain',h('p',{text:str(it.uncertainties)})));
+  /* sources */
+  if(arr(it.sources).length){ var sl=h('ul',{class:'srcs'});
+    arr(it.sources).forEach(function(s){ sl.appendChild(h('li',null,link(s.url,str(s.title)||null),h('div',{class:'s',text:[safeUrl(s.url)?host(s.url):'',str(s.publisher),str(s.date),({primary:'official source',court:'court',news:'press',tracker:'secondary reference'}[str(s.kind)]||str(s.kind))].filter(Boolean).join(' · ')}))); });
+    body.appendChild(sec('Sources',sl)); }
+  if(objs(it.related_reading).length){ var rr=h('ul',{class:'srcs'});
+    objs(it.related_reading).forEach(function(s){ rr.appendChild(h('li',null,link(s.url,str(s.name)||null),h('div',{class:'s',text:[safeUrl(s.url)?host(s.url):'',str(s.note)].filter(Boolean).join(' · ')}))); });
+    body.appendChild(sec('Related reading (outside commentary, not evidence)',rr)); }
+  /* review checks */
+  if(rv.mandate_note||objs(rv.source_checks).length){ var rl=h('ul',{class:'srcs'});
+    if(rv.mandate_note) rl.appendChild(h('li',null,h('span',{class:'chk',text:'Document text: '+str(rv.mandate_check||'checked')}),' ',str(rv.mandate_note)));
+    objs(rv.source_checks).forEach(function(c){ var res={supports:'supports',partial:'partly supports',does_not_support:'does not support',unreachable:'could not open'}[str(c.result)]||str(c.result);
+      rl.appendChild(h('li',null,h('span',{class:'chk',text:res}),' ',link(c.url),c.note?h('div',{class:'s',text:str(c.note)}):null)); });
+    body.appendChild(sec('What the reviewer checked',rl)); }
+  var rt=it.redteam;
+  if(rt&&typeof rt==='object'){ var rb=h('div',{class:'box'});
+    rb.appendChild(h('div',null,h('b',{text:({holds:'Held up',weakened:'Held up, with caveats added',changed:'Status changed'}[str(rt.verdict)]||'Checked')}),h('span',{class:'muted',style:'font-size:12.5px',text:rt.date?'  on '+fmtDate(rt.date):''})));
+    if(rt.what_was_tested) rb.appendChild(h('p',{text:str(rt.what_was_tested)}));
+    if(rt.note) rb.appendChild(h('p',{text:str(rt.note)}));
+    if(objs(rt.evidence).length){ var el=h('ul',{class:'srcs'}); objs(rt.evidence).forEach(function(c){ el.appendChild(h('li',null,link(c.url,str(c.source)||null),h('div',{class:'s',text:[safeUrl(c.url)?host(c.url):'',str(c.date),str(c.note)].filter(Boolean).join(' · ')}))); }); rb.appendChild(el); }
+    body.appendChild(sec('Red-team check',rb)); }
+  if(arr(it.history).length){ var hl=h('ul'); objs(it.history).slice().reverse().forEach(function(x){ hl.appendChild(h('li',null,h('span',{class:'mono',text:str(x.date)+'  '}),str(x.note))); }); body.appendChild(sec('Change history',hl)); }
+  if(S.canWrite && S.db){
+    var bx=h('div',{class:'form'}), ln=h('div',{class:'line'});
+    ln.appendChild(h('button',{class:'btn small',text:it.tracked===false?'Resume tracking':'Stop tracking this objective',onclick:function(){setTracked(it.id,it.tracked===false);}}));
+    ln.appendChild(h('button',{class:'btn small',text:'Ask for a deeper check',onclick:function(){addRequest({kind:'recheck',item_id:it.id,text:'Re-verify '+it.id+': '+str(it.title)});}}));
+    bx.appendChild(ln); if(S.msg) bx.appendChild(h('div',{class:'msg',text:S.msg}));
+    body.appendChild(sec('Manage',bx));
+  }
+}
+
+/* ---------- changes / method / manage ---------- */
+function fmtStageRef(v){ if(v==null||v==='') return ''; v=str(v); if(STAGE[v]) return STAGE[v].label; var m=/^([a-z_]+)\s+(\d{1,3})$/.exec(v); if(m&&STAGE[m[1]]) return STAGE[m[1]].label+' ('+m[2]+'%)'; return v; }
+function renderChanges(main){
+  var p=h('div',{class:'panel prose'}); p.appendChild(h('h2',{text:'What changed, run by run'}));
+  var runs=S.runs.slice().sort(function(a,b){return str(a.date)<str(b.date)?1:-1;});
+  if(!runs.length){ p.appendChild(h('p',{class:'muted',text:'No update runs recorded yet. Each scheduled run adds an entry here listing every objective whose status, evidence, or confidence changed.'})); }
+  runs.forEach(function(r){ var d=h('div',{class:'run'});
+    d.appendChild(h('div',{class:'eyebrow',text:fmtDate(r.date)+(r.kind?' · '+str(r.kind):'')}));
+    d.appendChild(h('h3',{text:str(r.title)}));
+    if(r.summary) d.appendChild(h('p',{text:str(r.summary)}));
+    if(objs(r.changes).length){ var u=h('ul'); objs(r.changes).forEach(function(c){
+      var li=h('li'); var b=h('a',{href:'#'+str(c.id),text:str(c.id),onclick:function(e){e.preventDefault();openItem(str(c.id));}}); li.appendChild(b);
+      var fs=fmtStageRef(c.from), ts=fmtStageRef(c.to), move=(!c.from&&c.to)?': added as '+ts:(fs&&ts&&fs!==ts)?': '+fs+' to '+ts:(ts?': '+ts+', no status change':'');
+      li.appendChild(document.createTextNode(' '+str(c.title)+move+(c.note?'. '+str(c.note):'')+' '));
+      if(safeUrl(c.url)) li.appendChild(link(c.url,'source')); u.appendChild(li); }); d.appendChild(u); }
+    p.appendChild(d); });
+  main.appendChild(p);
+}
+function renderMethod(main){
+  var m=S.meta||{}, p=h('div',{class:'panel prose'});
+  function para(t){ p.appendChild(h('p',{text:t})); }
+  p.appendChild(h('h2',{text:'Mission'}));
+  para('This tracker is apolitical. It is a scorecard, nothing more: it shows how closely the goals set out in the 2023 Mandate for Leadership align with this presidency\'s objectives and outcomes, objective by objective, with the evidence attached. It can be used by the right or the left. It takes no position on whether any objective is good or bad policy, and it does not claim the document caused any action.');
+  para('The aim is a factual, current, and checkable record. Every status rests on cited public sources with clickable links, every objective carries a confidence rating from an independent review, and every change is logged.');
+  para('The research and review are automated with AI models and are disclosed as such. The record is refreshed on a published schedule (see Updates below), with daily updates planned as the project matures. It is run as a public service'+(showNoAds()?' with no advertising':'')+'. The code and data are being prepared for release as an open-source project so that others can check the work, correct it, and build on it.');
+  p.appendChild(h('h2',{text:'What this is'}));
+  para('A record of the main objectives in Mandate for Leadership: The Conservative Promise (Heritage Foundation, 2023), set against federal actions since January 20, 2025. It tracks whether actions align with what the document recommends. It does not claim the document caused any action, and it takes no position on whether an objective is good or bad policy.');
+  para('The record began as a selection of key objectives, the concrete and checkable recommendations that carry each chapter, and is being extended chapter by chapter into a fuller enumeration by reading each chapter in full. The headline counts every recommendation tracked so far, '+counted().length+' today. It does not yet cover the whole document: chapters read in full contribute more recommendations than chapters still limited to their key objectives, and the figure will move as more are added. Foreword items are listed for completeness and left out of the count, because the chapters cover the same ground and one action should not be counted twice.');
+  var src=h('p'); src.appendChild(document.createTextNode('The document text used here is the 920-page PDF preserved at the '));
+  src.appendChild(link(ARCHIVE,'Internet Archive')); src.appendChild(document.createTextNode('. The publisher\'s original download links now redirect to a book sales page, so page links on each objective open the archived scan.')); p.appendChild(src);
+  p.appendChild(h('h2',{text:'How status is assigned'}));
+  var tw=h('div',{class:'tbl-wrap'}), tb=h('table'); tb.appendChild(h('tr',null,h('th',{text:'Status'}),h('th',{text:'Meaning'}),h('th',{text:'Progress band'})));
+  var bands={completed:'100',implemented:'65 to 90',in_progress:'25 to 60',proposed:'5 to 20',blocked:'keeps what was reached',diverged:'0',not_started:'0',pending:'not scored'};
+  STAGES.forEach(function(s){ tb.appendChild(h('tr',null,h('td',null,h('span',{class:'statline'},h('span',{class:'gl gl-'+s.k}),s.label)),h('td',{text:s.desc}),h('td',{class:'mono',text:bands[s.k]}))); });
+  tw.appendChild(tb); p.appendChild(tw);
+  para('Each objective also carries a match type (direct, partial, or parallel), the route it needs (executive action alone or Congress), and a durability note: an executive order or guidance can be undone quickly by a later administration, a final rule or completed reorganization is harder to undo, and a statute or Supreme Court holding is hardest.');
+  p.appendChild(h('h2',{text:'Confidence'}));
+  para('Research and review are done by AI models (currently Claude models), and every claim is linked to its source so that a person can check it. One model researches each objective. A different model then reviews it without having seen the research being produced: it re-reads the cited pages of the document, opens the sources that decide the status, and scores how confident a reader should be that the status is right. High means the document text and a primary source were both checked. Medium means the text was checked and a reputable secondary source or part of the primary record supports the status. Low means the status rests on sources the reviewer could not open, on a single secondary source, or on finding no evidence in a limited search.');
+  para('Absence of evidence is treated with care. A status that rests on no action having been found (no action found, diverged, and some proposed or in-progress calls) is capped at low unless the record carries a documented systematic check: a Federal Register search on the recommendation and its agency since January 20, 2025, the agency\'s current Unified Agenda entry, a congress.gov search of the 119th Congress, the agency\'s own press and policy pages, and one major news search, each listed with its date under what the reviewer checked. With that check recorded, the reviewer may rate the status up to 70, and the record says when the check was made. A qualifying action found later by any run resets the status in the ordinary way. This rule was added on October 12, 2026; records are being brought under it in order of significance.');
+  para('Objectives counted as in effect also get a red-team pass: a separate agent searches for reversals, injunctions, and effective dates that would make that status wrong. The result is shown on each objective.');
+  p.appendChild(h('h2',{text:'Significance weighting',id:'sig-method'}));
+  var sg=m.significance||{};
+  para('Significance is the expected consequence of an objective for people in the United States if the recommendation were fully carried out, judged from the recommendation itself and not from whether it has been carried out. It says nothing about whether an objective is good or bad. The weighted share shown under the headline reweights the same recommendations by this score, so that a government-wide law and a single pilot program no longer count the same. The unweighted share stays the headline.');
+  para('How it is scored. Two independent AI raters score every objective blind, from the recommendation text and page citations only, with no sight of its status or of each other, on four dimensions with written anchors: reach (how many people it touches directly: under 1 percent, 1 to 20 percent, or most people or the structure of government), magnitude (procedural, material, or large), breadth of government (one program, one agency or sector, or government-wide), and fiscal scale (under 1 billion dollars a year, 1 to 50 billion, or over 50 billion or a structural change to taxes or entitlements). Each is 1, 2 or 3. The weight is the average of the four, so it runs from 1 to 3 and no objective counts more than three times another. Where the two raters differ by more than half a point on the weight, or by two points on any dimension, a third rater scores it and the median is used. Where no published fiscal figure could be sourced, the fiscal score is marked as estimated.');
+  (function(){ var sh=sigShares(), kp=sg.kappa||{}; if(sh.weighted==null) return;
+    var bd=sg.band_5_95, bandTxt=(Array.isArray(bd)&&bd.length===2&&isFinite(+bd[0])&&isFinite(+bd[1]))?' The uncertainty range is '+(+bd[0]).toFixed(1)+' to '+(+bd[1]).toFixed(1)+' percent: the 5th to 95th percentile of 1,000 recomputations that draw each recommendation\'s weight from one of its raters at random (and, for estimated fiscal scores, from the neighboring anchors), recomputed weekly'+(sg.band_as_of?' (last on '+fmtDate(sg.band_as_of)+')':'')+(sg.band_n?' over the '+sg.band_n+' recommendations with stored per-rater scores':'')+'.':' The uncertainty range (5th to 95th percentile over rater disagreement) is recomputed weekly from each rater\'s stored scores and shown here once the next weekly recomputation has run.';
+    para('Current result, computed on this page from the scores stored on each record: weighted share in effect '+sh.weighted.toFixed(1)+' percent against '+sh.unweighted.toFixed(1)+' percent unweighted, across '+sh.n+' counted recommendations.'+bandTxt+(kp.composite!=null?' Rater agreement'+(sg.kappa_n?' across the '+sg.kappa_n+' recommendations with stored per-rater scores':' on the first 219 objectives scored')+', quadratic-weighted kappa: reach '+kp.R+', magnitude '+kp.M+', breadth '+kp.B+', fiscal '+kp.F+', composite '+kp.composite+' (0.6 and above is substantial agreement).':'')+' Every record shows its four scores and weight, so the figure can be recomputed by anyone.'); })();
+  para('Scores are frozen per objective and versioned; they are rescored only when the recommendation text of a record changes, never when its status changes, and the change is logged in the record history.');
+  p.appendChild(h('h2',{text:'Estimated timeframes'}));
+  para('Every estimated window is an inference, not a fact. It reasons from the route an objective needs: rulemaking usually takes one to two years, legislation needs 60 Senate votes or a budget reconciliation bill, litigation follows court calendars, and the presidential term ends January 20, 2029.');
+  p.appendChild(h('h2',{text:'Limits'}));
+  var lim=h('ul'); arr(m.limits).forEach(function(t){ lim.appendChild(h('li',{text:str(t)})); });
+  if(!arr(m.limits).length) lim.appendChild(h('li',{text:'This is a selection of key objectives, not every recommendation in the document.'}));
+  p.appendChild(lim);
+  if(objs(m.trackers).length){ p.appendChild(h('h2',{text:'Related trackers and resources'}));
+    var tu=h('ul'); objs(m.trackers).forEach(function(t){ var li=h('li'); li.appendChild(link(t.url,str(t.name))); li.appendChild(document.createTextNode(': '+str(t.note))); tu.appendChild(li); }); p.appendChild(tu);
+    para('Those projects count different sets of recommendations with different rules, so their percentages are not comparable with the figures here. Links to outside commentary are given for context and are labeled where the source takes an advocacy stance; nothing from them is used as evidence for a status.'); }
+  p.appendChild(h('h2',{text:'Updates'}));
+  para(str(m.update_note)||'The record is refreshed on a schedule. Each run searches official sources and the press for developments on every tracked objective, updates status and evidence, re-reviews what changed, and logs the changes under Changes.');
+  p.appendChild(h('h2',{text:'Contribute and support'}));
+  var cp=h('p'); cp.appendChild(document.createTextNode('Corrections, missing objectives, and better sources are the most useful help. The code and every record are public: ')); cp.appendChild(link(REPO_URL,'the repository on GitHub')); cp.appendChild(document.createTextNode(' takes error reports and suggestions as issues and accepts changes by pull request; every change to a record is checked by the same rules the research runs follow, and a stage change needs a primary source.'+(showNoAds()?' The project carries no advertising and no tracking.':''))); p.appendChild(cp);
+  var su=supportUrl(); if(su){ var sp=h('p'); sp.appendChild(document.createTextNode('Running the research and review costs money. If the tracker is useful to you, you can ')); sp.appendChild(link(su,'support the project')); sp.appendChild(document.createTextNode('. Donations pay for research runs and hosting only.')); p.appendChild(sp); }
+  main.appendChild(p);
+}
+function setTracked(id,val){ if(!S.db) return; S.msg='Saving';
+  S.db.doc('items/'+id).update({tracked:val,tracked_changed_at:new Date().toISOString()}).then(function(){S.msg=val?'Tracking resumed.':'Tracking stopped. It stays in the record and can be resumed under Requirements.';render();},function(){S.msg='Could not save. You may not have edit access.';render();}); }
+function addRequest(o){ if(!S.db) return; S.msg='Saving';
+  o.status='pending'; o.created_at=new Date().toISOString();
+  S.db.collection('requests').add(o).then(function(){S.draft=''; S.msg='Request saved. The next update run will pick it up.';render();},function(){S.msg='Could not save. You may not have edit access.';render();}); }
+function renderManage(main){
+  var p=h('div',{class:'panel prose'}); p.appendChild(h('h2',{text:'Change what is tracked'}));
+  if(!S.db){ p.appendChild(h('p',{text:'Tracking changes are available to the owner and editors when the live record is connected. This view is a read-only snapshot.'})); }
+  else if(!S.canWrite){ p.appendChild(h('p',{text:'Only the owner and editors of this page can add or remove objectives.'})); }
+  else {
+    p.appendChild(h('p',{text:'Describe an objective to add, in your own words. The next update run finds it in the document, researches it, has it reviewed, and adds it to the roadmap. To drop an objective, open it and choose Stop tracking.'}));
+    var ta=h('textarea',{id:'req-text',placeholder:'Example: track the recommendation to move the Coast Guard out of Homeland Security','aria-label':'Objective to add'});
+    ta.value=S.draft||''; ta.addEventListener('input',function(){ S.draft=ta.value; });
+    var sel=h('select',{id:'req-ch','aria-label':'Chapter (optional)'}); sel.appendChild(h('option',{value:'',text:'Any chapter'}));
+    S.chapters.forEach(function(c){ sel.appendChild(h('option',{value:c.num,text:c.num+'  '+c.title})); });
+    var f=h('form',{class:'form',onsubmit:function(e){ e.preventDefault(); var t=ta.value.trim(); if(!t){S.msg='Write what you want tracked first.';render();return;} addRequest({kind:'add',text:t.slice(0,2000),chapter:sel.value}); }},
+      ta,h('div',{class:'line'},sel,h('button',{class:'btn primary',type:'submit',text:'Add to the roadmap'})));
+    p.appendChild(f);
+  }
+  if(S.msg) p.appendChild(h('div',{class:'msg',text:S.msg}));
+  var reqs=S.requests.slice().sort(function(a,b){return str(a.created_at)<str(b.created_at)?1:-1;});
+  if(reqs.length){ p.appendChild(h('h2',{text:'Requests'})); var bx=h('div');
+    reqs.forEach(function(r){ bx.appendChild(h('div',{class:'req'},h('span',{class:'tag',text:str(r.status||'pending')}),h('div',{class:'tx'},h('div',{text:str(r.text)}),h('div',{class:'muted',style:'font-size:12.5px',text:[str(r.kind),r.chapter?'chapter '+str(r.chapter):'',fmtDate(str(r.created_at).slice(0,10)),str(r.resolution)].filter(Boolean).join(' · ')})))); });
+    p.appendChild(bx); }
+  var off=allItems().filter(function(i){return i.tracked===false;});
+  if(off.length){ p.appendChild(h('h2',{text:'Not tracked'})); var ob=h('div');
+    off.forEach(function(it){ ob.appendChild(h('div',{class:'req'},h('span',{class:'mono',text:str(it.id)}),h('div',{class:'tx',text:str(it.title)}),S.canWrite&&S.db?h('button',{class:'btn small',text:'Resume',onclick:function(){setTracked(it.id,true);}}):null)); });
+    p.appendChild(ob); }
+  main.appendChild(p);
+}
+
+/* ---------- render ---------- */
+var pending=false;
+function render(){ if(pending) return; pending=true; (window.requestAnimationFrame||setTimeout)(function(){ pending=false; draw(); }); }
+function draw(){
+  var ae=document.activeElement, fk=(ae&&ae.getAttribute)?ae.getAttribute('data-key'):null;
+  try{ drawInner(); }catch(e){ var m=document.getElementById('main'); m.textContent=''; m.appendChild(h('div',{class:'panel empty',text:'Something went wrong while drawing this view. Reload the page to try again.'})); }
+  if(fk){ var el=document.querySelector('[data-key="'+fk.replace(/[^\w-]/g,'')+'"]'); if(el){ try{ el.focus({preventScroll:true}); }catch(e){} } }
+}
+function drawInner(){
+  var view=(S.view==='manage'&&!S.canWrite)?'timeline':S.view;
+  renderSummary(); renderSupport(); renderFoot();
+  var main=document.getElementById('main'), y=window.scrollY; main.textContent='';
+  var isData=view==='timeline'||view==='list';
+  document.getElementById('filters').hidden=!isData;
+  document.getElementById('clear').hidden=!filtersOn();
+  document.getElementById('tab-manage').hidden=!S.canWrite;
+  Array.prototype.forEach.call(document.querySelectorAll('#tabs button'),function(b){ b.setAttribute('aria-selected',b.getAttribute('data-view')===view?'true':'false'); });
+  var items=tracked().filter(passes), total=tracked().length, cnt=document.getElementById('count');
+  cnt.textContent=isData?(filtersOn()?items.length+' of '+total+' objectives shown':''):''; cnt.hidden=!cnt.textContent;
+  if(!total && isData){ main.appendChild(h('div',{class:'panel empty',text:S.loadError?'The record could not be loaded. Reload the page to try again.':'The record is empty. Objectives appear here once the first research run has been loaded.'})); }
+  else if(view==='timeline') renderTimeline(main,items);
+  else if(view==='list') renderList(main,items);
+  else if(view==='changes') renderChanges(main);
+  else if(view==='method') renderMethod(main);
+  else renderManage(main);
+  if(document.getElementById('sheet').open && S.sel) renderSheet();
+  window.scrollTo(0,y);
+}
+function setView(v){ S.view=v; S.msg=''; try{localStorage.setItem('p25.view',v);}catch(e){} try{history.replaceState(null,'','#'+v);}catch(e){} render(); }
+
+/* ---------- wiring ---------- */
+document.getElementById('tabs').addEventListener('click',function(e){ var b=e.target.closest('button[data-view]'); if(b) setView(b.getAttribute('data-view')); });
+document.getElementById('q').addEventListener('input',function(e){ S.f.q=e.target.value.trim(); render(); });
+['section','conf','congress'].forEach(function(k){ document.getElementById('f-'+k).addEventListener('change',function(e){ S.f[k]=e.target.value; render(); }); });
+document.getElementById('clear').addEventListener('click',function(){ S.f={q:'',stages:{},section:'',conf:'',congress:''}; S.openF={}; document.getElementById('q').value=''; ['section','conf','congress'].forEach(function(k){document.getElementById('f-'+k).value='';}); render(); });
+(function(){ var s=document.getElementById('f-section'); s.appendChild(h('option',{value:'',text:'All sections'})); SECTIONS.forEach(function(x){ s.appendChild(h('option',{value:x.k,text:x.name})); }); })();
+var sheet=document.getElementById('sheet');
+document.getElementById('sh-close').addEventListener('click',closeSheet);
+sheet.addEventListener('click',function(e){ if(e.target===sheet) closeSheet(); });
+sheet.addEventListener('close',function(){ S.sel=null; });
+
+function boot(){
+  var v=null; try{ v=localStorage.getItem('p25.view'); }catch(e){}
+  try{ if(localStorage.getItem('p25.l3')==='off') S.l3prev=false; }catch(e){}
+  var hash=(location.hash||'').replace(/^#/,''), openId=null;
+  if(/^(timeline|list|changes|method|manage)$/.test(hash)) v=hash; else if(/^c\d\d-\d\d/.test(hash)) openId=hash;
+  if(/^(timeline|list|changes|method|manage)$/.test(v||'')) S.view=v;
+  fetch('snapshot.json').then(function(r){ if(!r.ok) throw new Error('snapshot'); return r.json(); }).then(function(d){
+    S.chapters=objs(d.chapters); S.meta=(d.meta&&typeof d.meta==='object')?d.meta:{}; if(!S.runs.length) S.runs=objs(d.runs);
+    arr(d.items).forEach(function(it){ var c=norm(it); if(c) S.snap[c.id]=c; });
+    render(); if(openId) setTimeout(function(){ if(getItem(openId)) openItem(openId); },60);
+  }).catch(function(){ var k,any=false; for(k in S.snap){ any=true; break; } S.loadError=!any; render(); });
+  connect();
+}
+function subRequests(){
+  if(!S.db||!S.canWrite||S.reqSub) return; S.reqSub=true;
+  S.db.collection('requests').limit(200).onSnapshot(function(snap){ S.requests=objs(snap.docs.map(function(d){ return d.data(); })); render(); },function(){ S.reqSub=false; });
+}
+function connect(){
+  if(!window.claude||typeof window.claude.use!=='function') return;
+  function use(n){ try{ return Promise.resolve(window.claude.use(n)).catch(function(){ return null; }); }catch(e){ return Promise.resolve(null); } }
+  use('user').then(function(user){
+    if(user&&typeof user.canEdit==='function') return Promise.resolve(user.canEdit()).then(function(ok){ S.canWrite=!!ok; subRequests(); render(); });
+  }).catch(function(){});
+  use('db').then(function(db){
+    if(!db) return; S.db=db; subRequests();
+    db.collection('items').limit(1000).onSnapshot(function(snap){
+      var live=Object.create(null);
+      snap.docs.forEach(function(d){ var o=d.data(); if(o&&typeof o==='object'){ var c={},k; for(k in o) c[k]=o[k]; if(!c.id) c.id=d.id; c=norm(c); if(c) live[c.id]=c; } });
+      S.live=live; S.liveOn=!snap.empty; render();
+    },function(){});
+    db.collection('runs').limit(200).onSnapshot(function(snap){ if(snap.empty) return; S.runs=objs(snap.docs.map(function(d){ return d.data(); })); render(); },function(){});
+    db.doc('meta/state').onSnapshot(function(d){ if(!d.exists) return; var o=d.data()||{},k,m={}; for(k in S.meta) m[k]=S.meta[k]; for(k in o) m[k]=o[k]; S.meta=m; render(); },function(){});
+  }).catch(function(){});
+}
+boot();
+})();
+</script>
+</body>
+</html>

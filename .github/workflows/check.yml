@@ -1,0 +1,81 @@
+# Checks on every push to main and every pull request. Job names are the status
+# contexts the branch ruleset requires (validate, build), so they must stay stable.
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - run: pip install jsonschema==4.23.0
+      - name: Validate every record and meta document
+        # TRACKER_FORBIDDEN_WORDS is a repository secret: the private list of
+        # identifiers that must never appear in public data. GitHub masks it in
+        # logs, and it is not sent to pull requests from forks, so for those the
+        # identifier check runs again on merge (push to main) and before deploy.
+        env:
+          TRACKER_FORBIDDEN_WORDS: ${{ secrets.TRACKER_FORBIDDEN_WORDS }}
+        run: python3 scripts/validate.py --strict
+
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: validate
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Build the snapshot the site reads
+        run: python3 scripts/build_snapshot.py
+      - name: Check the page for em dashes and parses as HTML with one script block
+        run: |
+          python3 - <<'PY'
+          import re, sys
+          s = open('site/index.html', encoding='utf-8').read()
+          assert '\u2014' not in s, 'em dash in site/index.html'
+          assert s.count('<script>') == 1, 'expected exactly one script block'
+          assert re.search(r'<meta charset="utf-8">', s), 'charset meta missing'
+          print('page ok')
+          PY
+
+  ui:
+    name: ui
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: build
+    continue-on-error: true  # advisory until it has run clean for a week; not a required check
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "22"
+      - run: python3 scripts/build_snapshot.py
+      - run: npm install --no-audit --no-fund playwright@1.55.0
+      - run: npx playwright install --with-deps chromium
+      - name: Serve the site and run the browser test
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory site &
+          sleep 2
+          node scripts/uitest.js

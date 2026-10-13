@@ -1,0 +1,16 @@
+{
+  "name": "project-2025-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Apolitical, source-linked tracker of the 2023 Mandate for Leadership recommendations against federal actions since 2025-01-20.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "validate": "python3 scripts/validate.py",
+    "build": "python3 scripts/build_snapshot.py",
+    "serve": "python3 -m http.server 8765 --directory site",
+    "test:ui": "node scripts/uitest.js"
+  },
+  "devDependencies": {
+    "playwright": "1.55.0"
+  }
+}

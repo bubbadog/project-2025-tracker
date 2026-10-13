@@ -1,0 +1,201 @@
+{
+  "agency": "DOL (OFCCP)",
+  "blockers": [
+    "Congress funded OFCCP for FY2026 rather than eliminating it.",
+    "Section 503 of the Rehabilitation Act and VEVRAA are statutes that continue to require DOL-administered contractor obligations.",
+    "No court challenge to the final rules was found (not exhaustively searched)."
+  ],
+  "chapter": "18",
+  "confidence": 84,
+  "confidence_label": "high",
+  "confidence_reason": "The 2026-10-26 effective date is confirmed, but the stage rests on the executive order revocation and the end of EO 11246 enforcement, both operative since January 2025 per DOL. Implemented at 80 is not overstated: the Mandate's own text allows DOL to keep enforcing Section 503 and VEVRAA, while the office itself still exists and is funded.",
+  "durability": {
+    "level": "medium",
+    "why": "A revoked executive order and final rescission rule are reversible only by a future President or new rulemaking; the underlying Section 503 and VEVRAA statutes are unchanged."
+  },
+  "est_completion": {
+    "basis": "Inference: the EO 11246 rescission rule takes effect on 2026-10-26 and the Section 503 procedure move on 2026-12-21, so those steps are scheduled. Eliminating the office itself needs appropriations action or reorganization; Congress funded OFCCP at about $100 million for FY2026, and FY2027 funding is under a stopgap that runs to 2026-12-11. Driving step: the full-year FY2027 appropriation, most likely resolved in early 2027 or later; a year-long stopgap would leave OFCCP funded.",
+    "window": "2027"
+  },
+  "history": [
+    {
+      "date": "2026-10-07",
+      "note": "Red-team check found nothing that undercuts the status."
+    },
+    {
+      "date": "2026-10-07",
+      "note": "Rechecked: effective date of the implementing rule confirmed; status unchanged."
+    },
+    {
+      "date": "2026-10-08",
+      "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    }
+  ],
+  "id": "c18-01",
+  "last_checked": "2026-10-07",
+  "layer": 1,
+  "match": "direct",
+  "mechanism": "mixed",
+  "pages": [
+    583,
+    584
+  ],
+  "position": null,
+  "progress": 80,
+  "proposal": "The Mandate recommends that the President eliminate the Office of Federal Contract Compliance Programs by rescinding Executive Order 11246, leaving federal contractors bound by statutory nondiscrimination law. It suggests that residual Section 503 (disability) and VEVRAA (veterans) obligations could be enforced by EEOC or DOL.",
+  "redteam": {
+    "date": "2026-10-07",
+    "evidence": [
+      {
+        "date": "2026-08-21",
+        "kind": "primary",
+        "note": "Final rule at 91 FR 54444, published 2026-08-21, effective 2026-10-26 (not yet reached on 2026-10-07); it rescinds the EO 11246 implementing regulations following EO 14173 (2025-01-21), which revoked EO 11246.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-17114.json"
+      },
+      {
+        "date": "2026-08-20",
+        "kind": "news",
+        "note": "Law-firm summary of the three OFCCP final rules (dated 2026-08-20) says they have different effective dates and mentions no litigation; OFCCP continues as the office administering them.",
+        "source": "Ogletree Deakins",
+        "url": "https://ogletree.com/insights-resources/blog-posts/ofccp-issues-final-rules-upending-federal-contractors-affirmative-action-obligations/"
+      }
+    ],
+    "note": "The operative step is EO 14173's 2025-01-21 revocation of EO 11246 and DOL's stop on enforcement, with the regulation rescission effective 2026-10-26; no challenge was found, and OFCCP still exists for Section 503 and VEVRAA, as the record already states.",
+    "verdict": "holds",
+    "what_was_tested": "Whether the EO 11246 rescission rule is actually in effect and whether any court challenge or reversal exists, by fetching the Federal Register record and searching for 2026 coverage of the three OFCCP final rules."
+  },
+  "related_ids": [
+    "c18-03",
+    "c02-10"
+  ],
+  "remaining": [
+    "The EO 11246 rescission rule takes effect on 2026-10-26; the Section 503 enforcement-procedure move takes effect 2026-12-21.",
+    "OFCCP as an office still exists to enforce Section 503 and VEVRAA; the Mandate's goal of eliminating the office, or moving those duties to EEOC or DOL's veterans office, would need congressional action or appropriations changes.",
+    "FY2027 appropriations decisions on OFCCP funding."
+  ],
+  "requires_congress": "partial",
+  "research_agent": "A13",
+  "review": {
+    "flags": [
+      "recheck resolved: 2026-10-26 effective date confirmed; the operative step is the EO revocation, so the final-but-not-effective rule does not lower the stage",
+      "FY2026 OFCCP funding figure rests on a Bloomberg Government report not re-fetched"
+    ],
+    "mandate_check": "verified",
+    "mandate_note": "Pages 583 and 584 recommend eliminating OFCCP by rescinding Executive Order 11246, leaving contractors bound by statutory nondiscrimination law, and say residual Section 503 and VEVRAA obligations could be enforced by EEOC or DOL.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "W4",
+    "source_checks": [
+      {
+        "note": "The Rescission of Executive Order 11246 Implementing Regulations final rule (2026-17114) is effective 2026-10-26, confirming the researcher's report.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-17114,2026-00754,2025-23452,2026-16134,2026-09383.json?fields%5B%5D=dates"
+      },
+      {
+        "note": "DOL states EO 11246 was revoked by EO 14173 on 2025-01-21, contractors were told to wind down compliance by 2025-04-21, Secretary's Order 03-2025 (2025-01-24) ended EO 11246 investigations and enforcement, and Order 08-2025 restored Section 503 and VEVRAA activity, which remains in effect.",
+        "result": "supports",
+        "url": "https://www.dol.gov/agencies/ofccp"
+      }
+    ]
+  },
+  "significance": {
+    "B": 1.5,
+    "F": 1,
+    "F_estimated": false,
+    "M": 2,
+    "R": 2,
+    "adjudicated": false,
+    "raters": 2,
+    "rationale": "Rescinding EO 11246 ends affirmative action obligations for federal contractors employing about a fifth of the workforce.",
+    "version": "2026-10-08",
+    "weight": 1.625
+  },
+  "sources": [
+    {
+      "date": "2026-10-07",
+      "kind": "primary",
+      "publisher": "U.S. Department of Labor",
+      "title": "DOL OFCCP: Executive Order 11246, Secretary's Orders, enforcement status",
+      "url": "https://www.dol.gov/agencies/ofccp"
+    },
+    {
+      "date": "2026-08-21",
+      "kind": "primary",
+      "publisher": "Federal Register / DOL OFCCP",
+      "title": "Rescission of Executive Order 11246 Implementing Regulations (final rule)",
+      "url": "https://www.federalregister.gov/documents/2026/08/21/2026-17114/rescission-of-executive-order-11246-implementing-regulations"
+    },
+    {
+      "date": "2025-01-31",
+      "kind": "primary",
+      "publisher": "Federal Register (govinfo)",
+      "title": "Executive Order 14173 as published in the Federal Register",
+      "url": "https://govinfo.gov/content/pkg/FR-2025-01-31/pdf/2025-02097.pdf"
+    },
+    {
+      "date": "2026-08-25",
+      "kind": "news",
+      "publisher": "Duane Morris",
+      "title": "OFCCP finalizes three rules resetting federal contractor affirmative action requirements",
+      "url": "https://www.duanemorris.com/alerts/ofccp_finalizes_three_rules_resetting_federal_contractor_affirmative_action_requirements_0826.html"
+    },
+    {
+      "date": "2026-02-03",
+      "kind": "news",
+      "publisher": "Bloomberg Government",
+      "title": "Congress funds labor watchdog gutted of core antibias powers",
+      "url": "https://news.bgov.com/construction-labor/congress-funds-labor-watchdog-gutted-of-core-antibias-powers"
+    }
+  ],
+  "stage": "implemented",
+  "status_summary": "Executive Order 14173 revoked EO 11246 on 2025-01-21, and DOL ordered OFCCP to stop investigations and enforcement under that order on 2025-01-24. On 2026-08-21 DOL published three final rules: one rescinds the EO 11246 regulations (effective 2026-10-26, after today's date), and two narrow the Section 503 and VEVRAA rules (mostly effective 2026-09-21). OFCCP itself still exists and enforces Section 503 and VEVRAA; the administration's FY2026 budget proposal to end its funding was not adopted, and Congress cleared about $100 million for it in February 2026.",
+  "timeline": [
+    {
+      "date": "2025-01-21",
+      "event": "President signs EO 14173, which revokes EO 11246 (the order that created OFCCP's contractor affirmative-action and nondiscrimination regime). The order was published in the Federal Register on 2025-01-31.",
+      "kind": "primary",
+      "source": "Federal Register (via govinfo)",
+      "url": "https://govinfo.gov/content/pkg/FR-2025-01-31/pdf/2025-02097.pdf"
+    },
+    {
+      "date": "2025-01-24",
+      "event": "Secretary's Order 03-2025 directs OFCCP to cease investigative and enforcement activity under EO 11246 and places Section 503 and VEVRAA activity in abeyance. Contractors were told to wind down EO 11246 compliance by 2025-04-21. OFCCP later administratively closed pending compliance reviews.",
+      "kind": "primary",
+      "source": "DOL OFCCP",
+      "url": "https://www.dol.gov/agencies/ofccp"
+    },
+    {
+      "date": "2025-07-01",
+      "event": "DOL/OFCCP publish proposed rules to rescind the EO 11246 regulations and to revise the Section 503 and VEVRAA regulations. Comments were due 2025-09-02 and the deadline was later extended; the final rule notice reports 917 comments on the rescission proposal.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/07/01/2025-12276/rescission-of-executive-order-11246-implementing-regulations"
+    },
+    {
+      "date": "2025-07-02",
+      "event": "Secretary's Order 08-2025 lifts the abeyance on Section 503 and VEVRAA enforcement (date per a law-firm summary); the EO 11246 provisions of Order 03-2025 remain in force. A DOL page states Section 503 and VEVRAA and their regulations remain in effect.",
+      "kind": "news",
+      "source": "Hunton Andrews Kurth",
+      "url": "https://www.hunton.com/hunton-employment-labor-perspectives/trump-administration-eliminates-ofccp-funding-reshaping-enforcement-landscape-for-federal-contractors"
+    },
+    {
+      "date": "2026-02-03",
+      "event": "Congress clears the FY2026 spending bill funding OFCCP at roughly $100 million (about $11 million below the prior year). The White House had proposed ending its funding and moving remaining functions to EEOC and DOL's veterans office.",
+      "kind": "news",
+      "source": "Bloomberg Government",
+      "url": "https://news.bgov.com/construction-labor/congress-funds-labor-watchdog-gutted-of-core-antibias-powers"
+    },
+    {
+      "date": "2026-08-21",
+      "event": "OFCCP publishes three final rules. The EO 11246 rescission removes the order's regulations in 41 CFR chapter 60 (parts 60-1 through 60-4, 60-20, 60-40, 60-50 and 60-999, plus the EO 11246 portions of part 60-30), including affirmative action plans and utilization goals, effective 2026-10-26. The Section 503 rule drops the self-identification form and the 7 percent utilization goal and raises the coverage threshold to $20,000; the VEVRAA rule raises its threshold to $200,000.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/08/21/2026-17114/rescission-of-executive-order-11246-implementing-regulations"
+    }
+  ],
+  "title": "Rescind Executive Order 11246 and eliminate OFCCP",
+  "tracked": true,
+  "uncertainties": "Law-firm summaries differ on whether effective dates are stated: the Federal Register public-inspection copy gives 2026-10-26 for the EO 11246 rescission, and Crowell, Duane Morris and Honigman summaries give 2026-09-21 for most Section 503 and VEVRAA changes (Crowell, whose summary was also read, is not listed as a source because its publication date was not shown). The OFCCP staff reduction figure (from about 479 to under 50) comes from a law-firm blog and was not checked against DOL. Appropriations figures differ slightly between sources ($100 million to $101 million). Litigation over the final rules was not exhaustively searched; the web search budget ran out after searches on OFCCP and disparate impact only, so most evidence comes from Federal Register queries and fetched pages.",
+  "updated_at": "2026-10-08"
+}

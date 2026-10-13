@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/bubbadog/project-2025-tracker/data/schema/item.schema.json",
+  "title": "Tracked recommendation",
+  "description": "One record under data/items/. scripts/validate.py enforces the rules this schema cannot express: progress bands per stage, label consistency with confidence, symmetric related_ids, confidence caps on no-action records, headline counts in meta/state.",
+  "type": "object",
+  "required": [
+    "id", "chapter", "agency", "title", "proposal", "pages", "stage", "progress", "match",
+    "status_summary", "timeline", "sources", "confidence", "confidence_label",
+    "confidence_reason", "review", "updated_at", "last_checked", "history"
+  ],
+  "additionalProperties": true,
+  "$defs": {
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "url": { "type": "string", "pattern": "^https://\\S+$" },
+    "id": { "type": "string", "pattern": "^c\\d\\d-\\d\\d$" },
+    "score": { "type": "number", "minimum": 1, "maximum": 3 }
+  },
+  "properties": {
+    "id": { "$ref": "#/$defs/id" },
+    "chapter": { "type": "string", "pattern": "^(0\\d|[12]\\d|30)$" },
+    "agency": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1, "maxLength": 90 },
+    "proposal": { "type": "string", "minLength": 1 },
+    "pages": { "type": "array", "items": { "type": "integer", "minimum": 1, "maximum": 999 } },
+    "position": { "type": ["string", "null"] },
+    "mechanism": { "enum": ["executive_order", "agency_rule", "agency_action", "legislation", "appointment", "litigation", "mixed"] },
+    "requires_congress": { "enum": ["yes", "no", "partial"] },
+    "stage": { "enum": ["not_started", "proposed", "in_progress", "implemented", "completed", "blocked", "diverged", "pending"] },
+    "progress": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "match": { "enum": ["direct", "partial", "parallel"] },
+    "status_summary": { "type": "string", "minLength": 1 },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "event", "url", "kind"],
+        "properties": {
+          "date": { "$ref": "#/$defs/date" },
+          "event": { "type": "string", "minLength": 1 },
+          "url": { "$ref": "#/$defs/url" },
+          "source": { "type": "string" },
+          "kind": { "enum": ["primary", "court", "news", "tracker"] }
+        }
+      }
+    },
+    "remaining": { "type": "array", "items": { "type": "string" } },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "est_completion": {
+      "type": "object",
+      "required": ["window", "basis"],
+      "properties": {
+        "window": { "type": "string", "pattern": "^(done|\\d{4}(-[QH][1-4])?|unlikely this term|unknown)$" },
+        "basis": { "type": "string", "minLength": 1 }
+      }
+    },
+    "durability": {
+      "type": "object",
+      "required": ["level", "why"],
+      "properties": { "level": { "enum": ["low", "medium", "high"] }, "why": { "type": "string" } }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "url"],
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "$ref": "#/$defs/url" },
+          "publisher": { "type": "string" },
+          "date": { "type": ["string", "null"] },
+          "kind": { "type": "string" }
+        }
+      }
+    },
+    "uncertainties": { "type": "string" },
+    "confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "confidence_label": { "enum": ["high", "medium", "low", "unverified"] },
+    "confidence_reason": { "type": "string" },
+    "review": {
+      "type": "object",
+      "required": ["reviewer", "model", "reviewed_at", "mandate_check", "source_checks", "flags"],
+      "properties": {
+        "reviewer": { "type": "string" },
+        "model": { "type": "string" },
+        "reviewed_at": { "$ref": "#/$defs/date" },
+        "mandate_check": { "type": "string" },
+        "mandate_note": { "type": "string" },
+        "source_checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["url", "result"],
+            "properties": {
+              "url": { "$ref": "#/$defs/url" },
+              "result": { "enum": ["supports", "partial", "does_not_support", "unreachable"] },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "flags": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "redteam": {
+      "type": "object",
+      "required": ["date", "verdict", "what_was_tested"],
+      "properties": {
+        "date": { "$ref": "#/$defs/date" },
+        "verdict": { "enum": ["holds", "weakened", "changed"] },
+        "what_was_tested": { "type": "string" },
+        "evidence": { "type": "array" },
+        "note": { "type": "string" }
+      }
+    },
+    "court_status": {
+      "type": "object",
+      "required": ["state", "date"],
+      "properties": {
+        "state": { "enum": ["enjoined", "stayed", "vacated", "upheld", "dismissed", "pending"] },
+        "date": { "$ref": "#/$defs/date" },
+        "url": { "$ref": "#/$defs/url" },
+        "basis": { "type": "string" }
+      }
+    },
+    "related_ids": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+    "restates_ids": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+    "significance": {
+      "type": "object",
+      "required": ["R", "M", "B", "F", "weight", "raters", "version"],
+      "properties": {
+        "R": { "$ref": "#/$defs/score" },
+        "M": { "$ref": "#/$defs/score" },
+        "B": { "$ref": "#/$defs/score" },
+        "F": { "$ref": "#/$defs/score" },
+        "weight": { "$ref": "#/$defs/score" },
+        "F_estimated": { "type": "boolean" },
+        "raters": { "type": "integer", "minimum": 1 },
+        "adjudicated": { "type": "boolean" },
+        "rationale": { "type": "string" },
+        "version": { "type": "string" },
+        "rater_scores": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["rater", "R", "M", "B", "F"],
+            "properties": {
+              "rater": { "enum": ["A", "B", "C"] },
+              "R": { "type": "integer", "minimum": 1, "maximum": 3 },
+              "M": { "type": "integer", "minimum": 1, "maximum": 3 },
+              "B": { "type": "integer", "minimum": 1, "maximum": 3 },
+              "F": { "type": "integer", "minimum": 1, "maximum": 3 }
+            }
+          }
+        }
+      }
+    },
+    "self_confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "research_agent": { "type": ["string", "null"] },
+    "layer": { "type": "integer", "enum": [1, 2, 3] },
+    "headline": { "type": "boolean" },
+    "tracked": { "type": "boolean" },
+    "tracked_changed_at": { "type": "string" },
+    "updated_at": { "$ref": "#/$defs/date" },
+    "last_checked": { "$ref": "#/$defs/date" },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "note"],
+        "properties": { "date": { "$ref": "#/$defs/date" }, "note": { "type": "string", "minLength": 1 } }
+      }
+    }
+  }
+}

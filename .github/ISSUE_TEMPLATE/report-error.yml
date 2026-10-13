@@ -1,0 +1,50 @@
+name: Report an error in a record
+description: A status, date, source or wording that is wrong, with the evidence.
+title: "[error] cNN-SS: "
+labels: ["needs-source"]
+body:
+  - type: input
+    id: record
+    attributes:
+      label: Record id
+      description: The id shown at the top of the record, for example c14-03.
+      placeholder: c14-03
+    validations:
+      required: true
+  - type: dropdown
+    id: what
+    attributes:
+      label: What is wrong
+      options:
+        - The status (stage) is wrong
+        - A date or event is wrong
+        - A source does not say what the record says
+        - The paraphrase of the document is wrong
+        - Something happened that the record does not have yet
+        - Wording is not neutral
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: What the record should say instead
+      description: One or two sentences, neutral, no adjectives about the document or the government.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Primary source link
+      description: A Federal Register, congress.gov, govinfo, court or agency page. News links are accepted as leads only.
+      placeholder: https://www.federalregister.gov/documents/...
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: House rules
+      options:
+        - label: I read the method and the stage rubric.
+          required: true
+        - label: This report takes no position on whether the recommendation is good or bad policy.
+          required: true

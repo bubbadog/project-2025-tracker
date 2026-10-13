@@ -1,0 +1,67 @@
+# Pipeline
+
+How the record is produced and kept current, and how it reaches this repository and the site.
+
+## 1. The runs
+
+Four scheduled AI sessions do the research. Each starts from nothing, reads the standing guidance and the work queue, does its mandate, writes to the working database with version-pinned writes, refreshes the published snapshot, and sends the maintainer a private digest. The full prompts are in [prompts/](prompts/), with only the maintainer's name removed; they are the specification of the process and change by pull request like everything else.
+
+| Run | Schedule (Pacific) | Mandate | Prompt |
+| --- | --- | --- | --- |
+| Update | Tuesday and Thursday, 6:54 am | Owner requests; news sweep (about 40 searches) mapped to records; rotation of about 25 deep checks including refutation checks on in-effect records; independent review of everything that changed; a slice of the backlog | [update-tuesday-thursday.txt](prompts/update-tuesday-thursday.txt) |
+| Freshness | Monday, Wednesday and Friday, 4:47 am | 12 records with the oldest evidence, plus watch items whose date has passed; developments since the latest event, refutation check, primary document behind secondary claims; independent review | [freshness-mon-wed-fri.txt](prompts/freshness-mon-wed-fri.txt) |
+| Enumeration | Nightly, 11:11 pm and 1:51 am (two independent firings; the first advances the cursor so the second takes different chapters) | Reads each chapter in full, lists every checkable recommendation, researches the ones not yet tracked (up to 12 per chapter per pass), independent review, blind significance scoring; after chapter 30, a second pass over the candidates left behind the cap; then the primary-source lift and the systematic absence checks | [nightly-enumeration.txt](prompts/nightly-enumeration.txt) |
+| Significance | Sunday, 3:31 am | Fills missing per-rater scores from the stored sheet or fresh blind raters; recomputes the weighted share, the bootstrap band, rater agreement and the sensitivity table | [significance-weekly.txt](prompts/significance-weekly.txt) |
+
+Model routing inside a run: a coordinating agent plans and writes; research subagents (a smaller model) do the searching under an explicit search cap; an independent reviewer (a larger model that never sees the research being produced) re-derives every changed record from the rubric and sets confidence; blind raters score significance from the recommendation text alone. Each run's search budget is fixed (200 calls shared across its agents; the Federal Register API is free) so a run cannot drift into open-ended browsing.
+
+Standing documents the runs read first, which are private and not in this repository: `meta/guidance` (standing notes and a dated feedback log, where lessons from each run are recorded so the process is refined run to run), `meta/backlog` (the work queue, mirrored in the roadmap), `meta/leads` (unverified leads; every URL is fetched before anything enters a record), and `requests` (the maintainer's add, recheck and remove requests).
+
+## 2. From the database to this repository
+
+The runs write to a working database (the artifact's database). The repository is the published, versioned copy, and `main` is what the site shows. The path between them:
+
+1. The run finishes its writes and its snapshot refresh.
+2. It dumps `items`, `meta/state`, `meta/chapters`, `meta/sig_raters` and `runs` to a directory and runs `python3 scripts/import_dump.py DUMP_DIR` in a fresh clone of this repository. The script writes only public documents, in canonical form, so the diff is only what changed.
+3. It runs `python3 scripts/validate.py --strict`. A failure is fixed in the database first (the database is upstream), then re-exported.
+4. It commits on a branch `run/<date>-<kind>` with the GitHub noreply identity, signs off, pushes, and opens a pull request whose body is the run's digest minus anything private.
+5. The checks run; with auto-merge enabled on run pull requests, the merge happens when `validate` and `build` pass, and `deploy-pages.yml` publishes the result. The maintainer reads the digest and can revert by pull request.
+
+Until the runs are connected to GitHub, the maintainer performs steps 2 to 4 from a session; the result is the same.
+
+Two runs can fire close together (the two nightly firings). The second to open its pull request rebases on `main` first, and the pull-request ruleset's strict status checks refuse a merge from a stale branch, so the second run's export always includes the first's.
+
+## 3. Checks on every change
+
+Whether a change comes from a run or a person, the same checks run on the pull request (`.github/workflows/check.yml`):
+
+- `validate`: every record against `scripts/validate.py` (required fields, stage bands, label consistency, no-action confidence caps, https URLs, no future dates, no raw URLs in notes, symmetric cross-references, headline counts in `meta/state` equal to the records, run logs pointing at real records, no em dashes, no private identifiers) and against the JSON Schema.
+- `build`: the snapshot assembles; the page parses with one script block and no em dashes.
+- `ui` (advisory until stable): Playwright opens every record on the built site, checks every link resolves, contrast, and the phone layout.
+
+## 4. Publishing
+
+A merge to `main` runs `.github/workflows/deploy-pages.yml`: validate again (with the private identifier list), build `site/snapshot.json`, upload `site/`, deploy to GitHub Pages. Nothing else can publish. The artifact page at claude.ai stays as a mirror of the same data while the GitHub Pages site becomes the canonical address; a later change will point one at the other.
+
+## 5. Red-team procedure after each run
+
+Run by the maintainer or a session after each scheduled run (find and fix, then record):
+
+1. Pull every live record and the published snapshot; keep the previous local record as the baseline.
+2. Diff live against baseline by id: which fields changed per record.
+3. Confirm every write was version-pinned (the digest reports no stale-pin failure) and no document lost a field it had.
+4. Confirm every stage change in the run log has a source URL and a review dated that day; progress stayed inside the stage band.
+5. Confirm the published snapshot equals the database; `meta.as_of` moved; the Changes tab shows the run.
+6. Scan everything written for private identifiers and em dashes; every new URL is https with no spaces; every new date is `YYYY-MM-DD` and not in the future.
+7. For every fact a run removed as unsupported, check the sibling records in the same chapter; if a sibling cites a verified source for it, restore the fact with that source.
+8. Research notes are not events: a timeline entry that describes a check rather than a government action moves to `uncertainties`.
+9. For an enumeration run: every new record carries a review dated that day and a significance block with per-rater scores; every record that overlaps a tracked one carries `related_ids` with the reverse link present; `meta/state` counts match.
+10. Fix what fails with pinned writes, add a history note on each corrected record, re-export, and record the check.
+
+In the repository, steps 3, 4, 6 and 9 are what `scripts/validate.py` automates; the rest need a reader.
+
+## 6. Limits of the pipeline (stated, not hidden)
+
+- Some primary documents sit behind sites that refuse automated retrieval (war.gov, media.defense.gov, dhs.gov, state.gov). Those records cite the URL and say the document was not read; a person with a browser can retrieve and summarize them, and the record then gets re-reviewed.
+- The runs cannot archive sources (no network path to archive.org from the research container); link rot is caught by the monthly link audit, not prevented.
+- A usage limit on the account can stop a run mid-way. Every write is pinned and atomic per document, so a stopped run leaves consistent records and an incomplete run log, and the digest says so.

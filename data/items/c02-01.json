@@ -1,0 +1,230 @@
+{
+  "agency": "OMB",
+  "blockers": [
+    "CREW v. OMB (D.D.C. No. 1:25-cv-01051; D.C. Cir. No. 25-5266): transparency order enforced in January 2026",
+    "Global Health Council v. Trump / Department of State v. AIDS Vaccine Advocacy Coalition: Supreme Court stay is interim, with further proceedings pending",
+    "GAO findings of Impoundment Control Act violations, which OMB does not treat as binding",
+    "Congressional appropriations riders and oversight; Senate vote of 2026-09-30 did not advance a ban"
+  ],
+  "chapter": "02",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Both OMB delegation notices were read and confirm the shift of apportionment authority to political PADs, and the 2025 and 2026 rescission events were confirmed in two fetched sources. Who actually signs individual apportionments was not verified, since PADs may re-delegate in writing, and the CREW v. OMB transparency rulings were not re-read.",
+  "court_status": {
+    "basis": "derived from the latest court event in the timeline",
+    "date": "2025-08-28",
+    "state": "pending",
+    "url": "https://www.scotusblog.com/cases/case-files/department-of-state-v-aids-vaccine-advocacy-coalition-2"
+  },
+  "durability": {
+    "level": "low",
+    "why": "The delegation is an internal OMB notice and spending-control practice that a later Director can reverse, although a final Supreme Court holding on the Impoundment Control Act would be durable."
+  },
+  "est_completion": {
+    "basis": "Inference: the signing change has been operative since 2025-02-11, so the open items are judicial and legislative. Driving step: appellate and Supreme Court resolution of the Impoundment Control Act question (the Supreme Court's 2025-09-26 order was interim, and a second rescission request followed on 2026-09-25) and the CREW v. OMB appeal (D.C. Cir. No. 25-5266). Appeals usually take 6 to 12 months from argument, and FY2027 appropriations riders await a stopgap that runs to 2026-12-11, so a settled answer is more likely in 2027; low confidence.",
+    "window": "2027"
+  },
+  "history": [
+    {
+      "date": "2026-10-07",
+      "note": "Red-team check found nothing that undercuts the status."
+    },
+    {
+      "date": "2026-10-08",
+      "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    }
+  ],
+  "id": "c02-01",
+  "last_checked": "2026-10-07",
+  "layer": 1,
+  "match": "direct",
+  "mechanism": "agency_action",
+  "pages": [
+    45
+  ],
+  "position": null,
+  "progress": 80,
+  "proposal": "The Mandate says OMB's political Program Associate Directors, not career staff, should personally sign apportionments, that the OMB Director should use apportionment aggressively for the President's agenda, and that the Director must be able to defend the power against congressional attacks.",
+  "redteam": {
+    "date": "2026-10-07",
+    "evidence": [
+      {
+        "date": "2026-10-07",
+        "kind": "primary",
+        "note": "Lists four OMB delegation notices; the newest is the 2025-04-23 notice and none supersedes it, though the query may miss differently titled notices.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22delegation+of+apportionment+authority%22&conditions[agencies][]=management-and-budget-office&order=newest&per_page=10"
+      }
+    ],
+    "note": "No later OMB notice changes the apportionment delegation; the stage stands.",
+    "verdict": "holds",
+    "what_was_tested": "Checked the Federal Register for any OMB notice after 2025-04-23 that withdrew or changed the apportionment delegation to the Program Associate Directors."
+  },
+  "related_ids": [
+    "c02-09",
+    "c09-15"
+  ],
+  "remaining": [
+    "Final judicial resolution of whether the Impoundment Control Act permits withholding funds through expiration (appeals pending; the 2025 Supreme Court order was preliminary)",
+    "Compliance with the district court's apportionment-database order, which enforcement proceedings addressed through July 2026",
+    "Any congressional action to limit pocket rescissions or codify apportionment practice"
+  ],
+  "requires_congress": "no",
+  "research_agent": "A01",
+  "review": {
+    "flags": [
+      "progress lowered from 85: PAD re-delegation allowed, personal signing not confirmed",
+      "2026 rescission amount differs by source",
+      "CREW v. OMB details not re-verified",
+      "pocket rescissions go beyond the apportionment recommendation itself"
+    ],
+    "mandate_check": "corrected",
+    "mandate_note": "The recommendation (PADs personally signing apportionments, a Director aggressive in using the tool and able to defend it against Congress) is on printed page 45; page 46 discusses the Budget Review Division and General Counsel, not apportionment, so the page cite is narrowed.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "R01",
+    "source_checks": [
+      {
+        "note": "OMB notice effective 2025-02-11 (published 2025-02-18) delegates the Director's apportionment authority to the Program Associate Directors and supersedes prior delegations; it also lets PADs re-delegate in writing.",
+        "result": "supports",
+        "url": "https://public-inspection.federalregister.gov/2025-02720.pdf"
+      },
+      {
+        "note": "Notice effective 2025-04-18 (90 FR 17084) sets a succession list (DAD, branch chiefs, other officials) used only when the responsible PAD is unavailable because of a continuity event.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06953/notice-delegation-of-apportionment-authority-pursuant-to-31-usc-1513b"
+      },
+      {
+        "note": "Dated 2026-09-29: request sent 2026-09-25, 11 cuts totaling about 810 million dollars; August 2025 package of 4.9 billion dollars; 2025-09-26 Supreme Court interim stay of a lower-court order covering about 4 billion dollars, not a merits ruling.",
+        "result": "supports",
+        "url": "https://www.americanactionforum.org/insight/the-810-million-pocket-rescissions-request-what-it-would-cut-and-why-its-timing-matters/"
+      },
+      {
+        "note": "Minority press release dated 2026-09-30: Republicans blocked a bill to end pocket rescissions; describes the 2026 request as nearly 1 billion dollars; says GAO reaffirmed on 2026-09-29 that the Act does not allow withholding funds past expiration.",
+        "result": "partial",
+        "url": "https://www.budget.senate.gov/ranking-member/newsroom/press/republicans-block-merkleys-bill-to-eliminate-pocket-rescissions"
+      }
+    ]
+  },
+  "self_confidence": 75,
+  "significance": {
+    "B": 3,
+    "F": 3,
+    "F_estimated": true,
+    "M": 2,
+    "R": 3,
+    "adjudicated": true,
+    "raters": 3,
+    "rationale": "Having political officials sign apportionments and use them to steer spending changes control over the federal budget process as a whole.",
+    "version": "2026-10-08",
+    "weight": 2.75
+  },
+  "sources": [
+    {
+      "date": "2025-02-18",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Delegation of Apportionment Authority (OMB notice, signed by the Director)",
+      "url": "https://public-inspection.federalregister.gov/2025-02720.pdf"
+    },
+    {
+      "date": "2025-04-23",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Notice; Delegation of Apportionment Authority Pursuant to 31 U.S.C. 1513(b)",
+      "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06953/notice-delegation-of-apportionment-authority-pursuant-to-31-usc-1513b"
+    },
+    {
+      "date": "2025-08-21",
+      "kind": "primary",
+      "publisher": "Congressional Research Service",
+      "title": "Office of Management and Budget (OMB) Reporting on Apportionments (IN12538)",
+      "url": "https://www.everycrsreport.com/files/2025-08-21_IN12538_db1ad06ba265f49376dcbf7b7d540631ede86c92.html"
+    },
+    {
+      "date": null,
+      "kind": "court",
+      "publisher": "SCOTUSblog",
+      "title": "Department of State v. AIDS Vaccine Advocacy Coalition (No. 25A269)",
+      "url": "https://www.scotusblog.com/cases/case-files/department-of-state-v-aids-vaccine-advocacy-coalition-2"
+    },
+    {
+      "date": "2025-11-25",
+      "kind": "news",
+      "publisher": "Lawfare",
+      "title": "Trump Is Usurping Congress's Power of the Purse",
+      "url": "https://www.lawfaremedia.org/article/trump-is-usurping-congress-s-power-of-the-purse"
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "news",
+      "publisher": "Senate Budget Committee minority",
+      "title": "Republicans block Merkley's bill to eliminate pocket rescissions (Senate Budget Committee Democrats press release)",
+      "url": "https://www.budget.senate.gov/ranking-member/newsroom/press/republicans-block-merkleys-bill-to-eliminate-pocket-rescissions"
+    }
+  ],
+  "stage": "implemented",
+  "status_summary": "OMB's Director delegated apportionment authority to the Program Associate Directors effective 2025-02-11, superseding prior delegations (the notice lets them re-delegate in writing), and a successor notice effective 2025-04-18 lists career officials only as fallbacks when the responsible director is unavailable during a continuity event. OMB has since used apportionment, spending-plan conditions and rescission requests to control spending. It sent a 4.9 billion dollar rescission request in late August 2025 with too little time left in the fiscal year for the 45-day congressional review, and on 2025-09-26 the Supreme Court, on an interim basis, stayed a lower-court order requiring about 4 billion dollars of those funds to be obligated. On 2026-09-25 it sent a second such request, about 810 million dollars per American Action Forum (Senate Budget Committee Democrats describe it as nearly 1 billion dollars); GAO reaffirmed on 2026-09-29 that the Impoundment Control Act does not allow withholding funds past their expiration, and on 2026-09-30 Senate Republicans blocked a bill to bar the practice. GAO has found several Impoundment Control Act violations, and a district court ordered OMB to restore its public apportionment website.",
+  "timeline": [
+    {
+      "date": "2025-02-11",
+      "event": "OMB Director Vought delegates apportionment authority to the Program Associate Directors, effective this date (Federal Register notice published 2025-02-18).",
+      "kind": "primary",
+      "source": "Federal Register (public inspection)",
+      "url": "https://public-inspection.federalregister.gov/2025-02720.pdf"
+    },
+    {
+      "date": "2025-03-24",
+      "event": "OMB deactivates its public apportionment website; a 2025-03-29 letter from Vought says apportionments hold sensitive, predecisional information. GAO disagreed in writing on 2025-04-08.",
+      "kind": "primary",
+      "source": "Congressional Research Service",
+      "url": "https://www.everycrsreport.com/files/2025-08-21_IN12538_db1ad06ba265f49376dcbf7b7d540631ede86c92.html"
+    },
+    {
+      "date": "2025-06-01",
+      "event": "GAO issues its second finding of an Impoundment Control Act violation in two months, concerning the Institute of Museum and Library Services (exact June date not confirmed; first of month used).",
+      "kind": "news",
+      "source": "Federal News Network",
+      "url": "https://federalnewsnetwork.com/agency-oversight/2025/06/gao-finds-trump-administrations-second-violation-of-federal-spending-law/"
+    },
+    {
+      "date": "2025-07-21",
+      "event": "In CREW v. OMB, the D.D.C. rules that removing the apportionment database violated the law and orders it restored; the D.C. Circuit denies a stay in August and OMB resumes posting on 2025-08-15.",
+      "kind": "tracker",
+      "source": "Clearinghouse",
+      "url": "https://clearinghouse.net/case/46355/"
+    },
+    {
+      "date": "2025-08-28",
+      "event": "The administration sends Congress a rescission request of about 4.9 billion dollars in foreign aid with fewer than 45 days left in the fiscal year, the approach critics call a pocket rescission; the funds expire 2025-09-30.",
+      "kind": "court",
+      "source": "SCOTUSblog",
+      "url": "https://www.scotusblog.com/cases/case-files/department-of-state-v-aids-vaccine-advocacy-coalition-2"
+    },
+    {
+      "date": "2025-09-26",
+      "event": "The Supreme Court, 6-3 and on a preliminary basis, stays a district court order requiring the foreign aid to be obligated, finding the government likely to show the Impoundment Control Act bars the plaintiffs' suit; the Court says this is not a final merits ruling.",
+      "kind": "news",
+      "source": "CBS News",
+      "url": "https://www.cbsnews.com/amp/miami/news/supreme-court-trump-foreign-aid-funding"
+    },
+    {
+      "date": "2026-03-12",
+      "event": "Nextgov reports an OMB update to its internal-controls circular that says GAO's views are not binding on the executive branch; GAO objected.",
+      "kind": "news",
+      "source": "Nextgov",
+      "url": "https://www.nextgov.com/policy/2026/03/vought-takes-aim-gao-new-guidance/412099"
+    },
+    {
+      "date": "2026-09-25",
+      "event": "A second rescission request, about 810 million dollars in 11 accounts, is sent five days before fiscal year end; GAO says on 2026-09-29 that pocket rescissions are not allowed and the Senate blocks a bill to bar them on 2026-09-30.",
+      "kind": "news",
+      "source": "American Action Forum",
+      "url": "https://www.americanactionforum.org/insight/the-810-million-pocket-rescissions-request-what-it-would-cut-and-why-its-timing-matters/"
+    }
+  ],
+  "title": "OMB political appointees sign apportionments and use them to steer agency spending",
+  "tracked": true,
+  "uncertainties": "I did not find reporting that directly describes who signs individual FY2025 or FY2026 apportionments, so the PAD-signing point rests on the two Federal Register delegation notices. Figures differ by source for the 2026 request: American Action Forum and the Independent Institute give about 810 million dollars, while the Senate Budget Committee Democrats and a Hill headline say nearly 1 billion dollars. The Rescissions Act of 2025 (enacted 2025-07-24, per a search result) is context, not an apportionment action. The Peace Corps and NIH examples of spending-plan footnotes came from advocacy or secondhand sources and are not relied on. The GAO count of violations changed over time and was not updated to October 2026.",
+  "updated_at": "2026-10-08"
+}

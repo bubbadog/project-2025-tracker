@@ -1,0 +1,174 @@
+{
+  "agency": "Small Business Administration",
+  "blockers": [
+    "Fraud must be established case by case; SBA and IRS releases note the totals are suspected amounts or tax discrepancies.",
+    "Collection depends on Treasury, IRS and Justice Department capacity and on litigation outcomes; no court challenge to the suspensions was found."
+  ],
+  "chapter": "25",
+  "confidence": 70,
+  "confidence_label": "medium",
+  "confidence_reason": "SBA's own September 2026 release confirms the suspension, referral and demand-letter figures. All figures are agency claims of suspected fraud rather than findings or recoveries, the IRS referral release was not re-fetched, and the absence of action on the Planned Parenthood loans rests on a limited review.",
+  "durability": {
+    "level": "medium",
+    "why": "Suspensions, referrals and collection steps are agency actions that a later administration could scale back, but judgments, settlements and Treasury debts once obtained persist."
+  },
+  "est_completion": {
+    "basis": "Inference: suspensions and the Treasury referral are largely in place, but demand letters, IRS examinations, prosecutions and collections typically take years.",
+    "window": "2028"
+  },
+  "history": [
+    {
+      "date": "2026-10-07",
+      "note": "Red-team check found nothing that undercuts the status."
+    }
+  ],
+  "id": "c25-02",
+  "last_checked": "2026-10-07",
+  "layer": 1,
+  "match": "partial",
+  "mechanism": "agency_action",
+  "pages": [
+    746,
+    750,
+    753
+  ],
+  "position": null,
+  "progress": 65,
+  "proposal": "The Mandate calls for a final accounting and accelerated cleanup of fraud in the COVID-19 PPP and EIDL programs: consider bringing in private-sector help to close out the programs, require PPP borrowers that were not eligible for forgiveness to repay, refer borrowers who falsified applications to law enforcement, and cooperate with congressional oversight. It also asks SBA to determine whether it can reverse forgiveness for certain Planned Parenthood affiliates' PPP loans, which the chapter says exceeded the size limit, and to refer any knowing misstatements to the Justice Department.",
+  "redteam": {
+    "date": "2026-10-07",
+    "evidence": [
+      {
+        "date": "2026-09-21",
+        "kind": "news",
+        "note": "Independent local report of the 870,000-borrower, roughly 39 billion dollar suspension (SBA's largest), noting the figure reflects suspected fraud and not adjudicated losses, that about 560,000 borrowers worth 22 billion dollars were earlier referred to Treasury for collection, that final demand letters began with about 8,000 borrowers in Kansas and Missouri, and that DOJ reported over 160 defendants and about 245 million dollars in intended losses; no criticism or legal challenge reported.",
+        "source": "MyChesCo",
+        "url": "https://www.mychesco.com/a/news/national/sba-suspends-24492-pennsylvania-borrowers-in-fraud-sweep/"
+      }
+    ],
+    "note": "SBA's September 2026 figures are corroborated by independent coverage, which also stresses they are suspected, not adjudicated, fraud; no challenge was found, and the Planned Parenthood and forgiveness-reversal items remain unaddressed.",
+    "verdict": "holds",
+    "what_was_tested": "Whether SBA's enforcement figures, which came only from SBA releases, were corroborated independently and whether any court challenge or retraction existed, by searching for news coverage of the 2026-09-14 announcement."
+  },
+  "remaining": [
+    "Report recoveries: SBA's releases give suspensions, referrals and demand letters but no total of funds recovered.",
+    "Require PPP borrowers ineligible for forgiveness to repay and reverse forgiveness where SBA has authority: no action found.",
+    "Planned Parenthood affiliates' PPP loans (Mandate p. 753): no SBA action found in the OIG or newsroom pages reviewed.",
+    "Private-sector support to close out the programs: not found.",
+    "Complete criminal and civil cases, Treasury collection and IRS examinations."
+  ],
+  "requires_congress": "no",
+  "research_agent": "A14",
+  "review": {
+    "flags": [
+      "figures are SBA statements of suspected fraud",
+      "Planned Parenthood and forgiveness-reversal findings are absence-of-evidence",
+      "borderline between in_progress and implemented because recoveries are unreported"
+    ],
+    "mandate_check": "verified",
+    "mandate_note": "Page 746 describes EIDL and PPP fraud, page 750 lists a full accounting with repayment or law enforcement referral, and page 753 calls for accelerated cleanup, possible private-sector help, repayment by ineligible PPP recipients, and review of forgiveness for Planned Parenthood affiliates' PPP loans with DOJ referral if warranted; the paraphrase matches.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "R07",
+    "source_checks": [
+      {
+        "note": "Dated 2026-09-14: 870,000 borrowers tied to about $39 billion suspended, plus earlier suspensions of more than 150,000 borrowers (about $10 billion) in five states including California on 2026-02-06 (111,620 borrowers, $8.6 billion); links to the 2026-04-24 Treasury referral of over 560,000 borrowers and $22 billion; final demand letters start with about 8,000 borrowers in Kansas and Missouri; no recovered totals, no mention of Planned Parenthood or reversing forgiveness.",
+        "result": "supports",
+        "url": "https://legacy.sba.gov/article/2026/09/14/sba-announces-suspensions-870000-us-borrowers-tied-39-billion-suspected-pandemic-fraud"
+      }
+    ]
+  },
+  "self_confidence": 70,
+  "significance": {
+    "B": 1,
+    "F": 1.5,
+    "F_estimated": true,
+    "M": 2,
+    "R": 1,
+    "adjudicated": false,
+    "raters": 2,
+    "rationale": "Accelerated PPP and EIDL fraud cleanup seeks repayment or prosecution from ineligible borrowers.",
+    "version": "2026-10-08",
+    "weight": 1.375
+  },
+  "sources": [
+    {
+      "date": "2026-09-14",
+      "kind": "primary",
+      "publisher": "SBA",
+      "title": "SBA Announces Suspensions for 870,000 U.S. Borrowers Tied to $39 Billion in Suspected Pandemic Fraud",
+      "url": "https://legacy.sba.gov/article/2026/09/14/sba-announces-suspensions-870000-us-borrowers-tied-39-billion-suspected-pandemic-fraud"
+    },
+    {
+      "date": "2026-09-14",
+      "kind": "primary",
+      "publisher": "SBA",
+      "title": "DOJ's Fraud Division, SBA, and SBA OIG Target $245M in COVID Loan Fraud Enforcement Activity",
+      "url": "https://legacy.sba.gov/article/2026/09/14/dojs-fraud-division-sba-sba-oig-target-245m-covid-loan-fraud-enforcement-activity-state-partnerships"
+    },
+    {
+      "date": "2026-09-23",
+      "kind": "primary",
+      "publisher": "SBA",
+      "title": "SBA Referral Leads IRS to Investigate Tax Liabilities Related To Potentially $100 Billion in COVID Loan Fraud",
+      "url": "https://legacy.sba.gov/article/2026/09/23/sba-referral-leads-irs-investigate-tax-liabilities-related-potentially-100-billion-covid-loan-fraud"
+    },
+    {
+      "date": "2026-09-16",
+      "kind": "primary",
+      "publisher": "SBA Office of Inspector General",
+      "title": "SBA OIG pandemic response oversight page",
+      "url": "https://www.sba.gov/about-sba/oversight-advocacy/office-inspector-general/pandemic-response-oversight"
+    }
+  ],
+  "stage": "implemented",
+  "status_summary": "SBA's fraud enforcement has been large and operative in 2026, according to SBA's own releases. It began suspending borrowers by state (California, 2026-02-06), referred over 560,000 suspected fraudulent borrowers tied to about $22 billion to Treasury for collection (2026-04-24), and on 2026-09-14 announced suspensions of 870,000 borrowers tied to about $39 billion in suspected fraud, final demand letters, and DOJ results (more than 160 criminal defendants, about $245 million in intended loss). On 2026-09-23 SBA said an IRS comparison of loan applications and tax records found discrepancies tied to about $100 billion in loans and that IRS examinations had opened. The releases do not report total funds recovered. No action on the Planned Parenthood PPP loans or on reversing forgiveness for ineligible PPP loans was found, and no private-sector close-out contractor was identified.",
+  "timeline": [
+    {
+      "date": "2025-04-23",
+      "event": "SBA Office of Inspector General issues report 25-12 on SBA's actions regarding forgiven PPP loans later flagged as potentially ineligible; further 2025 reports address EIDL collection and servicing (25-23, 25-16) and PPP loans over size standards (25-14).",
+      "kind": "primary",
+      "source": "SBA Office of Inspector General",
+      "url": "https://www.sba.gov/document/report-25-12-sbas-actions-address-forgiven-ppp-loans-subsequently-flagged-potentially-ineligible"
+    },
+    {
+      "date": "2026-02-06",
+      "event": "SBA suspends about 111,600 California borrowers tied to roughly $8.6 billion in suspected fraudulent PPP and EIDL activity; later state actions follow (Ohio 2026-06-04, Wisconsin 2026-07-08).",
+      "kind": "primary",
+      "source": "SBA",
+      "url": "https://legacy.sba.gov/article/2026/09/14/sba-announces-suspensions-870000-us-borrowers-tied-39-billion-suspected-pandemic-fraud"
+    },
+    {
+      "date": "2026-04-24",
+      "event": "SBA refers over 560,000 suspected fraudulent borrowers tied to about $22 billion in loans to Treasury for collection.",
+      "kind": "primary",
+      "source": "SBA",
+      "url": "https://legacy.sba.gov/article/2026/09/14/sba-announces-suspensions-870000-us-borrowers-tied-39-billion-suspected-pandemic-fraud"
+    },
+    {
+      "date": "2026-08-25",
+      "event": "SBA OIG and the Department of Justice launch a National Fraud Detection Center (press release title reviewed).",
+      "kind": "primary",
+      "source": "SBA Office of Inspector General",
+      "url": "https://legacy.sba.gov/article/2026/08/25/sba-office-inspector-general-partners-department-justice-launch-national-fraud-detection-center"
+    },
+    {
+      "date": "2026-09-14",
+      "event": "SBA announces suspension of 870,000 borrowers tied to about $39 billion in suspected fraud (about 1 million borrowers and $49 billion in total with earlier actions), with final 30-day demand letters starting in Kansas and Missouri; DOJ, SBA and OIG report Operation No Doze results (over 160 defendants, about $245 million intended loss).",
+      "kind": "primary",
+      "source": "SBA",
+      "url": "https://legacy.sba.gov/article/2026/09/14/dojs-fraud-division-sba-sba-oig-target-245m-covid-loan-fraud-enforcement-activity-state-partnerships"
+    },
+    {
+      "date": "2026-09-23",
+      "event": "SBA and IRS announce that an IRS review of PPP and EIDL applications found tax-information discrepancies tied to about $100 billion in loans; IRS has opened examinations. SBA states the figure reflects discrepancies, not findings of fraud in each case.",
+      "kind": "primary",
+      "source": "SBA",
+      "url": "https://legacy.sba.gov/article/2026/09/23/sba-referral-leads-irs-investigate-tax-liabilities-related-potentially-100-billion-covid-loan-fraud"
+    }
+  ],
+  "title": "Complete COVID-era PPP and EIDL fraud cleanup, with repayment or referral",
+  "tracked": true,
+  "uncertainties": "All figures come from SBA and SBA OIG releases, with no independent news or court-filing confirmation because the shared search budget ran out. Earlier suspension rounds (Minnesota, Maine) lack dates in the sources. The OIG report titles were read from an index page, not the reports. I did not find, and did not exhaustively search for, any action on the Planned Parenthood loans or on reversing PPP forgiveness; the OIG and newsroom pages reviewed do not mention them. The stage reflects the scale and operative status of enforcement, while recoveries are unreported.",
+  "updated_at": "2026-10-08"
+}

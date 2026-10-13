@@ -1,0 +1,204 @@
+{
+  "agency": "White House / DOI",
+  "blockers": [],
+  "chapter": "16",
+  "confidence": 86,
+  "confidence_label": "high",
+  "confidence_reason": "The revocation of Executive Order 14008 was read in Executive Order 14154 and the signed Interior order restoring governor and local approval for LWCF purchases was read. Order 3396, which the Mandate cites, has not been formally revoked, and the order's follow-up tasks were not checked.",
+  "durability": {
+    "level": "low",
+    "why": "An executive order revocation and a secretarial order can be reversed by a later President or Secretary; the LWCF statute is unchanged."
+  },
+  "est_completion": {
+    "basis": "Inference: both recommended actions have operative counterparts: EO 14148 and EO 14154 revoked EO 14008 in January 2025, and Secretary's Order 3442 (2025-09-04) restored a governor-and-local approval requirement for LWCF acquisitions. Driving step: none pending. The open items are housekeeping that the record could not confirm either way (formal revocation of Secretary's Order 3396, State Program Manual revisions, review of other programs), which is why the stage stays below completed.",
+    "window": "done"
+  },
+  "history": [
+    {
+      "date": "2026-10-07",
+      "note": "Objective added in the in-depth pass and independently reviewed."
+    },
+    {
+      "date": "2026-10-08",
+      "note": "Red-team check on an objective counted as in effect: holds. The record now names Secretary's Order 3396 (2021) as the likely Biden-era order and confirms that two executive orders revoke Executive Order 14008; the stage is unchanged."
+    },
+    {
+      "date": "2026-10-08",
+      "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    }
+  ],
+  "id": "c16-07",
+  "last_checked": "2026-10-08",
+  "layer": 2,
+  "match": "direct",
+  "mechanism": "mixed",
+  "pages": [
+    531,
+    532
+  ],
+  "position": null,
+  "progress": 85,
+  "proposal": "The Mandate recommends that the President vacate Executive Order 14008, which set the 30 by 30 goal of conserving 30 percent of U.S. lands and waters by 2030, and that Interior vacate a Biden-era secretarial order that dropped the Trump-era requirement for state and local government approval before federal purchases of private land with Land and Water Conservation Fund money.",
+  "redteam": {
+    "date": "2026-10-08",
+    "evidence": [
+      {
+        "date": "2025-01-28",
+        "kind": "primary",
+        "note": "Executive Order 14148 Sec. 2(s) lists Executive Order 14008 among the orders revoked. This was the stage-deciding source the reviewer had not re-fetched.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2025/01/28/2025-01901/initial-rescissions-of-harmful-executive-orders-and-actions"
+      },
+      {
+        "date": "2025-01-29",
+        "kind": "primary",
+        "note": "Executive Order 14154 Sec. 4(a)(iii) also lists Executive Order 14008 among the orders it revokes, so the revocation appears in two orders.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01956/unleashing-american-energy"
+      },
+      {
+        "date": "2021-02-11",
+        "kind": "primary",
+        "note": "Secretary's Order 3396, signed 2021-02-11, rescinds Secretary's Order 3388 on LWCF implementation; the text read does not itself mention a governor or local approval requirement.",
+        "source": "Penn State Ag Law (copy of Interior order)",
+        "url": "https://aglaw.psu.edu/wp-content/uploads/2021/06/U.S.-DOI-Secretarial-Order-3396-.pdf"
+      },
+      {
+        "date": "2025-09-04",
+        "kind": "news",
+        "note": "Reports Secretary Burgum announced Secretary's Order 3442 on 2025-09-04; does not mention SO 3396 or any legal challenge.",
+        "source": "Wildlife Management Institute",
+        "url": "https://wildlifemanagement.institute/node/1765"
+      }
+    ],
+    "note": "The record now names Secretary's Order 3396 (2021) as the likely Biden-era order and confirms that two executive orders revoke Executive Order 14008; the stage is unchanged.",
+    "verdict": "holds",
+    "what_was_tested": "Looked for a gap in either prong by reading Executive Orders 14148 and 14154 in the Federal Register for the revocation of Executive Order 14008, reading the 2021 Interior order that rescinded the Trump-era LWCF order, and searching for challenges to Secretary's Order 3442."
+  },
+  "related_ids": [
+    "c16-19"
+  ],
+  "remaining": [
+    "Confirm whether Secretary's Order 3396 (the 2021 rescission of Secretary's Order 3388) has been formally revoked; Secretary's Order 3442 does not say it revokes any prior order.",
+    "Revise the State Program Manual and the Outdoor Recreation Legacy Partnership program as Secretary's Order 3442 directs (30 and 60 day deadlines set in the order; completion not checked).",
+    "Review remaining agency programs that used the 30 by 30 or America the Beautiful framing (not checked)."
+  ],
+  "requires_congress": "no",
+  "research_agent": null,
+  "review": {
+    "flags": [
+      "Mandate endnote 69 names SO 3396; inference replaced with the citation",
+      "est_completion window changed from done to unknown to match the implemented stage",
+      "SO 3442 signature date blank; 2025-09-04 from Interior listing"
+    ],
+    "mandate_check": "verified",
+    "mandate_note": "Page 531 describes Executive Order 14008's 30 by 30 plan; page 532 says the President should vacate that order and Interior should vacate a Biden secretarial order that ended the Trump-era requirement for state and local approval before LWCF purchases of private property. Endnote 69 identifies that order as Secretary's Order 3396 (2021-02-11), so the record's inference is confirmed by the Mandate itself.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-08",
+    "reviewer": "Y1",
+    "source_checks": [
+      {
+        "note": "EO 14154 Sec. 4(a) lists EO 14008 among the twelve orders it revokes (fetched for c02-08); EO 14148 was not re-fetched in this pass.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01956/unleashing-american-energy"
+      },
+      {
+        "note": "Order No. 3442 (signature date blank in the PDF): federal LWCF acquisitions need written support from the affected governor and the county or equivalent (Sec. 4(c)(5)), willing sellers only, fee acquisitions within existing boundaries with FWS and NPS priority; 30 and 60 day follow-up tasks; revokes no prior order and does not mention SO 3388 or 3396.",
+        "result": "supports",
+        "url": "https://www.doi.gov/sites/default/files/document_secretarys_orders/so-land-and-water-conservation-fund-2025-09-04-final-signed_508-edited.pdf"
+      }
+    ]
+  },
+  "significance": {
+    "B": 2,
+    "F": 1,
+    "F_estimated": false,
+    "M": 1,
+    "R": 1,
+    "adjudicated": false,
+    "raters": 2,
+    "rationale": "Rescinding the 30 by 30 goal and restoring local approval for LWCF purchases changes conservation targets and process.",
+    "version": "2026-10-08",
+    "weight": 1.25
+  },
+  "sources": [
+    {
+      "date": "2025-01-28",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Initial Rescissions of Harmful Executive Orders and Actions (Executive Order 14148)",
+      "url": "https://www.federalregister.gov/documents/2025/01/28/2025-01901/initial-rescissions-of-harmful-executive-orders-and-actions"
+    },
+    {
+      "date": "2025-09-04",
+      "kind": "primary",
+      "publisher": "Department of the Interior",
+      "title": "SO 3442, Land and Water Conservation Fund Implementation by the U.S. Department of the Interior",
+      "url": "https://www.doi.gov/document-library/secretary-order/so-3442-land-and-water-conservation-fund-implementation-us"
+    },
+    {
+      "date": "2025-09-04",
+      "kind": "primary",
+      "publisher": "Department of the Interior",
+      "title": "Secretary's Order 3442 (signed PDF)",
+      "url": "https://www.doi.gov/sites/default/files/document_secretarys_orders/so-land-and-water-conservation-fund-2025-09-04-final-signed_508-edited.pdf"
+    },
+    {
+      "date": "2025-09-10",
+      "kind": "news",
+      "publisher": "Colorado Public Radio",
+      "title": "Interior Department changing conservation funding rules, what it can go toward and who can participate",
+      "url": "https://updates.cpr.org/2025/09/10/interior-department-conservation-funding-changes-lwcf-public-lands-blm"
+    },
+    {
+      "date": "2021-02-11",
+      "kind": "news",
+      "publisher": "PBS NewsHour",
+      "title": "US agency cancels Trump policy on conservation purchases",
+      "url": "https://www.pbs.org/newshour/amp/nation/u-s-agency-cancels-trump-policy-on-conservation-purchases"
+    }
+  ],
+  "stage": "implemented",
+  "status_summary": "Both prongs have an operative action. Executive Order 14148, signed 2025-01-20 and published 2025-01-28, revoked Executive Order 14008, which contained the 30 by 30 goal, and Executive Order 14154 also lists Executive Order 14008 among its revocations. On 2025-09-04 the Interior Secretary signed Secretary's Order 3442, which requires written support from the affected governor and the local county or equivalent body for every federal acquisition under the Land and Water Conservation Fund, limits acquisitions to willing sellers and, for fee purchases, to lands inside existing boundaries, and gives the Fish and Wildlife Service and National Park Service priority. The order does not state that it revokes any prior order. The Mandate's own endnote for this recommendation cites Interior Secretary's Order 3396 (2021-02-11), which rescinded Secretary's Order 3388, the Trump-era LWCF order; Order 3442 restores the approval requirement in substance but does not formally vacate Order 3396. No challenge to Order 3442 was found. Whether other agencies continue conservation programs that used the 30 by 30 framing was not found in the sources reviewed.",
+  "timeline": [
+    {
+      "date": "2021-02-11",
+      "event": "Baseline: Interior Secretary's Order 3396 rescinds Secretary's Order 3388, the Trump-era order on Land and Water Conservation Fund implementation; the Mandate's endnote 69 (ch. 16) cites Order 3396 as the Biden-era order to vacate.",
+      "kind": "primary",
+      "source": "Interior (copy hosted by Penn State Ag Law)",
+      "url": "https://aglaw.psu.edu/wp-content/uploads/2021/06/U.S.-DOI-Secretarial-Order-3396-.pdf"
+    },
+    {
+      "date": "2025-01-20",
+      "event": "The President signs Executive Order 14148, Initial Rescissions of Harmful Executive Orders and Actions, which revokes Executive Order 14008 (Tackling the Climate Crisis at Home and Abroad), the order containing the 30 by 30 goal; it is published 2025-01-28.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/01/28/2025-01901/initial-rescissions-of-harmful-executive-orders-and-actions"
+    },
+    {
+      "date": "2025-01-20",
+      "event": "Executive Order 14154 (published 2025-01-29) also lists Executive Order 14008 among the orders it revokes (Sec. 4(a)(iii)), in addition to Executive Order 14148.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01956/unleashing-american-energy"
+    },
+    {
+      "date": "2025-09-04",
+      "event": "Interior Secretary Doug Burgum signs Secretary's Order 3442 on Land and Water Conservation Fund implementation, requiring written governor and local support for LWCF federal acquisitions and limiting them to willing sellers.",
+      "kind": "primary",
+      "source": "Department of the Interior",
+      "url": "https://www.doi.gov/document-library/secretary-order/so-3442-land-and-water-conservation-fund-implementation-us"
+    },
+    {
+      "date": "2025-09-10",
+      "event": "Colorado Public Radio reports the order, describing the governor and local approval requirement, limits on nonprofit participation and priority for Fish and Wildlife Service and National Park Service acquisitions, and noting critics' concern about restrictions on private landowners.",
+      "kind": "news",
+      "source": "Colorado Public Radio",
+      "url": "https://updates.cpr.org/2025/09/10/interior-department-conservation-funding-changes-lwcf-public-lands-blm"
+    }
+  ],
+  "title": "Rescind the 30 by 30 goal; restore state and local approval for LWCF purchases",
+  "tracked": true,
+  "uncertainties": "The Mandate's endnote 69 names Secretary's Order 3396 (2021-02-11), which rescinded Secretary's Order 3388; the text of Order 3396 read does not itself mention a governor or local approval requirement. The signed PDF of Secretary's Order 3442 shows a blank date line; the 2025-09-04 date comes from Interior's order listing and a Wildlife Management Institute report. Federal agencies' use of the 30 by 30 or America the Beautiful framing after 2025-01-20 (for example grant programs) was not found in the searches run, and an E&E News article returned was from 2021. No lawsuit against Secretary's Order 3442 was found.",
+  "updated_at": "2026-10-08"
+}

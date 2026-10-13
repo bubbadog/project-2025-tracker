@@ -1,0 +1,30 @@
+name: Suggest a recommendation to track
+description: A concrete, checkable recommendation in the document that the tracker does not yet cover.
+title: "[add] chapter NN: "
+labels: ["suggest"]
+body:
+  - type: input
+    id: chapter
+    attributes:
+      label: Chapter number and printed pages
+      placeholder: "14, pages 455 to 457"
+    validations:
+      required: true
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: The recommendation, in your own words
+      description: Paraphrase; do not paste the document text. Say what would count as it being carried out.
+    validations:
+      required: true
+  - type: textarea
+    id: actions
+    attributes:
+      label: Any federal action you know of since January 20, 2025, with links
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: House rules
+      options:
+        - label: I checked the By chapter view and this is not already tracked under another title.
+          required: true

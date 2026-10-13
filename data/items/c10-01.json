@@ -1,0 +1,213 @@
+{
+  "agency": "USDA (FNS)",
+  "blockers": [
+    "Early termination of some state waivers drew a suit in the U.S. District Court for the District of Rhode Island (temporary restraining order 2025-10-31); USDA reversed the terminations by guidance on 2026-02-26.",
+    "The categorical eligibility rule is pending at OMB; a similar 2019 proposal was never finalized."
+  ],
+  "chapter": "10",
+  "confidence": 82,
+  "confidence_label": "high",
+  "confidence_reason": "The statutory SNAP changes and effective dates were confirmed in the USDA implementation memo, a Federal Register search confirmed that no categorical eligibility rule has been published as of 2026-10-07, and the waiver litigation was confirmed in a secondary report. The participation figures were not checked.",
+  "durability": {
+    "level": "high",
+    "why": "The work-requirement, waiver, Thrifty Food Plan and utility allowance changes are in statute, so reversal would need legislation; the pending categorical eligibility rule would be a regulation and easier to undo."
+  },
+  "est_completion": {
+    "basis": "The statutory work-requirement changes are already operative, but the categorical eligibility rule is unpublished and rulemaking typically takes 12 to 24 months from proposal.",
+    "window": "2027"
+  },
+  "history": [
+    {
+      "date": "2026-10-07",
+      "note": "Red-team check found nothing that undercuts the status."
+    }
+  ],
+  "id": "c10-01",
+  "last_checked": "2026-10-07",
+  "layer": 1,
+  "match": "partial",
+  "mechanism": "mixed",
+  "pages": [
+    299,
+    300,
+    301
+  ],
+  "position": null,
+  "progress": 75,
+  "proposal": "The Mandate recommends re-implementing and tightening SNAP work requirements, mainly by limiting state waivers for able-bodied adults without dependents and clarifying the general work requirement. It also recommends narrowing broad-based categorical eligibility, re-evaluating the 2021 Thrifty Food Plan increase, and ending the heat-and-eat utility allowance practice.",
+  "redteam": {
+    "date": "2026-10-07",
+    "evidence": [
+      {
+        "date": "2026-10-07",
+        "kind": "primary",
+        "note": "Query for FNS documents mentioning categorical eligibility since 2025-10-01 returned one item, a 2026-05-18 information-collection notice, and no proposed or final rule.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22categorical+eligibility%22&conditions[agencies][]=food-and-nutrition-service&conditions[publication_date][gte]=2025-10-01&order=newest&per_page=20"
+      },
+      {
+        "date": "2026-05-18",
+        "kind": "primary",
+        "note": "Paperwork Reduction Act notice for the quality control worksheet; mentions categorical eligibility only as a form field, not a rule.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/05/18/2026-09935/agency-information-collection-activities-proposed-collection-comment-request-supplemental-nutrition"
+      }
+    ],
+    "note": "The statutory SNAP changes stand and no categorical eligibility rule has been published as of 2026-10-07; a web search for one returned only 2019 coverage.",
+    "verdict": "holds",
+    "what_was_tested": "Re-ran a Federal Register query on 2026-10-07 for any Food and Nutrition Service categorical eligibility proposal and searched the web for a published rule, to see whether the pending piece had moved or the statutory changes had been blocked."
+  },
+  "related_ids": [
+    "c00-10",
+    "c10-11"
+  ],
+  "remaining": [
+    "Publish and finalize a rule narrowing broad-based categorical eligibility (draft under OMB review since 2025-10-24; a Federal Register search on 2026-10-07 found no published proposal).",
+    "Issue regulations clarifying the general work requirement and state duties to offer employment and training slots (none found).",
+    "Complete the first Thrifty Food Plan re-evaluation under the new cost-neutral rule (not permitted before 2027-10-01).",
+    "Extend the utility allowance limit to all households; the law limits automatic eligibility to households with an elderly or disabled member, while the Mandate recommended ending the practice."
+  ],
+  "requires_congress": "partial",
+  "research_agent": "A07",
+  "review": {
+    "flags": [
+      "participation data not fetched"
+    ],
+    "mandate_check": "verified",
+    "mandate_note": "Pages 299 to 301 contain the SNAP reform list: re-implement ABAWD work requirements and limit waivers, clarify the general work requirement, reform broad-based categorical eligibility, re-evaluate the Thrifty Food Plan, and eliminate the LIHEAP-linked heat-and-eat practice; the paraphrase is accurate.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "R04",
+    "source_checks": [
+      {
+        "note": "FNS memo dated 2025-09-04 confirms the P.L. 119-21 changes: time-limit exception age raised to 65, child exception limited to under 14, veteran, homeless and former foster youth exceptions removed, waivers only at 10 percent unemployment (Alaska and Hawaii rules separate), cost-neutral Thrifty Food Plan, and automatic heating and cooling SUA via LIHEAP limited to elderly or disabled households; most provisions effective on enactment, with a 120-day QC hold-harmless.",
+        "result": "supports",
+        "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-implementation.pdf"
+      },
+      {
+        "note": "Federal Register search run on 2026-10-07 returns only two information-collection notices and no proposed or final categorical eligibility rule, consistent with the claim that the draft rule has not been published.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22categorical+eligibility%22&conditions[agencies][]=food-and-nutrition-service&conditions[publication_date][gte]=2025-01-20"
+      },
+      {
+        "note": "Ballotpedia confirms RI Council of Churches v. Rollins (D.R.I.), filed 2025-10-30 by eight cities and other groups; a TRO on 2025-10-31 paused the early termination of insufficient-jobs waivers set for 2025-11-02; USDA guidance of 2026-02-26 reinstated the waivers through their original expiration dates.",
+        "result": "supports",
+        "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
+      }
+    ]
+  },
+  "self_confidence": 78,
+  "significance": {
+    "B": 1,
+    "F": 2,
+    "F_estimated": false,
+    "M": 3,
+    "R": 2,
+    "adjudicated": false,
+    "raters": 2,
+    "rationale": "Tighter SNAP work rules, narrower categorical eligibility and Thrifty Food Plan changes would alter eligibility and benefits for millions.",
+    "version": "2026-10-08",
+    "weight": 2
+  },
+  "sources": [
+    {
+      "date": "2025-09-04",
+      "kind": "primary",
+      "publisher": "USDA Food and Nutrition Service",
+      "title": "SNAP provisions of Public Law 119-21 (FNS memo to state agencies)",
+      "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-implementation.pdf"
+    },
+    {
+      "date": "2025-10-03",
+      "kind": "primary",
+      "publisher": "USDA Food and Nutrition Service",
+      "title": "SNAP ABAWD exceptions implementation memo",
+      "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-abawd-exceptions-implementation.pdf"
+    },
+    {
+      "date": "2025-10-24",
+      "kind": "primary",
+      "publisher": "OIRA (reginfo.gov)",
+      "title": "Pending EO 12866 review: SNAP Reforming Categorical Eligibility",
+      "url": "https://www.reginfo.gov/public/do/eoDetails?rrid=1142013"
+    },
+    {
+      "date": "2026-06-01",
+      "kind": "primary",
+      "publisher": "USDA Food and Nutrition Service",
+      "title": "SNAP national monthly participation, FY2023 to FY2026",
+      "url": "https://www.fna.usda.gov/sites/default/files/resource-files/snap-4fymonthly-9.pdf"
+    },
+    {
+      "date": "2026-04-02",
+      "kind": "news",
+      "publisher": "Ballotpedia News",
+      "title": "USDA guidance in response to litigation reinstates SNAP benefits for some ABAWDs",
+      "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
+    }
+  ],
+  "stage": "implemented",
+  "status_summary": "Public Law 119-21 (signed 2025-07-04) extended the time limit on benefits for adults without dependents to ages 18 through 64, narrowed the child-based exemption to children under 14, removed the exemptions for veterans, people experiencing homelessness and former foster youth, and limited area waivers to unemployment of 10 percent or higher (with separate Alaska and Hawaii rules). The law also requires future Thrifty Food Plan re-evaluations to be cost neutral and limits the automatic heating and cooling utility allowance tied to energy assistance to households with an elderly or disabled member. USDA issued implementing memos in September and October 2025, and the hold-harmless period for state error rates ended 2025-11-01. A USDA draft rule to narrow broad-based categorical eligibility reached OMB on 2025-10-24, and no published proposal was found in the sources reviewed (which run through June 2026). USDA data show about 41.2 million participants in September 2025 and about 36.4 million in June 2026 (preliminary); the data do not establish the cause of the change.",
+  "timeline": [
+    {
+      "date": "2025-07-04",
+      "event": "Public Law 119-21 is signed. Its SNAP sections (10101 to 10103) cap future Thrifty Food Plan increases, widen the adult work requirement and restrict waivers, and limit the utility allowance linked to energy assistance. Several provisions took effect on enactment.",
+      "kind": "primary",
+      "source": "USDA Food and Nutrition Service",
+      "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-implementation.pdf"
+    },
+    {
+      "date": "2025-09-04",
+      "event": "FNS memo to state agencies summarizes the law's SNAP provisions: age limit raised, new exemption rules, waiver limits, cost-neutral Thrifty Food Plan adjustments, and utility allowance changes.",
+      "kind": "primary",
+      "source": "USDA Food and Nutrition Service",
+      "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-implementation.pdf"
+    },
+    {
+      "date": "2025-10-03",
+      "event": "FNS issues guidance on the revised adult exemptions (ages 18 to 64, child exemption under 14, removal of veteran, homeless and former foster youth exemptions). USDA also announces it will end waivers granted under a provision the law repealed.",
+      "kind": "primary",
+      "source": "USDA Food and Nutrition Service",
+      "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-abawd-exceptions-implementation.pdf"
+    },
+    {
+      "date": "2025-10-24",
+      "event": "A draft USDA proposed rule titled Reforming Categorical Eligibility is received by OMB for review. No conclusion date is listed.",
+      "kind": "primary",
+      "source": "OIRA (reginfo.gov)",
+      "url": "https://www.reginfo.gov/public/do/eoDetails?rrid=1142013"
+    },
+    {
+      "date": "2025-10-31",
+      "event": "A federal district court in Rhode Island issues a temporary restraining order that pauses the early termination of the waivers, in a suit by eight cities and other groups.",
+      "kind": "news",
+      "source": "Ballotpedia News",
+      "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
+    },
+    {
+      "date": "2025-11-01",
+      "event": "The hold-harmless period for quality-control error rates ends; states are expected to be fully implementing the July 4 provisions.",
+      "kind": "news",
+      "source": "National Governors Association",
+      "url": "https://www.nga.org/wp-content/uploads/2026/01/SNAP_HR1_Implementation_and_Shutdown_Timeline.pdf"
+    },
+    {
+      "date": "2026-02-26",
+      "event": "USDA guidance reverses the early waiver terminations; the affected waivers stay in effect through their original end dates, citing the litigation.",
+      "kind": "news",
+      "source": "Ballotpedia News",
+      "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
+    },
+    {
+      "date": "2026-06-01",
+      "event": "USDA monthly data (preliminary) show about 36.4 million SNAP participants in June 2026, down from about 41.2 million in September 2025 (month-level date; exact release date not stated).",
+      "kind": "primary",
+      "source": "USDA Food and Nutrition Service",
+      "url": "https://www.fna.usda.gov/sites/default/files/resource-files/snap-4fymonthly-9.pdf"
+    }
+  ],
+  "title": "Tighten SNAP work requirements, categorical eligibility and utility allowances",
+  "tracked": true,
+  "uncertainties": "Whether the categorical eligibility proposal has been published after June 2026 was not confirmed; a Federal Register search for FNS proposed and final rules since 2025-01-20 found none on categorical eligibility, and the OMB review entry is the only primary evidence. The Ballotpedia item and the NGA timeline are secondary summaries. The participation change is shown from USDA data without a causal finding; a local news article attributing it to rules effective 2026-02-01 was not verified and was not used. The shutdown-era benefit litigation and state-level implementation differences were not examined in detail. Because the Mandate proposed a regulatory path and the change came through a reconciliation law with a wider scope (ages to 64), the match is rated partial.",
+  "updated_at": "2026-10-08"
+}

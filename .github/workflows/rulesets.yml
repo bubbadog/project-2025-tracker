@@ -1,0 +1,30 @@
+# Keeps .github/rulesets/*.json identical to the rulesets GitHub enforces.
+# Runs weekly, on demand, and on any pull request that touches the files.
+# The public API omits bypass lists, so a bypass change is not detectable here.
+name: rulesets
+
+on:
+  schedule:
+    - cron: "17 14 * * 1"
+  workflow_dispatch:
+  pull_request:
+    paths: [".github/rulesets/**", "tools/check_rulesets.py"]
+
+permissions:
+  contents: read
+
+jobs:
+  rulesets:
+    name: rulesets
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Compare the ruleset files with the live rulesets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: python3 tools/check_rulesets.py
