@@ -73,7 +73,7 @@ jobs:
         with:
           node-version: "22"
       - run: python3 scripts/build_snapshot.py
-      - run: npm install --no-audit --no-fund playwright@1.55.0
+      - run: npm ci --no-audit --no-fund  # version comes from package-lock.json, which Dependabot keeps current
       - run: npx playwright install --with-deps chromium
       - name: Serve the site and run the browser test
         run: |
