@@ -7,9 +7,9 @@
     "No court injunction against these appraisal rules found in the sources reviewed"
   ],
   "chapter": "03",
-  "confidence": 80,
-  "confidence_label": "high",
-  "confidence_reason": "The General Schedule appraisal rule, the September 2026 rating-cap memo and the accountability proposed rule were all read in primary sources and match the summary. The 2025 SES rule was not re-read, and the stage could move once the accountability rule is finalized.",
+  "confidence": 78,
+  "confidence_label": "medium",
+  "confidence_reason": "Document pages 73 to 76 checked; the new rules and EO 14284 confirmed on Federal Register pages fetched in review, but the earlier stage-deciding appraisal rules were not re-read and litigation was not searched.",
   "durability": {
     "level": "medium",
     "why": "Final rules require rulemaking to reverse, but the distribution caps are set by annual OPM memo and a later administration could drop them quickly."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-08",
       "note": "Fields normalized in the structure pass (dates, windows, cross-references, significance scores); no change to status or evidence."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "added the Federal Register entry for the suitability rule, the 2026-08-03 OPM probationary appeals final rule and a 2026-09-03 MSPB final rule on Douglas factors, all checked on the Federal Register; no final Promoting Employee Accountability rule through 2026-10-13, stage unchanged."
     }
   ],
   "id": "c03-03",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -58,30 +62,40 @@
   "research_agent": "A02",
   "review": {
     "flags": [
-      "SES rule not re-fetched",
-      "stage may rise when the accountability rule is finalized",
-      "possible overlap with c03-04 (same OPM memo)"
+      "Added a missed MSPB final rule (2026-09-03, effective 2026-10-05) on Douglas factors; it implements one element of the removal-side package. Progress kept at 55 as most of the package is still proposed; a small increase could be argued.",
+      "Existing 2026-06-29 event says the Federal Register citation was not reviewed; the new 2026-06-30 event supplies it, so the coordinator may trim that clause.",
+      "Probationary rule also sits in sibling c03-08 with the same date; consistent."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Pages 73 to 76 criticize ratings clustered at the top, want managers judged on how they rate staff and political executives active in career appraisals, call for reissuing EO 13839, and propose making the MSPB the main reviewer of adverse actions; EO 13839's probationary provision was a reminder to supervisors about expiring probationary periods, so 'tightened probationary reviews' is reworded.",
+    "mandate_check": "verified",
+    "mandate_note": "Page 73 describes EO 13839 (shorter improvement periods, faster discipline, reminders on expiring probationary periods, no record-altering settlements); pages 73 to 74 stress meaningful appraisals tied to policy goals; page 76 proposes making the MSPB the main reviewer of adverse actions. Proposal paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R01",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-3",
     "source_checks": [
       {
-        "note": "OPM final rule published 2026-07-07 (91 FR 41521), effective 2026-08-06, compliance date 2027-01-01 for summary-level provisions: removes the bar on standardized distribution (intended for Levels 4 and 5), drops Level 2, removes ratings of record from negotiated grievances as agreements expire, requires a supervisory critical element.",
+        "note": "OPM final rule, 91 FR 49072, doc 2026-15654, published 2026-08-03, effective 2026-09-02, implements EO 14284 (signed 2025-04-24, 90 FR 17729); OPM-adjudicated appeals replace MSPB process.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13715/performance-appraisal-for-general-schedule-prevailing-rate-and-certain-other-employees"
+        "url": "https://www.federalregister.gov/documents/2026/08/03/2026-15654/streamlining-probationary-and-trial-period-appeals"
       },
       {
-        "note": "OPM Director memo dated 2026-09-21: combined Level 4 and 5 ratings capped at 40 percent of each career SES, SP and GS population for periods ending 2026-09-30, waivers up to 50 percent; conflicting CBA provisions continue until the agreement expires.",
+        "note": "Confirmed EO 14284, Strengthening Probationary Periods in the Federal Service, signed 2025-04-24, published 2025-04-29.",
         "result": "supports",
-        "url": "https://www.opm.gov/chcoc/latest-memos/fy-2026-standardized-distribution-of-rating-levels-and-fy-2026-performance-awards-guidance-for-federal-employees.pdf"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Strengthening%20Probationary%20Periods%22&conditions[type][]=PRESDOCU&conditions[publication_date][gte]=2025-04-01&conditions[publication_date][lte]=2025-05-31"
       },
       {
-        "note": "OPM and MSPB proposed rule published 2026-07-02 (91 FR 40444), comments to 2026-08-03 and later reopened: 30-day improvement period, removal as default penalty, no required progressive discipline, no record-altering settlements, MSPB drops Douglas factors; relies on EO 13839 and says its policies were restored in 2025.",
+        "note": "Correction and technical amendment published 2026-08-25 (doc 2026-17336).",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/07/02/2026-13445/promoting-employee-accountability"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Streamlining%20Probationary%22&conditions[publication_date][gte]=2026-08-01&order=newest"
+      },
+      {
+        "note": "OPM final rule, 91 FR 39361, published 2026-06-30, effective 2026-07-30, post-appointment conduct suitability actions.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/06/30/2026-13154/suitability-and-fitness"
+      },
+      {
+        "note": "Found via title search for Promoting Employee Accountability: MSPB final rule 91 FR 56549, published 2026-09-03, effective 2026-10-05, drops mandatory weighing of all 12 Douglas factors.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-18061.json"
       }
     ]
   },
@@ -133,10 +147,31 @@
       "publisher": "OPM",
       "title": "Guidance on Revocation of EO 14003",
       "url": "https://www.opm.gov/policy-data-oversight/latest-memos/guidance-on-revocation-of-eo-14003.pdf"
+    },
+    {
+      "date": "2026-08-03",
+      "kind": "primary",
+      "publisher": "Federal Register (OPM)",
+      "title": "Streamlining Probationary and Trial Period Appeals",
+      "url": "https://www.federalregister.gov/documents/2026/08/03/2026-15654/streamlining-probationary-and-trial-period-appeals"
+    },
+    {
+      "date": "2026-06-30",
+      "kind": "primary",
+      "publisher": "Federal Register (OPM)",
+      "title": "Suitability and Fitness",
+      "url": "https://www.federalregister.gov/documents/2026/06/30/2026-13154/suitability-and-fitness"
+    },
+    {
+      "date": "2026-09-03",
+      "kind": "primary",
+      "publisher": "Federal Register (MSPB)",
+      "title": "Determining the Appropriate Penalty for Federal Employees Charged With Misconduct",
+      "url": "https://www.federalregister.gov/documents/2026/09/03/2026-18061/determining-the-appropriate-penalty-for-federal-employees-charged-with-misconduct"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "OPM finalized two appraisal rules: the Senior Executive Service rule (published 2025-09-15, effective 2025-10-15) and the General Schedule rule (published 2026-07-07, effective 2026-08-06, with some summary-level provisions required from 2027-01-01). Both let OPM set a distribution of top ratings; the General Schedule rule also drops Level 2 and removes ratings of record from negotiated grievance procedures as agreements expire. An OPM memo of 2026-09-21 caps combined Level 4 and 5 ratings at 40 percent of each covered career population for appraisal periods ending 2026-09-30, with waivers up to 50 percent. The removal-side changes resembling EO 13839 (a 30-day improvement period, removal as the default penalty for unacceptable performance, no required progressive discipline, limits on settlements that alter records) are in a joint OPM and MSPB proposed rule of 2026-07-02 that is not yet final. Consolidating appeals at the MSPB has not happened; OPM-run appeals now handle reductions in force.",
+  "status_summary": "OPM finalized two appraisal rules: the Senior Executive Service rule (published 2025-09-15, effective 2025-10-15) and the General Schedule rule (published 2026-07-07, effective 2026-08-06, with some summary-level provisions required from 2027-01-01). Both let OPM set a distribution of top ratings; the General Schedule rule also drops Level 2 and removes ratings of record from negotiated grievance procedures as agreements expire. An OPM memo of 2026-09-21 caps combined Level 4 and 5 ratings at 40 percent of each covered career population for appraisal periods ending 2026-09-30, with waivers up to 50 percent. On probationary employees, OPM published a final rule on 2026-08-03 (effective 2026-09-02) setting a limited OPM appeal process after EO 14284 had made the prior MSPB procedures inoperative. Most removal-side changes resembling EO 13839 (a 30-day improvement period, removal as the default penalty for unacceptable performance, no required progressive discipline, limits on settlements that alter records) remain in a joint OPM and MSPB proposed rule of 2026-07-02 that was not final as of 2026-10-13, though the MSPB separately finalized a rule (effective 2026-10-05) ending the requirement to weigh all 12 Douglas factors in misconduct penalty reviews. Consolidating appeals at the MSPB has not happened; OPM-run appeals now handle reductions in force and probationary terminations.",
   "timeline": [
     {
       "date": "2025-02-07",
@@ -160,6 +195,13 @@
       "url": "https://www.opm.gov/news/news-releases/opm-finalizes-rule-strengthening-accountability-and-integrity-across-the-federal-workforce/"
     },
     {
+      "date": "2026-06-30",
+      "event": "OPM's Suitability and Fitness final rule is published in the Federal Register (91 FR 39361, effective 2026-07-30), allowing suitability actions based on serious post-appointment conduct of current employees; this is the Federal Register text of the rule announced 2026-06-29.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/06/30/2026-13154/suitability-and-fitness"
+    },
+    {
       "date": "2026-07-02",
       "event": "OPM and MSPB publish proposed rule Promoting Employee Accountability: default 30-day improvement opportunity, removal as default penalty for unacceptable performance, no required progressive discipline, MSPB to drop the Douglas factors, limits on settlement terms that alter records, no official time to represent colleagues in covered proceedings.",
       "kind": "primary",
@@ -181,6 +223,20 @@
       "url": "https://www.opm.gov/chcoc/latest-memos/additional-guidance-for-agency-implementation-of-regulations-on-performance-appraisal-for-general-schedule-prevailing-rate-and-certain-other-employees.pdf"
     },
     {
+      "date": "2026-08-03",
+      "event": "OPM final rule Streamlining Probationary and Trial Period Appeals (91 FR 49072, effective 2026-09-02) creates a limited OPM-adjudicated appeal process for probationary and trial-period terminations, replacing MSPB procedures that EO 14284 (2025-04-24) had made inoperative; a correction and technical amendment was published 2026-08-25.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/08/03/2026-15654/streamlining-probationary-and-trial-period-appeals"
+    },
+    {
+      "date": "2026-09-03",
+      "event": "MSPB publishes a final rule (91 FR 56549, effective 2026-10-05) ending the requirement to weigh all 12 Douglas factors when reviewing penalties in misconduct-based adverse actions, replacing it with a case-by-case totality-of-circumstances reasonableness test.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/09/03/2026-18061/determining-the-appropriate-penalty-for-federal-employees-charged-with-misconduct"
+    },
+    {
       "date": "2026-09-15",
       "event": "OPM reopens the Promoting Employee Accountability comment period (to 2026-09-29) limited to new OPM data and a report published 2026-08-27.",
       "kind": "primary",
@@ -197,6 +253,6 @@
   ],
   "title": "Strengthen appraisal ratings and speed removal of poor performers",
   "tracked": true,
-  "uncertainties": "I could not search for EO 14284 (probationary periods, 2025) or the litigation over 2025 probationary terminations, so the probationary-review part of EO 13839's agenda is not documented here. I read only part of each long Federal Register document, so details on supervisor-rating treatment and calibration are incomplete. The suitability rule date comes from OPM's news listing; I did not read the Federal Register text. No MSPB or court action specific to these rules was found, but searches for litigation were not possible after the search budget ran out.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Litigation over the 2025 probationary terminations and over these 2026 rules was not searched, so no court status is set. Only part of each long Federal Register document was read (the probationary and suitability rules through their first 100,000 characters), so details on supervisor-rating treatment and calibration are incomplete. The MSPB Douglas factors rule was read from its Federal Register API abstract; how it relates to the joint OPM and MSPB proposal was not confirmed from its text. A Federal Register title search (checked 2026-10-13) shows no final Promoting Employee Accountability rule after the 2026-09-15 reopening notice.",
+  "updated_at": "2026-10-13"
 }

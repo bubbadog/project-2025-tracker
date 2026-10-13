@@ -5,9 +5,9 @@
     "Vacancies Act limits on who may serve as acting CEO."
   ],
   "chapter": "08",
-  "confidence": 62,
+  "confidence": 58,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked at page 245. The nomination (White House) and hearing (Senate Foreign Relations) were read on primary sites; the 2026-03-07 ruling was read only through three consistent news summaries, and the current acting CEO rests on one news report.",
+  "confidence_reason": "Document text checked and the committee hearing page fetched; the displacement of holdover leadership and the acting arrangements rest on reputable news reports (Axios, NPR, Bloomberg Law) from earlier reviews, and the current acting CEO is known from one news report.",
   "court_status": {
     "basis": "Judge Lamberth held Lake's acting-CEO actions of 2025-07-31 to 2025-11-19 void; Lake said the ruling would be appealed, and appellate status of this ruling was not found.",
     "date": "2026-03-07",
@@ -35,10 +35,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Refutation check found no confirmation and no later ruling on the acting-CEO question; independent review kept implemented 65 at the band floor."
     }
   ],
   "id": "c08-05",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-13",
   "layer": 3,
   "match": "direct",
   "mechanism": "appointment",
@@ -48,6 +52,38 @@
   "position": "Relevant Government Entities (The State Department)",
   "progress": 65,
   "proposal": "The Mandate recommends employing effective leadership at USAGM, even in an acting capacity, while a new CEO awaits Senate confirmation, so that leadership held over from the prior Administration does not remain in place. It cites the years-long delay in confirming the CEO appointed in the first Trump term as the cause of that holdover. The point appears in the discussion of the State Department's oversight role.",
+  "redteam": {
+    "date": "2026-10-13",
+    "evidence": [
+      {
+        "date": "2026-08-05",
+        "note": "Chairman statement for the 2026-07-30 hearing: the nominee is for agency CEO and Under Secretary of State for Public Diplomacy; describes the agency as in transition.",
+        "source": "Senate Foreign Relations Committee",
+        "url": "https://www.foreign.senate.gov/press/rep/release/chairman-risch-opening-statement-at-nominations-hearing-on-july-30-2026"
+      },
+      {
+        "date": "2026-10-13",
+        "note": "Lists her as nominee for the CEO post; no committee vote or confirmation noted. Lead only.",
+        "source": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sarah_B._Rogers"
+      },
+      {
+        "date": "2026-03",
+        "note": "Search result on the 2026-03-07 ruling; not opened in this check.",
+        "source": "WTOP (AP)",
+        "url": "https://wtop.com/national/2026/03/federal-judge-rules-trump-administrations-actions-to-dismantle-voice-of-america-are-illegal/"
+      },
+      {
+        "date": "2020-05-21",
+        "note": "Opened to rule out a false lead: the 2020 committee vote for the earlier first-term nominee, not the 2026 nominee.",
+        "source": "Senate Foreign Relations Committee",
+        "url": "https://www.foreign.senate.gov/press/rep/release/chairman-risch-applauds-committee-passage-of-usagm-nominee-additional-legislation-resolutions"
+      }
+    ],
+    "note": "No confirmation, committee vote or later court ruling on the acting-CEO question was found through 2026-10-13, and the USAGM leadership page could not be fetched. The Mandate recommends effective leadership even in an acting capacity; that is partly met, but the unlawful-acting finding and a reported gap weaken the stage. Kept at implemented 65, the band floor.",
+    "verdict": "weakened",
+    "what_was_tested": "Searched for a Senate confirmation or committee vote on the CEO nominee, later D.D.C. or D.C. Circuit rulings on the acting-CEO question through 2026-10-13, and a current USAGM leadership page."
+  },
   "related_ids": [
     "c08-01"
   ],
@@ -60,58 +96,17 @@
   "research_agent": "N08",
   "review": {
     "flags": [
-      "judgment call: implemented 65 kept although the court voided four months of acting-CEO actions and the CEO nomination came about 14 months into the term",
-      "partial overlap with c08-01 (which mentions the ruling and Rigas) handled by related_ids, not a drop",
-      "appellate status of the 2026-03-07 ruling not found"
+      "Judgment call: implemented 65 held; the Mandate's ask is acting leadership that displaces holdovers, which occurred from early 2025, though part of the acting tenure was held unlawful and a reported gap existed in March 2026",
+      "If the acting role now held by the Deputy Secretary cannot be confirmed in a later run, in_progress becomes the better fit"
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 245 confirmed. The sentence sits in the State Department bullet and does not name the White House as actor; proposal and position adjusted accordingly without change in substance.",
+    "mandate_check": "verified",
+    "mandate_note": "Page 245 attributes holdover leadership to the years-long delay in confirming the first-term CEO and calls for effective leadership, even acting, while a new CEO awaits confirmation; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9a",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-1",
     "source_checks": [
       {
-        "note": "OPM notified board members of termination in late January 2025, per a Wall Street Journal reporter.",
-        "result": "supports",
-        "url": "https://www.dailysignal.com/2025/02/06/trump-ousts-global-broadcast-board-whats-next-lake-bozell/"
-      },
-      {
-        "note": "Morales named acting CEO; Lake special adviser who could not yet formally lead VOA.",
-        "result": "supports",
-        "url": "https://www.axios.com/2025/03/04/new-acting-usagm-ceo"
-      },
-      {
-        "note": "Lake elevated to deputy CEO in July, styled acting CEO after Morales placed on leave in late July; experts doubted Vacancies Act eligibility.",
-        "result": "supports",
-        "url": "https://www.npr.org/2025/08/13/nx-s1-5500554/kari-lake-ceo-agency-usagm-voice-of-america"
-      },
-      {
-        "note": "Ruling 2026-03-07, No. 1:25-cv-01015, actions 2025-07-31 to 2025-11-19 void; no appeal mentioned.",
-        "result": "supports",
-        "url": "https://news.bloomberglaw.com/litigation/lakes-stint-as-agency-for-global-media-acting-ceo-ruled-illegal"
-      },
-      {
-        "note": "Same ruling; Lake said it would be appealed.",
-        "result": "supports",
-        "url": "https://www.fox9.com/news/kari-lake-dismantle-voice-of-america"
-      },
-      {
-        "note": "Lake ineligible because not at the agency when the former CEO resigned in January 2025; judge sought a succession plan.",
-        "result": "supports",
-        "url": "https://wtop.com/?p=29022059"
-      },
-      {
-        "note": "Rogers nomination for USAGM CEO sent 2026-03-12.",
-        "result": "supports",
-        "url": "https://www.whitehouse.gov/presidential-actions/2026/03/nomination-and-withdrawals-sent-to-the-senate"
-      },
-      {
-        "note": "Rigas named acting CEO; government lawyers had told the court no one was acting CEO; Lake remains deputy CEO.",
-        "result": "supports",
-        "url": "https://www.thewrap.com/media-platforms/journalism/trump-nominates-sarah-b-rogers-usagm/?rand=13097"
-      },
-      {
-        "note": "Hearing 2026-07-30 on Rogers for CEO and Under Secretary; no mention of acting leadership.",
+        "note": "Page dated 2026-08-05 covers the 2026-07-30 hearing for the CEO and Under Secretary nominee; no vote stated.",
         "result": "supports",
         "url": "https://www.foreign.senate.gov/press/rep/release/chairman-risch-opening-statement-at-nominations-hearing-on-july-30-2026"
       }
@@ -267,5 +262,5 @@
   "title": "Put effective acting leadership in place at USAGM while a CEO awaits confirmation",
   "tracked": true,
   "uncertainties": "The ruling is known from news summaries (Bloomberg Law, Fox 9, WTOP); the opinion text was not read. Lake said the ruling would be appealed, and a D.C. Circuit panel on 2026-03-31 stayed a related 2026-03-17 order in the same litigation (see c08-01), but the appellate status of the 2026-03-07 authority ruling itself was not found. Rigas's acting role rests on one TheWrap report and was not confirmed on an agency or State Department site; whether his service meets the Vacancies Act was not examined. Whether Morales's own acting service was lawful was not addressed in the sources read. The board removal is described only as late January 2025 by a secondary report citing a Wall Street Journal reporter; the same report said an earlier presidential pick for CEO had been named but not confirmed, and the fate of that pick was not verified. The nomination is confirmed through the White House notice only; no committee vote or confirmation was found as of 2026-10-12. The stage is a judgment: acting leadership existed for most of the period, but part of it was held unlawful and there was a reported gap with no acting CEO in March 2026.",
-  "updated_at": "2026-10-12"
+  "updated_at": "2026-10-13"
 }

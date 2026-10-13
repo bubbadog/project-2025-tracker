@@ -2,9 +2,9 @@
   "agency": "DOD",
   "blockers": [],
   "chapter": "04",
-  "confidence": 60,
+  "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked and EO 14182 read, but the order does not name DOD; the DOD rescissions rest on one news report and one advocacy summary, and the DOD memoranda were not opened.",
+  "confidence_reason": "Document text checked and the AP report of the 2025-01-29 Pentagon memo read, corroborating the travel rescission with a named signatory; the DOD memoranda themselves were not retrieved and the administrative absence rescission rests on an advocacy source.",
   "durability": {
     "level": "low",
     "why": "The change rests on departmental memoranda and an executive order that a later Administration could reverse, as the 2022 policy was itself created by memo."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-11",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Refutation check found no reversal, litigation or restoring statute, and a 2025 House reinstatement amendment failed; independent review confirmed implemented 75."
     }
   ],
   "id": "c04-15",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-13",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -39,6 +43,44 @@
   "position": "DOD chapter, DOD Personnel: eliminate politicization (item 7)",
   "progress": 75,
   "proposal": "The Mandate says public money should no longer be used to facilitate abortion for service members, alongside ending funding for transgender surgeries, which is covered in c04-01 (p. 104).",
+  "redteam": {
+    "date": "2026-10-13",
+    "evidence": [
+      {
+        "date": "2025-01-31",
+        "note": "Reports a memo signed 2025-01-29 by the Pentagon personnel chief eliminating the October 2022 travel reimbursement policy; a primary-adjacent confirmation of the rescission.",
+        "source": "AP via NBC New York",
+        "url": "https://www.nbcnewyork.com/news/national-international/pentagon-strips-travel-reimbursement-abortions-fertility-treatment/6130808/"
+      },
+      {
+        "date": "2025-06-13",
+        "note": "A House amendment to reinstate the 2022 policy in the FY2026 defense appropriations bill was rejected on 2025-06-12.",
+        "source": "Deseret News",
+        "url": "https://www.deseret.com/politics/2025/06/13/maloy-pushes-against-abortion-provision"
+      },
+      {
+        "date": "2026-07-23",
+        "note": "Says the policy has been rescinded and that the House FY27 defense appropriations bill includes a rider barring funds for abortion travel; a lead only, bill text not read.",
+        "source": "National Women's Law Center letter (advocacy)",
+        "url": "https://nwlc.org/wp-content/uploads/2026/07/Sign-On-Letter-Opposing-Anti-Abortion-Riders-in-FY27-Defense-and-MilCon-VA.pdf"
+      },
+      {
+        "date": "2026-10-13",
+        "note": "First 100,000 characters read; no provision on abortion travel or administrative absence found in the health or personnel titles. Remaining text (Division H) not read; the title of this public law was not confirmed on the page as the FY2026 NDAA.",
+        "source": "GovInfo",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
+      },
+      {
+        "date": "2026-10-13",
+        "note": "Only result was the 2026-05-29 federal financial assistance proposal; no DOD abortion notice.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=abortion&conditions[agencies][]=defense-department&conditions[publication_date][gte]=2025-01-20"
+      }
+    ],
+    "note": "No court order, rescission or reinstatement was found; the House rejected a reinstatement amendment in 2025, and a 2026 advocacy letter says the policy remains rescinded and that a House FY27 rider would add a funding bar (not enacted as far as found). Stage holds. The Air Force memo of 2025-03-17 remained unreadable.",
+    "verdict": "holds",
+    "what_was_tested": "Searched for a reversal, litigation, Federal Register notice, or an NDAA FY2026 (P.L. 119-60) or FY2027 provision that restores or codifies the DOD policy; checked appropriations amendments."
+  },
   "related_ids": [
     "c04-01",
     "c00-09",
@@ -52,35 +94,19 @@
   "research_agent": "N04a",
   "review": {
     "flags": [
-      "EO 14182 wording narrowed to what the order says",
-      "added c00-09 to related_ids",
-      "noted source conflict on fertility care"
+      "Red-team evidence objects well-formed; the FY2026 NDAA text was only partly read and the FY27 rider is a proposal only",
+      "The AP report sides with the news account that fertility travel is also no longer reimbursed; conflict with the advocacy source remains in uncertainties"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 104 item 7 says public money should no longer be used for transgender surgeries or to facilitate abortion for service members. The proposal covers the abortion part and points to c04-01 for the rest.",
+    "mandate_note": "Page 104, item 7, says public money should not be used for transgender surgeries or to facilitate abortion for service members; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
-    "reviewer": "Y6",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-1",
     "source_checks": [
       {
-        "note": "EO 14182 signed 2025-01-24; policy statement, revokes EO 14076 and 14079, OMB guidance; does not mention DOD. Summary reworded from 'directed agencies to stop'.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2025/01/31/2025-02175/enforcing-the-hyde-amendment"
-      },
-      {
-        "note": "DTMO updated travel regulations citing the order; abortion and fertility travel no longer reimbursable; no date in text.",
+        "note": "AP report of 2025-01-31: memo signed on 2025-01-29 by the Pentagon personnel director ends the October 2022 travel reimbursement policy, including fertility travel; administrative absence not addressed.",
         "result": "supports",
-        "url": "https://365.military.com/daily-news/2025/01/31/travel-reimbursements-troops-get-abortions-fertility-treatments-nixed-pentagon.html"
-      },
-      {
-        "note": "Dated 2025-02-03; travel policy rescinded 2025-01-30; administrative absence policy rescinded; says IVF not affected.",
-        "result": "supports",
-        "url": "https://reproductiverights.org/news/dod-continues-rescission-of-biden-era-protections-for-abortion-care/"
-      },
-      {
-        "note": "Air Force memorandum of March 2025 found by search; fetch failed.",
-        "result": "unreachable",
-        "url": "https://www.airforcemedicine.af.mil/Portals/1/Documents/Reproductive-Health/Tab%201%20-%20SecAF%20Memorandum%20for%20Non-Covered%20Reproductive%20Health%20Care%20sig%20Ashworth%2017%20Mar%2025%20(002).pdf"
+        "url": "https://www.nbcnewyork.com/news/national-international/pentagon-strips-travel-reimbursement-abortions-fertility-treatment/6130808/"
       }
     ]
   },
@@ -118,6 +144,20 @@
       "publisher": "Center for Reproductive Rights",
       "title": "DOD continues rescission of Biden-era protections for abortion care",
       "url": "https://reproductiverights.org/news/dod-continues-rescission-of-biden-era-protections-for-abortion-care/"
+    },
+    {
+      "date": "2025-01-31",
+      "kind": "news",
+      "publisher": "NBC New York (AP)",
+      "title": "Pentagon strips travel reimbursement for troops seeking abortions, fertility treatment",
+      "url": "https://www.nbcnewyork.com/news/national-international/pentagon-strips-travel-reimbursement-abortions-fertility-treatment/6130808/"
+    },
+    {
+      "date": "2025-06-13",
+      "kind": "news",
+      "publisher": "Deseret News",
+      "title": "Utah Rep. Maloy pushes against abortion provision",
+      "url": "https://www.deseret.com/politics/2025/06/13/maloy-pushes-against-abortion-provision"
     }
   ],
   "stage": "implemented",
@@ -150,10 +190,17 @@
       "kind": "news",
       "source": "Center for Reproductive Rights",
       "url": "https://reproductiverights.org/news/dod-continues-rescission-of-biden-era-protections-for-abortion-care/"
+    },
+    {
+      "date": "2025-06-12",
+      "event": "At a House Appropriations hearing on the FY2026 defense appropriations bill, an amendment to reinstate the 2022 Defense Department policy on travel reimbursement and leave for abortion was voted down.",
+      "kind": "news",
+      "source": "Deseret News",
+      "url": "https://www.deseret.com/politics/2025/06/13/maloy-pushes-against-abortion-provision"
     }
   ],
   "title": "End DOD funding of travel and leave for service member abortions",
   "tracked": true,
   "uncertainties": "The DOD memoranda were not retrieved; facts come from an advocacy organization and a news outlet (the advocacy source is cited only for the dates and content of the DOD rescissions, which the news report corroborates for the travel policy only). The Military.com article carries no date in its text; the date is from its URL. The exact date of the administrative absence rescission is not given. The sources differ on fertility care: the news report says fertility travel is no longer reimbursable, while the Center says the rescissions do not apply to assisted reproduction such as IVF. A Department of the Air Force memorandum of March 2025 on non-covered reproductive care was found in a review search on an Air Force medicine site but could not be opened. Whether military health coverage of abortion under existing law changed was not examined.",
-  "updated_at": "2026-10-11"
+  "updated_at": "2026-10-13"
 }

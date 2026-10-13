@@ -5,9 +5,9 @@
     "Enforcement outcomes (investigations, findings, funding actions) were not found and so are not assessed"
   ],
   "chapter": "14",
-  "confidence": 70,
+  "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "The Mandate text and the two main Federal Register notices were read and match the summary. The stage sits at the low edge of implemented because the RFRA rule, delegations, HIPAA guidance withdrawal and any enforcement or funding actions were not found or not verified.",
+  "confidence_reason": "Document text checked and the HHS HIPAA page fetched; the stage rests on Federal Register notices read in earlier checks (rescissions and the organization notice) and one reputable secondary report of Weldon investigations; several Mandate items remain unconfirmed.",
   "durability": {
     "level": "low",
     "why": "Guidance rescissions, reorganizations and enforcement posture can be reversed quickly by a later administration; only a final rule or statute would be more durable."
@@ -20,10 +20,14 @@
     {
       "date": "2026-10-07",
       "note": "Red-team check found nothing that undercuts the status."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Reviewed the Purl v. HHS vacatur of the 2024 HIPAA reproductive health rule and kept it as context only, since it concerns a different instrument; the HHS page still links the reproductive health guidance; stage unchanged."
     }
   ],
   "id": "c14-09",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_action",
@@ -69,25 +73,20 @@
   "research_agent": "A10",
   "review": {
     "flags": [
-      "implemented is borderline; no enforcement actions verified",
-      "whether repudiating the 2021 foster care letters reinstates the 2020 exemptions is unclear",
-      "June 2022 HIPAA guidance status not verified"
+      "Overruled researcher on placement: Purl events not added to the timeline and court_status not set, because the vacated 2024 rule is a different instrument from the June 2022 guidance and a vacated status on this conscience record would mislead; the facts are kept as context in uncertainties",
+      "Fifth Circuit dismissal rests on law-firm reports only",
+      "Evidence that the June 2022 guidance is still linked supports keeping it in remaining"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Pages 492 to 494 ask HHS to move conscience and RFRA enforcement back from OGC to OCR, rescind the UVMMC and California Weldon analyses, fund and delegate authority to the Conscience and Religious Freedom Division, finalize the draft RFRA rule, restore child welfare waivers, and cut funds to violators; pages 496 and 497 ask OCR to withdraw its pharmacy guidance and the June 2022 HIPAA guidance.",
+    "mandate_note": "Page 497 asks OCR to withdraw its June 2022 HIPAA guidance on abortion; pages 492 to 496 (checked in earlier reviews) cover conscience enforcement, the Conscience and Religious Freedom Division, RFRA, foster care waivers and the Vermont and California analyses; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R06",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-1",
     "source_checks": [
       {
-        "note": "Confirms the 2026-01-26 notice (91 FR 3207, effective on publication) repudiating the July 2021 UVMMC letter, three November 2021 foster care RFRA letters, the August 2021 California Weldon letter, and December 2021 COVID-19 vaccine equity guidance; it does not mention HIPAA guidance or OGC memos.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/01/26/2026-01434/rescission-of-office-for-civil-rights-documents-under-executive-order-14192"
-      },
-      {
-        "note": "Confirms the OCR organization notice (91 FR 39626), approved 2026-05-14 and effective 2026-06-28, with a Conscience and Religious Freedom Division under a Deputy Director enforcing Church, Coats-Snowe, Weldon and ACA 1303(b)(4) and 1553; RFRA and new delegations are not mentioned.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/06/30/2026-13142/statement-of-organization-functions-and-delegations-of-authority"
+        "note": "Confirms the 2025-06-18 Purl vacatur of most of the 2024 rule (89 FR 32976) and case number; the page still links the reproductive health disclosure guidance, so it does not show withdrawal of the June 2022 guidance.",
+        "result": "partial",
+        "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/reproductive-health/index.html"
       }
     ]
   },
@@ -132,6 +131,13 @@
       "publisher": "Federal Register",
       "title": "Statement of Organization, Functions, and Delegations of Authority (HHS Office for Civil Rights)",
       "url": "https://www.federalregister.gov/documents/2026/06/30/2026-13142/statement-of-organization-functions-and-delegations-of-authority"
+    },
+    {
+      "date": "2025-06-27",
+      "kind": "primary",
+      "publisher": "HHS Office for Civil Rights",
+      "title": "HIPAA and Reproductive Health Care Privacy (HHS OCR page acknowledging the Purl vacatur)",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/reproductive-health/index.html"
     }
   ],
   "stage": "implemented",
@@ -175,6 +181,6 @@
   ],
   "title": "Restore OCR conscience enforcement and rescind Biden-era conscience and pharmacy guidance",
   "tracked": true,
-  "uncertainties": "All four sources are Federal Register notices I opened or saw in query results; I could not confirm enforcement activity (investigations, findings, funding actions), a RFRA rule, HIPAA guidance withdrawal or OGC memo rescission, partly because my web search quota ran out. The organization notice does not say whether the division was newly established or restored, and it replaced a strategic planning division in OCR's structure. The pharmacy rescission abstract states the 2023 guidance had revised a 2022 guidance; whether the 2022 guidance the Mandate cites remains posted was not checked. Whether the Mandate's 'immediate' items (rescind OGC legal analyses) were done beyond the four OCR documents is unknown.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "All four timeline sources are Federal Register notices opened or seen in query results; enforcement activity beyond the March 2026 Weldon investigations (findings, funding actions), a RFRA rule and OGC memo rescission were not confirmed. The organization notice does not say whether the division was newly established or restored, and it replaced a strategic planning division in OCR's structure. The pharmacy rescission abstract states the 2023 guidance had revised a 2022 guidance; whether the 2022 pharmacy guidance remains posted was not checked. Context, not an action on this objective: a federal court in Texas (Purl v. HHS, N.D. Tex., No. 2:24-cv-00228-Z) vacated most of the separate 2024 HIPAA reproductive health privacy rule on 2025-06-18, and law-firm reports say HHS did not appeal and the Fifth Circuit dismissed the intervenors' appeal in September 2025. That ruling concerns a different instrument from the June 2022 HIPAA guidance the Mandate targets, and the HHS reproductive health HIPAA page (content last reviewed 2025-06-27, metadata modified 2026-03-20) still links the guidance on disclosures relating to reproductive health care, so withdrawal of the June 2022 guidance was not found. Whether the Mandate's immediate items (rescind OGC legal analyses) were done beyond the four OCR documents is unknown.",
+  "updated_at": "2026-10-13"
 }

@@ -7,7 +7,7 @@
   "chapter": "15",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "The Mandate text, the operative interim final rule, and a Federal Register listing showing no later final rule were all confirmed in primary sources. Litigation in 2026 was not searched, and the special-purpose credit part of the recommendation was not researched.",
+  "confidence_reason": "Text checked; the interim final rule and the special purpose credit withdrawals are primary Federal Register documents that were read; litigation absence rests on one search.",
   "durability": {
     "level": "medium",
     "why": "An interim final rule in the Code of Federal Regulations; a later administration would need new rulemaking to restore a planning-based AFFH rule, but the interim status makes it more exposed than a final rule."
@@ -20,10 +20,14 @@
     {
       "date": "2026-10-07",
       "note": "Red-team check found nothing that undercuts the status."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Added the two HUD guidance-withdrawal notices (2026-04-06 and 2026-07-17) that remove the 2021 special purpose credit documents; summary already mentions them."
     }
   ],
   "id": "c15-01",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -82,31 +86,22 @@
   "requires_congress": "no",
   "research_agent": "A11",
   "review": {
-    "flags": [
-      "wording: first-person phrasing in status summary replaced",
-      "special-purpose credit component not researched",
-      "2026 litigation not searched"
-    ],
+    "flags": [],
     "mandate_check": "verified",
-    "mandate_note": "Page 509 lists repeal of the AFFH regulation reinstituted under the Biden Administration and of other special-purpose credit uses to further equity; footnote 30 on page 515 notes the 2023 Biden proposed replacement of the 2020 rule.",
+    "mandate_note": "pp.509 and 515 call for repealing the reinstated AFFH rule and ending equity uses of special-purpose credit authorities; the guidance withdrawals fit the second part.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R06",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-2",
     "source_checks": [
       {
-        "note": "Confirms the interim final rule at 90 FR 11020, published 2025-03-03, effective 2025-04-02, comments due 2025-05-02, repealing the 2021 interim final rule and the 1994 Analysis of Impediments requirements, with a certification met by any action rationally related to promoting fair housing; it also notes the 2023 proposed rule had been withdrawn on 2025-01-16.",
+        "note": "Fetched: 91 FR 17291, 2026-04-06, eight FHEO documents withdrawn incl. the 2021-12-07 special purpose credit statement, withdrawal effective 2025-09-17.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/03/03/2025-03360/affirmatively-furthering-fair-housing-revisions"
+        "url": "https://www.federalregister.gov/documents/2026/04/06/2026-06624/notification-of-withdrawal-of-fair-housing-and-equal-opportunity-guidance-documents"
       },
       {
-        "note": "Fetch proxy rejected the URL as too long.",
-        "result": "unreachable",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22affirmatively%20furthering%20fair%20housing%22&conditions[agencies][]=housing-and-urban-development-department&conditions[publication_date][gte]=2025-01-20&order=newest&per_page=20"
-      },
-      {
-        "note": "HUD documents matching AFFH sorted newest first: the most recent AFFH rule is the 2025-03-03 interim final rule, preceded by the 2025-01-16 withdrawal of the 2023 proposal; no later final rule appears.",
+        "note": "Fetched: 91 FR 44867, 2026-07-17, thirteen OGC documents withdrawn incl. the 2021-12-06 special purpose credit guidance, withdrawal effective 2025-09-25.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=housing-and-urban-development-department&conditions[term]=AFFH&order=newest"
+        "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14432/notice-of-the-withdrawal-of-ogc-guidance-documents"
       }
     ]
   },
@@ -158,6 +153,20 @@
       "publisher": "NAHRO",
       "title": "HUD Publishes Interim Final Rule Implementing AFFH",
       "url": "https://www.nahro.org/news/hud-publishes-interim-final-rule-implementing-affh"
+    },
+    {
+      "date": "2026-04-06",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Notification of Withdrawal of Fair Housing and Equal Opportunity Guidance Documents (91 FR 17291)",
+      "url": "https://www.federalregister.gov/documents/2026/04/06/2026-06624/notification-of-withdrawal-of-fair-housing-and-equal-opportunity-guidance-documents"
+    },
+    {
+      "date": "2026-07-17",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Notice of the Withdrawal of OGC Guidance Documents (91 FR 44867)",
+      "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14432/notice-of-the-withdrawal-of-ogc-guidance-documents"
     }
   ],
   "stage": "implemented",
@@ -199,6 +208,13 @@
       "url": "https://www.federalregister.gov/documents/2025/06/03/2025-09991/rescission-of-affirmative-fair-housing-marketing-regulations"
     },
     {
+      "date": "2026-04-06",
+      "event": "HUD publishes a notice (91 FR 17291) withdrawing eight Fair Housing and Equal Opportunity guidance documents, including the FHEO Statement on the Fair Housing Act and Special Purpose Credit Programs dated 2021-12-07; the notice gives an effective date of 2025-09-17 for the withdrawal.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/04/06/2026-06624/notification-of-withdrawal-of-fair-housing-and-equal-opportunity-guidance-documents"
+    },
+    {
       "date": "2026-04-22",
       "event": "CFPB publishes a final rule amending Regulation B, including its special purpose credit program provisions.",
       "kind": "primary",
@@ -213,6 +229,13 @@
       "url": "https://www.federalregister.gov/documents/2026/06/17/2026-12149/equal-credit-opportunity-regulation-b-special-purpose-credit-programs-rescission"
     },
     {
+      "date": "2026-07-17",
+      "event": "HUD publishes a notice (91 FR 44867) withdrawing thirteen Office of General Counsel guidance documents, including the 2021-12-06 guidance on the Fair Housing Act's treatment of certain special purpose credit programs; the notice gives an effective date of 2025-09-25.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14432/notice-of-the-withdrawal-of-ogc-guidance-documents"
+    },
+    {
       "date": "2026-08-25",
       "event": "Eight federal agencies including HUD, DOJ, CFPB and Treasury rescind the 2022 Interagency Statement on Special Purpose Credit Programs.",
       "kind": "primary",
@@ -223,5 +246,5 @@
   "title": "Repeal the Biden-era Affirmatively Furthering Fair Housing (AFFH) rule",
   "tracked": true,
   "uncertainties": "A 2026 litigation search returned only 2018-era suits over the earlier rule suspension and the 2025 attorneys general comment letter, so no suit against the 2025 interim rule was found, but the search was one query. The Federal Register listing reviewed shows the first 20 of 33 matching HUD documents. The special purpose credit documents were identified from titles and abstracts and were not read in full, and their scope relative to the Mandate's wording was not compared. The HUD press release page loaded without body text, so the 2025-02-27 date comes from a trade-group article.",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-13"
 }

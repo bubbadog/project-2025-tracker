@@ -6,14 +6,14 @@
     "Leadership: no Senate-confirmed CEO; the Vacancies Act ruling limits what acting officials can do."
   ],
   "chapter": "08",
-  "confidence": 56,
+  "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked; the ADN report was fetched and supports the agreed (not enacted) funding figures and the request; a Phayul report found by search also describes the deal as still needing passage; no source tying the 653 million dollars to an enacted law was found, and the litigation status rests on sources read in an earlier review.",
+  "confidence_reason": "Document text checked; the three new court-related events were each fetched (Bloomberg Law and TheWrap in full, Law360 as a paywalled preview); the stage rests on enacted appropriations and reputable news of stayed orders, and no appellate docket was readable.",
   "court_status": {
-    "basis": "derived from the latest court event in the timeline",
-    "date": "2025-04-22",
-    "state": "enjoined",
-    "url": "https://clearinghouse.net/case/46293/"
+    "basis": "Latest court event found is the 2026-04-23 D.C. Circuit argument in the VOA director appeal, with no decision found through 2026-10-13; in the main case the 2026-03-17 order remains stayed (2026-03-31) pending appeal, so no relief currently bars the wind-down.",
+    "date": "2026-04-23",
+    "state": "pending",
+    "url": "https://law360.com/articles/2469361"
   },
   "durability": {
     "level": "low",
@@ -39,10 +39,14 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Added the 2025-10-06 D.C. Circuit stay denial in the VOA director case, the 2026-03-11 government filing on the acting CEO, and the 2026-04-23 D.C. Circuit argument (from Law360); court status moved from a stale 2025 injunction to pending; stage unchanged."
     }
   ],
   "id": "c08-01",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -72,35 +76,30 @@
   "research_agent": "A06",
   "review": {
     "flags": [
-      "funding sentence wording adjusted: 'predates final passage' implied a passage no cited source confirms",
-      "enactment of the USAGM line in P.L. 119-75 not confirmed from a primary source",
-      "no D.C. Circuit merits ruling or Senate vote on the nominee found"
+      "court_status pending kept rather than stayed: the latest court event is the 2026-04-23 argument in an ancillary appeal, and the main-case stay (2026-03-31) is noted in the basis",
+      "Resolved the acting-CEO tension from the government's own filing (authority revives once a nominee is named)",
+      "Event kind set to court for the two appellate events"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Pages 239 to 241 criticize the VOA firewall and keep personnel security outside USAGM; pages 243 to 244 propose NSC ties or placing VOA under State public affairs; page 245 calls for reform or, failing that, defunding and disestablishing USAGM. The paraphrase is accurate.",
+    "mandate_note": "Pages 239 to 241 describe the firewall dispute and personnel security failures flagged by OPM and ODNI, page 243 notes no NSC liaison, and page 244 suggests placing VOA under State's Office of Global Public Affairs if not under the NSC; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "U1",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-1",
     "source_checks": [
       {
-        "note": "About 653 million dollars agreed (643 million for broadcasting, nearly 10 million for capital improvements) against a 153 million dollar request to support an orderly shutdown; bill released and agreed by negotiators, still needing House and Senate votes. The page does not name the original outlet; a search-result listing on whistleblower.org attributes the same headline to The Washington Post.",
+        "note": "Per curiam order of 2025-10-06, No. 25-5314, panel Millett, Pillard, Garcia; reasoning on inferior officer and board quorum confirmed.",
         "result": "supports",
-        "url": "https://www.adn.com/nation-world/2026/01/13/congress-agrees-to-fund-voice-of-america-bucking-trump-shutdown-order"
+        "url": "https://news.bloomberglaw.com/litigation/dc-circuit-rejects-us-bid-to-remove-voice-of-america-director"
       },
       {
-        "note": "Dated 2026-01-14: same 653 million dollar agreement, still requiring final passage and signature; does not name the bill. Not added to the record.",
+        "note": "Dated 2026-03-11; DOJ said no succession plan and no acting CEO until a nominee is named, after which acting authority revives.",
+        "result": "supports",
+        "url": "https://www.thewrap.com/media-platforms/journalism/donald-trump-voice-of-america-court-order-update/"
+      },
+      {
+        "note": "Dated 2026-04-23; panel appeared Thursday not to accept summary removal; argument inferred, case number and panel hidden by paywall.",
         "result": "partial",
-        "url": "https://phayul.com/congress-approves-653-million-for-voa-rfa-and-other-usagm-broadcasters/"
-      },
-      {
-        "note": "Carried from earlier review, not refetched in this pass: AP, 2026-03-31: D.C. Circuit panel (Henderson, Wilkins, Katsas) stays Lamberth's 2026-03-17 order pending appeal; more than 1,000 employees remain on leave; appeal could take months; notes the ruling that Lake lacked authority.",
-        "result": "supports",
-        "url": "https://www.wsls.com/news/politics/2026/03/31/appeals-court-suspends-order-for-voice-of-america-employees-to-return-to-work/"
-      },
-      {
-        "note": "Carried from earlier review, not refetched in this pass: Hearing 2026-07-30, release 2026-08-05: Sarah Rogers listed for USAGM CEO and the Under Secretary for Public Diplomacy post; Risch says a combined role would unify operations and messaging and that the agency is in transition; Rigas not mentioned.",
-        "result": "supports",
-        "url": "https://www.foreign.senate.gov/press/rep/release/chairman-risch-opening-statement-at-nominations-hearing-on-july-30-2026"
+        "url": "https://law360.com/articles/2469361"
       }
     ]
   },
@@ -166,6 +165,27 @@
       "publisher": "Congressional Research Service",
       "title": "Department of State, Foreign Operations, and Related Programs: FY2026 Budget and Appropriations (R48624)",
       "url": "https://www.everycrsreport.com/files/2026-07-15_R48624_48cf729af75f7e8e8c710d63e39078520bd54f59.html"
+    },
+    {
+      "date": "2025-10-07",
+      "kind": "news",
+      "publisher": "Bloomberg Law",
+      "title": "D.C. Circuit rejects U.S. bid to remove Voice of America director",
+      "url": "https://news.bloomberglaw.com/litigation/dc-circuit-rejects-us-bid-to-remove-voice-of-america-director"
+    },
+    {
+      "date": "2026-03-11",
+      "kind": "news",
+      "publisher": "TheWrap",
+      "title": "DOJ Says Voice of America Parent Has No Succession Plan After Kari Lake Ruling",
+      "url": "https://www.thewrap.com/media-platforms/journalism/donald-trump-voice-of-america-court-order-update/"
+    },
+    {
+      "date": "2026-04-23",
+      "kind": "news",
+      "publisher": "Law360",
+      "title": "DC Circ. Doubts Legality Of Trump's Ouster Of VOA Chief",
+      "url": "https://law360.com/articles/2469361"
     }
   ],
   "stage": "in_progress",
@@ -193,6 +213,13 @@
       "url": "https://www.foxnews.com/politics/appeals-court-backs-voa-overhaul-kari-lake-modernize-agency-huge-victory-president-trump.amp"
     },
     {
+      "date": "2025-10-06",
+      "event": "A D.C. Circuit panel (Millett, Pillard, Garcia) in Abramowitz v. Lake (No. 25-5314) denies the government's request to remove the VOA director while it appeals the ruling that his removal was unlawful, reasoning that the director is an inferior officer whose removal requires approval of the International Broadcasting Advisory Board, which lacked a quorum.",
+      "kind": "court",
+      "source": "Bloomberg Law",
+      "url": "https://news.bloomberglaw.com/litigation/dc-circuit-rejects-us-bid-to-remove-voice-of-america-director"
+    },
+    {
       "date": "2026-02-03",
       "event": "The Consolidated Appropriations Act, 2026 (Public Law 119-75, H.R. 7148) is enacted; its Division F carries USAGM funding that CRS reports as $652.70 million ($643.00 million for International Broadcasting Operations and $9.70 million for capital improvements), 24.7 percent below FY2025 enacted and well above the $153.0 million request.",
       "kind": "primary",
@@ -205,6 +232,13 @@
       "kind": "news",
       "source": "Associated Press via CP24",
       "url": "https://www.cp24.com/news/world/2026/03/08/us-federal-judge-rules-trump-administrations-actions-to-dismantle-voice-of-america-are-illegal/"
+    },
+    {
+      "date": "2026-03-11",
+      "event": "In a court filing after the 2026-03-07 ruling, Justice Department lawyers say USAGM has no CEO succession plan, that no one is serving as acting CEO until a permanent nominee is sent to the Senate, and that it is unclear what the agency may do under the order; the judge had ordered the government to name an acting CEO and outline a succession plan by that day.",
+      "kind": "news",
+      "source": "TheWrap",
+      "url": "https://www.thewrap.com/media-platforms/journalism/donald-trump-voice-of-america-court-order-update/"
     },
     {
       "date": "2026-03-12",
@@ -228,6 +262,13 @@
       "url": "https://www.wsls.com/news/politics/2026/03/31/appeals-court-suspends-order-for-voice-of-america-employees-to-return-to-work/"
     },
     {
+      "date": "2026-04-23",
+      "event": "A D.C. Circuit panel hears the appeal over the 2025 removal of the VOA director and, per a Law360 report (paywalled preview read), appears unpersuaded that the President could summarily remove him, suggesting Congress vested removal in the agency's board.",
+      "kind": "court",
+      "source": "Law360",
+      "url": "https://law360.com/articles/2469361"
+    },
+    {
       "date": "2026-07-30",
       "event": "The Senate Foreign Relations Committee holds a nominations hearing for Rogers as USAGM CEO; Chairman Risch describes a possible dual role with the Under Secretary post as a way to align operations and messaging, and Rogers's written statement prioritizes stabilizing and modernizing the agency and restoring local-language and transmission capabilities.",
       "kind": "primary",
@@ -237,6 +278,6 @@
   ],
   "title": "Restructure USAGM and VOA under tighter executive control or wind the agency down",
   "tracked": true,
-  "uncertainties": "Not found: any D.C. Circuit merits ruling (the earlier appeal, No. 25-5145, was set for argument on 2025-09-22 per the Clearinghouse summary, which lists no 2026 orders), the outcome of the appeal of the March 2026 orders, any Senate committee vote on Rogers's nomination as CEO, or developments in USAGM operations from August to October 2026. The 2026-03-31 date is taken from the AP story's URL and a 'Tuesday' reference; the AP text did not give the vote or reasoning. Rigas's acting role and Rogers's nomination date rest on one TheWrap report, and Lake's 2025-11-19 departure (in the earlier record) was not re-verified. The case captions and numbers come from the Clearinghouse summary. Stage choice is a judgment: the earlier 'blocked' rating rested on the March 2026 orders, one of which is now stayed, while the layoffs voided by the March 7 ruling and the shutdown request rejected by Congress still limit the wind-down. Searches run: D.C. Circuit and Lamberth rulings, Rogers nomination, later appeals and stays.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Not found: any D.C. Circuit decision through 2026-10-13 in the appeal of the March 2026 orders or in the VOA director case (Abramowitz v. Lake), any ruling on the plaintiffs' 2026-03-21 motion to dismiss the appeal, any Senate committee vote on Rogers's nomination as CEO, or USAGM operations from August to October 2026. The 2026-04-23 argument rests on a paywalled Law360 preview that says the panel appeared that Thursday; the words oral argument and the panel names are not visible, and the court docket was not reachable. The Clearinghouse page for the main case (updated 2026-06-24) lists no D.C. Circuit orders in 2026 and a second D.C. Circuit docket (No. 26-5087) without details. The 2026-03-31 date is taken from the AP story's URL and a 'Tuesday' reference. The government's 2026-03-11 filing said acting authority would revive once a permanent nominee was named, which fits TheWrap's 2026-03-12 report that Rigas was named acting CEO with the nomination, but that role is still confirmed by one news report only. Stage choice is a judgment: the layoffs voided by the March 7 ruling and the shutdown request rejected by Congress still limit the wind-down.",
+  "updated_at": "2026-10-13"
 }

@@ -7,7 +7,7 @@
   "chapter": "07",
   "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "The ODNI fact sheet and the Senate Intelligence Committee's legislation page were read and confirm the folding of the center's functions and a reported but unpassed bill. The finding that no express prohibition exists rests on a limited search, and the bill provisions were read only through the committee report.",
+  "confidence_reason": "Text checked; EO 14149, the ODNI release and the committee report are primary and read, but the bill sections are known only through the report and the core finding is partly an absence of action.",
   "durability": {
     "level": "low",
     "why": "The actions found are an executive order and an internal ODNI reorganization that a later administration could reverse; a statutory limit would be durable only if S. 4615 or a similar bill were enacted."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Re-checked S. 4615 status (reported 2026-05-20, Calendar No. 420, S. Rept. 119-133 dated 2026-08-05, no floor action) and the FY2027 NDAA status; no new events. Stage unchanged."
     }
   ],
   "id": "c07-07",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-13",
   "layer": 2,
   "match": "parallel",
   "mechanism": "mixed",
@@ -49,26 +53,22 @@
   "requires_congress": "partial",
   "research_agent": "D3",
   "review": {
-    "flags": [
-      "no express IC prohibition found (absence-of-evidence)",
-      "fact sheet undated; date inferred from the ODNI 2.0 announcement",
-      "50 U.S.C. 3059(e) not re-fetched by reviewer"
-    ],
+    "flags": [],
     "mandate_check": "verified",
-    "mandate_note": "Page 216 recommends that the intelligence community be barred from monitoring what the authors call domestic disinformation, citing risks to opposition speech, First Amendment protections and impartiality; the paraphrase is accurate.",
+    "mandate_note": "p.216 calls for barring the intelligence community from monitoring domestic disinformation; record treats the related steps as parallel.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y3",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-2",
     "source_checks": [
       {
-        "note": "Reached via redirect from odni.gov. The undated fact sheet calls the Foreign Malign Influence Center redundant of NIC and NCSC elements, describes a multi-year relationship between the center and social media companies, and says its core functions are being integrated into Mission Integration and the National Intelligence Council; it does not mention domestic disinformation.",
+        "note": "Fetched: S. Rept. 119-133, Intelligence Authorization Act for Fiscal Year 2027, 119th Congress 2nd session, dated 2026-08-05.",
         "result": "supports",
-        "url": "https://archive.dni.gov/files/ODNI/documents/ODNI-20-Fact-Sheet.pdf"
+        "url": "https://www.govinfo.gov/app/details/CRPT-119srpt133"
       },
       {
-        "note": "Lists S. 4615 (FY2027 Intelligence Authorization Act) as reported and placed on the Senate calendar on 2026-05-20 as Calendar No. 420, with S. Rept. 119-133 filed 2026-08-05; no floor action, passage or enactment shown.",
+        "note": "Fetched: CRS IN12704 (updated 2026-09-01): H.R. 8800 passed House 2026-07-22; cloture on motion to proceed to S. 4784 failed 2026-07-14; no further Senate floor steps.",
         "result": "supports",
-        "url": "https://www.intelligence.senate.gov/legislation"
+        "url": "https://www.everycrsreport.com/files/2026-09-01_IN12704_5febe81defbc4a83dad47a95acd74ace07d6be21.html"
       }
     ]
   },
@@ -183,6 +183,6 @@
   ],
   "title": "Bar the intelligence community from monitoring domestic disinformation",
   "tracked": true,
-  "uncertainties": "Partly a no-action finding: no search found a prohibition on IC monitoring of domestic disinformation. The Foreign Malign Influence Center dealt with foreign influence, so folding its functions is a related but different step from the Mandate's domestic-disinformation prohibition. The ODNI fact sheet's date is not printed in the PDF (it redirects from odni.gov to archive.dni.gov); its date is inferred from the matching 2025-08-20 announcement, and its wording was read through a fetch summary. The ODNI release page showed a metadata date of 2026-09-01 that conflicts with its 2025-08-20 dateline; the dateline is used. The FY2027 bill sections were read only as the committee report describes them, not as bill text (govinfo and congress.gov bill pages could not be opened). The FY2026 Intelligence Authorization Act was not checked for its treatment of the center. The Arab News piece is retained as a news item; its byline was not confirmed.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Partly a no-action finding: no search found a prohibition on IC monitoring of domestic disinformation. The Foreign Malign Influence Center dealt with foreign influence, so folding its functions is a related but different step from the Mandate's domestic-disinformation prohibition. The ODNI fact sheet's date is not printed in the PDF; its date is inferred from the matching 2025-08-20 announcement. The ODNI release page showed a metadata date of 2026-09-01 that conflicts with its 2025-08-20 dateline; the dateline is used. The FY2027 bill sections (Sec. 506, Sec. 609) were read only as the committee report describes them, not as bill text; the report itself (read 2026-10-13) describes S. 4615 as an original bill, was ordered printed 2026-08-05, and does not mention the Foreign Malign Influence Center. The committee legislation page shows the bill reported and placed on the Senate calendar (Calendar No. 420) on 2026-05-20, with the report dated 2026-08-05 and no floor action; a bill tracker shows the same dates, and congress.gov could not be fetched (robots restriction). As of a CRS status page dated 2026-09-01, the FY2027 NDAA (H.R. 8800 passed the House 2026-07-22; S. 4784 not yet passed the Senate, cloture on motion to proceed failed 2026-07-14) was not enacted; a tracker summary of H.R. 8800 lists five divisions with no intelligence authorization division, but that summary is not a full table of contents, so inclusion of intelligence authorization text in the NDAA was not ruled out. The FY2026 Intelligence Authorization Act was carried as a division of the FY2026 NDAA per the committee legislation page, so the vehicle question for FY2027 is open.",
+  "updated_at": "2026-10-13"
 }

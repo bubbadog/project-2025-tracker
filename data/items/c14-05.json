@@ -2,9 +2,15 @@
   "agency": "HHS (CMS, Medicaid)",
   "blockers": [],
   "chapter": "14",
-  "confidence": 80,
-  "confidence_label": "high",
-  "confidence_reason": "The Mandate text and the interim final rule were both read and match the summary. The redetermination and cost-sharing details rely on Wikipedia, and litigation or early state implementation in 2026 was not checked.",
+  "confidence": 70,
+  "confidence_label": "medium",
+  "confidence_reason": "Document text checked; the interim final rule was read on the Federal Register in earlier checks, the suit is confirmed by a state attorney general release, and the injunction denial by two consistent trade reports; the order and docket were not read.",
+  "court_status": {
+    "basis": "Preliminary injunction against the interim final rule denied without prejudice in Massachusetts et al. v. Oz (D. Mass.); merits case continues with expedited briefing ahead of the 2027-01-01 compliance date.",
+    "date": "2026-07-29",
+    "state": "pending",
+    "url": "https://www.beckershospitalreview.com/legal-regulatory-issues/federal-judge-denies-25-states-bid-to-block-medicaid-work-rules/"
+  },
   "durability": {
     "level": "high",
     "why": "The requirement is in federal statute (Public Law 119-21 section 71119), so a later administration cannot remove it without legislation."
@@ -15,16 +21,12 @@
   },
   "history": [
     {
-      "date": "2026-10-07",
-      "note": "Record created in the baseline research pass and sent to independent review."
-    },
-    {
-      "date": "2026-10-08",
-      "note": "Fields normalized in the structure pass (dates, windows, cross-references, significance scores); no change to status or evidence."
+      "date": "2026-10-13",
+      "note": "Added the multistate suit against the interim final rule (2026-06-29) and the denial of a preliminary injunction without prejudice (2026-07-29); court status set to pending; stage unchanged at in_progress 60."
     }
   ],
   "id": "c14-05",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -49,19 +51,28 @@
   "research_agent": "A10",
   "review": {
     "flags": [
-      "cost-sharing and redetermination details not checked against statute text",
-      "time limits and lifetime caps not adopted"
+      "Reworded coalition count to match the California release; event kind for the ruling set to court; new source kind for the state release set to primary"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 467 asks CMS to require more robust eligibility determinations; page 468 asks CMS to clarify state authority for work incentives and targeted premiums and cost sharing and to add time limits or lifetime caps; page 469 mentions Section 1115 waiver requirements such as work requirements for able-bodied adults.",
+    "mandate_note": "Page 468 asks CMS to clarify state ability to adopt work incentives and broaden targeted premiums and cost sharing, and to add time limits or lifetime caps; page 469 adds Section 1115 work requirements for able-bodied adults; the paraphrase fits, though the eligibility-determination element was not re-located on these pages.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R06",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-1",
     "source_checks": [
       {
-        "note": "Confirms CMS-2454-IFC at 91 FR 33348, published 2026-06-03, effective and comments due 2026-07-31, correction 2026-06-29; 80 hours a month for the adult expansion group aged 19 to 64 plus certain 1115 populations; state compliance by 2027-01-01 with a good-faith exemption process; implements section 71119 of Public Law 119-21.",
+        "note": "Dated 2026-06-29; 24 attorneys general and two governors; claims include narrowing the medically frail exemption, APA and coercion; court not named on the page.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/06/03/2026-11094/medicaid-program-community-engagement-requirement-for-certain-individuals"
+        "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-sues-trump-administration-over-unlawful-implementation"
+      },
+      {
+        "note": "Ruling 2026-07-29 by Judge Stearns, denied without prejudice for lack of irreparable harm; expedited summary judgment briefing before 2027-01-01.",
+        "result": "supports",
+        "url": "https://www.beckershospitalreview.com/legal-regulatory-issues/federal-judge-denies-25-states-bid-to-block-medicaid-work-rules/"
+      },
+      {
+        "note": "Names the court as D. Mass. and the case as Massachusetts et al. v. Oz; preliminary injunction denied, rule remains in effect.",
+        "result": "supports",
+        "url": "https://www.ajmc.com/view/judge-denies-preliminary-injunction-in-medicaid-work-requirements-case"
       }
     ]
   },
@@ -106,10 +117,31 @@
       "publisher": "Wikipedia",
       "title": "One Big Beautiful Bill Act (Wikipedia, accessed 2026-10-07; lead for section details)",
       "url": "https://en.wikipedia.org/wiki/One_Big_Beautiful_Bill_Act"
+    },
+    {
+      "date": "2026-06-29",
+      "kind": "primary",
+      "publisher": "California Attorney General",
+      "title": "Attorney General Bonta sues Trump administration over unlawful implementation of Medicaid work requirements",
+      "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-sues-trump-administration-over-unlawful-implementation"
+    },
+    {
+      "date": "2026-07-30",
+      "kind": "news",
+      "publisher": "Becker's Hospital Review",
+      "title": "Federal judge denies 25 states' bid to block Medicaid work rules",
+      "url": "https://www.beckershospitalreview.com/legal-regulatory-issues/federal-judge-denies-25-states-bid-to-block-medicaid-work-rules/"
+    },
+    {
+      "date": "2026-07-30",
+      "kind": "news",
+      "publisher": "AJMC",
+      "title": "Judge denies preliminary injunction in Medicaid work requirements case",
+      "url": "https://www.ajmc.com/view/judge-denies-preliminary-injunction-in-medicaid-work-requirements-case"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Public Law 119-21 (signed 2025-07-04) section 71119 requires states to establish Medicaid community engagement requirements for certain adults, going beyond the Mandate's call for state options by making the requirement mandatory. CMS published an interim final rule on 2026-06-03 (effective 2026-07-31; correction 2026-06-29): adults aged 19 to 64 in the expansion group must show 80 hours a month of work, service, a work program or education, or equivalent income, subject to exemptions and data-based verification, with state compliance required by 2027-01-01 and state requests for good-faith exemptions allowed. The same law adds eligibility redeterminations (section 71107; Wikipedia describes them as every six months for expansion adults) and expansion-adult cost sharing (section 71120; Wikipedia reports up to $35 per service for incomes above 100 percent of poverty). Time limits or lifetime caps were not found in the law.",
+  "status_summary": "Public Law 119-21 (signed 2025-07-04) section 71119 requires states to establish Medicaid community engagement requirements for certain adults, going beyond the Mandate's call for state options by making the requirement mandatory. CMS published an interim final rule on 2026-06-03 (effective 2026-07-31; correction 2026-06-29): adults in the expansion group must show 80 hours a month of work, community service, a work program or education, or equivalent income, subject to exclusions and verification, with state compliance required by 2027-01-01. A coalition of state attorneys general and two governors sued on 2026-06-29 (Massachusetts et al. v. Oz, D. Mass.) over the rule's treatment of medically frail beneficiaries and other claims, and on 2026-07-29 the court denied a preliminary injunction without prejudice, leaving the rule in effect while expedited merits briefing proceeds. The same law adds eligibility redeterminations (section 71107) and expansion-adult cost sharing (section 71120), whose details were taken from secondary descriptions; time limits or lifetime caps were not found in the law.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -133,6 +165,20 @@
       "url": "https://www.federalregister.gov/documents/2026/06/29/C1-2026-11094/medicaid-program-community-engagement-requirement-for-certain-individuals"
     },
     {
+      "date": "2026-06-29",
+      "event": "A coalition of 24 attorneys general (23 states and the District of Columbia) and the governors of Kentucky and Pennsylvania sues over the CMS interim final rule (Massachusetts et al. v. Oz), alleging it unlawfully narrows the medically frail exemption, violates the Administrative Procedure Act and coerces states.",
+      "kind": "court",
+      "source": "California Attorney General",
+      "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-sues-trump-administration-over-unlawful-implementation"
+    },
+    {
+      "date": "2026-07-29",
+      "event": "Judge Richard Stearns (D. Mass.) denies the states' motion for a preliminary injunction without prejudice, finding no showing of irreparable harm and noting 90 percent federal funding of state system costs; the rule stays in effect, with expedited merits briefing planned before 2027-01-01.",
+      "kind": "court",
+      "source": "Becker's Hospital Review",
+      "url": "https://www.beckershospitalreview.com/legal-regulatory-issues/federal-judge-denies-25-states-bid-to-block-medicaid-work-rules/"
+    },
+    {
       "date": "2026-07-31",
       "event": "Interim final rule takes effect; the comment period closes the same day.",
       "kind": "primary",
@@ -142,6 +188,6 @@
   ],
   "title": "Add Medicaid work requirements, cost sharing and stronger eligibility checks",
   "tracked": true,
-  "uncertainties": "Section headings in Public Law 119-21 were confirmed from the GovInfo table of contents; the section bodies (redetermination frequency, $35 cost sharing, effective dates) come from Wikipedia and were not checked against the statute text. Did not verify whether any court has challenged the interim final rule, which states are implementing early, or the length of the good-faith exemption period. Georgia's earlier Pathways program and other 1115 work requirement waivers were not reviewed.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Section headings in Public Law 119-21 were confirmed from the GovInfo table of contents; the section bodies (redetermination frequency, cost sharing amounts) come from secondary descriptions and were not checked against the statute text. The court ruling is known from trade press (beckershospitalreview.com, ajmc.com) and a state attorney general release; the order itself and the docket were not read, and the coalition count differs across sources (24 attorneys general and two governors per the California release; reported as 25 states elsewhere). Early implementation by individual states, the length of the good-faith exemption period and Section 1115 work requirement waivers were not reviewed. No court development after 2026-07-31 was found.",
+  "updated_at": "2026-10-13"
 }

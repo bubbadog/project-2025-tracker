@@ -4,9 +4,9 @@
     "Possible appeal of Axle of Dearborn v. Department of Commerce (Court of International Trade, Slip Op. 26-94, decided 2026-08-13, upholding the suspension); the ruling is reported as subject to appeal, and an appeal would mainly affect duties paid on low-value shipments from 2025-08-29 to the statutory end date."
   ],
   "chapter": "26",
-  "confidence": 80,
+  "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Executive orders and Federal Register records confirm the suspension is in force for China and all countries and now in CBP regulations; the 2027-07-01 statutory end date rests on a secondary source and possible litigation over the order's legal basis was not checked.",
+  "confidence_reason": "Text checked; the de minimis executive orders and CBP rules are primary and read, and the statutory end date is now stated in a primary CBP document, though Section 70531 itself was not read.",
   "durability": {
     "level": "medium",
     "why": "The current suspension rests on an executive order, while the statutory change is law but takes effect only in mid-2027."
@@ -23,10 +23,14 @@
     {
       "date": "2026-10-08",
       "note": "Event dates and citations checked against the primary documents. The 2025-07-30 signing event now cites the original whitehouse.gov presidential action for Executive Order 14324 (which also gives the 2025-08-29 effective date) instead of the 2026-02-20 order that amended it; that order keeps its own 2026-02-20 event."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Added CBP's 2026-10-08 proposed rule on low-value shipment entries from the Federal Register, which also states the statutory de minimis end date of 2027-07-01; no stage change."
     }
   ],
   "id": "c26-03",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -70,35 +74,18 @@
   "research_agent": "A15",
   "review": {
     "flags": [
-      "2027-07-01 statutory date from Wikipedia only",
-      "legal basis after the IEEPA ruling not tested in sources reviewed",
-      "overlap with c26-02"
+      "Event reworded with the de minimis link from the rule text; uncertainties updated since the 2027-07-01 date now has a primary source."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 789 lists stopping China's use of the de minimis exemption for goods under $800 as one item in Navarro's package (position correct); the paraphrase matches.",
+    "mandate_note": "p.789 recommends stopping China's use of the de minimis exemption; the CBP rule is a follow-on processing step for low-value shipments generally.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R08",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-2",
     "source_checks": [
       {
-        "note": "Executive Order 14388 of 2026-02-20 amends Executive Order 14324 (2025-07-30) and continues the all-country suspension from 2026-02-24, citing IEEPA, the National Emergencies Act and Trade Act section 604; postal duties tied to the surcharge rate until it expires or a new CBP postal process starts; no mention of Public Law 119-21.",
+        "note": "Fetched (first 100,000 characters): CBP NPRM 91 FR 64532, comments due 2026-12-07; type 11 and new type 13 entries, broker and bond rules; cites EO 14324 and EO 14388; states the de minimis exemption ends 2027-07-01 under the 2025 law. No China-specific provisions seen.",
         "result": "supports",
-        "url": "https://www.whitehouse.gov/presidential-actions/2026/02/continuing-the-suspension-of-duty-free-de-minimis-treatment-for-all-countries/"
-      },
-      {
-        "note": "States that the de minimis continuation order is not affected by the ending of IEEPA duties.",
-        "result": "supports",
-        "url": "https://www.whitehouse.gov/presidential-actions/2026/02/ending-certain-tariff-actions/"
-      },
-      {
-        "note": "Federal Register records show Executive Order 14324 at 90 FR 37775 with the global suspension effective 2025-08-29, Executive Order 14256 of 2025-04-02 ending de minimis for Chinese goods effective 2025-05-02, and CBP rules of 2026-06-24 on indefinite suspension.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22de+minimis%22+suspending+duty-free&order=newest"
-      },
-      {
-        "note": "CBP interim final rule (91 FR 37789, effective 2026-06-24) implements an indefinite suspension of the de minimis exemption for non-postal shipments; it does not state a statutory end date.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-12670.json"
+        "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20650/low-value-shipments"
       }
     ]
   },
@@ -157,6 +144,13 @@
       "publisher": "The White House",
       "title": "Suspending Duty-Free De Minimis Treatment for All Countries (Executive Order 14324)",
       "url": "https://www.whitehouse.gov/presidential-actions/2025/07/suspending-duty-free-de-minimis-treatment-for-all-countries/"
+    },
+    {
+      "date": "2026-10-08",
+      "kind": "primary",
+      "publisher": "Federal Register (CBP)",
+      "title": "Low-Value Shipments (CBP proposed rule, 91 FR 64532)",
+      "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20650/low-value-shipments"
     }
   ],
   "stage": "implemented",
@@ -203,10 +197,17 @@
       "kind": "news",
       "source": "Alvarez & Marsal",
       "url": "https://www.alvarezandmarsal.com/thought-leadership/uscit-upholds-ieepa-suspension-of-de-minimis-treatment-in-axle-of-dearborn"
+    },
+    {
+      "date": "2026-10-08",
+      "event": "CBP proposes a rule on low-value shipments (91 FR 64532; comments due 2026-12-07) requiring informal entries of goods valued at 2,500 dollars or less to be filed electronically at or before importation, creating an informal mail entry type with tracking-number data, requiring a licensed broker for some consignees and an entry bond, and allowing blanket formal-entry requirements. It cites Executive Orders 14324 and 14388 on the de minimis suspension and states that the 2025 reconciliation law ends the de minimis exemption effective 2027-07-01.",
+      "kind": "primary",
+      "source": "Federal Register (CBP)",
+      "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20650/low-value-shipments"
     }
   ],
   "title": "End the de minimis exemption that lets low-value Chinese shipments avoid tariffs",
   "tracked": true,
-  "uncertainties": "The 2027-07-01 statutory end date is now reported by Alvarez & Marsal as well as Wikipedia, but the text of Section 70531 was not read. The 2025-08-29 start of the global suspension rests on Federal Register records and secondary sources. The initial China-only order (Executive Order 14256) was not read; its details are inferred from Executive Order 14266. Whether the Court of International Trade ruling has been appealed was not found.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The 2027-07-01 statutory end date is reported by Alvarez & Marsal and Wikipedia and stated in CBP's 2026-10-08 proposed rule, but the text of Section 70531 was not read. The 2025-08-29 start of the global suspension rests on Federal Register records and secondary sources. The initial China-only order (Executive Order 14256) was not read; its details are inferred from Executive Order 14266. Whether the Court of International Trade ruling has been appealed was not found.",
+  "updated_at": "2026-10-13"
 }

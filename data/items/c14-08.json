@@ -1,14 +1,21 @@
 {
   "agency": "HHS (OCR, CMS)",
   "blockers": [
-    "Multistate suit against the CMS Medicaid and CHIP rule (coalition described as 22 states, including the District of Columbia and Pennsylvania's governor; D. Mass., filed 2026-09-02); relief sought and any hearing not found",
-    "The Section 1557 reversal currently rests on a court vacatur (Tennessee v. Kennedy), not an HHS rule; appeal status not verified",
+    "Multistate suit against CMS-2451-F (D. Mass., filed 2026-09-02) asks the court to declare the rule unlawful; no ruling found as of 2026-10-13",
+    "A separate New Hampshire suit reported 2026-10-01 asks a court to block the rule's hormone and puberty blocker provisions; court and status not verified",
+    "The Section 1557 reversal rests on a court vacatur (Tennessee v. Kennedy) and a non-enforcement notice, not an HHS rule",
     "Hospital condition of participation rule not yet final"
   ],
   "chapter": "14",
-  "confidence": 70,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "The Medicaid and CHIP funding rule is final but not effective until 2026-10-13 and faces a multistate suit, while the Section 1557 changes rest on a court vacatur and an HHS non-enforcement notice confirmed by earlier checks. The stage should be rechecked after 2026-10-13.",
+  "confidence_reason": "Document text checked and the Federal Register record for CMS-2451-F read (effective 2026-10-13, no corrections); absence of a stay rests on one news search and state press releases, not the D. Mass. docket, and the Section 1557 half rests on a vacatur and non-enforcement notice confirmed by earlier checks.",
+  "court_status": {
+    "basis": "Multistate challenge to CMS-2451-F filed in D. Mass. on 2026-09-02; no ruling, injunction or stay found as of 2026-10-13.",
+    "date": "2026-09-02",
+    "state": "pending",
+    "url": "https://www.oag.ca.gov/news/press-releases/attorney-general-bonta-challenges-rule-attempting-block-federal-reimbursements"
+  },
   "durability": {
     "level": "medium",
     "why": "Final CMS rules are harder to reverse than guidance, but the Section 1557 reversal depends on a court vacatur and executive posture that a later administration or appellate court could change."
@@ -21,10 +28,14 @@
     {
       "date": "2026-10-07",
       "note": "Status changed from Implemented to In progress after the red-team check. The Medicaid and CHIP funding bar is not effective until 2026-10-13 and drew a 22-state suit, so only the Section 1557 half is operative today; stage moves from implemented 65 to in_progress 55 and should be rechecked after 2026-10-13."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "CMS-2451-F reached its Federal Register effective date with no stay or injunction found in one news search; stage moved from in_progress 55 to implemented 65, reversing the 2026-10-07 change that was made only because the rule was not yet effective."
     }
   ],
   "id": "c14-08",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -36,36 +47,39 @@
     496
   ],
   "position": null,
-  "progress": 55,
+  "progress": 65,
   "proposal": "The Mandate recommends reversing the Biden-era redefinition of sex to include gender identity in Section 1557 and CHIP, removing related OCR guidance (including the May 2021 notice), announcing that OCR will not enforce gender identity discrimination bans, proposing a rule to restore the 2020 Section 1557 regulation, reissuing a Medicare coverage determination position on gender reassignment surgery, and withdrawing HHS support for gender transition interventions.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-13",
     "evidence": [
       {
         "date": "2026-08-13",
-        "kind": "primary",
-        "note": "CMS-2451-F is effective 2026-10-13, six days after 2026-10-07; for children actively receiving cross-sex hormones on that date, states may claim federal match for up to six months, with no such period for puberty blockers or surgery.",
+        "note": "Federal Register document record gives an effective date of 2026-10-13 and lists no corrections; a Federal Register query from 2026-08-14 returned no delay or stay notice.",
         "source": "Federal Register",
         "url": "https://www.federalregister.gov/documents/2026/08/13/2026-16508/medicaid-program-prohibition-on-federal-medicaid-and-childrens-health-insurance-program-funding-for"
       },
       {
         "date": "2026-09-02",
-        "kind": "primary",
-        "note": "Press release: a coalition of 22 states and the District of Columbia sued on 2026-09-02 alleging the rule lacks statutory authority and a reasoned basis and violates the Administrative Procedure Act and Spending Clause; court and relief sought not stated on the page.",
-        "source": "Massachusetts Attorney General",
-        "url": "https://www.mass.gov/news/ag-campbell-co-leads-lawsuit-challenging-trump-administrations-latest-attack-on-healthcare-for-transgender-youth"
+        "note": "D. Mass. suit filed 2026-09-02; the page says the rule takes effect 2026-10-13 unless the court intervenes.",
+        "source": "California Attorney General",
+        "url": "https://www.oag.ca.gov/news/press-releases/attorney-general-bonta-challenges-rule-attempting-block-federal-reimbursements"
       },
       {
-        "date": "2026-09-08",
-        "kind": "news",
-        "note": "Newsletter: the suit was filed in the US District Court for the District of Massachusetts; it does not say whether a preliminary injunction was sought.",
-        "source": "kslaw.com (law-firm newsletter)",
-        "url": "https://www.kslaw.com/Insights/Newsletters/Health-Headlines/Health-Headlines-September-8-2026"
+        "date": "2026-09-04",
+        "note": "States asked a Boston federal judge to declare the rule unlawful and stop it from taking effect; several states said they would continue coverage with state funds.",
+        "source": "GBH News",
+        "url": "https://www.wgbh.org/news/health/2026-09-04/at-least-5-other-states-join-mass-in-covering-transgender-kids-health-care-under-medicaid"
+      },
+      {
+        "date": "2026-06-23",
+        "note": "Tennessee v. Kennedy: final judgment 2025-10-22; no appeal shown (page updated 2026-06-23, docket excerpt incomplete).",
+        "source": "Civil Rights Litigation Clearinghouse",
+        "url": "https://clearinghouse.net/case/45688/"
       }
     ],
-    "note": "The Medicaid and CHIP funding bar is not effective until 2026-10-13 and drew a 22-state suit, so only the Section 1557 half is operative today; stage moves from implemented 65 to in_progress 55 and should be rechecked after 2026-10-13.",
-    "verdict": "changed",
-    "what_was_tested": "Checked the effective date of the CMS Medicaid and CHIP rule, the action carrying the funding half of this objective, and searched for litigation that could block it before it takes effect."
+    "note": "No injunction, stay or delay found in one search and the Federal Register record; the rule is treated as in effect. The D. Mass. docket was not read, so a same-day order cannot be excluded.",
+    "verdict": "holds",
+    "what_was_tested": "Whether the Medicaid and CHIP funding rule took effect on 2026-10-13 or was enjoined, stayed or administratively delayed; appeal status of Tennessee v. Kennedy; whether the hospital condition of participation rule was finalized."
   },
   "related_ids": [
     "c00-07",
@@ -82,26 +96,31 @@
   "research_agent": "A10",
   "review": {
     "flags": [
-      "red-team stage change from implemented 65 to in_progress 55 accepted as a borderline call",
-      "recheck after 2026-10-13 effective date",
-      "not-yet-effective final rule treated differently in c19-01 (kept at implemented)",
-      "Tennessee v. Kennedy appeal status unverified"
+      "Judgment call: implemented 65 at band floor because the funding bar is now operative and the Section 1557 non-enforcement is in place; in_progress remains defensible because the Mandate's proposed 2020-rule restoration, coverage determination and hospital CoP are not done",
+      "Reworded the proposed 2026-10-13 event so the absence-of-stay check sits in uncertainties, not the event",
+      "Separate New Hampshire suit found; not added as an event (court and date unverified)",
+      "Same-day D. Mass. order cannot be excluded; recheck next run"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 474 asks for a reissued Medicare coverage determination on gender reassignment surgery; page 475 objects to redefining sex in Section 1557 and CHIP; page 491 asks OASH to withdraw support for gender transition interventions; pages 495 and 496 ask OCR to restore the 2020 Section 1557 rule, rescind the May 2021 notice, state it will not enforce gender identity bans, and propose a rule; the paraphrase is accurate.",
+    "mandate_note": "Pages 495 and 496 ask HHS to restore the 2020 Section 1557 rule by proposed rule and refocus enforcement; pages 474, 475 and 491 (checked in the earlier review) cover the coverage determination, the CHIP definition of sex and OASH support; the paraphrase fits, and the Medicaid funding bar is a partial match to withdrawing HHS support.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "V2",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-1",
     "source_checks": [
       {
-        "note": "Release dated 2026-09-02 confirms the suit, APA and Spending Clause claims, and the rule's 2026-10-13 effective date; it describes a 22-state coalition made up of Massachusetts, 20 other jurisdictions including the District of Columbia, and Pennsylvania's governor, so '22 states and the District of Columbia' overcounts; court and any injunction request not stated.",
-        "result": "partial",
-        "url": "https://www.mass.gov/news/ag-campbell-co-leads-lawsuit-challenging-trump-administrations-latest-attack-on-healthcare-for-transgender-youth"
+        "note": "Effective on 2026-10-13; docket CMS-2451-F; no corrections or related delay documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-16508.json"
       },
       {
-        "note": "Batch API call returned only one document (truncated), so the CMS rule and vacatur notice were not re-read by this reviewer; earlier review and the red team read the CMS rule (effective 2026-10-13) and the link audit read the 2026-06-02 vacatur notice.",
-        "result": "unreachable",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-14548,2026-14549,2026-03708,2026-16508,2026-19964,2026-03456,2026-08556,2025-19729,2026-06178,2026-02719,2026-03157,2026-11015.json"
+        "note": "Confirms Massachusetts and 21 other states sued in Boston federal court asking to declare the rule unlawful and stop it taking effect; no order reported.",
+        "result": "partial",
+        "url": "https://www.wgbh.org/news/health/2026-09-04/at-least-5-other-states-join-mass-in-covering-transgender-kids-health-care-under-medicaid"
+      },
+      {
+        "note": "Dated 2026-10-01: rule takes effect 2026-10-13; reports a separate New Hampshire suit; no injunction or stay reported. Search for any D. Mass. order (1 search) found none.",
+        "result": "partial",
+        "url": "https://www.bostonglobe.com/2026/10/01/metro/nh-transgender-trump-medicaid-gender-affirming-care-minors/"
       }
     ]
   },
@@ -153,10 +172,17 @@
       "publisher": "Federal Register",
       "title": "Medicaid Program; Prohibition on Federal Medicaid and CHIP Funding for Sex-Rejecting Procedures Furnished to Children (final rule)",
       "url": "https://www.federalregister.gov/documents/2026/08/13/2026-16508/medicaid-program-prohibition-on-federal-medicaid-and-childrens-health-insurance-program-funding-for"
+    },
+    {
+      "date": "2026-09-02",
+      "kind": "primary",
+      "publisher": "California Attorney General",
+      "title": "Attorney General Bonta Challenges Rule Attempting to Block Federal Reimbursements for Providers of Gender-Affirming Care",
+      "url": "https://www.oag.ca.gov/news/press-releases/attorney-general-bonta-challenges-rule-attempting-block-federal-reimbursements"
     }
   ],
-  "stage": "in_progress",
-  "status_summary": "Executive Order 14187 (signed 2025-01-28) directed HHS action on pediatric gender transition care. HHS rescinded the May 2021 Section 1557 and Title IX notice on 2025-05-14 and published a review of pediatric gender dysphoria evidence (preliminary 2025-05-01, final 2025-11-19). On 2025-10-22 a federal court in Mississippi (Tennessee v. Kennedy) vacated the gender identity provisions of the 2024 Section 1557 rule, and on 2026-06-02 HHS published a notice stating that OCR and CMS will not investigate or enforce them while the vacatur stands. CMS published a final rule on 2026-08-13 that is effective 2026-10-13, so as of 2026-10-07 it is not yet operative; once effective it requires state Medicaid plans to bar payment for these procedures for people under 18 (CHIP under 19) and bars federal funds, with up to six months of continued federal match for hormone therapy already under way (not for puberty blockers or surgery). On 2026-09-02 a multistate coalition sued in the District of Massachusetts (the Massachusetts Attorney General describes it as 22 states; listed participants include the District of Columbia and Pennsylvania's governor); the sources read do not say whether they seek to block the rule before it takes effect. A proposed hospital condition of participation (2025-12-19) had not been finalized as of late September 2026. A proposed rule restoring the 2020 Section 1557 regulation and a reissued coverage determination were not found. Today the Section 1557 side rests on a court vacatur and a non-enforcement notice, and the funding side begins to operate on 2026-10-13, so the objective is partly operative.",
+  "stage": "implemented",
+  "status_summary": "Executive Order 14187 (signed 2025-01-28) directed HHS action on pediatric gender transition care. HHS rescinded the May 2021 Section 1557 and Title IX notice on 2025-05-14 and published a review of pediatric gender dysphoria evidence (preliminary 2025-05-01, final 2025-11-19). On 2025-10-22 a federal court in Mississippi (Tennessee v. Kennedy) vacated the gender identity provisions of the 2024 Section 1557 rule, and on 2026-06-02 HHS published a notice stating that OCR and CMS will not investigate or enforce them while the vacatur stands. A CMS final rule published 2026-08-13 (CMS-2451-F) took effect on 2026-10-13: it requires state Medicaid plans to bar payment for these procedures for people under 18 (CHIP under 19) and bars federal funds, with up to six months of continued federal match for hormone therapy already under way (not for puberty blockers or surgery). A coalition the Massachusetts Attorney General describes as 22 states (21 attorneys general and one governor) sued in the District of Massachusetts on 2026-09-02, asking the court to declare the rule unlawful; no order blocking or delaying the rule was found as of 2026-10-13. A proposed hospital condition of participation (2025-12-19) had not been finalized, and a proposed rule restoring the 2020 Section 1557 regulation was not found.",
   "timeline": [
     {
       "date": "2025-01-28",
@@ -213,10 +239,17 @@
       "kind": "primary",
       "source": "Massachusetts Attorney General",
       "url": "https://www.mass.gov/news/ag-campbell-co-leads-lawsuit-challenging-trump-administrations-latest-attack-on-healthcare-for-transgender-youth"
+    },
+    {
+      "date": "2026-10-13",
+      "event": "The CMS Medicaid and CHIP funding rule (CMS-2451-F) reaches its effective date as stated in the Federal Register; no correction or delay notice is listed for it.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/08/13/2026-16508/medicaid-program-prohibition-on-federal-medicaid-and-childrens-health-insurance-program-funding-for"
     }
   ],
   "title": "Reverse Section 1557 gender identity rule; end federal funding of youth gender transition",
   "tracked": true,
-  "uncertainties": "I searched the Federal Register for Section 1557, Title X and the procedure terms but could not run general web searches after my quota ended. Not verified: appeal status of Tennessee v. Kennedy; whether the hospital condition of participation rule has been finalized after the Federal Register queries I ran; effective date of the Medicaid rule; any national coverage determination action; Ryan White and OASH guidance withdrawals; the effective date of the Marketplace provision. The marketplace abstract (not the rule text) is the basis for the essential health benefit statement. HHS uses the regulatory term 'sex-rejecting procedures' for these interventions; the Mandate uses different terminology. The multistate suit was read through a state press release and a law-firm newsletter; whether a preliminary injunction or stay of the 2026-10-13 effective date has been requested or granted was not found. The Marketplace essential health benefit exclusion (2025-06-25 rule) is known only from its abstract and its effective date was not checked. If the Medicaid and CHIP rule takes effect on 2026-10-13 without an order blocking it, the stage would reasonably return to implemented.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Not verified: the D. Mass. docket and any motion for a preliminary injunction or stay in the multistate suit (court records were not reachable; one news search on 2026-10-13 found no order); whether any order issued on or just before 2026-10-13. A separate New Hampshire suit reported by the Boston Globe on 2026-10-01 challenges the hormone and puberty blocker provisions; its court and status were not verified. Appeal status of Tennessee v. Kennedy rests on a clearinghouse page that shows no appeal of the 2025-10-22 judgment (updated 2026-06-23, docket excerpt incomplete). The hospital condition of participation final rule: none found in the Federal Register through 2026-10-13; mid-July 2026 trade reporting (fiercehealthcare.com) says it was under OMB review and that a separate Oregon court had enjoined CMS from implementing the proposal, which was not independently verified. The Marketplace essential health benefit exclusion (2025-06-25 rule) is known only from its abstract. Several states said they will continue coverage with state funds, so the practical effect varies by state. HHS uses the regulatory term 'sex-rejecting procedures'; the Mandate uses different terminology.",
+  "updated_at": "2026-10-13"
 }

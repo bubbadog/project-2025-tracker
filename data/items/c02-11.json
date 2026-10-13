@@ -2,9 +2,9 @@
   "agency": "OMB (Made in America Office)",
   "blockers": [],
   "chapter": "02",
-  "confidence": 58,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked and both Federal Register documents and the office website were fetched and read; the office's continuation rests on an undated website and its strengthening is unverified.",
+  "confidence_reason": "Document text checked and the office's public site read (waiver review by the OMB office, current President named); continuation rests on an undated site and the absence of any revocation found, with no primary evidence of strengthening.",
   "durability": {
     "level": "medium",
     "why": "Buy American requirements rest partly on statute, though the office and waiver practice are executive choices."
@@ -22,10 +22,14 @@
     {
       "date": "2026-10-10",
       "note": "Independent review: sources confirmed; added that the office website references current administration policies; stage implemented 65 kept at the band floor."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Refutation check found no revocation or closure, and the office's public site still describes waiver review; independent review kept implemented 65 at the band floor."
     }
   ],
   "id": "c02-11",
-  "last_checked": "2026-10-10",
+  "last_checked": "2026-10-13",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -35,6 +39,44 @@
   "position": "OMB, Management (Made in America Office)",
   "progress": 65,
   "proposal": "The Mandate recommends that the Made in America Office, created under the prior administration, be continued and further strengthened in centralizing and advancing the government's Buy American and Made in America commitments.",
+  "redteam": {
+    "date": "2026-10-13",
+    "evidence": [
+      {
+        "date": "2026-10-13",
+        "note": "Page is undated and was accessed this run; describes agency waiver submissions to the Made in America Office for review, a searchable waiver list, and refers to the current President's policies; contact addresses are on the OMB domain.",
+        "source": "madeinamerica.gov (GSA-run)",
+        "url": "https://www.madeinamerica.gov/"
+      },
+      {
+        "date": "2026-03-18",
+        "note": "EO 14392 (signed 2026-03-13); the text does not mention the Made in America Office, the FAR Council or EO 14005, and sets no deadlines.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/03/18/2026-05383/ensuring-truthful-advertising-of-products-claiming-to-be-made-in-america"
+      },
+      {
+        "date": "2026-09-18",
+        "note": "Proposed FAR overhaul rule for Parts 9, 27 and 47 listed by OMB, OFPP, DOD, GSA and NASA; shows ongoing procurement rewrite; not opened.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19159/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-9-27-and"
+      },
+      {
+        "date": "2026-03-13",
+        "note": "Routine FAR trade agreements thresholds rule; not opened.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/03/13/2026-04912/federal-acquisition-regulation-trade-agreements-thresholds"
+      },
+      {
+        "date": "2026-04",
+        "note": "Search result about stalled FAR overhaul final rules; not opened, context only.",
+        "source": "Washington Technology",
+        "url": "https://washingtontechnology.com/contracts/2026/04/far-overhaul-final-rules-stall-omb-weighs-changes/413130/"
+      }
+    ],
+    "note": "No revocation of EO 14005 and no action closing or defunding the office was found through 2026-10-13; the office is still described on its public site as reviewing waivers. No primary evidence of further strengthening was found, so match stays partial and the stage is unchanged. The Federal Register API found no document on the office itself after 2026-03-01.",
+    "verdict": "holds",
+    "what_was_tested": "Looked for a primary source on the Made in America Office's current posture and for any order, rule or action after 2026-03-13 that would revoke or weaken the Buy American policy or the office; checked Federal Register rules and notices on the office and Buy American."
+  },
   "related_ids": [],
   "remaining": [
     "Evidence of added staff, authority or funding for the office.",
@@ -44,28 +86,19 @@
   "research_agent": "N02a",
   "review": {
     "flags": [
-      "office strengthening (staff, funding, authority) not verified; one web search found nothing new"
+      "Red-team evidence objects well-formed; three entries were not opened and are context only",
+      "Adjusted the new source's title and publisher to show the page is undated and the office sits in OMB"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 49 says the Made in America Office's work on Buy American commitments ought to be continued and further strengthened. The proposal matches.",
+    "mandate_note": "Page 49 says the Made in America Office, created under the prior administration on earlier groundwork, should be continued and further strengthened; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-10",
-    "reviewer": "Y5",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-1",
     "source_checks": [
       {
-        "note": "Final rule, effective 2025-06-11; removes many items from the nonavailable list; aims at a stronger domestic industrial base; centralized waiver review lets the office promote consistent waiver use.",
+        "note": "GSA-run site; agencies submit waivers to the OMB Made in America Office for review; FAQ names the current President's Made in America policies; no executive order number cited; undated.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/05/12/2025-08022/federal-acquisition-regulation-list-of-domestically-nonavailable-articles"
-      },
-      {
-        "note": "EO 14392 signed 2026-03-13; section 2(d) requires verification of American-origin claims on government-wide contracts; does not mention the office or EO 14005.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/03/18/2026-05383/ensuring-truthful-advertising-of-products-claiming-to-be-made-in-america"
-      },
-      {
-        "note": "Describes the office as part of OMB, waiver review and thresholds, and mentions the current President's policies; no 2025 or 2026 dates.",
-        "result": "partial",
-        "url": "https://www.madeinamerica.gov"
+        "url": "https://www.madeinamerica.gov/"
       }
     ]
   },
@@ -103,6 +136,13 @@
       "publisher": "Office of Management and Budget",
       "title": "Made in America Office",
       "url": "https://www.madeinamerica.gov"
+    },
+    {
+      "date": "2026-10-13",
+      "kind": "primary",
+      "publisher": "Made in America Office (OMB), site run by GSA",
+      "title": "Made in America (madeinamerica.gov, undated page, accessed 2026-10-13)",
+      "url": "https://www.madeinamerica.gov/"
     }
   ],
   "stage": "implemented",
@@ -126,5 +166,5 @@
   "title": "Continue and strengthen the Made in America Office's Buy American work",
   "tracked": true,
   "uncertainties": "The madeinamerica.gov page is undated. Whether EO 14005 remains in force was not confirmed beyond finding no revocation in searches and the Federal Register API; the date shown for that source is the access date. A 2025-2026 OMB memo on domestic preferences was not found. Match is partial because the office's own strengthening is unverified.",
-  "updated_at": "2026-10-10"
+  "updated_at": "2026-10-13"
 }

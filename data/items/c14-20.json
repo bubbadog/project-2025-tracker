@@ -7,7 +7,7 @@
   "chapter": "14",
   "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Document text checked; the executive order number and revocations were confirmed on federalregister.gov and the OLC opinion was read on justice.gov.",
+  "confidence_reason": "Unchanged: text checked; EO 14182 and the OLC opinion, which decide the stage, are primary and were read earlier; the new proposed rule is context and its section text was not read.",
   "durability": {
     "level": "medium",
     "why": "Rests on an executive order and an OLC opinion, both revocable."
@@ -29,6 +29,10 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Added OMB's 2026-05-29 proposed grant-rule rewrite, which lists a new cost-principle section titled Abortion, from the Federal Register; section text not read and no stage change."
     }
   ],
   "id": "c14-20",
@@ -59,28 +63,23 @@
   "research_agent": "N14",
   "review": {
     "flags": [
-      "judgment call: implemented 70 rests on the order and the OLC withdrawal; the audit results and any Medicaid guidance step are unconfirmed."
+      "Event reworded to what the Federal Register page shows (section title only); the unallowability claim moved to uncertainties as law-firm-sourced. Proposal only, no stage effect."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Pages 471 and 473 confirmed; travel funding at 471 and the Hyde audit at 473.",
+    "mandate_note": "pp.471 and 473 call for withdrawing abortion-travel Medicaid guidance and waivers, withdrawing the 2022 OLC Hyde opinion, and an HHS Hyde audit; a government-wide grant cost principle on abortion is related context.",
     "model": "Claude Opus",
     "reviewed_at": "2026-10-13",
-    "reviewer": "Y14a",
+    "reviewer": "U13-2",
     "source_checks": [
       {
-        "note": "EO 14182 confirmed via the Federal Register API; signed 2025-01-24, published 2025-01-31; revokes 14076 and 14079.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/31/2025-02175/enforcing-the-hyde-amendment"
+        "note": "Fetched: proposed rule, OMB lead, 91 FR 32198, comments due 2026-07-13; table of contents lists Section 200.477, Abortion. Section text not reached.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
       },
       {
-        "note": "Opinion dated 2025-07-11 withdraws the 2022 opinion; transportation barred outside exceptions; discusses ORR.",
-        "result": "supports",
-        "url": "https://www.justice.gov/olc/media/1408241/dl"
-      },
-      {
-        "note": "Announcement 2025-01-27 of an OCR Hyde review.",
-        "result": "supports",
-        "url": "https://www.foxnews.com/politics/hhs-reevaluate-programs-regulations-ensure-taxpayer-funds-not-paying-elective-abortions"
+        "note": "Tried the plain-text full text with offset 100000 looking for 200.477 rule text; the fetched text stops in the 200.206 discussion. The HTML full text stopped at the same place.",
+        "result": "unreachable",
+        "url": "https://www.federalregister.gov/documents/full_text/text/2026/05/29/2026-10817.txt"
       }
     ]
   },
@@ -141,6 +140,20 @@
       "publisher": "Center for Reproductive Rights",
       "title": "Department of Justice withdraws previous interpretation of the Hyde Amendment",
       "url": "https://reproductiverights.org/news/department-of-justice-withdraws-previous-interpretation-of-the-hyde-amendment/"
+    },
+    {
+      "date": "2026-05-29",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Regulation for Federal Financial Assistance (proposed rule, 91 FR 32198)",
+      "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
+    },
+    {
+      "date": "2026",
+      "kind": "news",
+      "publisher": "Spencer Fane",
+      "title": "OMB's Proposed Rewrite of Federal Grant Rules Will Reshape Research Funding Across the Country",
+      "url": "https://www.spencerfane.com/insight/ombs-proposed-rewrite-of-federal-grant-rules-will-reshape-research-funding-across-the-country/"
     }
   ],
   "stage": "implemented",
@@ -166,10 +179,17 @@
       "kind": "primary",
       "source": "DOJ Office of Legal Counsel",
       "url": "https://www.justice.gov/olc/media/1408241/dl"
+    },
+    {
+      "date": "2026-05-29",
+      "event": "OMB, with participating agencies, publishes a proposed rule, Regulation for Federal Financial Assistance (91 FR 32198; comments due 2026-07-13), rewriting the federal grant rules in 2 CFR part 200; its table of contents lists a new cost-principle section 200.477 titled Abortion. The section text was not read.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
     }
   ],
   "title": "Withdraw Biden-era abortion travel funding actions and the OLC Hyde opinion",
   "tracked": true,
-  "uncertainties": "No published results of an HHS Hyde compliance audit were found, and no CMS Medicaid guidance or Section 1115 approval for abortion travel was found either to have been issued or withdrawn. The HHS review announcement is known from a news report rather than an HHS release. OCR rescissions in January 2026 cite the executive order but are tracked in another record.",
+  "uncertainties": "No published results of an HHS Hyde compliance audit were found, and no CMS Medicaid guidance or Section 1115 approval for abortion travel was found either to have been issued or withdrawn. The HHS review announcement is known from a news report rather than an HHS release. OCR rescissions in January 2026 cite the executive order but are tracked in another record. The text of proposed 2 CFR 200.477 could not be read: the Federal Register full-text, plain-text and GovInfo copies all end, as fetched, in the subpart C discussion. Only the section's title (Abortion) and the comment deadline are confirmed on the Federal Register page. A law-firm article says the section would make the costs of elective abortions unallowable under federal awards, and a link to Executive Order 14182 appears only in an advocacy group's comment letter; neither was confirmed in primary text. The proposal is not final.",
   "updated_at": "2026-10-13"
 }

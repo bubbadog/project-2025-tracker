@@ -5,9 +5,9 @@
     "Charter program terms are set by statute, so some restrictions cannot be removed by ED alone."
   ],
   "chapter": "11",
-  "confidence": 74,
+  "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; the 2022 rule, January 2025 notices, withdrawal, May 2025 CMO notice and FY2026 notice located or read in the Federal Register; FY2026 full requirements and a formal rescission were not found.",
+  "confidence_reason": "Document text checked and the FY2026 Federal Register notice re-read by the reviewer; the red team read the FY2025 notice and the API listing. The full FY2026 application package on Grants.gov was not read, and the stage rests on non-use rather than a formal rescission.",
   "durability": {
     "level": "medium",
     "why": "Grant priorities and competition notices can be changed by any later administration, while the statute stays the same."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Refutation check found no formal rescission notice, while FY2025 and FY2026 State Entity notices do not apply the 2022 requirements; independent review kept implemented 65 at the band floor."
     }
   ],
   "id": "c11-17",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-13",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -42,6 +46,38 @@
   "position": "Current Regulations That Should Be Rolled Back (Charter School Grant Programs)",
   "progress": 65,
   "proposal": "The Mandate recommends that the Department move immediately to rescind the priorities, requirements, definitions and selection criteria for the Charter Schools Program proposed in 2022, which it says expand the federal footprint beyond the statute, and to lessen federal restrictions on charter schools.",
+  "redteam": {
+    "date": "2026-10-13",
+    "evidence": [
+      {
+        "date": "2026-10-13",
+        "note": "13 Education Department documents since 2025-01-20, all competition notices, withdrawals or the supplemental-priorities rule; none rescinds the 2022 final priorities.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Charter%20Schools%20Program%22&conditions[agencies][]=education-department&conditions[publication_date][gte]=2025-01-20"
+      },
+      {
+        "date": "2025-05-09",
+        "note": "FY2025 State Entity notice cites the statute and EDGAR for its absolute priority and selection criteria; no diversity needs analysis and no mention of the 2022 requirements.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2025/05/09/2025-08092/application-for-new-awards-expanding-opportunity-through-quality-charter-schools-program-csp-grants"
+      },
+      {
+        "date": "2026-04-20",
+        "note": "FY2026 State Entity notice cites no priorities document, defers full requirements to Grants.gov and the ED website, and does not mention a diversity needs analysis or for-profit management limits.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/04/20/2026-07671/notice-announcing-expanding-opportunity-through-quality-charter-schools-program-grants-to-state"
+      },
+      {
+        "date": "2025-02-04",
+        "note": "Withdrawal of the FY2025 State Entity notice that had applied the 2022 requirements.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2025/02/04/2025-02139/withdrawal-of-notice-inviting-applications-and-cancellation-of-the-competition-for-the-expanding"
+      }
+    ],
+    "note": "Since February 2025 the Department has not used the 2022 terms in the notices read, though no rescission notice exists and the 2022 rule remains on the books. Implemented 65 (band floor) is kept as a judgment, with the missing formal rescission as the stated limit.",
+    "verdict": "weakened",
+    "what_was_tested": "Searched the Federal Register API (Education Department, Charter Schools Program, 2025-01-20 onward) for a notice rescinding the 2022 final priorities, and read the FY2025 State Entity notice (2025-05-09) and the FY2026 State Entity notice (2026-04-20) for use of the 2022 requirements."
+  },
   "related_ids": [
     "c11-09"
   ],
@@ -53,54 +89,18 @@
   "research_agent": "N11",
   "review": {
     "flags": [
-      "judgment call: stage raised from in_progress 55 to implemented 65 because the 2022 terms were dropped in practice in FY2025 and FY2026, though never formally rescinded",
-      "2022 final rule and January 2025 notices added"
+      "Judgment call: implemented 65 held because Department priorities apply only when a competition notice adopts them, so non-use is operative in substance; the absence of a formal rescission keeps it at the floor and reversible"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 331 recommends immediate steps to rescind the 2022 CSP priorities, requirements, definitions and selection criteria and to lessen federal charter restrictions; paraphrase and page accurate.",
+    "mandate_note": "Page 331 lists the Charter School Grant Program priorities among five regulatory targets to roll back; the paraphrase (rescind the 2022 priorities and lessen federal restrictions) fits this and the following discussion.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9e",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-1",
     "source_checks": [
       {
-        "note": "Withdrawal 2025-02-04 of the 2025-01-21 SE notice; alignment and minimizing oversight; no mention of 2022.",
+        "note": "No citation of the 2022 priorities and no diversity needs analysis or for-profit management restriction in the notice text; full requirements deferred to Grants.gov.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/02/04/2025-02139/withdrawal-of-notice-inviting-applications-and-cancellation-of-the-competition-for-the-expanding"
-      },
-      {
-        "note": "January 2025 CMO notice applied the 2022 NFP requirements (added).",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/21/2025-01379/applications-for-new-awards-expanding-opportunity-through-quality-charter-schools-program-csp-grants"
-      },
-      {
-        "note": "Cites only 2018 NFP; no absolute priority; $72 million.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/05/15/2025-08657/applications-for-new-awards-expanding-opportunity-through-quality-charter-schools-program-csp-grants"
-      },
-      {
-        "note": "FY2026 notice does not cite 2022 or 2018 rules; full requirements in external materials (added).",
-        "result": "partial",
         "url": "https://www.federalregister.gov/documents/2026/04/20/2026-07671/notice-announcing-expanding-opportunity-through-quality-charter-schools-program-grants-to-state"
-      },
-      {
-        "note": "$60 million added, $500 million total, 2025-05-16.",
-        "result": "supports",
-        "url": "https://www.edweek.org/policy-politics/education-department-adds-60-million-in-grants-for-charter-schools/2025/05"
-      },
-      {
-        "note": "Award amounts; no date beyond last-reviewed.",
-        "result": "supports",
-        "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-announces-release-of-record-500-million-charter-schools-programs"
-      },
-      {
-        "note": "Located via API: final rule 2022-07-06 (added).",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2022/07/06/2022-14445/final-priorities-requirements-definitions-and-selection-criteria-expanding-opportunity-through"
-      },
-      {
-        "note": "Replaces earlier supplemental priorities; not charter-specific (via API abstract and sibling record).",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/09/09/2025-17310/final-priorities-and-definitions-secretarys-supplemental-priorities-and-definitions-on"
       }
     ]
   },
@@ -275,5 +275,5 @@
   "title": "Rescind the 2022 Charter School Program priorities and reduce federal charter restrictions",
   "tracked": true,
   "uncertainties": "A Federal Register API search for Charter Schools Program priorities from 2022 found the 2022 final rule and no notice rescinding it. The FY2026 State Entity notice refers to grant materials on the ED website and Grants.gov for full requirements, which were not read, so whether any 2022 requirement still applies there is not confirmed. The May 2025 State Entity notice was identified by the API search but not opened. The ED awards release has no announcement date (page last reviewed 2025-09-24). The Mandate cites the 2022 proposed priorities; the final rule of 2022-07-06 is treated as the regulation it targets. FY2026 appropriations for the program were not checked.",
-  "updated_at": "2026-10-12"
+  "updated_at": "2026-10-13"
 }

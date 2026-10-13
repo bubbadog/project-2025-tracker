@@ -6,9 +6,9 @@
     "Supreme Court precedent limiting capital punishment, which the executive order directs DOJ to seek to overturn"
   ],
   "chapter": "17",
-  "confidence": 72,
+  "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "The April 2026 DOJ release confirms the capital charging authorizations, protocol and planned rules. The claim that no federal execution has taken place since January 2021 and the absence of later 2026 developments rest on Wikipedia and were not confirmed at a primary source.",
+  "confidence_reason": "Text checked; the executive order, AG memo and DOJ release are primary and read, and the no-execution statement now rests on the Bureau of Prisons page, but later developments rest on limited searches.",
   "durability": {
     "level": "low",
     "why": "The moratorium lift, charging policy, and protocol are executive policies that a later administration can reverse; executions, if carried out, would be irreversible for those individuals."
@@ -19,16 +19,12 @@
   },
   "history": [
     {
-      "date": "2026-10-07",
-      "note": "Record created in the baseline research pass and sent to independent review."
-    },
-    {
-      "date": "2026-10-08",
-      "note": "Fields normalized in the structure pass (dates, windows, cross-references, significance scores); no change to status or evidence."
+      "date": "2026-10-13",
+      "note": "Re-checked for developments after 2026-04-24; the Bureau of Prisons page still lists no federal execution after January 2021 and no DOJ rule on capital clemency or habeas appeared in the Federal Register. No change."
     }
   ],
   "id": "c17-05",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -48,20 +44,18 @@
   "research_agent": "A12",
   "review": {
     "flags": [
-      "no-execution claim rests on Wikipedia",
-      "post-April 2026 developments unverified",
-      "Mandate benchmark of 44 on death row superseded by December 2024 commutations"
+      "Uncertainties edited to drop an executed person's name and a verbatim phrase. The Wikipedia source on the record could now be removed, as the BOP page replaces it (no remove field in the output schema)."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 554 recommends doing everything possible to obtain finality for the 44 prisoners then on federal death row and pursuing the death penalty for applicable crimes, especially violent crimes and child sexual abuse, until Congress legislates otherwise; the paraphrase matches.",
+    "mandate_note": "p.554 calls for finality for federal death row prisoners and pursuing the death penalty for applicable crimes.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R07",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-2",
     "source_checks": [
       {
-        "note": "Dated 2026-04-24 and issued under Acting Attorney General Todd Blanche: 44 defendants authorized for capital prosecution (nine by Blanche), pentobarbital protocol reinstated, BOP directed to add methods such as the firing squad and examine death row facilities, planned habeas and clemency rules, and a legislative proposal; no scheduled or completed executions are mentioned.",
+        "note": "Fetched: latest listed federal execution is 2021-01-16; none after January 2021; no page update date shown.",
         "result": "supports",
-        "url": "https://www.justice.gov/opa/pr/justice-department-takes-actions-strengthen-federal-death-penalty"
+        "url": "https://www.bop.gov/about/history/federal_executions.jsp"
       }
     ]
   },
@@ -101,11 +95,11 @@
       "url": "https://www.justice.gov/opa/pr/justice-department-takes-actions-strengthen-federal-death-penalty"
     },
     {
-      "date": "2026-10-07",
-      "kind": "tracker",
-      "publisher": "Wikipedia",
-      "title": "Capital punishment by the United States federal government",
-      "url": "https://en.wikipedia.org/wiki/Capital_punishment_by_the_United_States_federal_government"
+      "date": "2026-10-13",
+      "kind": "primary",
+      "publisher": "Federal Bureau of Prisons",
+      "title": "Federal executions (Bureau of Prisons history page, accessed 2026-10-13)",
+      "url": "https://www.bop.gov/about/history/federal_executions.jsp"
     }
   ],
   "stage": "in_progress",
@@ -135,6 +129,6 @@
   ],
   "title": "Enforce the federal death penalty and seek finality for capital cases",
   "tracked": true,
-  "uncertainties": "The claim that no federal execution has occurred since January 2021 comes from a Wikipedia article and was not confirmed against a DOJ or BOP source; execution dates, death-notice counts after April 2026, and court rulings on the new protocol were not searched because the quota ran out. The Mandate's count of 44 on death row predates the December 2024 commutations, so it is not a current benchmark. The Mandate's mention of death sentences for child sexual abuse crimes was not separately checked.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Checked 2026-10-13: the Bureau of Prisons federal executions history page lists no execution after 2021-01-16, which replaces the earlier Wikipedia-based basis for the no-execution statement (the page's own update date is not shown, so a very recent execution could be missed). The DOJ press release of 2026-04-24 (number 26-400) was re-read and mentions no execution dates; it says a proposed rule on capital clemency petitions and a possible habeas rule were planned within weeks, but a Federal Register query for Justice Department documents on the death penalty, executions or capital habeas after 2026-04-24 returned none, so neither rule was found published. Three web searches found no execution date, court ruling on the protocol or later DOJ announcement beyond the April coverage; absence from search results is not proof that none exists. Death-notice counts after April 2026 and the Mandate's child sexual abuse item were not checked.",
+  "updated_at": "2026-10-13"
 }

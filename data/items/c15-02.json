@@ -7,7 +7,7 @@
   "chapter": "15",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "The Mandate text and the proposed rule were read and the stage is clear; the absence of a final rule rests on the researcher's Federal Register listing through 2026-10-05, and lawsuits or OMB review were not searched.",
+  "confidence_reason": "Text checked; the stage-deciding HUD proposed rule and the absence of a final rule rest on Federal Register pages and API queries; the added notices were read.",
   "durability": {
     "level": "medium",
     "why": "Would be a final regulation, reversible by a later administration through rulemaking, and likely to face legal challenge under the statute's proration language."
@@ -18,16 +18,12 @@
   },
   "history": [
     {
-      "date": "2026-10-07",
-      "note": "Record created in the baseline research pass and sent to independent review."
-    },
-    {
-      "date": "2026-10-08",
-      "note": "Fields normalized in the structure pass (dates, windows, cross-references, significance scores); no change to status or evidence."
+      "date": "2026-10-13",
+      "note": "Checked the Federal Register for a HUD final rule on mixed-status verification (none through 2026-10-13); added HUD's 2026-06-22 information collection notice and the DHS public charge final rule of 2026-07-20 as context. Stage unchanged."
     }
   ],
   "id": "c15-02",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -47,19 +43,23 @@
   "research_agent": "A11",
   "review": {
     "flags": [
-      "deferral reference date corrected to 1995-06-19",
-      "final rule absence not independently re-checked"
+      "Kept the DHS public charge rule: the Mandate text on p.509 expressly calls for alignment with DHS public charge reforms; it is worded as not changing HUD eligibility."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 509 asks HUD to restart the 2019 Trump proposed rule barring noncitizens, including all mixed-status families, from federally assisted housing and to align with DHS public charge reforms; footnote 33 on page 515 cites the 2019-05-10 proposed rule.",
+    "mandate_note": "p.509 asks HUD to restart the 2019 mixed-status rule and to align with DHS public charge reforms, so the DHS rule is in scope as a related step.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R06",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-2",
     "source_checks": [
       {
-        "note": "Confirms the proposed rule at 91 FR 8151 with comments due 2026-04-21: verification for every member regardless of age (removing the age-62 exemption), proration only while verification is pending, removal of the do-not-contend option, and a 90-day compliance window for mixed families after the effective date. It retains statutory preservation assistance for families assisted on 1995-06-19 (HUD's administrative date in place of the statutory 1988-02-05), not a 1988 date as the summary says, and it does not bar mixed-status families outright.",
+        "note": "Fetched: 91 FR 37121, HUD PIH, extension of an approved collection, HUD-9886-A, section 214 basis, comments due 2026-08-21, no mention of the proposed rule.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/02/20/2026-03405/housing-and-community-development-act-of-1980-verification-of-eligible-status"
+        "url": "https://www.federalregister.gov/documents/2026/06/22/2026-12348/60-day-notice-of-proposed-information-collection-restriction-on-assistance-to-noncitizens-and"
+      },
+      {
+        "note": "Fetched: DHS final rule 91 FR 45324, effective 2026-09-18, rescinds the 2022 public charge regulations, totality of circumstances, means-tested benefits considered; impact analysis mentions mixed-status households.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/07/20/2026-14539/public-charge-ground-of-inadmissibility"
       }
     ]
   },
@@ -111,10 +111,24 @@
       "publisher": "NAHRO",
       "title": "HUD Publishes 2026 Version of Mixed Status Proposed Rule",
       "url": "https://www.nahro.org/news/hud-publishes-2026-version-of-mixed-status-proposed-rule"
+    },
+    {
+      "date": "2026-06-22",
+      "kind": "primary",
+      "publisher": "Department of Housing and Urban Development",
+      "title": "60-Day Notice of Proposed Information Collection: Restriction on Assistance to Noncitizens and Authorization To Release Information/Privacy Act",
+      "url": "https://www.federalregister.gov/documents/2026/06/22/2026-12348/60-day-notice-of-proposed-information-collection-restriction-on-assistance-to-noncitizens-and"
+    },
+    {
+      "date": "2026-07-20",
+      "kind": "primary",
+      "publisher": "Department of Homeland Security",
+      "title": "Public Charge Ground of Inadmissibility (final rule)",
+      "url": "https://www.federalregister.gov/documents/2026/07/20/2026-14539/public-charge-ground-of-inadmissibility"
     }
   ],
   "stage": "proposed",
-  "status_summary": "HUD published a new proposed rule on 2026-02-20 (91 FR 8151) that would require immigration or citizenship verification for every household member regardless of age, limit proration of assistance for mixed-status families to the period while verification is pending, and remove the option to decline to claim eligible status. Statutory preservation assistance would remain for families assisted as of HUD's 1995-06-19 reference date, so the proposal does not bar every mixed-status family outright. Comments closed 2026-04-21 and no final rule appeared in HUD's Federal Register listings through 2026-10-05. Separately, a 2025-11-26 HUD notice states that HUD reads PRWORA's federal-public-benefit definition to cover several HUD grant programs and says verification guidance will follow.",
+  "status_summary": "HUD published a new proposed rule on 2026-02-20 (91 FR 8151) that would require immigration or citizenship verification for every household member regardless of age, limit proration of assistance for mixed-status families to the period while verification is pending, and remove the option to decline to claim eligible status. Statutory preservation assistance would remain for families assisted as of HUD's 1995-06-19 reference date, so the proposal does not bar every mixed-status family outright. Comments closed 2026-04-21 and no HUD final rule was found in the Federal Register through 2026-10-13. Separately, a 2025-11-26 HUD notice states that HUD reads PRWORA's federal-public-benefit definition to cover several HUD grant programs and says verification guidance will follow, and HUD's 2026-06-22 notice sought renewal of the existing noncitizen-restriction information collection. DHS published a final public charge rule on 2026-07-20 (effective 2026-09-18) that rescinds the 2022 rule's provisions, a related alignment step that does not change HUD eligibility rules.",
   "timeline": [
     {
       "date": "2025-02-19",
@@ -150,10 +164,24 @@
       "kind": "tracker",
       "source": "NLIHC",
       "url": "https://nlihc.org/resource/hud-publishes-mixed-status-families-proposed-rule-comments-due-april-21-keep-families"
+    },
+    {
+      "date": "2026-06-22",
+      "event": "HUD publishes a 60-day notice (91 FR 37121) to extend approval of the existing information collection on the restriction on assistance to noncitizens and the consent form HUD-9886-A, citing section 214 of the Housing and Community Development Act of 1980; comments were due 2026-08-21, and the notice does not refer to the pending proposed rule.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/06/22/2026-12348/60-day-notice-of-proposed-information-collection-restriction-on-assistance-to-noncitizens-and"
+    },
+    {
+      "date": "2026-07-20",
+      "event": "DHS publishes a final rule on the public charge ground of inadmissibility (91 FR 45324, effective 2026-09-18) that rescinds the 2022 rule's public charge provisions and returns to case-by-case totality-of-the-circumstances assessment, in which receipt of means-tested public benefits may be considered; DHS's impact analysis discusses effects on mixed-status households. This is the DHS counterpart the Mandate asks HUD to align with, but it does not itself change HUD eligibility rules.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/07/20/2026-14539/public-charge-ground-of-inadmissibility"
     }
   ],
   "title": "Bar noncitizens, including mixed-status families, from federally assisted housing",
   "tracked": true,
-  "uncertainties": "Estimates of affected households (about 80,000 people per an advocacy group's 2025 analysis) are from advocacy sources, not HUD; HUD's own docket estimates are in the Federal Register text. I could not run a general web search for 2026 lawsuits, OMB review of a final rule, or congressional action on the same topic, and did not verify what the 2025 reconciliation law did on this subject. Whether a final rule that ends proration fits Section 214 is a legal question I did not resolve (my inference from the statute described in HUD's own proposal).",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Estimates of affected households (about 80,000 people per an advocacy group's 2025 analysis) are from advocacy sources, not HUD; HUD's own estimates are in the Federal Register text. A Federal Register API query for HUD documents on the proposed rule's title after 2026-04-01 returned none, and a query for HUD documents on noncitizens after 2026-04-22 returned only the 2026-06-22 information collection notice and a 2026-09-30 Privacy Act notice for a HUD data system (which lists citizenship fields and does not describe a new verification process). One general web search (2026-10-13) found only commentary and comment letters from the proposal period; no final rule, OMB review notice, lawsuit or congressional action was found, but a lawsuit would not necessarily appear in those results. The DHS public charge final rule was read only in its first part (the housing assistance section was cut off), so how it treats HUD programs was not verified. Whether a final rule that ends proration fits Section 214 is a legal question not resolved (inference from the statute as described in HUD's proposal).",
+  "updated_at": "2026-10-13"
 }

@@ -6,9 +6,9 @@
     "Senate 60-vote threshold for amending Title VII."
   ],
   "chapter": "18",
-  "confidence": 74,
+  "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "The EEO-1 proposal and the absence of a final rule were confirmed in the Federal Register; EEOC's closure of disparate-impact charges and the DOJ opinion rest on law firm summaries (the opinion is also cited in the EEOC proposal), and the other agencies' Title VI rules were not re-read.",
+  "confidence_reason": "Document page 583 checked; DOJ Title VI rule and absence of an EEO-1 final rule confirmed on primary sources, but the EEOC charge closures and the DOJ opinion still rest on law-firm summaries.",
   "durability": {
     "level": "low",
     "why": "The current actions are an executive order, enforcement posture, an interim final rule and proposals; a later administration could reverse them, and final rules would move this toward medium. The statute is unchanged."
@@ -25,10 +25,14 @@
     {
       "date": "2026-10-08",
       "note": "Fields normalized in the structure pass (dates, windows, cross-references, significance scores); no change to status or evidence."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "added the 2025-12-10 DOJ Title VI final rule, confirmed on the Federal Register via GovInfo; no EEO-1 final rule found through 2026-10-13, stage unchanged."
     }
   ],
   "id": "c18-02",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -51,24 +55,23 @@
   "research_agent": "A13",
   "review": {
     "flags": [
-      "EEOC charge closures known only from secondary reporting",
-      "Title VI rule changes concern federal funding recipients, not Title VII employment"
+      "Sibling c11-11 already carries the same DOJ rule with the same date (2025-12-10) on the federalregister.gov URL; dates consistent, no conflict. c17-xx and other c18-xx records do not carry it."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 583 recommends ending EEO-1 race and ethnicity collection, working with Congress to amend Title VII to bar it, having Congress eliminate disparate impact as a theory under Title VII and other laws, and an executive order forbidding OFCCP from using disparate impact; the paraphrase and page match.",
+    "mandate_note": "Page 583 recommends eliminating EEO-1 race and ethnicity data collection because it supports disparate-impact charges, noting OFCCP access to the data; the proposal paraphrase fits (other elements of the proposal are on nearby pages not re-read).",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R05",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-3",
     "source_checks": [
       {
-        "note": "EEOC proposed rule at 91 FR 46332 (2026-07-23) would rescind the EEO-1 through EEO-6 reports and related recordkeeping in 29 CFR part 1602, citing Executive Order 14281 and a 2026-06-09 Office of Legal Counsel opinion; comments closed 2026-08-24 with 2,856 received.",
+        "note": "DOJ Civil Rights Division final rule, 90 FR 57141, FR Doc 2025-22448, published and effective 2025-12-10, no prior notice and comment, removes 42.104(b)(2), effect language in (b)(3), (b)(6) and (c)(2); cites EO 14281.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/07/23/2026-14937/removal-of-reporting-requirements"
+        "url": "https://www.govinfo.gov/content/pkg/FR-2025-12-10/html/2025-22448.htm"
       },
       {
-        "note": "Reviewer's Federal Register query shows no EEOC final rule on EEO-1 reporting, the Uniform Guidelines or harassment guidance published from 2026-08-01 through 2026-10-05, consistent with the item.",
+        "note": "Checked for an EEO-1 final rule: only the 2026-07-23 proposed rule and the 2026-07-30 hearing notice listed.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=equal-employment-opportunity-commission&conditions[publication_date][gte]=2026-08-01&per_page=40"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Removal%20of%20Reporting%20Requirements%22&conditions[publication_date][gte]=2026-07-01&order=newest"
       }
     ]
   },
@@ -127,10 +130,17 @@
       "publisher": "Federal Register / OPM",
       "title": "Removal of references to the Uniform Guidelines in federal personnel regulations (OPM interim final rule)",
       "url": "https://www.federalregister.gov/documents/2026/07/31/2026-15586/removal-of-references-to-the-uniform-guidelines-on-employee-selection-procedures-in-federal"
+    },
+    {
+      "date": "2025-12-10",
+      "kind": "primary",
+      "publisher": "GovInfo (Federal Register)",
+      "title": "Rescinding Portions of Department of Justice Title VI Regulations To Conform More Closely With the Statutory Text and To Implement Executive Order 14281 (FR Doc. 2025-22448)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2025-12-10/html/2025-22448.htm"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "EO 14281 (2025-04-23) set a policy of eliminating disparate-impact liability to the extent possible and told agencies to deprioritize enforcing provisions that rely on it, including Title VII. Agencies have since acted administratively: EEOC reportedly closed disparate-impact-only charges by 2025-09-30, DOJ issued a 2026-06-09 opinion questioning the constitutionality of disparate-impact liability under Title VII, many agencies removed disparate impact from their Title VI rules in 2026, and EEOC proposed on 2026-07-23 to rescind the EEO-1 through EEO-6 reports (comments closed 2026-08-24; no final rule found). The statutory disparate-impact provision in Title VII is unchanged, and private plaintiffs and state agencies can still bring such claims.",
+  "status_summary": "EO 14281 (2025-04-23) set a policy of eliminating disparate-impact liability to the extent possible and told agencies to deprioritize enforcing provisions that rely on it, including Title VII. Agencies have since acted administratively: EEOC reportedly closed disparate-impact-only charges by 2025-09-30, DOJ published a final rule on 2025-12-10 removing effects-based provisions from its Title VI regulations, DOJ issued a 2026-06-09 opinion questioning the constitutionality of disparate-impact liability under Title VII, and many other agencies removed disparate impact from their Title VI rules in 2026. EEOC proposed on 2026-07-23 to rescind the EEO-1 through EEO-6 reports (comments closed 2026-08-24); no final rule had been published through 2026-10-13. The statutory disparate-impact provision in Title VII is unchanged, and private plaintiffs and state agencies can still bring such claims.",
   "timeline": [
     {
       "date": "2025-04-23",
@@ -145,6 +155,13 @@
       "kind": "news",
       "source": "Littler Mendelson",
       "url": "https://www.littler.com/news-analysis/asap/eeoc-close-investigations-disparate-impact-discrimination"
+    },
+    {
+      "date": "2025-12-10",
+      "event": "DOJ publishes a final rule (90 FR 57141), effective the same day and issued without prior notice and comment, removing the effects-based (disparate-impact) provisions from its Title VI regulations at 28 CFR 42.104 so they reach only intentional discrimination, citing Executive Order 14281.",
+      "kind": "primary",
+      "source": "Federal Register (GovInfo)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2025-12-10/html/2025-22448.htm"
     },
     {
       "date": "2026-06-09",
@@ -184,6 +201,6 @@
   ],
   "title": "End disparate-impact enforcement and EEO-1 race and ethnicity data collection",
   "tracked": true,
-  "uncertainties": "The EEOC disparate-impact closure is known only from a law-firm summary of a Bloomberg Law report, not from an EEOC document. DOJ's June 2026 opinion is known only from law-firm summaries. The Federal Register listing for EEOC (newest item 2026-08-28) showed no EEO-1 final rule, but later days were not checked separately. The date of DOJ's own Title VI final rule (28 CFR part 42) was not captured. Whether the 2025 EEO-1 data collection ran as normal was not verified. The Mandate's separate recommendation that an order bar OFCCP from using disparate impact was overtaken by the revocation of EO 11246 (see c18-01).",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The EEOC disparate-impact closure is known only from a law-firm summary of a Bloomberg Law report, not from an EEOC document. DOJ's June 2026 opinion is known only from law-firm summaries. The Federal Register listing for EEOC from 2026-08-25 through 2026-10-13 shows a federal-sector complaint proposed rule (2026-08-28, read only in part and not seen to address EEO-1 or disparate impact) and a performance review board notice, but no EEO-1 final rule; a title search on the Federal Register (checked 2026-10-13) shows only the 2026-07-23 proposal and a 2026-07-30 hearing notice. A 2026-05-29 multi-agency proposed rule on federal financial assistance (comments closed 2026-07-13) includes a proposal to bar federal awards from supporting disparate-impact theories; its full text was not read. Whether the 2025 EEO-1 data collection ran as normal was not verified. No court ruling on these actions was searched. The Mandate's separate recommendation that an order bar OFCCP from using disparate impact was overtaken by the revocation of EO 11246 (see c18-01).",
+  "updated_at": "2026-10-13"
 }

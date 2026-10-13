@@ -6,9 +6,9 @@
     "The Federal Power Act leaves resource planning to states and grid operators, which the court emphasized."
   ],
   "chapter": "12",
-  "confidence": 70,
+  "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "The D.C. Circuit opinion was read and confirms the vacatur of the first Campbell order and the court's narrow reading of the emergency power; the executive order was confirmed earlier from the White House text. Order counts rest on a trade publication, and the absence of FERC or NERC action on reliability pricing and reserve margins rests on Federal Register searches.",
+  "confidence_reason": "Text checked; EO 14262, the DOE report and the FERC order are primary and read, but the D.C. Circuit opinion was read through a fetch summary of a hosted copy and DOE order counts come from a trade publication.",
   "court_status": {
     "basis": "derived from the latest court event in the timeline",
     "date": "2026-09-11",
@@ -35,10 +35,14 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Added the FERC order of 2026-09-29 accepting PJM's Reliability Backstop Procurement (hosted copy fetched) and confirmed Executive Order 14262 (published 2025-04-14, document 2025-06381) against the Federal Register; no DOE section 202(c) order after 2026-09-11 was found. Stage unchanged."
     }
   ],
   "id": "c12-07",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-13",
   "layer": 2,
   "match": "partial",
   "mechanism": "mixed",
@@ -64,20 +68,18 @@
   "research_agent": "D4",
   "review": {
     "flags": [
-      "opinion read from a Sierra Club-hosted copy",
-      "no FERC or NERC reform found (limited search)",
-      "DOE response after 2026-09-11 not found"
+      "Corrected the event: the section 206 docket is a proceeding to possibly modify the proposal, not an inquiry into an existing backstop tariff; added that eligibility is resource-neutral. court_status unchanged (vacated 2026-09-11)."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 373 says DOE's section 202(c) authority should stay with its security office and page 374 calls on DOE, FERC and NERC to ensure sufficient dispatchable generation; pages 401 to 402 call for reliability pricing for dispatchable resources or backup procurement by intermittent resources and for reserve margins that consider net peak and exclude non-dispatchable resources. The paraphrase is accurate.",
+    "mandate_note": "pp.373-374 and 401-402 call for dispatchable capacity, revised reserve margins and FERC-directed reliability pricing or backup procurement; the PJM procurement is a regional, resource-neutral parallel.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y3",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-2",
     "source_checks": [
       {
-        "note": "Michigan v. DOE, No. 25-1159 (consolidated with 25-1160, 25-1162), D.C. Cir., decided 2026-09-11, opinion by Judge Pillard for a panel of Srinivasan, Pillard and Wilkins: vacates DOE Order 202-25-3 of 2025-05-23 (Campbell plant) without remand, reads a 202(c) emergency as an acute risk not being timely addressed by states, utilities or grid operators and calls the authority a narrow last-resort backstop; four extensions (about 450 days) noted and their petitions held in abeyance.",
+        "note": "Fetched: the FERC order itself (caption, commissioners, Commission voice), 196 FERC 61,245, issued 2026-09-29, ER26-3380 and EL26-108; acceptance, five-month suspension to 2027-02-28, paper hearing, eligibility not limited to dispatchable resources.",
         "result": "supports",
-        "url": "https://www.sierraclub.org/sites/default/files/2026-09/campbell-order.pdf"
+        "url": "https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf"
       }
     ]
   },
@@ -149,10 +151,17 @@
       "publisher": "AP via ABC News",
       "title": "Federal court rejects Trump order keeping Michigan coal plant open",
       "url": "https://abcnews.com/Business/wireStory/federal-court-rejects-trump-order-keeping-michigan-coal-136371165"
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "primary",
+      "publisher": "FERC (copy hosted by PJM)",
+      "title": "FERC order accepting PJM Reliability Backstop Procurement and establishing further procedures (ER26-3380, EL26-108)",
+      "url": "https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "As of 2026-10-08 DOE has acted on the reliability goals mainly through executive tools, and its main emergency-order tool lost a court test on 2026-09-11. Executive Order 14262 (2025-04-08) directed DOE to build a uniform reserve margin method, to use section 202(c) and other tools to keep generation critical to reliability available, and allowed it to block retirements of resources above 50 MW. DOE published its Resource Adequacy Report on 2025-07-07; DOE's modeling projects expected loss-of-load hours rising from about 8 to about 818 a year by 2030 if announced retirements proceed, and it recommends slowing retirements and adding firm dispatchable generation. POWER counted 43 section 202(c) orders and extensions since May 2025 as of 2026-04-02, holding about 4.4 GW of capacity open, mostly coal plus two oil and gas units at Eddystone; FERC accepted cost-recovery and cost-allocation filings tied to the Campbell and Eddystone orders in 2025. On 2026-09-11 a D.C. Circuit panel (Chief Judge Srinivasan and Judges Pillard and Wilkins; opinion by Judge Pillard) in Michigan v. U.S. Department of Energy, No. 25-1159, vacated without remand DOE Order 202-25-3 of 2025-05-23 for the J.H. Campbell coal plant in Michigan, holding that DOE exceeded its authority under section 202(c): the court read an emergency as an acute shortage that states, utilities or grid operators are not timely addressing, found DOE's reliance on possible summer 2025 shortfalls insufficient, and called section 202(c) a narrow last-resort backstop. The order had already expired, four extensions had kept the plant running for 450 days in total, and the court said petitions challenging the extension orders are held in abeyance pending its decision; challenges to orders for other plants are pending. No FERC rule requiring reliability pricing or backup procurement was found; PJM filed its own resource adequacy proposals with FERC in August 2026.",
+  "status_summary": "As of 2026-10-13 DOE has acted on the reliability goals mainly through executive tools, and its main emergency-order tool lost a court test on 2026-09-11. Executive Order 14262 (signed 2025-04-08, published 2025-04-14) directed DOE to build a uniform reserve margin method, to use section 202(c) and other tools to keep generation critical to reliability available, and allowed it to block retirements of resources above 50 MW. DOE published its Resource Adequacy Report on 2025-07-07; DOE's modeling projects expected loss-of-load hours rising from about 8 to about 818 a year by 2030 if announced retirements proceed, and it recommends slowing retirements and adding firm dispatchable generation. POWER counted 43 section 202(c) orders and extensions since May 2025 as of 2026-04-02, holding about 4.4 GW of capacity open, mostly coal plus two oil and gas units at Eddystone; FERC accepted cost-recovery and cost-allocation filings tied to the Campbell and Eddystone orders in 2025. On 2026-09-11 a D.C. Circuit panel (opinion by Judge Pillard) in Michigan v. U.S. Department of Energy, No. 25-1159, vacated without remand DOE Order 202-25-3 of 2025-05-23 for the J.H. Campbell coal plant, holding that DOE exceeded its authority under section 202(c) by treating possible summer 2025 shortfalls as an emergency; the order had already expired, and petitions challenging extension orders are held in abeyance while challenges to orders for other plants are pending. On the FERC side, no rule requiring reliability pricing or backup procurement for the whole country was found, but on 2026-09-29 FERC accepted, subject to refund and a paper hearing, PJM's one-time Reliability Backstop Procurement of new capacity (effective 2027-02-28) and opened a section 206 proceeding under which it may later modify parts of the proposal; the procurement is open to storage, demand resources and other non-dispatchable resources, and FERC declined a request to give dispatchable generation further weight, so it is a partial parallel to the Mandate's pricing recommendation.",
   "timeline": [
     {
       "date": "2025-04-08",
@@ -195,10 +204,17 @@
       "kind": "news",
       "source": "Willkie Farr & Gallagher",
       "url": "https://www.willkie.com/publications/2026/09/dc-circuit-limits-does-section-202c-emergency-authority-to-keep-coal-generator-operational"
+    },
+    {
+      "date": "2026-09-29",
+      "event": "FERC accepts for filing PJM's one-time Reliability Backstop Procurement of new capacity (resources in service by 2032-06-01, a weighted-average price cap of 555 dollars per MW-day, commitments up to 15 years), suspends it five months to take effect 2027-02-28 subject to refund, sets a paper hearing on cost allocation, transmission owner exit and collateral rules, and opens a section 206 proceeding (EL26-108) under which it may later modify parts of the proposal. Eligible resources include storage and demand resources, and FERC declined a request to value dispatchable generation further (196 FERC 61,245; ER26-3380).",
+      "kind": "primary",
+      "source": "FERC order (copy hosted by PJM)",
+      "url": "https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf"
     }
   ],
   "title": "Prioritize dispatchable generation, update reserve margins, reform RTO reliability rules",
   "tracked": true,
-  "uncertainties": "The D.C. Circuit opinion was read through a fetch summary of the PDF hosted by the Sierra Club (the court's own site could not be searched by the fetch tool), and its Leagle copy is behind a paywall past the first paragraph. The summary of the holding should be checked against the opinion text; in particular, the vacatur reaches the 2025-05-23 order, and the extension orders are not resolved. DOE's reaction after 2026-09-11 and the status of other orders were not found. Counts of orders differ by source (POWER: 43 orders and extensions; Earthjustice: six plants in five states; AP: about half a dozen plants), and DOE's 202(c) order listing page could not be fetched (energy.gov returned 404 for the paths tried), so the order counts remain from POWER. FERC action was checked only through Federal Register queries on resource adequacy, reserve margin and large load interconnection, so a FERC order not published there could exist. Whether the administration reinstated an executive order on bulk-power system security (Executive Order 13920, p. 373) was not checked. Repeal of generation subsidies, which the Mandate also lists, is tracked under c12-03. The two fetches of FERC notices gave different PJM docket numbers, so none is cited.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The D.C. Circuit opinion was read through a fetch summary of the PDF hosted by the Sierra Club, and its Leagle copy is paywalled; the summary of the holding should be checked against the opinion text. DOE's reaction after 2026-09-11 and the status of other 202(c) orders were not found: the DOE 202(c) page could not be fetched, a Federal Register query for 202(c) after 2026-09-01 returned no DOE order notices, and one web search returned only reports of the court decision. Order counts remain from POWER (43 as of 2026-04-02). The FERC 2026-09-29 order was read from PJM's hosted copy; the fetch did not cover the whole order. Whether ELCC-rated eligible resources are mostly dispatchable was not examined. The earlier record's conflicting PJM docket numbers are resolved by this order: ER26-3380 and EL26-108. Repeal of generation subsidies is tracked under c12-03.",
+  "updated_at": "2026-10-13"
 }

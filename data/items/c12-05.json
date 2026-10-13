@@ -7,7 +7,7 @@
   "chapter": "12",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Federal Register documents confirm that no existing standard has been rescinded by DOE final rule and that Congress nullified three 2024 standards rules. The 2026 Process Rule proposal and the gas industry petition were not re-read, and litigation was not checked.",
+  "confidence_reason": "Unchanged: text checked and the deciding Federal Register items read; the finding that the 2025 rescission proposals remain non-final rests on API queries rather than a full census.",
   "durability": {
     "level": "medium",
     "why": "Final rules rescinding standards could be reversed by later rulemaking; a statutory repeal would be high durability but has not occurred."
@@ -20,10 +20,14 @@
     {
       "date": "2026-10-07",
       "note": "Re-researched in the in-depth pass; status confirmed. Reviewer confidence 60 to 72. Stage unchanged; adds the 2025-05-20 and 2025-09-09 CRA-related withdrawals, the 2026-04-27 petition, the 2026-07-28 Process Rule comment extension, state opposition, and the 2026-09-18 manufactured housing notice, and confirms no final rescission of the May 2025 proposals as of 2026-10-07."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Added DOE's 2026-10-07 final rule withdrawing an optional commercial furnace test procedure from the Federal Register; no standard changed and the stage is unchanged."
     }
   ],
   "id": "c12-05",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -44,29 +48,18 @@
   "research_agent": "A09",
   "review": {
     "flags": [
-      "record's opening sentence understated the 2025 CRA nullifications and omitted the showerhead definition repeal",
-      "May 2025 proposals still not final after about 17 months"
+      "Reworded: it is a final rule withdrawing a test procedure, not a standard; incremental, no stage change."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 378 calls for eliminating appliance efficiency standards and page 379 asks the administration to work with Congress to modify or repeal the standards law and, before or instead of repeal, to use the statute's existing limits to prioritize high-savings rules and protect product features; the paraphrase matches.",
+    "mandate_note": "pp.378-379 urge eliminating standards or, short of repeal, using statutory limits to avoid unjustified burdens; withdrawing a costly optional test procedure fits the second branch.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W3",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-2",
     "source_checks": [
       {
-        "note": "Reviewer's Federal Register query of DOE final rules since 2025-06-01 (40 of 44 results seen, newest 2026-10-07) shows no final rule rescinding or withdrawing an appliance or equipment standard; the closest items are a 2026-10-07 test procedure withdrawal that states no standard is being rescinded and the 2025-09-09 removal of certification and labeling provisions tied to a CRA-nullified rule.",
+        "note": "Fetched: final rule 91 FR 64105, effective 2026-12-07; removes appendix B and the TE2 definition; cites EO 14192 and the July 2026 Process Rule proposal; states no standard is modified.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=rescinding&conditions[agencies][]=energy-department&conditions[type][]=RULE&conditions[publication_date][gte]=2025-06-01&per_page=40&order=newest"
-      },
-      {
-        "note": "Final rule of 2025-05-20 withdraws DOE's December 2024 amended standards for walk-in coolers and freezers, stating they have no force or effect, after the President signed a CRA joint resolution of disapproval on 2025-05-09. This shows the record's first sentence (no standard eliminated by statute) needed qualifying.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/05/20/2025-09029/energy-conservation-program-energy-conservation-standards-for-walk-in-coolers-and-walk-in-freezers"
-      },
-      {
-        "note": "Reviewer's Federal Register query shows DOE's rule repealing the showerhead definition in 10 CFR 430.2 (published 2025-04-15, document 2025-06476), which the status summary omitted.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=showerhead&conditions[agencies][]=energy-department&conditions[type][]=RULE&conditions[publication_date][gte]=2025-01-21&per_page=20"
+        "url": "https://www.federalregister.gov/documents/2026/10/07/2026-20517/energy-conservation-program-test-procedures-for-commercial-warm-air-furnaces"
       }
     ]
   },
@@ -124,6 +117,13 @@
       "publisher": "Federal Register",
       "title": "Energy Conservation Standards for Manufactured Housing (notification)",
       "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19154/energy-conservation-program-energy-conservation-standards-for-manufactured-housing"
+    },
+    {
+      "date": "2026-10-07",
+      "kind": "primary",
+      "publisher": "Federal Register (DOE)",
+      "title": "Energy Conservation Program: Test Procedures for Commercial Warm Air Furnaces (final rule, 91 FR 64105)",
+      "url": "https://www.federalregister.gov/documents/2026/10/07/2026-20517/energy-conservation-program-test-procedures-for-commercial-warm-air-furnaces"
     }
   ],
   "stage": "in_progress",
@@ -184,10 +184,17 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19154/energy-conservation-program-energy-conservation-standards-for-manufactured-housing"
+    },
+    {
+      "date": "2026-10-07",
+      "event": "DOE publishes a final rule (91 FR 64105, effective 2026-12-07) withdrawing the optional appendix B (TE2) test procedure for commercial warm air furnaces, which would have applied only to future TE2-based standards, and keeping the appendix A test; DOE cites test burden outweighing uncertain benefits, Executive Order 14192 and its proposed Process Rule's preference for industry test procedures, and states no existing standard is changed.",
+      "kind": "primary",
+      "source": "Federal Register (DOE)",
+      "url": "https://www.federalregister.gov/documents/2026/10/07/2026-20517/energy-conservation-program-test-procedures-for-commercial-warm-air-furnaces"
     }
   ],
   "title": "Eliminate or curb DOE appliance and equipment efficiency standards",
   "tracked": true,
   "uncertainties": "The finding that the May 2025 proposals are not final rests on Federal Register API queries of DOE rules and proposed rules run on 2026-10-07 (term searches on energy conservation and on rescinding efficiency standards); a final action filed under an unexpected title could be missed. Showerhead definition repeal (2025-04-15), the 2025-05-16 product list beyond the battery charger notice, and the 2026-03-31 fluorescent ballast, 2026-04-27 petition and 2026-06-15 distribution transformer notices were seen as listings and abstracts only. Which CRA resolution dates apply to each withdrawn rule was not checked. No lawsuit over the proposals was found, but court dockets were not searched. The manufactured housing statute is adjacent, not an appliance standards repeal.",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-13"
 }

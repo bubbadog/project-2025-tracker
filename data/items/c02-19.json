@@ -2,9 +2,9 @@
   "agency": "Office of National Drug Control Policy",
   "blockers": [],
   "chapter": "02",
-  "confidence": 82,
-  "confidence_label": "high",
-  "confidence_reason": "The page 61 text was checked and all cited primary sources plus the 2026 strategy fact sheet were fetched and read. The consultation element remains undocumented.",
+  "confidence": 76,
+  "confidence_label": "medium",
+  "confidence_reason": "Document text checked and the stage-deciding ONDCP priorities release re-read on whitehouse.gov; the partial match rests on the 2026 strategy fact sheet rather than the full strategy document, and the Director's consultation with border officials is undocumented.",
   "durability": {
     "level": "medium",
     "why": "The HALT Fentanyl Act is a statute, while the priorities statement, strategy and executive order can be changed by a later administration."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-12",
       "note": "Cross-reference added to c06-19 (new records from the fuller reading of chapters 6 and 7); no change to status or evidence."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Refutation check found no rescission of the 2025 priorities; 2026 counter-cartel actions recorded as context; independent review confirmed implemented 70."
     }
   ],
   "id": "c02-19",
-  "last_checked": "2026-10-10",
+  "last_checked": "2026-10-13",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -39,6 +43,38 @@
   "position": "Office of National Drug Control Policy",
   "progress": 70,
   "proposal": "The Mandate says the top drug policy priority should be addressing the fentanyl crisis and reducing overdose deaths, reaffirms prevention, treatment and supply reduction, and says the ONDCP Director should consult federal border enforcement officials.",
+  "redteam": {
+    "date": "2026-10-13",
+    "evidence": [
+      {
+        "date": "2026-07-16",
+        "note": "Designation of two Mexican criminal organizations as foreign terrorist organizations, effective on publication; consistent with the supply and border emphasis of the 2026 strategy, not a reversal.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/07/16/2026-14259/foreign-terrorist-organization-designation-of-juarez-cartel-and-los-viagras"
+      },
+      {
+        "date": "2026-09-10",
+        "note": "A further designation (Los Tiguerones, signed 2026-08-03); the notice does not describe the group's activities.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/09/10/2026-18442/foreign-terrorist-organization-designation-of-los-tiguerones"
+      },
+      {
+        "date": "2026-03-07",
+        "note": "Describes the Americas Counter Cartel Coalition of 17 countries; the page does not name members.",
+        "source": "whitehouse.gov",
+        "url": "https://www.whitehouse.gov/presidential-actions/2026/03/commitment-to-countering-cartel-criminal-activity"
+      },
+      {
+        "date": "2026-08-25",
+        "note": "Appeared in a National Drug Control Strategy term search; its content was not opened.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/08/25/2026-17354/establishment-of-four-customs-enforcement-areas"
+      }
+    ],
+    "note": "No rescission or reversal of the 2025 priorities statement, HALT Fentanyl Act or EO 14367 was found. Later actions add counter-cartel and border measures, which fits the existing partial match (supply and border emphasis ahead of overdose response). The CRS report R48859 could not be fetched (host blocks automated access), so its contents were not used. Stage and progress unchanged.",
+    "verdict": "holds",
+    "what_was_tested": "Searched for any rescission, reversal or competing priority that would undo the fentanyl-first priority statement, and for developments after the 2026-05-04 strategy. Checked the Federal Register for State Department foreign terrorist organization notices of 2026 and for National Drug Control Strategy documents."
+  },
   "related_ids": [
     "c06-19"
   ],
@@ -51,45 +87,19 @@
   "research_agent": "N02b",
   "review": {
     "flags": [
-      "title shortened to 90 characters or fewer",
-      "progress lowered from 80 to 70 and match changed from direct to partial: 2026 strategy does not lead with overdose deaths",
-      "est_completion changed from done to unknown"
+      "New cartel-related events are context on supply reduction, not a change to the match",
+      "Red-team evidence entries are well-formed objects; one (customs enforcement areas) was not opened and adds nothing"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Printed page 61 supports the recommendation that fentanyl and overdose deaths be the top drug policy priority, the reaffirmation of prevention, treatment and supply reduction, and the Director consulting federal border enforcement officials.",
+    "mandate_note": "Page 61 makes the fentanyl crisis and overdose deaths the top drug policy priority, reaffirms prevention, treatment and supply reduction, and leads into the Director's consultation with border officials; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-10",
-    "reviewer": "Y6",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-1",
     "source_checks": [
       {
-        "note": "2025-04-03 release lists six priorities with overdose deaths and fentanyl first; no mention of consultation with border officials.",
+        "note": "Release of 2025-04-03 lists six priorities with reducing overdose fatalities, focused on fentanyl, first; the page does not say the order is a ranking.",
         "result": "supports",
         "url": "https://www.whitehouse.gov/releases/2025/04/ondcp-releases-trump-administrations-statement-of-drug-policy-priorities/"
-      },
-      {
-        "note": "Public Law 119-26 approved 2025-07-16 places fentanyl-related substances in Schedule I as a class.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ26/html/PLAW-119publ26.htm"
-      },
-      {
-        "note": "EO 14367 of 2025-12-15 designates illicit fentanyl and core precursors as weapons of mass destruction and tasks Justice, State, Treasury, War and Homeland Security.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/DCPD-202501197/html/DCPD-202501197.htm"
-      },
-      {
-        "note": "Confirmation as ONDCP Director on 2026-01-06 by a 52 to 48 vote.",
-        "result": "supports",
-        "url": "https://www.whitehouse.gov/releases/2026/01/sara-carter-confirmed-as-drug-czar"
-      },
-      {
-        "note": "Release dated 2026-05-04; summary only.",
-        "result": "supports",
-        "url": "https://www.whitehouse.gov/releases/2026/05/2026-national-drug-control-strategy-released/"
-      },
-      {
-        "note": "Fact sheet does not rank goals; leads with border and cartel measures and places overdose response last; covers prevention and treatment.",
-        "result": "partial",
-        "url": "https://www.whitehouse.gov/fact-sheets/2026/05/2026-national-drug-control-strategy-fact-sheet/"
       }
     ]
   },
@@ -148,6 +158,20 @@
       "publisher": "White House",
       "title": "Fact Sheet: 2026 National Drug Control Strategy",
       "url": "https://www.whitehouse.gov/fact-sheets/2026/05/2026-national-drug-control-strategy-fact-sheet/"
+    },
+    {
+      "date": "2026-07-16",
+      "kind": "primary",
+      "publisher": "Department of State via Federal Register",
+      "title": "Foreign Terrorist Organization Designation of Juarez Cartel and Los Viagras",
+      "url": "https://www.federalregister.gov/documents/2026/07/16/2026-14259/foreign-terrorist-organization-designation-of-juarez-cartel-and-los-viagras"
+    },
+    {
+      "date": "2026-03-07",
+      "kind": "primary",
+      "publisher": "White House",
+      "title": "Commitment to Countering Cartel Criminal Activity",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/03/commitment-to-countering-cartel-criminal-activity"
     }
   ],
   "stage": "implemented",
@@ -182,15 +206,29 @@
       "url": "https://www.whitehouse.gov/releases/2026/01/sara-carter-confirmed-as-drug-czar"
     },
     {
+      "date": "2026-03-07",
+      "event": "A presidential document dated this day describes the Americas Counter Cartel Coalition, set up by the Secretary of War as a pledge by military leaders and representatives of 17 countries, with goals including dismantling cartels designated as foreign terrorist organizations.",
+      "kind": "primary",
+      "source": "whitehouse.gov",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/03/commitment-to-countering-cartel-criminal-activity"
+    },
+    {
       "date": "2026-05-04",
       "event": "ONDCP released the 2026 National Drug Control Strategy; its fact sheet covers prevention, treatment and supply reduction, opens with border interdiction and cartels and places overdose response last.",
       "kind": "primary",
       "source": "White House",
       "url": "https://www.whitehouse.gov/releases/2026/05/2026-national-drug-control-strategy-released/"
+    },
+    {
+      "date": "2026-07-16",
+      "event": "State published the foreign terrorist organization designation of the Juarez Cartel and Los Viagras under section 219 of the Immigration and Nationality Act, effective on publication (signed 2026-07-02).",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/07/16/2026-14259/foreign-terrorist-organization-designation-of-juarez-cartel-and-los-viagras"
     }
   ],
   "title": "Make fentanyl and overdoses the top drug policy priority; consult border officials",
   "tracked": true,
   "uncertainties": "The full strategy document was not opened; its contents were judged from the official fact sheet, which does not rank goals. Overdose death trends were not examined. The cartel terrorist designations were not researched. The progress figure is an inference: the 2025 priorities statement matches the recommendation directly, while the 2026 strategy emphasizes border and supply measures.",
-  "updated_at": "2026-10-10"
+  "updated_at": "2026-10-13"
 }

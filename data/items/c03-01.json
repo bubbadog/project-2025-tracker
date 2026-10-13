@@ -6,9 +6,9 @@
     "Bills to bar the schedule (Saving the Civil Service Act, H.R. 492 / S. 134) have been introduced but not enacted"
   ],
   "chapter": "03",
-  "confidence": 74,
+  "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "The OPM final rule and EO 14410 were read and match the summary, and a July 2026 report confirms about 8,000 placements with no court ruling. Litigation after early July 2026 was not checked, and an injunction since then would change the stage.",
+  "confidence_reason": "Document pages 80 to 81 checked and the new ethics rule confirmed on the Federal Register API; stage-deciding EO 14410 and the 2026 final rule were verified in earlier runs, not re-read here, and litigation status rests on secondary trackers.",
   "durability": {
     "level": "medium",
     "why": "A final rule must be amended through notice-and-comment to undo, but the position designations rest on an executive order that a later President could revoke; the 2024 rule and 2021 revocation show both layers have been reversed before."
@@ -21,10 +21,18 @@
     {
       "date": "2026-10-07",
       "note": "Red-team check found nothing that undercuts the status."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Added the Federal Register publication of Executive Order 14410 (91 FR 34893) alongside the existing signing event."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "added the 2026-07-23 ethics-reporting interim final rule for Schedule Policy/Career positions, checked on the Federal Register; no court ruling found, stage unchanged."
     }
   ],
   "id": "c03-01",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-13",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -74,29 +82,30 @@
   "research_agent": "A02",
   "review": {
     "flags": [
-      "litigation after 2026-07-06 unverified",
-      "possible overlap with c01-03 and c03-07"
+      "Publication event is not duplicative: the existing 2026-06-03 event cites whitehouse.gov and adds no FR citation. Two later FR items citing EO 14410 (2026-07-23 ethics reporting exemption; 2026-08-14 Civil Service Rules amendments) were not opened and may merit a follow-up.",
+      "Dropped the proposed 2026-08-14 OPM Civil Service Rules cleanup event: non-substantive and unrelated to the schedule framework; noted in uncertainties.",
+      "One web search for October 2026 court rulings found nothing new."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Pages 80 to 81 describe EO 13957's Schedule F for career staff in confidential, policy-determining, policy-making or policy-advocating positions and say it should be reinstated, with SES accountability coming first; paraphrase is accurate.",
+    "mandate_note": "pp.80-81 recommend reinstating EO 13957 Schedule F; EO 14410 amends EO 13957 and places positions in the schedule.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R01",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "U13-2, U13-3",
     "source_checks": [
       {
-        "note": "OPM final rule published 2026-02-06 (91 FR 5580), effective 2026-03-09: establishes Schedule Policy/Career under EO 14171; positions stay career but are at-will and excluded from chapter 43 and chapter 75 procedures and MSPB appeals; about 40,500 comments, about 94 percent opposed; rescinds the April 2024 rule's changes.",
+        "note": "Fetched: EO 14410 signed 2026-06-03, published 2026-06-10, 91 FR 34893, doc 2026-11594; Sec. 2(f) removal basis, Sec. 3(a) amends EO 13957, Sec. 5(c) 7-day notice.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/02/06/2026-02375/improving-performance-accountability-and-responsiveness-in-the-civil-service"
+        "url": "https://www.federalregister.gov/documents/2026/06/10/2026-11594/implementing-schedule-policycareer-in-the-excepted-service"
       },
       {
-        "note": "EO 14410 signed 2026-06-03 places positions in an appendix into Schedule Policy/Career, requires employee notice within 7 days, sets a separate bonus pool and directs OPM rulemaking on a Presidential award program; no count stated in the text.",
+        "note": "OGE interim final rule 91 FR 46239, published and effective 2026-07-23, comments to 2026-08-24; positions moved to Schedule Policy/Career keep prior filing status. The HTML page returned a server error.",
         "result": "supports",
-        "url": "https://www.whitehouse.gov/presidential-actions/2026/06/implementing-schedule-policy-career-in-the-excepted-service/"
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-14872.json"
       },
       {
-        "note": "Dated 2026-07-06: close to 8,000 employees notified, about 97 percent GS-15 or senior level per the White House, three pending suits, no rulings or injunctions reported, OPM earlier estimated 50,000.",
-        "result": "supports",
-        "url": "https://federalnewsnetwork.com/workforce/2026/07/federal-employees-face-reality-of-schedule-policy-career/"
+        "note": "OPM direct final rule 91 FR 52475, effective 2026-10-13 absent significant adverse comment, under EO 14410 sec 2(g); OPM calls it non-substantive and it makes no Schedule Policy/Career change. Omitted as an event.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16630/updates-and-amendments-to-the-civil-service-rules"
       }
     ]
   },
@@ -155,6 +164,20 @@
       "publisher": "Federal News Network",
       "title": "Federal employees face reality of Schedule Policy/Career",
       "url": "https://federalnewsnetwork.com/workforce/2026/07/federal-employees-face-reality-of-schedule-policy-career/"
+    },
+    {
+      "date": "2026-06-10",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Implementing Schedule Policy/Career in the Excepted Service (Executive Order 14410, 91 FR 34893)",
+      "url": "https://www.federalregister.gov/documents/2026/06/10/2026-11594/implementing-schedule-policycareer-in-the-excepted-service"
+    },
+    {
+      "date": "2026-07-23",
+      "kind": "primary",
+      "publisher": "Federal Register (Office of Government Ethics)",
+      "title": "Exempting Certain Career Federal Employees From Ethics Reporting Requirements",
+      "url": "https://www.federalregister.gov/documents/2026/07/23/2026-14872/exempting-certain-career-federal-employees-from-ethics-reporting-requirements"
     }
   ],
   "stage": "implemented",
@@ -203,11 +226,25 @@
       "url": "https://www.opm.gov/schedulepc/"
     },
     {
+      "date": "2026-06-10",
+      "event": "Executive Order 14410, Implementing Schedule Policy/Career in the Excepted Service (signed 2026-06-03), is published at 91 FR 34893; it places the positions listed in its appendix in Schedule Policy/Career, amends Executive Order 13957 and the Civil Service Rules, adds a performance or misconduct removal basis, and gives agencies 7 days to notify affected employees.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/06/10/2026-11594/implementing-schedule-policycareer-in-the-excepted-service"
+    },
+    {
       "date": "2026-07-06",
       "event": "Federal News Network reports close to 8,000 career employees notified of reclassification, three pending lawsuits, no court rulings reported, and no immediate plans for further designations.",
       "kind": "news",
       "source": "Federal News Network",
       "url": "https://federalnewsnetwork.com/workforce/2026/07/federal-employees-face-reality-of-schedule-policy-career/"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "Office of Government Ethics publishes an interim final rule (91 FR 46239, effective 2026-07-23, comments to 2026-08-24) keeping positions moved into Schedule Policy/Career at their prior financial disclosure filing status, so employees not previously required to file public reports remain exempt.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/07/23/2026-14872/exempting-certain-career-federal-employees-from-ethics-reporting-requirements"
     },
     {
       "date": "2026-09-18",
@@ -226,6 +263,6 @@
   ],
   "title": "Reinstate Schedule F for policy-influencing career positions",
   "tracked": true,
-  "uncertainties": "Latest litigation reports I could read run through early July 2026; I could not run further searches (search budget exhausted) to confirm any August to October 2026 rulings or removals under the schedule. The 8,000 figure and 97 percent GS-15-or-above share come from press accounts of White House and OPM statements. One secondary source (FedSmith, 2026-06-03) says district court injunctions were stayed on appeal, which conflicts with Lawfare and Federal News Network reporting no rulings; I did not rely on it.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Latest litigation reports read run through early July 2026 and a tracker dated 2026-10-05. Searches on court rulings (2026-10-13) surfaced only March 2026 coverage and a CRS report; no ruling, injunction or removal under the schedule was found, but the dockets themselves were not opened. The 8,000 figure and 97 percent GS-15-or-above share come from press accounts of White House and OPM statements. One secondary source (FedSmith, 2026-06-03) says district court injunctions were stayed on appeal, which conflicts with Lawfare and Federal News Network reporting no rulings; it was not relied on. The Office of Government Ethics rule was read from its Federal Register API record (abstract only). An OPM direct final rule of 2026-08-14 cleaning up obsolete Civil Service Rules under EO 14410 section 2(g) was reviewed and left out of the timeline because it is non-substantive and does not touch the schedule.",
+  "updated_at": "2026-10-13"
 }
