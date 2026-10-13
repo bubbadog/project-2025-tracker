@@ -4,9 +4,9 @@
     "Withdrawal of guidance does not change underlying statutes or case law."
   ],
   "chapter": "15",
-  "confidence": 80,
-  "confidence_label": "high",
-  "confidence_reason": "Document text checked and both stage-deciding Federal Register notices confirmed on federalregister.gov and govinfo.gov.",
+  "confidence": 78,
+  "confidence_label": "medium",
+  "confidence_reason": "Document text checked and the July 2026 notice fetched and read on govinfo.gov, including its statement of a comprehensive review; whether a partly documented review counts as operative in substance or as formally underway is a matter of reading the rubric. This call is evenly balanced between implemented and in_progress.",
   "durability": {
     "level": "medium",
     "why": "Guidance withdrawals can be reversed by reissuing guidance."
@@ -28,6 +28,10 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Second independent review on 2026-10-13 kept implemented 65 because the July 2026 Federal Register notice on govinfo.gov describes a comprehensive HUD review of subregulatory guidance with withdrawals in effect; the call against in_progress is evenly balanced."
     }
   ],
   "id": "c15-10",
@@ -52,13 +56,24 @@
   "research_agent": "N15",
   "review": {
     "flags": [
-      "judgment call: implemented because the review and withdrawals are operative; in_progress would also be defensible since only fair housing and general counsel guidance is documented, not all subregulatory guidance."
+      "second review: kept implemented 65; HUD describes a comprehensive department-wide review, but documented results cover two offices, so in_progress remains defensible and the call is balanced. Confidence lowered to medium for that reason.",
+      "second review: operative ask: The Office of the Secretary or the Office of General Counsel at HUD should conduct a thorough review of all subregulatory guidance issued outside the Administrative Procedure Act process (page 508).",
+      "second review: rule applied: Implemented (65 to 90): the ask is a review, and HUD states in the July 2026 Federal Register notice that it is undertaking a comprehensive review of its subregulatory guidance, with two rounds of withdrawals already in effect. Test (a): yes in substance, the review is being conducted and producing results, though documented withdrawals cover only fair housing and general counsel guidance. Test (b): no, the action matches the ask. Test (c): no congressional action required.",
+      "second review: evenly balanced"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Bullet on page 508 matches the paraphrase.",
+    "mandate_note": "Page 508, first-day and first-year administrative reforms list: the Office of the Secretary or General Counsel leadership should thoroughly review all subregulatory guidance instituted outside the APA. Paraphrase accurate.",
     "model": "Claude Opus",
     "reviewed_at": "2026-10-13",
-    "reviewer": "Y15a",
+    "reviewer": "Y15a, U13-5",
+    "second_review": {
+      "balanced": true,
+      "date": "2026-10-13",
+      "decision": "keep",
+      "operative_ask": "The Office of the Secretary or the Office of General Counsel at HUD should conduct a thorough review of all subregulatory guidance issued outside the Administrative Procedure Act process (page 508).",
+      "reviewer": "U13-5",
+      "rule_applied": "Implemented (65 to 90): the ask is a review, and HUD states in the July 2026 Federal Register notice that it is undertaking a comprehensive review of its subregulatory guidance, with two rounds of withdrawals already in effect. Test (a): yes in substance, the review is being conducted and producing results, though documented withdrawals cover only fair housing and general counsel guidance. Test (b): no, the action matches the ask. Test (c): no congressional action required."
+    },
     "source_checks": [
       {
         "note": "91 FR 17291, effective 2025-09-17.",
@@ -84,6 +99,16 @@
         "note": "2025-02-28 remarks on taking inventory of regulations.",
         "result": "supports",
         "url": "https://www.housingwire.com/articles/hud-secretary-scott-turner-nahb-terminate-costly-housing-regulations/"
+      },
+      {
+        "note": "OGC notice, 13 documents dated 1990 to 2024, effective 2025-09-25, Executive Orders 14192 and 14219, three-part test, states HUD is undertaking a comprehensive review of its subregulatory guidance.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-17/html/2026-14432.htm"
+      },
+      {
+        "note": "Only two HUD guidance withdrawal notices since 2025-01-20 (2026-06624 and 2026-14432).",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=housing-and-urban-development-department&conditions[term]=withdrawal%20guidance&conditions[publication_date][gte]=2025-01-20"
       }
     ]
   },
@@ -154,7 +179,7 @@
     }
   ],
   "stage": "implemented",
-  "status_summary": "HUD has reviewed and withdrawn guidance under Executive Orders 14192 and 14219. An Office of Fair Housing and Equal Opportunity memo of 2025-09-17 withdrew nine documents, formalized in a notice published 2026-04-06 (91 FR 17291, eight documents, effective 2025-09-17), and an Office of General Counsel notice published 2026-07-17 (91 FR 44867) withdrew 13 documents effective 2025-09-25, covering topics such as criminal records screening, source of income, limited English proficiency, special purpose credit and appraisal elements of proof. HUD said it withdrew guidance that was not statutorily prescribed, was inconsistent with the governing statute or regulation, or did not reduce compliance burdens. The HUD Secretary said on 2025-02-28 that the department was taking inventory of burdensome regulations.",
+  "status_summary": "HUD has reviewed and withdrawn guidance under Executive Orders 14192 and 14219, and its Office of General Counsel notice of 2026-07-17 states that HUD is undertaking a comprehensive review of its subregulatory guidance. An Office of Fair Housing and Equal Opportunity memo of 2025-09-17 withdrew nine documents, formalized in a notice published 2026-04-06 (91 FR 17291, eight documents, effective 2025-09-17), and the Office of General Counsel notice (91 FR 44867) withdrew 13 documents effective 2025-09-25, covering topics such as criminal records screening, source of income, limited English proficiency, special purpose credit and appraisal elements of proof. HUD said it withdrew guidance that was not statutorily required, was inconsistent with the governing statute or regulation, or added compliance burdens. The HUD Secretary said on 2025-02-28 that the department was taking inventory of burdensome regulations.",
   "timeline": [
     {
       "date": "2025-02-28",
@@ -187,6 +212,6 @@
   ],
   "title": "Review and withdraw HUD subregulatory guidance issued outside notice and comment",
   "tracked": true,
-  "uncertainties": "Both notices carry effective dates in September 2025, earlier than their publication, because they formalize withdrawals made by memo. The memo and the April 2026 notice overlap almost entirely. No withdrawal rounds outside the fair housing and general counsel offices were documented in a Federal Register search.",
+  "uncertainties": "Both notices carry effective dates in September 2025, earlier than their publication, because they formalize withdrawals made by memo. The memo and the April 2026 notice overlap almost entirely. A Federal Register API search of HUD documents since 2025-01-20 on 2026-10-13 found only these two guidance withdrawal notices; no withdrawal rounds from single family, public housing or community development offices were documented, and HUD has not published an inventory of the guidance reviewed.",
   "updated_at": "2026-10-13"
 }

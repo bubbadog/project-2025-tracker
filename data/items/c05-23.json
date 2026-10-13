@@ -4,15 +4,15 @@
     "Needs 60 Senate votes for most legislation (Inference); no bill had passed either chamber in the sources found."
   ],
   "chapter": "05",
-  "confidence": 80,
+  "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Chapter text checked; the bill records on govinfo and the CBO estimate that decide the proposed stage were fetched and read; the absence of an executive order rests on searches.",
+  "confidence_reason": "Chapter text checked; the bill records on GovInfo and the CBO estimate that decide the proposed stage were fetched and read by the research tools, so the provenance cap does not bind. The congress.gov action history, read through the owner's browser retrieval, confirms the 2026-01-08 order to report (amended, 17 to 8) with no report filed and no floor action, which resolves the floor status gap. The H.R. 2641 text remains unread and the absence of an executive order rests on searches. Stage rule applied: bills introduced or ordered reported with nothing operative are proposed; 15 reflects committee action on one bill without a report or floor vote.",
   "durability": {
     "level": "high",
     "why": "A statute would be hard to reverse, but none has passed; the existing contractor requirement is a regulation already in force."
   },
   "est_completion": {
-    "basis": "Inference: bills have been introduced for years without enactment, and only one has been reported from committee in this Congress.",
+    "basis": "Inference: bills have been introduced for years without enactment, and in this Congress only one has been ordered reported by a committee, with no committee report filed and no floor action.",
     "window": "unlikely this term"
   },
   "headline": false,
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-11",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Independent review of new evidence: the congress.gov All Actions page for H.R. 2641, read through the owner's browser retrieval, confirms the Judiciary Committee ordered the bill reported, as amended, by 17 to 8 on 2026-01-08, with no report filed and no floor action (status Introduced); added it as a source, updated the summary, the completion basis and the uncertainties (floor status now confirmed; bill text still not read) and rewrote the review flags as open concerns; stage proposed 15 holds; confidence raised from 80 to 82."
     }
   ],
   "id": "c05-23",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-13",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -56,13 +60,17 @@
   "research_agent": "N05a",
   "review": {
     "flags": [
-      "FAR requirement qualified as covering contracts above thresholds, per CBO"
+      "H.R. 2641 text not read; only the introduced version is listed, and its contractor scope is taken from CBO",
+      "congress.gov action history read only through the owner's browser retrieval; the research tools cannot open that host",
+      "H.R. 251 provisions taken from its title only",
+      "E-Verify authorization status under current appropriations law not confirmed",
+      "no executive order or FAR change on E-Verify since 2025-01-20 found; the search was not exhaustive"
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 146 and 149 ask Congress to authorize E-Verify permanently and make it mandatory, and page 151 lists an executive order mandating E-Verify for anyone doing business with the government. The proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
-    "reviewer": "Y7",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "Y4",
     "source_checks": [
       {
         "note": "H.R. 251 introduced 2025-01-09 by Rep. Calvert; title: mandatory and permanent electronic employment eligibility verification.",
@@ -78,6 +86,11 @@
         "note": "S. 4620 introduced 2026-05-21 by Sen. Britt; title: permanently establish and mandate E-Verify for all employers.",
         "result": "supports",
         "url": "https://www.govinfo.gov/app/details/BILLS-119s4620is"
+      },
+      {
+        "note": "All Actions lists introduction and referral to Judiciary and to Education and Workforce on 2025-04-03, and on 2026-01-08 a markup and an order to report, as amended, by the Judiciary Committee by a 17 to 8 vote; no report filed and no floor action; status Introduced; read through the owner's browser retrieval on 2026-10-13; not reachable from the research tools.",
+        "result": "supports",
+        "url": "https://www.congress.gov/bill/119th-congress/house-bill/2641/all-actions"
       }
     ]
   },
@@ -129,10 +142,17 @@
       "publisher": "acquisition.gov",
       "title": "FAR 22.1802, Policy (E-Verify for federal contractors)",
       "url": "https://www.acquisition.gov/far/22.1802"
+    },
+    {
+      "date": "2026-01-08",
+      "kind": "primary",
+      "publisher": "Congress.gov",
+      "title": "H.R. 2641, To amend the Illegal Immigration Reform and Immigrant Responsibility Act of 1996 to require all Federal contractors to participate in the E-Verify program: All Actions (119th Congress)",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/2641/all-actions"
     }
   ],
   "stage": "proposed",
-  "status_summary": "Bills are pending in the 119th Congress: the Legal Workforce Act (H.R. 251, introduced 2025-01-09) would, by its title, make E-Verify use mandatory and permanent; the House Judiciary Committee ordered H.R. 2641, the Day 1, Dollar 1 E-Verify Act, reported on 2026-01-08 (per CBO it would require all federal contractors and subcontractors to use E-Verify); and the Mandatory E-Verify Act of 2026 (S. 4620) was introduced on 2026-05-21. None has been enacted, and no executive order requiring E-Verify for all government contractors was found. The Federal Acquisition Regulation already requires E-Verify in covered federal contracts above certain thresholds, a rule that predates 2025.",
+  "status_summary": "Bills are pending in the 119th Congress: the Legal Workforce Act (H.R. 251, introduced 2025-01-09) would, by its title, make E-Verify use mandatory and permanent; the House Judiciary Committee ordered H.R. 2641, the Day 1, Dollar 1 E-Verify Act, reported with an amendment by a 17 to 8 vote on 2026-01-08 (per CBO it would require all federal contractors and subcontractors to use E-Verify), and the congress.gov action history shows no committee report filed and no floor action; and the Mandatory E-Verify Act of 2026 (S. 4620) was introduced on 2026-05-21. None has been enacted, and no executive order requiring E-Verify for all government contractors was found. The Federal Acquisition Regulation already requires E-Verify in covered federal contracts above certain thresholds, a rule that predates 2025.",
   "timeline": [
     {
       "date": "2025-01-09",
@@ -158,6 +178,6 @@
   ],
   "title": "Make E-Verify permanent and mandatory, and require it for government contractors",
   "tracked": true,
-  "uncertainties": "The authorization status of E-Verify under current appropriations law was not confirmed: the DHS appropriations texts of P.L. 119-86 and P.L. 119-98 were searched and showed funding but no explicit extension in the parts read. H.R. 2641 text and its House floor status were not available (Congress.gov blocked the fetch), and H.R. 251's provisions are taken from its title. No Federal Acquisition Regulation change or executive order on E-Verify since 2025-01-20 was found in searches, but the search was not exhaustive. The page date for the FAR section is the retrieval date. The sub-point on E-Verify as a condition for grants is covered in c05-19.",
-  "updated_at": "2026-10-11"
+  "uncertainties": "The authorization status of E-Verify under current appropriations law was not confirmed: the DHS appropriations texts of P.L. 119-86 and P.L. 119-98 were searched and showed funding but no explicit extension in the parts read. The congress.gov All Actions page for H.R. 2641 was read through the owner's browser retrieval on 2026-10-13 (the research tools still cannot open that host): it lists introduction on 2025-04-03, referral to the Committee on the Judiciary and in addition to the Committee on Education and Workforce, and a markup on 2026-01-08 at which the Judiciary Committee ordered the bill reported, as amended, by 17 to 8; no committee report filed, no action by the Education and Workforce Committee and no floor action appear, and the status is Introduced. The House floor status is therefore confirmed as no floor action as of that check, but the bill text was still not read: only the introduced version is listed, so the text of the committee amendment was not available. H.R. 251's provisions are taken from its title. No Federal Acquisition Regulation change or executive order on E-Verify since 2025-01-20 was found in searches, but the search was not exhaustive. The page date for the FAR section is the retrieval date. The sub-point on E-Verify as a condition for grants is covered in c05-19.",
+  "updated_at": "2026-10-13"
 }
