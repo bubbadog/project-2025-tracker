@@ -2,12 +2,12 @@
   "agency": "HHS (CMS), Treasury (IRS)",
   "blockers": [
     "Further statutory expansion of HSAs, association health plans and short-term plans would need Congress",
-    "The DPC rule has limits the Mandate did not specify (a fee cap and a primary-care-only scope)"
+    "The enacted DPC provision has limits the Mandate did not specify (a fee cap and a primary-care-only scope)"
   ],
   "chapter": "14",
-  "confidence": 84,
+  "confidence": 86,
   "confidence_label": "high",
-  "confidence_reason": "The IRS notice was read and confirms that the 2025 law made qualifying direct primary care compatible with HSAs and widened HSA eligibility from 2026. Whether the open-ended call for expanded HSA access is met is a judgment, and the 2027 payment notice was read only from its abstract.",
+  "confidence_reason": "Document text checked (pages 469 and 470). The reviewer read IR-2025-119 and Rev. Proc. 2026-24 at irs.gov, which with Notice 2026-5 confirm the statutory DPC and HSA changes are in effect; the statute text itself was not read. Rule applied: completed requires the recommendation done as specified; the enacted provision covers only primary care under a fee cap, so higher-fee or broader DPC arrangements still bar HSA contributions, which is short of the document's unqualified call, and the expanded-access call is open-ended, so implemented, high in the band (85) because the change is statutory.",
   "durability": {
     "level": "high",
     "why": "The changes are in statute, so a later administration cannot undo them without Congress."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-14",
+      "note": "Freshness pass, independently reviewed: added IRS release IR-2025-119 and Rev. Proc. 2026-24 (bulletin of 2026-06-15) as primary sources; the review replaced the KPMG source for the 2025-12-09 release date and the 2026-01-01 effective date with IR-2025-119, removed the 2026-05-20 HHS payment notice (it does not address HSAs or direct primary care), and corrected the 2027 fee-limit wording. Stage unchanged at implemented 85; red-team holds; confidence 84 to 86."
     }
   ],
   "id": "c14-13",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-14",
   "layer": 2,
   "match": "direct",
   "mechanism": "legislation",
@@ -43,19 +47,24 @@
   "progress": 85,
   "proposal": "The Mandate recommends clarifying that a direct primary care (DPC) fixed fee is not insurance for purposes of health savings accounts (HSAs), and calls for giving consumers more flexibility with health dollars through expanded access to HSAs. The same section also urges Congress to codify expanded association health plans, short-term plans and individual coverage HRAs, which this record does not cover.",
   "redteam": {
-    "date": "2026-10-08",
+    "date": "2026-10-14",
     "evidence": [
       {
         "date": "2025-12-09",
-        "kind": "primary",
-        "note": "Re-read: direct primary care arrangements with fees up to 150 dollars a month per person (300 for more than one) do not bar HSA contributions for months after 2025-12-31, and fees can be paid from an HSA; Exchange bronze and catastrophic plans are treated as high-deductible plans from the same date; comments due 2026-03-06. The text shows no issue date (2025-12-09 comes from a KPMG summary).",
-        "source": "IRS Notice 2026-5",
-        "url": "https://www.irs.gov/pub/irs-drop/n-26-05.pdf"
+        "note": "IR-2025-119 states the direct primary care provision applies from 2026-01-01 for HSA contributions and tax-free payment of periodic fees.",
+        "source": "IRS",
+        "url": "https://www.irs.gov/newsroom/treasury-irs-provide-guidance-on-new-tax-benefits-for-health-savings-account-participants-under-the-one-big-beautiful-bill"
+      },
+      {
+        "date": "2026-06-15",
+        "note": "Rev. Proc. 2026-24 states the DPC fee limits for months beginning in 2027 as $150 a month per individual and $300 for more than one person and cites section 71308 of Public Law 119-21; no issue date shown.",
+        "source": "IRS",
+        "url": "https://www.irs.gov/pub/irs-drop/rp-26-24.pdf"
       }
     ],
-    "note": "No later guidance, repeal or delay found; the direct primary care and bronze or catastrophic plan HSA provisions are operative for months after 2025-12-31.",
+    "note": "The provision is in effect for months after 2025-12-31 and the IRS has since extended it with a 2027 adjustment; no delay or repeal found. Stage implemented 85 holds because of the fee cap and primary-care-only scope.",
     "verdict": "holds",
-    "what_was_tested": "Looked for a repeal, delay or narrowing of the direct primary care HSA provision by re-reading IRS Notice 2026-5 and searching for later IRS guidance or regulations."
+    "what_was_tested": "Looked for repeal, delay or narrowing of the direct primary care HSA provision and for any IRS guidance after Notice 2026-5, including by reading the IRS release and the 2027 inflation adjustment revenue procedure."
   },
   "remaining": [
     "Further HSA expansion beyond the 2025 law, if the Mandate's call for expanded access is read broadly",
@@ -65,19 +74,29 @@
   "research_agent": "D5",
   "review": {
     "flags": [
-      "completed vs implemented is a judgment given the fee cap and open-ended HSA call",
-      "notice release date (2025-12-09) from a KPMG summary; the PDF shows none"
+      "Statute text of Public Law 119-21 not read directly (congress.gov blocked)",
+      "implemented versus completed is a judgment call decided on the fee cap and scope limit"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 469 asks that changes clarify a direct primary care fixed fee is not insurance for HSA purposes; page 470 asks Congress to codify expanded association health plans, short-term plans and HRAs and asks CCIIO to work with Treasury and OMB on expanded HSA access. The proposal matches and correctly notes the parts this record does not cover.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y1",
+    "mandate_check": "ok",
+    "mandate_note": "Page 469 asks that changes clarify that a DPC fixed fee is not insurance for HSA purposes; page 470 asks Congress to codify expanded association health plans, short-term plans and HRAs and asks CCIIO to work with Treasury and OMB on expanded HSA access. The proposal and direct match fit, and the record correctly excludes the parts it does not cover.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-14",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "Notice 2026-5 (no issue date shown) explains P.L. 119-21 sections 71306 (permanent telehealth safe harbor, plan years after 2024-12-31), 71307 (Exchange bronze and catastrophic plans treated as HDHPs from months after 2025-12-31) and 71308 (qualifying direct primary care arrangements, primary care only, fees up to $150 a month or $300 for more than one person, do not bar HSA contributions and can be paid from an HSA, months after 2025-12-31); comments due 2026-03-06.",
+        "note": "Read 2026-10-14: IR-2025-119 dated 2025-12-09 announces Notice 2026-5; DPC participants may contribute to HSAs from 2026-01-01 and pay periodic DPC fees tax-free from HSAs; bronze and catastrophic plans HSA-compatible from 2026-01-01; telehealth safe harbor permanent for plan years from 2025-01-01. No fee cap or scope stated.",
         "result": "supports",
-        "url": "https://www.irs.gov/pub/irs-drop/n-26-05.pdf"
+        "url": "https://www.irs.gov/newsroom/treasury-irs-provide-guidance-on-new-tax-benefits-for-health-savings-account-participants-under-the-one-big-beautiful-bill"
+      },
+      {
+        "note": "Read 2026-10-14: Rev. Proc. 2026-24 cites Code section 223(c)(1)(E) added by section 71308 of Public Law 119-21; DPC fee limits for 2027 stated as $150 and $300 a month; 2027 HSA limits $4,500 and $9,000; no issue date.",
+        "result": "supports",
+        "url": "https://www.irs.gov/pub/irs-drop/rp-26-24.pdf"
+      },
+      {
+        "note": "2027 payment notice abstract covers Exchange, risk adjustment, catastrophic and bronze cost-sharing and other items; no mention of HSAs or direct primary care; event and source removed from this record.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-10050.json"
       }
     ]
   },
@@ -103,21 +122,28 @@
     },
     {
       "date": "2025-12-09",
-      "kind": "news",
-      "publisher": "KPMG",
-      "title": "Notice 2026-5: Expanded HSA eligibility under OBBBA",
-      "url": "https://kpmg.com/us/en/taxnewsflash/news/2025/12/notice-2026-5-expanded-hsa-eligibility-under-obbba.html"
+      "kind": "primary",
+      "publisher": "IRS",
+      "title": "Treasury, IRS provide guidance on new tax benefits for health savings account participants under the One, Big, Beautiful Bill (IR-2025-119)",
+      "url": "https://www.irs.gov/newsroom/treasury-irs-provide-guidance-on-new-tax-benefits-for-health-savings-account-participants-under-the-one-big-beautiful-bill"
     },
     {
-      "date": "2026-05-20",
+      "date": "2026-06-15",
       "kind": "primary",
-      "publisher": "Federal Register",
-      "title": "Patient Protection and Affordable Care Act, HHS Notice of Benefit and Payment Parameters for 2027; and Basic Health Program (final rule)",
-      "url": "https://www.federalregister.gov/documents/2026/05/20/2026-10050/patient-protection-and-affordable-care-act-hhs-notice-of-benefit-and-payment-parameters-for-2027-and"
+      "publisher": "IRS",
+      "title": "Rev. Proc. 2026-24: 2027 inflation-adjusted HSA amounts and direct primary care fee limits (Internal Revenue Bulletin 2026-25)",
+      "url": "https://www.irs.gov/irb/2026-25_irb"
+    },
+    {
+      "date": "2026-06-15",
+      "kind": "primary",
+      "publisher": "IRS",
+      "title": "Rev. Proc. 2026-24 (text)",
+      "url": "https://www.irs.gov/pub/irs-drop/rp-26-24.pdf"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Congress enacted the DPC and HSA changes in Public Law 119-21 (signed 2025-07-04), and the IRS explained them in Notice 2026-5, released 2025-12-09. Beginning in months after 2025-12-31, a qualifying DPC arrangement (primary care only, fixed periodic fee up to $150 a month per person or $300 for more than one person) does not disqualify a person from contributing to an HSA, and HSA funds can pay its fees; bronze and catastrophic marketplace plans are treated as HSA-compatible high-deductible plans; and the telehealth safe harbor became permanent. This record does not cover the same section's recommendations on short-term plans, association health plans and individual coverage HRAs; Federal Register queries found no rule or proposal on short-term plans or association health plans since 2025-01-20. HHS's 2027 payment notice (final, published 2026-05-20) separately revises catastrophic plan standards and implements provisions of the 2025 law.",
+  "status_summary": "Congress enacted the DPC and HSA changes in Public Law 119-21 (signed 2025-07-04), and the IRS explained them in Notice 2026-5, released with IR-2025-119 on 2025-12-09. Beginning 2026-01-01 (months after 2025-12-31), a qualifying DPC arrangement (primary care only, fixed periodic fee up to $150 a month per person or $300 for more than one person) does not disqualify a person from contributing to an HSA, and HSA funds can pay its fees; bronze and catastrophic marketplace plans are treated as HSA-compatible high-deductible plans; and the telehealth safe harbor became permanent. Rev. Proc. 2026-24 (Internal Revenue Bulletin of 2026-06-15) states the DPC fee limits for months beginning in 2027 as $150 and $300 and cites section 71308 of Public Law 119-21. This record does not cover the same section's recommendations on short-term plans, association health plans and individual coverage HRAs; Federal Register queries found no rule or proposal on short-term plans or association health plans since 2025-01-20.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -130,26 +156,26 @@
       "date": "2025-12-09",
       "event": "The IRS releases Notice 2026-5 (Expanded Availability of Health Savings Accounts under the One, Big, Beautiful Bill Act), explaining the DPC rules (primary care services only, fixed periodic fee capped at $150 a month per individual or $300 for several people), the bronze and catastrophic plan rule, and the permanent telehealth safe harbor; comments requested by 2026-03-06.",
       "kind": "primary",
-      "source": "IRS",
+      "source": "IRS (Notice 2026-5; release date from IR-2025-119)",
       "url": "https://www.irs.gov/pub/irs-drop/n-26-05.pdf"
     },
     {
       "date": "2026-01-01",
-      "event": "The DPC and bronze/catastrophic plan provisions apply to months beginning after 2025-12-31; the telehealth safe harbor applies retroactively to plan years beginning after 2024-12-31.",
-      "kind": "news",
-      "source": "KPMG",
-      "url": "https://kpmg.com/us/en/taxnewsflash/news/2025/12/notice-2026-5-expanded-hsa-eligibility-under-obbba.html"
+      "event": "The direct primary care and bronze or catastrophic plan HSA provisions take effect for months beginning after 2025-12-31 (the IRS states 2026-01-01); the telehealth safe harbor applies to plan years beginning on or after 2025-01-01.",
+      "kind": "primary",
+      "source": "IRS (IR-2025-119)",
+      "url": "https://www.irs.gov/newsroom/treasury-irs-provide-guidance-on-new-tax-benefits-for-health-savings-account-participants-under-the-one-big-beautiful-bill"
     },
     {
-      "date": "2026-05-20",
-      "event": "HHS finalizes the 2027 payment notice (FR doc. 2026-10050), which adds cost-sharing flexibilities for catastrophic and bronze plans and allows catastrophic plans with terms of up to 10 years, and implements provisions of the 2025 law.",
+      "date": "2026-06-15",
+      "event": "The IRS publishes Rev. Proc. 2026-24 in Internal Revenue Bulletin 2026-25: it sets the 2027 HSA contribution and high-deductible plan limits and states the direct primary care fee limits for months beginning in 2027 as $150 a month per individual and $300 where the arrangement covers more than one person, citing section 71308 of Public Law 119-21 (Internal Revenue Code section 223(c)(1)(E)) as the source of the provision.",
       "kind": "primary",
-      "source": "Federal Register",
-      "url": "https://www.federalregister.gov/documents/2026/05/20/2026-10050/patient-protection-and-affordable-care-act-hhs-notice-of-benefit-and-payment-parameters-for-2027-and"
+      "source": "IRS",
+      "url": "https://www.irs.gov/irb/2026-25_irb"
     }
   ],
   "title": "Clarify that direct primary care fees do not bar HSA eligibility and expand HSA access",
   "tracked": true,
-  "uncertainties": "The statute text of Public Law 119-21 was not read; the section numbers and effects come from IRS Notice 2026-5 (read through a summarizing fetch, which did not show the issue date) and the release date of 2025-12-09 comes from a KPMG summary. Whether a record limited to the HSA and DPC items should be 'completed' rather than 'implemented' is a judgment call: the DPC clarification matches the Mandate in principle but with a fee cap and scope limits, and the broader 'expanded access' call is open-ended. Federal Register queries run since 2025-01-20: 'short-term limited-duration insurance' (only price transparency and marketplace rules), 'association health plans' (only the Marketplace Integrity rule and unrelated items) and 'individual coverage health reimbursement' (only the marketplace payment notices); these show no short-term plan or association health plan rulemaking, but non-Federal Register guidance (for example enforcement statements) was not searched. The 2027 payment notice item was read from its Federal Register abstract in the API listing only; its link to the Mandate is thematic. No news search was run on this objective beyond the IRS notice date.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The statute text of Public Law 119-21 was not read; the section numbers and effects come from IRS Notice 2026-5 and Rev. Proc. 2026-24, and the 2025-12-09 release date comes from IRS release IR-2025-119, which announces the notice. Whether a record limited to the HSA and DPC items should be 'completed' rather than 'implemented' is a judgment call: the DPC clarification matches the Mandate in principle but with a fee cap and scope limits, and the broader 'expanded access' call is open-ended. Federal Register queries run since 2025-01-20: 'short-term limited-duration insurance' (only price transparency and marketplace rules), 'association health plans' (only the Marketplace Integrity rule and unrelated items) and 'individual coverage health reimbursement' (only the marketplace payment notices); these show no short-term plan or association health plan rulemaking, but non-Federal Register guidance (for example enforcement statements) was not searched. No news search was run on this objective beyond the IRS notice date. Checks on 2026-10-14: a Federal Register search for 'direct primary care' from 2026-01-01 returned no documents; a web search for later IRS guidance found Rev. Proc. 2026-24 and nothing that delays or narrows the provision. The statute text was still not read directly (congress.gov blocked automated fetch); section 71308 as the direct primary care provision comes from the text of Rev. Proc. 2026-24. Rev. Proc. 2026-24 states no separate release date, so the bulletin issue date is used. Reviewer check 2026-10-14: IR-2025-119 confirms the DPC provision applies from 2026-01-01 and that HSA funds may pay periodic DPC fees (it does not state the fee cap or scope); Rev. Proc. 2026-24 states $150 and $300 as the 2027 DPC fee limits, ties them to section 71308 and gives no issue date. HHS's 2027 payment notice (published 2026-05-20) was removed from this record: its Federal Register abstract addresses catastrophic and bronze plan cost sharing and other Exchange rules but does not mention HSAs or direct primary care, so it is not an action on this recommendation.",
+  "updated_at": "2026-10-14"
 }

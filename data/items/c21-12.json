@@ -1,0 +1,150 @@
+{
+  "agency": "Commerce (BIS)",
+  "blockers": [
+    "The administration resolved TikTok through divestiture under the 2024 law rather than export controls"
+  ],
+  "chapter": "21",
+  "confidence": 72,
+  "confidence_label": "medium",
+  "confidence_reason": "Mandate text checked; the executive order read on the Federal Register and the closing confirmed in news; the absence of a listing rests on term searches.",
+  "durability": {
+    "level": "medium",
+    "why": "The joint venture is a closed transaction, though its terms could be revisited."
+  },
+  "est_completion": {
+    "basis": "Inference: TikTok was resolved by divestiture and no WeChat listing was found.",
+    "window": "unlikely this term"
+  },
+  "headline": false,
+  "history": [
+    {
+      "date": "2026-10-13",
+      "note": "Added in the layer 3 enumeration pass; researched and sent to independent review."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Independent review: diverged confirmed, Executive Order 14352 added as primary source, related records added, confidence 72."
+    },
+    {
+      "date": "2026-10-13",
+      "note": "Significance scored blind by two AI raters from the recommendation text only."
+    }
+  ],
+  "id": "c21-12",
+  "last_checked": "2026-10-13",
+  "layer": 3,
+  "match": "parallel",
+  "mechanism": "agency_action",
+  "pages": [
+    674
+  ],
+  "position": "Bureau of Industry and Security: Data Transfer and Apps Used for Surveillance",
+  "progress": 0,
+  "proposal": "The Mandate recommends that BIS designate app providers it describes as undermining national security through data collection and surveillance, naming WeChat and ByteDance/TikTok, to the Entity List. It says the listing would block software updates and quickly make the apps non-operational in the United States.",
+  "related_ids": [
+    "c21-03",
+    "c00-13",
+    "c28-03",
+    "c21-15"
+  ],
+  "remaining": [
+    "Any Entity List designation of WeChat or TikTok providers"
+  ],
+  "requires_congress": "no",
+  "research_agent": "N21",
+  "restates_ids": [],
+  "review": {
+    "flags": [
+      "judgment call: diverged kept because the chosen route keeps TikTok operating, consistent with c00-13; not_started (0) is defensible for the WeChat half and if divestiture is treated as unrelated to the BIS recommendation",
+      "Added Executive Order 14352 as the primary source; related ids c00-13 and c28-03 added"
+    ],
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 674, BIS Data Transfer and Apps Used for Surveillance: designate app providers such as WeChat and ByteDance/TikTok to the Entity List so updates are blocked and the apps become non-operational. Paraphrase accurate.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-13",
+    "reviewer": "Y21e",
+    "source_checks": [
+      {
+        "note": "Federal Register API query, BIS documents since 2025-01-20 with term TikTok: zero results. Similar queries for WeChat and a combined WeChat, Tencent, ByteDance, TikTok term also returned zero. Check only.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=industry-and-security-bureau&conditions[term]=TikTok&conditions[publication_date][gte]=2025-01-20"
+      },
+      {
+        "note": "Executive Order 14352 signed 2025-09-25, published 2025-09-30; qualified divestiture, ByteDance under 20 percent; no Entity List mention.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/09/30/2025-19139/saving-tiktok-while-protecting-national-security"
+      },
+      {
+        "note": "Deal closed Thursday (2026-01-22); ByteDance near 20 percent; algorithm licensed; no Commerce or Entity List mention.",
+        "result": "supports",
+        "url": "https://axios.com/2026/01/23/tiktok-deal-trump-app-ban"
+      }
+    ]
+  },
+  "significance": {
+    "B": 1,
+    "F": 1,
+    "F_estimated": true,
+    "M": 2.5,
+    "R": 3,
+    "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 1,
+        "F": 1,
+        "M": 3,
+        "R": 3,
+        "rater": "A"
+      },
+      {
+        "B": 1,
+        "F": 1,
+        "M": 2,
+        "R": 3,
+        "rater": "B"
+      }
+    ],
+    "raters": 2,
+    "rationale": "BIS would place WeChat and ByteDance/TikTok on the Entity List, blocking software updates and making the apps nonoperational in the United States.",
+    "version": "2026-10-13",
+    "weight": 1.875
+  },
+  "sources": [
+    {
+      "date": "2025-09-30",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Saving TikTok While Protecting National Security (Executive Order 14352)",
+      "url": "https://www.federalregister.gov/documents/2025/09/30/2025-19139/saving-tiktok-while-protecting-national-security"
+    },
+    {
+      "date": "2026-01-23",
+      "kind": "news",
+      "publisher": "Axios",
+      "title": "TikTok divestiture deal closes",
+      "url": "https://axios.com/2026/01/23/tiktok-deal-trump-app-ban"
+    }
+  ],
+  "stage": "diverged",
+  "status_summary": "No Entity List designation of WeChat, Tencent, ByteDance or TikTok was found: Federal Register API queries of BIS documents since 2025-01-20 for each name returned no results. Executive Order 14352, signed 2025-09-25, instead found that a framework creating a U.S. TikTok joint venture, majority-owned by U.S. persons with ByteDance and affiliates below 20 percent, was a qualified divestiture under the 2024 divest-or-ban law. The joint venture closed on 2026-01-22, with ByteDance keeping nearly 20 percent and licensing its algorithm, and the app continues to operate. This route keeps the app running, the opposite of the outcome the Mandate sought.",
+  "timeline": [
+    {
+      "date": "2025-09-25",
+      "event": "Executive Order 14352 determined that a TikTok U.S. joint venture framework, with ByteDance and affiliates holding less than 20 percent, was a qualified divestiture under the 2024 divest-or-ban law (published 2025-09-30).",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/09/30/2025-19139/saving-tiktok-while-protecting-national-security"
+    },
+    {
+      "date": "2026-01-22",
+      "event": "TikTok closed a deal placing its U.S. operations in a joint venture controlled by American investors; ByteDance keeps nearly 20 percent and licenses its algorithm to the venture (reported 2026-01-23).",
+      "kind": "news",
+      "source": "Axios",
+      "url": "https://axios.com/2026/01/23/tiktok-deal-trump-app-ban"
+    }
+  ],
+  "title": "Designate WeChat and TikTok owners on the Entity List to disable the apps",
+  "tracked": true,
+  "uncertainties": "The Federal Register API checks are term searches of BIS documents (TikTok, WeChat, and a combined query including ByteDance and Tencent), not a review of every Entity List rule; a listing of a related subsidiary under another name would not appear. Axios gives the closing day as a Thursday, which is 2026-01-22; joint venture terms come from news reports, not transaction documents. Neither Axios nor the order mentions the Entity List. Related records c00-13 and c28-03 track TikTok from other chapters.",
+  "updated_at": "2026-10-13"
+}
