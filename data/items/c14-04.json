@@ -2,9 +2,9 @@
   "agency": "HHS (NIH)",
   "blockers": [],
   "chapter": "14",
-  "confidence": 82,
+  "confidence": 84,
   "confidence_label": "high",
-  "confidence_reason": "Both NIH notices were read and confirm an operative ban on NIH funding of elective-abortion fetal tissue research and a pause, not an end, to new registry lines. Any NIH decision after the April 2026 comment deadline and any legal challenge were not found in a limited search.",
+  "confidence_reason": "Document text checked (pages 460 and 461). The reviewer read NOT-OD-26-028, NOT-OD-26-060, NOT-OD-21-111 and the NIH stem cell policy page (June 2026); NOT-OD-26-031 was read in an earlier review and its pause is restated on the June 2026 policy page. Rule applied: an operative agency funding ban that goes beyond one element (ethics board) but leaves the registry paused rather than ended, with no statute, alternatives program or bioethics council, is operative in substance yet short of the full recommendation and reversible by notice, so implemented 68 holds. Absence of later action or litigation rests on limited searches.",
   "durability": {
     "level": "low",
     "why": "The ban is an NIH policy notice that a later administration can reverse, as the Biden administration reversed the 2019 restrictions in 2021."
@@ -25,10 +25,14 @@
     {
       "date": "2026-10-08",
       "note": "Red-team check on an objective counted as in effect: holds. No lawsuit, rescission or later registry decision found; the January 2026 notices remain the operative actions."
+    },
+    {
+      "date": "2026-10-14",
+      "note": "Freshness pass, independently reviewed: no new NIH action, lawsuit or rescission found; added NIH's FY2026 legislative mandates notice and the NIH stem cell policy page as sources and recorded appropriations findings in the uncertainties. The review confirmed both added sources, corrected the policy page date to June 2026, and replaced the year-only 2021 context event with NIH notice NOT-OD-21-111 of 2021-04-16. Stage unchanged at implemented 68; confidence 82 to 84."
     }
   ],
   "id": "c14-04",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-14",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_action",
@@ -40,26 +44,24 @@
   "progress": 68,
   "proposal": "The Mandate recommends that HHS restore the ethics advisory committee review of abortion-derived fetal tissue research (with Congress prohibiting such research), end intramural NIH projects using such tissue, end the NIH human embryonic stem cell registry, fund ethical alternatives, and reconvene a National Council on Bioethics.",
   "redteam": {
-    "date": "2026-10-08",
+    "date": "2026-10-14",
     "evidence": [
       {
-        "date": "2026-02-12",
-        "kind": "news",
-        "note": "Summarizes NOT-OD-26-028 (effective 2026-01-22, intramural and extramural) and NOT-OD-26-031 (registry additions paused, comments due 2026-04-24); reports no later NIH decision, lawsuit or implementation change.",
-        "source": "FASEB Washington Update",
-        "url": "https://faseb.org/journals-and-news/washington-update/recent-nih-policy-actions-of-interest"
+        "date": "2026-06-29",
+        "note": "Page last updated June 2026 (metadata 2026-06-29) still describes the registry pause under NOT-OD-26-031 and the fetal tissue funding limit effective 2026-01-22; cites no later notice.",
+        "source": "NIH Office of Science Policy",
+        "url": "https://osp.od.nih.gov/policies/stem-cell-and-developmental-biology-policy/"
       },
       {
-        "date": "2026-01-23",
-        "kind": "primary",
-        "note": "NIH page last modified 2026-01-23 with no outcome of the registry pause or the request for information.",
-        "source": "NIH Office of Science Policy",
-        "url": "https://osp.od.nih.gov/supplemental-information-for-guide-notice-pause-on-new-submissions-nih-human-embryonic-stem-cell-registry-and-rfi-on-reducing-reliance-on-human-embryonic/"
+        "date": "2026-03-18",
+        "note": "Lists Section 508, Ban on Funding Human Embryo Research, of the Consolidated Appropriations Act, 2026 (Public Law 119-75, signed 2026-02-03); no separate fetal tissue provision listed.",
+        "source": "NIH Guide",
+        "url": "https://www.grants.nih.gov/grants/guide/notice-files/NOT-OD-26-060.html"
       }
     ],
-    "note": "No lawsuit, rescission or later registry decision found; the January 2026 notices remain the operative actions.",
+    "note": "No injunction, rescission or later NIH decision found; the January 2026 notices remain the operative actions.",
     "verdict": "holds",
-    "what_was_tested": "Looked for a lawsuit, rescission, appropriations rider or later NIH decision on the registry by searching for litigation and post-April 2026 NIH action and reading the FASEB tracker and NIH supplemental page."
+    "what_was_tested": "Looked for a court order, rescission, registry decision or new NIH notice after 2026-04-24, and for an enacted appropriations provision on fetal tissue or embryonic stem cells."
   },
   "related_ids": [
     "c00-09"
@@ -75,24 +77,34 @@
   "research_agent": "A10",
   "review": {
     "flags": [
-      "registry decision after 2026-04-24 not found",
-      "no statute, bioethics council or alternatives funding found"
+      "Registry decision after the 2026-04-24 comment deadline not found",
+      "House FY2026 and FY2027 Labor-HHS fetal tissue text not read (trade-group leads only)"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 460 calls research using elective-abortion fetal tissue and human embryonic stem cells something taxpayers should not fund; page 461 asks HHS to restore the ethics advisory committee (with Congress prohibiting such research), end NIH intramural projects using such tissue, end the embryonic stem cell registry, fund ethical alternatives, and reconvene a National Council on Bioethics. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y1",
+    "mandate_check": "ok",
+    "mandate_note": "Page 460 describes elective-abortion fetal tissue and embryonic stem cell research as something taxpayers should not fund and recounts the 2019 ethics board policy; page 461 asks HHS to restore the ethics advisory committee (with Congress prohibiting such research), end NIH intramural projects using such tissue, end the embryonic stem cell registry, fund ethical alternatives and reconvene a National Council on Bioethics. Paraphrase fits.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-14",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "Released and effective 2026-01-22: NIH will not fund research using fetal tissue from elective abortions, intramural and extramural (proposals to solicitations issued after the effective date); existing awards may rebudget; miscarriage or stillbirth tissue still allowed; supersedes NOT-OD-21-111 and NOT-OD-19-128; no ethics board, stem cell or bioethics council content.",
+        "note": "Read 2026-10-14: NOT-OD-26-060 released 2026-03-18 lists FY2026 mandates under the Consolidated Appropriations Act, 2026 (Public Law 119-75, signed 2026-02-03), including Section 508 human embryo research ban; no separate fetal tissue provision.",
+        "result": "supports",
+        "url": "https://www.grants.nih.gov/grants/guide/notice-files/NOT-OD-26-060.html"
+      },
+      {
+        "note": "Read 2026-10-14: describes the registry pause (NOT-OD-26-031) and the elective-abortion fetal tissue funding limit effective 2026-01-22; no later notice; footer last updated June 2026, metadata 2026-06-29.",
+        "result": "supports",
+        "url": "https://osp.od.nih.gov/policies/stem-cell-and-developmental-biology-policy/"
+      },
+      {
+        "note": "Confirms it supersedes NOT-OD-21-111 and NOT-OD-19-128.",
         "result": "supports",
         "url": "https://www.grants.nih.gov/grants/guide/notice-files/NOT-OD-26-028.html"
       },
       {
-        "note": "Released 2026-01-23: pauses review of new lines for the registry, which is not ended; 503 approved lines remain usable; request for information on alternatives due 2026-04-24; does not end embryonic stem cell funding.",
+        "note": "Released 2021-04-16: HHS reverses the 2019 ethics advisory board requirement and will not convene a new board; marked rescinded 2026-01-22 and replaced by NOT-OD-26-028.",
         "result": "supports",
-        "url": "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-031.html"
+        "url": "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-111.html"
       }
     ]
   },
@@ -150,17 +162,38 @@
       "publisher": "FASEB",
       "title": "FASEB comments on NIH RFI on hESC utility",
       "url": "https://faseb.org/journals-and-news/washington-update/faseb-comments-on-nih-rfi-on-hesc-utility"
+    },
+    {
+      "date": "2026-03-18",
+      "kind": "primary",
+      "publisher": "NIH Guide",
+      "title": "NOT-OD-26-060: Notice of Legislative Mandates in Effect for FY 2026",
+      "url": "https://www.grants.nih.gov/grants/guide/notice-files/NOT-OD-26-060.html"
+    },
+    {
+      "date": "2026-06-29",
+      "kind": "primary",
+      "publisher": "NIH Office of Science Policy",
+      "title": "Stem Cell and Developmental Biology Policy (page footer shows last updated June 2026; metadata 2026-06-29)",
+      "url": "https://osp.od.nih.gov/policies/stem-cell-and-developmental-biology-policy/"
+    },
+    {
+      "date": "2021-04-16",
+      "kind": "primary",
+      "publisher": "NIH Guide",
+      "title": "NOT-OD-21-111: Update on Changes to NIH Requirements Regarding Proposed Human Fetal Tissue Research",
+      "url": "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-111.html"
     }
   ],
   "stage": "implemented",
   "status_summary": "On 2026-01-22 NIH issued notice NOT-OD-26-028, effective immediately, ending use of NIH funds for research on human fetal tissue from elective abortions, in both the intramural program and extramural research (applying to proposals under solicitations issued after that date; existing awards may redirect funds to other work). This goes beyond the Mandate's request to restore an ethics advisory board review, which the notices do not mention. On 2026-01-23 NIH paused review of applications to add new human embryonic stem cell lines to its registry and opened a request for information (comments closed 2026-04-24) on replacing such cells with alternatives; the registry's existing 503 lines remain usable, so the registry has not been ended. No statutory prohibition, National Council on Bioethics, or dedicated funding plan for alternatives was found.",
   "timeline": [
     {
-      "date": "2021-01-01",
-      "event": "Context before the tracking window: a 2019 policy required ethics advisory board review of extramural fetal tissue proposals; the Biden administration reversed these restrictions in 2021 (year only given in source; first of year used) and said no new board would be convened.",
-      "kind": "news",
-      "source": "Ropes & Gray",
-      "url": "https://www.ropesgray.com/en/insights/alerts/2026/01/nih-prohibits-use-of-federal-funds-for-research-involving-human-fetal-tissue-from-elective-abortions"
+      "date": "2021-04-16",
+      "event": "Context before the tracking window: NIH notice NOT-OD-21-111 announces that HHS is reversing its 2019 decision to send all extramural applications proposing fetal tissue from elective abortions to an ethics advisory board, and that no new board will be convened; other 2019 requirements such as donor consent remain. NOT-OD-26-028 later supersedes it.",
+      "kind": "primary",
+      "source": "NIH Guide",
+      "url": "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-111.html"
     },
     {
       "date": "2026-01-22",
@@ -193,6 +226,6 @@
   ],
   "title": "End NIH funding of abortion-derived fetal tissue and embryonic stem cell research",
   "tracked": true,
-  "uncertainties": "Searches covered NIH Guide notices, NIH news releases, law-firm alerts, a FASEB tracker, and Congress/bioethics-council terms. Not found: any NIH action on the embryonic stem cell registry after the 2026-04-24 comment deadline (a later decision could change the stage), any National Council on Bioethics, any appropriations rider or enacted statute on fetal tissue in the 119th Congress, or any lawsuit against the policy. The Ropes & Gray alert is dated by month only (January 2026, first of month used). The 2021 context event uses year only.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Searches covered NIH Guide notices, NIH news releases, law-firm alerts, a FASEB tracker, and Congress/bioethics-council terms. Not found: any NIH action on the embryonic stem cell registry after the 2026-04-24 comment deadline (a later decision could change the stage), any National Council on Bioethics, any appropriations rider or enacted statute on fetal tissue in the 119th Congress, or any lawsuit against the policy. The Ropes & Gray alert is dated by month only (January 2026, first of month used). Checks on 2026-10-14: the NIH Office of Science Policy stem cell policy page (footer shows last updated June 2026; page metadata 2026-06-29) still describes the registry pause under NOT-OD-26-031 and lists no notice after April 2026. NIH's FY2026 legislative mandates notice (2026-03-18) lists the human embryo research funding ban in the Consolidated Appropriations Act, 2026 (Public Law 119-75, signed 2026-02-03) and does not list a fetal tissue provision, so no enacted statutory fetal tissue prohibition was found for FY2026. A House Appropriations Committee FY2026 Labor-HHS bill was described by a trade association tracker as including a fetal tissue funding limit, but that bill text was not read and was not shown enacted. The House FY2027 Labor-HHS bill (committee-approved 2026-06-09 per a trade association) was not checked for fetal tissue text. Searches for lawsuits, rescissions or registry decisions after 2026-04-24 returned none; litigation might not appear in such results. Reviewer check 2026-10-14: NOT-OD-26-060 (released 2026-03-18) and the NIH Office of Science Policy page were opened and say what this record states; the 2021 context event is now dated and sourced to NIH notice NOT-OD-21-111 (2021-04-16) in place of a year-only law-firm date.",
+  "updated_at": "2026-10-14"
 }

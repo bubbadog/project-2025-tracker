@@ -1,0 +1,176 @@
+{
+  "agency": "Securities and Exchange Commission; Commodity Futures Trading Commission",
+  "blockers": [
+    "Dodd-Frank section 342 requires the offices by law"
+  ],
+  "chapter": "27",
+  "confidence": 42,
+  "confidence_label": "low",
+  "confidence_reason": "Office closures rest on news reports of web page removals; the SEC office page read contradicts abolition; the Nasdaq event is confirmed in the Federal Register.",
+  "durability": {
+    "level": "low",
+    "why": "Removed web pages and staffing changes are administrative and reversible; the statute is unchanged."
+  },
+  "est_completion": {
+    "basis": "Inference: statutory offices cannot be abolished without Congress and no bill was found.",
+    "window": "unknown"
+  },
+  "headline": false,
+  "history": [
+    {
+      "date": "2026-10-14",
+      "note": "Added in the layer 3 enumeration pass; researched and sent to independent review."
+    },
+    {
+      "date": "2026-10-14",
+      "note": "Independent review: in_progress 25 (from 30); Nasdaq event re-sourced to the Federal Register and corrected; confidence 42."
+    },
+    {
+      "date": "2026-10-14",
+      "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    }
+  ],
+  "id": "c27-06",
+  "last_checked": "2026-10-14",
+  "layer": 3,
+  "match": "partial",
+  "mechanism": "mixed",
+  "pages": [
+    830,
+    832
+  ],
+  "position": "Financial Regulatory Agencies (introduction); Better Capital Markets",
+  "progress": 25,
+  "proposal": "The Mandate recommends abolishing diversity, equity and inclusion offices at financial regulators, eliminating regulations that require appointments by race, ethnicity, sex or sexual orientation, and having Congress bar securities regulators and self-regulatory organizations from rules or actions that discriminate on such bases.",
+  "related_ids": [
+    "c00-01",
+    "c22-10",
+    "c27-03"
+  ],
+  "remaining": [
+    "Closure or repeal of the statutory Offices of Minority and Women Inclusion",
+    "A statutory bar on SRO rules that discriminate by race, sex or national origin",
+    "Confirmation that agency diversity offices or programs were ended, not only web pages"
+  ],
+  "requires_congress": "partial",
+  "research_agent": "N27",
+  "restates_ids": [],
+  "review": {
+    "flags": [
+      "Stage lowered from in_progress 30 to in_progress 25: only web pages were reported removed and the SEC office page still describes an active office",
+      "Replaced the law-firm source for the Nasdaq event with the Federal Register notice and corrected it: Nasdaq filed the change, effective on filing, rather than the SEC approving it",
+      "Removed the Fifth Circuit vacatur date, which no cited source states",
+      "Added c22-10 to related_ids",
+      "Raised the absence searches into uncertainties"
+    ],
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 830 (chapter introduction) recommends abolishing offices at financial regulators that promote DEI and eliminating rules requiring appointments by race, ethnicity, sex or sexual orientation; page 832 (Better Capital Markets, Congress bullets) asks Congress to bar securities regulators and SROs from discriminating. Paraphrase accurate.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-14",
+    "reviewer": "Y2",
+    "source_checks": [
+      {
+        "note": "90 FR 8554, notice dated 2025-01-24 of Nasdaq's filing of 2025-01-21, effective on filing under section 19(b)(3)(A), repealing board diversity listing requirements after a court vacatur. Checked 2026-10-14.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/01/30/2025-01932/self-regulatory-organizations-the-nasdaq-stock-market-llc-notice-of-filing-and-immediate"
+      },
+      {
+        "note": "Page still describes the office as active with an acting director and DEIA programs; modified date 2017; does not show abolition. Checked 2026-10-14.",
+        "result": "does_not_support",
+        "url": "https://www.sec.gov/about/offices/omwi.htm"
+      },
+      {
+        "note": "API search returned one FDIC information collection notice of 2025-01-22; no rescission or closure document found. Checked 2026-10-14.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Office+of+Minority+and+Women+Inclusion%22&conditions[publication_date][gte]=2025-01-20&per_page=40"
+      }
+    ]
+  },
+  "significance": {
+    "B": 2,
+    "F": 1,
+    "F_estimated": true,
+    "M": 2,
+    "R": 1,
+    "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 2,
+        "F": 1,
+        "M": 2,
+        "R": 1,
+        "rater": "A"
+      },
+      {
+        "B": 2,
+        "F": 1,
+        "M": 2,
+        "R": 1,
+        "rater": "B"
+      }
+    ],
+    "raters": 2,
+    "rationale": "Would abolish DEI offices and race- or sex-based appointment rules at financial regulators and SROs, a material change within the financial regulatory sector touching few people directly.",
+    "version": "2026-10-14",
+    "weight": 1.5
+  },
+  "sources": [
+    {
+      "date": "2025-01-24",
+      "kind": "news",
+      "publisher": "Spokesman-Review (Bloomberg)",
+      "title": "Wall Street watchdogs quietly scrub DEI pages after Trump orders",
+      "url": "https://www.spokesman.com/stories/2025/jan/24/wall-street-watchdogs-quietly-scrub-dei-pages-afte/"
+    },
+    {
+      "date": "2025-04-14",
+      "kind": "news",
+      "publisher": "Bloomberg Law",
+      "title": "SEC cuts access to mandated diversity office amid DEI purge",
+      "url": "https://news.bloomberglaw.com/esg/sec-axes-web-access-to-mandated-diversity-office-amid-dei-purge"
+    },
+    {
+      "date": "2025-01-30",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Self-Regulatory Organizations; The Nasdaq Stock Market LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Repeal Nasdaq's Board Diversity Listing Requirement",
+      "url": "https://www.federalregister.gov/documents/2025/01/30/2025-01932/self-regulatory-organizations-the-nasdaq-stock-market-llc-notice-of-filing-and-immediate"
+    },
+    {
+      "date": "undated",
+      "kind": "primary",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "title": "SEC Office of Minority and Women Inclusion page (shows a 2017 modified date; content cites FY2023 materials)",
+      "url": "https://www.sec.gov/about/offices/omwi.htm"
+    }
+  ],
+  "stage": "in_progress",
+  "status_summary": "Press reporting dated 2025-01-24 said the Fed, FDIC, OCC and CFTC had removed diversity office web pages and the SEC had removed its DEI page, while it was unclear whether any office had closed; Bloomberg Law reported on 2025-04-14 that the SEC's Office of Minority and Women Inclusion web page had disappeared. As of 2026-10-14 an SEC page for that office still describes it as active, with an acting director and diversity programs. On the SRO side, Nasdaq filed on 2025-01-21 an immediately effective rule change (SEC notice published 2025-01-30, 90 FR 8554) repealing its board diversity listing requirements to reflect a federal court's vacatur of the SEC's 2021 approval order. No closure of a financial regulator's diversity office, repeal of the statutory offices, or statute barring discrimination by securities regulators and SROs was found.",
+  "timeline": [
+    {
+      "date": "2025-01-21",
+      "event": "Nasdaq filed an immediately effective rule change (SR-NASDAQ-2025-007) repealing its board diversity listing requirements to reflect a federal court's vacatur of the SEC's 2021 approval order; the SEC notice was published 2025-01-30 at 90 FR 8554.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/01/30/2025-01932/self-regulatory-organizations-the-nasdaq-stock-market-llc-notice-of-filing-and-immediate"
+    },
+    {
+      "date": "2025-01-24",
+      "event": "Press reporting said the Fed, FDIC, OCC, CFTC and SEC had removed DEI or diversity office web pages as of 2025-01-23, with the SEC's OMWI page still up at that time.",
+      "kind": "news",
+      "source": "Spokesman-Review (Bloomberg)",
+      "url": "https://www.spokesman.com/stories/2025/jan/24/wall-street-watchdogs-quietly-scrub-dei-pages-afte/"
+    },
+    {
+      "date": "2025-04-14",
+      "event": "Bloomberg Law reported that the SEC's web page for its mandated Office of Minority and Women Inclusion had been removed, and that it was unclear whether the office still operated.",
+      "kind": "news",
+      "source": "Bloomberg Law",
+      "url": "https://news.bloomberglaw.com/esg/sec-axes-web-access-to-mandated-diversity-office-amid-dei-purge"
+    }
+  ],
+  "title": "End DEI offices and race- or sex-based appointment rules at financial regulators and SROs",
+  "tracked": true,
+  "uncertainties": "The SEC page for its Office of Minority and Women Inclusion, read on 2026-10-14 on sec.gov, still describes the office and its programs but shows a 2017 modified date and cites FY2023 materials, so it may be stale; the office's actual operation is unknown. The statutory basis (Dodd-Frank section 342) is from general knowledge. The Nasdaq repeal followed a court vacatur and an exchange filing that took effect on filing, so it reflects alignment with the recommendation, not an SEC policy choice; the Nasdaq rule required board diversity or an explanation, which is close to but not the same as a rule requiring appointments by race or sex. Federal Register API searches since 2025-01-20 for Office of Minority and Women Inclusion and for the joint diversity policies standards returned only an FDIC information collection renewal (2025-01-22), with no rescission found. CFTC action beyond web page removal was not found. Web page removals rest on news reports.",
+  "updated_at": "2026-10-14"
+}
