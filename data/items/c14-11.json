@@ -6,9 +6,9 @@
     "Pending final rule (CMS-4215-P) and 2028 effectuation guidance would further embed the program"
   ],
   "chapter": "14",
-  "confidence": 72,
+  "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "CMS and Federal Register documents confirm the program is continuing and being codified rather than repealed. The label is a judgment call, because the Mandate itself anticipated that an administration would have to implement the law until Congress repeals it, and no search for repeal bills was run.",
+  "confidence_reason": "Document text verified in an earlier review (pages 465 and 466). CMS releases and Federal Register documents confirm the program is continuing and being codified rather than repealed; in this review the CMS third-cycle fact sheet and the GLOBE final rule were read on the primary hosts. The diverged label remains a judgment call because the Mandate anticipated implementation until repeal.",
   "durability": {
     "level": "high",
     "why": "The program is set by statute, and the administration's current approach is to implement and codify it, so reversing it would take legislation."
@@ -25,10 +25,14 @@
     {
       "date": "2026-10-08",
       "note": "Event dates and citations checked against the primary documents. The signing event for Public Law 119-21 now cites the GovInfo public law page (section 71203 is listed there); CMS's 2025-11-28 final guidance keeps its own event."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Update run, independently reviewed. Added third-cycle detail: negotiation period ends 2026-11-01 (CMS fact sheet); four of 15 drugs primarily Part B (Health Affairs). No repeal bill advancing found; no new FR action since GLOBE final rule (2026-10-02). Stage unchanged diverged 0. Review (corrected): Corrected the final-guidance date to its issue date 2025-09-30 (published in the Federal Register 2025-11-28) per the CMS fact sheet, dated the fact sheet 2026-03, and fixed first-person and stale no-search wording in the summary and uncertainties. Stage diverged 0; confidence 72 to 74."
     }
   ],
   "id": "c14-11",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-15",
   "layer": 2,
   "match": "partial",
   "mechanism": "legislation",
@@ -51,30 +55,26 @@
   "research_agent": "D5",
   "review": {
     "flags": [
-      "label judgment call: diverged vs not_started",
-      "the earlier 'remaining' text treated Part B selection as an administration choice; the statute's own schedule adds Part B drugs from 2028 (reviewer knowledge, not fetched)",
-      "no search for repeal bills or manufacturer litigation"
+      "Researcher misread the fact sheet: final guidance issued 2025-09-30 (not 2026-09-30) and the sheet is printed March 2026; corrected, and the guidance event redated to its issue date",
+      "Four of 15 drugs primarily Part B rests on Health Affairs only",
+      "label judgment call: diverged vs not_started (carried over)",
+      "First-person wording and a stale no-search sentence in uncertainties corrected"
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 465 calls the IRA negotiation program government price controls that replaced private Part D negotiation and says it should be repealed alongside other Part D reforms (closing the coverage gap, a smaller government and larger manufacturer share in the catastrophic tier, continued on page 466); page 466 says that until repeal an administration should implement the law prudently and minimize its effects.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W4",
+    "reviewed_at": "2026-10-15",
+    "reviewer": "independent",
     "source_checks": [
       {
-        "note": "Dated 2026-01-27: 15 drugs selected for the third cycle including the first Part B drugs, Tradjenta selected for renegotiation, prices effective 2028-01-01; agreements on all 15 second-cycle drugs effective 2027-01-01 with estimated savings of about $8.5 billion (about 36 percent) had they applied in 2024.",
+        "note": "Fact sheet printed March 2026: negotiation period ends 2026-11-01; final guidance issued 2025-09-30; 15 drugs plus Tradjenta renegotiation; no Part B/Part D split given.",
         "result": "supports",
-        "url": "https://www.cms.gov/newsroom/press-releases/cms-announces-selection-drugs-third-cycle-medicare-drug-price-negotiation-program-including-first"
+        "url": "https://www.cms.gov/files/document/fact-sheet-medicare-drug-price-negotiation-third-cycle.pdf"
       },
       {
-        "note": "Abstracts confirm the 2026-06-16 proposed rule would codify the negotiation program, the 2026-07-20 notice is draft guidance on effectuating 2028 prices, and the GLOBE final rule creates a mandatory model testing an alternative way to calculate Part B inflation rebates.",
+        "note": "Final rule CMS-5545-F, 91 FR 62936, published 2026-10-02, effective 2026-11-30, 42 CFR part 513; excludes Part B drugs with a maximum fair price in effect (513.130(c)).",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-04095,2026-04606,2026-12059,2026-20281,2026-10050,2026-14583.json?fields%5B%5D=abstract"
-      },
-      {
-        "note": "Only four CMS documents since 2026-07-21 mention the program (GLOBE final rule, a Part D pharmacy RFI, two information collections); no final codification rule yet.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Drug+Price+Negotiation+Program%22&conditions[agencies][]=centers-for-medicare-medicaid-services&conditions[publication_date][gte]=2026-07-21&order=newest&per_page=20"
+        "url": "https://www.federalregister.gov/documents/2026/10/02/2026-20281/global-benchmark-for-efficient-drug-pricing-globe-model"
       }
     ]
   },
@@ -132,21 +132,35 @@
       "publisher": "GovInfo",
       "title": "Public Law 119-21 (reconciliation act signed 2025-07-04), enrolled text",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+    },
+    {
+      "date": "2026-03",
+      "kind": "primary",
+      "publisher": "CMS",
+      "title": "Fact sheet: Medicare Drug Price Negotiation Program, third cycle (initial price applicability year 2028)",
+      "url": "https://www.cms.gov/files/document/fact-sheet-medicare-drug-price-negotiation-third-cycle.pdf"
+    },
+    {
+      "date": "2026-02-05",
+      "kind": "news",
+      "publisher": "Health Affairs Forefront",
+      "title": "Analyzing the drugs selected for the 2028 Medicare drug price negotiation cycle",
+      "url": "https://www.healthaffairs.org/content/forefront/analyzing-drugs-selected-2028-medicare-drug-price-negotiation-cycle"
     }
   ],
   "stage": "diverged",
-  "status_summary": "The program has continued and is being put on a regulatory footing rather than repealed. A 2025 law (Public Law 119-21, signed 2025-07-04) expanded the program's orphan drug exclusion, which narrows its reach but leaves it in place. CMS issued final guidance for the third cycle on 2025-11-28 and on 2026-01-27 announced 15 selected drugs, the first cycle to include Part B drugs, plus one drug selected for renegotiation, with negotiated prices taking effect 2028-01-01; for the second cycle CMS reported agreement on all 15 drugs, with prices effective 2027-01-01. On 2026-06-16 CMS proposed to codify the program in regulation (new 42 CFR part 429; comments closed 2026-08-17 and CMS expects a final rule in fall 2026) and on 2026-07-20 issued draft guidance on putting 2028 prices into effect. Separately, CMS finalized the GLOBE model on 2026-10-02, a mandatory Part B rebate model benchmarked to international prices that takes effect 2026-11-30 and excludes drugs with a negotiated price. No bill repealing the program was examined.",
+  "status_summary": "The program has continued and is being put on a regulatory footing rather than repealed. A 2025 law (Public Law 119-21, signed 2025-07-04) expanded the program's orphan drug exclusion, which narrows its reach but leaves it in place. CMS issued final guidance for the third cycle on 2025-09-30 (published in the Federal Register on 2025-11-28) and on 2026-01-27 announced 15 selected drugs, the first cycle to include Part B drugs, plus one drug selected for renegotiation, with negotiated prices taking effect 2028-01-01; for the second cycle CMS reported agreement on all 15 drugs, with prices effective 2027-01-01. On 2026-06-16 CMS proposed to codify the program in regulation (new 42 CFR part 429; comments closed 2026-08-17 and CMS expects a final rule in fall 2026) and on 2026-07-20 issued draft guidance on putting 2028 prices into effect. Separately, CMS finalized the GLOBE model on 2026-10-02, a mandatory Part B rebate model benchmarked to international prices that takes effect 2026-11-30 and excludes drugs with a negotiated price. No repeal bill advancing was found in searches through 2026-10-15. CMS's third-cycle fact sheet schedules the negotiation period to end 2026-11-01, and Health Affairs counts four of the 15 selected drugs as primarily Part B.",
   "timeline": [
     {
       "date": "2025-07-04",
-      "event": "Public Law 119-21 is signed (GovInfo dates it 2025-07-04); its section 71203 expands and clarifies the orphan drug exclusion in the Medicare Drug Price Negotiation Program. CMS's 2025-11-28 final guidance (next entry) addresses it.",
+      "event": "Public Law 119-21 is signed (GovInfo dates it 2025-07-04); its section 71203 expands and clarifies the orphan drug exclusion in the Medicare Drug Price Negotiation Program. CMS's final guidance of 2025-09-30 (next entry) addresses it.",
       "kind": "primary",
       "source": "GovInfo (Public Law 119-21)",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
     },
     {
-      "date": "2025-11-28",
-      "event": "CMS publishes final guidance (90 FR 54692) for the third cycle (initial price applicability year 2028) and first renegotiation, continuing the program.",
+      "date": "2025-09-30",
+      "event": "CMS issues final guidance for the third cycle (initial price applicability year 2028) and first renegotiation, continuing the program; the guidance was published in the Federal Register on 2025-11-28 (90 FR 54692).",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/11/28/2025-21501/medicare-program-inflation-reduction-act-ira-medicare-drug-price-negotiation-program-final-guidance"
@@ -182,6 +196,6 @@
   ],
   "title": "Repeal the Medicare drug price negotiation program created by the Inflation Reduction Act",
   "tracked": true,
-  "uncertainties": "Federal Register documents were read through summarizing fetches (the proposed rule and GLOBE rule were read only through the first 100,000 characters). The first-cycle (2026 prices) results were not examined, and the third-cycle selection summary is slightly unclear on whether the 15 drugs split between Part B and Part D (the CMS release is described as including the first Part B drugs). The orphan drug exclusion change comes from CMS's description of Public Law 119-21 section 71203; the statute text was not read. No search was run for repeal bills or litigation over the program (several manufacturer suits exist in earlier cycles but were not checked). The Mandate also says to be prudent in implementing the law; I treat the orphan drug expansion as consistent with that and the Part B expansion and codification as inconsistent, which makes 'diverged' (0) a judgment call on the repeal recommendation rather than on the whole passage. Search terms in the Federal Register API: 'Medicare Drug Price Negotiation' since 2025-01-20.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Federal Register documents were read through summarizing fetches (the proposed rule and GLOBE rule were read only through the first 100,000 characters). The first-cycle (2026 prices) results were not examined, and the third-cycle selection summary is slightly unclear on whether the 15 drugs split between Part B and Part D (the CMS release is described as including the first Part B drugs). The orphan drug exclusion change comes from CMS's description of Public Law 119-21 section 71203; the statute text was not read. Manufacturer litigation over earlier cycles was not checked. The Mandate also says to be prudent in implementing the law; this record treats the orphan drug expansion as consistent with that and the Part B expansion and codification as inconsistent, which makes 'diverged' (0) a judgment call on the repeal recommendation rather than on the whole passage. Search terms in the Federal Register API: 'Medicare Drug Price Negotiation' since 2025-01-20. Re-check on 2026-10-15: the CMS fact sheet (printed March 2026) gives 2025-09-30 as the issue date of the final third-cycle guidance, which the Federal Register published on 2025-11-28; the timeline uses the issue date. The fact sheet does not list the maximum fair prices. The split of selected drugs (four primarily Part B) comes from Health Affairs, a secondary source. A Federal Register search from 2026-09-15 found only the GLOBE final rule and a Part D pharmacy contracting RFI; two web searches found no repeal bill advancing in 2026 (results were 2024 items and commentary on pill-penalty fixes, not read). The 340B rebate pilot lead was not examined (context only).",
+  "updated_at": "2026-10-15"
 }

@@ -6,7 +6,7 @@
   "chapter": "10",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "The official site confirms the January 2026 guidelines focus on nutrition without sustainability content, and a law-firm alert confirms a pending August 2026 suit seeking their withdrawal with no ruling. Whether the new process meets the Mandate's transparency standard is contested and not settled by these sources.",
+  "confidence_reason": "Document text verified in an earlier review (page 309). The official guidelines site and a law-firm alert on the pending suit were read in the earlier review; in this review the sponsor's press release and a bill tracker for H.R. 8578 were read and support the new event as a lead for codification. The guidelines release itself was not re-opened, so confidence stays medium.",
   "durability": {
     "level": "low",
     "why": "The guidelines are issued administratively every five years, so a later administration can revise the process and content for the 2030 edition or earlier."
@@ -19,10 +19,14 @@
     {
       "date": "2026-10-07",
       "note": "Red-team check: status holds, with caveats added. The guidelines remain in effect, but a pending federal suit filed 2026-08-19 seeks their withdrawal and disputes the process transparency the record treated as untested."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Update run, independently reviewed. Stage unchanged. No Federal Register notice for the guidelines; no ruling in the PCRM suit found. H.R. 8578 (FRESH Act, introduced 2026-04-29, in House Agriculture) added as a codification lead. Review (corrected): Bill event confirmed through the sponsor's release and a tracker; a stale uncertainty sentence about litigation not being reviewed was removed and the source basis for the bill details was stated. Stage implemented 65; confidence 72 to 72."
     }
   ],
   "id": "c10-04",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-15",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_action",
@@ -33,55 +37,53 @@
   "progress": 65,
   "proposal": "The Mandate recommends working with Congress to repeal the Dietary Guidelines. At a minimum, USDA and HHS should run a more transparent process that weighs the underlying science without overstating it, keep the guidelines focused on nutrition rather than environmental or other concerns, and codify these reforms in law.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-15",
     "evidence": [
       {
-        "date": "2026-08-19",
-        "kind": "news",
-        "note": "Law-firm alert: the Physicians Committee for Responsible Medicine sued USDA and HHS in the US District Court for the District of Columbia on 2026-08-19, alleging violations of the Federal Advisory Committee Act and the Administrative Procedure Act over an outside panel; it asks for withdrawal of the guidelines and a new process; no ruling reported.",
-        "source": "khlaw.com (law-firm alert)",
-        "url": "https://www.khlaw.com/hhs-and-usda-face-new-legal-challenge-over-2025-2030-dietary-guidelines"
+        "date": "2026-10-15",
+        "note": "Opened: no notice of the 2025-2030 guidelines or of a revision; only unrelated USDA rules.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22dietary+guidelines%22&conditions[publication_date][gte]=2025-12-01&per_page=20"
       },
       {
-        "date": "2026-08-21",
-        "kind": "news",
-        "note": "Reports the same suit, filed 2026-08-19; neither agency responded to requests for comment.",
-        "source": "FoodNavigator",
-        "url": "https://www.foodnavigator.com/Article/2026/08/21/doctors-sue-usda-and-hhs-over-2025-dietary-guidelines-for-americans/"
+        "date": "2026-04-29",
+        "note": "Opened: H.R. 8578 (FRESH Act), referred to House Agriculture, no cosponsors, no markup; lead for codification, official text not read.",
+        "source": "The Lobby News (tracker)",
+        "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/8578"
       }
     ],
-    "note": "The guidelines remain in effect, but a pending federal suit filed 2026-08-19 seeks their withdrawal and disputes the process transparency the record treated as untested.",
-    "verdict": "weakened",
-    "what_was_tested": "Searched for litigation or other challenges to the 2025-2030 Dietary Guidelines, since the record said none had been reviewed."
+    "note": "Guidelines stand unrevised; no ruling in the Physicians Committee suit found; a codification bill exists but has not moved.",
+    "verdict": "holds",
+    "what_was_tested": "Searched for revision, lawsuit developments or congressional action since 2026-08-19 and queried the Federal Register for a dietary guidelines notice."
   },
   "remaining": [
     "Statutory repeal of the Dietary Guidelines (the Mandate's first-choice option); no bill was identified.",
-    "Codification of the process and focus reforms in law, so that the changes persist across administrations.",
+    "Codification of the process and focus reforms in law, so that the changes persist across administrations (H.R. 8578, introduced 2026-04-29, has had no committee action as far as found).",
     "Independent confirmation that the new process meets the transparency standard the Mandate described (not assessed here)."
   ],
   "requires_congress": "partial",
   "research_agent": "A07",
   "review": {
     "flags": [
-      "pending PCRM suit (D.D.C., filed 2026-08-19), no ruling",
-      "redteam 'weakened' verdict justified: suit pending, guidelines in effect",
-      "law-firm alert added to sources (was cited only in the timeline)"
+      "H.R. 8578 official text on congress.gov not read (congress.gov blocked to fetches); bill details from a tracker",
+      "Stale uncertainty sentence saying litigation was not reviewed was removed, since the record now covers the suit",
+      "Pending PCRM suit (D.D.C., filed 2026-08-19), no ruling found"
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 309 recommends working with lawmakers to repeal the Dietary Guidelines and, at minimum, a more transparent process that does not overstate the science, keeps the guidelines on nutrition rather than environmental concerns, and codifies the reforms in law; the paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "V2",
+    "reviewed_at": "2026-10-15",
+    "reviewer": "independent",
     "source_checks": [
       {
-        "note": "Official USDA and HHS site for the Dietary Guidelines 2025-2030 links a 2026-01-07 briefing and the Scientific Foundation report (appendices file dated 1.28.26); recommends protein, full-fat dairy among whole-food fats, avoiding highly processed foods and added sugars; no mention of environment, sustainability or the advisory committee report.",
-        "result": "supports",
-        "url": "https://www.realfood.gov/"
+        "note": "Release dated 2026-04-30: FRESH Act would write the 2025-2030 guidelines into statute; no bill number or detail on future editions.",
+        "result": "partial",
+        "url": "https://letlow.house.gov/media/press-releases/letlow-introduces-fresh-act-reform-dietary-guidelines"
       },
       {
-        "note": "Alert dated 2026-08-25: PCRM sued HHS and USDA in D.D.C. on 2026-08-19 under FACA and the APA over an outside review group that shaped the Scientific Foundation report; seeks withdrawal of the guidelines, a FACA-compliant process and document disclosure; no ruling or agency response.",
+        "note": "Tracker: H.R. 8578 introduced 2026-04-29 by Rep. Letlow, referred to House Agriculture, no further action; would require congressional approval of future guidelines and lock in the 2025-2030 edition.",
         "result": "supports",
-        "url": "https://www.khlaw.com/hhs-and-usda-face-new-legal-challenge-over-2025-2030-dietary-guidelines"
+        "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/8578"
       }
     ]
   },
@@ -133,6 +135,20 @@
       "publisher": "Keller and Heckman (khlaw.com)",
       "title": "HHS and USDA face new legal challenge over 2025-2030 Dietary Guidelines",
       "url": "https://www.khlaw.com/hhs-and-usda-face-new-legal-challenge-over-2025-2030-dietary-guidelines"
+    },
+    {
+      "date": "2026-04-30",
+      "kind": "primary",
+      "publisher": "Office of Rep. Letlow",
+      "title": "Letlow introduces FRESH Act to reform dietary guidelines",
+      "url": "https://letlow.house.gov/media/press-releases/letlow-introduces-fresh-act-reform-dietary-guidelines"
+    },
+    {
+      "date": "2026-04-29",
+      "kind": "tracker",
+      "publisher": "The Lobby News",
+      "title": "H.R. 8578, Food Reform for Effective and Sustainable Health Act of 2026",
+      "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/8578"
     }
   ],
   "stage": "implemented",
@@ -165,10 +181,17 @@
       "kind": "news",
       "source": "khlaw.com (law-firm alert)",
       "url": "https://www.khlaw.com/hhs-and-usda-face-new-legal-challenge-over-2025-2030-dietary-guidelines"
+    },
+    {
+      "date": "2026-04-29",
+      "event": "H.R. 8578, the FRESH Act, is introduced and referred to the House Committee on Agriculture; per a tracker summary it would lock in the 2025-2030 guidelines and require congressional approval of future editions (a member press release is dated 2026-04-30).",
+      "kind": "tracker",
+      "source": "The Lobby News",
+      "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/8578"
     }
   ],
   "title": "Repeal or reform the Dietary Guidelines for Americans",
   "tracked": true,
-  "uncertainties": "Characterizations of the new process by outside experts, and any litigation, were not reviewed because the search budget ran out before news coverage could be pulled. Release date is taken from the program website, which links a 2026-01-07 briefing; no separate press release was fetched. Federal program alignment (for example school meal standards) was not checked. The Mandate asks for transparency; whether the process meets that standard is a judgment this tracker does not make. The lawsuit was read through two secondary summaries; its caption, case number and any agency response were not found.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Characterizations of the new process by outside experts were not reviewed. Release date is taken from the program website, which links a 2026-01-07 briefing; no separate press release was fetched. Federal program alignment (for example school meal standards) was not checked. The Mandate asks for transparency; whether the process meets that standard is a judgment this tracker does not make. The lawsuit was read through two secondary summaries; its caption, case number and any agency response were not found. Update 2026-10-15: no Federal Register notice for the guidelines exists in the API query; no court ruling or agency response in the lawsuit found. The two descriptions of H.R. 8578 (codify the guidelines versus require congressional approval of future editions) differ; official text on congress.gov was not read, so the bill is a lead only. The sponsor's press release (2026-04-30) describes codifying the 2025-2030 guidelines but prints no bill number; the bill number, introduction date and the congressional-approval mechanism rest on a tracker.",
+  "updated_at": "2026-10-15"
 }

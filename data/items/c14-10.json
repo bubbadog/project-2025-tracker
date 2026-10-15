@@ -7,7 +7,7 @@
   "chapter": "14",
   "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "HHS's FY2027 justification and Federal Register records confirm the administration is funding and restructuring Head Start rather than ending it, and that the remaining COVID-19 requirement was rescinded. The FY2026 enactment details and the PRWORA ruling were not re-checked.",
+  "confidence_reason": "Document text verified in an earlier review (page 482). HHS's FY2027 justification and Federal Register records, read in an earlier review, show the administration funding and restructuring Head Start rather than ending it, and that the remaining COVID-19 requirement was rescinded. In this review govinfo confirmed P.L. 119-75 as the FY2026 law with Labor-HHS as Division B, but the Head Start amount line was not reached, so the figure rests on a tracker. The PRWORA ruling and any appeal were not re-checked.",
   "court_status": {
     "basis": "derived from the latest court event in the timeline",
     "date": "2026-09-21",
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-07",
       "note": "Re-researched in the in-depth pass; status confirmed. Reviewer confidence 68 to 74. Replaced the Rhode Island reorganization event and added fiscal year 2026 and 2027 funding (flat at $12.357 billion), the May 2026 wage and benefit proposal, the PRWORA litigation and the confirmed December 2025 COVID-19 rescission; stage unchanged, match changed from parallel to partial because the Mandate's fallback is met while the"
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Update run, independently reviewed. FY2026 enacted law confirmed as P.L. 119-75 (signed 2026-02-03, Labor-HHS division) via govinfo; Head Start amount still from tracker. No new Head Start action or HHS reorganization found since 2026-09-21. Stage unchanged. Review (corrected): Govinfo confirmed P.L. 119-75 (H.R. 7148, 2026-02-03) with Labor-HHS as Division B and P.L. 119-74 (H.R. 6938, 2026-01-23) as the CJS, Energy-Water and Interior act; the enactment event was re-sourced to govinfo as a primary source. Stage diverged 0; confidence 74 to 74."
     }
   ],
   "id": "c14-10",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-15",
   "layer": 1,
   "match": "partial",
   "mechanism": "legislation",
@@ -49,29 +53,26 @@
   "research_agent": "A10",
   "review": {
     "flags": [
-      "diverged vs not_started is a judgment call; the administration's budget and rules retain the program",
-      "PRWORA ruling scope and any appeal not re-checked"
+      "P.L. 119-74 is a three-division act (CJS, Energy-Water, Interior), so sibling records calling it the Commerce law or the Energy-Water law are both correct; P.L. 119-75 carries Labor-HHS as Division B",
+      "Head Start FY2026 amount still from a tracker; govinfo text truncated before Division B",
+      "diverged vs not_started is a judgment call (carried over)",
+      "PRWORA 2026-09-21 ruling: appeal status not re-checked"
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 482 recommends eliminating Head Start and the Office of Head Start, citing reported abuse incidents at grantees and little long-term academic benefit, and at minimum rescinding the program's COVID-19 vaccine and mask requirements.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W4",
+    "reviewed_at": "2026-10-15",
+    "reviewer": "independent",
     "source_checks": [
       {
-        "note": "All Purpose Table shows Head Start at $12,356,820,000 for FY2026 enacted and the same for the FY2027 request; the overview proposes letting state standards (licensing, health and safety, ratios, quality) apply and proposes no elimination or block grant.",
-        "result": "supports",
-        "url": "https://www.hhs.gov/sites/default/files/fy-2027-acfc-cj.pdf"
+        "note": "Read 2026-10-15: Consolidated Appropriations Act, 2026, P.L. 119-75, H.R. 7148, approved 2026-02-03; Division B is Labor, HHS and Education; no Division C; text cut off in Division A, Head Start amount not reached.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
       },
       {
-        "note": "The COVID-19 mitigation direct final rule (2025-23452) was effective 2026-02-17 unless significant adverse comments arrived by 2026-01-20; the 2026-08-07 NPRM took comments to 2026-10-06 and the 2026-05-12 NPRM to 2026-06-11.",
+        "note": "Read 2026-10-15: P.L. 119-74, H.R. 6938, approved 2026-01-23, Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026 (Divisions A CJS, B Energy-Water, C Interior). Both descriptions of 119-74 by other records (Commerce law, Energy-Water law) are consistent with this multi-division act.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-17114,2026-00754,2025-23452,2026-16134,2026-09383.json?fields%5B%5D=dates"
-      },
-      {
-        "note": "Fifteen ACF Head Start documents since 2026-01-20; none withdraws the COVID-19 direct final rule and neither performance standards proposal has been finalized.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Head+Start%22&conditions[agencies][]=children-and-families-administration&conditions[publication_date][gte]=2026-01-20&order=newest&per_page=30"
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ74/html/PLAW-119publ74.htm"
       }
     ]
   },
@@ -129,10 +130,17 @@
       "publisher": "U.S. District Court, D.R.I.",
       "title": "New York v. U.S. Department of Justice, memorandum and order on summary judgment (D.R.I.)",
       "url": "https://www.courthousenews.com/wp-content/uploads/2026/09/permanent-injunction-states-citizenship-check-federal-aid.pdf"
+    },
+    {
+      "date": "2026-02-03",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Consolidated Appropriations Act, 2026 (Public Law 119-75, H.R. 7148), with Division B Labor, HHS and Education appropriations",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
     }
   ],
   "stage": "diverged",
-  "status_summary": "No proposal to eliminate Head Start or the Office of Head Start was found as of 2026-10-07. The program was funded at $12.357 billion in the fiscal year 2026 appropriation signed 2026-02-03 (an $85 million increase, per an advocacy group's tracker), and HHS's fiscal year 2027 congressional justification requests the same amount while proposing to let state standards apply to Head Start programs. The Mandate's fallback is met: ACF removed the masking requirement in January 2023 and the vaccination and testing requirements in June 2023, before this administration, and a direct final rule published 2025-12-19 (effective 2026-02-17 absent significant adverse comments; no withdrawal appears in the Federal Register) removed the remaining COVID-19 mitigation policy requirement. ACF has also proposed to drop Performance Standards wage and benefit requirements (2026-05-12) and to rescind and replace the 2024 Performance Standards (2026-08-07; comments closed 2026-10-06), and HHS's July 2025 notice treating Head Start as a federal public benefit was set aside by a 2026-09-21 summary judgment ruling in a suit by 20 states and D.C.",
+  "status_summary": "No proposal to eliminate Head Start or the Office of Head Start was found as of 2026-10-07. The program was funded at $12.357 billion in the fiscal year 2026 appropriation signed 2026-02-03 as Public Law 119-75 (an $85 million increase, per an advocacy group's tracker), and HHS's fiscal year 2027 congressional justification requests the same amount while proposing to let state standards apply to Head Start programs. The Mandate's fallback is met: ACF removed the masking requirement in January 2023 and the vaccination and testing requirements in June 2023, before this administration, and a direct final rule published 2025-12-19 (effective 2026-02-17 absent significant adverse comments; no withdrawal appears in the Federal Register) removed the remaining COVID-19 mitigation policy requirement. ACF has also proposed to drop Performance Standards wage and benefit requirements (2026-05-12) and to rescind and replace the 2024 Performance Standards (2026-08-07; comments closed 2026-10-06), and HHS's July 2025 notice treating Head Start as a federal public benefit was set aside by a 2026-09-21 summary judgment ruling in a suit by 20 states and D.C.",
   "timeline": [
     {
       "date": "2025-07-14",
@@ -157,10 +165,10 @@
     },
     {
       "date": "2026-02-03",
-      "event": "The fiscal year 2026 Labor-HHS appropriation is signed; First Focus on Children's tracker lists Head Start at $12.357 billion, an $85 million increase.",
-      "kind": "tracker",
-      "source": "First Focus on Children",
-      "url": "https://www.ffyf.org/state-of-play-appropriations"
+      "event": "The Consolidated Appropriations Act, 2026 (H.R. 7148) is approved as Public Law 119-75, with the fiscal year 2026 Labor-HHS appropriation as Division B; First Focus on Children's tracker lists Head Start at $12.357 billion, an $85 million increase.",
+      "kind": "primary",
+      "source": "GovInfo",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
     },
     {
       "date": "2026-04-03",
@@ -193,6 +201,6 @@
   ],
   "title": "Eliminate the Head Start program and the Office of Head Start",
   "tracked": true,
-  "uncertainties": "The fiscal year 2027 Head Start figures come from an excerpt of HHS's congressional justification whose Head Start section was cut off, and the entry date is the Budget in Brief release date reported by a law firm, not a date printed on the justification. The fiscal year 2026 signing date and funding level come from an advocacy group's tracker (the Senate Appropriations Committee's conference summary also lists $12.4 billion, an $85 million increase over fiscal year 2025). The 2025-09-10 injunction date comes from a school-board association post that does not name the case; a Hogan Lovells article reports a separate Washington district court injunction against enforcing the HHS notice as to Head Start, which was not verified. The 2026-09-21 order does not mention Head Start and whether HHS appealed it is unknown. Not verified: changes to Office of Head Start staffing or regional offices, and the later sections of the proposed rules. Federal Register queries for Head Start documents from 2025-12-01 through 2026-10-07 and budget documents showed no elimination proposal.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The fiscal year 2027 Head Start figures come from an excerpt of HHS's congressional justification whose Head Start section was cut off, and the entry date is the Budget in Brief release date reported by a law firm, not a date printed on the justification. The fiscal year 2026 signing date and funding level come from an advocacy group's tracker (the Senate Appropriations Committee's conference summary also lists $12.4 billion, an $85 million increase over fiscal year 2025). The 2025-09-10 injunction date comes from a school-board association post that does not name the case; a Hogan Lovells article reports a separate Washington district court injunction against enforcing the HHS notice as to Head Start, which was not verified. The 2026-09-21 order does not mention Head Start and whether HHS appealed it is unknown. Not verified: changes to Office of Head Start staffing or regional offices, and the later sections of the proposed rules. Federal Register queries for Head Start documents from 2025-12-01 through 2026-10-07 and budget documents showed no elimination proposal. Re-check on 2026-10-15: GovInfo confirms Public Law 119-75 (H.R. 7148) is the Consolidated Appropriations Act, 2026 dated 2026-02-03 with a Labor, HHS and Education division, but the reader truncated its text before the Head Start line, so the 12.357 billion dollar figure still rests on the advocacy tracker. Public Law 119-74 (H.R. 6938, 2026-01-23) is the Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026 (Divisions A to C), not Labor-HHS. A Federal Register search for 'Head Start' from 2026-09-15 returned only an unrelated Title IX rule, and two web searches found no HHS reorganization affecting the Office of Head Start after 2026-09-21 (results were 2025 regional office closure items).",
+  "updated_at": "2026-10-15"
 }

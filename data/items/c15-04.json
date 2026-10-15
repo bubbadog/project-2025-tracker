@@ -5,9 +5,9 @@
     "Congress has not enacted a national work requirement or time limit for HUD assistance (none found); the proposal relies on existing flexibility authority in the United States Housing Act of 1937 and Moving to Work rules, so a final rule could face legal challenge (inference)."
   ],
   "chapter": "15",
-  "confidence": 66,
+  "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "The Federal Register confirms the March 2026 proposal and no final rule. A September 2026 HUD notice loosening Moving to Work limits on work requirements and term limits was found; if it is already in effect for those agencies, the stage could be understated.",
+  "confidence_reason": "Document text verified in an earlier review (pages 509 and 511). The Federal Register API, queried again in review, lists only the 2026-03-02 proposed rule and the 2026-09-01 MTW notice, confirming the proposed stage. The FY2027 budget proposal was read in a housing advocacy analysis; the budget document itself was not opened. The MTW notice's effective date is unconfirmed and could understate the stage for MTW agencies.",
   "durability": {
     "level": "low",
     "why": "A proposed rule has no legal effect, and even a final permissive rule leaves adoption to local agencies and could be rescinded by a later administration."
@@ -20,10 +20,14 @@
     {
       "date": "2026-10-07",
       "note": "Objective added in the in-depth pass and independently reviewed."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Update run, independently reviewed. No final rule in the Federal Register through 2026-10-15 (federalregister.gov API). Added the FY2027 request proposal (20 hours a week, five-year cap) from an NLIHC analysis; EO 14394 lead is about home construction, not work requirements. Review (corrected): Confirmed on the Federal Register that no final rule exists and that EO 14394 is a home-construction order signed 2026-03-13; updated the uncertainty accordingly, dated the NLIHC analysis to its printed month and extended the no-final-rule date to 2026-10-15. Confidence raised from 66 to 68. Stage proposed 18; confidence 66 to 68."
     }
   ],
   "id": "c15-04",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-15",
   "layer": 2,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -48,29 +52,30 @@
   "requires_congress": "partial",
   "review": {
     "flags": [
-      "new development: 2026-09-01 MTW Operations Notice revision (effective date unconfirmed)",
-      "HUD adoption estimates and comment count not re-verified by reviewer"
+      "EO 14394 confirmed on the Federal Register as a home-construction order (signed 2026-03-13, published 2026-03-18); sibling check resolved",
+      "FY2026 block grant proposal with two-year limits still not located (sibling check)",
+      "MTW notice effective date unconfirmed; if already in effect for MTW agencies the stage could be understated (carried over)"
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 509 asks HUD, where regulation allows, to strengthen work and work-readiness requirements, set maximum term limits in PBRA and TBRA programs and reduce anti-marriage bias, and asks Congress to remove disincentives to work and marriage; page 511 says longer-term reforms should strengthen work requirements and limit how long households are eligible.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W4",
+    "reviewed_at": "2026-10-15",
+    "reviewer": "independent",
     "source_checks": [
       {
-        "note": "Abstract of 2026-04095 confirms a proposed rule letting PHAs and certain multifamily owners impose work requirements and term limits in public housing, HCV, PBV and PBRA.",
+        "note": "Run 2026-10-15: two HUD documents, MTW Operations Notice revision (2026-09-01, 2026-17777) and the proposed rule (2026-03-02, 2026-04095); no final rule.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-04095,2026-04606,2026-12059,2026-20281,2026-10050,2026-14583.json?fields%5B%5D=abstract"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22work+requirements%22&conditions[agencies][]=housing-and-urban-development-department&conditions[publication_date][gte]=2026-03-01&order=newest&per_page=20"
       },
       {
-        "note": "Only one HUD document since 2026-03-03 mentions work requirements, a 2026-09-01 notice; no final rule.",
+        "note": "EO 14394, Removing Regulatory Barriers to Affordable Home Construction, signed 2026-03-13, published 2026-03-18, doc 2026-05388; unrelated to work requirements.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22work+requirements%22&conditions[agencies][]=housing-and-urban-development-department&conditions[publication_date][gte]=2026-03-03&order=newest&per_page=20"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=PRESDOCU&conditions[presidential_document_type][]=executive_order&conditions[term]=14394"
       },
       {
-        "note": "New development not in the record: HUD's 2026-09-01 revision of the Moving to Work expansion Operations Notice (91 FR 56163) loosens the safe harbors for optional MTW work requirement and term-limit waivers (up to 40 hours a week per person, no household cap, two-year minimum term); comments due 2026-11-02; the portion read did not state when the changes take effect.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/09/01/2026-17777/revision-of-operations-notice-for-the-expansion-of-the-moving-to-work-demonstration-program"
+        "note": "NLIHC analysis dated April 2026 of the 2026-04-03 budget request: 20 hours a week average, five-year limit, effective once HUD issues regulations or a notice.",
+        "result": "supports",
+        "url": "https://nlihc.org/sites/default/files/FY27_Analysis_040626_1.pdf"
       }
     ]
   },
@@ -107,10 +112,24 @@
       "publisher": "NAHRO",
       "title": "HUD Term Limits and Work Requirements Proposed Rule Published",
       "url": "https://www.nahro.org/news/hud-term-limits-and-work-requirements-proposed-rule-published"
+    },
+    {
+      "date": "2026-04",
+      "kind": "tracker",
+      "publisher": "National Low Income Housing Coalition",
+      "title": "FY27 President's budget analysis (HUD rental assistance work requirements and time limits)",
+      "url": "https://nlihc.org/sites/default/files/FY27_Analysis_040626_1.pdf"
+    },
+    {
+      "date": "2026-02-02",
+      "kind": "tracker",
+      "publisher": "National Low Income Housing Coalition",
+      "title": "OIRA concludes review of HUD regulatory changes on 30-day notices, time limits and work requirements",
+      "url": "https://nlihc.org/resource/oira-concludes-review-hud-regulatory-changes-regarding-30-day-notices-time-limits-and-work"
     }
   ],
   "stage": "proposed",
-  "status_summary": "HUD published a proposed rule on 2026-03-02 (91 FR 10016) that would let public housing agencies and certain project-based rental assistance owners impose work requirements and term limits in public housing, Housing Choice Vouchers, Project-Based Vouchers and Project-Based Rental Assistance. It would be optional for each agency or owner, not a national requirement. Work requirements could reach up to 40 hours a week for assisted adults aged 18 to 61, with exclusions for disability, primary caregivers, pregnancy, children under 6 and full-time students; term limits would run at least two years for non-elderly, non-disabled families and apply prospectively. Comments closed on 2026-05-01, and the Federal Register shows no final rule on the subject through 2026-10-07. Separately, on 2026-09-01 HUD published a revised Operations Notice for the Moving to Work expansion (91 FR 56163) that loosens the safe-harbor limits on optional MTW work requirement and term-limit waivers, raising the cap to 40 hours a week per person, removing the household cap and lowering the minimum term to two years; comments are due 2026-11-02, and when the changes take effect was not confirmed. No statute on the subject was found.",
+  "status_summary": "HUD published a proposed rule on 2026-03-02 (91 FR 10016) that would let public housing agencies and certain project-based rental assistance owners impose work requirements and term limits in public housing, Housing Choice Vouchers, Project-Based Vouchers and Project-Based Rental Assistance. It would be optional for each agency or owner, not a national requirement. Work requirements could reach up to 40 hours a week for assisted adults aged 18 to 61, with exclusions for disability, primary caregivers, pregnancy, children under 6 and full-time students; term limits would run at least two years for non-elderly, non-disabled families and apply prospectively. Comments closed on 2026-05-01, and the Federal Register shows no final rule on the subject through 2026-10-15. Separately, on 2026-09-01 HUD published a revised Operations Notice for the Moving to Work expansion (91 FR 56163) that loosens the safe-harbor limits on optional MTW work requirement and term-limit waivers, raising the cap to 40 hours a week per person, removing the household cap and lowering the minimum term to two years; comments are due 2026-11-02, and when the changes take effect was not confirmed. No statute on the subject was found. The FY2027 budget request, as summarized by a housing advocacy group in April 2026, separately proposes a mandatory 20-hour weekly work requirement and a five-year assistance cap for HUD rental assistance, to take effect once HUD publishes implementing regulations or a notice; this is a request to Congress and not an enacted change.",
   "timeline": [
     {
       "date": "2026-03-02",
@@ -129,6 +148,6 @@
   ],
   "title": "Allow work requirements and time limits in HUD rental assistance programs",
   "tracked": true,
-  "uncertainties": "The proposed rule page was read through roughly the first 100,000 of 117,000 characters, so details in the unread tail are not confirmed. Absence of a final rule rests on a Federal Register query through 2026-10-05; White House review status and the Unified Agenda entry were not checked. Congressional action (appropriations text or authorizing bills) and any HUD guidance outside the Federal Register were not searched beyond one web search, which returned only coverage of the proposal. Litigation cannot exist before a final rule; the legal-challenge risk is an inference. Searches run: HUD work requirements and term limits proposed rule status; Federal Register queries of HUD proposed and final rules since 2025-06 and 2026-03.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The proposed rule page was read through roughly the first 100,000 of 117,000 characters, so details in the unread tail are not confirmed. Absence of a final rule rests on a Federal Register query through 2026-10-05; White House review status and the Unified Agenda entry were not checked. Congressional action (appropriations text or authorizing bills) and any HUD guidance outside the Federal Register were not searched beyond one web search, which returned only coverage of the proposal. Litigation cannot exist before a final rule; the legal-challenge risk is an inference. Searches run: HUD work requirements and term limits proposed rule status; Federal Register queries of HUD proposed and final rules since 2025-06 and 2026-03. Re-checked 2026-10-15: a Federal Register API query of HUD documents mentioning work requirements since 2026-03-01 returns only the 2026-03-02 proposed rule and the 2026-09-01 MTW notice, so no final rule through 2026-10-15 (confirmed again in review); a state-news outlet reported on 2026-06-30 that HUD is finalizing the rule, which the Federal Register does not confirm. The lead that Executive Order 14394 concerns housing assistance work requirements did not hold: the Federal Register lists EO 14394 as Removing Regulatory Barriers to Affordable Home Construction, signed 2026-03-13 and published 2026-03-18, so it is not treated as a related action. The reginfo.gov pending-review list could not be read. FY2026 block-grant proposal not located. Searches: 3 web searches.",
+  "updated_at": "2026-10-15"
 }
