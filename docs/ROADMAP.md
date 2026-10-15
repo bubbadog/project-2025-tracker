@@ -1,6 +1,6 @@
 # Roadmap
 
-Living document. Status as of 2026-10-14: one headline over 457 counted recommendations (473 records; Foreword items listed, not counted), 112 in effect after the 2026-10-14 runs; confidence 118 high, 292 medium, 63 low; chapters 00 to 27 read in full, 28 to 30 still at their key objectives. Labels: **Fact** is measured from the data; **Estimate** and **Opinion** are the maintainer's.
+Living document. Status as of 2026-10-15: one headline over 526 counted recommendations (547 records; Foreword items listed, not counted), 115 in effect after the 2026-10-15 runs; confidence 128 high, 338 medium, 81 low; all 30 chapters read in full (first pass complete 2026-10-14), second pass done through chapter 13. Labels: **Fact** is measured from the data; **Estimate** and **Opinion** are the maintainer's.
 
 ## A. Enumeration and depth (the data work)
 
@@ -8,9 +8,9 @@ Ranked by how much each changes what a reader sees.
 
 | # | Work | Status | What it changes |
 | --- | --- | --- | --- |
-| B5 | **Fuller enumeration.** Read every chapter in full, list every concrete and checkable recommendation, add the ones not yet tracked (up to 12 per chapter per pass), review and score each; then a second pass over the candidates left behind the cap | In progress nightly; chapters 00 to 27 done (84 records added 2026-10-13 and 2026-10-14); first pass through chapter 30 targeted for 2026-10-18 and the second pass for 2026-10-21 (about two weeks before the 2026-11-03 election) | Coverage becomes defensible as "the document", not "key objectives"; total checkable recommendations likely 450 to 700 (Estimate) |
+| B5 | **Fuller enumeration.** Read every chapter in full, list every concrete and checkable recommendation, add the ones not yet tracked (up to 12 per chapter per pass), review and score each; then a second pass over the candidates left behind the cap | First pass complete 2026-10-14 (three days early); second pass in progress nightly, chapters 00 to 13 done; first pass through chapter 30 targeted for 2026-10-18 and the second pass for 2026-10-21 (about two weeks before the 2026-11-03 election) | Coverage becomes defensible as "the document", not "key objectives"; total checkable recommendations likely 450 to 700 (Estimate) |
 | B3 | **Freshness.** Records whose latest dated event predates mid-2026 | Monday, Wednesday, Friday runs; backlog list of ids | Timelines catch up to summer and fall 2026 |
-| B16 | **Primary-source lift.** Medium-confidence records in order of significance weight: read the stage-deciding official document and re-review | Queued after B5; about 25 records per firing | High-confidence share (25 percent today, diluted by new records that start at medium) rises toward what the rubric allows, roughly 55 to 65 percent (Estimate) |
+| B16 | **Primary-source lift.** Medium-confidence records in order of significance weight: read the stage-deciding official document and re-review | Queued after B5; about 25 records per firing | High-confidence share (23 percent today, diluted by new records that start at medium) rises toward what the rubric allows, roughly 55 to 65 percent (Estimate) |
 | B17 | **Systematic absence checks.** No-action and diverged records get the documented five-part check so they can be rated up to 70 | Queued after B16 | Removes the permanent low on records where nothing has happened |
 | B12 | **Source archiving.** A Wayback capture per source against link rot | Blocked: no network path to archive.org from the research container; test from a scheduled run | Dead links stop silently eroding the record |
 | F1 | **Fiscal anchors.** Source the 204 estimated fiscal scores from CBO, CRS and budget documents | Open | Tightens the significance band |

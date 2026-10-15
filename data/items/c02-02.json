@@ -17,10 +17,14 @@
     {
       "date": "2026-10-07",
       "note": "Red-team check found nothing that undercuts the status."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Refutation check (update run): Federal Register documents from 2026-08 to 2026-10-15 show SEC, CFTC, NRC, EEOC and STB rules reviewed under EO 14215. No court limit or carve-out found. Unchanged. Stage unchanged at implemented 90; no review needed because only uncertainties and red-team findings changed."
     }
   ],
   "id": "c02-02",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-15",
   "layer": 1,
   "match": "direct",
   "mechanism": "executive_order",
@@ -31,19 +35,36 @@
   "progress": 90,
   "proposal": "The Mandate says regulatory analysis and OIRA review under Executive Order 12866 should also apply to historically independent agencies, as the Justice Department's Office of Legal Counsel found legally permissible, while keeping EO 12866 as the foundation of OIRA review.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-15",
     "evidence": [
       {
-        "date": "2025-04-17",
-        "kind": "primary",
-        "note": "Appeared in the search results; OMB guidance requiring independent agencies to follow EO 12866 review from 2025-04-21; no rescinding or replacing document surfaced.",
-        "source": "Office of Management and Budget",
-        "url": "https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-24-Interim-Guidance-Implementing-Section-3-of-Executive-Order-14215-Titled-Ensuring-Accountability-for-All-Agencies.pdf"
+        "date": "2026-10-15",
+        "note": "Proposed rule states OMB review consistent with EO 14215; shows the requirement operating.",
+        "source": "Federal Register (SEC proposed rule)",
+        "url": "https://www.federalregister.gov/documents/2026/10/15/2026-21037/investment-company-cross-trading"
+      },
+      {
+        "date": "2026-10-13",
+        "note": "States OMB review consistent with EO 14215.",
+        "source": "Federal Register (CFTC proposed rule)",
+        "url": "https://www.federalregister.gov/documents/2026/10/13/2026-20888/regulation-crypto-asset-transactions-and-regulation-crypto-asset-markets"
+      },
+      {
+        "date": "2026-08-28",
+        "note": "Describes the EO 14215 requirement that independent agencies submit significant actions to OIRA.",
+        "source": "Federal Register (EEOC proposed rule)",
+        "url": "https://www.federalregister.gov/documents/2026/08/28/2026-17641/federal-sector-equal-employment-opportunity"
+      },
+      {
+        "date": "2025",
+        "note": "Appeared in search; law-firm commentary only, no ruling or carve-out reported.",
+        "source": "Gibson Dunn",
+        "url": "https://www.gibsondunn.com/independent-no-more-implications-of-the-trump-administration-s-actions-on-independent-agencies/"
       }
     ],
-    "note": "The search returned only 2025 analyses of the order and no rescission or injunction; the stage stands.",
+    "note": "No court ruling against EO 14215 and no carve-out surfaced. SEC, CFTC, NRC, EEOC and STB documents dated August to October 2026 cite OIRA review under the order, so the practice continues after Trump v. Slaughter.",
     "verdict": "holds",
-    "what_was_tested": "Searched for a court challenge, rescission or compliance gap affecting EO 14215 and the OIRA review of independent agency rules."
+    "what_was_tested": "Searched for any court ruling limiting EO 14215, any agency carve-out or rescission, and any effect of Trump v. Slaughter on OIRA review; queried the Federal Register API for documents citing EO 14215 published since 2026-06-01 to see whether independent agencies still report OIRA review."
   },
   "related_ids": [
     "c17-02",
@@ -167,6 +188,6 @@
   ],
   "title": "Require OIRA review of rules from historically independent agencies",
   "tracked": true,
-  "uncertainties": "I confirmed the order and OMB implementing memo but not actual volume or timing of independent-agency submissions on reginfo.gov. Slaughter is described through law-firm summaries, not the opinion. I did not verify whether the Unified Agenda of August 2026 now lists independent-agency rules.",
+  "uncertainties": "Checked on 2026-10-15: no ruling limiting EO 14215 surfaced in one general search; the Federal Register API listing was read only for its first page of 46 matches. The volume of independent-agency rules actually reviewed was not measured. The Gibson Dunn URL date was not confirmed.",
   "updated_at": "2026-10-08"
 }

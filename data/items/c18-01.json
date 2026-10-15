@@ -8,7 +8,13 @@
   "chapter": "18",
   "confidence": 84,
   "confidence_label": "high",
-  "confidence_reason": "The 2026-10-26 effective date is confirmed, but the stage rests on the executive order revocation and the end of EO 11246 enforcement, both operative since January 2025 per DOL. Implemented at 80 is not overstated: the Mandate's own text allows DOL to keep enforcing Section 503 and VEVRAA, while the office itself still exists and is funded.",
+  "confidence_reason": "Document text verified in an earlier review (pages 583 and 584). The stage-deciding primary sources were read: the rescission final rule (91 FR 54444, effective 2026-10-26) on federalregister.gov, which itself states that EO 14173 revoked EO 11246 on 2025-01-21 and that the regulations no longer have operative force, and DOL's OFCCP page (earlier review) on the 2025-01-24 enforcement halt. The court order was read in a hosted copy. FY2027 funding rests on a trade-group report.",
+  "court_status": {
+    "basis": "Latest court event: on 2025-10-30 the N.D. Ill. (Chicago Women in Trades v. Trump) denied the government's motion to narrow or partly stay its 2025-04-14 preliminary injunction, which bars the Labor Department from enforcing EO 14173's certification provision (section 3(b)(iv)) against any federal grantee or contractor; the Seventh Circuit appeal (No. 25-2144) is pending per a clearinghouse page. The revocation of EO 11246 and the OFCCP rescission rule are not enjoined in sources found.",
+    "date": "2025-10-30",
+    "state": "pending",
+    "url": "https://www.lawyerscommittee.org/wp-content/uploads/2025/10/2025-10-30-Memorandum-Opinion-And-dckt-162_0.pdf"
+  },
   "durability": {
     "level": "medium",
     "why": "A revoked executive order and final rescission rule are reversible only by a future President or new rulemaking; the underlying Section 503 and VEVRAA statutes are unchanged."
@@ -29,10 +35,14 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Update run, independently reviewed. Rescission rule confirmed: 91 FR 54444, published 2026-08-21, effective 2026-10-26 (not yet reached). CWIT injunction covers only the certification provision; Seventh Circuit appeal pending. House FY2027 bill reportedly zeroes OFCCP (secondary source). Stage kept at implemented 80 because the EO revocation and enforcement halt are operative; reviewer may prefer in_progress if the rule is the deciding step. Review (corrected): Implemented 80 confirmed: the rescission rule (read on federalregister.gov) states EO 14173 already ended the regulations' force, so the not-yet-effective rule does not lower the stage. Corrected the scope of the Chicago Women in Trades injunction (all grantees and contractors, not only the plaintiff) in the timeline, court_status and uncertainties. Stage implemented 80; confidence 84 to 84."
     }
   ],
   "id": "c18-01",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-15",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -44,26 +54,36 @@
   "progress": 80,
   "proposal": "The Mandate recommends that the President eliminate the Office of Federal Contract Compliance Programs by rescinding Executive Order 11246, leaving federal contractors bound by statutory nondiscrimination law. It suggests that residual Section 503 (disability) and VEVRAA (veterans) obligations could be enforced by EEOC or DOL.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-15",
     "evidence": [
       {
         "date": "2026-08-21",
-        "kind": "primary",
-        "note": "Final rule at 91 FR 54444, published 2026-08-21, effective 2026-10-26 (not yet reached on 2026-10-07); it rescinds the EO 11246 implementing regulations following EO 14173 (2025-01-21), which revoked EO 11246.",
-        "source": "Federal Register",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-17114.json"
+        "note": "Opened; final rule 91 FR 54444, effective 2026-10-26 (not yet reached on 2026-10-15); no litigation reported in the part read.",
+        "source": "Federal Register (DOL/OFCCP)",
+        "url": "https://www.federalregister.gov/documents/2026/08/21/2026-17114/rescission-of-executive-order-11246-implementing-regulations"
       },
       {
-        "date": "2026-08-20",
-        "kind": "news",
-        "note": "Law-firm summary of the three OFCCP final rules (dated 2026-08-20) says they have different effective dates and mentions no litigation; OFCCP continues as the office administering them.",
-        "source": "Ogletree Deakins",
-        "url": "https://ogletree.com/insights-resources/blog-posts/ofccp-issues-final-rules-upending-federal-contractors-affirmative-action-obligations/"
+        "date": "2025-10-30",
+        "note": "Opened; N.D. Ill. injunction on the certification provision, Seventh Circuit appeal No. 25-2144 pending, no 2026 events reported.",
+        "source": "Civil Rights Litigation Clearinghouse",
+        "url": "https://www.clearinghouse.net/case/46181"
+      },
+      {
+        "date": "2025-10-30",
+        "note": "Opened; the order concerns only the certification provision, not the revocation of EO 11246.",
+        "source": "N.D. Ill. memorandum opinion",
+        "url": "https://www.lawyerscommittee.org/wp-content/uploads/2025/10/2025-10-30-Memorandum-Opinion-And-dckt-162_0.pdf"
+      },
+      {
+        "date": "2026-06-08",
+        "note": "Opened; reports a House FY2027 Labor-HHS bill released 2026-06-04 proposing zero OFCCP funding; subcommittee stage, secondary source.",
+        "source": "DirectEmployers Association (trade group)",
+        "url": "https://directemployers.org/2026/06/08/fy2027-appropriations-bill-proposes-to-zero-out-ofccp-cut-dol-funding-by-27/"
       }
     ],
-    "note": "The operative step is EO 14173's 2025-01-21 revocation of EO 11246 and DOL's stop on enforcement, with the regulation rescission effective 2026-10-26; no challenge was found, and OFCCP still exists for Section 503 and VEVRAA, as the record already states.",
-    "verdict": "holds",
-    "what_was_tested": "Whether the EO 11246 rescission rule is actually in effect and whether any court challenge or reversal exists, by fetching the Federal Register record and searching for 2026 coverage of the three OFCCP final rules."
+    "note": "The revocation of EO 11246 and the stop to its enforcement are not enjoined; the injunction reaches only the certification provision. The rescission rule is final but takes effect 2026-10-26, and OFCCP funding for FY2027 is undecided, so the stage rests on the executive revocation and enforcement halt rather than on the completed rule.",
+    "verdict": "weakened",
+    "what_was_tested": "Confirmed the rescission rule's publication and effective date on the Federal Register; searched for court challenges to EO 14173's contractor provisions (Chicago Women in Trades v. Trump) and any order touching the EO 11246 revocation; searched for FY2027 appropriations treatment of OFCCP."
   },
   "related_ids": [
     "c18-03",
@@ -78,24 +98,26 @@
   "research_agent": "A13",
   "review": {
     "flags": [
-      "recheck resolved: 2026-10-26 effective date confirmed; the operative step is the EO revocation, so the final-but-not-effective rule does not lower the stage",
-      "FY2026 OFCCP funding figure rests on a Bloomberg Government report not re-fetched"
+      "c18-01 stage decision: implemented 80 holds. The rubric's final-but-not-effective rule is in_progress applies when the rule is the operative step; here EO 14173 revoked EO 11246 on 2025-01-21 and DOL halted enforcement on 2025-01-24, and the rescission rule itself states the regulations already lack operative force. The rule's 2026-10-26 effective date is a cleanup step. Implemented, not completed, because OFCCP still exists and is funded",
+      "Injunction scope corrected: the CWIT injunction on the certification provision runs against enforcement for all grantees and contractors, not only the plaintiff; it does not touch the EO 11246 revocation",
+      "FY2027 House bill zeroing OFCCP rests on a trade-group page",
+      "Recheck after 2026-10-26 to confirm the rescission rule took effect"
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 583 and 584 recommend eliminating OFCCP by rescinding Executive Order 11246, leaving contractors bound by statutory nondiscrimination law, and say residual Section 503 and VEVRAA obligations could be enforced by EEOC or DOL.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W4",
+    "reviewed_at": "2026-10-15",
+    "reviewer": "independent",
     "source_checks": [
       {
-        "note": "The Rescission of Executive Order 11246 Implementing Regulations final rule (2026-17114) is effective 2026-10-26, confirming the researcher's report.",
+        "note": "Final rule, 91 FR 54444-54480, published 2026-08-21, effective 2026-10-26; removes 41 CFR parts 60-1 to 60-50 and 60-999; states EO 14173 revoked EO 11246 on 2025-01-21 and the regulations no longer have operative legal force.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-17114,2026-00754,2025-23452,2026-16134,2026-09383.json?fields%5B%5D=dates"
+        "url": "https://www.federalregister.gov/documents/2026/08/21/2026-17114/rescission-of-executive-order-11246-implementing-regulations"
       },
       {
-        "note": "DOL states EO 11246 was revoked by EO 14173 on 2025-01-21, contractors were told to wind down compliance by 2025-04-21, Secretary's Order 03-2025 (2025-01-24) ended EO 11246 investigations and enforcement, and Order 08-2025 restored Section 503 and VEVRAA activity, which remains in effect.",
-        "result": "supports",
-        "url": "https://www.dol.gov/agencies/ofccp"
+        "note": "Hosted copy of N.D. Ill. memorandum opinion, Judge Kennelly, 2025-10-30: denies indicative ruling and partial stay; injunction on EO 14173 sec. 3(b)(iv) certification provision reaches all grantees and contractors, not only the plaintiff (record had said as to the plaintiff); no mention of EO 11246.",
+        "result": "partial",
+        "url": "https://www.lawyerscommittee.org/wp-content/uploads/2025/10/2025-10-30-Memorandum-Opinion-And-dckt-162_0.pdf"
       }
     ]
   },
@@ -146,6 +168,13 @@
       "publisher": "Bloomberg Government",
       "title": "Congress funds labor watchdog gutted of core antibias powers",
       "url": "https://news.bgov.com/construction-labor/congress-funds-labor-watchdog-gutted-of-core-antibias-powers"
+    },
+    {
+      "date": "2025-10-30",
+      "kind": "court",
+      "publisher": "N.D. Ill. memorandum opinion (hosted by Lawyers' Committee for Civil Rights Under Law)",
+      "title": "Chicago Women in Trades v. Trump, memorandum opinion, dkt. 162",
+      "url": "https://www.lawyerscommittee.org/wp-content/uploads/2025/10/2025-10-30-Memorandum-Opinion-And-dckt-162_0.pdf"
     }
   ],
   "stage": "implemented",
@@ -180,6 +209,13 @@
       "url": "https://www.hunton.com/hunton-employment-labor-perspectives/trump-administration-eliminates-ofccp-funding-reshaping-enforcement-landscape-for-federal-contractors"
     },
     {
+      "date": "2025-10-30",
+      "event": "In Chicago Women in Trades v. Trump (N.D. Ill., Judge Kennelly), the court denies the government's motion for an indicative ruling and partial stay, keeping its 2025-04-14 preliminary injunction that bars the Labor Department from enforcing EO 14173's contractor certification provision against any federal grantee or contractor; the order does not address the revocation of EO 11246.",
+      "kind": "court",
+      "source": "N.D. Ill. memorandum opinion (hosted by Lawyers' Committee)",
+      "url": "https://www.lawyerscommittee.org/wp-content/uploads/2025/10/2025-10-30-Memorandum-Opinion-And-dckt-162_0.pdf"
+    },
+    {
       "date": "2026-02-03",
       "event": "Congress clears the FY2026 spending bill funding OFCCP at roughly $100 million (about $11 million below the prior year). The White House had proposed ending its funding and moving remaining functions to EEOC and DOL's veterans office.",
       "kind": "news",
@@ -196,6 +232,6 @@
   ],
   "title": "Rescind Executive Order 11246 and eliminate OFCCP",
   "tracked": true,
-  "uncertainties": "Law-firm summaries differ on whether effective dates are stated: the Federal Register public-inspection copy gives 2026-10-26 for the EO 11246 rescission, and Crowell, Duane Morris and Honigman summaries give 2026-09-21 for most Section 503 and VEVRAA changes (Crowell, whose summary was also read, is not listed as a source because its publication date was not shown). The OFCCP staff reduction figure (from about 479 to under 50) comes from a law-firm blog and was not checked against DOL. Appropriations figures differ slightly between sources ($100 million to $101 million). Litigation over the final rules was not exhaustively searched; the web search budget ran out after searches on OFCCP and disparate impact only, so most evidence comes from Federal Register queries and fetched pages.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Checked on 2026-10-15: the rescission rule (91 FR 54444, document 2026-17114) was confirmed on the Federal Register as published 2026-08-21 and effective 2026-10-26, so it is not yet operative today; the last 18,512 characters of the page were not read. No suit against the three final rules surfaced (one search, not exhaustive). The Chicago Women in Trades narrative on the clearinghouse page ends 2025-09-04 and reports no 2026 event or Seventh Circuit ruling; the district order read (2025-10-30) concerns only the certification provision, which it keeps enjoined as to all federal grantees and contractors, not only the plaintiff. FY2027 funding: a trade-group page reports a House Appropriations FY2027 Labor-HHS bill released 2026-06-04 that would zero out OFCCP (subcommittee stage, not enacted); that source is secondary and no primary bill text was read. The earlier uncertainties on law-firm effective dates and the staff-reduction figure remain.",
+  "updated_at": "2026-10-15"
 }

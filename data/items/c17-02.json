@@ -5,13 +5,13 @@
     "Pending challenges by dismissed DOJ attorneys (for example before the Merit Systems Protection Board and in court) per the Georgetown blog; outcomes not verified"
   ],
   "chapter": "17",
-  "confidence": 82,
+  "confidence": 86,
   "confidence_label": "high",
-  "confidence_reason": "The executive order and the Supreme Court opinion were read at primary sources and match the claims. The zealous advocacy memo's discipline language and the April 2026 change in Attorney General were not checked at a primary source.",
+  "confidence_reason": "Document text verified in an earlier review (pages 559 and 560). Both stage-deciding primary documents were fetched and read in this review: the Attorney General's 2025-02-05 zealous advocacy memo on justice.gov and the Trump v. Slaughter slip opinion (2026-06-29, 6-3, reversed and remanded); Executive Order 14215 was read on govinfo in an earlier review. The April 2026 change of Attorney General rests on a secondary report.",
   "court_status": {
-    "basis": "derived from the latest court event in the timeline",
+    "basis": "Trump v. Slaughter, No. 25-332, decided 2026-06-29 (6-3), sustained the President's removal power over FTC commissioners; Federal Reserve and non-Article III judges left open.",
     "date": "2026-06-29",
-    "state": "pending",
+    "state": "upheld",
     "url": "https://www.supremecourt.gov/opinions/25pdf/25-332_new_geil.pdf"
   },
   "durability": {
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-07",
       "note": "Red-team check found nothing that undercuts the status."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Update run, independently reviewed. Primary AG memo (justice.gov) fetched and now cited; replaces Lawfare as timeline source. court_status set to upheld for Slaughter (2026-06-29) instead of pending. Stage unchanged. Review (corrected): Both primary documents (AG memo, Slaughter opinion) read and support the record; confidence raised from 82 to 86. An unopened listing page was removed from red-team evidence and the Attorney General change was noted as secondary-sourced. Stage implemented 88; confidence 82 to 86."
     }
   ],
   "id": "c17-02",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-15",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -41,26 +45,24 @@
   "progress": 88,
   "proposal": "The Mandate says DOJ operates under the President's direct supervision and recommends issuing guidance so litigation decisions match the President's agenda, with leadership ready to discipline attorneys who resist. It also recommends that the executive branch formally take the position that Humphrey's Executor v. United States is unconstitutional.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-15",
     "evidence": [
       {
-        "date": "2026-06-29",
-        "kind": "court",
-        "note": "Trump v. Slaughter, No. 25-332, decided 2026-06-29, 6-3: the FTC's for-cause removal protection violates the separation of powers and Humphrey's Executor is overruled to the extent anything of it remains; the Federal Reserve is not decided; reversed and remanded.",
-        "source": "Supreme Court of the United States",
-        "url": "https://www.supremecourt.gov/opinions/25pdf/25-332_qn12.pdf"
+        "date": "2025-02-05",
+        "note": "Opened; primary memo on zealous advocacy, discipline for attorneys who decline to advance good-faith arguments; states it creates no enforceable rights.",
+        "source": "U.S. Department of Justice",
+        "url": "https://www.justice.gov/ag/media/1388521/dl"
       },
       {
-        "date": "2026-04-02",
-        "kind": "news",
-        "note": "Reports the President removed Pam Bondi as Attorney General on 2026-04-02 and that Deputy Attorney General Todd Blanche is acting Attorney General; no nominee named in the article.",
-        "source": "Ballotpedia News",
-        "url": "https://news.ballotpedia.org/2026/04/02/president-donald-trump-r-has-removed-pam-bondi-r-as-united-states-attorney-general/"
+        "date": "2026-06-29",
+        "note": "Slaughter opinion cited by the record; a search found only news coverage of the same decision, no later change.",
+        "source": "Supreme Court of the United States",
+        "url": "https://www.supremecourt.gov/opinions/25pdf/25-332_new_geil.pdf"
       }
     ],
-    "note": "The Supreme Court holding and the 2026-04-02 change of Attorney General are confirmed; no rescission of the litigation-alignment guidance was found.",
+    "note": "No rescission of the memo and no court ruling against the litigation-alignment policy surfaced. The record's claim now rests on a primary document.",
     "verdict": "holds",
-    "what_was_tested": "Whether the Slaughter holding the record relies on is accurate and whether the 2026-04-02 change of Attorney General is real, by reading the slip opinion and a Ballotpedia report."
+    "what_was_tested": "Fetched the primary Attorney General memorandum of 2025-02-05 behind the secondary accounts; searched for any rescission of the memo, any court ruling against the litigation-alignment policy, and post-Slaughter developments after 2026-06-29."
   },
   "related_ids": [
     "c01-06",
@@ -75,24 +77,25 @@
   "research_agent": "A12",
   "review": {
     "flags": [
-      "Bondi memo content from secondary sources only",
-      "Attorney General change of 2026-04-02 not independently verified by this reviewer"
+      "court_status changed by researcher from pending to upheld; accepted, since the Court sustained the removal power the record tracks (judgment reversed and remanded, so lower-court proceedings continue)",
+      "Redteam evidence entry for an unopened justice.gov listing page removed",
+      "Attorney General change of 2026-04-02 rests on Ballotpedia"
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 559 recommends guidance aligning litigation decisions with the President's agenda and readiness to discipline, and page 560 recommends formally taking the position that Humphrey's Executor violates the separation of powers; the paraphrase matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R07",
+    "reviewed_at": "2026-10-15",
+    "reviewer": "independent",
     "source_checks": [
       {
-        "note": "Trump v. Slaughter, No. 25-332, decided 2026-06-29, 6-3, Roberts for the Court: FTC for-cause removal protection unconstitutional and whatever remains of Humphrey's beyond its narrow core is overruled; Federal Reserve and non-Article III court judges expressly not decided.",
+        "note": "Memo dated 2025-02-05 to all DOJ employees: attorneys who refuse to sign briefs or appear on personal political grounds, withhold good-faith arguments or obstruct face discipline up to termination, consistent with applicable law.",
         "result": "supports",
-        "url": "https://www.supremecourt.gov/opinions/25pdf/25-332_new_geil.pdf"
+        "url": "https://www.justice.gov/ag/media/1388521/dl"
       },
       {
-        "note": "Executive Order 14215, signed 2025-02-18; section 7 makes the President's and Attorney General's legal opinions controlling on employees and bars contrary positions in regulations, guidance or litigation without authorization.",
+        "note": "Trump v. Slaughter, No. 25-332, argued 2025-12-08, decided 2026-06-29, 6-3 (Roberts); FTC for-cause protection unconstitutional, remainder of Humphrey's overruled; reversed and remanded; Federal Reserve and non-Article III courts left open.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/FR-2025-02-24/html/2025-03063.htm"
+        "url": "https://www.supremecourt.gov/opinions/25pdf/25-332_new_geil.pdf"
       }
     ]
   },
@@ -144,17 +147,24 @@
       "publisher": "Georgetown Law Legal Ethics Journal",
       "title": "Do or Be Dismissed: Zealous Advocacy Enforcement in Pam Bondi's DOJ",
       "url": "https://www.law.georgetown.edu/legal-ethics-journal/blog/do-or-be-dismissed-zealous-advocacy-enforcement-in-pam-bondis-doj/"
+    },
+    {
+      "date": "2025-02-05",
+      "kind": "primary",
+      "publisher": "U.S. Department of Justice",
+      "title": "General Policy Regarding Zealous Advocacy on Behalf of the United States (Attorney General memorandum)",
+      "url": "https://www.justice.gov/ag/media/1388521/dl"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Both recommendations have been acted on. On 2025-02-05 Attorney General Pam Bondi issued a memo on zealous advocacy that, per secondary accounts, calls for discipline or termination of attorneys who decline to advance good-faith arguments for the administration, and Executive Order 14215 (2025-02-18) says the President's and Attorney General's legal interpretations bind executive branch employees, including in litigation, unless they authorize otherwise. On 2026-06-29 the Supreme Court held in Trump v. Slaughter, 6-3, that the FTC's for-cause removal protection is unconstitutional and that Humphrey's Executor no longer controls, while leaving open the Federal Reserve and the tenure of judges on non-Article III courts. Bondi was removed on 2026-04-02 and Todd Blanche has led DOJ in an acting capacity.",
+  "status_summary": "Both recommendations have been acted on. On 2025-02-05 Attorney General Pam Bondi issued a memo on zealous advocacy that calls for discipline or termination of attorneys who decline to advance good-faith arguments for the administration, and Executive Order 14215 (2025-02-18) says the President's and Attorney General's legal interpretations bind executive branch employees, including in litigation, unless they authorize otherwise. On 2026-06-29 the Supreme Court held in Trump v. Slaughter, 6-3, that the FTC's for-cause removal protection is unconstitutional and that Humphrey's Executor no longer controls, while leaving open the Federal Reserve and the tenure of judges on non-Article III courts. Bondi was removed on 2026-04-02 and Todd Blanche has led DOJ in an acting capacity.",
   "timeline": [
     {
       "date": "2025-02-05",
-      "event": "AG Bondi signs a set of first-day memos including General Policy Regarding Zealous Advocacy on Behalf of the United States, which overrides the practice of attorneys declining to sign briefs or appear on personal grounds and calls for discipline or termination (as summarized by Lawfare).",
-      "kind": "news",
-      "source": "Lawfare",
-      "url": "https://www.lawfaremedia.org/article/justice-dept.-releases-slate-of-memos-from-attorney-general-bondi"
+      "event": "AG Bondi issues the memorandum General Policy Regarding Zealous Advocacy on Behalf of the United States to all Department employees: attorneys are to defend presidential policies vigorously, and those who decline to sign briefs, appear, or make good-faith arguments for the administration on personal grounds face discipline and possible termination.",
+      "kind": "primary",
+      "source": "U.S. Department of Justice",
+      "url": "https://www.justice.gov/ag/media/1388521/dl"
     },
     {
       "date": "2025-02-18",
@@ -194,6 +204,6 @@
   ],
   "title": "Align DOJ litigation with the President's agenda; oppose Humphrey's Executor",
   "tracked": true,
-  "uncertainties": "The Bondi memo itself was not retrieved; its content is taken from Lawfare and the Georgetown blog (publication date of the blog not shown; Lawfare date estimated as the day after the memos). The Slaughter opinion was read through a summarizing fetch, not in full. The Mandate frames this as DOJ taking the position that Humphrey's Executor is unconstitutional; I did not separately retrieve the SG filings stating that position. Other possible indicators (firing of attorneys, litigation over those firings, 2026 developments) were not searched because the search budget ran out.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Checked on 2026-10-15: the zealous advocacy memo was read directly on justice.gov (primary). The Slaughter opinion was read through a summarizing fetch, not in full; Solicitor General filings stating the Humphrey's Executor position were not retrieved. Litigation by dismissed DOJ attorneys and any post-Slaughter developments beyond one search were not verified. The change of Attorney General on 2026-04-02 rests on a Ballotpedia report and was not checked against a primary source.",
+  "updated_at": "2026-10-15"
 }

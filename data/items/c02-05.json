@@ -20,10 +20,14 @@
     {
       "date": "2026-10-07",
       "note": "Red-team check found nothing that undercuts the status."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Refutation check (update run): No suit against the CEQ removal and no CEQ action after the 2026-06-29 guidance withdrawal found (Federal Register API and tracker). Unchanged. Stage unchanged at implemented 70; no review needed because only uncertainties and red-team findings changed."
     }
   ],
   "id": "c02-05",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-15",
   "layer": 1,
   "match": "parallel",
   "mechanism": "agency_rule",
@@ -35,19 +39,30 @@
   "progress": 70,
   "proposal": "The Mandate says the President should instruct CEQ to rewrite its National Environmental Policy Act (NEPA) regulations along the lines of the 2020 rule, including barring cumulative-impact analysis, with further streamlining that limits judicial review and remedies, and should strengthen the Federal Permitting Improvement Steering Council and seek permitting modernization from Congress.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-15",
     "evidence": [
       {
         "date": "2026-06-29",
-        "kind": "news",
-        "note": "Tracks the 2026-01-08 final rule, January 2026 emergency guidance, April 2026 categorical-exclusion guidance and the withdrawal of 18 older CEQ guidance memos on 2026-06-29; reports no lawsuit against the removal itself.",
-        "source": "Harvard Environmental and Energy Law Program tracker",
+        "note": "Only CEQ document published since 2026-04-14 in the API; no later CEQ rule or guidance.",
+        "source": "Federal Register (CEQ notice)",
+        "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13079/notification-of-withdrawal-of-guidance-documents"
+      },
+      {
+        "date": "2026-06-29",
+        "note": "Opened; lists no suit against the removal of the regulations; notes Marin Audubon v. FAA (D.C. Cir., 2024) found CEQ lacks authority for binding NEPA rules, and Iowa v. CEQ vacatur dismissed as moot. Tracker is a lead only.",
+        "source": "Harvard Environmental and Energy Law Program (tracker)",
         "url": "https://eelp.law.harvard.edu/tracker/nepa-environmental-review-requirements"
+      },
+      {
+        "date": "2025",
+        "note": "Appeared in search; commentary on the 2025 rescission, no challenge reported.",
+        "source": "Law-firm alert",
+        "url": "https://sprlaw.com/trump-administration-rescinds-ceqs-nepa-regulations-and-issues-guidance-to-agencies/"
       }
     ],
-    "note": "No court challenge to the CEQ removal was found; a June 2026 withdrawal of older guidance was added to the timeline.",
+    "note": "No court challenge to the rescission and no CEQ action after 2026-06-29 was found. The final rule stands.",
     "verdict": "holds",
-    "what_was_tested": "Looked for lawsuits against the CEQ NEPA regulation removal and for any 2026 reversal."
+    "what_was_tested": "Searched for lawsuits challenging the CEQ removal of its NEPA regulations (final rule effective 2026-01-08) or agency NEPA procedures, any reinstatement, and any new CEQ document after 2026-06-29, including a Federal Register API query of CEQ documents since 2026-04-14."
   },
   "remaining": [
     "A CEQ rule restating 2020-style provisions such as barring cumulative-impact analysis (not done; CEQ now says it lacks authority to bind agencies)",
@@ -166,6 +181,6 @@
   ],
   "title": "Rewrite CEQ's NEPA regulations to streamline review and limit judicial review",
   "tracked": true,
-  "uncertainties": "I read the final rule and two guidance notices but not the interim rule, EO 14154 itself, or CEQ's 2026-06-29 notice withdrawing guidance documents (fetch refused). Whether cumulative-impact analysis is still required depends on agency procedures, which I did not review. The Seven County decision is described only as CEQ describes it. The FPISC and permitting-legislation points were not researched.",
+  "uncertainties": "Checked on 2026-10-15: no lawsuit against the CEQ rescission or against individual agency NEPA procedures surfaced in one search and the Harvard tracker; case-law databases were not searched directly. The earlier uncertainties on the interim rule, EO 14154 and agency procedures remain.",
   "updated_at": "2026-10-08"
 }

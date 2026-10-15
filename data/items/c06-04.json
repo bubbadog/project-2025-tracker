@@ -6,7 +6,7 @@
   "chapter": "06",
   "confidence": 84,
   "confidence_label": "high",
-  "confidence_reason": "The FY2027 presidential determination was read in the Federal Register and confirms the continuing EO 14163 suspension and a low ceiling, and a legal news report confirms the March 2026 appellate ruling largely upholding the suspension; actual arrival numbers and any later review of the case were not checked.",
+  "confidence_reason": "Document text verified in an earlier review (pages 177 to 178). The stage-deciding FY2027 presidential determination (PD 2026-24, 91 FR 63119) was fetched and read on 2026-10-15 and confirms the continuing EO 14163 suspension and a 17,500 ceiling. The Ninth Circuit holding rests on a Jurist summary; the opinion caption was confirmed on Leagle.",
   "durability": {
     "level": "low",
     "why": "The suspension and annual ceilings are set by executive order and presidential determination, which a later President can change; the underlying statute is unchanged."
@@ -19,10 +19,14 @@
     {
       "date": "2026-10-07",
       "note": "Red-team check: status holds, with caveats added. The suspension itself was largely upheld on 2026-03-05, but injunctions requiring services for refugees already admitted and preserving resettlement agreements remain, which the record had listed as unverified."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Update run, independently reviewed. FY2027 determination confirmed on the Federal Register (signed 2026-09-25, published 2026-10-02, 17,500 ceiling, primarily Afrikaners). No later Pacito development found. Stage unchanged. Review (corrected): Federal Register FY2027 determination confirmed; the uncertainty about the unread EO 14204 text, dropped in the researcher's rewrite, was restored and the opinion panel noted. Stage implemented 85; confidence 84 to 84."
     }
   ],
   "id": "c06-04",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-15",
   "layer": 1,
   "match": "direct",
   "mechanism": "executive_order",
@@ -34,19 +38,30 @@
   "progress": 85,
   "proposal": "The Mandate recommends an indefinite curtailment of admissions under the US Refugee Admissions Program, saying screening and vetting resources must shift to the border situation and that State's refugee bureau should redirect its resources until refugee-focused vetting capacity can reasonably be restored.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-15",
     "evidence": [
       {
+        "date": "2026-10-02",
+        "note": "Opened; Presidential Determination 2026-24 (91 FR 63119), signed 2026-09-25, ceiling up to 17,500, allocated primarily to Afrikaners under EO 14204; confirms the record.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/10/02/2026-20318/presidential-determination-on-refugee-admissions-for-fiscal-year-2027"
+      },
+      {
         "date": "2026-03-05",
-        "kind": "news",
-        "note": "Reports the Ninth Circuit held on 2026-03-05 that the President likely has authority under 8 U.S.C. 1182(f) to suspend refugee entry, while affirming in part injunctions that require reception and placement services for refugees already in the country and protect cooperative agreements with resettlement organizations; the case remains at the preliminary injunction stage.",
+        "note": "Opened; confirms the opinion (Nos. 25-1313, 25-1939) but the excerpt omitted the holdings and any rehearing history.",
+        "source": "Leagle (Ninth Circuit opinion, 169 F.4th 895)",
+        "url": "https://www.leagle.com/decision/infco20260305102"
+      },
+      {
+        "date": "2026-03-05",
+        "note": "Appeared in search; news summary of the holding, no later development found.",
         "source": "Jurist",
         "url": "https://www.jurist.org/news/2026/03/us-appeals-court-rules-trump-may-suspend-refugee-admissions/"
       }
     ],
-    "note": "The suspension itself was largely upheld on 2026-03-05, but injunctions requiring services for refugees already admitted and preserving resettlement agreements remain, which the record had listed as unverified.",
-    "verdict": "weakened",
-    "what_was_tested": "Searched for the current status of Pacito v. Trump, the class challenge the record listed as unverified, to see whether the suspension had been enjoined."
+    "note": "The FY2027 determination was published and keeps admissions at a low, narrowly allocated level. No post-March 2026 Pacito ruling surfaced. The suspension remains operative; litigation limited to services for refugees already in the country.",
+    "verdict": "holds",
+    "what_was_tested": "Checked the Federal Register for the FY2027 refugee presidential determination and its terms, and searched for any rehearing, Supreme Court filing or new district court order in Pacito v. Trump after the 2026-03-05 Ninth Circuit opinion."
   },
   "remaining": [
     "No presidential finding resuming general program admissions was found; the 90-day review cycle continues under Executive Order 14163",
@@ -57,23 +72,24 @@
   "research_agent": "A05",
   "review": {
     "flags": [
-      "Pacito v. Trump read only through a news summary"
+      "Pacito v. Trump holdings rest on a news summary; opinion text not readable",
+      "Researcher's shortened uncertainties dropped the EO 14204 caveat; restored in review"
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 177 to 178 call for an indefinite curtailment of USRAP admissions while screening and vetting resources shift to the border, with State's refugee bureau redirecting resources until refugee vetting capacity can be restored; the paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "V1",
+    "reviewed_at": "2026-10-15",
+    "reviewer": "independent",
     "source_checks": [
       {
-        "note": "Jurist, 2026-03-06, on the Ninth Circuit's 2026-03-05 Pacito v. Trump ruling: the President likely has 1182(f) authority to suspend refugee entry; injunctions affirmed in part on reception and placement services under 8 U.S.C. 1522 and on terminated cooperative agreements under the APA; some relief for conditionally approved refugees; further review possible.",
-        "result": "supports",
-        "url": "https://www.jurist.org/news/2026/03/us-appeals-court-rules-trump-may-suspend-refugee-admissions/"
-      },
-      {
-        "note": "PD 2026-24, signed 2026-09-25, 91 FR 63119: FY2027 ceiling up to 17,500, mainly Afrikaners under EO 14204; admissions subject to EOs 14161, 14163, 14204 and Proclamation 10998; nothing on resuming general admissions.",
+        "note": "Read 2026-10-15: PD 2026-24, 91 FR 63119-63120, signed 2026-09-25, published 2026-10-02, up to 17,500, primarily Afrikaners under EO 14204, admissions subject to EO 14163.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/10/02/2026-20318/presidential-determination-on-refugee-admissions-for-fiscal-year-2027"
+      },
+      {
+        "note": "Caption only: Pacito v. Trump, 169 F.4th 895, Nos. 25-1313 and 25-1939, filed 2026-03-05, Bybee for the court, Lee dissenting in part; holdings behind subscription.",
+        "result": "partial",
+        "url": "https://www.leagle.com/decision/infco20260305102"
       }
     ]
   },
@@ -118,6 +134,13 @@
       "publisher": "Federal Register",
       "title": "Presidential Determination on Refugee Admissions for Fiscal Year 2027",
       "url": "https://www.federalregister.gov/documents/2026/10/02/2026-20318/presidential-determination-on-refugee-admissions-for-fiscal-year-2027"
+    },
+    {
+      "date": "2026-03-05",
+      "kind": "court",
+      "publisher": "Leagle",
+      "title": "Pacito v. Trump, 169 F.4th 895 (9th Cir. 2026), caption page",
+      "url": "https://www.leagle.com/decision/infco20260305102"
     }
   ],
   "stage": "implemented",
@@ -168,6 +191,6 @@
   ],
   "title": "Indefinitely curtail refugee admissions under the US Refugee Admissions Program",
   "tracked": true,
-  "uncertainties": "The Ninth Circuit ruling was read through a Jurist summary only; the panel, the exact scope of relief for conditionally approved refugees, and any rehearing or Supreme Court petition were not checked. Actual arrival totals for FY2025 and FY2026 were not retrieved. Executive Order 14204 is cited for its title and for how the presidential determinations describe it; its text was not read.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Checked on 2026-10-15: no rehearing or Supreme Court activity in Pacito v. Trump surfaced, but the full Ninth Circuit opinion text was not readable (Leagle excerpt only), so the holding rests on the Jurist summary. Actual arrival totals were not retrieved. The panel (Judge Bybee writing, Judge Lee dissenting in part, per the Leagle caption) is confirmed, but the exact scope of relief for conditionally approved refugees was not read. Executive Order 14204 is cited for its title and for how the presidential determinations describe it; its text was not read.",
+  "updated_at": "2026-10-15"
 }

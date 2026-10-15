@@ -6,7 +6,7 @@
   "chapter": "16",
   "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "Interior's final NEPA rule was confirmed in the Federal Register and a pending suit against its earlier interim rule was confirmed in a law-firm alert. CEQ's own rescission documents, the suit's status after January 2026 and any congressional NEPA bills were not checked.",
+  "confidence_reason": "Document text verified in an earlier review (pages 522, 524 and 533). Interior's February 2026 final NEPA rule was confirmed in the Federal Register in an earlier review; in this review the 2026-10-09 categorical exclusion notice was read on federalregister.gov. CEQ's own rescission documents and the status of the N.D. Cal. suit after January 2026 were not checked.",
   "durability": {
     "level": "medium",
     "why": "The CEQ rescission and Interior final rule are rules and a handbook that a later administration could replace, though the Supreme Court's 2025 decision limits some challenges to this approach."
@@ -23,10 +23,14 @@
     {
       "date": "2026-10-08",
       "note": "Event dates and citations checked against the primary documents. The CEQ effective-date and finalization events now cite CEQ's own Federal Register documents instead of Interior's 2026-02-24 rule, and I added a 2025-02-25 event for the interim final rule's publication."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Update run, independently reviewed. Stage unchanged. Federal Register lists a further Interior NEPA categorical exclusion notice on 2026-10-09 (doc 2026-20763); no court ruling on the N.D. Cal. challenge found. Review (corrected): The 2026-10-09 categorical exclusion was read on federalregister.gov; the timeline entry now cites the document page instead of an API query and the document was added to sources. A possible date mismatch for the August categorical exclusions was noted. Stage implemented 80; confidence 74 to 74."
     }
   ],
   "id": "c16-06",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-15",
   "layer": 1,
   "match": "parallel",
   "mechanism": "agency_rule",
@@ -39,19 +43,24 @@
   "progress": 80,
   "proposal": "The Mandate recommends reinstating the Trump-era CEQ NEPA regulations and the Interior secretarial orders that set time and page limits on NEPA documents and show their cost on page one. It also recommends asking Congress to reform NEPA, including considering eliminating judicial review of NEPA documents and decisions.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-15",
     "evidence": [
       {
         "date": "2026-01-14",
-        "kind": "news",
-        "note": "Reports that the Center for Biological Diversity and Sierra Club sued in the Northern District of California in December 2025, arguing Interior skipped notice-and-comment steps and removed public participation in rescinding its NEPA regulations, and seeking vacatur of the July 2025 interim final rule; no ruling or injunction is reported.",
-        "source": "Paul Hastings",
+        "note": "Still the latest item on the N.D. Cal. suit; no ruling surfaced.",
+        "source": "Paul Hastings (search result)",
         "url": "https://www.paulhastings.com/insights/phast-track-legal-insights-on-environment-energy-and-infrastructure/environmental-groups-challenge-interior-departments-new-nepa-procedures"
+      },
+      {
+        "date": "2026-10-15",
+        "note": "Opened: shows further Interior NEPA categorical exclusion notices, including doc 2026-20763 (NPR-A wintertime exploration, 2026-10-09); no rescission or revision of the February 2026 final rule.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22National+Environmental+Policy+Act%22+Interior&conditions[agencies][]=interior-department&conditions[publication_date][gte]=2026-08-01&per_page=20"
       }
     ],
-    "note": "The rules are in effect, but the record now lists a pending Northern District of California suit seeking vacatur of Interior's interim rule; no ruling found.",
-    "verdict": "weakened",
-    "what_was_tested": "Whether Interior's or CEQ's NEPA rescissions face a pending court challenge, by searching for lawsuits against the rescission rules."
+    "note": "Interior NEPA final rule stands; no ruling or vacatur found; Interior continues adding categorical exclusions.",
+    "verdict": "holds",
+    "what_was_tested": "Searched for a court ruling in the N.D. Cal. challenge to Interior's NEPA rule and for Interior final procedures or notices after 2026-08-24; queried the Federal Register for Interior NEPA documents since 2026-08-01."
   },
   "related_ids": [
     "c10-05"
@@ -64,26 +73,25 @@
   "research_agent": "A07",
   "review": {
     "flags": [
-      "red-team 'weakened' verdict justified; suit targets the superseded interim rule",
-      "reviewer recollection, not fetched: the House passed a permitting bill in December 2025 (the SPEED Act, H.R. 4776) that would limit NEPA judicial review; its status bears on the 'Congressional NEPA reform' remaining item and should be checked",
-      "CEQ rescission dates rely on Interior's rule",
-      "BLM categorical exclusions overlap with c10-05"
+      "Timeline event re-pointed from an API query URL to the Federal Register document page",
+      "Two BLM timber categorical exclusions appear in the Federal Register on 2026-08-24; summary says finalized 2026-08-20 (possibly signing date); not resolved",
+      "SPEED Act (H.R. 4776) status still unchecked for the congressional NEPA reform item (carried over)"
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 522 lists NEPA-related secretarial orders (SO 3355, SO 3380), page 524 calls for reinstating the Trump CEQ NEPA rules, and page 533 calls for restoring time and page limits and page-one cost disclosure for NEPA documents and asking Congress to reform NEPA, including possibly eliminating judicial review; the paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "V2",
+    "reviewed_at": "2026-10-15",
+    "reviewer": "independent",
     "source_checks": [
       {
-        "note": "Interior final rule 2026-03708 (91 FR 8738), published and effective 2026-02-24, adopts the July 2025 interim final rule with minor changes and keeps most NEPA procedures in a Departmental Handbook.",
+        "note": "Notice, 91 FR 64673, published and effective 2026-10-09: adds a wintertime oil and gas exploration categorical exclusion for BLM in NPR-A to the DOI NEPA Handbook.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-14548,2026-14549,2026-03708.json"
+        "url": "https://www.federalregister.gov/documents/2026/10/09/2026-20763/national-environmental-policy-act-implementing-procedures-wintertime-oil-and-gas-exploration-in-the"
       },
       {
-        "note": "Dated 2026-01-14: CBD and Sierra Club sued in N.D. Cal. in December 2025 seeking nationwide vacatur of Interior's July 2025 interim final rule over notice-and-comment and public participation; no ruling; no challenge to CEQ's rescission mentioned.",
+        "note": "Federal Register API listing of Interior NEPA documents since 2026-08-01: shows 2026-20763 and the two timber categorical exclusion notices dated 2026-08-24; no revision of the February 2026 final rule.",
         "result": "supports",
-        "url": "https://www.paulhastings.com/insights/phast-track-legal-insights-on-environment-energy-and-infrastructure/environmental-groups-challenge-interior-departments-new-nepa-procedures"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22National+Environmental+Policy+Act%22+Interior&conditions[agencies][]=interior-department&conditions[publication_date][gte]=2026-08-01&per_page=20"
       }
     ]
   },
@@ -149,6 +157,13 @@
       "publisher": "Council on Environmental Quality (Federal Register)",
       "title": "Removal of National Environmental Policy Act Implementing Regulations (final rule)",
       "url": "https://www.federalregister.gov/documents/2026/01/08/2026-00178/removal-of-national-environmental-policy-act-implementing-regulations"
+    },
+    {
+      "date": "2026-10-09",
+      "kind": "primary",
+      "publisher": "Federal Register (Interior)",
+      "title": "National Environmental Policy Act Implementing Procedures: Wintertime Oil and Gas Exploration in the National Petroleum Reserve in Alaska Categorical Exclusion",
+      "url": "https://www.federalregister.gov/documents/2026/10/09/2026-20763/national-environmental-policy-act-implementing-procedures-wintertime-oil-and-gas-exploration-in-the"
     }
   ],
   "stage": "implemented",
@@ -202,10 +217,17 @@
       "kind": "primary",
       "source": "Federal Register (DOI)",
       "url": "https://www.federalregister.gov/documents/2026/08/24/2026-17251/national-environmental-policy-act-implementing-procedures-timber-salvage-harvest-categorical"
+    },
+    {
+      "date": "2026-10-09",
+      "event": "Interior establishes, effective on publication, a categorical exclusion in its NEPA Handbook for BLM wintertime oil and gas exploration in the National Petroleum Reserve in Alaska (91 FR 64673).",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/10/09/2026-20763/national-environmental-policy-act-implementing-procedures-wintertime-oil-and-gas-exploration-in-the"
     }
   ],
   "title": "Streamline NEPA review and restore Trump-era NEPA reforms at Interior and CEQ",
   "tracked": true,
-  "uncertainties": "The CEQ rescission dates rely on Interior's rule, not CEQ's own documents. The outcome or current status of the Northern District of California case after January 2026 was not found, and challenges to the CEQ rescission itself were not searched. The Supreme Court's Seven County Infrastructure Coalition decision date was not checked. The secretarial orders the Mandate listed were not individually checked.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The CEQ rescission dates rely on Interior's rule, not CEQ's own documents. The outcome or current status of the Northern District of California case after January 2026 was not found, and challenges to the CEQ rescission itself were not searched. The Supreme Court's Seven County Infrastructure Coalition decision date was not checked. The secretarial orders the Mandate listed were not individually checked. Update 2026-10-15: no ruling in the N.D. Cal. case was found in one search; the 2026-10-09 categorical exclusion notice was read in review on federalregister.gov. The Federal Register lists the two BLM timber categorical exclusion notices as published 2026-08-24; the record's 2026-08-20 date for them was not re-checked against the documents.",
+  "updated_at": "2026-10-15"
 }

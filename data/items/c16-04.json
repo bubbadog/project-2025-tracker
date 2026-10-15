@@ -24,10 +24,14 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Refutation check (update run): No new monument proclamation since 2026-07-13 and no Cascade-Siskiyou action in the Federal Register API; no ruling on the reopened suits found. Unchanged. Stage unchanged at implemented 65; no review needed because only uncertainties and red-team findings changed."
     }
   ],
   "id": "c16-04",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-15",
   "layer": 1,
   "match": "partial",
   "mechanism": "executive_order",
@@ -39,33 +43,36 @@
   "progress": 65,
   "proposal": "The Mandate recommends a fresh review of national monument designations, including Biden-era ones, with downward adjustments (it names the Maine and Oregon monuments as candidates), a vigorous defense of reductions so the Supreme Court can rule on presidential authority to shrink monuments, and congressional repeal of the Antiquities Act.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-15",
     "evidence": [
       {
+        "date": "2026-07-17",
+        "note": "Proclamation 11043 remains the operative Bears Ears action; no later proclamation found in the API.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14548/modifying-the-bears-ears-national-monument"
+      },
+      {
+        "date": "2026-07-17",
+        "note": "Proclamation 11044; the API listing of monument-related proclamations since 2025-01-20 shows no Cascade-Siskiyou or other land monument reduction.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14549/modifying-the-grand-staircase-escalante-national-monument"
+      },
+      {
         "date": "2026-09-02",
-        "kind": "news",
-        "note": "Conservation groups represented by Earthjustice, NRDC and SUWA, with Patagonia and a nonprofit led by Ute Mountain Ute members, moved to reopen their stalled 2017 monument case to challenge the 2026 proclamations under the Antiquities Act; no injunction or hearing date is mentioned.",
+        "note": "Opened; describes a motion to reopen the 2017 lawsuit, not a new filing; court and defendants not named; no ruling.",
         "source": "KUER",
         "url": "https://www.kuer.org/politics-government/2026-09-02/conservationists-sue-to-undo-trumps-bears-ears-and-grand-staircase-downsizing"
       },
       {
-        "date": "2026-09-03",
-        "kind": "news",
-        "note": "Reports filings in U.S. district court in Washington seeking to reactivate the 2017 cases and challenge both the 2017 and 2026 proclamations; no TRO or injunction is mentioned as sought or granted.",
-        "source": "KPCW",
-        "url": "https://www.kpcw.org/state-regional/2026-09-03/patagonia-environmental-groups-sue-trump-for-slashing-utah-monuments"
-      },
-      {
-        "date": "2026-09-02",
-        "kind": "news",
-        "note": "A coalition of 18 Native, conservation and scientific groups (the Native American Rights Fund represents the Hopi, Zuni and Ute Mountain Ute tribes) moved to revive earlier suits in a consolidated case; no ruling reported and the cases are expected to remain in procedural stages through at least early 2027.",
-        "source": "Backpacker",
-        "url": "https://www.backpacker.com/news-and-events/news/a-massive-coalition-just-sued-to-save-bears-ears-and-grand-staircase-and-the-outcome-could-decide-the-future-of-u-s-public-lands/?scope=anon"
+        "date": "2019-10-01",
+        "note": "Opened; a 2019 ruling in the first-term cases, not the 2026 proclamations; excluded as outdated.",
+        "source": "KATU (AP)",
+        "url": "https://katu.com/news/nation-world/trump-administration-loses-bid-to-dismiss-bears-ears-grand-staircase-escalante-lawsuits"
       }
     ],
-    "note": "Still in effect (lands opened around 2026-09-11), but the record now notes the revived federal lawsuits challenging the reductions, with no injunction found.",
-    "verdict": "weakened",
-    "what_was_tested": "Whether the July 2026 monument reductions were enjoined or challenged, by searching for lawsuits and restraining orders over the Bears Ears and Grand Staircase-Escalante proclamations."
+    "note": "No injunction or ruling on the 2026 reductions found, and no Cascade-Siskiyou proclamation exists in the Federal Register API results. Search results on Cascade-Siskiyou were from 2017 to 2018 (Merkley, OPB, KATU). The fishing proclamations (2025-04-22, 2026-02-11, 2026-06-17) remain unreviewed.",
+    "verdict": "holds",
+    "what_was_tested": "Federal Register API search for proclamations mentioning monuments since 2025-01-20 (any reduction beyond Bears Ears and Grand Staircase-Escalante, including Cascade-Siskiyou); a news search on Cascade-Siskiyou; a search and page read for any court ruling or injunction against the 2026 reductions."
   },
   "related_ids": [
     "c16-16"
@@ -165,6 +172,6 @@
   ],
   "title": "Reduce national monuments, defend the reductions in court, and seek Antiquities Act repeal",
   "tracked": true,
-  "uncertainties": "The case names, docket numbers and whether a preliminary injunction has been requested were not confirmed; the court is identified only as federal district court in Washington by KPCW. Two further monument-related fishing proclamations (published 2025-04-22, 2026-02-11 and 2026-06-17) were not reviewed. The absence of Maine or Oregon actions rests on a Federal Register proclamation search, not on Interior announcements.",
+  "uncertainties": "Checked on 2026-10-15: no ruling on the reopened monument suits was found; the case name, docket number and court remain unconfirmed (KUER does not name the court). The Federal Register term search for 'monument' returned only 10 proclamations; Cascade-Siskiyou was also searched in news with only 2017 to 2018 results. The three fishing proclamations (2025-04-22, 2026-02-11, 2026-06-17) were not reviewed in full.",
   "updated_at": "2026-10-08"
 }

@@ -7,7 +7,7 @@
   "chapter": "01",
   "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked (pages 29 and 30). The pool-control finding that decides the stage rests on the government's own 2025-03-11 court filing, read in an earlier review and not re-opened in this run (courtlistener.com is blocked to these tools). The 2026-10-13 preliminary injunction was read in two reputable secondary reports (Forbes and a Wall Street Journal republication), with no order text found. Rule applied: blocked applies only when a court stops the action that earns the stage; this injunction stops the exclusion of three outlets, which is outside the recommendation, and leaves pool control operative, so implemented 65 holds.",
+  "confidence_reason": "Document text checked (pages 29 and 30). The pool-control finding that decides the stage rests on the government's own 2025-03-11 court filing, read in an earlier review and not re-opened. The 2026-10-13 preliminary injunction is supported by reputable secondary reports (Forbes, a Wall Street Journal republication, and ABC News read on 2026-10-15), with no order text found. A reported 2026-10-14 appeal rests on an aggregator only and is held in uncertainties. The injunction concerns the three outlets' access, not pool control, so implemented 65 holds.",
   "court_status": {
     "basis": "Latest court event: on 2026-10-13 Judge Timothy Kelly (D.D.C., Cable News Network, Inc. v. Trump) granted a preliminary injunction barring the administration from enforcing its ban on CNN, MS NOW and Politico while the case proceeds (Forbes; Wall Street Journal via To Vima; ABC7 New York). The case continues and no stay or appeal was reported as of 2026-10-14. The injunction runs against the exclusion of those outlets, not against White House control of pool membership. The AP appeal (D.C. Cir. No. 25-5109), argued 2025-11-24, has no merits decision found.",
     "date": "2026-10-13",
@@ -50,10 +50,14 @@
     {
       "date": "2026-10-14",
       "note": "Recheck of the expected hard-pass ruling, independently reviewed. The review replaced a headline-only news event with the court action: on 2026-10-13 Judge Kelly granted a preliminary injunction barring enforcement of the three-outlet ban while the case proceeds (Forbes, Wall Street Journal via To Vima), corrected the restraining order date to 2026-09-23, dropped unreadable CNBC and NPR citations and set court status to pending. No D.C. Circuit merits decision in the AP appeal and no new White House press policy found. Stage unchanged at implemented 65; confidence 72 to 74."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Update run: the news sweep found a report of a Justice Department appeal of the 2026-10-13 preliminary injunction (filed 2026-10-14) on an aggregator only; independent review could not confirm it from a readable source, so it is recorded in uncertainties and the status summary and court status stand. ABC News added as a source for the injunction. Stage unchanged at implemented 65; confidence 74."
     }
   ],
   "id": "c01-01",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-15",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_action",
@@ -100,50 +104,26 @@
   "research_agent": "A01",
   "review": {
     "flags": [
-      "Order text of the 2026-10-13 injunction not read; scope beyond the three outlets' passes unverified",
-      "Government stay motion or appeal of the injunction not yet reported; recheck",
-      "Status summary is long (over four sentences)"
+      "DOJ appeal of the 2026-10-13 injunction reported only by an aggregator (briefs.co citing CNBC); moved to uncertainties per review brief; recheck for a readable confirmation (Forbes, WSJ reprint, The Hill, Reuters)",
+      "Status summary remains longer than four sentences (carried over)",
+      "Order text of the 2026-10-13 injunction not read",
+      "One WebSearch on 2026-10-15 for the DOJ appeal returned only reprints of the September restoration order"
     ],
     "mandate_check": "ok",
     "mandate_note": "Page 29 says no legal entitlement exists to permanent media space on the campus and urges reexamining the balance between media demands and space; page 30 urges examining the relationship with the White House Correspondents Association and weighing an alternative coordinating body. Paraphrase and partial match fit.",
-    "model": "claude-opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "independent review",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-15",
+    "reviewer": "independent",
     "source_checks": [
       {
-        "note": "Read 2026-10-14: preliminary injunction granted Tuesday night 2026-10-13 by Judge Kelly, replacing the restraining order, barring reinstatement of the ban while the suit proceeds; due-process and First Amendment grounds; no stay or appeal mentioned.",
+        "note": "Read 2026-10-15: Judge Kelly granted a preliminary injunction late Tuesday 2026-10-13 preserving the status quo; no appeal or stay motion mentioned.",
         "result": "supports",
-        "url": "https://www.forbes.com/sites/siladityaray/2026/10/13/judge-extends-block-on-trumps-white-house-ban-of-cnn-ms-now-and-politico/"
+        "url": "https://abcnews.com/Politics/federal-judge-grants-preliminary-injunction-continuing-block-trumps/story?id=137247889"
       },
       {
-        "note": "Republication of a Wall Street Journal article (Wheeler, Bruell) dated 2026-10-14; confirms the 2026-10-13 preliminary injunction, grounds, and no stay or appeal reported.",
-        "result": "supports",
-        "url": "https://www.tovima.com/wsj/trump-cant-reinstate-white-house-ban-on-cnn-politico-and-ms-now-judge-rules/"
-      },
-      {
-        "note": "Confirms a preliminary injunction late Tuesday preserving the status quo while the case proceeds; no stay or appeal mentioned.",
-        "result": "supports",
-        "url": "https://abc7ny.com/story/white-house-media-ban-judge-extends-order-blocking-trump-banning-cnn-ms-now-politico-reporters/19937416/"
-      },
-      {
-        "note": "Sinclair report of 2026-09-24: 14-day order issued late Wednesday 2026-09-23, briefing schedule, outlets turned away then readmitted by about midday 2026-09-24 after a court filing that badges were restored.",
-        "result": "supports",
-        "url": "https://abcnews4.com/news/nation-world/federal-judge-timothy-kelly-orders-white-house-president-donald-trump-administration-to-restore-media-access-to-cnn-ms-now-and-politico-fake-news-national-security-first-amendment-justice-department"
-      },
-      {
-        "note": "Extension on Thursday 2026-10-08 through 2026-10-13; DOJ asked that any injunction be limited to the passes and stayed pending appeal.",
-        "result": "supports",
-        "url": "https://www.jurist.org/news/2026/10/us-federal-judge-briefly-extends-cnn-ms-now-and-politicos-white-house-access/"
-      },
-      {
-        "note": "Fetch refused by the site (robots); citation removed.",
-        "result": "unreachable",
-        "url": "https://npr.org/2026/10/14/nx-s1-6001398/white-house-media-ban"
-      },
-      {
-        "note": "Statement of 2025-07-22 on the en banc denial of the stay; used only to show no later AP merits decision surfaced in a 2026-10-14 search.",
+        "note": "Aggregator page dated 2026-10-14 reports a DOJ appeal to the D.C. Circuit, names no source beyond a link to an unreadable CNBC article; not a reputable readable source, entries dropped.",
         "result": "partial",
-        "url": "https://knightcolumbia.org/content/court-decision-to-uphold-ap-ban-from-white-house-press-pool-undermines-press-freedom-knight-institute-says"
+        "url": "https://www.briefs.co/news/justice-department-appeals-ruling-that-keeps-ms-now-cnn-and/"
       }
     ]
   },
@@ -285,6 +265,13 @@
       "publisher": "ABC News 4 (Sinclair)",
       "title": "CNN, MS NOW, Politico seek emergency hearing after White House defies judge's order",
       "url": "https://abcnews4.com/news/nation-world/federal-judge-timothy-kelly-orders-white-house-president-donald-trump-administration-to-restore-media-access-to-cnn-ms-now-and-politico-fake-news-national-security-first-amendment-justice-department"
+    },
+    {
+      "date": "2026-10-14",
+      "kind": "news",
+      "publisher": "ABC News",
+      "title": "Federal judge grants preliminary injunction continuing block of Trump's White House ban on CNN, MS NOW and Politico",
+      "url": "https://abcnews.com/Politics/federal-judge-grants-preliminary-injunction-continuing-block-trumps/story?id=137247889"
     }
   ],
   "stage": "implemented",
@@ -384,6 +371,6 @@
   ],
   "title": "Reexamine press access and the White House Correspondents' Association role",
   "tracked": true,
-  "uncertainties": "No White House policy document announcing the February 2025 pool change was found; the change is documented by the government's own court filings of 2025-02-28 and 2025-03-11, and by NPR. The April 2025 wire-slot change rests on Reuters and AP reports that do not name a specific announcer. The D.C. Circuit's 2025-06-06 stay order and 2025-07-22 en banc denial were identified through RECAP-hosted copies and the 2025-06-12 court order, but their text was not read; the 2-1 vote and the East Room carve-out rest on CBS News and the litigation clearinghouse summary. courtlistener.com docket pages are blocked to automated fetches, so appeal status rests on a Wikipedia case page and the Civil Rights Litigation Clearinghouse page (last updated 2026-07-22), neither listing a merits decision, plus searches on 2026-10-13 that found none; a decision could still be missed. The 2026-09-23 order in the three-outlet case, its 2026-10-08 extension and the 2026-10-13 preliminary injunction rest on news reports only (no order text found); the exact scope of the injunction (passes only, or broader access) and whether the government has sought a stay or appealed were not reported in the articles read. CNBC and NPR reports dated 2026-10-14 could not be opened and are not cited. A May 2026 aggregator report of further pool tightening rests on anonymous sourcing and was not used. The September 2026 credential dispute goes beyond the Mandate's recommendations (permanent space and the WHCA relationship); it is included as context on White House control of press access. A separate dispute over pool access to presidential travel is mentioned in one report and was not examined. The 14-day order is dated 2026-09-23 (late Wednesday) by the Sinclair report; an earlier version of this record gave 2026-09-24, the day access was restored. No D.C. Circuit merits decision in No. 25-5109 appeared in searches on 2026-10-14 (latest result found, a Knight Institute statement, concerns the 2025-07-22 en banc denial). No new White House press policy since 2026-10-08 was found; a report of a Justice Department antitrust inquiry into a television pool boycott appeared on an undated page and was not used. A Justice Department request to overturn a 1977 D.C. Circuit due-process precedent was mentioned in a September report and not examined.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "No White House policy document announcing the February 2025 pool change was found; the change is documented by the government's own court filings of 2025-02-28 and 2025-03-11, and by NPR. The April 2025 wire-slot change rests on Reuters and AP reports that do not name a specific announcer. The D.C. Circuit's 2025-06-06 stay order and 2025-07-22 en banc denial were identified through RECAP-hosted copies and the 2025-06-12 court order, but their text was not read; the 2-1 vote and the East Room carve-out rest on CBS News and the litigation clearinghouse summary. courtlistener.com docket pages are blocked to automated fetches, so appeal status rests on a Wikipedia case page and the Civil Rights Litigation Clearinghouse page (last updated 2026-07-22), neither listing a merits decision, plus searches on 2026-10-13 that found none; a decision could still be missed. The 2026-09-23 order in the three-outlet case, its 2026-10-08 extension and the 2026-10-13 preliminary injunction rest on news reports only (no order text found); the exact scope of the injunction (passes only, or broader access) and whether the government has sought a stay or appealed were not reported in the articles read. CNBC and NPR reports dated 2026-10-14 could not be opened and are not cited. A May 2026 aggregator report of further pool tightening rests on anonymous sourcing and was not used. The September 2026 credential dispute goes beyond the Mandate's recommendations (permanent space and the WHCA relationship); it is included as context on White House control of press access. A separate dispute over pool access to presidential travel is mentioned in one report and was not examined. The 14-day order is dated 2026-09-23 (late Wednesday) by the Sinclair report; an earlier version of this record gave 2026-09-24, the day access was restored. No D.C. Circuit merits decision in No. 25-5109 appeared in searches on 2026-10-14 (latest result found, a Knight Institute statement, concerns the 2025-07-22 en banc denial). No new White House press policy since 2026-10-08 was found; a report of a Justice Department antitrust inquiry into a television pool boycott appeared on an undated page and was not used. A Justice Department request to overturn a 1977 D.C. Circuit due-process precedent was mentioned in a September report and not examined. An aggregator site (briefs.co) reported on 2026-10-14 that the Justice Department appealed the 2026-10-13 preliminary injunction to the D.C. Circuit, linking to a CNBC report that could not be opened; the ABC News report of 2026-10-14 and a news search on 2026-10-15 did not confirm an appeal, so it is not treated as an event until a readable major news or court source confirms it.",
+  "updated_at": "2026-10-15"
 }
