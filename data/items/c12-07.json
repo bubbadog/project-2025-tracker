@@ -6,11 +6,11 @@
     "The Federal Power Act leaves resource planning to states and grid operators, which the court emphasized."
   ],
   "chapter": "12",
-  "confidence": 72,
+  "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; EO 14262, the DOE report and the FERC order are primary and read, but the D.C. Circuit opinion was read through a fetch summary of a hosted copy and DOE order counts come from a trade publication.",
+  "confidence_reason": "Executive Order 14262, the D.C. Circuit opinion (court copy hosted by the Sierra Club), the FERC order of 2026-09-29 and the DOE report were read; the FERC order and DOE report were read in part, DOE's response to the ruling was not found, and order counts rest on a trade publication, so confidence stays medium.",
   "court_status": {
-    "basis": "derived from the latest court event in the timeline",
+    "basis": "Michigan v. U.S. Department of Energy, No. 25-1159 (D.C. Cir. 2026-09-11) vacated without remand DOE Order 202-25-3 for the J.H. Campbell plant, which had already expired; petitions against the four extension orders are held in abeyance and challenges to orders for other plants are pending. FERC's 2026-09-29 order is an agency action, not a court event.",
     "date": "2026-09-11",
     "state": "vacated",
     "url": "https://www.sierraclub.org/sites/default/files/2026-09/campbell-order.pdf"
@@ -43,10 +43,18 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c12-22, c12-23, c12-28, c12-31 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Primary-source lift on 2026-10-17 re-read Executive Order 14262 on whitehouse.gov, the D.C. Circuit Campbell opinion, the FERC order of 2026-09-29 and the DOE Resource Adequacy Report, added the dated Campbell order, rehearing and four extension orders, and left stage, progress and court status unchanged."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review after the primary-source lift: Executive Order 14262 on whitehouse.gov, the D.C. Circuit Campbell opinion on a hosted copy, the FERC order of 2026-09-29 on pjm.com and the DOE Resource Adequacy Report on energy.gov were read; the six DOE Campbell orders were confirmed and three non-action events removed; in_progress 35 kept; confidence 72 to 76."
     }
   ],
   "id": "c12-07",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-16",
   "layer": 2,
   "match": "partial",
   "mechanism": "mixed",
@@ -76,18 +84,36 @@
   "research_agent": "D4",
   "review": {
     "flags": [
-      "Corrected the event: the section 206 docket is a proceeding to possibly modify the proposal, not an inquiry into an existing backstop tariff; added that eligibility is resource-neutral. court_status unchanged (vacated 2026-09-11)."
+      "The six added DOE Campbell order dates are dated government actions confirmed in the court opinion and kept, now with order numbers and kind court; their total was corrected to 450 days of compelled operation.",
+      "Removed three non-action events (POWER count, FERC notice of PJM filings, law-firm and wire coverage).",
+      "in_progress 35 and court_status vacated (2026-09-11) kept.",
+      "Confidence raised from 72 to 76: the opinion and EO were read in full, but the FERC order and DOE report only in part."
     ],
     "mandate_check": "verified",
     "mandate_note": "pp.373-374 and 401-402 call for dispatchable capacity, revised reserve margins and FERC-directed reliability pricing or backup procurement; the PJM procurement is a regional, resource-neutral parallel.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-2",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16L-1",
     "source_checks": [
       {
-        "note": "Fetched: the FERC order itself (caption, commissioners, Commission voice), 196 FERC 61,245, issued 2026-09-29, ER26-3380 and EL26-108; acceptance, five-month suspension to 2027-02-28, paper hearing, eligibility not limited to dispatchable resources.",
+        "note": "Signed 2025-04-08; section 3: speed 202(c) orders, uniform reserve margin method within 30 days and published within 90, protocol to keep critical resources and block exit of units over 50 MW.",
         "result": "supports",
+        "url": "https://www.whitehouse.gov/presidential-actions/2025/04/strengthening-the-reliability-and-security-of-the-united-states-electric-grid/"
+      },
+      {
+        "note": "Decided 2026-09-11, argued 2026-05-15, Srinivasan, Pillard (author), Wilkins; vacated without remand. Dated DOE actions confirmed: 202-25-3 (2025-05-23), 202-25-7 (2025-08-20), 202-25-3B rehearing (2025-09-08), 202-25-9 (2025-11-18), 202-26-16 (2026-02-17), 202-26-22 (2026-05-18); 450 days of compelled operation in total; extension petitions in abeyance.",
+        "result": "supports",
+        "url": "https://www.sierraclub.org/sites/default/files/2026-09/campbell-order.pdf"
+      },
+      {
+        "note": "196 FERC 61,245 of 2026-09-29, ER26-3380 and EL26-108: accepted, suspended to 2027-02-28 subject to refund, paper hearing on cost allocation, TO exit and collateral; 555 dollars per MW-day weighted cap; in service by 2032-06-01; up to 15 years; declined extra valuation of dispatchable attributes. No backup requirement in the portion read.",
+        "result": "partial",
         "url": "https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf"
+      },
+      {
+        "note": "July 2025; 8.1 to 817.7 loss-of-load hours in the 2030 closures case; 104 GW retirements; no formal recommendations section, so the record's recommends wording was changed to the report's conclusions.",
+        "result": "partial",
+        "url": "https://www.energy.gov/sites/default/files/2025-07/DOE%20Final%20EO%20Report%20%28FINAL%20JULY%207%29.pdf"
       }
     ]
   },
@@ -98,6 +124,24 @@
     "M": 2,
     "R": 2,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 2,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 2,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Reliability rules favoring dispatchable generation would change electricity market design and costs for many ratepayers.",
     "version": "2026-10-08",
@@ -166,10 +210,17 @@
       "publisher": "FERC (copy hosted by PJM)",
       "title": "FERC order accepting PJM Reliability Backstop Procurement and establishing further procedures (ER26-3380, EL26-108)",
       "url": "https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf"
+    },
+    {
+      "date": "2025-04-14",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Strengthening the Reliability and Security of the United States Electric Grid (Executive Order 14262, Federal Register document 2025-06381)",
+      "url": "https://www.federalregister.gov/documents/2025/04/14/2025-06381/strengthening-the-reliability-and-security-of-the-united-states-electric-grid"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "As of 2026-10-13 DOE has acted on the reliability goals mainly through executive tools, and its main emergency-order tool lost a court test on 2026-09-11. Executive Order 14262 (signed 2025-04-08, published 2025-04-14) directed DOE to build a uniform reserve margin method, to use section 202(c) and other tools to keep generation critical to reliability available, and allowed it to block retirements of resources above 50 MW. DOE published its Resource Adequacy Report on 2025-07-07; DOE's modeling projects expected loss-of-load hours rising from about 8 to about 818 a year by 2030 if announced retirements proceed, and it recommends slowing retirements and adding firm dispatchable generation. POWER counted 43 section 202(c) orders and extensions since May 2025 as of 2026-04-02, holding about 4.4 GW of capacity open, mostly coal plus two oil and gas units at Eddystone; FERC accepted cost-recovery and cost-allocation filings tied to the Campbell and Eddystone orders in 2025. On 2026-09-11 a D.C. Circuit panel (opinion by Judge Pillard) in Michigan v. U.S. Department of Energy, No. 25-1159, vacated without remand DOE Order 202-25-3 of 2025-05-23 for the J.H. Campbell coal plant, holding that DOE exceeded its authority under section 202(c) by treating possible summer 2025 shortfalls as an emergency; the order had already expired, and petitions challenging extension orders are held in abeyance while challenges to orders for other plants are pending. On the FERC side, no rule requiring reliability pricing or backup procurement for the whole country was found, but on 2026-09-29 FERC accepted, subject to refund and a paper hearing, PJM's one-time Reliability Backstop Procurement of new capacity (effective 2027-02-28) and opened a section 206 proceeding under which it may later modify parts of the proposal; the procurement is open to storage, demand resources and other non-dispatchable resources, and FERC declined a request to give dispatchable generation further weight, so it is a partial parallel to the Mandate's pricing recommendation.",
+  "status_summary": "As of 2026-10-13 DOE has acted on the reliability goals mainly through executive tools, and its main emergency-order tool lost a court test on 2026-09-11. Executive Order 14262 (signed 2025-04-08, published 2025-04-14) directed DOE to build a uniform reserve margin method, to use section 202(c) and other tools to keep generation critical to reliability available, and allowed it to block retirements of resources above 50 MW. DOE published its Resource Adequacy Report on 2025-07-07; DOE's modeling projects expected loss-of-load hours rising from about 8 to about 818 a year by 2030 if announced retirements proceed, and it concludes that the current retirement trend is not sustainable, noting that only 22 GW of the projected 209 GW of new capacity would be firm baseload. POWER counted 43 section 202(c) orders and extensions since May 2025 as of 2026-04-02, holding about 4.4 GW of capacity open, mostly coal plus two oil and gas units at Eddystone; FERC accepted cost-recovery and cost-allocation filings tied to the Campbell and Eddystone orders in 2025. On 2026-09-11 a D.C. Circuit panel (opinion by Judge Pillard) in Michigan v. U.S. Department of Energy, No. 25-1159, vacated without remand DOE Order 202-25-3 of 2025-05-23 for the J.H. Campbell coal plant, holding that DOE exceeded its authority under section 202(c) by treating possible summer 2025 shortfalls as an emergency; the order had already expired, and petitions challenging extension orders are held in abeyance while challenges to orders for other plants are pending. On the FERC side, no rule requiring reliability pricing or backup procurement for the whole country was found, but on 2026-09-29 FERC accepted, subject to refund and a paper hearing, PJM's one-time Reliability Backstop Procurement of new capacity (effective 2027-02-28) and opened a section 206 proceeding under which it may later modify parts of the proposal; the procurement is open to storage, demand resources and other non-dispatchable resources, and FERC declined a request to give dispatchable generation further weight, so it is a partial parallel to the Mandate's pricing recommendation.",
   "timeline": [
     {
       "date": "2025-04-08",
@@ -179,39 +230,60 @@
       "url": "https://www.whitehouse.gov/presidential-actions/2025/04/strengthening-the-reliability-and-security-of-the-united-states-electric-grid/"
     },
     {
+      "date": "2025-05-23",
+      "event": "DOE issues Order No. 202-25-3 under Federal Power Act section 202(c), declaring an emergency and directing that the J.H. Campbell coal plant in Michigan keep running for at least 90 days, just before its scheduled retirement (as recounted in the D.C. Circuit opinion of 2026-09-11).",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the D.C. Circuit (opinion copy hosted by Sierra Club)",
+      "url": "https://www.sierraclub.org/sites/default/files/2026-09/campbell-order.pdf"
+    },
+    {
       "date": "2025-07-07",
-      "event": "DOE issues its Resource Adequacy Report under the order: it models about 818 loss-of-load hours per year by 2030 if announced retirements occur (about 8 today), assumes 104 GW of retirements, and recommends slowing retirements, adding firm dispatchable generation, updating adequacy metrics, and crediting generators by past performance.",
+      "event": "DOE issues its Resource Adequacy Report under the order: it models about 818 loss-of-load hours per year by 2030 if announced retirements occur (about 8 today), assumes 104 GW of retirements of which about 71 GW coal, finds that only 22 GW of the projected 209 GW of new capacity would be firm baseload, and calls for reform of the current retirement trend, updated adequacy metrics, integrated regional modeling and better data sharing.",
       "kind": "primary",
       "source": "U.S. Department of Energy",
       "url": "https://www.energy.gov/sites/default/files/2025-07/DOE%20Final%20EO%20Report%20%28FINAL%20JULY%207%29.pdf"
     },
     {
-      "date": "2026-04-02",
-      "event": "POWER Magazine counts 43 DOE section 202(c) orders and extensions since May 2025, listing active orders that hold about 4.4 GW of coal capacity open (Campbell, Eddystone, Centralia, Schahfer, Craig and others) and pending challenges in the D.C. Circuit and the Ninth Circuit.",
-      "kind": "news",
-      "source": "POWER Magazine",
-      "url": "https://www.powermag.com/?p=253152"
-    },
-    {
-      "date": "2026-08-19",
-      "event": "FERC's combined notice of filings lists a PJM proposal for an interim resource adequacy service and a large load registry; an earlier notice (2026-08-06) lists a PJM proposal for reliability backstop procurement. These are PJM filings under review, not FERC orders.",
-      "kind": "primary",
-      "source": "Federal Register",
-      "url": "https://www.federalregister.gov/documents/2026/08/19/2026-16927/combined-notice-of-filings-1"
-    },
-    {
-      "date": "2026-09-11",
-      "event": "A D.C. Circuit panel (Chief Judge Srinivasan and Judges Pillard and Wilkins; argued 2026-05-15) in Michigan v. U.S. Department of Energy, No. 25-1159 (consolidated with Nos. 25-1160 and 25-1162), grants the petitions and vacates, without remand, DOE Order 202-25-3 of 2025-05-23 keeping the J.H. Campbell coal plant open. The court holds DOE exceeded its authority under Federal Power Act section 202(c), reads an emergency as an acute shortage not being timely addressed by states, utilities or grid operators, finds DOE's reliance on possible summer 2025 shortfalls and a five-year reliability risk insufficient, and notes the order had expired and that petitions against its four extensions (450 days in total) are held in abeyance.",
+      "date": "2025-08-20",
+      "event": "DOE issues Order No. 202-25-7, the first 90-day extension of the Campbell order (as recounted in the D.C. Circuit opinion of 2026-09-11).",
       "kind": "court",
-      "source": "U.S. Court of Appeals for the D.C. Circuit (opinion PDF as hosted by the Sierra Club)",
+      "source": "U.S. Court of Appeals for the D.C. Circuit (opinion copy hosted by Sierra Club)",
+      "url": "https://www.sierraclub.org/sites/default/files/2026-09/campbell-order.pdf"
+    },
+    {
+      "date": "2025-09-08",
+      "event": "DOE issues rehearing Order No. 202-25-3B, modifying the Campbell order in some respects, otherwise sustaining it and adding a rationale based on reliability risks within five years (as recounted in the D.C. Circuit opinion of 2026-09-11).",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the D.C. Circuit (opinion copy hosted by Sierra Club)",
+      "url": "https://www.sierraclub.org/sites/default/files/2026-09/campbell-order.pdf"
+    },
+    {
+      "date": "2025-11-18",
+      "event": "DOE issues Order No. 202-25-9, the second extension of the Campbell order (as recounted in the D.C. Circuit opinion of 2026-09-11).",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the D.C. Circuit (opinion copy hosted by Sierra Club)",
+      "url": "https://www.sierraclub.org/sites/default/files/2026-09/campbell-order.pdf"
+    },
+    {
+      "date": "2026-02-17",
+      "event": "DOE issues Order No. 202-26-16, the third extension of the Campbell order (as recounted in the D.C. Circuit opinion of 2026-09-11).",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the D.C. Circuit (opinion copy hosted by Sierra Club)",
+      "url": "https://www.sierraclub.org/sites/default/files/2026-09/campbell-order.pdf"
+    },
+    {
+      "date": "2026-05-18",
+      "event": "DOE issues Order No. 202-26-22, the fourth extension of the Campbell order, bringing compelled operation to 450 days in total (as recounted in the D.C. Circuit opinion of 2026-09-11).",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the D.C. Circuit (opinion copy hosted by Sierra Club)",
       "url": "https://www.sierraclub.org/sites/default/files/2026-09/campbell-order.pdf"
     },
     {
       "date": "2026-09-11",
-      "event": "Law-firm and wire reports of the decision: Willkie Farr & Gallagher says the court gave challengers a template against DOE's similar orders for at least six other coal plants and that DOE may seek en banc or Supreme Court review; the Associated Press reports a unanimous panel.",
-      "kind": "news",
-      "source": "Willkie Farr & Gallagher",
-      "url": "https://www.willkie.com/publications/2026/09/dc-circuit-limits-does-section-202c-emergency-authority-to-keep-coal-generator-operational"
+      "event": "A D.C. Circuit panel (Chief Judge Srinivasan and Judges Pillard and Wilkins; argued 2026-05-15) in Michigan v. U.S. Department of Energy, No. 25-1159 (consolidated with Nos. 25-1160 and 25-1162), grants the petitions and vacates, without remand, DOE Order 202-25-3 of 2025-05-23 keeping the J.H. Campbell coal plant open. The court holds DOE exceeded its authority under Federal Power Act section 202(c), reads an emergency as an acute shortage not being timely addressed by states, utilities or grid operators, finds DOE's reliance on possible summer 2025 shortfalls and a five-year reliability risk insufficient, and notes the order had expired and that petitions against its four extension orders (450 days of compelled operation in total) are held in abeyance.",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the D.C. Circuit (opinion PDF as hosted by the Sierra Club)",
+      "url": "https://www.sierraclub.org/sites/default/files/2026-09/campbell-order.pdf"
     },
     {
       "date": "2026-09-29",
@@ -223,6 +295,6 @@
   ],
   "title": "Prioritize dispatchable generation, update reserve margins, reform RTO reliability rules",
   "tracked": true,
-  "uncertainties": "The D.C. Circuit opinion was read through a fetch summary of the PDF hosted by the Sierra Club, and its Leagle copy is paywalled; the summary of the holding should be checked against the opinion text. DOE's reaction after 2026-09-11 and the status of other 202(c) orders were not found: the DOE 202(c) page could not be fetched, a Federal Register query for 202(c) after 2026-09-01 returned no DOE order notices, and one web search returned only reports of the court decision. Order counts remain from POWER (43 as of 2026-04-02). The FERC 2026-09-29 order was read from PJM's hosted copy; the fetch did not cover the whole order. Whether ELCC-rated eligible resources are mostly dispatchable was not examined. The earlier record's conflicting PJM docket numbers are resolved by this order: ER26-3380 and EL26-108. Repeal of generation subsidies is tracked under c12-03.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The D.C. Circuit opinion (decided 2026-09-11, opinion by Judge Pillard for Chief Judge Srinivasan and Judges Pillard and Wilkins) was re-read on 2026-10-17 through the Sierra Club hosted PDF, which is a copy of the court's opinion; the Campbell order dates in the timeline are as recounted there, and the opinion does not discuss mootness expressly but notes the order had expired. The court did not reach the substantial-evidence claims. DOE's reaction after 2026-09-11 and the status of other 202(c) orders were not found: the DOE 202(c) page could not be fetched, a Federal Register query for 202(c) after 2026-09-01 returned no DOE order notices, and one web search returned only reports of the court decision. Order counts remain from POWER (43 as of 2026-04-02). The FERC 2026-09-29 order was read from PJM's hosted copy; the fetch did not cover the whole order. Whether ELCC-rated eligible resources are mostly dispatchable was not examined. The earlier record's conflicting PJM docket numbers are resolved by this order: ER26-3380 and EL26-108. Repeal of generation subsidies is tracked under c12-03. A web search on 2026-10-17 for DOE's response to the ruling returned only press coverage and state releases, so no DOE rehearing petition or Supreme Court filing is confirmed. The FERC order of 2026-09-29 was re-read from PJM's hosted copy; its fetched text did not reach a section on intermittent or backup requirements, and it shows no such requirement in the portion read. Independent review of 2026-10-16: the six DOE Campbell order dates and numbers were confirmed in the opinion, which states that the orders compelled 450 days of operation in total (the earlier wording of 450 days of extensions was corrected). Three non-action entries left the timeline: the POWER count of 43 orders as of 2026-04-02 (kept in the summary as a count), the FERC combined notice of PJM filings of 2026-08-19 (filings, superseded by the 2026-09-29 order), and law-firm and wire coverage of the ruling, including a law firm's view that DOE may seek en banc or Supreme Court review. The DOE report has no formal recommendations section; the summary now states its conclusions.",
+  "updated_at": "2026-10-16"
 }

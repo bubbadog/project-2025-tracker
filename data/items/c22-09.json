@@ -5,9 +5,9 @@
     "Mandate item is an internal reorganization with little public documentation"
   ],
   "chapter": "22",
-  "confidence": 62,
+  "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked and the executive order read on the Federal Register; the Treasury actions rest on consistent news and law-firm reports, and the Climate Hub status is unconfirmed.",
+  "confidence_reason": "Text checked; the FSOC minutes and readout, the NGFS withdrawal release and Executive Order 14162 were read on primary hosts, but the Climate Hub office, the item the text names first, has no document showing its status.",
   "durability": {
     "level": "medium",
     "why": "Committee charters and memberships can be restored by a later Secretary or council vote."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent primary-source review: progress moved from 40 to 30 within in_progress, the FSOC vote corrected to unanimous after reading the 2025-09-10 minutes on home.treasury.gov, and the NGFS and FSOC events re-sourced to Treasury documents."
     }
   ],
   "id": "c22-09",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -41,7 +45,7 @@
     709
   ],
   "position": "Climate-Related Financial Risk",
-  "progress": 40,
+  "progress": 30,
   "proposal": "The Mandate recommends eliminating Treasury's Climate Hub office, which it ties to the department's climate-change strategic goal. It also recommends that Treasury use its tools to promote domestic energy investment, including oil and gas, and reverse support for international ESG and Principles for Responsible Investment efforts.",
   "related_ids": [
     "c22-04",
@@ -58,40 +62,30 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: in_progress 40 kept; proposed (15-20) is defensible if only the Climate Hub item is weighed, since its closure is undocumented",
-      "Merged items: Climate Hub, energy investment and ESG items from one section are tracked together; the agreement withdrawal is tracked in c22-11",
-      "Added related ids c22-11 and c24-04 (Federal Reserve ESG and NGFS record)"
+      "progress lowered from 40 to 30 within in_progress: operative steps exist, but the named Climate Hub elimination and the energy and ESG items are undocumented",
+      "judgment call: proposed 15-20 defensible if only the Climate Hub item is weighed",
+      "voice vote corrected to unanimous vote per FSOC minutes"
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Pages 708-709, Climate-Related Financial Risk: eliminate the Climate Hub office, withdraw from harmful climate agreements, use Treasury tools to promote domestic energy including oil and gas, and reverse support for international ESG and Principles for Responsible Investment efforts. The Mandate describes the climate goal as one of Treasury's top five goals and asks to eliminate the office; it does not separately say to reverse the strategic goal, so the proposal wording was adjusted.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y22a",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 708 and 709 ask to eliminate the Climate Hub office, tied to the department's climate strategic goal, withdraw from climate agreements, use Treasury tools to promote domestic energy including oil and gas, and reverse support for international ESG and Principles for Responsible Investment efforts. Current paraphrase accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Signed 2025-01-20, published 2025-01-30; section 3 revokes the climate finance plan and gives the Treasury Secretary a 30-day report duty.",
+        "note": "Open session item 2: CFRC (chartered 2021-12-17) and CFRAC (chartered 2022-10-03) charters rescinded, each by unanimous vote; no Climate Hub mention.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02010/putting-america-first-in-international-environmental-agreements"
+        "url": "https://home.treasury.gov/system/files/261/FSOC-20250910-Minutes.pdf"
       },
       {
-        "note": "Dated 2025-02-03; Treasury statement dated 2025-01-30 cites EO 14162 and EO 14154; no Climate Hub mention.",
+        "note": "Readout of 2025-09-10 meeting confirms the two charter rescissions.",
         "result": "supports",
-        "url": "https://www.esgdive.com/news/treasury-department-exits-global-regulatory-climate-coalition-ngfs/739062/"
+        "url": "https://home.treasury.gov/news/press-releases/sb0242"
       },
       {
-        "note": "Dated 2025-09-11, paywalled; vote on a Wednesday to revoke the two committee charters.",
-        "result": "partial",
-        "url": "https://news.bgov.com/financial-accounting/us-treasury-scraps-financial-oversight-groups-on-climate-risk"
-      },
-      {
-        "note": "Dated 2025-09-11; voice vote without dissent; no Climate Hub mention.",
+        "note": "Dated 2025-01-30; FIO withdrawal from NGFS citing the two executive orders.",
         "result": "supports",
-        "url": "https://stratnewsglobal.com/team-sng/u-s-watchdog-led-by-treasury-shuts-down-climate-risk-advisory-panels/"
-      },
-      {
-        "note": "Gives the vote date as 2025-09-10; found by a web search for Climate Hub closure, which returned no report of the office closing.",
-        "result": "supports",
-        "url": "https://www.mintz.com/insights-center/viewpoints/2026-03-16-trump-administration-continues-dismantling-government"
+        "url": "https://home.treasury.gov/news/press-releases/sb0003"
       }
     ]
   },
@@ -158,10 +152,31 @@
       "publisher": "Mintz",
       "title": "Trump Administration Continues Dismantling Government Organizations Focused on Climate Change",
       "url": "https://www.mintz.com/insights-center/viewpoints/2026-03-16-trump-administration-continues-dismantling-government"
+    },
+    {
+      "date": "2025-09-10",
+      "kind": "primary",
+      "publisher": "U.S. Department of the Treasury",
+      "title": "Minutes of the Financial Stability Oversight Council, September 10, 2025",
+      "url": "https://home.treasury.gov/system/files/261/FSOC-20250910-Minutes.pdf"
+    },
+    {
+      "date": "2025-09-10",
+      "kind": "primary",
+      "publisher": "U.S. Department of the Treasury",
+      "title": "Readout of the Financial Stability Oversight Council meeting, September 10, 2025",
+      "url": "https://home.treasury.gov/news/press-releases/sb0242"
+    },
+    {
+      "date": "2025-01-30",
+      "kind": "primary",
+      "publisher": "U.S. Department of the Treasury",
+      "title": "U.S. Department of the Treasury Withdraws from the Network of Central Banks and Supervisors for Greening the Financial System (NGFS)",
+      "url": "https://home.treasury.gov/news/press-releases/sb0003"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Executive Order 14162, signed 2025-01-20, revoked the U.S. International Climate Finance Plan and directed the Treasury Secretary, with others, to end U.S. financial commitments under the UN climate convention and report within 30 days. Treasury's Federal Insurance Office left the Network for Greening the Financial System under a statement dated 2025-01-30 that cites that order and Executive Order 14154. On 2025-09-10 the Financial Stability Oversight Council, chaired by the Treasury Secretary, rescinded the charters of its two climate-related financial risk committees. No source found states that the Climate Hub office was closed or that the climate strategic goal was formally replaced, and no Treasury step on Principles for Responsible Investment or on promoting oil and gas investment was found.",
+  "status_summary": "Executive Order 14162, signed 2025-01-20, revoked the U.S. International Climate Finance Plan and directed the Treasury Secretary, with others, to cease U.S. financial commitments under the UN climate convention and report within 30 days. On 2025-01-30 Treasury's Federal Insurance Office announced its withdrawal from the Network for Greening the Financial System, citing that order and the Unleashing American Energy order. On 2025-09-10 the Financial Stability Oversight Council, chaired by the Treasury Secretary, rescinded the charters of its two climate-related financial risk committees by unanimous vote, according to its minutes. No source found states that the Climate Hub office was closed or that the climate strategic goal was formally replaced, and no Treasury step on Principles for Responsible Investment or on promoting oil and gas investment was found.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -172,21 +187,21 @@
     },
     {
       "date": "2025-01-30",
-      "event": "Treasury's Federal Insurance Office withdrew from the Network for Greening the Financial System, describing the exit as part of implementing two January 2025 executive orders (reported 2025-02-03).",
-      "kind": "news",
-      "source": "ESG Dive",
-      "url": "https://www.esgdive.com/news/treasury-department-exits-global-regulatory-climate-coalition-ngfs/739062/"
+      "event": "Treasury's Federal Insurance Office announced its withdrawal from the Network for Greening the Financial System, citing two January 2025 executive orders.",
+      "kind": "primary",
+      "source": "U.S. Department of the Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/sb0003"
     },
     {
       "date": "2025-09-10",
-      "event": "The Financial Stability Oversight Council rescinded the charters of the Climate-related Financial Risk Committee and the Climate-related Financial Risk Advisory Committee by voice vote.",
-      "kind": "news",
-      "source": "Bloomberg Government",
-      "url": "https://news.bgov.com/financial-accounting/us-treasury-scraps-financial-oversight-groups-on-climate-risk"
+      "event": "The Financial Stability Oversight Council voted unanimously to rescind the charters of its Climate-related Financial Risk Committee and Climate-related Financial Risk Advisory Committee.",
+      "kind": "primary",
+      "source": "U.S. Department of the Treasury (FSOC minutes)",
+      "url": "https://home.treasury.gov/system/files/261/FSOC-20250910-Minutes.pdf"
     }
   ],
   "title": "Eliminate the Treasury Climate Hub and reverse climate and ESG finance initiatives",
   "tracked": true,
-  "uncertainties": "This record combines the Climate Hub, strategic goal, energy investment and ESG items from the same section, since they share one aim; the stage is a judgment across them. The Treasury organization page lists no Climate Hub office but prints no date, so it cannot show when or whether the office closed, and a web search found no report of its closure. The vote day comes from news reports (a Wednesday, 2025-09-10) and the Mintz summary; no FSOC primary document was opened. The Bloomberg Government article is paywalled and was read in part. Treasury's 30-day report under Executive Order 14162 was not found. The Mintz page lists 2025-09-12 as its date although its address contains a 2026 date.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "This record combines the Climate Hub, strategic goal, energy investment and ESG items from the same section, since they share one aim; the stage is a judgment across them. The Treasury organization page lists no Climate Hub office but prints no date, so it cannot show when or whether the office closed; a web search and a Federal Register search found no document on its closure. The FSOC minutes of 2025-09-10 and the Treasury readout were read on home.treasury.gov; the minutes do not mention the Climate Hub. The Bloomberg Government article is paywalled and was read in part. Treasury's 30-day report under Executive Order 14162 was not found. The Mintz page lists 2025-09-12 as its date although its address contains a 2026 date.",
+  "updated_at": "2026-10-18"
 }

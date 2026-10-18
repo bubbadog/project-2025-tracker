@@ -5,9 +5,9 @@
     "FERC is an independent commission whose members and votes determine outcomes; the Energy Secretary's section 403 request is not binding on it."
   ],
   "chapter": "12",
-  "confidence": 68,
+  "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "The FERC rule removing the construction bar and the pending status of the Energy Secretary's request were confirmed in the Federal Register. The absence of any FERC change to certificate need or NEPA scope rests on Federal Register searches, and individual FERC certificate orders were not examined.",
+  "confidence_reason": "The stage-deciding final rule (90 FR 48221) was fetched and read, and the Energy Secretary's request notice (90 FR 42963) was confirmed through its API record; the blanket certificate proposal was read by the researcher, the 2026-02-24 confirmation rule only as an API record, and FERC's response to the request and individual certificate orders were not found or examined, so the stage could be understated.",
   "durability": {
     "level": "medium",
     "why": "A final FERC rule needs new rulemaking to reverse, but policy statements, DOE requests and blanket certificate limits can be changed by later commissions; judicial review could also alter outcomes."
@@ -20,10 +20,14 @@
     {
       "date": "2026-10-07",
       "note": "Objective added in the in-depth pass and independently reviewed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Stage in_progress 35 confirmed against the final rule at 90 FR 48221; citations and wording tightened; confidence raised to 74."
     }
   ],
   "id": "c12-09",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 2,
   "match": "partial",
   "mechanism": "mixed",
@@ -50,15 +54,15 @@
   "research_agent": "D4",
   "review": {
     "flags": [
-      "LNG climate point overlaps c12-04; proposal narrowed to avoid double counting",
-      "FERC response to the Energy Secretary's section 403 request not found",
-      "individual certificate orders after the 2025 Supreme Court NEPA ruling not examined"
+      "Accepted researcher's updates: FR citations added, statement that the rule leaves certificate standards in place, uncertainties updated after the blanket certificate proposal was read in full.",
+      "Edited the status_summary sentence on environmental effects to match the rule text: the rule says it changes only the construction start date and does not alter a project's environmental effects.",
+      "judgment call: in_progress 35 kept; proposed (20) is defensible because the operative rule is procedural and the need-only and project-only NEPA standards are not adopted."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 407 says FERC should limit certificate decisions to need for the gas and limit NEPA analysis to the pipeline's own impacts, and that Congress, states and FERC should consider landowner protection; page 408 says FERC should not use climate change to stop LNG projects and should ensure needed pipelines are reviewed and built in a timely manner; page 406 gives background. The paraphrase is accurate, but the LNG climate point duplicates c12-04.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W3",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V8",
     "source_checks": [
       {
         "note": "Final rule published 2025-10-10, effective 2025-11-10, removes 18 CFR 157.23, which barred construction authorizations while rehearing was pending; FERC cites delay reduction, reliability and resource adequacy and discusses Executive Orders 14154 and 14156 as context; 23 comments (12 supporting, 11 opposing). It also notes a temporary waiver of the rule issued 2025-06-18.",
@@ -69,6 +73,16 @@
         "note": "Reviewer's Federal Register query returns only the 2025-09-05 notice of the Energy Secretary's request to rescind the 2022 draft certificate policy statement and the 2026-05-27 blanket certificate proposal; no FERC document rescinding the draft or adopting a new certificate policy appears, consistent with the record.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22certificate%20policy%20statement%22&conditions[agencies][]=federal-energy-regulatory-commission&conditions[publication_date][gte]=2025-08-01&per_page=20&order=newest"
+      },
+      {
+        "note": "Read: 90 FR 48221, docket RM25-9-000, issued 2025-10-07, published 2025-10-10, effective 2025-11-10; removes 18 CFR 157.23 and the cross-reference in 153.4; 23 comments (12 support, 11 oppose); FERC continues to apply existing NGA section 3 and 7 standards and the rule does not alter project environmental effects. Speeds procedure only. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/10/10/2025-19533/removal-of-regulations-limiting-authorizations-to-proceed-with-construction-activities-pending"
+      },
+      {
+        "note": "API record: 90 FR 42963, published 2025-09-05, dockets PL18-1-000 and PL18-1-001; metadata only. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2025-17044.json"
       }
     ]
   },
@@ -129,7 +143,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "As of 2026-10-07 FERC has made pipeline approvals faster in procedure, but the Mandate's two specific standards (need-only certificate decisions and project-only NEPA review) have not been formally adopted in the sources reviewed. On 2025-08-29 the Energy Secretary used section 403 of the DOE Organization Act to ask FERC to rescind its never-finalized 2022 draft certificate policy statement, which would have weighed environmental impacts more heavily, and keep the 1999 framework; FERC sought comments through 2025-09-09 and the outcome was not found. FERC issued a final rule on 2025-10-10 (effective 2025-11-10, confirmed 2026-02-24) removing a regulation that barred construction authorization while rehearing was pending; it received 23 comments, 11 opposed and 12 in support. On 2026-05-27 FERC proposed raising the cost limits for pipeline projects built under blanket certificates without case-specific authorization (for example the prior-notice cap from 41.1 to 86 million dollars); comments closed 2026-07-27 and no final rule was found. No FERC action limiting NEPA review to a pipeline's own effects was found.",
+  "status_summary": "As of 2026-10-18 FERC has made pipeline approvals faster in procedure, but the Mandate's two specific standards (need-only certificate decisions and project-only NEPA review) were not found adopted in the Federal Register. On 2025-08-29 the Energy Secretary used section 403 of the DOE Organization Act to ask FERC to rescind its never-finalized 2022 draft certificate policy statement and keep the 1999 framework; FERC published the request on 2025-09-05 (90 FR 42963) for comment through 2025-09-09 and the notice states that action remains pending, with no outcome found. FERC issued a final rule on 2025-10-10 (90 FR 48221, effective 2025-11-10, confirmed 2026-02-24) removing 18 CFR 157.23, which barred construction authorization while rehearing was pending; it received 23 comments, 11 opposed and 12 in support, and the rule states that FERC continues to apply the existing Natural Gas Act standards and that the change affects only when construction may begin, not a project's environmental effects. On 2026-05-27 FERC proposed raising blanket certificate cost limits (91 FR 31371; prior-notice cap from 41.1 to 86 million dollars); comments closed 2026-07-27 and no final rule was found.",
   "timeline": [
     {
       "date": "2025-06-24",
@@ -169,6 +183,6 @@
   ],
   "title": "Narrow FERC gas pipeline review to market need and project-level NEPA; speed approvals",
   "tracked": true,
-  "uncertainties": "FERC's response to the Energy Secretary's request (requested by 2025-09-30, per a law firm post) was not found in the Federal Register or in the sources searched, so the draft statement may or may not have been rescinded. The blanket certificate proposal was read through about 100,000 of 116,000 characters, and its executive order references were not confirmed. The 2026-02-24 confirmation rule was cited from a Federal Register listing, not read in full. No Federal Register document addressed limiting NEPA review to a pipeline's own effects or greenhouse gas analysis in certificate cases. FERC's reviews of LNG export facilities and pipeline certificates in individual cases were not examined; FERC's termination of an interim greenhouse gas policy statement in January 2025, reported by a law firm, is not counted as an action in this period. One web search was used, plus Federal Register queries on pipeline certificate policy, blanket certificates and docket PL18-1. Overlaps with c12-04, which covers DOE LNG export approvals and the FERC climate point.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "FERC's response to the Energy Secretary's request was not found in the Federal Register (the notice itself says action remains pending), so the draft statement may or may not have been rescinded; a web search on 2026-10-18 surfaced only law-firm posts and the notice. The blanket certificate proposal was read in full (about 116,000 characters, in two parts); it does not mention executive orders and does not adopt a NEPA scope standard, though it proposes removing compressor station expansions from a categorical exclusion. The 2026-02-24 confirmation rule was read as a Federal Register API record only (abstract and dates), not in full text. No Federal Register document addressed limiting NEPA review to a pipeline's own effects or greenhouse gas analysis in certificate cases. FERC orders on individual certificates and ferc.gov orders were not examined. Overlaps with c12-04, which covers DOE LNG export approvals and the FERC climate point.",
+  "updated_at": "2026-10-18"
 }

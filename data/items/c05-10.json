@@ -2,12 +2,12 @@
   "agency": "DHS/ICE",
   "blockers": [
     "Participation is voluntary for state and local agencies; FWD.us reports that Dallas's police chief and city council declined a reported $25 million offer",
-    "Funding sits inside broader ICE appropriations; the CRS report gives no 287(g)-specific amount"
+    "Funding sits inside a broader ICE appropriation; Section 202 of Public Law 119-98 gives no 287(g)-specific amount"
   ],
   "chapter": "05",
-  "confidence": 57,
+  "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked; the updated agreement count was confirmed in the UnoTV report fetched in this pass, which relays ICE data rather than the ICE page itself; neither specific Mandate instrument was found.",
+  "confidence_reason": "Chapter text (pp. 141 and 153) checked; Executive Order 14159 read in full on the Federal Register and Section 202 of Public Law 119-98 read on GovInfo. The stage depends on the growth in agreements, which rests on news reports relaying ICE tracker data because ICE's page could not be opened, so confidence stays medium.",
   "durability": {
     "level": "medium",
     "why": "Agreements are voluntary arrangements that DHS could end or let lapse, but thousands are signed and statutory funding in the reconciliation law would outlast a policy change."
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review read Executive Order 14159 on federalregister.gov and Section 202 of Public Law 119-98 on govinfo.gov, added the law's 2026-06-10 enactment as a timeline event and lowered progress from 70 to 65 within implemented."
     }
   ],
   "id": "c05-10",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-18",
   "layer": 2,
   "match": "partial",
   "mechanism": "mixed",
@@ -48,7 +52,7 @@
     153
   ],
   "position": null,
-  "progress": 70,
+  "progress": 65,
   "proposal": "The Mandate recommends that ICE stop ignoring criminal aliens identified by local police partners in the 287(g) program and take custody of those with felony, violent-crime, DUI or prior-removal records (with Congress to codify this), and that DHS issue a memo barring denial of 287(g) access to any applying jurisdiction unless good cause is shown.",
   "redteam": {
     "date": "2026-10-08",
@@ -95,34 +99,30 @@
   "research_agent": "D2",
   "review": {
     "flags": [
-      "agreement count relayed by a news outlet; ICE page not opened",
-      "redteam verdict holds is reasonable"
+      "progress lowered from 70 to 65: the program is operative and funded but neither of the Mandate's two specific instruments was found",
+      "in_progress at the top of its band is also defensible because the specific asks are absent",
+      "agreement counts relayed by news outlets; ICE page unreachable"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 141 asks that ICE stop ignoring criminal aliens identified through 287(g) partners and take custody of those with felony, violent-crime, DUI, prior-removal or other threat records, pending congressional action; page 153 asks for a memo barring denial of 287(g) access to any applying jurisdiction without good cause. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "U1",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 141 asks that ICE stop ignoring criminal aliens identified through 287(g) partners, with Congress ultimately to act and ICE meanwhile directed to take custody of those with felony, violent-crime, DUI, prior-removal or similar records; page 153 asks for a memo barring denial of 287(g) access to an applying jurisdiction without good cause. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Dated 2026-09-18: 2,510 agreements as of ICE's 2026-09-15 update (1,778 task force, 553 warrant service officer, 179 jail enforcement) across 39 states and two territories; an earlier ICE registry of 2026-09-14 showed 2,506.",
-        "result": "supports",
-        "url": "https://www.unotv.com/us/inmigracion-us/ice-ya-suma-2-mil-510-acuerdos-con-policias-locales-este-es-el-mapa-en-ee-uu/"
+        "note": "90 FR 8443, FR Doc. 2025-02006, signed 2025-01-20, published 2025-01-29; Section 11 directs DHS to pursue 287(g) agreements or other means for qualified state and local officers; no custody direction and no good-cause access rule.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/01/29/2025-02006/protecting-the-american-people-against-invasion"
       },
       {
-        "note": "Carried from earlier review, not refetched in this pass: Section 11 of the 2025-01-20 order directs DHS to authorize state and local officers to perform immigration functions through 287(g) agreements or otherwise, to the maximum extent permitted by law and with consent where appropriate.",
+        "note": "Secure America Act approved 2026-06-10; Section 202 appropriates 31,075,000,000 dollars to ICE until 2029-09-30, purpose (6) covers expanding, facilitating and implementing 287(g) agreements; no separate amount.",
         "result": "supports",
-        "url": "https://www.whitehouse.gov/presidential-actions/2025/01/protecting-the-american-people-against-invasion/"
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ98/html/PLAW-119publ98.htm"
       },
       {
-        "note": "Carried from earlier review, not refetched in this pass: 2026-08-24 report citing ICE's own tracker: 2,365 signed agreements as of 2026-08-21 (1,640 task force, 544 warrant service officer, 181 jail enforcement) in 39 states and two territories; it cites roughly 135 agreements in January 2025 to an independent analyst, and says nothing on ICE approval or denial criteria or on salary payments.",
-        "result": "supports",
-        "url": "https://www.latintimes.com/ices-police-partnerships-just-hit-2365-deals-heres-what-that-means-if-you-live-near-major-cities-598760"
-      },
-      {
-        "note": "Carried from earlier review, not refetched in this pass: Read for c05-05: CRS says Section 202 of P.L. 119-98 covers supporting coordination with state and local authorities by expanding 287(g) agreements, within 31.075 billion dollars for enforcement and removal; no separate 287(g) amount.",
-        "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2026-06-24_R48874_110288560491cb6ccc12bffcf6463335c70a9043.html"
+        "note": "Fetch error; agreement counts remain secondary.",
+        "result": "unreachable",
+        "url": "https://www.ice.gov/identify-and-arrest/287g"
       }
     ]
   },
@@ -187,10 +187,24 @@
       "publisher": "UnoTV",
       "title": "ICE ya suma 2 mil 510 acuerdos con policias locales (UnoTV)",
       "url": "https://www.unotv.com/us/inmigracion-us/ice-ya-suma-2-mil-510-acuerdos-con-policias-locales-este-es-el-mapa-en-ee-uu/"
+    },
+    {
+      "date": "2025-01-29",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Executive Order 14159, Protecting the American People Against Invasion (90 FR 8443, FR Doc. 2025-02006)",
+      "url": "https://www.federalregister.gov/documents/2025/01/29/2025-02006/protecting-the-american-people-against-invasion"
+    },
+    {
+      "date": "2026-06-10",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Public Law 119-98, Secure America Act, Sec. 202",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ98/html/PLAW-119publ98.htm"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Executive Order 14159 (signed 2025-01-20) directs DHS to authorize qualified state and local officers to perform immigration enforcement functions through 287(g) agreements or otherwise, to the maximum extent the law allows. Counts of agreements rose from roughly 135 in January 2025 (per an independent analyst and FWD.us, an immigration advocacy group) to 2,365 signed agreements as of 2026-08-21 and 2,510 as of 2026-09-15, according to news reports citing ICE's own tracker (as of 2026-09-15: 1,778 task force model, 553 warrant service officer, 179 jail enforcement model). FWD.us describes a September 2025 ICE offer to pay salary, benefits and other costs for trained task force officers, and a CRS report lists 287(g) coordination among the purposes of ICE funding in P.L. 119-98, with no separate dollar amount. The Mandate's two specific asks, a memo barring denial of access without good cause and a direction that ICE take custody of all listed criminal aliens identified by partners, were not located, so the match is partial; the growth in agreements is consistent with open access but does not show the memo itself.",
+  "status_summary": "Executive Order 14159 (signed 2025-01-20, published 2025-01-29 at 90 FR 8443) directs DHS in Section 11 to pursue 287(g) agreements or other means so that qualified state and local officers can perform immigration officer functions, within the law and with local consent where appropriate. Counts of agreements rose from roughly 135 in January 2025 (per an independent analyst and FWD.us, an immigration advocacy group) to 2,365 signed agreements as of 2026-08-21 and 2,510 as of 2026-09-15, according to news reports citing ICE's own tracker (as of 2026-09-15: 1,778 task force model, 553 warrant service officer, 179 jail enforcement model). The Secure America Act (Public Law 119-98, enacted 2026-06-10) appropriates 31,075,000,000 dollars to ICE in Section 202, available until 2029-09-30, and lists supporting coordination with state and local authorities by expanding, facilitating and implementing 287(g) agreements among its purposes, with no separate 287(g) amount; FWD.us also describes a September 2025 ICE offer to pay salary, benefits and other costs for trained task force officers. The Mandate's two specific asks, a memo barring denial of access without good cause and a direction that ICE take custody of all listed criminal aliens identified by partners, were not located, and the order contains neither, so the match is partial.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -221,6 +235,13 @@
       "url": "https://www.fwd.us/wp-content/uploads/2026/02/287g.pdf"
     },
     {
+      "date": "2026-06-10",
+      "event": "Public Law 119-98 (Secure America Act) enacted; Section 202 appropriates 31,075,000,000 dollars to ICE, available until 2029-09-30, and lists supporting coordination with state and local authorities by expanding, facilitating and implementing 287(g) agreements among its purposes, with no separate 287(g) amount.",
+      "kind": "primary",
+      "source": "GovInfo",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ98/html/PLAW-119publ98.htm"
+    },
+    {
       "date": "2026-06-24",
       "event": "CRS report on FY2026 DHS appropriations (updated this date) describes P.L. 119-98 as giving ICE about $31.1 billion, with expanding and coordinating 287(g) agreements among the listed purposes and no separate 287(g) amount.",
       "kind": "primary",
@@ -244,6 +265,6 @@
   ],
   "title": "Expand 287(g) partnerships with local police and bar denials of access without cause",
   "tracked": true,
-  "uncertainties": "ICE's own 287(g) pages could not be fetched (access blocked), so the 2,365 figure comes from a Latin Times report that cites ICE's tracker, and the earlier counts come from an advocacy group (FWD.us) and an independent analyst's data report; the counts use different methods (agreements versus agencies, active versus signed), so they should not be compared closely. No DHS or ICE memo was found or confirmed on good-cause denial of access, or any custody policy for aliens identified by partners; the absence is not proof that neither exists. CRS describes P.L. 119-98 as the FY2026 reconciliation law; The statute text was not checked, and CRS ties 287(g) only to the ICE section's purpose list. The September 2025 funding offer is described by FWD.us, not by an ICE document that was read. The match is partial because the program grew far beyond what the Mandate specified while its two particular asks were not found. Searches run: one search on 287(g) counts (an earlier search also covered the topic), plus fetches of the cited pages.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "ICE's own 287(g) pages could not be fetched (access blocked again in this review), so the 2,365 and 2,510 figures come from news reports that cite ICE's tracker, and the earlier counts come from an advocacy group (FWD.us) and an independent analyst's data report; the counts use different methods (agreements versus agencies, active versus signed), so they should not be compared closely. Executive Order 14159 was read in full on the Federal Register and contains no good-cause access rule and no custody direction tied to 287(g) partners. No DHS or ICE memo was found on good-cause denial of access, or any custody policy for aliens identified by partners; the absence is not proof that neither exists. The text of Public Law 119-98 Section 202 was read on GovInfo and ties 287(g) only to a listed purpose of the ICE appropriation. The September 2025 funding offer is described by FWD.us, not by an ICE document that was read. The match is partial because the program grew far beyond what the Mandate specified while its two particular asks were not found.",
+  "updated_at": "2026-10-18"
 }

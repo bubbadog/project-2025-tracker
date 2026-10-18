@@ -5,9 +5,9 @@
     "Reversal by later rulemaking is possible"
   ],
   "chapter": "16",
-  "confidence": 78,
-  "confidence_label": "medium",
-  "confidence_reason": "Text checked and the final rule and release read on primary hosts; the ten-day notice item is confirmed, while the absence of action on the other items rests on a Federal Register search.",
+  "confidence": 85,
+  "confidence_label": "high",
+  "confidence_reason": "Text checked and the final rule 91 FR 7835 (FR Doc. 2026-03301) read in full on federalregister.gov, confirming publication, effective date and scope; the absence of action on the other OSM items rests on a Federal Register search.",
   "durability": {
     "level": "medium",
     "why": "A final rule is durable until rescinded through new rulemaking, as the 2024 rule was."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent primary-source review: in_progress 40 confirmed after reading the final rule 91 FR 7835 in full on federalregister.gov, which was added as a source."
     }
   ],
   "id": "c16-17",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -56,28 +60,19 @@
   "research_agent": "N16",
   "review": {
     "flags": [
-      "judgment call: the ten-day notice item is done as asked; with five other OSM items not found, in_progress 40 was kept rather than implemented"
+      "judgment call: implemented at the low end defensible for the ten-day notice element alone; in_progress 40 kept because the other OSM items were not found",
+      "effective-date event not added: the timeline already carries the rule's publication with its effective date"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 534 and 535 list the OSM items: headquarters to Pittsburgh, fewer inspectors, Schedule F, training access, Applicant Violator System revision, keeping the ten-day notice rule and preserving Directive INE-26. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y16a",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 534 and 535 list the OSM items: relocate headquarters to Pittsburgh, fewer field inspectors, Schedule F, training access for coal company staff, Applicant Violator System revision, keep the ten-day notice rule then in force and preserve Directive INE-26. Paraphrase accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Final rule published 2026-02-19, effective 2026-03-23; rescinds 2024 rule, largely reinstates 2020 rule; cites SO 3418 and several EOs.",
+        "note": "91 FR 7835-7855, published 2026-02-19, effective 2026-03-23, RIN 1029-AC89, docket OSM-2025-0018; rescinds 2024 rule, largely restores 2020 rule; cites SO 3418 sec. 4.b and several executive orders; proposed rule FR Doc. 2025-10999 of 2025-06-16.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/FR-2026-02-19/pdf/2026-03301.pdf"
-      },
-      {
-        "note": "Release dated 2026-02-18; repeals 2024 rule, reinstates 2020 rule with changes.",
-        "result": "supports",
-        "url": "https://www.osmre.gov/node/3306"
-      },
-      {
-        "note": "FR API 2026-10-13: 44 OSMRE rules since 2025-01-20; none on AVS, training or INE-26.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=surface-mining-reclamation-and-enforcement-office"
+        "url": "https://www.federalregister.gov/documents/2026/02/19/2026-03301/rescission-of-the-ten-day-notices-and-corrective-action-for-state-regulatory-program-issues-rule"
       }
     ]
   },
@@ -124,10 +119,17 @@
       "publisher": "Office of Surface Mining Reclamation and Enforcement",
       "title": "OSMRE news release on the ten-day notice final rule",
       "url": "https://www.osmre.gov/node/3306"
+    },
+    {
+      "date": "2026-02-19",
+      "kind": "primary",
+      "publisher": "Federal Register (OSMRE)",
+      "title": "Rescission of the Ten-Day Notices and Corrective Action for State Regulatory Program Issues Rule (91 FR 7835)",
+      "url": "https://www.federalregister.gov/documents/2026/02/19/2026-03301/rescission-of-the-ten-day-notices-and-corrective-action-for-state-regulatory-program-issues-rule"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "OSMRE published a final rule on 2026-02-19, effective 2026-03-23, rescinding its April 2024 ten-day notice rule and returning largely to the 2020 rule, which gives state regulators more room, removes fixed deadlines for state program issues and generally excludes states from being the target of a notice. The agency's release ties the change to Secretary's Order 3418. No action was found on moving the headquarters to Pittsburgh, cutting inspectors, the training program or the violator database.",
+  "status_summary": "OSMRE published a final rule on 2026-02-19 (91 FR 7835, FR Doc. 2026-03301), effective 2026-03-23, rescinding its April 2024 ten-day notice rule and returning largely to the 2020 rule, with minor changes that streamline coordination with state regulators and recognize states as primary regulators on non-federal, non-Indian lands. The rule and the agency's release tie the change to Secretary's Order 3418. No action was found on moving the headquarters to Pittsburgh, cutting inspectors, the training program or the violator database.",
   "timeline": [
     {
       "date": "2026-02-18",
@@ -147,5 +149,5 @@
   "title": "Keep state-led ten-day notice process at the Office of Surface Mining",
   "tracked": true,
   "uncertainties": "A Federal Register API search of OSMRE rules and proposed rules since 2025-01-20 found none on the Applicant Violator System, training access or Directive INE-26; backfilling and grading rules of 2025 and 2026 remove a suspended time and distance standard and do not address approximate original contour. Searches for an OSM headquarters move and inspector reductions returned nothing relevant, so those items are recorded as not found, not as confirmed absent. The Mandate's 'current rule' is read as the 2020 framework in force when the chapter was written.",
-  "updated_at": "2026-10-13"
+  "updated_at": "2026-10-18"
 }

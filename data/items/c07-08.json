@@ -5,9 +5,9 @@
     "DOD opposition and an NGA carve-out request, as reported in October 2025."
   ],
   "chapter": "07",
-  "confidence": 60,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; the enacted law's Division F table of contents and most of its text were read on primary copies, and the bill history rests on two fetched trade outlets; the absence of an ODNI designation rests on limited searching.",
+  "confidence_reason": "The chapter text (p. 206) was checked, the enacted Division F of Public Law 119-60 was read on the Senate intelligence committee's copy, the ODNI 2.0 fact sheet (archive.dni.gov) and the H.R. 9624 bill status (govinfo.gov) were read; the open-source provisions themselves are known only through news reports because the amended bill text is not published, so the record stays medium.",
   "durability": {
     "level": "medium",
     "why": "A DNI designation or committee chair change could be done administratively and reversed; a statutory provision would be durable but none was enacted."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "An independent AI review read the H.R. 9624 bill status (govinfo.gov) and the ODNI 2.0 fact sheet (archive.dni.gov), added the July 2026 House committee markup of the FY2027 bill and kept the stage at proposed 5."
     }
   ],
   "id": "c07-08",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -55,51 +59,29 @@
   "research_agent": "N07a",
   "review": {
     "flags": [
-      "date of 2025 House committee approval corrected to 2025-09-10",
-      "match changed from parallel to partial",
-      "FY2027 House bill provisions added as unenacted context",
-      "Federal News Network dates are URL-month approximations"
+      "open-source provisions of the FY2026 and FY2027 House bills known only through news reports",
+      "dni.gov unreachable"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 206 asks that the DNI's role as enterprise leader for open-source collection and analysis be clarified, that the IC avoid duplicating private-sector work, and that the PDDNI chair the National Open Source Committee if it lacks results; the paraphrase is accurate. Pages 228 to 229 make a related point about duplicative AI-driven open-source work at ODNI and CIA.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y8b",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 206 asks that the DNI's role as enterprise leader for open-source collection and analysis be clarified, that the IC avoid duplicating private-sector work and focus on harder questions, and that the Principal Deputy DNI chair the National Open Source Committee if it lacks results; the proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Undated page; describes the House bill's DNI open-source overseer, de-duplication, commercial data official and funding limits; says the committee approved it 'last week'.",
-        "result": "supports",
-        "url": "https://federalnewsnetwork.com/intelligence-community/2025/09/house-intel-bill-includes-major-osint-reforms/"
-      },
-      {
-        "note": "Dated 2025-10-24. Letters went to committee leaders (not 'conferees' as such); Senate bill lacks the measures; Senate aide says DOD broadly opposes; NGA reportedly seeks a carve-out.",
-        "result": "supports",
-        "url": "https://www.washingtontechnology.com/companies/2025/10/industry-groups-push-keep-open-source-measures-annual-intelligence-bill/409068/"
-      },
-      {
-        "note": "Gives the House committee's passage date as Sept. 10 (2025 from the URL).",
-        "result": "supports",
-        "url": "https://breakingdefense.com/2025/09/house-intel-committee-props-up-fy26-funding-for-nro-commercial-imagery-buys/"
-      },
-      {
-        "note": "Fetched. Confirms Public Law 119-60, the NDAA for FY2026 enacted 2025-12-18, with Division F as the Intelligence Authorization Act for FY2026, and gives the Division F table of contents. The page text available to the fetch ends early in Division A, so section text was read from the Senate intelligence committee copy instead.",
+        "note": "H.R. 9624 introduced 2026-07-09 (Crawford); markup and ordered reported amended by voice vote 2026-07-20; only the introduced text listed; no summary or open-source mention.",
         "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9624.xml"
       },
       {
-        "note": "Fetched in two parts. Division F section text was read through Sec. 6703; Secs. 6704 to 6806 were checked by title only (from the table of contents). Sec. 6712 is a diplomatic reciprocity provision (22 U.S.C. 254c-1), not FARA.",
-        "result": "partial",
-        "url": "https://www.intelligence.senate.gov/2025/12/18/intelligence-authorization-act-for-fiscal-year-2026-division-f-of-the-national-defense-authorization-act-for-fiscal-year-2026-public-law-119-60-dec-18-2025-119th-congress-in/"
-      },
-      {
-        "note": "Undated fact sheet; no mention of open-source intelligence.",
+        "note": "No mention of open-source intelligence.",
         "result": "supports",
         "url": "https://archive.dni.gov/files/ODNI/documents/ODNI-20-Fact-Sheet.pdf"
       },
       {
-        "note": "Undated; House committee passed its FY2027 bill with OSINT budget reporting, AI and sharing provisions; no DNI overseer described.",
+        "note": "Division F table of contents lists no open-source section (read in this run for Title LXIV and Sec. 6310 context).",
         "result": "supports",
-        "url": "https://federalnewsnetwork.com/intelligence-community/2026/07/ai-audits-and-osint-featured-in-house-intel-bill/"
+        "url": "https://www.intelligence.senate.gov/2025/12/18/intelligence-authorization-act-for-fiscal-year-2026-division-f-of-the-national-defense-authorization-act-for-fiscal-year-2026-public-law-119-60-dec-18-2025-119th-congress-in/"
       }
     ]
   },
@@ -165,10 +147,17 @@
       "publisher": "Federal News Network",
       "title": "AI, audits and OSINT featured in House intel bill",
       "url": "https://federalnewsnetwork.com/intelligence-community/2026/07/ai-audits-and-osint-featured-in-house-intel-bill/"
+    },
+    {
+      "date": "2026-07-20",
+      "kind": "primary",
+      "publisher": "govinfo",
+      "title": "Bill status, H.R. 9624 (119th Congress), Intelligence Authorization Act for Fiscal Year 2027",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9624.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "The House intelligence committee passed its FY2026 intelligence authorization bill on 2025-09-10, and Federal News Network reported that the bill would have the DNI establish an official to oversee open-source intelligence across the IC and minimize duplicative open-source activities and funding; industry groups urged the committees' leaders on 2025-10-24 to keep these measures, and the Senate version did not contain them. Division F of Public Law 119-60 (signed 2025-12-18), the enacted FY2026 intelligence authorization, has no open-source section in its table of contents, and its text read through Sec. 6703 does not mention open-source intelligence. ODNI's August 2025 reorganization fact sheet does not mention open-source intelligence, and no designation of the Principal Deputy DNI as chair of the National Open Source Committee was found. A Federal News Network report from July 2026 said the House committee's FY2027 bill again contains open-source provisions, on budget reporting and sharing across the IC, which are not enacted.",
+  "status_summary": "The House intelligence committee passed its FY2026 intelligence authorization bill on 2025-09-10 (Breaking Defense), and Federal News Network reported that the bill would have the DNI establish an official to oversee open-source intelligence across the IC and minimize duplicative open-source activities and funding; industry groups urged the committees' leaders on 2025-10-24 to keep these measures, and the Senate version did not contain them (Washington Technology). Division F of Public Law 119-60 (signed 2025-12-18), the enacted FY2026 intelligence authorization, has no open-source section in its table of contents, and ODNI's August 2025 reorganization fact sheet does not mention open-source intelligence; no designation of the Principal Deputy DNI as chair of the National Open Source Committee was found. The House intelligence committee ordered the FY2027 authorization bill (H.R. 9624) reported, amended, by voice vote on 2026-07-20, and Federal News Network reported that it again contains open-source provisions on budget reporting and sharing across the IC; no reported text or floor action was listed as of the bill status read.",
   "timeline": [
     {
       "date": "2025-08-20",
@@ -197,10 +186,17 @@
       "kind": "primary",
       "source": "GovInfo",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
+    },
+    {
+      "date": "2026-07-20",
+      "event": "The House Permanent Select Committee on Intelligence held a markup of H.R. 9624, the FY2027 intelligence authorization bill introduced on 2026-07-09, and ordered it reported, amended, by voice vote; no report or floor action is listed.",
+      "kind": "primary",
+      "source": "govinfo (bill status)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9624.xml"
     }
   ],
   "title": "Clarify DNI leadership of IC open-source work and avoid duplicating the private sector",
   "tracked": true,
-  "uncertainties": "Neither Federal News Network article shows a publication date; their dates here are taken from the URL month (an inference), and the 2025 article dates the committee approval only as 'last week', so the 2025-09-10 date comes from Breaking Defense. The enacted-law finding rests on the Division F table of contents and on section text read through Sec. 6703 on the Senate intelligence committee's copy; Secs. 6704 to 6806 were checked by title only. The FY2027 House bill as introduced (H.R. 9624, 2026-07-09) contains only funding sections; the open-source provisions were described as added in committee and were not read. Match is partial: the House text would have created a DNI-designated open-source overseer aimed at duplication, close to the Mandate's enterprise-leader idea, but it was not enacted. No ODNI or National Open Source Committee announcement was found; classified or internal decisions would not appear.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "Neither Federal News Network article shows a publication date; their dates here are taken from the URL month (an inference), and the 2025 article dates the committee approval only as the previous week, so the 2025-09-10 date comes from Breaking Defense. The enacted-law finding rests on the Division F table of contents and on section text read through Sec. 6703 on the Senate intelligence committee's copy; Secs. 6704 to 6806 were checked by title only. The FY2027 House bill status on govinfo.gov lists only the introduced text (2026-07-09, funding sections only) and a 2026-07-20 markup at which the bill was ordered reported as amended; the amended text with the open-source provisions was not available and was not read. The Senate committee report on S. 4615 does not mention open-source intelligence. No ODNI or National Open Source Committee announcement was found, and ODNI pages on dni.gov could not be reached; classified or internal decisions would not appear. Match is partial: the House text would have created a DNI-designated open-source overseer aimed at duplication, close to the Mandate's enterprise-leader idea, but it was not enacted.",
+  "updated_at": "2026-10-18"
 }

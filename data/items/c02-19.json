@@ -2,9 +2,9 @@
   "agency": "Office of National Drug Control Policy",
   "blockers": [],
   "chapter": "02",
-  "confidence": 76,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked and the stage-deciding ONDCP priorities release re-read on whitehouse.gov; the partial match rests on the 2026 strategy fact sheet rather than the full strategy document, and the Director's consultation with border officials is undocumented.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text checked at page 61; the stage-deciding ONDCP priorities release was reread in full on whitehouse.gov and the 2026 strategy PDF on whitehouse.gov was read through its letter, summary, introduction and first five chapters; the unread appendices could at most document the consultation element and cannot change the stage.",
   "durability": {
     "level": "medium",
     "why": "The HALT Fentanyl Act is a statute, while the priorities statement, strategy and executive order can be changed by a later administration."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-13",
       "note": "Refutation check found no rescission of the 2025 priorities; 2026 counter-cartel actions recorded as context; independent review confirmed implemented 70."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Independent review reread the ONDCP priorities release and read the 2026 National Drug Control Strategy in part on whitehouse.gov, corrected the summary on how the strategy treats overdose deaths, kept implemented 70 and moved confidence from 76 to 80."
     }
   ],
   "id": "c02-19",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-17",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -80,28 +84,35 @@
   ],
   "remaining": [
     "Public evidence of the Director's consultation with border enforcement officials",
-    "Confirmation that the 2026 strategy keeps overdose deaths as the top priority (the fact sheet does not rank goals)",
+    "An express statement that overdose deaths are the top priority (neither the 2025 statement nor the 2026 strategy ranks goals)",
     "Measurable reduction in overdose deaths (not assessed here)"
   ],
   "requires_congress": "no",
   "research_agent": "N02b",
   "review": {
+    "document_reread": {
+      "citation": "ONDCP Statement of Drug Policy Priorities release (2025-04-03) and National Drug Control Strategy 2026 (released 2026-05-04)",
+      "note": "Release read in full: six numbered priorities led by reducing overdose fatalities with a focus on fentanyl, no stated ranking, no mention of border enforcement officials. Strategy read in part: no ranking, two equally important fronts, fentanyl a central threat, qualitative goal of accelerating the overdose decline.",
+      "result": "supports",
+      "url": "https://www.whitehouse.gov/releases/2025/04/ondcp-releases-trump-administrations-statement-of-drug-policy-priorities/"
+    },
     "flags": [
-      "New cartel-related events are context on supply reduction, not a change to the match",
-      "Red-team evidence entries are well-formed objects; one (customs enforcement areas) was not opened and adds nothing"
+      "Accepted the researcher's summary rewrite: the phrase about overdose response last applies to the fact sheet pillar order, not the strategy document.",
+      "Added EO 14157 as a dated context event and three primary sources from the researcher's file."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 61 makes the fentanyl crisis and overdose deaths the top drug policy priority, reaffirms prevention, treatment and supply reduction, and leads into the Director's consultation with border officials; the paraphrase fits.",
+    "mandate_check": "ok",
+    "mandate_note": "Page 61 says the next President's top drug policy priority must be the fentanyl crisis and reducing overdoses and deaths, reaffirms prevention, treatment and reducing illicit drug availability, stresses disrupting drug flows across the border, and says the ONDCP Director should consult federal border enforcement officials. The paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-1",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-A",
     "source_checks": [
       {
-        "note": "Release of 2025-04-03 lists six priorities with reducing overdose fatalities, focused on fentanyl, first; the page does not say the order is a ranking.",
-        "result": "supports",
-        "url": "https://www.whitehouse.gov/releases/2025/04/ondcp-releases-trump-administrations-statement-of-drug-policy-priorities/"
+        "note": "Read through about Chapter 5 in two passes; Appendices A, B and D not visible; no Director consultation passage found in the read part.",
+        "result": "partial",
+        "url": "https://www.whitehouse.gov/wp-content/uploads/2026/05/National-Drug-Control-Strategy-2026-1.pdf"
       }
-    ]
+    ],
+    "stage_change_reason": "No change: the 2025 priorities statement and the 2026 strategy are operative executive policy documents that put fentanyl and overdose deaths at the center with prevention, treatment and supply reduction, short of an express top ranking and with no documented border consultation, so implemented 70 with a partial match."
   },
   "self_confidence": 65,
   "significance": {
@@ -172,11 +183,39 @@
       "publisher": "White House",
       "title": "Commitment to Countering Cartel Criminal Activity",
       "url": "https://www.whitehouse.gov/presidential-actions/2026/03/commitment-to-countering-cartel-criminal-activity"
+    },
+    {
+      "date": "2026-05-04",
+      "kind": "primary",
+      "publisher": "White House / ONDCP",
+      "title": "National Drug Control Strategy 2026",
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/05/National-Drug-Control-Strategy-2026-1.pdf"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Designating Fentanyl as a Weapon of Mass Destruction (EO 14367), 90 FR 59365",
+      "url": "https://www.federalregister.gov/documents/2025/12/18/2025-23417/designating-fentanyl-as-a-weapon-of-mass-destruction"
+    },
+    {
+      "date": "2025-01-29",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Designating Cartels and Other Organizations as Foreign Terrorist Organizations and Specially Designated Global Terrorists (EO 14157), 90 FR 8439",
+      "url": "https://www.federalregister.gov/documents/2025/01/29/2025-02004/designating-cartels-and-other-organizations-as-foreign-terrorist-organizations-and-specially"
     }
   ],
   "stage": "implemented",
-  "status_summary": "ONDCP's drug policy priorities released on 2025-04-03 list reducing overdose deaths with a focus on fentanyl first, followed by supply chain, border, prevention, treatment and research. The HALT Fentanyl Act (Public Law 119-26) was approved on 2025-07-16, and Executive Order 14367 of 2025-12-15 designated illicit fentanyl a weapon of mass destruction. The 2026 National Drug Control Strategy, released on 2026-05-04, covers prevention, treatment and supply reduction, but its fact sheet does not rank goals, opens with border interdiction and cartels and places overdose response last. No document was found describing the Director's consultation with border officials.",
+  "status_summary": "ONDCP's drug policy priorities released on 2025-04-03 list reducing overdose fatalities with a focus on fentanyl first of six, followed by supply chain, border, prevention, treatment and research, without stating a ranking. The HALT Fentanyl Act (Public Law 119-26) was approved on 2025-07-16, and Executive Order 14367 (90 FR 59365), signed 2025-12-15, designated illicit fentanyl and core precursors weapons of mass destruction. The 2026 National Drug Control Strategy, released 2026-05-04, ranks no goals, calls supply and demand efforts equally important, emphasizes illicit fentanyl as a central lethal threat and sets a goal of accelerating the decline in overdose deaths; its fact sheet lists border interdiction first and overdose response last. No document was found describing the Director's consultation with border officials.",
   "timeline": [
+    {
+      "date": "2025-01-20",
+      "event": "Executive Order 14157 (90 FR 8439, published 2025-01-29) directs a State Department recommendation within 14 days on designating covered cartels as foreign terrorist organizations or specially designated global terrorists.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/01/29/2025-02004/designating-cartels-and-other-organizations-as-foreign-terrorist-organizations-and-specially"
+    },
     {
       "date": "2025-04-03",
       "event": "ONDCP released the administration's six drug policy priorities, led by reducing overdose deaths with a focus on fentanyl.",
@@ -214,7 +253,7 @@
     },
     {
       "date": "2026-05-04",
-      "event": "ONDCP released the 2026 National Drug Control Strategy; its fact sheet covers prevention, treatment and supply reduction, opens with border interdiction and cartels and places overdose response last.",
+      "event": "ONDCP released the 2026 National Drug Control Strategy; the strategy ranks no goals, treats supply and demand efforts as equally important, emphasizes illicit fentanyl and sets a goal of accelerating the decline in overdose deaths, while its fact sheet opens with border interdiction and cartels and places overdose response last.",
       "kind": "primary",
       "source": "White House",
       "url": "https://www.whitehouse.gov/releases/2026/05/2026-national-drug-control-strategy-released/"
@@ -229,6 +268,6 @@
   ],
   "title": "Make fentanyl and overdoses the top drug policy priority; consult border officials",
   "tracked": true,
-  "uncertainties": "The full strategy document was not opened; its contents were judged from the official fact sheet, which does not rank goals. Overdose death trends were not examined. The cartel terrorist designations were not researched. The progress figure is an inference: the 2025 priorities statement matches the recommendation directly, while the 2026 strategy emphasizes border and supply measures.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The 2026 strategy PDF was read in review only in part (through about Chapter 5; Appendices A, B and D, including the border strategies appendix and performance goals, were not visible), so a passage on the Director consulting border enforcement officials cannot be ruled out; the visible text mentions only views solicited from National Drug Control Program agencies and law enforcement organizations. CRS report R48859 was not read. Overdose death trends were not examined beyond the figures the strategy cites. The cartel designation notices of 2026 and Executive Order 14157 are context on supply reduction. The progress figure is an inference: the 2025 priorities statement matches the recommendation directly, while the 2026 strategy balances supply and demand without naming a top priority.",
+  "updated_at": "2026-10-17"
 }

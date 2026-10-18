@@ -6,9 +6,9 @@
     "Pace: the NRC chair reportedly acknowledged that some final rules will come after the order's 18-month target (POWER Magazine, 2026-05-20)."
   ],
   "chapter": "12",
-  "confidence": 72,
+  "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "Document text verified in an earlier review (pages 369, 408 and 409). Federal Register listings confirm several operative NRC streamlining rules and that the ALARA, licensing and NEPA proposals are not final. In this review the two newest direct final rules (materials-licensing exemptions and AP1000 renewal) were read on federalregister.gov and match the record. Most earlier final rules were seen as listings and abstracts, and the pace report rests on one trade article.",
+  "confidence_reason": "Executive Order 14300 section 5 was read on federalregister.gov, and Federal Register API records for the three direct final rules and the 2026-09-30 confirmation of effective date were opened and confirm their dates; the ALARA proposal was read through about 100,000 of 118,672 characters in research. The operative final rules (fees, advanced reactor framework, categorical exclusions, generic environmental findings) were read only as API metadata, which keeps the record medium.",
   "durability": {
     "level": "medium",
     "why": "Final NRC rules need a new rulemaking to reverse, but the executive order that drives the schedule can be revoked and the central ALARA and deadline rules are still proposals."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-15",
       "note": "Update run, independently reviewed. Added three NRC actions: 2026-09-24 licensing/decommissioning/oversight proposal, 2026-10-05 materials-licensing exemptions DFR (eff. 2026-12-21), 2026-10-14 AP1000 40-year renewal DFR (eff. 2026-12-28). ONE FY2026 enacted 1,685M vs 1,370M request confirmed in CRS R48599 (context only). Stage unchanged in_progress 40. Review (corrected): Both new direct final rules confirmed on federalregister.gov; timeline sorted by date and the AP1000 rule's Federal Register citation added. No stage change. Stage in_progress 40; confidence 70 to 72."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Direct final rule dates confirmed in the Federal Register API and the 2026-09-30 effective-date confirmation restored; in_progress 40 kept at medium confidence."
     }
   ],
   "id": "c12-06",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -56,16 +60,17 @@
   "research_agent": "A09",
   "review": {
     "flags": [
-      "Status summary now runs to six sentences, beyond the two-to-four sentence schema; owner may want it trimmed",
-      "Two new items are direct final rules not yet effective; counted as context, not as completion steps",
-      "Uncertainties say the FY2026 Energy-Water law is believed to be P.L. 119-74 Division B; see c14-10 review for the govinfo title check",
-      "Several rules also driven by the 2024 ADVANCE Act (carried over)"
+      "Restored the effective-date confirmation for the 2026-08-11 direct final rule as a 2026-09-30 event; the draft wrongly said it was unsupported.",
+      "Summary now gives each direct final rule's effective date status.",
+      "Kept in_progress 40; implemented is not reached because the ALARA replacement and codified deadlines are proposals.",
+      "Confidence kept medium (76): several operative final rules read only as API metadata.",
+      "No court_status: no court event found."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 409 says light-water combined license and design certification reviews should generally finish within two years and early site permits within one year, and calls for faster license extensions with streamlined NEPA review, replacing ALARA with risk- and dose-based standards, and working with Congress on licensee fees; page 369 has the summary bullet and page 408 the background. The paraphrase matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "independent",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V3",
     "source_checks": [
       {
         "note": "Direct final rule, 91 FR 63133, published 2026-10-05, effective 2026-12-21 unless significant adverse comment by 2026-11-04; cites EO 14300; self-described deregulatory.",
@@ -76,6 +81,36 @@
         "note": "Direct final rule, 91 FR 65091, published 2026-10-14, effective 2026-12-28 unless significant adverse comment by 2026-11-13; 40-year renewal; incorporates DCD Revision 20, keeps Revision 19.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/10/14/2026-21030/ap1000-design-certification-renewal"
+      },
+      {
+        "note": "Direct final rule 91 FR 51555, published 2026-08-11, effective 2026-10-26, comments closed 2026-09-10; abstract says it responds to EO 14300. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-16374.json"
+      },
+      {
+        "note": "Correction and confirmation of effective date, 91 FR 61685, published 2026-09-30: confirms 2026-10-26 effective date of the 2026-08-11 direct final rule. Contradicts the draft's statement that the confirmation was unsupported. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-19963.json"
+      },
+      {
+        "note": "91 FR 63133, published 2026-10-05, effective 2026-12-21 unless significant adverse comments by 2026-11-04; abstract cites executive orders without a number. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-20336.json"
+      },
+      {
+        "note": "91 FR 65091, published 2026-10-14, effective 2026-12-28 unless significant adverse comments by 2026-11-13. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-21030.json"
+      },
+      {
+        "note": "Section 5: 18 months new reactors, 1 year continued operation, fee caps, LNT and ALARA reconsideration, proposed rules in 9 months and final in 18; signed 2025-05-23. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/05/29/2025-09798/ordering-the-reform-of-the-nuclear-regulatory-commission"
+      },
+      {
+        "note": "NRC rules from 2026-08-01: no final ALARA, reactor licensing or NEPA rule; confirmation of effective date 2026-19963 listed. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json"
       }
     ]
   },
@@ -175,14 +210,56 @@
       "publisher": "POWER Magazine",
       "title": "From pilot to launch: DOE names first four Nuclear Energy Launch Pad developers",
       "url": "https://www.powermag.com/from-pilot-to-launch-doe-names-first-four-nuclear-energy-launch-pad-developers/"
+    },
+    {
+      "date": "2025-05-29",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Ordering the Reform of the Nuclear Regulatory Commission (Executive Order 14300), Federal Register publication",
+      "url": "https://www.federalregister.gov/documents/2025/05/29/2025-09798/ordering-the-reform-of-the-nuclear-regulatory-commission"
+    },
+    {
+      "date": "2026-08-11",
+      "kind": "primary",
+      "publisher": "Federal Register (NRC)",
+      "title": "NRC Modernization: Rulemaking Procedure, FACA Alignment, Access, and Security (direct final rule)",
+      "url": "https://www.federalregister.gov/documents/2026/08/11/2026-16374/nrc-modernization-rulemaking-procedure-federal-advisory-committee-act-alignment-access-and-security"
+    },
+    {
+      "date": "2025-08-26",
+      "kind": "primary",
+      "publisher": "Federal Register (NRC)",
+      "title": "Revising the Duration of Design Certifications (confirmation of effective date)",
+      "url": "https://www.federalregister.gov/documents/2025/08/26/2025-16286/revising-the-duration-of-design-certifications"
+    },
+    {
+      "date": "2026-04-24",
+      "kind": "primary",
+      "publisher": "Federal Register (NRC)",
+      "title": "Generic Environmental Impact Statement for Licensing of New Nuclear Reactors (final rule)",
+      "url": "https://www.federalregister.gov/documents/2026/04/24/2026-08015/generic-environmental-impact-statement-for-licensing-of-new-nuclear-reactors"
+    },
+    {
+      "date": "2026-07-07",
+      "kind": "primary",
+      "publisher": "Federal Register (NRC)",
+      "title": "Implementation of the National Environmental Policy Act (proposed rule)",
+      "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13687/implementation-of-the-national-environmental-policy-act"
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "primary",
+      "publisher": "Federal Register (NRC)",
+      "title": "NRC Modernization: Rulemaking Procedure, Federal Advisory Committee Act Alignment, Access, and Security; Correction and Confirmation of Effective Date",
+      "url": "https://www.federalregister.gov/documents/2026/09/30/2026-19963/nrc-modernization-rulemaking-procedure-federal-advisory-committee-act-alignment-access-and-security"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "As of 2026-10-15 the NRC has finalized several streamlining rules, while the Mandate's ALARA replacement and codified review deadlines are not final. Executive Order 14300 (2025-05-23) set maximum decision periods of 18 months for new reactor applications and 12 months for continued operation, fixed caps on hourly fee recovery, reconsideration of the linear no-threshold model and ALARA, and final rules within 18 months. Final rules include a 40-year design certification duration (confirmed effective 2025-09-15), the advanced reactor framework and categorical exclusions from environmental review (both 2026-03-30; the NRC says the exclusions rulemaking began before the order), codified generic environmental findings for new reactors (2026-04-24) and FY2026 fees with fixed service-fee caps (2026-06-16, caps effective 2026-10-01); a direct final rule modernizing NRC rulemaking procedures under the order was published 2026-08-11, with its effective date confirmed as 2026-10-26. The FY2026 fee rule states that the 12 and 18 month decision deadlines will be addressed in a future rulemaking, and the ALARA proposal (2026-07-15), the NEPA implementation proposal (2026-07-07) and the reactor licensing and siting proposal (2026-07-16) are not final. A trade report of 2026-05-20 counted five of 27 planned rulemakings as final and said the NRC chair conceded some final rules would follow the order's target of about 2026-11-23. Since then the NRC has published a proposal on reactor licensing, decommissioning and operational oversight (2026-09-24) and two direct final rules that take effect only if no significant adverse comment arrives: expanded exemptions from materials licensing (published 2026-10-05, effective 2026-12-21) and a 40-year renewal of the AP1000 design certification (published 2026-10-14, effective 2026-12-28).",
+  "status_summary": "Executive Order 14300 (signed 2025-05-23) directs the NRC to set maximum decision periods of 18 months for new reactor applications and 1 year for continued operation, reconsider ALARA and the linear no-threshold model, and issue final rules within 18 months. The NRC has finalized several streamlining rules, including a 40-year design certification duration (effective 2025-09-15), the advanced reactor framework and categorical exclusions (2026-03-30), generic environmental findings for new reactors (2026-04-24) and FY2026 fees with fixed service-fee caps (2026-06-16), and has published three direct final rules not yet in effect as of 2026-10-18: NRC rulemaking procedure modernization (published 2026-08-11, effective date of 2026-10-26 confirmed on 2026-09-30), materials licensing exemptions (published 2026-10-05, effective 2026-12-21 absent significant adverse comment) and a 40-year AP1000 design certification renewal (published 2026-10-14, effective 2026-12-28 absent significant adverse comment). The ALARA replacement (2026-07-15), the NEPA implementation proposal (2026-07-07), the reactor licensing and siting proposal (2026-07-16) and the licensing, decommissioning and oversight proposal (2026-09-24) are proposed rules only, and the FY2026 fee rule states the 12 and 18 month decision deadlines will be addressed in a future rulemaking. The Mandate's fee recommendation to Congress has no enacted counterpart found.",
   "timeline": [
     {
       "date": "2025-05-23",
-      "event": "Executive Order 14300 directs the NRC to decide new reactor applications within 18 months and continued-operation applications within 12 months, to set fixed caps on hourly fee recovery, to reconsider reliance on the linear no-threshold model and ALARA, and to issue proposed rules within 9 months and final rules within 18 months.",
+      "event": "Executive Order 14300 (signed 2025-05-23, published in the Federal Register 2025-05-29, document 2025-09798) directs the NRC in section 5 to set maximum decision periods of 18 months for new reactor applications and 1 year for continued operation, enforced through caps on hourly fee recovery, to reconsider the linear no-threshold model and ALARA, and to issue proposed rules within 9 months and final rules within 18 months.",
       "kind": "primary",
       "source": "White House",
       "url": "https://www.whitehouse.gov/presidential-actions/2025/05/ordering-the-reform-of-the-nuclear-regulatory-commission/"
@@ -210,17 +287,10 @@
     },
     {
       "date": "2026-04-24",
-      "event": "NRC publishes a rule codifying generic environmental findings for licensing new nuclear reactors.",
+      "event": "NRC publishes a final rule (91 FR 22394, effective 2026-05-26) codifying generic environmental findings for licensing new nuclear reactors; the NRC describes this rulemaking as separate from its Executive Order 14300 reform.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/04/24/2026-08015/generic-environmental-impact-statement-for-licensing-of-new-nuclear-reactors"
-    },
-    {
-      "date": "2026-05-20",
-      "event": "POWER Magazine reports the NRC has finalized 5 of 27 planned rulemakings tied to the order, that the chair conceded some final rules will come after the 18-month target, and that ALARA and linear no-threshold reconsideration was still in development.",
-      "kind": "news",
-      "source": "POWER Magazine",
-      "url": "https://www.powermag.com/how-trumps-eo-14300-is-reshaping-nrc-nuclear-licensing-and-regulation/"
     },
     {
       "date": "2026-06-16",
@@ -231,31 +301,45 @@
     },
     {
       "date": "2026-07-07",
-      "event": "NRC publishes a proposed rule on implementing the National Environmental Policy Act that narrows the scope of NEPA review, updates review procedures and categorical exclusions, and issues draft guidance.",
+      "event": "NRC publishes a proposed rule (91 FR 42086) on implementing the National Environmental Policy Act that would limit NEPA reviews to effects within NRC's statutory authority, revise review-level procedures and add categorical exclusions; comments due 2026-08-21.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13687/implementation-of-the-national-environmental-policy-act"
     },
     {
       "date": "2026-07-15",
-      "event": "NRC publishes the radiation protection proposal: it would remove the term ALARA from regulations and guidance in favor of a graded approach to dose management, keep current dose limits, and retain the linear dose-response model as a partial basis. Comments due 2026-08-31.",
+      "event": "NRC publishes the radiation protection proposed rule (91 FR 43456): it would remove the term ALARA from the regulations in favor of a graded approach to dose management (pp. 43456, 43465, 43468), keep current dose limits (p. 43464) and reaffirm the linear dose-response model while not applying its nonthreshold aspect in the ALARA context (pp. 43462 to 43464). Comments due 2026-08-31.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/07/15/2026-14208/reforming-and-modernizing-the-nrcs-radiation-protection-framework"
     },
     {
       "date": "2026-07-16",
-      "event": "NRC publishes a proposal modernizing reactor licensing, oversight and siting under 10 CFR Parts 50, 52 and 53 (earlier construction start, no expiration for early site permits, risk-informed alternatives, revised design-change thresholds and a two-tier siting approach). Comments due 2026-08-31.",
+      "event": "NRC publishes a proposed rule (91 FR 44560) to modernize reactor licensing, safety oversight and siting under 10 CFR Parts 2, 50, 51, 52, 53, 54, 71 and 100, citing Executive Order 14300; comments due 2026-08-31.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/07/16/2026-14341/modernizing-reactor-licensing-safety-oversight-and-siting-practices"
     },
     {
+      "date": "2026-08-11",
+      "event": "NRC publishes a direct final rule (91 FR 51555), NRC Modernization: Rulemaking Procedure, FACA Alignment, Access, and Security, stated to respond to Executive Order 14300; effective 2026-10-26 unless significant adverse comments are received by 2026-09-10, with a companion proposed rule.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/08/11/2026-16374/nrc-modernization-rulemaking-procedure-federal-advisory-committee-act-alignment-access-and-security"
+    },
+    {
       "date": "2026-09-24",
-      "event": "NRC publishes a proposed rule, Regulatory Enhancements for Reactor Licensing, Decommissioning, and Operational Oversight, described in its abstract as part of the overhaul under Executive Order 14300 (read as a listing abstract only).",
+      "event": "NRC publishes a proposed rule (91 FR 60702), Regulatory Enhancements for Reactor Licensing, Decommissioning, and Operational Oversight, stated to respond to section 5 of Executive Order 14300; comments due 2026-11-09.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/09/24/2026-19568/regulatory-enhancements-for-reactor-licensing-decommissioning-and-operational-oversight"
+    },
+    {
+      "date": "2026-09-30",
+      "event": "NRC publishes a correction and confirmation of effective date (91 FR 61685) confirming that its 2026-08-11 direct final rule on rulemaking procedure, Federal Advisory Committee Act alignment, access and security takes effect 2026-10-26.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/09/30/2026-19963/nrc-modernization-rulemaking-procedure-federal-advisory-committee-act-alignment-access-and-security"
     },
     {
       "date": "2026-10-05",
@@ -274,6 +358,6 @@
   ],
   "title": "Streamline NRC licensing, set review deadlines and replace the ALARA principle",
   "tracked": true,
-  "uncertainties": "The list of NRC final rules comes from Federal Register API listings (titles and abstracts) read on 2026-10-07; only the fee rule and the categorical exclusions rule were read in part (the first 100,000 characters of each), and the advanced reactor framework, NEPA implementation proposal and generic environmental findings rules were seen as listing abstracts only; the 2026-09-24 licensing, decommissioning and oversight proposal was also not read. The ANS report of 2026-03-13 said the NRC was on target for the 2026-11-23 deadline, while POWER on 2026-05-20 reported the chair conceding delays; the later report is used. The NRC's own count of final rules after May 2026 was not found. Whether any individual licensing review has met the order's 18 month limit was not checked (POWER cites a subsequent license renewal for Robinson finished in under 12 months). Staffing reductions, ACRS changes and commissioner changes were not researched. The 2026-08-21 Federal Register item titled Environmental Protection Regulations is a CFR correction, not a substantive rule. Re-check on 2026-10-15: the three newest NRC items were read as follows: the materials-licensing and AP1000 direct final rules (first 100,000 characters each), the 2026-09-24 proposal as a listing abstract only. Context from the DOE side, not NRC licensing: CRS R48599 (updated 2026-03-25) lists the Office of Nuclear Energy at 1,685.0 million dollars enacted for FY2026 against a 1,370.0 million request (House 1,795.0; Senate bill 1,592.7); the enacting law is believed to be Public Law 119-74, whose Division B covers Energy and Water, but its text on govinfo was truncated and the amount was not confirmed there. POWER Magazine reports DOE's Nuclear Energy Launch Pad, run by the National Reactor Innovation Center, was unveiled 2026-03-04 and named four initial participants on 2026-04-27; it does not replace NRC licensing and the article ties it to Executive Order 14301, not 14300, so it is not counted toward this record. ADVANCE Act implementation and the Part 53 final rule's detailed status beyond the 2026-03-30 framework rule were not separately examined.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The fee rule, categorical exclusions rule, advanced reactor framework and generic environmental findings rule were checked this run through Federal Register API metadata (type, dates, citations, abstracts), not full text; the ALARA proposal was read through page 43468 of 100,000 characters of 118,672 (the remainder not read), and the Executive Order 14300 section 5 text was read on federalregister.gov. The Federal Register abstract of the ALARA proposal does not use the term; the full text does (pp. 43456, 43468). The 2026-05-20 POWER Magazine report (5 of 27 planned rulemakings final; the chair conceding some final rules would follow the order's target of about 2026-11-23) is a news report and is not counted as an event; it was not re-opened. The ANS report of 2026-03-13 said the NRC was on target for the deadline; the later report is used. The NRC confirmed on 2026-09-30 the 2026-10-26 effective date of the 2026-08-11 direct final rule; the comment periods on the 2026-10-05 and 2026-10-14 direct final rules were still open on 2026-10-18, and none of the three had taken effect by then. A Federal Register API listing of NRC rules from 2026-08-01 showed no final ALARA, reactor licensing or NEPA implementation rule. The Federal Register abstract of the generic environmental findings rule describes it as separate from the Executive Order 14300 reform. The NRC's own count of final rules after May 2026 was not found. Whether any licensing review has met the 18 month limit was not checked. Staffing reductions, ACRS changes and commissioner changes were not researched. Context from the DOE side, not NRC licensing: CRS R48599 (updated 2026-03-25) lists the Office of Nuclear Energy at 1,685.0 million dollars enacted for FY2026 against a 1,370.0 million request; the enacting law is believed to be Public Law 119-74, Division B, but its text on govinfo was truncated and the amount was not confirmed there. POWER Magazine's report on the DOE Nuclear Energy Launch Pad ties it to Executive Order 14301, so it is not counted toward this record. ADVANCE Act implementation and the Part 53 details beyond the 2026-03-30 framework rule were not examined.",
+  "updated_at": "2026-10-18"
 }

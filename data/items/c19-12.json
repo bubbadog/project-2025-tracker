@@ -5,9 +5,9 @@
     "Opposition from House leaders and maritime groups, shown by their request that the waiver expire"
   ],
   "chapter": "19",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked at page 638; the bill texts of S. 2043 and H.R. 3940 were fetched from GovInfo and confirm introduction on 2025-06-12; later bill action and the DHS waiver notice were not checked.",
+  "confidence": 82,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter page 638 checked; S. 2043 (introduced text) and the H.R. 3940 bill status were read on govinfo.gov in this review and show introduction and committee referral only, which supports the proposed stage; actions after the bill status update of 2025-12-05 were not checked.",
   "durability": {
     "level": "low",
     "why": "Introduced bills lapse at the end of the Congress; the waiver is time-limited and leaves the statute unchanged."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review read S. 2043 and the H.R. 3940 bill status on govinfo.gov; referral is the only recorded action, the waiver terms now cite a CBP bulletin; stage unchanged, confidence 72 to 82."
     }
   ],
   "id": "c19-12",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -53,37 +57,33 @@
   "research_agent": "N19",
   "restates_ids": [],
   "review": {
+    "document_reread": {
+      "citation": "S. 2043, 119th Congress, 1st Session, Open America's Waters Act, introduced 2025-06-12 (govinfo BILLS-119s2043is); with H.R. 3940 bill status (govinfo BILLSTATUS-119hr3940)",
+      "note": "Read on govinfo.gov: S. 2043 (Mr. Lee) introduced 2025-06-12 and referred to Commerce, Science, and Transportation; Sec. 2 rewrites 46 U.S.C. 12112(a) so a coastwise endorsement may issue to any vessel qualifying under US law, directs Coast Guard safety regulations within 90 days, repeals 46 U.S.C. 12132 and makes conforming changes; the official purpose is repeal of the Jones Act coastwise restrictions. The H.R. 3940 bill status (Rep. McClintock) shows introduction and referral to Transportation and Infrastructure on 2025-06-12 and to the Coast Guard and Maritime Transportation Subcommittee on 2025-06-13, with no later action as of its 2025-12-05 update.",
+      "result": "supports",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s2043is/html/BILLS-119s2043is.htm"
+    },
     "flags": [
-      "judgment call: the researcher kept not_started with the waiver; the introduced repeal bills make proposed the rubric stage, and the waiver stays out of the timeline as a parallel step.",
-      "Stage changed from not_started 0 to proposed 8 and match from parallel to direct after repeal bills were found."
+      "CBP bulletin accepted on the researcher's fetch; not re-read in this review."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 638 says serious consideration should be given to repealing or substantially reforming the Jones Act, which would require legislation, and suggests the Defense Reserve Fleet for capacity concerns. Paraphrase accurate.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed page 638 recommends serious consideration of repealing or substantially reforming the Jones Act through legislation, arguing its costs exceed its effect on domestic ship supply and that fleet capacity concerns could be met by expanding the Defense Reserve Fleet; the proposal paraphrases this accurately.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y19f",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-5",
     "source_checks": [
       {
-        "note": "S. 2043 introduced 2025-06-12 by Senator Lee, to repeal the Jones Act restrictions on coastwise trade. Found by web search for 119th Congress repeal bills.",
+        "note": "Introduced 2025-06-12, referred to Commerce; Sec. 2 coastwise endorsement rewrite and repeal of 12132.",
         "result": "supports",
         "url": "https://www.govinfo.gov/content/pkg/BILLS-119s2043is/html/BILLS-119s2043is.htm"
       },
       {
-        "note": "H.R. 3940 introduced 2025-06-12 by Representative McClintock, companion bill.",
+        "note": "Introduced 2025-06-12; referrals 2025-06-12 and 2025-06-13; no later action; updated 2025-12-05.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr3940ih/html/BILLS-119hr3940ih.htm"
-      },
-      {
-        "note": "Dated 2026-08-18; reports the waiver first announced in March 2026 and extended 2026-08-17 through 2026-11-15 for a narrowed product list; names no repeal bill.",
-        "result": "partial",
-        "url": "https://www.ajot.com/insights/full/ai-cato-urges-ending-jones-act-after-latest-trump-waiver-extension"
-      },
-      {
-        "note": "Article timestamp 2026-07-01; reports House leaders asking that the waiver expire on 2026-08-16.",
-        "result": "partial",
-        "url": "https://maritime-executive.com/article/house-leaders-call-for-an-end-to-white-house-s-jones-act-waiver"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3940.xml"
       }
-    ]
+    ],
+    "stage_change_reason": "Repeal bills were introduced and referred with no further action, which is the proposed band; the waiver is an existing executive exception and does not change the statute."
   },
   "significance": {
     "B": 2,
@@ -141,10 +141,24 @@
       "publisher": "AJOT",
       "title": "Cato urges ending Jones Act after latest Trump waiver extension",
       "url": "https://www.ajot.com/insights/full/ai-cato-urges-ending-jones-act-after-latest-trump-waiver-extension"
+    },
+    {
+      "date": "2025-06-12",
+      "kind": "primary",
+      "publisher": "govinfo.gov",
+      "title": "H.R. 3940 bill status (BILLSTATUS-119hr3940)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3940.xml"
+    },
+    {
+      "date": "2026-08-13",
+      "kind": "primary",
+      "publisher": "U.S. Customs and Border Protection",
+      "title": "CBP CSMS 69519766, Jones Act waiver extension guidance",
+      "url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/424c996"
     }
   ],
   "stage": "proposed",
-  "status_summary": "The Open America's Waters Act, introduced in the Senate as S. 2043 and in the House as H.R. 3940 on 2025-06-12, would repeal the Jones Act restrictions on coastwise trade by rewriting the coastwise endorsement statute and repealing related provisions. No committee or floor action was found. Separately, a temporary waiver of the law for energy and related products, announced in March 2026, was extended for 90 days from 2026-08-17 through 2026-11-15; a waiver is an existing executive tool and does not change the statute.",
+  "status_summary": "The Open America's Waters Act, introduced in the Senate as S. 2043 and in the House as H.R. 3940 on 2025-06-12, would repeal the Jones Act restrictions on coastwise trade by rewriting the coastwise endorsement statute and repealing related provisions. The only recorded actions are referral to the Senate Commerce Committee and, for the House bill, to the Coast Guard and Maritime Transportation Subcommittee on 2025-06-13; no hearing or markup is recorded in govinfo bill status. Separately, a waiver dated 2026-03-17 and issued at the Department of War's request was extended a second time for 90 days from 2026-08-17, with covered cargo to be loaded by 2026-11-15, per CBP guidance; a waiver is an existing executive tool and does not change the statute.",
   "timeline": [
     {
       "date": "2025-06-12",
@@ -156,6 +170,6 @@
   ],
   "title": "Repeal or substantially reform the Jones Act",
   "tracked": true,
-  "uncertainties": "Committee or floor action on S. 2043 and H.R. 3940 was not checked on congress.gov, and other reform bills may exist. The waiver is treated as a parallel executive step and not as progress on repeal; the DHS waiver notice itself was not opened and its details come from trade press. The Maritime Executive date comes from the article timestamp shown on the page.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Bill status for S. 2043 and H.R. 3940 was read from govinfo bulk data last updated 2025-12-05, so any action after that date was not checked, and other Jones Act reform bills were not enumerated. The waiver is treated as a parallel executive step and not as progress on repeal; the original 2026-03-17 waiver was not opened and its terms come from a CBP bulletin and trade press. The Maritime Executive date comes from the article timestamp shown on the page.",
+  "updated_at": "2026-10-16"
 }

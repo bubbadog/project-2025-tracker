@@ -5,9 +5,9 @@
     "Source and method protection concerns, which the text itself acknowledges."
   ],
   "chapter": "07",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Text checked and all four sources fetched; the not_started finding rests on absence of evidence from limited searching of a largely internal IC policy area (capped at 50).",
+  "confidence": 55,
+  "confidence_label": "medium",
+  "confidence_reason": "All five systematic checks were documented on 2026-10-18: check 1 (three Federal Register queries, plus a reviewer read of the two cybersecurity executive orders they surfaced) found no IC release rule; check 2 is unreachable (Unified Agenda blocked, CISA-filtered queries failed); check 3 (one search, only older bills) is partial because enacted laws were not read; check 4 (ODNI newsroom read, CISA and NSA pages failed) and check 5 (one news search) found no formal policy. With one unreachable and several partial checks in a largely non-public policy area, confidence is set at 55.",
   "durability": {
     "level": "low",
     "why": "The adjacent statutory authority has been extended only temporarily, and no IC policy exists to assess."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c06-27 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check with independent AI review: Systematic absence check confirmed not_started for the IC 48-hour release policy; two cybersecurity executive orders read and judged non-qualifying; confidence raised from 45 to 55."
     }
   ],
   "id": "c07-15",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -60,13 +64,15 @@
   "review": {
     "flags": [
       "February 2026 event redated to the source's publication date",
-      "not_started confirmed"
+      "not_started confirmed",
+      "V10: not_started 0 confirmed; the two cybersecurity executive orders surfaced by check 1 were read and do not qualify (Executive Order 14306 runs slightly the other way by striking an immediate-sharing directive, but it concerns Defense and DHS procedures, not the IC release rule, so diverged is not warranted).",
+      "V10: confidence 45 to 55, below the researcher's suggested 60, because check 2 is unreachable including its fallback and checks 3 to 5 are partial in places."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 222 to 223 call for an IC obligation-to-share policy with write-to-release cyber products provided within 48 hours, exception reporting to Congress, and a real-time auditing capability; the paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y8b",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V10",
     "source_checks": [
       {
         "note": "Dated 2026-02-12; lapse 2025-09-30, late-2025 extension to 2026-01-30, early February 2026 act (H.R. 7148) to 2026-09-30.",
@@ -87,6 +93,61 @@
         "note": "Updated 2026-09-03; extended to 2026-12-11 upon enactment of the Continuing Appropriations and Extensions Act, 2027.",
         "result": "supports",
         "url": "https://www.everycrsreport.com/files/2026-09-03_IF12959_e88b818ccb3aca205dcf1ba233b57cd55207205b.html"
+      },
+      {
+        "note": "Systematic check 1 (researcher): Terms: cyber threat, indicators, sharing, intelligence community, declassify; all agencies; 0 documents since 2025-01-20. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22cyber+threat%22+indicators+sharing+intelligence+community+declassify&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 1 (researcher): Terms: cyber threat information sharing; all agencies; 101 documents, first 20 read (CIRCIA town hall proposal 2026-02-13, FERC reliability standards, FCC items, DHS information collections, executive orders of 2025-06-11 and 2026-03-11 on cybersecurity and cybercrime). None sets an intelligence community release rule or 48-hour policy by title; the executive orders were not read in full. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=cyber+threat+information+sharing&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 1 (researcher): Terms: intelligence community, declassification, sharing, indicators, 48 hours; 1 document (a GSA Federal Management Regulation rule of 2025-12-16), unrelated. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=intelligence+community+declassification+sharing+indicators+48+hours&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 2 (researcher): Unified Agenda listing is script-driven and the host is refused by the session proxy (HTTP 403 on connect), checked 2026-10-18; the Federal Register proposed-rule listing was used as the fallback (see the next entry).",
+        "result": "unreachable",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Systematic check 2 (researcher): Fetch of the CISA proposed-rule listing and of a CISA-filtered cyber threat indicators query failed (client error, one over-length URL rejected), checked 2026-10-18. The all-agency query above, which lists the CIRCIA proposed rule, served as the fallback. ODNI and NSA publish little in the Federal Register.",
+        "result": "unreachable",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=PRORULE&conditions[agencies][]=cybersecurity-and-infrastructure-security-agency&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 3 (researcher): One WebSearch (congress.gov, govinfo.gov) on an intelligence community obligation to share cyber threat indicators within 48 hours. All hits were from the 112th to 114th Congresses (CISPA, S. 754 / Cybersecurity Information Sharing Act of 2015, H.R. 3523); no 119th Congress bill matched. The record already covers the 2015 law's extensions. Enacted laws P.L. 119-21, 119-60 (defense authorization) and appropriations acts were not read for intelligence-sharing provisions. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.congress.gov/bill/114th-congress/senate-bill/754/text"
+      },
+      {
+        "note": "Systematic check 4 (researcher): ODNI newsroom first page (items of 2026-06-12, 2026-06-18, 2026-08-03): none on cyber threat sharing, indicator release or write-to-release policy. The CISA news page and NSA pages could not be fetched (error); dhs.gov is blocked. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.odni.gov/newsroom/"
+      },
+      {
+        "note": "Systematic check 5 (researcher): One WebSearch (no domain filter) on intelligence community sharing of cyber threat intelligence faster or with industry, 2026. Results were an ExecutiveGov report on faster sharing of unclassified indicators by DHS, a CFR brief, a Breaking Defense item and NSA cybersecurity commentary; dates were not shown in the results. None showed a formal IC obligation-to-share policy or 48-hour rule. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.executivegov.com/articles/dhs-official-sharing-of-unclassified-cyber-threat-indicators-getting-faster"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: query cyber threat indicators intelligence, presidential documents, since 2025-01-20: one document, Executive Order 14306 (published 2025-06-11).",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=cyber+threat+indicators+intelligence&conditions[type][]=PRESDOCU&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: Executive Order 14306, signed 2025-06-06, read: no IC release deadline, exception reporting or access auditing; section 1(d) strikes language directing Defense and DHS to establish procedures to immediately share threat information; the only sharing item concerns indicators of compromise for AI systems, with no deadline.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/06/11/2025-10804/sustaining-select-efforts-to-strengthen-the-nations-cybersecurity-and-amending-executive-order-13694"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: Executive Order 14390, signed 2026-03-06 (published 2026-03-11), read: general information-sharing and coordination language, CISA sharing with state and local partners to the extent permitted by law; no IC release deadline, exception reporting or auditing.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/03/11/2026-04826/combating-cybercrime-fraud-and-predatory-schemes-against-american-citizens"
       }
     ]
   },
@@ -174,6 +235,6 @@
   ],
   "title": "Adopt an obligation-to-share policy with 48-hour release of cyber threat intelligence",
   "tracked": true,
-  "uncertainties": "The 2015 law is about voluntary sharing by companies with the government and is not an IC release policy, so it is related background only. The CRS update says the provisions were extended to 2026-12-11 upon enactment of the Continuing Appropriations and Extensions Act, 2027, without a public law number or date; the Nextgov article of 2026-09-01 said the stopgap was not yet signed, so the CRS statement is the basis for treating it as enacted. The February 2026 act's public law number and exact date were not found. A search for an ODNI or NSA write-to-release or 48-hour policy returned nothing new; the Senate intelligence committee's FY2027 bill (S. 4615) lists a section making hostile foreign cyber actors a national intelligence priority but none on release of indicators, by title. Internal IC sharing policies may not be public.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The 2015 law is about voluntary sharing by companies with the government and is not an IC release policy, so it is related background only. The CRS update says the provisions were extended to 2026-12-11 upon enactment of the Continuing Appropriations and Extensions Act, 2027, without a public law number or date; the Nextgov article of 2026-09-01 said the stopgap was not yet signed, so the CRS statement is the basis for treating it as enacted. The February 2026 act's public law number and exact date were not found. A search for an ODNI or NSA write-to-release or 48-hour policy returned nothing new; the Senate intelligence committee's FY2027 bill (S. 4615) lists a section making hostile foreign cyber actors a national intelligence priority but none on release of indicators, by title. Internal IC sharing policies may not be public. Checked systematically on 2026-10-18: Federal Register API searches (three term variants) found no IC release policy or 48-hour rule; the Unified Agenda listing was unreachable and the CISA-filtered queries failed; one congress.gov and govinfo search matched only 112th to 114th Congress bills; the ODNI newsroom showed nothing on cyber indicator release (CISA and NSA pages could not be fetched); and one news search found only reports of faster sharing of unclassified indicators. Executive Order 14306 (signed 2025-06-06) and Executive Order 14390 (signed 2026-03-06), read in review, set no IC release deadline, exception reporting or access auditing; the first removed an earlier directive to establish procedures to immediately share threat information. Internal IC sharing policies may not be public, and enacted 119th Congress laws were not read for such provisions.",
+  "updated_at": "2026-10-18"
 }

@@ -1,18 +1,18 @@
 {
   "agency": "Centers for Medicare and Medicaid Services (CMS)",
   "blockers": [
-    "District court vacatur of the 2023 rule provisions",
-    "Appeal argued 2026-10-05 with no decision"
+    "District court vacatur and remand of the 2023 RADV final rule as a whole (Humana Inc. v. Becerra, 2025-09-25)",
+    "Appeal argued in the Fifth Circuit on 2026-10-05 with no decision found"
   ],
   "chapter": "14",
-  "confidence": 74,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked; the CMS announcement and the CMS memo were read, but the court opinion was not opened and court facts rest on law-firm and news summaries.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text at pages 463 to 464 checked. The stage-deciding document, the Northern District of Texas order of 2025-09-25 (ECF 76) with its final judgment (ECF 77), was fetched and read in full in this review through a copy of the filing hosted by the Georgetown Law litigation tracker; the CMS release and memo behind the earned progress were read in the prior review. The pending appeal rests on law-firm and news reports, and no Fifth Circuit ruling has been reported.",
   "court_status": {
-    "basis": "The district court vacatur remains in effect; the government's appeal was argued in the Fifth Circuit on 2026-10-05 with no decision reported.",
+    "basis": "The 2025-09-25 order (ECF 76) and final judgment (ECF 77) vacate and remand the 2023 RADV final rule on logical-outgrowth grounds; the government's Fifth Circuit appeal (notice 2025-11-21) was argued 2026-10-05 per a STAT report, with no decision found.",
     "date": "2025-09-25",
     "state": "vacated",
-    "url": "https://www.crowell.com/en/insights/client-alerts/court-vacates-cmss-2023-final-rule-on-radv-audits"
+    "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2023/09/Humana-Inc._2025.09.25_ORDER-ON-MOTION-FOR-SUMMARY-JUDGMENT.pdf"
   },
   "durability": {
     "level": "low",
@@ -35,10 +35,22 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Cross-references added to new layer 3 records c14-37 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Independent review read the Northern District of Texas order and final judgment of 2025-09-25 in full through a copy hosted by the Georgetown Law litigation tracker, corrected the summary to say the whole 2023 RADV rule was vacated, repointed the court status to the order and moved confidence from 74 to 80; the stage stayed blocked at 35."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Coordinating session red-team: the stage-deciding document behind the high rating was re-read on a summary of the order and recorded in review.source_checks, which the 2026-10-17 review had left without the order itself. No change to stage, progress or confidence."
     }
   ],
   "id": "c14-17",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-17",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -49,56 +61,45 @@
   "position": "Centers for Medicare and Medicaid Services (CMS): Medicare Regulatory Reforms",
   "progress": 35,
   "proposal": "The Mandate recommends reintroducing Trump-era Medicare regulations and demonstrations that were withdrawn or weakened, naming the Risk Adjustment Data Validation (RADV) rule among them, alongside the MCIT coverage rule, the MAQI demonstration and the direct contracting model later rebranded ACO REACH.",
-  "related_ids": [],
+  "related_ids": [
+    "c14-37"
+  ],
   "remaining": [
-    "Fifth Circuit ruling or a new rulemaking on the fee-for-service adjuster and extrapolation",
+    "Fifth Circuit ruling on the vacatur, or a new rulemaking on remand for the RADV rule (including the fee-for-service adjuster and extrapolation)",
     "Completion of the 2018 to 2024 audit backlog",
     "Status of the other named items (MCIT, MAQI, ACO REACH) not assessed in this record"
   ],
   "requires_congress": "no",
   "research_agent": "N14",
   "review": {
+    "document_reread": {
+      "citation": "Humana Inc. v. Becerra, No. 4:23-cv-00909-O (N.D. Tex.), Order on Motions for Summary Judgment (ECF 76) and Final Judgment (ECF 77), 2025-09-25",
+      "note": "Read in full. The copy is the filed order itself (caption, case number, ECF 76 header dated 2025-09-25, closing order line; no typed judge name in the copy) followed by ECF 77. It rules only on the logical-outgrowth claim, vacates the 2023 final rule (88 FR 6643) as a whole and remands; it does not hold extrapolation unlawful. This contradicts the record's wording that only the adjuster removal and extrapolation were vacated.",
+      "result": "supports",
+      "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2023/09/Humana-Inc._2025.09.25_ORDER-ON-MOTION-FOR-SUMMARY-JUDGMENT.pdf"
+    },
     "flags": [
-      "Appeal date settled as 2025-11-21 (three sources agree).",
-      "Healthmanagement roundup source dropped as unneeded."
+      "status_summary corrected: the order vacates the whole 2023 rule, not only the adjuster removal and extrapolation",
+      "Fifth Circuit status rests on STAT; appellate docket not opened"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 463 to 464 confirmed; RADV is one of four listed Trump-era items to restore.",
+    "mandate_check": "ok",
+    "mandate_note": "Pages 463 to 464 call for reintroducing Trump-era Medicare regulations and demonstrations that were withdrawn or weakened and list MCIT, the RADV rule, MAQI and the direct contracting model later rebranded ACO REACH; the proposal is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y14a",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-F",
     "source_checks": [
       {
-        "note": "Press release dated 2025-05-21 with all-contract audits and 35 to 200 sample.",
-        "result": "supports",
-        "url": "https://www.cms.gov/newsroom/press-releases/cms-rolls-out-aggressive-strategy-enhance-accelerate-medicare-advantage-audits"
-      },
-      {
-        "note": "CMS memo itself (hosted copy); batches 2025-06-12 and 2025-06-25; appeal 2025-11-21; PY 2020 plan.",
-        "result": "supports",
-        "url": "https://www.ahcancal.org/Reimbursement/Documents/MA/Update%20on%20Status%20of%20MA%20RADV%20Audits%201.27.26.pdf"
-      },
-      {
-        "note": "Vacatur 2025-09-25 on logical outgrowth and APA grounds; remand.",
-        "result": "supports",
+        "note": "Law-firm alert; consistent on date and vacatur but superseded as the court source by the order itself.",
+        "result": "partial",
         "url": "https://www.crowell.com/en/insights/client-alerts/court-vacates-cmss-2023-final-rule-on-radv-audits"
       },
       {
-        "note": "Notice of appeal 2025-11-21; alert dated 2025-11-26.",
+        "note": "Order of 2025-09-25 in Humana Inc. v. Becerra, No. 4:23-cv-00909-O (N.D. Tex., Judge O'Connor), read in full in the 2026-10-17 review from a copy hosted by a university litigation tracker: summary judgment on the logical-outgrowth claim, 2023 RADV final rule vacated and remanded as a whole. Docket, date, judge and disposition confirmed 2026-10-18 against an actuarial firm's summary of the order.",
         "result": "supports",
-        "url": "https://www.crowell.com/en/insights/client-alerts/cms-appeals-humana-v-becerra"
-      },
-      {
-        "note": "Appeal to the Fifth Circuit filed in a Friday filing reported 2025-11-25.",
-        "result": "supports",
-        "url": "https://www.healthcaredive.com/news/trump-administration-cms-appeal-medicare-advantage-audit-ruling-radv/806397/"
-      },
-      {
-        "note": "Fifth Circuit argument 2026-10-05; no decision.",
-        "result": "supports",
-        "url": "https://www.statnews.com/2026/10/05/humana-medicare-advantage-radv-audits-lawsuit-hearing/"
+        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2023/09/Humana-Inc._2025.09.25_ORDER-ON-MOTION-FOR-SUMMARY-JUDGMENT.pdf"
       }
-    ]
+    ],
+    "stage_change_reason": "Stage blocked kept at progress 35: the 2023 RADV rule is vacated and on appeal (blocked keeps earned progress), while CMS's expanded RADV audits announced 2025-05-21 continue under the 2026-01-27 memo, which is partial operative progress toward the RADV item."
   },
   "self_confidence": 55,
   "significance": {
@@ -171,10 +172,17 @@
       "publisher": "STAT",
       "title": "Appeals judges question government in Humana Medicare Advantage audit case",
       "url": "https://www.statnews.com/2026/10/05/humana-medicare-advantage-radv-audits-lawsuit-hearing/"
+    },
+    {
+      "date": "2025-09-25",
+      "kind": "primary",
+      "publisher": "U.S. District Court, Northern District of Texas (copy hosted by Georgetown Law litigation tracker)",
+      "title": "Humana Inc. v. Becerra, No. 4:23-cv-00909-O (N.D. Tex.), order on motion for summary judgment and final judgment (ECF 76, 77)",
+      "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2023/09/Humana-Inc._2025.09.25_ORDER-ON-MOTION-FOR-SUMMARY-JUDGMENT.pdf"
     }
   ],
   "stage": "blocked",
-  "status_summary": "On 2025-05-21 CMS announced it would audit every eligible Medicare Advantage contract in each payment year, finish remaining audits for payment years 2018 to 2024 by early 2026, and use samples of 35 to 200 records per contract. On 2025-09-25 the Northern District of Texas, in Humana v. Becerra, vacated the 2023 RADV final rule's removal of the fee-for-service adjuster, together with its codified extrapolation, on notice-and-comment grounds and remanded it; the government filed a notice of appeal to the Fifth Circuit on 2025-11-21. A CMS memo of 2026-01-27 says HHS will comply with the order while it stands and expects to begin payment year 2020 audits by February 2026. The Fifth Circuit heard argument on 2026-10-05 and no decision was found.",
+  "status_summary": "On 2025-05-21 CMS announced it would audit every eligible Medicare Advantage contract in each payment year, finish remaining audits for payment years 2018 to 2024 by early 2026, and use samples of 35 to 200 records per contract. On 2025-09-25 the Northern District of Texas, in Humana Inc. v. Becerra (No. 4:23-cv-00909-O, ECF 76 and 77), granted summary judgment on a notice-and-comment claim and vacated and remanded the 2023 RADV final rule as a whole, without reaching the other claims; the government filed a notice of appeal to the Fifth Circuit on 2025-11-21. A CMS memo of 2026-01-27 says HHS will comply with the order while it stands and expects to begin payment year 2020 audits by February 2026. The Fifth Circuit heard argument on 2026-10-05 and no decision was found.",
   "timeline": [
     {
       "date": "2025-05-21",
@@ -192,10 +200,10 @@
     },
     {
       "date": "2025-09-25",
-      "event": "Northern District of Texas grants summary judgment to Humana, vacating the 2023 RADV final rule's removal of the fee-for-service adjuster on notice-and-comment grounds and remanding to the agency.",
+      "event": "The Northern District of Texas, in Humana Inc. v. Becerra (No. 4:23-cv-00909-O, ECF 76 and 77), grants Humana's motion for summary judgment on the notice-and-comment (logical outgrowth) claim without reaching the other claims, and vacates and remands the 2023 RADV final rule (88 FR 6643) as a whole.",
       "kind": "court",
-      "source": "Crowell & Moring",
-      "url": "https://www.crowell.com/en/insights/client-alerts/court-vacates-cmss-2023-final-rule-on-radv-audits"
+      "source": "U.S. District Court, Northern District of Texas (copy hosted by Georgetown Law litigation tracker)",
+      "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2023/09/Humana-Inc._2025.09.25_ORDER-ON-MOTION-FOR-SUMMARY-JUDGMENT.pdf"
     },
     {
       "date": "2025-11-21",
@@ -221,6 +229,6 @@
   ],
   "title": "Restore Medicare Advantage risk adjustment data validation (RADV) audits",
   "tracked": true,
-  "uncertainties": "The district court opinion and appellate docket were not opened; the vacatur and appeal rest on law-firm and news summaries, which agree on a 2025-11-21 notice of appeal (the 2025-11-01 date in one lead was not supported). The CMS memo was read as a copy hosted by a trade association. The document calls the RADV rule a Trump-era rule, while the vacated rule was finalized in 2023 from a 2018 proposal. MCIT, MAQI and ACO REACH are not assessed here. Whether payment year 2020 audits began on schedule was not confirmed.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The district court order (ECF 76) and final judgment (ECF 77) were read through a copy hosted by the Georgetown Law litigation tracker, which shows the caption, document numbers and filing header but no typed judge name or signature; the order vacates the 2023 rule as a whole on logical-outgrowth grounds and does not hold extrapolation unlawful. The appellate docket was not opened; the appeal rests on law-firm and news summaries, which agree on a 2025-11-21 notice of appeal (the 2025-11-01 date in one lead was not supported), and the 2026-10-05 Fifth Circuit argument rests on a STAT report. The CMS memo was read as a copy hosted by a trade association. The document calls the RADV rule a Trump-era rule, while the vacated rule was finalized in 2023 from a 2018 proposal. MCIT, MAQI and ACO REACH are not assessed here. Whether payment year 2020 audits began on schedule was not confirmed.",
+  "updated_at": "2026-10-18"
 }

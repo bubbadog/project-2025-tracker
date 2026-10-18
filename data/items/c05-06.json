@@ -7,11 +7,11 @@
   "chapter": "05",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked; the Supreme Court order list of 2026-10-05 (primary) was fetched and supports the new event; termination notices and Mullin v. Doe rest on primary and law-firm sources read in an earlier review, and El Salvador status rests on an advocacy alert.",
+  "confidence_reason": "The CHNV, Family Reunification Parole and Venezuela TPS notices, Executive Order 14159, the Mullin v. Doe opinion and the 2026-10-05 order list were read on federalregister.gov and supremecourt.gov; the status of the other terminations, the reported stays and El Salvador rest on a law-firm summary and an advocacy alert, so confidence stays medium.",
   "court_status": {
-    "basis": "derived from the latest court event in the timeline",
+    "basis": "Mullin v. Doe, 609 U.S. 324 (2026-06-25), held non-constitutional challenges to TPS terminations unreviewable and reversed the orders postponing the Haiti and Syria terminations; on 2026-10-05 the Court granted certiorari in Mullin v. National TPS Alliance (No. 26-48), vacated the Ninth Circuit judgment and remanded for further consideration in light of Mullin v. Doe, so that case is pending on remand; constitutional claims remain open below, and district-court stays for several other countries were reported in June 2026.",
     "date": "2026-10-05",
-    "state": "vacated",
+    "state": "upheld",
     "url": "https://www.supremecourt.gov/orders/courtorders/100526zor_2a34.pdf"
   },
   "durability": {
@@ -38,10 +38,18 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Primary-source lift on 2026-10-17 re-read the Federal Register notices on the CHNV and Family Reunification parole terminations and the Venezuela TPS termination, Executive Order 14159, the Supreme Court opinion in Mullin v. Doe and the 2026-10-05 order list, and corrected the court status from vacated to upheld."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review after the primary-source lift: the CHNV, Family Reunification Parole and Venezuela TPS notices and Executive Order 14159 on federalregister.gov, and the Mullin v. Doe opinion and 2026-10-05 order list on supremecourt.gov, were read; court status upheld kept with pending noted as the alternative; implemented 72 kept; confidence 78 kept."
     }
   ],
   "id": "c05-06",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-16",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -94,35 +102,45 @@
   "research_agent": "A04",
   "review": {
     "flags": [
-      "redteam evidence date for the Morgan Lewis article corrected from 2026-06-01 to 2026-06-30, as flagged in the earlier review; verdict weakened is reasonable",
-      "El Salvador TPS decision pending",
-      "DACA status unverified"
+      "court_status upheld kept, not reverted to vacated: the Supreme Court's merits ruling reversed the orders that had blocked the terminations, and the 2026-10-05 GVR vacated a judgment adverse to the government. pending is the other defensible call, since the GVR itself decides nothing and the Venezuela case returns to the Ninth Circuit; basis now says so.",
+      "Removed the 2026-09-09 El Salvador lapse from the timeline (a non-action sourced to an advocacy alert).",
+      "implemented 72 kept; the other 13 country terminations and DACA remain unverified on primary pages."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 145 says USCIS should not be diverted to DACA and mass parole programs and lists repeal of TPS designations; page 146 asks Congress to legislate parole standards; pages 149 to 150 repeat parole reform and TPS repeal; page 151 recommends prohibiting categorical parole and allowing it only case by case. The paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "U1",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16L-1",
     "source_checks": [
       {
-        "note": "Order list of 2026-10-05, summary dispositions: No. 26-48, Mullin v. National TPS Alliance, certiorari granted, judgment vacated and remanded to the Ninth Circuit for further consideration in light of Mullin v. Doe, 609 U.S. 324 (2026). The event fits the objective (TPS terminations litigation).",
+        "note": "90 FR 13611, published 2025-03-25, terminates the CHNV parole programs as of that date; unexpired parole ends 2025-04-24.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/03/25/2025-05128/termination-of-parole-processes-for-cubans-haitians-nicaraguans-and-venezuelans"
+      },
+      {
+        "note": "90 FR 58032, 2025-12-15: nine programs (seven modernized FRP plus legacy Cuban and Haitian) terminated as of 2025-12-15; parole ends 2026-01-14 with exceptions.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/12/15/2025-22744/termination-of-family-reunification-parole-processes-for-colombians-cubans-ecuadorians-guatemalans"
+      },
+      {
+        "note": "90 FR 9040, 2025-02-05, effective 2025-04-07; about 348,202 eligible.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/02/05/2025-02294/termination-of-the-october-3-2023-designation-of-venezuela-for-temporary-protected-status"
+      },
+      {
+        "note": "EO 14159, 90 FR 8443: section 16 limits parole to case-by-case use and directs narrow TPS designations.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/01/29/2025-02006/protecting-the-american-people-against-invasion"
+      },
+      {
+        "note": "Decided 2026-06-25, Alito opinion, 6 to 3 (Kagan dissent joined by Sotomayor and Jackson); TPS review bar covers all non-constitutional claims; Haiti equal protection claim unlikely to succeed; judgments reversed and remanded; consolidated with No. 25-1084.",
+        "result": "supports",
+        "url": "https://www.supremecourt.gov/opinions/25pdf/25-1083_f204.pdf"
+      },
+      {
+        "note": "Order list of 2026-10-05: No. 26-48 certiorari granted, judgment vacated, remanded to the Ninth Circuit in light of Mullin v. Doe, 609 U.S. 324 (2026).",
         "result": "supports",
         "url": "https://www.supremecourt.gov/orders/courtorders/100526zor_2a34.pdf"
-      },
-      {
-        "note": "Carried from earlier review, not refetched in this pass: Federal Register API lists the CHNV parole termination notice (2025-03-25, Doc. 2025-05128) and the Family Reunification Parole termination for seven nationalities (2025-12-15, Doc. 2025-22744), plus a 2026-06-05 proposed rule on discretionary employment authorization. The FRP notice covers seven nationalities, not nine programs as the record said.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22termination%22+%22parole+processes%22&conditions[agencies][]=homeland-security-department&conditions[publication_date][gte]=2025-01-20&order=oldest&per_page=20"
-      },
-      {
-        "note": "Carried from earlier review, not refetched in this pass: Dated 2026-06-30 (the red-team evidence gave 2026-06-01): Mullin v. Doe decided 2026-06-25, 6 to 3; table of terminations for 14 designations, stays for Burma, Ethiopia, Somalia, South Sudan and Yemen at risk, Ninth Circuit stay of 2026-02-09 for Honduras, Nicaragua and Nepal, Venezuela 2023 class work authorization through 2026-10-02; El Salvador, Ukraine, Sudan and Lebanon active.",
-        "result": "supports",
-        "url": "https://www.morganlewis.com/pubs/2026/06/after-mullin-a-practical-guide-for-employers-with-tps-workers"
-      },
-      {
-        "note": "Carried from earlier review, not refetched in this pass: Alert of 2026-09-09: DHS let El Salvador TPS reach its end date without a formal Federal Register decision; DHS said current holders keep protection and work authorization until an official decision.",
-        "result": "supports",
-        "url": "https://nipnlg.org/sites/default/files/2026-09/Breaking-Community-Update-El-Salvador-TPS.pdf"
       }
     ]
   },
@@ -134,6 +152,24 @@
     "M": 3,
     "R": 2,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 2,
+        "F": 1,
+        "F_estimated": true,
+        "M": 3,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 2,
+        "F": 1,
+        "F_estimated": true,
+        "M": 3,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Ending categorical parole and TPS would remove lawful status and work authorization for a large immigrant population and their families.",
     "version": "2026-10-08",
@@ -150,9 +186,9 @@
     {
       "date": "2025-01-20",
       "kind": "primary",
-      "publisher": "White House",
+      "publisher": "Federal Register",
       "title": "Protecting the American People Against Invasion (Executive Order 14159)",
-      "url": "https://www.whitehouse.gov/presidential-actions/2025/01/protecting-the-american-people-against-invasion/"
+      "url": "https://www.federalregister.gov/documents/2025/01/29/2025-02006/protecting-the-american-people-against-invasion"
     },
     {
       "date": "2025-02-05",
@@ -180,14 +216,14 @@
       "kind": "primary",
       "publisher": "Federal Register / DHS",
       "title": "Termination of Parole Processes for Cubans, Haitians, Nicaraguans, and Venezuelans",
-      "url": "https://www.federalregister.gov/d/2025-05128"
+      "url": "https://www.federalregister.gov/documents/2025/03/25/2025-05128/termination-of-parole-processes-for-cubans-haitians-nicaraguans-and-venezuelans"
     },
     {
       "date": "2025-12-15",
       "kind": "primary",
       "publisher": "Federal Register / DHS",
       "title": "Termination of Family Reunification Parole Processes for Colombians, Cubans, Ecuadorians, Guatemalans, Haitians, Hondurans, and Salvadorans",
-      "url": "https://www.federalregister.gov/d/2025-22744"
+      "url": "https://www.federalregister.gov/documents/2025/12/15/2025-22744/termination-of-family-reunification-parole-processes-for-colombians-cubans-ecuadorians-guatemalans"
     },
     {
       "date": "2026-06-30",
@@ -202,6 +238,13 @@
       "publisher": "Supreme Court of the United States",
       "title": "Supreme Court order list, 2026-10-05",
       "url": "https://www.supremecourt.gov/orders/courtorders/100526zor_2a34.pdf"
+    },
+    {
+      "date": "2025-01-30",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Securing Our Borders (Executive Order 14165), Federal Register publication",
+      "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02015/securing-our-borders"
     }
   ],
   "stage": "implemented",
@@ -209,17 +252,17 @@
   "timeline": [
     {
       "date": "2025-01-20",
-      "event": "Executive Order 14165 directs DHS to end the CHNV categorical parole processes and to stop using CBP One to parole inadmissible aliens.",
+      "event": "Executive Order 14165 (published 2025-01-30, FR Doc. 2025-02015) directs DHS to end the CHNV categorical parole processes and to stop using CBP One to parole inadmissible aliens.",
       "kind": "primary",
       "source": "White House",
       "url": "https://www.whitehouse.gov/presidential-actions/2025/01/securing-our-borders/"
     },
     {
       "date": "2025-01-20",
-      "event": "Executive Order 14159 limits parole under INA 212(d)(5) to case-by-case use for urgent humanitarian reasons or significant public benefit.",
+      "event": "Executive Order 14159 (90 FR 8443) section 16 limits parole under INA 212(d)(5) to case-by-case use for urgent humanitarian reasons or significant public benefit and directs that TPS designations be narrowly scoped and last only as long as the statute requires.",
       "kind": "primary",
-      "source": "White House",
-      "url": "https://www.whitehouse.gov/presidential-actions/2025/01/protecting-the-american-people-against-invasion/"
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/01/29/2025-02006/protecting-the-american-people-against-invasion"
     },
     {
       "date": "2025-02-05",
@@ -230,35 +273,28 @@
     },
     {
       "date": "2025-03-25",
-      "event": "DHS publishes the termination of the parole processes for Cubans, Haitians, Nicaraguans and Venezuelans (FR Doc. 2025-05128).",
+      "event": "DHS publishes a notice terminating the parole processes for Cubans, Haitians, Nicaraguans and Venezuelans and their immediate family members, as of 2025-03-25 (FR Doc. 2025-05128).",
       "kind": "primary",
       "source": "Federal Register / DHS",
-      "url": "https://www.federalregister.gov/d/2025-05128"
+      "url": "https://www.federalregister.gov/documents/2025/03/25/2025-05128/termination-of-parole-processes-for-cubans-haitians-nicaraguans-and-venezuelans"
     },
     {
       "date": "2025-12-15",
-      "event": "DHS publishes the termination of the Family Reunification Parole processes for Colombians, Cubans, Ecuadorians, Guatemalans, Haitians, Hondurans and Salvadorans (FR Doc. 2025-22744).",
+      "event": "DHS publishes a notice ending nine Family Reunification Parole programs (2023 programs for Colombians, Cubans, Ecuadorians, Guatemalans, Haitians, Hondurans and Salvadorans and legacy Cuban and Haitian programs), as of 2025-12-15, and revoking related employment authorization (FR Doc. 2025-22744).",
       "kind": "primary",
       "source": "Federal Register / DHS",
-      "url": "https://www.federalregister.gov/d/2025-22744"
+      "url": "https://www.federalregister.gov/documents/2025/12/15/2025-22744/termination-of-family-reunification-parole-processes-for-colombians-cubans-ecuadorians-guatemalans"
     },
     {
       "date": "2026-06-25",
-      "event": "Supreme Court decides Mullin v. Doe (consolidated with Trump v. Miot), 6 to 3, reversing orders that had postponed the Haiti and Syria TPS terminations and holding non-constitutional challenges to TPS terminations are not reviewable.",
+      "event": "Supreme Court decides Mullin v. Doe (No. 25-1083, consolidated with Trump v. Miot, No. 25-1084), 6 to 3, holding the TPS judicial-review bar prevents review of non-constitutional challenges to terminations, finding the Haiti equal protection claim unlikely to succeed on interim review, reversing the orders below and remanding.",
       "kind": "court",
       "source": "U.S. Supreme Court",
       "url": "https://www.supremecourt.gov/opinions/25pdf/25-1083_f204.pdf"
     },
     {
-      "date": "2026-09-09",
-      "event": "Per an immigration-advocacy alert, the El Salvador TPS designation reaches its expiry date without a formal DHS extension or termination notice; holders keep status and work authorization until a decision is published.",
-      "kind": "news",
-      "source": "National Immigration Project",
-      "url": "https://nipnlg.org/sites/default/files/2026-09/Breaking-Community-Update-El-Salvador-TPS.pdf"
-    },
-    {
       "date": "2026-10-05",
-      "event": "The Supreme Court granted certiorari in Mullin v. National TPS Alliance (No. 26-48), vacated the Ninth Circuit judgment and remanded in light of Mullin v. Doe.",
+      "event": "The Supreme Court granted certiorari in Mullin v. National TPS Alliance (No. 26-48), vacated the Ninth Circuit judgment and remanded for further consideration in light of Mullin v. Doe.",
       "kind": "court",
       "source": "Supreme Court of the United States",
       "url": "https://www.supremecourt.gov/orders/courtorders/100526zor_2a34.pdf"
@@ -266,6 +302,6 @@
   ],
   "title": "End categorical parole programs and Temporary Protected Status designations",
   "tracked": true,
-  "uncertainties": "Web search and fetch quotas ran out before sourcing the CHNV parole termination notice, the Supreme Court's 2025 orders on CHNV and Venezuela TPS, or the other country terminations. Leads from a Wikipedia summary, unverified here: TPS terminations for Afghanistan, Cameroon, Nepal, Honduras, Nicaragua, Venezuela (2021 designation), South Sudan, Syria, Ethiopia, Haiti, Myanmar, Somalia and Yemen with several stayed by judges, a Ninth Circuit ruling in February 2026 for the government on Nicaragua, Honduras and Nepal, and a reported December 2025 end to Family Reunification Parole. DACA: the USCIS page retrieved is an undated snapshot that does not show 2025 or 2026 developments; Fifth Circuit and Texas work-permit rulings were not checked. Update: country-by-country TPS status comes from a Morgan Lewis client article of June 2026 and an advocacy alert on El Salvador, not Federal Register notices; the 2026-10-02 Venezuela preservation date has passed and its effect was not checked.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Web search and fetch quotas ran out before sourcing the CHNV parole termination notice, the Supreme Court's 2025 orders on CHNV and Venezuela TPS, or the other country terminations. Leads from a Wikipedia summary, unverified here: TPS terminations for Afghanistan, Cameroon, Nepal, Honduras, Nicaragua, Venezuela (2021 designation), South Sudan, Syria, Ethiopia, Haiti, Myanmar, Somalia and Yemen with several stayed by judges, a Ninth Circuit ruling in February 2026 for the government on Nicaragua, Honduras and Nepal, and a reported December 2025 end to Family Reunification Parole. DACA: the USCIS page retrieved is an undated snapshot that does not show 2025 or 2026 developments; Fifth Circuit and Texas work-permit rulings were not checked. Update: country-by-country TPS status comes from a Morgan Lewis client article of June 2026 and an advocacy alert on El Salvador, not Federal Register notices; the 2026-10-02 Venezuela preservation date has passed and its effect was not checked. Primary lift: the Federal Register records for the CHNV and Family Reunification Parole notices and the Venezuela TPS notice were read and match the record; EO 14165's Federal Register citation was confirmed from the API listing without reading its full text. Mullin v. Doe was read in summary form; it is cited as 609 U.S. 324 on the 2026-10-05 order list. The court_status state is changed from vacated to upheld because the latest court actions let the terminations proceed rather than vacate agency action. Independent review of 2026-10-16: the 2026-09-09 lapse of the El Salvador designation was removed from the timeline because it is the absence of a DHS action, reported only by an advocacy alert; it remains in the summary as reported.",
+  "updated_at": "2026-10-16"
 }

@@ -6,9 +6,9 @@
     "Any statutory change needs Congress."
   ],
   "chapter": "18",
-  "confidence": 76,
-  "confidence_label": "medium",
-  "confidence_reason": "Unchanged: text checked; the DOL proposals and NLRB final rule are primary Federal Register documents; absence of final DOL rules rests on API queries.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter pages checked and the stage-deciding NLRB final rule, 91 FR 9707 (FR Doc. 2026-03955), was read in review, with a Wage and Hour Division Federal Register listing through 2026-10-16 showing the DOL rules remain proposals.",
   "durability": {
     "level": "low",
     "why": "Today's operative pieces are an enforcement bulletin and a ministerial NLRB rule; DOL's proposals are not final, and both standards have changed with each administration since 2015."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Cross-reference added to the further recommendation(s) c18-11, c18-20, c18-21 from the fuller reading of chapter 18."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review read the NLRB final rule and a Wage and Hour Division document listing on federalregister.gov; no DOL final rule through 2026-10-16; stage in_progress 45 unchanged; confidence 76 to 80."
     }
   ],
   "id": "c18-04",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-16",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -56,21 +60,34 @@
   "requires_congress": "partial",
   "research_agent": "A13",
   "review": {
+    "document_reread": {
+      "citation": "91 FR 9707 (2026-02-27), FR Doc. 2026-03955, RIN 3142-AA21, 29 CFR 103.40 (NLRB final rule)",
+      "note": "Read in review: final rule effective on publication 2026-02-27, issued without notice and comment on a good-cause finding that the action is ministerial; replaces the vacated 2023 text with the 2020 rule requiring substantial direct and immediate control over essential terms; states the Eastern District of Texas vacated the 2023 rule on 2024-03-08 in Chamber of Commerce v. NLRB and that the 2023 rule never took effect. A Wage and Hour Division Federal Register listing from 2026-04-24 through 2026-10-16 shows no independent contractor or joint employer final rule.",
+      "result": "supports",
+      "url": "https://www.federalregister.gov/documents/2026/02/27/2026-03955/withdrawal-of-2023-standard-for-determining-joint-employer-status"
+    },
     "flags": [
-      "Dropped the uncertainty sentence saying the Field Assistance Bulletin was known only through the proposal: the record's timeline cites the bulletin PDF itself."
+      "The 2024 vacatur is a pre-2025 court event described as background; court_status left null since no post-2025 litigation over these rules is recorded.",
+      "No-final-rule date extended to 2026-10-16."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "pp.590-591 call for returning to the 2021 independent contractor rule and a direct-control joint employer test, plus congressional action.",
+    "mandate_check": "ok",
+    "mandate_note": "Pages 590 and 591 ask NLRB and DOL to return to their 2019 and 2021 independent contractor rules and to a direct-and-immediate-control joint employer approach, and ask Congress for a bright-line control test, a benefits safe harbor and the Save Local Business Act; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-2",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-4",
     "source_checks": [
       {
-        "note": "Re-ran the Labor Department independent contractor query: one MSHA information collection notice (2026-09-29), no final independent contractor or joint employer rule.",
+        "note": "91 FR 9707; effective 2026-02-27; good cause; 2020 text restored; 2023 rule vacated 2024-03-08, never effective.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22independent%20contractor%22&conditions[agencies][]=labor-department&conditions[publication_date][gte]=2026-04-24&order=newest"
+        "url": "https://www.federalregister.gov/documents/2026/02/27/2026-03955/withdrawal-of-2023-standard-for-determining-joint-employer-status"
+      },
+      {
+        "note": "Ten WHD documents 2026-05-15 to 2026-10-16; none an independent contractor or joint employer final rule.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=wage-and-hour-division&conditions[publication_date][gte]=2026-04-24&order=newest&per_page=40"
       }
-    ]
+    ],
+    "stage_change_reason": "One operative final rule (NLRB joint employer text), an operative DOL enforcement change and two pending DOL proposals, with no congressional action, fit the middle of in_progress."
   },
   "self_confidence": 75,
   "significance": {
@@ -80,6 +97,24 @@
     "M": 2,
     "R": 2,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 2,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 2,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Narrower independent contractor and joint employer tests change wage-law coverage for many workers and franchise businesses.",
     "version": "2026-10-08",
@@ -116,7 +151,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "DOL stopped applying the 2024 independent contractor rule in its investigations on 2025-05-01. On 2026-02-27 DOL proposed replacing that rule with the 2021 framework (with modifications), and on 2026-04-23 it proposed restoring a joint employer rule under the FLSA, FMLA and MSPA; comment periods closed 2026-04-28 and 2026-06-22 and no final rules were found as of 2026-10-07. The NLRB on 2026-02-27 published a final rule restoring the 2020 joint employer text (direct and immediate control); because a court had vacated the 2023 rule in March 2024 before it took effect, the 2020 standard was already the one in use, and the 2026 rule formally restored its text. The NLRB's independent contractor standard was not checked.",
+  "status_summary": "DOL stopped applying the 2024 independent contractor rule in its investigations on 2025-05-01. On 2026-02-27 DOL proposed replacing that rule with the 2021 framework (with modifications), and on 2026-04-23 it proposed restoring a joint employer rule under the FLSA, FMLA and MSPA; comment periods closed 2026-04-28 and 2026-06-22, and no final rules appear in the Federal Register through 2026-10-16. The NLRB on 2026-02-27 published a final rule restoring the 2020 joint employer text (substantial direct and immediate control); because a court had vacated the 2023 rule in March 2024 before it took effect, the 2020 standard was already the one in use, and the 2026 rule formally restored its text. The NLRB's independent contractor standard was not checked.",
   "timeline": [
     {
       "date": "2025-05-01",
@@ -134,7 +169,7 @@
     },
     {
       "date": "2026-02-27",
-      "event": "NLRB publishes a final rule, effective immediately and issued without notice and comment, that replaces the vacated 2023 joint employer rule text with the 2020 rule, which requires substantial direct and immediate control over essential terms of employment. The 2023 rule had been vacated by a federal court in Texas in March 2024.",
+      "event": "NLRB publishes a final rule (91 FR 9707), effective immediately and issued without notice and comment, that replaces the vacated 2023 joint employer rule text with the 2020 rule, which requires substantial direct and immediate control over essential terms of employment. The 2023 rule had been vacated by the Eastern District of Texas on 2024-03-08 and never took effect.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/02/27/2026-03955/withdrawal-of-2023-standard-for-determining-joint-employer-status"
@@ -149,6 +184,6 @@
   ],
   "title": "Return to 2021 independent contractor and direct-control joint employer standards",
   "tracked": true,
-  "uncertainties": "The NLRB's independent contractor standard (Board adjudication) was not checked. Federal Register queries on 2026-10-13 (Wage and Hour Division rules after 2026-04-24, and Labor Department documents mentioning independent contractor after 2026-04-24) found no final independent contractor or joint employer rule; the Wage and Hour rules listed were a coordinated enforcement rescission (2026-08-31), penalty inflation adjustments and an overtime exemption rule implementing court judgments (2026-05-15), none on these topics. A final rule could still be at OIRA review without appearing there. One web search returned only law firm summaries of the February to April 2026 actions and a Wage and Hour regulatory agenda article (not opened); no litigation over these rules was found. Congressional bills were not searched.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The NLRB's independent contractor standard (Board adjudication) was not checked. Federal Register listings of Wage and Hour Division documents published from 2026-04-24 through 2026-10-16 show no final independent contractor or joint employer rule; the rules listed were a coordinated enforcement rescission (2026-08-31), penalty inflation adjustments and an overtime exemption rule implementing court judgments (2026-05-15). A final rule could still be at OIRA review without appearing there. No litigation over these rules was found in one web search, and congressional bills were not searched.",
+  "updated_at": "2026-10-16"
 }

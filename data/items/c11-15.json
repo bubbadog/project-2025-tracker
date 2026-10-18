@@ -5,9 +5,9 @@
     "No hearing or markup was found on a strict scrutiny standard or a private right of action."
   ],
   "chapter": "11",
-  "confidence": 76,
-  "confidence_label": "medium",
-  "confidence_reason": "Text checked; S. 204 and H.R. 6860 texts, the ED release, the ED complaint page and K-12 Dive fetched; H.R. 650 and bill statuses rest on news and tracker sources.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Text checked; the GovInfo bill status records for S. 204, H.R. 650 and H.R. 6860, which decide the proposed stage, and the ED complaint page and parental rights release were fetched and read in full in review; the 2026-10-05 letter rests on a news report and the release date on another record.",
   "durability": {
     "level": "medium",
     "why": "ED guidance and investigations can be reversed administratively, and the statutory items have not been enacted."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Primary-source lift: GovInfo bill status records for S. 204, H.R. 650 and H.R. 6860 were read and confirm introduction and referral only, and the ED complaint page was re-read."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review after the primary-source lift: GovInfo bill status records for S. 204, H.R. 650 and H.R. 6860 and the ED complaint page and release were read, proposed 20 was kept and confidence rose from 76 to 80."
     }
   ],
   "id": "c11-15",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -58,51 +66,38 @@
   "research_agent": "N11",
   "review": {
     "flags": [
-      "judgment call: stage lowered from in_progress 30 to proposed 20 because the title items are bills or absent; only the FERPA access statement is in effect",
-      "pages corrected (343 removed)",
-      "H.R. 6860 description corrected",
-      "K-12 Dive event dated to the letter date for consistency with c00-05"
+      "Confidence raised to the high band because the stage-deciding bill status records were read in full; the undated ED release and the news-sourced letter of 2026-10-05 are not stage-deciding."
     ],
     "mandate_check": "corrected",
     "mandate_note": "Bill of Rights and strict scrutiny (p. 344), private right of action (pp. 344 to 345), FERPA full access statement (p. 334) and complaint transparency and portal (p. 358) confirmed; page 343 removed because it holds only background.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9e",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16L-2",
     "source_checks": [
       {
-        "note": "DCL on full record access, 2025-04-30 deadline, CA and ME investigations; no date on page.",
+        "note": "Introduced 2025-01-23 (Sen. Tim Scott), referred to Judiciary; no later action; H.R. 650 listed as identical.",
         "result": "supports",
-        "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-directs-schools-comply-parental-rights-laws"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s204.xml"
       },
       {
-        "note": "Introduced 2025-12-18; 90-day deadline is for ED to resolve complaints, corrected.",
+        "note": "Introduced 2025-01-23 (Rep. Foxx), referred to Judiciary; no later action.",
         "result": "supports",
-        "url": "https://www.congress.gov/119/bills/hr6860/BILLS-119hr6860ih.htm"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr650.xml"
       },
       {
-        "note": "Introduced 2025-01-23, Judiciary, strict scrutiny (added).",
+        "note": "Introduced 2025-12-18 (Rep. Hageman), referred to Education and Workforce; no later action.",
         "result": "supports",
-        "url": "https://www.congress.gov/119/bills/s204/BILLS-119s204is.htm"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6860.xml"
       },
       {
-        "note": "PDF form by email or mail; no portal or complaint data.",
+        "note": "Fillable PDF by email or mail; no portal or complaint data.",
         "result": "supports",
         "url": "https://studentprivacy.ed.gov/file-a-complaint"
       },
       {
-        "note": "Letter dated 2026-10-05, article 2026-10-06.",
+        "note": "Undated (last reviewed 2025-12-08); DCL sent 'Thursday', 2025-04-30 deadline, California and Maine investigations, parents may review all education records.",
         "result": "supports",
-        "url": "https://www.k12dive.com/news/trump-administration-threatens-federal-funds-over-mental-health-screenings/832281/"
-      },
-      {
-        "note": "Not opened; S. 204 text used for the timeline event instead.",
-        "result": "unreachable",
-        "url": "https://www.dailysignal.com/2025/01/23/exclusive-republican-lawmakers-introduce-bill-protect-parental-rights/"
-      },
-      {
-        "note": "Not opened; tracker lead only.",
-        "result": "unreachable",
-        "url": "https://policysoup.com/bills/hr650-119"
+        "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-directs-schools-comply-parental-rights-laws"
       }
     ]
   },
@@ -198,17 +193,38 @@
       "publisher": "Congress.gov",
       "title": "S. 204, Families' Rights and Responsibilities Act (introduced in Senate)",
       "url": "https://www.congress.gov/119/bills/s204/BILLS-119s204is.htm"
+    },
+    {
+      "date": "2025-01-23",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S. 204 bill status (BILLSTATUS XML)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s204.xml"
+    },
+    {
+      "date": "2025-01-23",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 650 bill status (BILLSTATUS XML)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr650.xml"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 6860 bill status (BILLSTATUS XML)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6860.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "The legislative core is introduced only: the Families' Rights and Responsibilities Act (S. 204, with House companion H.R. 650, introduced 2025-01-23) would apply strict scrutiny to government burdens on parental rights, and the Parental Rights Relief Act (H.R. 6860, introduced 2025-12-18) would create a private right of action under FERPA and PPRA for declaratory and injunctive relief and fees; no committee action was found on either. One administrative item is met: ED's Student Privacy Policy Office announced a Dear Colleague letter on 2025-03-28 stating that parents must be able to review all education records, required state agencies to document compliance by 2025-04-30 and opened FERPA investigations of the California and Maine education departments; on 2026-10-05 ED and DOJ told state attorneys general that FERPA and PPRA funding conditions are non-negotiable. ED's complaint page still uses a PDF form sent by email or mail, and no new parent portal or public complaint reporting was found, so the stage is proposed.",
+  "status_summary": "The legislative core is introduced only: the Families' Rights and Responsibilities Act (S. 204 and House companion H.R. 650, both introduced 2025-01-23 and referred to the Judiciary committees) would apply strict scrutiny to government burdens on parental rights, and the Parental Rights Relief Act (H.R. 6860, introduced 2025-12-18) would create a private right of action under FERPA and PPRA for declaratory and injunctive relief and fees; the bill status records for all three bills show no action after introduction and referral. One administrative item is met: ED's Student Privacy Policy Office announced a Dear Colleague letter on 2025-03-28 stating that parents must be able to review all education records, required state agencies to document compliance by 2025-04-30 and opened FERPA investigations of the California and Maine education departments; on 2026-10-05 ED and DOJ told state attorneys general that FERPA and PPRA funding conditions are non-negotiable. ED's complaint page still uses a PDF form sent by email or mail, and no new parent portal or public complaint reporting was found, so the stage is proposed.",
   "timeline": [
     {
       "date": "2025-01-23",
-      "event": "The Families' Rights and Responsibilities Act was introduced as S. 204 (referred to the Senate Judiciary Committee) with House companion H.R. 650; it declares parental rights fundamental and bars substantial government burdens unless they meet strict scrutiny.",
+      "event": "The Families' Rights and Responsibilities Act was introduced as S. 204 (Senator Tim Scott; read twice and referred to the Senate Judiciary Committee) with House companion H.R. 650 (Representative Foxx; referred to the House Judiciary Committee); it declares parental rights fundamental and bars substantial government burdens unless they meet strict scrutiny.",
       "kind": "primary",
-      "source": "Congress.gov",
-      "url": "https://www.congress.gov/119/bills/s204/BILLS-119s204is.htm"
+      "source": "GovInfo, BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s204.xml"
     },
     {
       "date": "2025-03-28",
@@ -221,8 +237,8 @@
       "date": "2025-12-18",
       "event": "H.R. 6860, the Parental Rights Relief Act, was introduced and referred to the House Education and Workforce Committee; it would let parents and eligible students sue for declaratory or injunctive relief and fees under FERPA and PPRA without exhausting administrative remedies, and require ED to resolve complaints within 90 days.",
       "kind": "primary",
-      "source": "Congress.gov",
-      "url": "https://www.congress.gov/119/bills/hr6860/BILLS-119hr6860ih.htm"
+      "source": "GovInfo, BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6860.xml"
     },
     {
       "date": "2026-10-05",
@@ -234,6 +250,6 @@
   ],
   "title": "Pass a Parents' Bill of Rights, add a FERPA/PPRA right to sue, publish complaint data",
   "tracked": true,
-  "uncertainties": "The ED press release page shows no publication date (last reviewed 2025-12-08); 2025-03-28 follows record c00-05. H.R. 650 text could not be fetched from congress.gov; its companion status rests on a Daily Signal report and a PolicySoup tracker, while S. 204 text was read. Bill status (no action beyond referral) comes from trackers and introduced text, not congress.gov action pages, which could not be fetched. A bill titled Parents Bill of Rights Act was not located in the 119th Congress. ED's complaint page links to a parents section, a parent guide to FERPA and archives of historic findings letters, which predate 2025; no new portal or published complaint data was found, but a full search of ed.gov was not made. The record is limited to the Mandate's FERPA, PPRA and Bill of Rights recommendations; broader parental-rights enforcement is covered by c00-05. Stage choice: in_progress was considered because the FERPA access statement is in effect, but the recommendations named in the title are introduced bills or not found.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "Bill status for S. 204, H.R. 650 and H.R. 6860 was read from the GovInfo BILLSTATUS XML; each shows only introduction and committee referral, with no later action. The ED press release on the March 2025 Dear Colleague letter was re-read and shows no release date (page text says 'Today'; last reviewed 2025-12-08), so 2025-03-28 follows record c00-05 and was not independently confirmed; the Student Privacy Policy Office complaint page does not mention that letter. The K-12 Dive report (published 2026-10-06) places the ED and DOJ letter to state attorneys general on 2026-10-05; the letter itself was not read, and the same report refers to an August 2026 Dear Colleague letter (month-only, not added). A bill titled Parents Bill of Rights Act was not located in the 119th Congress. The complaint page (re-read in this lift) describes an Adobe PDF form returned by email or mail, no online portal and no published complaint data; a full search of ed.gov was not made. The record is limited to the Mandate's FERPA, PPRA and Bill of Rights recommendations; broader parental-rights enforcement is covered by c00-05. Stage choice: in_progress was considered because the FERPA access statement is in effect, but the recommendations named in the title are introduced bills or not found.",
+  "updated_at": "2026-10-16"
 }

@@ -7,7 +7,7 @@
   "chapter": "19",
   "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "DOT's budget document and its 2026-09-28 release, both read for this review, confirm the funded modernization program, its 2028 first-phase schedule and the new funding bill, and neither mentions structural reform. The stage credits only the modernization strand, and the absence of structural proposals comes from a limited search.",
+  "confidence_reason": "Chapter pages 632 to 634 checked; S. 5572 (Modern Skies Act, introduced 2026-09-28) was read on govinfo.gov in this review and confirms the pending second phase, the existence of P.L. 119-21 Sec. 40003 and the absence of structural reform; the enacted 12.5 billion dollar amount could not be read in statute text and rests on FAA, White House and DOT material, so the rating stays medium.",
   "durability": {
     "level": "high",
     "why": "Structural reform would be statutory, and the modernization funding already enacted is also statute."
@@ -24,10 +24,14 @@
     {
       "date": "2026-10-08",
       "note": "Primary-source check: the deciding document was located and read, and an independent reviewer re-rated the record (confidence 64 to 76). The funding strand is now backed by (congress.gov) (Sec. 40003) and (transportation.gov) ($4.0 billion), and the absence of ATO separation, user fees or bonds by the DOT bud"
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review read S. 5572 on govinfo.gov, naming the Modern Skies Act bill number and confirming its reference to section 40003 of Public Law 119-21; the enacted amount still rests on FAA, White House and DOT material; stage and confidence unchanged (76)."
     }
   ],
   "id": "c19-03",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-16",
   "layer": 1,
   "match": "parallel",
   "mechanism": "legislation",
@@ -47,28 +51,29 @@
   "requires_congress": "yes",
   "research_agent": "A11",
   "review": {
+    "document_reread": {
+      "citation": "S. 5572, 119th Congress, 2d Session, Modern Skies Act, introduced 2026-09-28 (govinfo BILLS-119s5572is); deciding enacted provision P.L. 119-21 Sec. 40003 not readable",
+      "note": "Read on govinfo.gov: introduced by Mr. Schmitt on 2026-09-28 and referred to Commerce, Science, and Transportation; Sec. 3 appropriates 10 billion dollars for a terminal pilot, Sec. 4 10.1 billion for air traffic control improvements (7.2 billion automation platform, 2 billion cloud, 600 million flow management, 300 million terminal facility consolidation), Sec. 6 10 billion for terminal air traffic control facilities and airport grants; Sec. 5 allows transfers among paragraphs of section 40003(a) of P.L. 119-21, confirming that section exists; no ATO separation, user fees or revenue bonds. The 12.5 billion dollar amount in P.L. 119-21 Sec. 40003 was not read in statute text because govinfo truncates that law; it rests on FAA, White House and DOT material.",
+      "result": "partial",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s5572is/xhtml/BILLS-119s5572is.html"
+    },
     "flags": [
-      "stage reflects modernization only; the three structural recommendations show no action",
-      "absence of ATO separation, fee or bond proposals is a limited-search finding",
-      "Modern Skies Act bill number not confirmed"
+      "Bill number resolved as S. 5572; the uncertainty about the blank draft number is removed.",
+      "Second 2026-09-28 timeline entry (DOT fact sheet) is a document release rather than an action and is proposed for removal from the timeline."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 633 recommends separating the FAA from DOT or at least the ATO from the FAA and notes uncertified remote towers and unconsolidated centers; page 634 lists the legislative changes (separate the ATO, shift from aviation taxes to fees paid to the ATO, allow revenue bonds); page 632 sets up the argument. The paraphrase is accurate.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed pages 632 to 634 recommend separating the FAA from DOT or at least the ATO from the FAA, shifting from aviation taxes to fees for air traffic services with bonding authority, and modernizing technology including remote towers and center consolidation, and note the organizational changes need legislation; the proposal paraphrases this accurately.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y4",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-5",
     "source_checks": [
       {
-        "note": "FY2027 request of $4.0 billion for FAA Facilities and Equipment, flat with FY2026, with $1.5 billion for the new air traffic control system; no mention of separating the ATO, air traffic user fees or revenue bonds. The document itself carries no issue date.",
+        "note": "S. 5572 introduced 2026-09-28, referred to Commerce; sections and amounts confirmed; references section 40003(a) and (b) of P.L. 119-21; no ATO separation, fees or bonds.",
         "result": "supports",
-        "url": "https://www.transportation.gov/sites/dot.gov/files/DOT_FY_2027_Budget_Highlights.pdf"
-      },
-      {
-        "note": "DOT release dated 2026-09-28: Sen. Schmitt's Modern Skies Act introduced that day, $30 billion in three $10 billion parts; the $12.5 billion first phase (Working Families Tax Cut Act) set to finish by end of 2028; no mention of ATO separation, user fees, bonds or governance.",
-        "result": "supports",
-        "url": "https://www.transportation.gov/briefing-room/trumps-transportation-secretary-sean-p-duffy-modern-skies-coalition-applaud-senator"
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s5572is/xhtml/BILLS-119s5572is.html"
       }
-    ]
+    ],
+    "stage_change_reason": "Only the modernization strand is underway, through enacted appropriations (P.L. 119-21 Sec. 40003, amount per FAA and White House material) and a pending second-phase bill; the structural changes the text says need legislation have no bill found, so in_progress 25 at the low end with a parallel match holds."
   },
   "significance": {
     "B": 2,
@@ -77,6 +82,24 @@
     "M": 2,
     "R": 2,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 2,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 2,
+        "F": 2,
+        "F_estimated": false,
+        "M": 2,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Separating air traffic control and funding it with user fees restructures a system used by most air travelers.",
     "version": "2026-10-08",
@@ -159,10 +182,24 @@
       "publisher": "Sen. Eric Schmitt",
       "title": "Modern Skies Act (Senate-hosted draft text)",
       "url": "https://www.schmitt.senate.gov/wp-content/uploads/2026/09/LAN26545.pdf"
+    },
+    {
+      "date": "2026-09-28",
+      "kind": "primary",
+      "publisher": "govinfo.gov",
+      "title": "S. 5572, Modern Skies Act (introduced)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s5572is/xhtml/BILLS-119s5572is.html"
+    },
+    {
+      "date": "2025-12-04",
+      "kind": "primary",
+      "publisher": "Federal Aviation Administration",
+      "title": "Brand New Air Traffic Control System (BNATCS) Fact Sheet",
+      "url": "https://www.faa.gov/newsroom/brand-new-air-traffic-control-system-bnatcs-fact-sheet"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The modernization strand is underway through appropriations rather than the structural changes the Mandate lists. Congress provided $12.5 billion in Public Law 119-21, signed 2025-07-04 (Sec. 40003; DOT calls it the Working Families Tax Cut Act), for a new air traffic control system that DOT announced on 2025-05-08 and says will be deployed by the end of 2028. On 2026-09-28 Senator Eric Schmitt introduced the Modern Skies Act, a $30 billion second phase that DOT and the FAA Administrator endorsed; DOT's FY2027 budget request (released 2026-04-03) asks $4.0 billion for FAA Facilities and Equipment, flat with FY2026. None of the DOT materials, the Modern Skies Act draft text or news coverage reviewed mentions separating the ATO from the FAA, replacing taxes with fees for air traffic services, or revenue bonds.",
+  "status_summary": "The modernization strand is underway through appropriations rather than the structural changes the Mandate lists. Congress provided $12.5 billion in Public Law 119-21, signed 2025-07-04 (Sec. 40003; DOT calls it the Working Families Tax Cut Act), for a new air traffic control system that DOT announced on 2025-05-08 and says will be deployed by the end of 2028. On 2026-09-28 Senator Eric Schmitt introduced the Modern Skies Act as S. 5572, a $30.1 billion second phase referred to the Senate Commerce Committee and endorsed by DOT and the FAA Administrator; DOT's FY2027 budget request (released 2026-04-03) asks $4.0 billion for FAA Facilities and Equipment, flat with FY2026. None of the DOT materials, the text of S. 5572 or news coverage reviewed mentions separating the ATO from the FAA, replacing taxes with fees for air traffic services, or revenue bonds.",
   "timeline": [
     {
       "date": "2025-05-08",
@@ -187,21 +224,14 @@
     },
     {
       "date": "2026-09-28",
-      "event": "Senator Eric Schmitt introduces the Modern Skies Act (DOT's release says it was introduced that day); the Senate-hosted draft text, which shows a blank bill number, appropriates about $30 billion for FY2027 in three parts: $10 billion for a pilot to modernize or rebuild terminals at up to three transitional hub airports, $10.1 billion to the FAA (including $7.2 billion for a common automation platform and controller workstation, $2 billion for cloud computing infrastructure, $600 million for traffic flow management technology and $300 million to consolidate terminal air traffic control facilities), and $10 billion for terminal air traffic control facilities (including digital tower technology) and airport grants. It would also let the FAA Administrator transfer funds among the paragraphs of section 40003(a) of Public Law 119-21. The draft does not mention an Air Traffic Organization separation, user fees, bonds or changes to FAA governance. DOT and the FAA Administrator endorse it; DOT says first-phase deployment should finish by the end of 2028. No committee action was found.",
+      "event": "Senator Eric Schmitt introduces the Modern Skies Act as S. 5572, referred to the Senate Commerce, Science, and Transportation Committee; it would appropriate $30.1 billion for FY2027: $10 billion for a pilot to modernize terminals at up to three transitional hub airports, $10.1 billion for FAA air traffic control improvements (including $7.2 billion for a common automation platform and controller workstation, $2 billion for cloud computing, $600 million for traffic flow management and $300 million to consolidate terminal facilities), and $10 billion for terminal air traffic control facilities and airport grants, and would allow transfers among the paragraphs of section 40003(a) of Public Law 119-21. The text does not mention an Air Traffic Organization separation, user fees, bonds or changes to FAA governance. No committee action was found. (Cite govinfo BILLS-119s5572is in place of the Senate-hosted draft.)",
       "kind": "primary",
       "source": "Sen. Eric Schmitt",
       "url": "https://www.schmitt.senate.gov/wp-content/uploads/2026/09/LAN26545.pdf"
-    },
-    {
-      "date": "2026-09-28",
-      "event": "DOT fact sheet on the Modern Skies Act breaks down the $30 billion and does not mention an Air Traffic Organization, user fees, bonds or governance changes.",
-      "kind": "primary",
-      "source": "DOT",
-      "url": "https://www.transportation.gov/sites/dot.gov/files/2026-09/Modern%20Skies%20Act%20fact%20sheet.pdf"
     }
   ],
   "title": "Restructure air traffic control: separate the ATO, change funding, modernize systems",
   "tracked": true,
-  "uncertainties": "Pass 5: Public Law 119-21 and Sec. 40003 are confirmed from the Congress.gov table of contents and the Schmitt draft's reference to section 40003(a), but the statute text of Sec. 40003 (including the $12.5 billion amount) could not be fetched, so the amount rests on the White House fact sheet and DOT; the Modern Skies Act bill number is blank in the Senate-hosted draft and not given by DOT, so whether the introduced version matches that draft is unverified. The absence of any structural reform (ATO separation, user fees, revenue bonds) rests on DOT materials, Nextgov, FedScoop and AOPA coverage plus two web searches (one returned only 2017 first-term material); congressional bills outside those sources were not enumerated. Remote tower and center consolidation status was searched once and returned only 2021 to 2023 material. The FY2027 $4.0 billion Facilities and Equipment figure is from DOT's Budget Highlights (pp. 15-16 as read), which FedScoop also cites; the statement that the Highlights propose no reorganization of the air traffic organization and no new user fee comes from a tool summary of the document, not a line-by-line read.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Public Law 119-21 Sec. 40003 is confirmed from the law's table of contents and from S. 5572's reference to section 40003(a), but the statute text of Sec. 40003 (including the $12.5 billion amount) could not be read because the govinfo copy ends before Title IV, so the amount rests on FAA, White House and DOT material. The absence of any structural reform (ATO separation, user fees, revenue bonds) rests on S. 5572, DOT materials, Nextgov, FedScoop and AOPA coverage plus web searches; other congressional bills were not enumerated. Remote tower and center consolidation status was searched once and returned only 2021 to 2023 material. The FY2027 $4.0 billion Facilities and Equipment figure is from DOT's Budget Highlights; the statement that the Highlights propose no reorganization of the air traffic organization and no new user fee comes from a summary of the document, not a line-by-line read. An FAA fact sheet says about 20 billion dollars more is needed, a figure that differs from the $30.1 billion in S. 5572.",
+  "updated_at": "2026-10-16"
 }

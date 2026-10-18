@@ -5,9 +5,9 @@
     "Litigation and settlement obligations over ESA compliance for pesticides"
   ],
   "chapter": "13",
-  "confidence": 66,
+  "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked and EPA primary pages read, but the usage-data link rests on a university extension summary.",
+  "confidence_reason": "The deciding EPA release of 2026-05-01 and the University of Illinois Extension article were fetched and read in review on 2026-10-18; the researcher read the 2025-04-29 insecticide release and both EPA strategy pages. The strategy documents themselves were not opened, the link to the usage-data recommendation rests on an extension summary, the comment deadline differs between EPA (2026-06-29) and the extension article (2026-07-20), and one search found no final fungicide strategy.",
   "durability": {
     "level": "medium",
     "why": "Strategies are agency guidance applied in registration decisions and can be revised or challenged in court."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: In_progress 30 kept; duplicate draft-page row folded into the 2026-05-01 release row; extension-article removal accepted; confidence 66 to 68."
     }
   ],
   "id": "c13-19",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -53,13 +57,18 @@
   "research_agent": "N13",
   "review": {
     "flags": [
-      "judgment call: in_progress at 30 credits a final insecticide strategy and a draft fungicide strategy that only partly track the usage-data recommendation; proposed would also be defensible"
+      "Researcher's removal of the 2026-07-06 extension-article row accepted: it records a publication describing the draft, not a government action, and contains no extension of the comment period (the article says an extension is unlikely); the article stays in sources and uncertainties.",
+      "Removed the 2026-04-29 row, which recorded the posting of the strategy web page for the same draft released on 2026-05-01; its acres-treated figure was folded into the 2026-05-01 row, which the EPA release also supports.",
+      "Stage kept at in_progress 30, match partial; the defensible alternative is proposed 15, since the final insecticide strategy and the draft fungicide strategy only partly track the usage-data recommendation and the ESA benefits change needs Congress.",
+      "One search (2026-10-18) found no final fungicide strategy; extension pages cite the 2026-06-29 deadline and a fall 2026 finalization target.",
+      "No court_status: no court event is in the timeline.",
+      "Confidence raised from 66 to 68."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 434 to 435 checked; usage data in registration review and ESA analyses, and ESA reform for pesticides, are accurately paraphrased.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y13a",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V2",
     "source_checks": [
       {
         "note": "EPA release dated 2025-04-29; replaces the potato industry republication; no mention of usage data.",
@@ -85,6 +94,21 @@
         "note": "Dated 2026-07-06; says the draft incorporates acres-treated data; comments due 2026-07-20; adjuvant options.",
         "result": "supports",
         "url": "https://extension.illinois.edu/blogs/pesticide-news/2026-07-06-epa-seeks-comments-esa-draft-fungicide-strategy"
+      },
+      {
+        "note": "Dated 2026-05-01: draft Fungicide Strategy, 60-day comment period closing 2026-06-29, docket EPA-HQ-OPP-2026-2973, finalization expected by November 2026, about 41 million acres treated annually; no USDA or usage-data source named; no extension mentioned. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.epa.gov/pesticides/epa-seeks-public-comment-draft-strategy-better-protect-endangered-species"
+      },
+      {
+        "note": "Dated 2026-07-06: says comments are due 2026-07-20, the deadline is not likely to be extended, and the draft uses acres-treated data to identify where mitigation may apply; no data source named. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://extension.illinois.edu/blogs/pesticide-news/2026-07-06-epa-seeks-comments-esa-draft-fungicide-strategy"
+      },
+      {
+        "note": "Search result title (2026-06-17) gives a June 29 deadline for comments on the fungicide strategy; page not opened. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://uaex.uada.edu/media-resources/news/2026/june/06-17-2026-ark-nalc-epa-fungicide-strategy.aspx"
       }
     ]
   },
@@ -155,32 +179,25 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "On 2025-04-29 EPA released its final ESA Insecticide Strategy with reduced buffer distances, credit for treating a smaller share of a field and for qualifying conservation programs, and other grower flexibilities; the release does not say that usage data drive the strategy. On 2026-05-01 EPA released a draft ESA Fungicide Strategy for a 60-day comment period and said it expected to finalize it no later than November 2026; a university extension service reported that the draft uses acres-treated data to help identify where mitigation may apply and adds spray drift adjuvant options, with comments due 2026-07-20. No change to the ESA's treatment of pesticide benefits was found; that part would need congressional action.",
+  "status_summary": "On 2025-04-29 EPA released its final ESA Insecticide Strategy with reduced buffer distances, credit for treating a smaller share of a field and for qualifying conservation programs, and updated data sources; the release does not describe USDA or state pesticide usage data as driving the strategy. On 2026-05-01 EPA released a draft ESA Fungicide Strategy for a 60-day comment period (docket EPA-HQ-OPP-2026-2973) and stated it expects to finalize it no later than November 2026; EPA's strategy page cites about 41 million acres treated with fungicides each year in the lower 48 states, without naming a data source. No change to the ESA's treatment of pesticide benefits was found; that part would need congressional action.",
   "timeline": [
     {
       "date": "2025-04-29",
-      "event": "EPA released its final Insecticide Strategy with flexibilities for states and growers.",
+      "event": "EPA released its final Insecticide Strategy with flexibilities for states and growers; the release names USDA as a federal partner and refers to updated data sources but does not mention pesticide usage data.",
       "kind": "primary",
       "source": "EPA",
       "url": "https://www.epa.gov/newsreleases/epa-releases-strategy-better-protect-endangered-species-insecticides-using-commonsense"
     },
     {
       "date": "2026-05-01",
-      "event": "EPA released a draft Fungicide Strategy for public comment (docket EPA-HQ-OPP-2026-2973) and said it expected to finalize it no later than November 2026.",
+      "event": "EPA released the draft Fungicide Strategy for a 60-day public comment period in docket EPA-HQ-OPP-2026-2973, closing 2026-06-29 per EPA, stated it expects to finalize the strategy no later than November 2026, and cited about 41 million agricultural acres treated with fungicides each year in the lower 48 states.",
       "kind": "primary",
       "source": "EPA",
       "url": "https://www.epa.gov/pesticides/epa-seeks-public-comment-draft-strategy-better-protect-endangered-species"
-    },
-    {
-      "date": "2026-07-06",
-      "event": "A university extension report said the draft Fungicide Strategy incorporates acres-treated data, with comments due 2026-07-20.",
-      "kind": "news",
-      "source": "University of Illinois Extension",
-      "url": "https://extension.illinois.edu/blogs/pesticide-news/2026-07-06-epa-seeks-comments-esa-draft-fungicide-strategy"
     }
   ],
   "title": "Reform Endangered Species Act review of pesticides and use actual usage data",
   "tracked": true,
-  "uncertainties": "EPA's pages do not say that USDA or state usage data drive the strategies; the acres-treated point rests on a university extension summary. EPA's notice describes a 60-day comment period from 2026-05-01, while the extension report gives 2026-07-20 as the deadline. Whether the fungicide strategy was finalized by October 2026 was not confirmed, and no ESA amendment bill was searched.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "EPA's pages do not say that USDA or state usage data drive the strategies; the statement that the draft incorporates acres-treated data rests on a University of Illinois Extension article dated 2026-07-06, which does not name the data source or mention USDA. EPA's release page gives a 60-day period closing 2026-06-29, while the extension article gives 2026-07-20 as the comment deadline; the difference was not resolved. A Federal Register API search for the fungicide docket number and strategy title found no notice, so no Federal Register document was available. Whether the fungicide strategy was finalized by October 2026 was not confirmed, and no ESA amendment bill was searched.",
+  "updated_at": "2026-10-18"
 }

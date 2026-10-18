@@ -2,9 +2,9 @@
   "agency": "DHS Office of the Secretary",
   "blockers": [],
   "chapter": "05",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "The memo (through a hosting copy) and the Federal Register charter and meeting notices were read; the full replacement of members is inferred from the swearing-in notice without a roster.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text checked (page 138). The charter renewal notice (90 FR 11749, Doc. 2025-03856) was read in full on federalregister.gov and the 2025-01-20 termination memo was read in full from a hosted copy on 2026-10-18; the full replacement of members rests on the memo plus the swearing-in notice, with no roster read.",
   "durability": {
     "level": "low",
     "why": "Advisory committee membership is set by the Secretary and can change at any time."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift: the charter renewal notice and the June 2025 date-change notice (federalregister.gov) and the 2025-01-20 termination memo (hosted copy) were read; the 90 FR 11749 citation and the 2025-07-02 meeting date were added and confidence moved from 72 to 80, stage unchanged."
     }
   ],
   "id": "c05-27",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -56,36 +60,33 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage implemented 78 kept: the memo's government-wide wording reaches the Council, and the renewed charter plus the sworn-in members show replacement. completed 100 is defensible if the owner accepts the memo wording plus the swearing-in as full replacement; in_progress 55 would apply only if the owner requires a named roster.",
-      "No private individual is named in the record; the only person named is the Acting Secretary (a public official).",
-      "Replaced related_ids c05-13 (unions, no overlap) with c05-09 (CISA advisory committee and the same 2025-01-20 memo) and c05-34 (cites the same HSAC notice).",
-      "Added the charter amendments to the status and timeline. Confidence raised from 66 to 72 (primary notices read; memo via hosted copy)."
+      "Implemented 78 kept; completed 100 is defensible if the memo plus the swearing-in are accepted as full replacement without a roster."
     ],
     "mandate_check": "confirmed",
-    "mandate_note": "Page 138 (Office of the Secretary, Replacement of the Entire Homeland Security Advisory Committee): the Secretary should plan to remove all current members quickly and replace them as soon as feasible. Proposal is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y7",
+    "mandate_note": "Page 138 asks the Secretary to plan to remove all current members of the Homeland Security Advisory Committee quickly and replace them as soon as feasible. The proposal matches; the text uses Committee for the body chartered as the Council.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Hosted copy of the 2025-01-20 memo signed by the Acting Secretary: terminates all current memberships on DHS advisory committees effective immediately; names no committee; former members may reapply (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://iptp-production.s3.amazonaws.com/media/documents/2025.01.20_DHS_Memorandum_for_all_Members_of_Department_of_Homeland_Security_A_iBvPF7T.pdf"
-      },
-      {
-        "note": "Charter effective 2025-03-05 to 2027-03-05; membership cap cut from 40 to 35, three-year terms, Chair and Vice Chair replace co-chairs (checked 2026-10-14)",
+        "note": "90 FR 11749, Doc. 2025-03856, Docket DHS-2025-0007; charter renewed effective 2025-03-05 to 2027-03-05; membership 40 to 35; three-year terms; Chair and Vice Chair replace co-chairs.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/03/11/2025-03856/notice-of-committee-charter-renewal-homeland-security-advisory-council"
       },
       {
-        "note": "Meeting set for 2025-06-30 with introduction of new Chair and Vice Chair and swearing in of members; a related 2025-06-26 date-change notice is listed (checked 2026-10-14)",
+        "note": "Signed by the Acting Secretary on 2025-01-20; terminates all current memberships on DHS advisory committees immediately; former members may reapply; no committee named.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/06/16/2025-10924/homeland-security-advisory-council-notice-of-meeting"
+        "url": "https://iptp-production.s3.amazonaws.com/media/documents/2025.01.20_DHS_Memorandum_for_all_Members_of_Department_of_Homeland_Security_A_iBvPF7T.pdf"
       },
       {
-        "note": "HSAC meeting 2025-12-10 to discuss new taskings; notice issued by the Office of Partnership and Engagement (checked 2026-10-14)",
+        "note": "90 FR 27330, published 2025-06-26: meeting moved from 2025-06-30 to 2025-07-02; agenda not restated.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/12/03/2025-21800/notice-of-partially-closed-federal-advisory-committee-meeting"
+        "url": "https://www.federalregister.gov/documents/2025/06/26/2025-11757/homeland-security-advisory-council-notice-of-meeting"
+      },
+      {
+        "note": "Fetch failed on 2026-10-18; not cited.",
+        "result": "unreachable",
+        "url": "https://www.dhs.gov/news/2025/06/24/president-trump-announces-appointments-homeland-security-advisory-council"
       }
     ]
   },
@@ -152,10 +153,17 @@
       "publisher": "Federal Register",
       "title": "Notice of Termination of Discretionary Federal Advisory Committees",
       "url": "https://www.federalregister.gov/documents/2025/03/13/2025-04011/notice-of-termination-of-discretionary-federal-advisory-committees"
+    },
+    {
+      "date": "2025-06-26",
+      "kind": "primary",
+      "publisher": "Department of Homeland Security (Federal Register)",
+      "title": "Homeland Security Advisory Council; Notice of Meeting (date change)",
+      "url": "https://www.federalregister.gov/documents/2025/06/26/2025-11757/homeland-security-advisory-council-notice-of-meeting"
     }
   ],
   "stage": "implemented",
-  "status_summary": "On 2025-01-20 the Acting Secretary terminated all current memberships on DHS advisory committees effective immediately, with former members allowed to reapply; the memo names no committee, and the Homeland Security Advisory Council is a DHS advisory committee within its stated scope. DHS renewed the Council's charter effective 2025-03-05 (notice published 2025-03-11), cutting maximum membership from 40 to 35, setting three-year terms and replacing co-chairs with a Chair and Vice Chair. A notice published 2025-06-16 announced a Council meeting at which senior leadership would introduce the new Chair and Vice Chair and members would be sworn in, and a meeting on 2025-12-10 was noticed on 2025-12-03 to discuss new taskings.",
+  "status_summary": "On 2025-01-20 the Acting Secretary terminated all current memberships on DHS advisory committees effective immediately, with former members allowed to reapply; the memo names no committee, and the Homeland Security Advisory Council is a DHS advisory committee within its stated scope. DHS renewed the Council's charter effective 2025-03-05 (90 FR 11749, published 2025-03-11), cutting maximum membership from 40 to 35, setting three-year terms and replacing co-chairs with a Chair and Vice Chair. A notice published 2025-06-16 announced a Council meeting at which a new Chair and Vice Chair would be introduced and members sworn in, moved to 2025-07-02 by a notice of 2025-06-26, and a meeting on 2025-12-10 was noticed on 2025-12-03 to discuss new taskings.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -181,6 +189,6 @@
   ],
   "title": "Remove all members of the Homeland Security Advisory Council and replace them",
   "tracked": true,
-  "uncertainties": "The January memo does not name the Homeland Security Advisory Council; its coverage of the Council rests on the memo's wording that it applies to all DHS advisory committees, and the Council is chartered as one. The March 2025 termination notice (eight committees) does not list the Council, consistent with the Council being kept and reconstituted rather than terminated. The meeting notices do not list members or name the new Chair and Vice Chair, a June 2025 notice changed the meeting date (its text was not read), and it was not verified that the meeting occurred as noticed. The Mandate text uses the word Committee; the body is called Council. The memo copy was read through a third-party host, not dhs.gov.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The January memo does not name the Homeland Security Advisory Council; its coverage of the Council rests on the memo's wording that it applies to all DHS advisory committees, and the Council is chartered as one. The March 2025 termination notice (eight committees) does not list the Council, consistent with the Council being kept and reconstituted rather than terminated. The meeting notices do not list members or name the new Chair and Vice Chair, a notice published 2025-06-26 (90 FR 27330) moved the meeting from 2025-06-30 to 2025-07-02 without restating the agenda, and it was not verified that the meeting occurred as noticed. The Mandate text uses the word Committee; the body is called Council. The memo copy was read through a third-party host, not dhs.gov. A DHS release of 2025-06-24 announcing appointments to the Council could not be fetched from dhs.gov on 2026-10-18, so no roster was read.",
+  "updated_at": "2026-10-18"
 }

@@ -5,9 +5,9 @@
     "Likely industry First Amendment challenges"
   ],
   "chapter": "14",
-  "confidence": 76,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked; the memorandum and Unified Agenda entry were read on primary sites, while the enforcement letters rest on a law-firm summary.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text checked at page 460. In this review the memorandum was read in full on govinfo.gov, the FDA press announcement that decides the in_progress stage (operative enforcement letters) was read on fda.gov, the RIN 0910-AJ14 agenda entry was read on reginfo.gov, and a Federal Register API search confirmed no proposed rule; the stage-deciding documents were read in full.",
   "durability": {
     "level": "medium",
     "why": "Enforcement letters are quickly reversible, a final rule would be more durable."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Independent review read the memorandum on govinfo.gov, the FDA announcement on fda.gov and the agenda entry on reginfo.gov, replaced a law-firm event with the FDA announcement, kept the stage at in_progress 30, and raised confidence from 76 to 80."
     }
   ],
   "id": "c14-23",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-17",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -51,47 +55,40 @@
   "requires_congress": "partial",
   "research_agent": "N14",
   "review": {
+    "document_reread": {
+      "citation": "Memorandum on Addressing Misleading Direct-to-Consumer Prescription Drug Advertisements (2025-09-09), DCPD-202500906; FDA press announcement of 2025-09-09",
+      "note": "Memorandum read in full: two directives (HHS transparency and risk disclosure to the extent the law permits; FDA enforcement), no deadlines, no rulemaking named. FDA announcement read in full: thousands of letters, about 100 cease-and-desist letters issued, adequate provision rulemaking started.",
+      "result": "supports",
+      "url": "https://www.govinfo.gov/content/pkg/DCPD-202500906/html/DCPD-202500906.htm"
+    },
     "flags": [
-      "judgment call: in_progress 30 rests on operative enforcement letters; proposed would fit if only the rulemaking were counted.",
-      "White House copy of the memorandum unreachable; GovInfo copy used."
+      "Law-firm event replaced by the FDA announcement as the dated government action",
+      "Status summary corrected: FDA says about 100 cease-and-desist letters were issued, not planned",
+      "in_progress rests on enforcement of existing law; proposed would fit if only the rulemaking were counted"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 460 confirmed; paraphrase accurate.",
+    "mandate_check": "ok",
+    "mandate_note": "Page 460, under conflicts of interest, cites the 1997 FDA relaxation that allowed broadcast drug ads, says pharmaceutical ad spending buys newsroom influence, and says FDA or Congress should regulate where and how drug companies use paid advertising more stringently, especially on media outlets. The proposal paraphrase matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y14a",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-B",
     "source_checks": [
       {
-        "note": "Memorandum dated 2025-09-09 to the HHS Secretary and FDA Commissioner.",
+        "note": "Dated 2025-09-09; letter counts and rulemaking start confirmed.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/DCPD-202500906/html/DCPD-202500906.htm"
+        "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-crackdown-deceptive-drug-advertising"
       },
       {
-        "note": "RIN 0910-AJ14, proposed rule stage, NPRM 12/2026, economically significant, major.",
+        "note": "Proposed Rule Stage, economically significant, major, FD&C Act 502(n), 21 CFR 202, NPRM 12/00/2026.",
         "result": "supports",
         "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0910-AJ14"
       },
       {
-        "note": "HHS agenda in the Federal Register lists the rule at proposed rule stage.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16597/regulatory-agenda"
-      },
-      {
-        "note": "Dated 2025-09-10; thousands of letters, about 100 cease-and-desist letters, adequate provision rulemaking.",
-        "result": "supports",
-        "url": "https://foleyhoag.com/news-and-insights/publications/alerts-and-updates/2025/september/hhs-and-fda-attempt-to-crackdown-on-deceptive-dtc-rx-drug-advertising-following-presidential-memo/"
-      },
-      {
-        "note": "Dated 2026-07-07; Unified Agenda listing, December 2026 NPRM.",
-        "result": "supports",
-        "url": "https://www.foleyhoag.com/news-and-insights/publications/alerts-and-updates/2026/july/fda-proposes-to-eliminate-adequate-provision-for-broadcast-prescription-drug-advertising/"
-      },
-      {
-        "note": "No FDA proposed rule published since August 2025.",
+        "note": "Four results, none an FDA proposed rule; HHS agenda 2026-16597 listed.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=direct-to-consumer+advertising&conditions[publication_date][gte]=2025-08-01&per_page=20"
       }
-    ]
+    ],
+    "stage_change_reason": "in_progress kept: the memorandum directs action and FDA's enforcement letters are operative, while the stricter broadcast rule is only on the agenda and the placement element is unaddressed, so the objective is formally underway and partly operative; progress 30 sits in band."
   },
   "self_confidence": 58,
   "significance": {
@@ -157,10 +154,17 @@
       "publisher": "Foley Hoag",
       "title": "FDA proposes to eliminate adequate provision for broadcast prescription drug advertising",
       "url": "https://www.foleyhoag.com/news-and-insights/publications/alerts-and-updates/2026/july/fda-proposes-to-eliminate-adequate-provision-for-broadcast-prescription-drug-advertising/"
+    },
+    {
+      "date": "2025-09-09",
+      "kind": "primary",
+      "publisher": "U.S. Food and Drug Administration",
+      "title": "FDA Launches Crackdown on Deceptive Drug Advertising",
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-crackdown-deceptive-drug-advertising"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "A presidential memorandum of 2025-09-09 directed the HHS Secretary to improve transparency and accuracy in direct-to-consumer drug advertising, including more risk information, and the FDA Commissioner to enforce the advertising provisions of the drug law. The same day HHS and FDA announced thousands of letters to drug makers, about 100 planned cease-and-desist letters, review of sponsored social media posts and rulemaking to end the adequate provision option for broadcast ads. The Unified Agenda lists FDA's Transparency in Direct-to-Consumer Advertising rule (RIN 0910-AJ14) at the proposed rule stage with a proposal expected in December 2026, as an economically significant, major rule. No proposed rule had been published as of 2026-10-13.",
+  "status_summary": "A presidential memorandum of 2025-09-09 directed the HHS Secretary to take appropriate action on transparency and accuracy in direct-to-consumer drug advertising, including more risk information where the law permits, and the FDA Commissioner to enforce the advertising provisions of the drug law, without deadlines or a stated rulemaking. The same day FDA, with HHS, announced thousands of letters to drug makers to remove misleading ads, about 100 cease-and-desist letters already issued and a rulemaking to close the adequate provision option for broadcast and digital ads. FDA's Transparency in Direct-to-Consumer Advertising rule (RIN 0910-AJ14, revising 21 CFR 202.1) is listed at the proposed rule stage in the Unified Agenda and in the HHS agenda published 2026-08-14, as economically significant and major, with a proposal targeted for December 2026. No proposed rule had been published in the Federal Register as of 2026-10-17.",
   "timeline": [
     {
       "date": "2025-09-09",
@@ -171,10 +175,10 @@
     },
     {
       "date": "2025-09-09",
-      "event": "HHS and FDA announce thousands of letters to drug makers, about 100 planned cease-and-desist letters, review of sponsored social media posts and rulemaking on the adequate provision pathway.",
-      "kind": "news",
-      "source": "Foley Hoag",
-      "url": "https://foleyhoag.com/news-and-insights/publications/alerts-and-updates/2025/september/hhs-and-fda-attempt-to-crackdown-on-deceptive-dtc-rx-drug-advertising-following-presidential-memo/"
+      "event": "FDA, with HHS, announces it is sending thousands of letters to drug makers to remove misleading ads, has issued about 100 cease-and-desist letters, and is starting rulemaking to close the adequate provision pathway for broadcast and digital ads.",
+      "kind": "primary",
+      "source": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-crackdown-deceptive-drug-advertising"
     },
     {
       "date": "2026-08-14",
@@ -186,6 +190,6 @@
   ],
   "title": "Tighten rules on pharmaceutical direct-to-consumer advertising",
   "tracked": true,
-  "uncertainties": "GovInfo notes that an original copy of the memorandum was not available for verification. Counts of letters come from a law-firm summary of the HHS and FDA announcement; the FDA press release was not opened, and a later law-firm report gives about 100 cease-and-desist and about 40 untitled letters. A Federal Register search found no proposed rule. The document's concern with ad placement on media outlets is not addressed by the announced actions, so alignment is partial.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "GovInfo notes that an original copy of the memorandum was not available for verification. The FDA press announcement of 2025-09-09 was read on fda.gov and gives the counts of thousands of letters and about 100 cease-and-desist letters without a published list; a later law-firm report gives about 100 cease-and-desist and about 40 untitled letters, which was not checked against FDA data. Individual warning letters dated 2025-09-09 were not opened in this review. A Federal Register API search for direct-to-consumer advertising documents since 2025-08-01 found only the agenda listings and no FDA proposed or final rule. A law-firm alert titled as an FDA proposal describes only the agenda listing. The document's concern with ad placement on media outlets is not addressed by the announced actions, so alignment is partial.",
+  "updated_at": "2026-10-17"
 }

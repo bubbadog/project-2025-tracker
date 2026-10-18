@@ -5,9 +5,9 @@
     "The FY2027 request cuts vessel procurement by 861 million dollars from the FY2026 request while adding shore funding (per CRS)"
   ],
   "chapter": "05",
-  "confidence": 66,
+  "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "Coast Guard award releases, the Division G table of contents and CRS funding figures were read; the text of P.L. 119-21 Sec. 40001 and Division G sections was not visible.",
+  "confidence_reason": "Chapter text checked at pages 155 and 156. In this review the 2025-12-29 Coast Guard award release was read on news.uscg.mil and the House committee section-by-section summary of Division G was read; the enacted text of P.L. 119-21 sec. 40001 and of Division G of P.L. 119-60 could not be read on govinfo, so the funding and the absence of a shipbuilding plan requirement rest on CRS and committee summaries, a partly primary route that supports medium.",
   "durability": {
     "level": "medium",
     "why": "Statutory appropriations and multi-year ship contracts are hard to reverse, but later budgets can change the pace."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Independent review read the Coast Guard award release on news.uscg.mil and the House committee section-by-section of Division G on transportation.house.gov, found no shipbuilding plan requirement, kept the stage at in_progress 45 and raised confidence from 66 to 68."
     }
   ],
   "id": "c05-26",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-17",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -51,7 +55,7 @@
     "c05-01"
   ],
   "remaining": [
-    "A required long-range Coast Guard shipbuilding plan modeled on the Navy's plan (none identified in the enacted authorization table of contents)",
+    "A required long-range Coast Guard shipbuilding plan modeled on the Navy's plan (none identified in the enacted authorization table of contents or the committee section-by-section summary)",
     "An updated Fleet Mix Analysis driving acquisitions (not found)",
     "Scaling the mission set to congressional budgets (the Force Design 2028 expansion points the other way)",
     "Decision on shifting the Arctic mission to the Navy (not adopted)",
@@ -61,45 +65,34 @@
   "research_agent": "N05",
   "restates_ids": [],
   "review": {
+    "document_reread": {
+      "citation": "Pub. L. 119-21 sec. 40001 (enacted 2025-07-04); Pub. L. 119-60 Division G, Coast Guard Authorization Act of 2025 (enacted 2025-12-18)",
+      "note": "govinfo page text for P.L. 119-21 is 129,866 characters and ends in Title I sec. 10601, so sec. 40001 was not reached; Division G content was read only through the committee section-by-section summary, which lists no shipbuilding plan, 30-year plan or fleet mix requirement and records a spending plan for 24.593 billion dollars of reconciliation funds (Sec. 7116).",
+      "result": "partial",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+    },
     "flags": [
-      "Confirmed Division G of Public Law 119-60 as the Coast Guard Authorization Act of 2025 and both Arctic Security Cutter awards on news.uscg.mil.",
-      "Proposal changed in substance (minor): added the page 156 element that the mission set be scaled to long-term congressional budgets, already listed in remaining.",
-      "Stage in_progress 45 kept: the reconciliation funding and Arctic cutter awards are operative on the Arctic and acquisition elements, while the shipbuilding plan and Fleet Mix Analysis are not found. proposed is not defensible given the awards; implemented would need the plan requirement.",
-      "Removed c05-09 (CISA) from related_ids as unrelated; kept c05-01 (Coast Guard relocation in the dismantling plan).",
-      "Confidence raised from 62 to 66."
+      "Shipbuilding-plan gap narrowed by the committee summary but enacted Division G text still unread",
+      "Committee summary carries no date; source date left empty"
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Pages 155 to 156 (U.S. Coast Guard): size the fleet to great-power competition and home waters; scale the mission set to long-term congressional budgets with added funds going to acquisitions based on an updated Fleet Mix Analysis; require a long-range shipbuilding plan modeled on the Navy 30-year plan; fund the Arctic mission above current levels if retained, or consider moving it to the Navy. The draft omitted the budget-scaling element.",
+    "mandate_check": "ok",
+    "mandate_note": "Pages 155 to 156 ask that the fleet be sized for great-power competition and home waters, that the mission set be scaled to long-term budgets with added money going to acquisitions based on an updated Fleet Mix Analysis, that a long-range shipbuilding plan modeled on the Navy's 30-year plan be required, and that the Arctic mission be funded above current levels or moved to the Navy. The corrected proposal from the prior review matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y7",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-B",
     "source_checks": [
       {
-        "note": "Release dated 2025-12-29: up to six Arctic Security Cutters (up to two Rauma Marine Constructions, Finland; up to four Bollinger Lockport); first deliveries 2028 and 2029; attributes awards to the reconciliation law; no values (checked 2026-10-14)",
+        "note": "Undated 26-page section-by-section titled Division G, Coast Guard Authorization Act of 2025: Secs. 7112, 7113, 7116, 7117, 7118, 7119, 7215, 7217 described; no long-range shipbuilding plan.",
+        "result": "supports",
+        "url": "https://transportation.house.gov/UploadedFiles/CGAA_of_2025_Section_by_Section_NDAA_FINAL.pdf"
+      },
+      {
+        "note": "Release dated 2025-12-29: awards made the preceding Friday (no calendar date given); up to two cutters from Rauma (first delivery 2028) and up to four from Bollinger Lockport (first delivery 2029); credits the 2025 reconciliation law.",
         "result": "supports",
         "url": "https://www.news.uscg.mil/Press-Releases/Article/4368196/coast-guard-awards-contracts-to-build-arctic-security-cutters/"
-      },
-      {
-        "note": "Release dated 2026-02-11: Davie Defense contract for up to five more cutters (two in Finland, three domestic), completing the initial order of 11 (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.news.uscg.mil/Press-Releases/Article/4403354/us-coast-guard-completes-the-presidents-contract-awards-for-11-arctic-security/"
-      },
-      {
-        "note": "Table of contents confirms Division G is the Coast Guard Authorization Act of 2025, Sec. 7117 regular polar security cutter updates, Sec. 7118 and 7119 Pacific and Caribbean operations plans; no section titled shipbuilding plan or fleet mix; approval 2025-12-18 (S. 1071); page cut short (checked 2026-10-14)",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
-      },
-      {
-        "note": "Table of contents lists Sec. 40001 Coast Guard mission readiness; section text not visible in the portion returned (checked 2026-10-14)",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
-      },
-      {
-        "note": "CRS R48979 dated 2026-06-09: 24.59 billion dollars in P.L. 119-21 funds for the Coast Guard; FY2027 request cuts vessel procurement by 861 million dollars (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.everycrsreport.com/reports/R48979.html"
       }
-    ]
+    ],
+    "stage_change_reason": "in_progress kept: reconciliation funds and 11 Arctic Security Cutter awards make the fleet and Arctic funding elements operative, while no shipbuilding plan requirement or Fleet Mix Analysis was found; formally underway and partly operative, progress 45 in band."
   },
   "significance": {
     "B": 1.5,
@@ -178,10 +171,17 @@
       "publisher": "LegiScan",
       "title": "S. 524, Coast Guard Authorization Act of 2025 (history)",
       "url": "https://legiscan.com/US/bill/SB524/"
+    },
+    {
+      "date": null,
+      "kind": "primary",
+      "publisher": "House Committee on Transportation and Infrastructure",
+      "title": "Division G, Coast Guard Authorization Act of 2025, section-by-section (undated committee summary)",
+      "url": "https://transportation.house.gov/UploadedFiles/CGAA_of_2025_Section_by_Section_NDAA_FINAL.pdf"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Public Law 119-21, approved 2025-07-04, included a Coast Guard mission readiness section (Sec. 40001), and CRS reports about 24.59 billion dollars in reconciliation funds for the Coast Guard. The Coast Guard awarded contracts on 2025-12-29 for up to six Arctic Security Cutters and on 2026-02-11 for up to five more, completing an initial order of 11; the Commandant told the Senate on 2026-01-29 that the reconciliation law also funds Offshore Patrol and Fast Response Cutters and that the service plans to grow by 15,000 people under Force Design 2028. Division G of Public Law 119-60 (approved 2025-12-18, the FY2026 defense authorization) is titled the Coast Guard Authorization Act of 2025 and requires regular Polar Security Cutter updates; no required long-range shipbuilding plan or Fleet Mix Analysis section was identified, and the Arctic mission stays with the Coast Guard.",
+  "status_summary": "Public Law 119-21, approved 2025-07-04, included a Coast Guard mission readiness section (Sec. 40001), and CRS reports about 24.59 billion dollars in reconciliation funds for the Coast Guard. The Coast Guard awarded contracts on 2025-12-29 for up to six Arctic Security Cutters and on 2026-02-11 for up to five more, completing an initial order of 11; the Commandant told the Senate on 2026-01-29 that the reconciliation law also funds Offshore Patrol and Fast Response Cutters and that the service plans to grow by 15,000 people under Force Design 2028. Division G of Public Law 119-60 (approved 2025-12-18, the FY2026 defense authorization) is titled the Coast Guard Authorization Act of 2025 and requires regular Polar Security Cutter updates; the House Transportation and Infrastructure Committee's section-by-section summary of Division G lists a spending plan for the 24.593 billion dollars in reconciliation funds (Sec. 7116), quarterly acquisition briefs (Sec. 7113) and a Great Lakes icebreaker acquisition plan (Sec. 7215), but no required long-range shipbuilding plan or Fleet Mix Analysis, and the Arctic mission stays with the Coast Guard.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -214,6 +214,6 @@
   ],
   "title": "Rebuild the Coast Guard fleet, require a shipbuilding plan, fund the Arctic mission",
   "tracked": true,
-  "uncertainties": "The stand-alone Coast Guard Authorization Act bills (S. 524, passed the Senate 2025-03-05; H.R. 4275, passed the House 2025-07-23) were not enacted as such; Division G of Public Law 119-60 carries the title, confirmed from the law's table of contents because the GovInfo page was cut short, so Division G could contain a shipbuilding plan provision under a section title that does not say so. Division G also lists annual plans for Coast Guard operations in the Pacific (Sec. 7118) and the Caribbean (Sec. 7119), which bear on the Mandate's Pacific priority (page 156) but are operational plans, not a long-range shipbuilding plan. The amounts in Sec. 40001 of Public Law 119-21 were not visible on GovInfo; the 24.59 billion dollar figure is from CRS. The Polar Security Cutter delivery date (2030) and the Force Design 2028 figure come from a news account of the Commandant's testimony, not a Coast Guard document. The Coast Guard releases did not state contract values; the first release attributes the awards to the 2025 reconciliation law. No source was found on the American Samoa facility, wartime support board or interagency maritime office recommendations.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The stand-alone Coast Guard Authorization Act bills (S. 524, passed the Senate 2025-03-05; H.R. 4275, passed the House 2025-07-23) were not enacted as such; Division G of Public Law 119-60 carries the title, confirmed from the law's table of contents because the GovInfo page was cut short. The absence of a shipbuilding plan requirement rests on the table of contents and the committee's undated section-by-section summary, not on the enacted Division G text. Division G also lists annual plans for Coast Guard operations in the Pacific (Sec. 7118) and the Caribbean (Sec. 7119), which bear on the Mandate's Pacific priority (page 156) but are operational plans, not a long-range shipbuilding plan. The amounts in Sec. 40001 of Public Law 119-21 were not visible on GovInfo; the 24.59 billion dollar figure is from CRS. The Polar Security Cutter delivery date (2030) and the Force Design 2028 figure come from a news account of the Commandant's testimony, not a Coast Guard document. The Coast Guard releases did not state contract values; the first release attributes the awards to the 2025 reconciliation law. No source was found on the American Samoa facility, wartime support board or interagency maritime office recommendations. The 2025-12-29 Coast Guard release says the first awards were made on the preceding Friday without giving a calendar date, so the timeline keeps the announcement date.",
+  "updated_at": "2026-10-17"
 }

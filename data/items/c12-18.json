@@ -7,7 +7,7 @@
   "chapter": "12",
   "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked; key facts are supported by several reputable secondary sources that were fetched, but no State Department or congress.gov primary document could be opened.",
+  "confidence_reason": "The GovInfo BILLSTATUS record for H.R. 7037 was fetched and read (introduced 2026-01-13, 45-0 markup 2026-05-13, House passage by voice vote 2026-06-08, Senate referral 2026-06-09, no later action), and the E&E News (2025-04-28, citing a State fact sheet) and Fortune (2026-04-05, citing a State spokesperson) reports on the bureau's closure were read. No State Department document on the elimination could be opened and no DOE document showing a consolidation exists in the record, so the operative step rests on secondary reports and the record stays medium.",
   "durability": {
     "level": "low",
     "why": "The State reorganization is administrative and a House bill would partially reverse it."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c12-31 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Progress lowered from 35 to 25 because the only operative step is the State bureau's elimination with functions kept at State, while the House-passed bill runs opposite and the DOE consolidation is undocumented; confidence unchanged at 62."
     }
   ],
   "id": "c12-18",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -46,7 +50,7 @@
     389
   ],
   "position": "Office of International Affairs (IA)",
-  "progress": 35,
+  "progress": 25,
   "proposal": "The Mandate recommends consolidating international energy activities under DOE's Office of International Affairs and eliminating the State Department's Bureau of Energy Resources. It also recommends guaranteeing DOE seats at National Security Council deputies and policy committee meetings and having DOE staff replace State billets at embassies.",
   "related_ids": [
     "c06-02",
@@ -61,15 +65,17 @@
   "research_agent": "N12",
   "review": {
     "flags": [
-      "State bureau claim rests on news and a law firm summary only; no State primary document opened",
-      "House passage date corrected from 2026-06-09 to 2026-06-08",
-      "judgment call: proposed also defensible since the DOE consolidation itself has not occurred"
+      "Progress lowered from 35 to 25 within in_progress: the only operative step is the elimination of the State energy bureau, a reorganization that kept the functions at State; under the rubric a cancellation alone is proposed or low in_progress, and the DOE consolidation, NSC seats and embassy billets are not credited without a document. Proposed 20 is the defensible alternative.",
+      "H.R. 7037 is not credited as progress: it passed only the House and would recreate a State energy bureau, which runs against consolidation at DOE; it is listed as a blocker.",
+      "Accepted the researcher's replacement of news-dated bill events with BILLSTATUS-dated actions; the removed E&E News and Fortune report events were news publications and stay out of the timeline, with the July 2025 closure kept as a month-only government action supported by Fortune.",
+      "The 2025-04-22 announcement event is supported by a law-firm summary; E&E News (2025-04-28) citing the State fact sheet corroborates the fold-in but not the exact date.",
+      "Confidence unchanged at 62."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 370 and 388 to 389 checked; paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y12a",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V9",
     "source_checks": [
       {
         "note": "Dated 2025-04-24; State announced the restructuring 2025-04-22; bureau folded back into Economic and Business Affairs.",
@@ -100,6 +106,21 @@
         "note": "Blocked by robots rules.",
         "result": "unreachable",
         "url": "https://www.congress.gov/bill/119th-congress/house-bill/7037"
+      },
+      {
+        "note": "DOMINANCE Act, sponsor Rep. Young Kim; introduced 2026-01-13; markup 2026-05-13 ordered reported 45-0; passed House by voice vote under suspension 2026-06-08; referred to Senate Foreign Relations 2026-06-09, latest action; would establish a State Bureau of Energy Security and Diplomacy. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7037.xml"
+      },
+      {
+        "note": "Dated 2025-04-28; State fact sheet (obtained by POLITICO) closes the Bureau of Energy Resources and folds it into Economic and Business Affairs under the economic growth undersecretary. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.eenews.net/articles/state-department-cuts-bureau-tasked-with-expanding-us-energy-exports"
+      },
+      {
+        "note": "Bureau effectively ceased to exist in July 2025; State spokesperson confirmed capabilities absorbed into the economic bureau. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.fortune.com/2026/04/05/doge-fired-state-department-energy-resources-bureau-key-personnel-insights-iran-war"
       }
     ]
   },
@@ -167,49 +188,63 @@
       "publisher": "E&E News",
       "title": "House clears bill to create State Department energy bureau",
       "url": "https://www.eenews.net/articles/house-oks-bill-to-create-state-department-energy-bureau/"
+    },
+    {
+      "date": "2026-06-09",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS record, H.R. 7037 (DOMINANCE Act), 119th Congress",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7037.xml"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The State Department announced a reorganization on 2025-04-22 that folds the Bureau of Energy Resources into the Bureau of Economic and Business Affairs under the undersecretary for economic growth, energy and the environment. Fortune reported on 2026-04-05 that the bureau effectively ceased to exist in July 2025 and that a State spokesperson confirmed its capabilities moved into the economic bureau, so the functions stayed within State rather than moving to DOE. The House passed H.R. 7037, the DOMINANCE Act, by voice vote on 2026-06-08; it would create a State Department Bureau of Energy Security and Diplomacy. The reviewed sources do not show expanded DOE National Security Council representation or DOE embassy billets.",
+  "status_summary": "The State Department announced a reorganization on 2025-04-22 that folds the Bureau of Energy Resources into the Bureau of Economic and Business Affairs, and Fortune reported that the bureau effectively ceased to exist in July 2025 with its capabilities moved into the economic bureau, so the functions stayed within State rather than moving to DOE. H.R. 7037, the DOMINANCE Act, was introduced 2026-01-13, passed the House by voice vote on 2026-06-08 and was referred to the Senate Foreign Relations Committee on 2026-06-09; it would create a State Bureau of Energy Security and Diplomacy. The DOE Office of International Affairs page and the DOE realignment release of 2025-11-20 do not describe a transfer of international energy functions, and no expanded DOE National Security Council representation or DOE embassy billets were found.",
   "timeline": [
     {
       "date": "2025-04-22",
-      "event": "Secretary of State announced a department restructuring that folds the Bureau of Energy Resources into the Bureau of Economic and Business Affairs.",
+      "event": "The Secretary of State announced a department restructuring that folds the Bureau of Energy Resources into the Bureau of Economic and Business Affairs.",
       "kind": "news",
       "source": "Brownstein Hyatt Farber Schreck",
       "url": "https://www.bhfs.com/insight/trump-administration-announces-department-of-state-restructuring/"
     },
     {
-      "date": "2025-04-28",
-      "event": "E&E News reported the bureau's closure, citing a State Department fact sheet.",
-      "kind": "news",
-      "source": "E&E News",
-      "url": "https://www.eenews.net/articles/state-department-cuts-bureau-tasked-with-expanding-us-energy-exports"
-    },
-    {
-      "date": "2026-04-05",
-      "event": "Fortune reported the Bureau of Energy Resources effectively ceased to exist in July 2025, and a State Department spokesperson confirmed its capabilities were incorporated into the economic bureau.",
+      "date": "2025-07-01",
+      "event": "The Bureau of Energy Resources effectively ceased to exist in July 2025 (month-only date), and a State Department spokesperson later confirmed its capabilities were incorporated into the economic bureau, per Fortune.",
       "kind": "news",
       "source": "Fortune",
       "url": "https://www.fortune.com/2026/04/05/doge-fired-state-department-energy-resources-bureau-key-personnel-insights-iran-war"
     },
     {
-      "date": "2026-06-08",
-      "event": "House scheduled a vote on H.R. 7037, which would create a Bureau of Energy Security and Diplomacy at State.",
-      "kind": "news",
-      "source": "E&E News",
-      "url": "https://www.eenews.net/articles/house-sets-vote-on-bill-to-revive-state-department-energy-bureau/"
+      "date": "2026-01-13",
+      "event": "H.R. 7037, the DOMINANCE Act (Rep. Young Kim), was introduced in the House and referred to the Foreign Affairs Committee.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7037.xml"
+    },
+    {
+      "date": "2026-05-13",
+      "event": "The House Foreign Affairs Committee ordered H.R. 7037 reported as an amended substitute by a 45-0 vote.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7037.xml"
     },
     {
       "date": "2026-06-08",
-      "event": "The House passed H.R. 7037, the DOMINANCE Act, by voice vote; it would create a State Department Bureau of Energy Security and Diplomacy.",
-      "kind": "news",
-      "source": "E&E News",
-      "url": "https://www.eenews.net/articles/house-oks-bill-to-create-state-department-energy-bureau/"
+      "event": "The House passed H.R. 7037 under suspension of the rules by voice vote; the bill would establish a Bureau of Energy Security and Diplomacy within the State Department.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7037.xml"
+    },
+    {
+      "date": "2026-06-09",
+      "event": "H.R. 7037 was received in the Senate and referred to the Senate Foreign Relations Committee; no further action is recorded.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7037.xml"
     }
   ],
   "title": "Consolidate international energy at DOE and eliminate State's energy bureau",
   "tracked": true,
-  "uncertainties": "No State Department document on the bureau's elimination was opened; the record rests on a law firm summary, E&E News citing a State fact sheet, and Fortune citing a State spokesperson. congress.gov could not be opened, so the bill number and House passage rest on E&E News and Senate action is unknown. DOE embassy staffing and NSC attendance were not checked.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The State elimination of the bureau rests on a law firm summary, E&E News citing a State fact sheet and Fortune citing a State spokesperson; no State Department document could be opened (state.gov blocked) and the Federal Register search for notices naming the Bureau of Energy Resources returned none. Bill facts were read in the GovInfo BILLSTATUS record. The energy.gov page for the Office of International Affairs and the DOE realignment release of 2025-11-20 do not mention consolidation of international energy; the linked organization chart was not read. DOE embassy staffing and NSC attendance were not checked at a primary source. The 2025-04-28 E&E News report and the 2026-04-05 Fortune report are not actions and are kept as sources only.",
+  "updated_at": "2026-10-18"
 }

@@ -1,18 +1,19 @@
 {
   "agency": "DOT (Office of the Secretary)",
   "blockers": [
-    "Congress funded the program in full for FY2026 and did not adopt the proposed cut"
+    "Congress funded the program in full for FY2026 and did not adopt the proposed cut.",
+    "The House Appropriations Committee's FY2027 bill provides about 538 million dollars, well above the 142.0 million request, and the continuing resolution through 2026-12-11 generally continues FY2026 rates."
   ],
   "chapter": "19",
-  "confidence": 66,
+  "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked at page 631; the proposed cut is supported by a news article and a senator's release, and the FY2026 funding outcome by a fetched committee release, but the enacted text and FY2027 request were not read.",
+  "confidence_reason": "Text checked at page 631; DOT's FY2027 budget estimates and the govinfo bill status for H.R. 7148 were read, and the Senate committee release confirms the FY2026 amount, but the enacted division text and the House report were not opened (the FY2027 House figure comes from a CRS mirror), so the record stays medium.",
   "durability": {
     "level": "low",
     "why": "Funding levels are reset in annual appropriations."
   },
   "est_completion": {
-    "basis": "Inference: the requested cut was not enacted and no proposal to end the program was found.",
+    "basis": "Inference: Congress rejected the FY2026 cut, the House committee rejected the FY2027 cut, and no proposal to end the program was found.",
     "window": "unlikely this term"
   },
   "headline": false,
@@ -28,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift): DOT's FY2027 Office of the Secretary budget estimates on transportation.gov and the H.R. 7148 bill status on govinfo.gov were read, the FY2027 request and House committee action were added, and stage blocked 5 was kept."
     }
   ],
   "id": "c19-11",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -43,47 +48,42 @@
   "proposal": "The Mandate recommends finally ending the Essential Air Service program, which subsidizes flights to about 200 small airports and was meant as a temporary measure after deregulation. It says ending it would free pilots for larger markets and that regulations could instead encourage service in lower-served areas.",
   "related_ids": [],
   "remaining": [
-    "Any proposal to end the program",
-    "Enactment of a cut or repeal by Congress"
+    "A proposal to end the program (the FY2027 request seeks a cut and cost controls, not elimination).",
+    "Enactment of a cut or repeal by Congress (the House committee bill for FY2027 provides more than the FY2026 level)."
   ],
   "requires_congress": "yes",
   "research_agent": "N19",
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: proposed 5 is defensible if the budget request is treated as the latest step, but Congress rejected the cut in the enacted FY2026 bill, so the record is staged blocked with the earned progress of 5.",
-      "Stage changed from proposed 8 to blocked 5 after the FY2026 appropriations outcome was checked."
+      "Stage blocked 5 kept rather than the researcher's proposed 10: the FY2027 request is a live cut proposal, but the House committee bill and the continuing resolution keep funding at or above the FY2026 level, so the effort is stalled in Congress; proposed 10 is also defensible.",
+      "The undated Railway Age source was replaced by the govinfo bill status record."
     ],
     "mandate_check": "confirmed",
-    "mandate_note": "Page 631 recommends finally ending the Essential Air Service program, which it says subsidizes flights to 200 small airports. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y19e",
+    "mandate_note": "Page 631 recommends finally ending the Essential Air Service program, describing it as subsidizing flights to about 200 small airports and as a temporary deregulation measure made permanent. The paraphrase is accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Dated 2025-05-16; reports the proposed cut of about $308 million and the Secretary remarks at a Senate hearing the day before; no proposal to end the program.",
+        "note": "FY2026 enacted 513.6 million; FY2027 request 142.0 million (down 371.6 million, about 72 percent); cost-control legislative proposal not specified; overflight-fee EAS 173.7 million pre-sequester; no elimination proposed.",
         "result": "supports",
-        "url": "https://airlinegeeks.com/2025/05/16/duffy-on-essential-air-service-more-with-less/"
+        "url": "https://www.transportation.gov/sites/dot.gov/files/OST_FY_2027_Budget_Estimates_CJ.pdf"
       },
       {
-        "note": "Release dated 2025-05-15 on the THUD subcommittee hearing and the proposed $308 million cut in the FY2026 request.",
+        "note": "H.R. 7148 became Public Law 119-75 on 2026-02-03.",
         "result": "supports",
-        "url": "https://www.hydesmith.senate.gov/node/7428"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7148.xml"
       },
       {
-        "note": "Release dated 2026-02-03; final FY2026 THUD bill provides $513.6 million for Essential Air Service.",
+        "note": "Release dated 2026-02-03; 513.6 million for EAS; says the bill heads to the President, no signing date.",
         "result": "supports",
         "url": "https://www.appropriations.senate.gov/news/majority/congress-approves-fy-2026-transportation-housing-and-urban-development-appropriations-bill"
       },
       {
-        "note": "File summarizes the Senate committee version of July 2025 with $513.6 million, described as fully funding the program. Web search for the FY2026 appropriations outcome.",
-        "result": "partial",
-        "url": "https://www.appropriations.senate.gov/imo/media/doc/fy26_thud_bill_summary_conferenced.pdf"
-      },
-      {
-        "note": "H.R. 7148, Consolidated Appropriations Act, 2026, including the THUD division, signed on February 3 after Senate passage on January 30; page shows only an update label.",
+        "note": "FY2027 House committee 538 million (H.R. 9170, reported 2026-06-03); no Senate bill; CR P.L. 119-103 signed 2026-09-02 through 2026-12-11 at FY2026 rates generally.",
         "result": "supports",
-        "url": "https://www.old.railwayage.com/?p=187480"
+        "url": "https://www.everycrsreport.com/files/2026-09-03_R49341_4b80776e33c94143b1ee2df62b34cad65928d0a5.html"
       }
     ]
   },
@@ -138,15 +138,29 @@
       "url": "https://www.appropriations.senate.gov/news/majority/congress-approves-fy-2026-transportation-housing-and-urban-development-appropriations-bill"
     },
     {
-      "date": "undated",
-      "kind": "news",
-      "publisher": "Railway Age",
-      "title": "Congressional Bill H.R. 7148 Signed into Law",
-      "url": "https://www.old.railwayage.com/?p=187480"
+      "date": "2026-04-03",
+      "kind": "primary",
+      "publisher": "U.S. Department of Transportation",
+      "title": "Department of Transportation, Office of the Secretary FY 2027 Budget Estimates (Congressional Justification)",
+      "url": "https://www.transportation.gov/sites/dot.gov/files/OST_FY_2027_Budget_Estimates_CJ.pdf"
+    },
+    {
+      "date": "2026-02-03",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 7148 bill status (became Public Law 119-75)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7148.xml"
+    },
+    {
+      "date": "2026-09-03",
+      "kind": "primary",
+      "publisher": "Congressional Research Service (EveryCRSReport mirror)",
+      "title": "Transportation, Housing and Urban Development, and Related Agencies (THUD) Appropriations for FY2027 (R49341)",
+      "url": "https://www.everycrsreport.com/files/2026-09-03_R49341_4b80776e33c94143b1ee2df62b34cad65928d0a5.html"
     }
   ],
   "stage": "blocked",
-  "status_summary": "The administration's fiscal year 2026 budget request proposed cutting roughly $308 million from the program, as discussed at a Senate appropriations subcommittee hearing on 2025-05-15, where the Secretary said DOT would look for efficiencies. Congress did not adopt the cut: the FY2026 Transportation-HUD appropriations, enacted in the Consolidated Appropriations Act, 2026 (H.R. 7148) signed on 2026-02-03, provide $513.6 million for the program, which the Senate committee described as full funding. No proposal to end the program entirely was found.",
+  "status_summary": "The FY2026 budget request proposed cutting roughly 308 million dollars from the Essential Air Service program, as discussed at a Senate appropriations subcommittee hearing on 2025-05-15. Congress did not adopt the cut: the Consolidated Appropriations Act, 2026 (H.R. 7148), which became Public Law 119-75 on 2026-02-03, provides 513.6 million dollars for the program per the Senate Appropriations Committee and DOT's FY2027 budget estimates. The FY2027 request asks 142.0 million dollars, 371.6 million below the FY2026 enacted level, with a legislative proposal to control program costs, but does not propose ending the program. The House Appropriations Committee reported its FY2027 bill (H.R. 9170) on 2026-06-03 with about 538 million dollars, no Senate bill had been proposed as of 2026-09-03, and a continuing resolution signed 2026-09-02 generally funds the account at FY2026 rates through 2026-12-11.",
   "timeline": [
     {
       "date": "2025-05-15",
@@ -157,14 +171,28 @@
     },
     {
       "date": "2026-02-03",
-      "event": "Congress approved FY2026 Transportation-HUD appropriations providing $513.6 million for Essential Air Service, in a package reported as signed the same day.",
+      "event": "The Consolidated Appropriations Act, 2026 (H.R. 7148) becomes Public Law 119-75; per the Senate Appropriations Committee it provides 513.6 million dollars for Essential Air Service, rejecting the requested cut.",
       "kind": "primary",
-      "source": "Senate Appropriations Committee",
-      "url": "https://www.appropriations.senate.gov/news/majority/congress-approves-fy-2026-transportation-housing-and-urban-development-appropriations-bill"
+      "source": "GovInfo (bill status)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7148.xml"
+    },
+    {
+      "date": "2026-04-03",
+      "event": "DOT's FY2027 budget estimates request 142.0 million dollars for Essential Air Service payments to air carriers, 371.6 million below the FY2026 enacted level, with a legislative proposal to control program costs; elimination is not proposed.",
+      "kind": "primary",
+      "source": "U.S. DOT",
+      "url": "https://www.transportation.gov/sites/dot.gov/files/OST_FY_2027_Budget_Estimates_CJ.pdf"
+    },
+    {
+      "date": "2026-06-03",
+      "event": "The House Appropriations Committee reports its FY2027 Transportation-HUD bill (H.R. 9170) with about 538 million dollars for Essential Air Service, above the FY2026 level (per CRS).",
+      "kind": "primary",
+      "source": "Congressional Research Service (mirror)",
+      "url": "https://www.everycrsreport.com/files/2026-09-03_R49341_4b80776e33c94143b1ee2df62b34cad65928d0a5.html"
     }
   ],
   "title": "End the Essential Air Service subsidy program",
   "tracked": true,
-  "uncertainties": "The FY2026 funding figure comes from the Senate Appropriations Committee release; the enacted bill text was not read, and the signing date comes from a Railway Age page that shows only an update label. The FY2027 budget request and appropriations for the program were not checked. The budget request document itself was not opened; the cut is known from a news report and a senator's release dated 2025-05-15.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The FY2026 enacted figure comes from the Senate Appropriations Committee release and DOT's FY2027 budget estimates; the enacted division text was not read, and the Public Law number and date come from the govinfo bill status record. The FY2027 request was read in DOT's Office of the Secretary budget estimates, which do not describe the specifics of the cost-control proposal. The FY2027 House committee figure, the absence of a Senate bill and the continuing resolution come from a CRS report of 2026-09-03 read on a mirror site; the House report itself was not opened. The FY2026 budget request document was not opened; that cut is known from a news report and a senator's release dated 2025-05-15.",
+  "updated_at": "2026-10-18"
 }

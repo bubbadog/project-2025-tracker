@@ -5,9 +5,9 @@
     "Platform liability rules not changed"
   ],
   "chapter": "26",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Primary CBP pages could not be opened; the finding rests on one trade-press report and limited searches, so not_started is capped and confidence is low.",
+  "confidence": 60,
+  "confidence_label": "medium",
+  "confidence_reason": "Chapter text page 790 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo with the H.R. 708 bill status and Senate-referred text read, CBP media releases with dhs.gov blocked, one news search); capped at 60 because check 2 was partial, dhs.gov was unreachable and the CBP FY2025 seizure report was not read.",
   "durability": {
     "level": "medium",
     "why": "Enforcement is routine agency activity that continues across administrations, with no new statute or order found."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Cross-reference added to new layer 3 record c26-21 written in the second enumeration pass; no change to the status."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov), read the H.R. 708 bill status and Senate-referred text on govinfo.gov, and reviewed the Unified Agenda fallback, CBP page and news checks, found no qualifying action, and kept not_started 0."
     }
   ],
   "id": "c26-16",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -44,7 +52,8 @@
   "proposal": "Navarro recommends reinvigorating and expanding the Department of Homeland Security's crackdown on the Chinese Communist Party's use of e-commerce sellers, including third-party sellers, and shippers and warehouse operators to flood U.S. markets with counterfeit and pirated goods.",
   "related_ids": [
     "c26-02",
-    "c26-03"
+    "c26-03",
+    "c26-21"
   ],
   "remaining": [
     "A directive or program specifically targeting e-commerce platforms, third-party sellers and warehouse operators used for Chinese counterfeits",
@@ -55,31 +64,39 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage changed from in_progress 25 to not_started: no directive or program was found, and higher seizure counts alone are not a qualifying action",
-      "Removed the trade-press statistics item from the timeline (a report of figures, not an action)",
-      "Added one restricted search of DHS, CBP, ICE and White House sites",
-      "Confidence 40"
+      "Alternative: proposed 5 as a parallel match is arguable on H.R. 708, a House-passed bill whose DHS working group would examine counterfeit and pirated goods trafficking among CCP trade practices; not counted because it only studies and reports and does not address e-commerce sellers or expand enforcement.",
+      "Check 2 partial and dhs.gov unreachable; confidence capped at 60."
     ],
     "mandate_check": "confirmed",
-    "mandate_note": "Page 790, Policy options for decoupling from China: reinvigorate and expand the DHS crackdown on CCP use of e-sellers, shippers and major warehouse operators to flood U.S. markets with counterfeit and pirated goods. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "mandate_note": "Page 790 recommends reinvigorating and expanding the DHS crackdown on the CCP's use of online sellers, including third-party sellers, and large shippers and warehouse operators to flood US markets with counterfeit and pirated goods. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14; fetch error.",
-        "result": "unreachable",
-        "url": "https://www.cbp.gov/document/annual-report/fy-2025-ipr-seizure-statistics"
+        "note": "2026-10-18: reviewer rerun with terms counterfeit, intellectual property, e-commerce, China since 2025-01-20: 3 CBP documents (Low-Value Shipments proposed rule 2026-10-08; two de minimis suspension rules 2026-06-24), matched on contact headings; none targets Chinese sellers or counterfeits. Researcher CBP-filtered query on counterfeit e-commerce shippers: 4 documents, same conclusion.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=counterfeit+%22intellectual+property%22+e-commerce+China&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Checked 2026-10-14; seen as a search result, fetch error.",
-        "result": "unreachable",
-        "url": "https://www.cbp.gov/newsroom/national-media-release/cbp-ready-enforce-end-de-minimis-loophole-securing-borders-and"
-      },
-      {
-        "note": "Checked 2026-10-14 from the draft; trade press on FY2025 seizure counts; not evidence of a new directive.",
+        "note": "2026-10-18: reginfo.gov Unified Agenda landing page loaded but listings are script-driven and were not read; Federal Register fallback used. Terms: CBP, counterfeit, e-commerce.",
         "result": "partial",
-        "url": "https://aircargoweek.com/cbp-seizures-and-penalties-climb/"
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: reviewer read the H.R. 708 BILLSTATUS and Senate-referred text (BILLS-119hr708rfs): SHIELD Against CCP Act, introduced 2025-01-23, passed House by voice vote 2025-03-10, referred to Senate Homeland Security and Governmental Affairs 2025-03-11; DHS working group to examine CCP threats, including counterfeit and pirated goods trafficking among trade practices; no e-commerce seller, shipper or warehouse provisions and no enforcement expansion.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr708.xml"
+      },
+      {
+        "note": "2026-10-18: CBP national media releases page fetched by the researcher; items on a brand partnership and a withhold release order, none on e-commerce sellers; dhs.gov blocked and not read.",
+        "result": "partial",
+        "url": "https://www.cbp.gov/newsroom/national-media-release"
+      },
+      {
+        "note": "2026-10-18: one researcher news search on DHS counterfeit e-commerce enforcement returned a 2026-06-15 report of a CBP Indianapolis seizure operation (18 shipments, mostly from Hong Kong); no Chinese e-commerce seller focus or new policy.",
+        "result": "does_not_support",
+        "url": "https://www.newsweek.com/immigration-agents-seize-135k-of-fake-fifa-world-cup-merchandise-12074528?rand=95"
       }
     ]
   },
@@ -132,6 +149,6 @@
   "timeline": [],
   "title": "Expand DHS enforcement against Chinese e-commerce sellers and shippers of counterfeits",
   "tracked": true,
-  "uncertainties": "CBP pages, including the fiscal year 2025 statistics report and a CBP release on enforcing the end of de minimis seen only as a search result, could not be fetched, so the seizure figures rest on one trade-press report and are not counted as an event. A rise in seizures does not show a policy change or a China focus. Searches of DHS, CBP, ICE and White House sites for a 2025 or 2026 e-commerce counterfeit directive returned only first-term era items. This is a judgment call: a reader who counts the de minimis suspension as an expanded crackdown on e-commerce shipments could stage the record in_progress, but that action is tariff policy tracked in c26-03.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: the researcher's CBP-filtered query on counterfeit e-commerce shippers returned four documents (a low-value shipments proposed rule of 2026-10-08, two de minimis suspension rules of 2026-06-24 and an advance cargo data rule), and a reviewer rerun on counterfeit, intellectual property, e-commerce and China returned three of the same CBP documents; none targets Chinese sellers, shippers or warehouse operators over counterfeits, and the de minimis items are tracked in c26-03. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used. (3) congress.gov and govinfo: H.R. 708, passed by the House on 2025-03-10 and referred to a Senate committee on 2025-03-11, would set up a DHS working group that examines DHS efforts against CCP trade practices, listing trafficking in counterfeit and pirated goods among them, with annual reports; it does not mention e-commerce sellers or warehouses and does not itself expand enforcement, so it is treated as related rather than qualifying. (4) Agency pages: CBP national media releases showed no item on e-commerce sellers; dhs.gov was unreachable and the CBP FY2025 seizure statistics report, including any China or e-commerce breakdown, was not read. (5) News: one search found a 2026-06-15 report of a local CBP counterfeit seizure operation with no new policy. The FY2025 seizure figures in status_summary rest on one trade-press report. A rise in seizures does not show a policy change or a China focus. A reader who counts the de minimis suspension as an expanded crackdown on e-commerce shipments could stage the record in_progress, but that action is tariff policy tracked in c26-03.",
+  "updated_at": "2026-10-18"
 }

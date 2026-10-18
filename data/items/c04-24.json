@@ -5,9 +5,9 @@
     "Pay levels set by statute and annual budget decisions"
   ],
   "chapter": "04",
-  "confidence": 65,
+  "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Signing and section titles confirmed on primary pages and EO 14417 read on federalregister.gov; provision details rest on CRS, a member release and press because section text was unavailable.",
+  "confidence_reason": "Signing of Public Law 119-60 confirmed through BILLSTATUS, the family separation allowance increase through the U.S. Code note, the 2026 pay schedule through Executive Order 14368 on federalregister.gov and its 3.8 percent size through CRS, and EO 14417 through the Federal Register API. The law's Title VI text (Secs. 624 and 641), the FY2026 appropriation pay provisions and the spouse employment memo itself were not read, so the record stays medium.",
   "durability": {
     "level": "medium",
     "why": "Pay and allowance changes are statutory but reset yearly; the commission and memo are executive and reversible."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Pay-raise item read through EO 14368 and CRS and added to the timeline; in_progress 40 kept at medium because the appropriation provisions remain unread."
     }
   ],
   "id": "c04-24",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -60,18 +64,16 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Added a 2025-07-04 event for Public Law 119-21 Sec. 20001 (about $7.5 billion for quality of life, including privatized housing) from CRS.",
-      "Replaced the NDAA event source with the White House signing statement (primary) and restated the event as section titles from the GovInfo table of contents; the family separation allowance figure now cites Military Times.",
-      "Corrected the MOAA memo article date from 2026-04-01 to 2026-04-10 (the memo itself is dated 2026-04-01).",
-      "Removed c04-08 from related_ids (it does not cover this recommendation; it was cited only for the NDAA date).",
-      "Stage kept at in_progress 40; implemented could be argued for the allowance items alone, but junior enlisted wage measures, licensing and childcare expansion are not done; proposed is not defensible given enacted statute.",
-      "Confidence raised from 60 to 65: signing confirmed on whitehouse.gov and section titles on GovInfo; section text still unread."
+      "Added a 2025-12-18 event for Executive Order 14368 setting the 2026 uniformed services pay schedule, and moved the 3.8 percent figure from the House member release to CRS IN12706.",
+      "Pay-raise item now read (EO 14368 and CRS); FY2026 appropriation pay provisions still unread, so the record stays medium (72) as instructed.",
+      "Stage in_progress 40 kept; implemented is arguable for the allowance items alone, but the junior enlisted wage measure, licensing reform and childcare expansion are not done.",
+      "No court_status: no court event."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "p. 104, under Value the military family: support legislation raising wages and family allowances for active-duty enlisted personnel so none rely on food stamps or public housing aid; improve base housing and consider families in change-of-station moves; improve spouse employment and protections including licensing reform, and expand childcare. Proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y6",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V3",
     "source_checks": [
       {
         "note": "Checked 2026-10-14: White House statement dated 2025-12-18 says the President signed S. 1071, the FY2026 NDAA.",
@@ -107,6 +109,21 @@
         "note": "Checked 2026-10-14: EO 14417 signed 2026-08-03, 91 FR 51059; duties name housing, employment, healthcare, education, deployment support; licensing only in background; terminates after 2 years.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/08/06/2026-16125/establishing-the-presidents-military-spouse-commission"
+      },
+      {
+        "note": "EO 14368 signed 2025-12-18: uniformed services basic pay Schedule 8 under 37 U.S.C. 203(a) as adjusted under 1009, effective 2026-01-01; percentage not stated in page text (schedule is an image). Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/12/23/2025-23844/adjustments-of-certain-rates-of-pay"
+      },
+      {
+        "note": "Table 1 lists an enacted 3.8 percent raise for all paygrades effective January 2026; FY2027 request 7-6-5 percent (7 percent for E-1 to E-5) not enacted as of 2026-07-14; SASC version 3.6 percent. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.everycrsreport.com/files/2026-07-14_IN12706_10a92657a90c147b048e338ce271aada919c3f7d.html"
+      },
+      {
+        "note": "Amendment note: Pub. L. 119-60 substituted $300 for $250 in the minimum family separation allowance. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.law.cornell.edu/uscode/text/37/427"
       }
     ]
   },
@@ -201,10 +218,38 @@
       "publisher": "Military Times",
       "title": "Troops to get 3.8% pay raise under proposed defense bill",
       "url": "https://www.militarytimes.com/news/pentagon-congress/2025/12/08/troops-to-get-38-pay-raise-under-proposed-defense-bill/"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "primary",
+      "publisher": "Cornell Law School Legal Information Institute (U.S. Code)",
+      "title": "37 U.S.C. 427, family separation allowance (editorial note on Pub. L. 119-60, div. A, title VI, sec. 622)",
+      "url": "https://www.law.cornell.edu/uscode/text/37/427"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "primary",
+      "publisher": "Cornell Law School Legal Information Institute (U.S. Code)",
+      "title": "37 U.S.C. 402, basic allowance for subsistence (editorial note on Pub. L. 119-60, sec. 621(a)(1))",
+      "url": "https://www.law.cornell.edu/uscode/text/37/402"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS record for S. 1071 (119th Congress): became Public Law 119-60 on 2025-12-18",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1071.xml"
+    },
+    {
+      "date": "2025-12-23",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Adjustments of Certain Rates of Pay (Executive Order 14368)",
+      "url": "https://www.federalregister.gov/documents/2025/12/23/2025-23844/adjustments-of-certain-rates-of-pay"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The 2025 reconciliation law (Public Law 119-21, signed 2025-07-04) provides about $7.5 billion in Sec. 20001 for military quality of life, including an expansion of privatized military housing construction, per CRS. The FY2026 NDAA (Public Law 119-60, signed 2025-12-18) contains sections modifying the enlisted basic allowance for subsistence, increasing the family separation allowance (to $300 a month per Military Times), improving the basic allowance for housing and reviewing child care fee assistance limits, and a House member's release reports a 3.8 percent pay raise and extension of the in-home child care pilot through 2029. A Department of War memo of 2026-04-01 told components to make maximum use of spouse employment flexibilities, and Executive Order 14417 (signed 2026-08-03) created a President's Military Spouse Commission to develop policies on housing, employment and other spouse concerns. No raise targeted at junior enlisted pay was enacted for 2026, and licensing reform appears in the order only as background.",
+  "status_summary": "The 2025 reconciliation law (Public Law 119-21, signed 2025-07-04) provides about $7.5 billion in Sec. 20001 for military quality of life, including an expansion of privatized military housing construction, per CRS. The FY2026 NDAA (Public Law 119-60, signed 2025-12-18) contains sections modifying the enlisted basic allowance for subsistence, increasing the family separation allowance (to $300 a month per Military Times), improving the basic allowance for housing and reviewing child care fee assistance limits, and a House member's release reports extension of the in-home child care pilot through 2029. Executive Order 14368 (signed 2025-12-18) set the uniformed services basic pay schedule effective 2026-01-01, which CRS lists as a 3.8 percent raise for all paygrades. A Department of War memo of 2026-04-01 told components to make maximum use of spouse employment flexibilities, and Executive Order 14417 (signed 2026-08-03) created a President's Military Spouse Commission to develop policies on housing, employment and other spouse concerns. No raise targeted at junior enlisted pay was enacted for 2026, and licensing reform appears in the order only as background.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -215,10 +260,17 @@
     },
     {
       "date": "2025-12-18",
-      "event": "The President signed the FY2026 NDAA (S. 1071, Public Law 119-60), whose table of contents lists Sec. 621 (enlisted basic allowance for subsistence), Sec. 622 (family separation allowance increase), Sec. 624 (basic allowance for housing improvements) and Sec. 641 (child care fee assistance review).",
+      "event": "The President signed the FY2026 NDAA (S. 1071, Public Law 119-60); the Senate had agreed to the House amendment 77-20 on 2025-12-17. Its table of contents lists Sec. 621 (enlisted basic allowance for subsistence), Sec. 622 (family separation allowance increase), Sec. 624 (basic allowance for housing improvements) and Sec. 641 (child care fee assistance review). U.S. Code notes confirm that Sec. 621 rewrote the enlisted subsistence rate to follow the USDA monthly liberal food plan cost and that Sec. 622 raised the minimum monthly family separation allowance from $250 to $300.",
       "kind": "primary",
       "source": "The White House",
       "url": "https://www.whitehouse.gov/briefings-statements/2025/12/statement-by-the-president-7598/"
+    },
+    {
+      "date": "2025-12-18",
+      "event": "Executive Order 14368, Adjustments of Certain Rates of Pay, set the 2026 monthly basic pay schedule for the uniformed services under 37 U.S.C. 203(a) as adjusted under 37 U.S.C. 1009, effective 2026-01-01; CRS lists the resulting raise as 3.8 percent for all paygrades.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/12/23/2025-23844/adjustments-of-certain-rates-of-pay"
     },
     {
       "date": "2026-04-01",
@@ -237,6 +289,6 @@
   ],
   "title": "Raise enlisted pay and allowances, improve housing, spouse jobs and childcare",
   "tracked": true,
-  "uncertainties": "Section text of Public Law 119-60 is not in the GovInfo HTML copy (the page holds only the table of contents and front matter), so section contents rest on section titles, a House member's release, Military Times and MOAA; the exact BAS mechanics and the BAH terms were not read. The 3.8 percent raise is the formula-based raise for all members; whether it counts as increasing wages in the Mandate's sense is a judgment call. A Marine Corps message reproduced on an unofficial mirror says the $300 family separation allowance applies retroactively to 2025-12-18; it was not used as a source. The FY2025 NDAA (Public Law 118-159) targeted junior enlisted raises predate the period. CRS does not break out child care or spouse items within Sec. 20001 of Public Law 119-21. The April 2026 memo was read only through MOAA. Spouse licensing and childcare capacity expansion were not found as new actions. The FY2027 request (7 percent for E-1 to E-5 per CRS) is not enacted.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Section text of Public Law 119-60 is not in the GovInfo HTML copy (the page holds only the table of contents and front matter), so section contents rest on section titles, a House member's release, Military Times and MOAA; the exact BAS mechanics and the BAH terms were not read. The 3.8 percent raise is the formula-based raise for all members; whether it counts as increasing wages in the Mandate's sense is a judgment call. A Marine Corps message reproduced on an unofficial mirror says the $300 family separation allowance applies retroactively to 2025-12-18; it was not used as a source. The FY2025 NDAA (Public Law 118-159) targeted junior enlisted raises predate the period. CRS does not break out child care or spouse items within Sec. 20001 of Public Law 119-21. The April 2026 memo was read only through MOAA. Spouse licensing and childcare capacity expansion were not found as new actions. The FY2027 request (7 percent for E-1 to E-5 per CRS) is not enacted. Pass 6 check: the BILLSTATUS record for S. 1071 confirms Public Law 119-60, signed 2025-12-18, after a 77-20 Senate vote on 2025-12-17. The GovInfo HTML of the law holds only the table of contents and the start of Division A within its first 128,000 characters, so Title VI text was not reached. U.S. Code editorial notes at law.cornell.edu confirm Sec. 621 (subsistence rate formula) and Sec. 622 (minimum family separation allowance $250 to $300, 37 U.S.C. 427). The note for 37 U.S.C. 403 cites only Sec. 611(e) of the law (extension of two temporary housing allowance provisions to 2026-12-31) and none for Sec. 624, so the Sec. 624 content and the Sec. 641 content remain based on section titles. The Federal Register API confirmed Executive Order 14417 (signed 2026-08-03, published 2026-08-06, 91 FR 51059). The 3.8 percent figure is taken from CRS IN12706 (Table 1), since the Executive Order 14368 pay schedule is an image not readable in the Federal Register page text; the order confirms the uniformed services schedule and its 2026-01-01 effective date. The FY2026 appropriation pay provisions were not read. Whether a FY2027 NDAA was enacted after CRS's 2026-07-14 status (House versions backing 7 percent for E-1 to E-5, Senate committee version 3.6 percent) was not checked.",
+  "updated_at": "2026-10-18"
 }

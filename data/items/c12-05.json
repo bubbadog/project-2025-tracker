@@ -7,7 +7,7 @@
   "chapter": "12",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Unchanged: text checked and the deciding Federal Register items read; the finding that the 2025 rescission proposals remain non-final rests on API queries rather than a full census.",
+  "confidence_reason": "The Federal Register API listing of DOE final rules, the battery charger proposal, the miscellaneous gas products final rule and Executive Order 14154 were read; the stage rests on the absence of a final standards rescission in title-based API queries rather than a full census, so confidence stays medium.",
   "durability": {
     "level": "medium",
     "why": "Final rules rescinding standards could be reversed by later rulemaking; a statutory repeal would be high durability but has not occurred."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c12-27 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Primary-source lift on 2026-10-17 queried the Federal Register API for DOE final rules since May 2025 and read the proposed battery charger rescission, the Process Rule proposal and Executive Order 14154, added the 2025-05-07 miscellaneous gas products final rule, and confirmed that no May 2025 standards rescission has been finalized, with stage unchanged."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review after the primary-source lift: the Federal Register API listing of DOE final rules, the battery charger proposal and the miscellaneous gas products final rule on federalregister.gov were read; a law-firm-sourced comment event left the timeline; in_progress 40 kept; confidence 72 kept."
     }
   ],
   "id": "c12-05",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-16",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -55,18 +63,29 @@
   "research_agent": "A09",
   "review": {
     "flags": [
-      "Reworded: it is a final rule withdrawing a test procedure, not a standard; incremental, no stage change."
+      "in_progress 40 kept: no final standards rescission; CRA disapprovals and withdrawals blocked tightening rather than eliminating standards.",
+      "Removed a law-firm-sourced comment filing from the timeline; corrected the API rule enumeration in uncertainties."
     ],
     "mandate_check": "verified",
     "mandate_note": "pp.378-379 urge eliminating standards or, short of repeal, using statutory limits to avoid unjustified burdens; withdrawing a costly optional test procedure fits the second branch.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-2",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16L-1",
     "source_checks": [
       {
-        "note": "Fetched: final rule 91 FR 64105, effective 2026-12-07; removes appendix B and the TE2 definition; cites EO 14192 and the July 2026 Process Rule proposal; states no standard is modified.",
+        "note": "13 DOE final rules since 2025-05-01; none finalizes a rescission of an existing standard; the record's enumeration omitted the 2025-05-20 CAC test delay and the 2026-04-14 grant regulation rescission and was corrected.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/10/07/2026-20517/energy-conservation-program-test-procedures-for-commercial-warm-air-furnaces"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Energy+Conservation+Program%22&conditions[agencies][]=energy-department&conditions[publication_date][gte]=2025-05-01&conditions[type][]=RULE&per_page=50&order=newest"
+      },
+      {
+        "note": "Proposed rule, 90 FR 20868, 2025-05-16; would rescind 10 CFR 430.32(z) on a tentative finding that no standard is economically justified; comments to 2025-07-15; cites EO 14154 and 14192.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/05/16/2025-08598/energy-conservation-program-rescinding-the-efficiency-standards-for-battery-chargers"
+      },
+      {
+        "note": "Final rule, 90 FR 19250, published 2025-05-07, effective 2025-06-06; withdraws the 2022 coverage determination and three definitions; cites EO 14154 and 14192.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/05/07/2025-07950/energy-conservation-program-final-withdrawal-of-determination-of-miscellaneous-gas-products-as-a"
       }
     ]
   },
@@ -77,6 +96,24 @@
     "M": 2,
     "R": 3,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 1,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 3,
+        "rater": "A"
+      },
+      {
+        "B": 1,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 3,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Eliminating or curbing efficiency standards affects the price and energy use of appliances bought by nearly all households.",
     "version": "2026-10-08",
@@ -131,10 +168,38 @@
       "publisher": "Federal Register (DOE)",
       "title": "Energy Conservation Program: Test Procedures for Commercial Warm Air Furnaces (final rule, 91 FR 64105)",
       "url": "https://www.federalregister.gov/documents/2026/10/07/2026-20517/energy-conservation-program-test-procedures-for-commercial-warm-air-furnaces"
+    },
+    {
+      "date": "2025-05-07",
+      "kind": "primary",
+      "publisher": "Federal Register (DOE)",
+      "title": "Energy Conservation Program: Final Withdrawal of Determination of Miscellaneous Gas Products as a Covered Consumer Product (final rule, 90 FR 19250)",
+      "url": "https://www.federalregister.gov/documents/2025/05/07/2025-07950/energy-conservation-program-final-withdrawal-of-determination-of-miscellaneous-gas-products-as-a"
+    },
+    {
+      "date": "2025-05-20",
+      "kind": "primary",
+      "publisher": "Federal Register (DOE)",
+      "title": "Energy Conservation Standards for Commercial Refrigerators, Freezers, and Refrigerator-Freezers (withdrawal of CRA-disapproved rule)",
+      "url": "https://www.federalregister.gov/documents/2025/05/20/2025-09031/energy-conservation-program-energy-conservation-standards-for-commercial-refrigerators-freezers-and"
+    },
+    {
+      "date": "2025-05-20",
+      "kind": "primary",
+      "publisher": "Federal Register (DOE)",
+      "title": "Energy Conservation Standards for Consumer Gas-Fired Instantaneous Water Heaters (withdrawal of CRA-disapproved rule)",
+      "url": "https://www.federalregister.gov/documents/2025/05/20/2025-09030/energy-conservation-program-energy-conservation-standards-for-consumer-gas-fired-instantaneous-water"
+    },
+    {
+      "date": "2025-01-29",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Unleashing American Energy (Executive Order 14154, 90 FR 8353)",
+      "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01956/unleashing-american-energy"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "As of 2026-10-07 DOE has not rescinded any existing appliance or equipment efficiency standard by final rule, and its May 2025 proposals to rescind or withdraw standards for more than a dozen product types remain non-final in Federal Register queries. Congress, using the Congressional Review Act, nullified three rules finalized late in the previous administration that would have tightened standards (walk-in coolers and freezers, commercial refrigerators and freezers, and consumer gas-fired instantaneous water heaters), so those amended standards have no effect, and DOE repealed the showerhead definition in 10 CFR 430.2 in a rule published 2025-04-15. Executive Order 14154 (2025-01-20) set a policy of protecting consumer choice among appliances. DOE published the proposals on 2025-05-16, formally withdrew the three disapproved standards rules on 2025-05-20, and removed provisions of a fourth disapproved rule on 2025-09-09. In 2026 DOE finalized determinations leaving small electric motor and metal halide fixture standards unchanged (2026-02-13), and on 2026-07-07 it proposed revising its Process Rule and requested comment on its analytic methods; the Process Rule comment period was extended to 2026-08-21. The Mandate's statutory step (modify or repeal the Energy Policy and Conservation Act standards program) has not been taken.",
+  "status_summary": "As of 2026-10-07 DOE has not rescinded any existing appliance or equipment efficiency standard by final rule, and its May 2025 proposals to rescind or withdraw standards for more than a dozen product types remain non-final in Federal Register queries. Congress, using the Congressional Review Act, nullified three rules finalized late in the previous administration that would have tightened standards (walk-in coolers and freezers, commercial refrigerators and freezers, and consumer gas-fired instantaneous water heaters), so those amended standards have no effect, and DOE repealed the showerhead definition in 10 CFR 430.2 in a rule published 2025-04-15. Executive Order 14154 (2025-01-20) set a policy of protecting consumer choice among appliances. DOE finalized a withdrawal of its miscellaneous gas products coverage determination on 2025-05-07 (a coverage determination, not a standard), published the proposed rescissions on 2025-05-16, formally withdrew the three disapproved standards rules on 2025-05-20, and removed provisions of a fourth disapproved rule on 2025-09-09. In 2026 DOE finalized determinations leaving small electric motor and metal halide fixture standards unchanged (2026-02-13), and on 2026-07-07 it proposed revising its Process Rule and requested comment on its analytic methods; the Process Rule comment period was extended to 2026-08-21. The Mandate's statutory step (modify or repeal the Energy Policy and Conservation Act standards program) has not been taken.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -144,25 +209,25 @@
       "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01956/unleashing-american-energy"
     },
     {
+      "date": "2025-05-07",
+      "event": "DOE publishes a final rule (90 FR 19250, effective 2025-06-06) withdrawing its 2022 determination that miscellaneous gas products, including decorative hearths and outdoor heaters, are covered products and removing their definitions from 10 CFR 430.2; DOE cites Executive Orders 14192 and 14154 as consistent with the action. This is a coverage determination, not a standard.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/05/07/2025-07950/energy-conservation-program-final-withdrawal-of-determination-of-miscellaneous-gas-products-as-a"
+    },
+    {
       "date": "2025-05-16",
-      "event": "DOE publishes a batch of proposed rescissions and withdrawals of standards, test procedures and coverage determinations, including battery chargers, dishwashers and commercial clothes washers; a law firm counts more than a dozen product types and says all are proposals, not final actions.",
+      "event": "DOE publishes a batch of proposed rescissions and withdrawals of standards, test procedures and coverage determinations; the battery charger notice proposes removing the standard at 10 CFR 430.32(z) on a tentative finding that no standard is economically justified, with comments due 2025-07-15, and cites Executive Orders 14154 and 14192 as policy alignment. A law firm counts more than a dozen product types and says all are proposals, not final actions.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/05/16/2025-08598/energy-conservation-program-rescinding-the-efficiency-standards-for-battery-chargers"
     },
     {
       "date": "2025-05-20",
-      "event": "DOE withdraws three standards rules (commercial refrigerators and freezers, consumer gas-fired instantaneous water heaters, and walk-in coolers and freezers) that Congress disapproved under the Congressional Review Act; the Federal Register notice for the walk-in rule is the cited example.",
+      "event": "DOE withdraws three standards rules that Congress disapproved under the Congressional Review Act: commercial refrigerators and freezers (rule of 2025-01-21), consumer gas-fired instantaneous water heaters (rule of 2024-12-26) and walk-in coolers and walk-in freezers (rule of 2024-12-23); the walk-in notice is the cited example and the other two are separate Federal Register documents of the same date.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/05/20/2025-09029/energy-conservation-program-energy-conservation-standards-for-walk-in-coolers-and-walk-in-freezers"
-    },
-    {
-      "date": "2025-07-15",
-      "event": "A coalition of states, the District of Columbia and New York City files comments opposing the May 2025 proposals; a law-firm alert of 2025-07-21 says lawsuits appear likely and reports none filed.",
-      "kind": "news",
-      "source": "Beveridge & Diamond",
-      "url": "https://www.bdlaw.com/publications/coalition-of-us-states-and-cities-lays-groundwork-for-legal-challenge-of-the-department-of-energys-appliance-efficiency-rollback/"
     },
     {
       "date": "2025-09-09",
@@ -180,7 +245,7 @@
     },
     {
       "date": "2026-07-07",
-      "event": "DOE proposes revising its Process Rule (making Appendix A binding for certain actions, defining significant energy savings, adding economic thresholds) and separately requests comment on its analytic methods for setting standards; on 2026-07-28 the Process Rule comment deadline is extended from 2026-08-06 to 2026-08-21.",
+      "event": "DOE proposes revising its Process Rule (91 FR 42034; making Appendix A binding for certain actions, defining significant energy savings, adding economic thresholds, reinstating the walk-up comparison and the clear and convincing evidence description) and separately requests comment on its analytic methods for setting standards; on 2026-07-28 the Process Rule comment deadline is extended from 2026-08-06 to 2026-08-21.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13674/energy-conservation-program-procedures-interpretations-and-policies-for-consideration-of-new-or"
@@ -202,6 +267,6 @@
   ],
   "title": "Eliminate or curb DOE appliance and equipment efficiency standards",
   "tracked": true,
-  "uncertainties": "The finding that the May 2025 proposals are not final rests on Federal Register API queries of DOE rules and proposed rules run on 2026-10-07 (term searches on energy conservation and on rescinding efficiency standards); a final action filed under an unexpected title could be missed. Showerhead definition repeal (2025-04-15), the 2025-05-16 product list beyond the battery charger notice, and the 2026-03-31 fluorescent ballast, 2026-04-27 petition and 2026-06-15 distribution transformer notices were seen as listings and abstracts only. Which CRA resolution dates apply to each withdrawn rule was not checked. No lawsuit over the proposals was found, but court dockets were not searched. The manufactured housing statute is adjacent, not an appliance standards repeal.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The finding that the May 2025 proposals are not final rests on a Federal Register API query of DOE final rules published since 2025-05-01 with the term Energy Conservation Program, which returned 13 rules (the 2025-05-07 coverage withdrawal, three 2025-05-20 withdrawals of disapproved rules and a 2025-05-20 central air conditioner test procedure delay, two 2025-09-09 rules, two 2026-02-13 determinations, a 2026-04-14 rescission of legacy grant program regulations, and 2026 rules on external power supplies, manufactured housing and commercial furnace test procedures), none of which finalizes a rescission of a standard; a final action filed under an unexpected title could be missed. A matching proposed-rule query was too long to run. The showerhead definition repeal (2025-04-15), the 2025-05-16 product list beyond the battery charger notice, and the 2026-03-31 fluorescent ballast, 2026-04-27 petition and 2026-06-15 distribution transformer notices were seen as listings and abstracts only. The Process Rule proposal text was read to about 100,000 characters of 125,602, and its visible text does not say DOE will rescind standards. Which CRA resolution dates apply to each withdrawn rule was not checked. No lawsuit over the proposals was found, but court dockets were not searched. The manufactured housing statute is adjacent, not an appliance standards repeal. Independent review of 2026-10-16: the API listing was re-run and again shows 13 final rules with no final rescission of an existing standard. The 2025-07-15 comments by a coalition of states, the District of Columbia and New York City opposing the May 2025 proposals were moved here from the timeline because they rest only on a law-firm alert, which also said lawsuits appeared likely.",
+  "updated_at": "2026-10-16"
 }

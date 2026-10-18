@@ -7,7 +7,7 @@
   "chapter": "25",
   "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "Two CRS products and the GovInfo law record were read; the absence of a review report rests on a limited search.",
+  "confidence_reason": "CRS R43846 and IN12694 were fetched and read and support the request and enacted figures, and the public law was confirmed on GovInfo by number and date; the SBA budget justifications were blocked and the SBA chapter of the FY2027 Budget was not reached, and the absence of a ranking report rests on limited searches.",
   "durability": {
     "level": "low",
     "why": "Budget requests carry no force until enacted, and Congress has so far funded the programs."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Restored the FY2026 request figure from the cited CRS report; stage unchanged."
     }
   ],
   "id": "c25-10",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -60,13 +64,15 @@
     "flags": [
       "Title shortened from 91 to under 90 characters",
       "Replaced the CRS-report-as-event with the 2026-02-03 enactment of Public Law 119-75, confirmed on GovInfo",
-      "Confidence 64"
+      "Confidence 64",
+      "V6: restored the FY2026 request figure of about 0.8 billion dollars, which the researcher removed as unsourced; CRS R43846, already cited, states it as a rounded total.",
+      "V6: proposed 15 with match parallel kept; budget requests are request-level steps and Congress funded the programs."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 758 to 759, Organizational Issues and Budget: Budget. Review program effectiveness, report to Congress within six months ranking programs by cost-effectiveness, hold the roughly 1 billion dollar budget constant meanwhile, then terminate, consolidate or reallocate. Paraphrase accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V6",
     "source_checks": [
       {
         "note": "Checked 2026-10-14. CRS IN12694 of 2026-05-27: FY2027 request 329.0 million dollars, minus 74.7 percent, ED 21.4 million, Advocacy 14.1 million; no effectiveness ranking described.",
@@ -77,6 +83,16 @@
         "note": "Checked 2026-10-14. Public Law 119-75, H.R. 7148, approved 2026-02-03.",
         "result": "supports",
         "url": "https://www.govinfo.gov/app/details/PLAW-119publ75"
+      },
+      {
+        "note": "First 100000 characters read: FY2026 total request about 0.8 billion dollars (rounded), FY2026 appropriation 1.3 billion dollars (1,250.1 million in Table 2), 330.0 million for entrepreneurial development with all 16 programs funded in the enacted text (checked 2026-10-18).",
+        "result": "supports",
+        "url": "https://www.everycrsreport.com/files/2026-03-12_R43846_f3ddbb07ac73f36b782227ec42d347001c71eb38.html"
+      },
+      {
+        "note": "Re-read: dated 2026-05-27; FY2027 request 329.0 million dollars, 74.7 percent below FY2026; ED 21.4 million against 330.0 million; Advocacy 10.1 to 14.1 million; Administration rationale quoted, no independent evaluation; no FY2026 request total (checked 2026-10-18).",
+        "result": "supports",
+        "url": "https://www.everycrsreport.com/reports/IN12694.html"
       }
     ]
   },
@@ -132,11 +148,11 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "No SBA review ranking its programs by cost-effectiveness and reported to Congress was found. The Administration's FY2026 request proposed about 0.8 billion dollars for SBA, but the Consolidated Appropriations Act, 2026 (Public Law 119-75, approved 2026-02-03) provided about 1.3 billion dollars, including 330 million for entrepreneurial development, according to CRS. CRS reported on 2026-05-27 that the FY2027 request seeks 329.0 million dollars, a 74.7 percent cut, funds entrepreneurial development only for veterans outreach (21.4 million dollars), and raises the Office of Advocacy to 14.1 million dollars; the Administration describes the cut programs as failed counseling and training programs but no ranking or evaluation is cited.",
+  "status_summary": "No SBA review ranking its programs by cost-effectiveness and reported to Congress was found. The Administration's FY2026 request proposed about 0.8 billion dollars for SBA, but the Consolidated Appropriations Act, 2026 (Public Law 119-75, approved 2026-02-03) provided about 1.3 billion dollars, including 330 million for entrepreneurial development across all 16 programs, according to CRS. CRS reported on 2026-05-27 that the FY2027 request seeks 329.0 million dollars, a 74.7 percent cut, funds entrepreneurial development only for veterans outreach (21.4 million dollars), and raises the Office of Advocacy to 14.1 million dollars; the Administration describes the cut programs as failed counseling and training programs, and CRS cites no ranking or evaluation.",
   "timeline": [
     {
       "date": "2026-02-03",
-      "event": "The Consolidated Appropriations Act, 2026 (H.R. 7148, Public Law 119-75) was approved, providing about 1.3 billion dollars for SBA per CRS, above the Administration's request of about 0.8 billion dollars.",
+      "event": "The Consolidated Appropriations Act, 2026 (H.R. 7148, Public Law 119-75) was approved; per CRS it provides about 1.3 billion dollars for SBA, above the Administration's request of about 0.8 billion dollars, including 330 million for entrepreneurial development.",
       "kind": "primary",
       "source": "GovInfo",
       "url": "https://www.govinfo.gov/app/details/PLAW-119publ75"
@@ -151,6 +167,6 @@
   ],
   "title": "Rank SBA programs by cost-effectiveness, hold the budget flat, then end weak programs",
   "tracked": true,
-  "uncertainties": "One web search for an SBA program effectiveness review or report to Congress found only congressional letters and commentary, none read; absence of a report is an absence-of-evidence finding. The FY2026 request and enacted SBA amounts come from CRS; the appropriations law was confirmed on GovInfo by number and date only. The FY2027 request's own release date was not confirmed, so the event is dated by the CRS summary. FY2027 appropriations status was not checked. The budget requests propose ending programs without the ranking report the chapter asks for first, and they cut rather than hold the budget constant, so the match is parallel.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The SBA FY2027 and FY2026 congressional budget justifications are listed on the legacy SBA site (FY2027 effective 2026-04-03) but the PDFs could not be fetched because the host blocks automated access, so any program-evaluation language in them was not read. The FY2027 Budget of the U.S. Government PDF on whitehouse.gov was opened but the fetched text stopped before the SBA chapter (listed at printed page 71), so it was not read. The figure of about 0.8 billion dollars for the FY2026 SBA request is a rounded total stated in CRS R43846, which gives no exact figure. The public law was confirmed on GovInfo by number, bill and approval date; the SBA amounts come from CRS. One search in the latest research pass for an SBA effectiveness review found only budget documents. FY2027 appropriations status was not checked. The budget requests propose ending programs without the ranking report the chapter asks for first, and they cut rather than hold the budget constant, so the match is parallel.",
+  "updated_at": "2026-10-18"
 }

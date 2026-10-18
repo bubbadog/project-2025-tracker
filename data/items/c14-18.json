@@ -5,11 +5,11 @@
     "Hospital opposition and litigation risk to the revised pilot"
   ],
   "chapter": "14",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked; the House bill and HRSA notices were read on primary sites, while the Senate bill and court events rest on trade and law-firm reports.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter pages checked and the stage-deciding H.R. 5256 bill status (GovInfo BILLSTATUS) was read in review and shows introduction and referral only; 91 FR 48883 was also read and confirms the court events and pilot dates; the Senate bill rests on a trade journal.",
   "court_status": {
-    "basis": "The District of Maine vacated and remanded the 2025 pilot approvals on 2026-02-10; HRSA has since issued a revised pilot notice.",
+    "basis": "The District of Maine vacated and remanded the 2025 pilot notices and approvals on 2026-02-10 (confirmed in 91 FR 48883); HRSA has since issued a revised pilot notice.",
     "date": "2026-02-10",
     "state": "vacated",
     "url": "https://btlaw.com/en/insights/alerts/2026/340b-rebate-model-pilot-program-effectively-ends-preserving-upfront-discounts-for-now"
@@ -35,10 +35,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Cross-references added to new layer 3 records c14-38 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review read the H.R. 5256 bill status on govinfo.gov and the 2026-08-03 HRSA notice on federalregister.gov; stage proposed 15 unchanged; court events confirmed in the notice; confidence 72 to 80."
     }
   ],
   "id": "c14-18",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -50,7 +58,8 @@
   "progress": 15,
   "proposal": "The Mandate recommends that legislation restructure 340B drug subsidies so they benefit beneficiaries rather than hospitals. It also asks Congress to let CMS use HRSA's 340B data and to penalize covered entities that do not respond to HRSA data requests.",
   "related_ids": [
-    "c14-11"
+    "c14-11",
+    "c14-38"
   ],
   "remaining": [
     "Committee action and passage of a 340B restructuring bill",
@@ -60,52 +69,34 @@
   "requires_congress": "yes",
   "research_agent": "N14",
   "review": {
+    "document_reread": {
+      "citation": "H.R. 5256 (119th Congress), 340B ACCESS Act, BILLSTATUS XML on GovInfo; and 91 FR 48883 (2026-08-03), FR Doc. 2026-15633",
+      "note": "Bill status read in full: introduced 2025-09-10 by one sponsor with one original cosponsor, referred to Energy and Commerce and Ways and Means; no action after 2025-09-10 (file updated 2025-09-24). The HRSA notice was read for its first 100,000 of about 132,000 characters: plans due 2026-08-24, rebate model from 2027-01-01, and it states the District of Maine granted a preliminary injunction on 2025-12-29 in American Hospital Association v. Kennedy and vacated and remanded the 2025 notices and approvals on 2026-02-10.",
+      "result": "supports",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5256.xml"
+    },
     "flags": [
-      "Stage changed from in_progress 30 to proposed 15: the text asks Congress to act, introduced bills make it proposed and the HRSA pilot is a parallel executive step.",
-      "Law-firm article dates corrected."
+      "Court status kept (vacated, 2026-02-10, the latest court event); basis now notes confirmation in the Federal Register notice.",
+      "Status summary wording on the 2025-12-29 order changed from blocked to preliminarily enjoined, per the HRSA notice."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 465 and 483 confirmed; both recommendations are framed as legislation.",
+    "mandate_check": "ok",
+    "mandate_note": "Page 465 lists restructuring 340B subsidies toward beneficiaries among items legislation reforming legacy Medicare should do, and page 483 asks Congress to let CMS use HRSA's 340B data and to penalize non-response to HRSA data collection; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y14a",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-4",
     "source_checks": [
       {
-        "note": "Voluntary pilot notice 2025-08-01.",
+        "note": "Introduced and referred 2025-09-10; one cosponsor; no later action.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/08/01/2025-14619/340b-program-notice-application-process-for-the-340b-rebate-model-pilot-program"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5256.xml"
       },
       {
-        "note": "RFI 2026-02-17.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/02/17/2026-03042/request-for-information-340b-rebate-model-pilot-program"
-      },
-      {
-        "note": "Revised pilot; plans due 2026-08-24; earliest start 2027-01-01.",
+        "note": "91 FR 48883; plans due 2026-08-24; start 2027-01-01; PI 2025-12-29 and vacatur 2026-02-10 by the District of Maine.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/08/03/2026-15633/notice-regarding-340b-rebate-model-pilot-program"
-      },
-      {
-        "note": "Dated 2026-08-13; 2025-12-29 block, 2026-02-10 vacatur, selected drug list scope.",
-        "result": "supports",
-        "url": "https://www.bakerdonelson.com/hrsa-revives-340b-rebate-model-pilot-program-with-january-2027-effective-date"
-      },
-      {
-        "note": "Dated 2026-02-25; joint motion vacatur 2026-02-10.",
-        "result": "supports",
-        "url": "https://btlaw.com/en/insights/alerts/2026/340b-rebate-model-pilot-program-effectively-ends-preserving-upfront-discounts-for-now"
-      },
-      {
-        "note": "H.R. 5256 introduced 2025-09-10 with patient discount, data submission and penalty provisions.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr5256ih/html/BILLS-119hr5256ih.htm"
-      },
-      {
-        "note": "SUSTAIN 340B Act introduced 2026-08-05; no bill number given.",
-        "result": "partial",
-        "url": "https://www.ajmc.com/view/senate-unveils-sweeping-bill-to-reform-340b-drug-program"
       }
-    ]
+    ],
+    "stage_change_reason": "The asks are addressed to Congress; the only bills are introduced (H.R. 5256 with no action after referral, and a Senate bill reported by trade press), which is proposed. The HRSA rebate pilot is a parallel executive step that does not redirect the subsidy to patients."
   },
   "self_confidence": 60,
   "significance": {
@@ -185,10 +176,17 @@
       "publisher": "AJMC",
       "title": "Senate unveils sweeping bill to reform 340B drug program",
       "url": "https://www.ajmc.com/view/senate-unveils-sweeping-bill-to-reform-340b-drug-program"
+    },
+    {
+      "date": "2025-09-10",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 5256, 340B ACCESS Act, bill status (GovInfo BILLSTATUS XML)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5256.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "No 340B statute has been enacted. H.R. 5256, the 340B ACCESS Act, was introduced on 2025-09-10 and referred to Energy and Commerce and Ways and Means; it would define eligible patients, require sliding-fee patient discounts at hospital covered entities, add covered entity data submissions and set civil penalties. A bipartisan Senate group introduced the SUSTAIN 340B Act on 2026-08-05, with annual reporting and a patient financial assistance policy, according to a trade journal. Separately, HRSA's voluntary rebate model pilot (notice of 2025-08-01) was blocked by the District of Maine on 2025-12-29 and vacated and remanded on 2026-02-10; HRSA issued a request for information on 2026-02-17 and a revised pilot notice on 2026-08-03 with a 2027-01-01 earliest start.",
+  "status_summary": "No 340B statute has been enacted. H.R. 5256, the 340B ACCESS Act, was introduced on 2025-09-10 and referred to Energy and Commerce and Ways and Means, with no later action recorded; it would define eligible patients, require sliding-fee patient discounts at hospital covered entities, add covered entity data submissions and set civil penalties. A bipartisan Senate group introduced the SUSTAIN 340B Act on 2026-08-05, with annual reporting and a patient financial assistance policy, according to a trade journal. Separately, HRSA's voluntary rebate model pilot (notice of 2025-08-01) was preliminarily enjoined by the District of Maine on 2025-12-29 and vacated and remanded on 2026-02-10; HRSA issued a request for information on 2026-02-17 and a revised pilot notice on 2026-08-03 with a 2027-01-01 start.",
   "timeline": [
     {
       "date": "2025-08-01",
@@ -206,7 +204,7 @@
     },
     {
       "date": "2025-12-29",
-      "event": "District of Maine blocks the rebate pilot from starting on 2026-01-01 in a suit by the American Hospital Association and others.",
+      "event": "The District of Maine grants a preliminary injunction in American Hospital Association v. Kennedy, pausing the rebate pilot before its planned 2026-01-01 start (as stated in the 2026-08-03 HRSA notice).",
       "kind": "court",
       "source": "Baker Donelson",
       "url": "https://www.bakerdonelson.com/hrsa-revives-340b-rebate-model-pilot-program-with-january-2027-effective-date"
@@ -242,6 +240,6 @@
   ],
   "title": "Restructure the 340B drug discount program toward patients",
   "tracked": true,
-  "uncertainties": "The Senate bill number was not found and its text was not read; congress.gov status pages for both bills were not opened, so later action is not excluded. Court dates come from law-firm summaries; the orders were not opened. The rebate pilot changes how discounts reach covered entities and does not redirect the subsidy to patients, so it is a parallel step. Only part of the long House bill text was read.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The Senate bill number was not found and its text was not read. H.R. 5256 bill status on GovInfo, read in review, shows no action after referral on 2025-09-10; only part of the long bill text was read, so the data submission provisions in later sections rest on the earlier reading. The 2025-12-29 injunction and 2026-02-10 vacatur are stated in the 2026-08-03 Federal Register notice and law-firm summaries; the orders themselves were not opened. The rebate pilot changes how discounts reach covered entities and does not redirect the subsidy to patients, so it is a parallel step.",
+  "updated_at": "2026-10-16"
 }

@@ -5,9 +5,9 @@
     "Transfers between agencies require legislation."
   ],
   "chapter": "15",
-  "confidence": 60,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked and budget claims confirmed by two fetched secondary accounts; no primary budget document was opened.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Text checked; the FY2027 Budget of the U.S. Government, HUD section pp. 29 to 32, was fetched and read in this review and shows eliminations and consolidations proposed to Congress with no transfers to other agencies, which supports the proposed stage; FY2026 details rest on secondary accounts.",
   "durability": {
     "level": "low",
     "why": "Requests depend on annual appropriations and the withdrawn reorganization shows plans can change."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review: the FY2027 budget HUD section was reread on whitehouse.gov and added as a primary source; the FY2027 Continuum of Care and HOPWA changes were added; stage unchanged."
     }
   ],
   "id": "c15-15",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -54,36 +58,28 @@
   "requires_congress": "yes",
   "research_agent": "N15",
   "review": {
+    "document_reread": {
+      "citation": "Budget of the U.S. Government, Fiscal Year 2027, Department of Housing and Urban Development section, pp. 29 to 32 (released 2026-04-03)",
+      "note": "The HUD section requests $73.5 billion in discretionary budget authority, $10.7 billion (13 percent) below the 2026 enacted level; it eliminates CDBG, HOME, HOPWA and Continuum of Care and funds Emergency Solutions Grants at $4 billion as a more targeted program; it does not mention a rental assistance block grant, time limits, or moving any HUD program to SBA, Interior or a successor housing agency.",
+      "result": "supports",
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/04/budget_fy2027.pdf"
+    },
     "flags": [
-      "overlap check: no record in other chapters tracks HUD devolution or transfers; overlaps are with c15-03 (homelessness grant consolidation) and c15-04 (time limits)."
+      "Federal News Network source is dated 'undated'; the article path and reported event give September 2026, so the source date can be set to 2026-09-04."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 504 and 512 match the paraphrase; the devolution and transfer idea is framed as something Congress could consider.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed pages 504 and 512 say Congress could consider a wholesale HUD overhaul devolving functions to states and localities and moving the rest to other agencies (loan guarantees to SBA, Indian housing to Interior, rental assistance, mortgage insurance and Ginnie Mae to a redesignated Housing and Home Finance Agency), consolidating, eliminating and narrowing programs; the record's paraphrase matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y15a",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-2",
     "source_checks": [
       {
-        "note": "Released 2025-05-30; block grant merging five programs; two-year caps; CoC and HOPWA folded into ESG; CDBG and HOME eliminated.",
+        "note": "HUD pp. 29-32 confirmed.",
         "result": "supports",
-        "url": "https://www.nahro.org/news/trump-administration-releases-full-fy-2026-budget-with-devastating-proposed-cuts-to-housing-and-community-development-programs"
-      },
-      {
-        "note": "$31.79 billion block grant and two-year limits; page dated 2025-06-02.",
-        "result": "supports",
-        "url": "https://nlihc.org/resource/trump-administration-releases-additional-details-fy26-budget-request-slashing-hud-rental"
-      },
-      {
-        "note": "FY2027 request eliminates CDBG and HOME and does not propose a block grant.",
-        "result": "supports",
-        "url": "https://www.nahro.org/news/hud-releases-fy-2027-budget-proposal-insufficient-rental-assistance-increases-paired-with-devasting-cuts-to-community-development-programs"
-      },
-      {
-        "note": "Notice previewed 2026-09-04 and withdrawn same day; internal consolidation; no transfers mentioned; no printed date.",
-        "result": "supports",
-        "url": "https://federalnewsnetwork.com/reorganization/2026/09/hud-circulated-plans-for-a-major-reorganization-then-it-withdrew-them/"
+        "url": "https://www.whitehouse.gov/wp-content/uploads/2026/04/budget_fy2027.pdf"
       }
-    ]
+    ],
+    "stage_change_reason": "Budget requests propose eliminations and consolidations that need Congress, and no transfer of functions to other agencies or a successor agency was found, so proposed at 15 stands."
   },
   "self_confidence": 50,
   "significance": {
@@ -137,15 +133,22 @@
       "url": "https://www.nahro.org/news/hud-releases-fy-2027-budget-proposal-insufficient-rental-assistance-increases-paired-with-devasting-cuts-to-community-development-programs"
     },
     {
-      "date": "undated",
+      "date": "2026-09-04",
       "kind": "news",
       "publisher": "Federal News Network",
       "title": "HUD circulated plans for a major reorganization, then it withdrew them",
       "url": "https://federalnewsnetwork.com/reorganization/2026/09/hud-circulated-plans-for-a-major-reorganization-then-it-withdrew-them/"
+    },
+    {
+      "date": "2026-04-03",
+      "kind": "primary",
+      "publisher": "Office of Management and Budget",
+      "title": "Budget of the U.S. Government, Fiscal Year 2027 (HUD, pp. 29-32)",
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/04/budget_fy2027.pdf"
     }
   ],
   "stage": "proposed",
-  "status_summary": "The FY2026 budget request, released 2025-05-30, proposed a State-based Rental Assistance Block Grant merging five rental programs at $31.79 billion, with two-year assistance limits for non-elderly, non-disabled households, folded Continuum of Care and HOPWA into an expanded Emergency Solutions Grants program, and proposed eliminating CDBG and HOME. The FY2027 request of 2026-04-03 again proposed eliminating CDBG and HOME but did not repeat the block grant. A HUD internal reorganization notice previewed on 2026-09-04 was withdrawn the same day and did not, as reported, move functions to other agencies or states. No proposal to move programs to SBA or Interior, or to create a successor housing agency, was found.",
+  "status_summary": "The FY2026 budget request, released 2025-05-30, proposed a State-based Rental Assistance Block Grant merging five rental programs at $31.79 billion, with two-year assistance limits for non-elderly, non-disabled households, folded Continuum of Care and HOPWA into an expanded Emergency Solutions Grants program, and proposed eliminating CDBG and HOME. The FY2027 request of 2026-04-03 again proposed eliminating CDBG and HOME, replaced Continuum of Care with a larger Emergency Solutions Grant program and eliminated HOPWA, and did not repeat the rental assistance block grant (HUD section, pp. 29-32). A HUD internal reorganization notice previewed on 2026-09-04 was withdrawn the same day and did not, as reported, move functions to other agencies or states. No proposal to move programs to SBA or Interior, or to create a successor housing agency, was found.",
   "timeline": [
     {
       "date": "2025-05-30",
@@ -156,7 +159,7 @@
     },
     {
       "date": "2026-04-03",
-      "event": "The FY2027 budget request proposed eliminating CDBG, HOME and other grant programs without a rental assistance block grant.",
+      "event": "The FY2027 budget request proposed eliminating CDBG, HOME, HOPWA and Continuum of Care, funding Emergency Solutions Grants at $4 billion, without a rental assistance block grant (HUD section, pp. 29-32).",
       "kind": "news",
       "source": "NAHRO",
       "url": "https://www.nahro.org/news/hud-releases-fy-2027-budget-proposal-insufficient-rental-assistance-increases-paired-with-devasting-cuts-to-community-development-programs"
@@ -171,6 +174,6 @@
   ],
   "title": "Devolve HUD functions to states and move others to SBA, Interior or a successor agency",
   "tracked": true,
-  "uncertainties": "Whether FY2026 appropriations adopted any block grant or eliminations was not checked directly; the FY2027 request's reference to enacted FY2026 PD&R funding suggests CDBG-type eliminations were not enacted but this was not verified. The Federal News Network item has no printed date and is labeled undated; the NLIHC page is an advocacy lead consistent with the NAHRO account.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The FY2027 budget HUD pages were read on whitehouse.gov through a tool summary; the FY2026 request details rest on NAHRO and NLIHC accounts, and the FY2026 appropriations outcome and HUD congressional justifications were not read. The FY2027 budget measures its cut against a 2026 enacted level, which suggests the FY2026 eliminations were not enacted, but this was not verified directly. A Federal Register query for HUD reorganization notices returned only a Kansas City field office consolidation notice of 2026-06-24, consistent with the withdrawal, but the withdrawn notice itself rests on a Federal News Network report.",
+  "updated_at": "2026-10-16"
 }

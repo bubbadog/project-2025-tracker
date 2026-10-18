@@ -4,9 +4,9 @@
     "No court challenge to the January 2026 rules was found in the sources read (not exhaustively searched)"
   ],
   "chapter": "09",
-  "confidence": 74,
-  "confidence_label": "medium",
-  "confidence_reason": "The gender-related final rule was read on the Federal Register and matches the summary, and the companion equity rule's existence was confirmed; the USAID-specific steps the Mandate lists (Chief Diversity Officer, Climate Strategy, gender office) are treated as overtaken by the agency's closure rather than verified, and no enforcement actions were checked.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Both stage-deciding final rules were fetched in review on 2026-10-18: the equity rule (91 FR 3345) was read in full and the gender rule (91 FR 3332) through its operative terms, with publication and effective dates confirmed on the Federal Register API. The USAID closure rests on an NPR report and a Lead Inspector General report on program transfers, both read in review; the USAID-internal steps the Mandate lists and any enforcement under the rules were not verified.",
   "durability": {
     "level": "medium",
     "why": "The terms are final rules in the Code of Federal Regulations that a later administration would need to rescind by rulemaking, though they were issued without notice and comment."
@@ -27,10 +27,14 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Implemented 80 confirmed against both State final rules; USAID closure sentence restored with NPR and Lead Inspector General sources; confidence 74 to 80."
     }
   ],
   "id": "c09-03",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -82,14 +86,19 @@
   "research_agent": "A05",
   "review": {
     "flags": [
-      "USAID-internal DEI, climate and gender steps inferred as moot, not verified",
-      "possible overlap with c09-04 (same January 2026 rule package) and c06-03 (same withdrawal memorandum)"
+      "Restored a USAID closure sentence that the researcher had dropped: an NPR report of 2025-07-01 (news) and the Lead Inspector General report of 2026-02-20 (primary, cited in sibling record c09-16) support that USAID's remaining operations and programs moved to State on 2025-07-01; both sources added and a 2025-07-01 timeline event added from the Lead Inspector General report.",
+      "Researcher's added EO 14151 timeline row accepted; both rules list it among consistent policies.",
+      "Stage kept at implemented 80; the defensible alternative is implemented 70, since contracts are not yet covered, the information collection awaits OMB approval, no enforcement was found and the USAID-specific steps are unverified.",
+      "USAID-internal DEI, climate and gender steps remain inferred as overtaken by the closure, not verified (carried over).",
+      "Possible overlap with c09-04 (same January 2026 rule package) and c06-03 (same withdrawal memorandum), carried over.",
+      "No court_status: no court event is in the timeline.",
+      "Confidence raised from 74 to 80."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 257-258 call for rescinding USAID's Climate Strategy and Paris-related programs, pp. 258 for dismantling the DEI apparatus with defunding and possible debarment of partners, and pp. 259-260 for renaming the gender office for women, children and families, rescinding the 2022 Gender Policy and removing gender terms from materials and awards; the paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R03",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V2",
     "source_checks": [
       {
         "note": "Final rule, 91 FR 3332, published 2026-01-27, effective 2026-02-26, 2 CFR part 603: terms for foreign NGOs and international organizations, narrower terms for US NGOs, optional for foreign governments; binary sex definition; verbatim flow-down; termination, refund, suspension and debarment; contracts not yet covered; information collection awaiting OMB; issued under the grants and foreign-affairs exemptions.",
@@ -97,9 +106,29 @@
         "url": "https://www.federalregister.gov/documents/2026/01/27/2026-01516/combating-gender-ideology-in-foreign-assistance"
       },
       {
-        "note": "API returned only the title (Combating Discriminatory Equity Ideology in Foreign Assistance Rules), confirming the companion rule exists; its dates and CFR part were not confirmed in this review.",
+        "note": "Final rule, 91 FR 3345 to 3358, 2 CFR part 604, published 2026-01-27, effective 2026-02-26; covers foreign NGOs, US NGOs, international organizations, foreign governments and parastatals. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-01517.json"
+      },
+      {
+        "note": "Read in full: new awards and existing awards amended with funds, verbatim flow-down, termination, suspension, debarment and refund, national security or foreign policy waiver, contracts excluded pending a separate rulemaking, information collection unenforced until OMB approval; USAID appears only in background and footnotes. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/01/27/2026-01517/combating-discriminatory-equity-ideology-in-foreign-assistance-rules"
+      },
+      {
+        "note": "First 100,000 of 127,138 characters read: 2 CFR part 603, effective 2026-02-26, coverage and contract and OMB status as recorded, lists EOs 14151, 14168 and 14173; mentions USAID only for funds transferred to State. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/01/27/2026-01516/combating-gender-ideology-in-foreign-assistance"
+      },
+      {
+        "note": "Lead Inspector General report released 2026-02-20: State took over remaining USAID programs on 2025-07-01 (five Iraq programs, 27 million dollars; 15 humanitarian programs); describes an ongoing operational drawdown but not the agency closure as a whole. Checked 2026-10-18.",
         "result": "partial",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-01517.json?fields[]=title&fields[]=type&fields[]=publication_date&fields[]=effective_on&fields[]=cfr_references&fields[]=abstract&fields[]=citation&fields[]=agencies"
+        "url": "https://oig.usaid.gov/node/8036"
+      },
+      {
+        "note": "NPR, 2025-07-01: USAID officially shut down and its remaining operations merged into State; no mention of DEI, gender or climate offices. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.wwno.org/npr-news/2025-07-01/usaid-officially-shuts-down-and-merges-remaining-operations-with-state-department"
       }
     ]
   },
@@ -151,17 +180,52 @@
       "publisher": "GovInfo",
       "title": "Rescissions Act of 2025, Public Law 119-28",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ28/html/PLAW-119publ28.htm"
+    },
+    {
+      "date": "2025-01-29",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Ending Radical and Wasteful Government DEI Programs and Preferencing (Executive Order 14151)",
+      "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01953/ending-radical-and-wasteful-government-dei-programs-and-preferencing"
+    },
+    {
+      "date": "2025-07-01",
+      "kind": "news",
+      "publisher": "NPR via WWNO",
+      "title": "USAID officially shuts down and merges remaining operations with State Department",
+      "url": "https://www.wwno.org/npr-news/2025-07-01/usaid-officially-shuts-down-and-merges-remaining-operations-with-state-department"
+    },
+    {
+      "date": "2026-02-20",
+      "kind": "primary",
+      "publisher": "Lead Inspector General (USAID OIG host)",
+      "title": "Operation Inherent Resolve Lead Inspector General Quarterly Report to Congress, July 1, 2025 - December 31, 2025",
+      "url": "https://oig.usaid.gov/node/8036"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Beyond the closure of USAID, the main operative measures are two State final rules published 2026-01-27 and effective 2026-02-26: Combating Gender Ideology in Foreign Assistance (2 CFR part 603) and Combating Discriminatory Equity Ideology in Foreign Assistance (2 CFR part 604). They add award terms for foreign NGOs, US NGOs and international organizations (and optionally foreign governments), require flow-down to subrecipients, define sex as a binary biological classification, and allow termination, refund, suspension and debarment. They do not yet cover contracts, and the information-collection requirement awaits OMB approval. The 2026-01-07 withdrawal memorandum also lists the UNFCCC, IPCC and UN Women, and State's April 2025 plan expected to cut the Office of Global Women's Issues and DEI efforts. The rules apply to every recipient of foreign assistance, including US organizations, which is broader than the Mandate's focus on USAID's own apparatus and partners.",
+  "status_summary": "USAID's remaining operations were merged into the State Department on 2025-07-01, as reported by NPR on that date and reflected in a Lead Inspector General report that records USAID programs moving to State management that day; the USAID-internal DEI, climate and gender steps the Mandate lists were not separately verified. Two State Department final rules published 2026-01-27 and effective 2026-02-26 add foreign assistance award terms: Combating Gender Ideology in Foreign Assistance (91 FR 3332, 2 CFR part 603) and Combating Discriminatory Equity Ideology in Foreign Assistance Rules (91 FR 3345, 2 CFR part 604). They apply to new awards and to existing awards that add funds; they bind foreign NGOs and international organizations, impose narrower terms on US NGOs and optional terms on foreign governments, require flow-down to subrecipients, define sex as a binary biological classification, and provide for termination, refund, suspension and debarment, with a national security or foreign policy waiver. Contract clauses await a separate rulemaking and the information collection awaits OMB approval. The 2026-01-07 withdrawal memorandum also lists the UNFCCC, IPCC and UN Women, and State's April 2025 reorganization plan was reported as expected to cut the Office of Global Women's Issues and DEI efforts. The rules cover all recipients of State foreign assistance, which is broader than the Mandate's focus on USAID's own apparatus and partners.",
   "timeline": [
+    {
+      "date": "2025-01-20",
+      "event": "Executive Order 14151, Ending Radical and Wasteful Government DEI Programs and Preferencing, was issued; it was published in the Federal Register on 2025-01-29 as document 2025-01953 and is one of the orders both State rules list as consistent policy.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01953/ending-radical-and-wasteful-government-dei-programs-and-preferencing"
+    },
     {
       "date": "2025-04-22",
       "event": "AP reported that State's reorganization was expected to cut the Office of Global Women's Issues and diversity and inclusion efforts.",
       "kind": "news",
       "source": "AP via WCAX",
       "url": "https://www.wcax.com/2025/04/22/rubio-unveils-massive-overhaul-state-department-with-reduction-staff-bureaus/"
+    },
+    {
+      "date": "2025-07-01",
+      "event": "USAID's remaining operations were merged into the State Department; the Lead Inspector General later reported that State took over management of remaining USAID programs that day, including five active Iraq programs and 15 humanitarian assistance programs covered by the report.",
+      "kind": "primary",
+      "source": "Lead Inspector General (USAID OIG host)",
+      "url": "https://oig.usaid.gov/node/8036"
     },
     {
       "date": "2025-07-24",
@@ -201,6 +265,6 @@
   ],
   "title": "End DEI, climate and gender programming in foreign assistance",
   "tracked": true,
-  "uncertainties": "The two final rules were read through a summarizing fetch limited to the first 100,000 characters; later sections (regulatory analyses) were not read. The underlying executive orders were not retrieved (14151, 14168, 14173, and the climate order) or any USAID-internal actions such as removal of the Chief Diversity Officer, rescission of the Climate Strategy, or renaming of the gender office, because web search quota ran out; the Mandate's USAID-specific steps are therefore inferred as overtaken by the closure rather than verified. Litigation over the rules was not researched.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The USAID-internal steps the Mandate lists (Chief Diversity Officer, Climate Strategy rescission, renaming of the gender office) were not found in any document read and are treated as overtaken by agency changes rather than verified; the closure of USAID rests on an NPR report of 2025-07-01 and a Lead Inspector General report (released 2026-02-20, read on the USAID OIG site) that confirms USAID programs moved to State management on 2025-07-01 and an ongoing operational drawdown but does not describe the agency's closure as a whole. The equity rule (2 CFR part 604) was read in full in review; the gender rule (2 CFR part 603) was read through its first 100,000 characters, which include the operative terms, and its closing appendix text and footnotes were not read. Executive Orders 14168 and 14173 are confirmed only as listed in the text of the rules; only 14151 was checked as a Federal Register document. Litigation over the rules and any OMB approval or contract rulemaking after 2026-02-26 were not exhaustively researched; no court challenge was found.",
+  "updated_at": "2026-10-18"
 }

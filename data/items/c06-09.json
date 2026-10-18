@@ -4,9 +4,9 @@
     "C-175 delegations are internal State procedure and are not generally published, so action may not be visible."
   ],
   "chapter": "06",
-  "confidence": 55,
+  "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "Document text verified in an earlier review (pages 175 and 178). The stage rests on absence of a qualifying action. In review the Federal Register API query for Circular 175 since 2025-01-20 (one document), Delegation of Authority No. 620 and the 11 FAM 720 manual chapter were fetched and read, and none revokes or narrows C-175 authorities held by other agencies. Of the five systematic checks, congress.gov could not be fetched and the Unified Agenda was not searched, so the rating is held below the 70 ceiling.",
+  "confidence_reason": "Chapter text pages 175 and 178 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo search with the H.R. 5251 bill status read, state.gov unreachable, one news search) plus Delegation of Authority No. 620 read in an earlier review; capped at 60 because the only agency host, state.gov, is blocked and C-175 delegations are generally unpublished.",
   "durability": {
     "level": "medium",
     "why": "Delegations of negotiating authority are internal executive-branch decisions that can be granted or withdrawn at any time."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-15",
       "note": "Update run, independently reviewed. Systematic absence check 2026-10-15: Federal Register API found State Delegation of Authority No. 620 (2026-07-02) on treaty negotiation authority within State; it relies on Circular 175 and does not revoke or narrow it. No bill or manual change found. Stage unchanged. Review (corrected): Federal Register API, Delegation No. 620 and the manual chapter confirmed; the uncertainty wording was updated to reflect review reads and given the systematic-check phrasing. Confidence raised from 40 to 55 under the absence-of-action exception, short of 70 because two of five checks could not be done. Stage not_started 0; confidence 40 to 55."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov), read the H.R. 5251 bill status on govinfo.gov, and reviewed the Unified Agenda fallback, agency page and news checks, found no qualifying action, and kept not_started 0."
     }
   ],
   "id": "c06-09",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -57,35 +61,39 @@
   "research_agent": "N06a",
   "review": {
     "flags": [
-      "not_started rests on absence of evidence; C-175 delegations to other agencies are internal and usually unpublished",
-      "Systematic check judged partial (FR API, agency manual, one news search done; congress.gov blocked, Unified Agenda not searched); confidence set at 55, above the usual not_started level but below the 70 ceiling",
-      "Delegation No. 620 kept as a context timeline event; it is a State action but not a qualifying one"
+      "The only agency host, state.gov, was unreachable, so confidence is capped at 60.",
+      "C-175 delegations are internal and usually unpublished; a revocation could occur without public trace."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 175 says the Secretary must revoke most outstanding C-175 authorities granted to other agencies, coordinated with the White House; page 178 says DHS should retain or regain C-175 authority for bilateral and multilateral security agreements. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "independent",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 175 criticizes the prior administration for using C-175 to delegate diplomatic capacity to agencies such as DHS, page 178 says the Secretary should revoke most outstanding C-175 authorities granted to other agencies in coordination with the White House, and a later passage says DHS should keep or regain C-175 authority for security agreements. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Federal Register API query on 2026-10-15, term Circular 175, published since 2025-01-20: one result, State document 2026-13350 (2026-07-02).",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Circular+175%22&conditions[publication_date][gte]=2025-01-20&per_page=20"
+        "note": "2026-10-18: reviewer rerun with terms international agreements, negotiate, authority, delegation, State Department filter, since 2025-01-20: 1 document, Delegation of Authority No. 620 (2026-13350, 2026-07-02), an internal State delegation that does not revoke other agencies' authorities. Researcher query on Circular 175 returned the same single document.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22international+agreements%22+negotiate+authority+delegation&conditions[agencies][]=state-department&conditions[publication_date][gte]=2025-01-20&per_page=20"
       },
       {
-        "note": "Read 2026-10-15: Delegation of Authority No. 620, 91 FR 40651, signed 2026-06-25, delegates to Deputy Secretaries and six Under Secretaries, revokes Delegation 311 (2008), invokes 22 CFR 181.6 and 11 FAM 700 without amending them; names no other agencies.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/07/02/2026-13350/negotiation-conclusion-and-termination-of-treaties-and-other-international-agreements"
+        "note": "2026-10-18: reginfo.gov Unified Agenda landing page loaded but listings are script-driven and were not read; Federal Register fallback used. Terms: State Department, Circular 175.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       },
       {
-        "note": "11 FAM 720 codifies Circular 175; latest change tag CT:POL-48 of 2006-09-25; no recent revision.",
-        "result": "supports",
-        "url": "https://fam.state.gov/fam/11fam/11fam0720.html"
+        "note": "2026-10-18: researcher search limited to congress.gov and govinfo.gov found no bill on C-175 delegations; reviewer read the H.R. 5251 BILLSTATUS (public diplomacy authorities, introduced 2025-09-10, ordered reported 48 to 0 on 2025-09-18), which does not mention treaty or C-175 authority.",
+        "result": "does_not_support",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5251.xml"
       },
       {
-        "note": "congress.gov search for Circular 175 in the 119th Congress, blocked by robots on 2026-10-15.",
+        "note": "2026-10-18: state.gov is blocked in this environment and was not fetched; the agency home page is listed because no page could be opened.",
         "result": "unreachable",
-        "url": "https://www.congress.gov/search?q=%7B%22congress%22%3A%5B%22119%22%5D%2C%22source%22%3A%22legislation%22%2C%22search%22%3A%22%5C%22Circular+175%5C%22%22%7D"
+        "url": "https://www.state.gov"
+      },
+      {
+        "note": "2026-10-18: one researcher news search on State revoking Circular 175 authorities returned historical and reference pages only; no search URL was recorded, so the agency home page is listed as a placeholder.",
+        "result": "does_not_support",
+        "url": "https://www.state.gov"
       }
     ]
   },
@@ -152,6 +160,6 @@
   ],
   "title": "Revoke most Circular 175 negotiating authorities held by other agencies",
   "tracked": true,
-  "uncertainties": "Status checked systematically on 2026-10-15: (1) federalregister.gov API, term Circular 175 since 2025-01-20: 1 document, State Department Delegation of Authority No. 620 (2026-07-02), read on federalregister.gov in review on 2026-10-15; it keeps the Circular 175 procedure and does not mention other agencies' delegations, so no revocation was found. (2) reginfo.gov Unified Agenda: not searched, since a delegation or manual change is not a rule. (3) congress.gov: not fetchable (robots restriction, retried in review on 2026-10-15); no bill was identified through other searches. (4) state.gov: the Foreign Affairs Manual chapter 11 FAM 720 (codifying Circular 175) shows change tags no later than 2006 and still describes the procedure, including requests that name officers to whom authority is delegated. (5) news: one web search on Circular 175 and the delegation found only the manual and regulation text. Earlier notes: DHS notices read were short and their agreement text appears as images, so signatories and authority basis could not be confirmed; the Paraguay signature date comes from the notice alone; Executive Order 14159 sections 12 and 13 direct DHS and State to use agreements on removals but do not mention C-175. The not_started finding rests on absence in these checks.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: the researcher's query on Circular 175 and a reviewer rerun on international agreements, negotiation authority and delegation filtered to the State Department each returned one document, Delegation of Authority No. 620 (2026-07-02), which delegates the Secretary's own treaty and agreement authority within State under the Circular 175 procedure and does not address other agencies' delegations. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used; a delegation or manual change would not be a rule in any case. (3) congress.gov and govinfo: one search found no bill on C-175 delegations; H.R. 5251 on State public diplomacy authorities, ordered reported on 2025-09-18, does not mention treaty or agreement authority. (4) Agency pages: state.gov could not be reached in this check; an earlier review read the 11 FAM 720 manual chapter, which showed no change after 2006. (5) News: one search returned only historical and reference pages. DHS notices on asylum cooperation agreements with Honduras and Paraguay do not state the authority under which they were negotiated, and their agreement text appears as images, so signatories and authority basis could not be confirmed; Executive Order 14159 sections 12 and 13 direct agreements on removals without mentioning C-175. C-175 delegations to other agencies are internal and usually unpublished, so the not_started finding rests on absence in these checks.",
+  "updated_at": "2026-10-18"
 }

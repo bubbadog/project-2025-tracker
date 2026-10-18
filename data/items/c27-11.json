@@ -1,18 +1,18 @@
 {
   "agency": "Securities and Exchange Commission",
   "blockers": [
-    "Requires an act of Congress; the Senate has not acted on any repeal found"
+    "Requires an act of Congress; H.R. 7085 awaits House floor consideration and no Senate action was found"
   ],
   "chapter": "27",
-  "confidence": 62,
-  "confidence_label": "medium",
-  "confidence_reason": "Bill text and CBO page read; later floor status and absence of other repeal bills rest on a tracker and limited searching.",
+  "confidence": 82,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter page 832 was checked, and the stage-deciding H.R. 7085 bill status was fetched and read in full on govinfo.gov on 2026-10-18 (latest action 2026-03-19, Union Calendar No. 481), with the SEC proposal (91 FR 30086) read in full on federalregister.gov; absence of repeal bills for the other three disclosures rests on limited searching.",
   "durability": {
     "level": "high",
     "why": "A statutory repeal would be durable, but none is enacted; the SEC proposal is reversible."
   },
   "est_completion": {
-    "basis": "Inference: only one of four disclosures has a reported bill and no floor action was found.",
+    "basis": "Inference: only one of the four disclosures has a reported bill, which has sat on the Union Calendar since 2026-03-19 with no floor action.",
     "window": "unlikely this term"
   },
   "headline": false,
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source review on 2026-10-18 read the H.R. 7085 bill status on govinfo.gov and the SEC proposal on federalregister.gov, added the 2026-03-19 committee report and calendar placement, confirmed proposed 12 and raised confidence from 62 to 82."
     }
   ],
   "id": "c27-11",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -45,43 +49,34 @@
     "c27-04"
   ],
   "remaining": [
-    "Repeal of mine safety, resource extraction and pay ratio mandates",
-    "Floor passage and enactment of any repeal"
+    "Repeal of the mine safety, resource extraction and pay ratio mandates",
+    "House floor passage, Senate passage and enactment of any repeal"
   ],
   "requires_congress": "yes",
   "research_agent": "N27",
   "restates_ids": [],
   "review": {
     "flags": [
-      "proposed 12 confirmed",
-      "Bill text URL switched to the GovInfo copy read in review",
-      "Added the Union Calendar lead to uncertainties"
+      "Added the 2026-03-19 committee report and Union Calendar placement from bill status; the 2026-01-22 markup event is now sourced to bill status with the 30 to 24 vote.",
+      "Tracker lead in uncertainties replaced by the confirmed bill status finding.",
+      "Status summary drops the sponsor's name and states the SEC proposal's pay ratio and resource extraction treatment as read.",
+      "Alternative stage: proposed at a lower figure (about 8) since only one of four disclosures is covered."
     ],
     "mandate_check": "confirmed",
-    "mandate_note": "Page 832, Better Capital Markets (Congress bullets): repeal the Dodd-Frank disclosures on conflict minerals, mine safety, resource extraction and CEO pay ratio. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y2",
+    "mandate_note": "Page 832 recommends repealing the Dodd-Frank mandated disclosures on conflict minerals, mine safety, resource extraction and CEO pay ratios. The proposal paraphrase is accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Introduced 2026-01-15 by Rep. Huizenga, referred to Financial Services; repeals Exchange Act 13(p) and strikes Dodd-Frank 1502; silent on 1503, 13(q) and 953(b). Checked 2026-10-14.",
+        "note": "Read 2026-10-18: introduced 2026-01-15; ordered reported as amended 30 to 24 on 2026-01-22; reported H. Rept. 119-560 and placed on Union Calendar No. 481 on 2026-03-19; no floor or Senate action.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr7085ih/html/BILLS-119hr7085ih.htm"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7085.xml"
       },
       {
-        "note": "Ordered reported by House Financial Services on 2026-01-22; estimate dated 2026-02-27. Checked 2026-10-14.",
-        "result": "supports",
-        "url": "https://www.cbo.gov/publication/62191"
-      },
-      {
-        "note": "91 FR 30086, comments closed 2026-07-20; extends SRC and EGC accommodations including pay ratio relief to non-accelerated filers; page truncated. Checked 2026-10-14.",
+        "note": "Read in full 2026-10-18 (two segments): 91 FR 30086, doc 2026-10222, comments due 2026-07-20; non-accelerated filers could forgo pay ratio and certain Rule 13q-1 disclosures; conflict minerals and mine safety not mentioned; proposal only.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2026/05/21/2026-10222/enhancement-of-emerging-growth-company-accommodations-and-simplification-of-filer-status-for"
-      },
-      {
-        "note": "Tracker shows Union Calendar placement 2026-03-19 and no floor vote; lead only. Checked 2026-10-14.",
-        "result": "partial",
-        "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/7085"
       }
     ]
   },
@@ -134,10 +129,17 @@
       "publisher": "Federal Register",
       "title": "Enhancement of Emerging Growth Company Accommodations and Simplification of Filer Status for Reporting Companies",
       "url": "https://www.federalregister.gov/documents/2026/05/21/2026-10222/enhancement-of-emerging-growth-company-accommodations-and-simplification-of-filer-status-for"
+    },
+    {
+      "date": "2026-03-19",
+      "kind": "primary",
+      "publisher": "U.S. Government Publishing Office",
+      "title": "H.R. 7085 bill status (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7085.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "H.R. 7085, introduced by Rep. Huizenga on 2026-01-15 and referred to the Financial Services Committee, would repeal only the conflict minerals disclosure requirement (Exchange Act section 13(p) and Dodd-Frank section 1502); it does not touch mine safety, resource extraction or pay ratio. The House Financial Services Committee ordered it reported on 2026-01-22, and the Congressional Budget Office published its estimate on 2026-02-27. No floor action was found. Separately, an SEC proposal of 2026-05-21 on emerging growth company accommodations and filer status would extend scaled-disclosure accommodations that include pay ratio and resource extraction relief to non-accelerated filers, but it is a proposal and not a repeal.",
+  "status_summary": "H.R. 7085, introduced on 2026-01-15 and referred to the Financial Services Committee, would repeal only the conflict minerals disclosure requirement (Exchange Act section 13(p) and Dodd-Frank section 1502); it does not touch mine safety, resource extraction or pay ratio. The committee ordered it reported as amended by a 30 to 24 vote on 2026-01-22, and the Congressional Budget Office published its estimate on 2026-02-27. On 2026-03-19 the committee reported the bill (H. Rept. 119-560) and it was placed on the Union Calendar (No. 481); the bill status record shows no floor or Senate action. Separately, an SEC proposal published 2026-05-21 (91 FR 30086) would let non-accelerated filers forgo pay ratio disclosure and certain resource extraction payment disclosures, but it is a proposal and not a repeal.",
   "timeline": [
     {
       "date": "2026-01-15",
@@ -148,10 +150,17 @@
     },
     {
       "date": "2026-01-22",
-      "event": "The House Financial Services Committee ordered H.R. 7085 reported.",
+      "event": "The House Financial Services Committee ordered H.R. 7085 reported as amended by a recorded vote of 30 to 24.",
       "kind": "primary",
-      "source": "Congressional Budget Office",
-      "url": "https://www.cbo.gov/publication/62191"
+      "source": "U.S. Government Publishing Office",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7085.xml"
+    },
+    {
+      "date": "2026-03-19",
+      "event": "H.R. 7085 was reported as amended by the House Financial Services Committee (H. Rept. 119-560) and placed on the Union Calendar (No. 481).",
+      "kind": "primary",
+      "source": "U.S. Government Publishing Office",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7085.xml"
     },
     {
       "date": "2026-05-21",
@@ -163,6 +172,6 @@
   ],
   "title": "Repeal Dodd-Frank conflict minerals, mine safety, resource extraction, pay ratio rules",
   "tracked": true,
-  "uncertainties": "A bill tracker (thelobbynews.com) shows H.R. 7085 placed on the House Union Calendar on 2026-03-19 with no floor vote; that is a lead only and was not confirmed on congress.gov. The SEC proposal page was truncated, so the exact treatment of pay ratio and resource extraction for non-accelerated filers is inferred from its general approach; it is a proposal, listed as context. Bills on pay ratio, mine safety or resource extraction repeal may exist; searches found none. Federal Register search found no SEC document on conflict minerals since 2025-01-20.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Bill status for H.R. 7085 was read on govinfo.gov and shows the 2026-03-19 report and Union Calendar placement as the latest action; no floor vote is recorded. The SEC proposal was read in full: it would let non-accelerated filers forgo pay ratio disclosure and certain Rule 13q-1 resource extraction payment disclosures, and it does not mention conflict minerals or mine safety; it is a proposal with no final rule found. Bills on pay ratio, mine safety or resource extraction repeal may exist; the searches run found none. A Federal Register search found no SEC document on conflict minerals since 2025-01-20.",
+  "updated_at": "2026-10-18"
 }

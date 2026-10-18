@@ -5,9 +5,9 @@
     "Senate Democrats objected to layoffs ordered by an acting DNI (reported by Roll Call); no court challenge was found."
   ],
   "chapter": "07",
-  "confidence": 70,
+  "confidence": 77,
   "confidence_label": "medium",
-  "confidence_reason": "The ODNI 2.0 downsizing was confirmed from ODNI's own release and the 2026 layoffs and new DNI from Roll Call; the provisions of Public Law 119-60 and the new DNI's stated views on the cuts were not confirmed in the sources checked.",
+  "confidence_reason": "The chapter text (pp. 204-206, 212, 229, 231) was checked, and ODNI News Release 24-25 (odni.gov) and Title LXIV of Public Law 119-60 (Senate intelligence committee copy) were fetched and read in full; the release states targets rather than achieved cuts, and the achieved reductions and 2026 layoffs rest on news reports, so the record stays medium.",
   "durability": {
     "level": "medium",
     "why": "Completed layoffs and a reorganization are slow to unwind and Public Law 119-60 codifies the end of one center and limits on creating new ones, but a later DNI could rehire staff or recreate functions administratively."
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "An independent AI review re-read ODNI News Release 24-25 (odni.gov) and Title LXIV of Public Law 119-60 (intelligence.senate.gov), removed a research note from the law's timeline entry, stated the law's provisions as verified and kept the stage at implemented 70."
     }
   ],
   "id": "c07-01",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -96,25 +100,24 @@
   "research_agent": "A06",
   "review": {
     "flags": [
-      "Public Law 119-60 provisions not re-verified",
-      "Clayton's reported comments on ODNI size not found in the cited Roll Call article",
-      "staff counts vary by source"
+      "achieved cuts and 2026 layoffs rest on news reports",
+      "alternative defensible: implemented 65, since EO 12333 changes and stronger DNI directing authority were not found"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 204 says ODNI should direct rather than replicate other agencies' functions and cut redundant positions and spending, pp. 205-206 prefer amending EO 12333 over new legislation, p. 212 urges voluntary separation buyouts to shrink ODNI and CIA, p. 229 says calls for new centers should be rejected, and p. 231 restates the small-ODNI design; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R03",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 204 says ODNI should direct rather than replicate other agencies' functions and cut redundant positions and spending; pages 205-206 prefer amending Executive Order 12333; page 212 urges voluntary separation buyouts to shrink ODNI and CIA; page 229 says calls for new centers should be rejected; page 231 restates the small-ODNI design. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "ODNI release 24-25 dated 2025-08-20 (page metadata shows a later date): ODNI 2.0 to cut the office by over 40% by end of FY2025 and save over $700 million a year; names no specific centers and gives no headcount.",
+        "note": "Release 24-25 dated 2025-08-20: more than 40 percent reduction by end of FY2025, more than $700 million a year; no centers named; no EO 12333 mention.",
         "result": "supports",
         "url": "https://www.odni.gov/3547/pr-24-25/"
       },
       {
-        "note": "Confirms Clayton confirmed 2026-07-28 by 51-47 and acting DNI Pulte's fifth and near-final round of terminations (about 30% from weeks earlier); does not report Clayton saying he favored a lean ODNI or would review cuts, and gives no date for Gabbard's departure.",
-        "result": "partial",
-        "url": "https://rollcall.com/2026/07/28/jay-clayton-confirmed-director-national-intelligence/"
+        "note": "Title LXIV Secs. 6402-6405 confirmed; no staff cap; Sec. 6404 also renames section 119A and places the mission under a DNI-appointed official.",
+        "result": "supports",
+        "url": "https://www.intelligence.senate.gov/2025/12/18/intelligence-authorization-act-for-fiscal-year-2026-division-f-of-the-national-defense-authorization-act-for-fiscal-year-2026-public-law-119-60-dec-18-2025-119th-congress-in/"
       }
     ]
   },
@@ -173,10 +176,17 @@
       "publisher": "Hawaii News Now",
       "title": "Tulsi Gabbard exits role as director of national intelligence",
       "url": "https://www.hawaiinewsnow.com/2026/06/20/tulsi-gabbard-exits-role-director-national-intelligence/"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "primary",
+      "publisher": "Senate Select Committee on Intelligence",
+      "title": "Intelligence Authorization Act for Fiscal Year 2026, Division F of Public Law 119-60 (committee copy of text)",
+      "url": "https://www.intelligence.senate.gov/2025/12/18/intelligence-authorization-act-for-fiscal-year-2026-division-f-of-the-national-defense-authorization-act-for-fiscal-year-2026-public-law-119-60-dec-18-2025-119th-congress-in/"
     }
   ],
   "stage": "implemented",
-  "status_summary": "ODNI announced a restructuring called ODNI 2.0 on 2025-08-20, targeting a size reduction of more than 40 percent by the end of FY2025 and savings above $700 million a year; contemporaneous reports put staffing near 1,500, down from just under 2,000 in January 2025, and described three mission centers as refocused with functions moved to the Mission Integration office and the National Intelligence Council. The FY2026 intelligence authorization (the intelligence division of Public Law 119-60, signed 2025-12-18) repealed the DNI's authority to create new national intelligence centers, required termination of the National Counterproliferation and Biosecurity Center, and required a staffing end-state plan (as read by the researcher). After DNI Gabbard left in June 2026, acting DNI Bill Pulte announced further rounds of layoffs, which he described in late July as a near-final round of about 30 percent, and the Senate confirmed Jay Clayton as DNI on 2026-07-28 by 51-47. No amendment to Executive Order 12333 giving the DNI stronger budget and personnel authority was found.",
+  "status_summary": "ODNI announced a restructuring called ODNI 2.0 on 2025-08-20, targeting a size reduction of more than 40 percent by the end of FY2025 and savings above $700 million a year; contemporaneous reports put staffing near 1,500, down from just under 2,000 in January 2025, and described three mission centers as refocused with functions moved to the Mission Integration office and the National Intelligence Council (Defense One). Title LXIV of Public Law 119-60 (signed 2025-12-18) repealed the DNI's authority to establish new national intelligence centers, required the DNI to submit a staffing end-state and plan within 120 days, required termination of the National Counterproliferation and Biosecurity Center within 180 days and wound down the Office of Engagement, without setting a numerical staff cap. After DNI Gabbard left in June 2026, acting DNI Bill Pulte announced further rounds of layoffs, which he described in late July as a near-final round of about 30 percent, and the Senate confirmed Jay Clayton as DNI on 2026-07-28 by 51-47 (Roll Call). No amendment to Executive Order 12333 giving the DNI stronger budget and personnel authority was found.",
   "timeline": [
     {
       "date": "2025-08-20",
@@ -194,7 +204,7 @@
     },
     {
       "date": "2025-12-18",
-      "event": "Public Law 119-60 (FY2026 NDAA) is signed. Its intelligence division (Title LXIV) repeals the DNI's authority to create new national intelligence centers (Sec. 6402), requires a staffing end-state report within 120 days (Sec. 6403), requires termination of the National Counterproliferation and Biosecurity Center within 180 days (Sec. 6404), and winds down the Office of Engagement (Sec. 6405). A cap of 650 ODNI staff proposed in the Senate was not found in the text reviewed.",
+      "event": "Public Law 119-60 (FY2026 NDAA) is signed. Its intelligence division (Title LXIV) repeals the DNI's authority to create new national intelligence centers (Sec. 6402), requires a staffing end-state and plan within 120 days (Sec. 6403), requires termination of the National Counterproliferation and Biosecurity Center within 180 days (Sec. 6404), and winds down the Office of Engagement effective 90 days after enactment (Sec. 6405); it sets no numerical ODNI staff cap.",
       "kind": "primary",
       "source": "Public Law 119-60",
       "url": "https://www.intelligence.senate.gov/wp-content/uploads/2025/12/PLAW-119publ60.pdf"
@@ -230,6 +240,6 @@
   ],
   "title": "Downsize ODNI and refocus it on directing rather than duplicating IC functions",
   "tracked": true,
-  "uncertainties": "Staff counts differ by source: the ODNI release gives percentages but no headcount, the Washington Post figures come second-hand via Federal News Network, and a Wikipedia summary of Gabbard's tenure says staff was cut by 50 percent. The Federal News Network article is dated July 2026 without a day. A Wikipedia summary reports that the National Intelligence Council was moved into the DNI's office in May 2025 and two officials were fired; not confirmed from a primary source. The Senate committee version of the FY2026 intelligence authorization would have transferred the National Counterintelligence and Security Center to the FBI; that transfer was not in the enacted Title LXIV text reviewed, but the rest of the law was not verified. Clayton's sworn-in date (2026-08-03) was seen only in an ODNI newsroom listing. Web search budget ran out mid-research, so later items rely on direct page fetches; searches tried: ODNI 2.0, ODNI 2026 cuts, Gabbard resignation, Clayton confirmation, FY2026 intelligence authorization.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Staff counts differ by source: the ODNI release gives percentages but no headcount, the Washington Post figures come second-hand via Federal News Network, and a Wikipedia summary of Gabbard's tenure says staff was cut by 50 percent. The Federal News Network article is dated July 2026 without a day. A Wikipedia summary reports that the National Intelligence Council was moved into the DNI's office in May 2025 and two officials were fired; not confirmed from a primary source. Title LXIV of Public Law 119-60 was read on the Senate intelligence committee's copy and contains no ODNI staff cap; the earlier Senate proposal to transfer the National Counterintelligence and Security Center to the FBI was not in that title, and the last part of the committee copy was not read. Whether the DNI submitted the required staffing end-state report and whether the counterproliferation center was terminated on schedule were not verified. The 2026 layoffs and the DNI confirmation rest on news reports, not on ODNI or Senate pages. Clayton's sworn-in date (2026-08-03) was seen only in an ODNI newsroom listing.",
+  "updated_at": "2026-10-18"
 }

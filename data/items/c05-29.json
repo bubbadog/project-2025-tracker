@@ -7,7 +7,7 @@
   "chapter": "05",
   "confidence": 58,
   "confidence_label": "medium",
-  "confidence_reason": "The executive order and both bills were read on primary pages; the February 2025 funding stop and the court rulings rest on news reports and a case-tracking docket summary, not the orders.",
+  "confidence_reason": "Executive Order 14159, the FEMA termination letter to one grantee and the bill status files were read; the February 2025 clawback, the New York ruling and the Washington judgment rest on news reports and a case-tracking docket summary, not the orders, and no program-wide FEMA notice was found, so confidence stays medium.",
   "court_status": {
     "basis": "The Western District of Washington set aside the Shelter and Services Program termination policy and the termination of Washington's award as applied to Washington only (summary judgment and judgment entered 2026-05-26, per a case-tracking docket summary and news reports); no appeal was found in the sources read, and the New York City suit's outcome was not found.",
     "date": "2026-05-26",
@@ -39,10 +39,18 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Primary-source lift on 2026-10-17 re-read Executive Order 14159 on the Federal Register, added a FEMA termination letter of 2025-04-01 from a county host and tightened the 2026-05-26 Washington judgment entry from the docket summary, which shows no appeal as of its last update."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review after the primary-source lift: Executive Order 14159 on federalregister.gov, the FEMA letter on a county host, the Washington docket summary on a case-tracking host and the BILLSTATUS files for S. 771 and H.R. 1668 on govinfo.gov were read; in_progress 35 kept; confidence 58 kept."
     }
   ],
   "id": "c05-29",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -67,56 +75,39 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage lowered from implemented 65 to in_progress 35 and match kept partial: the Mandate asks Congress to act; the bills are only introduced (proposed, direct match) and the executive pause and program stop are a parallel route that is operative but not statutory and is set aside for Washington. proposed 15 is defensible if the owner scores only the legislative route; implemented is not allowed under the brief's rule that executive steps do not implement a request to Congress.",
-      "Added EO 14159 section 19 and S. 771 / H.R. 1668 as primary timeline events; replaced the unread Bloomberg Law filing source with the Clearinghouse docket summary.",
-      "Court events rest on secondary sources (docket summary and news); no court order could be opened. court_status.state is vacated, with detail in basis.",
-      "Judges' names removed from timeline events (public officials, but not needed). Confidence raised from 52 to 58 because the stage-relevant order and bills were read."
+      "in_progress 35 with match partial kept, though the rubric's rule that executive steps toward a request to Congress are parallel at proposed or below makes proposed 15 to 20 the other defensible call; the higher band rests on the page 151 executive-order element and the operative EO 14159 pause and SSP terminations.",
+      "Timeline reordered by date (the 2025-04-01 FEMA letter had been placed before the 2025-03-05 ruling); bill event now cites GovInfo BILLSTATUS."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 149 (legislative priorities, NGOs and processing): Congress should halt funds to NGOs that process and transport illegal aliens into and through the country, and redirect those funds and the DHS joint processing centers to border security, detention and immigration court space. Page 151 also lists, among executive orders, prohibiting funds for travel into the interior. Proposal is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y7",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16L-1",
     "source_checks": [
       {
-        "note": "EO 14159 section 19 pauses and orders review and termination of funding agreements with NGOs supporting removable or illegal aliens, with recoupment (checked 2026-10-14)",
+        "note": "EO 14159 section 19: review and audit NGO funding agreements serving removable or illegal aliens, pause payments pending review, terminate unlawful or wasteful agreements, exclude from budget requests, seek recoupment.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/01/29/2025-02006/protecting-the-american-people-against-invasion"
       },
       {
-        "note": "S. 771 introduced 2025-02-27 (Risch), bars FEMA sheltering program for non-federal entities and rescinds unobligated transferred balances; referred to HSGAC (checked 2026-10-14)",
+        "note": "County memo of 2025-04-03 attaching the FEMA letter of 2025-04-01 terminating three SSP awards (about 52.6 million dollars) under 2 CFR 200.340(a)(2), after a 2025-03-11 letter barring new costs.",
         "result": "supports",
-        "url": "https://www.congress.gov/119/bills/s771/BILLS-119s771is.htm"
+        "url": "https://content.civicplus.com/api/assets/95b00c76-b940-4909-b5e2-c0d854c33c46"
       },
       {
-        "note": "H.R. 1668 introduced 2025-02-27 (Cloud), same provisions (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.congress.gov/119/bills/hr1668/BILLS-119hr1668ih.htm"
-      },
-      {
-        "note": "Case page for No. 2:25-cv-01401 (W.D. Wash.): filed 2025-07-25; ECF 33 summary judgment order and ECF 34 judgment of 2026-05-26 setting aside the termination as applied to Washington; no appeal listed (checked 2026-10-14)",
+        "note": "No. 2:25-cv-01401, filed 2025-07-25, Judge Rothstein; ECF 33 and 34 of 2026-05-26 set aside the SSP termination policy and the termination as applied to Washington, no payment ordered; no notice of appeal listed; updated 2026-07-22.",
         "result": "supports",
         "url": "https://clearinghouse.net/case/46830/"
       },
       {
-        "note": "News report of the 2026-05-26 ruling: APA claim granted, vacatur limited to Washington, no payment ordered (checked 2026-10-14)",
+        "note": "S. 771 introduced and referred 2025-02-27; no later action.",
         "result": "supports",
-        "url": "https://courthousenews.com/washington-state-wins-challenge-against-femas-termination-of-shelters-and-services-program/"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s771.xml"
       },
       {
-        "note": "News report: FEMA zeroed out the funding in February 2025; about 4 million dollars; no appeal reported (checked 2026-10-14)",
+        "note": "H.R. 1668 introduced and referred 2025-02-27; no later action.",
         "result": "supports",
-        "url": "https://washingtonstatestandard.com/2026/05/27/judge-orders-trump-administration-to-reopen-canceled-funding-for-migrant-shelter-in-wa/"
-      },
-      {
-        "note": "AP report of 2025-03-05 denial of New York City's restraining order request over more than 80 million dollars clawed back in February 2025 (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.wsls.com/news/world/2025/03/05/judge-rejects-nycs-request-to-order-immediate-return-of-80-million-from-fema-to-shelter-migrants/"
-      },
-      {
-        "note": "Docket page blocked by robots rules (checked 2026-10-14)",
-        "result": "unreachable",
-        "url": "https://www.courtlistener.com/docket/70917556/state-of-washington-v-united-states-department-of-homeland-security/"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1668.xml"
       }
     ]
   },
@@ -197,24 +188,45 @@
       "publisher": "Civil Rights Litigation Clearinghouse",
       "title": "State of Washington v. U.S. Department of Homeland Security, No. 2:25-cv-01401 (case page and docket summary)",
       "url": "https://clearinghouse.net/case/46830/"
+    },
+    {
+      "date": "2025-04-03",
+      "kind": "primary",
+      "publisher": "Pima County Board of Supervisors",
+      "title": "Pima County memo with FEMA Shelter and Services Program termination letter of 2025-04-01",
+      "url": "https://content.civicplus.com/api/assets/95b00c76-b940-4909-b5e2-c0d854c33c46"
+    },
+    {
+      "date": "2025-02-27",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS for S. 771 (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s771.xml"
+    },
+    {
+      "date": "2025-02-27",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS for H.R. 1668 (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1668.xml"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Executive Order 14159 (signed 2025-01-20), section 19, paused and ordered review of federal funding agreements with nongovernmental organizations that support removable aliens, and in February 2025 FEMA stopped funding under the Shelter and Services Program, which reimburses non-federal entities for sheltering noncitizens released from DHS custody, and clawed back more than 80 million dollars from New York City; a Manhattan judge declined on 2025-03-05 to order that money returned immediately. Bills to end the program and rescind its balances (S. 771 and H.R. 1668) were introduced on 2025-02-27; no enactment was found. On 2026-05-26 the Western District of Washington set aside the termination as applied to Washington and required FEMA to consider its reimbursement requests, without ordering payment. The redirect of the money to border and detention uses was not traced.",
+  "status_summary": "Executive Order 14159 (signed 2025-01-20), section 19, paused and ordered review of federal funding agreements with nongovernmental organizations that support removable aliens, and in February 2025 FEMA clawed back more than 80 million dollars from New York City under the Shelter and Services Program, which reimburses non-federal entities for sheltering noncitizens released from DHS custody; on 2025-04-01 FEMA terminated three Pima County awards under the program for no longer matching DHS priorities; a Manhattan judge declined on 2025-03-05 to order that money returned immediately. Bills to end the program and rescind its balances (S. 771 and H.R. 1668) were introduced on 2025-02-27; no enactment was found. On 2026-05-26 the Western District of Washington set aside the termination as applied to Washington and required FEMA to consider its reimbursement requests, without ordering payment. The redirect of the money to border and detention uses was not traced.",
   "timeline": [
     {
       "date": "2025-01-20",
-      "event": "Executive Order 14159 was signed; section 19 directs the Attorney General and the Secretary of Homeland Security to review and audit funding agreements with nongovernmental organizations that support removable or illegal aliens, pause further distributions pending review, terminate agreements found unlawful or wasteful, and seek recoupment where appropriate.",
+      "event": "Executive Order 14159 (90 FR 8443) was signed; section 19 directs the Attorney General and the Secretary of Homeland Security to review and audit funding agreements with nongovernmental organizations that serve removable or illegal aliens, halt further payments pending review, end agreements found unlawful or wasteful, keep their funding out of the agencies' appropriations requests with OMB, and start recoupment where appropriate.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/01/29/2025-02006/protecting-the-american-people-against-invasion"
     },
     {
       "date": "2025-02-27",
-      "event": "S. 771 and H.R. 1668, the End FEMA Benefits for Illegal Immigrants Act, were introduced to bar FEMA from running a program that funds sheltering by non-federal entities to relieve CBP holding facilities and to rescind unobligated transferred balances.",
+      "event": "S. 771 and H.R. 1668, the End FEMA Benefits for Illegal Immigrants Act, were introduced to bar FEMA from running a program that funds sheltering by non-federal entities to relieve CBP holding facilities and to rescind unobligated transferred balances; S. 771 was referred to the Senate Homeland Security and Governmental Affairs Committee and H.R. 1668 to several House committees the same day, with no later action.",
       "kind": "primary",
-      "source": "Congress.gov",
-      "url": "https://www.congress.gov/119/bills/s771/BILLS-119s771is.htm"
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s771.xml"
     },
     {
       "date": "2025-03-05",
@@ -222,6 +234,13 @@
       "kind": "court",
       "source": "WSLS (AP)",
       "url": "https://www.wsls.com/news/world/2025/03/05/judge-rejects-nycs-request-to-order-immediate-return-of-80-million-from-fema-to-shelter-migrants/"
+    },
+    {
+      "date": "2025-04-01",
+      "event": "FEMA's Senior Official Performing the Duties of the Administrator issued a letter to Pima County, Arizona terminating three Shelter and Services Program grants (about 52.6 million dollars in total) with immediate effect for no longer matching DHS priorities, citing 2 CFR 200.340(a)(2), after a 2025-03-11 letter that barred new costs.",
+      "kind": "primary",
+      "source": "Pima County Board of Supervisors (copy of FEMA letter)",
+      "url": "https://content.civicplus.com/api/assets/95b00c76-b940-4909-b5e2-c0d854c33c46"
     },
     {
       "date": "2025-07-25",
@@ -232,7 +251,7 @@
     },
     {
       "date": "2026-05-26",
-      "event": "The district court granted Washington summary judgment in part on its Administrative Procedure Act claims, set aside the program termination policy and the termination of Washington's award as applied to Washington, and barred FEMA from refusing to consider its reimbursement requests on the grounds held unlawful, without ordering payment.",
+      "event": "Judge Rothstein granted Washington summary judgment in part on its Administrative Procedure Act claims (ECF 33) and entered judgment (ECF 34), holding the program termination policy contrary to law and arbitrary and capricious and setting it aside, with the termination of Washington's award, as applied to Washington; FEMA may not refuse to consider its reimbursement requests on the grounds held unlawful, and no payment was ordered.",
       "kind": "court",
       "source": "Civil Rights Litigation Clearinghouse",
       "url": "https://clearinghouse.net/case/46830/"
@@ -240,6 +259,6 @@
   ],
   "title": "End federal funding of NGOs that process, house or transport illegal aliens",
   "tracked": true,
-  "uncertainties": "No FEMA or Federal Register document on the program's termination was opened (a Federal Register search for the program name since 2025-01-20 returned nothing, and the FEMA program page failed to load), so the February 2025 stoppage is taken from news reports without a day. The court events rest on secondary sources: the Washington ruling and judgment come from a Civil Rights Litigation Clearinghouse docket summary (ECF 33 and 34) and two news reports, and the New York ruling from an AP report; CourtListener blocked direct access to the docket. Whether the government appealed is not stated. The New York clawback was explained by FEMA as a gang concern at a shelter, so it may not be a general policy step. Whether FY2026 appropriations funded or rescinded the program was not checked. The 2025 DHS and FEMA grant conditions on immigration cooperation and their litigation are covered in c05-19.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No FEMA or Federal Register document on the program-wide termination was opened (a Federal Register search for the program name since 2025-01-20 returned nothing, and the FEMA program page failed to load). The February 2025 clawback is taken from news reports without a day; the 2025-04-01 termination is read from a county-hosted copy of a FEMA letter to one grantee, not a program-wide notice. The Washington ruling and judgment (ECF 33 and 34, Judge Rothstein) were read as docket summaries on a case-tracking host, whose docket excerpt was last updated 2026-07-22 and shows no notice of appeal; the orders themselves were not opened because the court docket host was inaccessible. The New York ruling comes from an AP report. The New York clawback was explained by FEMA as a gang concern at a shelter, so it may not be a general policy step. Whether FY2026 appropriations funded or rescinded the program, and whether the money was redirected to detention uses (one news item suggests so; the page could not be opened), were not checked. The 2025 DHS and FEMA grant conditions on immigration cooperation and their litigation are covered in c05-19. Independent review of 2026-10-16: the GovInfo BILLSTATUS files show both bills only introduced and referred on 2025-02-27.",
+  "updated_at": "2026-10-16"
 }

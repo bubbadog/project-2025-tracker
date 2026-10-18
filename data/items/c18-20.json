@@ -2,12 +2,12 @@
   "agency": "Congress (House Education and Workforce)",
   "blockers": [
     "Senate 60-vote threshold for most legislation",
-    "No floor action found"
+    "No floor action recorded in either chamber"
   ],
   "chapter": "18",
-  "confidence": 75,
-  "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked and the reported bill text was read on GovInfo; the markup vote and the absence of floor action rest on bill trackers.",
+  "confidence": 85,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text at page 587 checked; GovInfo BILLSTATUS XML for H.R. 2870 and S. 1158 was read in full in this review, and the reported bill text on GovInfo was read in an earlier review, so the committee vote, report and absence of floor action rest on primary data.",
   "durability": {
     "level": "high",
     "why": "A statute would last until Congress changes it; the bill as reported would apply for five years after enactment."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Cross-references added to new layer 3 records c18-25 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Reviewer read GovInfo bill status data for H.R. 2870 and S. 1158 on govinfo.gov, moved the markup vote to that primary source, added the Senate companion bill, and raised confidence from 75 to 85 with the stage unchanged at proposed."
     }
   ],
   "id": "c18-20",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-17",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -43,7 +51,8 @@
   "progress": 20,
   "proposal": "The Mandate recommends that Congress enact the Working Families Flexibility Act so private-sector employees can choose to accumulate paid time off at time-and-a-half instead of receiving overtime pay, an option many public-sector workers already have.",
   "related_ids": [
-    "c18-04"
+    "c18-04",
+    "c18-25"
   ],
   "remaining": [
     "House floor consideration",
@@ -54,36 +63,29 @@
   "research_agent": "N18",
   "restates_ids": [],
   "review": {
+    "document_reread": {
+      "citation": "H.R. 2870 (119th Congress) bill status, H. Rept. 119-496, Union Calendar No. 422",
+      "note": "Read in full. Introduced 2025-04-10; markup and 19-15 vote 2025-11-20; reported 2026-02-12; placed on the Union Calendar; no floor action. Latest action decides that the bill is committee-reported only.",
+      "result": "supports",
+      "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr2870/xml/BILLSTATUS-119hr2870.xml"
+    },
     "flags": [
-      "judgment call: none; a bill reported from committee sits at the top of the proposed band."
+      "Markup vote moved from a tracker to GovInfo BILLSTATUS",
+      "Senate companion identified as S. 1158 (introduced 2025-03-26; the senator's release is dated 2025-03-28)"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 587 checked: Congress should enact the Working Families Flexibility Act letting private-sector employees choose time-and-a-half pay or time-and-a-half paid time off, a choice many public-sector workers already have. Paraphrase accurate. Related to c18-04 only loosely; no existing record covers it.",
+    "mandate_check": "ok",
+    "mandate_note": "Page 587 asks Congress to enact the Working Families Flexibility Act so private-sector workers can choose time-and-a-half pay or time-and-a-half paid time off, a choice many public-sector workers have; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y18j",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-E",
     "source_checks": [
       {
-        "note": "Introduced 2025-04-10 by Rep. Miller of Illinois; reported 2026-02-12 with H. Rept. 119-496; Union Calendar No. 422; five-year sunset.",
+        "note": "S. 1158, Sen. Lee, introduced and referred to HELP on 2025-03-26; no further action.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr2870rh/xhtml/BILLS-119hr2870rh.html"
-      },
-      {
-        "note": "Markup 2025-11-20, ordered reported 19-15; no House passage listed.",
-        "result": "supports",
-        "url": "https://www.ifebp.org/cebs/detail-pages/legislative-tracker/hr-2870"
-      },
-      {
-        "note": "Found by web search for a floor vote; latest action is Union Calendar placement on 2026-02-12.",
-        "result": "partial",
-        "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/2870"
-      },
-      {
-        "note": "Dated 2025-03-28; announces Senate introduction without a bill number.",
-        "result": "partial",
-        "url": "https://www.lee.senate.gov/2025/3/lee-introduces-the-working-families-flexibility-act-for-the-119th-congress"
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119s1158/xml/BILLSTATUS-119s1158.xml"
       }
-    ]
+    ],
+    "stage_change_reason": "No change: an introduced bill reported from committee with no floor action is proposed under the rubric; progress 20 at the top of the band reflects committee reporting."
   },
   "significance": {
     "B": 1,
@@ -134,11 +136,32 @@
       "publisher": "Office of Sen. Mike Lee",
       "title": "Lee introduces the Working Families Flexibility Act for the 119th Congress",
       "url": "https://www.lee.senate.gov/2025/3/lee-introduces-the-working-families-flexibility-act-for-the-119th-congress"
+    },
+    {
+      "date": "2026-02-12",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 2870 bill status (Working Families Flexibility Act of 2025), BILLSTATUS XML",
+      "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr2870/xml/BILLSTATUS-119hr2870.xml"
+    },
+    {
+      "date": "2025-03-26",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S. 1158 bill status (Working Families Flexibility Act of 2025), BILLSTATUS XML",
+      "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119s1158/xml/BILLSTATUS-119s1158.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "H.R. 2870, the Working Families Flexibility Act of 2025, was introduced on 2025-04-10. The House Education and Workforce Committee ordered it reported as amended on 2025-11-20 by a vote of 19 to 15 and reported it on 2026-02-12 (H. Rept. 119-496), placing it on the Union Calendar. As reported, the compensatory time authority would last five years from enactment. A Senate version was announced on 2025-03-28. No House floor vote was found.",
+  "status_summary": "H.R. 2870, the Working Families Flexibility Act of 2025, was introduced on 2025-04-10. The House Education and Workforce Committee ordered it reported as amended on 2025-11-20 by a vote of 19 to 15 and reported it on 2026-02-12 (H. Rept. 119-496), placing it on the Union Calendar (No. 422). As reported, the compensatory time authority would last five years from enactment. The Senate companion, S. 1158, was introduced on 2025-03-26 and referred to committee. GovInfo bill status data record no floor vote on either bill.",
   "timeline": [
+    {
+      "date": "2025-03-26",
+      "event": "S. 1158, the Senate Working Families Flexibility Act of 2025, was introduced and referred to the Senate Health, Education, Labor, and Pensions Committee; no later action is recorded.",
+      "kind": "primary",
+      "source": "GovInfo (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119s1158/xml/BILLSTATUS-119s1158.xml"
+    },
     {
       "date": "2025-04-10",
       "event": "H.R. 2870, the Working Families Flexibility Act of 2025, was introduced in the House.",
@@ -149,13 +172,13 @@
     {
       "date": "2025-11-20",
       "event": "The House Education and Workforce Committee ordered the bill reported as amended by a vote of 19 to 15.",
-      "kind": "tracker",
-      "source": "International Foundation of Employee Benefit Plans",
-      "url": "https://www.ifebp.org/cebs/detail-pages/legislative-tracker/hr-2870"
+      "kind": "primary",
+      "source": "GovInfo (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr2870/xml/BILLSTATUS-119hr2870.xml"
     },
     {
       "date": "2026-02-12",
-      "event": "The bill was reported with an amendment (H. Rept. 119-496) and placed on the Union Calendar.",
+      "event": "The bill was reported with an amendment (H. Rept. 119-496) and placed on the Union Calendar (No. 422).",
       "kind": "primary",
       "source": "GovInfo",
       "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr2870rh/xhtml/BILLS-119hr2870rh.html"
@@ -163,6 +186,6 @@
   ],
   "title": "Allow private-sector employees to take compensatory time off in place of overtime pay",
   "tracked": true,
-  "uncertainties": "The tracker page is undated and is the only source for the markup date and vote; it and a second tracker show no floor action, but a later House vote cannot be fully excluded because congress.gov could not be opened. The Senate release does not state a bill number, so none is given here. The bill as reported differs from the Mandate in limits it adds, including a five-year sunset.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "GovInfo bill status XML for H.R. 2870 and S. 1158 shows no action after 2026-02-12 and 2025-03-26 respectively; that data can lag congress.gov by days, which could not be opened. The bill as reported differs from the Mandate in limits it adds, including a five-year sunset, a 160-hour bank and a 1,000-hours-worked eligibility threshold.",
+  "updated_at": "2026-10-17"
 }

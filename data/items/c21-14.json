@@ -2,9 +2,9 @@
   "agency": "Commerce (ITA Enforcement and Compliance)",
   "blockers": [],
   "chapter": "21",
-  "confidence": 55,
+  "confidence": 70,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked and both stage-deciding notices read; the absence of the specific reforms rests on a limited Federal Register query and one search, and the stage is a judgment.",
+  "confidence_reason": "The stage-deciding welded wire mesh notice (91 FR 14526) was fetched and read in full and the aluminum container notice was confirmed through its Federal Register API record; the progress level rests on the absence of the Mandate's specific reforms from limited Federal Register queries, and the China surrogate country memo was not opened.",
   "durability": {
     "level": "medium",
     "why": "Determinations follow statute and stand until revised, but practice can shift."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Stage in_progress 25 confirmed against the full welded wire mesh notice; citations upgraded to Federal Register pages; confidence raised to 70."
     }
   ],
   "id": "c21-14",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -50,14 +54,15 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: in_progress 25 kept at the band floor because operative circumvention orders match the first bullets; not_started (0) is defensible because the work is routine and none of the specific reforms was found",
-      "Removed related id c21-03, a BIS export control record unrelated to AD/CVD enforcement"
+      "Accepted researcher's move of timeline and sources to the Federal Register document pages with FR citations; public inspection copies kept as secondary sources.",
+      "judgment call: in_progress 25 kept at the band floor; not_started (0) is defensible because the circumvention work is routine statutory enforcement and none of the specific reforms was found.",
+      "Confidence 70 rather than high because the progress level depends on the absence of the specific reforms from limited queries."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 668-669, Enforcement and Compliance: work with CBP on circumvention and unpaid duties, require high cash deposits or asset registration from importers of record, revive the China non-market economy unit and develop a new normal-value method for Chinese cases. Paraphrase accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y21g",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V8",
     "source_checks": [
       {
         "note": "Final affirmative circumvention, welded wire mesh from Mexico, dated 2026-03-20, scheduled for publication 2026-03-25; cash deposits and importer certification.",
@@ -73,6 +78,16 @@
         "note": "Federal Register API query of ITA rules and proposed rules since 2025-01-20 returned only two 2025-03-31 corrections to earlier trade remedy regulations; no rule on importer deposits, non-market economy methodology or surrogate countries. Check only.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/documents/2025/03/31/2025-05481/regulations-enhancing-the-administration-of-the-antidumping-and-countervailing-duty-trade-remedy"
+      },
+      {
+        "note": "Full notice read: 91 FR 14526-14530, published 2026-03-25, signed 2026-03-20; Customs directed to suspend liquidation and collect cash deposits on uncertified entries; importer certification and record keeping; no importer-of-record bond or non-market economy methodology content. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/03/25/2026-05809/standard-steel-welded-wire-mesh-from-mexico-final-affirmative-determination-of-circumvention"
+      },
+      {
+        "note": "API record: preliminary affirmative circumvention determination, aluminum containers from China completed in Vietnam, 91 FR 20977, published 2026-04-20; metadata only. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-07659.json"
       }
     ]
   },
@@ -108,38 +123,52 @@
     {
       "date": "2026-03-25",
       "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Standard Steel Welded Wire Mesh From Mexico: Final Affirmative Determination of Circumvention (91 FR 14526)",
+      "url": "https://www.federalregister.gov/documents/2026/03/25/2026-05809/standard-steel-welded-wire-mesh-from-mexico-final-affirmative-determination-of-circumvention"
+    },
+    {
+      "date": "2026-04-20",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Disposable Aluminum Containers, Pans, Trays, and Lids From the People's Republic of China: Preliminary Affirmative Determination of Circumvention (91 FR 20977)",
+      "url": "https://www.federalregister.gov/documents/2026/04/20/2026-07659/disposable-aluminum-containers-pans-trays-and-lids-from-the-peoples-republic-of-china-preliminary"
+    },
+    {
+      "date": "2026-03-25",
+      "kind": "primary",
       "publisher": "Federal Register (public inspection)",
-      "title": "Standard Steel Welded Wire Mesh from Mexico: Final Affirmative Determination of Circumvention",
+      "title": "Standard Steel Welded Wire Mesh from Mexico: Final Affirmative Determination of Circumvention (public inspection copy)",
       "url": "https://public-inspection.federalregister.gov/2026-05809.pdf"
     },
     {
       "date": "2026-04-20",
       "kind": "primary",
       "publisher": "Federal Register (public inspection)",
-      "title": "Disposable Aluminum Containers from China: Preliminary Affirmative Determination of Circumvention",
+      "title": "Disposable Aluminum Containers from China: Preliminary Affirmative Determination of Circumvention (public inspection copy)",
       "url": "https://public-inspection.federalregister.gov/2026-07659.pdf"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Commerce continued to issue circumvention determinations in 2026, including a final affirmative circumvention determination on welded wire mesh from Mexico (published 2026-03-25) and a preliminary determination on aluminum containers from China via Vietnam (published 2026-04-20), both conditioning exemption from cash deposits on certifications. The specific steps of importer-of-record deposits, a revived non-market economy unit and a new Chinese normal-value method were not found.",
+  "status_summary": "Commerce continued to issue circumvention determinations in 2026, including a final affirmative determination on welded wire mesh from Mexico (91 FR 14526, published 2026-03-25) and a preliminary affirmative determination on aluminum containers from China completed in Vietnam (91 FR 20977, published 2026-04-20). Both notices direct Customs to collect cash deposits on uncertified entries and set importer certification duties (the second also sets exporter certification). The Mandate's specific steps of higher importer-of-record deposits or asset registration, a revived China non-market economy unit and a new Chinese normal-value method were not found in the Federal Register.",
   "timeline": [
     {
       "date": "2026-03-25",
-      "event": "Commerce published a final affirmative circumvention determination on welded wire mesh from Mexico with cash deposits and certification requirements.",
+      "event": "Commerce published in the Federal Register (91 FR 14526, signed 2026-03-20) a final affirmative circumvention determination on welded wire mesh from Mexico; entries are exempt from cash deposits only with importer certification and supporting records, and otherwise cash deposits are collected at the order rates.",
       "kind": "primary",
-      "source": "Federal Register (public inspection)",
-      "url": "https://public-inspection.federalregister.gov/2026-05809.pdf"
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/03/25/2026-05809/standard-steel-welded-wire-mesh-from-mexico-final-affirmative-determination-of-circumvention"
     },
     {
       "date": "2026-04-20",
-      "event": "Commerce published a preliminary affirmative circumvention determination on disposable aluminum containers from China assembled in Vietnam.",
+      "event": "Commerce published in the Federal Register (91 FR 20977) a preliminary affirmative circumvention determination on disposable aluminum containers from China completed in Vietnam, with importer and exporter certification requirements and cash deposits for uncertified entries.",
       "kind": "primary",
-      "source": "Federal Register (public inspection)",
-      "url": "https://public-inspection.federalregister.gov/2026-07659.pdf"
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/04/20/2026-07659/disposable-aluminum-containers-pans-trays-and-lids-from-the-peoples-republic-of-china-preliminary"
     }
   ],
   "title": "Tighten AD/CVD enforcement against China and duty evasion",
   "tracked": true,
-  "uncertainties": "Circumvention rulings are an ongoing statutory activity, so they show continued enforcement rather than a new policy; the progress figure is a judgment. A Federal Register API query of ITA rules and proposed rules since 2025-01-20 found only corrections (2025-03-31) to trade remedy regulations finalized before the period. A web search surfaced the annual China surrogate country list memo for 2025, which was not opened and is a routine product. No step to revive a China non-market economy unit was found. Dates are the publication dates given in the notices.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Circumvention rulings are an ongoing statutory activity, so they show continued enforcement rather than a new policy; the progress figure is a judgment and not_started is defensible. Federal Register API queries of International Trade Administration rules and proposed rules for the term non-market economy since 2025-01-20 returned no documents; an earlier review found only 2025-03-31 corrections to trade remedy regulations. Queries on importer-of-record deposits could not be run because of a URL length limit, so the absence of such a rule rests on the earlier review and the non-market economy query. The annual China surrogate country list memo was not opened. The aluminum container notice is preliminary and its entries on deposit case numbers contain an apparent typographic inconsistency in the fetched text. Dates are Federal Register publication dates; the web text was an unofficial rendition, and the official print edition was not compared.",
+  "updated_at": "2026-10-18"
 }

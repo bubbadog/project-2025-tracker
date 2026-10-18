@@ -4,9 +4,9 @@
     "Requires an act of Congress; both bills remain in committee"
   ],
   "chapter": "22",
-  "confidence": 62,
-  "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; the introduced bills confirmed through a legislative tracker and the parallel accounts through the law's table of contents and a professional society summary; no bill text opened.",
+  "confidence": 82,
+  "confidence_label": "high",
+  "confidence_reason": "Text checked; the GovInfo bill status records for S. 1581 and H.R. 3186 and IRS Notice 2025-68 were fetched and read in this review; the bills remain in committee and the notice shows the enacted accounts differ, which decides the proposed stage.",
   "durability": {
     "level": "medium",
     "why": "Statutory accounts persist unless repealed, but expansion would need new legislation."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review: the GovInfo bill status records for S. 1581 and H.R. 3186 and IRS Notice 2025-68 on irs.gov were read; both bills remain in committee, the contribution-limit wording was refined and the bill entries re-sourced to GovInfo; stage unchanged."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Cross-reference added to new layer 3 record c22-19 written in the second enumeration pass; no change to the status."
     }
   ],
   "id": "c22-13",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -43,7 +51,8 @@
   "progress": 15,
   "proposal": "The Mandate recommends letting all taxpayers contribute up to $15,000 a year, adjusted for inflation, of after-tax earnings to Universal Savings Accounts taxed like Roth IRAs, with flexible investments and tax-free gains withdrawable at any time for any purpose.",
   "related_ids": [
-    "c22-01"
+    "c22-01",
+    "c22-19"
   ],
   "remaining": [
     "Enactment of Universal Savings Accounts open to all taxpayers",
@@ -53,37 +62,38 @@
   "research_agent": "N22",
   "restates_ids": [],
   "review": {
+    "document_reread": {
+      "citation": "S. 1581 and H.R. 3186, Universal Savings Account Act of 2025 (119th Congress), GovInfo bill status records; IRS Notice 2025-68",
+      "note": "S. 1581 (Sen. Cruz, introduced 2025-05-01) shows only referral to Finance, record updated 2026-06-12; H.R. 3186 (Rep. Harshbarger, introduced 2025-05-05) shows only referral to Ways and Means, record updated 2026-08-31; neither has committee markup or passage. IRS Notice 2025-68 was also read on irs.gov: issued under section 530A as added by section 70204 of Public Law 119-21; accounts for individuals under 18; a $5,000 aggregate annual limit for 2026 and 2027 that includes employer contributions and excludes pilot, qualified general and rollover contributions; no contributions before 2026-07-04; distributions generally barred before the year the beneficiary turns 18 and taxed under traditional IRA rules after; comments due 2026-02-20; no issue date shown.",
+      "result": "supports",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1581.xml"
+    },
     "flags": [
-      "judgment call: changed from in_progress 25 to proposed 15 because the enacted Trump accounts differ materially (minors only, traditional IRA treatment, locked until 18, limited investments) and the matching bills are only introduced; in_progress (25) is defensible only if Trump accounts are counted as a partial step",
-      "Related id changed from c22-02 to c22-01 (intermediate tax reform record)"
+      "The record's review metadata names an AI model (field review.model); the same appears in all twelve records and should read AI."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 696-697, Universal Savings Accounts: all taxpayers may contribute up to $15,000 a year, inflation-adjusted, of post-tax earnings, taxed like Roth IRAs, flexibly invested and withdrawable at any time for any purpose. Paraphrase accurate.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed pages 696 and 697 recommend Universal Savings Accounts open to all taxpayers with up to $15,000 a year of after-tax contributions, inflation adjusted, taxed like Roth IRAs, flexibly invested and withdrawable at any time for any purpose; the record's paraphrase matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y22e",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-2",
     "source_checks": [
       {
-        "note": "S. 1581 introduced 2025-05-01, referred to Finance; Roth-like, any-purpose withdrawals; found by web search.",
+        "note": "Referral to Finance 2025-05-01 only.",
         "result": "supports",
-        "url": "https://www.ifebp.org/detail-pages/legislative-tracker/s-1581"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1581.xml"
       },
       {
-        "note": "H.R. 3186 introduced 2025-05-05, referred to Ways and Means; same design; no further action shown.",
+        "note": "Referral to Ways and Means 2025-05-05 only; cosponsor added 2026-05-26.",
         "result": "supports",
-        "url": "https://www.ifebp.org/detail-pages/legislative-tracker/hr-3186"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3186.xml"
       },
       {
-        "note": "Approved 2025-07-04. Table of contents confirms Sec. 70204 (Trump accounts and contribution pilot program), Sec. 70331 (extension and modification of base erosion minimum tax amount), Sec. 70432 (repeal of revision to de minimis rules for third party network transactions), Sec. 70433 (increase in threshold for information reporting on certain payees) and Sec. 70601 (modification and extension of limitation on excess business losses). The HTML is truncated at about 130,000 characters, so section text was not read and a missing table entry is not evidence of absence.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
-      },
-      {
-        "note": "Dated 2025-12-03; Notice 2025-68 released 2025-12-02; under-18 eligibility, $5,000 cap, no contributions before 2026-07-04, traditional IRA rules after 18.",
+        "note": "Section 530A basis, under-18 eligibility, $5,000 aggregate limit, 2026-07-04 start, traditional IRA treatment after 18; no issue date.",
         "result": "supports",
-        "url": "https://www.nysscpa.org/article-content/treasury-irs-release-guidance-regarding-trump-accounts"
+        "url": "https://www.irs.gov/pub/irs-drop/n-25-68.pdf"
       }
-    ]
+    ],
+    "stage_change_reason": "The matching bills are only introduced and referred, per the GovInfo status records, and the enacted Trump accounts differ materially in eligibility, limits and withdrawal rules, so proposed at 15 stands."
   },
   "significance": {
     "B": 1,
@@ -141,24 +151,59 @@
       "publisher": "New York State Society of CPAs",
       "title": "Treasury, IRS release guidance regarding Trump Accounts (Notice 2025-68)",
       "url": "https://www.nysscpa.org/article-content/treasury-irs-release-guidance-regarding-trump-accounts"
+    },
+    {
+      "date": "2025-12-02",
+      "kind": "primary",
+      "publisher": "Internal Revenue Service",
+      "title": "Notice 2025-68, Trump accounts",
+      "url": "https://www.irs.gov/pub/irs-drop/n-25-68.pdf"
+    },
+    {
+      "date": "2025-05-01",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S. 1581 Universal Savings Account Act of 2025 (Introduced)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1581is/html/BILLS-119s1581is.htm"
+    },
+    {
+      "date": "2025-05-05",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 3186 Universal Savings Account Act of 2025 (Introduced)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr3186ih/html/BILLS-119hr3186ih.htm"
+    },
+    {
+      "date": "2026-06-12",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Bill status, S. 1581 (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1581.xml"
+    },
+    {
+      "date": "2026-08-31",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Bill status, H.R. 3186 (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3186.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "The Universal Savings Account Act of 2025 was introduced in the Senate (S. 1581, 2025-05-01) and the House (H.R. 3186, 2025-05-05); both would create Roth-like accounts with withdrawals for any purpose and a $10,000 base contribution limit rising to a $25,000 cap, and both remain in committee. Separately, Public Law 119-21, approved 2025-07-04, lists Section 70204 on Trump accounts. Under Notice 2025-68 (released 2025-12-02), these are accounts for children under 18, with others' contributions capped at $5,000 a year, no contributions before 2026-07-04, traditional IRA treatment after 18 and no withdrawals before that year, which differs materially from the recommended accounts.",
+  "status_summary": "The Universal Savings Account Act of 2025 was introduced in the Senate (S. 1581, 2025-05-01) and the House (H.R. 3186, 2025-05-05); both would create tax-exempt accounts whose distributions are excluded from income whatever their purpose, with a $10,000 base contribution limit rising to a $25,000 cap, and both remain in committee with no action after referral. Separately, Public Law 119-21, approved 2025-07-04, added Trump accounts in section 70204. Under IRS Notice 2025-68 (released 2025-12-02), these are accounts for children under 18, with an aggregate annual contribution limit of $5,000 for 2026 and 2027 that counts employer and other contributions together, no contributions before 2026-07-04, no withdrawals before the year the beneficiary turns 18 and traditional IRA treatment after, which differs materially from the recommended accounts.",
   "timeline": [
     {
       "date": "2025-05-01",
       "event": "The Universal Savings Account Act of 2025 (S. 1581) was introduced in the Senate and referred to the Finance Committee.",
-      "kind": "tracker",
-      "source": "International Foundation of Employee Benefit Plans legislative tracker",
-      "url": "https://www.ifebp.org/detail-pages/legislative-tracker/s-1581"
+      "kind": "primary",
+      "source": "GovInfo",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1581is/html/BILLS-119s1581is.htm"
     },
     {
       "date": "2025-05-05",
       "event": "The Universal Savings Account Act of 2025 (H.R. 3186) was introduced in the House and referred to the Ways and Means Committee.",
-      "kind": "tracker",
-      "source": "International Foundation of Employee Benefit Plans legislative tracker",
-      "url": "https://www.ifebp.org/detail-pages/legislative-tracker/hr-3186"
+      "kind": "primary",
+      "source": "GovInfo",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr3186ih/html/BILLS-119hr3186ih.htm"
     },
     {
       "date": "2025-07-04",
@@ -169,7 +214,7 @@
     },
     {
       "date": "2025-12-02",
-      "event": "Treasury and the IRS released Notice 2025-68 on Trump accounts for children under 18, with contributions from others limited to $5,000 a year and not allowed before 2026-07-04 (reported 2025-12-03).",
+      "event": "Treasury and the IRS released Notice 2025-68 on Trump accounts for children under 18, with an aggregate annual contribution limit of $5,000 for 2026 and 2027 that includes employer contributions, and no contributions before 2026-07-04 (release date per a 2025-12-03 report; the notice shows no issue date).",
       "kind": "news",
       "source": "New York State Society of CPAs",
       "url": "https://www.nysscpa.org/article-content/treasury-irs-release-guidance-regarding-trump-accounts"
@@ -177,6 +222,6 @@
   ],
   "title": "Create Universal Savings Accounts open to all taxpayers",
   "tracked": true,
-  "uncertainties": "Bill details come from a legislative tracker, not the bill text or Congress.gov. The bills' $10,000 base limit differs from the Mandate's $15,000. Trump account terms come from a society summary of Notice 2025-68; the notice itself was not opened. Trump accounts are a parallel vehicle and are not counted as progress.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Bill texts and GovInfo bill status records for S. 1581 and H.R. 3186 were read; both show only introduction and referral. The bills' $10,000 base limit differs from the Mandate's $15,000, and the bills do not use a Roth label; Roth-like is a characterization of their tax treatment. IRS Notice 2025-68 was read on irs.gov, but the PDF shows no issue date, so the 2025-12-02 release date rests on the New York State Society of CPAs report. The Public Law 119-21 section 70204 body was not read on govinfo because the page is truncated before Title VII; the notice confirms the section. Trump accounts are a parallel vehicle and are not counted as progress.",
+  "updated_at": "2026-10-16"
 }

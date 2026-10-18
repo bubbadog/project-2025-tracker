@@ -1,24 +1,24 @@
 {
   "agency": "VA (Human Resources and Administration)",
   "blockers": [
-    "Preliminary injunction and enforcement order for the AFGE agreement"
+    "The 2026-03-13 preliminary injunction for the AFGE agreement remains in place, although the First Circuit stayed the district court's later enforcement orders in part on 2026-05-16 and in full on 2026-10-02"
   ],
   "chapter": "20",
-  "confidence": 70,
+  "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked at page 653; the executive order and VA announcement were fetched from primary sources; the court events rest on two fetched news reports, and the appeals ruling was not verified at the source.",
+  "confidence_reason": "The chapter text (page 653) was checked and the First Circuit's 2026-05-16 opinion was read in full; the deciding 2026-10-02 order was read only in part (caption, dockets and date), with its disposition taken from a Government Executive report, so the record stays medium.",
   "court_status": {
-    "basis": "The district court enforced its 2026-03-13 preliminary injunction requiring VA to keep the AFGE agreement in place during the lawsuit; a reported First Circuit ruling in May 2026 denied a stay.",
-    "date": "2026-08-07",
-    "state": "enjoined",
-    "url": "https://federalnewsnetwork.com/unions/2026/08/judge-orders-va-again-to-maintain-collective-bargaining-with-afge/"
+    "basis": "On 2026-10-02 the First Circuit (Nos. 26-1321 and 26-1904) stayed the district court's August 2026 order enforcing the AFGE injunction; the 2026-03-13 preliminary injunction itself was left in place by the 2026-05-16 ruling, and the appeal is pending (disposition of the October order per a Government Executive report).",
+    "date": "2026-10-02",
+    "state": "stayed",
+    "url": "https://storage.courtlistener.com/recap/gov.uscourts.rid.60786/gov.uscourts.rid.60786.79.0_2.pdf"
   },
   "durability": {
     "level": "low",
     "why": "The termination rests on an executive order and agency decision under active court challenge, and could be reversed by a later administration."
   },
   "est_completion": {
-    "basis": "Inference: litigation over the AFGE contract was ongoing as of August 2026, and a stay pending appeal was reportedly denied.",
+    "basis": "Inference: the appeal of the AFGE injunction was pending as of October 2026, and the First Circuit's 2026-10-02 stay of the latest enforcement order leaves the agreement's status unresolved.",
     "window": "unknown"
   },
   "headline": false,
@@ -34,10 +34,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review read the First Circuit's 2026-05-16 opinion (ca1.uscourts.gov) and located the 2026-10-02 stay order (leagle.com and courtlistener.com), corrected the May ruling to a partial stay, added both court events and changed court_status from enjoined to stayed; stage stays blocked at 60."
     }
   ],
   "id": "c20-07",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -46,10 +50,10 @@
   ],
   "position": "Human Resources and Administration: Personnel (labor relations)",
   "progress": 60,
-  "proposal": "The Mandate recommends that VA manage its relationship with organized labor effectively and proactively: give any labor or civil service reform agenda clear Secretarial direction with General Counsel and human resources alignment, gain buy-in from reform-minded career managers, have the White House communicate the agenda swiftly, prepare for drawn-out legal challenges through early and decisive timing, and track when each labor contract ends and what the department wants in renegotiation.",
+  "proposal": "The Mandate recommends that VA manage its relationship with organized labor effectively and proactively: give any labor or civil service reform agenda clear Secretarial direction with General Counsel and human resources alignment, gain buy-in from reform-minded career managers, have the White House communicate the agenda swiftly and support a coordinated implementation effort, prepare for drawn-out legal challenges through early and decisive timing, and track when each labor contract ends and what the department wants in renegotiation.",
   "related_ids": [],
   "remaining": [
-    "Outcome of the litigation over the AFGE contract",
+    "Outcome of the appeal of the 2026-03-13 preliminary injunction and of the dispute over whether the AFGE agreement was automatically extended past 2026-08-08",
     "Status of the other unions' agreements",
     "Renegotiation strategy for any restored contract"
   ],
@@ -58,39 +62,34 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: implemented is defensible for the unions whose contracts remain terminated, but the largest agreement is enjoined, so blocked 60 is kept.",
-      "court_status updated to the latest court event of 2026-08-07."
+      "implemented is also defensible: with the enforcement order stayed, VA appears able to treat the AFGE agreement as lapsed, but the preliminary injunction has not been vacated, so blocked 60 is kept",
+      "court_status changed from enjoined (2026-08-07) to stayed (2026-10-02)"
     ],
     "mandate_check": "corrected",
-    "mandate_note": "Page 653 recommends managing the relationship with organized labor effectively and proactively, in six numbered steps. The title was corrected because the Mandate does not itself call for ending contracts, and the proposal now lists the steps.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y20a",
+    "mandate_note": "Page 653 sets out six steps for managing organized labor; the proposal omitted step five (White House support for a coordinated implementation effort), which is added.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Executive Order 14251 signed 2025-03-27, published 2025-04-03.",
+        "note": "Opinion 2026-05-16, Barron, Aframe, Dunlap: stay granted in part (enforcement order compliance directive and grievance processing) and denied in part (the injunction and the ruling that the second termination was ineffective). Corrects the record's statement that a stay was simply denied.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2025-05836.json"
+        "url": "https://www.ca1.uscourts.gov/sites/ca1/files/opnfiles/26-1321P-01A.pdf"
       },
       {
-        "note": "Section 2(b) adds the Department of Veterans Affairs to the excluded agencies; police, security guard and firefighter offices keep coverage.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/04/03/2025-05836/exclusions-from-federal-labor-management-relations-programs"
+        "note": "Listing confirms caption, Nos. 26-1321 and 26-1904, entry 2026-10-02, second stay motion; disposition cut off.",
+        "result": "partial",
+        "url": "https://www.leagle.com/decision/infco20261005052"
       },
       {
-        "note": "Release dated 2025-08-06; terminations for AFGE, NAGE, NFFE, NNU and SEIU units, about 4,000 police, firefighters and guards kept.",
-        "result": "supports",
-        "url": "https://news.va.gov/press-room/va-terminates-union-contracts-for-most-bargaining-unit-employees/"
+        "note": "District docket copy (ECF 79, filed 2026-10-05); body text not machine-readable.",
+        "result": "partial",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.rid.60786/gov.uscourts.rid.60786.79.0_2.pdf"
       },
       {
-        "note": "Dated 2026-03-13; District of Rhode Island preliminary injunction requiring reinstatement of the AFGE contract.",
+        "note": "Report dated 2026-10-05: the panel stayed the August enforcement order as an improper modification of the injunction; the agreement's extension dispute remains open.",
         "result": "supports",
-        "url": "https://www.govexec.com/workforce/2026/03/judge-orders-va-restore-collective-bargaining/412123/"
-      },
-      {
-        "note": "No printed date; reports the 2026-08-07 enforcement ruling, the July 24 re-termination notice and a May 2026 First Circuit denial of a stay.",
-        "result": "supports",
-        "url": "https://federalnewsnetwork.com/unions/2026/08/judge-orders-va-again-to-maintain-collective-bargaining-with-afge/"
+        "url": "https://www.govexec.com/workforce/2026/10/appeals-court-seemingly-oks-vas-contested-union-contract-expiration/416426/"
       }
     ]
   },
@@ -150,10 +149,38 @@
       "publisher": "Federal News Network",
       "title": "Judge orders VA again to maintain collective bargaining with AFGE",
       "url": "https://federalnewsnetwork.com/unions/2026/08/judge-orders-va-again-to-maintain-collective-bargaining-with-afge/"
+    },
+    {
+      "date": "2026-05-16",
+      "kind": "court",
+      "publisher": "U.S. Court of Appeals for the First Circuit",
+      "title": "AFGE Local 2305 v. Department of Veterans Affairs, No. 26-1321, opinion and order on stay pending appeal",
+      "url": "https://www.ca1.uscourts.gov/sites/ca1/files/opnfiles/26-1321P-01A.pdf"
+    },
+    {
+      "date": "2026-10-02",
+      "kind": "court",
+      "publisher": "Leagle",
+      "title": "AFGE Local 2305 v. Department of Veterans Affairs, Nos. 26-1321 and 26-1904, order on second stay motion (listing)",
+      "url": "https://www.leagle.com/decision/infco20261005052"
+    },
+    {
+      "date": "2026-10-05",
+      "kind": "court",
+      "publisher": "CourtListener RECAP",
+      "title": "First Circuit order of 2026-10-02 as filed on the district docket (No. 1:25-cv-00583, ECF 79)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.rid.60786/gov.uscourts.rid.60786.79.0_2.pdf"
+    },
+    {
+      "date": "2026-10-05",
+      "kind": "news",
+      "publisher": "Government Executive",
+      "title": "Appeals court seemingly OKs VA's contested union contract expiration",
+      "url": "https://www.govexec.com/workforce/2026/10/appeals-court-seemingly-oks-vas-contested-union-contract-expiration/416426/"
     }
   ],
   "stage": "blocked",
-  "status_summary": "On 2025-08-06 VA announced it was ending collective bargaining agreements for most bargaining-unit employees represented by five unions, citing Executive Order 14251, which added VA to the agencies excluded from federal labor-management relations programs; contracts for about 4,000 police officers, firefighters and security guards were kept. A federal district court in Rhode Island issued a preliminary injunction on 2026-03-13 requiring VA to reinstate its contract with AFGE. Reporting says a First Circuit panel in May 2026 denied VA's motion to stay that injunction, and on 2026-08-07 the district court granted a motion to enforce it after VA gave notice in July 2026 of a new termination effective 2026-08-08.",
+  "status_summary": "On 2025-08-06 VA announced it was ending collective bargaining agreements for most bargaining-unit employees represented by five unions, citing Executive Order 14251, which added VA to the agencies excluded from federal labor-management relations programs; contracts for about 4,000 police officers, firefighters and security guards were kept. A federal district court in Rhode Island issued a preliminary injunction on 2026-03-13 requiring VA to reinstate its contract with AFGE. On 2026-05-16 the First Circuit (No. 26-1321) denied VA's request to stay that injunction but stayed the parts of a district enforcement order that required compliance with the agreement and continued grievance processing. After the district court granted a further motion to enforce on 2026-08-07, the First Circuit on 2026-10-02 (Nos. 26-1321 and 26-1904) stayed that enforcement order, which according to press reports appears to let VA treat the agreement as lapsed while the appeal of the injunction continues.",
   "timeline": [
     {
       "date": "2025-03-27",
@@ -177,15 +204,29 @@
       "url": "https://www.govexec.com/workforce/2026/03/judge-orders-va-restore-collective-bargaining/412123/"
     },
     {
+      "date": "2026-05-16",
+      "event": "The First Circuit (No. 26-1321) denies VA's motion to stay the preliminary injunction reinstating the AFGE agreement, but stays the parts of the district court's enforcement order requiring compliance with the agreement and continued processing of grievances and arbitrations.",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the First Circuit",
+      "url": "https://www.ca1.uscourts.gov/sites/ca1/files/opnfiles/26-1321P-01A.pdf"
+    },
+    {
       "date": "2026-08-07",
       "event": "The court granted a motion to enforce the injunction, rejecting VA's July 2026 notice of re-termination effective 2026-08-08; reporting said the contract remains in effect.",
       "kind": "news",
       "source": "Federal News Network",
       "url": "https://federalnewsnetwork.com/unions/2026/08/judge-orders-va-again-to-maintain-collective-bargaining-with-afge/"
+    },
+    {
+      "date": "2026-10-02",
+      "event": "On VA's second stay motion (Nos. 26-1321 and 26-1904), the First Circuit stays the district court's August 2026 enforcement order, finding it likely modified the injunction by deciding whether the agreement was automatically extended (disposition as reported by Government Executive).",
+      "kind": "court",
+      "source": "First Circuit order filed on the district docket (CourtListener RECAP)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.rid.60786/gov.uscourts.rid.60786.79.0_2.pdf"
     }
   ],
   "title": "Manage VA's relationship with organized labor under a defined labor reform agenda",
   "tracked": true,
-  "uncertainties": "The Mandate text asks for planning and management of labor relations rather than ending contracts, so this is a partial match. The Federal News Network article prints no date and is labeled undated; the 2026-08-07 date is the ruling date it reports. The May 2026 First Circuit ruling is known only from that article; the appeals court order was not opened, so it is kept out of the timeline. Whether the agreements of NAGE, NFFE, NNU and SEIU remain terminated was not checked.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The 2026-05-16 First Circuit opinion was read in full on the court's site. The 2026-10-02 First Circuit order was identified through a case-law listing (caption, docket numbers and entry date) and a district-docket copy whose body text was not machine-readable; its disposition (a stay of the August 2026 enforcement order) rests on a Government Executive report. The 2026-08-07 district enforcement order was not opened and is known from a Federal News Network report, which prints no date. The dates of VA's mid-2026 re-termination notices differ between sources (court filings cited by the researcher give 2026-05-19 and 2026-07-15; Federal News Network gives a late-July notice). The Mandate text asks for planning and management of labor relations rather than ending contracts, so this is a partial match. Whether the agreements of NAGE, NFFE, NNU and SEIU remain terminated was not checked.",
+  "updated_at": "2026-10-18"
 }

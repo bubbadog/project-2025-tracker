@@ -2,13 +2,13 @@
   "agency": "Department of Defense",
   "blockers": [
     "Annual appropriations and a continuing resolution",
-    "Supplier capacity and plant problems (Mesquite, Texas) per a DoD Inspector General evaluation",
+    "Supplier capacity and plant problems (Mesquite, Texas, and equipment upgrades at Scranton) per Department of War Inspector General evaluation DOWIG-2026-095",
     "Estimated 42 to 53 month production timelines for interceptors (CSIS estimates)"
   ],
   "chapter": "04",
-  "confidence": 60,
+  "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "CRS figures and GovInfo section titles read; contracts and production rates rest on a company release and several news reports; statutory section text not read.",
+  "confidence_reason": "The Mandate text (pages 96 and 112) was checked. The Department of War Inspector General evaluation DOWIG-2026-095 was read on oversight.gov and confirms the production figures; the funding sections of P.L. 119-21 and P.L. 119-60 were read only through govinfo.gov tables of contents and CRS, a partly primary route, and the framework and contract events rest on a company release and news reports.",
   "durability": {
     "level": "medium",
     "why": "Funding and multiyear authority are statutory, but the framework agreements are contingent on future appropriations and contracts."
@@ -34,10 +34,14 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Primary-source lift: the Department of War Inspector General evaluation DOWIG-2026-095 was read on oversight.gov and confirms the 155mm figures and the link of the 155mm goal to Ukraine consumption, while the P.L. 119-21 funding sections were checked through the govinfo.gov table of contents and CRS; confidence moves from 60 to 64 and the stage stays in_progress at 45."
     }
   ],
   "id": "c04-28",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-17",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -59,61 +63,46 @@
     "Reaching the Army's 155mm goal (100,000 a month was targeted for October 2025; about 36,000 reported for March 2026)",
     "FY2027 appropriations to fund the tripled and quadrupled interceptor rates (annual appropriations not enacted as of the last check)",
     "Fixing projectile metal-part production problems reported by the Inspector General",
-    "Replenishment of the specific stocks the Mandate ties to Ukraine support (not found; reported depletion is attributed to a 2026 Iran war)"
+    "Replenishment of the specific stocks the Mandate ties to Ukraine support: the 155mm expansion is sized to Ukraine-era consumption per the Inspector General, but no replenishment measure tied to Ukraine stocks was found and recent interceptor depletion is attributed to a 2026 Iran war"
   ],
   "requires_congress": "partial",
   "research_agent": "N04",
   "restates_ids": [],
   "review": {
+    "document_reread": {
+      "citation": "P.L. 119-21 (H.R. 1), Secs. 20004 and 20005, enacted 2025-07-04, with P.L. 119-60 Secs. 361, 362, 364, 804 and 832; outcome per DoW OIG DOWIG-2026-095 (2026-07-09)",
+      "note": "govinfo.gov table of contents confirms Sec. 20004 (munitions and defense supply chain resiliency) and Sec. 20005 titles and the 2025-07-04 approval note; the page ends in Title I, so amounts rest on CRS IN12580 (25,381 and 16,049 million dollars). The Inspector General evaluation, which shows how far production has moved, was read on oversight.gov and confirms 36,000 of 100,000 rounds a month.",
+      "result": "partial",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+    },
     "flags": [
-      "Duplicate check: c04-05 says munitions production rates were not verified and c04-17 covers only Army 155mm rounds; c04-04 lists the Sec. 804 multiyear authority only as an acquisition item; c04-28 kept as a split-out.",
-      "Progress lowered from 50 to 45 and match from direct to partial: funding and frameworks are operative, but frameworks depend on appropriations, the 155mm goal is about one third met, and the Ukraine replenishment framing is not matched. implemented is not defensible; in_progress 35 to 50 is.",
-      "Replaced the Pulse 2.0 item with the Lockheed Martin release and corrected the date from 2026-01-07 to 2026-01-06.",
-      "Added the 2026-08-05 memo to industry as an event; removed the Munitions Acceleration Council from the event text (named only as a collaborator in one trade article).",
-      "Confidence kept at 60."
+      "statutory section text not read (govinfo pages end early)",
+      "PAC-3 framework rests on a company release",
+      "August 2026 frameworks and Tomahawk contract via news reports"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "p. 96, under Strengthen America's defense industrial base, item 1: replenish and maintain ammunition and equipment stockpiles depleted by support to Ukraine, which would strengthen the supply chain and ensure inventory for a future conflict; p. 112, under Accelerate the purchase of key munitions (Navy section): produce key munitions at the maximum rate with significant capacity and, with Congress, use the widest range of techniques to strengthen munitions supply chains and workforce. Proposal matches.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed page 96 (defense industrial base, item 1) asks to replenish and maintain ammunition and equipment stockpiles depleted by support to Ukraine; page 112 (Navy munitions) asks to produce key munitions at the maximum rate with significant capacity and, with Congress, widen techniques to strengthen munitions supply chains and workforce. The proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y6",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-C",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14: Sec. 20004 munitions and supply chain resiliency $25,381 million; Sec. 20005 low-cost weapons $16,049 million; signed 2025-07-04; no detail of munitions types or Ukraine.",
+        "note": "DOWIG-2026-095, 2026-07-09: goal missed; 14,000 to 36,000 rounds a month by March 2026; 63,000 projected September 2026, 140,000 December 2027; 11 months behind; Mesquite no conforming parts after 469 million dollars, stop work order, April 2026 move to Pennsylvania; goal based on Ukraine consumption; more than 3 million rounds to Ukraine.",
+        "result": "supports",
+        "url": "https://www.oversight.gov/sites/default/files/documents/reports/2026-07/DOWIG-2026-095%20155-mm_Redacted_Secure.pdf"
+      },
+      {
+        "note": "Sec. 20004 25,381 million and Sec. 20005 16,049 million dollars enacted.",
         "result": "supports",
         "url": "https://www.everycrsreport.com/files/2025-07-24_IN12580_4e64292443ec5f76ebb345d35f4970da6a16521b.html"
       },
       {
-        "note": "Checked 2026-10-14: dated July 4, 2025; table of contents lists Secs. 20001 to 20012 with these titles; section text not in the HTML copy, which is not evidence of absence.",
+        "note": "Table of contents only; Title II text not reached.",
         "result": "partial",
         "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
-      },
-      {
-        "note": "Checked 2026-10-14: table of contents lists Secs. 361, 362, 363, 364, 804, 832 with the titles cited; no section text in the HTML copy.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
-      },
-      {
-        "note": "Checked 2026-10-14: release of 2026-01-06 on a seven-year framework, capacity from about 600 to about 2,000 a year, initial award expected in FY2026 appropriations.",
-        "result": "supports",
-        "url": "https://news.lockheedmartin.com/2026-01-06-Lockheed-Martin-and-Department-of-War-Advance-Landmark-Acquisition-Transformation-to-Accelerate-PAC-3-R-MSE-Production"
-      },
-      {
-        "note": "Checked 2026-10-14: article dated 2026-08-04 says DOW announced on Monday two Northrop frameworks ($2 billion PAC-3 rocket motors, $1 billion THAAD components); names the Munitions Acceleration Council as a collaborator.",
-        "result": "supports",
-        "url": "https://www.executivegov.com/articles/dow-northrop-3b-pac-3-thaad-production-deals"
-      },
-      {
-        "note": "Checked 2026-10-14: lists 2026-07-27 L3Harris, 2026-08-03 Northrop, 2026-08-05 Feinberg memo on 16 programs, 2026-08-14 SM-3 frameworks, 2026-08-17 $22.9 billion Tomahawk contract, 2026-08-31 multiyear agreements; depletion tied to the Iran war; nothing on Ukraine.",
-        "result": "supports",
-        "url": "https://www.militarytimes.com/news/pentagon-congress/2026/09/21/the-pentagon-asked-industry-how-fast-it-could-make-more-weapons-the-numbers-remain-private/"
-      },
-      {
-        "note": "Checked 2026-10-14: 36,000 rounds a month as of March 2026 versus a 100,000 goal for October 2025; 140,000 a month targeted by December 2027; Mesquite metal-parts problems per DoD IG.",
-        "result": "supports",
-        "url": "https://www.defensenews.com/news/your-military/2026/07/14/manufacturing-woes-hamper-us-155-mm-ammo-production/"
       }
-    ]
+    ],
+    "stage_change_reason": "in_progress (25-60) kept: enacted munitions funding and multiyear authority are operative and production has risen, but the 155mm goal is about one third met per the Inspector General and interceptor frameworks depend on appropriations; progress 45 kept."
   },
   "significance": {
     "B": 1.5,
@@ -192,10 +181,17 @@
       "publisher": "Defense News",
       "title": "Manufacturing woes hamper US 155 mm ammo production",
       "url": "https://www.defensenews.com/news/your-military/2026/07/14/manufacturing-woes-hamper-us-155-mm-ammo-production/"
+    },
+    {
+      "date": "2026-07-09",
+      "kind": "primary",
+      "publisher": "Department of War Office of Inspector General (via oversight.gov)",
+      "title": "Evaluation of the DoW's Capability and Capacity to Produce 155-Millimeter Artillery Ammunition (DOWIG-2026-095)",
+      "url": "https://www.oversight.gov/sites/default/files/documents/reports/2026-07/DOWIG-2026-095%20155-mm_Redacted_Secure.pdf"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The 2025 reconciliation law (Public Law 119-21, signed 2025-07-04) includes Sec. 20004 on munitions and defense supply chain resiliency, about $25.4 billion per CRS, plus about $16.0 billion in Sec. 20005 for scaling low-cost weapons into production. The FY2026 NDAA (Public Law 119-60, signed 2025-12-18) lists Sec. 804 on multiyear procurement authority for certain munitions, Sec. 832 on supply chain resilience and Secs. 361, 362 and 364 on munitions requirements reporting. In 2026 the Department of War signed a seven-year framework with Lockheed Martin to raise PAC-3 MSE capacity from about 600 to about 2,000 a year (announced 2026-01-06), further PAC-3, THAAD and SM-3 component frameworks in July and August, and a $22.9 billion Tomahawk contract (2026-08-17), while the Deputy Secretary asked industry on 2026-08-05 for acceleration plans on 16 programs. Army 155mm output was about 36,000 rounds a month in March 2026 against a 100,000 goal for October 2025, per a DoD Inspector General evaluation.",
+  "status_summary": "The 2025 reconciliation law (Public Law 119-21, signed 2025-07-04) includes Sec. 20004 on munitions and defense supply chain resiliency, about $25.4 billion per CRS, plus about $16.0 billion in Sec. 20005 for scaling low-cost weapons into production. The FY2026 NDAA (Public Law 119-60, signed 2025-12-18) lists Sec. 804 on multiyear procurement authority for certain munitions, Sec. 832 on supply chain resilience and Secs. 361, 362 and 364 on munitions requirements reporting. In 2026 the Department of War signed a seven-year framework with Lockheed Martin to raise PAC-3 MSE capacity from about 600 to about 2,000 a year (announced 2026-01-06), further PAC-3, THAAD and SM-3 component frameworks in July and August, and a $22.9 billion Tomahawk contract (2026-08-17), while the Deputy Secretary asked industry on 2026-08-05 for acceleration plans on 16 programs. The Department of War Inspector General (evaluation DOWIG-2026-095, 2026-07-09) found Army 155mm output at about 36,000 rounds a month in March 2026, up from 14,000, against a 100,000 goal for October 2025 that was missed, with 140,000 a month projected by December 2027; the report says the capacity goal was based on Ukraine's consumption and that more than 3 million rounds were provided to Ukraine through presidential drawdowns.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -217,6 +213,13 @@
       "kind": "news",
       "source": "Lockheed Martin",
       "url": "https://news.lockheedmartin.com/2026-01-06-Lockheed-Martin-and-Department-of-War-Advance-Landmark-Acquisition-Transformation-to-Accelerate-PAC-3-R-MSE-Production"
+    },
+    {
+      "date": "2026-07-09",
+      "event": "The Department of War Inspector General issues evaluation DOWIG-2026-095: the goal of 100,000 155mm rounds a month by October 2025 was not met; output rose from 14,000 to 36,000 a month by March 2026, limited by load, assemble and pack capacity; capacity is projected at 63,000 by September 2026 and 140,000 by December 2027; the Army was about 11 months behind plan; and the Mesquite, Texas metal-parts site had produced no conforming parts after 469 million dollars of investment, with production moved to Pennsylvania under an April 2026 agreement.",
+      "kind": "primary",
+      "source": "Department of War Office of Inspector General (oversight.gov)",
+      "url": "https://www.oversight.gov/sites/default/files/documents/reports/2026-07/DOWIG-2026-095%20155-mm_Redacted_Secure.pdf"
     },
     {
       "date": "2026-08-03",
@@ -242,6 +245,6 @@
   ],
   "title": "Replenish stockpiles and produce key munitions at maximum rate",
   "tracked": true,
-  "uncertainties": "No section text of Public Law 119-60 or 119-21 was readable (the GovInfo HTML copies hold the table of contents and front matter), so the Sec. 804 content and covered munitions are unknown and the dollar figures come from CRS, which does not detail Sec. 20004 purposes. The PAC-3 framework rests on the company's release; no war.gov page was opened. The Munitions Acceleration Council is named only in the ExecutiveGov article as a collaborator, and its charter and date were not confirmed, so it is not used as an event. Military Times relays CSIS estimates of interceptor drawdowns after the 2026 Iran war; the reported drivers of current replenishment differ from the Ukraine support the Mandate names, and no source tying 2025 or 2026 production steps to Ukraine stock replacement was found. The 155mm figures rest on Defense News's account of a DoD Inspector General evaluation not read directly. The Ukraine Security Assistance Initiative extension was not read. The 155mm rate also appears in c04-17. This record is the split-out of the munitions element that c04-05 says was not verified and c04-17 treats only for 155mm rounds.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No section text of Public Law 119-60 or 119-21 was readable (the GovInfo HTML copies hold the table of contents and front matter), so the Sec. 804 content and covered munitions are unknown and the dollar figures come from CRS, which does not detail Sec. 20004 purposes. The PAC-3 framework rests on the company's release; no war.gov page was opened. The Munitions Acceleration Council is named only in the ExecutiveGov article as a collaborator, and its charter and date were not confirmed, so it is not used as an event. Military Times relays CSIS estimates of interceptor drawdowns after the 2026 Iran war; the reported drivers of current replenishment differ from the Ukraine support the Mandate names, and apart from the Inspector General's statement that the 155mm goal was sized to Ukraine consumption, no source tying 2025 or 2026 production steps to Ukraine stock replacement was found. The 155mm figures were confirmed in the Inspector General evaluation itself (DOWIG-2026-095, read on oversight.gov), which also ties the 155mm goal to Ukraine consumption. The Ukraine Security Assistance Initiative extension was not read. The 155mm rate also appears in c04-17. This record is the split-out of the munitions element that c04-05 says was not verified and c04-17 treats only for 155mm rounds. The PAC-3 framework is a company-announced framework, not a contract, with an initial award expected through FY2026 appropriations; the August 2026 framework and Tomahawk contract events were read through news and trade reports, not Department of War or Navy documents.",
+  "updated_at": "2026-10-17"
 }

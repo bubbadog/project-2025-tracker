@@ -6,9 +6,9 @@
     "Appropriators gave SBA more than the administration requested for FY2026 (per CRS), so FY2027 funding cuts depend on Congress."
   ],
   "chapter": "25",
-  "confidence": 48,
-  "confidence_label": "low",
-  "confidence_reason": "The CRS budget summary and the GAO report, read for this review, describe a continuing SBA disaster loan program and no proposal to end or transfer direct lending. This is an absence finding: the FEMA Review Council report and SBA budget justification were not read, and the December 2025 testimony and the January 2026 rule were not re-read here.",
+  "confidence": 62,
+  "confidence_label": "medium",
+  "confidence_reason": "Chapter text pages 749, 750 and 754 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo with the H.R. 4238 and S. 300 bill status read, SBA disaster page with the newsroom unreachable, one news search) plus the GAO report and CRS summaries read earlier; capped near 62 because check 2 was partial and the FEMA Review Council report and SBA budget justification were not read.",
   "durability": {
     "level": "high",
     "why": "A transfer of disaster lending would be statutory; current administrative steps point the other way and could change quickly."
@@ -24,15 +24,19 @@
     },
     {
       "date": "2026-10-08",
-      "note": "Re-researched to close the gaps behind a low confidence rating; status confirmed. Reviewer confidence 48 to 48. Closed the gap that the GAO report, FEMA council summary, and SBA disaster page were not re-read by fetching (gao.gov) (everycrsreport.com) and (sba.gov) could not close: the FEMA Review Council report and SBA budget justi"
+      "note": "Re-researched to close the gaps behind a low confidence rating; status confirmed. Reviewer confidence 48 to 48. The GAO report, the FEMA Review Council summary and the SBA disaster page were re-read on gao.gov, everycrsreport.com and sba.gov; the FEMA Review Council report and the SBA budget justification could not be found on a fetchable page. (Note added 2026-10-18: the earlier version of this note was cut short.)"
     },
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to new layer 3 record(s) c25-06, c25-10 from the fuller reading of chapters 24 to 27."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov), read the H.R. 4238 and S. 300 bill status on govinfo.gov, and reviewed the Unified Agenda fallback, SBA page and news checks, found no qualifying action, kept not_started 0, removed a research-note timeline entry and closed a truncated history note."
     }
   ],
   "id": "c25-01",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -57,25 +61,42 @@
   "research_agent": "A14",
   "review": {
     "flags": [
-      "absence-of-evidence finding (cap 50)",
-      "SBA is speeding and consolidating direct disaster lending, which some readers may see as divergence",
-      "whether the prior administration's direct-lending push was formally dropped was not checked"
+      "Alternative: diverged 0 is defensible because SBA is continuing and speeding direct disaster lending; not_started kept as no explicit reversal was found.",
+      "H.R. 4238 (House-passed 2026-06-23) and S. 300 add oversight of the disaster loan program and are related, not qualifying.",
+      "Removed the 2026-10-01 timeline entry describing the SBA disaster page's last-modified state, a research note rather than an action; the fact remains in status_summary with its source.",
+      "Closed the truncated 2026-10-08 history note.",
+      "GAO report and CRS budget summary timeline entries are reports rather than actions; kept as context but not stage-deciding."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 749 lists a push to expand direct government lending among SBA concerns, page 750 lists an end to SBA direct lending as a goal, and page 754 recommends working with Congress to assess moving disaster loans to another agency and exploring private channels, and stating that no new direct lending programs will be developed, citing FEMA overlap, insurance incentives and the 90 percent share of loans to individuals; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "X2",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 749 and 750 call for an end to SBA direct lending, and page 754 recommends working with Congress to assess moving disaster loans to another agency or private channels and stating that no new SBA direct lending programs will be created, citing FEMA overlap, insurance incentives and the share of loans to individuals. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "CRS Insight of 2026-05-27: FY2027 SBA request $329.0 million (down 74.7 percent), disaster loan program $143.0 million versus $282.0 million in FY2026, nearly all entrepreneurial development programs zeroed, lender fees proposed for 7(a), 504 and SBIC; no proposal to end, privatize or transfer direct or disaster lending.",
-        "result": "supports",
-        "url": "https://www.everycrsreport.com/reports/IN12694.html"
+        "note": "2026-10-18: reviewer rerun with terms disaster loan, transfer, privatize since 2025-01-20: 4 documents (SBA size standards proposed rules 2025-08-22 and 2026-08-20, DHS/FEMA Privacy Act matching notice 2025-07-22); none ends or transfers SBA lending. Researcher SBA-filtered query on direct lending: 0.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22disaster+loan%22+transfer+privatize&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "GAO-26-108688 of 2026-05-18: about $1.7 billion in disaster lending and more than 27,000 direct disaster loans in FY2024; recommends consistent outreach; SBA neither agreed nor disagreed; no discussion of moving the program.",
-        "result": "supports",
-        "url": "https://www.gao.gov/products/gao-26-108688"
+        "note": "2026-10-18: reginfo.gov Unified Agenda landing page loaded but listings are script-driven and were not read; Federal Register fallback used. Terms: SBA, disaster loan.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: reviewer read the H.R. 4238 BILLSTATUS (DLARA; introduced 2025-06-27, reported as H. Rept. 119-695 on 2026-06-11, passed House by voice vote 2026-06-23, Senate calendar No. 448 on 2026-06-24) and the S. 300 BILLSTATUS (introduced 2025-01-29, reported 2025-03-04, Senate calendar No. 22); both add reporting and oversight only, no end or transfer of direct lending.",
+        "result": "does_not_support",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr4238.xml"
+      },
+      {
+        "note": "2026-10-18: SBA disaster assistance page (modified 2026-10-01) fetched by the researcher shows SBA still offering disaster loans; SBA newsroom fetch failed.",
+        "result": "partial",
+        "url": "https://www.sba.gov/funding-programs/disaster-assistance"
+      },
+      {
+        "note": "2026-10-18: one researcher news search on ending SBA direct lending or moving disaster loans returned GAO, CRS and 2024 funding items; no search URL was recorded, so the SBA disaster page is listed as a placeholder.",
+        "result": "does_not_support",
+        "url": "https://www.sba.gov/funding-programs/disaster-assistance"
       }
     ]
   },
@@ -154,10 +175,24 @@
       "publisher": "Federal Register (Executive Office of the President)",
       "title": "Emergency Measures To Provide Water Resources in California and Improve Disaster Response in Certain Areas",
       "url": "https://www.federalregister.gov/documents/2025/01/31/2025-02174/emergency-measures-to-provide-water-resources-in-california-and-improve-disaster-response-in-certain"
+    },
+    {
+      "date": "2026-06-24",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 4238, Disaster Loan Accountability and Reform Act (DLARA), bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr4238.xml"
+    },
+    {
+      "date": "2025-03-04",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S. 300, Disaster Loan Accountability and Reform Act (DLARA), bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s300.xml"
     }
   ],
   "stage": "not_started",
-  "status_summary": "No action ending SBA direct lending, stating that SBA will develop no new direct lending programs, or moving disaster lending to another agency or private channel was found as of 2026-10-08. SBA is operating and adjusting its direct disaster loan program: its Associate Administrator for Disaster Recovery told a House committee on 2025-12-16 that SBA had approved 27,996 disaster loans totaling about $4.76 billion since 2025-01-20 and was moving the lending function into the Office of Disaster Recovery and Resilience; an interim final rule published 2026-01-29 (91 FR 3813) preempts state and local permit delays over 60 days so borrowers can use approved funds; and SBA's disaster page (last modified 2026-10-01) lists loans for Hawaii, Alaska and California disasters. GAO reported on 2026-05-18 that the program supported about $1.7 billion in lending and more than 27,000 direct loans in FY2024. The FEMA Review Council's final report (approved 2026-05-07) recommends shifting disaster responsibilities toward states and private insurers, but the CRS summary and two press summaries read do not mention SBA disaster loans. The FY2027 SBA request (per CRS, 2026-05-27) would cut the disaster loan program to $143 million from $282 million in FY2026 and end funding for most entrepreneurial development programs; CRS describes no proposal to end or transfer direct lending.",
+  "status_summary": "No action ending SBA direct lending, stating that SBA will develop no new direct lending programs, or moving disaster lending to another agency or private channel was found as of 2026-10-18. SBA continues to run and adjust its direct disaster loan program: its disaster recovery official told a House committee on 2025-12-16 that SBA had approved 27,996 disaster loans totaling about $4.76 billion since 2025-01-20 and was moving the lending function into the Office of Disaster Recovery and Resilience, an interim final rule of 2026-01-29 (91 FR 3813) preempts state and local permit delays over 60 days for loan-financed work, and SBA's disaster page (last modified 2026-10-01) lists loans for Hawaii, Alaska and California disasters. The House passed H.R. 4238 on 2026-06-23, which adds reporting and oversight requirements to the disaster loan program without ending or transferring it, and GAO reported on 2026-05-18 that the program made more than 27,000 direct loans in FY2024. The FY2027 SBA request (per CRS, 2026-05-27) would cut disaster loan program funding to $143 million from $282 million, and the FEMA Review Council's final report, approved 2026-05-07, is not described by CRS as addressing SBA disaster loans.",
   "timeline": [
     {
       "date": "2025-01-31",
@@ -200,17 +235,10 @@
       "kind": "primary",
       "source": "Congressional Research Service",
       "url": "https://www.everycrsreport.com/reports/IN12694.html"
-    },
-    {
-      "date": "2026-10-01",
-      "event": "SBA's disaster page (last-modified date) states the agency is offering loans for multiple declared disasters (Hawaii severe storms, Alaska floods, California wildfires), with no notice of a pause, transfer or phase-out.",
-      "kind": "primary",
-      "source": "SBA",
-      "url": "https://www.sba.gov/disaster/"
     }
   ],
   "title": "End SBA direct lending and explore moving disaster loans to other agencies or lenders",
   "tracked": true,
-  "uncertainties": "Absence-of-evidence finding. The FEMA Review Council report itself and the SBA FY2027 budget justification were not read directly (neither was found on a fetchable page); the first is known from a CRS summary and two press summaries (National League of Cities, Housing Assistance Council) that do not mention SBA, and the second from a CRS Insight, so a recommendation or budget line on SBA disaster loans could sit in the full documents. CRS did not split the $143 million disaster funding into subsidy and administrative parts, and the reason for the proposed cut was not given. Bills in Congress to move disaster lending were searched for in two web searches that returned only older material; none was found. The testimony figures are SBA's own. A Federal Register query for SBA documents mentioning direct loans returned only quarterly interest rate notices. Judgment: the SBA is continuing and speeding up the direct disaster loan program, which a reviewer could classify as diverged from the Mandate's goal of ending direct lending; not_started is used because no step toward or explicit reversal of the recommendation was found and the FY2027 request halves the program's funding. Searches run this pass: SBA disaster loan program moved to FEMA, Treasury or private lenders (2026); FEMA Review Council final report and SBA; Loeffler and SBA disaster loan changes; House Small Business Committee disaster loan bills. Plus direct fetches of the SBA disaster page, GAO-26-108688, CRS IN12693 and IN12694, and the Federal Register.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: the researcher's SBA-filtered query on direct lending returned no documents, and a reviewer rerun on disaster loan with transfer and privatize returned SBA size standard proposed rules and a FEMA data-matching notice, which show SBA still administering disaster loans; no document ends direct lending or moves disaster loans. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used. (3) congress.gov and govinfo: H.R. 4238, passed by the House on 2026-06-23 and on the Senate calendar since 2026-06-24, and its Senate counterpart S. 300, on the Senate calendar since 2025-03-04, add reporting, budget disclosure and oversight requirements to the SBA disaster loan program and do not end or transfer it; no bill moving disaster lending was found, and bill texts were read only through their CRS summaries. (4) Agency pages: the SBA disaster page (modified 2026-10-01) shows SBA offering loans for several declared disasters; the SBA newsroom could not be loaded. (5) News: one search returned GAO, CRS and older funding items. The FEMA Review Council report and the SBA FY2027 budget justification were not read directly; the first is known from a CRS summary and two press summaries that do not mention SBA, and the second from a CRS Insight, so a recommendation or budget line on SBA disaster loans could sit in the full documents. CRS did not explain the proposed FY2027 cut to disaster loan funding. The testimony figures are SBA's own. Judgment: SBA is continuing and speeding up direct disaster lending, which a reader could classify as diverged from the goal of ending direct lending; not_started is kept because no step toward, or explicit reversal of, the recommendation was found and the FY2027 request halves the program's funding.",
+  "updated_at": "2026-10-18"
 }

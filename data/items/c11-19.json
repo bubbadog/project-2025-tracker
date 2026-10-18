@@ -1,13 +1,13 @@
 {
   "agency": "Congress (National Education Association federal charter, 36 U.S.C. ch. 1511)",
   "blockers": [
-    "Both bills remain in the Judiciary Committees with no reported markup.",
+    "Both bills remain in the Judiciary Committees with no action after referral, per govinfo.gov bill status.",
     "Senate passage would likely face the 60-vote threshold, which is an inference and not a source finding."
   ],
   "chapter": "11",
-  "confidence": 78,
-  "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked and both introduced bill texts read on primary hosts; absence of later committee action rests on a bill tracker because congress.gov action pages could not be read.",
+  "confidence": 84,
+  "confidence_label": "high",
+  "confidence_reason": "Text checked; the H.R. 4450 text and the bill status records for H.R. 4450 and S. 2310 were read in full on govinfo.gov, confirming introduction, referral, 20 House cosponsors and no later action.",
   "durability": {
     "level": "high",
     "why": "A repeal enacted by statute would not be changed by agency action, but it has not been enacted."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent primary-source review: proposed 10 confirmed after reading the H.R. 4450 and S. 2310 bill status records on govinfo.gov, which replaced tracker sources and corrected the House cosponsor count to 20."
     }
   ],
   "id": "c11-19",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -55,43 +59,24 @@
   "research_agent": "N11",
   "review": {
     "flags": [
-      "original cosponsor count corrected to 14 from bill text; tracker shows 18 later"
+      "House cosponsor count corrected from 18 (tracker) to 20 (govinfo.gov bill status)",
+      "tracker sources replaced by govinfo.gov bill status"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 341 to 342 recommend that Congress rescind the NEA charter and that Members hold hearings on federal taxpayer money used by the NEA; paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9f",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 341 and 342 say the NEA's federal charter implies unearned federal backing, ask Congress to rescind it, and suggest Members hold hearings on federal taxpayer money the NEA has used for partisan causes. Paraphrase accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "H.R. 4450, introduced 2025-07-16, Rep. Harris (NC), 14 cosponsors, Judiciary; repeals 36 U.S.C. ch. 1511.",
+        "note": "Introduced and referred to House Judiciary 2025-07-16; 20 cosponsors (14 original, 6 added through 2025-12-09); no later action.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr4450ih/html/BILLS-119hr4450ih.htm"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr4450.xml"
       },
       {
-        "note": "S. 2310, 2025-07-16, Blackburn for herself and Lummis, Judiciary.",
+        "note": "Introduced and referred to Senate Judiciary 2025-07-16; one cosponsor; no later action.",
         "result": "supports",
-        "url": "https://www.congress.gov/119/bills/s2310/BILLS-119s2310is.htm"
-      },
-      {
-        "note": "18 cosponsors, in committee, no votes (tracker).",
-        "result": "supports",
-        "url": "https://policysoup.com/bills/hr4450-119"
-      },
-      {
-        "note": "1 cosponsor, referred to Judiciary (tracker).",
-        "result": "supports",
-        "url": "https://policysoup.com/bills/s2310-119"
-      },
-      {
-        "note": "2025-09-29 letter on NEA retirement program, deadline 2025-10-13; no mention of federal funds.",
-        "result": "supports",
-        "url": "https://edworkforce.house.gov/uploadedfiles/nea_oversight_letter_final_signed.pdf"
-      },
-      {
-        "note": "2025-10-01 repost of WLEN story on same letter.",
-        "result": "supports",
-        "url": "https://walberg.house.gov/media/in-the-news/wlen-walberg-opens-inquiry-nea-retirement-program"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2310.xml"
       }
     ]
   },
@@ -140,20 +125,6 @@
       "url": "https://www.congress.gov/119/bills/s2310/BILLS-119s2310is.htm"
     },
     {
-      "date": "2025-07-16",
-      "kind": "tracker",
-      "publisher": "PolicySoup",
-      "title": "H.R. 4450 (119th) bill overview",
-      "url": "https://policysoup.com/bills/hr4450-119"
-    },
-    {
-      "date": "2025-07-16",
-      "kind": "tracker",
-      "publisher": "PolicySoup",
-      "title": "S. 2310 (119th) bill overview",
-      "url": "https://policysoup.com/bills/s2310-119"
-    },
-    {
       "date": "2025-09-29",
       "kind": "primary",
       "publisher": "House Committee on Education and Workforce",
@@ -166,10 +137,24 @@
       "publisher": "Office of Rep. Tim Walberg (reposting WLEN)",
       "title": "Walberg opens inquiry into NEA retirement program",
       "url": "https://walberg.house.gov/media/in-the-news/wlen-walberg-opens-inquiry-nea-retirement-program"
+    },
+    {
+      "date": "2025-12-09",
+      "kind": "primary",
+      "publisher": "U.S. Government Publishing Office",
+      "title": "Bill status, H.R. 4450 (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr4450.xml"
+    },
+    {
+      "date": "2025-07-16",
+      "kind": "primary",
+      "publisher": "U.S. Government Publishing Office",
+      "title": "Bill status, S. 2310 (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2310.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "Bills to repeal the charter were introduced on 2025-07-16: H.R. 4450 (Rep. Mark Harris, 14 original cosponsors, referred to the House Judiciary Committee) and S. 2310 (Sen. Marsha Blackburn with Sen. Cynthia Lummis, referred to the Senate Judiciary Committee), each titled the National Education Association Charter Repeal Act and each repealing chapter 1511 of title 36, U.S. Code. A bill tracker lists 18 cosponsors on the House bill and shows no committee action or vote on either bill. The House Education and Workforce Committee wrote to the NEA on 2025-09-29 opening an inquiry into its retirement program, with documents due 2025-10-13; that letter concerns member retirement products and not federal funds, and no hearing on NEA use of federal money was found.",
+  "status_summary": "Bills to repeal the charter were introduced on 2025-07-16: H.R. 4450 (Rep. Mark Harris, referred to the House Judiciary Committee) and S. 2310 (Sen. Marsha Blackburn with Sen. Cynthia Lummis, referred to the Senate Judiciary Committee), each titled the National Education Association Charter Repeal Act; the House text repeals chapter 1511 of title 36, U.S. Code. The govinfo.gov bill status records show 20 cosponsors on H.R. 4450 (14 original, the last added 2025-12-09) and no action after referral on either bill. The House Education and Workforce Committee wrote to the NEA on 2025-09-29 opening an inquiry into its retirement program, with documents due 2025-10-13; that letter concerns member retirement products and not federal funds, and no hearing on NEA use of federal money was found.",
   "timeline": [
     {
       "date": "2025-07-16",
@@ -195,6 +180,6 @@
   ],
   "title": "Repeal the National Education Association's federal charter and hold hearings on its funds",
   "tracked": true,
-  "uncertainties": "Cosponsor count after introduction (18) and committee status come from a bill tracker (policysoup.com); congress.gov action pages could not be fetched (robots restriction), so later actions are not confirmed from a primary source. The STUDENT Act named in an earlier lead was not found. An earlier version of the repeal bill in the 118th Congress was seen only in a search result list and is not used. The Education and Workforce letter concerns retirement product fees and not federal funds; the Walberg office page dated 2025-10-01 reports the same letter. No hearing specifically on NEA use of federal funds was found.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "Cosponsor counts and committee status were read from the govinfo.gov bill status records for H.R. 4450 and S. 2310, which show no action after referral. The STUDENT Act named in an earlier lead was not found. An earlier version of the repeal bill in the 118th Congress was seen only in a search result list and is not used. The Education and Workforce letter concerns retirement product fees and not federal funds; the Walberg office page dated 2025-10-01 reports the same letter. No hearing specifically on NEA use of federal funds was found, but hearing records were not systematically searched.",
+  "updated_at": "2026-10-18"
 }

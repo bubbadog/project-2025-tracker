@@ -6,9 +6,15 @@
     "Bills to bar the schedule (Saving the Civil Service Act, H.R. 492 / S. 134) have been introduced but not enacted"
   ],
   "chapter": "03",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "Document pages 80 to 81 checked and the new ethics rule confirmed on the Federal Register API; stage-deciding EO 14410 and the 2026 final rule were verified in earlier runs, not re-read here, and litigation status rests on secondary trackers.",
+  "confidence": 84,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter pages 80 and 81 checked; the stage-deciding final rule at 91 FR 5580 (Doc. 2026-02375) was fetched and read in this review and supports implemented; EO 14410 was verified in earlier runs; litigation status rests on secondary trackers.",
+  "court_status": {
+    "basis": "Latest court event in the timeline is the 2026-03-17 scheduling order in NTEU v. Trump (D.D.C.), per CRS; a tracker updated 2026-10-05 lists three challenges pending with no merits ruling or injunction.",
+    "date": "2026-03-17",
+    "state": "pending",
+    "url": "https://www.everycrsreport.com/reports/LSB11412.html"
+  },
   "durability": {
     "level": "medium",
     "why": "A final rule must be amended through notice-and-comment to undo, but the position designations rest on an executive order that a later President could revoke; the 2024 rule and 2021 revocation show both layers have been reversed before."
@@ -33,10 +39,14 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to c00-20, c00-18 (layer 3 enumeration, chapters 00, 04, 05, 28 and 30)."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review (primary-source lift): the final rule at 91 FR 5580 was re-read on federalregister.gov and supports implemented 75; court_status set to pending; confidence raised to 84."
     }
   ],
   "id": "c03-01",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-16",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -87,33 +97,30 @@
   "requires_congress": "no",
   "research_agent": "A02",
   "review": {
+    "document_reread": {
+      "citation": "91 FR 5580, Doc. 2026-02375, OPM final rule, RIN 3206-AO80, docket OPM-2025-0004",
+      "note": "Read to character 100,000 of about 118,000: final rule published 2026-02-06, effective 2026-03-09; positions moved into Schedule Policy/Career remain career and merit-filled but fall outside chapter 75 adverse-action procedures and chapter 43 performance-removal procedures, have no adverse-action appeal to the MSPB, and the 2024 provisions allowing appeals of involuntary transfers are removed.",
+      "result": "supports",
+      "url": "https://www.federalregister.gov/documents/2026/02/06/2026-02375/improving-performance-accountability-and-responsiveness-in-the-civil-service"
+    },
     "flags": [
-      "Publication event is not duplicative: the existing 2026-06-03 event cites whitehouse.gov and adds no FR citation. Two later FR items citing EO 14410 (2026-07-23 ethics reporting exemption; 2026-08-14 Civil Service Rules amendments) were not opened and may merit a follow-up.",
-      "Dropped the proposed 2026-08-14 OPM Civil Service Rules cleanup event: non-substantive and unrelated to the schedule framework; noted in uncertainties.",
-      "One web search for October 2026 court rulings found nothing new."
+      "Record has a court event but no court_status; pending object proposed.",
+      "Researcher's proposed source (a Federal Register API search listing) not accepted: a query listing is not a document and adds nothing to the summary.",
+      "Status summary now cites 91 FR 5580 and the 2026-10-05 tracker date already in the timeline."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "pp.80-81 recommend reinstating EO 13957 Schedule F; EO 14410 amends EO 13957 and places positions in the schedule.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed pages 80 and 81 describe EO 13957 creating Schedule F for career positions with significant policy duties, note its revocation, and say it should be reinstated with SES accountability first; the proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-2, U13-3",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-3",
     "source_checks": [
       {
-        "note": "Fetched: EO 14410 signed 2026-06-03, published 2026-06-10, 91 FR 34893, doc 2026-11594; Sec. 2(f) removal basis, Sec. 3(a) amends EO 13957, Sec. 5(c) 7-day notice.",
+        "note": "91 FR 5580; final rule; published 2026-02-06; effective 2026-03-09; chapter 75 and 43 exclusions and no MSPB adverse-action appeals; positions remain career.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/06/10/2026-11594/implementing-schedule-policycareer-in-the-excepted-service"
-      },
-      {
-        "note": "OGE interim final rule 91 FR 46239, published and effective 2026-07-23, comments to 2026-08-24; positions moved to Schedule Policy/Career keep prior filing status. The HTML page returned a server error.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-14872.json"
-      },
-      {
-        "note": "OPM direct final rule 91 FR 52475, effective 2026-10-13 absent significant adverse comment, under EO 14410 sec 2(g); OPM calls it non-substantive and it makes no Schedule Policy/Career change. Omitted as an event.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16630/updates-and-amendments-to-the-civil-service-rules"
+        "url": "https://www.federalregister.gov/documents/2026/02/06/2026-02375/improving-performance-accountability-and-responsiveness-in-the-civil-service"
       }
-    ]
+    ],
+    "stage_change_reason": "The final rule is in effect and EO 14410 has placed positions in the schedule, so the recommendation is operative through executive and agency action; reversibility and pending suits keep it short of completed."
   },
   "self_confidence": 85,
   "significance": {
@@ -123,6 +130,24 @@
     "M": 2.5,
     "R": 2.5,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 3,
+        "F": 1,
+        "F_estimated": true,
+        "M": 3,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 3,
+        "F": 1,
+        "F_estimated": true,
+        "M": 2,
+        "R": 3,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Schedule F would remove competitive-service protections for a class of career federal employees, altering civil service architecture.",
     "version": "2026-10-08",
@@ -187,7 +212,7 @@
     }
   ],
   "stage": "implemented",
-  "status_summary": "EO 14171 (2025-01-20) reinstated the framework under the name Schedule Policy/Career. OPM published a final rule on 2026-02-06 (effective 2026-03-09) that keeps covered positions career but makes them at-will, outside chapter 75 adverse-action procedures and MSPB appeals. EO 14410 (2026-06-03) placed about 8,000 employees in more than 4,800 positions in the schedule, per press reports, against an earlier OPM estimate of up to 50,000. Lawsuits in D. Md. and D.D.C. are pending; the reports reviewed (through July 2026) describe no merits ruling and no injunction.",
+  "status_summary": "EO 14171 (2025-01-20) reinstated the framework under the name Schedule Policy/Career. OPM published a final rule on 2026-02-06 (91 FR 5580, effective 2026-03-09) that keeps covered positions career but makes them at-will, outside chapter 75 adverse-action procedures and MSPB appeals. EO 14410 (2026-06-03) placed about 8,000 employees in more than 4,800 positions in the schedule, per press reports, against an earlier OPM estimate of up to 50,000. Lawsuits in D. Md. and D.D.C. are pending; the reports reviewed (through a tracker updated 2026-10-05) describe no merits ruling and no injunction.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -269,6 +294,6 @@
   ],
   "title": "Reinstate Schedule F for policy-influencing career positions",
   "tracked": true,
-  "uncertainties": "Latest litigation reports read run through early July 2026 and a tracker dated 2026-10-05. Searches on court rulings (2026-10-13) surfaced only March 2026 coverage and a CRS report; no ruling, injunction or removal under the schedule was found, but the dockets themselves were not opened. The 8,000 figure and 97 percent GS-15-or-above share come from press accounts of White House and OPM statements. One secondary source (FedSmith, 2026-06-03) says district court injunctions were stayed on appeal, which conflicts with Lawfare and Federal News Network reporting no rulings; it was not relied on. The Office of Government Ethics rule was read from its Federal Register API record (abstract only). An OPM direct final rule of 2026-08-14 cleaning up obsolete Civil Service Rules under EO 14410 section 2(g) was reviewed and left out of the timeline because it is non-substantive and does not touch the schedule.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The final rule was re-read on federalregister.gov to about character 100,000 of 118,000; its last part was not read. The EO 14410 appendix listing covered positions is supplied as page images, so the 8,000 figure and the 97 percent GS-15-or-above share come from press accounts of White House and OPM statements. Latest litigation reports read run through early July 2026 and a tracker dated 2026-10-05; searches on court rulings (2026-10-13 and 2026-10-16) surfaced no ruling, injunction or removal under the schedule, but the dockets themselves were not opened. One secondary source (FedSmith, 2026-06-03) says district court injunctions were stayed on appeal, which conflicts with Lawfare and Federal News Network reporting no rulings; it was not relied on. The Office of Government Ethics rule was read from its Federal Register API record (abstract only). An OPM direct final rule of 2026-08-14 cleaning up obsolete Civil Service Rules under EO 14410 section 2(g) was reviewed and left out of the timeline because it is non-substantive. Later OPM documents listed by the Federal Register (a 2026-07-02 employee accountability proposal and 2026-08-25 correcting amendments) were not read.",
+  "updated_at": "2026-10-16"
 }

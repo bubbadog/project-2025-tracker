@@ -1,0 +1,198 @@
+{
+  "agency": "Treasury (Tax Policy) and Congress",
+  "blockers": [
+    "Requires an act of Congress, and the 2025 law expanded rather than limited benefit-related preferences",
+    "Employers and benefit sponsors have broad interest in current exclusions"
+  ],
+  "chapter": "22",
+  "confidence": 60,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-18 on top of the enacted provisions read in Code amendment notes: (1) Federal Register API searches of Treasury and IRS documents found only information collections; (2) Unified Agenda listings could not be read, so the Federal Register proposed-rule fallback was used (partial); (3) a congress.gov and GovInfo bill search found only income-exclusion bills such as H.R. 317, not a per-employee deduction cap, with one bill text read in part (partial); (4) Treasury and IRS releases showed nothing; (5) a news search found an unnamed reintroduced exclusion-cap bill (partial). Held at 60 because that bill could not be matched to a number.",
+  "durability": {
+    "level": "high",
+    "why": "The expansions are in statute and can be changed only by Congress."
+  },
+  "est_completion": {
+    "basis": "Inference: no bill was found and the one enacted benefit measure expanded preferences, so a cap would need new tax legislation.",
+    "window": "unlikely this term"
+  },
+  "headline": false,
+  "history": [
+    {
+      "date": "2026-10-16",
+      "note": "Added in the layer 3 enumeration pass (second pass over leftover candidates); researched and sent to independent review."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review: diverged kept; the Cornell Legal Information Institute copies of 26 U.S.C. 129 and 45F confirm that Public Law 119-21 expanded dependent care and employer child care preferences rather than capping benefit deductions; confidence 60."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check with independent AI review: Diverged kept; five-part check documented and spot-checked; confidence held at 60 because an unnamed exclusion-cap bill could not be identified."
+    }
+  ],
+  "id": "c22-19",
+  "last_checked": "2026-10-18",
+  "layer": 3,
+  "match": "parallel",
+  "mechanism": "legislation",
+  "pages": [
+    697
+  ],
+  "position": "Treasury and Congress (tax legislation)",
+  "progress": 0,
+  "proposal": "The Mandate recommends that the next Administration set a cap of no more than 12,000 dollars per year per full-time-equivalent employee, not indexed to inflation, on untaxed benefits employers may deduct, with tax-deferred retirement contributions excluded, only part of health savings account contributions counted, and deductions denied for benefits provided to dependents aged 23 or older (p. 697).",
+  "related_ids": [
+    "c22-01",
+    "c22-13"
+  ],
+  "remaining": [
+    "Enactment of a statutory cap on deductible untaxed employee benefits",
+    "A rule denying deductions for benefits to dependents aged 23 or older",
+    "Counting rules for health savings account contributions"
+  ],
+  "requires_congress": "yes",
+  "research_agent": "R22",
+  "restates_ids": [],
+  "review": {
+    "document_reread": {
+      "citation": "26 U.S.C. 129 and 45F as amended by Pub. L. 119-21",
+      "note": "Amendment notes confirm the section numbers and effective dates.",
+      "result": "supports",
+      "url": "https://www.law.cornell.edu/uscode/text/26/129"
+    },
+    "flags": [
+      "Removed the sentence on the judgment call from the status summary and moved it to uncertainties.",
+      "Named the search performed in uncertainties.",
+      "Other defensible call: not_started 0 (no cap was proposed or rejected); diverged kept because the law moved benefit preferences the opposite way.",
+      "V7 systematic-check review: diverged 0 kept (stage rests on the 2025 law expanding benefit preferences); the unnamed May 2026 bill was opened and cannot be matched to a number or cap; confidence held at 60."
+    ],
+    "mandate_check": "ok",
+    "mandate_note": "Page 697 says the next Administration should set a cap of no more than 12,000 dollars a year per full-time-equivalent employee, not indexed, on untaxed benefits employers can deduct, counting all benefits except tax-deferred retirement contributions, counting only part of HSA contributions, and denying deductions for benefits to dependents aged 23 or older. The paraphrase and page are correct.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V7",
+    "source_checks": [
+      {
+        "note": "129(a)(2)(A) limit 7,500 dollars (3,750 separate) by Pub. L. 119-21 section 70404(a), tax years after 2025.",
+        "result": "supports",
+        "url": "https://www.law.cornell.edu/uscode/text/26/129"
+      },
+      {
+        "note": "45F 40 percent (50 percent small business), caps 500,000 and 600,000 dollars, Pub. L. 119-21 section 70401, amounts after 2025.",
+        "result": "supports",
+        "url": "https://www.law.cornell.edu/uscode/text/26/45F"
+      },
+      {
+        "note": "Systematic check 1: Terms employer deduction benefits cap, agency treasury-department: 0 documents. checked 2026-10-18.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"employer+deduction\"+benefits+cap&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=treasury-department&per_page=20"
+      },
+      {
+        "note": "Systematic check 1: Terms fringe benefits deduction, agency internal-revenue-service: 4 documents, all information-collection notices for business and exempt-organization returns; no proposed or final rule capping deductible benefits. checked 2026-10-18.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"fringe+benefits\"+deduction&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=internal-revenue-service&per_page=20"
+      },
+      {
+        "note": "Systematic check 2: Reached the current Unified Agenda page (2026 Regulatory Plan edition, publication 202510); the agency listings sit behind a JavaScript dropdown and could not be read, so the Federal Register API was used as the fallback for proposed-rule and agenda notices. Treasury and IRS proposed rules found in other queries concern credits and the 2025 law, not a cap on deductible benefits. checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Systematic check 3: One search limited to congress.gov and govinfo.gov (cap employer deduction health benefits $12,000 per employee). Hits included H.R. 317, Healthcare Freedom Act of 2025 (referred to Ways and Means 2025-01-09; it would end the income exclusion for employer contributions to other health plans for new hires and expand health savings accounts, a different mechanism from a deduction cap and not a $12,000 limit), H.R. 10015 (introduced 2026-08-03; text reviewed in part, no cap on the exclusion or deduction found, final portion unread), and the 2025 reconciliation text. No bill with a per-employee deduction cap. Enacted law check: P.L. 119-21 amendments already recorded raise benefit preferences; no cap provision seen. checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr317.xml"
+      },
+      {
+        "note": "Systematic check 4: Treasury releases 2026-10-08 to 2026-10-16: a 2026-10-14 release on health care benefits concerns eligibility protection under the premium tax credit rules (the same-day IRS release lists Premium Tax Credit proposed regulations), not an employer deduction cap. IRS newsroom likewise showed no release on benefit deduction caps. checked 2026-10-18.",
+        "result": "does_not_support",
+        "url": "https://home.treasury.gov/news/press-releases"
+      },
+      {
+        "note": "Systematic check 5: One news search (cap on employer health benefit tax exclusion or deduction, 2026): an industry-press article of 2026-05-15 says a Republican lawmaker brought back a bill that could cap the federal health benefits tax exclusion; it names no bill number or cap level, and the bill is in nine committees. A cap on the income exclusion is not the recommended cap on the employer deduction, and no vote or enactment is reported. checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.benefitspro.com/amp/2026/05/15/republican-brings-back-bill-that-could-cap-employers-health-benefits-tax-exclusion/"
+      },
+      {
+        "note": "Reviewer re-check, 2026-10-18: terms fringe benefits deduction, IRS, since 2025-01-20: count 4, all information-collection notices for business and exempt-organization returns; confirms the researcher's result.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"fringe+benefits\"+deduction&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=internal-revenue-service&per_page=20"
+      },
+      {
+        "note": "Reviewer re-check, 2026-10-18: article of 2026-05-15 opened; it gives no sponsor name, bill number or cap amount and does not say whether the cap applies to the employee exclusion or the employer deduction; not a qualifying action.",
+        "result": "partial",
+        "url": "https://www.benefitspro.com/amp/2026/05/15/republican-brings-back-bill-that-could-cap-employers-health-benefits-tax-exclusion/"
+      }
+    ]
+  },
+  "significance": {
+    "B": 2,
+    "F": 3,
+    "F_estimated": true,
+    "M": 3,
+    "R": 3,
+    "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 2,
+        "F": 3,
+        "M": 3,
+        "R": 3,
+        "rater": "A"
+      },
+      {
+        "B": 2,
+        "F": 3,
+        "M": 3,
+        "R": 3,
+        "rater": "B"
+      }
+    ],
+    "raters": 2,
+    "rationale": "A 12,000 dollar cap on deductible employer benefits would restructure the employer health tax exclusion, affecting most workers and raising large revenue.",
+    "version": "2026-10-16",
+    "weight": 2.75
+  },
+  "sources": [
+    {
+      "date": "2025-07-04",
+      "kind": "primary",
+      "publisher": "Cornell Legal Information Institute",
+      "title": "26 U.S.C. 129, Dependent care assistance programs",
+      "url": "https://www.law.cornell.edu/uscode/text/26/129"
+    },
+    {
+      "date": "2025-07-04",
+      "kind": "primary",
+      "publisher": "Cornell Legal Information Institute",
+      "title": "26 U.S.C. 45F, Employer-provided child care credit",
+      "url": "https://www.law.cornell.edu/uscode/text/26/45F"
+    }
+  ],
+  "stage": "diverged",
+  "status_summary": "No enacted law or bill found in this check caps the untaxed benefits employers may deduct. Public Law 119-21 (signed 2025-07-04) moved the other way on two benefit-related preferences: section 70404 raised the tax-free dependent care assistance limit from 5,000 to 7,500 dollars for tax years beginning after 2025, and section 70401 raised the employer-provided child care credit to 40 percent (50 percent for eligible small businesses) with a 500,000 dollar annual cap (600,000 dollars for small businesses) for amounts paid after 2025. Neither is a cap on deductible benefits, and no rule on dependents aged 23 or older was found.",
+  "timeline": [
+    {
+      "date": "2025-07-04",
+      "event": "Public Law 119-21 section 70404 raised the section 129 dependent care assistance exclusion limit to 7,500 dollars (3,750 dollars for separate returns), effective for taxable years beginning after 2025 (per the amendment notes of 26 U.S.C. 129).",
+      "kind": "primary",
+      "source": "Cornell Legal Information Institute",
+      "url": "https://www.law.cornell.edu/uscode/text/26/129"
+    },
+    {
+      "date": "2025-07-04",
+      "event": "Public Law 119-21 section 70401 raised the section 45F employer-provided child care credit to 40 percent (50 percent for eligible small businesses) and the annual cap to 500,000 dollars (600,000 dollars for small businesses), effective for amounts paid or incurred after 2025 (per 26 U.S.C. 45F).",
+      "kind": "primary",
+      "source": "Cornell Legal Information Institute",
+      "url": "https://www.law.cornell.edu/uscode/text/26/45F"
+    }
+  ],
+  "title": "Cap untaxed employee benefits that employers deduct at 12,000 dollars per worker",
+  "tracked": true,
+  "uncertainties": "Searches performed: one web search for a bill capping employer benefit deductions in the 119th Congress, which returned explainers of the 2025 law and an unopened benefits-industry page; the absence of a cap bill is a limited no-result finding. Provisions were read on the Cornell Legal Information Institute copy of the Code with its amendment notes, not the enrolled text of Public Law 119-21. Other benefit changes in the law were not reviewed. Diverged was chosen over not_started because the only enacted action on the subject expanded benefit-related tax preferences, the opposite direction from a cap; not_started is the other defensible call, since no cap was rejected as such. Checked systematically on 2026-10-18: Federal Register searches, agenda and proposed-rule listings, a congress.gov and govinfo.gov bill search, Treasury and IRS releases and a news search found no rule, order or law capping deductible employer benefits. A reintroduced health-exclusion bill reported in May 2026 and H.R. 317 act on the employee income exclusion rather than a per-employee deduction cap and are unpassed; the unnamed bill could not be matched to a number, and the trade article reporting it names no sponsor, bill number or cap amount.",
+  "updated_at": "2026-10-18"
+}

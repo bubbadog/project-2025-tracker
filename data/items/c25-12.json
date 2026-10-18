@@ -1,18 +1,18 @@
 {
   "agency": "Small Business Administration",
   "blockers": [
-    "No committee action found on either panel bill"
+    "H.R. 421 has not reached the House floor in the bill status record (latest action 2025-06-10); no committee action found on S. 5178"
   ],
   "chapter": "25",
-  "confidence": 60,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "The H.R. 421 text and the S. 5178 record were read on GovInfo; the IMPROVE the SBA Act absence and later bill actions rest on limited searches.",
+  "confidence_reason": "Text checked; the bill status records for H.R. 421 and S. 5178 were read in full in review and the H.R. 421 text in earlier passes; the absence of an IMPROVE the SBA Act bill and of an Administration statement rests on limited searches.",
   "durability": {
     "level": "high",
     "why": "Nothing has been adopted."
   },
   "est_completion": {
-    "basis": "Inference: the panel bills are introduced but no committee action was found, and no IMPROVE the SBA Act counterpart exists.",
+    "basis": "Inference: H.R. 421 was ordered reported by one of its three House committees on 2025-06-10 with no later action, S. 5178 is only referred, and no IMPROVE the SBA Act counterpart exists.",
     "window": "unknown"
   },
   "headline": false,
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Primary-source lift: GovInfo bill status records showed a House Judiciary Committee markup of H.R. 421 on 2025-06-10, which the record had not listed, and S. 5178 was confirmed as introduced and referred."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review after the primary-source lift: GovInfo bill status records confirmed the House Judiciary vote of 13 to 12 on H.R. 421 on 2025-06-10 and the referral of S. 5178; proposed 10 was kept and confidence rose from 60 to 66."
     }
   ],
   "id": "c25-12",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -55,32 +63,24 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage changed from not_started to proposed 10: introduced bills (H.R. 421, S. 5178) would extend the panel process to agencies generally",
-      "Match partial: no IMPROVE the SBA Act counterpart",
-      "Title shortened from 92 to under 90 characters",
-      "Added GovInfo sources; tracker page kept only for the 117th Congress bill",
-      "Confidence 60"
+      "2025-06-10 House Judiciary vote confirmed (13-12, ordered reported, no report filed).",
+      "Progress 10 kept; 12 to 15 defensible for a committee-ordered bill, but the order is in one of three committees, 16 months old, and covers one of the two asks."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 757 to 758, SBA Policy Priorities for 2025 and Beyond: Legislation. Support the IMPROVE the SBA Act and extend SBREFA panel requirements to all federal agencies. Paraphrase accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16L-2",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14. Section 6 replaces 5 U.S.C. 609(b)-(e) so any agency must notify the Chief Counsel before proposing covered rules; also judicial review and paperwork fine waiver.",
+        "note": "Introduced 2025-01-15 (Cline); referred to Judiciary, Small Business, Oversight; Judiciary markup 2025-06-10, ordered reported in the nature of a substitute 13-12; no report number, no later action.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr421ih/html/BILLS-119hr421ih.htm"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr421.xml"
       },
       {
-        "note": "Checked 2026-10-14. Introduced 2025-01-15 by Rep. Cline; referred to Judiciary, Small Business, Oversight.",
+        "note": "Introduced 2026-07-30 (Rick Scott), referred to HSGAC; no later action; H.R. 421 listed as related.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/app/details/BILLS-119hr421ih"
-      },
-      {
-        "note": "Checked 2026-10-14. Introduced 2026-07-30 by Sen. Rick Scott; referred to HSGAC. Text not read.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/app/details/BILLS-119s5178is"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s5178.xml"
       }
     ]
   },
@@ -140,28 +140,56 @@
       "publisher": "The Lobby News",
       "title": "H.R. 7628, IMPROVE the SBA Act, 117th Congress (bill tracker page)",
       "url": "https://thelobbynews.com/congress/bills/117/house-bill/7628"
-    }
-  ],
-  "stage": "proposed",
-  "status_summary": "H.R. 421, the Small Business Regulatory Flexibility Improvements Act, introduced 2025-01-15 and referred to the House Judiciary, Small Business and Oversight committees, would replace the panel provisions of 5 U.S.C. 609 so that any agency, not only the currently covered agencies, must notify the Chief Counsel for Advocacy before proposing a rule with a significant small business impact, and it adds judicial review and a first-time paperwork fine waiver. A Senate bill of the same name, S. 5178, was introduced 2026-07-30 and referred to the Homeland Security and Governmental Affairs Committee. No 119th Congress bill titled the IMPROVE the SBA Act and no Administration statement supporting either measure was found.",
-  "timeline": [
+    },
     {
-      "date": "2025-01-15",
-      "event": "H.R. 421, the Small Business Regulatory Flexibility Improvements Act, was introduced; it would extend the pre-proposal panel process under 5 U.S.C. 609 to agencies generally.",
+      "date": "2025-06-10",
       "kind": "primary",
-      "source": "U.S. Government Publishing Office",
-      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr421ih/html/BILLS-119hr421ih.htm"
+      "publisher": "GovInfo",
+      "title": "H.R. 421 bill status (BILLSTATUS XML)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr421.xml"
     },
     {
       "date": "2026-07-30",
-      "event": "S. 5178, the Small Business Regulatory Flexibility Improvements Act, was introduced and referred to the Senate Homeland Security and Governmental Affairs Committee.",
       "kind": "primary",
-      "source": "U.S. Government Publishing Office",
-      "url": "https://www.govinfo.gov/app/details/BILLS-119s5178is"
+      "publisher": "GovInfo",
+      "title": "S. 5178 bill status (BILLSTATUS XML)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s5178.xml"
+    },
+    {
+      "date": "undated",
+      "kind": "primary",
+      "publisher": "House Committee on Small Business",
+      "title": "IMPROVE the SBA Act, House Small Business Committee page",
+      "url": "https://smallbusiness.house.gov/legislation/improve-the-sba-act.htm"
+    }
+  ],
+  "stage": "proposed",
+  "status_summary": "H.R. 421, the Small Business Regulatory Flexibility Improvements Act, introduced 2025-01-15 and referred to the House Judiciary, Small Business and Oversight committees (the Judiciary Committee ordered it reported 13 to 12 on 2025-06-10, with no later action recorded), would replace the panel provisions of 5 U.S.C. 609 so that any agency, not only the currently covered agencies, must notify the Chief Counsel for Advocacy before proposing a rule with a significant small business impact, and it adds judicial review and a first-time paperwork fine waiver. A Senate bill of the same name, S. 5178, was introduced 2026-07-30 and referred to the Homeland Security and Governmental Affairs Committee. No 119th Congress bill titled the IMPROVE the SBA Act and no Administration statement supporting either measure was found.",
+  "timeline": [
+    {
+      "date": "2025-01-15",
+      "event": "H.R. 421, the Small Business Regulatory Flexibility Improvements Act (Representative Cline), was introduced and referred to the Judiciary, Oversight and Government Reform, and Small Business committees; it would extend the pre-proposal panel process under 5 U.S.C. 609 to agencies generally.",
+      "kind": "primary",
+      "source": "GovInfo, BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr421.xml"
+    },
+    {
+      "date": "2025-06-10",
+      "event": "The House Judiciary Committee held a markup of H.R. 421 and ordered it reported in the nature of a substitute by a recorded vote of 13 to 12.",
+      "kind": "primary",
+      "source": "GovInfo, BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr421.xml"
+    },
+    {
+      "date": "2026-07-30",
+      "event": "S. 5178, the Small Business Regulatory Flexibility Improvements Act (Senator Rick Scott), was introduced and referred to the Senate Homeland Security and Governmental Affairs Committee.",
+      "kind": "primary",
+      "source": "GovInfo, BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s5178.xml"
     }
   ],
   "title": "Support the IMPROVE the SBA Act and extend SBREFA review panels to all federal agencies",
   "tracked": true,
-  "uncertainties": "The IMPROVE the SBA Act found is H.R. 7628 of the 117th Congress, described from a third-party tracker with no printed date; no 119th Congress counterpart was found, but congress.gov was not searchable. Committee or floor action on H.R. 421 and S. 5178 was not checked beyond the GovInfo versions available; S. 5178 text was not read. The Small Business Regulatory Flexibility Improvements Act is also named separately in the chapter (p. 758) for broader analysis and paperwork fine waivers; the Regulatory Flexibility Act amendments and Office of Advocacy budget are tracked in c25-04. The chapter asks the Administration to support these bills; no Administration statement was searched for in depth.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Bill status for H.R. 421 and S. 5178 was read from the GovInfo BILLSTATUS XML: H.R. 421 shows Judiciary markup and an order to be reported on 2025-06-10 (13 to 12) and nothing later; S. 5178 shows introduction and referral only. The bill texts were not re-read in this lift (earlier passes read H.R. 421). The IMPROVE the SBA Act found is H.R. 7628 of the 117th Congress, described from a third-party tracker; a House Small Business Committee page on the measure carries no Congress, bill number or date, and a search found no 119th Congress bill of that title, but congress.gov could not be searched. The Small Business Regulatory Flexibility Improvements Act is also named separately in the chapter (p. 758); the Regulatory Flexibility Act amendments and Office of Advocacy budget are tracked in c25-04. The chapter asks the Administration to support these bills; no Administration statement was searched for in depth.",
+  "updated_at": "2026-10-16"
 }

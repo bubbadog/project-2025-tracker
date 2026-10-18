@@ -5,9 +5,9 @@
     "No announced review found"
   ],
   "chapter": "12",
-  "confidence": 72,
+  "confidence": 70,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; the law and section number were confirmed on GovInfo, but the amendment content rests on a third-party code compilation and absence of the other reviews on a limited search.",
+  "confidence_reason": "Chapter text at pages 399 and 400 checked; Public Law 119-60 was confirmed on GovInfo by number and date, but section 1631's content was read only through the U.S. Code amendment notes on law.cornell.edu, a partly primary route, and the absence of the laboratory and Naval Reactors reviews rests on a limited search.",
   "durability": {
     "level": "high",
     "why": "The Nuclear Weapons Council change is in statute; it can be changed only by later legislation."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Reviewer confirmed section 1631 of Public Law 119-60 through the U.S. Code amendment notes on law.cornell.edu and the law's table of contents on govinfo.gov, updated the summary wording, and set confidence from 72 to 70 with the stage unchanged at in_progress."
     }
   ],
   "id": "c12-32",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-17",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -57,32 +61,30 @@
   "research_agent": "R12",
   "restates_ids": [],
   "review": {
+    "document_reread": {
+      "citation": "Pub. L. 119-60 (S. 1071), section 1631, 2025-12-18, amending 10 U.S.C. 179",
+      "note": "Read via the U.S. Code amendment notes (partly primary). Section 1631(1) to (4) adds the primary-mechanism sentence in (a), strikes the staff paragraph in (c)(3), adds an oversight duty and rewrites duties in (d), and rewrites the (f)(1) annual review; section 3111(c) updates cross-references. The section concerns the Council only. The GovInfo HTML was fetched to its end (127,913 characters as rendered) and contains only the table of contents and early titles.",
+      "result": "supports",
+      "url": "https://www.law.cornell.edu/uscode/text/10/179"
+    },
     "flags": [
-      "Timeline URL moved from the code compilation to the GovInfo law text; the compilation remains a source for the amendment details.",
-      "Judgment call: proposed would also be defensible, since the Council change came through legislation rather than the review the Mandate asks for and two of the three reviews show no action; in_progress 30 is kept because one element is enacted law."
+      "Status summary now cites the U.S. Code notes rather than a commercial code compilation and mentions the struck staff paragraph",
+      "Confidence held at medium: the only reading of section 1631 content is through a partly primary route",
+      "Stage judgment: in_progress 30 kept because one of three elements is enacted in law; proposed would be defensible since the Mandate asked for executive reviews"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 399 to 400 ask for a Director of Naval Reactors review of new Navy, DHS and Maritime Administration construction programs with possible extension of Naval Reactors authority, a review of non-national-security work at Los Alamos, Lawrence Livermore and Sandia to identify divestments, and a review of the Nuclear Weapons Council to refocus it on comprehensive oversight of DOE and DOD nuclear weapons policy and requirements.",
+    "mandate_check": "ok",
+    "mandate_note": "Pages 399 and 400 ask for a Director of Naval Reactors review of new Navy, DHS and MARAD nuclear construction programs with possible extension of that authority, a review of non-security work at Los Alamos, Lawrence Livermore and Sandia to identify divestments, and a review refocusing the Nuclear Weapons Council on comprehensive oversight; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-E",
     "source_checks": [
       {
-        "note": "GovInfo HTML confirms Public Law 119-60, S. 1071, 2025-12-18 and section 1631 title in the table of contents; section text cut off (checked 2026-10-15).",
+        "note": "Law number, S. 1071, date and section 1631 title confirmed in the table of contents; section text not present in the rendered page.",
         "result": "partial",
         "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
-      },
-      {
-        "note": "Code compilation shows 10 U.S.C. 179 amendments by section 1631: primary mechanism sentence, new oversight paragraph, expanded plan and budget review (checked 2026-10-15).",
-        "result": "supports",
-        "url": "https://law.counselstack.com/usc/10/179"
-      },
-      {
-        "note": "CRS of 2026-07-14: Naval Reactors FY2027 request $2.39 billion, up 12 percent; no mention of Council changes or lab portfolio reviews (checked 2026-10-15).",
-        "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2026-07-14_R48946_309ced8105a2067cbcc52bbc22d79cc1b0a714f1.html"
       }
-    ]
+    ],
+    "stage_change_reason": "No change: one of three requested items (the Council refocus) is reflected in enacted law, while the laboratory and Naval Reactors reviews show no action, which fits formally underway and partly operative; in_progress 30 kept within band."
   },
   "significance": {
     "B": 2,
@@ -147,10 +149,17 @@
       "publisher": "Congressional Research Service",
       "title": "NNSA FY2027 Budget and Policy Issues: In Brief (CRS R48946)",
       "url": "https://www.everycrsreport.com/files/2026-07-14_R48946_309ced8105a2067cbcc52bbc22d79cc1b0a714f1.html"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "primary",
+      "publisher": "Cornell Law School Legal Information Institute (U.S. Code notes)",
+      "title": "10 U.S.C. 179, Nuclear Weapons Council, with Pub. L. 119-60 amendment notes",
+      "url": "https://www.law.cornell.edu/uscode/text/10/179"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The FY2026 National Defense Authorization Act, Public Law 119-60 of 2025-12-18, includes section 1631, Adjustment to responsibilities of Nuclear Weapons Council. Per a code compilation, the section makes the Council the primary mechanism for integrating nuclear deterrence activities across DOD and DOE and widens its oversight and plan and budget review roles, in line with the Mandate's call to refocus the Council. No review of the three weapons laboratories' non-security portfolios, or of Navy, Homeland Security and Maritime Administration nuclear construction programs by the Director of Naval Reactors, was found. A CRS report of 2026-07-14 puts the FY2027 Naval Reactors request at $2.39 billion, 12 percent above the FY2026 enacted level.",
+  "status_summary": "The FY2026 National Defense Authorization Act, Public Law 119-60 of 2025-12-18, includes section 1631, Adjustment to responsibilities of Nuclear Weapons Council. Per the U.S. Code amendment notes for 10 U.S.C. 179, the section makes the Council the primary mechanism for integrating nuclear deterrence activities across DOD and DOE, adds an oversight duty and rewrites its duties and annual plan and budget review, and strikes the Council staff paragraph, in line with the Mandate's call to refocus the Council. No review of the three weapons laboratories' non-security portfolios, or of Navy, Homeland Security and Maritime Administration nuclear construction programs by the Director of Naval Reactors, was found. A CRS report of 2026-07-14 puts the FY2027 Naval Reactors request at $2.39 billion, 12 percent above the FY2026 enacted level.",
   "timeline": [
     {
       "date": "2025-12-18",
@@ -162,6 +171,6 @@
   ],
   "title": "Review NNSA lab non-security work, the Nuclear Weapons Council and nuclear construction",
   "tracked": true,
-  "uncertainties": "The GovInfo HTML of Public Law 119-60 confirms the law number, S. 1071, the 2025-12-18 date and section 1631 in its table of contents, but the page was cut short before the section text, so the content of the amendments rests on a third-party code compilation that cites section 1631. A truncated table of contents is not evidence that other provisions on laboratories or Naval Reactors are absent; the NNSA sections (3101 onward) were not read. Absence of a lab or Naval Reactors review is from a limited search. The other Mandate items on pages 399 to 400 are tracked in c12-10 and c12-11.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The GovInfo HTML of Public Law 119-60 confirms the law number, S. 1071, the 2025-12-18 date and section 1631 in its table of contents, but the page as fetched ends before the section text, so the content of the amendments rests on the U.S. Code amendment notes for 10 U.S.C. 179 on law.cornell.edu (a partly primary route) and a third-party code compilation; the enrolled section text was not read. A truncated table of contents is not evidence that other provisions on laboratories or Naval Reactors are absent; the NNSA sections (3101 onward) were not read. Absence of a lab or Naval Reactors review is from a limited search. The other Mandate items on pages 399 to 400 are tracked in c12-10 and c12-11.",
+  "updated_at": "2026-10-17"
 }

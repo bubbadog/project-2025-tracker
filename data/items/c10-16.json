@@ -6,9 +6,9 @@
     "The December 2024 vacatur of the 2020 rule returned APHIS to its older regulations pending a new rule."
   ],
   "chapter": "10",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; the APHIS rules and notices, the request for information and the USDA statement were fetched on primary hosts; the labeling court order and the Mexico amendment rest on law-firm summaries.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "The stage-deciding APHIS notice of 2025-08-18 and the 2026-05-15 request for information were fetched and read on federalregister.gov, and the MON 87429 determination's docket was matched through the Federal Register API. The labeling vacatur rests on a law-firm alert and the Mexico amendment on a law-firm article, neither of which decides the stage.",
   "court_status": {
     "basis": "Latest court event: in Natural Grocers v. Rollins the district court ordered three provisions of the bioengineered food disclosure rule vacated effective 2028-01-01. This concerns the existing disclosure rule, not an action on the recommendation, and does not block the approvals or trade parts.",
     "date": "2026-08-03",
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: APHIS withdrawal notice and RFI read on primary pages; in_progress 25 kept and confidence raised to high."
     }
   ],
   "id": "c10-16",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -60,15 +64,17 @@
   "research_agent": "N10",
   "review": {
     "flags": [
-      "judgment call: in_progress 25 kept on the strength of the operative 2025 change ending NEPA analyses for petition reviews, found in review; without it the record would be proposed 10 to 15",
-      "court_status kept as vacated but limited to the disclosure rule; it is not a block on the recommendation",
-      "Mexico article publisher and date corrected; Haynes Boone alert date corrected to 2026-08-26"
+      "Timeline text for 2025-08-18 and 2026-08-05 now names the withdrawn petitions and the shared docket, confirmed on the primary pages.",
+      "Uncertainties consolidated; treated as changed content although the draft marked changed false.",
+      "Confidence raised to high 80 on reading the stage-deciding notice; alternative medium 75 because the labeling element rests on a law-firm alert.",
+      "Stage in_progress 25 kept; proposed 15 remains the alternative if the NEPA change is treated as a USDA-wide procedural change rather than streamlining of biotech approvals.",
+      "court_status kept as vacated, limited to the disclosure rule (Natural Grocers v. Rollins, 2026-08-03)."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 307 confirmed: three bullets on countering scare tactics and removing approval barriers, repealing the federal labeling law with preemption kept, and using all tools with USTR against foreign barriers such as Mexico's planned GE corn import ban.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9b",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V3",
     "source_checks": [
       {
         "note": "2025-02-06 statement; USDA to work with USTR to monitor compliance.",
@@ -91,19 +97,9 @@
         "url": "https://www.everycrsreport.com/files/2026-03-03_IF11573_ab4fde42b6517331f49539d99e9c3eba7e13987d.html"
       },
       {
-        "note": "RFI on potential risk-based deregulation, comments to 2026-06-15, later extended.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/05/15/2026-09833/request-for-information-on-modified-organisms-subject-to-the-plant-protection-act"
-      },
-      {
         "note": "Extension to 2026-06-30 (from Federal Register API abstract).",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/06/09/2026-11544/request-for-information-on-modified-organisms-subject-to-the-plant-protection-act"
-      },
-      {
-        "note": "APHIS stopped NEPA analyses for petition reviews from 2025-07-09; two EIS notices withdrawn.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/08/18/2025-15702/petitions-seeking-determination-of-nonregulated-status-notice-of-intent-of-withdrawal-of-notices-of"
       },
       {
         "note": "From Federal Register API listing: MON 87429 maize no longer regulated, 2026-08-05.",
@@ -114,6 +110,21 @@
         "note": "Natural Grocers v. Rollins, order 2026-08-03, alert dated 2026-08-26; three provisions vacated effective 2028-01-01; USDA sought 2029.",
         "result": "supports",
         "url": "https://www.haynesboone.com/news/alerts/court-orders-january-2028-deadline-for-bioengineered-food-disclosure-rule-changes"
+      },
+      {
+        "note": "Withdraws EIS notices for maize (APHIS-2020-0021) and Darling 58 chestnut (APHIS-2020-0030); no NEPA analysis for petition reviews from 2025-07-09; basis USDA interim final rule of 2025-07-03 (90 FR 29632). Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/08/18/2025-15702/petitions-seeking-determination-of-nonregulated-status-notice-of-intent-of-withdrawal-of-notices-of"
+      },
+      {
+        "note": "USDA Office of the Secretary RFI, 91 FR 27868, docket USDA-2026-0133; input for potential risk-based deregulation; comments due 2026-06-15; no rule proposed. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/05/15/2026-09833/request-for-information-on-modified-organisms-subject-to-the-plant-protection-act"
+      },
+      {
+        "note": "91 FR 50513, 2026-08-05; MON 87429 maize no longer regulated; docket APHIS-2020-0021, matching the withdrawn EIS notice. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-15876.json"
       }
     ]
   },
@@ -237,7 +248,7 @@
     },
     {
       "date": "2025-08-18",
-      "event": "APHIS published a notice withdrawing two notices of intent to prepare environmental impact statements, stating that since a 2025-07-09 program update it no longer prepares NEPA analyses for reviews of petitions for nonregulated status.",
+      "event": "APHIS published a notice withdrawing two notices of intent to prepare environmental impact statements (for a multi-herbicide-resistant maize and the Darling 58 American chestnut), stating that since a 2025-07-09 program update it no longer prepares NEPA analyses for reviews of petitions for nonregulated status, following USDA's 2025-07-03 revision of its NEPA regulations.",
       "kind": "primary",
       "source": "Federal Register (APHIS)",
       "url": "https://www.federalregister.gov/documents/2025/08/18/2025-15702/petitions-seeking-determination-of-nonregulated-status-notice-of-intent-of-withdrawal-of-notices-of"
@@ -272,7 +283,7 @@
     },
     {
       "date": "2026-08-05",
-      "event": "APHIS announced that MON 87429 maize, one of the two petitions whose environmental impact statements were withdrawn, is no longer regulated.",
+      "event": "APHIS announced that MON 87429 maize (docket APHIS-2020-0021, the maize whose environmental impact statement notice was withdrawn) is no longer regulated.",
       "kind": "primary",
       "source": "Federal Register (APHIS)",
       "url": "https://www.federalregister.gov/documents/2026/08/05/2026-15876/bayermonsanto-determination-of-nonregulated-status-for-mon-87429-maize-genetically-engineered-for"
@@ -280,6 +291,6 @@
   ],
   "title": "Counter biotech opposition, repeal federal bioengineered labeling, press trade barriers",
   "tracked": true,
-  "uncertainties": "No bill repealing the National Bioengineered Food Disclosure Standard was found by the researcher, and no USDA statement seeking repeal was found; the review did not search further. The 2026-08-03 order is known from a law-firm alert dated 2026-08-26; the order itself was not read. The 2026 Unified Agenda lists a disclosure rulemaking tied to the court remand, read only as an API abstract. The Mexico amendment details come from a law-firm article dated 2025-04-04, which mentions a USDA attache report calling its scope ambiguous; a formal US response after 2025-03-17 and the 2026 USMCA review's treatment of biotech were not found. The CRS biotechnology report links a 2025-10-31 Ninth Circuit opinion (case 22-16770); that case number matches the labeling litigation rather than the 2020 rule vacatur, which the Federal Register dates to 2024-12-02 in National Family Farm Coalition v. Vilsack. The interim final rule titled Regaining Lost Efficiencies for Products of Biotechnology appears only as a CRS account of a regulatory agenda entry. The NEPA change follows a USDA-wide July 2025 revision of its NEPA rules rather than a biotech-specific policy. EPA, FDA and Make America Healthy Again report positions on biotechnology were not researched.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "No bill repealing the National Bioengineered Food Disclosure Standard was found by the researcher, and no USDA statement seeking repeal was found; the review did not search further. The 2026-08-03 order is known from a law-firm alert dated 2026-08-26; the order itself was not read. The 2026 Unified Agenda lists a disclosure rulemaking tied to the court remand, read only as an API abstract. The Mexico amendment details come from a law-firm article dated 2025-04-04, which mentions a USDA attache report calling its scope ambiguous; a formal US response after 2025-03-17 and the 2026 USMCA review's treatment of biotech were not found. The CRS biotechnology report links a 2025-10-31 Ninth Circuit opinion (case 22-16770); that case number matches the labeling litigation rather than the 2020 rule vacatur, which the Federal Register dates to 2024-12-02 in National Family Farm Coalition v. Vilsack. The interim final rule titled Regaining Lost Efficiencies for Products of Biotechnology appears only as a CRS account of a regulatory agenda entry. The NEPA change follows a USDA-wide July 2025 revision of its NEPA rules rather than a biotech-specific policy. EPA, FDA and Make America Healthy Again report positions on biotechnology were not researched. Federal Register documents 2025-10797, 2025-15702, 2026-09833, 2026-11544 and 2026-15876 were confirmed through the Federal Register API or pages; the 2025-08-18 notice and the 2026-05-15 request for information were read on federalregister.gov on 2026-10-18. The notice withdraws the notices of intent for a multi-herbicide-resistant maize (docket APHIS-2020-0021) and the Darling 58 American chestnut and grounds the change in USDA's 2025-07-03 interim final rule revising its NEPA regulations; the 2026-08-05 MON 87429 determination carries the same docket number. The request for information was issued by the USDA Office of the Secretary and is listed in Federal Register metadata as a proposed rule type although it is a request for information. The Natural Grocers v. Rollins order and the disclosure rule documents at ams.usda.gov were not read; the vacatur rests on a law-firm alert.",
+  "updated_at": "2026-10-18"
 }

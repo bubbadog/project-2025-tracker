@@ -4,9 +4,9 @@
     "The proposal opposed was a budget proposal, not an enacted rule, so there is no single act of opposition to record"
   ],
   "chapter": "22",
-  "confidence": 60,
+  "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; the IRS primary statement and the law's table of contents read; section effects rest partly on a trade publication and the match to the Mandate is partial.",
+  "confidence_reason": "Chapter pages 699 and 701 checked; IRS release IR-2025-107 was fetched and read in this review and supports the Form 1099-K change, and section 70433 of Public Law 119-21 was read through the U.S. Code text and amendment notes for 26 U.S.C. 6041 on Cornell LII, a partly primary fallback because the statute text on govinfo.gov is truncated.",
   "durability": {
     "level": "medium",
     "why": "Statutory thresholds can be changed by a later Congress."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review (primary-source lift): IR-2025-107 on irs.gov and the 26 U.S.C. 6041 text and amendment notes on law.cornell.edu were read; section 70433 threshold and effective date confirmed; stage in_progress 50 kept; confidence 76."
     }
   ],
   "id": "c22-12",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -53,33 +57,34 @@
   "research_agent": "N22",
   "restates_ids": [],
   "review": {
+    "document_reread": {
+      "citation": "Public Law 119-21, section 70433 (amending 26 U.S.C. 6041), approved 2025-07-04, read through the U.S. Code text and amendment notes; IRS news release IR-2025-107 (2025-10-23)",
+      "note": "Cornell LII (accepted partly primary fallback because the govinfo.gov HTML of the law ends before Title VII): 26 U.S.C. 6041(a) threshold now $2,000, raised from $600 by sec. 70433(a); sec. 70433(b) adds subsection (h) indexing for calendar years after 2026 from a 2025 base; amendments apply to payments made after 2025-12-31 per sec. 70433(f). IR-2025-107 on irs.gov was also read and states the law retroactively reinstated the pre-2021 Form 1099-K threshold (more than $20,000 and more than 200 transactions); it does not mention Forms 1099-NEC or 1099-MISC.",
+      "result": "partial",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6041"
+    },
     "flags": [
-      "judgment call: moved from implemented 70 to in_progress 50 because the enacted threshold changes address the burden item only in part and the restored 1099-K threshold is not what the Mandate opposed; implemented (65) is defensible if the account reporting proposal is treated as defeated in substance",
-      "Title and proposal reworded",
-      "Added Section 70433 on the payee reporting threshold"
+      "Researcher status edit accepted: the threshold sentence now rests on the U.S. Code text rather than the trade publication; the trade publication stays as a source for the form-level effect.",
+      "Cornell LII entered with kind primary per the accepted fallback; it is a mirror of the official U.S. Code."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 699: oppose the proposed comprehensive financial account reporting regime for accounts above $600 with revised Forms 1099-K from banks. Page 701: Congress and Treasury should seriously review the information reporting regime and reduce the burden, especially on small businesses. The title and proposal were corrected because the Mandate does not ask to reverse the 2021 Form 1099-K threshold as such.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed page 699 says the proposed comprehensive financial account reporting regime for accounts over $600, with revised Forms 1099-K filed by banks, should be unequivocally opposed; page 701 says Congress and Treasury must seriously review the information reporting regime and reduce the burden, especially on small businesses. The proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y22d",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-3",
     "source_checks": [
       {
-        "note": "Approved 2025-07-04. Table of contents confirms Sec. 70204 (Trump accounts and contribution pilot program), Sec. 70331 (extension and modification of base erosion minimum tax amount), Sec. 70432 (repeal of revision to de minimis rules for third party network transactions), Sec. 70433 (increase in threshold for information reporting on certain payees) and Sec. 70601 (modification and extension of limitation on excess business losses). The HTML is truncated at about 130,000 characters, so section text was not read and a missing table entry is not evidence of absence.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+        "note": "Threshold $2,000 (from $600) by sec. 70433(a); indexing after 2026 by sec. 70433(b); applies to payments after 2025-12-31 per sec. 70433(f).",
+        "result": "supports",
+        "url": "https://www.law.cornell.edu/uscode/text/26/6041"
       },
       {
-        "note": "IR-2025-107, 2025-10-23; retroactive reinstatement of the pre-2021 Form 1099-K threshold.",
+        "note": "IR-2025-107, 2025-10-23; Form 1099-K threshold more than $20,000 and more than 200 transactions, retroactively reinstated; no mention of 1099-NEC or 1099-MISC.",
         "result": "supports",
         "url": "https://irs.gov/newsroom/irs-issues-faqs-on-form-1099-k-threshold-under-the-one-big-beautiful-bill-dollar-limit-reverts-to-20000"
-      },
-      {
-        "note": "Dated 2025-07-30; 1099-K at $20,000 and 200 transactions retroactively; 1099-NEC and 1099-MISC threshold $600 to $2,000 for 2026, indexed from 2027.",
-        "result": "supports",
-        "url": "https://cpapracticeadvisor.com/2025/07/30/one-big-beautiful-bill-act-changes-1099-thresholds/165863/"
       }
-    ]
+    ],
+    "stage_change_reason": "Enacted threshold increases are operative burden relief on parts of the reporting regime, but no broader review of information reporting was found and the restored Form 1099-K threshold is distinct from the account reporting proposal the text opposes; in_progress 50 stays defensible, with implemented 65 a possible alternative reading."
   },
   "significance": {
     "B": 1,
@@ -130,10 +135,17 @@
       "publisher": "CPA Practice Advisor",
       "title": "One Big Beautiful Bill Act Changes 1099 Thresholds",
       "url": "https://cpapracticeadvisor.com/2025/07/30/one-big-beautiful-bill-act-changes-1099-thresholds/165863/"
+    },
+    {
+      "date": "2025-07-04",
+      "kind": "primary",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "title": "26 U.S.C. 6041, Information at source (with amendment notes for Pub. L. 119-21, sec. 70433)",
+      "url": "https://www.law.cornell.edu/uscode/text/26/6041"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "No action reviving the comprehensive account reporting proposal was found. Public Law 119-21, approved 2025-07-04, lists Section 70432, repealing the 2021 revision to the de minimis rules for third party network transactions, and Section 70433, raising the payee information reporting threshold. The IRS stated on 2025-10-23 that the law retroactively reinstated the earlier Form 1099-K threshold of more than $20,000 and more than 200 transactions, and a trade publication reports the Form 1099-NEC and 1099-MISC threshold rises from $600 to $2,000 for 2026. These reduce specific reporting burdens; no broader review of the information reporting regime was found.",
+  "status_summary": "No action reviving the comprehensive account reporting proposal was found. Public Law 119-21, approved 2025-07-04, lists Section 70432, repealing the 2021 revision to the de minimis rules for third party network transactions, and Section 70433, raising the payee information reporting threshold. The IRS stated on 2025-10-23 that the law retroactively reinstated the earlier Form 1099-K threshold of more than $20,000 and more than 200 transactions, and Section 70433 amends the payee reporting threshold in the tax code from $600 to $2,000 for payments made after 2025-12-31, with cost-of-living indexing for calendar years after 2026, as shown in the U.S. Code amendment notes. These reduce specific reporting burdens; no broader review of the information reporting regime was found.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -152,6 +164,6 @@
   ],
   "title": "Oppose comprehensive $600 bank account reporting and cut information reporting burdens",
   "tracked": true,
-  "uncertainties": "The Form 1099-K threshold that the law restored was set by a 2021 statute and is distinct from the account reporting proposal the Mandate opposes; the Mandate mentions Form 1099-K only as part of that proposal, so the threshold changes are treated as partial progress on the burden-reduction item. Section text was not read because the GovInfo HTML is truncated; contents come from the table of contents, the IRS FAQ and a trade publication. Whether any later budget request revived the account reporting proposal was not searched.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The Form 1099-K threshold that the law restored was set by a 2021 statute and is distinct from the account reporting proposal the Mandate opposes; the Mandate mentions Form 1099-K only as part of that proposal, so the threshold changes are treated as partial progress on the burden-reduction item. The govinfo.gov HTML of Public Law 119-21 is cut off before Title VII, so sections 70432 and 70433 were confirmed there only by table of contents titles; the $2,000 threshold, its effective date and indexing come from the Cornell LII U.S. Code text and amendment notes for 26 U.S.C. 6041. The text of section 70432 was not read. The form-level effect on Forms 1099-NEC and 1099-MISC rests on a trade publication and was not verified on irs.gov. Whether any later budget request revived the account reporting proposal was not searched.",
+  "updated_at": "2026-10-16"
 }

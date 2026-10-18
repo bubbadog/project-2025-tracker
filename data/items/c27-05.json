@@ -6,9 +6,9 @@
     "A later Commission could revise an interpretation or proposal"
   ],
   "chapter": "27",
-  "confidence": 74,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked; the Senate roll call and the CFTC notice were read on primary pages, and the joint interpretation and SEC proposal were read in earlier checks through summarizing fetches rather than in full.",
+  "confidence": 82,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter page 835 checked; the stage-deciding joint SEC and CFTC release at 91 FR 13714 (Doc. 2026-05635) was fetched and read in this review to most of its length and supports a parallel in_progress reading; the Senate roll call and CFTC notice were read in the prior review, and the House vote rests on a news report.",
   "durability": {
     "level": "low",
     "why": "An interpretive release and a proposed rule can be revised by a later Commission, and the statutory definitions are unchanged."
@@ -33,10 +33,18 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to new layer 3 record(s) c27-13 from the fuller reading of chapters 24 to 27."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review (primary-source lift): the joint release at 91 FR 13714 was re-read on federalregister.gov and supports in_progress 40; release labeling added and one timeline event reworded; confidence raised to 82."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Cross-reference added to new layer 3 record c27-19 written in the second enumeration pass; no change to the status."
     }
   ],
   "id": "c27-05",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-16",
   "layer": 2,
   "match": "parallel",
   "mechanism": "mixed",
@@ -47,7 +55,8 @@
   "progress": 40,
   "proposal": "The Mandate says the SEC and CFTC have handled digital assets mainly through enforcement and recommends a joint regulation under which a holder of a digital asset is not treated as party to an investment contract unless the holder is entitled to a share of enterprise earnings, a defined payment flow, or claims on assets in liquidation; otherwise the asset would be a CFTC-regulated commodity. It also recommends amending the statutory definitions of commodity and security, and, if regulators do not act, that Congress legislate.",
   "related_ids": [
-    "c27-13"
+    "c27-13",
+    "c27-19"
   ],
   "remaining": [
     "A joint SEC-CFTC regulation (not an interpretation) setting the profit-entitlement test the Mandate describes; the SEC offering rule is still a proposal",
@@ -58,27 +67,30 @@
   "requires_congress": "partial",
   "research_agent": "D9",
   "review": {
+    "document_reread": {
+      "citation": "91 FR 13714, FR Doc. 2026-05635, SEC and CFTC joint release (final rule; interpretation; guidance), Release Nos. 33-11412 and 34-105020, published and effective 2026-03-23",
+      "note": "Read to character 100,000 of about 124,000: joint SEC and CFTC release typed as a rule, SEC interpretation and CFTC guidance; five categories (digital commodities, collectibles, tools, stablecoins, digital securities), the first three not securities in themselves though they can be sold under an investment contract; it states Howey remains binding and does not replace it, and no profits, payment-flow or liquidation-rights test appears in the part read; the CFTC states some non-security crypto assets could meet the commodity definition.",
+      "result": "supports",
+      "url": "https://www.federalregister.gov/documents/2026/03/23/2026-05635/application-of-the-federal-securities-laws-to-certain-types-of-crypto-assets-and-certain"
+    },
     "flags": [
-      "Dropped the SEC custody proposal event (outside the match, as the researcher suggested); kept it in uncertainties",
-      "Removed the unsupported 'complementary to the SEC proposal' wording and the Senate calendar clause, which rested on a source not cited in the record"
+      "Researcher status edit accepted.",
+      "Timeline event of 2025-07-01 reworded so the event is the House action, not the report.",
+      "Progress 40 kept: the text asks regulators first, so the Congress-only low-end rule does not bind; a lower figure is defensible because the operative step is an interpretation rather than the test specified."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 835 asks the SEC and CFTC for a joint regulation using an earnings, payment-flow or liquidation-rights test, otherwise treating the asset as a CFTC commodity, amended definitions of commodity and security, and legislation if regulators do not act; the paraphrase fits.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed page 835 asks the SEC and CFTC for a joint regulation under which a digital asset holder is not in an investment contract unless entitled to earnings, a defined payment flow or liquidation claims, otherwise treating the asset as a CFTC commodity, plus amended commodity and security definitions, and legislation if regulators do not act; the proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-1",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-3",
     "source_checks": [
       {
-        "note": "Vote 234 on 2026-09-15: cloture on the motion to proceed to H.R. 3633 rejected 49-50, one not voting.",
+        "note": "91 FR 13714-13733; Doc. 2026-05635; SEC and CFTC; rule (final rule; interpretation; guidance); published and effective 2026-03-23; five categories; Howey kept as binding; CFTC commodity statement.",
         "result": "supports",
-        "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00234.htm"
-      },
-      {
-        "note": "CFTC advance notice published 2026-10-13, comments due 2026-12-14, on rules under CEA section 2(c)(2)(D); the abstract does not describe it as complementary to the SEC proposal.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-20888.json"
+        "url": "https://www.federalregister.gov/documents/2026/03/23/2026-05635/application-of-the-federal-securities-laws-to-certain-types-of-crypto-assets-and-certain"
       }
-    ]
+    ],
+    "stage_change_reason": "A joint SEC and CFTC release is in effect and moves in the same direction, but keeps Howey rather than adopting the Mandate's test; the SEC and CFTC rulemakings are proposals and the Senate rejected cloture on H.R. 3633, so no definition change exists. Because the text asks regulators first and Congress only as a fallback, an operative joint agency step supports mid in_progress rather than the low end."
   },
   "significance": {
     "B": 2,
@@ -87,6 +99,24 @@
     "M": 2,
     "R": 2,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 2,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 2,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "A joint test for digital assets decides which regulator and rules apply to holders and issuers.",
     "version": "2026-10-08",
@@ -151,7 +181,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The agencies have moved in the same general direction through a joint interpretation and proposed rules, not the joint regulation and statutory definition changes the Mandate specifies. The SEC and CFTC issued a joint interpretation, published and effective 2026-03-23, that sorts crypto assets into five categories, says digital commodities, digital collectibles and digital tools are not securities in themselves (though they can be sold under an investment contract), describes when an investment contract ends, and states that the Howey test remains binding, so it does not adopt the Mandate's test based on entitlement to profits, payment flows or liquidation claims; the CFTC part says some non-security crypto assets could meet the Commodity Exchange Act definition of commodity. The SEC proposed Regulation Crypto Assets on 2026-08-21, with a $5 million four-year exemption, a $75 million annual exemption and a conditional safe harbor from the investment contract prong, with comments due 2026-10-20, and the CFTC published an advance notice on crypto asset transactions and markets on 2026-10-13, with comments due 2026-12-14. In Congress, the Senate rejected cloture 49-50 on 2026-09-15 (vote 234) on the motion to proceed to H.R. 3633, which Crypto Briefing reports passed the House 294-134 in July 2025, and the GENIUS Act (P.L. 119-27, 2025-07-18) covers payment stablecoins only.",
+  "status_summary": "The agencies have moved in the same general direction through a joint interpretation and proposed rules, not the joint regulation and statutory definition changes the Mandate specifies. The SEC and CFTC issued a joint release labeled a final rule, interpretation and guidance (91 FR 13714), in which the SEC interprets the security definition and the CFTC provides guidance, published and effective 2026-03-23; it sorts crypto assets into five categories, says digital commodities, digital collectibles and digital tools are not securities in themselves (though they can be sold under an investment contract), describes when an investment contract ends, and states that the Howey test remains binding, so it does not adopt the Mandate's test based on entitlement to profits, payment flows or liquidation claims; the CFTC part says some non-security crypto assets could meet the Commodity Exchange Act definition of commodity. The SEC proposed Regulation Crypto Assets on 2026-08-21, with a $5 million four-year exemption, a $75 million annual exemption and a conditional safe harbor from the investment contract prong, with comments due 2026-10-20, and the CFTC published an advance notice on crypto asset transactions and markets on 2026-10-13, with comments due 2026-12-14. In Congress, the Senate rejected cloture 49-50 on 2026-09-15 (vote 234) on the motion to proceed to H.R. 3633, which Crypto Briefing reports passed the House 294-134 in July 2025, and the GENIUS Act (P.L. 119-27, 2025-07-18) covers payment stablecoins only.",
   "timeline": [
     {
       "date": "2025-01-23",
@@ -162,7 +192,7 @@
     },
     {
       "date": "2025-07-01",
-      "event": "Crypto Briefing reports that H.R. 3633 passed the House 294-134 in July 2025 (month only is given, so the first of the month is used).",
+      "event": "The House passes H.R. 3633, 294-134, per Crypto Briefing (only the month, July 2025, is given, so the first of the month is used).",
       "kind": "news",
       "source": "Crypto Briefing",
       "url": "https://cryptobriefing.com/senate-clarity-act-vote-tuesday/"
@@ -205,6 +235,6 @@
   ],
   "title": "Set a joint SEC-CFTC test for when digital assets are securities versus commodities",
   "tracked": true,
-  "uncertainties": "The CFTC notice and the SEC proposal were read through summarizing fetches, not in full; the CFTC abstract does not mention the SEC proposal, so whether the notice describes itself as complementary to it was not confirmed. The Senate roll call page (vote 234, 2026-09-15, 49 yea, 50 nay, 1 not voting) lists the measure by bill number and does not use the CLARITY Act name; the link between H.R. 3633 and that name, Calendar No. 423 and the House 294-134 vote rest on Crypto Briefing and a bitcoin.com article, and congress.gov was blocked so status there was not checked. The Senate list showed no later H.R. 3633 vote through 2026-09-30 (final part of the page unread). The SEC proposal's date appears as 2026-08-21 in the Federal Register page and as 2026-08-18 in the CFTC notice (likely vote date versus publication). Related items not treated as part of this match: the SEC crypto custody proposal (Federal Register 2026-10-06, doc 2026-20466), the SEC order of 2026-09-22 granting temporary exemptive relief for tokenized stocks, and the CFTC 2025-12-16 withdrawal of retail commodity guidance.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The joint release was re-read on federalregister.gov to about character 100,000 of 124,000; the remainder, including the CFTC appendix, was not read. The CFTC notice and the SEC proposal were read through summarizing fetches, not in full; the CFTC abstract does not mention the SEC proposal, so whether the notice describes itself as complementary to it was not confirmed, and the Federal Register types it as a proposed rule while its action line calls it an advance notice. The Senate roll call page (vote 234, 2026-09-15, 49 yea, 50 nay, 1 not voting) lists the measure by bill number and does not use the CLARITY Act name; the link between H.R. 3633 and that name, Calendar No. 423 and the House 294-134 vote rest on Crypto Briefing and a bitcoin.com article, and congress.gov refuses automated fetches so status there was not checked. The Senate list showed no later H.R. 3633 vote through 2026-09-30 (final part of the page unread). The SEC proposal's date appears as 2026-08-21 in the Federal Register page and as 2026-08-18 in the CFTC notice (likely vote date versus publication). Related items not treated as part of this match: the SEC crypto custody proposal (Federal Register 2026-10-06, doc 2026-20466), the SEC order of 2026-09-22 granting temporary exemptive relief for tokenized stocks, and the CFTC 2025-12-16 withdrawal of retail commodity guidance.",
+  "updated_at": "2026-10-16"
 }

@@ -7,9 +7,9 @@
   "chapter": "05",
   "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked; EO 14251 was fetched and read. The TSA litigation status rests on a court-docket tracker and news reports rather than the orders themselves, and the post-May 2026 schedule is unknown.",
+  "confidence_reason": "EO 14251 was confirmed through its Federal Register API record and read earlier in full; the TSA litigation rests on the Civil Rights Litigation Clearinghouse docket tracker (read 2026-10-18) and news reports rather than the court orders, which could not be opened, and the USCIS and FEMA contract cancellations rest on news reports.",
   "court_status": {
-    "basis": "Derived from the latest court event: on 2026-01-15 the court enforced the TSA preliminary injunction against the second determination; the case remained pending in the trial court with deadlines suspended on 2026-05-11.",
+    "basis": "Derived from the latest court events: on 2026-01-15 the court enforced the TSA preliminary injunction against the second determination, and the 2026-05-11 order only suspended the dispositive-motion deadline, so the injunction remains in place while the case is pending in the trial court.",
     "date": "2026-01-15",
     "state": "enjoined",
     "url": "https://clearinghouse.net/case/46218/"
@@ -39,10 +39,14 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to c05-35, c05-34, c05-33 (layer 3 enumeration, chapters 00, 04, 05, 28 and 30)."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Two court events from the Clearinghouse docket confirmed and kept; court_status basis updated; stage in_progress 55 and confidence 74 unchanged."
     }
   ],
   "id": "c05-13",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -72,15 +76,15 @@
   "research_agent": "N05a",
   "review": {
     "flags": [
-      "trial date reworded: 2026-05-11 order suspended deadlines; trial status unknown",
-      "EO 14251 DHS list completed",
-      "August 2025 timeline event moved to the Federal News Network source that was read"
+      "Accepted the two court events added from the Clearinghouse docket (2025-08-13 denial of the first motion to dismiss, ECF 47; 2026-05-11 deadline suspension, ECF 81); both are shown on that page.",
+      "court_status kept enjoined with the basis updated for the 2026-05-11 procedural order; pending is the defensible alternative if the latest docket entry alone decides.",
+      "judgment call: in_progress 55 kept; blocked is defensible for the TSA part only."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 135, 147, 159 and 160 say all DHS unions should be removed for national security reasons, the USCIS union decertified, the TSA workforce deunionized at once, and the Management front office ready to implement an executive order ending component unionization under 5 U.S.C. 7103. The proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
-    "reviewer": "Y7",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V8",
     "source_checks": [
       {
         "note": "EO 14251 signed 2025-03-27; DHS list includes USCIS, ICE, Coast Guard, CISA, FEMA plus Office of the Secretary, OGC, PLCY, Management, S&T, Health Security, Situational Awareness; no TSA or CBP. Summary amended to mention headquarters offices.",
@@ -101,6 +105,16 @@
         "note": "USCIS told unions it would cancel all agreements; FEMA ended agreements after the early August appeals decision; no exact dates.",
         "result": "supports",
         "url": "https://federalnewsnetwork.com/unions/2025/08/draft-here-are-the-agencies-that-have-canceled-collective-bargaining-so-far/"
+      },
+      {
+        "note": "Docket re-read: ECF 47 order denying motion to dismiss dated 2025-08-13; ECF 56 trial set for 2026-09-14; ECF 58 motion to dismiss and dissolve 2025-12-12; ECF 73 order granting emergency motion to enforce 2026-01-15; ECF 81 order of 2026-05-11 suspending the dispositive-motion deadline with a joint status report due 2026-05-22; last entry ECF 81; page updated 2026-07-28. Both added court events confirmed. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://clearinghouse.net/case/46218/"
+      },
+      {
+        "note": "API record: EO 14251 signed 2025-03-27, published 2025-04-03, 90 FR 14553-14557. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2025-05836.json"
       }
     ]
   },
@@ -180,7 +194,7 @@
     },
     {
       "date": "2025-03-27",
-      "event": "EO 14251 signed; for DHS it lists USCIS, ICE, CISA, FEMA, the Coast Guard and several headquarters offices among subdivisions excluded from the federal labor-relations program, and does not list TSA or CBP.",
+      "event": "EO 14251 signed (90 FR 14553, published 2025-04-03); section 2 adds to EO 12171 a list of DHS subdivisions excluded from the federal labor-relations program (pp. 14553-14554): Office of the Secretary, General Counsel, Strategy Policy and Plans, Management Directorate, Science and Technology, Health Security, Situational Awareness, USCIS, ICE, Coast Guard, CISA and FEMA. TSA and CBP are not listed.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/04/03/2025-05836/exclusions-from-federal-labor-management-relations-programs"
@@ -188,6 +202,13 @@
     {
       "date": "2025-06-02",
       "event": "The Western District of Washington (AFGE v. Noem) granted a preliminary injunction barring implementation of the TSA determination.",
+      "kind": "court",
+      "source": "Civil Rights Litigation Clearinghouse",
+      "url": "https://clearinghouse.net/case/46218/"
+    },
+    {
+      "date": "2025-08-13",
+      "event": "The court denied the government's first motion to dismiss in AFGE v. Noem (ECF 47).",
       "kind": "court",
       "source": "Civil Rights Litigation Clearinghouse",
       "url": "https://clearinghouse.net/case/46218/"
@@ -212,10 +233,17 @@
       "kind": "court",
       "source": "Government Executive",
       "url": "https://www.govexec.com/workforce/2026/01/judge-tsa-plainly-violated-court-order-renewed-union-busting-push/410739"
+    },
+    {
+      "date": "2026-05-11",
+      "event": "The court granted a stipulated motion suspending the 2026-05-18 dispositive-motion deadline and ordered a joint status report by 2026-05-22 to reset remaining deadlines; the 2026-09-14 trial date was not shown as reset.",
+      "kind": "court",
+      "source": "Civil Rights Litigation Clearinghouse",
+      "url": "https://clearinghouse.net/case/46218/"
     }
   ],
   "title": "Remove unions across DHS on national security grounds, starting with TSA and USCIS",
   "tracked": true,
-  "uncertainties": "The litigation chronology comes from the Civil Rights Litigation Clearinghouse case page (updated 2026-07-28), whose last docket entry is the 2026-05-11 order suspending the dispositive-motion deadline; whether the 2026-09-14 trial was held or reset, and whether the December 2025 motion to dismiss and dissolve the injunction was decided, was not found, and a search in this review found no later ruling. The August 2025 USCIS and FEMA cancellations are sourced to news reports without exact termination dates, and the court-of-appeals decision they followed is covered in c03-02. A claim in one report that the September 2025 TSA determination cited two executive orders was not checked against a primary document. Whether an FLRA or other formal decertification of the USCIS unit occurred was not found.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The litigation chronology comes from the Civil Rights Litigation Clearinghouse case page (updated 2026-07-28), whose last docket entry is the 2026-05-11 order suspending the dispositive-motion deadline; whether the 2026-09-14 trial was held or reset, and whether the December 2025 motion to dismiss and dissolve the injunction was decided, was not found, and a search in this review found no later ruling. The August 2025 USCIS and FEMA cancellations are sourced to news reports without exact termination dates, and the court-of-appeals decision they followed is covered in c03-02. A claim in one report that the September 2025 TSA determination cited two executive orders was not checked against a primary document. Whether an FLRA or other formal decertification of the USCIS unit occurred was not found. On 2026-10-18 the Clearinghouse page was re-read: last docket entry remains ECF 81 (2026-05-11); the government's 2025-12-12 motion to dismiss and dissolve the injunction (ECF 58) and the plaintiffs' motion for leave to file a supplemental complaint (ECF 69) show no ruling, no appeal is listed, and the page does not show whether the 2026-09-14 trial occurred. EO 14251 was confirmed through the Federal Register API and web text (signing 2025-03-27, 90 FR 14553-14557); the order itself did not name TSA, and the TSA action rests on a Secretary determination. The court orders themselves (courtlistener.com) could not be opened.",
+  "updated_at": "2026-10-18"
 }

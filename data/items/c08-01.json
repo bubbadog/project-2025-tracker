@@ -6,14 +6,14 @@
     "Leadership: no Senate-confirmed CEO; the Vacancies Act ruling limits what acting officials can do."
   ],
   "chapter": "08",
-  "confidence": 60,
+  "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked; the three new court-related events were each fetched (Bloomberg Law and TheWrap in full, Law360 as a paywalled preview); the stage rests on enacted appropriations and reputable news of stayed orders, and no appellate docket was readable.",
+  "confidence_reason": "The executive order was read in the Federal Register and the two D.C. Circuit arguments were confirmed in fetched Bloomberg Government and Law360 reports; the district and appellate orders themselves were not readable and rest on news and a docket summary, and the funding figures on a CRS report.",
   "court_status": {
-    "basis": "Latest court event found is the 2026-04-23 D.C. Circuit argument in the VOA director appeal, with no decision found through 2026-10-13; in the main case the 2026-03-17 order remains stayed (2026-03-31) pending appeal, so no relief currently bars the wind-down.",
+    "basis": "Latest court event found is the 2026-04-23 D.C. Circuit argument in the VOA director appeal, with no decision found through 2026-10-18; in the main case the 2026-03-17 order remains stayed (2026-03-31) pending appeal, so no relief currently bars the wind-down.",
     "date": "2026-04-23",
     "state": "pending",
-    "url": "https://law360.com/articles/2469361"
+    "url": "https://news.bgov.com/us-law-week/appeals-court-questions-power-to-fire-voice-of-america-head"
   },
   "durability": {
     "level": "low",
@@ -43,10 +43,14 @@
     {
       "date": "2026-10-13",
       "note": "Added the 2025-10-06 D.C. Circuit stay denial in the VOA director case, the 2026-03-11 government filing on the acting CEO, and the 2026-04-23 D.C. Circuit argument (from Law360); court status moved from a stale 2025 injunction to pending; stage unchanged."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: D.C. Circuit arguments confirmed as court actions, court_status pending kept, one en banc denial event added; stage unchanged."
     }
   ],
   "id": "c08-01",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -78,13 +82,16 @@
     "flags": [
       "court_status pending kept rather than stayed: the latest court event is the 2026-04-23 argument in an ancillary appeal, and the main-case stay (2026-03-31) is noted in the basis",
       "Resolved the acting-CEO tension from the government's own filing (authority revives once a nominee is named)",
-      "Event kind set to court for the two appellate events"
+      "Event kind set to court for the two appellate events",
+      "V6: both D.C. Circuit arguments (2025-09-22 and 2026-04-23) confirmed as court actions from Law360 and Bloomberg Government; court_status kept pending, the latest court event being the 2026-04-23 argument with no ruling found in one search.",
+      "V6: reworded the 2026-04-23 event to match its Bloomberg Government source and added a 2025-05-22 event (full court declined to intervene) from a Radio Ink report.",
+      "Judgment call: court_status stayed would also be defensible because the main-case order of 2026-03-17 remains stayed; pending follows the latest court event."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 239 to 241 describe the firewall dispute and personnel security failures flagged by OPM and ODNI, page 243 notes no NSC liaison, and page 244 suggests placing VOA under State's Office of Global Public Affairs if not under the NSC; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-1",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V6",
     "source_checks": [
       {
         "note": "Per curiam order of 2025-10-06, No. 25-5314, panel Millett, Pillard, Garcia; reasoning on inferior officer and board quorum confirmed.",
@@ -100,6 +107,26 @@
         "note": "Dated 2026-04-23; panel appeared Thursday not to accept summary removal; argument inferred, case number and panel hidden by paywall.",
         "result": "partial",
         "url": "https://law360.com/articles/2469361"
+      },
+      {
+        "note": "Dated 2026-04-23; D.C. Circuit oral argument held that Thursday on the VOA director's removal, Judge Pillard named, panel skeptical, no ruling reported (checked 2026-10-18).",
+        "result": "supports",
+        "url": "https://news.bgov.com/us-law-week/appeals-court-questions-power-to-fire-voice-of-america-head"
+      },
+      {
+        "note": "Dated 2025-09-22; D.C. Circuit heard consolidated argument that Monday in Nos. 25-5144, 25-5145, 25-5150 and 25-5151; judges not visible (checked 2026-10-18).",
+        "result": "supports",
+        "url": "https://www.law360.com/employment-authority/articles/2390661"
+      },
+      {
+        "note": "API metadata: EO 14238 signed 2025-03-14, published 2025-03-20 at 90 FR 13043 (checked 2026-10-18).",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2025-04868.json"
+      },
+      {
+        "note": "Dated 2025-05-26; divided panel stayed the injunction in early May 2025 and the full court declined to intervene on 2025-05-22; found in a search for later rulings, none after 2026-04-23 found (checked 2026-10-18).",
+        "result": "supports",
+        "url": "https://radioink.com/?p=91422"
       }
     ]
   },
@@ -186,6 +213,34 @@
       "publisher": "Law360",
       "title": "DC Circ. Doubts Legality Of Trump's Ouster Of VOA Chief",
       "url": "https://law360.com/articles/2469361"
+    },
+    {
+      "date": "2025-03-20",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Continuing the Reduction of the Federal Bureaucracy (Executive Order 14238), Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/03/20/2025-04868/continuing-the-reduction-of-the-federal-bureaucracy"
+    },
+    {
+      "date": "2026-04-23",
+      "kind": "news",
+      "publisher": "Bloomberg Government",
+      "title": "Appeals Court Questions Power to Fire Voice of America Head",
+      "url": "https://news.bgov.com/us-law-week/appeals-court-questions-power-to-fire-voice-of-america-head"
+    },
+    {
+      "date": "2025-09-22",
+      "kind": "news",
+      "publisher": "Law360",
+      "title": "DC Circ. Mulls International Media Funding, Firings",
+      "url": "https://www.law360.com/employment-authority/articles/2390661"
+    },
+    {
+      "date": "2025-05-26",
+      "kind": "news",
+      "publisher": "Radio Ink",
+      "title": "Appeals Court Lets Trump Administration Continue VOA Cuts",
+      "url": "https://radioink.com/?p=91422"
     }
   ],
   "stage": "in_progress",
@@ -193,9 +248,9 @@
   "timeline": [
     {
       "date": "2025-03-14",
-      "event": "President signs Executive Order 14238, which names USAGM among seven entities whose non-statutory parts are to be eliminated and whose statutory functions are to be reduced to the minimum the law requires; USAGM announces compliance on 2025-03-15, placing most affected staff on paid administrative leave.",
+      "event": "President signs Executive Order 14238 (published in the Federal Register 2025-03-20, document 2025-04868), which in Sec. 2(a)(ii) names USAGM among seven entities whose non-statutory components and functions are to be eliminated to the maximum extent consistent with law and whose statutory functions and personnel are to be reduced to the minimum presence and function required by law; Sec. 2(b) requires a compliance report to OMB within 7 days. USAGM announces compliance on 2025-03-15, placing most affected staff on paid administrative leave.",
       "kind": "primary",
-      "source": "White House",
+      "source": "White House; Federal Register",
       "url": "https://www.whitehouse.gov/presidential-actions/2025/03/continuing-the-reduction-of-the-federal-bureaucracy/"
     },
     {
@@ -211,6 +266,20 @@
       "kind": "news",
       "source": "Fox News",
       "url": "https://www.foxnews.com/politics/appeals-court-backs-voa-overhaul-kari-lake-modernize-agency-huge-victory-president-trump.amp"
+    },
+    {
+      "date": "2025-05-22",
+      "event": "The full D.C. Circuit declines to intervene in the panel's partial stay of the April 2025 injunction, so the staff and service cuts can continue while the appeals proceed.",
+      "kind": "court",
+      "source": "Radio Ink",
+      "url": "https://radioink.com/?p=91422"
+    },
+    {
+      "date": "2025-09-22",
+      "event": "The D.C. Circuit hears consolidated argument in four appeals of the April 2025 orders (Widakuswara v. Lake No. 25-5144, Abramowitz v. Lake No. 25-5145, Middle East Broadcasting Networks v. United States No. 25-5150, Radio Free Asia v. United States No. 25-5151).",
+      "kind": "court",
+      "source": "Law360",
+      "url": "https://www.law360.com/employment-authority/articles/2390661"
     },
     {
       "date": "2025-10-06",
@@ -263,10 +332,10 @@
     },
     {
       "date": "2026-04-23",
-      "event": "A D.C. Circuit panel hears the appeal over the 2025 removal of the VOA director and, per a Law360 report (paywalled preview read), appears unpersuaded that the President could summarily remove him, suggesting Congress vested removal in the agency's board.",
+      "event": "A D.C. Circuit panel including Judge Pillard hears argument in the appeal over the 2025 removal of the VOA director and, per Bloomberg Government and a Law360 preview, appears skeptical that the administration could remove him without the approval of the agency's board; no ruling was reported.",
       "kind": "court",
-      "source": "Law360",
-      "url": "https://law360.com/articles/2469361"
+      "source": "Bloomberg Government",
+      "url": "https://news.bgov.com/us-law-week/appeals-court-questions-power-to-fire-voice-of-america-head"
     },
     {
       "date": "2026-07-30",
@@ -278,6 +347,6 @@
   ],
   "title": "Restructure USAGM and VOA under tighter executive control or wind the agency down",
   "tracked": true,
-  "uncertainties": "Not found: any D.C. Circuit decision through 2026-10-13 in the appeal of the March 2026 orders or in the VOA director case (Abramowitz v. Lake), any ruling on the plaintiffs' 2026-03-21 motion to dismiss the appeal, any Senate committee vote on Rogers's nomination as CEO, or USAGM operations from August to October 2026. The 2026-04-23 argument rests on a paywalled Law360 preview that says the panel appeared that Thursday; the words oral argument and the panel names are not visible, and the court docket was not reachable. The Clearinghouse page for the main case (updated 2026-06-24) lists no D.C. Circuit orders in 2026 and a second D.C. Circuit docket (No. 26-5087) without details. The 2026-03-31 date is taken from the AP story's URL and a 'Tuesday' reference. The government's 2026-03-11 filing said acting authority would revive once a permanent nominee was named, which fits TheWrap's 2026-03-12 report that Rigas was named acting CEO with the nomination, but that role is still confirmed by one news report only. Stage choice is a judgment: the layoffs voided by the March 7 ruling and the shutdown request rejected by Congress still limit the wind-down.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Not found: any D.C. Circuit decision through 2026-10-13 in the appeal of the March 2026 orders or in the VOA director case (Abramowitz v. Lake), any ruling on the plaintiffs' 2026-03-21 motion to dismiss the appeal, any Senate committee vote on Rogers's nomination as CEO, or USAGM operations from August to October 2026. The 2026-04-23 argument rests on a paywalled Law360 preview that says the panel appeared that Thursday; the words oral argument and the panel names are not visible, and the court docket was not reachable. The Clearinghouse page for the main case (updated 2026-06-24) lists no D.C. Circuit orders in 2026 and a second D.C. Circuit docket (No. 26-5087) without details. The 2026-03-31 date is taken from the AP story's URL and a 'Tuesday' reference. The government's 2026-03-11 filing said acting authority would revive once a permanent nominee was named, which fits TheWrap's 2026-03-12 report that Rigas was named acting CEO with the nomination, but that role is still confirmed by one news report only. Stage choice is a judgment: the layoffs voided by the March 7 ruling and the shutdown request rejected by Congress still limit the wind-down. The order number (14238), signing date (2025-03-14) and Sec. 2(a)(ii), 2(b), 2(c) were confirmed in the Federal Register text. The 2026-04-23 argument is now supported by a Bloomberg Government article (published that day) naming Judge Pillard and the Justice Department advocate, so the event no longer rests only on the paywalled Law360 preview. The Clearinghouse page (updated 2026-07-05) lists no 2026 orders other than a clerical entry, and the court docket (courtlistener.com) is blocked. The usagm.gov home page shows no 2026 items (latest item 2025-11-21), so no USAGM notice of 2026 operations or court compliance was available. A consolidated D.C. Circuit argument of 2025-09-22 in the April 2025 appeals is added; no decision in those appeals was found.",
+  "updated_at": "2026-10-18"
 }

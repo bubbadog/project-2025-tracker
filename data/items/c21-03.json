@@ -6,9 +6,9 @@
     "Congress has not legislated the Mandate's specific export-control changes, and licensing involves interagency agreement."
   ],
   "chapter": "21",
-  "confidence": 72,
+  "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "The Entity List additions, the suspended affiliates rule and the absence of 2026 additions were confirmed in the Federal Register, and earlier review confirmed the eased chip licensing policy. The finding that no de minimis, foreign direct product, deemed export or country-group change was made rests on title searches, and other 2025 to 2026 export-control actions were not tallied.",
+  "confidence_reason": "Chapter text at pages 671 to 674 checked; the BIS affiliates suspension (90 FR 50857) and the chip license rule (91 FR 1684) were read on federalregister.gov in this review for their decisive passages, and a Federal Register API query found no extension through 2026-09-30. The absence of de minimis, foreign direct product, deemed export and country-group rules rests on title searches, so the record stays medium.",
   "durability": {
     "level": "medium",
     "why": "Final and interim final rules in the Export Administration Regulations persist until amended, but the administration has already suspended or loosened some of them by new rule."
@@ -41,10 +41,18 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Cross-reference added to new layer 3 record c21-18 written in the second enumeration pass; no change to the status."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Reviewer re-read the BIS affiliates suspension (90 FR 50857) and chip license rule (91 FR 1684) on federalregister.gov and a Federal Register API query of BIS documents, clarified the chip rule's treatment of Macau, and raised confidence from 72 to 76 with the stage unchanged at in_progress."
     }
   ],
   "id": "c21-03",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-17",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -64,7 +72,8 @@
     "c07-10",
     "c21-12",
     "c21-15",
-    "c28-08"
+    "c28-08",
+    "c21-18"
   ],
   "remaining": [
     "Decide whether the affiliates rule resumes on 2026-11-10 or is extended; a commentary page reported announced extension plans to 2027-01-10 but no Federal Register extension as of 2026-10-03.",
@@ -76,28 +85,35 @@
   "requires_congress": "no",
   "research_agent": "A14",
   "review": {
+    "document_reread": {
+      "citation": "90 FR 50857, Doc. 2025-19846, final rule; stay of 90 FR 47201",
+      "note": "Read for its dates and action (a two-page document): stay effective 2025-11-10, ends 2026-11-09, provisions resume 2026-11-10 with no further end date.",
+      "result": "supports",
+      "url": "https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities"
+    },
     "flags": [
-      "2026 Entity List removals added by reviewer",
-      "absence of de minimis, foreign direct product and country-group rules based on title searches",
-      "status of the 2025 AI diffusion rule rescission not tracked here"
+      "Macau treatment in the chip rule clarified: case-by-case for end-users located in Macau, presumption of denial for Macau reexports, transfers and headquartered entities",
+      "FR citations added for the suspension, affiliates and chip rules",
+      "Affiliates suspension ends 2026-11-09; resumption or extension due within weeks"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 671 to 674 call for BIS to act unilaterally to reverse 2008 to 2016 loosening of the EAR, listing priorities such as moving China and Russia to more restrictive country groups, eliminating license exceptions, broadening foreign direct product rules, lowering the de minimis threshold, tightening deemed-export and fundamental-research rules, adding more entities to the Entity List with a policy of denial, and denying licenses where end-use checks are blocked; the paraphrase and pages match.",
+    "mandate_check": "ok",
+    "mandate_note": "Pages 671 to 674 ask BIS to act unilaterally to tighten the EAR for China and Russia: more restrictive country groups, ending license exceptions, broader foreign direct product rules, a de minimis threshold cut from 25 to 10 percent or zero, tighter deemed-export rules, many more Entity List additions with a policy of denial, and license denials where end-use checks are blocked; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W5",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-E",
     "source_checks": [
       {
-        "note": "BIS listing confirms the 2025-09-16 additions (32 entities, 23 under China), the 2025-10-09 additions (26 entities and 3 addresses, 19 under China), the 2025-09-30 affiliates rule and its 2025-11-12 suspension through 2026-11-09 with no extension published. It also shows that the 2026 Entity List rules only removed entries (two Hong Kong addresses on 2026-08-24 and one entity under Turkey in a separate 2026-08-24 rule) and that a 2025-11-12 revision removed one China entity; the record mentions only one 2026 rule and none of the removals.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Entity+List%22&conditions[agencies][]=industry-and-security-bureau&conditions[publication_date][gte]=2025-09-01&order=newest&per_page=40"
+        "note": "91 FR 1684, effective 2026-01-15: case-by-case for end-users located in China or Macau under 742.6(b)(10)(iii)(A)(1); presumption of denial for other D:5, Macau reexports and transfers, and Macau or D:5 headquartered entities.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/01/15/2026-00789/revision-to-license-review-policy-for-advanced-computing-commodities"
       },
       {
-        "note": "BIS final rule (91 FR 52501, 2026-08-14) raises the endurance threshold for national security controls on drones to three hours and removes those controls on related software and technology for lesser drones, citing commercial availability and EO 14307; it keeps anti-terrorism controls and adds the items to military end-use and end-user licensing, and the document gives inconsistent prior thresholds.",
+        "note": "Seven BIS documents from 2026-09-01 to 2026-09-30 (Russia airline denial renewals, polysilicon rule, pharmaceutical tariff guidance, an information collection); none on the affiliates rule or China export controls; none listed after 2026-09-30.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16628/streamlining-export-controls-for-drone-exports"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=industry-and-security-bureau&conditions[publication_date][gte]=2026-09-01&order=newest&per_page=40"
       }
-    ]
+    ],
+    "stage_change_reason": "No change: tightening actions (Entity List additions, validated end-user revocations) are operative while the affiliates rule is suspended and chip and drone controls were loosened, and the Mandate's core regulatory changes are absent, which fits formally underway and partly operative; in_progress 30 kept within band."
   },
   "significance": {
     "B": 2,
@@ -153,10 +169,17 @@
       "publisher": "timewell.jp",
       "title": "Commentary page on the 2026-11-10 affiliates rule and trade truce deadlines (updated 2026-10-03)",
       "url": "https://timewell.jp/en/columns/us-china-november-10-2026-convergence"
+    },
+    {
+      "date": "2026-10-17",
+      "kind": "primary",
+      "publisher": "Federal Register API",
+      "title": "BIS documents published from 2026-09-01 (query as fetched 2026-10-17)",
+      "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=industry-and-security-bureau&conditions[publication_date][gte]=2026-09-01&order=newest&per_page=40"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "BIS has issued rules in both directions. Tightening steps include large Entity List additions in 2025 (two rules on 2025-03-28 covering about 80 entities, most under China; 30 entities on 2025-09-16, 23 of them under China; 26 entities and 3 addresses on 2025-10-09), removal of validated end-user status for three China chip plants (effective 2025-12-31), and a 2025-09-30 rule extending Entity List restrictions to entities 50 percent or more owned by listed parties. That affiliates rule has been suspended since 2025-11-10 as part of a U.S.-China trade arrangement announced by the White House on 2025-11-01; the suspension runs through 2026-11-09, and no extension had appeared in the Federal Register by early October 2026. Loosening steps include a 2026-01-15 rule moving licenses for certain advanced AI chips to China and Macau from presumed denial to case-by-case review and an August 2026 rule easing controls on drones with under three hours of endurance. BIS's Entity List rules in 2026 removed entries (two Hong Kong addresses and one entity listed under Turkey, both on 2026-08-24) and added none, and BIS Federal Register documents since 2025-01-20 include no rule on de minimis, foreign direct product, deemed export, fundamental research or country-group changes.",
+  "status_summary": "BIS has issued rules in both directions. Tightening steps include large Entity List additions in 2025 (two rules on 2025-03-28 covering about 80 entities, most under China; 30 entities on 2025-09-16, 23 of them under China; 26 entities and 3 addresses on 2025-10-09), removal of validated end-user status for three China chip plants (effective 2025-12-31), and a 2025-09-30 interim final rule (90 FR 47201) extending Entity List restrictions to entities 50 percent or more owned by listed parties. That affiliates rule has been suspended since 2025-11-10 (90 FR 50857) as part of a U.S.-China trade arrangement announced by the White House on 2025-11-01; the suspension runs through 2026-11-09, and a Federal Register query of BIS documents published from 2026-09-01 shows no extension, with no BIS documents listed after 2026-09-30. Loosening steps include a 2026-01-15 rule (91 FR 1684) moving licenses for certain advanced AI chips to end-users located in China or Macau from presumed denial to case-by-case review, while other D:5 destinations and Macau-headquartered entities stay under presumed denial, and an August 2026 rule easing controls on drones with under three hours of endurance. BIS's Entity List rules in 2026 removed entries (two Hong Kong addresses and one entity listed under Turkey, both on 2026-08-24) and added none, and BIS Federal Register documents since 2025-01-20 include no rule on de minimis, foreign direct product, deemed export, fundamental research or country-group changes.",
   "timeline": [
     {
       "date": "2025-03-28",
@@ -181,7 +204,7 @@
     },
     {
       "date": "2025-09-30",
-      "event": "BIS interim final rule extends Entity List and similar end-user restrictions automatically to entities at least 50 percent owned by listed parties.",
+      "event": "BIS interim final rule (90 FR 47201) extends Entity List and similar end-user restrictions automatically to entities at least 50 percent owned by listed parties.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/09/30/2025-19001/expansion-of-end-user-controls-to-cover-affiliates-of-certain-listed-entities"
@@ -195,14 +218,14 @@
     },
     {
       "date": "2025-11-12",
-      "event": "BIS publishes a one-year suspension of the affiliates rule, effective 2025-11-10 through 2026-11-09, after which the provisions resume unless extended. The White House fact sheet of 2025-11-01 on a U.S.-China arrangement listed the suspension among U.S. steps.",
+      "event": "BIS publishes a final rule staying the affiliates rule for one year (90 FR 50857), effective 2025-11-10 through 2026-11-09, after which the provisions resume on 2026-11-10 unless extended. The White House fact sheet of 2025-11-01 on a U.S.-China arrangement listed the suspension among U.S. steps.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities"
     },
     {
       "date": "2026-01-15",
-      "event": "BIS rule revises license review for advanced computing chips (such as Nvidia H200 and AMD MI325X class) to China and Macau from presumption of denial to case-by-case, subject to certification, a 50 percent cap relative to U.S. shipments, security and third-party testing conditions.",
+      "event": "BIS final rule (91 FR 1684) moves license review for advanced computing chips below set performance thresholds (such as Nvidia H200 and AMD MI325X class) from presumption of denial to case-by-case when destined to end-users located in China or Macau, subject to certification, a 50 percent cap relative to U.S. shipments, security and third-party testing conditions; other D:5 destinations, reexports and transfers to Macau, and entities headquartered in Macau or D:5 stay under presumption of denial.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/01/15/2026-00789/revision-to-license-review-policy-for-advanced-computing-commodities"
@@ -217,6 +240,6 @@
   ],
   "title": "Tighten export controls on China and expand Entity List restrictions",
   "tracked": true,
-  "uncertainties": "The Federal Register review used rule titles plus fetched summaries of the Entity List and export rules named above; BIS rules whose titles were not opened (for example the 2025-12-05 Commerce Control List rule) could contain provisions not seen. The affiliates-rule extension status rests on one commentary page that itself relies on press reports of statements by Treasury and China's commerce ministry, not on a Federal Register notice or a White House document; the 2026-09-25 White House fact sheet on a China state visit does not mention export controls. Entity List counts are taken from the rules' own text as summarized by a fetch tool and should be rechecked against the notices. Reasons for the affiliates suspension are stated by the White House as part of a broader arrangement; the Federal Register notice itself gives none. Not checked: Russia-related listings, the status of the 2025 AI diffusion framework, and total Entity List counts.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The Federal Register review used rule titles plus fetched summaries of the Entity List and export rules named above; BIS rules whose titles were not opened (for example the 2025-12-05 Commerce Control List rule) could contain provisions not seen. The affiliates-rule extension status rests on one commentary page that itself relies on press reports of statements by Treasury and China's commerce ministry, not on a Federal Register notice or a White House document; the 2026-09-25 White House fact sheet on a China state visit does not mention export controls. Entity List counts are taken from the rules' own text as summarized by a fetch tool and should be rechecked against the notices. Reasons for the affiliates suspension are stated by the White House as part of a broader arrangement; the Federal Register notice itself gives none. Not checked: Russia-related listings, the status of the 2025 AI diffusion framework, and total Entity List counts. The suspension rule (90 FR 50857) and the chip rule (91 FR 1684) were re-read on federalregister.gov in this review; the chip rule's case-by-case policy covers end-users located in China or Macau, while Macau reexports and transfers and Macau-headquartered entities stay under presumption of denial. The Federal Register API listing fetched on 2026-10-17 showed no BIS documents after 2026-09-30, which may reflect indexing lag.",
+  "updated_at": "2026-10-17"
 }

@@ -1,0 +1,158 @@
+{
+  "agency": "VA (VBA)",
+  "blockers": [],
+  "chapter": "20",
+  "confidence": 62,
+  "confidence_label": "medium",
+  "confidence_reason": "Chapter text page 650 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo search, VA news page, one news search), so confidence is capped near 62 because check 2 was partial; the 2025 workforce figures in status_summary rest on news reports.",
+  "durability": {
+    "level": "low",
+    "why": "Nothing exists to assess; contract vehicles are reversible."
+  },
+  "est_completion": {
+    "basis": "Inference: no related VBA action was found.",
+    "window": "unknown"
+  },
+  "headline": false,
+  "history": [
+    {
+      "date": "2026-10-16",
+      "note": "Added in the layer 3 enumeration pass (second pass over leftover candidates); researched and sent to independent review."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review: not_started kept on absence of VBA contractor or exchange actions in limited searches; confidence 30."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov) and reviewed the Unified Agenda fallback, congress.gov and govinfo, VA news page and news checks, found no qualifying action, and kept not_started 0."
+    }
+  ],
+  "id": "c20-14",
+  "last_checked": "2026-10-18",
+  "layer": 3,
+  "match": "direct",
+  "mechanism": "agency_action",
+  "pages": [
+    650
+  ],
+  "position": "VA Secretary and VBA Under Secretary",
+  "progress": 0,
+  "proposal": "The Mandate recommends reforming VBA human capital management toward a blended workforce with more contractors processing claims so federal employees can focus on final benefit decisions, improving the acquisition workforce through more outreach to top contractors, and establishing a knowledge exchange program with top private-sector firms doing similar work (p. 650).",
+  "related_ids": [
+    "c20-04"
+  ],
+  "remaining": [
+    "VBA use of contractors for benefit claims processing or development",
+    "Acquisition workforce outreach and a private-sector knowledge exchange"
+  ],
+  "requires_congress": "no",
+  "research_agent": "R1920",
+  "restates_ids": [],
+  "review": {
+    "document_reread": {
+      "citation": "Government Executive, VA reorganization report, 2026-01-28",
+      "note": "Draft reading relied on; staffing context only.",
+      "result": "partial",
+      "url": "https://www.govexec.com/workforce/2026/01/vas-reorganization-staffing-caps-result-previous-overhiring-officials-say/411032"
+    },
+    "flags": [
+      "Check 2 reached only the Federal Register fallback; confidence capped near 62.",
+      "H.R. 3854 (119th Congress) appeared in a search result but was not opened; whether it touches VBA contractor claims work was not established."
+    ],
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 650 recommends a more blended VBA workforce with more claims contractors so federal staff make final decisions, stronger acquisition outreach to top contractors, and a knowledge exchange with private firms doing similar work. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
+    "source_checks": [
+      {
+        "note": "2026-10-18: reviewer rerun with terms Veterans Benefits Administration, contractors, claims since 2025-01-20: 12 documents (VA and RRB Privacy Act notices, Unified Agenda introduction 2026-08-14, FAR overhaul proposed rule 2026-06-23); none on VBA claims contractors or a knowledge exchange. Researcher VA-filtered query on claims processing contractor returned 3 Privacy Act notices.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Veterans+Benefits+Administration%22+contractors+claims&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reginfo.gov Unified Agenda landing page reached, item listings unavailable through the fetch tool; Federal Register fallback used. Terms: VA, VBA, claims.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: researcher search limited to congress.gov and govinfo.gov on VBA claims contractors; CRS reports on contracted compensation and pension exams and older bills; H.R. 3854 (119th) surfaced but was not opened. Not repeated by the reviewer.",
+        "result": "does_not_support",
+        "url": "https://www.congress.gov/crs-product/R47163"
+      },
+      {
+        "note": "2026-10-18: VA news homepage fetched by the researcher; items on FY2026 claims processed (2026-10-15) and a VHA dental network contract; nothing on a blended VBA workforce or private-sector exchange.",
+        "result": "does_not_support",
+        "url": "https://news.va.gov"
+      },
+      {
+        "note": "2026-10-18: one researcher news search on VBA contractor claims processing and private-sector exchange returned older GAO and DTIC items and an explainer; no search URL was recorded, so the VA news page is listed as a placeholder.",
+        "result": "does_not_support",
+        "url": "https://news.va.gov"
+      }
+    ]
+  },
+  "significance": {
+    "B": 1,
+    "F": 2,
+    "F_estimated": true,
+    "M": 2,
+    "R": 1.5,
+    "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 1,
+        "F": 2,
+        "M": 2,
+        "R": 1,
+        "rater": "A"
+      },
+      {
+        "B": 1,
+        "F": 2,
+        "M": 2,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
+    "raters": 2,
+    "rationale": "Shifting VBA claims processing toward contractors changes the workforce and delivery for veterans' benefit claims within one VA component.",
+    "version": "2026-10-16",
+    "weight": 1.625
+  },
+  "sources": [
+    {
+      "date": "2025-07",
+      "kind": "news",
+      "publisher": "Nextgov",
+      "title": "VA backs down on mass layoffs, will cut 30K through attrition only",
+      "url": "https://www.nextgov.com/people/2025/07/va-backs-down-mass-layoffs-will-cut-30k-through-attrition-only/406558"
+    },
+    {
+      "date": "2026-01-28",
+      "kind": "news",
+      "publisher": "Government Executive",
+      "title": "VA's reorganization, staffing caps result of previous overhiring, officials say",
+      "url": "https://www.govexec.com/workforce/2026/01/vas-reorganization-staffing-caps-result-previous-overhiring-officials-say/411032"
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "news",
+      "publisher": "Orange Slices",
+      "title": "Signature Choice III wins $517M VA Claims Processing and Customer Services IDC",
+      "url": "https://orangeslices.ai/signature-choice-iii-wins-517m-va-claims-processing-and-customer-services-contract/"
+    }
+  ],
+  "stage": "not_started",
+  "status_summary": "No VBA action expanding contractor processing of benefit claims, outreach to top contractors or a private-sector knowledge exchange was found since 2025-01-20. VA reduced its workforce by about 30,000 in 2025 through attrition after dropping mass-layoff plans, which is a federal staffing reduction and not a contractor shift. A $517 million claims processing contract awarded 2026-09-29 covers Veterans Health Administration community care claims, not VBA benefit claims.",
+  "timeline": [],
+  "title": "Build a blended VBA workforce with more claims contractors and a private-sector exchange",
+  "tracked": true,
+  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: the researcher's VA-filtered query on claims processing and contractors returned three Privacy Act notices, and a reviewer rerun on the Veterans Benefits Administration with contractors and claims returned 12 documents (Privacy Act notices, the Unified Agenda introduction and a governmentwide acquisition regulation proposed rule), none on contractor processing of VBA benefit claims, acquisition outreach or a private-sector knowledge exchange. (2) Unified Agenda: item listings could not be reached, so only the Federal Register fallback was used. (3) congress.gov and govinfo: one search surfaced CRS reports on contracted disability exams and older bills; one 119th Congress bill on veterans and survivors appeared in results but was not opened, so a related bill is not ruled out. (4) Agency pages: the VA news homepage showed claims volume and VHA contract items but nothing on a blended VBA workforce; VBA task orders are not always publicized and the claims processing contract cited in the record (2026-09-29) was not re-verified and concerns VHA community care claims. (5) News: one search returned older GAO items and explainers. Earlier searches found the 2025 VA workforce reduction reported in news sources. The contract medical exam program (see c20-04) is separate from contractors processing claims.",
+  "updated_at": "2026-10-18"
+}

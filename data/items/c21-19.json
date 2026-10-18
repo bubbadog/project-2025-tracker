@@ -1,0 +1,165 @@
+{
+  "agency": "Commerce (NTIA)",
+  "blockers": [
+    "NTIA effort is directed to reallocating federal bands for auction, which removes rather than leases federal use",
+    "Leasing would need a legal framework and agency agreements, none of which was found"
+  ],
+  "chapter": "21",
+  "confidence": 60,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-18 on top of the NTIA 2.7 GHz release: (1) Federal Register searches of NTIA documents for spectrum leasing and sharing returned zero; (2) the Unified Agenda listing could not be browsed, and the NTIA proposed-rule listing returned zero (partial); (3) a congress.gov and GovInfo search with a bill status read found only a valuation bill; (4) the NTIA 2.7 GHz release describes reallocation, while the NTIA press index could not be fetched (partial); (5) a news search found only reallocation coverage. Set to 60 for the partial agenda and newsroom checks.",
+  "durability": {
+    "level": "low",
+    "why": "No action exists to assess; reallocation steps are separate and tracked elsewhere."
+  },
+  "est_completion": {
+    "basis": "Inference: no leasing or sharing initiative was found, and NTIA effort is directed to reallocation.",
+    "window": "unknown"
+  },
+  "headline": false,
+  "history": [
+    {
+      "date": "2026-10-16",
+      "note": "Added in the layer 3 enumeration pass (second pass over leftover candidates); researched and sent to independent review."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review: not_started kept; an NTIA release on the 2.7 GHz band was read and one further web search found no federal spectrum leasing program; confidence 40."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check with independent AI review: Not_started kept; five-part absence check documented and spot-checked; confidence raised from 40 to 60."
+    }
+  ],
+  "id": "c21-19",
+  "last_checked": "2026-10-18",
+  "layer": 3,
+  "match": "parallel",
+  "mechanism": "agency_action",
+  "pages": [
+    687
+  ],
+  "position": "NTIA",
+  "progress": 0,
+  "proposal": "The Mandate recommends that NTIA begin short-term, temporary leasing of government-allocated spectrum to make better use of it while preserving federal agencies' use rights (p. 687).",
+  "related_ids": [
+    "c28-04"
+  ],
+  "remaining": [
+    "Any NTIA leasing or dynamic sharing framework or pilot",
+    "Legal authority and agency agreements for temporary leases"
+  ],
+  "requires_congress": "partial",
+  "research_agent": "R21",
+  "restates_ids": [],
+  "review": {
+    "document_reread": {
+      "citation": "NTIA press release 2026-04-14",
+      "note": "Shows the reallocation path.",
+      "result": "supports",
+      "url": "https://www.ntia.gov/press-release/2026/plan-repurpose-27-ghz-band-clears-key-milestone-fueling-us-6g-leadership"
+    },
+    "flags": [
+      "Named the searches performed in uncertainties.",
+      "Removed the Broadband Breakfast source, which no remaining sentence relies on.",
+      "Removed the unsupported claim in the summary that Public Law 119-21 directs identification of federal spectrum (tracked in c28-04 with its own source).",
+      "Removed an unsourced blocker on agency reluctance.",
+      "V7 systematic-check review: not_started 0 kept; NTIA spectrum leasing Federal Register query re-run with zero results; confidence 40 to 60 rather than the suggested 65, since check 2 and check 4 are both partial."
+    ],
+    "mandate_check": "ok",
+    "mandate_note": "Page 687 recommends beginning short-term, temporary leasing of government-allocated spectrum to make full use of it while preserving federal agency use rights. The paraphrase and page are correct.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V7",
+    "source_checks": [
+      {
+        "note": "2026-04-14: 2.7 GHz relocation plans approved and sent to OMB; reallocation, not leasing.",
+        "result": "supports",
+        "url": "https://www.ntia.gov/press-release/2026/plan-repurpose-27-ghz-band-clears-key-milestone-fueling-us-6g-leadership"
+      },
+      {
+        "note": "Systematic check 1: NTIA, terms 'spectrum lease leasing', since 2025-01-20: count 0. A second query 'spectrum sharing federal commercial' also returned 0. checked 2026-10-18",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=spectrum+lease+leasing&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=national-telecommunications-and-information-administration"
+      },
+      {
+        "note": "Systematic check 2: Unified Agenda landing page loaded and is titled as the 2026 Regulatory Plan and Unified Agenda, but agency listings are script-driven form submissions and could not be browsed; the API was used instead. checked 2026-10-18",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Systematic check 2: NTIA proposed rules since 2025-01-20: count 0. checked 2026-10-18",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=national-telecommunications-and-information-administration"
+      },
+      {
+        "note": "Systematic check 3: One WebSearch on NTIA spectrum leasing bills returned S. 792 (Government Spectrum Valuation Act, introduced 2025-02-27, referred to Commerce Committee), which concerns valuation and not leasing; also surfaced CRS material on spectrum provisions in P.L. 119-21 (reconciliation), which concern auction authority and pipeline, not short-term leasing; that CRS report was not opened. checked 2026-10-18",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s792.xml"
+      },
+      {
+        "note": "Systematic check 4: NTIA press release on the 2.7 GHz repurposing plan (a reallocation, not a lease). NTIA press-release index pages returned fetch errors, so the full newsroom was not reviewed. checked 2026-10-18",
+        "result": "partial",
+        "url": "https://www.ntia.gov/press-release/2026/plan-repurpose-27-ghz-band-clears-key-milestone-fueling-us-6g-leadership"
+      },
+      {
+        "note": "Systematic check 5: One WebSearch on NTIA federal spectrum leasing 2026: results were reallocation news (2.7 GHz, 4.4 GHz, NOAA band) and an older trade article on considering leasing; no dated leasing action in 2025-2026 seen in titles. checked 2026-10-18",
+        "result": "supports",
+        "url": "https://insidetowers.com/cell-tower-news-feds-consider-leasing-spectrum-commercial-use/"
+      },
+      {
+        "note": "Reviewer re-check, 2026-10-18: terms spectrum lease leasing, NTIA, since 2025-01-20: count 0; confirms the researcher's result.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=spectrum+lease+leasing&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=national-telecommunications-and-information-administration"
+      }
+    ]
+  },
+  "significance": {
+    "B": 2,
+    "F": 1.5,
+    "F_estimated": true,
+    "M": 2,
+    "R": 2,
+    "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 2,
+        "F": 2,
+        "M": 2,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 2,
+        "F": 1,
+        "M": 2,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
+    "raters": 2,
+    "rationale": "Temporary leasing of federal spectrum would shift spectrum use for wireless users and agencies through NTIA at multi-billion dollar value.",
+    "version": "2026-10-16",
+    "weight": 1.875
+  },
+  "sources": [
+    {
+      "date": "2026-04-14",
+      "kind": "primary",
+      "publisher": "NTIA",
+      "title": "Plan to repurpose 2.7 GHz band clears key milestone",
+      "url": "https://www.ntia.gov/press-release/2026/plan-repurpose-27-ghz-band-clears-key-milestone-fueling-us-6g-leadership"
+    }
+  ],
+  "stage": "not_started",
+  "status_summary": "No NTIA program for short-term leasing of federal spectrum to commercial users was found since 2025-01-20. NTIA's work has followed a reallocation path instead: on 2026-04-14 it announced that relocation plans for the 2.7 GHz band had cleared technical review and were sent to OMB, with the band to move from federal use to full-power commercial licensed use. That approach clears federal users rather than leasing their bands, and the broader spectrum pipeline is tracked in c28-04.",
+  "timeline": [],
+  "title": "Begin short-term temporary leasing of federal spectrum while keeping agency rights",
+  "tracked": true,
+  "uncertainties": "Searches performed: three web searches on NTIA leasing or sharing of federal spectrum (the last, on 2026-10-16, returned only 2020-era NTIA sharing material and news on reallocations) and a Federal Register API query of NTIA documents for spectrum sharing, which returned only an unrelated notice. The full NTIA press archive and the Spectrum Sharing Innovation Test-Bed pages were not reviewed. A lease program could exist without press coverage. NTIA's Commerce Spectrum Management Advisory Committee is shown as terminated on the Commerce advisory committee page. Checked systematically on 2026-10-18: Federal Register queries of NTIA documents (spectrum lease, spectrum sharing; proposed rules), a congress.gov and GovInfo search with a BILLSTATUS read of the valuation bill, the NTIA 2026 press release on 2.7 GHz, and one news search found no NTIA short-term leasing program. NTIA's press index could not be fetched in full and the CRS review of spectrum provisions in the reconciliation law was not opened.",
+  "updated_at": "2026-10-18"
+}

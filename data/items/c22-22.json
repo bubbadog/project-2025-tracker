@@ -1,0 +1,148 @@
+{
+  "agency": "Treasury (Bureau of the Fiscal Service)",
+  "blockers": [
+    "No announced Treasury plan or bill found",
+    "Delivering statements to households would need a mailing or online mechanism and likely funding"
+  ],
+  "chapter": "22",
+  "confidence": 62,
+  "confidence_label": "medium",
+  "confidence_reason": "Chapter text page 702 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo with the H.R. 7808 bill status read, Fiscal Service results page, one news search), so confidence is capped near 62 because check 2 was partial.",
+  "durability": {
+    "level": "low",
+    "why": "A Treasury publication practice could be changed administratively."
+  },
+  "est_completion": {
+    "basis": "Inference: no proposal, bill or Treasury announcement was found.",
+    "window": "unlikely this term"
+  },
+  "headline": false,
+  "history": [
+    {
+      "date": "2026-10-16",
+      "note": "Added in the layer 3 enumeration pass (second pass over leftover candidates); researched and sent to independent review."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review: not_started kept; the Fiscal Service summary of the FY2025 Financial Report was read and shows no per-family statement; confidence 45."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov), read the H.R. 7808 bill status on govinfo.gov, and reviewed the Unified Agenda fallback, Fiscal Service page and news checks, found no qualifying action, and kept not_started 0."
+    }
+  ],
+  "id": "c22-22",
+  "last_checked": "2026-10-18",
+  "layer": 3,
+  "match": "parallel",
+  "mechanism": "agency_action",
+  "pages": [
+    702
+  ],
+  "position": "Treasury",
+  "progress": 0,
+  "proposal": "The Mandate recommends that each year Americans receive a financial statement of the U.S. government showing revenues, expenditures, deficit and debt for the preceding fiscal year, including the family's pro-rata share of the debt based on family size (p. 702).",
+  "related_ids": [
+    "c22-16"
+  ],
+  "remaining": [
+    "A statement delivered or made available to each household",
+    "A family-size pro-rata debt share",
+    "Annual schedule tied to the preceding fiscal year"
+  ],
+  "requires_congress": "no",
+  "research_agent": "R22",
+  "restates_ids": [],
+  "review": {
+    "document_reread": {
+      "citation": "Fiscal Service, Financial Report results in brief",
+      "note": "No household statement.",
+      "result": "supports",
+      "url": "https://fiscal.treasury.gov/accounting/us-financial-report/results-in-brief"
+    },
+    "flags": [
+      "Check 2 reached only the Federal Register fallback; confidence capped near 62.",
+      "H.R. 7808 concerns budget ratios only and is not counted; its full text was not read."
+    ],
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 702 recommends an annual financial statement of the US government to Americans covering revenues, spending, deficit and debt for the prior fiscal year, including the family's pro-rata debt share by family size. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
+    "source_checks": [
+      {
+        "note": "2026-10-18: reviewer rerun with terms national debt, household, statement, taxpayer since 2025-01-20: 2 Education Department Workforce Pell documents (2026-03-09 proposed, 2026-05-19 final), unrelated. Researcher queries on financial statement per family (Fiscal Service) and Financial Report of the U.S. Government: 0 each.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22national+debt%22+household+statement+taxpayer&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reginfo.gov Unified Agenda landing page loaded but listings are script-driven and were not read; Federal Register fallback used. Terms: Treasury, Fiscal Service.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: reviewer read the H.R. 7808 BILLSTATUS: Debt-to-GDP Transparency and Stabilization Act, introduced 2026-03-04, referred to Budget and Rules, no later action; requires debt and deficit ratios in the budget and budget resolutions only, no household statement.",
+        "result": "does_not_support",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7808.xml"
+      },
+      {
+        "note": "2026-10-18: Fiscal Service results-in-brief page fetched by the researcher; national metrics only, no per-family statement or mailing.",
+        "result": "does_not_support",
+        "url": "https://fiscal.treasury.gov/accounting/us-financial-report/results-in-brief"
+      },
+      {
+        "note": "2026-10-18: one researcher news search on a federal household financial statement returned advocacy items, a 2024 petition and private calculators; no search URL was recorded, so the Fiscal Service page is listed as a placeholder.",
+        "result": "does_not_support",
+        "url": "https://fiscal.treasury.gov/accounting/us-financial-report/results-in-brief"
+      }
+    ]
+  },
+  "significance": {
+    "B": 1,
+    "F": 1,
+    "F_estimated": true,
+    "M": 1,
+    "R": 3,
+    "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 1,
+        "F": 1,
+        "M": 1,
+        "R": 3,
+        "rater": "A"
+      },
+      {
+        "B": 1,
+        "F": 1,
+        "M": 1,
+        "R": 3,
+        "rater": "B"
+      }
+    ],
+    "raters": 2,
+    "rationale": "An annual federal financial statement sent to every household is informational and cheap, though it reaches most people.",
+    "version": "2026-10-16",
+    "weight": 1.5
+  },
+  "sources": [
+    {
+      "date": "2026-05-07",
+      "kind": "primary",
+      "publisher": "Bureau of the Fiscal Service",
+      "title": "Financial Report of the U.S. Government, results in brief",
+      "url": "https://fiscal.treasury.gov/accounting/us-financial-report/results-in-brief"
+    }
+  ],
+  "stage": "not_started",
+  "status_summary": "No Treasury action sending a federal financial statement to households was found. The Bureau of the Fiscal Service continues to publish the annual Financial Report of the U.S. Government; its FY2025 executive summary (page last updated 2026-05-07) reports a 1.8 trillion dollar deficit and 30.3 trillion dollars of federal debt and interest payable, without per-person or per-family figures. This existing report is not a statement delivered to each family.",
+  "timeline": [],
+  "title": "Send Americans an annual federal financial statement with a family debt share",
+  "tracked": true,
+  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: researcher queries on a per-family financial statement filtered to the Fiscal Service and on the Financial Report of the U.S. Government returned no documents, and a reviewer rerun on national debt, household, statement and taxpayer returned two unrelated Education Department Pell grant documents; no Treasury document sets up a household statement. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used. (3) congress.gov and govinfo: one search surfaced H.R. 7808, whose bill status shows it would add debt-to-GDP and deficit-to-GDP ratios to budget documents and has remained in committee since 2026-03-04; it does not provide for household statements, and its full text was not read. (4) Agency pages: the Fiscal Service results-in-brief page reports national totals without per-person or per-family figures; the full Financial Report and Treasury's online guide to federal finances were not opened. (5) News: one search returned advocacy items and private debt calculators, which are not government statements.",
+  "updated_at": "2026-10-18"
+}

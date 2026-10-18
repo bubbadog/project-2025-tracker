@@ -6,7 +6,7 @@
   "chapter": "05",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Unchanged: text checked; the proclamation and DHS rules are primary and read, but the Harvard litigation chronology rests on a science-policy organization's page and visa issuance data were not found.",
+  "confidence_reason": "Proclamation 10948 was fetched and its sections 1 to 3 read, and the final fixed-admission rule was confirmed through its Federal Register API record and a web text cut off before the regulatory text; the Harvard litigation chronology rests on a science-policy organization's page, State Department pages were not opened and visa issuance data were not found.",
   "court_status": {
     "basis": "Derived from the latest court event: a preliminary injunction of 2025-06-23 blocks Proclamation 10948, which has since expired by its terms; DHS stipulated it would not enforce the SEVP revocation.",
     "date": "2025-06-23",
@@ -38,10 +38,14 @@
     {
       "date": "2026-10-13",
       "note": "Added ICE's 2026-10-08 proposed Optional Practical Training fee rule from the Federal Register as context; it is not nationality-based and the stage is unchanged."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Stage in_progress 50 confirmed; the proclamation's section 3 wording (consider limiting SEVP participation) verified in the Federal Register text; confidence unchanged at 72."
     }
   ],
   "id": "c05-18",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -65,18 +69,31 @@
   "research_agent": "N05a",
   "review": {
     "flags": [
-      "Reworded the event: the news sweep's 'foreign-adversary funding concerns' overstated a secondary point. Kept as context; it does not move the stage. Replaced the existing uncertainty sentence that said the rule was not counted."
+      "Accepted researcher's correction of the Proclamation 10948 event from 'directed review' to a direction to consider limiting SEVP and SEVIS participation, confirmed in section 3 of the Federal Register text.",
+      "Accepted FR citations and the added Proclamation 10998 context source.",
+      "court_status kept enjoined: the latest court event is the 2025-06-23 injunction; the 2025-08-06 stipulation is a party filing.",
+      "judgment call: in_progress 50 kept; proposed (20) is defensible because the operative fixed-admission rule is SEVP-adjacent and the nationality-based visa cut was not found."
     ],
     "mandate_check": "verified",
     "mandate_note": "p.141 asks ICE to end deference to schools in SEVP, remove security risks, and with State cut visas for students from adversary nations; the OPT fee rule touches school accountability in SEVP but not nationality.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-2",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V8",
     "source_checks": [
       {
         "note": "Fetched (first 100,000 characters): NPRM 91 FR 64566, school-paid fees of 70,000 and 30,000 dollars, comments due 2026-11-09; rationale is mainly fraud and US-worker protection, with a secondary foreign-funding point; no nationality-based provision. Supports the event as reworded; fit with the record is partial.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20660/optional-practical-training-fees"
+      },
+      {
+        "note": "Proclamation 10948, 90 FR 24493-24496, signed 2025-06-04, published 2025-06-10; section 1 suspension expires absent extension six months after signing; section 2(e) asks for an extension recommendation within 90 days; section 3 says the Secretaries shall consider using their authorities to limit Harvard's SEVP and SEVIS participation (the word review does not appear there). Researcher's correction to 'directs consideration' confirmed. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/06/10/2025-10668/enhancing-national-security-by-addressing-risks-at-harvard-university"
+      },
+      {
+        "note": "API record: final rule 91 FR 44976, published 2026-07-17, effective 2026-09-15, fixed admission periods for F, J and I; metadata and abstract only. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-14439.json"
       }
     ]
   },
@@ -135,10 +152,17 @@
       "publisher": "Federal Register (ICE/DHS)",
       "title": "Optional Practical Training Fees (proposed rule, 91 FR 64566)",
       "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20660/optional-practical-training-fees"
+    },
+    {
+      "date": "2025-12-19",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Restricting and Limiting the Entry of Foreign Nationals To Protect the Security of the United States (Proclamation 10998, context; tracked in c06-05)",
+      "url": "https://www.federalregister.gov/documents/2025/12/19/2025-23570/restricting-and-limiting-the-entry-of-foreign-nationals-to-protect-the-security-of-the-united-states"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "DHS revoked Harvard's SEVP certification on 2025-05-22 and Proclamation 10948 (signed 2025-06-04) suspended for six months entry of new Harvard F, M and J students, but a federal court blocked the revocation on 2025-06-20 and the proclamation on 2025-06-23, and DHS later stipulated it would not enforce the revocation. In late May 2025 the Secretary of State said the department would work with DHS to revoke visas of Chinese students with party ties or in critical fields and would add scrutiny to future applications from China and Hong Kong. DHS published a final rule on 2026-07-17, effective 2026-09-15 subject to congressional review, replacing duration of status for F and J holders with fixed admission periods of up to four years; the parts read show no nationality-based limit for students. Entry limits for nationals of listed countries under Proclamations 10949 and 10998 are covered in c06-05.",
+  "status_summary": "DHS revoked Harvard's SEVP certification on 2025-05-22 and Proclamation 10948 (signed 2025-06-04, 90 FR 24493) suspended for six months entry of new Harvard F, M and J students, but a federal court blocked the revocation on 2025-06-20 and the proclamation on 2025-06-23, and DHS later stipulated it would not enforce the revocation. In late May 2025 the Secretary of State said the department would work with DHS to revoke visas of Chinese students with party ties or in critical fields and would add scrutiny to future applications from China and Hong Kong. DHS published a final rule on 2026-07-17 (91 FR 44976), effective 2026-09-15 subject to congressional review, replacing duration of status for F and J holders with fixed admission periods of up to four years; the parts read show no nationality-based limit for students. Entry limits for nationals of listed countries under Proclamations 10949 and 10998 are covered in c06-05.",
   "timeline": [
     {
       "date": "2025-05-22",
@@ -156,7 +180,7 @@
     },
     {
       "date": "2025-06-04",
-      "event": "Proclamation 10948 suspended for six months entry of foreign nationals coming to study at or join exchange programs at Harvard, and directed review of Harvard's SEVP participation.",
+      "event": "Proclamation 10948 (90 FR 24493, published 2025-06-10) suspended for six months entry of F, M and J nonimmigrants seeking to study at or join exchange programs at Harvard, and in section 3 directed State, Justice and Homeland Security to consider limiting Harvard's SEVP and SEVIS participation (pp. 24495-24496).",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/06/10/2025-10668/enhancing-national-security-by-addressing-risks-at-harvard-university"
@@ -177,7 +201,7 @@
     },
     {
       "date": "2026-07-17",
-      "event": "DHS published the final fixed-period-of-admission rule for F, J and I nonimmigrants, effective 2026-09-15 and classified as a major rule.",
+      "event": "DHS published the final fixed-period-of-admission rule (91 FR 44976) for F, J and I nonimmigrants, effective 2026-09-15 unless DHS publishes a notice changing the date after congressional review, and classified as a major rule; F and J admission is set to program length up to four years.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant"
@@ -192,6 +216,6 @@
   ],
   "title": "Put national security first in SEVP and cut student visas for adversary-country nationals",
   "tracked": true,
-  "uncertainties": "The Harvard litigation timeline comes from a science-policy organization's page last updated 2026-03-15, which lists the proclamation as expired and does not mention appeals. The NPR article does not state the announcement date; 2025-05-28 is taken from its URL. The final rule was read in large part: it caps F and J admission at program length up to four years and mentions an exception for some I nonimmigrants from the PRC, and no country-based limit for students was seen; whether it took effect on 2026-09-15 after congressional review was not confirmed. No source on the actual change in visa issuance to Chinese students was found. A DHS proposed rule of 2026-10-08 on Optional Practical Training fees is listed as context: it applies to all F-1 students regardless of nationality, rests mainly on fraud and worker-protection grounds with a secondary foreign-funding rationale, and does not change school certification, so it does not count toward the nationality-based visa cuts. The tail of that rule's text (regulatory flexibility and paperwork analyses) was not read.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The Harvard litigation timeline comes from a science-policy organization's page last updated 2026-03-15, which lists the proclamation as expired and does not mention appeals. The NPR article does not state the announcement date; 2025-05-28 is taken from its URL. The final rule was read in large part: it caps F and J admission at program length up to four years and mentions an exception for some I nonimmigrants from the PRC, and no country-based limit for students was seen; whether it took effect on 2026-09-15 after congressional review was not confirmed. No source on the actual change in visa issuance to Chinese students was found. A DHS proposed rule of 2026-10-08 on Optional Practical Training fees is listed as context: it applies to all F-1 students regardless of nationality, rests mainly on fraud and worker-protection grounds with a secondary foreign-funding rationale, and does not change school certification, so it does not count toward the nationality-based visa cuts. The tail of that rule's text (regulatory flexibility and paperwork analyses) was not read. Proclamation 10948 and the final rule were confirmed through the Federal Register API and web text on 2026-10-18; the final rule web text was cut off after about 100,000 of 124,000 characters, so the regulatory text was not read in full and a nationality provision for students there cannot be excluded. The proclamation sets its own review of extension (section 2(e), 90 days) and, in section 3, only directs consideration of limiting SEVP participation; it does not itself end SEVP deference. State Department pages could not be opened, so the visa-scrutiny announcement rests on the news report.",
+  "updated_at": "2026-10-18"
 }

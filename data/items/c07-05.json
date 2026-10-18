@@ -2,9 +2,9 @@
   "agency": "ODNI / CIA / NARA",
   "blockers": [],
   "chapter": "07",
-  "confidence": 56,
-  "confidence_label": "medium",
-  "confidence_reason": "EO 14243 was read in the Federal Register and confirms a directed over-classification review; the finding that no structural reform or review outcome followed rests on Federal Register and web searches, which would likely catch an order but not internal agency changes.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "The chapter text (pp. 223-224) was checked and the stage-deciding Executive Order 14243 was fetched and read in full on federalregister.gov, together with the Senate committee report on S. 4615; the absence of a revised classification order rests on Federal Register searches, and ODNI declassification pages on dni.gov could not be checked.",
   "durability": {
     "level": "low",
     "why": "An executive order directing a review, and releases of specific records, do not change the classification system, and a later administration could narrow or end such programs."
@@ -25,10 +25,14 @@
     {
       "date": "2026-10-12",
       "note": "Cross-reference added to c07-08, c07-16 (new records from the fuller reading of chapters 6 and 7); no change to status or evidence."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "An independent AI review re-read Executive Order 14243 (federalregister.gov) and the Senate committee report on the FY2027 intelligence authorization (intelligence.senate.gov), added the report as context and kept the stage at proposed 15."
     }
   ],
   "id": "c07-05",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "partial",
   "mechanism": "executive_order",
@@ -54,20 +58,24 @@
   "research_agent": "A06",
   "review": {
     "flags": [
-      "stage change from in_progress to proposed agreed",
-      "outcome of the EO 14243 review not found",
+      "dni.gov unreachable, so ODNI declassification initiatives could not be checked",
       "EO 14243's main purpose is information sharing, so the link to the Mandate's goal is partial"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 223 calls for tighter definitions, significantly fewer original classification authorities and stricter accountability; page 224 adds accuracy metrics, a faster default-to-automated ODNI-run declassification process and a dedicated budget line with AI tools; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "V1",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 223 calls for tighter definitions of protected information, significant reductions in original classification authorities and stricter accountability; page 224 adds accuracy metrics, simplification, a faster default-to-automated ODNI-run declassification process and a dedicated budget line with AI and IT tools; the proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "EO 14243, signed 2025-03-20, 90 FR 13681: Sec. 3(f) has agency heads review classified information policies for over-classification and report to OMB within 45 days with a catalog and recommendations; it does not mention EO 13526, original classification authorities or declassification.",
+        "note": "EO 14243, 90 FR 13681, doc 2025-05214, signed 2025-03-20; Sec. 3(f) over-classification review with report to OMB in 45 days; no mention of declassification, OCAs or EO 13526.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/03/25/2025-05214/stopping-waste-fraud-and-abuse-by-eliminating-information-silos"
+      },
+      {
+        "note": "S. 4615 reported 2026-08-05; Sec. 307 declassification notices; Church Committee records review; no OCA, over-classification or declassification funding provision.",
+        "result": "partial",
+        "url": "https://www.intelligence.senate.gov/wp-content/uploads/2026/08/CRPT-119srpt133.pdf"
       }
     ]
   },
@@ -126,6 +134,13 @@
       "publisher": "CIA",
       "title": "CIA press releases and statements (2025-2026 listing, page 1)",
       "url": "https://www.cia.gov/stories/press-releases-and-statements/"
+    },
+    {
+      "date": "2026-08-05",
+      "kind": "primary",
+      "publisher": "Senate Select Committee on Intelligence",
+      "title": "Senate Report 119-133, Intelligence Authorization Act for Fiscal Year 2027 (S. 4615)",
+      "url": "https://www.intelligence.senate.gov/wp-content/uploads/2026/08/CRPT-119srpt133.pdf"
     }
   ],
   "stage": "proposed",
@@ -183,6 +198,6 @@
   ],
   "title": "Modernize classification and declassification and cut original classification authorities",
   "tracked": true,
-  "uncertainties": "The finding of no structural reform rests on Federal Register searches (presidential documents mentioning classified national security information since 2025-01-20, and all documents mentioning Executive Order 13526, which returned only agency notices) and web searches that returned mostly Obama-era material; an order or ISOO rule not indexed under those terms could exist. The outcome of the Executive Order 14243 review (due about 2025-05-04) was not found. The Director's Initiatives Group is described only through a nominee's written answers and a trade report of Gabbard's remarks; the date of the Senate document is inferred from its file name. The earlier record's 2026-06 ODNI COVID-origins release was dropped because it rested on a Wikipedia summary and is record-specific. Searches run: classification executive order overhaul 2026; Gabbard AI declassification; over-classification and ISOO 2026.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The finding of no structural reform rests on Federal Register searches (presidential documents mentioning classified national security information since 2025-01-20, and all documents mentioning Executive Order 13526, which returned only agency notices) and web searches that returned mostly Obama-era material; an order or ISOO rule not indexed under those terms could exist. Executive Order 14243 was re-read on 2026-10-18: section 3(f) asks for an over-classification review and a report to OMB within 45 days and does not mention declassification, original classification authorities or Executive Order 13526; the outcome of that review (due about 2025-05-04) was not found. ODNI pages on declassification could not be checked because dni.gov was unreachable, so an ODNI-run declassification initiative published only there cannot be ruled out. The Director's Initiatives Group is described only through a nominee's written answers and a trade report of Gabbard's remarks; the date of the Senate document is inferred from its file name. The Senate Intelligence Committee's FY2027 authorization bill (S. 4615, reported 2026-08-05) would require notice to Congress of certain declassifications under Executive Order 13526 but does not address original classification authorities, over-classification or declassification funding, and it has not been enacted. The earlier record's 2026-06 ODNI COVID-origins release was dropped because it rested on a Wikipedia summary and is record-specific.",
+  "updated_at": "2026-10-18"
 }

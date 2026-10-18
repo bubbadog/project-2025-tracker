@@ -6,7 +6,7 @@
   "chapter": "11",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; Executive Order 14332 and the OMB proposed rule were read on the Federal Register; the speech provision rests on a law-firm summary.",
+  "confidence_reason": "Chapter text on printed page 357 checked. The stage-deciding OMB proposed rule (91 FR 32198, Doc. 2026-10817) was fetched on federalregister.gov and GovInfo and read only in part (preamble and table of contents); the content of proposed 200.219, which supplies the only related element, rests on a law-firm summary re-read in this review. EO 14332 was read in full for record c09-12 in this review and contains no assurance language. Medium is kept because the unread regulatory text decides whether any related element exists.",
   "durability": {
     "level": "low",
     "why": "An executive order or form change would be revocable; the OMB proposal would become binding regulation only if finalized."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Independent review on 2026-10-17 re-read the OMB proposed rule on federalregister.gov and GovInfo in part and the Greenberg Traurig summary, confirmed through the Federal Register API that no final rule had been published, and kept confidence at 72 and stage at proposed 8."
     }
   ],
   "id": "c11-31",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-17",
   "layer": 3,
   "match": "parallel",
   "mechanism": "executive_order",
@@ -53,29 +57,39 @@
   "research_agent": "R11",
   "restates_ids": [],
   "review": {
-    "flags": [],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 357 recommends an executive order requiring SF-424 series grant applications to carry assurances that the applicant will uphold the First Amendment in funded programs and work.",
+    "document_reread": {
+      "citation": "Regulation for Federal Financial Assistance, OMB proposed rule, 91 FR 32198 (2026-05-29), Doc. 2026-10817, docket OMB-2026-0034",
+      "note": "Read in part: full-text XML and GovInfo PDF capped near 126,500 characters; preamble groups 200.218 to 200.220 and 200.300 as anti-discrimination changes; no First Amendment, SF-424 or assurance language in the text read; regulatory text of 200.219 not reached.",
+      "result": "partial",
+      "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
+    },
+    "flags": [
+      "no final OMB rule found as of 2026-10-17 despite the reported 2026-10-01 target",
+      "regulatory text of proposed 200.219 still unread on a primary host"
+    ],
+    "mandate_check": "ok",
+    "mandate_note": "Page 357 recommends a presidential executive order requiring SF-424 series grant applications to contain assurances that the applicant will uphold the First Amendment in funded programs and work. The paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-D",
     "source_checks": [
       {
-        "note": "EO 14332 signed 2025-08-07, published 2025-08-12; no First Amendment, SF-424, assurance or certification language; free speech in findings only. Checked 2026-10-15.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/08/12/2025-15344/improving-oversight-of-federal-grantmaking"
-      },
-      {
-        "note": "91 FR 32198 of 2026-05-29, comments to 2026-07-13; section 200.219 listed but its text not in the portion read; no First Amendment or SF-424 mention. Checked 2026-10-15.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
-      },
-      {
-        "note": "Summary of 2026-07-08 describes proposed 200.219 as barring viewpoint-based discrimination in event services; no applicant certification. Checked 2026-10-15.",
+        "note": "Dated 2026-07-08; proposed 200.219 bars viewpoint, content and affiliation discrimination in event services by public-entity recipients; no mention of assurances or SF-424; final rule targeted for 2026-10-01.",
         "result": "supports",
         "url": "https://www.gtlaw.com/en/insights/2026/7/omb-proposes-significant-revisions-to-the-uniform-guidance-for-grants-and-agreements"
+      },
+      {
+        "note": "91 FR 32198 to 32305, comments close 2026-07-13, no effective date, docket OMB-2026-0034.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-10817.json"
+      },
+      {
+        "note": "Read in full in this review (see c09-12); no First Amendment, SF-424 or applicant assurance provision.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/08/12/2025-15344/improving-oversight-of-federal-grantmaking"
       }
-    ]
+    ],
+    "stage_change_reason": "proposed 8 kept: the only related step is a proposed government-wide rule whose event-services section bars viewpoint discrimination by recipients, a different instrument from an SF-424 applicant assurance, so it is a parallel match at proposed or below, and it is not final."
   },
   "significance": {
     "B": 3,
@@ -129,7 +143,7 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "No executive order or form change adding a First Amendment assurance to SF-424 applications was found. Executive Order 14332 (Improving Oversight of Federal Grantmaking), signed 2025-08-07, mentions free speech once in its findings but does not name the First Amendment, SF-424 or applicant assurances; it directs OMB to streamline application requirements and revise the Uniform Guidance. On 2026-05-29 OMB published a proposed rule (91 FR 32198) restructuring 2 CFR part 200, which lists a section prohibiting discriminatory event services; a law-firm summary of 2026-07-08 describes that section as barring recipients from discriminating in event services based on the viewpoint or content of speech, a related but different instrument that was not final as of 2026-10-15.",
+  "status_summary": "No executive order or form change adding a First Amendment assurance to SF-424 applications was found. Executive Order 14332 (Improving Oversight of Federal Grantmaking), signed 2025-08-07, mentions free speech once in its findings but does not name the First Amendment, SF-424 or applicant assurances; it directs OMB to streamline application requirements and revise the Uniform Guidance. On 2026-05-29 OMB published a proposed rule (91 FR 32198) restructuring 2 CFR part 200, which lists a section prohibiting discriminatory event services; a law-firm summary of 2026-07-08 describes that section as barring recipients from discriminating in event services based on the viewpoint or content of speech, a related but different instrument that was not final as of 2026-10-17. The proposal's preamble groups that section with others meant to keep award funds from unlawful discrimination or uses inconsistent with law and Executive Branch policy, and the portions of the proposal read contain no First Amendment, SF-424 or applicant-assurance language.",
   "timeline": [
     {
       "date": "2025-08-07",
@@ -148,6 +162,6 @@
   ],
   "title": "Executive order requiring SF-424 grant applications to assure First Amendment compliance",
   "tracked": true,
-  "uncertainties": "Searches run: one web search by the researcher (SF-424, First Amendment, assurances, OMB Uniform Guidance, executive order on grantmaking) plus Federal Register API queries; the reviewer ran no web search and queried the Federal Register API for the rule's title since 2026-06-01, which returned only regulatory agenda notices and no final rule. The OMB proposed rule page was truncated, so a speech assurance in unread text cannot be excluded; the description of the event-services section comes from a law-firm summary, which says OMB targeted an effective date of 2026-10-01. The SF-424 forms on grants.gov were not inspected. Department grant certifications on DEI are a different subject and were not counted.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Searches run: one web search by the researcher (SF-424, First Amendment, assurances, OMB Uniform Guidance, executive order on grantmaking) plus Federal Register API queries; the reviewer ran no web search and queried the Federal Register API for the rule's title since 2026-06-01, which returned only regulatory agenda notices and no final rule. The OMB proposed rule page was truncated, so a speech assurance in unread text cannot be excluded; the description of the event-services section comes from a law-firm summary, which says OMB targeted an effective date of 2026-10-01. The SF-424 forms on grants.gov were not inspected. Department grant certifications on DEI are a different subject and were not counted. In the 2026-10-17 review the Federal Register API record for the proposal (91 FR 32198 to 32305, 108 pages, comments closed 2026-07-13, no effective date) was read, and the full-text XML, the HTML page and the GovInfo PDF were each retrieved only to about 126,500 characters, which covers the preamble but not the regulatory text of proposed 200.219; none of the text read mentions the First Amendment, SF-424 or applicant assurances, and the only speech reference is a footnote citing the executive order on restoring freedom of speech. A Federal Register API query for the rule title from 2026-08-01 returned only regulatory agenda notices, so no final rule had been published as of 2026-10-17 despite the 2026-10-01 target reported by the law-firm summary.",
+  "updated_at": "2026-10-17"
 }

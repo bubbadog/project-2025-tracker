@@ -5,9 +5,9 @@
     "The Mandate's focus-country designation has no published list"
   ],
   "chapter": "06",
-  "confidence": 62,
+  "confidence": 65,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; the USTR statement and the NSS were fetched and read, and the commercial strategy and health compacts were confirmed on fetched secondary pages (a news aggregator reprinting the remarks and a think tank).",
+  "confidence_reason": "Chapter text pp. 186 to 187 checked; the National Security Strategy Africa section (whitehouse.gov) and Proclamation 11030 (federalregister.gov) were read, but the Commercial Diplomacy Strategy that carries the priority-country element was read only on a news aggregator, so the record stays medium.",
   "durability": {
     "level": "low",
     "why": "A bureau strategy and bilateral memoranda are executive documents, and AGOA runs only through 2026-12-31."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Schema conformance for the public repository: event dated 2025-05 set to 2025-05-01 with a month-only note; event dated 2025-12 set to 2025-12-01 with a month-only note. No change to stage, progress or substance."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source review read the National Security Strategy Africa section on whitehouse.gov and Proclamation 11030 on federalregister.gov, identified the AGOA extension as section 5019 of Pub. L. 119-75, and lowered progress from 40 to 30 within in_progress because no focus countries were designated."
     }
   ],
   "id": "c06-25",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -45,7 +49,7 @@
     187
   ],
   "position": "Department of State (Africa policy)",
-  "progress": 40,
+  "progress": 30,
   "proposal": "The Mandate says the next Administration should shift strategic focus in Africa from stand-alone development assistance toward private-sector-led growth, and should build a 'coalition of the cooperative' by having the State Department designate focus countries that receive a full suite of engagement while keeping a baseline of contact with countries that have less fruitful relationships (pages 186 and 187).",
   "related_ids": [
     "c09-17",
@@ -62,35 +66,25 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Progress moved from 45 to 40: the priority-country concept supports part of the focus-country element, but the health compacts are tangential and AGOA is a short extension of an existing program.",
-      "Duplicate check: kept, not dropped. c09-17 covers the aid-to-trade shift through USAID and Prosper Africa; the State-designated focus-country element is not in c09-17, so this is a partial overlap listed in related_ids.",
-      "Judgment call: proposed 20 would also be defensible if the commercial priority-country concept is not read as the Mandate's designation of focus countries."
+      "Progress lowered from 40 to 30 within in_progress: the strategy states direction without designating focus countries, and the AGOA step is a short extension of an existing program; proposed 20 is the defensible alternative if the commercial priority-country concept is not counted.",
+      "AGOA timeline entry replaced with one naming Pub. L. 119-75 sec. 5019 from the Federal Register proclamation.",
+      "Two month-only timeline entries relabeled with the standard (month-only date) note."
     ],
     "mandate_check": "confirmed",
-    "mandate_note": "Pages 186 and 187 recommend reorienting development aid in Africa toward free markets and US private-sector engagement while keeping emergency relief, and building a coalition of the cooperative in which State designates focus countries for a full suite of engagement while baseline contact continues with less cooperative countries.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "mandate_note": "Pages 186 and 187 recommend shifting development aid in Africa toward free markets and US private-sector engagement while keeping emergency relief, and building a coalition of the cooperative in which State designates focus countries for full engagement while keeping baseline contact elsewhere; the paraphrase fits.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Remarks by the acting head of the Africa bureau in Abidjan launching a Commercial Diplomacy Strategy with six actions; actions 2 and 3 target priority countries; no date printed. Checked 2026-10-15.",
-        "result": "supports",
-        "url": "https://allafrica.com/stories/202505150068.html"
-      },
-      {
-        "note": "USTR statement of 2026-02-03: AGOA reauthorized through 2026-12-31, retroactive to 2025-09-30; no public law number. Checked 2026-10-15.",
-        "result": "supports",
-        "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/february/statement-ambassador-jamieson-greer-reauthorization-african-growth-and-opportunity-act"
-      },
-      {
-        "note": "Think tank article of 2025-12-18 lists eight African health MOUs, first with Kenya; no focus-country list. Checked 2026-10-15.",
-        "result": "supports",
-        "url": "https://www.cgdev.org/node/3135613"
-      },
-      {
-        "note": "PDF cover dated November 2025; China treated in the Asia section (rebalance the economic relationship), no standalone China strategy; Hormuz and Red Sea named as core interests, no regional pact; Africa shift from aid to investment favoring capable, reliable states; India and Quad named, Pakistan only as party to a peace deal with India, Afghanistan not mentioned; Western Hemisphere nearshore manufacturing and energy infrastructure with regional partners; offensive cyber, no international norms framework. Checked 2026-10-15.",
-        "result": "supports",
+        "note": "Cover dated November 2025; Africa section moves from aid to investment, favors capable, reliable states and select partners without listing them; no focus-country designation or tiered engagement.",
+        "result": "partial",
         "url": "https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Security-Strategy.pdf"
+      },
+      {
+        "note": "Proclamation 11030, signed 2026-05-19, 91 FR 30469 to 30474: Pub. L. 119-75 sec. 5019 extends AGOA through 2026-12-31; Gabon redesignated effective 2026-01-01; retroactivity not addressed.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/full_text/text/2026/05/22/2026-10398.txt"
       }
     ]
   },
@@ -164,21 +158,28 @@
       "publisher": "Brownstein Hyatt Farber Schreck",
       "title": "White House Releases 2025 National Security Strategy",
       "url": "https://www.bhfs.com/insight/white-house-releases-2025-national-security-strategy/"
+    },
+    {
+      "date": "2026-05-22",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Proclamation 11030, To Implement Certain Provisions in the Consolidated Appropriations Act, 2026, and for Other Purposes (91 FR 30469)",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2026/05/22/2026-10398.txt"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "In May 2025 the acting head of the Bureau of African Affairs launched a Commercial Diplomacy Strategy, framed as trade not aid, whose six actions include working with governments in priority countries, defined as those where US companies want to do business and data support it, and backing infrastructure projects in those countries. The National Security Strategy released 2025-12-04 calls for a transition in Africa from a foreign aid paradigm to an investment and growth paradigm favoring capable, reliable states, but names no focus country list. In December 2025 the State Department signed health compacts with eight African governments, and on 2026-02-03 the President signed legislation reauthorizing AGOA through 2026-12-31, retroactive to 2025-09-30.",
+  "status_summary": "In May 2025 the acting head of the Bureau of African Affairs launched a Commercial Diplomacy Strategy, framed as trade not aid, whose six actions include working with governments in priority countries, defined as those where US companies want to do business and data support it, and backing infrastructure projects in those countries. The National Security Strategy dated November 2025 and released in December 2025 calls for a transition in Africa from a foreign aid paradigm to an investment and growth paradigm and for partnering with select capable, reliable states, but names no focus countries. In December 2025 the State Department signed health compacts with eight African governments. The Consolidated Appropriations Act, 2026 (Pub. L. 119-75), signed 2026-02-03, extends AGOA duty-free treatment through 2026-12-31 in section 5019, retroactive to 2025-09-30 according to USTR.",
   "timeline": [
     {
       "date": "2025-05-01",
-      "event": "The Bureau of African Affairs launched a Commercial Diplomacy Strategy with six actions, including reforms and infrastructure projects in priority countries, announced by the acting head of the bureau at a business summit in Abidjan. (month only; first of month used)",
+      "event": "The Bureau of African Affairs launched a Commercial Diplomacy Strategy with six actions, including reforms and infrastructure projects in priority countries, announced by the acting head of the bureau at a business summit in Abidjan. (month-only date)",
       "kind": "news",
       "source": "AllAfrica (State Department remarks)",
       "url": "https://allafrica.com/stories/202505150068.html"
     },
     {
       "date": "2025-12-01",
-      "event": "The State Department signed bilateral health memorandums of understanding with eight sub-Saharan African governments (Cameroon, Eswatini, Kenya, Lesotho, Liberia, Mozambique, Rwanda and Uganda), beginning with Kenya, under the America First Global Health Strategy. (month only; first of month used)",
+      "event": "The State Department signed bilateral health memorandums of understanding with eight sub-Saharan African governments (Cameroon, Eswatini, Kenya, Lesotho, Liberia, Mozambique, Rwanda and Uganda), beginning with Kenya, under the America First Global Health Strategy. (month-only date)",
       "kind": "news",
       "source": "Center for Global Development",
       "url": "https://www.cgdev.org/node/3135613"
@@ -192,14 +193,14 @@
     },
     {
       "date": "2026-02-03",
-      "event": "The President signed legislation reauthorizing the African Growth and Opportunity Act through 2026-12-31, retroactive to 2025-09-30.",
+      "event": "The Consolidated Appropriations Act, 2026 (Pub. L. 119-75) became law; its section 5019 extends AGOA duty-free treatment and the regional apparel and third-country fabric programs through 2026-12-31 (retroactive to 2025-09-30 per USTR).",
       "kind": "primary",
-      "source": "USTR",
-      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/february/statement-ambassador-jamieson-greer-reauthorization-african-growth-and-opportunity-act"
+      "source": "Federal Register (Proclamation 11030)",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2026/05/22/2026-10398.txt"
     }
   ],
   "title": "Shift Africa policy from aid to private-sector growth with designated focus countries",
   "tracked": true,
-  "uncertainties": "The public law number for the AGOA reauthorization was not confirmed; the USTR statement does not cite one. The Commercial Diplomacy Strategy speech was read on a news aggregator that prints no date, so the month rests on that page's story identifier. The priority-country concept in the commercial strategy is the nearest match to the Mandate's focus countries, but it is limited to commercial engagement and no list was found. The eight health compacts are a global health selection, not a general focus-country designation, and their individual signing dates were not confirmed. The end of USAID programs in Africa and any 2025 Africa summit were not separately researched. The aid-to-growth element overlaps c09-17 (Prosper Africa and the USAID, DFC and Commerce toolkit); the focus-country element does not appear there.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The National Security Strategy's Africa section was read on whitehouse.gov: it favors capable, reliable states and select partners without listing them, and names countries only in conflict contexts (DRC and Rwanda, Sudan, Ethiopia, Eritrea and Somalia). Its cover is dated November 2025; the exact release date was not confirmed from the PDF. The AGOA extension was confirmed as section 5019 of Pub. L. 119-75 through Proclamation 11030 on the Federal Register host; the section text itself was not opened, and the proclamation does not address retroactivity, which rests on the USTR statement. The Commercial Diplomacy Strategy speech was read on a news aggregator that prints no date, so the month rests on that page's story identifier; the State Department host was not reachable. The priority-country concept in the commercial strategy is the nearest match to the Mandate's focus countries, but it is limited to commercial engagement and no list was found. The eight health compacts are a global health selection, not a general focus-country designation, and their individual signing dates were not confirmed. The aid-to-growth element overlaps c09-17 (Prosper Africa and the USAID, DFC and Commerce toolkit); the focus-country element does not appear there.",
+  "updated_at": "2026-10-18"
 }

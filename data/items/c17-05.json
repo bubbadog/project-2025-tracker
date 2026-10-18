@@ -6,9 +6,9 @@
     "Supreme Court precedent limiting capital punishment, which the executive order directs DOJ to seek to overturn"
   ],
   "chapter": "17",
-  "confidence": 75,
-  "confidence_label": "medium",
-  "confidence_reason": "Text checked; the executive order, AG memo and DOJ release are primary and read, and the no-execution statement now rests on the Bureau of Prisons page, but later developments rest on limited searches.",
+  "confidence": 82,
+  "confidence_label": "high",
+  "confidence_reason": "The stage-deciding Attorney General memo of 2025-02-05, Executive Order 14164, the 2026-04-24 DOJ release and the Bureau of Prisons executions page were fetched and read on 2026-10-18. Later developments (any execution dates, protocol litigation, the announced rules) rest on limited Federal Register and web searches.",
   "durability": {
     "level": "low",
     "why": "The moratorium lift, charging policy, and protocol are executive policies that a later administration can reverse; executions, if carried out, would be irreversible for those individuals."
@@ -21,10 +21,14 @@
     {
       "date": "2026-10-13",
       "note": "Re-checked for developments after 2026-04-24; the Bureau of Prisons page still lists no federal execution after January 2021 and no DOJ rule on capital clemency or habeas appeared in the Federal Register. No change."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Commutation fact restored from the cited executive order and DOJ release; in_progress 60 confirmed and confidence raised to high."
     }
   ],
   "id": "c17-05",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -44,16 +48,34 @@
   "research_agent": "A12",
   "review": {
     "flags": [
-      "Uncertainties edited to drop an executed person's name and a verbatim phrase. The Wikipedia source on the record could now be removed, as the BOP page replaces it (no remove field in the output schema)."
+      "Restored the commutation sentence the draft removed: section 1 of Executive Order 14164 and the 2026-04-24 DOJ release, both cited, support it; the earlier interpretive clause about the death row population was not restored.",
+      "Stage in_progress 60 kept; implemented is not reached without executions or the announced rules.",
+      "Confidence raised to high 82 on reading the deciding memo and the order.",
+      "No court_status: no court event in the timeline."
     ],
     "mandate_check": "verified",
     "mandate_note": "p.554 calls for finality for federal death row prisoners and pursuing the death penalty for applicable crimes.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-2",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V3",
     "source_checks": [
       {
-        "note": "Fetched: latest listed federal execution is 2021-01-16; none after January 2021; no page update date shown.",
+        "note": "Section I lifts the 2021 moratorium; section II seek-death categories; section III 120-day Capital Review Committee review; section IV OLP evaluation of the 2019 pentobarbital addendum within 90 days; mentions the 37 commutations. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.justice.gov/ag/media/1388561/dl"
+      },
+      {
+        "note": "EO 14164 signed 2025-01-20; section 1 states the 2024-12-23 commutation of 37 of 40 federal death sentences; section 3(e) directs review of their confinement; sections 4 and 5 on state drugs and precedent. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2025-01-30/pdf/2025-02012.pdf"
+      },
+      {
+        "note": "2026-04-24: 44 defendants authorized (nine by the Acting AG), pentobarbital protocol reinstated, firing squad and facility study, legislative proposal, planned clemency proposed rule and possible habeas rule; no execution dates; refers to 37 of 40 commutations. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.justice.gov/opa/pr/justice-department-takes-actions-strengthen-federal-death-penalty"
+      },
+      {
+        "note": "Most recent listed federal execution 2021-01-16; none later. Checked 2026-10-18.",
         "result": "supports",
         "url": "https://www.bop.gov/about/history/federal_executions.jsp"
       }
@@ -103,7 +125,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Executive Order 14164 (2025-01-20) and Bondi's 2025-02-05 memo lifted the federal execution moratorium and directed prosecutors to seek death in specified categories, including murders of law enforcement officers and capital crimes by people in the country illegally. On 2026-04-24 DOJ announced it had authorized seeking death against 44 defendants, readopted the pentobarbital protocol, directed the Bureau of Prisons to add other execution methods including the firing squad, and planned rules on habeas review and clemency petitions. President Biden had commuted 37 of 40 federal death sentences in December 2024, so the death row population the Mandate described no longer exists, and no federal execution since January 2021 was found in the sources reviewed.",
+  "status_summary": "Executive Order 14164 (2025-01-20) and Bondi's 2025-02-05 memo lifted the federal execution moratorium and directed prosecutors to seek death in specified categories, including murders of law enforcement officers and capital crimes by people in the country illegally. On 2026-04-24 DOJ announced it had authorized seeking death against 44 defendants, readopted the pentobarbital protocol, directed the Bureau of Prisons to add other execution methods including the firing squad, and planned rules on habeas review and clemency petitions. Executive Order 14164 states that President Biden commuted 37 of the 40 federal death sentences on 2024-12-23 and directs a review of those offenders' conditions of confinement. The Bureau of Prisons history page lists no federal execution after 2021-01-16.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -129,6 +151,6 @@
   ],
   "title": "Enforce the federal death penalty and seek finality for capital cases",
   "tracked": true,
-  "uncertainties": "Checked 2026-10-13: the Bureau of Prisons federal executions history page lists no execution after 2021-01-16, which replaces the earlier Wikipedia-based basis for the no-execution statement (the page's own update date is not shown, so a very recent execution could be missed). The DOJ press release of 2026-04-24 (number 26-400) was re-read and mentions no execution dates; it says a proposed rule on capital clemency petitions and a possible habeas rule were planned within weeks, but a Federal Register query for Justice Department documents on the death penalty, executions or capital habeas after 2026-04-24 returned none, so neither rule was found published. Three web searches found no execution date, court ruling on the protocol or later DOJ announcement beyond the April coverage; absence from search results is not proof that none exists. Death-notice counts after April 2026 and the Mandate's child sexual abuse item were not checked.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Checked 2026-10-13: the Bureau of Prisons federal executions history page lists no execution after 2021-01-16, which replaces the earlier Wikipedia-based basis for the no-execution statement (the page's own update date is not shown, so a very recent execution could be missed). The DOJ press release of 2026-04-24 (number 26-400) was re-read and mentions no execution dates; it says a proposed rule on capital clemency petitions and a possible habeas rule were planned within weeks, but a Federal Register query for Justice Department documents on the death penalty, executions or capital habeas after 2026-04-24 returned none, so neither rule was found published. Three web searches found no execution date, court ruling on the protocol or later DOJ announcement beyond the April coverage; absence from search results is not proof that none exists. Death-notice counts after April 2026 and the Mandate's child sexual abuse item were not checked. Pass 6 check: the Attorney General memo of 2025-02-05 was read (section I lifts the moratorium; section II directs seeking death for law enforcement murders and capital crimes by people illegally present, absent significant mitigating circumstances; section III directs a 120-day Capital Review Committee reevaluation of no-seek decisions; Office of Legal Policy reviews the pentobarbital protocol and other methods, with a 90-day report), and the Federal Register API confirmed Executive Order 14164 (signed 2025-01-20, published 2025-01-30, 90 FR 8463). The DOJ release of 2026-04-24 was read again and names no execution date. A Federal Register API search for Justice Department documents mentioning capital clemency, execution or the death penalty since 2026-04-01 returned none. The commutation of 37 of 40 federal death sentences on 2024-12-23 is stated in section 1 of Executive Order 14164 and in the 2026-04-24 DOJ release (both read on 2026-10-18); the Bureau of Prisons page does not mention it. A Federal Register API listing of Justice Department proposed rules from 2026-04-24, read on 2026-10-18 for 41 of 53 results, showed no clemency or capital habeas rule. The page markers in the memo were incomplete, so the page numbers are inferred.",
+  "updated_at": "2026-10-18"
 }

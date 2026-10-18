@@ -5,9 +5,9 @@
     "Bank regulators and the Fed treat liquidity provision as a core function"
   ],
   "chapter": "24",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Bill text and the Vice Chair's remarks were read on primary sites; the finding that no limiting action exists rests on a limited search, so not_started is capped.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter pages 733 and 740 were checked, and the stage-deciding documents for S. 1646 (bill status and introduced text on govinfo.gov) were fetched and read in full on 2026-10-18: introduced and referred to Senate Banking on 2025-05-07 with no later action. The rating sits at the floor of high because the match is partial (emergency and asset-purchase programs only, no discount window limit or phase-in) and the absence of other qualifying actions rests on the documented systematic check rather than an exhaustive search.",
   "durability": {
     "level": "high",
     "why": "Nothing operative toward the recommendation exists; the status quo of an available discount window persists."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check with independent AI review: Stage moved from not_started 0 to proposed 5 on an introduced bill limiting section 13(3) emergency lending programs; confidence raised from 45 to 50. The coordinator then set confidence to 56 (medium) because the absence cap applies to not_started records, with the reviewer's 50 recorded as the alternative."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source review on 2026-10-18 re-read the S. 1646 bill status and introduced text on govinfo.gov, confirmed proposed 5, added the bill's coverage of asset-purchase programs to the status summary and raised confidence from 56 to 80."
     }
   ],
   "id": "c24-05",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -41,7 +49,7 @@
     740
   ],
   "position": "Federal Reserve: Limit the Federal Reserve's lender-of-last-resort function; Minimum Effective Reforms",
-  "progress": 0,
+  "progress": 5,
   "proposal": "The chapter recommends limiting the Federal Reserve's lender-of-last-resort function, which it calls a standing bailout offer that encourages risky lending, with ample lead time so banks can adjust without disrupting the financial system (p. 733). Among its minimum effective reforms it recommends curbing the Fed's last-resort lending practices, which it ties to too big to fail and moral hazard (p. 740).",
   "related_ids": [
     "c24-02"
@@ -55,32 +63,25 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage changed from diverged to not_started: the only opposite-direction item is an introduced bill, which is not operative, and the Fed's operational changes do not expand lending authority",
-      "Title shortened from 94 to under 90 characters",
-      "Proposal now cites both pages and the too-big-to-fail link",
-      "Bill provisions now read from the bill text rather than the sponsor release",
-      "Speech event reworded to the operative step it reports"
+      "Status summary now notes that S. 1646 also covers quantitative easing or tightening programs and requires a plan to end each program within 3 years.",
+      "Alternative stage: not_started 0, if a reporting duty and time limit are read as oversight rather than a limit on the last-resort role.",
+      "Confidence moved from 56 to 80: the deciding bill text and status were read in full on a primary host and the chapter text was checked; the absence cap does not apply to a proposed record."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Pages 733 (Limit the Federal Reserve's lender-of-last-resort function) and 740 (Minimum Effective Reforms: curb last-resort lending tied to too big to fail). Paraphrase accurate in substance; page attributions and the too-big-to-fail link added; title shortened.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 733 recommends limiting the lender-of-last-resort function, described as a standing bailout offer, with ample lead time for banks to adjust; page 740 lists curbing the Fed's last-resort lending, tied to too big to fail and moral hazard, among the minimum effective reforms. The proposal paraphrase is accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14. Introduced text: test borrowing quarterly above 100 billion dollars and semiannually from 10 to 100 billion; Board to modernize operations; stigma study; no cap on advances.",
+        "note": "Read 2026-10-18: two actions, both 2025-05-07 (introduced; read twice and referred to Senate Banking); one original cosponsor; no later action.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s4585is/html/BILLS-119s4585is.htm"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1646.xml"
       },
       {
-        "note": "Checked 2026-10-14. Introduced 2026-05-20 by Sen. Warner with Sen. Kennedy, referred to Senate Banking.",
+        "note": "Read in full 2026-10-18: section 2 covers quantitative easing or tightening programs and emergency lending under the first or third undesignated paragraph of section 13; reports every 90 days, a plan to end within 3 years, a one-year limit absent congressional authorization, Congressional Review Act disapproval; no discount window provision.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/app/details/BILLS-119s4585is"
-      },
-      {
-        "note": "Checked 2026-10-14. Remarks of 2026-09-22 describe September 2026 Borrower-in-Custody streamlining and the 2024 Discount Window Direct portal; no lending limit.",
-        "result": "supports",
-        "url": "https://www.federalreserve.gov/newsevents/speech/files/jefferson20260922a.pdf"
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1646is/xml/BILLS-119s1646is.xml"
       }
     ]
   },
@@ -147,11 +148,32 @@
       "publisher": "American Banker",
       "title": "Fed watchers say discount window revamp overdue, but tricky",
       "url": "https://www.americanbanker.com/news/fed-watchers-say-discount-window-revamp-overdue-but-tricky"
+    },
+    {
+      "date": "2025-05-07",
+      "kind": "primary",
+      "publisher": "U.S. Government Publishing Office",
+      "title": "S. 1646, Rein in the Federal Reserve Act (introduced text)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1646is/xml/BILLS-119s1646is.xml"
+    },
+    {
+      "date": "2025-05-07",
+      "kind": "primary",
+      "publisher": "U.S. Government Publishing Office",
+      "title": "S. 1646 bill status (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1646.xml"
     }
   ],
-  "stage": "not_started",
-  "status_summary": "No statutory or Board action limiting the Fed's lender-of-last-resort role or its last-resort lending was found. The activity found points the other way but is not a limit or an expansion of lending authority: S. 4585, the Discount Window Preparedness Act, introduced 2026-05-20 and referred to the Senate Banking Committee, would require larger banks to test-borrow from the discount window, direct the Board to modernize discount window operations and study ways to reduce stigma, and sets no cap on advances. In remarks of 2026-09-22 the Fed's Vice Chair reported that Reserve Banks had streamlined the Borrower-in-Custody collateral program in September 2026 and described primary credit as offered on a no-questions-asked basis; no limit on lending was announced.",
+  "stage": "proposed",
+  "status_summary": "No statutory or Board action limiting the Fed's lender-of-last-resort role or its last-resort lending has been taken. One introduced bill points toward the recommendation in part: S. 1646, the Rein in the Federal Reserve Act, introduced 2025-05-07 and referred to the Senate Banking Committee with no further action, would require public reports to Congress, updated at least every 90 days, on each quantitative easing or tightening program and each emergency lending program under section 13 of the Federal Reserve Act, with a plan to end each program within 3 years, a bar on running any such program more than one year without authorization from Congress, and congressional disapproval procedures for each report; it does not address the discount window. Other activity points the other way but is not a limit or an expansion of lending authority: S. 4585, the Discount Window Preparedness Act, introduced 2026-05-20 and referred to the Senate Banking Committee, would require larger banks to test-borrow from the discount window, direct the Board to modernize discount window operations and study ways to reduce stigma, and sets no cap on advances. In remarks of 2026-09-22 the Fed's Vice Chair reported that Reserve Banks had streamlined the Borrower-in-Custody collateral program in September 2026 and described primary credit as offered on a no-questions-asked basis; no limit on lending was announced.",
   "timeline": [
+    {
+      "date": "2025-05-07",
+      "event": "S. 1646, the Rein in the Federal Reserve Act, was introduced in the Senate and referred to the Banking Committee; it would require public reports on each Federal Reserve emergency lending program under section 13 and bar a program from running more than one year without authorization from Congress.",
+      "kind": "primary",
+      "source": "U.S. Government Publishing Office",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1646is/xml/BILLS-119s1646is.xml"
+    },
     {
       "date": "2026-05-20",
       "event": "S. 4585, the Discount Window Preparedness Act, was introduced and referred to the Senate Banking Committee; it would require discount window test borrowing by banks above 10 billion dollars in assets, direct the Board to modernize discount window operations, and require a stigma study, with no cap on advances.",
@@ -169,6 +191,6 @@
   ],
   "title": "Limit the Fed's lender-of-last-resort role and curb its last-resort lending",
   "tracked": true,
-  "uncertainties": "No 119th Congress bill amending section 13(3) or limiting discount window lending was found; congress.gov search could not be opened, so absence is not proven. The Fed's operational changes (the Borrower-in-Custody streamlining and the Discount Window Direct portal) make existing lending easier to reach but do not widen eligibility or lending authority, so the record is not staged diverged; a reader who treats easier access as opposite to the recommendation could stage it diverged. S. 4585 is an introduced bill and not operative, so it cannot set the stage. The Borrower-in-Custody change is known from the Vice Chair's remarks; the Fed web page announcing it was not opened. The American Banker article is context only.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "No 119th Congress bill limiting discount window lending was found; congress.gov search could not be opened, so absence is not proven. The Fed's operational changes (the Borrower-in-Custody streamlining and the Discount Window Direct portal) make existing lending easier to reach but do not widen eligibility or lending authority, so the record is not staged diverged; a reader who treats easier access as opposite to the recommendation could stage it diverged. S. 4585 is an introduced bill and not operative, so it cannot set the stage. The Borrower-in-Custody change is known from the Vice Chair's remarks; the Fed web page announcing it was not opened. The American Banker article is context only. Checked systematically on 2026-10-18: Federal Register searches, agenda and proposed-rule listings, a congress.gov and govinfo.gov bill search, the Board press release list and a news search found one introduced Senate bill (S. 1646, 2025-05-07) that would limit section 13(3) emergency lending programs to one year absent congressional authorization, with no committee action; no rule, order or enacted law limits last-resort lending. A May 2026 Board proposal to make holders of a new Payment Account ineligible for discount window credit leaves existing credit programs unchanged and does not limit the general role. Proposed at the low end was chosen because S. 1646 curbs emergency lending, one of the two last-resort channels the chapter targets, but leaves the discount window untouched and sets no phase-in; not_started is the other defensible call if a reporting duty and a time limit are read as oversight rather than a limit on the role.",
+  "updated_at": "2026-10-18"
 }

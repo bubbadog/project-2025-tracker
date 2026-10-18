@@ -5,9 +5,9 @@
     "Recommendation depends on policy choices that run against public affairs and information-operations missions"
   ],
   "chapter": "04",
-  "confidence": 55,
+  "confidence": 58,
   "confidence_label": "medium",
-  "confidence_reason": "Two reputable trade-press reports read on internal memos; no primary policy text available; other services not checked.",
+  "confidence_reason": "Chapter text checked (page 104). The Army directive itself sits on armypubs.army.mil, which refused automated fetches, so the stage rests on the DefenseScoop report of 2026-07-09, re-read on 2026-10-18, which describes an account consolidation with no recruiting-only limit and no discipline provision; confidence stays medium.",
   "durability": {
     "level": "low",
     "why": "The steps are an internal email and a service memo, both reversible by the Secretary."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift: the Army directive on armypubs.army.mil could not be fetched, and the DefenseScoop report (defensescoop.com) was re-read; stage proposed 10 and the parallel match were kept and confidence moved from 55 to 58."
     }
   ],
   "id": "c04-27",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -59,25 +63,24 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage changed from in_progress 25 to proposed 10 and match from partial to parallel: the 2025 email makes recruiting one of several primary purposes and the Army memo consolidates accounts; neither restricts official use to recruitment nor sets discipline for engaging critics, so they are parallel executive steps, not partial implementation. in_progress 25 (researcher's view) and not_started 0 are both defensible alternatives.",
-      "Corrected 'mainly' to 'primarily' (the source's word) and listed the email's other purposes.",
-      "Confidence raised from 40 to 55: both DefenseScoop reports fetched and read; no primary memo text."
+      "Proposed 10 parallel kept; not_started 0 is also defensible because neither step restricts use to recruiting or adds discipline.",
+      "Deciding Army directive not read (host blocked)."
     ],
     "mandate_check": "confirmed",
-    "mandate_note": "p. 104, item 5 under Eliminate politicization, reestablish trust and accountability, and restore faith to the force: restrict social media use solely to recruitment and discipline personnel who use an official command channel to engage civilian critics. Proposal matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y6",
+    "mandate_note": "Page 104 (numbered item 5) asks that social media use be restricted solely to recruitment and that personnel who use an official command channel to engage civilian critics be disciplined. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14: 2025-01-24 pause memo; 2025-02-03 email rescinds it and says primarily mission, lethality, meritocracy, readiness and recruiting; nothing on discipline or critics.",
-        "result": "supports",
-        "url": "https://defensescoop.com/2025/02/03/dod-defense-department-social-media-pause-rescinded-trump-hegseth/"
+        "note": "Memo Optimizing Digital Media dated 2026-06-30, released 2026-07-08; official accounts limited to listed organizations, unauthorized accounts deactivated within 30 days, mission-critical exceptions approved by the deputy undersecretary; personal accounts excluded; no mention of recruiting or discipline. Supports a parallel step only.",
+        "result": "partial",
+        "url": "https://defensescoop.com/2026/07/09/army-social-media-policy-dan-driscoll-directive/"
       },
       {
-        "note": "Checked 2026-10-14: memo dated 2026-06-30, released 2026-07-08, Optimizing Digital Media; account list, 30-day deactivation, mission-critical exceptions; personal accounts excluded; nothing on critics or discipline.",
-        "result": "supports",
-        "url": "https://defensescoop.com/2026/07/09/army-social-media-policy-dan-driscoll-directive/"
+        "note": "Robots disallowed on 2026-10-18.",
+        "result": "unreachable",
+        "url": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN47041-ARMY_DIR_2026-17-000-WEB-1.pdf"
       }
     ]
   },
@@ -152,6 +155,6 @@
   ],
   "title": "Limit official social media to recruiting and discipline engagement with critics",
   "tracked": true,
-  "uncertainties": "Neither the January 2025 memo, the February 2025 email nor the June 2026 Army memo was read directly; all rest on DefenseScoop and Military Times. The 2025 email lists recruiting as one of several primary purposes, which differs from the Mandate's solely-for-recruitment test. The Army consolidation is framed by the Army as reducing operational risk, not as a restriction to recruiting. Navy, Marine Corps, Air Force and Space Force policies and any Defense Department instruction changes were not examined, and no disciplinary policy on engaging civilian critics was found in a limited search.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Neither the January 2025 memo, the February 2025 email nor the June 2026 Army memo was read directly; all rest on DefenseScoop and Military Times. The 2025 email lists recruiting as one of several primary purposes, which differs from the Mandate's solely-for-recruitment test. The Army consolidation is framed by the Army as reducing operational risk, not as a restriction to recruiting. Navy, Marine Corps, Air Force and Space Force policies and any Defense Department instruction changes were not examined, and no disciplinary policy on engaging civilian critics was found in a limited search. On 2026-10-18 the Army directive PDF linked by DefenseScoop (armypubs.army.mil) refused automated fetches, so the memo's own text, including any purpose statement, remains unread.",
+  "updated_at": "2026-10-18"
 }

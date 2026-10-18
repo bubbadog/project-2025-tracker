@@ -2,9 +2,9 @@
   "agency": "National Security Council",
   "blockers": [],
   "chapter": "02",
-  "confidence": 62,
-  "confidence_label": "medium",
-  "confidence_reason": "NSPM-1 was read and confirms the NSC and Homeland Security Council staff consolidation, and AP and CBS confirm the May 2025 cuts and detailee removals; the 2026 picture rests on one commentary, and the cyber office, counsel and clearance findings are inferences or absence-of-evidence findings.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text (pp. 50 to 53) checked, and the stage-deciding document, NSPM-1, was read in full on whitehouse.gov: it puts one NSC staff and Executive Secretary over the NSC and the Homeland Security Council and does not mention the cyber director, detailees, clearances or directorates. EO 14413 was read on the Federal Register for the cyber reporting chain; staff cuts and the 2026 assessment rest on news reports and one commentary, which do not decide the stage.",
   "durability": {
     "level": "low",
     "why": "NSC organization is set by presidential memoranda and White House staffing decisions that any President can change at once; the NSC itself is statutory but its staff structure is not."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-15",
       "note": "Rotation check (update run): No new NSPM or NSC reorganization found since 2026-10-07 (Federal Register API presidential documents, 2 web searches); HSC consolidation rests on NSPM-1 only. Stage unchanged at in_progress 45; no review needed because only uncertainties changed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review read NSPM-1 on whitehouse.gov and EO 14413 on federalregister.gov, re-dated the cyber reporting event to the 2026-06-22 signing, removed a research-note timeline entry and kept in_progress 45."
     }
   ],
   "id": "c02-03",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -62,35 +66,26 @@
   "research_agent": "A01",
   "review": {
     "flags": [
-      "progress lowered from 55 to 45: three of the Mandate's structural asks (cyber office, separate counsel, NSC-held clearances) are not met and the empowered-NSC goal runs the other way",
-      "'more than 100 notices' and '350 to under 150' figures not in the cited AP or CBS reports; removed",
-      "2026 assessment rests on one commentary"
+      "progress kept at 45; 40 (researcher suggestion) is also defensible because three structural asks are unmet",
+      "the dual-titled counsel position was confirmed in NSPM-1, resolving the researcher's doubt",
+      "timeline event 'two presidential documents' re-dated to the EO 14413 signing (2026-06-22) and narrowed to the one document read",
+      "Wikipedia officeholder-table event removed as a research note, not an action"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "The NSC section runs from the end of page 50 to page 53: a strong, empowered NSC organized by presidential directive, elimination of nonaligned directorates, NSC-held clearances (p. 52), consolidation of NSC and HSC staffs and incorporation of the cyber director's office, staffing with aligned political appointees and trusted career officials, return of nonessential detailees on day one, and its own counsel without dual-hatted staff (p. 53); the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "V1",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 51 to 53 call for an empowered NSC organized by presidential directive, elimination of nonaligned directorates, NSC-held clearances, consolidation of the NSC and HSC staffs with incorporation of the National Cyber Director's office, staffing mostly with aligned political appointees, return of nonessential detailees on day one, and an NSC counsel without dual-hatted staff. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "NSPM-1 (2025-01-20) has the NSC convene as the HSC on pre-agreed topics with a single staff and Executive Secretary; does not mention the cyber director or detailees; one position carries both the Deputy Counsel to the President for National Security Affairs and Legal Counsel to the NSA titles.",
+        "note": "NSPM-1, 2025-01-20: NSC meets as the HSC on pre-agreed topics, one staff under a single Executive Secretary, NSC staff chair PCCs; lists one position titled Deputy Counsel to the President for National Security Affairs and Legal Counsel to the National Security Advisor; no mention of the cyber director, detailees, clearances or directorates.",
         "result": "supports",
         "url": "https://www.whitehouse.gov/presidential-actions/2025/01/organization-of-the-national-security-council-and-subcommittees"
       },
       {
-        "note": "AP, 2025-05-23: staff of about 395 (about 180 support), about 90 to 95 detailed experts ousted and free to return to home agencies, staff to be significantly reduced. It does not give the 350 to under-150 figures or the 'more than 100 notices' in the record's summary.",
-        "result": "partial",
-        "url": "https://www.scrippsnews.com/politics/white-house-slashing-staff-in-major-overhaul-of-national-security-council-officials-say"
-      },
-      {
-        "note": "CBS, 2025-05-23: about 20 placed on administrative leave, communications team dissolving, Andy Baker and Robert Gabriel named deputies; no headcount before or after.",
-        "result": "partial",
-        "url": "https://www.cbsnews.com/amp/news/trump-national-security-council-trimmed-in-restructuring"
-      },
-      {
-        "note": "Foreign Service Journal, July-August 2026, commentary by a former NSC deputy executive secretary: reduced NSC expertise, staff and responsibility over the past year, slower interagency meetings, Rubio in both roles; officials dismissed the concerns.",
+        "note": "EO 14413, 91 FR 38487, FR Doc. 2026-12910, signed 2026-06-22, published 2026-06-25; Section 10(c) lists the National Cyber Director as a separate report recipient.",
         "result": "supports",
-        "url": "https://afsa.org/sites/default/files/flipping_book/070826/25/"
+        "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12910/ushering-in-the-next-frontier-of-quantum-innovation"
       }
     ]
   },
@@ -152,7 +147,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "As of 2026-10-07 the NSC has been reorganized by presidential memorandum and personnel actions, but only some of the Mandate's elements are in place. NSPM-1 (2025-01-20) lets the NSC meet as the Homeland Security Council on topics agreed in advance and puts one staff and one Executive Secretary over both, a staff consolidation of the kind the Mandate describes. In April 2025 several NSC staff were fired, and on 2025-05-23 AP reported an overhaul of a staff of roughly 395 in which about 90 to 95 detailed experts were removed and free to return to their home agencies, with the staff expected to be significantly reduced; CBS reported about 20 staff placed on administrative leave and the communications team dissolved. Neither report gave a post-cut headcount. The Office of the National Cyber Director still appears as a separate official in presidential documents of 2026-06-25, and NSPM-1 gives one official both the Deputy Counsel to the President for National Security Affairs and Legal Counsel to the National Security Advisor titles. The Mandate also asks for a strong, empowered NSC; a July 2026 commentary by a former NSC deputy executive secretary says the NSC lost staff, expertise and responsibilities and that interagency meetings slowed, and Secretary of State Marco Rubio still also serves as national security adviser, so the outcome differs from that goal.",
+  "status_summary": "As of 2026-10-07 the NSC has been reorganized by presidential memorandum and personnel actions, but only some of the Mandate's elements are in place. NSPM-1 (2025-01-20) lets the NSC meet as the Homeland Security Council on topics agreed in advance and puts one staff and one Executive Secretary over both, a staff consolidation of the kind the Mandate describes. In April 2025 several NSC staff were fired, and on 2025-05-23 AP reported an overhaul of a staff of roughly 395 in which about 90 to 95 detailed experts were removed and free to return to their home agencies, with the staff expected to be significantly reduced; CBS reported about 20 staff placed on administrative leave and the communications team dissolved. Neither report gave a post-cut headcount. The National Cyber Director still appears as a separate report recipient alongside the national security adviser in EO 14413 (signed 2026-06-22, published 2026-06-25 at 91 FR 38487), and NSPM-1 gives one official both the Deputy Counsel to the President for National Security Affairs and Legal Counsel to the National Security Advisor titles. The Mandate also asks for a strong, empowered NSC; a July 2026 commentary by a former NSC deputy executive secretary says the NSC lost staff, expertise and responsibilities and that interagency meetings slowed, and Secretary of State Marco Rubio still also serves as national security adviser, so the outcome differs from that goal.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -190,8 +185,8 @@
       "url": "https://en.wikipedia.org/wiki/National_Security_Council_(United_States)"
     },
     {
-      "date": "2026-06-25",
-      "event": "Two presidential documents published this day send reports to the President through the assistant for national security affairs and the National Cyber Director as separate officials, showing the cyber director's office still operates alongside, not inside, the NSC staff structure (inference from the reporting chain).",
+      "date": "2026-06-22",
+      "event": "EO 14413, Ushering in the Next Frontier of Quantum Innovation (published 2026-06-25 at 91 FR 38487), routes reports on the national security implications of commercial quantum computers to the President through the science and technology assistant, the national security adviser and the National Cyber Director as separate officials, so the cyber director's office still operates alongside, not inside, the NSC staff structure (inference from the reporting chain).",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12910/ushering-in-the-next-frontier-of-quantum-innovation"
@@ -202,17 +197,10 @@
       "kind": "news",
       "source": "Foreign Service Journal (AFSA)",
       "url": "https://afsa.org/sites/default/files/flipping_book/070826/25/"
-    },
-    {
-      "date": "2026-10-07",
-      "event": "The Wikipedia officeholder table still lists Rubio as acting national security adviser (read on this date).",
-      "kind": "tracker",
-      "source": "Wikipedia (tracker)",
-      "url": "https://en.wikipedia.org/wiki/National_Security_Advisor_(United_States)"
     }
   ],
   "title": "Realign NSC staff to presidential priorities and fold in HSC and cyber functions",
   "tracked": true,
-  "uncertainties": "Staff figures differ by outlet (about 350 versus about 395 before the cuts) and no post-cut headcount was published in the articles read. The 2026 assessment of a weakened NSC comes from one commentary by a former NSC official, not from staffing data. The cyber office finding is an inference from the reporting chain in two presidential documents, not from a document about NSC structure. Whether the NSC adjudicates its own clearances, whether a separate counsel was created, and whether directorates were formally eliminated were not found. A Federal Register search of presidential documents for NSC organization found only NSPM-1 being cited by a 2025-04-15 order. The Financial Times claim is second-hand from Wikipedia. Searches run: two web searches on NSC downsizing and 2026 NSC structure plus Federal Register queries for 'National Cyber Director' and NSC organization. Re-check on 2026-10-15: a Federal Register API search of presidential documents mentioning the National Security Council from 2026-10-01 returned none, and one web search for a new NSPM or NSC reorganization surfaced only 2017 and 2025 items; another search on folding the HSC into the NSC found only older commentary. NSPM-1's single-staff provision remains the only formal HSC step found.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Staff figures differ by outlet (about 350 versus about 395 before the cuts) and no post-cut headcount was published in the articles read. The 2026 assessment of a weakened NSC comes from one commentary by a former NSC official, not from staffing data. The cyber office finding is an inference from the reporting chain in EO 14413 (Section 10(c) routes reports through the science and technology assistant, the national security adviser and the National Cyber Director as separate officials), not from a document about NSC structure; an earlier reference to a second document published the same day was not confirmed. Whether the NSC adjudicates its own clearances, whether a separate counsel was created, and whether directorates were formally eliminated were not found. A Federal Register search of presidential documents for NSC organization found only NSPM-1 being cited by a 2025-04-15 order. The Financial Times claim is second-hand from Wikipedia. Searches run: two web searches on NSC downsizing and 2026 NSC structure plus Federal Register queries for 'National Cyber Director' and NSC organization. Re-check on 2026-10-15: a Federal Register API search of presidential documents mentioning the National Security Council from 2026-10-01 returned none, and one web search for a new NSPM or NSC reorganization surfaced only 2017 and 2025 items; another search on folding the HSC into the NSC found only older commentary. NSPM-1's single-staff provision remains the only formal HSC step found.",
+  "updated_at": "2026-10-18"
 }

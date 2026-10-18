@@ -5,9 +5,9 @@
     "Some trespass charges were dismissed by a judge"
   ],
   "chapter": "17",
-  "confidence": 68,
+  "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked and the executive order was confirmed in the Federal Register; the detentions rest on one reputable wire report, and later developments were not verified.",
+  "confidence_reason": "Chapter page 555 checked; NSPM-4 (DCPD-202500471) and Public Land Order 7963 (90 FR 16698, Doc. 2025-06827) were read on govinfo.gov in this review and support operative military jurisdiction over border lands; the detention practice that supports in_progress rests on an AP report and an Army article, so the rating stays medium.",
   "durability": {
     "level": "medium",
     "why": "Based on executive designations and orders that a later administration can reverse; the legal basis was being tested in courts."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review read NSPM-4 and Public Land Order 7963 on govinfo.gov, added both as primary sources and timeline events, and replaced the statement that the national defense area documents were not located; stage unchanged, confidence 68 to 76."
     }
   ],
   "id": "c17-17",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "partial",
   "mechanism": "executive_order",
@@ -56,31 +60,35 @@
   "research_agent": "N17",
   "restates_ids": [],
   "review": {
+    "document_reread": {
+      "citation": "National Security Presidential Memorandum NSPM-4 of 2025-04-11, Memorandum on the Military Mission for Sealing the Southern Border of the United States and Repelling Invasions, DCPD-202500471; with Public Land Order No. 7963, 90 FR 16698, Doc. 2025-06827",
+      "note": "Read on govinfo.gov: Sec. 1 directs transfer of use and jurisdiction over southern-border federal lands to the Defense Department and provides for the Secretary of Defense to designate National Defense Areas, with use-of-force rules set by the Secretary; Sec. 2 phases implementation from an initial sector; Sec. 3 preserves authority to request title 32 National Guard support, including law enforcement support if requested. It does not itself direct arrests or detentions. PLO 7963 (read on govinfo.gov) withdraws about 109,651 acres in Dona Ana, Luna and Hidalgo Counties, New Mexico, to Army jurisdiction for border security, effective 2025-04-15 for three years, published 2025-04-21, signed by the Secretary of the Interior.",
+      "result": "supports",
+      "url": "https://www.govinfo.gov/content/pkg/DCPD-202500471/html/DCPD-202500471.htm"
+    },
     "flags": [
-      "judgment call: implemented (65) is defensible because active-duty troops do take part in border detentions; in_progress kept because the role is confined to designated areas and no National Guard arrest role was found."
+      "Contradiction accepted: the uncertainty that the national defense area documents were not located is superseded by NSPM-4 and PLO 7963; uncertainties rewritten.",
+      "Both proposed events are dated government actions and accepted.",
+      "The court-related items (charges, dismissals) are carried in the summary from the AP report, not as timeline events, so no court_status is required."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 555 checked: the text says the approach could include active-duty military personnel and National Guardsmen assisting in arrest operations; it is phrased as an option, so the proposal was reworded. Not covered by c17-09 or c17-11.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed page 555 recommends finishing the southwestern border wall and an aggressive approach to criminal organizations that could include active-duty military and National Guard help with arrests at the border; the proposal paraphrases this accurately.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y17f",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-5",
     "source_checks": [
       {
-        "note": "Executive Order 14167, signed 2025-01-20, published 2025-01-30, 90 FR 8613.",
+        "note": "Header labels it NSPM-4; Sec. 1 to 3 confirmed; no arrest or Guard arrest directive.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2025-02089.json"
+        "url": "https://www.govinfo.gov/content/pkg/DCPD-202500471/html/DCPD-202500471.htm"
       },
       {
-        "note": "Associated Press, 2025-06-11: troops detaining trespassers near Santa Teresa, New Mexico and handing them to Border Patrol; more than 1,400 charged; more than 100 national security charges dismissed by a New Mexico judge; National Guard mentioned only for Los Angeles.",
+        "note": "PLO 7963, 90 FR 16698-16699, about 109,651 acres, Army, effective 2025-04-15, 3 years.",
         "result": "supports",
-        "url": "https://www.news4jax.com/news/politics/2025/06/11/troops-begin-detaining-immigrants-in-national-defense-zone-at-border-in-escalation-of-military-role/"
-      },
-      {
-        "note": "Federal Register API search for the sealing-mission memorandum returned no documents.",
-        "result": "does_not_support",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Sealing+the+Southern+Border%22&conditions[publication_date][gte]=2025-01-20"
+        "url": "https://www.govinfo.gov/content/pkg/FR-2025-04-21/html/2025-06827.htm"
       }
-    ]
+    ],
+    "stage_change_reason": "NSPM-4 and PLO 7963 make military jurisdiction over border lands operative, and troops detain trespassers in those areas per the AP and Army accounts, which is partly operative executive action; no National Guard arrest role is documented and the wall element is not assessed here, so in_progress 55 holds."
   },
   "significance": {
     "B": 3,
@@ -124,17 +132,52 @@
       "publisher": "Associated Press (via news4jax)",
       "title": "Troops begin detaining immigrants in national defense zone at border in escalation of military role",
       "url": "https://www.news4jax.com/news/politics/2025/06/11/troops-begin-detaining-immigrants-in-national-defense-zone-at-border-in-escalation-of-military-role/"
+    },
+    {
+      "date": "2025-04-11",
+      "kind": "primary",
+      "publisher": "govinfo.gov",
+      "title": "Memorandum on the Military Mission for Sealing the Southern Border of the United States and Repelling Invasions (NSPM-4)",
+      "url": "https://www.govinfo.gov/content/pkg/DCPD-202500471/html/DCPD-202500471.htm"
+    },
+    {
+      "date": "2025-04-21",
+      "kind": "primary",
+      "publisher": "govinfo.gov (Federal Register)",
+      "title": "Public Land Order No. 7963; National Defense Operating Area Withdrawal, Dona Ana, Luna, and Hidalgo Counties, NM",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2025-04-21/html/2025-06827.htm"
+    },
+    {
+      "date": "2025-04-17",
+      "kind": "primary",
+      "publisher": "U.S. Army",
+      "title": "Interagency land agreement strengthens military border mission",
+      "url": "https://www.army.mil/article/284719/interagency_land_agreement_strengthens_military_border_mission"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Executive Order 14167 (signed 2025-01-20, published 2025-01-30) directed the Defense Department to assign U.S. Northern Command a mission of sealing the borders and repelling unlawful entry and trafficking. By 2025-06-11 the Associated Press reported that troops were detaining people accused of trespassing in national defense areas in New Mexico, with a second area in western Texas, and handing them to Border Patrol, and that more than 1,400 people had been charged with entering militarized areas; a New Mexico judge dismissed more than 100 of the national security charges. The sources do not describe National Guard participation in border arrests.",
+  "status_summary": "Executive Order 14167 (signed 2025-01-20, published 2025-01-30) directed the Defense Department to submit a Unified Command Plan revision giving U.S. Northern Command the border-sealing mission; a 2025-04-11 presidential memorandum (NSPM-4) then provided for military jurisdiction over southern-border federal lands and the designation of National Defense Areas, and Public Land Order 7963 (effective 2025-04-15) transferred about 109,651 acres in New Mexico to the Army for border security for three years. By 2025-06-11 the Associated Press reported that troops were detaining people accused of trespassing in national defense areas in New Mexico, with a second area in western Texas, and handing them to Border Patrol, and that more than 1,400 people had been charged with entering militarized areas; a New Mexico judge dismissed more than 100 of the national security charges. NSPM-4 preserves authority to request National Guard support for law enforcement under title 32, but the sources do not describe National Guard participation in border arrests.",
   "timeline": [
     {
       "date": "2025-01-20",
-      "event": "Executive Order 14167 directed Northern Command to be assigned a border sealing mission and the Defense Department to assess options to protect against mass unlawful entry and transnational criminal organizations.",
+      "event": "Executive Order 14167 directed the Secretary of Defense to deliver a Unified Command Plan revision assigning Northern Command a border-sealing mission and to assess options against mass unlawful entry and transnational criminal organizations.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02089/clarifying-the-militarys-role-in-protecting-the-territorial-integrity-of-the-united-states"
+    },
+    {
+      "date": "2025-04-11",
+      "event": "Presidential memorandum NSPM-4 directs transfer of jurisdiction over southern-border federal lands to the Defense Department, provides for designation of National Defense Areas, and preserves authority to request National Guard support under title 32.",
+      "kind": "primary",
+      "source": "govinfo.gov",
+      "url": "https://www.govinfo.gov/content/pkg/DCPD-202500471/html/DCPD-202500471.htm"
+    },
+    {
+      "date": "2025-04-15",
+      "event": "Public Land Order 7963 takes effect, transferring about 109,651 acres of federal land in Dona Ana, Luna and Hidalgo Counties, New Mexico, to Army jurisdiction for border security for three years (published 2025-04-21 at 90 FR 16698).",
+      "kind": "primary",
+      "source": "govinfo.gov (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2025-04-21/html/2025-06827.htm"
     },
     {
       "date": "2025-06-11",
@@ -146,6 +189,6 @@
   ],
   "title": "Use military and National Guard personnel in southwest border arrest operations",
   "tracked": true,
-  "uncertainties": "The documents designating the national defense areas were not located; a Federal Register API search for the sealing-mission memorandum returned no documents, so the designations rest on the news report. Developments after June 2025, including later court rulings on the trespass charges and any National Guard arrest role, were not found in a search. The recommendation sits in the DOJ chapter but is carried out mainly by the Defense and Homeland Security departments.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The Secretary of Defense's own designation of each National Defense Area was not read; the New Mexico area rests on Public Land Order 7963 and an Army article, and the western Texas area rests on the news report. A correction notice listed on the Federal Register public inspection site (filed 2026-03-20) gives a revised acreage of about 110,967 acres for Public Land Order 7963; it was not read in its published form. The AP figures on charges and the New Mexico dismissals were not checked against court records. Developments after June 2025, including later court rulings on the trespass charges and any National Guard arrest role, were not found in a search. NSPM-4 does not itself direct arrests or detentions; the detention practice rests on the AP report and the Army's description. The recommendation sits in the DOJ chapter but is carried out mainly by the Defense and Homeland Security departments.",
+  "updated_at": "2026-10-16"
 }

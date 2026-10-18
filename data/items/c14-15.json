@@ -5,16 +5,16 @@
     "Reversible by a future administration"
   ],
   "chapter": "14",
-  "confidence": 60,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked and the executive order read on federalregister.gov; the CDC implementation rests on one reputable news report.",
+  "confidence_reason": "Chapter text checked (page 456). EO 14168 is in the record from federalregister.gov, and the CDC 2024 BRFSS data page and the 2025 high school YRBS questionnaire were fetched and read on cdc.gov on 2026-10-18; they show partial, survey-dependent implementation, and the CDC decision itself rests on one news report quoting a spokesperson.",
   "durability": {
     "level": "medium",
     "why": "Rests on an executive order and agency practice, not statute."
   },
   "est_completion": {
-    "basis": "Inference: the policy is already operating through agency practice; remaining work is survey-by-survey cleanup.",
-    "window": "2026"
+    "basis": "Inference: removal depends on survey-by-survey questionnaire changes, and the next YRBS cycle (fielded in odd-numbered years) is the first that could drop the question from the instrument itself.",
+    "window": "2027"
   },
   "headline": false,
   "history": [
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift: the CDC 2024 BRFSS data page and the 2025 high school YRBS questionnaire (cdc.gov) were read; the YRBS instrument still carries a transgender question while BRFSS was modified, so the stage moved from implemented 70 to in_progress 45 and confidence from 60 to 66."
     }
   ],
   "id": "c14-15",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -40,43 +44,43 @@
     456
   ],
   "position": "Centers for Disease Control and Prevention (CDC): Data Collection",
-  "progress": 70,
+  "progress": 45,
   "proposal": "The Mandate recommends that CDC immediately stop collecting data on gender identity, which it characterizes as legitimizing a disputed concept and encouraging a growing number of subjective identities.",
   "related_ids": [
     "c14-08",
     "c18-03"
   ],
   "remaining": [
-    "Confirm removal of gender identity items from all CDC surveillance instruments",
+    "Confirm removal of gender identity items from all CDC surveillance instruments, including future YRBS cycles (the 2025 high school questionnaire on cdc.gov still carries a transgender question)",
+    "Identification of which BRFSS questions were removed from the modified 2024 dataset",
     "Any codification in statute"
   ],
   "requires_congress": "no",
   "research_agent": "N14",
   "review": {
     "flags": [
-      "Uncertainty corrected: the executive order does address forms and gender identity questions.",
-      "Mechanism changed from executive_order to mixed (order plus CDC practice)."
+      "Stage moved from implemented 70 to in_progress 45: the order covers forms, CDC's BRFSS dataset was modified, but the 2025 YRBS instrument on cdc.gov still asks a transgender question and the processing halt rests on one news report. Implemented 65 remains defensible if the spokesperson's statement and the BRFSS modification are taken as operative in substance."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 456 confirmed; removed an added sentence about no statutory change being required, which is not in the text.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y14a",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 456 asks CDC to end its collection of gender identity data immediately, giving the document's reasons. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "EO 14168 confirmed; Sec. 3(e) bars gender identity requests on forms that ask about sex.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02090/defending-women-from-gender-ideology-extremism-and-restoring-biological-truth-to-the-federal"
-      },
-      {
-        "note": "CDC spokesperson statement; YRBS modified; court order restored data.",
-        "result": "supports",
-        "url": "https://www.statnews.com/2025/02/25/cdc-will-no-longer-process-transgender-data/"
-      },
-      {
-        "note": "Says 2025 YRBS national report omitted earlier topics; silent on a gender identity item.",
+        "note": "Dataset modified to comply with executive orders; some questions removed (unnamed); last updated 2025-09-17.",
         "result": "partial",
-        "url": "https://www.ibtimes.co.uk/younger-us-students-lower-lgb-identification-2025-survey-1822459"
+        "url": "https://www.cdc.gov/brfss/annual_data/annual_2024.html"
+      },
+      {
+        "note": "2025 standard high school YRBS questionnaire still contains Q63 asking whether the student is transgender and Q62 on sexual identity; undated beyond 2025.",
+        "result": "does_not_support",
+        "url": "https://www.cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf"
+      },
+      {
+        "note": "Researcher read sec. 3(e) on forms and materials; the order does not itself end data collection. Not re-fetched in this pass.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02090/defending-women-from-gender-ideology-extremism-and-restoring-biological-truth-to-the-federal"
       }
     ]
   },
@@ -130,10 +134,24 @@
       "publisher": "IBTimes UK",
       "title": "Younger US high-school students report lower gay and bisexual identification",
       "url": "https://www.ibtimes.co.uk/younger-us-students-lower-lgb-identification-2025-survey-1822459"
+    },
+    {
+      "date": "2025-09-17",
+      "kind": "primary",
+      "publisher": "Centers for Disease Control and Prevention",
+      "title": "2024 BRFSS Survey Data and Documentation",
+      "url": "https://www.cdc.gov/brfss/annual_data/annual_2024.html"
+    },
+    {
+      "date": "2025-01-01",
+      "kind": "primary",
+      "publisher": "Centers for Disease Control and Prevention",
+      "title": "2025 Standard High School YRBS Questionnaire (year-only date)",
+      "url": "https://www.cdc.gov/yrbs/media/pdf/2025/2025-YRBS-Standard-HS-Questionnaire508.pdf"
     }
   ],
-  "stage": "implemented",
-  "status_summary": "Executive Order 14168, signed 2025-01-20 and published 2025-01-30, requires agency forms that ask about sex to offer only male or female without a gender identity question, and directs removal of agency materials and forms that promote what it calls gender ideology. On 2025-02-25 a CDC spokesperson told STAT that CDC would stop processing transgender identity data to comply with the order, that the Youth Risk Behavior Survey was being modified, and that sexual orientation data would continue to be processed; STAT also reported that removed webpages and datasets were restored after a court order. A September 2026 report on the 2025 Youth Risk Behavior Survey says the shorter national report omitted several topics found in earlier reports.",
+  "stage": "in_progress",
+  "status_summary": "Executive Order 14168, signed 2025-01-20 and published 2025-01-30, requires agency forms that ask about sex to offer only male or female without requesting gender identity and directs removal of materials that promote what it calls gender ideology, but it does not itself end any data collection. On 2025-02-25 a CDC spokesperson told STAT that CDC would stop processing transgender identity data to comply with the order and that the Youth Risk Behavior Survey was being modified, while sexual orientation data would continue to be processed. CDC's 2024 BRFSS data page (last updated 2025-09-17) says the dataset was modified to comply with the President's executive orders, with some questions removed, without naming them, while the 2025 standard high school YRBS questionnaire posted on cdc.gov still includes a question asking whether the student is transgender. A September 2026 report on the 2025 YRBS says the shorter national report omitted several topics found in earlier reports, so implementation is partial and varies by survey.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -148,10 +166,17 @@
       "kind": "news",
       "source": "STAT",
       "url": "https://www.statnews.com/2025/02/25/cdc-will-no-longer-process-transgender-data/"
+    },
+    {
+      "date": "2025-09-17",
+      "event": "CDC's 2024 BRFSS data page, last updated this date, states that the dataset was modified to comply with the President's executive orders and that some questions were removed; it does not name the removed questions.",
+      "kind": "primary",
+      "source": "Centers for Disease Control and Prevention",
+      "url": "https://www.cdc.gov/brfss/annual_data/annual_2024.html"
     }
   ],
   "title": "End CDC collection of gender identity data",
   "tracked": true,
-  "uncertainties": "The CDC step rests on one outlet quoting a CDC spokesperson; no CDC notice or survey instrument was read. The court order restoring webpages is known only from secondary reporting, and which surveys (BRFSS, YRBS, HIV surveillance) dropped the item is not confirmed from CDC documents.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The CDC decision to stop processing transgender identity data rests on one outlet quoting a CDC spokesperson; no CDC notice announcing it was found, and a Federal Register search for CDC documents on gender identity since 2025-01-20 returned none. The 2025 standard high school YRBS questionnaire read on cdc.gov on 2026-10-18 is undated beyond its year and still asks whether the student is transgender, so the 2025 instrument appears to have collected the item even if CDC stopped processing it. The 2024 BRFSS data page says questions were removed to comply with executive orders but does not name them. A Federal Register notice citing the order for removing sexual orientation and gender identity questions was found for AHRQ's MEPS survey, not for a CDC survey, and is not used here. The court order restoring webpages in February 2025 is known only from secondary reporting.",
+  "updated_at": "2026-10-18"
 }

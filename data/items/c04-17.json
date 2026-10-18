@@ -7,7 +7,7 @@
   "chapter": "04",
   "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked; two CRS reports and a Defense News article reporting a DOD IG evaluation were fetched and support the figures, but the Army documents and IG report were not opened and the modernization element is unassessed.",
+  "confidence_reason": "Chapter text checked; the deciding P.L. 119-60 Sec. 401 could not be reached in the truncated govinfo text, and the end strength figures were confirmed in this review through CRS Insight IN12651; the Army documents, the IG report and the modernization element were not examined.",
   "durability": {
     "level": "medium",
     "why": "End strength is set annually by statute, while the transformation cancellations are departmental decisions."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to c04-28, c04-29 (layer 3 enumeration, chapters 00, 04, 05, 28 and 30)."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review tried the P.L. 119-60 text on govinfo.gov in HTML and PDF without reaching Sec. 401 and re-read CRS Insight IN12651 on everycrsreport.com, which supports the end strength figures; in_progress 30 and medium confidence kept."
     }
   ],
   "id": "c04-17",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -61,32 +65,38 @@
   "requires_congress": "partial",
   "research_agent": "N04a",
   "review": {
+    "document_reread": {
+      "citation": "Public Law 119-60, National Defense Authorization Act for Fiscal Year 2026, Sec. 401 (End strengths for active forces), enacted 2025-12-18",
+      "note": "The govinfo HTML page text is about 128,000 characters and stops well before Title IV, so reading on with an offset fails; the PDF also truncates (last visible entry Sec. 7275 of the table of contents). Sec. 401 appears only as a table of contents entry. The stage-deciding figure was re-read instead in CRS Insight IN12651 (2026-02-06), which states P.L. 119-60 was signed 2025-12-18 and authorizes Army active-component end strength of 454,000 for 2026-09-30, up 11,700 from 442,300, without citing the section number.",
+      "result": "partial",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
+    },
     "flags": [
-      "cancellations reworded as directed actions",
-      "FY2027 figure labelled Total Army end strength"
+      "Operative section unreadable on govinfo in HTML and PDF; confidence held at medium on the CRS Insight."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 108 and 109 call for a larger Army budget, faster work on six named modernization priorities, a 50,000 increase in force structure for two simultaneous regional contingencies, and an immediate increase in munitions and repair parts production. The proposal matches.",
+    "mandate_check": "ok",
+    "mandate_note": "Pages 108 and 109 recommend a larger Army budget, accelerating the six named modernization priorities, a 50,000 increase in force structure for two simultaneous regional contingencies, and an immediate increase in production and stockpiling of critical munitions and repair parts; the proposal paraphrases this accurately.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
-    "reviewer": "Y6",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-1",
     "source_checks": [
       {
-        "note": "Updated 2026-05-21; memo 2025-04-30 and letter 2025-05-01; cancellations described as directed; T2COM 2025-10-01; FY2027 adds 18,300 Total Army; no six priorities or munitions.",
+        "note": "Page text about 128,000 characters; Sec. 401 present only in the table of contents.",
         "result": "partial",
-        "url": "https://www.everycrsreport.com/reports/R48606.html"
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
       },
       {
-        "note": "Dated 2026-02-06; P.L. 119-60 signed 2025-12-18; Army 442,300 to 454,000.",
+        "note": "Truncated within the table of contents; Sec. 401 body not reached.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/pdf/PLAW-119publ60.pdf"
+      },
+      {
+        "note": "P.L. 119-60 signed 2025-12-18; Army 454,000 for 2026-09-30, up 11,700 from 442,300; no section number.",
         "result": "supports",
         "url": "https://www.everycrsreport.com/reports/IN12651.html"
-      },
-      {
-        "note": "Dated 2026-07-14; 36,000 a month as of March 2026, up from 14,000; 100,000 goal by October 2025; DOD IG; Mesquite metal parts.",
-        "result": "supports",
-        "url": "https://www.defensenews.com/news/your-military/2026/07/14/manufacturing-woes-hamper-us-155-mm-ammo-production/"
       }
-    ]
+    ],
+    "stage_change_reason": "An enacted end strength increase of 11,700 against a 50,000 recommendation, directed program cancellations and a reorganization, and munitions output rising but well short of goal support a low in_progress stage; nothing read contradicts it."
   },
   "self_confidence": 55,
   "significance": {
@@ -96,6 +106,24 @@
     "M": 3,
     "R": 2,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 2,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 2,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 1,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Raises Army budgets, adds 50,000 troops, and boosts munitions production, implying large defense spending increases.",
     "version": "2026-10-11",
@@ -132,7 +160,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Army active-component end strength authorized in law rose from 442,300 in FY2025 to 454,000 in the FY2026 NDAA (P.L. 119-60, enacted 2025-12-18), an increase of 11,700, and CRS says the FY2027 request would add 18,300 to Total Army end strength, against the Mandate's 50,000 force structure increase. Under the Army Transformation Initiative (a Secretary of Defense memo of 2025-04-30 and an Army letter of 2025-05-01) the Army was directed to cancel procurement of the AH-64D and of excess HMMWV, JLTV and Gray Eagle systems, and Army Futures Command and TRADOC were merged on 2025-10-01. Defense News reported on 2026-07-14, citing a DOD Inspector General evaluation, that 155mm output was about 36,000 rounds a month as of March 2026, up from about 14,000, against a goal of 100,000 a month by October 2025. Whether the six listed modernization priorities are being accelerated was not established.",
+  "status_summary": "Army active-component end strength authorized in law rose from 442,300 in FY2025 to 454,000 for 2026-09-30 in the FY2026 NDAA (P.L. 119-60, enacted 2025-12-18), an increase of 11,700, and CRS says the FY2027 request would add 18,300 to Total Army end strength, against the Mandate's 50,000 force structure increase. Under the Army Transformation Initiative (a Secretary of Defense memo of 2025-04-30 and an Army letter of 2025-05-01) the Army was directed to cancel procurement of the AH-64D and of excess HMMWV, JLTV and Gray Eagle systems, and Army Futures Command and TRADOC were merged on 2025-10-01. Defense News reported on 2026-07-14, citing a DOD Inspector General evaluation, that 155mm output was about 36,000 rounds a month as of March 2026, up from about 14,000, against a goal of 100,000 a month by October 2025. Whether the six listed modernization priorities are being accelerated was not established.",
   "timeline": [
     {
       "date": "2025-04-30",
@@ -165,6 +193,6 @@
   ],
   "title": "Grow Army force structure by 50,000, speed modernization and boost munitions output",
   "tracked": true,
-  "uncertainties": "The 50,000 comparison uses authorized active-component end strength (442,300 to 454,000), not actual strength or total force structure; the FY2027 figure of 18,300 is for Total Army end strength. CRS R48606 (updated 2026-05-21) does not mention the six priorities or munitions production, and describes the cancellations as directed actions without confirming that each program has ended. The Defense News figures rely on a DOD IG report not read directly, and the timing of the earlier 14,000 rate is not given. Other munitions were not examined.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The text of Sec. 401 of P.L. 119-60 could not be read: the govinfo HTML and PDF truncate before Title IV and Congress.gov refuses automated fetches, so the end strength figures rest on CRS Insight IN12651, which does not cite the section. The 50,000 comparison uses authorized active-component end strength, not actual strength or total force structure; the FY2027 figure of 18,300 is for Total Army end strength. CRS R48606 (updated 2026-05-21) does not mention the six priorities or munitions production, and describes the cancellations as directed actions without confirming that each program has ended. The Defense News figures rely on a DOD IG report not read directly, and the timing of the earlier 14,000 rate is not given. Other munitions were not examined.",
+  "updated_at": "2026-10-16"
 }

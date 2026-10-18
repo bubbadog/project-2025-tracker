@@ -4,9 +4,9 @@
     "Statutory change requires Congress"
   ],
   "chapter": "21",
-  "confidence": 78,
-  "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; the order and three proclamations read on primary pages; the match to the statutory recommendation is parallel, which leaves the stage a judgment.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Mandate text checked in an earlier review; Proclamation 11035 was read in full on the Federal Register text page and its API record, and the order and the other two proclamations were confirmed through Federal Register API records and primary pages. Not read: any NOAA rule amending the Papahanaumokuakea sanctuary regulations (none found in a Federal Register query) and the content of a 2026-04-06 NOAA Magnuson-Stevens conforming rule. The stage rests on a parallel match, which is a judgment rather than a sourcing gap.",
   "durability": {
     "level": "low",
     "why": "Executive orders and proclamations can be reversed by later presidents."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Cross-reference added to new layer 3 record c21-22 written in the second enumeration pass; no change to the status."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Stage and text confirmed against the full text of Proclamation 11035; confidence raised to high on the read deciding document."
     }
   ],
   "id": "c21-13",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -43,7 +51,8 @@
   "proposal": "The Mandate recommends harmonizing the Magnuson-Stevens Act with the National Marine Sanctuaries Act, arguing that sanctuaries and no-fishing zones conflict with fisheries management by NOAA Fisheries, regional councils and states, and that expansion of the sanctuary system should be reviewed.",
   "related_ids": [
     "c21-01",
-    "c21-09"
+    "c21-09",
+    "c21-22"
   ],
   "remaining": [
     "Statutory harmonization of the Magnuson-Stevens Act and the National Marine Sanctuaries Act",
@@ -55,14 +64,15 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: in_progress 35; proposed (20) is defensible because neither statute changed and the steps concern monuments rather than sanctuaries",
-      "Added Proclamations 10918, 11009 and 11035; corrected the Pacific monument name; progress 25 to 35"
+      "Stage in_progress 35 kept; judgment call: proposed (20) is defensible because neither statute changed and the steps concern monuments rather than sanctuaries.",
+      "Confidence 78 to 80 (high): the deciding Proclamation 11035 was fetched and read in full, including the direction on sanctuary regulations and the absence of a deadline; the researcher's suggested label of medium did not match the 80 score.",
+      "No content changes; the draft added only verification notes to uncertainties."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 676, NOAA section: harmonize the Magnuson-Stevens Act with the National Marine Sanctuaries Act because sanctuaries and no-fishing zones conflict with fisheries management; the same page says sanctuary expansion should be reviewed. Paraphrase accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y21f",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V5",
     "source_checks": [
       {
         "note": "Executive Order 14276 signed 2025-04-17, published 2025-04-22; 180-day monument review; council recommendations; no sanctuary mention.",
@@ -88,6 +98,16 @@
         "note": "Not fetched: congress.gov PDFs are blocked for this review; source removed as not needed.",
         "result": "unreachable",
         "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF13017/IF13017.4.pdf"
+      },
+      {
+        "note": "Proclamation 11035, 91 FR 36741, signed 2026-06-11, published 2026-06-17; checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-12283.json"
+      },
+      {
+        "note": "Full text read: removes monument-based commercial fishing prohibitions in the Mariana Trench Islands Unit, parts of Papahanaumokuakea and 12 to 50 nautical miles around Rose Atoll for U.S.-flagged vessels; directs the Commerce Secretary to amend or repeal inconsistent regulations, naming the Papahanaumokuakea sanctuary regulations; no deadline; checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/full_text/text/2026/06/17/2026-12283.txt"
       }
     ]
   },
@@ -183,6 +203,6 @@
   ],
   "title": "Reduce marine closures that conflict with fisheries management",
   "tracked": true,
-  "uncertainties": "Monuments are not sanctuaries, so most of these steps are a parallel match; only Proclamation 11035 reaches sanctuary regulations, and whether NOAA has amended them was not checked. The earlier draft named the Pacific monument as Pacific Islands Heritage; Proclamation 10918 calls it the Pacific Remote Islands Marine National Monument. Any lawsuit against the proclamations was not searched. The CRS product cited earlier was dropped because congress.gov PDFs could not be opened and it was not needed.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Monuments are not sanctuaries, so most of these steps are a parallel match; only Proclamation 11035 reaches sanctuary regulations, and whether NOAA has amended them was not checked. The earlier draft named the Pacific monument as Pacific Islands Heritage; Proclamation 10918 calls it the Pacific Remote Islands Marine National Monument. Any lawsuit against the proclamations was not searched. The CRS product cited earlier was dropped because congress.gov PDFs could not be opened and it was not needed. In this pass the Federal Register API confirmed Proclamation 10918 (90 FR 16987), Executive Order 14276 (90 FR 16993), Proclamation 11009 (91 FR 6489) and Proclamation 11035 (91 FR 36741) with the signing and publication dates in the record; Proclamation 11035 sets no deadline for the Secretary. A Federal Register query of NOAA documents on monument commercial fishing since 2025-04-01 returned no NOAA rule amending monument or sanctuary fishing regulations, but did list a 2026-04-06 NOAA Magnuson-Stevens conforming rule whose content was not read, and a query for Papahanaumokuakea since 2026-06-01 returned nothing (diacritic spelling may matter).",
+  "updated_at": "2026-10-18"
 }

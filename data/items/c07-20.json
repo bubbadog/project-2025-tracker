@@ -4,9 +4,9 @@
     "No tasking document or public reporting of board products was found; the board's work is largely non-public"
   ],
   "chapter": "07",
-  "confidence": 55,
-  "confidence_label": "medium",
-  "confidence_reason": "Text checked and the stage-deciding White House announcement fetched and read; the finding that no tasking exists rests on absence after limited searching.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text checked (page 229). The stage-deciding White House announcement of 2025-02-11 was fetched and read in full on 2026-10-18 (12 appointments, a stated role with no long-term, open-source or oversight-board tasking), and EO 13462 was read on federalregister.gov as background; the absence of a later tasking rests on searches and a Federal Register query, which is consistent with the low end of proposed.",
   "durability": {
     "level": "low",
     "why": "Membership and tasking of an advisory board are set by the President and can change at any time; no statute or rule fixes them."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift: the 2025-02-11 White House announcement (whitehouse.gov) and Executive Order 13462 (federalregister.gov) were read; stage proposed 10 kept, the standing order was added as background and confidence moved from 55 to 80."
     }
   ],
   "id": "c07-20",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "appointment",
@@ -53,20 +57,23 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage moved from in_progress 25 to proposed 10 because the recommendation is a tasking, and appointments without a published tasking do not make it formally underway; the board's existence is routine across administrations.",
-      "Added c07-03 to related_ids because the announcement ties the board to restoring integrity in the intelligence community.",
-      "Judgment call: in_progress 25 would also be defensible if a functioning, newly appointed board advising on major security challenges is read as partly operative."
+      "Proposed 10 kept (appointments alone, low end); in_progress 25 is defensible if a newly appointed functioning board is read as partly operative."
     ],
     "mandate_check": "confirmed",
-    "mandate_note": "Page 229 says the PIAB and its Intelligence Oversight Board should be tasked with independent, informed advice on major long-term national security matters, including a broader look at critical trends and their implications using unclassified and open-source information.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "mandate_note": "Page 229 asks that the PIAB and its Intelligence Oversight Board be tasked with independent advice on long-term national security issues, including a broad look at critical trends using unclassified and open-source information. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Announcement of 2025-02-11: 12 members and a chair; role to advise on the most important security challenges and ensure the IC advances the President's agenda; no mention of long-term trends, open source or the Intelligence Oversight Board. Checked 2026-10-15.",
-        "result": "partial",
+        "note": "Dated 2025-02-11; 12 appointees including the chair; role is advising on major security challenges and aligning the IC with the administration agenda; no mention of long-term trends, open-source information or the IOB.",
+        "result": "supports",
         "url": "https://www.whitehouse.gov/presidential-actions/2025/02/president-trump-announces-the-presidents-intelligence-advisory-board"
+      },
+      {
+        "note": "EO 13462, 73 FR 11805, Doc. 08-970, signed 2008-02-29, published 2008-03-04, amended by EO 13516; background on standing PIAB and IOB functions, not a 2025 action.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2008/03/04/08-970/presidents-intelligence-advisory-board-and-intelligence-oversight-board"
       }
     ]
   },
@@ -112,6 +119,13 @@
       "publisher": "ExecutiveGov",
       "title": "White House names chair, members of Intelligence Advisory Board",
       "url": "https://www.executivegov.com/articles/white-house-chair-members-intelligence-advisory-board"
+    },
+    {
+      "date": "2008-03-04",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Executive Order 13462, President's Intelligence Advisory Board and Intelligence Oversight Board",
+      "url": "https://www.federalregister.gov/documents/2008/03/04/08-970/presidents-intelligence-advisory-board-and-intelligence-oversight-board"
     }
   ],
   "stage": "proposed",
@@ -127,6 +141,6 @@
   ],
   "title": "Task the PIAB and Intelligence Oversight Board with independent long-term security advice",
   "tracked": true,
-  "uncertainties": "The board's authorizing executive order was not fetched, and a Federal Register search of presidential documents since 2025-01-20 for the board's name returned no document. Searches of whitehouse.gov results and news (researcher: PIAB, chair, 2026 tasking; reviewer: one further search for 2026 board reports or reviews) found no later tasking, report or membership change. Any classified or non-public tasking would not appear. The Intelligence Oversight Board was not separately found in any result. The stated purpose of advancing the President's agenda differs in emphasis from the independent, long-term advice the Mandate describes.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The board's standing authority, Executive Order 13462 (73 FR 11805, 2008, amended by EO 13516 in 2009), was read on federalregister.gov on 2026-10-18; it sets the board's general review and reporting functions and the Intelligence Oversight Board's compliance role, which predate 2025. A Federal Register search of presidential documents since 2025-01-20 for the board's name returned no document. Searches of whitehouse.gov results and news (researcher: PIAB, chair, 2026 tasking; reviewer: one further search for 2026 board reports or reviews) found no later tasking, report or membership change. Any classified or non-public tasking would not appear. The Intelligence Oversight Board was not separately found in any result. The stated purpose of advancing the President's agenda differs in emphasis from the independent, long-term advice the Mandate describes.",
+  "updated_at": "2026-10-18"
 }

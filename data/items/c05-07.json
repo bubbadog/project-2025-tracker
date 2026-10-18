@@ -9,9 +9,9 @@
   "chapter": "05",
   "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "The Mandate text, the Labor Department proposal and the D. Mass. order were read and match the record, and the weighted-selection final rule was confirmed in an earlier review. The N.D. Cal. order, the D.D.C. ruling and the First Circuit action rest on a trade-association summary, and whether the payment is being collected is unclear.",
+  "confidence_reason": "The Federal Register API record of the weighted selection final rule (90 FR 60864, effective 2026-02-27) was fetched, and the preamble executive summary on GovInfo was read for the four-to-one weighting by wage level; the codified regulatory text fell beyond the cut of both copies. The CUPA-HR report of the 2026-09-30 N.D. Cal. order was re-read. The N.D. Cal. and D.D.C. orders themselves were not opened, so the record stays medium.",
   "court_status": {
-    "basis": "derived from the latest court event in the timeline",
+    "basis": "Latest reported court event: an N.D. Cal. order of 2026-09-30, known through a CUPA-HR report of 2026-10-01, vacated the agency policies implementing the 100,000 dollar payment under Proclamations 10973 and 11069 and barred enforcement until notice-and-comment rulemaking; the D. Mass. vacatur of 2026-06-08 is on appeal and the D.D.C. ruling upholding the payment is on appeal. The weighted selection rule is not affected.",
     "date": "2026-09-30",
     "state": "vacated",
     "url": "https://www.cupahr.org/?p=90237"
@@ -40,10 +40,14 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Stage in_progress 45 confirmed against the weighted selection final rule; court_status basis made specific and one month-only date marked; confidence unchanged."
     }
   ],
   "id": "c05-07",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -72,15 +76,16 @@
   "research_agent": "A04",
   "review": {
     "flags": [
-      "N.D. Cal., D.D.C. and First Circuit actions known only through CUPA-HR",
-      "current collection status of the payment unclear",
-      "status_summary reworded for clarity (court rulings grouped); no facts added"
+      "Stage in_progress 45 confirmed: weighted selection is final and effective while the wage rule and the fee are proposals and the payment is vacated in two courts; implemented at 65 is a defensible alternative if weighted selection is read as operative in substance for the elite-channel aim, but the Mandate's elimination of the two lowest wage levels is not matched.",
+      "court_status vacated kept and its basis replaced with the court event detail (the previous basis was generic).",
+      "The D.D.C. event text now carries the standard (month-only date) marker.",
+      "Confidence unchanged at 76."
     ],
     "mandate_check": "verified",
     "mandate_note": "Printed page 145 says H-1B should become an elite program for top foreign workers at the highest wages, page 150 repeats this while protecting U.S. workers, and page 167 asks the Labor Department to eliminate the two lowest of four wage levels.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y2",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V9",
     "source_checks": [
       {
         "note": "D. Mass. memorandum and order of 2026-06-08 (State of California v. Mullin, No. 25-13829-LTS, Judge Sorokin; twenty states) vacates the policy implementing the 100,000 dollar payment in its entirety, holding it a tax not delegated by INA 212(f), a legislative rule issued without notice and comment, beyond statutory authority and arbitrary and capricious.",
@@ -91,6 +96,21 @@
         "note": "Labor Department proposed rule, 91 FR 15454, published 2026-03-27, comments closed 2026-05-26: raises the four wage levels from the 17th, 34th, 50th and 67th to the 34th, 52nd, 70th and 88th percentiles and keeps four levels.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/03/27/2026-06017/improving-wage-protections-for-the-temporary-and-permanent-employment-of-certain-foreign-nationals"
+      },
+      {
+        "note": "Final rule, 90 FR 60864, published 2025-12-29, effective 2026-02-27, 8 CFR 214, weighted selection favoring higher-skilled and higher-paid workers for the FY2027 season. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2025-23853.json"
+      },
+      {
+        "note": "Executive summary: Level IV entered four times, Level III three, Level II two, Level I once; text returned ends inside the preamble before the codified section. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2025-12-29/html/2025-23853.htm"
+      },
+      {
+        "note": "Dated 2026-10-01; N.D. Cal. order of 2026-09-30 vacates policies implementing the payment under Proclamations 10973 and 11069 until notice-and-comment rulemaking; case name and judge not given. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.cupahr.org/?p=90237"
       }
     ]
   },
@@ -197,7 +217,7 @@
     },
     {
       "date": "2025-12-01",
-      "event": "The U.S. District Court for D.C. upholds the proclamation in Chamber of Commerce v. DHS; the Chamber appeals to the D.C. Circuit, where the case is pending (December 2025; day not given, first of month used).",
+      "event": "The U.S. District Court for D.C. upholds the proclamation in Chamber of Commerce v. DHS; the Chamber appeals to the D.C. Circuit, where the case is pending (month-only date).",
       "kind": "court",
       "source": "CUPA-HR",
       "url": "https://www.cupahr.org/?p=87967"
@@ -247,6 +267,6 @@
   ],
   "title": "Convert H-1B into a high-wage program limited to top-skilled workers",
   "tracked": true,
-  "uncertainties": "Court details come from CUPA-HR, a higher-education HR association, and a JURIST report of the First Circuit action; The D. Mass. memorandum and order of 2026-06-08 (hosted on the California Attorney General's site) but not the other opinions or orders, and the N.D. Cal. case name and judge, the D.D.C. ruling date (December 2025 only) and the exact First Circuit date were not confirmed. It is not clear from these sources whether the 100,000 dollar payment is currently being collected, given the vacaturs and the 2026-09-18 extension. FY2027 lottery results were not retrieved because uscis.gov returned a 403 error. The Labor Department percentile figures come from the Federal Register text; the final rule and any further comment-period actions were not checked. Congress has not acted on H-1B (no bill search was run). The D. Mass. appeal date (2026-06-11) comes from Ogletree, which also says the court granted a stay pending appeal; CUPA-HR says the court paused its order on 2026-06-12 and later reports a First Circuit decision declining a stay, so the district court's pause and the appellate stay ruling were not reconciled from court documents. The N.D. Cal. order of 2026-09-30 and the D.D.C. ruling of December 2025 remain known only through CUPA-HR.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Court details come from CUPA-HR, a higher-education HR association, and a JURIST report of the First Circuit action; The D. Mass. memorandum and order of 2026-06-08 (hosted on the California Attorney General's site) but not the other opinions or orders, and the N.D. Cal. case name and judge, the D.D.C. ruling date (December 2025 only) and the exact First Circuit date were not confirmed. It is not clear from these sources whether the 100,000 dollar payment is currently being collected, given the vacaturs and the 2026-09-18 extension. FY2027 lottery results were not retrieved because uscis.gov returned a 403 error. The Labor Department percentile figures come from the Federal Register text; the final rule and any further comment-period actions were not checked. Congress has not acted on H-1B (no bill search was run). The D. Mass. appeal date (2026-06-11) comes from Ogletree, which also says the court granted a stay pending appeal; CUPA-HR says the court paused its order on 2026-06-12 and later reports a First Circuit decision declining a stay, so the district court's pause and the appellate stay ruling were not reconciled from court documents. The N.D. Cal. order of 2026-09-30 and the D.D.C. ruling of December 2025 remain known only through CUPA-HR. The Federal Register API confirmed document numbers, dates and citations: Proclamation 10973 (90 FR 46027, signed 2025-09-19), the weighted selection final rule (90 FR 60864, effective 2026-02-27), the Labor Department proposal (91 FR 15454), the DHS fee proposal (91 FR 54817), Proclamation 11069 (91 FR 60497) and Executive Order 14431 (91 FR 60501). The codified regulatory text of the weighted selection rule fell beyond the cut of the web text, so its operative weighting (Level IV entered four times down to Level I once) was read in the preamble.",
+  "updated_at": "2026-10-18"
 }

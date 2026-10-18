@@ -7,13 +7,13 @@
   "chapter": "22",
   "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "The FSOC proposal and the absence of a final version were confirmed in the Federal Register; the finding that no repeal bill exists rests on a limited search because congress.gov was not checked, and the stage treats a narrowing proposal as a parallel step rather than progress on repeal.",
+  "confidence_reason": "Pages 705 and 706 were re-read, and the two council readouts added in this pass were opened and support the text. The stage rests on the 2026-03-30 proposed guidance read in earlier reviews and on an absence of repeal bills from limited searches. In a further review the proposed guidance web text was read to its end, which stops mid-sentence, so the deciding document was not read in full and confidence is unchanged.",
   "durability": {
     "level": "low",
     "why": "The only related action is interpretive guidance, which a later council can replace; repeal itself would be a statute and highly durable."
   },
   "est_completion": {
-    "basis": "No repeal bill was identified, and the administration is adjusting the council's use of its authority rather than seeking statutory repeal.",
+    "basis": "Inference: no repeal bill was identified, and the administration is adjusting the council's use of its authority rather than seeking statutory repeal.",
     "window": "unlikely this term"
   },
   "history": [
@@ -28,10 +28,26 @@
     {
       "date": "2026-10-15",
       "note": "Rotation check (update run): No final FSOC guidance, no FSOC Federal Register document after 2026-03-30, and no House committee action on Titles I, II or VIII found. Stage unchanged at proposed 8; no review needed because only uncertainties changed."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Freshness pass: council readouts of 2026-07-15 and 2026-09-29 per Treasury show the nonbank guidance not yet finalized; no repeal bill or Title II or Title VIII action found per the Federal Register API and searches. Stage unchanged."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review: re-read pages 705 and 706 and opened the council readouts of 2026-07-15 and 2026-09-29, which support the added text (work toward finalizing the nonbank guidance continues; the September readout is silent on it). Prefixed the completion basis with Inference. Stage kept at proposed 8 as a parallel executive step toward a recommendation addressed to Congress. Confidence unchanged at 66."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Primary-source lift: the Federal Register proposed FSOC guidance (91 FR 15551) and an FSOC document query were re-read and confirmed the record, with no final guidance or repeal bill found."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review after the primary-source lift: the proposed council guidance and a council document query on federalregister.gov were read again and confirm the record; proposed 8 was kept and confidence stays at 66."
     }
   ],
   "id": "c22-08",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-16",
   "layer": 2,
   "match": "parallel",
   "mechanism": "legislation",
@@ -53,24 +69,23 @@
   "requires_congress": "yes",
   "review": {
     "flags": [
-      "repeal-bill absence not checked on congress.gov",
-      "stage reflects a parallel narrowing proposal, not repeal"
+      "Unchanged record; confidence kept at 66 because the deciding document could not be read in full."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 705 to 706 recommend that Congress repeal Dodd-Frank Titles I, II and VIII, describing FSOC designation of systemically important firms, FSOC designation of financial market utilities and orderly liquidation authority as entrenching too-big-to-fail; the paraphrase is accurate.",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Page 705 says Congress should repeal Titles I, II and VIII of the Dodd-Frank Act, describing the council's power to designate systemically important firms and financial market utilities; page 706 describes orderly liquidation authority as resting on a faulty premise and repeats that Congress should repeal each provision. The proposal paraphrase is faithful.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W6",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16L-2",
     "source_checks": [
       {
-        "note": "FSOC proposed interpretive guidance at 91 FR 15551, published 2026-03-30, comments due 2026-05-14 (26 comments); raises the designation threshold, restores cost-benefit analysis and an activities-based approach, and would rescind the 2023 framework; it keeps and refines the Title I authority, and the portion read does not address Title II or Title VIII.",
-        "result": "supports",
+        "note": "91 FR 15551, proposed interpretive guidance, comments to 2026-05-14, 26 comments; replaces 2023 guidance; no Title II, Title VIII or repeal content; web text read to its end but truncated mid-sentence.",
+        "result": "partial",
         "url": "https://www.federalregister.gov/documents/2026/03/30/2026-06114/authority-to-require-supervision-and-regulation-of-certain-nonbank-financial-companies"
       },
       {
-        "note": "Only one FSOC document since 2025-01-20 (the 2026-03-30 proposal); no final guidance published as of 2026-10-07.",
+        "note": "Only the 2026-03-30 proposal listed since 2026-03-01; no final guidance.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=financial-stability-oversight-council&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=financial-stability-oversight-council&conditions[publication_date][gte]=2026-03-01&per_page=20&order=newest"
       }
     ]
   },
@@ -107,10 +122,24 @@
       "publisher": "U.S. Department of the Treasury",
       "title": "FSOC rulemaking and notices",
       "url": "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service/fsoc/rulemaking-and-notices"
+    },
+    {
+      "date": "2026-07-15",
+      "kind": "primary",
+      "publisher": "U.S. Department of the Treasury",
+      "title": "FSOC readout, meeting of July 15, 2026",
+      "url": "https://home.treasury.gov/system/files/261/FSOC_20260715_Readout.pdf"
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "primary",
+      "publisher": "U.S. Department of the Treasury",
+      "title": "FSOC readout, meeting of September 29, 2026",
+      "url": "https://home.treasury.gov/system/files/261/FSOC_20260929_Readout.pdf"
     }
   ],
   "stage": "proposed",
-  "status_summary": "No repeal of Titles I, II or VIII was found, and no 2025 or 2026 bill to repeal them was identified. The administration has kept the Financial Stability Oversight Council and is changing how it uses its Title I designation power: on 2025-09-10 Treasury Secretary Bessent said the council would revisit its 2023 nonbank guidance, and on 2026-03-30 the council proposed replacing that guidance with a version that raises the threshold for designating a nonbank firm, restores cost-benefit analysis and favors activity-based responses. Comments closed 2026-05-14, and no final version was found. The proposal does not touch Title II or Title VIII, and no action on either was found.",
+  "status_summary": "No repeal of Titles I, II or VIII was found, and no 2025 or 2026 bill to repeal them was identified. The administration has kept the Financial Stability Oversight Council and is changing how it uses its Title I designation power: on 2025-09-10 Treasury Secretary Bessent said the council would revisit its 2023 nonbank guidance, and on 2026-03-30 the council proposed replacing that guidance with a version that raises the threshold for designating a nonbank firm, restores cost-benefit analysis and favors activity-based responses. Comments closed 2026-05-14, and per the council readout of its 2026-07-15 meeting, staff briefed the council on the comments and the council said it would continue working toward finalizing the guidance; no final version was found. The proposal does not touch Title II or Title VIII, and no action on either was found.",
   "timeline": [
     {
       "date": "2025-09-10",
@@ -136,6 +165,6 @@
   ],
   "title": "Repeal Dodd-Frank Titles I, II and VIII (FSOC designation, orderly liquidation)",
   "tracked": true,
-  "uncertainties": "Stage is a judgment: the only related action is the proposed FSOC guidance, which narrows use of Title I designation authority but is not a repeal proposal, so it is recorded as a parallel proposal rather than as progress on repeal. The Treasury rulemaking page, as fetched on the date of this pass, listed no FSOC items after November 2023, and a Federal Register query for FSOC documents since 2025-01-20 returned only the 2026-03-30 proposal, so no final guidance was found; the page may lag. Federal Register queries for orderly liquidation (FDIC) and financial market utility designation found nothing on Title II or Title VIII. One web search for a 2025 or 2026 repeal bill returned only older material; congress.gov is blocked to automated fetches, so bills and hearings were not checked directly. The proposal text was read only in part, so statements about it are limited to the parts read. Update 2026-10-15: a Federal Register query for FSOC documents since 2026-04-01 returned none, and Treasury's FSOC rulemaking page still listed nothing after November 2023 (its notices sections were not readable); searches found no 2026 House Financial Services markup on Titles I, II or VIII.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Stage is a judgment: the only related action is the proposed FSOC guidance, which narrows use of Title I designation authority but is not a repeal proposal, so it is recorded as a parallel proposal rather than as progress on repeal. The Treasury rulemaking page, as fetched on the date of this pass, listed no FSOC items after November 2023, and a Federal Register query for FSOC documents since 2025-01-20 returned only the 2026-03-30 proposal, so no final guidance was found; the page may lag. Federal Register queries for orderly liquidation (FDIC) and financial market utility designation found nothing on Title II or Title VIII. One web search for a 2025 or 2026 repeal bill returned only older material; congress.gov is blocked to automated fetches, so bills and hearings were not checked directly. The proposal text was read only in part, so statements about it are limited to the parts read. Update 2026-10-15: a Federal Register query for FSOC documents since 2026-04-01 returned none, and Treasury's FSOC rulemaking page still listed nothing after November 2023 (its notices sections were not readable); searches found no 2026 House Financial Services markup on Titles I, II or VIII. Update 2026-10-16: the council readout of 2026-07-15 reports a staff briefing on comments and a statement that work toward finalization continues; the readout of 2026-09-29 does not mention the nonbank guidance or Titles I, II or VIII. A Federal Register query for council documents on nonbank companies since 2026-03-31 returned none. A search for 2026 bills repealing orderly liquidation authority returned only 2016-era material; congress.gov was not checked directly. Council meeting readouts are recorded as sources, not as timeline events. Independent review 2026-10-16: both council readouts were opened and match the text; the 2026-09-29 readout covers the financial stability monitor, household resilience, bank supervision updates and the council's fiscal year 2027 budget, and does not mention the nonbank guidance.",
+  "updated_at": "2026-10-16"
 }

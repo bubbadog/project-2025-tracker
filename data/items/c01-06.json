@@ -1,12 +1,12 @@
 {
   "agency": "White House Counsel / Justice Department (Solicitor General)",
   "blockers": [
-    "The Court denied the abeyance motion in at least one of the four cases (EPA v. Calumet Shreveport Refining)"
+    "The Court denied the abeyance motion in three of the four cases (Nos. 23-1229, 24-7 and 23-1067) on 2025-02-06"
   ],
   "chapter": "01",
-  "confidence": 55,
+  "confidence": 70,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked and the January 2025 abeyance request re-read through a reputable secondary source (the Skrmetti letter was read on supremecourt.gov in an earlier review); the White House Counsel's own role is undocumented, so the stage rests on the visible outcome rather than the process the chapter describes.",
+  "confidence_reason": "Chapter text checked at page 28; the Skrmetti letter and the four supremecourt.gov dockets were fetched and read in this review and confirm the early position changes, but the Counsel's own review, which the text describes, is undocumented, so the implemented stage rests on the visible outcome as a proxy.",
   "durability": {
     "level": "medium",
     "why": "Litigation positions are set by the Justice Department and can be reversed by a later administration, but court rulings such as Skrmetti remain precedent."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-13",
       "note": "Refutation check found no primary source on the Counsel's litigation review and no undoing of the early 2025 position changes; independent review kept implemented 65 at the band floor."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Independent review read the Skrmetti letter and the dockets for Nos. 24-413, 23-1229, 24-7 and 23-1067 on supremecourt.gov, corrected the abeyance outcome to denials in three of four cases, replaced news-sourced events with docket events, kept implemented 65 and moved confidence from 55 to 70."
     }
   ],
   "id": "c01-06",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-17",
   "layer": 3,
   "match": "partial",
   "mechanism": "litigation",
@@ -76,22 +80,46 @@
   "requires_congress": "no",
   "research_agent": "N01",
   "review": {
+    "document_reread": {
+      "citation": "Letter of the Deputy Solicitor General to the Clerk, United States v. Skrmetti, No. 23-477 (Feb. 7, 2025)",
+      "note": "Read in full: after the change in Administration the Department concluded SB1 does not violate equal protection, stated its earlier views no longer represent the United States' position, and asked the Court to resolve the question without dismissal; no mention of the White House Counsel.",
+      "result": "supports",
+      "url": "https://www.supremecourt.gov/DocketPDF/23/23-477/342223/20250207133625781_Letter%2023-477.pdf"
+    },
     "flags": [
-      "Judgment call: implemented 65 held at band floor; the outcome (early reversal of litigation positions) is visible, the Counsel's process is not; in_progress would be defensible on a strict reading",
-      "Counsel succession kept as a source only, as the researcher suggests"
+      "URL rule: the four docket URLs came from the researcher's file and were fetched successfully on supremecourt.gov in this review, so they are accepted.",
+      "Corrected the abeyance outcome: denied in three of four cases, not only Calumet; blockers updated.",
+      "Replaced the SCOTUSblog-sourced 2025-01-24, 2025-02-06 and 2025-08-11 events with docket-sourced events; removed the 2026-08-10 news-report event (source kept, noted in uncertainties).",
+      "No court_status set: the court events are rulings in the government's own cases on abeyance and merits, not challenges to the recommendation's implementation."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 28 says the Counsel must quickly get up to speed on significant litigation and be ready at the outset to recommend reconsidering or reversing prior positions, usually consulting new Justice Department leadership, including during the transition; the paraphrase fits.",
+    "mandate_check": "ok",
+    "mandate_note": "Page 28 says the Counsel must quickly learn the significant litigation across the executive branch and be ready at the outset to recommend to the President whether to reconsider or reverse the prior Administration's positions, usually after consulting new Justice Department leadership, including during the transition. The paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-1",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-A",
     "source_checks": [
       {
-        "note": "Confirms the 2025-01-24 request to pause briefing in four named cases so the agencies could reconsider the underlying actions.",
+        "note": "Abeyance motion 2025-01-24 granted 2025-02-06; resume briefing granted 2025-06-23; stipulation 2025-08-08; dismissed under Rule 46 on 2025-08-11.",
         "result": "supports",
-        "url": "https://www.scotusblog.com/2025/01/trump-asks-justices-for-pause-in-four-cases-to-reconsider-biden-policies/"
+        "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24-413.html"
+      },
+      {
+        "note": "Abeyance motion by the Acting Solicitor General 2025-01-24 denied 2025-02-06; argued 2025-03-25; vacated and remanded 2025-06-18.",
+        "result": "supports",
+        "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-1229.html"
+      },
+      {
+        "note": "Federal respondents' abeyance motion 2025-01-24 denied 2025-02-06; argued 2025-04-23.",
+        "result": "supports",
+        "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24-7.html"
+      },
+      {
+        "note": "Federal respondents' abeyance motion 2025-01-24 denied 2025-02-06, Justice Alito not participating; argued 2025-03-25.",
+        "result": "supports",
+        "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-1067.html"
       }
-    ]
+    ],
+    "stage_change_reason": "No change: Justice Department filings show prior litigation positions reconsidered and reversed at the outset of the Administration (operative in substance), while the Counsel's own role is undocumented, so implemented at the band floor of 65 with a partial match."
   },
   "significance": {
     "B": 3,
@@ -161,24 +189,52 @@
       "publisher": "Reuters via NY Daily Record",
       "title": "Trump names Will Scharf as White House counsel",
       "url": "https://nydailyrecord.com/2026/08/10/trump-names-will-scharf-as-white-house-counsel/"
-    }
-  ],
-  "stage": "implemented",
-  "status_summary": "On 2025-01-24 the Acting Solicitor General asked the Supreme Court to pause briefing in four pending cases so agencies could reconsider Biden-era rules and decisions; on 2025-02-06 the Court granted the pause in the Education Department borrower-defense case and denied it in EPA v. Calumet Shreveport Refining. On 2025-02-07 a Deputy Solicitor General told the Court that the government's earlier equal-protection position in United States v. Skrmetti no longer represented the United States' view, while asking the Court to decide the case; the Court upheld the Tennessee law 6-3 on 2025-06-18. The Education case was dismissed on 2025-08-11 after the parties stipulated to dismissal. These filings show the Justice Department reconsidering prior positions at the outset of the Administration; no source found shows the White House Counsel's role in those decisions. Reuters reported on 2026-08-10 that White House Counsel David Warrington would leave and be succeeded by Will Scharf from 2026-09-01.",
-  "timeline": [
+    },
     {
-      "date": "2025-01-24",
-      "event": "The Acting Solicitor General asks the Supreme Court to hold briefing in abeyance in four pending cases (Department of Education v. Career Colleges and Schools of Texas, Diamond Alternative Energy v. EPA, Oklahoma v. EPA and EPA v. Calumet Shreveport Refining) so the agencies can reconsider the underlying rules or decisions after the change of Administration.",
-      "kind": "news",
-      "source": "SCOTUSblog",
-      "url": "https://www.scotusblog.com/2025/01/trump-asks-justices-for-pause-in-four-cases-to-reconsider-biden-policies/"
+      "date": "2025-08-11",
+      "kind": "primary",
+      "publisher": "U.S. Supreme Court docket",
+      "title": "Docket No. 24-413, Department of Education v. Career Colleges and Schools of Texas",
+      "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24-413.html"
     },
     {
       "date": "2025-02-06",
-      "event": "The Court denies the abeyance motion in EPA v. Calumet Shreveport Refining (later argued 2025-03-25 and decided 2025-06-18) and grants the pause in Department of Education v. Career Colleges and Schools of Texas.",
-      "kind": "news",
-      "source": "SCOTUSblog",
-      "url": "https://www.scotusblog.com/cases/case-files/environmental-protection-agency-v-calumet-shreveport-refining-llc"
+      "kind": "primary",
+      "publisher": "U.S. Supreme Court docket",
+      "title": "Docket No. 23-1229, EPA v. Calumet Shreveport Refining, L.L.C.",
+      "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-1229.html"
+    },
+    {
+      "date": "2025-02-06",
+      "kind": "primary",
+      "publisher": "U.S. Supreme Court docket",
+      "title": "Docket No. 24-7, Diamond Alternative Energy, LLC v. EPA",
+      "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24-7.html"
+    },
+    {
+      "date": "2025-02-06",
+      "kind": "primary",
+      "publisher": "U.S. Supreme Court docket",
+      "title": "Docket No. 23-1067, Oklahoma v. EPA",
+      "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-1067.html"
+    }
+  ],
+  "stage": "implemented",
+  "status_summary": "On 2025-01-24 the Acting Solicitor General moved the Supreme Court to hold briefing in abeyance in four pending cases so agencies could reconsider Biden-era actions; on 2025-02-06 the Court granted the motion in the Education Department borrower-defense case (No. 24-413) and denied it in the other three (Nos. 23-1229, 24-7 and 23-1067). On 2025-02-07 a Deputy Solicitor General told the Court in United States v. Skrmetti that the government's earlier equal-protection position no longer represented the United States' view while asking the Court to decide the case; the Court upheld the Tennessee law 6-3 on 2025-06-18. The Education case was dismissed on 2025-08-11 after a stipulation. These filings show the Justice Department reconsidering prior positions at the outset of the Administration; no source found shows the White House Counsel's role in those decisions.",
+  "timeline": [
+    {
+      "date": "2025-01-24",
+      "event": "The Acting Solicitor General files motions to hold the briefing schedule in abeyance in four pending cases (Department of Education v. Career Colleges and Schools of Texas, No. 24-413; EPA v. Calumet Shreveport Refining, No. 23-1229; Diamond Alternative Energy v. EPA, No. 24-7; Oklahoma v. EPA, No. 23-1067) so the agencies can reconsider the underlying actions after the change of Administration.",
+      "kind": "primary",
+      "source": "U.S. Supreme Court docket",
+      "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-1229.html"
+    },
+    {
+      "date": "2025-02-06",
+      "event": "By orders of this date the Court grants the abeyance motion in Department of Education v. Career Colleges and Schools of Texas (No. 24-413) and denies it in EPA v. Calumet Shreveport Refining (No. 23-1229), Diamond Alternative Energy v. EPA (No. 24-7) and Oklahoma v. EPA (No. 23-1067).",
+      "kind": "primary",
+      "source": "U.S. Supreme Court docket",
+      "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24-7.html"
     },
     {
       "date": "2025-02-07",
@@ -196,21 +252,14 @@
     },
     {
       "date": "2025-08-11",
-      "event": "Department of Education v. Career Colleges and Schools of Texas is dismissed under Supreme Court Rule 46 after the parties filed a joint stipulation of dismissal on 2025-08-08; merits briefing had been resumed by order of 2025-06-23.",
-      "kind": "news",
-      "source": "SCOTUSblog",
-      "url": "https://www.scotusblog.com/cases/case-files/department-of-education-v-career-colleges-and-schools-of-texas/"
-    },
-    {
-      "date": "2026-08-10",
-      "event": "Reuters reports that White House Counsel David Warrington will leave for the private sector and that Will Scharf will become White House Counsel effective 2026-09-01; the report does not describe the office's litigation role.",
-      "kind": "news",
-      "source": "Reuters via NY Daily Record",
-      "url": "https://nydailyrecord.com/2026/08/10/trump-names-will-scharf-as-white-house-counsel/"
+      "event": "Department of Education v. Career Colleges and Schools of Texas (No. 24-413) is dismissed under Supreme Court Rule 46 after a stipulation of dismissal filed 2025-08-08; merits briefing had been resumed by order of 2025-06-23.",
+      "kind": "primary",
+      "source": "U.S. Supreme Court docket",
+      "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24-413.html"
     }
   ],
   "title": "Have the Counsel review pending litigation and recommend reversing prior positions",
   "tracked": true,
-  "uncertainties": "The Skrmetti letter was read on supremecourt.gov. The abeyance motions and the Court's orders were read through SCOTUSblog case-file docket summaries, not the supremecourt.gov docket pages. Only the Education and Calumet rulings on the abeyance motions were checked; outcomes in the other two cases were not. The record covers a few Supreme Court cases from the first weeks; lower-court position changes were not surveyed. Nothing found shows what the White House Counsel recommended or when, so the match is partial and progress is held at the low end of implemented (inference): the outcome the chapter describes is visible, the Counsel's process is not. Court outcomes after the pause are context, not outcomes of the recommendation.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The Skrmetti letter (signed by Deputy Solicitor General Curtis E. Gannon, the Acting Solicitor General being recused) and the supremecourt.gov docket pages for Nos. 24-413, 23-1229, 24-7 and 23-1067 were read in review; the text of the 2025-01-24 motions themselves was not opened. The Skrmetti decision date and vote rest on the SCOTUSblog case file. The record covers a few Supreme Court cases from the first weeks; lower-court position changes were not surveyed. A 2026-08-10 news report (Reuters via NY Daily Record) of a change of White House Counsel effective 2026-09-01 is context only and says nothing of the office's litigation role. Nothing found shows what the White House Counsel recommended or when, so the match is partial and progress is held at the low end of implemented (inference): the outcome the chapter describes is visible, the Counsel's process is not. Court outcomes after the pause are context, not outcomes of the recommendation.",
+  "updated_at": "2026-10-17"
 }

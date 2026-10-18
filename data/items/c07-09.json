@@ -5,9 +5,9 @@
     "GAO reports the Trusted Workforce 2.0 completion target has slipped to the end of FY2028, with NBIS development to the end of FY2027."
   ],
   "chapter": "07",
-  "confidence": 68,
+  "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; the quarterly report and GAO statement were fetched and read as primary sources, but no source addresses the Mandate's specific reciprocity enforcement or directorate move, and the stage credit rests on a judgment about continued program work.",
+  "confidence_reason": "The chapter text (p. 207) was checked and the FY2026 third-quarter personnel vetting report (performance.gov), the GAO statement GAO-26-108838 and Section 6310 of Public Law 119-60 (Senate intelligence committee copy) were fetched and read; none addresses the reciprocity enforcement or directorate move the text names, and any DNI directive on reciprocity would sit on dni.gov, which was unreachable, so the record stays medium.",
   "durability": {
     "level": "medium",
     "why": "The program rests on existing executive agent directives and agency systems; reorganizing NCSC functions could be done administratively or by statute and reversed."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "An independent AI review re-read the FY2026 third-quarter personnel vetting report (performance.gov), GAO-26-108838 (gao.gov) and Section 6310 of Public Law 119-60 (intelligence.senate.gov), added the law's committee copy as a source and kept the stage at in_progress 25."
     }
   ],
   "id": "c07-09",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -56,37 +60,27 @@
   "research_agent": "N07a",
   "review": {
     "flags": [
-      "Trusted Workforce 2.0 completion slip to FY2028 added from GAO",
-      "most program activity predates 2025"
+      "SecEA directives sit on dni.gov, unreachable",
+      "alternative defensible: proposed 15, since the specific enforcement and directorate steps are absent and program work predates 2025"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 207 asks the DNI as security executive agent to require results from resisting agencies, enforce the 48-hour reciprocity guidance and fix slow onboarding, and says moving the Security Services Directorate from NCSC to ODNI may be needed; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y8b",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 207 asks the DNI as security executive agent to require results from resisting agencies, enforce the 48-hour reciprocity guidance and fix slow onboarding, and says executive order changes including moving the Security Services Directorate from NCSC into ODNI with elevated status may be needed; the proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Undated FY26 Q3 report: FBI first approved provider in April, legacy PR products retired end of June, CV enrollment 78 percent, risk management rated poor, timeliness declining; SecEA is DNI Jay Clayton; PAC chair Eric Ueland of OMB; no reciprocity or Security Services Directorate mention.",
+        "note": "Undated FY2026 Q3 report; SecEA named as DNI Clayton; FBI approved in April; DCSA sunset legacy PR products end of June; continuous vetting 78 percent; risk management Poor; no reciprocity or NCSC mention.",
         "result": "supports",
         "url": "https://assets.performance.gov/files/Personnel_Vetting_QPR_(FY26-Q3).pdf"
       },
       {
-        "note": "2026-02-24 testimony: DCSA 95 percent, NBIS by end FY2027, TW 2.0 completion moved to end FY2028; no reciprocity mention.",
+        "note": "2026-02-24 House Oversight subcommittee; TW 2.0 target moved from end FY2026 to end FY2028; NBIS development end FY2027; DCSA about 95 percent of investigations; no reciprocity mention.",
         "result": "supports",
         "url": "https://files.gao.gov/reports/GAO-26-108838/index.html"
       },
       {
-        "note": "NCSC to focus on clearance reform, counterintelligence threats and leak investigations.",
-        "result": "supports",
-        "url": "https://archive.dni.gov/files/ODNI/documents/ODNI-20-Fact-Sheet.pdf"
-      },
-      {
-        "note": "Fetched. Confirms Public Law 119-60, the NDAA for FY2026 enacted 2025-12-18, with Division F as the Intelligence Authorization Act for FY2026, and gives the Division F table of contents. The page text available to the fetch ends early in Division A, so section text was read from the Senate intelligence committee copy instead.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
-      },
-      {
-        "note": "Fetched in two parts. Division F section text was read through Sec. 6703; Secs. 6704 to 6806 were checked by title only (from the table of contents). Sec. 6712 is a diplomatic reciprocity provision (22 U.S.C. 254c-1), not FARA.",
+        "note": "Sec. 6310 review of eligibility for separated personnel and continuous-vetting assessment, due in 120 days; no reciprocity enforcement.",
         "result": "partial",
         "url": "https://www.intelligence.senate.gov/2025/12/18/intelligence-authorization-act-for-fiscal-year-2026-division-f-of-the-national-defense-authorization-act-for-fiscal-year-2026-public-law-119-60-dec-18-2025-119th-congress-in/"
       }
@@ -133,6 +127,13 @@
       "publisher": "Government Accountability Office",
       "title": "GAO statement on background investigations and NBIS (GAO-26-108838)",
       "url": "https://files.gao.gov/reports/GAO-26-108838/index.html"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "primary",
+      "publisher": "Senate Select Committee on Intelligence",
+      "title": "Intelligence Authorization Act for Fiscal Year 2026, Division F of Public Law 119-60 (committee copy of text)",
+      "url": "https://www.intelligence.senate.gov/2025/12/18/intelligence-authorization-act-for-fiscal-year-2026-division-f-of-the-national-defense-authorization-act-for-fiscal-year-2026-public-law-119-60-dec-18-2025-119th-congress-in/"
     }
   ],
   "stage": "in_progress",
@@ -169,6 +170,6 @@
   ],
   "title": "Enforce Trusted Workforce 2.0 and reciprocity; elevate the Security Services Directorate",
   "tracked": true,
-  "uncertainties": "The quarterly report's publication date was not stated; its date here is the end of the covered quarter (an inference). Reciprocity timeliness was not found in the quarterly report or the GAO statement. Section 6310 of Public Law 119-60 is cited by title; its text was within the portion of Division F read but was not analyzed for reciprocity. Most of the governmentwide program predates 2025, so stage credit reflects continued implementation under the DNI as Security Executive Agent rather than the Mandate's specific enforcement steps. A search for a move of the Security Services Directorate found nothing, but internal ODNI reorganizations may not be public.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "The quarterly report's publication date was not stated; its date here is the end of the covered quarter (an inference). Reciprocity timeliness, the 48-hour reciprocity guidance, NCSC and the Security Services Directorate are not mentioned in the quarterly report or the GAO statement, both of which were re-read on 2026-10-18. Section 6310 of Public Law 119-60, read on the Senate intelligence committee's copy, directs the DNI to review the feasibility of restoring eligibility for people separated up to five years and to assess continuous vetting of inactive clearances, with findings due within 120 days; it does not address reciprocity enforcement. Security Executive Agent directives and the Trusted Workforce 2.0 page are hosted on dni.gov, which could not be reached, so a DNI reciprocity directive issued since 2025 cannot be ruled out. Most of the governmentwide program predates 2025, so stage credit reflects continued implementation under the DNI as Security Executive Agent rather than the Mandate's specific enforcement steps. A search for a move of the Security Services Directorate found nothing, but internal ODNI reorganizations may not be public.",
+  "updated_at": "2026-10-18"
 }

@@ -7,7 +7,7 @@
   "chapter": "05",
   "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "PM 25-29 was read on justice.gov; the consent judgment and intervention events rest on a case-tracking page, an advocacy advisory and a news report that agree, without the order.",
+  "confidence_reason": "PM 25-29 was read in full on justice.gov and the consent judgment's docket text on a case-tracking host; the vacatur, the bar on future closure rules, the intervention denial and the appeal rest on an advocacy advisory and a news report because the order itself could not be opened, so confidence stays medium.",
   "court_status": {
     "basis": "Consent judgment of 2026-06-22 vacating the 2024 EOIR docket management rule (from a case-tracking page, an advocacy advisory and a news report; the order itself was not opened); the 2026-08-21 denial of intervention is on appeal to the Fifth Circuit.",
     "date": "2026-06-22",
@@ -39,10 +39,18 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Primary-source lift on 2026-10-17 re-read EOIR PM 25-29 on justice.gov and the Texas v. DOJ docket text on a case-tracking host, added the 2024 rule's Federal Register citation and corrected the judgment entry to name the signing judge and the declaration actually shown in the docket text; the order itself could not be opened."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review after the primary-source lift: EOIR PM 25-29 on justice.gov, the Texas v. DOJ docket text on a case-tracking host and the September 2026 advisory on ilrc.org were read; implemented 70 kept; confidence 64 kept."
     }
   ],
   "id": "c05-30",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -69,37 +77,29 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Match changed from direct to partial: the Mandate targets ICE's own use of closure and termination, while the actions found are EOIR's memo and a court judgment on immigration judge authority; parallel is defensible because the actor differs, direct is not.",
-      "Progress lowered from 80 to 70 within implemented: administrative closure by immigration judges is largely ended, but the termination element and any ICE-side policy are not shown. in_progress 55 is defensible if the owner weighs the ICE actor and the pending appeal more heavily.",
-      "Court events rest on secondary sources (tracker, advocacy advisory, news); no order could be opened. court_status.state is vacated.",
-      "ILRC source date changed from the placeholder 2026-09-01 to 2026-09 (month only, as printed). Removed the unread tracker source and added a news report of the judgment.",
-      "Confidence lowered from 68 to 64."
+      "Stage implemented 70 and match partial kept: the immigration-judge closure authority is ended by memo and judgment, while ICE's own practice (the Mandate's named actor) has no written policy found; in_progress 55 remains the other defensible call.",
+      "court_status vacated (2026-06-22) kept: the later 2026-08-21 intervention denial does not change the judgment, and the order text was not opened."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 141 (ICE, Needed Reforms) asks the administration to order ICE to stop closing out pending immigration cases and apply the INA as written; page 152 (subregulatory list) asks to end ICE's widespread use of termination and administrative closure in immigration court. Proposal is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y7",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16L-1",
     "source_checks": [
       {
-        "note": "PM 25-29 dated 2025-04-18, signed by the Acting Director, rescinds DM 22-03 and states no statute authorizes administrative closure; says the 2024 rule stays binding until rescinded or vacated; no DHS-specific guidance (checked 2026-10-14)",
+        "note": "PM 25-29 of 2025-04-18 (Acting Director, effective same day) cancels DM 22-03, says no statute authorizes administrative closure, says EOIR will not defend the 2024 rule, and says the rule stays binding until rescinded, enjoined or vacated.",
         "result": "supports",
         "url": "https://www.justice.gov/eoir/media/1397161/dl"
       },
       {
-        "note": "Case page: No. 7:26-cv-00070 (N.D. Tex.), filed and closed 2026-06-22; order and final judgment declaring the 2024 rule in excess of statutory authority; no intervention or appeal listed (checked 2026-10-14)",
-        "result": "supports",
+        "note": "ECF 1 to 5, all 2026-06-22, Chief Judge O'Connor; ECF 5 Order and Final Judgment declares the 2024 rule in excess of statutory authority and contrary to law. Docket text does not itself say vacated or enjoined; no intervention or appeal entries; last updated 2026-07-26.",
+        "result": "partial",
         "url": "https://clearinghouse.net/case/48322/"
       },
       {
-        "note": "Advisory dated September 2026 only: judgment vacates the 2024 rule and enjoins rules allowing closure without express statutory basis; intervention motion 2026-08-07, denied 2026-08-21, appeal pending; interim final rule signaled; PM 25-27 of 2025-03-21 (checked 2026-10-14)",
+        "note": "Advisory (September 2026, no day): judgment vacates the rule, permanently enjoins DOJ from closure rules without express statutory basis, appeal waived; intervention motion of 2026-08-07 denied 2026-08-21 and appealed; DOJ has signaled an interim final rule; PM 25-27 of 2025-03-21.",
         "result": "supports",
         "url": "https://www.ilrc.org/sites/default/files/2026-09/09-26%20TX%20v%20DOJ.pdf"
-      },
-      {
-        "note": "News report: judgment entered late on 2026-06-22 in Wichita Falls, DOJ agreed with Texas (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.texastribune.org/2026/06/22/texas-paxton-doj-lawsuit-immigration-administrative-rule-biden/"
       }
     ]
   },
@@ -166,6 +166,13 @@
       "publisher": "Texas Tribune",
       "title": "Texas sues DOJ over Biden-era immigration rule (report of the 2026-06-22 judgment)",
       "url": "https://www.texastribune.org/2026/06/22/texas-paxton-doj-lawsuit-immigration-administrative-rule-biden/"
+    },
+    {
+      "date": "2024-05-29",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Efficient Case and Docket Management in Immigration Proceedings (final rule, 89 FR 46742)",
+      "url": "https://www.federalregister.gov/documents/2024/05/29/2024-11121/efficient-case-and-docket-management-in-immigration-proceedings"
     }
   ],
   "stage": "implemented",
@@ -173,14 +180,14 @@
   "timeline": [
     {
       "date": "2025-04-18",
-      "event": "EOIR Acting Director Sirce Owen issued PM 25-29, rescinding Director's Memorandum 22-03 on administrative closure and stating that no statute authorizes administrative closure by EOIR adjudicators.",
+      "event": "EOIR Acting Director issued PM 25-29, effective the same day, cancelling Director's Memorandum 22-03 (2021) on administrative closure, stating that no statute authorizes administrative closure by EOIR adjudicators and that EOIR would not defend the 2024 docket management rule against legal challenge, while noting the rule remained binding until rescinded, superseded, enjoined, vacated or found unlawful.",
       "kind": "primary",
       "source": "Executive Office for Immigration Review",
       "url": "https://www.justice.gov/eoir/media/1397161/dl"
     },
     {
       "date": "2026-06-22",
-      "event": "In Texas v. DOJ (N.D. Tex., No. 7:26-cv-00070) the court entered a consent judgment the same day the complaint was filed, declaring the 2024 EOIR docket management rule in excess of statutory authority, vacating it and, per an advocacy advisory, enjoining DOJ from rules allowing administrative closure without an express statutory basis; the parties waived appeal.",
+      "event": "In Texas v. DOJ (N.D. Tex., No. 7:26-cv-00070) Chief Judge Reed O'Connor granted a joint motion and entered an Order and Final Judgment (ECF 5) the same day the complaint was filed, declaring the 2024 EOIR docket management rule (89 FR 46742) in excess of statutory authority and contrary to law; per an advocacy advisory the judgment also vacated the rule and enjoined DOJ from rules allowing administrative closure without an express statutory basis, and the parties waived appeal.",
       "kind": "court",
       "source": "Civil Rights Litigation Clearinghouse",
       "url": "https://clearinghouse.net/case/48322/"
@@ -195,6 +202,6 @@
   ],
   "title": "End administrative closure and termination of pending immigration cases",
   "tracked": true,
-  "uncertainties": "The Mandate's pages 141 and 152 address ICE's use of closure and termination, while the actions found are by EOIR and a court, which control the immigration judge's authority; the record is therefore a partial match. The court events rest on secondary sources: the consent judgment was read through a case-tracking page, a September 2026 advocacy advisory (no day given) and a news report, not the order, and the intervention denial and appeal come from the advisory only. The 2026 BIA interim final rule does not change closure rules per the portion read. PM 25-27 is cited from the advisory only. The EOIR policy memorandum list page failed to load, so other memos since 2025-01-20 may exist. Whether the Attorney General acted was not found. The vacatur follows a suit by Texas that DOJ did not defend.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The Mandate's pages 141 and 152 address ICE's use of closure and termination, while the actions found are by EOIR and a court, which control the immigration judge's authority; the record is therefore a partial match. The consent judgment's docket text (ECF 3 and ECF 5, signed by Chief Judge O'Connor) was read on a case-tracking page, which reports a declaration that the 2024 rule is in excess of statutory authority and contrary to law; the order itself was not opened because the court's docket host refused access, and the vacatur and the bar on future closure rules come from a September 2026 advocacy advisory (no day given) and a news report. The intervention denial and the Fifth Circuit appeal come from the advisory only; the case-tracking docket (last updated 2026-07-26) does not show them. The 2026 BIA interim final rule does not change closure rules per the portion read; a Federal Register search of EOIR rules since 2025-01-20 found no rule on administrative closure or termination. PM 25-27 is cited from the advisory only. The EOIR policy memorandum list page failed to load, so other memos since 2025-01-20 may exist. Whether the Attorney General acted was not found. The vacatur follows a suit by Texas that DOJ did not defend. Independent review of 2026-10-16: PM 25-29, the case-tracking docket and the September 2026 advisory were re-read and agree with the record; the docket page shows the case closed on 2026-06-22 with no intervention or appeal entries, so the 2026-08-21 denial and the Fifth Circuit appeal rest on the advisory alone.",
+  "updated_at": "2026-10-16"
 }

@@ -5,9 +5,9 @@
     "Statutory text governs WIC contract bidding."
   ],
   "chapter": "10",
-  "confidence": 70,
-  "confidence_label": "medium",
-  "confidence_reason": "Text checked at pages 301 to 302; the stage-deciding primary documents (FDA request for information, USDA correcting amendment, bill text, GAO report) and a Federal Register search were read; the planned FDA rule rests on one news report and the bill's latest action could not be read.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "The stage-deciding documents were fetched and read in review on 2026-10-18: the FDA request for information on the Federal Register (a notice with six questions, no proposal, Operation Stork Speed dated 2025-03-18, last comprehensive review 1998) and the GovInfo bill status for H.R. 5759 (introduction and referral on 2025-10-14 as the only actions). The USDA correcting amendment and the GAO report were read by the researcher; the trade report on a planned FDA rule was not re-opened, and the FDA Operation Stork Speed page and the FNS rebate-extension page were not read.",
   "durability": {
     "level": "medium",
     "why": "Statutory change to bidding would be durable, but the agency steps so far are reviews and proposals."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Cross-reference added to new layer 3 record c26-23 written in the second enumeration pass; no change to the status."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Proposed 15 confirmed against the FDA request for information and the H.R. 5759 bill status; trade-report timeline row kept out; confidence 70 to 80."
     }
   ],
   "id": "c10-10",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -44,7 +52,8 @@
   "progress": 15,
   "proposal": "The Mandate recommends that WIC infant formula competitive bidding for state rebate contracts, under which states approve one brand, be regulated so that it does not unintentionally create monopolies, given that WIC buys about half of baby formula. It also calls for re-evaluating formula labeling rules and other regulations that unnecessarily delay the manufacture and sale of baby formula.",
   "related_ids": [
-    "c10-02"
+    "c10-02",
+    "c26-23"
   ],
   "remaining": [
     "A USDA rule or guidance to change single-supplier rebate contracting or add multi-supplier options, or enactment of a bill such as H.R. 5759.",
@@ -55,14 +64,16 @@
   "research_agent": "N10",
   "review": {
     "flags": [
-      "stage changed from in_progress 20 to proposed 15: progress 20 sat outside the in_progress band and the evidence is a review, a planned rule and an introduced bill",
-      "congress.gov action history for H.R. 5759 blocked"
+      "Timeline row for the 2026-03-24 trade report removed by the researcher and kept out: it reports a planned proposal, which is an announcement that a proposal is coming, not a government action; the fact remains in status_summary with its news source cited.",
+      "H.R. 5759 timeline row re-sourced to GovInfo bill status, confirmed in review (one cosponsor, latest action 2025-10-14 referral, record updated 2026-06-11).",
+      "Stage kept at proposed 15; the defensible alternative is in_progress 25 if the FDA nutrient review is treated as a formally underway proceeding, but a request for information changes nothing operative.",
+      "Confidence raised from 70 to 80 because the deciding documents were fetched and read in full."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 301 to 302 (Reform WIC) confirmed for both bullets.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9a",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V2",
     "source_checks": [
       {
         "note": "Report 2025-01-14; $1.6 billion FY2023 rebates; 19.3 percent of caseload; two manufacturers hold nearly all contracts; no formal recommendations.",
@@ -98,6 +109,21 @@
         "note": "2026-03-24; FDA aims to propose a nutrient rule later in 2026 (paywalled after opening).",
         "result": "supports",
         "url": "https://news.bgov.com/health-law-and-business/fda-to-propose-new-infant-formula-nutrients-rule-this-year"
+      },
+      {
+        "note": "Notice, request for information, 90 FR 20475, published 2025-05-14, comments due 2025-09-11; no rule proposed. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2025-08419.json"
+      },
+      {
+        "note": "Background says HHS and FDA announced Operation Stork Speed on 2025-03-18 and that the last comprehensive nutrient review was in 1998; no labeling content; responses to inform what actions, if any, to take. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/05/14/2025-08419/infant-formula-nutrient-requirements-request-for-information"
+      },
+      {
+        "note": "H.R. 5759, INFANT Act of 2025, introduced 2025-10-14, one cosponsor, referred to Education and Workforce on 2025-10-14; no later action; record updated 2026-06-11. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5759.xml"
       }
     ]
   },
@@ -167,22 +193,29 @@
       "url": "https://www.federalregister.gov/documents/2025/12/17/2025-23089/special-supplemental-nutrition-program-for-women-infants-and-children-wic-implementation-of-the"
     },
     {
-      "date": "2026-03-24",
-      "kind": "news",
-      "publisher": "Bloomberg Government",
-      "title": "FDA to Propose New Infant Formula Nutrients Rule This Year",
-      "url": "https://news.bgov.com/health-law-and-business/fda-to-propose-new-infant-formula-nutrients-rule-this-year"
-    },
-    {
       "date": "2025-10-14",
       "kind": "primary",
       "publisher": "GovInfo",
       "title": "H.R. 5759 bill details (GovInfo)",
       "url": "https://www.govinfo.gov/app/details/BILLS-119hr5759ih"
+    },
+    {
+      "date": "2025-10-14",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS XML for H.R. 5759 (119th Congress), action record",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5759.xml"
+    },
+    {
+      "date": "2026-03-24",
+      "kind": "news",
+      "publisher": "Bloomberg Government",
+      "title": "FDA to Propose New Infant Formula Nutrients Rule This Year",
+      "url": "https://news.bgov.com/health-law-and-business/fda-to-propose-new-infant-formula-nutrients-rule-this-year"
     }
   ],
   "stage": "proposed",
-  "status_summary": "On the formula-regulation side, HHS and FDA announced Operation Stork Speed on 2025-03-18, and FDA opened its first comprehensive review of infant formula nutrient requirements since 1998 with a request for information published 2025-05-14; Bloomberg Government reported on 2026-03-24 that FDA aims to propose a revised nutrient rule later in 2026, and no such proposal appeared in a Federal Register search through 2026-10-12. No FDA action on formula labeling or on rules that delay manufacture and sale was found. On the WIC bidding side, no USDA rule or guidance changing the single-supplier rebate model was found; USDA published only a correcting amendment (2025-12-17) restoring omitted bid-evaluation text of a 2023 rule, and said it expects no policy change. H.R. 5759 (introduced 2025-10-14) would have states select two lowest-price manufacturers, one primary and one secondary; GovInfo lists only the introduced version. Because the steps found are a review, a planned proposal and an introduced bill, the stage is proposed.",
+  "status_summary": "On the formula-regulation side, HHS and FDA announced Operation Stork Speed on 2025-03-18, and FDA opened its first comprehensive review of infant formula nutrient requirements since 1998 with a request for information published 2025-05-14; a trade report of 2026-03-24 said FDA aims to propose a revised nutrient rule later in 2026, and no such proposal appeared in a Federal Register search through 2026-10-12. No FDA action on formula labeling or on rules that delay manufacture and sale was found. On the WIC bidding side, no USDA rule or guidance changing the single-supplier rebate model was found; USDA published only a correcting amendment (2025-12-17) restoring omitted bid-evaluation text of a 2023 rule, and said it expects no policy change. H.R. 5759 (introduced 2025-10-14) would have states select two lowest-price manufacturers, one primary and one secondary; the GovInfo bill status shows referral to Education and Workforce on 2025-10-14 as the only action. Because the steps found are a review, a planned proposal and an introduced bill, the stage is proposed.",
   "timeline": [
     {
       "date": "2025-01-14",
@@ -214,10 +247,10 @@
     },
     {
       "date": "2025-10-14",
-      "event": "H.R. 5759 (INFANT Act of 2025) was introduced, amending the Child Nutrition Act to define WIC formula competitive bidding as selecting the two lowest-price manufacturers, one primary and one secondary; referred to the Committee on Education and Workforce.",
+      "event": "H.R. 5759 (INFANT Act of 2025) was introduced, amending the Child Nutrition Act to define WIC formula competitive bidding as selecting the two lowest-price manufacturers, one primary and one secondary; referred to the Committee on Education and Workforce. The bill status record shows one cosponsor and no later action.",
       "kind": "primary",
-      "source": "Congress.gov",
-      "url": "https://www.congress.gov/119/bills/hr5759/BILLS-119hr5759ih.htm"
+      "source": "GovInfo (H.R. 5759 bill status)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5759.xml"
     },
     {
       "date": "2025-12-17",
@@ -225,17 +258,10 @@
       "kind": "primary",
       "source": "Federal Register (USDA FNS)",
       "url": "https://www.federalregister.gov/documents/2025/12/17/2025-23089/special-supplemental-nutrition-program-for-women-infants-and-children-wic-implementation-of-the"
-    },
-    {
-      "date": "2026-03-24",
-      "event": "Bloomberg Government reported that FDA plans to propose revised infant formula nutrient standards later in 2026.",
-      "kind": "news",
-      "source": "Bloomberg Government",
-      "url": "https://news.bgov.com/health-law-and-business/fda-to-propose-new-infant-formula-nutrients-rule-this-year"
     }
   ],
   "title": "Reform WIC infant formula bidding and re-evaluate formula regulations",
   "tracked": true,
-  "uncertainties": "The Operation Stork Speed launch date of 2025-03-18 is taken from the background of FDA's 2025-05-14 request for information; the March 2025 announcement itself was not fetched. Congress.gov blocks automated access, so H.R. 5759's action history could not be read; GovInfo shows only the introduced version, which suggests no further printed version, but committee action cannot be ruled out. A Federal Register search for infant formula documents in 2026 found no FDA nutrient proposed rule; it found a 2026-05-22 final guidance on protein efficiency ratio rat bioassay studies for new formulas, which refines rather than removes a premarket requirement and is not framed as burden reduction, and a 2026-06-24 WIC food package correction that does not touch formula or bidding. A FNS page on extension of infant formula rebate contracts (WIC PM 94-6), updated 2026-09-10 per research, was not read. The Mandate's monopoly concern is addressed by H.R. 5759 only in part, since it keeps a primary award.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "The Operation Stork Speed launch date of 2025-03-18 is taken from the background of FDA's 2025-05-14 request for information, which was read in this run; the March 2025 announcement itself was not fetched. H.R. 5759 bill status was read on GovInfo (latest action 2025-10-14, referral). The 2026-03-24 trade report that FDA aims to propose a nutrient rule in 2026 is a news item, not a government action, so it is kept out of the timeline; it was not re-opened. A Federal Register API search of FDA documents mentioning infant formula since 2025-01-20 found only the 2025-05-14 request for information, information collection notices (2026-07-17 and 2026-10-14), and a 2026-05-22 notice on protein efficiency ratio rat bioassay guidance for new formulas (not opened in this run); no FDA nutrient proposed or final rule appeared through 2026-10-14. A search of USDA Food and Nutrition Service documents found only the 2025-12-17 correcting amendment. The FDA Operation Stork Speed page could not be read (rate limited) and the FNS page on rebate contract extensions was not read, so non-Federal Register FDA or USDA steps are not excluded. The Mandate's monopoly concern is addressed by H.R. 5759 only in part, since it keeps a primary award.",
+  "updated_at": "2026-10-18"
 }

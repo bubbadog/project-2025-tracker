@@ -2,9 +2,9 @@
   "agency": "HHS (CMS, Medicaid)",
   "blockers": [],
   "chapter": "14",
-  "confidence": 70,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked; the interim final rule was read on the Federal Register in earlier checks, the suit is confirmed by a state attorney general release, and the injunction denial by two consistent trade reports; the order and docket were not read.",
+  "confidence": 82,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter pages checked and the stage-deciding interim final rule, 91 FR 33348 (FR Doc. 2026-11094), was re-read in review, with its Summary and Dates supporting the stage; SMD #26-001 and the CMS legislation overview slide were also read; the court order itself was not read.",
   "court_status": {
     "basis": "Preliminary injunction against the interim final rule denied without prejudice in Massachusetts et al. v. Oz (D. Mass.); merits case continues with expedited briefing ahead of the 2027-01-01 compliance date.",
     "date": "2026-07-29",
@@ -23,10 +23,18 @@
     {
       "date": "2026-10-13",
       "note": "Added the multistate suit against the interim final rule (2026-06-29) and the denial of a preliminary injunction without prejudice (2026-07-29); court status set to pending; stage unchanged at in_progress 60."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Cross-references added to new layer 3 records c14-39, c14-40 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review re-read the interim final rule on federalregister.gov and State Medicaid Director Letter #26-001 and two CMS overview decks on medicaid.gov; added the 2026-03-06 guidance event and sourced sections 71107 and 71120 to CMS; stage in_progress 60 unchanged; confidence 70 to 82."
     }
   ],
   "id": "c14-05",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-16",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -39,7 +47,9 @@
   "progress": 60,
   "proposal": "The Mandate recommends that CMS clarify that states may adopt work incentives for able-bodied adults, broaden targeted premiums and cost sharing for higher-income enrollees, consider time limits or lifetime caps on benefits, require more robust eligibility determinations, and use Section 1115 waivers to impose work requirements.",
   "related_ids": [
-    "c00-10"
+    "c00-10",
+    "c14-39",
+    "c14-40"
   ],
   "remaining": [
     "States implement the requirement by 2027-01-01 or obtain good-faith exemptions",
@@ -50,31 +60,46 @@
   "requires_congress": "partial",
   "research_agent": "A10",
   "review": {
+    "document_reread": {
+      "citation": "91 FR 33348 (2026-06-03), FR Doc. 2026-11094, CMS-2454-IFC, RIN 0938-AV98",
+      "note": "First 100,000 of about 131,000 characters read; Summary and Dates confirm an interim final rule with comment implementing Public Law 119-21 section 71119 (Social Security Act section 1902(xx)), effective and comment deadline 2026-07-31, state implementation no later than 2027-01-01 (earlier allowed), 80 hours a month standard; correction of 2026-06-29 noted on the page. SMD #26-001 (2026-03-06) on section 71107 was also read in full.",
+      "result": "supports",
+      "url": "https://www.federalregister.gov/documents/2026/06/03/2026-11094/medicaid-program-community-engagement-requirement-for-certain-individuals"
+    },
     "flags": [
-      "Reworded coalition count to match the California release; event kind for the ruling set to court; new source kind for the state release set to primary"
+      "New timeline event for SMD #26-001 accepted: a dated agency guidance action.",
+      "Dates of the two CMS slide sources corrected from the researcher's placeholder 2026-01-01 to the dates printed on them (2025-11-18 and 2025-12-08).",
+      "Court status matches the latest court event (2026-07-29); unchanged.",
+      "The rule was published 2026-06-03, two days after the 2026-06-01 statutory date shown on the CMS overview slide; not material to stage."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 468 asks CMS to clarify state ability to adopt work incentives and broaden targeted premiums and cost sharing, and to add time limits or lifetime caps; page 469 adds Section 1115 work requirements for able-bodied adults; the paraphrase fits, though the eligibility-determination element was not re-located on these pages.",
+    "mandate_check": "ok",
+    "mandate_note": "Page 468 asks CMS to clarify state ability to adopt work incentives and broaden targeted premiums and cost sharing and to add time limits or lifetime caps, page 467 asks for more robust eligibility determinations, and page 469 adds Section 1115 work requirements for able-bodied adults; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-1",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-4",
     "source_checks": [
       {
-        "note": "Dated 2026-06-29; 24 attorneys general and two governors; claims include narrowing the medically frail exemption, APA and coercion; court not named on the page.",
+        "note": "91 FR 33348, CMS-2454-IFC, RIN 0938-AV98; effective and comments 2026-07-31; states by 2027-01-01; 80 hours a month; first 100,000 characters read.",
         "result": "supports",
-        "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-sues-trump-administration-over-unlawful-implementation"
+        "url": "https://www.federalregister.gov/documents/2026/06/03/2026-11094/medicaid-program-community-engagement-requirement-for-certain-individuals"
       },
       {
-        "note": "Ruling 2026-07-29 by Judge Stearns, denied without prejudice for lack of irreparable harm; expedited summary judgment briefing before 2027-01-01.",
+        "note": "SMD #26-001 dated 2026-03-06; section 71107; renewals every six months for the adult expansion group for renewals on or after 2027-01-01.",
         "result": "supports",
-        "url": "https://www.beckershospitalreview.com/legal-regulatory-issues/federal-judge-denies-25-states-bid-to-block-medicaid-work-rules/"
+        "url": "https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf"
       },
       {
-        "note": "Names the court as D. Mass. and the case as Massachusetts et al. v. Oz; preliminary injunction denied, rule remains in effect.",
+        "note": "Title slide dated 2025-11-18 (researcher's 2026-01-01 date corrected); lists 71107 from 2027-01-01 and 71120 from 2028-10-01; interim final rule due by 2026-06-01.",
         "result": "supports",
-        "url": "https://www.ajmc.com/view/judge-denies-preliminary-injunction-in-medicaid-work-requirements-case"
+        "url": "https://www.medicaid.gov/medicaid/downloads/wftc-legsltn-overview-slide.pdf"
+      },
+      {
+        "note": "Dated 2025-12-08; good-faith exemptions expire no later than 2028-12-31; requirement cannot be waived under Section 1115; managed care plans may not determine compliance.",
+        "result": "supports",
+        "url": "https://www.medicaid.gov/medicaid/downloads/community-engagement-overview-slide.pdf"
       }
-    ]
+    ],
+    "stage_change_reason": "The statute is enacted and the interim final rule is in effect, but no state requirement is operative before 2027-01-01 except by state election, and redeterminations (2027-01-01) and cost sharing (2028-10-01) are not yet operative; in_progress at the top of the band fits a mandatory statutory requirement with an effective implementing rule."
   },
   "self_confidence": 80,
   "significance": {
@@ -84,6 +109,24 @@
     "M": 3,
     "R": 2,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 1,
+        "F": 2,
+        "F_estimated": false,
+        "M": 3,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 1,
+        "F": 2,
+        "F_estimated": false,
+        "M": 3,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Medicaid work requirements, cost sharing and stricter eligibility checks would change eligibility for millions of adult enrollees.",
     "version": "2026-10-08",
@@ -138,10 +181,31 @@
       "publisher": "AJMC",
       "title": "Judge denies preliminary injunction in Medicaid work requirements case",
       "url": "https://www.ajmc.com/view/judge-denies-preliminary-injunction-in-medicaid-work-requirements-case"
+    },
+    {
+      "date": "2026-03-06",
+      "kind": "primary",
+      "publisher": "Medicaid.gov, CMS",
+      "title": "State Medicaid Director Letter #26-001: Implementation of Eligibility Redeterminations (Section 71107)",
+      "url": "https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf"
+    },
+    {
+      "date": "2025-12-08",
+      "kind": "primary",
+      "publisher": "Medicaid.gov, CMS",
+      "title": "Section 71119 of Working Families Tax Cut Legislation, Public Law 119-21: community engagement overview deck",
+      "url": "https://www.medicaid.gov/medicaid/downloads/community-engagement-overview-slide.pdf"
+    },
+    {
+      "date": "2025-11-18",
+      "kind": "primary",
+      "publisher": "Medicaid.gov, CMS",
+      "title": "Working Families Tax Cut Legislation, Public Law 119-21: Summary of Medicaid provisions (overview slide)",
+      "url": "https://www.medicaid.gov/medicaid/downloads/wftc-legsltn-overview-slide.pdf"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Public Law 119-21 (signed 2025-07-04) section 71119 requires states to establish Medicaid community engagement requirements for certain adults, going beyond the Mandate's call for state options by making the requirement mandatory. CMS published an interim final rule on 2026-06-03 (effective 2026-07-31; correction 2026-06-29): adults in the expansion group must show 80 hours a month of work, community service, a work program or education, or equivalent income, subject to exclusions and verification, with state compliance required by 2027-01-01. A coalition of state attorneys general and two governors sued on 2026-06-29 (Massachusetts et al. v. Oz, D. Mass.) over the rule's treatment of medically frail beneficiaries and other claims, and on 2026-07-29 the court denied a preliminary injunction without prejudice, leaving the rule in effect while expedited merits briefing proceeds. The same law adds eligibility redeterminations (section 71107) and expansion-adult cost sharing (section 71120), whose details were taken from secondary descriptions; time limits or lifetime caps were not found in the law.",
+  "status_summary": "Public Law 119-21 (signed 2025-07-04) section 71119 requires states to establish Medicaid community engagement requirements for certain adults, going beyond the Mandate's call for state options by making the requirement mandatory. CMS published an interim final rule on 2026-06-03 (effective 2026-07-31; correction 2026-06-29): adults in the expansion group must show 80 hours a month of work, community service, a work program or education, or equivalent income, subject to exclusions and verification, with state compliance required by 2027-01-01. A coalition of state attorneys general and two governors sued on 2026-06-29 (Massachusetts et al. v. Oz, D. Mass.), and on 2026-07-29 the court denied a preliminary injunction without prejudice, leaving the rule in effect while expedited merits briefing proceeds. The same law adds six-month eligibility renewals for the expansion adult group (section 71107, for renewals on or after 2027-01-01, with CMS guidance in a 2026-03-06 State Medicaid Director Letter) and cost sharing for certain expansion adults (section 71120, effective 2028-10-01 per CMS); no time limit or lifetime cap on benefits appears in the CMS summaries of the law.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -149,6 +213,13 @@
       "kind": "primary",
       "source": "GovInfo (Public Law 119-21)",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+    },
+    {
+      "date": "2026-03-06",
+      "event": "CMS issues State Medicaid Director Letter #26-001 on implementing six-month eligibility renewals for the adult expansion group under section 71107, for renewals scheduled on or after 2027-01-01.",
+      "kind": "primary",
+      "source": "Medicaid.gov, CMS",
+      "url": "https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf"
     },
     {
       "date": "2026-06-03",
@@ -188,6 +259,6 @@
   ],
   "title": "Add Medicaid work requirements, cost sharing and stronger eligibility checks",
   "tracked": true,
-  "uncertainties": "Section headings in Public Law 119-21 were confirmed from the GovInfo table of contents; the section bodies (redetermination frequency, cost sharing amounts) come from secondary descriptions and were not checked against the statute text. The court ruling is known from trade press (beckershospitalreview.com, ajmc.com) and a state attorney general release; the order itself and the docket were not read, and the coalition count differs across sources (24 attorneys general and two governors per the California release; reported as 25 states elsewhere). Early implementation by individual states, the length of the good-faith exemption period and Section 1115 work requirement waivers were not reviewed. No court development after 2026-07-31 was found.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The interim final rule was read on the Federal Register host for its first 100,000 of about 131,000 characters; the good-faith exemption section was not reached there, and the latest exemption end date of 2028-12-31 comes from a CMS overview deck. Sections 71107 and 71120 were confirmed through CMS documents on the medicaid.gov host (State Medicaid Director Letter #26-001 and the November 2025 legislation overview slide), not the statute body, which the GovInfo page truncates. The court ruling is known from trade press (beckershospitalreview.com, ajmc.com) and a state attorney general release; the order and docket were not read, and the coalition count differs across sources (24 attorneys general and two governors per the California release; reported as 25 states elsewhere). Early implementation by individual states and Section 1115 work requirement waivers were not reviewed. No court development after 2026-07-31 was found.",
+  "updated_at": "2026-10-16"
 }

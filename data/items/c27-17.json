@@ -1,12 +1,12 @@
 {
   "agency": "Securities and Exchange Commission",
   "blockers": [
-    "The PCAOB audit requirement is statutory (Dodd-Frank), so full relief needs Congress"
+    "The PCAOB audit requirement is statutory (Sarbanes-Oxley section 110 as applied by Dodd-Frank), so full relief needs Congress; both bills remain in committee"
   ],
   "chapter": "27",
-  "confidence": 55,
+  "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Bill text read on GovInfo; SEC-side absence rests on limited searches.",
+  "confidence_reason": "The H.R. 10477 text and the BILLSTATUS records for both bills were read on GovInfo; the S. 5454 text was not read, and the absence of SEC action on audits, peer-to-peer lending and Regulation CF debt rests on a limited Federal Register search.",
   "durability": {
     "level": "high",
     "why": "A statutory exemption would be durable if enacted; none is."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Bill status confirmed on GovInfo and Senate bill added as related; stage unchanged."
     }
   ],
   "id": "c27-17",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -56,18 +60,29 @@
   "review": {
     "flags": [
       "proposed 10 confirmed",
-      "Added the statutory section the bill amends to the summary"
+      "Added the statutory section the bill amends to the summary",
+      "V6: confirmed both BILLSTATUS records; described S. 5454 as a related bill rather than the Senate version, since BILLSTATUS lists it as related and its text was not read; proposed 10 kept."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 831, Entrepreneurial Capital Formation: reduce burdens on small broker-dealers and exempt privately held, non-custodial broker-dealers from PCAOB-registered audits; exempt peer-to-peer lending from securities laws and lighten Regulation CF debt. Paraphrase accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y2",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V6",
     "source_checks": [
       {
         "note": "H.R. 10477 introduced 2026-09-17 by Rep. Hill, referred to Financial Services; amends Sarbanes-Oxley section 110 definitions to exclude privately held, non-carrying broker-dealers in good standing; directs SEC to amend Rule 17a-5 to allow a GAAS audit; silent on peer-to-peer lending and Regulation CF. Checked 2026-10-14.",
         "result": "supports",
         "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr10477ih/html/BILLS-119hr10477ih.htm"
+      },
+      {
+        "note": "Introduced and referred to Financial Services 2026-09-17, no later action; one cosponsor added 2026-09-24; S. 5454 listed as related; record updated 2026-10-02 (checked 2026-10-18).",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr10477.xml"
+      },
+      {
+        "note": "Introduced and referred to Banking 2026-09-22, no later action, no cosponsors; record updated 2026-10-02 (checked 2026-10-18).",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s5454.xml"
       }
     ]
   },
@@ -113,10 +128,24 @@
       "publisher": "Quiver Quantitative",
       "title": "H.R. 10477 bill page",
       "url": "https://www.quiverquant.com/bills/119/hr-10477"
+    },
+    {
+      "date": "2026-09-17",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS record for H.R. 10477 (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr10477.xml"
+    },
+    {
+      "date": "2026-09-22",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS record for S. 5454, Small Business Audit Correction Act of 2026",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s5454.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "H.R. 10477, the Small Business Audit Correction Act of 2026 (Rep. Hill, introduced 2026-09-17, referred to House Financial Services), would exclude privately held, non-carrying broker-dealers in good standing from the Sarbanes-Oxley PCAOB audit provisions by amending the definitions in section 110 of that Act and direct the SEC to amend Rule 17a-5 to allow a standard GAAS audit. That is the audit exemption the Mandate describes, but it is a bill only. No SEC rule, proposal or exemptive order on broker-dealer audit requirements, peer-to-peer lending or Regulation CF debt was found.",
+  "status_summary": "H.R. 10477, the Small Business Audit Correction Act of 2026 (Rep. Hill), was introduced on 2026-09-17 and referred to House Financial Services; S. 5454 (Sen. Cotton) was introduced on 2026-09-22 and referred to Senate Banking, and BILLSTATUS shows no later action on either. Section 2 of the House bill would amend section 110 of the Sarbanes-Oxley Act (15 U.S.C. 7220) to exclude privately held, non-carrying broker-dealers in good standing from the PCAOB-registered firm definitions and would direct the SEC to amend Rule 17a-5 so such firms can meet the annual audit duty with a GAAS audit within 180 days of the effective date. That is the audit exemption the Mandate describes, but it is a bill only, and the text does not mention peer-to-peer lending or Regulation CF. A Federal Register search of SEC documents since 2025-01-20 on broker-dealer audit and Rule 17a-5 returned no related proposed or final rule.",
   "timeline": [
     {
       "date": "2026-09-17",
@@ -124,10 +153,17 @@
       "kind": "primary",
       "source": "GovInfo",
       "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr10477ih/html/BILLS-119hr10477ih.htm"
+    },
+    {
+      "date": "2026-09-22",
+      "event": "S. 5454, a related Senate bill also titled the Small Business Audit Correction Act of 2026 (Sen. Cotton), was introduced and referred to the Senate Committee on Banking, Housing, and Urban Affairs.",
+      "kind": "primary",
+      "source": "GovInfo (BILLSTATUS S. 5454)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s5454.xml"
     }
   ],
   "title": "Ease small broker-dealer audits; exempt peer-to-peer lending; lighten Regulation CF debt",
   "tracked": true,
-  "uncertainties": "The bill number and content were confirmed on GovInfo; later actions were not checked on congress.gov. SEC searches were limited to two queries and a Federal Register title scan; an SEC action on Rule 17a-5 or Regulation CF debt could have been missed. Regulation CF changes are also tracked in the related capital formation record.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The bill text and BILLSTATUS records on GovInfo were read in review; BILLSTATUS may lag congress.gov, which could not be opened. The SEC-side absence rests on one Federal Register API term search (broker-dealer audit 17a-5, SEC, from 2025-01-20), whose results were unrelated rules, plus two earlier queries; an SEC exemptive order, staff statement or Regulation CF debt proposal could still have been missed, and no search was spent on peer-to-peer lending. Regulation CF changes are also tracked in the related capital formation record. BILLSTATUS lists S. 5454 as a related bill, not as identical, and its text was not read.",
+  "updated_at": "2026-10-18"
 }

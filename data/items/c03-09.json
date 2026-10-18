@@ -5,9 +5,15 @@
     "U.S. Institute of Peace litigation: a D.D.C. ruling against the dismantling was stayed by the D.C. Circuit in 2025 and the appeal was held pending Trump v. Slaughter, per Wikipedia"
   ],
   "chapter": "03",
-  "confidence": 55,
+  "confidence": 70,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked and GAO's duplication page fetched (supports the new sentence); the stage rests on executive orders read in earlier reviews and on a Wikipedia account for the USIP litigation, and the absence of a layers-focused action comes from a limited search.",
+  "confidence_reason": "Chapter pages 78 and 79 checked; Executive Order 14210 (90 FR 9669) was fetched and read in this review and supports only a parallel in_progress reading; EO 14217 and EO 14238 were read by the researcher; the USIP litigation rests on Wikipedia and an Associated Press report.",
+  "court_status": {
+    "basis": "D.C. Circuit stay of the 2025-05-19 district court ruling on the U.S. Institute of Peace, per Wikipedia; an Associated Press report of 2026-10-01 says the stay remains while the appeal is pending, with argument set for November 2026.",
+    "date": "2025-06-27",
+    "state": "stayed",
+    "url": "https://en.wikipedia.org/wiki/United_States_Institute_of_Peace"
+  },
   "durability": {
     "level": "low",
     "why": "The actions rest on executive orders, reorganization reports and staffing guidance that a later administration can revise; entities defended in court may be restored."
@@ -32,10 +38,14 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to c00-18 (layer 3 enumeration, chapters 00, 04, 05, 28 and 30)."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review (primary-source lift): EO 14210 was re-read on federalregister.gov and supports parallel in_progress 30; an Associated Press report on wjla.com shows the USIP stay still in place; court_status set to stayed; confidence 70."
     }
   ],
   "id": "c03-09",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-16",
   "layer": 2,
   "match": "parallel",
   "mechanism": "mixed",
@@ -59,27 +69,34 @@
   "requires_congress": "partial",
   "research_agent": "D1",
   "review": {
+    "document_reread": {
+      "citation": "Executive Order 14210, 90 FR 9669, Doc. 2025-02762 (signed 2025-02-11, published 2025-02-14)",
+      "note": "Sec. 3(c) directs prompt preparation of large-scale reductions in force, prioritizing offices doing functions not required by law and excluding public safety, immigration and law enforcement; Sec. 3(e) requires reports within 30 days on statutorily required components and whether any should be eliminated or consolidated. The order does not mention management layers, cross-agency duplication or GAO, so it supports a parallel in_progress reading only.",
+      "result": "partial",
+      "url": "https://www.federalregister.gov/documents/2025/02/14/2025-02762/implementing-the-presidents-department-of-government-efficiency-workforce-optimization-initiative"
+    },
     "flags": [
-      "GAO timeline event reworded: the GAO page does not state that no administration action exists; absence comes from the researcher's search",
-      "USIP litigation still rests on Wikipedia"
+      "Record had a court event but no court_status; stayed object proposed.",
+      "Uncertainties corrected: the GAO page was read in the 2026-10-08 review, so the earlier statement that GAO's report could not be read now refers only to the full report; the stale 'No web search was used' sentence removed since one search was used in this review."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 79 cites GAO findings on fragmentation, overlap and duplication, says a logical start is eliminating functions duplicated across departments, criticizes the many levels between department heads and the public, notes Congress must approve most consolidations, and says the best solution is to cut functions and budgets and devolve responsibilities; page 78 adds that cutting functions and levels matters more than headcount. The paraphrase is accurate.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed page 79 cites GAO's fragmentation and duplication findings, says a logical start is eliminating functions duplicated across departments, criticizes the many levels between department heads and the public, notes Congress must approve most consolidations, and says the best solution is to cut functions and budgets and devolve responsibilities; page 78 adds that cutting functions and levels matters more than headcount. The proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "U1",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-3",
     "source_checks": [
       {
-        "note": "GAO's 2026 report, the 16th in the series (GAO-26-108505), released 2026-05-12, identified 97 new matters for congressional consideration and recommendations for agencies, without a breakdown. The page does not itself say anything about administration action, so the timeline wording that the page states no action was corrected.",
-        "result": "supports",
-        "url": "https://www.gao.gov/duplication-cost-savings"
+        "note": "EO 14210, 90 FR 9669, signed 2025-02-11, published 2025-02-14; Sec. 3(c) and 3(e) match the summary; no mention of layers, cross-agency duplication or GAO.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/02/14/2025-02762/implementing-the-presidents-department-of-government-efficiency-workforce-optimization-initiative"
       },
       {
-        "note": "Carried from earlier review, not refetched in this pass: EO 14217 signed 2025-02-19, published 2025-02-25 (90 FR 10577): four named entities cut to statutory minimum, six advisory committees terminated (the record says five), Presidential Management Fellows Program and Federal Executive Board rules to be withdrawn; no mention of duplication, consolidation or management layers. Amended by EO 14410 (2026-06-03).",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2025/02/25/2025-03133/commencing-the-reduction-of-the-federal-bureaucracy"
+        "note": "Dated 2026-10-01; D.C. Circuit order of 2026-09-30 on building engraving; lower-court ruling remains paused pending appeal; argument scheduled November 2026. The engraving order itself is not a qualifying event for this record.",
+        "result": "supports",
+        "url": "https://wjla.com/news/local/appeals-court-blocks-trump-from-engraving-his-name-onto-us-institute-of-peace-building-doge-ronald-reagan-doj-supreme-court"
       }
-    ]
+    ],
+    "stage_change_reason": "Operative orders eliminate non-statutory components of named entities and require statutory-necessity and consolidation reports, a parallel route to the GAO-keyed review and layer reduction the text describes; low in_progress fits."
   },
   "significance": {
     "B": 3,
@@ -88,6 +105,24 @@
     "M": 2,
     "R": 2,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 3,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 3,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Eliminating duplicated programs and management layers across departments would cut and devolve functions government-wide, subject to congressional approval.",
     "version": "2026-10-08",
@@ -135,10 +170,17 @@
       "publisher": "GAO",
       "title": "Duplication & Cost Savings",
       "url": "https://www.gao.gov/duplication-cost-savings"
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "news",
+      "publisher": "Associated Press (via WJLA)",
+      "title": "Appeals court blocks Trump from engraving his name onto U.S. Institute of Peace building (Associated Press via WJLA)",
+      "url": "https://wjla.com/news/local/appeals-court-blocks-trump-from-engraving-his-name-onto-us-institute-of-peace-building-doge-ronald-reagan-doj-supreme-court"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The administration has pursued elimination of selected entities and non-statutory functions rather than a review keyed to GAO-identified duplication or management layers. Executive Order 14210 (signed 2025-02-11) told agencies to prioritize large-scale reductions in force in offices performing functions not required by statute and to report within 30 days on which of their components are statutorily required and whether any should be eliminated or consolidated. Executive Orders 14217 (2025-02-19) and 14238 (2025-03-14) directed 11 named entities to eliminate non-statutory components and reduce statutory functions to the legal minimum, and EO 14217 also directed termination of six advisory committees and of the Presidential Management Fellows Program and told OPM to begin withdrawing the Federal Executive Board rules. A Wikipedia account says a district court ruled against the dismantling of one of those entities, the U.S. Institute of Peace, on 2025-05-19 and the D.C. Circuit stayed that ruling on 2025-06-27. No Federal Register document on management layers or span of control was found, and OPM's 2026 staffing-plan guidance lists organizational restructuring as an efficiency option without addressing layers or duplicated functions. GAO's 16th annual duplication report (2026-05-12) identified 97 new matters, and no administration action keyed to it was found.",
+  "status_summary": "The administration has pursued elimination of selected entities and non-statutory functions rather than a review keyed to GAO-identified duplication or management layers. Executive Order 14210 (signed 2025-02-11) told agencies to prioritize large-scale reductions in force in offices performing functions not required by statute and to report within 30 days on which of their components are statutorily required and whether any should be eliminated or consolidated. Executive Orders 14217 (2025-02-19) and 14238 (2025-03-14) directed 11 named entities to eliminate non-statutory components and reduce statutory functions to the legal minimum, and EO 14217 also directed termination of six advisory committees and of the Presidential Management Fellows Program and told OPM to begin withdrawing the Federal Executive Board rules. A Wikipedia account says a district court ruled against the dismantling of one of those entities, the U.S. Institute of Peace, on 2025-05-19 and the D.C. Circuit stayed that ruling on 2025-06-27; an Associated Press report of 2026-10-01 says the appeal remains pending with the stay in place and argument set for November 2026. No Federal Register document on management layers or span of control was found, and OPM's 2026 staffing-plan guidance lists organizational restructuring as an efficiency option without addressing layers or duplicated functions. GAO's 16th annual duplication report (2026-05-12) identified 97 new matters, and no administration action keyed to it was found.",
   "timeline": [
     {
       "date": "2025-02-11",
@@ -169,22 +211,22 @@
       "url": "https://en.wikipedia.org/wiki/United_States_Institute_of_Peace"
     },
     {
-      "date": "2026-07-31",
-      "event": "OPM issues governmentwide guidance on annual staffing plans under Executive Order 14356. Agencies are to base needs on mission and to evaluate efficiency through technology, process changes, organizational restructuring and the mix of contractors and employees. The release does not mention management layers or spans of control. The date comes from OPM's news release index.",
-      "kind": "primary",
-      "source": "OPM",
-      "url": "https://www.opm.gov/news/news-releases/opm-issues-governmentwide-guidance-on-annual-staffing-plans/"
-    },
-    {
       "date": "2026-05-12",
       "event": "GAO releases its 16th annual duplication report (GAO-26-108505), identifying 97 new matters for congressional consideration and recommendations for agencies; the GAO page does not describe any administration action keyed to them.",
       "kind": "primary",
       "source": "GAO",
       "url": "https://www.gao.gov/duplication-cost-savings"
+    },
+    {
+      "date": "2026-07-31",
+      "event": "OPM issues governmentwide guidance on annual staffing plans under Executive Order 14356. Agencies are to base needs on mission and to evaluate efficiency through technology, process changes, organizational restructuring and the mix of contractors and employees. The release does not mention management layers or spans of control. The date comes from OPM's news release index.",
+      "kind": "primary",
+      "source": "OPM",
+      "url": "https://www.opm.gov/news/news-releases/opm-issues-governmentwide-guidance-on-annual-staffing-plans/"
     }
   ],
   "title": "Cut duplicated functions and management layers, starting with items GAO has identified",
   "tracked": true,
-  "uncertainties": "GAO's annual report on fragmentation, overlap and duplication could not be read (the fetch was rate limited and the proxy said not to retry), so the Mandate's GAO figures and whether the administration acted on GAO recommendations were not checked. Federal Register queries for management layers, layers of management and span of control returned no documents, but internal agency memoranda are not published there. The court history of the U.S. Institute of Peace comes from Wikipedia, which also lists litigation over other eliminated entities (for example the Institute of Museum and Library Services) that was not verified against court records. Executive Order 14217 was amended by a June 2026 order that was not examined. Workforce-size reductions are tracked in c03-06 and agency-specific reorganizations in their own chapters, so this record covers only the cross-government duplication and layers recommendation. OPM's staffing-plan release gives no date on the page; the date is from its news release index. No web search was used for this record.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "GAO's full annual report on fragmentation, overlap and duplication was not read (an earlier fetch was rate limited); GAO's summary page was read, so whether the administration acted on specific GAO recommendations was not checked. Federal Register queries for management layers, layers of management and span of control returned no documents, but internal agency memoranda are not published there, and no OMB or OPM reorganization memorandum was searched for directly. The district court ruling and stay for the U.S. Institute of Peace come from Wikipedia and a 2026-10-01 Associated Press report, not court records; Wikipedia also lists litigation over other eliminated entities (for example the Institute of Museum and Library Services) that was not verified. Executive Order 14217 was amended by a June 2026 order that was not examined. Workforce-size reductions are tracked in c03-06 and agency-specific reorganizations in their own chapters, so this record covers only the cross-government duplication and layers recommendation. OPM's staffing-plan release gives no date on the page; the date is from its news release index, and its reference to EO 14356 was not checked against the Federal Register.",
+  "updated_at": "2026-10-16"
 }

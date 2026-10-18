@@ -9,7 +9,7 @@
   "chapter": "05",
   "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "The Mandate text and the FY2026 DHS appropriations law were read and show DHS funded as one department with a limit on reorganization authority. The FY2027 TSA step rests on Bloomberg Government, and the absence of an administration breakup bill rests on a limited search; whether proposed or not_started fits is a judgment.",
+  "confidence_reason": "Chapter text checked and Public Law 119-86 Division A Sec. 513 re-read in this review, confirming DHS funded as one department with reorganization authority restricted; the proposed stage rests on the FY2027 TSA step reported by Bloomberg Government, and the absence of an administration breakup bill rests on a limited search.",
   "durability": {
     "level": "high",
     "why": "The objective is statutory; if enacted it would be durable, but no structural change is currently in effect."
@@ -34,10 +34,18 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to c05-35, c05-25, c05-34, c05-33, c05-26 (layer 3 enumeration, chapters 00, 04, 05, 28 and 30)."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review re-read Sec. 513 of Public Law 119-86 on govinfo.gov, which supports DHS remaining one department with reorganization authority restricted; proposed 10 and medium confidence kept and the summary condensed."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Cross-reference added to new layer 3 record c22-25 written in the second enumeration pass; no change to the status."
     }
   ],
   "id": "c05-01",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-16",
   "layer": 1,
   "match": "parallel",
   "mechanism": "legislation",
@@ -62,7 +70,8 @@
     "c05-25",
     "c05-34",
     "c05-33",
-    "c05-26"
+    "c05-26",
+    "c22-25"
   ],
   "remaining": [
     "Enact legislation replacing DHS with mission-based agencies and creating a Cabinet-level border and immigration agency (no administration bill and no committee-advanced bill implementing the Mandate's design was found)",
@@ -74,23 +83,29 @@
   "requires_congress": "yes",
   "research_agent": "A04",
   "review": {
+    "document_reread": {
+      "citation": "Public Law 119-86 (H.R. 7147), Homeland Security and Further Additional Continuing Appropriations Act, 2026, Division A (Department of Homeland Security Appropriations Act, 2026), Sec. 513; marginal date 2026-04-30",
+      "note": "First 100,000 of about 124,500 characters read, covering Division A. Sec. 513(a) bars use of the Act's funds for section 872 of the Homeland Security Act of 2002 unless Congress explicitly authorizes it later; (b) and (c) exempt reallocation of Countering Weapons of Mass Destruction Office functions and related fund transfers. Components are funded as accounts within DHS; Sec. 4 zeroes certain ICE and CBP Border Security Operations amounts in the explanatory statement but merges nothing. No provision abolishes DHS or transfers components.",
+      "result": "supports",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ86/html/PLAW-119publ86.htm"
+    },
     "flags": [
-      "not_started defensible: no administration proposal on the core restructuring",
-      "budget detail from one secondary source; budget document not read",
-      "absence of an administration bill rests on a limited search"
+      "status_summary condensed to four sentences; Sec. 513 CWMD exception added per researcher note.",
+      "Blockers field names a lawsuit with case name unconfirmed; no court event is in the timeline, so court_status stays null."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Printed pages 133 and 134 give the primary recommendation to seek legislation dismantling DHS, combining CBP, ICE, USCIS, ORR and DOJ's immigration offices into one Cabinet-level agency and moving CISA, FEMA, the Coast Guard, the Secret Service and S&T elsewhere, privatizing TSA and dismantling remaining support components; pages 138, 144, 166 and 167 carry the fallbacks and the ORR and DOJ office moves (page 159 adds the TSA privatization route).",
+    "mandate_check": "ok",
+    "mandate_note": "Pages 133 and 134 make legislation to dismantle DHS the primary recommendation, with the single immigration agency and the CISA, FEMA, Coast Guard, Secret Service, TSA, S&T and CWMD moves; pages 138, 144, 166 and 167 add the ICE and CBP fallback and the ORR and EOIR transfers. The proposal's closing phrase on remaining offices covers the S&T and CWMD moves adequately.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y2",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-1",
     "source_checks": [
       {
-        "note": "Public Law 119-86 (H.R. 7147, dated 2026-04-30): Division A Sec. 513 bars funds for carrying out section 872 of the Homeland Security Act unless Congress explicitly authorizes it after enactment, with Countering WMD Office exceptions; no provision abolishing DHS, moving components out or merging ICE and CBP appears in the portion read (first 100,000 characters).",
+        "note": "P.L. 119-86, H.R. 7147, marginal date Apr. 30, 2026; Division A Sec. 513(a) to (c) as summarized; no dissolution or transfer provision in text read.",
         "result": "supports",
         "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ86/html/PLAW-119publ86.htm"
       }
-    ]
+    ],
+    "stage_change_reason": "The recommendation asks Congress to act; DHS remains funded as one department with reorganization authority restricted, and the only administration step is a budget proposal on one element (TSA screening), so proposed at the low end stands, with not_started a defensible alternative already noted in uncertainties."
   },
   "significance": {
     "B": 3,
@@ -99,6 +114,24 @@
     "M": 2,
     "R": 2.5,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 3,
+        "F": 3,
+        "F_estimated": false,
+        "M": 2,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 3,
+        "F": 3,
+        "F_estimated": false,
+        "M": 2,
+        "R": 3,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Dissolving DHS and moving its components to other departments, with privatized airport screening, restructures a Cabinet department that touches travelers, disaster survivors and immigrants.",
     "version": "2026-10-08",
@@ -198,7 +231,7 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "As of 2026-10-08 DHS has not been broken up and no administration bill to do so was found. Congress funded DHS as one department (P.L. 119-21 in July 2025, P.L. 119-86 on 2026-04-30 and P.L. 119-98 on 2026-06-10; the texts of the last two contain no provision reorganizing DHS or transferring components, and Sec. 513 of P.L. 119-86 bars use of funds for the reorganization authority in section 872 of the Homeland Security Act unless Congress explicitly authorizes it after enactment), and Secretary Markwayne Mullin said on 2026-09-25 that abolishing DHS will never happen. One element of the Mandate has an administration proposal: the FY2027 budget request, reported on 2026-04-03, proposes initial steps toward privatizing TSA screening by requiring smaller airports to join the Screening Partnership Program, and Mullin sidestepped a House appropriator's question on nationwide privatization on 2026-06-25. The FEMA Review Council approved its final report on 2026-05-07; a CRS summary does not describe a recommendation to eliminate FEMA or move it within DHS, though earlier council meetings included calls to eliminate FEMA as currently structured. Member bills use different designs: a Moskowitz (D-FL) package of 2026-05-07 with Republican co-leads (FEMA as an independent agency, the Secret Service to the Executive Office of the President, TSA to Transportation), a plan by Rep. Delia Ramirez (D-IL) reported on 2026-06-24 to break DHS into standalone entities with draft language aimed at 2027, her Reimagining Safety Act announced about 2026-09-23 (abolishing ICE and CBP, opposite to the Mandate's single immigration agency), and H.R. 7123, a bill to abolish ICE introduced 2026-01-15. DHS issued reduction-in-force notices in March 2025 at its civil rights office and two ombudsman offices, which the Mandate (pages 164 to 166) recommends restructuring or eliminating; by 2025-05-27 DHS said the offices continue to exist and perform their statutory functions.",
+  "status_summary": "As of 2026-10-08 DHS has not been broken up and no administration bill to do so was found: Congress funded DHS as one department in P.L. 119-21 (July 2025), P.L. 119-86 (2026-04-30) and P.L. 119-98 (2026-06-10), whose texts contain no provision reorganizing DHS or transferring components, Sec. 513 of P.L. 119-86 bars use of funds for the reorganization authority in section 872 of the Homeland Security Act unless Congress explicitly authorizes it (apart from a Countering Weapons of Mass Destruction Office exception), and Secretary Markwayne Mullin said on 2026-09-25 that abolishing DHS will never happen. The FY2027 budget request, reported on 2026-04-03, proposes initial steps toward privatizing TSA screening by requiring smaller airports to join the Screening Partnership Program, and the FEMA Review Council's final report approved on 2026-05-07 is not described by CRS as recommending FEMA's elimination or move. Member bills use different designs: a Moskowitz (D-FL) package of 2026-05-07 with Republican co-leads (FEMA independent, the Secret Service to the Executive Office of the President, TSA to Transportation), a Ramirez (D-IL) plan reported 2026-06-24 and her Reimagining Safety Act announced about 2026-09-23 (abolishing ICE and CBP, opposite to the Mandate's single immigration agency), and H.R. 7123, a bill to abolish ICE introduced 2026-01-15. DHS issued reduction-in-force notices in March 2025 at its civil rights office and two ombudsman offices, which the Mandate (pages 164 to 166) recommends restructuring or eliminating, and by 2025-05-27 said the offices continue to perform their statutory functions.",
   "timeline": [
     {
       "date": "2025-03-21",
@@ -280,6 +313,6 @@
   ],
   "title": "Replace DHS with mission-based agencies and one border and immigration agency",
   "tracked": true,
-  "uncertainties": "Stage is a judgment call: no administration bill to replace DHS exists, so 'proposed' rests on the FY2027 budget's TSA privatization step (one element of the Mandate's design) and on member bills with different designs; a stricter reading could keep not_started. The budget details come from a Bloomberg Government summary read in part (the article is partly paywalled); the budget document itself was not read. The FEMA Review Council final report was not read directly; the CRS Insight summary does not address FEMA's location within DHS. Bill numbers and committee status of the Moskowitz and Ramirez bills were not retrieved, and the Ramirez item is described both as a plan with 2027 language (June 2026) and as an announced bill (September 2026). The outcome of Robert F. Kennedy Human Rights v. DHS was not found. Not found in searches (DHS reorganization with TSA, CISA and Coast Guard; ORR and EOIR transfers; ICE and CBP merger; FEMA Review Council): any administration proposal to move CISA to Transportation, FEMA to Interior, the Coast Guard to DOJ or DOD, ORR or the immigration courts into DHS, or to merge ICE and CBP. The date Secretary Mullin took office was not retrieved. Public Laws 119-86 and 119-98 were read on govinfo.gov (119-86 through its first 100,000 characters, so Division B was not read); neither contains a DHS restructuring provision in the text read, and the funding-lapse durations come from CRS. The case name Robert F. Kennedy Human Rights v. DHS was removed from the 2025-05-27 event because the cited article does not name the case.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Stage is a judgment call: no administration bill to replace DHS exists, so proposed rests on the FY2027 budget's TSA privatization step (one element of the Mandate's design) and on member bills with different designs; a stricter reading could keep not_started. The budget details come from a Bloomberg Government summary read in part (partly paywalled); the budget document itself was not read. The FEMA Review Council final report was not read directly. Bill numbers and committee status of the Moskowitz and Ramirez bills were not retrieved, and the Ramirez item is described both as a plan with 2027 language (June 2026) and as an announced bill (September 2026). The outcome and case name of the suit over the oversight office cuts were not found. No administration proposal was found to move CISA to Transportation, FEMA to Interior, the Coast Guard to DOJ or DOD, ORR or the immigration courts into DHS, or to merge ICE and CBP. The date Secretary Mullin took office was not retrieved. Public Law 119-86 was read on govinfo.gov through its first 100,000 characters (Division B not read) and Public Law 119-98 in an earlier pass; the funding-lapse durations come from CRS.",
+  "updated_at": "2026-10-16"
 }
