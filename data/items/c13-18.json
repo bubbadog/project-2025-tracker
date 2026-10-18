@@ -5,9 +5,9 @@
     "Fifth Circuit review of 2024 risk management rules and challenges to any new framework"
   ],
   "chapter": "13",
-  "confidence": 76,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked and the proposal was opened on federalregister.gov, but the protective equipment detail rests on a law firm summary because that section was cut off.",
+  "confidence": 85,
+  "confidence_label": "high",
+  "confidence_reason": "The stage-deciding proposed rule (FR doc 2025-18431) was read in full from the Federal Register raw text, including the proposed 702.39(f)(2) text on engineering and administrative controls and protective equipment, and a Federal Register API title search found no final rule. The Unified Agenda entry for the final rule and the Latham and Watkins timing claim were not re-read.",
   "durability": {
     "level": "medium",
     "why": "A final rule would be reviewable in court and reversible by later rulemaking."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c13-30 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Proposed rule read in full and no final rule found; stage proposed 20 confirmed and confidence raised to high."
     }
   ],
   "id": "c13-18",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -59,12 +63,16 @@
   "requires_congress": "no",
   "research_agent": "N13",
   "review": {
-    "flags": [],
+    "flags": [
+      "Confirmed proposed 20; the protective equipment element now rests on the primary text rather than a law firm summary.",
+      "Confidence raised to high 85 on a full read of the deciding proposal.",
+      "No court_status field added: no court event concerns this action; the Fifth Circuit matters in blockers concern the 2024 risk management rules."
+    ],
     "mandate_check": "verified",
     "mandate_note": "Pages 433 to 434 checked; risk-based and timely evaluations, OSHA and protective equipment presumption, real-world use and a risk management framework rule are accurately paraphrased.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y13a",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V3",
     "source_checks": [
       {
         "note": "Proposal opened: per-condition-of-use determinations, restored discretion to exclude conditions of use and pathways, comments to 2025-11-07; occupational controls section truncated in the fetch.",
@@ -87,7 +95,12 @@
         "url": "https://www.khlaw.com/news/david-fischer-quoted-inside-epa-article-2026-final-framework-rule"
       },
       {
-        "note": "Query: procedures for chemical risk evaluation, from 2025-01-20. Only the 2025 proposal; no final rule.",
+        "note": "Read in two segments: separate determinations per condition of use (p. 45699), deletion of the will-not-exclude text (pp. 45694, 45696), deletion of 702.39(d)(9) all-pathways requirement (p. 45698), proposed 702.39(f)(2) considering engineering and administrative controls and protective equipment; comments due 2025-11-07. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/full_text/text/2025/09/23/2025-18431.txt"
+      },
+      {
+        "note": "Quoted-title search for Procedures for Chemical Risk Evaluation from 2025-09-24 returned two unrelated notices and no final rule. Checked 2026-10-18.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json"
       }
@@ -131,6 +144,13 @@
       "url": "https://www.federalregister.gov/documents/2025/09/23/2025-18431/procedures-for-chemical-risk-evaluation-under-the-toxic-substances-control-act-tsca"
     },
     {
+      "date": "2025-09-23",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Procedures for Chemical Risk Evaluation Under TSCA, full text (document 2025-18431)",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2025/09/23/2025-18431.txt"
+    },
+    {
       "date": "2025-09-30",
       "kind": "news",
       "publisher": "Beveridge and Diamond",
@@ -146,11 +166,11 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "On 2025-09-23 EPA published a proposed rule to revise the 2024 TSCA risk evaluation procedures. It would restore separate risk determinations for each condition of use, delete the 2024 statement that EPA will not exclude conditions of use, allow exclusion of exposure pathways handled under other statutes, and, according to a law firm summary, take into account available information on engineering controls and protective equipment in occupational scenarios. Comments closed 2025-11-07. A law firm article said EPA planned to publish the final rule in April 2026, but no final rule was found in the Federal Register through 2026-10-13.",
+  "status_summary": "On 2025-09-23 EPA published a proposed rule (docket EPA-HQ-OPPT-2025-0260) to amend the 40 CFR Part 702 procedures for TSCA risk evaluations. The proposal would restore a separate risk determination for each condition of use, delete the 2024 statement that EPA will not exclude conditions of use, remove the requirement to assess exposure pathways regulated under other statutes, and replace the 2024 limit on crediting protective equipment with consideration of reasonably available information on occupational exposure controls, including engineering and administrative controls and protective equipment (Federal Register pages 45696 to 45699 and the Unit III.C.1 text). Comments closed 2025-11-07. A Federal Register API search on 2026-10-18 found no final rule.",
   "timeline": [
     {
       "date": "2025-09-23",
-      "event": "EPA published a proposed rule revising the 2024 procedures for chemical risk evaluation under TSCA.",
+      "event": "EPA published a proposed rule revising the 2024 procedures for chemical risk evaluation under TSCA (40 CFR Part 702); comments due 2025-11-07.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/09/23/2025-18431/procedures-for-chemical-risk-evaluation-under-the-toxic-substances-control-act-tsca"
@@ -158,6 +178,6 @@
   ],
   "title": "Rewrite the TSCA risk evaluation framework: real-world use, protective equipment",
   "tracked": true,
-  "uncertainties": "The proposal text was read in part on federalregister.gov; its occupational controls section was cut off, so the protective equipment point rests on a law firm summary. The Latham article is undated on its page (its address suggests April 2026). A Federal Register API search on 2026-10-13 found no final rule. Other chemical program recommendations (new chemicals timelines, fee rule, Safer Choice) are not covered by this record.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The proposal text was read in full from the Federal Register raw text (two passes); the 2026 Unified Agenda entry for the final rule was not opened, so the final-rule timing rests on the undated Latham and Watkins article, whose address suggests April 2026. Searches of the Federal Register API on 2026-10-18 for the rule title from 2025-09-24 found no final rule. Other chemical program recommendations (new chemicals timelines, fee rule, Safer Choice) are not covered by this record.",
+  "updated_at": "2026-10-18"
 }

@@ -5,9 +5,9 @@
     "Combination with CESER is described in the Mandate as optional"
   ],
   "chapter": "12",
-  "confidence": 78,
-  "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked and the DOE budget justification fetched and read; the reorganization rests on a law-firm summary because the chart was read in flattened form.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter page 374 was checked; the stage-deciding FY2027 budget justification for the Office of Electricity was read on energy.gov on 2026-10-18, including its funding tables, comparability matrices and realignment description, and the 2025-11-20 organization chart was read; the reporting-line detail rests on a law-firm summary and is not stage-deciding.",
   "durability": {
     "level": "low",
     "why": "Organization charts and budget requests are administrative and annual; appropriations can restore programs."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Schema conformance for the public repository: event dated 2026-04 set to 2026-04-01 with a month-only note. No change to stage, progress or substance."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source review on 2026-10-18 re-read the FY2027 Office of Electricity budget justification and the November 2025 organization chart on energy.gov, kept the 22 percent figure with the printed 28 percent noted, rewrote the two timeline events to match the documents, confirmed proposed 15 and raised confidence from 78 to 80."
     }
   ],
   "id": "c12-34",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -61,31 +65,27 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage moved from in_progress 40 to proposed 15 because eliminating the applied programs needs Congress and the cuts exist only as a budget request, while the executive reorganization kept Office of Electricity and CESER separate and moved Grid Deployment Office grant programs into the office rather than ending them.",
-      "Judgment call: in_progress 25 would also be defensible if the operative absorption of the Grid Deployment Office is credited toward the optional combination element; dropping the record as covered by c12-17 and c12-01 would also be defensible, but the Office of Electricity's own applied grants are not tracked elsewhere.",
-      "Proposal changed in substance: added the bulk power equipment security focus and that elimination runs through Congress.",
-      "Budget justification source dated 2026-04 (month of the DOE FY2027 justifications per CRS) instead of the bare year."
+      "Researcher's suggested 28 percent not adopted: 56.3 million against the comparable FY2026 base of 259.8 million is 22 percent; the source prints 28 percent on the Electricity row, so both figures are noted in uncertainties.",
+      "Timeline events rewritten: the organization chart event now states only what the chart shows, and the budget event uses the (month-only date) label.",
+      "Budget justification source date set from 2026-04 to 2026-04-01.",
+      "Alternative stage: in_progress 25 if the operative absorption of the Grid Deployment Office is credited toward the optional combination element.",
+      "Confidence moved from 78 to 80."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 374 says the Office of Electricity should return to its grid reliability and resilience mission and focus on bulk power system equipment security, that its applied grant programs (energy storage, grid-enhancing technology testing) should be eliminated with Congress, and that it could be combined with CESER and any remnant of the Grid Deployment Office. The proposal was adjusted to name the equipment security focus and that elimination runs through Congress.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 374 says the Office of Electricity could focus more on its original grid reliability and resilience mission and could be combined with CESER and what remains of the Grid Deployment Office, calls for eliminating applied grant programs such as energy storage and grid-enhancing technology testing by working with Congress, and asks the office to prioritize bulk power system equipment security. The proposal paraphrase is accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "FY2027 justification: $203.477 million versus $259.75 million comparable FY2026 enacted, storage down to $51.7 million, Distribution and Markets unfunded, no CESER mention, describes merging OE and GDO; no printed date (checked 2026-10-15).",
+        "note": "Read 2026-10-18: overview table shows FY2026 enacted 235,000K (259,750K comparable with Grid Deployment), FY2027 request 203,477K, change -56,273K, printed as -28 percent on the Electricity row and -22 percent on the total row; energy storage 85,000K to 51,700K; Distribution and Markets 8,500K to zero; Grid Deployment activities functionally realigned into the office in November 2025; CESER not mentioned.",
         "result": "supports",
         "url": "https://www.energy.gov/documents/doe-fy-2027-volume-3-oe"
       },
       {
-        "note": "Law-firm summary: OE moved to the Under Secretary of Energy and took most of the GDO portfolio; CESER listed separately; no OE and CESER merger (checked 2026-10-15).",
-        "result": "supports",
-        "url": "https://www.hklaw.com/en/insights/publications/2025/11/doe-releases-updated-agency-structure-and-organization-chart"
-      },
-      {
-        "note": "CRS cites DOE FY2027 justifications dated April 2026, supporting the month used for the budget event (checked 2026-10-15).",
-        "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2026-07-14_R48946_309ced8105a2067cbcc52bbc22d79cc1b0a714f1.html"
+        "note": "Read 2026-10-18: flattened list naming OE and CESER separately and three under secretary entries; reporting lines not discernible; Grid Deployment Office not listed.",
+        "result": "partial",
+        "url": "https://www.energy.gov/sites/default/files/2025-11/Organization-Chart-11.20.2025-2.pdf"
       }
     ]
   },
@@ -126,7 +126,7 @@
       "url": "https://www.energy.gov/sites/default/files/2025-11/Organization-Chart-11.20.2025-2.pdf"
     },
     {
-      "date": "2026-04",
+      "date": "2026-04-01",
       "kind": "primary",
       "publisher": "U.S. Department of Energy",
       "title": "DOE FY 2027 Congressional Budget Justification, Volume 3, Office of Electricity",
@@ -155,18 +155,18 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "On 2025-11-20 DOE released a new organization chart that moved the Office of Electricity under the Under Secretary of Energy and folded most of the Grid Deployment Office's grant and technical assistance portfolio into it, with CESER listed as a separate office under the same Under Secretary. DOE's FY2027 budget justification, dated April 2026 per CRS, requests $203.5 million for the Electricity account, 22 percent below the comparable FY2026 enacted level, cuts energy storage by 39 percent and ends funding for the Distribution and Markets program. The request does not mention combining the office with CESER, and the cuts depend on appropriations.",
+  "status_summary": "On 2025-11-20 DOE released a new organization chart that lists the Office of Electricity and CESER as separate offices; a law-firm summary of the reorganization reports that the Office of Electricity moved under the Under Secretary of Energy. DOE's FY2027 budget justification, dated April 2026 per CRS, states that Grid Deployment Office activities were functionally realigned into the Office of Electricity in November 2025, and requests $203.5 million for the office, $56.3 million or 22 percent below the comparable FY2026 enacted level of $259.8 million that counts the realigned Grid Deployment activities; it cuts energy storage by 39 percent and requests no funding for the Distribution and Markets program. The justification does not mention combining the office with CESER, and the cuts depend on appropriations.",
   "timeline": [
     {
       "date": "2025-11-20",
-      "event": "DOE released a new organization chart placing the Office of Electricity under the Under Secretary of Energy and moving most of the Grid Deployment Office's grant and technical assistance portfolio into it, with CESER shown as a separate office under the same Under Secretary.",
+      "event": "DOE released a new organization chart listing the Office of Electricity and CESER as separate offices, with no separate Grid Deployment Office listed.",
       "kind": "primary",
       "source": "DOE",
       "url": "https://www.energy.gov/sites/default/files/2025-11/Organization-Chart-11.20.2025-2.pdf"
     },
     {
       "date": "2026-04-01",
-      "event": "DOE's FY2027 budget justification requested $203.5 million for the Office of Electricity, down $56.3 million from FY2026 enacted, cutting energy storage 39 percent and eliminating the Distribution and Markets program. (month only; first of month used)",
+      "event": "DOE's FY2027 budget justification (month-only date) requested $203.5 million for the Office of Electricity, $56.3 million below the comparable FY2026 enacted level including realigned Grid Deployment activities, cutting energy storage 39 percent and requesting no funding for the Distribution and Markets program.",
       "kind": "primary",
       "source": "DOE",
       "url": "https://www.energy.gov/documents/doe-fy-2027-volume-3-oe"
@@ -174,6 +174,6 @@
   ],
   "title": "Reduce Office of Electricity applied R&D and combine it with CESER",
   "tracked": true,
-  "uncertainties": "The budget document prints no date; the April 2026 date comes from a CRS report citing the DOE justifications. The organization chart was read in flattened form, so the move under the Under Secretary of Energy and the Grid Deployment Office realignment come from a law-firm summary, a trade article and the budget justification's description of the November 2025 realignment. Overlaps c12-17 (which tracks the possible combination with CESER), c12-20 (internal regrouping) and c12-01 (Grid Deployment Office and applied programs); this record is limited to the Office of Electricity's applied programs and structure.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The budget document prints no date; the April 2026 date comes from a CRS report citing the DOE justifications. Its overview table prints a 28 percent decrease on the Electricity account row and 22 percent on the total row, both against the same $56.3 million change; the 22 percent figure matches the comparable FY2026 base of $259.8 million and is used here, while 28 percent appears to compare against a different base and is not adopted. The organization chart is a flattened list that shows no reporting lines, so the placement of the office under the Under Secretary of Energy rests on a law-firm summary and a trade article; the Grid Deployment Office realignment is confirmed by the budget justification. Overlaps c12-17 (which tracks the possible combination with CESER), c12-20 (internal regrouping) and c12-01 (Grid Deployment Office and applied programs); this record is limited to the Office of Electricity's applied programs and structure.",
+  "updated_at": "2026-10-18"
 }

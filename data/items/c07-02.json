@@ -6,9 +6,9 @@
     "Bipartisan disagreement over a warrant requirement for searches of U.S. persons' data."
   ],
   "chapter": "07",
-  "confidence": 62,
-  "confidence_label": "medium",
-  "confidence_reason": "The last extension law and the July 2026 state of play are confirmed from govinfo and Roll Call, and the June lapse from CBS in an earlier review; congressional action after late July 2026 was searched by the researcher without results and was not re-checked here.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "The chapter text (pp. 215-216) was checked, and the stage-deciding documents were fetched and read in full on govinfo.gov: Public Law 119-87 and its 2026-06-12 repeal date, Public Law 119-84 and the bill status of H.R. 9238 showing the failed 2026-06-11 vote; no later FISA public law was found, though House floor action after July 2026 could not be read directly.",
   "durability": {
     "level": "high",
     "why": "Any outcome would be set by statute, and the authority carries a sunset that forces periodic congressional review; the current state is a statutory lapse covered by court-approved certifications that expire in about March 2027."
@@ -25,10 +25,14 @@
     {
       "date": "2026-10-15",
       "note": "Rotation check (update run): No reauthorization vote, bill advance or enactment found since 2026-07-29: Senate roll calls through 2026-09-30 show no FISA vote; no public law after 119-118 located; House floor record unreadable. Stage unchanged at blocked 30; no review needed because only uncertainties changed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "An independent AI review read Public Laws 119-84 and 119-87 and the H.R. 9238 bill status on govinfo.gov, added the omitted April 2026 extension and the primary record of the failed June vote, and kept the stage at blocked 30."
     }
   ],
   "id": "c07-02",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "partial",
   "mechanism": "legislation",
@@ -48,25 +52,29 @@
   "research_agent": "A06",
   "review": {
     "flags": [
-      "2026 developments after July unverified",
-      "progress of 30 is a judgment, since the Mandate's main ask (keeping 702) is in statutory lapse with collection continuing under certifications",
-      "June vote tally from one news source"
+      "the lapse itself is inferred from the statutory repeal date and the absence of a later extension; no primary document states it",
+      "House floor action after 2026-07-29 not read directly"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 215 calls Section 702 essential and says Congress should review the PCLOB report to decide on reforms or codification, and page 216 lists traditional-FISA safeguards (leak penalties, intercept controls, a ban on politically motivated use, DOJ and FISC accountability); the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W2",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 215 calls Section 702 essential and asks Congress to review the PCLOB report to decide on reforms or codification, and page 216 lists traditional-FISA safeguards (leak penalties, intercept controls, a ban on politically motivated use, DOJ and FISC accountability); the proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Public Law 119-87 (S. 4465), approved 2026-04-30, changes the Title VII repeal dates in section 403(b) of the FISA Amendments Act of 2008 from 2026-04-30 to 2026-06-12.",
+        "note": "S. 4465, approved 2026-04-30; moves the section 403(b) repeal date from 2026-04-30 to 2026-06-12; effective the earlier of enactment or 2026-04-29.",
         "result": "supports",
         "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ87/html/PLAW-119publ87.htm"
       },
       {
-        "note": "2026-07-28: Senate confirmed Clayton as DNI 51 to 47 on a party-line vote, replacing temporary appointee Bill Pulte after Gabbard resigned; describes Section 702 as now expired; Democrats had vowed to halt FISA negotiations until a permanent DNI was in place; Trump said FISA action should come with the SAVE America Act; no reauthorization timeline.",
+        "note": "H.R. 8322, approved 2026-04-18; sets the repeal date at 2026-04-30; previously omitted from the record.",
         "result": "supports",
-        "url": "https://rollcall.com/2026/07/28/jay-clayton-confirmed-director-national-intelligence/"
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ84/html/PLAW-119publ84.htm"
+      },
+      {
+        "note": "Introduced 2026-06-10 (Crawford), extension to 2026-07-02; suspension motion failed 198-218, Roll Call No. 221, 2026-06-11; latest action.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9238.xml"
       }
     ]
   },
@@ -124,10 +132,24 @@
       "publisher": "Roll Call",
       "title": "Jay Clayton confirmed as director of national intelligence",
       "url": "https://rollcall.com/2026/07/28/jay-clayton-confirmed-director-national-intelligence/"
+    },
+    {
+      "date": "2026-04-18",
+      "kind": "primary",
+      "publisher": "govinfo",
+      "title": "Public Law 119-84 (H.R. 8322), extending FISA Title VII to April 30, 2026",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ84/html/PLAW-119publ84.htm"
+    },
+    {
+      "date": "2026-06-11",
+      "kind": "primary",
+      "publisher": "govinfo",
+      "title": "Bill status, H.R. 9238 (119th Congress), extension of FISA Title VII to July 2, 2026",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9238.xml"
     }
   ],
   "stage": "blocked",
-  "status_summary": "Section 702 was reauthorized with a 2026 sunset by Public Law 118-49 (signed 2024-04-20, before the tracking period), which also added query-approval, audit and penalty provisions that overlap with some Mandate safeguards. In 2026 Congress passed short extensions (the last, Public Law 119-87, signed 2026-04-30, moved the Title VII sunset to 2026-06-12); the House then rejected a further extension on 2026-06-11 (198 to 218) and Title VII of FISA, including Section 702, lapsed on 2026-06-12, the first lapse since 2008. Collection was reported to continue under FISC certifications approved in March 2026 that run to about March 2027, and the Senate confirmed Jay Clayton as DNI on 2026-07-28 (sworn in 2026-08-03). As of 2026-07-29 reports said the House was out until 2026-08-31 with no Senate plan to act, and none of the public laws numbered 119-99 through 119-118 (through 2026-09-30) that were checked on govinfo concerns FISA, so no reauthorization and no new Mandate-style traditional-FISA safeguard was found enacted since the lapse.",
+  "status_summary": "Section 702 was reauthorized with a 2026 sunset by Public Law 118-49 (signed 2024-04-20, before the tracking period), which also added query-approval, audit and penalty provisions that overlap with some Mandate safeguards. In 2026 Congress passed two short extensions, Public Law 119-84 (H.R. 8322, approved 2026-04-18, to 2026-04-30) and Public Law 119-87 (S. 4465, approved 2026-04-30, to 2026-06-12); on 2026-06-11 the House rejected H.R. 9238, which would have extended Title VII to 2026-07-02, by 198 to 218 under suspension of the rules (Roll Call No. 221), and Title VII, including Section 702, lapsed on 2026-06-12, the first lapse since 2008 (CBS News). Collection was reported to continue under FISC certifications approved in March 2026 that run to about March 2027, and the Senate confirmed Jay Clayton as DNI on 2026-07-28 (Roll Call). As of 2026-07-29 reports said the House was out until 2026-08-31 with no Senate plan to act (Punchbowl News), and none of the public laws through 119-118 (2026-09-30) checked on govinfo concerns FISA, so no reauthorization and no new Mandate-style traditional-FISA safeguard was found enacted since the lapse.",
   "timeline": [
     {
       "date": "2026-03-01",
@@ -144,6 +166,13 @@
       "url": "https://www.wgcu.org/2026-04-17/house-extends-surveillance-powers-for-10-days"
     },
     {
+      "date": "2026-04-18",
+      "event": "Public Law 119-84 (H.R. 8322) is approved, setting the repeal date for FISA Title VII, including Section 702, at 2026-04-30; its amendments take effect on enactment.",
+      "kind": "primary",
+      "source": "govinfo (Public Law 119-84)",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ84/html/PLAW-119publ84.htm"
+    },
+    {
       "date": "2026-04-30",
       "event": "Public Law 119-87 (S. 4465) is approved, changing the repeal dates in section 403(b) of the FISA Amendments Act of 2008 from 2026-04-30 to 2026-06-12, so Title VII (including Section 702) is extended to that date.",
       "kind": "primary",
@@ -152,10 +181,10 @@
     },
     {
       "date": "2026-06-11",
-      "event": "The House rejects a further short-term extension (H.R. 9238), 198 for and 218 against, a day before the authority was due to expire.",
-      "kind": "news",
-      "source": "New Jersey Monitor",
-      "url": "https://newjerseymonitor.com/2026/06/12/repub/us-spying-law-expires-national-security/"
+      "event": "The House fails to pass H.R. 9238, a bill to extend FISA Title VII authorities to 2026-07-02, under suspension of the rules by 198 to 218 (Roll Call No. 221); no further action is recorded.",
+      "kind": "primary",
+      "source": "govinfo (bill status)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9238.xml"
     },
     {
       "date": "2026-06-12",
@@ -189,5 +218,5 @@
   "title": "Keep FISA Section 702, add accountability reforms, and guard against partisan misuse",
   "tracked": true,
   "uncertainties": "The govinfo check covers public laws 119-99 to 119-118 only through the 2026-09-30 law found; govinfo may lag the most recent enactments, and a House or Senate vote after 2026-07-29 would not show up as a public law, so floor action in September cannot be ruled out. Searches for August to October 2026 news, including a final search on September 2026 floor action, returned only June and July 2026 items (and a 2024 Senate vote), and a forum timeline of the 2026 reauthorization fight ended on 2026-06-17. The 2026-06-11 vote count (198 to 218) is from the New Jersey Monitor. The Mandate's PCLOB reliance is affected by the January 2025 removal of three PCLOB members (reported in a Berkeley Tech Law Journal article), which was not verified from a primary source. Whether the lapse has changed provider cooperation beyond the July 2026 reports was not verified. Re-check on 2026-10-15: the Senate roll call list for the 2nd session shows 44 votes from 2026-07-29 through 2026-09-30 (numbers 213 to 256), none on FISA or surveillance; govinfo has no public law 119-119 or 119-125 page at the addresses tried; congress.gov and the House Clerk vote pages could not be read, so House floor action after 2026-07-29 is not ruled out; three web searches for September to October 2026 action returned only June and July 2026 items. No FISC order or ODNI statement on the lapse was found.",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-18"
 }

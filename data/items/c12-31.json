@@ -1,12 +1,12 @@
 {
   "agency": "DOE Office of Policy / National Energy Dominance Council",
   "blockers": [
-    "The strategy is assigned to a White House council with no deadline"
+    "The strategy is assigned to a White House council chaired by the Interior Secretary, with no deadline"
   ],
   "chapter": "12",
-  "confidence": 60,
-  "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked and the order confirmed through the Federal Register; absence of a published strategy rests on limited searches.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text pp. 370 and 392 checked; the stage-deciding EO 14213 (90 FR 9945) was fetched and read in full on federalregister.gov, and a 2026-10-07 White House proclamation read on whitehouse.gov shows no published strategy.",
   "durability": {
     "level": "low",
     "why": "A council established by executive order and its strategy can be revised or disbanded by a later President."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source review read Executive Order 14213 in full on federalregister.gov and a 2026-10-07 proclamation on whitehouse.gov, added that the Interior Secretary chairs the council, and kept the stage at proposed 10."
     }
   ],
   "id": "c12-31",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "executive_order",
@@ -57,20 +61,24 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Progress lowered from 12 to 10 within proposed; the only action is a White House order directing a differently framed strategy.",
-      "Judgment call: not_started would also be defensible, or the record could be set aside, because the directed strategy is an energy dominance product of a White House council rather than a DOE energy security strategy.",
-      "Removed a lobbying-firm summary and an unopened DOE page as sources; added the Federal Register page for the order."
+      "Stage kept at proposed 10 (parallel); not_started 0 is the alternative because the directed strategy is a council energy dominance product rather than a DOE energy security strategy.",
+      "Status summary corrected to name the Interior Secretary as Chair."
     ],
     "mandate_check": "confirmed",
-    "mandate_note": "Pages 370 and 392 ask DOE (its Office of Policy, drawing on international affairs analysis) to develop a National Energy Security Strategy for the Secretary, aligned with the National Security Strategy and National Defense Strategy, covering cyber and physical threats, rare earth supply and foreign threats to US energy security, informing the President's foreign and defense roles, and guarded against becoming industrial or climate policy.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "mandate_note": "Page 392 says the Office of Policy could develop a National Energy Security Strategy for the Secretary with the National Security Strategy and National Defense Strategy, covering cyber and physical threats, rare earth supply and foreign threats, guarded against industrial or climate policy; page 370 asks for an international energy security analysis and strategy to inform the President; the paraphrase fits.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Federal Register API confirms EO 14213 signed 2025-02-14, published 2025-02-20, document 2025-02928 (checked 2026-10-15).",
+        "note": "90 FR 9945 to 9947, doc 2025-02928, signed 2025-02-14; Interior Secretary chairs, Energy Secretary is Vice Chair; Sec. 4(b) recommended National Energy Dominance Strategy with no deadline; 100-day tasks in Sec. 4(d); no mention of energy security, DOE Office of Policy or the NSS.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22National%20Energy%20Dominance%20Council%22&conditions[presidential_document_type]=executive_order&conditions[publication_date][gte]=2025-01-20"
+        "url": "https://www.federalregister.gov/documents/2025/02/20/2025-02928/establishing-the-national-energy-dominance-council"
+      },
+      {
+        "note": "Proclamation dated 2026-10-07 mentions no National Energy Dominance Strategy or council output.",
+        "result": "supports",
+        "url": "https://www.whitehouse.gov/presidential-actions/2026/10/national-energy-dominance-month-2026/"
       }
     ]
   },
@@ -126,7 +134,7 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "Executive Order 14213, signed 2025-02-14, established the National Energy Dominance Council in the Executive Office of the President, with the Secretary of Energy as Vice Chair, and directed it to provide the President a recommended National Energy Dominance Strategy, without a set deadline. No published energy dominance or energy security strategy, and no DOE Office of Policy energy security strategy, was found. The directed strategy is a White House council product on energy dominance rather than the DOE-prepared energy security strategy the Mandate describes.",
+  "status_summary": "Executive Order 14213, signed 2025-02-14 (90 FR 9945), established the National Energy Dominance Council in the Executive Office of the President, chaired by the Secretary of the Interior with the Secretary of Energy as Vice Chair, and directed it to provide the President a recommended National Energy Dominance Strategy, without a set deadline. The order mentions critical minerals and national security but not energy security, cyber or physical threats, the DOE Office of Policy or the National Security Strategy. No published energy dominance or energy security strategy, and no DOE Office of Policy energy security strategy, was found. The directed strategy is a White House council product on energy dominance rather than the DOE-prepared energy security strategy the Mandate describes.",
   "timeline": [
     {
       "date": "2025-02-14",
@@ -138,6 +146,6 @@
   ],
   "title": "Develop a National Energy Security Strategy through DOE's Office of Policy",
   "tracked": true,
-  "uncertainties": "The White House fact sheet appeared in search results but was not opened. Absence of a published strategy rests on the researcher's two searches and one reviewer web search for a released National Energy Dominance Strategy, which returned only coverage of the council's creation. Executive Orders 14154 and 14156 were not read for strategy directions, and the December 2025 National Security Strategy, FY2027 budget language and DOE Office of Policy outputs were not checked.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Executive Order 14213 was read in full on the Federal Register host. The White House fact sheet appeared in search results but was not opened. Absence of a published strategy rests on the researcher's searches, an earlier reviewer web search and one further web search in this review; a White House proclamation of 2026-10-07 on energy dominance, read on whitehouse.gov, lists energy actions but mentions no National Energy Dominance Strategy or council output. Executive Orders 14154 and 14156 were not read for strategy directions, and FY2027 budget language and DOE Office of Policy outputs were not checked.",
+  "updated_at": "2026-10-18"
 }

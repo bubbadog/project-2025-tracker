@@ -1,0 +1,149 @@
+{
+  "agency": "VA (VHA)",
+  "blockers": [],
+  "chapter": "20",
+  "confidence": 62,
+  "confidence_label": "medium",
+  "confidence_reason": "Chapter text page 646 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo search, VA news page, one news search), so confidence is capped near 62 because check 2 was partial.",
+  "durability": {
+    "level": "low",
+    "why": "Nothing exists; an administrative reporting policy could be reversed."
+  },
+  "est_completion": {
+    "basis": "Inference: no related action was found.",
+    "window": "unknown"
+  },
+  "headline": false,
+  "history": [
+    {
+      "date": "2026-10-16",
+      "note": "Added in the layer 3 enumeration pass (second pass over leftover candidates); researched and sent to independent review."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review: not_started kept on absence of a VA public reporting standard in limited searches; confidence 35."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov) and reviewed the Unified Agenda fallback, congress.gov and govinfo, VA news page and news checks, found no qualifying action, and kept not_started 0."
+    }
+  ],
+  "id": "c20-13",
+  "last_checked": "2026-10-18",
+  "layer": 3,
+  "match": "direct",
+  "mechanism": "agency_action",
+  "pages": [
+    646
+  ],
+  "position": "VA Secretary and VHA leadership",
+  "progress": 0,
+  "proposal": "The Mandate recommends requiring VHA to report publicly on all aspects of its operation, including quality, safety, patient experience, timeliness and cost-effectiveness, using standards similar to those of the Medicare Accountable Care Organization program (p. 646).",
+  "related_ids": [],
+  "remaining": [
+    "A VA reporting standard covering quality, safety, patient experience, timeliness and cost",
+    "Public dashboards aligned to the Accountable Care Organization measures"
+  ],
+  "requires_congress": "no",
+  "research_agent": "R1920",
+  "restates_ids": [],
+  "review": {
+    "document_reread": {
+      "citation": "Senate Veterans' Affairs Committee minority letter, 2025-06-02",
+      "note": "Context only.",
+      "result": "partial",
+      "url": "https://www.veterans.senate.gov/2025/6/blumenthal-takano-call-on-trump-va-to-maintain-medical-data-transparency-for-veterans-congress"
+    },
+    "flags": [
+      "Check 2 reached only the Federal Register fallback; confidence capped near 62.",
+      "VA's existing public access and quality data pages were not evaluated; changes there would not be caught by these checks."
+    ],
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 646 recommends requiring VHA to report publicly on all aspects of operation, including quality, safety, patient experience, timeliness and cost-effectiveness, on standards like those of the Medicare ACO program. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
+    "source_checks": [
+      {
+        "note": "2026-10-18: reviewer rerun with terms Veterans Health Administration, patient experience, transparency since 2025-01-20: 9 CMS rules (OPPS, physician fee schedule, IPPS, GLOBE model); none establishes VHA public reporting. Researcher query on VHA quality, safety, timeliness, cost, public reporting returned 13 unrelated documents.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Veterans+Health+Administration%22+%22patient+experience%22+transparency&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "2026-10-18: reginfo.gov Unified Agenda landing page reached, item listings unavailable through the fetch tool; Federal Register fallback used. Terms: VA, VHA, quality reporting.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: researcher search limited to congress.gov and govinfo.gov on VHA public quality reporting; results were earlier-Congress bills such as S. 1319 (117th); no 119th Congress bill identified. Not repeated by the reviewer.",
+        "result": "does_not_support",
+        "url": "https://www.congress.gov/bill/117th-congress/senate-bill/1319"
+      },
+      {
+        "note": "2026-10-18: VA news homepage fetched by the researcher; no item on public reporting of VHA quality, safety, timeliness or cost.",
+        "result": "does_not_support",
+        "url": "https://news.va.gov"
+      },
+      {
+        "note": "2026-10-18: one researcher news search on new VHA public reporting requirements returned press releases on the 117th Congress bill and older items; no search URL was recorded, so the VA news page is listed as a placeholder.",
+        "result": "does_not_support",
+        "url": "https://news.va.gov"
+      }
+    ]
+  },
+  "significance": {
+    "B": 1,
+    "F": 1,
+    "F_estimated": true,
+    "M": 2,
+    "R": 2,
+    "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 1,
+        "F": 1,
+        "M": 2,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 1,
+        "F": 1,
+        "M": 2,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
+    "raters": 2,
+    "rationale": "Mandating public VHA reporting on quality and cost, ACO style, touches millions of veterans but is mainly transparency within one administration.",
+    "version": "2026-10-16",
+    "weight": 1.5
+  },
+  "sources": [
+    {
+      "date": "2025-06-02",
+      "kind": "primary",
+      "publisher": "Senate Veterans' Affairs Committee (minority)",
+      "title": "Blumenthal, Takano Call on Trump VA to Maintain Medical Data Transparency for Veterans & Congress",
+      "url": "https://www.veterans.senate.gov/2025/6/blumenthal-takano-call-on-trump-va-to-maintain-medical-data-transparency-for-veterans-congress"
+    },
+    {
+      "date": "2026-02-11",
+      "kind": "primary",
+      "publisher": "House Veterans' Affairs Committee",
+      "title": "Statement of Secretary Collins, House Veterans' Affairs hearing",
+      "url": "https://docs.house.gov/meetings/VR/VR00/20260211/118948/HHRG-119-VR00-Wstate-CollinsD-20260211.pdf"
+    }
+  ],
+  "stage": "not_started",
+  "status_summary": "No new VA public reporting requirement, dashboard or directive modeled on Medicare Accountable Care Organization standards was found since 2025-01-20. On 2025-06-02 the ranking members of the House and Senate veterans committees wrote that VA might reduce quality data sharing, including stopping submissions for hospital star ratings and cutting congressional quality briefings; the letter did not confirm any final VA decision. The Secretary's written testimony of 2026-02-11 did not address public reporting.",
+  "timeline": [],
+  "title": "Require VHA to report publicly on quality, safety, timeliness and cost",
+  "tracked": true,
+  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: the researcher's query on VHA quality, safety, timeliness, cost and public reporting returned 13 documents, and a reviewer rerun on the Veterans Health Administration with patient experience and transparency returned 9 CMS payment and quality rules; none requires VHA public reporting on the listed dimensions, the only VHA reference being an eligibility point in a CMS rule. (2) Unified Agenda: item listings could not be reached, so only the Federal Register fallback was used. (3) congress.gov and govinfo: one search returned earlier-Congress transparency and report card bills; a 119th Congress reintroduction was not ruled out. (4) Agency pages: the VA news homepage showed no item on public reporting; VA's existing access and quality data pages were not evaluated for changes. (5) News: one search returned only press releases on a 117th Congress bill and older items. The 2025-06-02 minority letter describes possible reductions in quality data sharing that were not confirmed from a VA source.",
+  "updated_at": "2026-10-18"
+}

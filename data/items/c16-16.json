@@ -6,9 +6,9 @@
     "Plan revision timeline of several years"
   ],
   "chapter": "16",
-  "confidence": 72,
+  "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked and the notice read on federalregister.gov; the operative increase in timber sales rests on one fetched news report.",
+  "confidence_reason": "The notice of intent (91 FR 8017) was fetched and read in full and later Federal Register documents were queried; the in_progress stage rests on the rise in timber sales reported by one news outlet rather than BLM data, and the absence of monument changes rests on a limited search.",
   "durability": {
     "level": "medium",
     "why": "Resource management plans can be revised again, and the timber outputs depend on court outcomes."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Notice of intent re-read and confirmed; stage in_progress 30 kept with proposed as the alternative; confidence 74."
     }
   ],
   "id": "c16-16",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -56,14 +60,15 @@
   "research_agent": "N16",
   "review": {
     "flags": [
-      "judgment call: proposed 20 also defensible since the plan revision is at scoping; in_progress 30 kept because timber sales have risen under current plans",
-      "repost source removed"
+      "Accepted researcher's FR citation and expanded notice event, and added uncertainty sentences.",
+      "Confidence kept medium rather than the suggested high because the operative part of the in_progress stage (rising timber sales) rests on one news report.",
+      "judgment call: in_progress 30 kept; proposed (20) is defensible because the plan revision is at scoping, which the rubric treats as a planning step."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 532 and 533 call for managing O&C lands for permanent forest production and sustained-yield sales and treat the Cascade-Siskiyou monument and its expansion as barriers. Paraphrase accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y16a",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V8",
     "source_checks": [
       {
         "note": "2.46 million acres in 17 counties; aim of historically higher harvest; comments due 2026-03-23; reserves about 4, 13 and 6 percent; cites EOs 14223 and 14225; no monument mention.",
@@ -79,6 +84,11 @@
         "note": "FR API 2026-10-13: no draft plan after 2026-02-20.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Oregon+resource+management+plan+O%26C&conditions[agencies][]=land-management-bureau"
+      },
+      {
+        "note": "Read: 91 FR 8017-8020, published 2026-02-19; about 2,460,000 acres in 17 counties; aim of increasing sustained-yield harvest toward historically higher levels; new allowable sale quantity to be declared; comments due 2026-03-23; reserves about 4, 13 and 6 percent; cites EOs 14223 and 14225; no mention of the Cascade-Siskiyou monument. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/02/19/2026-03290/notice-of-intent-to-revise-resource-management-plans-for-northwestern-and-coastal-oregon-and"
       }
     ]
   },
@@ -132,7 +142,7 @@
   "timeline": [
     {
       "date": "2026-02-19",
-      "event": "BLM published a notice of intent to revise the Northwestern and Coastal Oregon and Southwestern Oregon resource management plans to increase sustained-yield timber harvest toward historically higher levels.",
+      "event": "BLM published a notice of intent (91 FR 8017 to 8020) to revise the Northwestern and Coastal Oregon and Southwestern Oregon resource management plans, covering about 2.46 million acres, to increase sustained-yield timber harvest toward historically higher levels under the O&C Act, with a new allowable sale quantity to be declared; scoping comments were due 2026-03-23.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/02/19/2026-03290/notice-of-intent-to-revise-resource-management-plans-for-northwestern-and-coastal-oregon-and"
@@ -147,6 +157,6 @@
   ],
   "title": "Manage Oregon and California railroad lands for higher sustained-yield timber",
   "tracked": true,
-  "uncertainties": "A Federal Register API search after 2026-02-20 found no draft plan. The sales volume figures come from one news report, not BLM data. A search for Cascade-Siskiyou monument changes found only 2017 coverage. The earlier repost of public radio coverage was not opened and was removed.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "A Federal Register API search after 2026-02-20 found no draft plan. The sales volume figures come from one news report, not BLM data. A search for Cascade-Siskiyou monument changes found only 2017 coverage. The earlier repost of public radio coverage was not opened and was removed. The notice does not mention the Cascade-Siskiyou monument. The notice gives no allowable sale quantity figure. A Federal Register API query for later BLM documents on the Oregon plans (publication from 2026-02-20, read in this pass) returned no draft plan.",
+  "updated_at": "2026-10-18"
 }

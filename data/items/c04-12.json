@@ -5,9 +5,9 @@
     "DCSA is mid-way through a multi-year NBIS rebuild with funding projected through FY2031."
   ],
   "chapter": "04",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "not_started rests on absence of evidence from limited searches; the GAO statement is primary and was read, but no systematic absence check is documented, so capped below 50.",
+  "confidence": 62,
+  "confidence_label": "medium",
+  "confidence_reason": "Chapter text page 107 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo search, OPM news releases with DCSA and war.gov hosts blocked, one news search) plus the GAO statement read earlier, so confidence is capped near 62 because check 2 was partial and the DOD hosts were unreachable.",
   "durability": {
     "level": "medium",
     "why": "A transfer would probably need an executive order and possibly statute, and a prior transfer took several years to complete."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-13",
       "note": "Added, as context, the GAO-reported move of the Trusted Workforce 2.0 target to the end of FY2028; no transfer to OPM found and no stage change."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov) and reviewed the Unified Agenda fallback, congress.gov and govinfo, OPM news page and news checks, found no qualifying action, and kept not_started 0."
     }
   ],
   "id": "c04-12",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "executive_order",
@@ -62,18 +66,39 @@
   "research_agent": "N04a",
   "review": {
     "flags": [
-      "Kept as context with wording that it is vetting reform, not the transfer; stage stays not_started."
+      "Check 2 reached only the Federal Register fallback and the DCSA and DOD hosts were blocked; confidence capped near 62.",
+      "NDAA text for FY2026 and FY2027 was not searched for investigation-transfer provisions."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "p.107 calls for returning civilian investigations from DCSA to OPM; the added GAO detail is context only.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-2",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 107 calls the 2019 move of civilian clearance and suitability investigations from OPM to DCSA a mistake and says the function should return to OPM, leaving military clearance investigations with DOD. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Fetched: confirms the fiscal 2026 to fiscal 2028 target move citing NBIS delays, the 46 percent milestone figure, and no mention of moving investigations to OPM.",
-        "result": "supports",
-        "url": "https://files.gao.gov/reports/GAO-26-108838/index.html"
+        "note": "2026-10-18: reviewer rerun with terms background investigations plus Defense Counterintelligence and Security Agency since 2025-01-20: 4 notices (DOD information collections 2025-09-02 and 2026-09-02, Army Privacy Act notice 2026-01-23, OPM Privacy Act notice 2026-06-26 restating the earlier transfer to DCSA); none returns investigations to OPM. Researcher query on personnel vetting: 17 documents on suitability standards and appeals.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22background+investigations%22+%22Defense+Counterintelligence+and+Security+Agency%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reginfo.gov Unified Agenda landing page reached, item listings unavailable through the fetch tool; Federal Register fallback used. Terms: OPM, DCSA, investigations.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: researcher search limited to congress.gov and govinfo.gov; results were EO 13869 (2019 transfer to DOD) and unrelated firearm background check bills; no 119th Congress bill returning DCSA investigations to OPM. Not repeated by the reviewer.",
+        "result": "does_not_support",
+        "url": "https://www.govinfo.gov/link/cpd/executiveorder/13869"
+      },
+      {
+        "note": "2026-10-18: OPM news releases fetched by the researcher, no item on taking back investigations; dcsa.mil and war.gov not reachable (DOD hosts blocked), so the DOD side is unverified.",
+        "result": "partial",
+        "url": "https://www.opm.gov/news/news-releases/"
+      },
+      {
+        "note": "2026-10-18: one researcher news search on a DCSA to OPM reversal returned only 2019 coverage of the original transfer; no search URL was recorded, so the OPM news page is listed as a placeholder.",
+        "result": "does_not_support",
+        "url": "https://www.opm.gov/news/news-releases/"
       }
     ]
   },
@@ -119,6 +144,6 @@
   ],
   "title": "Return civilian clearance and suitability investigations from DCSA to OPM",
   "tracked": true,
-  "uncertainties": "Absence of evidence: neither the GAO statement nor the DefenseScoop report mentions a plan to move investigations back to OPM, general web searches (including one in review) returned only 2019 and 2020 coverage of the original transfer, and a Federal Register query for presidential documents on background investigations since 2025-01-20 returned no results. Proposals in unpublished drafts, Congress or OPM planning would not appear. The NDAA text was not searched for investigation-transfer provisions.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: the researcher's query on personnel vetting returned 17 documents, including OPM suitability and fitness and suitability appeal rules and DCSA information collections, and a reviewer rerun on background investigations with the Defense Counterintelligence and Security Agency returned 4 notices, one of which restates that OPM had transferred the investigation mission to DCSA; no document moves investigations back to OPM. (2) Unified Agenda: item listings could not be reached, so only the Federal Register fallback was used. (3) congress.gov and govinfo: one search surfaced the 2019 executive order on the transfer and unrelated firearm background check bills; no 119th Congress bill returning investigations to OPM was identified, and NDAA text was not searched for transfer provisions. (4) Agency pages: OPM news releases showed no transfer item; DCSA and DOD hosts were blocked and not read. (5) News: one search returned only 2019 coverage of the original transfer. The GAO statement of 2026-02-24 and press coverage describe continued DCSA investment in NBIS through FY2031. Unpublished planning would not appear in these checks.",
+  "updated_at": "2026-10-18"
 }

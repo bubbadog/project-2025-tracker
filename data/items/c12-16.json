@@ -8,7 +8,7 @@
   "chapter": "12",
   "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked; the DOE budget briefing and CRS were fetched, but stage depends on trade press and on how far pre-period agreements count.",
+  "confidence_reason": "The DOE April 2026 budget briefing, the Washington Ecology release on the 2025 Hanford agreement and the GAO-26-108878 summary page were fetched and read; CRS R48599 was read in research. The in-period grouting demonstration and the Energy Secretary's statement rest on paywalled trade press, and the stage turns on how far a pre-period agreement counts.",
   "durability": {
     "level": "medium",
     "why": "Hanford milestones are tied to legally binding agreements, while budget direction varies by year."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Removed government-action events restored and a GAO-reported grout solicitation added; in_progress 25 kept with proposed named as the alternative."
     }
   ],
   "id": "c12-16",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -59,43 +63,52 @@
   "research_agent": "N12",
   "review": {
     "flags": [
-      "judgment call: proposed also defensible, since the operative steps rest largely on a pre-period Hanford agreement while the FY2027 request cuts EM funding"
+      "Restored two government actions the draft removed, supported by trade press: DOE's 2025-05-01 demonstration announcement and the 2026-04-03 FY2027 request release.",
+      "Added the December 2025 grout solicitation (month-only date) from GAO-26-108878, found with one search.",
+      "Energy Secretary testimony left out of the timeline because its dates are inferred; alternative: add it dated 2026-04-21.",
+      "Judgment call: kept in_progress 25 because the grouting and commercial-disposal path is operative and advancing in the period (demonstration, solicitation); proposed 15 is the defensible alternative, since the operative steps trace to the pre-period 2025-01-10 agreement and the FY2027 request cuts EM funding.",
+      "No court_status: the consent decree amendment was approved before the period and no later court event was found."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 394 to 396 and 371 checked; paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y12a",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V3",
     "source_checks": [
-      {
-        "note": "2025-05-02; 2,000-gallon Test Bed Initiative demonstration to WCS and EnergySolutions.",
-        "result": "supports",
-        "url": "https://www.exchangemonitor.com/hanford-ships-2000-gallons-of-tank-waste-to-texas-utah-for-grouting/"
-      },
-      {
-        "note": "2025-01-10 agreement: low-activity waste from 22 tanks grouted for offsite disposal.",
-        "result": "supports",
-        "url": "https://ecology.wa.gov/about-us/who-we-are/news/2025/hanford-site-holistic-agreement-finalized"
-      },
-      {
-        "note": "2026-04-03; 8.2 billion request, 386 million cut.",
-        "result": "supports",
-        "url": "https://www.exchangemonitor.com/white-house-requests-8-2b-for-em-slightly-less-than-fiscal-2026/"
-      },
-      {
-        "note": "Briefing dated 2026-04-29; FY2026 enacted 8.562 billion, FY2027 request 8.176 billion; Hanford down 12 percent; no 2035 target.",
-        "result": "supports",
-        "url": "https://www.energy.gov/sites/default/files/2026-05/EM%20SSAB%20Chairs%20Apr%202026%20Budget%20Du%20Bosq%20DOE.pdf"
-      },
-      {
-        "note": "2026-04-23; no planned revision to the Tri-Party Agreement or consent decree.",
-        "result": "supports",
-        "url": "https://www.exchangemonitor.com/washington-senators-wright-spar-over-impact-of-hanford-budget-cuts/"
-      },
       {
         "note": "EM 8.562 billion enacted, 470 million above request.",
         "result": "supports",
         "url": "https://www.everycrsreport.com/files/2026-03-25_R48599_fda58c2112f7ba1b98a0636a382dfa8d1b6d6d43.html"
+      },
+      {
+        "note": "Dated 2026-04-29; EM 8,562,371 thousand FY2026 enacted, 8,176,391 thousand FY2027 request (minus 5 percent); Hanford 3,347,941 to 2,954,324 thousand (minus 12 percent); no acceleration, 2035, grouting, commercial disposal or Deputy Secretary content. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.energy.gov/sites/default/files/2026-05/EM%20SSAB%20Chairs%20Apr%202026%20Budget%20Du%20Bosq%20DOE.pdf"
+      },
+      {
+        "note": "2025-01-10; TPA and consent decree amendments finalized, court approved decree; 22 tanks by 2040; low-activity portion grouted for out-of-state disposal; location decision due end of 2025. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://ecology.wa.gov/about-us/who-we-are/news/2025/hanford-site-holistic-agreement-finalized"
+      },
+      {
+        "note": "Published 2025-05-02; DOE announced the completed 2,000-gallon Test Bed Initiative demonstration the previous day; paywalled after the opening paragraphs. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.exchangemonitor.com/hanford-ships-2000-gallons-of-tank-waste-to-texas-utah-for-grouting/"
+      },
+      {
+        "note": "2026-04-03; request released that day; 8.2 billion dollars for EM, 386 million below FY2026. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.exchangemonitor.com/white-house-requests-8-2b-for-em-slightly-less-than-fiscal-2026/"
+      },
+      {
+        "note": "2026-04-23; Senate hearings earlier that week; Energy Secretary said DOE does not expect to seek TPA or consent decree revisions. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.exchangemonitor.com/washington-senators-wright-spar-over-impact-of-hanford-budget-cuts/"
+      },
+      {
+        "note": "Released 2026-05-20; contractor solicitation December 2025; proposals under evaluation as of April 2026; onsite versus offsite grouting not decided; disposal at one of two out-of-state commercial sites; 0.48 to 1.1 billion dollar grouting estimate. Summary page only. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.gao.gov/products/gao-26-108878"
       }
     ]
   },
@@ -170,49 +183,70 @@
       "publisher": "Congressional Research Service",
       "title": "Energy and Water Development: FY2026 Appropriations (CRS R48599)",
       "url": "https://www.everycrsreport.com/files/2026-03-25_R48599_fda58c2112f7ba1b98a0636a382dfa8d1b6d6d43.html"
+    },
+    {
+      "date": "2026-01-23",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 6938, Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026 (bill status, Public Law 119-74)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6938.xml"
+    },
+    {
+      "date": "2026-05-20",
+      "kind": "primary",
+      "publisher": "U.S. Government Accountability Office",
+      "title": "Hanford Cleanup: grouting low-activity tank waste (GAO-26-108878)",
+      "url": "https://www.gao.gov/products/gao-26-108878"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Some recommended approaches are operating: a Hanford amendment to the Tri-Party Agreement and consent decree finalized on 2025-01-10, before the period, provides for grouting some low-activity tank waste for offsite disposal, and trade press reported on 2025-05-02 that DOE completed a 2,000-gallon demonstration shipment of treated tank waste to commercial disposal sites in Texas and Utah. Congress enacted 8.562 billion dollars for Environmental Management in FY2026 (Public Law 119-74, 2026-01-23), 470 million above the request, per CRS. The FY2027 request seeks about 8.18 billion dollars, a cut of about 5 percent, with Hanford down 12 percent, per a DOE briefing dated 2026-04-29 that sets no accelerated completion dates. On 2026-04-23 the Energy Secretary told senators DOE does not expect to seek revisions to the Tri-Party Agreement or consent decree.",
+  "status_summary": "A Hanford amendment to the Tri-Party Agreement and consent decree finalized on 2025-01-10, before the period, provides for grouting low-activity waste from 22 tanks for offsite disposal, and trade press reported that DOE announced on 2025-05-01 a completed 2,000-gallon demonstration shipment of treated tank waste to commercial sites in Texas and Utah. GAO reported in May 2026 that a solicitation for grouting that waste was issued in December 2025 and that DOE had not yet chosen between an onsite grout facility and shipping liquid waste offsite. Congress enacted 8.562 billion dollars for Environmental Management in FY2026 (Public Law 119-74, signed 2026-01-23), 470 million above the request, per CRS. A DOE briefing dated 2026-04-29 shows an FY2027 request of about 8.176 billion dollars, a 5 percent cut, with Hanford down 12 percent, and sets no accelerated completion dates; trade press reported on 2026-04-23 that the Energy Secretary told senators DOE does not expect to seek revisions to the Tri-Party Agreement or consent decree.",
   "timeline": [
     {
-      "date": "2025-05-02",
-      "event": "Trade press reported DOE completed a 2,000-gallon demonstration shipment of treated low-level Hanford tank waste to commercial facilities in Texas and Utah for grouting and disposal.",
+      "date": "2025-01-10",
+      "event": "Washington Department of Ecology announced the Hanford holistic agreement finalized (before the period): revised Tri-Party Agreement milestones and an amended consent decree approved by a federal district court, providing for retrieval of waste from 22 tanks in the 200 West Area by 2040 with the low-activity portion grouted for offsite disposal, and a DOE decision on a grouting location due by the end of 2025.",
+      "kind": "primary",
+      "source": "Washington Department of Ecology",
+      "url": "https://ecology.wa.gov/about-us/who-we-are/news/2025/hanford-site-holistic-agreement-finalized"
+    },
+    {
+      "date": "2025-05-01",
+      "event": "DOE announced it had completed a 2,000-gallon demonstration under the Test Bed Initiative, shipping treated low-activity Hanford tank waste to commercial facilities in Texas and Utah for grouting and disposal (announcement date as reported by trade press).",
       "kind": "news",
       "source": "Exchange Monitor",
       "url": "https://www.exchangemonitor.com/hanford-ships-2000-gallons-of-tank-waste-to-texas-utah-for-grouting/"
     },
     {
+      "date": "2025-12-01",
+      "event": "DOE's Hanford tank contractor issued a solicitation for grouting low-activity waste from the 22 tanks, covering either a new onsite grout facility or shipment of liquid waste to existing facilities (month-only date); as of April 2026 proposals were under evaluation, per GAO.",
+      "kind": "primary",
+      "source": "U.S. Government Accountability Office",
+      "url": "https://www.gao.gov/products/gao-26-108878"
+    },
+    {
       "date": "2026-01-23",
-      "event": "FY2026 Energy and Water appropriations (P.L. 119-74) enacted; per CRS, Environmental Management received 8.562 billion dollars, 470 million above the request.",
+      "event": "FY2026 Energy and Water appropriations enacted as Division B of Public Law 119-74 (H.R. 6938); per CRS, Environmental Management received 8.562 billion dollars, 470 million above the request and 80 million above FY2025.",
       "kind": "primary",
       "source": "Congressional Research Service",
       "url": "https://www.everycrsreport.com/files/2026-03-25_R48599_fda58c2112f7ba1b98a0636a382dfa8d1b6d6d43.html"
     },
     {
       "date": "2026-04-03",
-      "event": "FY2027 request released; trade press reported 8.2 billion dollars sought for Environmental Management, 386 million below FY2026.",
+      "event": "The FY2027 budget request was released; trade press reported 8.2 billion dollars sought for Environmental Management, 386 million below FY2026.",
       "kind": "news",
       "source": "Exchange Monitor",
       "url": "https://www.exchangemonitor.com/white-house-requests-8-2b-for-em-slightly-less-than-fiscal-2026/"
     },
     {
       "date": "2026-04-29",
-      "event": "DOE budget briefing to site advisory board chairs showed the FY2027 EM request at about 8.18 billion dollars, with Hanford down 12 percent from FY2026.",
+      "event": "DOE budget briefing to site advisory board chairs shows the FY2027 Environmental Management request at 8,176,391 thousand dollars versus 8,562,371 thousand enacted for FY2026 (minus 5 percent), with the Hanford total down 12 percent (slide 5); it does not mention an accelerated completion schedule, grouting, commercial disposal or the Deputy Secretary.",
       "kind": "primary",
       "source": "U.S. Department of Energy",
       "url": "https://www.energy.gov/sites/default/files/2026-05/EM%20SSAB%20Chairs%20Apr%202026%20Budget%20Du%20Bosq%20DOE.pdf"
-    },
-    {
-      "date": "2026-04-23",
-      "event": "Energy Secretary told Senate committees the Hanford cut is modest and that DOE does not expect to revise the Tri-Party Agreement or consent decree.",
-      "kind": "news",
-      "source": "Exchange Monitor",
-      "url": "https://www.exchangemonitor.com/washington-senators-wright-spar-over-impact-of-hanford-budget-cuts/"
     }
   ],
   "title": "Accelerate Environmental Management cleanup and revisit the Hanford framework",
   "tracked": true,
-  "uncertainties": "Whether DOE applied the high-level waste interpretation more broadly in 2025 and 2026 was not confirmed in primary documents. The commercial disposal shipment was a demonstration under a program begun earlier. Whether DOE chose a grouting location by the end of 2025, as the Hanford agreement required, was not checked.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Whether DOE applied the high-level waste interpretation more broadly in 2025 and 2026 was not confirmed in primary documents. The demonstration shipment, the FY2027 request release date and the Energy Secretary's 2026-04-23 statement rest on Exchange Monitor reports that are paywalled beyond their opening paragraphs; no DOE primary page on the shipment was reachable. The Energy Secretary's Senate testimony (hearings the article places on the two days before 2026-04-23) is described in the summary but not listed as a timeline event because its exact dates are inferred. The shipment was a demonstration under a program begun earlier. The Ecology release states a grouting-location decision was due by the end of 2025; GAO's May 2026 report (read on its summary page only) says the choice between onsite and offsite grouting was still under evaluation as of April 2026. The CRS report was read through 100,000 of 115,543 characters. The DOE briefing text has no clear slide boundaries, so slide numbers are inferred. No DOE document setting a 2035 or 2060 completion target or a Deputy Secretary reporting line was found.",
+  "updated_at": "2026-10-18"
 }

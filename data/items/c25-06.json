@@ -2,18 +2,18 @@
   "agency": "Small Business Administration",
   "blockers": [
     "Requires an Act of Congress to change the statutory 7(a) loan ceiling",
-    "No Senate action found"
+    "No Senate floor vote since the bill was placed on the Senate calendar on 2025-12-04; the 119th Congress ends on 2027-01-03"
   ],
   "chapter": "25",
-  "confidence": 66,
-  "confidence_label": "medium",
-  "confidence_reason": "The House-engrossed bill text and the SBA release were read on primary sites; Senate status rests on GovInfo version history, not a congress.gov action list, and the SBA policy's legal instrument is unconfirmed.",
+  "confidence": 85,
+  "confidence_label": "high",
+  "confidence_reason": "The chapter text (page 756) was checked, and the stage-deciding H.R. 3174 engrossed text and GovInfo BILLSTATUS file were read in full (House passage, Senate calendar placement and a Senate committee hearing, no enactment).",
   "durability": {
     "level": "medium",
     "why": "A statutory change would be durable, but the 504 and 7(a) combination announced by SBA is an agency rule that a later administration could revise."
   },
   "est_completion": {
-    "basis": "Inference: the bill passed the House by consent but no Senate step was found, so timing cannot be projected.",
+    "basis": "Inference: the bill passed the House and is on the Senate calendar, with a Senate committee hearing on 2026-05-13 but no floor action; it would need Senate passage before the 119th Congress ends on 2027-01-03, and no scheduling signal was found.",
     "window": "unknown"
   },
   "headline": false,
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review read the H.R. 3174 bill status file and engrossed text (govinfo.gov), added the Senate calendar placement and the 2026-05-13 Senate committee hearing, corrected the 7(a) limits described, and raised confidence to high; stage proposed and progress 20 unchanged."
     }
   ],
   "id": "c25-06",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -48,7 +52,7 @@
     "c25-08"
   ],
   "remaining": [
-    "Senate passage and enactment of H.R. 3174 or a similar bill",
+    "Senate passage and enactment of H.R. 3174 (on the Senate calendar since 2025-12-04; committee hearing 2026-05-13) or a similar bill",
     "A 7(a) manufacturing limit approaching the 50 million dollars the chapter cites"
   ],
   "requires_congress": "yes",
@@ -56,37 +60,23 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Title shortened from 95 to under 90 characters",
-      "House passage now sourced to the GovInfo engrossed bill, and its provisions read from the text",
-      "Match changed from parallel to partial: the bill creates the requested manufacturer category at a smaller amount",
-      "SBA combined-limit rule kept as an event but described as a policy with no Federal Register citation; instrument moved to uncertainties",
-      "Confidence 66"
+      "The record's statement that no later Senate step was found is corrected (calendar 2025-12-04, hearing 2026-05-13)"
     ],
     "mandate_check": "confirmed",
-    "mandate_note": "Page 756, Domestic Manufacturing and Small Business: ask Congress for a 7(a) loan category with a larger principal for manufacturing facility construction and equipment upgrading, citing a 2019 proposal of 50 million dollars against the 5 million dollar cap. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "mandate_note": "Page 756 asks the administration to seek from Congress a 7(a) loan category with a larger principal for manufacturing facility construction and equipment upgrades, citing a 2019 proposal of 50 million dollars against the 5 million dollar cap. The paraphrase is accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14. Engrossed text: small manufacturer definition; 7(a) limits doubled for small manufacturers; section 502 figure raised to 10 million dollars.",
+        "note": "House passage 2025-12-01 by voice vote under suspension; H. Rept. 119-224; Senate calendar No. 283 on 2025-12-04 after the Finance referral was vitiated; Senate Small Business hearing 2026-05-13 (latest action).",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3174.xml"
+      },
+      {
+        "note": "Sec. 3 adds 7.5 million (general), 9 million (with 8 million sub-limit) and 10 million (export) limits for small manufacturers alongside existing limits; Sec. 4 replaces 5.5 million with 10 million in 15 U.S.C. 696(2)(A)(iii). Corrects the record's export-limit description.",
         "result": "supports",
         "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr3174eh/html/BILLS-119hr3174eh.htm"
-      },
-      {
-        "note": "Checked 2026-10-14. Engrossed in House, last action date 2025-12-01; no enrolled version listed.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/app/details/BILLS-119hr3174eh"
-      },
-      {
-        "note": "Checked 2026-10-14. Release describes the combined 10 million dollar limit effective July 4; no Federal Register or SOP citation.",
-        "result": "partial",
-        "url": "https://legacy.sba.gov/article/2026/05/18/sba-doubles-cumulative-7a-504-loan-limit-10-million"
-      },
-      {
-        "note": "Checked 2026-10-14. Eleven SBA documents since 2026-03-01 matching 504; none is a 7(a) and 504 limit rule.",
-        "result": "does_not_support",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=small-business-administration&conditions[publication_date][gte]=2026-03-01&conditions[term]=504&per_page=40"
       }
     ]
   },
@@ -153,10 +143,17 @@
       "publisher": "Office of Rep. Sykes",
       "title": "Rep. Sykes applauds House passage of legislation supporting small manufacturers",
       "url": "https://sykes.house.gov/media/press-releases/rep-sykes-applauds-house-passage-of-legislation-supporting-small-manufacturers"
+    },
+    {
+      "date": "2026-05-13",
+      "kind": "primary",
+      "publisher": "U.S. Government Publishing Office",
+      "title": "H.R. 3174, Made in America Manufacturing Finance Act, bill status (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3174.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "H.R. 3174, the Made in America Manufacturing Finance Act, passed the House on 2025-12-01; its engrossed text defines small manufacturers (NAICS sectors 31 to 33 with all production facilities in the United States) and doubles their 7(a) guarantee limits, for example from 3.75 million to 7.5 million dollars on the standard guarantee and from 5 million to 10 million dollars on export loans, and raises a development company (504) limit to 10 million dollars. SBA's Administrator welcomed House passage, and no later Senate step was found. Separately, SBA announced on 2026-05-18 a policy, effective 2026-07-04, letting borrowers who secure a 7(a) loan first combine up to 5 million dollars of 7(a) and 5 million dollars of 504 financing; it does not create a separate larger 7(a) manufacturing category. Both fall well short of the 50 million dollar figure the chapter cites.",
+  "status_summary": "H.R. 3174, the Made in America Manufacturing Finance Act, passed the House by voice vote under suspension on 2025-12-01 after the House Small Business Committee reported it (H. Rept. 119-224). Its engrossed text defines small manufacturers (NAICS sectors 31 to 33 with all production facilities in the United States) and adds higher 7(a) guarantee limits for them alongside the existing ones: 7.5 million dollars against the general 3.75 million, 9 million against the 4.5 million limit (with no more than 8 million for working capital, supplies or export financings), and 10 million against 5 million for export loans; it also replaces a 5.5 million dollar development company (504) limit with 10 million. In the Senate the bill was placed on the Legislative Calendar on 2025-12-04 and the Small Business and Entrepreneurship Committee held a hearing on 2026-05-13, its latest action; it is not enacted. Separately, SBA announced on 2026-05-18 a policy, effective July 4, letting borrowers who secure a 7(a) loan first combine up to 5 million dollars of 7(a) and 5 million dollars of 504 financing; neither step creates the 50 million dollar category the chapter cites.",
   "timeline": [
     {
       "date": "2025-12-01",
@@ -164,6 +161,20 @@
       "kind": "primary",
       "source": "U.S. Government Publishing Office",
       "url": "https://www.govinfo.gov/app/details/BILLS-119hr3174eh"
+    },
+    {
+      "date": "2025-12-04",
+      "event": "The Senate vitiates the bill's referral to the Finance Committee and places H.R. 3174 on the Senate Legislative Calendar under General Orders (Calendar No. 283).",
+      "kind": "primary",
+      "source": "U.S. Government Publishing Office (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3174.xml"
+    },
+    {
+      "date": "2026-05-13",
+      "event": "The Senate Committee on Small Business and Entrepreneurship holds a hearing on H.R. 3174, the bill's latest recorded action.",
+      "kind": "primary",
+      "source": "U.S. Government Publishing Office (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3174.xml"
     },
     {
       "date": "2026-05-18",
@@ -175,6 +186,6 @@
   ],
   "title": "Ask Congress for a larger 7(a) loan category for manufacturing facilities and equipment",
   "tracked": true,
-  "uncertainties": "GovInfo lists only the House-engrossed version of H.R. 3174, with a last action date of 2025-12-01, and congress.gov could not be opened, so the absence of Senate action rests on that and on SBA and member releases. The SBA release of 2026-05-18 calls the combined-limit change a new rule but gives no Federal Register citation, SOP number or procedural notice; a Federal Register API search of SBA documents since 2026-03-01 for the term 504 found no matching rule, so the instrument is unconfirmed and it may be a policy or SOP change; the effective year 2026 is inferred from the release date. The engrossed bill text has a parenthetical on a 10 million dollar gross loan amount whose effect is unclear as drafted.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Bill status was read in the GovInfo BILLSTATUS file, which lists the 2026-05-13 Senate committee hearing as the latest action; whether the Senate scheduled floor action after that was not found. The SBA release of 2026-05-18 calls the combined-limit change a new rule but gives no Federal Register citation, SOP number or procedural notice; a Federal Register API search of SBA documents since 2026-03-01 for the term 504 found no matching rule, so the instrument is unconfirmed and it may be a policy or SOP change; the effective year 2026 is inferred from the release date. The engrossed bill text applies its higher 7(a) limits to small manufacturers or where a gross loan amount would exceed 10 million dollars, a condition whose effect is unclear as drafted. The bill text does not use the term 504; the 504 description is an inference from the amended Small Business Investment Act provision.",
+  "updated_at": "2026-10-18"
 }

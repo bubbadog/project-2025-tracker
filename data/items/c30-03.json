@@ -6,9 +6,15 @@
     "Industry compliance and litigation outcomes in the Sendit case (Central District of California) were not found"
   ],
   "chapter": "30",
-  "confidence": 68,
+  "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Document text verified in an earlier review (pages 875 and 876). FTC releases confirm the chatbot 6(b) orders and Sendit referral (earlier review) and the 2026-02-25 age-verification policy statement (read in this review); the amended COPPA Rule is in the Federal Register. The TAKE IT DOWN Act item rests on a trade-news article. A contracts-with-minors proceeding cannot be fully ruled out.",
+  "confidence_reason": "The stage-deciding FTC releases (2025-09-29 Sendit referral, 2026-02-25 policy statement) and the FTC kids privacy topic page were fetched and read in review on 2026-10-18, and the researcher read the Federal Register rule metadata, the 2025-09-11 release and the GovInfo bill status records. The amended rule's body was not read, the 2026-04-22 compliance date rests on law-firm updates and the TAKE IT DOWN Act enforcement start on a trade article, and the absence of a contracts-with-minors proceeding is not systematically checked, so the record stays medium.",
+  "court_status": {
+    "basis": "Latest court event in the timeline: the complaint against Iconic Hearts Holdings (operator of the Sendit app) and its CEO, referred by the FTC (3-0) and filed by DOJ in the Central District of California on or after 2025-09-29, alleging COPPA, FTC Act and ROSCA violations; no ruling, settlement or later docket event was found, and the court docket was not read.",
+    "date": "2025-09-29",
+    "state": "pending",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-alleges-sendit-app-its-ceo-unlawfully-collected-personal-data-children-deceived-users-about"
+  },
   "durability": {
     "level": "medium",
     "why": "The amended COPPA Rule is a final rule that survives administrations until rewritten; enforcement priorities, policy statements and 6(b) studies are discretionary and reversible."
@@ -37,10 +43,22 @@
     {
       "date": "2026-10-15",
       "note": "Update run, independently reviewed. No new FTC COPPA rule, order or 6(b) report found since April 2026. Replaced law-firm sourcing for the 2026-02-25 age-verification policy statement with the FTC release (vote 2-0); added the 2026-05-19 start of Take It Down Act enforcement (news source). Review (corrected): FTC policy statement release and the TAKE IT DOWN Act article confirmed; the enforcement-start date was aligned with the article (2026-05-20) and stale uncertainty sentences updated. Confidence raised from 66 to 68. Stage in_progress 30; confidence 66 to 68."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Freshness pass: no new FTC children-related rule, order or policy statement after 2026-05-20 was found per the FTC site and Federal Register API; congressional actions were added per GovInfo bill status (House passage of H.R. 7757 on 2026-06-29 and Senate Commerce action on S. 1748 on 2026-08-05). Stage unchanged because none is enacted."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review: re-read pages 875 and 876 and confirmed on GovInfo bill status the House passage of H.R. 7757 on 2026-06-29 (267-117, Roll no. 228) and the Senate Commerce order to report S. 1748 on 2026-08-05. Added a court_status of pending for the Sendit complaint. Stage kept at in_progress 30 under the rule that unenacted bills are parallel steps when the recommendation asks the FTC to use existing authority. Confidence unchanged at 68."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: In_progress 30 confirmed against FTC releases and topic page; compliance-date row removed, Sendit wording softened; confidence 68 to 78."
     }
   ],
   "id": "c30-03",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -66,25 +84,45 @@
   "research_agent": "A16",
   "review": {
     "flags": [
-      "TAKE IT DOWN Act enforcement start redated from 2026-05-19 to 2026-05-20 per the only source read; the statutory one-year compliance date could make 2026-05-19 correct, unverified",
-      "Stale uncertainty sentences (policy statement from law firms only; Take It Down role unverified) corrected",
-      "Amended COPPA Rule approval date relative to 2025-01-20 still unchecked (carried over)"
+      "Timeline row for the 2026-04-22 compliance deadline removed: it records a date set by the 2025 rule rather than a government action; the date remains in the 2025-04-22 row and in status_summary.",
+      "Sendit wording softened in status_summary, timeline and court_status: the FTC release cites unfair use of fake messages but does not label a separate unfairness count.",
+      "Resolved a carried-over flag: the FTC topic page lists the final COPPA Rule amendments under 2025-01-16, before the period tracked; publication followed on 2025-04-22.",
+      "Researcher's re-sourcing of the 2026-01-28 workshop to the FTC topic page accepted; the date was confirmed there.",
+      "Stage kept at in_progress 30, match parallel; the defensible alternative is proposed 15, since none of the FTC steps applies the chapter's contracts-with-minors theory and the amended rule was finalized before the period tracked.",
+      "court_status kept pending (DOJ complaint, no later event found); the docket was not read.",
+      "A trade report that the Senate passed a COPPA 2.0 bill in 2026 remains unverified against Senate records (carried over).",
+      "Confidence raised from 68 to 78."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 875 says the FTC should examine platforms' advertising to and contracts with children as deceptive or unfair practices, perhaps requiring written parental consent, notes COPPA's under-13 and actual-knowledge limits, and says the FTC should bring unfair practices proceedings against firms that contract with children without parental consent; page 876 records skeptical conservatives who prefer an educational role and warn about age-verification privacy costs.",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Page 875 says the FTC should examine platforms' advertising to and contracts with children as deceptive or unfair practices, perhaps requiring written parental consent, notes COPPA's under-13 and actual-knowledge limits, and says the FTC should bring unfair practices proceedings against firms that contract with children without parental consent; page 876 records conservatives who prefer an educational FTC role and warn about the privacy costs of age verification. The proposal paraphrase is faithful.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "independent",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V2",
     "source_checks": [
       {
-        "note": "Release of 2026-02-25, vote 2-0: no COPPA enforcement against general and mixed audience operators collecting data solely to determine age, under conditions; planned COPPA Rule review; refers to a recent age-verification workshop.",
+        "note": "Opened 2026-10-16: H.R. 7757, KIDS Act, introduced 2026-03-03 (Rep. Guthrie); on 2026-06-29 the motion to suspend the rules and pass as amended was agreed to 267-117 (Roll no. 228); received in the Senate and referred to Commerce on 2026-07-13; record updated 2026-09-08.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7757.xml"
+      },
+      {
+        "note": "Opened 2026-10-16: S. 1748, Kids Online Safety Act, introduced 2025-05-14 (Sen. Blackburn); on 2026-08-05 Senate Commerce ordered it reported favorably with an amendment in the nature of a substitute; latest action 2026-08-05; no report number.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1748.xml"
+      },
+      {
+        "note": "2026-02-25, vote 2-0; no COPPA Rule actions against certain general and mixed audience operators collecting data solely to determine age, six conditions; in effect until final rule amendments or withdrawal; Commission intends to review the COPPA Rule; refers to a recent workshop without a date. Checked 2026-10-18.",
         "result": "supports",
         "url": "https://www.ftc.gov/news-events/news/press-releases/2026/02/ftc-issues-coppa-policy-statement-incentivize-use-age-verification-technologies-protect-children"
       },
       {
-        "note": "Article of 2026-05-20 (updated 2026-09-17): FTC began enforcing section 3 on 2026-05-20 (record said 2026-05-19); 48-hour removal; Chairman letters to Amazon, Alphabet, Apple and Meta the week before.",
+        "note": "2025-09-29, 3-0 referral, DOJ filed in the Central District of California; COPPA, FTC Act and ROSCA violations, unfair use of fake messages to push child and teen users into subscriptions; no separately labeled unfairness count. Checked 2026-10-18.",
         "result": "partial",
-        "url": "https://broadbandbreakfast.com/ftc-starts-enforcing-the-take-it-down-act.md"
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-alleges-sendit-app-its-ceo-unlawfully-collected-personal-data-children-deceived-users-about"
+      },
+      {
+        "note": "Lists the age verification workshop on 2026-01-28, the final COPPA Rule amendments on 2025-01-16, Iconic Hearts case on 2025-09-29, and COPPA cases Disney, Apitor and NGL; no COPPA action after 2026-02-25; last modified 2026-04-22. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.ftc.gov/news-events/topics/protecting-consumer-privacy-security/kids-privacy-coppa"
       }
     ]
   },
@@ -150,10 +188,45 @@
       "publisher": "Broadband Breakfast",
       "title": "FTC starts enforcing the Take It Down Act",
       "url": "https://broadbandbreakfast.com/ftc-starts-enforcing-the-take-it-down-act.md"
+    },
+    {
+      "date": "2026-06-29",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 7757, KIDS Act (119th Congress) bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7757.xml"
+    },
+    {
+      "date": "2026-06-29",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 7757 (engrossed in House), text",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr7757eh/html/BILLS-119hr7757eh.htm"
+    },
+    {
+      "date": "2026-08-05",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S. 1748, Kids Online Safety Act (119th Congress) bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1748.xml"
+    },
+    {
+      "date": "2025-12-11",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 3149, App Store Accountability Act (119th Congress) bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3149.xml"
+    },
+    {
+      "date": "2026-04-22",
+      "kind": "primary",
+      "publisher": "FTC",
+      "title": "FTC Kids Privacy (COPPA) topic page",
+      "url": "https://www.ftc.gov/news-events/topics/protecting-consumer-privacy-security/kids-privacy-coppa"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The FTC is acting on children's online protection through COPPA and general Section 5 authority, but no proceeding built on the chapter's contracts-with-minors theory or a written parental consent requirement was found. The amended COPPA Rule was published 2025-04-22 and its full compliance date passed on 2026-04-22; the sources read describe no change to its under-13 scope, which the chapter criticizes. The FTC ordered seven companies on 2025-09-11 to report on AI companion chatbots and minors, and on 2025-09-29 referred a complaint against the Sendit app that includes a Section 5 unfairness count about pressuring children and teens into subscriptions. In 2026 the FTC held an age-verification workshop (2026-01-28) and issued a policy statement (2026-02-25) easing COPPA enforcement for data collected solely to verify age, which responds to the privacy concern the chapter's skeptics raise. On 2026-05-20 the FTC began enforcing the civil provisions of the TAKE IT DOWN Act, a related but distinct child-protection authority.",
+  "status_summary": "The FTC is acting on children's online protection through COPPA and general Section 5 authority, but no proceeding built on the chapter's contracts-with-minors theory or a written parental consent requirement was found. The amended COPPA Rule, which the FTC topic page lists as finalized on 2025-01-16 before the period tracked, was published 2025-04-22 and its full compliance date passed on 2026-04-22; the sources read describe no change to its under-13 scope, which the chapter criticizes. The FTC ordered seven companies on 2025-09-11 to report on AI companion chatbots and minors, and on 2025-09-29 referred a complaint against the operator of the Sendit app alleging, among other violations, that it unfairly used fake messages to push child and teen users into subscriptions. In 2026 the FTC held an age-verification workshop (2026-01-28) and issued a policy statement (2026-02-25) easing COPPA enforcement for data collected solely to verify age, which responds to the privacy concern the chapter's skeptics raise. On 2026-05-20 the FTC began enforcing the civil provisions of the TAKE IT DOWN Act, a related but distinct child-protection authority. In Congress, the House passed the KIDS Act (H.R. 7757) on 2026-06-29, whose text would raise the COPPA child age to under 14 and add teen protections, and the Senate Commerce Committee ordered the Kids Online Safety Act (S. 1748) reported on 2026-08-05; no enactment was found, and the App Store Accountability Act (H.R. 3149) shows a subcommittee vote on 2025-12-11 as its latest action.",
   "timeline": [
     {
       "date": "2025-04-22",
@@ -171,31 +244,24 @@
     },
     {
       "date": "2025-09-29",
-      "event": "FTC (vote 3-0) refers to DOJ a complaint against Iconic Hearts Holdings, operator of the Sendit app, and its CEO, alleging COPPA violations (no parental notice or consent), deceptive practices, an unfairness claim over pressuring child and teen users to buy subscriptions, and subscription-billing violations; DOJ files in the Central District of California.",
+      "event": "FTC (vote 3-0) refers to DOJ a complaint against Iconic Hearts Holdings, operator of the Sendit app, and its CEO, alleging COPPA violations (no parental notice or consent), FTC Act violations including unfair use of fake messages to push child and teen users into paid subscriptions, and ROSCA subscription-billing violations; the complaint was filed by DOJ in the Central District of California.",
       "kind": "primary",
       "source": "Federal Trade Commission",
       "url": "https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-alleges-sendit-app-its-ceo-unlawfully-collected-personal-data-children-deceived-users-about"
     },
     {
       "date": "2026-01-28",
-      "event": "FTC holds a public workshop on age verification; Chairman Ferguson says he wants the COPPA Rule not to hinder effective age-verification technology (as summarized by a law-firm update).",
-      "kind": "news",
-      "source": "Davis Polk (law-firm update)",
-      "url": "https://www.davispolk.com/insights/client-update/ftc-prioritizes-coppa-enforcement-new-compliance-obligations-take-effect"
+      "event": "FTC held a public workshop on age verification technologies (date as listed on the FTC kids privacy topic page; the 2026-02-25 FTC release gives the month as January 2026).",
+      "kind": "primary",
+      "source": "Federal Trade Commission",
+      "url": "https://www.ftc.gov/news-events/topics/protecting-consumer-privacy-security/kids-privacy-coppa"
     },
     {
       "date": "2026-02-25",
-      "event": "FTC (vote 2-0) issues an enforcement policy statement under which it will not bring COPPA Rule actions against general-audience and mixed-audience operators that collect children's data solely to estimate age, without prior parental consent, if conditions on use, retention, sharing, notice, security and accuracy are met; it says it plans to review the COPPA Rule on age verification.",
+      "event": "FTC (vote 2-0) issues an enforcement policy statement under which it will not bring COPPA Rule actions against general-audience and mixed-audience operators that collect children's data solely to estimate age, without prior parental consent, if conditions on use, retention, sharing, notice, security and accuracy are met; it says it plans to review the COPPA Rule on age verification. The statement remains in effect until final rule amendments are published or it is withdrawn.",
       "kind": "primary",
       "source": "FTC press release",
       "url": "https://www.ftc.gov/news-events/news/press-releases/2026/02/ftc-issues-coppa-policy-statement-incentivize-use-age-verification-technologies-protect-children"
-    },
-    {
-      "date": "2026-04-22",
-      "event": "Compliance deadline for the amended COPPA Rule passes; FTC Commissioner Meador and a privacy division official said in March 2026 that children's protection is an enforcement priority.",
-      "kind": "news",
-      "source": "Davis Polk (law-firm update)",
-      "url": "https://www.davispolk.com/insights/client-update/ftc-prioritizes-coppa-enforcement-new-compliance-obligations-take-effect"
     },
     {
       "date": "2026-05-20",
@@ -203,10 +269,24 @@
       "kind": "news",
       "source": "Broadband Breakfast",
       "url": "https://broadbandbreakfast.com/ftc-starts-enforcing-the-take-it-down-act.md"
+    },
+    {
+      "date": "2026-06-29",
+      "event": "House passes H.R. 7757, the KIDS Act (sponsor Rep. Guthrie), 267-117 (Roll no. 228) on a motion to suspend the rules and pass the bill as amended; the engrossed text includes a Kids Online Safety Act title, a COPPA 2.0 title raising the child age from under 13 to under 14 and covering ages 14 to 17 as teens, and a chatbot title. It was received in the Senate and referred to the Commerce Committee on 2026-07-13.",
+      "kind": "primary",
+      "source": "GovInfo",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7757.xml"
+    },
+    {
+      "date": "2026-08-05",
+      "event": "Senate Commerce, Science, and Transportation Committee orders S. 1748, the Kids Online Safety Act, reported favorably with an amendment in the nature of a substitute.",
+      "kind": "primary",
+      "source": "GovInfo",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1748.xml"
     }
   ],
   "title": "Use FTC unfair-practice authority to protect children from online platform contracts",
   "tracked": true,
-  "uncertainties": "Only three searches covered this objective, so other FTC child-related actions in 2025 and 2026 (for example further COPPA settlements such as the Disney matter reported by a law firm, and any proceeding on teen social media) were not verified. The 2026-02-25 policy statement is confirmed by the FTC release, which also refers to a recent age-verification workshop; the workshop's 2026-01-28 date comes from a law-firm summary and the FTC event page was not read. Whether an FTC action rests on a contracts-with-minors theory could not be ruled out beyond Federal Register and press-release checks. The Sendit case outcome and any 2026 developments were not found. Whether the amended COPPA Rule counts as progress on this objective is a classification judgment: it advances child privacy but is not the unfair-contract approach the chapter proposes. Update 2026-10-15: the FTC's COPPA topic page and a Federal Register query for FTC children-related documents since 2026-04-01 showed no new COPPA order, rule or policy statement after 2026-02-25, and no published result of the AI companion chatbot 6(b) inquiry was found; a first search page for later COPPA settlements returned only older matters. The Take It Down Act item rests on a trade-news article, not an FTC page. The 2026-02-25 policy statement is now sourced to the FTC. The TAKE IT DOWN Act enforcement start is dated 2026-05-20 by the trade-news article read (the record earlier gave 2026-05-19).",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Only three searches covered this objective, so other FTC child-related actions in 2025 and 2026 (for example further COPPA settlements such as the Disney matter reported by a law firm, and any proceeding on teen social media) were not verified. The 2026-02-25 policy statement is confirmed by the FTC release, which also refers to a recent age-verification workshop; the workshop's 2026-01-28 date comes from a law-firm summary and the FTC event page was not read. Whether an FTC action rests on a contracts-with-minors theory could not be ruled out beyond Federal Register and press-release checks. The Sendit case outcome and any 2026 developments were not found. Whether the amended COPPA Rule counts as progress on this objective is a classification judgment: it advances child privacy but is not the unfair-contract approach the chapter proposes. Update 2026-10-15: the FTC's COPPA topic page and a Federal Register query for FTC children-related documents since 2026-04-01 showed no new COPPA order, rule or policy statement after 2026-02-25, and no published result of the AI companion chatbot 6(b) inquiry was found; a first search page for later COPPA settlements returned only older matters. The Take It Down Act item rests on a trade-news article, not an FTC page. The 2026-02-25 policy statement is now sourced to the FTC. The TAKE IT DOWN Act enforcement start is dated 2026-05-20 by the trade-news article read (the record earlier gave 2026-05-19). Update 2026-10-16: bill actions are from GovInfo bill status (H.R. 7757 latest action 2026-07-13 referral to Senate Commerce as of the status update of 2026-09-08; S. 1748 latest action 2026-08-05; H.R. 3149 latest action 2025-12-11), and the House text was read only through Title VI, so its enforcement, preemption and app store titles were not confirmed. A trade report that the Senate passed a COPPA 2.0 bill in 2026 was not verified against Senate records. The FTC press release page for 2026-09-16 to 2026-10-15 and the FTC COPPA topic page (last modified 2026-04-22) show no new children-related FTC action or rulemaking after 2026-05-20; August 2026 releases were not read; a Federal Register query for FTC documents on children since 2026-05-20 returned only an unrelated AI policy statement. The compliance date for the amended COPPA Rule (2026-04-22) and the amended rule's publication remain as recorded. Independent review 2026-10-16: GovInfo bill status was re-read for H.R. 7757 (introduced 2026-03-03; House passage 2026-06-29, 267-117, Roll no. 228; Senate referral 2026-07-13; status updated 2026-09-08) and S. 1748 (introduced 2025-05-14; ordered reported by Senate Commerce with an amendment in the nature of a substitute on 2026-08-05; no report number listed). House passage of a bill was not treated as moving the stage, because the recommendation asks the FTC to use its existing unfair-practice authority and an unenacted bill changes nothing operative. Research pass (primary documents re-read): the Federal Register rule (published 2025-04-22, effective 2025-06-23), the FTC releases of 2025-09-11 (3-0, seven companies, 6(b) orders), 2025-09-29 (3-0 referral; unfairness count on tricking child and teen users into subscriptions) and 2026-02-25 (2-0; Commission intends to start a COPPA Rule review on age verification) were confirmed. BILLSTATUS for H.R. 7757 (latest action 2026-07-13, referral to Senate Commerce; no Senate companion listed) and S. 1748 (latest action 2026-08-05) was re-read with no change. The FTC kids privacy topic page lists COPPA cases newest first as NGL (2026-01-06) and Disney (2025-12-31), with nothing after 2026-02-25 and no Sendit status update; those two cases were not opened. The 2026-04-22 compliance date and the TAKE IT DOWN Act enforcement date still rest on a law-firm update and a trade article respectively. The Federal Register document does not state the compliance date. Independent review 2026-10-18: the FTC releases of 2025-09-29 and 2026-02-25 and the FTC kids privacy topic page were re-read. The Sendit release cites COPPA, FTC Act and ROSCA violations and describes unfair use of fake messages, but does not label a separate unfairness count, so the wording was softened. The topic page lists the final COPPA Rule amendments under 2025-01-16, before the period tracked, and lists other COPPA cases after 2025-01-20 (Disney, Apitor, NGL) that were not opened. The 2026-04-22 compliance date was moved out of the timeline because it records a date in an earlier rule rather than a new action.",
+  "updated_at": "2026-10-18"
 }

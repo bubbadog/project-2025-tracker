@@ -4,9 +4,9 @@
     "Requires an Act of Congress; no bill identified"
   ],
   "chapter": "25",
-  "confidence": 44,
-  "confidence_label": "low",
-  "confidence_reason": "The main size standards proposal was read on the Federal Register; absence of a bill rests on a limited search, so not_started is capped.",
+  "confidence": 55,
+  "confidence_label": "medium",
+  "confidence_reason": "Chapter text page 757 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo search where candidate bills were seen by title only, SBA newsroom unreachable, one news search) plus the 2026-08-20 size standards proposed rule read earlier; held at 55 because check 2 was partial, check 3 was partial and the only agency host could not be loaded.",
   "durability": {
     "level": "high",
     "why": "Nothing has been adopted; a statutory classification, if created, would be durable."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov) and reviewed the Unified Agenda fallback, congress.gov and govinfo, SBA newsroom and news checks, found no qualifying action, and kept not_started 0."
     }
   ],
   "id": "c25-11",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -51,20 +55,39 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Title shortened from 93 to under 90 characters",
-      "Size standards proposal read in full text rather than abstract",
-      "Confidence 44"
+      "Check 2 reached only the Federal Register fallback, check 3 saw candidate bills by title only, and the SBA newsroom was unreachable; confidence held at 55.",
+      "Capital-access bills H.R. 3244, H.R. 2225, S. 1808, H.R. 3673 and H.R. 3383 were not opened."
     ],
     "mandate_check": "confirmed",
-    "mandate_note": "Page 757, Small-Business Size Standard Modernization: encourage Congress to create a medium-sized business classification with eligibility confined to access-to-capital programs for projects lacking other credit. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "mandate_note": "Page 757 notes that SBA, unlike competing economies, does not recognize medium-sized enterprises and recommends encouraging Congress to create a medium-sized business classification whose program eligibility is limited to capital access where credit is unavailable elsewhere. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14. Proposed rule for 338 industry groups; single small threshold per industry; no medium-sized classification.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/08/20/2026-17042/small-business-size-standards"
+        "note": "2026-10-18: reviewer rerun with terms mid-sized businesses OR medium-sized enterprises, all agencies, since 2025-01-20: 0 documents. Researcher SBA-filtered queries on medium-sized business and on size standards plus mid-size: 0 documents each.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22mid-sized+businesses%22+OR+%22medium-sized+enterprises%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reginfo.gov Unified Agenda landing page loaded but listings are script-driven and were not read; Federal Register fallback used. Terms: SBA, size standards.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: researcher search limited to congress.gov and govinfo.gov (no result URL recorded, so the search host is listed) returned capital-access bills H.R. 3244, H.R. 2225, S. 1808, H.R. 3673 and H.R. 3383 by title; none appears to create a medium-sized business class; none opened on BILLSTATUS.",
+        "result": "partial",
+        "url": "https://www.congress.gov"
+      },
+      {
+        "note": "2026-10-18: SBA newsroom fetch failed with a client error; no agency statement on a medium-sized classification seen.",
+        "result": "unreachable",
+        "url": "https://www.sba.gov/about-sba/sba-newsroom/press-releases-media-advisories"
+      },
+      {
+        "note": "2026-10-18: one researcher news search on a medium-sized business classification returned older hearing and law-firm items (2011 to 2018); no search URL was recorded, so the SBA newsroom is listed as a placeholder.",
+        "result": "does_not_support",
+        "url": "https://www.sba.gov/about-sba/sba-newsroom/press-releases-media-advisories"
       }
     ]
   },
@@ -117,6 +140,6 @@
   "timeline": [],
   "title": "Ask Congress to create a medium-sized business class limited to capital-access programs",
   "tracked": true,
-  "uncertainties": "Only one web search and a Federal Register listing of SBA documents were used; congress.gov was not searchable, so a bill could exist unseen. The 2026-08-20 proposed rule was read in full except its last tenth and proposes no mid-size category; the 2025-08-22 rule was read only as an abstract. The size standard rules are context and do not count toward the stage.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: researcher queries on medium-sized business and on size standards with mid-size, filtered to SBA, and a reviewer rerun on mid-sized businesses or medium-sized enterprises across all agencies each returned no documents since 2025-01-20; SBA's size standard proposed rules of 2025-08-22 and 2026-08-20 address small business thresholds only, and the 2026 rule, read except its last tenth, proposes no mid-size category while the 2025 rule was read only as an abstract. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used. (3) congress.gov and govinfo: one search returned small business capital-access bills by title (H.R. 3244, H.R. 2225, S. 1808, H.R. 3673, H.R. 3383), none of which appears to create a medium-sized class; they were not opened, so a qualifying bill is not fully ruled out. (4) Agency pages: the SBA newsroom failed to load, so no agency statement was seen. (5) News: one search returned only older hearing and law-firm items from 2011 to 2018. The size standard rules are context and do not count toward the stage.",
+  "updated_at": "2026-10-18"
 }

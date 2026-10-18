@@ -7,7 +7,7 @@
   "chapter": "13",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; the CASAC announcement and the Phoenix-Mesa and Utah Federal Register documents were fetched and read; the stage rests on absence of any process action on the listed items, which was checked through the Federal Register API.",
+  "confidence_reason": "Chapter text checked and the CASAC meeting notice at 91 FR 40536 re-read in this review, confirming no process change; the stage rests on the absence of action on the listed items, checked through Federal Register queries and web searches rather than a single deciding document.",
   "durability": {
     "level": "low",
     "why": "Committee appointments are discretionary and can be reversed by a later Administrator; international-emissions findings are single-area determinations open to challenge."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review re-read the CASAC meeting notice on federalregister.gov, which shows no NAAQS process change; proposed 15 and medium confidence kept and the 2026-06-12 ozone reclassification proposal added as a related action."
     }
   ],
   "id": "c13-22",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -59,38 +63,29 @@
   "research_agent": "R13",
   "restates_ids": [],
   "review": {
+    "document_reread": {
+      "citation": "EPA, Public Meeting of the Clean Air Scientific Advisory Committee (CASAC), 91 FR 40536, FR Doc. 2026-13400, published 2026-07-02",
+      "note": "Read in full: notice of a virtual CASAC meeting on 2026-07-22 to receive an EPA briefing on the NAAQS review process and upcoming review documents. It announces no change to the review process or to the factors CASAC weighs; its background restates the existing statutory charge, which already includes advising on social, economic and energy effects of attainment strategies.",
+      "result": "supports",
+      "url": "https://www.federalregister.gov/documents/2026/07/02/2026-13400/public-meeting-of-the-clean-air-scientific-advisory-committee-casac"
+    },
     "flags": [
-      "Stage moved from in_progress 30 (partial) to proposed 15 (parallel) because none of the six listed items has an operative action: the CASAC appointments do not address the factors the committee weighs, and the international-emissions findings are related implementation relief, not a listed item.",
-      "Title corrected: the page text does not mention international emissions.",
-      "Judgment call: in_progress 25 partial would also be defensible if the CASAC reset is read as a step toward the factor recommendation; not_started with a parallel note would be defensible if the international-emissions findings are seen as unrelated."
+      "Membership wording changed from two companies to several private firms per the researcher's reading of the EPA release.",
+      "PM2.5 court events from a tracker remain out of the timeline, so court_status stays null."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Pages 424 to 425 ask that the advisory committee weigh all statutory factors including social and economic effects of attainment strategies, that post-attainment requirements be limited to statutory ones, that highway conformity showings be streamlined, that error-correction and section 301 authority not be abused, and, if possible, that standard setting return to Congress. They do not mention international or background emissions, so the title was corrected; the proposal text was accurate.",
+    "mandate_check": "ok",
+    "mandate_note": "Pages 424 and 425 list the CASAC statutory-factors item, limiting requirements on areas moving from nonattainment to attainment (and removing non-statutory attainment and maintenance differences), streamlining highway conformity, guarding against error-correction abuse, limiting section 301 reliance and, if possible, returning standard setting to Congress; the proposal paraphrases these accurately.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y4",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-1",
     "source_checks": [
       {
-        "note": "Final rule 91 FR 13777 published 2026-03-23; section 179B finding for Phoenix-Mesa, area stays Moderate. Checked 2026-10-15.",
+        "note": "91 FR 40536, Doc. 2026-13400; briefing meeting 2026-07-22; no process or factor change.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/03/23/2026-05601/determination-of-attainment-by-the-attainment-date-but-for-international-emissions-for-the-2015"
-      },
-      {
-        "note": "Proposed rule 91 FR 23209 published 2026-04-30; repeal of Serious reclassification and 179B finding proposed; comments due 2026-06-01. Checked 2026-10-15.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/04/30/2026-08372/utah-northern-wasatch-front-2015-8-hour-ozone-national-ambient-air-quality-standards-reconsideration"
-      },
-      {
-        "note": "Release dated 2026-03-09 names a chair and six members for 2026 to 2028 (two state agency, two company affiliations); says nothing about statutory factors such as social and economic effects. Checked 2026-10-15.",
-        "result": "partial",
-        "url": "https://www.epa.gov/node/299185"
-      },
-      {
-        "note": "API listing confirms the 2025-05-01 nominations notice (2025-07538) and the 2026-07-02 meeting notice (2026-13400); no process rule on NAAQS setting appears. Checked 2026-10-15.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=environmental-protection-agency&conditions[term]=%22Clean+Air+Scientific+Advisory+Committee%22&conditions[publication_date][gte]=2025-01-20&order=newest&per_page=20"
+        "url": "https://www.federalregister.gov/documents/2026/07/02/2026-13400/public-meeting-of-the-clean-air-scientific-advisory-committee-casac"
       }
-    ]
+    ],
+    "stage_change_reason": "No action on a listed item was found; the related international-emissions findings and the 2026-06-12 proposed rule limiting SIP elements for reclassified ozone areas point in a parallel direction without addressing the listed items, so proposed with a parallel match stays as the prior review's judgment, with not_started defensible."
   },
   "significance": {
     "B": 1.5,
@@ -162,10 +157,17 @@
       "publisher": "Harvard Environmental and Energy Law Program",
       "title": "PM2.5 NAAQS Quick Take",
       "url": "https://eelp.law.harvard.edu/wp-content/uploads/2026/07/PM2.5-NAAQS-Quick-Take.pdf"
+    },
+    {
+      "date": "2026-06-12",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Ozone Reclassification State Implementation Plan Rule (proposed rule), 91 FR 35639",
+      "url": "https://www.federalregister.gov/documents/2026/06/12/2026-11843/ozone-reclassification-state-implementation-plan-rule"
     }
   ],
   "stage": "proposed",
-  "status_summary": "No EPA rule or guidance on the NAAQS process itself, on the factors the Clean Air Scientific Advisory Committee weighs, on post-attainment requirements, on error correction, or on returning standard setting to Congress was found. On 2026-03-09 the EPA Administrator announced a chair and six members of the Clean Air Scientific Advisory Committee for 2026 through 2028, including members from two state agencies and two companies; the announcement does not address the statutory factors the committee considers. On 2026-03-23 EPA finalized a determination that the Phoenix-Mesa ozone area would have met the 2015 standard by its deadline but for international emissions, keeping it Moderate, and on 2026-04-30 it proposed the same type of finding for Utah's Northern Wasatch Front while proposing to repeal a reclassification to Serious; these related actions ease implementation burdens but are not among the listed recommendations.",
+  "status_summary": "No EPA rule or guidance on the NAAQS process itself, on the factors the Clean Air Scientific Advisory Committee weighs, on post-attainment requirements, on error correction, or on returning standard setting to Congress was found; a CASAC meeting notice of 2026-07-02 (91 FR 40536) announces only a briefing on the existing review process. On 2026-03-09 the EPA Administrator announced a chair and six members of the committee for 2026 through 2028, including members from two state agencies and several private firms; the announcement does not address the statutory factors the committee considers. On 2026-03-23 EPA finalized a determination that the Phoenix-Mesa ozone area would have met the 2015 standard by its deadline but for international emissions, keeping it Moderate, and on 2026-04-30 it proposed the same type of finding for Utah's Northern Wasatch Front while proposing to repeal a reclassification to Serious; these related actions, together with a 2026-06-12 proposed rule (91 FR 35639) that would remove repeat prior-classification SIP elements for reclassified ozone areas, ease implementation burdens but are not among the listed recommendations.",
   "timeline": [
     {
       "date": "2025-05-01",
@@ -196,6 +198,13 @@
       "url": "https://www.federalregister.gov/documents/2026/04/30/2026-08372/utah-northern-wasatch-front-2015-8-hour-ozone-national-ambient-air-quality-standards-reconsideration"
     },
     {
+      "date": "2026-06-12",
+      "event": "EPA proposes the Ozone Reclassification State Implementation Plan Rule (91 FR 35639, docket EPA-HQ-OAR-2025-0201), which would limit a reclassified ozone area to the Clean Air Act section 182 requirements for its current classification and drop repeat prior-classification SIP elements; comments closed 2026-07-13. Related implementation action, not among the listed recommendations.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/06/12/2026-11843/ozone-reclassification-state-implementation-plan-rule"
+    },
+    {
       "date": "2026-07-02",
       "event": "EPA noticed a CASAC public meeting for 2026-07-22 to receive a briefing on the NAAQS review process and upcoming review documents (document 2026-13400).",
       "kind": "primary",
@@ -205,6 +214,6 @@
   ],
   "title": "Reform NAAQS process: CASAC factors, post-attainment limits, conformity, error correction",
   "tracked": true,
-  "uncertainties": "The review read the Phoenix-Mesa final rule (section 179B, weight of evidence) and the Utah proposal summary on federalregister.gov. Separately, per a university tracker, EPA asked the D.C. Circuit on 2025-11-24 to vacate the 2024 PM2.5 standard and the court upheld the standard on 2026-06-26; EPA then proposed designations under that standard on 2026-10-06. This tracker material was not confirmed against court records and is not placed in the timeline. The relationship of the PM2.5 reconsideration to the Mandate's process recommendations is unclear. Searches run: Federal Register API (CASAC, international emissions, PM NAAQS), plus web searches on PM2.5 reconsideration and CASAC appointments. Whether new CASAC members were chosen for viewpoint balance as described on page 424 is not assessed. The printed text on pages 424 and 425 supplied for this record does not itself mention international or background emissions, so the international-emissions findings are a related action rather than a stated element. The committee membership reset itself is credited in c13-05 (advisory body reconstitution); this record tracks only whether the committee weighs the statutory factors.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The Phoenix-Mesa final rule and the Utah proposal summary were read on federalregister.gov; the Phoenix-Mesa rule shows an effective-date discrepancy (2026-03-23 in its DATES section, 2026-04-22 in its metadata). The 2026-06-12 reclassification proposal was read through its first 100,000 characters. Per a university tracker, EPA asked the D.C. Circuit on 2025-11-24 to vacate the 2024 PM2.5 standard, the court upheld the standard on 2026-06-26, and EPA proposed designations under it on 2026-10-06; this was not confirmed against court records and is not placed in the timeline, and its relationship to the Mandate's process recommendations is unclear. Federal Register API queries (CASAC, international emissions, PM NAAQS) and web searches for a NAAQS process memorandum or CASAC charge change found none. Whether new CASAC members were chosen for viewpoint balance is not assessed. The printed text on pages 424 and 425 does not mention international or background emissions, so the international-emissions findings are a related action rather than a stated element. The committee membership reset itself is credited in c13-05; this record tracks only whether the committee weighs the statutory factors.",
+  "updated_at": "2026-10-16"
 }

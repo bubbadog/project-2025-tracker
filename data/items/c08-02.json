@@ -8,7 +8,7 @@
   "chapter": "08",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "CRS and the RFE/RL court opinion were read and confirm FY2026 USAGM funding below the Mandate's $700 million figure and the court-ordered disbursements. Per-grantee amounts rest on a news report, Radio Free Asia's status after October 2025 was not verified, and the absence of consolidation rests on limited searches.",
+  "confidence_reason": "The CRS table on FY2026 USAGM funding and the 2025-07-18 RFE/RL opinion were fetched and read in this review, with the executive order and the other court opinions read earlier; the enacted Division F text of Public Law 119-75 could not be read because the govinfo copy stops in Division A, per-grantee amounts rest on a news report, Radio Free Asia's status after October 2025 was not verified, and the absence of consolidation rests on limited searches.",
   "court_status": {
     "basis": "derived from the latest court event in the timeline",
     "date": "2025-11-25",
@@ -39,10 +39,14 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: CRS funding table and RFE/RL opinion re-read; timeline split by action date, April 2025 order added, grantee action moved out of the timeline; stage and confidence kept."
     }
   ],
   "id": "c08-02",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "parallel",
   "mechanism": "mixed",
@@ -71,23 +75,26 @@
   "research_agent": "A06",
   "review": {
     "flags": [
-      "$12.18 million April 2025 figure not found in the opinion read; amount dropped",
+      "judgment call: proposed (20) is defensible under the rule that a materially different program is parallel at proposed or below, since the reduction came through appropriations and grant terminations rather than the consolidation the text describes; in_progress (35) kept because the enacted FY2026 level is itself below the Mandate's 700 million dollar figure and is operative.",
+      "Timeline: the combined 2025-03-15 entry was split into the termination letter (2025-03-15) and the temporary restraining order (2025-03-25), each dated by its own action; the 2025-04-29 temporary restraining order, recounted in the 2025-07-18 opinion, was added as its own court event; the unsourced attribution of the letter to a named official via NPR was dropped.",
+      "Radio Free Asia's 2025-10-31 halt of news operations moved out of the timeline because it is a grantee's action, not a government or court action; it remains in status_summary with its news source.",
+      "Truncated title of the 2025-06-20 Open Technology Fund opinion source repaired. Court status unchanged: latest court event is the 2025-11-25 preliminary injunction (enjoined).",
       "per-grantee FY2026 amounts news-only",
       "overlaps c08-01"
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 242 to 243 say USAGM can run on less than $700 million a year, call for consolidating redundant VOA, RFA, RFE/RL and Cuba Broadcasting services, reinstating the Office of Internet Freedom over OTF, ending J-1 use for journalists and investing in shortwave; pages 236 to 238 give the OTF background. The paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y3",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V4",
     "source_checks": [
       {
-        "note": "CRS Table A-1: USAGM FY2025 enacted $866.91 million, FY2026 request $153.00 million, FY2026 enacted $652.70 million ($643.00 million International Broadcasting Operations, $9.70 million capital) in Division F of P.L. 119-75 enacted 2026-02-03, down 24.7 percent; no per-grantee figures.",
+        "note": "CRS Table A-1: USAGM FY2025 enacted $866.91 million, FY2026 request $153.00 million, FY2026 enacted $652.70 million ($643.00 million International Broadcasting Operations, $9.70 million capital) in Division F of P.L. 119-75 enacted 2026-02-03, down 24.7 percent; no per-grantee figures. Re-checked 2026-10-18: same figures.",
         "result": "supports",
         "url": "https://www.everycrsreport.com/files/2026-07-15_R48624_48cf729af75f7e8e8c710d63e39078520bd54f59.html"
       },
       {
-        "note": "Memorandum opinion filed 2025-07-18 in RFE/RL v. Lake (1:25-cv-799-RCL) grants the preliminary injunction in part: FY2025 master grant agreement on prior terms, monthly disbursement, monthly status reports; notes about $77 million appropriated for 2025-03-15 to 2025-09-30, the termination letter the day after the 2025-03-14 order, the 2025-03-25 ruling and an April 29 TRO on April funds. It gives no $12.18 million figure.",
+        "note": "Memorandum opinion filed 2025-07-18 in RFE/RL v. Lake (1:25-cv-799-RCL) grants the preliminary injunction in part: FY2025 master grant agreement on prior terms, monthly disbursement, monthly status reports; notes about $77 million appropriated for 2025-03-15 to 2025-09-30, the termination letter the day after the 2025-03-14 order, the 2025-03-25 ruling and an April 29 TRO on April funds. It gives no $12.18 million figure. Re-checked 2026-10-18: confirms the 2025-04-29 order on April funds and the letter the day after the executive order.",
         "result": "supports",
         "url": "https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_25-cv-00799/pdf/USCOURTS-dcd-1_25-cv-00799-2.pdf"
       },
@@ -95,6 +102,11 @@
         "note": "OTF v. Lake opinion filed 2025-11-25 discusses FY2025 appropriations allocated to OTF and irreparable harm; the operative paragraph and dollar amount were not visible, so the nearly $20 million figure remains Bloomberg Law's.",
         "result": "partial",
         "url": "https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_25-cv-00840/pdf/USCOURTS-dcd-1_25-cv-00840-1.pdf"
+      },
+      {
+        "note": "Public Law 119-75 text on govinfo is 133,318 characters and ends in Division A; the table of contents lists Division F but its text is not served; checked 2026-10-18.",
+        "result": "unreachable",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
       }
     ]
   },
@@ -129,7 +141,7 @@
       "date": "2025-06-20",
       "kind": "court",
       "publisher": "U.S. District Court for the District of Columbia (via govinfo)",
-      "title": "Judge Lamberth grants a preliminary injunction in Open Technology Fund v. Lake (",
+      "title": "Open Technology Fund v. Lake, memorandum opinion and order on preliminary injunction (D.D.C. No. 1:25-cv-840)",
       "url": "https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_25-cv-00840/pdf/USCOURTS-dcd-1_25-cv-00840-0.pdf"
     },
     {
@@ -208,10 +220,24 @@
     },
     {
       "date": "2025-03-15",
-      "event": "USAGM sends RFE/RL a letter dated 2025-03-15, the day after the executive order, terminating its grants and directing closeout; the letter gave as its reason that the grants no longer effectuated agency priorities, which the court later called conclusory. NPR reports the letter was signed by Kari Lake. On 2025-03-25 Judge Royce Lamberth (D.D.C., RFE/RL, Inc. v. Lake, No. 1:25-cv-799) grants a temporary restraining order barring USAGM from closing out RFE/RL's grant, finding the termination likely arbitrary and capricious; USAGM had begun disbursing about $7.46 million for 2025-03-01 to 2025-03-14.",
+      "event": "USAGM sends RFE/RL a letter, the day after the executive order, terminating its grants and directing closeout on the ground that the grants no longer effectuate agency priorities, as recounted in the later court opinion.",
+      "kind": "primary",
+      "source": "U.S. District Court for the District of Columbia (via govinfo), recounting the letter",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_25-cv-00799/pdf/USCOURTS-dcd-1_25-cv-00799-2.pdf"
+    },
+    {
+      "date": "2025-03-25",
+      "event": "Judge Royce Lamberth (D.D.C., RFE/RL, Inc. v. Lake, No. 1:25-cv-799) grants a temporary restraining order barring USAGM from enforcing the closeout of RFE/RL's grant, finding the termination likely arbitrary and capricious; USAGM had begun disbursing about $7.46 million for 2025-03-01 to 2025-03-14.",
       "kind": "court",
       "source": "U.S. District Court for the District of Columbia (via govinfo)",
       "url": "https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_25-cv-00799/pdf/USCOURTS-dcd-1_25-cv-00799-0.pdf"
+    },
+    {
+      "date": "2025-04-29",
+      "event": "Judge Lamberth enters a further temporary restraining order in RFE/RL, Inc. v. Lake ordering disbursement of RFE/RL's April 2025 funds, as recounted in the court's 2025-07-18 opinion.",
+      "kind": "court",
+      "source": "U.S. District Court for the District of Columbia (via govinfo)",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_25-cv-00799/pdf/USCOURTS-dcd-1_25-cv-00799-2.pdf"
     },
     {
       "date": "2025-06-20",
@@ -222,17 +248,10 @@
     },
     {
       "date": "2025-07-18",
-      "event": "Judge Lamberth grants RFE/RL's motion for a preliminary injunction in part: for FY2025 (through 2025-09-30) USAGM must enter a master grant agreement on the most recent terms and restore monthly disbursement of RFE/RL's appropriated funds (about $77 million for 2025-03-15 to 2025-09-30 per the opinion); he set aside USAGM's proposed FY2025 agreement as arbitrary and capricious and declined to rule on future-year terms. The opinion also recounts an earlier temporary restraining order of 2025-04-29 requiring disbursement of RFE/RL's April 2025 funds.",
+      "event": "Judge Lamberth grants RFE/RL's motion for a preliminary injunction in part: for FY2025 (through 2025-09-30) USAGM must enter a master grant agreement on the most recent terms and restore monthly disbursement of RFE/RL's appropriated funds (about $77 million for 2025-03-15 to 2025-09-30 per the opinion); he set aside USAGM's proposed FY2025 agreement as arbitrary and capricious and declined to rule on future-year terms.",
       "kind": "court",
       "source": "U.S. District Court for the District of Columbia (via govinfo)",
       "url": "https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_25-cv-00799/pdf/USCOURTS-dcd-1_25-cv-00799-2.pdf"
-    },
-    {
-      "date": "2025-10-31",
-      "event": "Radio Free Asia halts its news operations and begins closing foreign bureaus and laying off staff, citing strained finances tied to the federal shutdown and administration actions toward government-funded news services (AP report dated 2025-10-30).",
-      "kind": "news",
-      "source": "Associated Press (via ClickOrlando)",
-      "url": "https://www.clickorlando.com/business/2025/10/30/radio-free-asia-says-it-is-halting-its-news-operations-due-to-funding-troubles/"
     },
     {
       "date": "2025-11-25",
@@ -259,5 +278,5 @@
   "title": "Cut USAGM spending and consolidate duplicate language services and grantees",
   "tracked": true,
   "uncertainties": "Enacted USAGM totals rest on the CRS report (R48624, updated 2026-07-15), which names Division F of P.L. 119-75; the govinfo HTML and PDF of the public law and of H.R. 7148 as enrolled stop before Division F when fetched, so the per-grantee lines are still from the January 2026 Washington Post report of the negotiators' agreement. Apportionment, withholding and actual disbursement in FY2026 were not checked. The FY2026 budget justification's posting date is inferred from its file path (July 2025). The court orders were read through govinfo's copies of the D.D.C. opinions (RFE/RL: orders of 2025-03-25, 2025-04-29 and 2025-07-18; OTF: orders of 2025-06-20 and 2025-11-25) as summarized by a fetch tool; the operative paragraph of the 2025-11-25 OTF opinion, including the dollar amount and deadline, was not visible in the excerpt, so the nearly $20 million figure remains Bloomberg Law's. Any appeal of the OTF orders or the RFE/RL preliminary injunction was not found. The RFA resumption of service in February 2026 and the Hungarian and Romanian service closures (Wikipedia only) were not re-verified and are dropped. The March 2026 summary-judgment ruling against Kari Lake's acting-CEO actions belongs to c08-01. Radio Free Asia's status after 2025-10-31 could not be confirmed from rfa.org. CourtListener is blocked to the fetch tool, so dockets were read through govinfo and the Civil Rights Litigation Clearinghouse.",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-18"
 }

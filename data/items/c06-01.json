@@ -5,9 +5,9 @@
     "No court challenge to the ambassador recalls was found; ambassadors serve at the President's pleasure"
   ],
   "chapter": "06",
-  "confidence": 70,
+  "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "The Mandate text, the January 2025 leadership departures, the December 2025 recalls and the July 2026 vacancy and appointment figures were confirmed in AP and Ballotpedia reports; no primary government document was available, and the August 2026 confirmation vote was not re-checked.",
+  "confidence_reason": "The chapter text (pp. 173-174) was checked and the S.Res. 817 text (govinfo.gov) and the committee minority release were fetched and read; the stage rests mainly on the 2025 departures and recalls, which are documented only in AP and Federal News Network reports because no primary record was found and state.gov was unreachable, so the record stays medium.",
   "durability": {
     "level": "low",
     "why": "Ambassadors and political appointees serve at the President's pleasure, so a later administration can replace them at will."
@@ -20,10 +20,14 @@
     {
       "date": "2026-10-07",
       "note": "Red-team check found nothing that undercuts the status."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "An independent AI review read the S.Res. 817 text on govinfo.gov and a Senate Foreign Relations Committee minority release on foreign.senate.gov, confirmed the 11 ambassador confirmations and corrected the September 2026 unanimous consent entry, keeping the stage at implemented."
     }
   ],
   "id": "c06-01",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "direct",
   "mechanism": "appointment",
@@ -72,29 +76,25 @@
   "research_agent": "A05",
   "review": {
     "flags": [
-      "no primary source available",
-      "high vacancy rate is in tension with the Mandate's aim of quickly installing new ambassadors"
+      "record's earlier timeline said the unanimous consent request was only asked; the release reports it succeeded on 2026-09-30",
+      "2025 departures and December 2025 recalls have no primary document; state.gov unreachable",
+      "alternative defensible: in_progress at 55-60 given that more than half of ambassador posts remained vacant in mid-2026"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 173-174 call for political appointees in non-confirmed leadership posts from day one, more political appointees overall, accepting all political ambassadors' resignations, a quick review of career ambassadors with immediate recall where policy changes or hostility is shown, no fixed mix of ambassador types, and close presidential associates at key posts; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R03",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 173-174 recommend placing political appointees in non-confirmed senior posts from the first day, increasing political appointees, accepting all political ambassadors' resignations, quickly reviewing career ambassadors with immediate recall where policy changes or hostility is shown, no preset mix of ambassador types, and close presidential associates at key posts; the record's proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "AP, 2025-12-22: nearly 30 career chiefs of mission or senior embassy officials in at least 29 countries told their tenures end in January; they keep Foreign Service jobs; State called it standard and said ambassadors are the President's personal representatives; an earlier 2025 round mainly hit political appointees.",
+        "note": "S.Res. 817, submitted 2026-07-23, agreed 2026-07-30; 74 numbered nominations, 11 Ambassador Extraordinary and Plenipotentiary posts (Cyprus, Norway, Tanzania, Albania, Australia, Belize, Cambodia, Equatorial Guinea, Moldova, Brazil, The Gambia) and 6 other ambassador-rank entries.",
         "result": "supports",
-        "url": "https://www.pbs.org/newshour/nation/trump-recalls-nearly-30-career-diplomats-from-ambassadorial-and-embassy-posts"
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119sres817ats/html/BILLS-119sres817ats.htm"
       },
       {
-        "note": "Confirms 107 of 195 posts vacant (54.9%), 34 nominees pending, 73 posts without a nominee, and 8.9% career versus 91.1% political second-term appointments, citing AFSA; no separate as-of date beyond the 2026-07-06 publication.",
+        "note": "Release dated 2026-10-01 says the unanimous consent request for 10 career nominees succeeded on Wednesday night (2026-09-30); repeats 13 career confirmations, over 100 empty posts, more than 30 recalls; partisan.",
         "result": "supports",
-        "url": "https://news.ballotpedia.org/2026/07/06/second-trump-administration-has-seen-historically-high-ambassador-vacancies-and-political-appointments/"
-      },
-      {
-        "note": "AP via Federal News Network (undated, written around the 2025-01-20 inauguration): acting Under Secretary for Political Affairs John Bass, the other under secretaries and all assistant secretaries had their pro forma resignations accepted; they remain Foreign Service officers. No mention of ambassadors.",
-        "result": "supports",
-        "url": "https://federalnewsnetwork.com/?p=5305658"
+        "url": "https://www.foreign.senate.gov/press/dem/release/icymi-ranking-member-shaheen-successfully-calls-for-the-confirmation-of-10-career-ambassadorial-nominees"
       }
     ]
   },
@@ -146,10 +146,31 @@
       "publisher": "American Foreign Service Association",
       "title": "Appointments, Donald J. Trump 2nd term (ambassador tracker)",
       "url": "https://afsa.org/appointments-donald-j-trump-2nd-term"
+    },
+    {
+      "date": "2026-07-30",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S.Res. 817, Authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119sres817ats/html/BILLS-119sres817ats.htm"
+    },
+    {
+      "date": "2026-08-07",
+      "kind": "primary",
+      "publisher": "U.S. Senate",
+      "title": "Senate roll call vote 225 (119th Congress, 2nd session)",
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00225.htm?congress=119&session=2&vote=00225"
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "primary",
+      "publisher": "Senate Foreign Relations Committee Democrats",
+      "title": "ICYMI: Ranking Member Shaheen successfully calls for the confirmation of 10 career ambassadorial nominees",
+      "url": "https://www.foreign.senate.gov/press/dem/release/icymi-ranking-member-shaheen-successfully-calls-for-the-confirmation-of-10-career-ambassadorial-nominees"
     }
   ],
   "stage": "implemented",
-  "status_summary": "On 2025-01-20 State asked senior career officials in leadership posts, including the acting Under Secretary for Political Affairs and other under and assistant secretaries, to leave those posts; they stayed in the Foreign Service. In December 2025 the administration told career chiefs of mission or senior embassy officials in at least 29 countries that their tenures would end in January 2026; State called this a standard process and said ambassadors are the President's personal representatives, chosen to advance his agenda. As of July 2026, AFSA data reported by Ballotpedia showed 107 of 195 ambassador posts vacant and 91.1% of second-term ambassador appointments going to political appointees; the Senate confirmed 11 ambassadors in a 74-nominee single vote on 2026-08-07 (Reuters).",
+  "status_summary": "On 2025-01-20 State asked senior career officials in leadership posts, including the acting Under Secretary for Political Affairs and other under and assistant secretaries, to leave those posts; they stayed in the Foreign Service (Federal News Network). In December 2025 career chiefs of mission or senior embassy officials in at least 29 countries were told their tenures would end in January 2026, which State described as a standard process (AP). As of July 2026, AFSA data reported by Ballotpedia showed 107 of 195 ambassador posts vacant and 91.1% of second-term ambassador appointments going to political appointees. The Senate agreed to S.Res. 817 on 2026-07-30 and on 2026-08-07 confirmed its 74 nominations en bloc by 51 to 47, including 11 ambassadors and 6 other ambassador-rank posts; a committee minority release reports that 10 career ambassador nominees were confirmed by unanimous consent on the evening of 2026-09-30.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -160,7 +181,7 @@
     },
     {
       "date": "2025-09-11",
-      "event": "Senate Republicans used the procedure known as the nuclear option to change confirmation procedure for Trump nominees (headline-level evidence; article body not read). Batch votes covering ambassadors followed, as in the 2026-08-07 vote below.",
+      "event": "Senate Republicans used the procedure known as the nuclear option to change confirmation procedure for the President's nominees, as reported by NPR (headline-level report). Batch votes covering ambassadors followed, as in the 2026-08-07 vote below.",
       "kind": "news",
       "source": "Indiana Public Media (NPR)",
       "url": "https://www.ipm.org/2025-09-11/senate-republicans-turn-to-nuclear-option-to-speed-confirmation-of-trump-nominees"
@@ -180,6 +201,13 @@
       "url": "https://news.ballotpedia.org/2026/07/06/second-trump-administration-has-seen-historically-high-ambassador-vacancies-and-political-appointments/"
     },
     {
+      "date": "2026-07-30",
+      "event": "The Senate agreed to S.Res. 817, authorizing en bloc consideration of 74 nominations on the Executive Calendar, including 11 ambassadors and 6 other ambassador-rank posts; the confirmation vote followed on 2026-08-07.",
+      "kind": "primary",
+      "source": "GovInfo",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119sres817ats/html/BILLS-119sres817ats.htm"
+    },
+    {
       "date": "2026-08-07",
       "event": "The Senate confirmed 74 nominations in one 51-47 vote, including 11 ambassadors and 5 ambassador-rank nominees, a fraction of the more than 100 vacancies (Reuters).",
       "kind": "news",
@@ -194,8 +222,8 @@
       "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00225.htm?congress=119&session=2&vote=00225"
     },
     {
-      "date": "2026-10-01",
-      "event": "The Democratic ranking member of the Senate Foreign Relations Committee says only 13 career ambassadors have been confirmed in this administration and over 100 diplomatic posts remain empty, and asks for unanimous consent to confirm 10 career nominees (partisan statement).",
+      "date": "2026-09-30",
+      "event": "According to a Senate Foreign Relations Committee minority release dated 2026-10-01, 10 career ambassador nominees were discharged from committee and confirmed by unanimous consent on the evening of 2026-09-30 at the ranking member's request (partisan statement; date inferred from the release's reference to Wednesday night).",
       "kind": "primary",
       "source": "Senate Foreign Relations Committee Democrats",
       "url": "https://www.foreign.senate.gov/press/dem/release/icymi-ranking-member-shaheen-successfully-calls-for-the-confirmation-of-10-career-ambassadorial-nominees"
@@ -203,6 +231,6 @@
   ],
   "title": "Reset the ambassador corps and State leadership with new political appointees",
   "tracked": true,
-  "uncertainties": "No primary government document was found for the January 2025 departures or the December 2025 recalls: State declined to confirm names, and the AP report relies on unnamed officials. One primary source exists for the confirmation step: Senate roll call vote 225 (second session, 119th Congress) records the 2026-08-07 en bloc confirmation under S.Res.817 at 51 to 47. That page lists no ambassador count, so the Reuters figure of 11 ambassadors among 74 nominations is unverified here, and the congress.gov text of S.Res.817 could not be opened (robots restriction). The AFSA tracker page was read only through a summarizing fetch, and its counts are approximate. A Democratic ranking member's release of 2026-10-01 says only 13 career ambassadors have been confirmed, over 100 posts are empty and more than 30 career ambassadors were recalled; this is a partisan statement and differs slightly from AP's count of at least 29 countries. Whether ambassadors were told to resign before 2025-01-20 (the Mandate asked for this) was not verified. The search cap ended before State statements could be searched.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "No primary government document was found for the January 2025 departures or the December 2025 recalls; State declined to confirm names, the AP report relies on unnamed officials, and state.gov could not be reached. The confirmation step is documented on primary hosts: the text of S.Res. 817 on govinfo.gov lists 74 nominations, including 11 ambassadors and 6 other ambassador-rank posts, and Senate roll call vote 225 records the 2026-08-07 en bloc confirmation at 51 to 47. The AFSA tracker page was read only through a summarizing fetch, and its counts are approximate. A Senate Foreign Relations Committee minority release dated 2026-10-01 reports that 10 career ambassador nominees were discharged and confirmed by unanimous consent on the preceding Wednesday evening, and states that only 13 career ambassadors had been confirmed, over 100 posts were empty and more than 30 career ambassadors were recalled; this is a partisan statement, the confirmation date is inferred from the release's wording, and the Senate record of that unanimous consent action was not opened. Whether ambassadors were told to resign before 2025-01-20, as the Mandate asked, was not verified.",
+  "updated_at": "2026-10-18"
 }

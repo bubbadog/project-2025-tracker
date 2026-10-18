@@ -4,7 +4,7 @@
   "chapter": "02",
   "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: implemented (65 to 90) because OIRA review of tax regulatory actions is operative through an executive agreement that can be changed; progress 85 kept. Chapter text checked; EO 14192 and two IRS rule preambles applying the agreement were fetched in earlier passes, and the stage-deciding 2025 agreement was read only through the browser retrieval (partly primary), so confidence rises within medium.",
+  "confidence_reason": "Chapter text (p. 49) checked in this review; EO 14192 Section 6(c) and the 2026-03-06 IRS proposed rule preamble (91 FR 11003), which applies the 2025-07-04 agreement, were read on the Federal Register. The stage-deciding agreement itself could not be read in this review (scanned PDF; only its date was extractable and a direct download was refused), so its terms rest on an earlier browser retrieval and confidence stays medium.",
   "durability": {
     "level": "medium",
     "why": "A memorandum of agreement between two agencies, reversed once in 2023 and reinstated in 2025, so it can change with administrations."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-11",
       "note": "Independent review: agreement terms in the summary and event checked against the browser retrieval with no excerpt copied. Stage implemented 85 unchanged; chapter text not available, so the mandate check is carried over."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review checked the chapter text, re-read EO 14192 and an IRS proposed rule applying the 2025 agreement on federalregister.gov, could not read the agreement itself from home.treasury.gov, and kept implemented 85."
     }
   ],
   "id": "c02-12",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -54,49 +58,28 @@
   "research_agent": "N02a",
   "review": {
     "flags": [
-      "Chapter text not on disk for this review; mandate_check and mandate_note kept unchanged from the earlier review.",
-      "2025 agreement terms read only through browser retrieval (scanned PDF)",
-      "whether the 2025 terms match the 2018 agreement was not compared",
-      "related to c02-07 (EO 14192 reinstatement)"
+      "2025 agreement terms still not readable from the document; confidence held at medium",
+      "progress kept at 85; the researcher's 80 is also defensible but unreadability bears on confidence rather than stage",
+      "completed is not supported because the arrangement is a reversible interagency agreement with limited triggers"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 49 says the Administration should maintain the recent extension of EO 12866 review standards to Treasury regulatory actions. The proposal matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
-    "reviewer": "Y9",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 49 says the President should keep EO 12866 and that the Administration should maintain the recent extension of its review standards to Treasury regulatory actions. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "EO 14192 signed 2025-01-31, section 6(c) directs reinstatement of the Treasury-OMB agreement; it does not itself say the 2023 agreement ended review, so that clause was reworded and sourced to a secondary summary.",
+        "note": "EO 14192, 90 FR 9065, FR Doc. 2025-02345, signed 2025-01-31; Section 6(c) directs the Treasury Secretary and OMB Director to reinstate the 2018-04-11 Treasury and OMB agreement on tax regulation review.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/02/06/2025-02345/unleashing-prosperity-through-deregulation"
       },
       {
-        "note": "Lists 2025, 2023, 2018 and 1983 agreements by year only; no description of 2025 terms.",
-        "result": "partial",
-        "url": "https://home.treasury.gov/policy-issues/tax-policy/tax-regulatory-process"
-      },
-      {
-        "note": "Cites the Memorandum of Agreement of July 4, 2025; OIRA designated the rule significant under section 1(c) and reviewed it.",
+        "note": "OIRA designated the proposed rule for review under the 2025-07-04 agreement and found it significant under section 1(c) of that agreement; OMB reviewed it.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/03/06/2026-04432/removal-of-final-regulations-identifying-certain-partnership-related-party-basis-adjustment"
       },
       {
-        "note": "States the rule is not subject to review under section 6(b) of EO 12866, citing the July 4, 2025 agreement.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/03/20/2026-05525/substantiation-requirements-and-qualified-nonpersonal-use-vehicles"
-      },
-      {
-        "note": "Dated 2025-02-11; the 2023 agreement again provided an exception for tax regulations; the order reinstates the 2018 agreement.",
-        "result": "supports",
-        "url": "https://www.grantthornton.com/insights/newsletters/tax/2025/hot-topics/feb-11/trump-reinstates-oira-review-of-tax-regulations"
-      },
-      {
-        "note": "Describes the 2018 agreement terms, not the 2025 one; not cited.",
-        "result": "does_not_support",
-        "url": "https://jdsupra.com/legalnews/a-new-deal-38348"
-      },
-      {
-        "note": "Fetched by this reviewer but only the date line (July 4, 2025) was readable from the scanned file; terms were read through a browser retrieval supplied to the project: three review triggers, 45-day norm, 10-business-day expedited track for H.R. 1, listed exemptions, supersedes the 1983 agreement and rescinds the 2023-06-09 agreement.",
+        "note": "WebFetch returned only the date 2025-07-04; direct download refused by the network gateway (403). Terms not verified in this review.",
         "result": "unreachable",
         "url": "https://home.treasury.gov/system/files/131/2025-MOA-EO12866.pdf"
       }
@@ -186,6 +169,6 @@
   ],
   "title": "Keep Treasury tax regulations under OIRA review",
   "tracked": true,
-  "uncertainties": "The 2025 agreement was read through a browser retrieval supplied to the project and was not opened in readable form by the research tools or by the independent reviewer: direct fetches of the Treasury PDF returned only its date line, because the file is a scan, so its terms rest on that retrieval. The typed name of the Treasury signer is partly illegible in the scan. The document does not mention the 2018 agreement, so whether the 2025 terms match the 2018 terms the recommendation refers to was not compared, and the record cannot say that the 2018 agreement was reinstated as such. The recommendation text describes the 2018 agreement and gives no thresholds of its own. Review is limited to actions meeting the three triggers and excludes listed categories, which is narrower than review of every tax regulatory action. The proportion of tax rules actually sent to OIRA was not measured. The statement about the 2023 agreement's effect rests on one tax advisory summary.",
-  "updated_at": "2026-10-11"
+  "uncertainties": "The 2025 agreement was read through a browser retrieval supplied to the project and was not opened in readable form by the research tools or by the independent reviewers: direct fetches of the Treasury PDF returned only its date line because the file is a scan, and on 2026-10-18 a further fetch again returned only the date while a direct download was refused by the network gateway, so its terms rest on that retrieval. The typed name of the Treasury signer is partly illegible in the scan. The document does not mention the 2018 agreement, so whether the 2025 terms match the 2018 terms the recommendation refers to was not compared, and the record cannot say that the 2018 agreement was reinstated as such. The recommendation text describes the 2018 agreement and gives no thresholds of its own. Review is limited to actions meeting the three triggers and excludes listed categories, which is narrower than review of every tax regulatory action. The proportion of tax rules actually sent to OIRA was not measured. The statement about the 2023 agreement's effect rests on one tax advisory summary.",
+  "updated_at": "2026-10-18"
 }

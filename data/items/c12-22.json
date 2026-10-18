@@ -8,7 +8,7 @@
   "chapter": "12",
   "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; the FERC notice, news release and the September 2026 order were fetched and read, but the December 2025 order text was not read and absence of a broader market-design action rests on a limited search.",
+  "confidence_reason": "Chapter text checked and FERC's order at 196 FERC para. 61,245 (2026-09-29) re-read in this review, supporting the finding that dispatchable valuation was declined; the proposed stage itself rests on the 2025 conference notice and on a limited search for broader market-design action.",
   "durability": {
     "level": "medium",
     "why": "FERC orders can be revised by later commissions and are subject to rehearing and court review, but tariff changes bind RTOs until altered."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review re-read the 2026-09-29 FERC order on the pjm.com copy, which supports the record; proposed 10 and medium confidence kept and the December 2025 order description completed from ferc.gov."
     }
   ],
   "id": "c12-22",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -58,33 +62,29 @@
   "research_agent": "R12",
   "restates_ids": [],
   "review": {
+    "document_reread": {
+      "citation": "PJM Interconnection, L.L.C., 196 FERC para. 61,245 (2026-09-29), Docket Nos. ER26-3380-000 and EL26-108-000, Order Accepting Reliability Backstop Procurement and Establishing Further Procedures",
+      "note": "Read from the PJM-hosted copy (later pages truncated). FERC accepted the one-time backstop procurement, suspended it to an effective date of 2027-02-28 subject to refund and a paper hearing on cost allocation, transmission owner exit and collateral, and opened section 206 docket EL26-108; it declined a request to add valuation of dispatchable reliability attributes, finding PJM's ELCC accreditation already captures them. The portion read does not address reexamining the RTO model or state choice of RTO membership.",
+      "result": "supports",
+      "url": "https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf"
+    },
     "flags": [
-      "Stage moved from in_progress 25 to proposed 10 because the cited FERC actions are a conference, a co-location tariff order and a backstop procurement that do not adopt any of the Mandate's market reforms, and FERC explicitly declined added dispatchable valuation.",
-      "Judgment call: not_started would also be defensible, since none of the actions reexamines the RTO model or addresses state choice; proposed is kept because the 2025 conference formally opened the capacity market question.",
-      "Removed the roic.ai aggregator source, which no remaining sentence relies on."
+      "Accepted researcher's fuller description of the December 2025 order and its ferc.gov PDF as a source.",
+      "FERC citations written with 'para.' in place of the pilcrow sign; restore the symbol if the site prefers it."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 404 to 405 ask FERC to reexamine whether RTOs serve customers, require RTOs to value reliable dispatchable resources (backup requirements, dual markets or reliability-only markets, alternatives to marginal price auctions), pass renewable subsidy benefits to customers, end subsidy-driven price distortion, and affirm that states choose whether to join an RTO, possibly with non-RTO pools.",
+    "mandate_check": "ok",
+    "mandate_note": "Pages 404 and 405 ask FERC to reexamine the RTO premise, require valuation of dispatchable resources with three named options, pass renewable benefits to customers, end undue discrimination by subsidized resources and affirm state choice on RTO membership with possible non-RTO pools; the proposal paraphrases this accurately.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-1",
     "source_checks": [
       {
-        "note": "Notice confirms docket AD25-7 conference on 2025-06-04 and 2025-06-05 on capacity markets, alternatives and state roles (checked 2026-10-15).",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/06/06/2025-10353/meeting-the-challenge-of-resource-adequacy-in-regional-transmission-organization-and-independent"
-      },
-      {
-        "note": "Release confirms 2025-12-18 co-location finding in EL25-49 and the 2026-01-19 PJM report; it does not mention a paper hearing, so that detail was removed (checked 2026-10-15).",
-        "result": "partial",
-        "url": "https://www.ferc.gov/news-events/news/ferc-directs-nations-largest-grid-operator-create-new-rules-embrace-innovation-and"
-      },
-      {
-        "note": "Order of 2026-09-29 accepts and suspends the filing to 2027-02-28, sets a paper hearing, opens EL26-108, and rejects added dispatchable valuation; the rejection is not framed as preliminary, so the draft wording was corrected (checked 2026-10-15).",
+        "note": "196 FERC para. 61,245; acceptance, suspension to 2027-02-28, paper hearing topics, EL26-108, and dispatchable valuation request declined.",
         "result": "supports",
         "url": "https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf"
       }
-    ]
+    ],
+    "stage_change_reason": "The September 2026 order declines added dispatchable valuation and neither FERC order reexamines the RTO model or state choice; proposed at 10 rests only on the 2025 resource adequacy conference opening the capacity market question, a judgment already flagged, with not_started defensible."
   },
   "significance": {
     "B": 2,
@@ -142,10 +142,17 @@
       "publisher": "PJM",
       "title": "FERC order of 2026-09-29, Docket ER26-3380 (PJM Reliability Backstop Procurement)",
       "url": "https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "primary",
+      "publisher": "FERC",
+      "title": "Order on Show Cause Proceeding, PJM Interconnection, L.L.C., 193 FERC para. 61,217 (EL25-49)",
+      "url": "https://www.ferc.gov/sites/default/files/2025-12/E-1%20EL25-49-000.pdf"
     }
   ],
   "stage": "proposed",
-  "status_summary": "On 2025-06-04 and 2025-06-05 FERC held a commissioner-led technical conference on resource adequacy in RTO and ISO regions, covering the role of capacity markets, alternatives such as long-term contracting, and the division of responsibility with states (docket AD25-7). On 2025-12-18 FERC found PJM's tariff unjust and unreasonable for lacking clear co-location rules, directed new transmission service options, and required PJM to report on faster capacity additions and its reliability backstop. On 2026-09-29 FERC accepted PJM's reliability backstop procurement filing, suspended it to 2027-02-28 subject to a paper hearing and opened docket EL26-108, and rejected a request to add valuation of dispatchable attributes, finding PJM's accreditation already captures them. No FERC action reexamining the RTO model, adopting the Mandate's dispatchable-valuation options or affirming state choice on RTO membership was found.",
+  "status_summary": "On 2025-06-04 and 2025-06-05 FERC held a commissioner-led technical conference on resource adequacy in RTO and ISO regions, covering the role of capacity markets, alternatives such as long-term contracting, and the division of responsibility with states (docket AD25-7). On 2025-12-18 FERC issued an order in docket EL25-49 (193 FERC para. 61,217) finding PJM's tariff unjust and unreasonable for lacking clear co-location rules, directing new transmission service options, compliance filings and a paper hearing, and, per the FERC news release, a PJM report by 2026-01-19 on adding capacity faster, including its reliability backstop. On 2026-09-29 FERC accepted PJM's reliability backstop procurement filing, suspended it to 2027-02-28 subject to a paper hearing and opened docket EL26-108, and rejected a request to add valuation of dispatchable attributes, finding PJM's accreditation already captures them. No FERC action reexamining the RTO model, adopting the Mandate's dispatchable-valuation options or affirming state choice on RTO membership was found.",
   "timeline": [
     {
       "date": "2025-06-04",
@@ -156,7 +163,7 @@
     },
     {
       "date": "2025-12-18",
-      "event": "FERC issued an order (docket EL25-49) finding PJM's tariff unjust and unreasonable for lacking clear co-location rules, directing new transmission service options for co-located load, and requiring PJM to report by 2026-01-19 on faster capacity additions and its reliability backstop.",
+      "event": "FERC issued an order on a show cause proceeding (docket EL25-49, 193 FERC para. 61,217) finding PJM's tariff unjust and unreasonable for lacking clear co-location rules, directing new transmission service options for co-located load, compliance filings and a paper hearing, and requiring PJM to report by 2026-01-19 on faster capacity additions and its reliability backstop.",
       "kind": "primary",
       "source": "FERC",
       "url": "https://www.ferc.gov/news-events/news/ferc-directs-nations-largest-grid-operator-create-new-rules-embrace-innovation-and"
@@ -171,6 +178,6 @@
   ],
   "title": "Reexamine RTO premise, value dispatchable resources, let states decide on RTO membership",
   "tracked": true,
-  "uncertainties": "The December 2025 order was read through the FERC news release, not the order text. No FERC action on states choosing RTO membership, on non-RTO pools, or on any rulemaking reexamining RTOs was found. The researcher searched FERC, PJM, Federal Register and law-firm sources; DOE section 403 directives on large loads were seen only through law-firm headlines and are not treated as events here. The FERC September 2026 commission meeting summary on ferc.gov listed no RTO market design item beyond tariff matters. The 2026-09-29 order is read from a copy hosted on pjm.com. Overlap with c12-07 on the PJM backstop is intentional; this record stays on market design.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The December 2025 order was read only through its introduction (ordering paragraphs truncated), so compliance deadlines come from the introduction and the FERC news release. The 2026-09-29 order was read from a copy hosted on pjm.com, not FERC eLibrary, and its later pages were truncated. No FERC action on states choosing RTO membership, on non-RTO pools, or on any rulemaking reexamining RTOs was found; FERC, PJM, Federal Register and law-firm sources were searched. DOE section 403 directives on large loads were seen only through law-firm headlines and are not treated as events here. The FERC September 2026 commission meeting summary listed no RTO market design item beyond tariff matters. Overlap with c12-07 on the PJM backstop is intentional; this record stays on market design.",
+  "updated_at": "2026-10-16"
 }

@@ -1,18 +1,18 @@
 {
   "agency": "DOJ (National Security Division)",
   "blockers": [
-    "No executive step found; the congressional report directive was dropped before enactment"
+    "H.R. 1468 awaits House floor action and S. 672 has not moved from Senate Judiciary; no executive step found"
   ],
   "chapter": "17",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Chapter text checked; the committee summary and public law were fetched, but the removal of the language rests on secondary sources and the absence of a Justice Department restart rests on limited searching.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text page 556 checked, and the stage-deciding bill was read on govinfo.gov in full: the reported text of H.R. 1468 (H. Rept. 119-699) and its BILLSTATUS, plus the S. 672 BILLSTATUS; five systematic checks of 2026-10-18 (Federal Register API, Unified Agenda fallback only, congress.gov and govinfo, Justice Department NSD page, one news search) found no Justice Department restart, so the stage is proposed on a pending bill.",
   "durability": {
     "level": "low",
     "why": "The first initiative lasted about four years and was ended by a later Attorney General; a restart by memorandum could be reversed the same way."
   },
   "est_completion": {
-    "basis": "Inference: no Justice Department decision was found and the congressional route lapsed with the fiscal year 2026 act.",
+    "basis": "Inference: the bill is on the House calendar with no scheduled floor vote and no Senate action, and no Justice Department decision was found.",
     "window": "unknown"
   },
   "headline": false,
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 read the H.R. 1468 reported text and bill status and the S. 672 bill status on govinfo.gov, reran the Federal Register API check (federalregister.gov) and reviewed the remaining checks, and moved the stage from not_started 0 to proposed 5."
     }
   ],
   "id": "c17-15",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -39,62 +43,55 @@
     556
   ],
   "position": "Pursuing a National Security Agenda",
-  "progress": 0,
+  "progress": 5,
   "proposal": "The Mandate recommends restarting the China Initiative that ended in February 2022, along with other programs educating the public on national and economic security threats from China and Iran. It describes the initiative as aimed at research and technology theft and supply-chain threats.",
   "related_ids": [
     "c17-14"
   ],
   "remaining": [
-    "A Justice Department announcement or directive re-establishing the initiative"
+    "House and Senate passage and enactment of H.R. 1468 or S. 672, or a Justice Department decision to restart the initiative",
+    "Public education programs on threats from China and Iran"
   ],
   "requires_congress": "no",
   "research_agent": "N17",
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: blocked (5) is defensible if the dropped committee directive is treated as stalled progress; not_started chosen because the Mandate asks the administration to act and no executive step was found.",
-      "Researcher sources from SCMP (2025-03-20) and NBC Washington were not needed and were removed; the SCMP March article was not opened in review."
+      "Stage changed from not_started 0 to proposed 5 on H.R. 1468, a reported bill placed on the Union Calendar that would reestablish the initiative as the CCP Initiative in the National Security Division.",
+      "Alternative: not_started 0 is defensible because the recommendation asks the Justice Department to act and no executive restart was found; proposed up to 10 is defensible because the bill has been reported, not only introduced.",
+      "Match kept as parallel; direct is arguable because the CRS summary describes the bill as reestablishing the same initiative.",
+      "The bill omits the public education element of the recommendation."
     ],
     "mandate_check": "confirmed",
-    "mandate_note": "Page 556 checked: the text recommends restarting the China Initiative and pursuing other programs on threats from China and Iran; paraphrase accurate. No existing chapter record covers it.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y17d",
+    "mandate_note": "Page 556 recommends restarting the China Initiative and pursuing other programs to educate the public about threats from China and Iran; it describes the initiative's goals on research theft and supply-chain threats. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Dated 2025-09-09; opposes House committee report language directing the National Security Division to re-establish an office countering PRC espionage; an advocacy-side document, not a government action.",
+        "note": "2026-10-18: researcher query on China Initiative since 2025-01-20 returned 0 documents (a National Security Division and China variant returned 7 unrelated documents); reviewer rerun with terms economic espionage plus National Security Division returned 0 documents. No executive document restarting the initiative.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22China+Initiative%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reginfo.gov Unified Agenda landing page reached, item listings unavailable through the fetch tool; Federal Register fallback used. Terms: DOJ, National Security Division.",
         "result": "partial",
-        "url": "https://chu.house.gov/sites/evo-subsites/chu.house.gov/files/evo-media-document/chu-and-hirono-letter-to-appropriators-to-oppose-china-initiative-directive-in-fy26-house-and-senate-cjs-appropriations.pdf"
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       },
       {
-        "note": "Dated 2025-07-30; cites the House bill summary; no DOJ statement. Not needed once the summary was fetched; removed from sources.",
-        "result": "partial",
-        "url": "https://asiatimes.com/2025/07/us-moving-to-revive-china-initiative-targeting-espionage/"
-      },
-      {
-        "note": "Summary updated 2025-07-23 lists directing the re-establishment of the DOJ China Initiative.",
+        "note": "2026-10-18: reviewer read the H.R. 1468 BILLSTATUS and the reported text (BILLS-119hr1468rh): CCP Initiative in the DOJ National Security Division, six-year sunset, annual report; introduced 2025-02-21, ordered reported 14 to 9 on 2026-03-26, reported as H. Rept. 119-699 and placed on Union Calendar No. 607 on 2026-06-15; not passed. S. 672 BILLSTATUS read: referred to Senate Judiciary 2025-02-20, no later action.",
         "result": "supports",
-        "url": "https://appropriations.house.gov/sites/evo-subsites/republicans-appropriations.house.gov/files/evo-media-document/fy26-commerce-justice-science-and-related-agencies-bill-summary-full-committee.pdf"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1468.xml"
       },
       {
-        "note": "Public Law 119-74 enacted 2026-01-23, Division A is the CJS act.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/link/plaw/119/public/74"
+        "note": "2026-10-18: Justice Department National Security Division page fetched by the researcher; recent items are individual cases, no China Initiative or equivalent program announcement.",
+        "result": "does_not_support",
+        "url": "https://www.justice.gov/nsd"
       },
       {
-        "note": "Congressional Record of 2026-01-08 with the bill text; visible part shows NSD funding only; explanatory statement not shown.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/link/crec/172/h/151"
-      },
-      {
-        "note": "Dated 2026-01-09; reports the provision was removed.",
-        "result": "supports",
-        "url": "https://www.scmp.com/news/china/science/article/3339328/us-house-lawmakers-abandon-bid-bring-back-controversial-china-initiative"
-      },
-      {
-        "note": "Dated 2026-01-14; says the report language was removed ahead of final passage.",
-        "result": "supports",
-        "url": "https://advancingjustice-aajc.org/news/house-drops-effort-revive-china-initiative"
+        "note": "2026-10-18: one researcher news search on a China Initiative restart returned coverage of the House appropriations proposal and advocacy items on its removal; no search URL was recorded, so the NSD page is listed as a placeholder.",
+        "result": "does_not_support",
+        "url": "https://www.justice.gov/nsd"
       }
     ]
   },
@@ -161,11 +158,39 @@
       "publisher": "Asian Americans Advancing Justice",
       "title": "House drops effort to revive China Initiative",
       "url": "https://advancingjustice-aajc.org/news/house-drops-effort-revive-china-initiative"
+    },
+    {
+      "date": "2026-06-15",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 1468, Protect America's Innovation and Economic Security from CCP Act, bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1468.xml"
+    },
+    {
+      "date": "2026-06-15",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 1468, reported in House (H. Rept. 119-699), bill text",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1468rh/xml/BILLS-119hr1468rh.xml"
+    },
+    {
+      "date": "2025-02-20",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S. 672, Protect America's Innovation and Economic Security from CCP Act of 2025, bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s672.xml"
     }
   ],
-  "stage": "not_started",
-  "status_summary": "The House Appropriations Committee's fiscal year 2026 Commerce, Justice, Science bill summary, updated 2025-07-23, listed directing the re-establishment of the DOJ China Initiative, and the accompanying committee report directed the National Security Division to re-establish an office to counter PRC espionage and influence efforts. Press reports in January 2026 said the language was removed before final passage, and the act was enacted as Public Law 119-74 on 2026-01-23. No Justice Department announcement or directive restarting the initiative was found.",
+  "stage": "proposed",
+  "status_summary": "H.R. 1468, introduced 2025-02-21, would establish a CCP Initiative in the Justice Department's National Security Division to counter Chinese government espionage, trade secret theft and critical infrastructure threats, which the CRS summary describes as reestablishing the initiative discontinued in 2022; the House Judiciary Committee reported it as H. Rept. 119-699 and it was placed on the Union Calendar on 2026-06-15, and the Senate companion S. 672 remains in committee. Earlier, the House Appropriations Committee's fiscal year 2026 Commerce, Justice, Science summary, updated 2025-07-23, listed directing the re-establishment of the initiative, but press reports in January 2026 said the language was removed before the act was enacted as Public Law 119-74 on 2026-01-23. No Justice Department announcement or directive restarting the initiative was found.",
   "timeline": [
+    {
+      "date": "2025-02-21",
+      "event": "H.R. 1468, which would establish a CCP Initiative in the Justice Department's National Security Division, is introduced in the House and referred to the Judiciary Committee.",
+      "kind": "primary",
+      "source": "GovInfo",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1468.xml"
+    },
     {
       "date": "2025-07-23",
       "event": "The House Appropriations Committee's summary of its fiscal year 2026 Commerce, Justice, Science bill listed directing the re-establishment of the DOJ China Initiative.",
@@ -179,10 +204,17 @@
       "kind": "primary",
       "source": "GovInfo",
       "url": "https://www.govinfo.gov/link/plaw/119/public/74"
+    },
+    {
+      "date": "2026-06-15",
+      "event": "The House Judiciary Committee reports H.R. 1468 as amended (H. Rept. 119-699), and it is placed on the Union Calendar as No. 607.",
+      "kind": "primary",
+      "source": "GovInfo",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1468.xml"
     }
   ],
   "title": "Restart the DOJ China Initiative",
   "tracked": true,
-  "uncertainties": "The committee report and the final explanatory statement were not opened; the report directive is described in a letter from members opposing it, and its removal rests on two secondary sources, one from an advocacy group. The visible part of the enacted text shows only National Security Division funding. The 2025-02-05 closure of the Foreign Influence Task Force concerns foreign-influence work and is not a restart of the initiative. A systematic search of Justice Department releases was not done.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: queries on China Initiative returned no documents since 2025-01-20, and a National Security Division with China variant returned only unrelated documents. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used. (3) congress.gov and govinfo: H.R. 1468 would set up a CCP Initiative in the Justice Department's National Security Division, which the CRS summary describes as reestablishing the 2018 to 2022 effort; it was reported by the House Judiciary Committee and placed on the Union Calendar on 2026-06-15 and has not passed the House, and the Senate companion S. 672 has had no action since referral on 2025-02-20. The reported bill text has no public education provision and does not name the former China Initiative. (4) Agency pages: the National Security Division page showed individual cases and no program announcement. (5) News: one search returned coverage of the dropped appropriations proposal. The House FY2026 committee report directive and its removal before Public Law 119-74 rest on a members' letter and two secondary sources, one from an advocacy group; the committee report and final explanatory statement were not opened. The 2025-02-05 closure of the Foreign Influence Task Force concerns foreign-influence work and is not a restart. A full search of Justice Department press releases was not done.",
+  "updated_at": "2026-10-18"
 }

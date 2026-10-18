@@ -5,9 +5,9 @@
     "Rescinding a prior Commission's policies is reversible by a later Commission"
   ],
   "chapter": "18",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked and the EEOC votes page and releases were read; the effect of the litigation resolution and the quorum timing rest on law-firm commentary.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text was checked in an earlier review; the stage-deciding litigation-authority resolution and the January 2026 votes page were fetched and read in this review, and the rescission release was read by the researcher. The quorum date and the 2026-01-14 agenda vote rest on law-firm commentary, the 2026-01-13 resolution text and later months of votes were not opened, and the absence of consent-decree and rulemaking disclaimers was not systematically checked.",
   "durability": {
     "level": "medium",
     "why": "Commission votes can be reversed by a later Commission majority, though the shift in litigation authority is an institutional change."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Litigation-authority resolution and votes page read; event kept at the 2026-01-21 vote date with the 2026-01-22 signature noted; unsupported Title VII claim removed."
     }
   ],
   "id": "c18-14",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -57,31 +61,38 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: proposed (15) is defensible because none of the four items is fully done and the Chair gained agenda control; in_progress kept because the litigation-authority change and guidance rescission are operative steps toward two items."
+      "judgment call: proposed (15) is defensible because three of the four items show no action and the Chair gained agenda control; in_progress kept because the litigation-authority resolution is an operative step on the majority-vote item and the guidance rescission is operative.",
+      "Date check: the votes page gives 2026-01-21 as the date of final vote and the resolution text is signed 2026-01-22 with no vote date; the event keeps 2026-01-21 because it records the vote, and the signature date is noted in the event text.",
+      "Statement that the majority argued the 2024 guidance exceeded Title VII removed as unsupported by the cited release; stale uncertainty that the litigation resolution's effect came only from a law firm replaced now that the resolution was read. Confidence raised from 72 to 80 (high)."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 586 and 587 checked: General EEOC Reforms lists disclaiming regulatory pretensions, affirming majority-vote decision-making, disclaiming power to enter consent decrees beyond what the law allows, and reorienting enforcement toward failure-to-accommodate claims for disability, religion and pregnancy (but not abortion). Paraphrase accurate. Not covered by c18-03 or c18-09.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y18d",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V4",
     "source_checks": [
       {
-        "note": "Lists the 2026-01-21 litigation authority resolution (2-1) and 2026-01-22 harassment guidance rescission (2-1); a 2026-01-13 resolution on Chair and Commission roles; no consent decree or rulemaking votes.",
+        "note": "13 January 2026 votes; 2-1 votes on 2026-01-13 (Chair and Commission roles regarding organizational changes), 2026-01-21 (litigation authority resolution; obligation of funds resolution) and 2026-01-22 (harassment guidance rescission); no 2026-01-14 entry; checked 2026-10-18.",
         "result": "supports",
         "url": "https://www.eeoc.gov/commission-votes-january-2026"
       },
       {
-        "note": "Release dated 2026-01-23 on the 2-1 rescission vote.",
+        "note": "Signed 2026-01-22 by the Chair for the Commission, no vote date; majority vote on filing or intervening, 5 or 7 business day vote periods; consent decree and settlement enforcement, recordkeeping enforcement and public-sector referrals delegated to the General Counsel; no-quorum fallback; no disclaimer of consent-decree or rulemaking power; checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.eeoc.gov/resolution-concerning-commissions-authority-commence-or-intervene-litigation"
+      },
+      {
+        "note": "Release dated 2026-01-23 on the 2026-01-22 2-1 rescission vote; gives no reasons; read by the researcher, not re-read.",
         "result": "supports",
         "url": "https://www.eeoc.gov/newsroom/eeoc-commission-votes-rescind-2024-harassment-guidance"
       },
       {
-        "note": "Dated 2026-05-07; listed priorities do not include pregnancy or disability accommodation, which appear only in cases; the researcher's summary was corrected.",
+        "note": "Dated 2026-05-07; listed priorities do not include pregnancy or disability accommodation; read in an earlier review.",
         "result": "partial",
         "url": "https://www.eeoc.gov/newsroom/eeoc-delivers-administration-priorities-and-president-trumps-executive-orders"
       },
       {
-        "note": "Law firm, 2026-03-13; quorum regained late 2025; litigation resolution requires Commission approval of every new suit; 2026-01-14 vote on agenda control.",
+        "note": "Law firm, 2026-03-13; quorum regained late 2025; 2026-01-14 vote on agenda control; read in an earlier review.",
         "result": "partial",
         "url": "https://www.morganlewis.com/de/pubs/2026/03/full-quorum-at-the-eeoc-brings-increased-activity"
       }
@@ -124,6 +135,13 @@
       "url": "https://www.eeoc.gov/commission-votes-january-2026"
     },
     {
+      "date": "2026-01-22",
+      "kind": "primary",
+      "publisher": "EEOC",
+      "title": "Resolution Concerning the Commission's Authority to Commence or Intervene in Litigation",
+      "url": "https://www.eeoc.gov/resolution-concerning-commissions-authority-commence-or-intervene-litigation"
+    },
+    {
       "date": "2026-01-23",
       "kind": "primary",
       "publisher": "EEOC",
@@ -146,11 +164,11 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "After the Commission regained a quorum in late 2025, it voted 2-1 on 2026-01-21 to modify the delegation of litigation authority so that every new lawsuit requires Commission approval, and 2-1 on 2026-01-22 to rescind its 2024 harassment enforcement guidance, with the majority arguing it exceeded Title VII. A 2026-01-14 vote, reported by a law firm, gave the Chair control over meeting agendas. A 2026-05-07 EEOC release lists religious freedom, DEI-related discrimination, anti-American bias and women's sex-based rights among its priorities; pregnancy and disability accommodation appear only in individual cases. No disclaimer of consent-decree power or of rulemaking authority was found.",
+  "status_summary": "After the Commission regained a quorum in late 2025 (per law-firm commentary), the EEOC votes page records a 2-1 vote on 2026-01-21 approving a resolution concerning the Commission's authority to commence or intervene in litigation; the resolution text, signed 2026-01-22, makes the decision to file or intervene in litigation a majority vote of the Commission, with vote periods of 5 or 7 business days, and leaves enforcement of consent decrees and settlements, recordkeeping enforcement and some other matters delegated to the General Counsel. On 2026-01-22 the Commission voted 2-1 to rescind its 2024 harassment enforcement guidance. A 2026-01-14 vote giving the Chair agenda control was reported only by a law firm. No disclaimer of consent-decree power or of rulemaking authority, and no reorientation toward disability and pregnancy accommodation claims, was found.",
   "timeline": [
     {
       "date": "2026-01-21",
-      "event": "The Commission voted 2-1 on a resolution concerning its authority to commence or intervene in litigation, modifying the long-standing delegation so that new lawsuits proceed only with Commission approval.",
+      "event": "The Commission voted 2-1 on a resolution concerning its authority to commence or intervene in litigation; the resolution text (signed 2026-01-22) returns most litigation decisions to a majority vote of the Commission, with vote deadlines of 5 or 7 business days, and leaves consent decree enforcement and some other matters with the General Counsel.",
       "kind": "primary",
       "source": "EEOC",
       "url": "https://www.eeoc.gov/commission-votes-january-2026"
@@ -165,6 +183,6 @@
   ],
   "title": "EEOC governance reforms: Commission votes, guidance rescission, enforcement priorities",
   "tracked": true,
-  "uncertainties": "The quorum restoration and the 2026-01-14 agenda vote come from law-firm commentary, which gives no exact quorum date; the EEOC votes page for January 2026 lists a 2026-01-13 resolution on Chair and Commission roles in organizational changes but no 2026-01-14 entry, so the two may differ. The votes page lists titles only; the effect of the litigation resolution comes from the law-firm summary. Later months of votes were not reviewed. The 2026-05-07 release is the agency's own characterization of its work and is not treated as an event. The 2026-01-14 vote giving the Chair agenda control runs partly against the Mandate's call to act by majority vote rather than Chair action.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The quorum restoration and the 2026-01-14 agenda vote come from law-firm commentary, which gives no exact quorum date; the EEOC votes page for January 2026 lists a 2-1 resolution of 2026-01-13 on Chair and Commission roles regarding agency organizational changes but no 2026-01-14 entry, so the two may be the same action; the 2026-01-13 resolution text was not opened. The resolution on litigation authority carries a signature date of 2026-01-22 and no vote date, while the votes page lists the final vote on 2026-01-21; the timeline dates the event by the vote. The resolution applies a majority-vote rule to decisions to file or intervene but keeps enforcement of consent decrees and settlements with the General Counsel and does not disclaim authority to enter consent decrees; it does not mention rulemaking. The harassment rescission release gives no reasons and mentions no rulemaking or consent decrees. Later months of votes were not reviewed. The 2026-05-07 release is the agency's own characterization of its work, was not re-read in this pass, and is not treated as an event.",
+  "updated_at": "2026-10-18"
 }

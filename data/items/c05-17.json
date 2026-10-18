@@ -5,9 +5,9 @@
     "No agency action narrowing eligibility was found; the related ICE enforcement guidance is partly stayed by a district court, with an appeal pending."
   ],
   "chapter": "05",
-  "confidence": 76,
+  "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked and the stage-deciding bill record read on GovInfo by the research tools, so the provenance cap does not bind. The congress.gov action history, read through the owner's browser retrieval, confirms no action after the introduction and referral of 2026-04-30, which resolves the earlier gap on later bill actions. Confidence stays medium because the search for agency eligibility changes was limited and partly relied on secondary reports. Stage rule applied: an introduced bill with nothing operative is proposed, and with no committee action progress stays at the band floor of 5.",
+  "confidence_reason": "The GovInfo BILLSTATUS record for H.R. 8628 was read in full (introduced and referred 2026-04-30, two cosponsors, latest action the referral, record updated 2026-07-17), the introduced text was read, and ICE 11005.4 was read on ice.gov. Capped at 50 because the proposed stage also rests on the absence of any rule, policy manual change or directive narrowing T or U eligibility, found only through Federal Register API queries keyed to one term and limited web searches; uscis.gov and the Spring 2026 regulatory agenda were not reviewed item by item, and no documented systematic check is recorded. USCIS alert PA-2025-34 rests on a secondary report. Coordinator adjustment on 2026-10-18: the reviewer's 50 applied the not_started absence cap to a record whose stage rests on a positive action read on a primary host; the absence component (no further action found) is noted but does not cap a proposed or in_progress record, so the rating is set at 72.",
   "court_status": {
     "basis": "Derived from the latest dated court event: the government's Ninth Circuit appeal (No. 26-3961) of the 2026-05-20 class stay order; a 2026-07-28 stay order and a 2026-08-05 dismissal filing on the district docket are listed by title only.",
     "date": "2026-06-19",
@@ -43,10 +43,14 @@
     {
       "date": "2026-10-13",
       "note": "Independent review of new evidence: the congress.gov All Actions page for H.R. 8628, read through the owner's browser retrieval, lists only the introduction and referral of 2026-04-30 and no later action; added it as a source, updated the summary and uncertainties, dropped the flag on unconfirmed later bill actions and rewrote the review flags as open concerns; stage proposed 5 holds; confidence raised from 74 to 76."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Bill status confirmed on GovInfo; confidence capped at 50 because the stage also rests on the absence of a narrowing agency action without a documented systematic check. The coordinator then set confidence to 72 (medium) because the absence cap applies to not_started records, with the reviewer's 50 recorded as the alternative."
     }
   ],
   "id": "c05-17",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -71,17 +75,17 @@
   "research_agent": "N05a",
   "review": {
     "flags": [
-      "congress.gov action history read only through the owner's browser retrieval; the research tools cannot open that host",
-      "judgment call: proposed 5 rests on a bill covering the U category only; no T repeal bill and no eligibility rule found",
-      "agency search limited: uscis.gov not opened directly and the Spring 2026 regulatory agenda not reviewed item by item",
-      "USCIS policy alert PA-2025-34 read only through a secondary report",
-      "litigation status after the 2026-07-28 stay order and the 2026-08-05 dismissal filing unknown (docket entries by title only)"
+      "Stage proposed 5 kept; judgment call: in_progress would apply if a rule or directive narrowing T or U eligibility exists that the limited search missed; not_started is not available because the introduced U repeal bill is a qualifying action.",
+      "Confidence 76 to 50 (low), not the researcher's suggested 80 high: the bill record was read in full, but the stage also rests on the absence of a narrowing agency action, and no documented systematic check is recorded, so the absence cap of 50 applies.",
+      "Added the GovInfo BILLSTATUS record as a source; court_status kept pending at the 2026-06-19 Ninth Circuit appeal, the latest dated court event.",
+      "Primary document that would raise confidence: a systematic review of the Spring 2026 Unified Agenda DHS entries and the USCIS Policy Manual Volume 3 Parts B and C update history for T and U eligibility changes.",
+      "Coordinator adjustment 2026-10-18: confidence set to 72 (medium) from the reviewer's 50; the absence cap of the rubric applies to not_started records and to systematic checks, not to a record whose stage rests on a read bill or order. The reviewer's figure is the alternative."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 141 says victimization should not ground an immigration benefit, T and U visas should be eliminated with the S visa used for cooperating witnesses, and eligibility should be sharply restricted meanwhile to prevent fraud; page 145 lists U visa reform among regulatory priorities; page 150 calls for reforming both programs until repeal so that only victims giving significant material help to law enforcement qualify. Proposal and pages match.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y4",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V5",
     "source_checks": [
       {
         "note": "H.R. 8628, End U Visa Abuse Act, introduced 2026-04-30 by three members, referred to Judiciary; title states it repeals INA 101(a)(15)(U). Stage-deciding.",
@@ -132,6 +136,11 @@
         "note": "All Actions lists two actions, both dated 2026-04-30: introduced in the House and referred to the House Committee on the Judiciary; status Introduced; 2 cosponsors, 0 amendments, 0 related bills; no later action; read through the owner's browser retrieval on 2026-10-13; not reachable from the research tools.",
         "result": "supports",
         "url": "https://www.congress.gov/bill/119th-congress/house-bill/8628/all-actions"
+      },
+      {
+        "note": "End U Visa Abuse Act; introduced 2026-04-30 and referred to House Judiciary the same day; two original cosponsors; latest action the referral; updateDate 2026-07-17; checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr8628.xml"
       }
     ]
   },
@@ -218,6 +227,13 @@
       "publisher": "Congress.gov",
       "title": "H.R. 8628, End U Visa Abuse Act: All Actions (119th Congress)",
       "url": "https://www.congress.gov/bill/119th-congress/house-bill/8628/all-actions"
+    },
+    {
+      "date": "2026-07-17",
+      "kind": "primary",
+      "publisher": "GovInfo (BILLSTATUS)",
+      "title": "H.R. 8628, End U Visa Abuse Act, bill status record",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr8628.xml"
     }
   ],
   "stage": "proposed",
@@ -275,6 +291,6 @@
   ],
   "title": "Eliminate T and U visas, and until then restrict them to victims aiding law enforcement",
   "tracked": true,
-  "uncertainties": "Searches for qualifying actions since 2025-01-20: Federal Register API queries for T and U nonimmigrant documents (DHS and all agencies) returned no rule changing T or U eligibility, only a proposed biometrics rule on good moral character for T adjustment applicants and other rules that leave T and U eligibility unchanged; the DHS regulatory agenda notice of 2025-09-22, as summarized, lists no T or U rule; web searches for USCIS Policy Manual or policy alert changes to eligibility or the bona fide determination process found only a 2021 bona fide determination update and the 2025-12-22 confidentiality alert; searches for 119th Congress bills found H.R. 8628 (U repeal) and bills that would expand the categories, but no bill on T repeal. The congress.gov All Actions page for H.R. 8628 was read through the owner's browser retrieval on 2026-10-13 (the research tools still cannot open that host): it lists exactly two actions, introduction and referral to the House Judiciary Committee, both on 2026-04-30, with status Introduced, 2 cosponsors and 0 amendments, so no committee or floor action had occurred as of that check; GovInfo, read by the research tools, confirms the introduction and referral. uscis.gov was not opened directly and the Spring 2026 regulatory agenda was not reviewed item by item, so a pending T or U eligibility rule cannot be ruled out. The ICE guidance bears no issuance date; 2025-01-30 comes from a legal-services practice advisory and matches the class definitions reported by Bloomberg Law. The USCIS alert PA-2025-34 was read through a secondary report. The district docket lists a stay order of 2026-07-28 and a dismissal filing of 2026-08-05 by title only, so the current status of the litigation and appeal is unknown. Stage: the earlier in_progress 25 rested on vetting and enforcement measures that the rubric treats as parallel; not_started would apply only if no qualifying action existed, but an introduced bill to repeal the U category is a qualifying action at the proposed stage, covering part of the recommendation.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Searches for qualifying actions since 2025-01-20: Federal Register API queries for T and U nonimmigrant documents (DHS and all agencies) returned no rule changing T or U eligibility, only a proposed biometrics rule on good moral character for T adjustment applicants and other rules that leave T and U eligibility unchanged; the DHS regulatory agenda notice of 2025-09-22, as summarized, lists no T or U rule; web searches for USCIS Policy Manual or policy alert changes to eligibility or the bona fide determination process found only a 2021 bona fide determination update and the 2025-12-22 confidentiality alert; searches for 119th Congress bills found H.R. 8628 (U repeal) and bills that would expand the categories, but no bill on T repeal. The congress.gov All Actions page for H.R. 8628 was read through the owner's browser retrieval on 2026-10-13 (the research tools still cannot open that host): it lists exactly two actions, introduction and referral to the House Judiciary Committee, both on 2026-04-30, with status Introduced, 2 cosponsors and 0 amendments, so no committee or floor action had occurred as of that check; GovInfo, read by the research tools, confirms the introduction and referral. uscis.gov was not opened directly and the Spring 2026 regulatory agenda was not reviewed item by item, so a pending T or U eligibility rule cannot be ruled out. The ICE guidance bears no issuance date; 2025-01-30 comes from a legal-services practice advisory and matches the class definitions reported by Bloomberg Law. The USCIS alert PA-2025-34 was read through a secondary report. The district docket lists a stay order of 2026-07-28 and a dismissal filing of 2026-08-05 by title only, so the current status of the litigation and appeal is unknown. Stage: the earlier in_progress 25 rested on vetting and enforcement measures that the rubric treats as parallel; not_started would apply only if no qualifying action existed, but an introduced bill to repeal the U category is a qualifying action at the proposed stage, covering part of the recommendation. Primary-source lift 2026-10-18 (confirmed in independent review the same day): the GovInfo BILLSTATUS record for H.R. 8628 was read in full (sponsor Rep. Roy, introduced 2026-04-30, referred to House Judiciary the same day, two cosponsors, latest action the referral, record last updated 2026-07-17), so the congress.gov limitation is resolved by the GovInfo record. The introduced text was read: Section 3 repeals INA 101(a)(15)(U) with conforming edits to INA sections 204, 212, 214, 237, 239, 245 and 248, and does not mention T status; it contains no effective date or transition provision. ICE policy 11005.4 was read on ice.gov; the memo bears no printed date (it cites the 2025-01-20 executive order, signed by an acting ICE director) and states it does not change T or U eligibility. A Federal Register API query for U nonimmigrant documents since 2025-01-20 returned information-collection notices, the 2025-11-03 biometrics proposed rule and unrelated immigration rules, none narrowing T or U eligibility; the query matched only the term U nonimmigrant, so a rule using other wording cannot be excluded. No web search was used. The litigation status after 2026-07-28 remains unknown.",
+  "updated_at": "2026-10-18"
 }

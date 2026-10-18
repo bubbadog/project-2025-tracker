@@ -2,17 +2,17 @@
   "agency": "USDA (NRCS)",
   "blockers": [
     "Compliance conditions come from the Food Security Act of 1985, so a shift needs Congress.",
-    "S. 1495 has shown no committee action as far as could be checked; the congress.gov actions page could not be opened."
+    "S. 1495 has had no action since its 2025-04-10 committee referral."
   ],
   "chapter": "10",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; the bill text and the interim rule were fetched and read on primary hosts; the court outcome and the no-appeal update rest on secondary sources; bill status could not be read on congress.gov.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter pages 304 and 305 were checked; the interim rule (91 FR 47779) was read on federalregister.gov and the S. 1495 text and bill status on govinfo.gov on 2026-10-18, and the CTM Holdings opinion was read; the no-appeal finding rests on secondary reports.",
   "court_status": {
-    "basis": "The district court ruled for USDA and upheld Swampbuster; a later news update reports the plaintiff decided not to appeal. The case concerns the existing compliance law, not an action on the recommendation.",
+    "basis": "The district court granted summary judgment to USDA and upheld Swampbuster as a valid spending-power condition, dismissing the plaintiff's claims with prejudice; no appeal was found. The case concerns the existing compliance law, not an action on the recommendation.",
     "date": "2025-05-29",
     "state": "upheld",
-    "url": "https://nationalaglawcenter.org/?p=89036"
+    "url": "https://aglaw.psu.edu/wp-content/uploads/2025/06/2-Opinion-CTM-v-USDA-5.29.25.pdf"
   },
   "durability": {
     "level": "medium",
@@ -35,10 +35,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source review on 2026-10-18 read the July 2026 interim rule on federalregister.gov, the S. 1495 text and bill status on govinfo.gov and the CTM Holdings opinion (copy on aglaw.psu.edu), removed two news-report timeline entries, re-sourced the court event, confirmed proposed 10 and raised confidence from 72 to 80."
     }
   ],
   "id": "c10-12",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -62,49 +66,38 @@
   "research_agent": "N10",
   "review": {
     "flags": [
-      "judgment call: proposed 10 kept; only an introduced bill covers part of the recommendation (appeals), with no Administration support found",
-      "court_status source switched to the law center summary, which gives the decision date; appeal statement corrected to no appeal"
+      "Removed two news-report timeline entries (the 2025-07-31 radio update and the 2026-08-03 trade report), which are reports rather than government or court actions; their content stays in uncertainties.",
+      "Court event and court_status now cite the opinion itself instead of a law center summary.",
+      "Added the S. 1495 bill status and noted the interim rule's limit on NRCS revisiting certified determinations and the 2024 decision it responds to.",
+      "Existing source and timeline URL for S. 1495 text points to congress.gov; the govinfo.gov copy of the same text was the one read in review.",
+      "Alternative stage: proposed 15 if the interim rule's limit on NRCS discretion over certified determinations is credited as a partial executive step.",
+      "Confidence moved from 72 to 80."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 304 to 305 confirmed: the bullet recommends removing NRCS authority to prescribe farm-specific practices, a general best-practices plan approvable by local SWCDs, appeals reform, and at minimum support for legislation shifting power to states and possibly SWCDs.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9b",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 304 and 305 call for reforming NRCS wetland and erodible land compliance and appeals by removing NRCS authority to prescribe practices on a farm as a condition of program eligibility, requiring instead a general best-practices plan that the local Soil and Water Conservation District could approve, and at a minimum supporting legislation shifting more of this authority to states and possibly districts. The proposal paraphrase is accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Introduced text read: sponsor Rounds, 2025-04-10, Agriculture Committee; sections 2(c) burden of proof, 2(h) state oversight committees, 2(i) appeals reforms; no SWCD role. Same text confirmed on GovInfo.",
-        "result": "supports",
-        "url": "https://www.congress.gov/119/bills/s1495/BILLS-119s1495is.htm"
-      },
-      {
-        "note": "Interim rule 2026-15284 read: amends 7 CFR 12.30(c)(1), effective 2026-07-29, comments to 2026-09-28; no change to appeals or practice authority.",
-        "result": "supports",
+        "note": "Read 2026-10-18: interim rule, 91 FR 47779 to 47786, doc 2026-15284, effective 2026-07-29, comments due 2026-09-28, docket NRCS-2026-0067, RIN 0578-AA73; revises 7 CFR 12.30(c)(1); determinations since 1990-11-28 certified if notice and appeal rights were given; NRCS has no independent authority to question prior certified determinations; responds to National Wildlife Federation v. Lohr (2024-02-22); no state or district role and no new practice requirements.",
+        "result": "partial",
         "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15284/highly-erodible-land-and-wetland-conservation"
       },
       {
-        "note": "Confirms ruling for USDA on spending power and exhaustion; no exact date; reports intended appeal that later did not occur.",
-        "result": "partial",
-        "url": "https://www.dtnpf.com/agriculture/web/ag/news/article/2025/05/30/judge-rejects-landowner-claim-usda"
-      },
-      {
-        "note": "Decision date 2025-05-29, ruling for USDA, no appeal reported.",
+        "note": "Read 2026-10-18: introduced and referred to Senate Agriculture 2025-04-10 with two original cosponsors; no later action.",
         "result": "supports",
-        "url": "https://nationalaglawcenter.org/?p=89036"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1495.xml"
       },
       {
-        "note": "Update reports the plaintiff decided not to appeal.",
+        "note": "Read 2026-10-18: clear and convincing burden on USDA, appeals changes, three-member state oversight committees of active farmers or ranchers, ban on new permanent easements; no SWCD role or limit on practice prescriptions.",
         "result": "supports",
-        "url": "https://www.iowapublicradio.org/environment/2025-05-30/swampbuster-wetlands-lawsuit-iowa"
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1495is/html/BILLS-119s1495is.htm"
       },
       {
-        "note": "Rule in effect; farm group concerns on appeals and burden of proof.",
+        "note": "Read 2026-10-18: No. 24-CV-2016-CJW-MAR, order of 2025-05-29 granting summary judgment to defendants and intervenors, claims dismissed with prejudice.",
         "result": "supports",
-        "url": "https://www.dtnpf.com/agriculture/web/ag/news/article/2026/08/03/usda-settles-decades-uncertainty"
-      },
-      {
-        "note": "Actions page blocked to the fetch tool.",
-        "result": "unreachable",
-        "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1495/all-actions"
+        "url": "https://aglaw.psu.edu/wp-content/uploads/2025/06/2-Opinion-CTM-v-USDA-5.29.25.pdf"
       }
     ]
   },
@@ -179,10 +172,24 @@
       "publisher": "Iowa Public Radio",
       "title": "Federal judge dismisses swampbuster wetlands lawsuit in Iowa (with later update on appeal)",
       "url": "https://www.iowapublicradio.org/environment/2025-05-30/swampbuster-wetlands-lawsuit-iowa"
+    },
+    {
+      "date": "2025-04-10",
+      "kind": "primary",
+      "publisher": "U.S. Government Publishing Office",
+      "title": "S. 1495 bill status (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1495.xml"
+    },
+    {
+      "date": "2025-05-29",
+      "kind": "court",
+      "publisher": "U.S. District Court for the Northern District of Iowa",
+      "title": "CTM Holdings, LLC v. USDA, No. 24-CV-2016-CJW-MAR (N.D. Iowa), memorandum opinion and order of 2025-05-29 (copy hosted by Penn State Agricultural Law Center)",
+      "url": "https://aglaw.psu.edu/wp-content/uploads/2025/06/2-Opinion-CTM-v-USDA-5.29.25.pdf"
     }
   ],
   "stage": "proposed",
-  "status_summary": "No change to NRCS authority to prescribe farm practices, no shift to plans approved by Soil and Water Conservation Districts, and no Administration support for legislation moving compliance authority to states was found. S. 1495, the NRCS Wetland Compliance and Appeals Reform Act (introduced 2025-04-10), would raise the burden of proof on USDA, change wetland appeals and create state oversight committees whose members include active farmers, which matches the appeals part of the recommendation; no committee action was found. USDA's interim rule of 2026-07-29 treats wetland determinations issued since 1990-11-28 as certified when the producer was notified with appeal rights, which settles the status of older determinations but leaves appeal procedures and NRCS authority unchanged. In CTM Holdings v. USDA the Northern District of Iowa ruled for USDA on 2025-05-29, holding Swampbuster a valid spending-power condition, and the plaintiff later decided not to appeal according to an update reported by Iowa Public Radio.",
+  "status_summary": "No change to NRCS authority to prescribe farm practices, no shift to plans approved by Soil and Water Conservation Districts, and no Administration support for legislation moving compliance authority to states was found. S. 1495, the NRCS Wetland Compliance and Appeals Reform Act, introduced 2025-04-10 and referred to the Senate Agriculture Committee with no later action, would require USDA to prove violations by clear and convincing evidence, change wetland appeals and create state oversight committees of active farmers and ranchers, which matches the appeals part of the recommendation. USDA's interim rule of 2026-07-29 (91 FR 47779), issued after a 2024 district court decision vacated a 2020 NRCS rule, treats wetland determinations issued since 1990-11-28 as certified when the producer was notified with appeal rights and states that NRCS has no independent authority to question prior certified determinations on agricultural land, but it leaves practice requirements, appeal procedures and state or district roles unchanged. In CTM Holdings v. USDA the Northern District of Iowa granted summary judgment to USDA on 2025-05-29, holding Swampbuster a valid spending-power condition and dismissing the claims with prejudice.",
   "timeline": [
     {
       "date": "2025-04-10",
@@ -193,17 +200,10 @@
     },
     {
       "date": "2025-05-29",
-      "event": "The Northern District of Iowa ruled for USDA in CTM Holdings v. USDA, holding the Swampbuster provisions a valid condition on federal benefits under the spending power and noting the plaintiff had not exhausted administrative remedies.",
+      "event": "The Northern District of Iowa granted summary judgment to USDA and intervenors in CTM Holdings v. USDA, holding Swampbuster a valid condition on federal benefits under the spending power, finding no final agency action or standing for the APA claims and unexhausted regulatory claims, and dismissing all claims with prejudice.",
       "kind": "court",
-      "source": "National Agricultural Law Center",
-      "url": "https://nationalaglawcenter.org/?p=89036"
-    },
-    {
-      "date": "2025-07-31",
-      "event": "Iowa Public Radio updated its report to say the plaintiff in CTM Holdings had decided not to appeal, according to a Pacific Legal Foundation statement.",
-      "kind": "news",
-      "source": "Iowa Public Radio",
-      "url": "https://www.iowapublicradio.org/environment/2025-05-30/swampbuster-wetlands-lawsuit-iowa"
+      "source": "U.S. District Court for the Northern District of Iowa",
+      "url": "https://aglaw.psu.edu/wp-content/uploads/2025/06/2-Opinion-CTM-v-USDA-5.29.25.pdf"
     },
     {
       "date": "2026-07-29",
@@ -211,17 +211,10 @@
       "kind": "primary",
       "source": "Federal Register (USDA)",
       "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15284/highly-erodible-land-and-wetland-conservation"
-    },
-    {
-      "date": "2026-08-03",
-      "event": "DTN reported that the interim rule was already in effect and that a national farm organization had raised concerns that the appeals process places the burden of proof on farmers.",
-      "kind": "news",
-      "source": "DTN Progressive Farmer",
-      "url": "https://www.dtnpf.com/agriculture/web/ag/news/article/2026/08/03/usda-settles-decades-uncertainty"
     }
   ],
   "title": "Limit NRCS power over farm practices in wetland and erodible land compliance",
   "tracked": true,
-  "uncertainties": "The appeal question in CTM Holdings was rechecked: a National Agricultural Law Center summary reports no appeal filed and an Iowa Public Radio update reports the plaintiff decided not to appeal; the court order itself was not read. The S. 1495 actions page on congress.gov could not be opened, so the absence of committee action rests on the introduced text and searches. The 2026 farm bill comparison by CRS (read in part, the report is long) shows no conservation compliance provision in the visible text. The interim rule responds to a 2024 District of Columbia ruling that vacated a 2020 NRCS rule; it is related context rather than a step toward the recommendation. No change at the National Appeals Division was found. The district-approved plan idea is not in S. 1495.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "The CTM Holdings opinion was read from a copy hosted by a university agricultural law center, not from the court docket; a law center summary reports no appeal filed and an Iowa Public Radio update reports the plaintiff decided not to appeal, and no appellate docket was checked. S. 1495 status was read on govinfo.gov; it does not mention Soil and Water Conservation Districts or farmer-written plans and does not limit NRCS practice prescriptions. The 2026 farm bill comparison by CRS (read in part, the report is long) shows no conservation compliance provision in the visible text, and farm bill text was not searched. The interim rule responds to National Wildlife Federation v. Lohr (D.D.C., 2024-02-22), which vacated a 2020 NRCS rule; its limit on NRCS revisiting certified determinations narrows agency discretion for certified determinations only, so it is treated as related context rather than a step on practice prescriptions. A national farm organization's concern about the burden of proof in appeals is known from one trade report. No change at the National Appeals Division was found.",
+  "updated_at": "2026-10-18"
 }

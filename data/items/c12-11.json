@@ -6,9 +6,9 @@
     "Regulatory and logistical lead times of 24 to 36 months"
   ],
   "chapter": "12",
-  "confidence": 72,
+  "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked; CRS and the delegation letter were fetched and support the absence of an operative readiness directive; the presidential statement itself rests on press accounts.",
+  "confidence_reason": "CRS IF11662 and the AIP report were read and a Federal Register query returned nothing; the presidential statement rests on press accounts of a social media post and the stage rests on the absence of a formal readiness directive from limited searching, so confidence is lowered within medium.",
   "durability": {
     "level": "low",
     "why": "The step is a public statement without an implementing order, and the program office has said no technical need for explosive testing exists."
@@ -34,10 +34,18 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c12-32, c12-33 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Primary-source lift on 2026-10-17 re-read CRS report IF11662, queried the Federal Register for a published testing directive and found none, and noted that the presidential statement was addressed to the Department of War, with stage and progress unchanged."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review after the primary-source lift: CRS IF11662 on everycrsreport.com, the AIP FYI report and a Federal Register API query were read; two non-action entries left the timeline; proposed 12 kept; confidence 72 to 64."
     }
   ],
   "id": "c12-11",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -62,39 +70,30 @@
   "research_agent": "N12",
   "review": {
     "flags": [
-      "overlaps c04-06 on test readiness (partial, kept)",
-      "judgment call: in_progress could be argued since the willingness-to-test signal was given, but no operative readiness change was found"
+      "proposed 12 kept: the willingness-to-test signal was given publicly, but no readiness directive to NNSA was found; in_progress at the low end could be argued only if a directive surfaces.",
+      "Removed a CRS analysis entry and a members' letter from the timeline; the President's post now cites AIP, which dates it and names the addressee.",
+      "Confidence lowered from 72 to 64: no single deciding document exists and the stage rests on absence of a directive."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 399 checked; paraphrase of the treaty, signaling and test readiness recommendation is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y12a",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16L-1",
     "source_checks": [
       {
-        "note": "CRS IF11662 (2025-12-16): unclear what policy follows; 24 to 36 month readiness goal; US signed, not ratified. Does not give the post date.",
+        "note": "Updated 2025-12-16: no formal order identified, policy change unclear; 24 to 36 month readiness goal (PDD-15); US signed, Senate rejected ratification in 1999; voluntary moratorium continues.",
         "result": "supports",
         "url": "https://www.everycrsreport.com/files/2025-12-16_IF11662_8bdc835a5adcc1e7cb39b100ef46e82890298bb5.html"
       },
       {
-        "note": "Dated 2025-11-02/03; post made on Wednesday before the Busan meeting (2025-10-29 US time); Secretary said systems tests, not nuclear explosions.",
+        "note": "Zero documents returned.",
         "result": "supports",
-        "url": "https://thenightly.com.au/politics/us-politics/donald-trumps-nuclear-test-plan-wont-include-explosions-energy-secretary-confirms-c-20556541"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22nuclear+weapons+testing%22&conditions[publication_date][gte]=2025-10-01&per_page=20&order=newest"
       },
       {
-        "note": "Letter dated 2025-11-03 asking that the directive be retracted.",
+        "note": "Dated 2025-11-05; post of about 2025-10-29 said the Department of War was instructed to begin testing on an equal basis; Energy Secretary described system tests, not nuclear explosions; no written order. Now the timeline source for the post.",
         "result": "supports",
-        "url": "https://horsford.house.gov/sites/evo-subsites/horsford.house.gov/files/evo-media-document/11.3.25-nv-delegation-letter-to-adminstration-re-explosive-nuclear-testing.pdf"
-      },
-      {
-        "note": "2026-05-13 hearing statements as relayed by a senator.",
-        "result": "supports",
-        "url": "https://www.rosen.senate.gov/2026/05/13/video-rosen-pushes-energy-secretary-to-admit-explosive-nuclear-testing-is-not-needed/"
-      },
-      {
-        "note": "2026-10-01: non-nuclear high-explosive experiment for detection research.",
-        "result": "supports",
-        "url": "https://www.fox5vegas.com/2026/10/01/nuclear-security-administration-conducts-test-nevada-national-security-site/"
+        "url": "https://www.aip.org/fyi/trump-order-to-start-nuclear-testing-raises-questions-for-doe"
       }
     ]
   },
@@ -162,6 +161,13 @@
       "publisher": "FOX5 Las Vegas",
       "title": "Nuclear Security Administration conducts test at Nevada National Security Site",
       "url": "https://www.fox5vegas.com/2026/10/01/nuclear-security-administration-conducts-test-nevada-national-security-site/"
+    },
+    {
+      "date": "2025-11-05",
+      "kind": "news",
+      "publisher": "American Institute of Physics (FYI)",
+      "title": "Trump order to start nuclear testing raises questions for DOE",
+      "url": "https://www.aip.org/fyi/trump-order-to-start-nuclear-testing-raises-questions-for-doe"
     }
   ],
   "stage": "proposed",
@@ -169,10 +175,10 @@
   "timeline": [
     {
       "date": "2025-10-29",
-      "event": "The President posted that the United States would begin testing nuclear weapons on an equal basis with other countries (dated from press accounts of a post made shortly before a meeting in South Korea).",
+      "event": "The President posted that, because other countries test, he had instructed the Department of War to begin testing US nuclear weapons on an equal basis, starting immediately (dated from an AIP report that places the post on the prior Wednesday); no written order was identified.",
       "kind": "news",
-      "source": "The Nightly",
-      "url": "https://thenightly.com.au/politics/us-politics/donald-trumps-nuclear-test-plan-wont-include-explosions-energy-secretary-confirms-c-20556541"
+      "source": "American Institute of Physics (FYI)",
+      "url": "https://www.aip.org/fyi/trump-order-to-start-nuclear-testing-raises-questions-for-doe"
     },
     {
       "date": "2025-11-02",
@@ -180,20 +186,6 @@
       "kind": "news",
       "source": "The Nightly",
       "url": "https://thenightly.com.au/politics/us-politics/donald-trumps-nuclear-test-plan-wont-include-explosions-energy-secretary-confirms-c-20556541"
-    },
-    {
-      "date": "2025-11-03",
-      "event": "The Nevada congressional delegation wrote to the President and Energy and Defense leaders asking that the directive be withdrawn and preparatory activity halted.",
-      "kind": "primary",
-      "source": "Office of Rep. Horsford",
-      "url": "https://horsford.house.gov/sites/evo-subsites/horsford.house.gov/files/evo-media-document/11.3.25-nv-delegation-letter-to-adminstration-re-explosive-nuclear-testing.pdf"
-    },
-    {
-      "date": "2025-12-16",
-      "event": "CRS reported it was unclear what policy change would follow the statements, that the readiness goal remains 24 to 36 months from a presidential decision, and that the United States has signed but not ratified the test ban treaty.",
-      "kind": "primary",
-      "source": "Congressional Research Service",
-      "url": "https://www.everycrsreport.com/files/2025-12-16_IF11662_8bdc835a5adcc1e7cb39b100ef46e82890298bb5.html"
     },
     {
       "date": "2026-05-13",
@@ -212,6 +204,6 @@
   ],
   "title": "Direct NNSA to nuclear test readiness and signal willingness to test",
   "tracked": true,
-  "uncertainties": "The President's social media post was not retrieved; its date is inferred from press accounts. No directive to NNSA on readiness was found in the sources reviewed, and a Federal Register search was not separately run for one. The readiness element overlaps the existing DoD-chapter record c04-06, which tracks restoring test readiness; this record also covers the treaty and signaling elements.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The President's social media post was not retrieved; its date (about 2025-10-29) is inferred from press accounts, and an AIP report quotes it as an instruction to the Department of War. The CRS report of 2025-12-16 was read in full and identifies no executive order or other binding directive resulting from the statements; it links a Reuters report of 2025-10-30 whose text was not read. A Federal Register query on 2026-10-17 for the term nuclear weapons testing since 2025-10-01 returned no documents, which does not rule out a non-published directive. The readiness element overlaps the existing DoD-chapter record c04-06, which tracks restoring test readiness; this record also covers the treaty and signaling elements. A House bill to bar explosive tests was reported introduced in late October 2025; it was not located and is not treated as an event. Independent review of 2026-10-16: the CRS report of 2025-12-16 (no formal order identified, readiness goal 24 to 36 months, treaty signed but not ratified) and the Nevada delegation letter of 2025-11-03 asking that the directive be withdrawn were moved here from the timeline, as an analysis and a members' letter rather than government actions; both remain cited sources. The Federal Register query was re-run and again returned no documents.",
+  "updated_at": "2026-10-16"
 }

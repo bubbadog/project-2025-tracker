@@ -4,7 +4,7 @@
   "chapter": "02",
   "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "The page 52 text was checked and the CRS Insight and an AP report were fetched and read; they show a White House, not NSC, review of four-star nominees. The NSC role rests on absence of evidence in public sources.",
+  "confidence_reason": "Chapter page 52 checked; NSPM-1 (2025-01-20) was fetched and read in this review and supports only the general strategy-coordination role, and the AP report of 2025-07-30 was re-read; the stage rests on that secondary report and on absence of evidence of an NSC role.",
   "durability": {
     "level": "low",
     "why": "Internal White House review practices are set by the President and the national security adviser and can change without notice."
@@ -22,10 +22,14 @@
     {
       "date": "2026-10-10",
       "note": "Independent review: rechecked White House and NSC roles in promotions; added the July 2025 presidential meetings with four-star candidates; stage changed from not_started 0 to in_progress 25 (parallel); proposal expanded to cover the guidance review."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review (primary-source lift): NSPM-1 on whitehouse.gov and the AP report on wsls.com were re-read; NSPM-1 added as source and event with its limits stated; stage in_progress 25 kept; confidence 62."
     }
   ],
   "id": "c02-15",
-  "last_checked": "2026-10-10",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -47,37 +51,34 @@
   "requires_congress": "no",
   "research_agent": "N02b",
   "review": {
+    "document_reread": {
+      "citation": "National Security Presidential Memorandum NSPM-1, Organization of the National Security Council and Subcommittees (2025-01-20)",
+      "note": "Read on whitehouse.gov through a summarizing fetch: NSPM-1 names the NSC as the President's principal means of coordinating national security policy, strategies and long-term strategic planning, with Policy Coordination Committees developing options. It does not mention the National Defense Strategy, war plans, force allocation or officer promotions, and gives OMB only a Deputies Committee invitee seat. The AP report of 2025-07-30 (via WSLS) was also re-read and supports the presidential meetings with four-star candidates, attributed to the Defense Secretary, with no NSC mention.",
+      "result": "partial",
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/01/organization-of-the-national-security-council-and-subcommittees/"
+    },
     "flags": [
-      "stage raised from not_started 0 to in_progress 25 (parallel) for White House meetings with four-star nominees",
-      "NSC role in strategies and promotions not documented"
+      "NSPM-1 accepted as a timeline event: it is a dated presidential action and bears on the strategy-coordination part of the recommendation, but the event text states what it does not cover.",
+      "Stage judgment: in_progress 25 kept as parallel; proposed 20 also defensible."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Printed page 52 supports the strategy, defense strategy, war plan and promotion review recommendations; the proposal now also mentions the review of key Defense, State and Intelligence Community guidance in the same passage.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed page 52 says the NSC should lead drafting and review of all formal strategies, prioritize White House review of the National Defense Strategy with OMB, review war plans and force allocation with the Secretary of Defense, review key Defense, State and Intelligence Community guidance before distribution, and rigorously review all general and flag officer promotions; the proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-10",
-    "reviewer": "Y6",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-3",
     "source_checks": [
       {
-        "note": "CRS Insight IN12714 of 2026-07-17 describes the promotion path from selection boards through the Secretary of Defense to the President and does not mention NSC review.",
-        "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2026-07-17_IN12714_c667aae6932d64f11a0ce37b904cc908e1c14244.pdf"
+        "note": "NSPM-1, 2025-01-20; NSC coordinates policy and strategies and long-term planning; silent on NDS, war plans, force allocation and promotions; OMB Deputy Director is a Deputies Committee invitee.",
+        "result": "partial",
+        "url": "https://www.whitehouse.gov/presidential-actions/2025/01/organization-of-the-national-security-council-and-subcommittees/"
       },
       {
-        "note": "AP report of 2025-07-30: the White House acknowledged the President meets four-star nominees; the practice was attributed to the Defense Secretary; no NSC role mentioned.",
+        "note": "2025-07-30; White House confirmed presidential meetings with four-star candidates; practice attributed to the Defense Secretary; NSC not mentioned.",
         "result": "supports",
         "url": "https://www.wsls.com/news/politics/2025/07/30/trump-meets-with-candidates-for-four-star-general-in-break-with-tradition-white-house-acknowledges/"
-      },
-      {
-        "note": "Confirms release on 2025-12-04 (article dated 2025-12-05); does not say who drafted it.",
-        "result": "supports",
-        "url": "https://www.lawfaremedia.org/article/trump-administration-releases-2025-national-security-strategy"
-      },
-      {
-        "note": "Confirms release on 2026-01-23; no mention of White House, NSC or OMB review.",
-        "result": "supports",
-        "url": "https://www.hstoday.us/dod-national-defense/department-of-war-releases-2026-national-defense-strategy-emphasizing-homeland-defense-and-peace-through-strength/"
       }
-    ]
+    ],
+    "stage_change_reason": "Kept at the low end of in_progress as a parallel match: NSPM-1 sets the NSC as the coordinator of national security strategies in general terms, and the President personally meets four-star candidates, but no document shows an NSC review of the defense strategy, war plans or all general and flag officer promotions. A reviewer could defend proposed 20 given how little is documented."
   },
   "self_confidence": 55,
   "significance": {
@@ -87,6 +88,24 @@
     "M": 2,
     "R": 3,
     "adjudicated": true,
+    "rater_scores": [
+      {
+        "B": 3,
+        "F": 1,
+        "F_estimated": true,
+        "M": 1,
+        "R": 1,
+        "rater": "A"
+      },
+      {
+        "B": 3,
+        "F": 1,
+        "F_estimated": true,
+        "M": 1,
+        "R": 1,
+        "rater": "B"
+      }
+    ],
     "raters": 3,
     "rationale": "Increases NSC role in strategy, war plans and officer promotions, mainly affecting the defense establishment.",
     "version": "2026-10-10",
@@ -120,11 +139,25 @@
       "publisher": "Associated Press (via WSLS)",
       "title": "Trump meets with candidates for four-star general in break with tradition, White House acknowledges",
       "url": "https://www.wsls.com/news/politics/2025/07/30/trump-meets-with-candidates-for-four-star-general-in-break-with-tradition-white-house-acknowledges/"
+    },
+    {
+      "date": "2025-01-20",
+      "kind": "primary",
+      "publisher": "White House",
+      "title": "Organization of the National Security Council and Subcommittees (NSPM-1)",
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/01/organization-of-the-national-security-council-and-subcommittees/"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "A new National Security Strategy was released on 2025-12-04 and a National Defense Strategy on 2026-01-23, but the public descriptions reviewed do not say that the NSC led their drafting or that the NSC and OMB reviewed the defense strategy, war plans or force allocation. On promotions, the White House acknowledged in July 2025 that the President personally meets candidates for four-star posts, which an Associated Press report described as a break from past practice; this is a White House review of the most senior nominees rather than an NSC review of all general and flag officer promotions. A Congressional Research Service product of 2026-07-17 describes promotion lists as going from the Secretary of Defense to the President and does not mention NSC review.",
+  "status_summary": "NSPM-1 (2025-01-20) organized the National Security Council system and describes the NSC as the President's principal means of coordinating national security policy, strategies and long-term planning, but it does not address the National Defense Strategy, war plans, force allocation or officer promotions. A new National Security Strategy was released on 2025-12-04 and a National Defense Strategy on 2026-01-23, and the public descriptions reviewed do not say that the NSC led their drafting or that the NSC and OMB reviewed the defense strategy, war plans or force allocation. On promotions, the White House acknowledged on 2025-07-30 that the President personally meets candidates for four-star posts, a practice an Associated Press report attributed to the Defense Secretary, which is a White House review of the most senior nominees rather than an NSC review of all general and flag officer promotions. A Congressional Research Service product of 2026-07-17 describes promotion lists as going from the Secretary of Defense to the President and does not mention NSC review.",
   "timeline": [
+    {
+      "date": "2025-01-20",
+      "event": "NSPM-1 organized the National Security Council system, describing the NSC as the President's principal means of coordinating national security policy, strategies and long-term planning; it does not address the National Defense Strategy, war plans, force allocation or officer promotions.",
+      "kind": "primary",
+      "source": "White House",
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/01/organization-of-the-national-security-council-and-subcommittees/"
+    },
     {
       "date": "2025-07-30",
       "event": "The White House acknowledged that the President meets with candidates nominated for four-star general and admiral posts, a practice the report said began at the Defense Secretary's initiative; the NSC is not mentioned.",
@@ -156,6 +189,6 @@
   ],
   "title": "NSC to lead review of formal strategies, war plans and general and flag officer promotions",
   "tracked": true,
-  "uncertainties": "Not found: any report that the NSC itself reviews general and flag officer promotion lists; the presidential meetings cover four-star candidates only, and reported removals of officers from promotion lists were described as actions of the Defense Secretary, not the NSC. The public strategy summaries do not say who drafted them, and the 2026 National Defense Strategy document itself was not opened. Absence of public evidence is not evidence of absence, since NSC process is largely internal. The progress figure is an inference. Staffing is covered by c02-03 and cuts to general officer numbers by c04-09.",
-  "updated_at": "2026-10-10"
+  "uncertainties": "Not found: any report that the NSC itself reviews general and flag officer promotion lists; the presidential meetings cover four-star candidates only, and reported removals of officers from promotion lists were described as actions of the Defense Secretary, not the NSC. NSPM-1 was read through a summarizing fetch rather than as full text, and only NSPM-1, NSPM-2 and NSPM-12 were checked among the national security memoranda. The public strategy summaries do not say who drafted them, and the 2026 National Defense Strategy document itself was not opened. Absence of public evidence is not evidence of absence, since NSC process is largely internal. The progress figure is an inference. Staffing is covered by c02-03 and cuts to general officer numbers by c04-09.",
+  "updated_at": "2026-10-16"
 }

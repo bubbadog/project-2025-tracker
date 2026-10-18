@@ -5,9 +5,9 @@
     "Record turnover among confirmed appointees (Partnership for Public Service analysis, July 2026)"
   ],
   "chapter": "01",
-  "confidence": 72,
+  "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "The Mandate text and the OPM Schedule C memo establishing PPO preclearance were read, and the Schedule G release was confirmed in an earlier review. Confirmation-pace, turnover and leadership-change facts rest on news and think-tank reports, and the choice between in_progress and implemented is a judgment.",
+  "confidence_reason": "The OPM Schedule C memo of 2025-04-10 was fetched and read (PPO preclearance on page 2), and the Federal Register API confirmed EO 14356 (document 2025-19614, 90 FR 48387, signed 2025-10-15) and EO 14410 (document 2026-11594, 91 FR 34893); the AP and Brookings reports behind the restored events were read. The underlying Schedule G guidance and the EO 14410 appendix (images only) were not read, and PPO's role in firings rests on the absence of a document, so the record stays medium.",
   "durability": {
     "level": "low",
     "why": "PPO's role and leadership are White House practice that any President can change; the linked Schedule Policy/Career rule and order are more durable but are tracked separately."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Stage in_progress 55 kept; two removed government-action events restored; EO numbers confirmed in the Federal Register API; confidence 72 to 75."
     }
   ],
   "id": "c01-03",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "partial",
   "mechanism": "appointment",
@@ -63,20 +67,47 @@
   "research_agent": "A01",
   "review": {
     "flags": [
-      "implemented also defensible",
-      "Breitbart figures are White House-provided and unverified",
-      "possible overlap with c03-01 and c03-07"
+      "Stage in_progress 55 kept; implemented 65 is the defensible alternative because PPO's clearance role is operative for Schedule C and Schedule G.",
+      "Restored two timeline events the draft removed because they are government actions with a usable source: the 2025-08-26 naming of the PPO director (AP) and the Senate's 2025-09-11 rule change with the batch confirmations (Brookings); one sentence on them added back to status_summary. The Fortune, Government Executive and Breitbart items stay out of the timeline as news reports.",
+      "Federal Register API confirmed EO 14356 at 2025-19614 and EO 14410 at 2026-11594.",
+      "Removed a repeated sentence in uncertainties.",
+      "Confidence 72 to 75."
     ],
     "mandate_check": "verified",
     "mandate_note": "Printed pages 31 to 33 describe PPO as the center of political staffing for about 1,000 Senate-confirmed and 3,000 other political posts, with Schedule F planning, close work with OPM and direct responsibility for firings and hirings, while page 31 notes agencies keep direct legal authority over hiring and firing.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y2",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V9",
     "source_checks": [
       {
         "note": "OPM memo dated 2025-04-10, signed by Acting Director Charles Ezell: approving or withdrawing an agency's Schedule C authority requires PPO preclearance through the agency White House Liaison, plus approval by OPM's White House Liaison; it also gives agency heads latitude on Schedule C pay terms.",
         "result": "supports",
         "url": "https://opm.gov/policy-data-oversight/schedule-c-terms-of-employment-flexibilities.pdf"
+      },
+      {
+        "note": "Memo dated 2025-04-10, signed by the Acting Director; page 2 requires preclearance from the White House Office of Presidential Personnel through the agency White House Liaison for approval or withdrawal of Schedule C authority. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://opm.gov/policy-data-oversight/schedule-c-terms-of-employment-flexibilities.pdf"
+      },
+      {
+        "note": "Executive Order 14356, Ensuring Continued Accountability in Federal Hiring, signed 2025-10-15, published 2025-10-20, 90 FR 48387. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2025-19614.json"
+      },
+      {
+        "note": "Executive Order 14410, document 2026-11594, 91 FR 34893; signing date not shown in the fetched fields. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-11594.json"
+      },
+      {
+        "note": "Dated 2025-08-26; Scavino to replace Gor as PPO director; White House press secretary statement; no effective date. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://abcnews4.com/news/nation-world/senior-trump-advisor-dan-scavino-lead-white-house-personnel-office-chief-of-staff-sergio-gor-trump-administration"
+      },
+      {
+        "note": "Dated 2025-11-24; Senate rule change 2025-09-11 for bundled nominee consideration; batches of 41 (2025-09-18) and 74 (2025-10-07). Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.brookings.edu/articles/300-days-into-the-trump-administration-mixed-progress-in-filling-senior-leadership-posts/"
       }
     ]
   },
@@ -115,11 +146,11 @@
       "url": "https://www.opm.gov/news/news-releases/opm-issues-guidance-on-schedule-g/"
     },
     {
-      "date": "2025-10-15",
+      "date": "2025-10-20",
       "kind": "primary",
-      "publisher": "The White House",
-      "title": "EO 14356, Ensuring Continued Accountability in Federal Hiring",
-      "url": "https://whitehouse.gov/presidential-actions/2025/10/ensuring-continued-accountability-in-federal-hiring"
+      "publisher": "Federal Register",
+      "title": "EO 14356, Ensuring Continued Accountability in Federal Hiring (Federal Register, 90 FR)",
+      "url": "https://www.federalregister.gov/documents/2025/10/20/2025-19614/ensuring-continued-accountability-in-federal-hiring"
     },
     {
       "date": "2026-06-10",
@@ -172,15 +203,8 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "PPO operates as a central clearance point for political staffing. Bloomberg reported on 2025-03-06 that PPO, then led by Sergio Gor, asked candidates loyalty questions and reviewed donations and social media; an OPM memo of 2025-04-10 on Schedule C terms of employment flexibilities, signed by Acting Director Charles Ezell, says approving or withdrawing an agency's Schedule C appointing authority requires preclearance from the White House Office of Presidential Personnel, in addition to approval by OPM's White House Liaison; and OPM's Schedule G guidance (2025-07-29) gives PPO final review of agency requests. Dan Scavino was named in August 2025 to succeed Gor, and an August 2026 Breitbart piece quotes cabinet members praising PPO and relays White House figures of 591 civilian nominees confirmed in the 119th Congress. Independent measures are weaker: Brookings counted 216 confirmations at day 300 (against roughly 700 positions in the 15 departments) and Partnership for Public Service data showing the fewest nominations in a first 300 days since Reagan, and a July 2026 analysis reported a record pace of departures among confirmed officials and more acting officials. Agency hiring generally runs through agency strategic hiring committees under EO 14356 (2025-10-15), which names no PPO role, and the order moving positions into Schedule Policy/Career (EO 14410, signed 2026-06-03) assigns recommendation and rulemaking roles to OPM and does not mention PPO. The Mandate itself notes that departments and agencies hold direct legal authority over hiring and firing; PPO's documented clearance role covers Schedule C and Schedule G appointments and nominee vetting, while its role in firings of political appointees and in choosing Schedule Policy/Career positions was not documented.",
+  "status_summary": "PPO is documented as a clearance point for some political staffing. An OPM memo of 2025-04-10 (page 2) states that approving or withdrawing an agency's Schedule C appointing authority requires preclearance from the White House Office of Presidential Personnel, and OPM's release of 2025-07-29 on Schedule G says PPO gives final review and approval of agency requests. EO 14356 (signed 2025-10-15) sets agency strategic hiring committees and exempts Schedule C and Schedule G positions without naming PPO, and EO 14410 (signed 2026-06-03) routes Schedule Policy/Career position recommendations through the OPM Director to the President, with no mention of PPO in the readable text. Dan Scavino was named in August 2025 to lead PPO in place of Sergio Gor, and on 2025-09-11 the Senate changed its rules to allow most executive nominees to be confirmed in batches (41 on 2025-09-18 and 74 on 2025-10-07). Reporting on nominee vetting, confirmation pace and turnover rests on news sources, and a PPO role in firings of political appointees was not documented.",
   "timeline": [
-    {
-      "date": "2025-03-06",
-      "event": "Bloomberg (via Fortune) reports PPO under Sergio Gor put candidates through loyalty questions and reviewed donations and social media, with a White House official saying more than 200 nominees had gone to the Senate and more than 1,300 vacancies had been filled.",
-      "kind": "news",
-      "source": "Fortune (Bloomberg)",
-      "url": "https://fortune.com/2025/03/06/trump-tests-job-candidates-asking-who-won-2020-election"
-    },
     {
       "date": "2025-04-10",
       "event": "OPM Acting Director Charles Ezell issues a memo to agency heads, Schedule C Terms of Employment Flexibilities, which says approving or withdrawing an agency's Schedule C appointing authority requires preclearance from the White House Office of Presidential Personnel (routed through the agency's White House Liaison) in addition to approval by OPM's White House Liaison, and that Schedule C appointments should not advance without coordinating with the agency White House Liaison.",
@@ -204,24 +228,24 @@
     },
     {
       "date": "2025-08-26",
-      "event": "The Associated Press reports that Trump will install deputy chief of staff Dan Scavino to lead PPO in place of Sergio Gor, whom he had nominated as ambassador to India; no effective date is given. Brookings (2025-11-24) later reports Scavino as Gor's successor.",
+      "event": "The White House names deputy chief of staff Dan Scavino to lead PPO in place of Sergio Gor, who had been nominated the previous week as ambassador to India; no effective date was given.",
       "kind": "news",
       "source": "Associated Press via ABC News 4",
       "url": "https://abcnews4.com/news/nation-world/senior-trump-advisor-dan-scavino-lead-white-house-personnel-office-chief-of-staff-sergio-gor-trump-administration"
     },
     {
-      "date": "2025-10-15",
-      "event": "EO 14356 requires each agency to set up a strategic hiring committee (deputy head, chief of staff and designees) to approve filling each vacancy, with notice to OPM; it exempts Schedule C, Schedule G and presidentially appointed positions and names no PPO role.",
-      "kind": "primary",
-      "source": "White House",
-      "url": "https://whitehouse.gov/presidential-actions/2025/10/ensuring-continued-accountability-in-federal-hiring"
-    },
-    {
-      "date": "2025-11-24",
-      "event": "Brookings reports 216 Senate confirmations at day 300 against roughly 700 positions in the 15 departments and a record 53 withdrawn nominations, cites Partnership for Public Service data showing the fewest nominations in a first 300 days since Reagan, and describes the Senate's 2025-09-11 rule change allowing batch confirmations (batches of 41 on 2025-09-18 and 74 on 2025-10-07).",
+      "date": "2025-09-11",
+      "event": "The Senate changes its rules by majority vote to allow bundled consideration of most executive branch nominees; it then confirms 41 nominees in one batch on 2025-09-18 and 74 on 2025-10-07.",
       "kind": "news",
       "source": "Brookings",
       "url": "https://www.brookings.edu/articles/300-days-into-the-trump-administration-mixed-progress-in-filling-senior-leadership-posts/"
+    },
+    {
+      "date": "2025-10-15",
+      "event": "EO 14356 (signed 2025-10-15, published in the Federal Register 2025-10-20) requires each agency to set up a strategic hiring committee (deputy head, chief of staff and designees) to approve filling each vacancy, with notice to OPM; section 3(a)(iv) exempts Schedule C and Schedule G positions, and the text does not use the term Presidential Personnel.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/10/20/2025-19614/ensuring-continued-accountability-in-federal-hiring"
     },
     {
       "date": "2026-02-06",
@@ -232,28 +256,14 @@
     },
     {
       "date": "2026-06-03",
-      "event": "EO 14410 (published 2026-06-10) places the positions listed in its appendix into Schedule Policy/Career and lets agency heads petition the OPM Director to recommend additional positions to the President; the text read does not mention PPO.",
+      "event": "EO 14410 (signed 2026-06-03, published 2026-06-10 at 91 FR 34893) transfers the positions listed in its appendix into Schedule Policy/Career and has agency heads petition the OPM Director, who recommends further positions to the President (section 3(a)(ii)); the text read does not mention Presidential Personnel, and the appendix was available only as images.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/06/10/2026-11594/implementing-schedule-policycareer-in-the-excepted-service"
-    },
-    {
-      "date": "2026-07-23",
-      "event": "A Partnership for Public Service analysis, reported by Government Executive, finds 27 Senate-confirmed officials (11.4 percent) have left, a record pace, and the fewest nominations of any president since Reagan, with more acting officials; the article does not name PPO.",
-      "kind": "news",
-      "source": "Government Executive",
-      "url": "https://www.govexec.com/management/2026/07/trump-appointees-confirmed-senate-are-exiting-their-jobs-record-numbers-report-finds/414971/"
-    },
-    {
-      "date": "2026-08-21",
-      "event": "Breitbart publishes an exclusive in which cabinet officials praise PPO under Scavino and White House-provided figures are cited, including 591 civilian nominees confirmed in the 119th Congress; the figures are not independently verified and no critics are quoted.",
-      "kind": "news",
-      "source": "Breitbart News",
-      "url": "https://www.breitbart.com/politics/2026/08/21/exclusive-cabinet-officials-commend-work-of-presidential-personnel-office-under-dan-scavino/"
     }
   ],
   "title": "Run political staffing through a strong Presidential Personnel Office",
   "tracked": true,
-  "uncertainties": "The OPM Schedule C memo (dated 2025-04-10) was read on opm.gov; the Schedule G guidance was read as an OPM release, not as the underlying guidance document. The March 2025 vetting description and figures rest on a Bloomberg article that relies on unnamed people and a White House official. The Breitbart piece is a favorable account built on White House-provided figures and statements from officials, not independently verified. The Scavino handover date is not established: the AP report of 2025-08-26 says he will take over and Brookings later reports him as Gor's successor. Whether PPO has a role in choosing the positions placed in Schedule Policy/Career is not shown by the text of EO 14410 (an unofficial rendition of the text was read; the appendix was not). Overlap with c03-01 and c03-07 (Schedule Policy/Career) is intended; this record tracks only PPO's role. The progress figure of 55 is a judgment: PPO's clearance role is documented, but its authority over firings and over agency hiring generally is not.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The OPM Schedule C memo (dated 2025-04-10) was read on opm.gov; the Schedule G guidance was read as an OPM release, not as the underlying guidance document. The March 2025 vetting description and figures rest on a Bloomberg article that relies on unnamed people and a White House official. The Breitbart piece is a favorable account built on White House-provided figures and statements from officials, not independently verified. The Scavino handover date is not established: the AP report of 2025-08-26 says he will take over and Brookings later reports him as Gor's successor. Whether PPO has a role in choosing the positions placed in Schedule Policy/Career is not shown by the text of EO 14410 (an unofficial rendition of the text was read; the appendix was not). Overlap with c03-01 and c03-07 (Schedule Policy/Career) is intended; this record tracks only PPO's role. The progress figure of 55 is a judgment: PPO's clearance role is documented, but its authority over firings and over agency hiring generally is not. News reports that describe practices or counts rather than a dated government action are not listed as timeline events: Bloomberg via Fortune (2025-03-06) on PPO loyalty vetting, Brookings (2025-11-24) on 216 confirmations at day 300, Government Executive (2026-07-23) on a record pace of departures and Breitbart (2026-08-21) with unverified White House figures; they remain cited as sources. The naming of Dan Scavino (2025-08-26, reported by the Associated Press) and the Senate's 2025-09-11 rule change (reported by Brookings) are kept as timeline events because they are government actions. The Federal Register API confirmed EO 14356 (document 2025-19614, published 2025-10-20) and EO 14410 (document 2026-11594, 91 FR 34893, published 2026-06-10, signed 2026-06-03). The EO 14410 appendix is available only as images and was not read.",
+  "updated_at": "2026-10-18"
 }

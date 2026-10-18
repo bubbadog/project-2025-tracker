@@ -6,9 +6,9 @@
     "Shield laws in several states protect prescribers who mail pills to patients in states with bans (not examined in detail)."
   ],
   "chapter": "17",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "DOJ's own opinions page and the 2022 opinion page, read for this review, show no new or withdrawn Comstock Act opinion through 2026-09-17, and the September 2026 Fifth Circuit argument report shows DOJ litigating mifepristone without a Comstock position. This remains an absence finding: a DOJ statement outside the opinions page, or anything after mid-September 2026, could have been missed.",
+  "confidence": 60,
+  "confidence_label": "medium",
+  "confidence_reason": "All five systematic checks were documented on 2026-10-18: check 1 (three Federal Register queries plus a reviewer rerun on Comstock) found no relevant document; check 2 is partial (Unified Agenda unreachable, DOJ term query covers proposed rules, and enforcement policy would not appear as a rule); check 3 (one search, BILLSTATUS reads) found only bills not qualifying; check 4 is partial because only the first ten OLC opinions and recent DOJ releases were listed; check 5 (two news searches) found no DOJ announcement. With two partial checks and a pledged review that could produce an announcement at any time, confidence is set at 60.",
   "durability": {
     "level": "low",
     "why": "An enforcement announcement or a new OLC opinion would be a policy posture a later administration could withdraw; only a court ruling on the statute's meaning would be durable."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check with independent AI review: Systematic absence check confirmed not_started for DOJ Comstock enforcement; related bills judged non-qualifying and a review news search found nothing newer; confidence raised from 50 to 60."
     }
   ],
   "id": "c17-04",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_action",
@@ -57,13 +61,15 @@
     "flags": [
       "absence-of-evidence finding (cap 50)",
       "OSV News confirmation and swearing-in dates not re-read by this reviewer",
-      "nothing found after 2026-09-17"
+      "nothing found after 2026-09-17",
+      "V10: not_started 0 confirmed; S. 951, H.R. 2029 and H.R. 9421 were checked and judged related but not qualifying (the first two run the other way but are committee-stage bills, the third addresses prescribing, not DOJ enforcement).",
+      "V10: confidence 50 to 60, below the researcher's suggested 65, because checks 2 and 4 are partial and a pledged review could produce an announcement at any time."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 562 recommends that DOJ announce its intent to enforce 18 U.S.C. 1461 and 1462 against providers and distributors of abortion pills that use the mail, reasoning that after Dobbs no federal bar to enforcement remains; the paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "X2",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V10",
     "source_checks": [
       {
         "note": "First listing page shows ten opinions dated 2026-07-16 through 2026-09-17 (for example 18 U.S.C. 930(a) and post offices, Posse Comitatus); none concerns the Comstock Act, mailing of abortion drugs or mifepristone, and no withdrawal of the 2022 opinion appears.",
@@ -79,6 +85,81 @@
         "note": "Dated 2026-09-09: at Fifth Circuit argument in Louisiana v. FDA (No. 26-30203) DOJ attorney Daniel Winik argued Louisiana lacks standing and a section 705 stay would be improper, and declined to discuss FDA's ongoing review; the article does not mention the Comstock Act or any DOJ enforcement policy on mailed pills.",
         "result": "supports",
         "url": "https://news.bloomberglaw.com/health-law-and-business/fdas-regulation-of-abortion-drug-weighed-by-appeals-court"
+      },
+      {
+        "note": "Systematic check 1 (researcher): Terms: Comstock, section 1461, obscene matter, abortion, mail; all agencies; 0 documents since 2025-01-20. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Comstock+OR+%22section+1461%22+OR+%22obscene+matter%22+abortion+mail&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 1 (researcher): Terms: mifepristone, mail, abortion pills; all agencies; 0 documents. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=mifepristone+mail+abortion+pills&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 1 (researcher): Terms: mailing abortion, Comstock; agency Department of Justice; 0 documents. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=mailing+abortion+OR+Comstock&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=justice-department&per_page=20"
+      },
+      {
+        "note": "Systematic check 2 (researcher): Unified Agenda listing is script-driven and the host is refused by the session proxy (HTTP 403 on connect), checked 2026-10-18; the Federal Register proposed-rule listing was used as the fallback (see the next entry).",
+        "result": "unreachable",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Systematic check 2 (researcher): Fallback: the Department of Justice term query above returned 0 documents of any type, which includes proposed rules; DOJ enforcement policy would in any case not appear as a rule. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=PRORULE&conditions[agencies][]=justice-department&conditions[publication_date][gte]=2025-01-20&conditions[term]=mailing+abortion+OR+Comstock&per_page=20"
+      },
+      {
+        "note": "Systematic check 3 (researcher): One WebSearch (congress.gov, govinfo.gov) on Comstock Act and mailing of abortion pills, 119th Congress. S. 951 and H.R. 2029 (Stop Comstock Act; would revise 18 U.S.C. 552, 1461 and 1462) were each introduced 2025-03-11 and referred to committee, no later action; they point away from enforcement. H.R. 9421 (Ban Abortion by Mail Act, introduced 2026-06-24, referred to House Energy and Commerce) concerns mifepristone prescribing, not DOJ enforcement of sections 1461 and 1462. H.R. 629 (Ending Chemical Abortions Act) was listed and not read. Enacted laws were not read for Comstock provisions. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s951.xml"
+      },
+      {
+        "note": "Systematic check 3 (researcher): BILLSTATUS for H.R. 9421: three actions all dated 2026-06-24, latest referral to House Energy and Commerce; does not cite 18 U.S.C. 1461 or 1462. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9421.xml"
+      },
+      {
+        "note": "Systematic check 4 (researcher): OLC opinions page, first 10 of 1,454 entries (2026-07-16 to 2026-09-17): none on the Comstock Act or mailing of abortion drugs and no withdrawal of the 2022 opinion shown; older entries not paged. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.justice.gov/olc/opinions"
+      },
+      {
+        "note": "Systematic check 4 (researcher): DOJ news listing (2026-10-15 and 2026-10-16 items): none on the Comstock Act, abortion pills or mifepristone. Earlier releases not paged; DOJ announcement outside press releases cannot be excluded. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.justice.gov/news"
+      },
+      {
+        "note": "Systematic check 5 (researcher): One WebSearch (no domain filter) on DOJ Comstock enforcement of abortion pills by mail, October 2026. The top results were a syndicated report of 2026-08-10 and 2026-08-11 that anti-abortion groups urged the Attorney General to halt mailing of abortion pills; this reports a request, not a government action. No newer item showed a DOJ announcement. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://sourcenm.com/2026/08/10/repub/anti-abortion-groups-urge-attorney-general-to-halt-mailing-of-abortion-pills/"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: query Comstock, all agencies, all document types, since 2025-01-20: four documents (a river basin commission notice, two SEC notices, a customs broker license notice), all matching the word as a name and unrelated.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Comstock&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: BILLSTATUS for H.R. 9421 (Ban Abortion by Mail Act) re-read: introduced and referred to House Energy and Commerce 2026-06-24, no later action; the official title concerns in-person visits for mifepristone prescribing and a state medical license, with no reference to 18 U.S.C. 1461 or 1462; related but not qualifying.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9421.xml"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: BILLSTATUS for S. 951 (Stop Comstock Act): introduced and referred to Senate Judiciary 2025-03-11, no later action; identical House bill H.R. 2029; it would revise 18 U.S.C. 552, 1461 and 1462 and runs against the recommendation, but as a minority bill in committee it is not a government action that moves the stage.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s951.xml"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: OLC opinions page re-read: ten opinions dated 2026-07-16 to 2026-09-17, none on the Comstock Act or mailing of abortion drugs, and no withdrawal of the 2022 opinion.",
+        "result": "supports",
+        "url": "https://www.justice.gov/olc/opinions"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: one WebSearch (no domain filter) on a Justice Department Comstock Act opinion, mifepristone mail and the Attorney General, October 2026: results were the recorded July and August 2026 reports (hearing remarks, group letters); no DOJ announcement, new opinion or enforcement action.",
+        "result": "supports",
+        "url": "https://msmagazine.com/2026/07/17/todd-blanche-abortion-pill-mifepristone-comstock-act/"
       }
     ]
   },
@@ -193,6 +274,6 @@
   ],
   "title": "Announce enforcement of Comstock Act provisions against mailing of abortion pills",
   "tracked": true,
-  "uncertainties": "Searches run: Comstock Act, Blanche and OLC opinion (September and October 2026), mifepristone mail and DOJ news for September 2026, and withdrawal or replacement of the 2022 opinion; the newest items returned were from late August and early September 2026. The OLC opinions page was read with a 2026-10-08 retrieval (ten opinions listed, dated 2026-07-16 through 2026-09-17; earlier 2026 and 2025 opinions were not shown in the text returned), so a non-public or unpublished review cannot be excluded, and DOJ may announce policy outside the OLC page. The date shown on the OLC opinions source is the retrieval date. No DOJ press release was found. Counts of letter signers conflict across reports. The Washington Examiner article date (2026-08-07) is inferred from its content. An advocacy-group page (Center for Reproductive Rights) reports that Blanche said at the hearing he would have DOJ evaluate lawful enforcement options and, per a Politico report cited there (2026-08-03), told religious stakeholders on a private call that new policies would stop mailing of abortion drugs; the Ms. Magazine and OSV News reports do not support the first remark and the second was not independently verified, so neither is used. The 2026-09-09 Bloomberg Law report on Louisiana v. FDA does not mention the Comstock Act, and a Washington Examiner report of the same argument was also read; the Supreme Court action in May 2026 mentioned in the Bloomberg report was not examined.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Searches run: Comstock Act, Blanche and OLC opinion (September and October 2026), mifepristone mail and DOJ news for September 2026, and withdrawal or replacement of the 2022 opinion; the newest items returned were from late August and early September 2026. The OLC opinions page was read with a 2026-10-08 retrieval (ten opinions listed, dated 2026-07-16 through 2026-09-17; earlier 2026 and 2025 opinions were not shown in the text returned), so a non-public or unpublished review cannot be excluded, and DOJ may announce policy outside the OLC page. The date shown on the OLC opinions source is the retrieval date. No DOJ press release was found. Counts of letter signers conflict across reports. The Washington Examiner article date (2026-08-07) is inferred from its content. An advocacy-group page (Center for Reproductive Rights) reports that Blanche said at the hearing he would have DOJ evaluate lawful enforcement options and, per a Politico report cited there (2026-08-03), told religious stakeholders on a private call that new policies would stop mailing of abortion drugs; the Ms. Magazine and OSV News reports do not support the first remark and the second was not independently verified, so neither is used. The 2026-09-09 Bloomberg Law report on Louisiana v. FDA does not mention the Comstock Act, and a Washington Examiner report of the same argument was also read; the Supreme Court action in May 2026 mentioned in the Bloomberg report was not examined. Checked systematically on 2026-10-18: Federal Register API searches (all agencies and Department of Justice) returned no Comstock Act or abortion-pill mailing document; the Unified Agenda listing was unreachable; one congress.gov and govinfo search with BILLSTATUS reads found only committee-stage bills, the Stop Comstock Act (S. 951 and H.R. 2029, introduced 2025-03-11), which would revise the provisions the other way, and the Ban Abortion by Mail Act (H.R. 9421, introduced 2026-06-24), which concerns in-person prescribing of mifepristone rather than DOJ enforcement, and enacted laws were not read; the OLC opinions page (ten entries through 2026-09-17, re-read in review) and the DOJ news listing showed no Comstock item; and news searches, including one in review, surfaced nothing newer than the August 2026 requests to the Attorney General. An unpublished DOJ review or an announcement outside these pages cannot be excluded.",
+  "updated_at": "2026-10-18"
 }

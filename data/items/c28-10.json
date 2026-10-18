@@ -8,7 +8,7 @@
   "chapter": "28",
   "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "Reviewer read the Federal Register records for all five FCC documents (four proposed rules, one final rule) and the GAO testimony; whether the proposals amount to the review requested is a judgment.",
+  "confidence_reason": "Reviewer read the Federal Register API records for the USF administration proposal (FCC 26-52) and the 2026-09-14 competitive bidding notice, and relied on the 2026-10-14 review's reading of the other FCC records and the GAO testimony; the full proposal texts were not read, and whether the proposals amount to the review requested is a judgment.",
   "durability": {
     "level": "medium",
     "why": "FCC rules can be changed by later Commissions; a statutory strategy would be more durable but none is enacted."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: in_progress 25 kept; a 2026-09-14 E-Rate competitive bidding rule was added as an event and the summary wording on final steps was corrected."
     }
   ],
   "id": "c28-10",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -60,17 +64,18 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Progress lowered from 30 to 25: four of the five FCC steps are proposed rules, one final rule is narrow, and the national strategy element has no action. proposed 20 is defensible if the NPRMs are not read as the review itself.",
+      "Progress lowered from 30 to 25 in the 2026-10-14 review: four of the five FCC steps are proposed rules, one final rule is narrow, and the national strategy element has no action. proposed 20 is defensible if the NPRMs are not read as the review itself.",
       "Hotspot rescission ground corrected to the statutory reading in the Federal Register abstract; private petitioners' names left out.",
       "E-Rate proposal description narrowed to what the abstract shows; BEAD overlap claim moved to uncertainties.",
       "c28-09 removed from related_ids because that draft was dropped as a duplicate of c28-05.",
-      "Duplicate check: c28-06 names USF requirements among rules to eliminate, and c28-02 covers USF contributions; neither covers a duplication review or a national strategy, so kept."
+      "Duplicate check: c28-06 names USF requirements among rules to eliminate, and c28-02 covers USF contributions; neither covers a duplication review or a national strategy, so kept.",
+      "2026-10-18 review (V1): in_progress 25 kept. The researcher's new 2026-09-14 competitive bidding event was kept and reworded to name the underlying order (FCC 26-30, 91 FR 29051); the status summary sentence on final steps was split so the hotspot rescission and the procurement rule are described separately; a future date (2026-10-19) in uncertainties was corrected to 2026-10-18. Confidence kept at 75 because the deciding documents were read as API metadata only."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 856, under Holding Government Accountable (Adopt a national coordinating strategy): citing GAO's count of more than 100 programs across 15 agencies and weak tracking and accountability, the next Administration should put a national strategy in place for a coordinated approach and ask the FCC to review its broadband programs, including the USF components, to avoid duplication, improve efficiency and save money. Paraphrase, page and position confirmed.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y5",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V1",
     "source_checks": [
       {
         "note": "Testimony published 2026-07-22: no overarching national strategy; 2022 recommendation to EOP through the National Economic Council not addressed (checked 2026-10-14)",
@@ -93,14 +98,19 @@
         "url": "https://www.federalregister.gov/api/v1/documents/2026-16590.json"
       },
       {
-        "note": "Proposed rule, FCC 26-52, USF administration, published 2026-08-31 (checked 2026-10-14)",
+        "note": "Final rule (partial withdrawal) published 2026-01-21, effective 2026-02-20; rescinds 2024 hotspot rules on a section 254 statutory ground (checked 2026-10-14)",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-01053.json"
+      },
+      {
+        "note": "Proposed rule, FCC 26-52, 91 FR 55826, published 2026-08-31; comments due 2026-09-30, replies 2026-10-30; seeks comment on USAC processes, structure, operating costs and board (checked 2026-10-18)",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents/2026-17761.json"
       },
       {
-        "note": "Final rule (partial withdrawal) published 2026-01-21, effective 2026-02-20; rescinds 2024 hotspot rules on a section 254 statutory ground (checked 2026-10-14)",
+        "note": "Effective-date notice, 91 FR 58027, published 2026-09-14: amendatory instructions 4 and 5 of FCC 26-30 (91 FR 29051, 2026-05-19) effective 2026-09-14 after OMB approval; procurement rules, not a USF duplication review (checked 2026-10-18)",
         "result": "partial",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-01053.json"
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-18780.json"
       }
     ]
   },
@@ -188,10 +198,17 @@
       "publisher": "Benton Institute",
       "title": "Agreed, But Not Done: The Broadband To-Do List Federal Agencies Keep Not Finishing",
       "url": "https://www.benton.org/blog/agreed-not-done-broadband-do-list-federal-agencies-keep-not-finishing"
+    },
+    {
+      "date": "2026-09-14",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Promoting Fair and Open Competitive Bidding in the E-Rate Program; Schools and Libraries Universal Service Support Mechanism",
+      "url": "https://www.federalregister.gov/documents/2026/09/14/2026-18780/promoting-fair-and-open-competitive-bidding-in-the-e-rate-program-schools-and-libraries-universal"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The FCC element has advanced through program-by-program proposals, while the national strategy element has not. GAO testified on 2026-07-22 that no national strategy exists and that its 2022 recommendation to the Executive Office of the President to develop one has not been addressed. The FCC adopted proposed rules on Lifeline (FCC 26-8, published 2026-04-03), high-cost support (FCC 26-35, adopted 2026-05-20), E-Rate (FCC 26-41, published 2026-08-14) and USF administration (FCC 26-52, published 2026-08-31), all still at the proposal stage. The only final step found is the FCC's rescission of its 2024 E-Rate hotspot rules (effective 2026-02-20), on the ground that the statute does not permit E-Rate funding of off-premises hotspots; no single FCC review of all USF components was found.",
+  "status_summary": "The FCC element has advanced through program-by-program proposals, while the national strategy element has not. GAO testified on 2026-07-22 that no national strategy exists and that its 2022 recommendation to the Executive Office of the President to develop one has not been addressed. The FCC adopted proposed rules on Lifeline (FCC 26-8, published 2026-04-03), high-cost support (FCC 26-35, adopted 2026-05-20), E-Rate (FCC 26-41, published 2026-08-14) and USF administration (FCC 26-52, published 2026-08-31), all still at the proposal stage. The main final step found is the FCC's rescission of its 2024 E-Rate hotspot rules (effective 2026-02-20), on the ground that the statute does not permit E-Rate funding of off-premises hotspots. Amendments to the E-Rate competitive bidding rules (FCC 26-30) also took effect on 2026-09-14; they concern procurement and do not amount to a review of USF components. No single FCC review of all USF components was found.",
   "timeline": [
     {
       "date": "2026-01-21",
@@ -234,10 +251,17 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17761/maximizing-efficiencies-in-universal-service-administration"
+    },
+    {
+      "date": "2026-09-14",
+      "event": "The FCC announced that amendments to its E-Rate competitive bidding rules adopted in FCC 26-30 (published 2026-05-19 at 91 FR 29051) took effect on 2026-09-14, after OMB approval of the related information collection (91 FR 58027).",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/09/14/2026-18780/promoting-fair-and-open-competitive-bidding-in-the-e-rate-program-schools-and-libraries-universal"
     }
   ],
   "title": "Adopt a national broadband strategy and review FCC broadband programs including USF",
   "tracked": true,
-  "uncertainties": "The Federal Register documents were read in part through a summarizing fetch tool (the Lifeline and E-Rate documents were read only to about character 100,000 of 137,000), so savings estimates in their later sections were not seen. The hotspot rescission order's adoption date was not confirmed, so the record dates it by publication; the Federal Register abstract gives a statutory ground, and the researcher's partial read also found cost and overlap with other federal hotspot programs mentioned. The GAO status page for the 2022 recommendation was read as open and partially addressed as of April 2024 and as not addressed in the 2026 report; the GAO recommendation database itself was not opened. The PLAN for Broadband Act status comes from the 2026 GAO report's description (subcommittee consideration) and a 2024 trade article about an earlier Congress, so its current bill number was not confirmed. No White House or NTIA national strategy document was found in two searches and the GAO and Benton texts. These FCC proceedings are not linked to a White House request to the FCC; the Mandate's text frames the review as an Administration ask, and whether any such request occurred was not found. The FCC's general rules-deletion review and USF contribution base are treated in other records. Whether the Lifeline, high-cost and E-Rate proposals suffice as the review requested is a judgment. The Federal Register abstract of the E-Rate proposal does not mention BEAD; the researcher's partial read reported a question on overlap with BEAD and other federal funding, which the reviewer did not confirm, so it was removed from the summary.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The Federal Register documents were read in part through a summarizing fetch tool (the Lifeline and E-Rate documents were read only to about character 100,000 of 137,000), so savings estimates in their later sections were not seen. The hotspot rescission order's adoption date was not confirmed, so the record dates it by publication; the Federal Register abstract gives a statutory ground, and the researcher's partial read also found cost and overlap with other federal hotspot programs mentioned. The GAO status page for the 2022 recommendation was read as open and partially addressed as of April 2024 and as not addressed in the 2026 report; the GAO recommendation database itself was not opened. The PLAN for Broadband Act status comes from the 2026 GAO report's description (subcommittee consideration) and a 2024 trade article about an earlier Congress, so its current bill number was not confirmed. No White House or NTIA national strategy document was found in two searches and the GAO and Benton texts. These FCC proceedings are not linked to a White House request to the FCC; the Mandate's text frames the review as an Administration ask, and whether any such request occurred was not found. The FCC's general rules-deletion review and USF contribution base are treated in other records. Whether the Lifeline, high-cost and E-Rate proposals suffice as the review requested is a judgment. The Federal Register abstract of the E-Rate proposal does not mention BEAD; the researcher's partial read reported a question on overlap with BEAD and other federal funding, which the reviewer did not confirm, so it was removed from the summary. The 2026-09-14 competitive bidding rule was read only through its Federal Register abstract, which describes the effective date of earlier amendatory instructions and an information collection approval; its substance was not read. Federal Register comment dates were confirmed: Lifeline replies due 2026-06-02, high-cost replies due 2026-09-03, E-Rate replies due 2026-11-12, USF administration replies due 2026-10-30. No final rule from the four proposals was found in FCC documents published through 2026-10-18.",
+  "updated_at": "2026-10-18"
 }

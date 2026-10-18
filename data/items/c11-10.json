@@ -5,9 +5,9 @@
     "A final rule must first address the 7,051 comments received."
   ],
   "chapter": "11",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "The executive order and the August 2026 proposed rule were confirmed from primary sources; the operative steps so far are the order and a nonbinding interpretive rule, while the main regulatory change is still a proposal. The outcome of the September 2026 ABA and SACSCOC recognition reviews was not found.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "The Federal Register API records for the proposed rule (91 FR 53940, 82 pages, comments closed 2026-09-21), Executive Order 14279 (90 FR 17529) and the interpretive rule (91 FR 9709) were fetched, and the proposed rule's text was read through about page 53956, which covers the geographic-scope, two-year-rule, antitrust, lawful-standards and viewpoint provisions and the 2026-05-21 consensus date; the stage-deciding fact (a proposal with no final rule) is confirmed at the primary source. The rest of the preamble and the regulatory text were not reached, and the advisory committee outcome rests on the CHEA Policy Watch of 2026-10-06.",
   "durability": {
     "level": "low",
     "why": "The order, the interpretive rule and recognition decisions can be changed by a later administration; a final rule would be medium durability but none exists yet."
@@ -24,10 +24,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c11-25, c11-29 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Stage in_progress 30 confirmed against the proposed rule and Federal Register API records; emptied blockers restored; confidence 72 to 80."
     }
   ],
   "id": "c11-10",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 2,
   "match": "partial",
   "mechanism": "mixed",
@@ -51,7 +55,7 @@
   "remaining": [
     "A final accreditation rule (the comment period closed 2026-09-21).",
     "Amendments to the Higher Education Act to bar accreditors from requiring diversity policies, protect state and religious governance, and authorize states to recognize accreditors (none found).",
-    "The Secretary's decision on any accreditor that fails recognition criteria, including the ABA council and SACSCOC reviews scheduled for 2026-09-23 and 2026-09-24 (outcome not found).",
+    "The Secretary's decision on any accreditor that fails recognition criteria; the advisory committee made no ABA council recommendation and recommended SACSCOC renewal with added reporting, so the Department's decisions are pending.",
     "Federal recognition of a new accreditor such as the Commission for Public Higher Education (plans to apply in late 2027).",
     "The executive order pursuing antitrust action against accreditors, especially the ABA, that the Mandate recommends (p. 359): the August 2026 proposal would state that recognition gives accreditors no antitrust immunity, but no antitrust enforcement action or order directing one was found."
   ],
@@ -59,15 +63,18 @@
   "research_agent": "D4",
   "review": {
     "flags": [
-      "progress lowered from 40 to 30: the main regulatory change is a proposal and the operative steps are an order and nonbinding guidance",
-      "proposed rule includes an antitrust-immunity provision the record omitted",
-      "ABA and SACSCOC recognition review outcome not found"
+      "Stage in_progress 30 confirmed: executive order and interpretive rule in place, proposed rule pending; proposed 20 is the defensible alternative because the interpretive rule is nonbinding and the main rule is only proposed.",
+      "Restored the blockers the draft emptied without explanation (statutory recognition authority; comments to address before a final rule).",
+      "Federal Register API confirmed EO 14279 at 2025-07376 (90 FR 17529, signed 2025-04-23), the proposed rule at 2026-17001 and the interpretive rule at 2026-03953.",
+      "Corrected the uncertainties: the geographic-scope and two-year-rule provisions were in the part of the proposed rule that was read (pp. 53949 to 53951).",
+      "CHEA Policy Watch dated 2026-10-06, not month-only.",
+      "Confidence 72 to 80: the deciding proposed rule was fetched and its relevant provisions read."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 351 to 353 ask the administration to work with Congress to amend the HEA so accreditors cannot use their Title IV role to require DEI policies or intrude on state or religious institution governance, and to let states recognize accreditors; page 355 says the Secretary should refuse to recognize accreditors that abuse their power and encourage new ones; page 359 calls for an executive order pursuing antitrust action against accreditors, especially the ABA. The paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W3",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V9",
     "source_checks": [
       {
         "note": "Executive Order 14279 (2025-04-23) directs the Secretary to hold accreditors accountable through recognition actions, address accreditor-required discrimination, keep accreditors from pushing violations of state law, streamline switching and resume recognizing new accreditors, and to assess whether to suspend or terminate the ABA council's recognition; it directs the Attorney General to investigate discrimination by law and medical schools and does not mention antitrust.",
@@ -78,6 +85,31 @@
         "note": "Proposed rule published 2026-08-20 (comments closed 2026-09-21, 7,051 received) that reflects negotiated rulemaking consensus of 2026-05-21 and implements Executive Order 14279: removes geographic limits, bars standards that direct institutions to break federal or state law, requires viewpoint neutrality except for religious-mission agencies and eases switching. It replaces rather than simply drops the two-year rule, does not mention the ABA, and proposes a section stating that recognition gives no antitrust immunity, which the record omitted.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/08/20/2026-17001/accreditation-innovation-and-modernization-the-secretarys-recognition-of-accrediting-agencies"
+      },
+      {
+        "note": "Proposed rule, 91 FR 53940, 2026-08-20, 82 pages, 34 CFR parts 600, 602 and 668, comments close 2026-09-21; implements EO 14279. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-17001.json"
+      },
+      {
+        "note": "Text returned ends at about p. 53956; section 602.11 geographic scope (pp. 53949-53950), section 602.12 two-year rule removal (pp. 53950-53951), consensus 2026-05-21 (p. 53946), sections 602.13 to 602.17 read; regulatory text not reached. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/full_text/xml/2026/08/20/2026-17001.xml"
+      },
+      {
+        "note": "Executive Order 14279, signed 2025-04-23, published 2025-04-28, 90 FR 17529. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2025-07376.json"
+      },
+      {
+        "note": "Interpretive rule on initial recognition, 91 FR 9709, 2026-02-27. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-03953.json"
+      },
+      {
+        "note": "Policy Watch dated 2026-10-06: 7,051 comments; NACIQI no recommendation on the ABA council, SACSCOC renewal recommended with added reporting; final rule anticipated around 2026-11-01. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.chea.org/node/94386"
       }
     ]
   },
@@ -95,11 +127,11 @@
   },
   "sources": [
     {
-      "date": "2025-04-23",
+      "date": "2025-04-28",
       "kind": "primary",
-      "publisher": "White House",
-      "title": "Reforming Accreditation to Strengthen Higher Education (Executive Order 14279)",
-      "url": "https://www.whitehouse.gov/presidential-actions/2025/04/reforming-accreditation-to-strengthen-higher-education/"
+      "publisher": "Federal Register",
+      "title": "Reforming Accreditation To Strengthen Higher Education (Executive Order 14279, Federal Register)",
+      "url": "https://www.federalregister.gov/documents/2025/04/28/2025-07376/reforming-accreditation-to-strengthen-higher-education"
     },
     {
       "date": "2026-02-27",
@@ -128,49 +160,56 @@
       "publisher": "Higher Ed Dive",
       "title": "New accreditor CPHE and state laws on switching accreditors",
       "url": "https://www.highereddive.com/news/commission-public-higher-education-state-laws/818856/"
+    },
+    {
+      "date": "2026-10-06",
+      "kind": "tracker",
+      "publisher": "CHEA",
+      "title": "Policy Watch, October 2026",
+      "url": "https://www.chea.org/node/94386"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "As of 2026-10-07 the executive and rulemaking track is under way, while the Mandate's statutory changes are not. Executive Order 14279 (2025-04-23) directed ED to hold accreditors accountable under the recognition criteria, ensure they do not require discrimination barred by law, speed institutions' switching of accreditors, resume recognizing new accreditors, and assess the American Bar Association council's recognition. ED published a nonbinding interpretive rule on initial recognition of new accreditors on 2026-02-27. After a negotiated rulemaking committee reached consensus on 2026-05-21, ED proposed regulations on 2026-08-20 that would remove geographic limits on accreditors, replace the two-year rule for initial recognition with a check that ends recognition if no institution relies on the agency two years after recognition, bar standards that direct institutions to violate federal or state law, require viewpoint neutrality except for agencies with a religious mission, and state that federal recognition gives accreditors no immunity from antitrust laws; comments closed 2026-09-21 with 7,051 received and no final rule has been published. Six public university systems have formed a new accreditor, the Commission for Public Higher Education, which per a trade report has not applied for federal recognition and plans to file in late 2027. ED's advisory committee scheduled renewal reviews of the ABA council and SACSCOC for 2026-09-23 and 2026-09-24; the outcome was not found.",
+  "status_summary": "The executive and rulemaking track is under way, while the Mandate's statutory changes are not. Executive Order 14279 (signed 2025-04-23) directed ED to hold accreditors accountable under the recognition criteria, ensure they do not require discrimination barred by law, ease switching of accreditors, resume recognizing new accreditors and assess the ABA council's recognition; ED published a nonbinding interpretive rule on initial recognition on 2026-02-27 (91 FR 9709). ED published the proposed rule 'Accreditation, Innovation, and Modernization' on 2026-08-20 (91 FR 53940; 34 CFR parts 600, 602 and 668), which among other provisions would state that recognition confers no antitrust immunity (section 602.13), bar standards that force institutions to violate lawful state law (section 602.16), apply First Amendment and viewpoint protections except for religious-mission institutions (sections 602.15 and 602.17) and ease switching of accreditors; comments closed 2026-09-21 with 7,051 received and no final rule has been published. The advisory committee met 2026-09-23 and 2026-09-24 and made no recommendation on the ABA council, and no Higher Education Act amendment or antitrust action was found.",
   "timeline": [
     {
       "date": "2025-04-23",
-      "event": "Executive Order 14279 directs the Education Secretary to enforce recognition criteria against accreditors, ensure accreditors do not require discrimination barred by law or push violations of state law, streamline switching of accreditors, resume recognizing new accreditors, and assess whether to suspend or end recognition of the ABA's law school accreditation council; it directs the Attorney General to investigate alleged discrimination by ABA-linked law schools.",
+      "event": "Executive Order 14279 (signed 2025-04-23, published 2025-04-28) directs the Education Secretary to enforce recognition criteria against accreditors, ensure accreditors do not require discrimination barred by law or push violations of state law, streamline switching of accreditors, resume recognizing new accreditors, and assess whether to suspend or end recognition of the ABA's law school accreditation council; it directs the Attorney General to investigate alleged discrimination by ABA-linked law schools.",
       "kind": "primary",
-      "source": "White House",
-      "url": "https://www.whitehouse.gov/presidential-actions/2025/04/reforming-accreditation-to-strengthen-higher-education/"
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/04/28/2025-07376/reforming-accreditation-to-strengthen-higher-education"
     },
     {
       "date": "2026-02-27",
-      "event": "ED publishes a nonbinding interpretive rule on initial recognition of accreditors, stating its reading of the criteria and review timing for new agencies and citing Executive Order 14279; the rule keeps a two-year period that starts at a new agency's first accrediting activity.",
+      "event": "ED publishes (91 FR 9709) a nonbinding interpretive rule on initial recognition of accreditors, stating its reading of the criteria and review timing for new agencies and citing Executive Order 14279; the rule keeps a two-year period that starts at a new agency's first accrediting activity.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/02/27/2026-03953/regulatory-guidance-relating-to-the-criteria-and-process-for-initial-recognition-of-an-accrediting"
     },
     {
-      "date": "2026-04-30",
-      "event": "Higher Ed Dive reports that the Commission for Public Higher Education, founded by six public university systems (Florida, Texas A&M, North Carolina, South Carolina, Tennessee, Georgia), has not applied for federal recognition and plans to file in late 2027, and that a federal grant of 1 million dollars lets it waive dues until recognition.",
-      "kind": "news",
-      "source": "Higher Ed Dive",
-      "url": "https://www.highereddive.com/news/commission-public-higher-education-state-laws/818856/"
-    },
-    {
       "date": "2026-08-20",
-      "event": "ED publishes the proposed rule 'Accreditation, Innovation, and Modernization' amending 34 CFR parts 600, 602 and 668. It reflects the consensus of the negotiated rulemaking committee (announced 2026-01-27; sessions in April and May 2026; consensus 2026-05-21) and proposes removing geographic limits on accreditors, dropping the two-year rule for initial recognition, barring standards that push institutions to violate federal or state law, requiring viewpoint-neutral decisions except for agencies with a religious mission, and easing institutions' switching of accreditors. Comments closed 2026-09-21 with 7,051 received.",
+      "event": "ED publishes the proposed rule (91 FR 53940, 82 pages) 'Accreditation, Innovation, and Modernization' amending 34 CFR parts 600, 602 and 668. It reflects the consensus of the negotiated rulemaking committee (announced 2026-01-27; sessions in April and May 2026; consensus 2026-05-21) and proposes removing geographic limits on accreditors, dropping the two-year rule for initial recognition, barring standards that push institutions to violate federal or state law, requiring viewpoint-neutral decisions except for agencies with a religious mission, and easing institutions' switching of accreditors. Comments closed 2026-09-21 with 7,051 received.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/08/20/2026-17001/accreditation-innovation-and-modernization-the-secretarys-recognition-of-accrediting-agencies"
     },
     {
       "date": "2026-08-21",
-      "event": "ED notices a 2026-09-23 and 2026-09-24 meeting of its accreditation advisory committee (NACIQI) to review renewal of recognition for six agencies, including the ABA's law school accreditation council and the Southern Association's Commission on Colleges, plus one compliance report.",
+      "event": "ED publishes (91 FR 54315) a notice of a 2026-09-23 and 2026-09-24 meeting of its accreditation advisory committee (NACIQI) to review renewal of recognition for six agencies, including the ABA's law school accreditation council and the Southern Association's Commission on Colleges, plus one compliance report.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/08/21/2026-17135/national-advisory-committee-on-institutional-quality-and-integrity-notice-of-meeting"
+    },
+    {
+      "date": "2026-09-24",
+      "event": "After its 2026-09-23 and 2026-09-24 meeting, NACIQI made no recommendation on renewal of the ABA council's recognition (no consensus) and recommended renewal of SACSCOC subject to added reporting; the Education Department decides on the full record (per the CHEA Policy Watch of 2026-10-06).",
+      "kind": "tracker",
+      "source": "CHEA",
+      "url": "https://www.chea.org/node/94386"
     }
   ],
   "title": "Reform accreditation: curb non-academic mandates and open the field to new accreditors",
   "tracked": true,
-  "uncertainties": "The proposed rule was read through its first 100,000 characters only (the rest, about 40,000 characters, was not read), so some provisions may be missing from the summary; the page text did not mention the ABA or the word DEI. The January 2026 negotiated rulemaking announcement is cited through the proposed rule, not read directly. Outcomes of the 2026-09-23 and 2026-09-24 advisory committee review were not found. No search found a derecognition, suspension or antitrust action against an accreditor, but no search was run for these specifically beyond one web search on new accreditors and the ABA council. The Mandate's mention of accreditors on p. 358 (D.C. Opportunity Scholarship accreditation rules) is covered under c11-09.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The proposed rule was read in the Federal Register API record and the XML text through about page 53956 of an 82-page document (starting at 91 FR 53940); the geographic-scope provisions (section 602.11, pp. 53949 to 53950) and the removal of the two-year rule (section 602.12, pp. 53950 to 53951) fall within the part read, while the remainder of the preamble and the proposed regulatory text were not read because the web text ends at about page 53956. The page text read did not mention the ABA or the word DEI. The January 2026 negotiated rulemaking announcement is cited through the proposed rule, not read directly. The 2026-04-30 Higher Ed Dive report on the Commission for Public Higher Education (which has not applied for federal recognition and plans to file in late 2027) is not a government action and is kept as a source only. The advisory committee outcome comes from a CHEA tracker, not an Education Department document. CHEA expects a final rule around 2026-11-01, which is an expectation, not an action. No derecognition, suspension or antitrust action against an accreditor was found. The Mandate's mention of accreditors on p. 358 is covered under c11-09.",
+  "updated_at": "2026-10-18"
 }

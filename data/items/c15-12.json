@@ -5,9 +5,9 @@
     "Longer-term products floated by the administration run in the opposite direction."
   ],
   "chapter": "15",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Document text checked and the 2023 mortgagee letter read, but not_started rests on absence of a later premium change from limited searches.",
+  "confidence": 58,
+  "confidence_label": "medium",
+  "confidence_reason": "Not_started after a systematic five-check review on 2026-10-18: Federal Register API (re-run with a term variant), Unified Agenda (Federal Register fallback only, so partial), congress.gov and govinfo (search run in review, H.R. 5508 status read), HUD mortgagee letters page (unreachable), and a news search; held below 60 because the agenda check was only the fallback and the agency page where premiums are announced could not be opened.",
   "durability": {
     "level": "low",
     "why": "Premium schedules are set by notice and can be changed readily."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Cross-references added to new layer 3 records c15-16 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 ran the Federal Register API, Unified Agenda fallback, a congress.gov and govinfo search, HUD mortgagee letters page (unreachable) and news checks (Federal Register and govinfo hosts read), found no qualifying action and removed one press-report timeline entry, so the record stays not_started."
     }
   ],
   "id": "c15-12",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -43,7 +51,9 @@
   "position": "First-Day and First-Year Administrative Reforms",
   "progress": 0,
   "proposal": "The Mandate recommends that FHA raise the mortgage insurance premium for all products with terms above 20 years while holding premiums for shorter terms and refinances, to steer borrowers toward shorter-duration, wealth-building mortgages. It also asks Congress to consider statutory flexibility for products that build equity faster.",
-  "related_ids": [],
+  "related_ids": [
+    "c15-16"
+  ],
   "remaining": [
     "A premium schedule raising rates for terms above 20 years.",
     "Any statutory change for shorter-term products."
@@ -51,32 +61,40 @@
   "requires_congress": "partial",
   "research_agent": "N15",
   "review": {
-    "flags": [],
-    "mandate_check": "verified",
-    "mandate_note": "Bullet on page 510 matches; footnote 39 on page 516 cites the LIFT Act as addressing the goal, so page 516 was added.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y15a",
+    "flags": [
+      "The 2025-12-29 timeline entry described press reporting of a statement rather than a government action and was removed; the source stays in sources for the status summary.",
+      "Agency page unreachable on two attempts; a mortgagee letter changing premiums could have been missed."
+    ],
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 510 recommends raising the premium for products above 20-year terms while holding it for shorter terms and refinances, and asks Congress to consider statutory flexibility for faster-amortizing products; page 516 holds the supporting footnote. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "ML 2023-05 issued 2023-02-22, effective 2023-03-20, annual rates for terms over 15 years of 50 to 75 basis points.",
+        "note": "2026-10-18: Federal Register API variant on annual mortgage insurance premium and single family since 2025-01-20: 0 documents. The researcher's HUD-filtered query on mortgage insurance premium returned 3 documents (a premiums collection information request, the Section 232 green premium category notice and an energy standards notice), none on single family premiums by term.",
         "result": "supports",
-        "url": "https://archives.hud.gov/news/2024/2023-05hsgml.pdf"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22annual+mortgage+insurance+premium%22+single+family&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Only a Section 232 notice, an information collection and an energy code notice; no single family premium change.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=housing-and-urban-development-department&conditions[term]=%22mortgage+insurance+premium%22&conditions[publication_date][gte]=2025-01-20&per_page=30"
+        "note": "2026-10-18: The Unified Agenda itself was not readable (reginfo.gov rule list is form-driven); Federal Register fallback only: no rule or proposed rule on single family FHA premiums by term.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json"
       },
       {
-        "note": "2026-06-23 changes listed; no premium change mentioned.",
+        "note": "2026-10-18: One review search limited to congress.gov and govinfo.gov on FHA premiums, loan term and shorter-term mortgages returned H.R. 5508, H.R. 892, H.R. 2094, S. 978 and S. 1527; the H.R. 5508 status record (Mortgage Insurance Freedom Act, introduced 2025-09-19, referred to Financial Services) shows a bill restricting collection of annual premiums, not term-based pricing. No qualifying bill found.",
         "result": "supports",
-        "url": "https://infobytes.orrick.com/2026-06-26/hud-announces-policy-changes-to-its-single-family-mortgage-insurance-program-aiming-to-reduce-costs-and-regulatory-burdens/"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5508.xml"
       },
       {
-        "note": "Article 2025-12-29; FHFA Director promoted the idea; HUD Secretary urged further research.",
+        "note": "2026-10-18: The HUD single family mortgagee letters page returned a client error to the researcher and again in review.",
+        "result": "unreachable",
+        "url": "https://www.hud.gov/hud-partners/single-family-mortgagee-letters"
+      },
+      {
+        "note": "2026-10-18: No URL was recorded for the researcher's news search, so this field holds the agency page attempted in review. The search on FHA premiums and shorter-term mortgages in 2026 returned rate guides and a note on the multifamily premium cut, with no single family increase for loans over 20 years.",
         "result": "supports",
-        "url": "https://www.scotsmanguide.com/news/hud-secretary-pumps-brakes-on-50-year-mortgage-plan-citing-need-for-further-research/"
+        "url": "https://www.hud.gov/hud-partners/single-family-mortgagee-letters"
       }
     ]
   },
@@ -150,13 +168,6 @@
       "url": "https://www.federalregister.gov/documents/2025/09/23/2025-18379/changes-in-mortgage-insurance-premiums-applicable-to-fha-multifamily-insurance-programs"
     },
     {
-      "date": "2025-12-29",
-      "event": "Reporting on the HUD Secretary's statement that a 50-year mortgage proposal needed further research.",
-      "kind": "news",
-      "source": "Scotsman Guide",
-      "url": "https://www.scotsmanguide.com/news/hud-secretary-pumps-brakes-on-50-year-mortgage-plan-citing-need-for-further-research/"
-    },
-    {
       "date": "2026-06-23",
       "event": "HUD announced single family program changes to quality control and loss mitigation without reported premium changes.",
       "kind": "news",
@@ -166,6 +177,6 @@
   ],
   "title": "Raise FHA premiums on loans over 20 years and favor shorter-term mortgages",
   "tracked": true,
-  "uncertainties": "HUD's current premium page could not be opened, so the current schedule rests on Mortgagee Letter 2023-05 and on Federal Register searches of HUD premium documents since 2025-01-20, which found no single family premium change; single family premiums are set by mortgagee letter, which the Federal Register does not carry. One web search for 2026 premium changes found none. The 50-year proposal is context only.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Checked systematically on 2026-10-18. The Federal Register API check (mortgage insurance premium limited to HUD, and a variant on annual mortgage insurance premium and single family) found no single family premium change since 2025-01-20; single family premiums are set by mortgagee letter, which the Federal Register does not carry, so this check is limited by design. The Unified Agenda check was partial: only the Federal Register fallback was usable. The Congress check, run in review as one search limited to congress.gov and govinfo.gov, found premium-related bills such as H.R. 5508, whose status record shows a bill restricting collection of annual premiums rather than setting premiums by loan term, and no bill providing statutory flexibility for shorter-term products. The agency check was unreachable: the HUD single family mortgagee letters page returned a client error to the researcher and again in review, so the current premium schedule rests on Mortgagee Letter 2023-05. The news check found no single family premium increase for loans over 20 years. The 50-year mortgage proposal is context only.",
+  "updated_at": "2026-10-18"
 }

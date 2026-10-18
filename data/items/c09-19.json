@@ -5,9 +5,9 @@
     "Pending litigation over the dismantling and over State reductions in force."
   ],
   "chapter": "09",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Text at pages 271, 278 and 279 checked and the OPM final rule fetched on federalregister.gov; absence of the USAID-specific steps rests on the researcher's documented element-by-element searches, which this review did not repeat, so the no-action cap of 50 applies until a systematic absence check is recorded. This call is evenly balanced between not_started and diverged.",
+  "confidence": 55,
+  "confidence_label": "medium",
+  "confidence_reason": "Chapter text pages 271, 278 and 279 checked and the OPM Schedule Policy/Career final rule read earlier; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo with the H.R. 1123 bill status read, agency pages unreachable because state.gov is blocked and USAID has closed, one news search); held at 55, under the 60 cap for a blocked agency host, because the not_started versus diverged call is evenly balanced.",
   "court_status": {
     "basis": "D.C. Circuit heard argument in AFGE v. Trump (No. 25-5290) on 2026-04-23; AFSA's tracker, updated 2026-10-07, reports no ruling; the Fourth Circuit stay of 2025-03-28 in J. Doe 4 v. Musk remains.",
     "date": "2026-04-23",
@@ -39,10 +39,14 @@
     {
       "date": "2026-10-13",
       "note": "Second independent review on 2026-10-13 changed the stage from diverged to not_started with a parallel match, because the USAID wind-down made the staffing steps moot without running opposite to them; the government-wide Schedule Policy/Career final rule on federalregister.gov was added as a parallel step."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov), read the H.R. 1123 bill status on govinfo.gov, and reviewed the Unified Agenda fallback, agency page and news checks, found no qualifying action, kept not_started 0 and recorded that the recommendation is moot after the USAID closure."
     }
   ],
   "id": "c09-19",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -69,16 +73,15 @@
   "research_agent": "N09b",
   "review": {
     "flags": [
-      "second review: changed diverged to not_started 0 parallel under a strict test (b); closure made the USAID staffing steps moot but did not run opposite to political control of the workforce. Sibling c09-12 (implemented 65) and c03-01 (implemented 75) hold the aligned parallel actions.",
-      "second review: operative ask: The new administration should install political appointees as USAID's Chief Human Capital Officer and in at least four General Counsel posts, use Administratively Determined and Schedule C hiring, make USAID a pilot for a reinstated Schedule F, create an SES mobility program, replace all agencywide training on Day One with modules on the President's agenda, name a Senior Accountable Official on policy adherence, and recruit veterans, former missionaries, diaspora members and faith stakeholders (pages 271, 278, 279).",
-      "second review: rule applied: Not_started (0) with a parallel match: test (b) applied strictly finds nothing opposite to the ask, since the wind-down of USAID moved the agency further toward political control and fewer career staff rather than against it; the closure made the USAID-specific staffing steps moot, which is a different outcome but not a contrary one. Test (a) none of the USAID-specific steps is in effect; related government-wide steps exist (the OPM Schedule Policy/Career final rule effective 2026-03-09 and appointee review of awards under Executive Order 14332), which are parallel and tracked in c03-01 and c09-12. Test (c) no congressional action required.",
-      "second review: evenly balanced"
+      "Moot: USAID closed on 2025-07-01, so the USAID-specific staffing steps cannot be carried out as written; stage kept at not_started 0 under the absence brief.",
+      "Alternative: diverged 0 is defensible because the closure is materially different from a restaffed agency.",
+      "The only agency hosts are blocked (state.gov) or defunct (usaid.gov); confidence held at 55 under the 60 cap."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 271 (political CHCO, Administratively Determined and Schedule C hiring, USAID as a pilot for reinstated Schedule F, Schedule A recruiting, SES review), page 278 (political CHCO) and page 279 (Day One training replacement, Senior Accountable Official). Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y9d, U13-5",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 271, 278 and 279 recommend a political CHCO and HCTM director, exploring Administratively Determined and Schedule C hiring, a USAID Schedule F pilot, Schedule A recruiting of veterans, an SES mobility program, at least four political General Counsel attorneys, replacing agencywide training on Day One, a Senior Accountable Official on policy adherence and recruitment of specified groups. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "second_review": {
       "balanced": true,
       "date": "2026-10-13",
@@ -89,49 +92,29 @@
     },
     "source_checks": [
       {
-        "note": "13,600 to 241 confirmed; about 730 awards remained active in March 2026 with responsibility transferred to State; GAO does not say it could not establish how many staff moved (that sentence removed).",
+        "note": "2026-10-18: reviewer rerun with terms Agency for International Development plus Chief Human Capital Officer since 2025-01-20: 1 OPM notice (SES career reserved positions 2024, 2025-05-20), no USAID content. Researcher queries on USAID plus Schedule F and plus Schedule Policy/Career: 0 each.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Agency+for+International+Development%22+%22Chief+Human+Capital+Officer%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reginfo.gov Unified Agenda landing page loaded but listings are script-driven and were not read; Federal Register fallback used. Terms: USAID, Schedule F.",
         "result": "partial",
-        "url": "https://www.gao.gov/assets/gao-26-108607.pdf"
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       },
       {
-        "note": "Dated 2025-03-28; RIF dates; leave option from 2025-03-29; circuit court suspended the order on Friday March 28.",
-        "result": "supports",
-        "url": "https://govexec.com/workforce/2025/03/more-usaid-staff-set-be-cut-trump-administration-tries-move-agency-state-department/404145"
+        "note": "2026-10-18: researcher search limited to congress.gov and govinfo.gov found USAID abolition bills H.R. 1029 and H.R. 1123; reviewer read the H.R. 1123 BILLSTATUS: introduced 2025-02-07, referred to Foreign Affairs and Appropriations, no further action, no staffing provisions shown.",
+        "result": "does_not_support",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1123.xml"
       },
       {
-        "note": "Names the Fourth Circuit and Judge Chuang's ruling; gives only the weekday (a Friday), no calendar date.",
-        "result": "partial",
-        "url": "https://www.yahoo.com/news/appeals-court-enables-musk-resume-213623642.html"
-      },
-      {
-        "note": "TRO extended to 2025-02-21; AFSA and AFGE suit; more than 2,000 locked out.",
-        "result": "supports",
-        "url": "https://govexec.com/workforce/2025/02/judge-extends-order-blocking-usaid-leave-notices-and-evacuations/403010"
-      },
-      {
-        "note": "Argument 2026-04-23, no ruling; Fourth Circuit stay remains; page updated 2026-10-07.",
-        "result": "supports",
-        "url": "https://www.afsa.org/afsa-lawsuit-tracker"
-      },
-      {
-        "note": "Dual role, about 5,200 cancellations, workforce to a couple of hundred.",
-        "result": "supports",
-        "url": "https://www.npr.org/sections/goats-and-soda/2025/03/25/g-s1-50582/usaid-pete-marocco-trump-foreign-aid"
-      },
-      {
-        "note": "Error page in review; background only, see c03-01.",
+        "note": "2026-10-18: state.gov blocked in this environment and usaid.gov not fetched because USAID closed on 2025-07-01; the State home page is listed because no agency page could be opened.",
         "result": "unreachable",
-        "url": "https://www.opm.gov/schedulepc/"
+        "url": "https://www.state.gov"
       },
       {
-        "note": "Not re-fetched; verified in sibling records.",
-        "result": "supports",
-        "url": "https://www.wwno.org/npr-news/2025-07-01/usaid-officially-shuts-down-and-merges-remaining-operations-with-state-department"
-      },
-      {
-        "note": "OPM final rule, 91 FR 5580, published 2026-02-06, effective 2026-03-09; Schedule Policy/Career government-wide.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/02/06/2026-02375/improving-performance-accountability-and-responsiveness-in-the-civil-service"
+        "note": "2026-10-18: one researcher news search on a USAID political CHCO, counsel appointments or Schedule F pilot returned general Schedule F and Project 2025 items; no search URL was recorded, so the agency home page is listed as a placeholder.",
+        "result": "does_not_support",
+        "url": "https://www.state.gov"
       }
     ]
   },
@@ -284,6 +267,6 @@
   ],
   "title": "Staff USAID with political appointees, a Schedule F pilot and day-one policy training",
   "tracked": true,
-  "uncertainties": "Searches recorded by the researcher for a USAID chief human capital officer, Schedule C or Administratively Determined hiring, General Counsel attorney appointments, a Schedule F pilot, SES mobility program, Day One training halt and Senior Accountable Official found nothing specific; this review did not repeat them. Whether Schedule Policy/Career placements under Executive Order 14410 include foreign assistance positions at State was not checked; the government-wide program is tracked in c03-01. The stage is a judgment call: the closure is materially different from a restaffed agency, which a broad reading would treat as diverged, but it does not run against the text's aim of political control of the workforce. The Fourth Circuit stay date of 2025-03-28 rests on the Government Executive report of that date. GAO does not state how many USAID staff moved to State. The NPR article names the individual; this record uses office titles only. Overlap with c09-01 is partial: c09-01 covers the Director of Foreign Assistance structure and the agency's fate.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: researcher queries pairing the Agency for International Development with Schedule F and with Schedule Policy/Career returned no documents, and a reviewer rerun pairing it with Chief Human Capital Officer returned one OPM notice on career reserved SES positions for 2024 with no USAID content; the government-wide Schedule Policy/Career final rule of 2026-02-06 is already in the record and applies across agencies, not as a USAID pilot. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used. (3) congress.gov and govinfo: bills to abolish USAID (H.R. 1029 and H.R. 1123) were found; the H.R. 1123 bill status shows referral to committee on 2025-02-07 with no further action, and neither concerns the staffing steps. (4) Agency pages: state.gov is blocked and usaid.gov no longer serves an operating agency, so no agency page was read. (5) News: one search returned general Schedule F items and nothing on a USAID political Chief Human Capital Officer, counsel appointments or a Schedule F pilot. The recommendation is now largely moot: USAID closed on 2025-07-01 with remaining functions merged into State, and GAO reports about 241 staff in April 2026, so the USAID-specific steps cannot be carried out as written. Whether Schedule Policy/Career placements under Executive Order 14410 include foreign assistance positions at State was not checked; the government-wide program is tracked in c03-01. The stage is a judgment call: the closure is materially different from a restaffed agency, which a broad reading would treat as diverged, but it does not run against the aim of political control of the workforce. The Fourth Circuit stay date of 2025-03-28 rests on a Government Executive report. GAO does not state how many USAID staff moved to State. The NPR article names the individual; this record uses office titles only. Overlap with c09-01 is partial: c09-01 covers the Director of Foreign Assistance structure and the agency's fate.",
+  "updated_at": "2026-10-18"
 }

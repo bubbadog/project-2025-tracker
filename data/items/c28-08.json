@@ -6,9 +6,9 @@
     "Parallel loosening of chip license policy toward China"
   ],
   "chapter": "28",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "Reviewer read the Federal Register entries for EO 14320 and the 2026-01-15 rule, the GAO decision and the GovInfo bill status; the May 2025 BIS guidance is known only secondhand and the stage is a judgment.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Reviewer read the full Federal Register text of the stage-deciding 2026-01-15 BIS rule (license conditions at supplement no. 2 to part 748, paragraph (dd)), the GovInfo bill status for H.R. 2683 and a Federal Register listing of BIS documents since 2026-07-15; the May 2025 BIS guidance is known only through GAO and a law-firm alert, and the Senate bill status was taken from the earlier review.",
   "durability": {
     "level": "low",
     "why": "Guidance and license policy are executive and reversible; the House bill is not law."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Stage proposed 15 confirmed from the full text of the 2026-01-15 BIS rule and the H.R. 2683 bill status; uncertainty on the recent BIS document check updated."
     }
   ],
   "id": "c28-08",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -60,16 +64,17 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage changed from in_progress 25 to proposed 15: no plan exists, the House bill is not law, and the only operative tightening is a set of license conditions inside a rule that loosens China chip licensing. in_progress 25 is defensible if those conditions are counted as a partial operative step.",
+      "Stage changed from in_progress 25 to proposed 15 in the 2026-10-14 review: no plan exists, the House bill is not law, and the only operative tightening is a set of license conditions inside a rule that loosens China chip licensing. in_progress 25 is defensible if those conditions are counted as a partial operative step.",
       "The 2026-07-14 UAE rule was removed from the timeline (concerns a partner country, not China) and kept in sources as context.",
       "Status summary corrected: the 2026-01-15 rule does contain know-your-customer conditions for remote and IaaS access, so the earlier statement that no Commerce know-your-customer rule for cloud providers exists was narrowed to 'no general rule'.",
-      "Duplicate check: c28-03 lists the AI plan in remaining as not verified, so this split-out is kept; c21-03 covers export controls broadly and shares the 2026-01-15 rule; both stay in related_ids."
+      "Duplicate check: c28-03 lists the AI plan in remaining as not verified, so this split-out is kept; c21-03 covers export controls broadly and shares the 2026-01-15 rule; both stay in related_ids.",
+      "2026-10-18 review (V1): stage proposed 15 kept after reading the full text of the 2026-01-15 rule; the researcher's added Federal Register check sentence was kept with the result count replaced by a description of the items, since a re-run returned 17 items rather than 16; confidence raised from 72 to 80 because the deciding rule was read in full. The record's agency field (FCC, the chapter agency) was left as is although the actions are Commerce actions."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 852 to 853, under Protecting America's National Security (Stop aiding the CCP's authoritarian approach to AI): U.S. businesses help Beijing's AI goals, often unwittingly, including by giving access to high-powered cloud computing, so an Administration should put in place a comprehensive plan to stop U.S. entities from directly or indirectly contributing to China's AI goals. Paraphrase, pages and position confirmed.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y5",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V1",
     "source_checks": [
       {
         "note": "EO 14320, Promoting the Export of the American AI Technology Stack, signed 2025-07-23, published 2025-07-28 at 90 FR 35393 (checked 2026-10-14)",
@@ -80,11 +85,6 @@
         "note": "Final rule 91 FR 1684, effective 2026-01-15: case-by-case review for China and Macau, with KYC against unauthorized remote access, lists of IaaS remote end users, and checks on IaaS providers (checked 2026-10-14)",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/01/15/2026-00789/revision-to-license-review-policy-for-advanced-computing-commodities"
-      },
-      {
-        "note": "H.R. 2683 introduced 2025-04-07, reported by Foreign Affairs 51 to 0, passed House 2026-01-12 by 369 to 22 (roll call 13), referred to Senate Banking 2026-01-13 (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2683.xml"
       },
       {
         "note": "S. 3519 introduced and referred to Senate Banking 2025-12-17; no later action (checked 2026-10-14)",
@@ -105,6 +105,21 @@
         "note": "Plan dated July 2025 has chip location-verification and end-use monitoring items but no measure on adversary access to U.S. cloud compute (checked 2026-10-14)",
         "result": "partial",
         "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf"
+      },
+      {
+        "note": "Full text read: effective 2026-01-15; case-by-case review for certain chips to China; paragraph (dd)(1)(v) KYC against remote access, (dd)(1)(vi) list of IaaS remote end users, (dd)(1)(vii) IaaS provider checks; no general cloud-provider rule (checked 2026-10-18)",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/full_text/html/2026/01/15/2026-00789.html"
+      },
+      {
+        "note": "Passed House 369 to 22 (roll call 13) on 2026-01-12; latest action referral to Senate Banking on 2026-01-13 (checked 2026-10-18)",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2683.xml"
+      },
+      {
+        "note": "17 BIS documents since 2026-07-15; none on remote or cloud access or China AI chips (checked 2026-10-18)",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=industry-and-security-bureau&conditions[publication_date][gte]=2026-07-15"
       }
     ]
   },
@@ -242,6 +257,6 @@
   ],
   "title": "Plan to stop U.S. entities contributing to China's AI goals, including via cloud computing",
   "tracked": true,
-  "uncertainties": "The BIS May 2025 announcement and guidance were read through the GAO decision and a law-firm alert; the BIS pages were not opened. The Action Plan (July 2025) has no provision on adversary access to cloud compute; its location-verification and end-use monitoring items are chip-diversion measures and are not counted as events. Reports that Commerce is drafting a rule on remote access, and that the prior administration's foundry due diligence and cloud know-your-customer requirements are not being enforced, come from one trade news article and are not events. The 2026-01-15 rule's know-your-customer and remote-access conditions apply only to license applications under that rule, not to cloud providers generally. The BIS rule of 2026-07-14 giving the UAE more favorable export treatment (license-free access to advanced computing items for approved UAE entities) concerns a partner country, not China, and was moved out of the timeline as context only. Federal Register queries for cloud and remote access among BIS documents returned only Entity List rules and the two rules named; the Entity List rules were not read for AI-specific listings. The stage is a judgment: the only tightening measures are a House-passed bill and license conditions inside a rule that loosens China chip licensing, and no plan exists, so proposed 15 with a partial match is used; in_progress 25 is the alternative if the license conditions are read as an operative step. The Mandate does not specify a mechanism.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The BIS May 2025 announcement and guidance were read through the GAO decision and a law-firm alert; the BIS pages were not opened. The Action Plan (July 2025) has no provision on adversary access to cloud compute; its location-verification and end-use monitoring items are chip-diversion measures and are not counted as events. Reports that Commerce is drafting a rule on remote access, and that the prior administration's foundry due diligence and cloud know-your-customer requirements are not being enforced, come from one trade news article and are not events. The 2026-01-15 rule's know-your-customer and remote-access conditions apply only to license applications under that rule, not to cloud providers generally. The BIS rule of 2026-07-14 giving the UAE more favorable export treatment (license-free access to advanced computing items for approved UAE entities) concerns a partner country, not China, and was moved out of the timeline as context only. Federal Register queries for cloud and remote access among BIS documents returned only Entity List rules and the two rules named; the Entity List rules were not read for AI-specific listings. The stage is a judgment: the only tightening measures are a House-passed bill and license conditions inside a rule that loosens China chip licensing, and no plan exists, so proposed 15 with a partial match is used; in_progress 25 is the alternative if the license conditions are read as an operative step. The Mandate does not specify a mechanism. A Federal Register query of Bureau of Industry and Security documents published from 2026-07-15 to 2026-10-18 returned no remote-access, cloud or China AI rule; the results were Entity List, drone, polysilicon, firearms, tariff, critical minerals and denial order items.",
+  "updated_at": "2026-10-18"
 }

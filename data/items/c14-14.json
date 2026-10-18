@@ -6,9 +6,9 @@
     "CDC staffing reductions in 2025"
   ],
   "chapter": "14",
-  "confidence": 68,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked and both bill texts read on GovInfo; the CDC pause and delay rest on news reports and the CDC FAQ page.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Reviewer read the GovInfo bill status for H.R. 627 and S. 178 (introduction and referral only, latest action 2025-01-22), which decides the proposed stage; the earlier review read both bill texts. The CDC pause and report delay rest on two press reports, and whether a report on 2023 data appeared after July 2026 was not checked.",
   "durability": {
     "level": "low",
     "why": "Without a statute, state participation depends on voluntary CDC and state practice."
@@ -30,10 +30,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Cross-references added to new layer 3 records c14-27 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: proposed 10 confirmed from bill status; two CDC actions removed by the researcher were restored to the timeline, dated by their reports."
     }
   ],
   "id": "c14-14",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -45,7 +53,8 @@
   "progress": 10,
   "proposal": "The Mandate recommends that HHS use every available tool, including funding leverage, to make every state report detailed abortion data to CDC, with separate categories for miscarriage, stillbirth and induced abortion, plus tracking of complications and live births after abortion. It endorses the Ensuring Accurate and Complete Abortion Data Reporting Act, which would make state reporting a condition of certain Medicaid family planning payments.",
   "related_ids": [
-    "c14-01"
+    "c14-01",
+    "c14-27"
   ],
   "remaining": [
     "Congress to pass the reporting bill or a similar condition on Medicaid family planning payments",
@@ -56,13 +65,17 @@
   "research_agent": "N14",
   "review": {
     "flags": [
-      "Legilist tracker source replaced by GovInfo bill texts."
+      "Legilist tracker source replaced by GovInfo bill texts (2026-10-13 review).",
+      "Restored two timeline items the researcher removed: the CDC decision to pause abortion data analysis and not release the surveillance report, and the delay of the annual report to spring 2026. Both are agency actions with usable press sources; neither source gives the action date, so each is dated by the report and says so. Alternative: keep them in the summary only.",
+      "The July 2026 nominee testimony item stays out of the timeline as a statement, not an agency action.",
+      "Bill status source date for H.R. 627 corrected to its record update date (2025-12-06); S. 178 cosponsor count (11) added to the summary.",
+      "Stage proposed 10 kept: the text asks Congress to act and the bills are introduced only; HHS has taken no step to require reporting."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 455 to 456 confirmed; paraphrase accurate (the document cites the 2023 version of the bill).",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y14a",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V1",
     "source_checks": [
       {
         "note": "H.R. 627 introduced 2025-01-22, referred to Energy and Commerce, Medicaid family planning payment condition.",
@@ -80,19 +93,29 @@
         "url": "https://cdc.gov/reproductive-health/data-statistics/abortion-surveillance-system.html"
       },
       {
-        "note": "FOIA-obtained unsigned CDC email on pausing analysis.",
+        "note": "Advocacy outlet; says no 2023 report released as of July 2026.",
+        "result": "partial",
+        "url": "https://www.liveaction.org/news/cdc-nominee-abortion-data-collection-critical"
+      },
+      {
+        "note": "Introduced and referred to Energy and Commerce 2025-01-22; no later action; 7 cosponsors; record updated 2025-12-06 (checked 2026-10-18)",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr627.xml"
+      },
+      {
+        "note": "Introduced and referred to Finance 2025-01-22; no later action; 11 cosponsors, latest added 2026-06-24; record updated 2026-06-25 (checked 2026-10-18)",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s178.xml"
+      },
+      {
+        "note": "Unsigned CDC email, obtained through a Virginia public records request, says CDC is pausing analysis and will not release the report; email date not given (checked 2026-10-18)",
         "result": "supports",
         "url": "https://www.whro.org/2025-09-25/cdc-says-annual-abortion-surveillance-report-is-on-pause"
       },
       {
-        "note": "Report delayed to spring 2026; competing explanations; reporting voluntary.",
+        "note": "Report normally due late November delayed until spring; HHS and a former CDC official give different explanations; no decision date (checked 2026-10-18)",
         "result": "supports",
         "url": "https://abc17news.com/cnn-health/2025/12/09/cdcs-annual-abortion-report-delayed-amid-agency-turmoil/"
-      },
-      {
-        "note": "Advocacy outlet; says no 2023 report released as of July 2026.",
-        "result": "partial",
-        "url": "https://www.liveaction.org/news/cdc-nominee-abortion-data-collection-critical"
       }
     ]
   },
@@ -141,6 +164,20 @@
       "url": "https://www.govinfo.gov/content/pkg/BILLS-119s178is/html/BILLS-119s178is.htm"
     },
     {
+      "date": "2025-12-06",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS XML for H.R. 627 (119th Congress), action record",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr627.xml"
+    },
+    {
+      "date": "2026-06-25",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS XML for S. 178 (119th Congress), action record",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s178.xml"
+    },
+    {
       "date": "2024-11-27",
       "kind": "primary",
       "publisher": "CDC",
@@ -170,39 +207,32 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "The Ensuring Accurate and Complete Abortion Data Reporting Act of 2025 was introduced in both chambers on 2025-01-22 (H.R. 627, referred to Energy and Commerce, and S. 178, referred to Finance); it would make certain Medicaid family planning payments depend on annual state abortion data submissions to CDC. CDC's surveillance page (updated November 2024) says state reporting is voluntary with no national requirement. In September 2025 a public radio outlet reported an unsigned CDC email saying CDC was pausing analysis and would not release an abortion surveillance report, and in December 2025 CNN reported the annual report was delayed until spring 2026, with HHS and a former CDC official giving different explanations. An advocacy news site reported in July 2026 that no report on 2023 data had appeared and that the CDC director nominee called abortion surveillance critical.",
+  "status_summary": "The Ensuring Accurate and Complete Abortion Data Reporting Act of 2025 was introduced in both chambers on 2025-01-22 (H.R. 627, referred to Energy and Commerce, and S. 178, referred to Finance); it would make certain Medicaid family planning payments depend on annual state abortion data submissions to CDC. CDC's surveillance page (updated November 2024) says state reporting is voluntary with no national requirement. In September 2025 a public radio outlet reported an unsigned CDC email saying CDC was pausing analysis and would not release an abortion surveillance report, and in December 2025 CNN reported the annual report was delayed until spring 2026, with HHS and a former CDC official giving different explanations. An advocacy news site reported in July 2026 that no report on 2023 data had appeared and that the CDC director nominee called abortion surveillance critical. The GovInfo bill status records for both bills show 2025-01-22 as the latest action, with H.R. 627 having seven cosponsors and S. 178 eleven.",
   "timeline": [
     {
       "date": "2025-01-22",
-      "event": "Ensuring Accurate and Complete Abortion Data Reporting Act of 2025 introduced in the House as H.R. 627 and referred to Energy and Commerce; Senate companion S. 178 introduced the same day and referred to Finance.",
+      "event": "Ensuring Accurate and Complete Abortion Data Reporting Act of 2025 introduced in the House as H.R. 627 and referred to Energy and Commerce; Senate companion S. 178 introduced the same day and referred to Finance. Both bill status records show no later action.",
       "kind": "primary",
       "source": "GovInfo",
       "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr627ih/html/BILLS-119hr627ih.htm"
     },
     {
       "date": "2025-09-25",
-      "event": "Public radio reports a CDC email, obtained by FOIA, saying CDC is pausing abortion data analysis and will not release an abortion surveillance report.",
+      "event": "CDC told Virginia vital statistics staff, in an unsigned email obtained through a state public records request, that it was pausing abortion data analysis and would not release an abortion surveillance report (the email's own date is not given; dated by the report that first described it).",
       "kind": "news",
       "source": "WHRO",
       "url": "https://www.whro.org/2025-09-25/cdc-says-annual-abortion-surveillance-report-is-on-pause"
     },
     {
       "date": "2025-12-09",
-      "event": "CNN reports CDC's annual abortion report is delayed until spring amid staffing turmoil; states still submit data voluntarily.",
+      "event": "CDC's annual abortion surveillance report, normally published in late November, had not been released and was delayed until spring 2026; HHS attributed the halt to a former CDC official's direction to return state data, which that official disputed (decision date not given; dated by the report).",
       "kind": "news",
       "source": "CNN via ABC17",
       "url": "https://abc17news.com/cnn-health/2025/12/09/cdcs-annual-abortion-report-delayed-amid-agency-turmoil/"
-    },
-    {
-      "date": "2026-07-22",
-      "event": "Advocacy news site reports that the CDC director nominee described abortion surveillance as critical at her confirmation hearing and that no report on 2023 data had been released.",
-      "kind": "news",
-      "source": "Live Action News",
-      "url": "https://www.liveaction.org/news/cdc-nominee-abortion-data-collection-critical"
     }
   ],
   "title": "Require states to report abortion data to CDC and pass the abortion data reporting bill",
   "tracked": true,
-  "uncertainties": "Congress.gov bill status pages were not opened, so later committee action is not excluded; the bill texts were read on GovInfo. Whether CDC released a report on 2023 data after July 2026 was not confirmed, and the July 2026 item comes from an advocacy outlet. The CDC page read carries a November 2024 update date. Press reports differ on why the report was delayed.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Bill status for H.R. 627 and S. 178 was read in full on GovInfo (latest action 2025-01-22 for both), so later committee action is excluded as of the record dates. Whether CDC released a report on 2023 data after July 2026 was not confirmed. The CDC pause (reported 2025-09-25) and the report delay (reported 2025-12-09) are agency actions known only from press reports that do not give the action dates, so the timeline dates them by the reports. The July 2026 item, from an advocacy outlet, concerns a nominee's testimony rather than an agency action and is kept out of the timeline. The CDC page read carries a November 2024 update date. Press reports differ on why the report was delayed.",
+  "updated_at": "2026-10-18"
 }

@@ -2,9 +2,9 @@
   "agency": "EPA Office of Water and Army Corps of Engineers",
   "blockers": [],
   "chapter": "13",
-  "confidence": 72,
+  "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; Executive Order 14394 and the nationwide permit final action were fetched and read; absence of rules on the five listed items rests on Federal Register API queries and one web search.",
+  "confidence_reason": "Executive Order 14394 was read in earlier review and its citation and dates confirmed through the Federal Register API; the nationwide permit action was confirmed through its API record (91 FR 768 to 886, 56 permits reissued and one new) but its 119 pages were not read in full; the absence of rules on the five listed items rests on loosely matching Federal Register API queries and one web search.",
   "durability": {
     "level": "medium",
     "why": "Nationwide permits last until 2031 absent modification, but the review directed by the order is reversible."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Stage proposed 10 parallel confirmed; nationwide permit details verified in the API; confidence raised to 74."
     }
   ],
   "id": "c13-27",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -57,14 +61,14 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Progress lowered from 15 to 10 (stage stays proposed, match parallel): the order directs a review that touches only the 404 permit element, and the nationwide permit reissuance is a routine cycle.",
-      "Judgment call: the c13-06 proposal text also names sections 308, 402 and 404; the owner may wish to trim that sentence from c13-06 so this record alone carries those items."
+      "Accepted the page range and permit counts added to the nationwide permit event (confirmed in the API record) and the added uncertainty sentences.",
+      "judgment call: proposed 10 parallel kept; not_started (0) is defensible because the order only directs a review touching section 404 and the permit reissuance is a routine cycle."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 429 asks for rules giving section 308 information requests a clear time limit, clarifying criminal negligence under sections 402 and 404, barring retroactive or preemptive 404 permits, promoting nutrient trading through incentives, and updating compensatory mitigation without new requirements; WOTUS, section 401 and the needs survey items are tracked or set aside elsewhere.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y4",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V8",
     "source_checks": [
       {
         "note": "EO 14394 signed 2026-03-13, published 2026-03-18 at 91 FR 13207; section 2(a) directs Army and EPA review of 404 permit and 404(g) assumption standards, stormwater and TMDLs; no deadline; no mention of mitigation, trading or section 308. Checked 2026-10-15.",
@@ -75,6 +79,16 @@
         "note": "Corps final action published 2026-01-08 at 91 FR 768, effective 2026-03-15, retains 1/10-acre wetland and 3/100-acre stream mitigation thresholds; a regular reissuance, not the requested rule. Checked 2026-10-15.",
         "result": "partial",
         "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-08/pdf/2026-00121.pdf"
+      },
+      {
+        "note": "EO 14394 signed 2026-03-13, published 2026-03-18, 91 FR 13207-13210; API metadata. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-05388.json"
+      },
+      {
+        "note": "Corps final action, 91 FR 768-886, published 2026-01-08, effective 2026-03-15, expires 2031-03-15, docket COE-2025-0002; reissues 56 existing permits and issues one new permit. API metadata. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-00121.json"
       }
     ]
   },
@@ -134,7 +148,7 @@
   "timeline": [
     {
       "date": "2026-01-08",
-      "event": "The Army Corps of Engineers published its final reissuance and modification of the nationwide permits, effective 2026-03-15 and expiring 2031-03-15, retaining the 2021 compensatory mitigation thresholds (91 FR 768, docket COE-2025-0002).",
+      "event": "The Army Corps of Engineers published its final reissuance and modification of the nationwide permits, effective 2026-03-15 and expiring 2031-03-15, retaining the 2021 compensatory mitigation thresholds (91 FR 768 to 886, docket COE-2025-0002; 56 existing permits reissued and one new permit issued).",
       "kind": "primary",
       "source": "govinfo.gov (Federal Register)",
       "url": "https://www.govinfo.gov/content/pkg/FR-2026-01-08/pdf/2026-00121.pdf"
@@ -149,6 +163,6 @@
   ],
   "title": "Reform Clean Water Act 308, 404, nutrient trading and compensatory mitigation rules",
   "tracked": true,
-  "uncertainties": "Absence of evidence rests on Federal Register API queries (compensatory mitigation, water quality trading, nationwide permits under the Army Department listing, which returned none) and one web search; the nationwide permit rule was read only in part (a fetch of the govinfo PDF). Nationwide permits were reissued on the Corps' regular five-year cycle and are not what the Mandate asked for, so the match is parallel. Waters of the United States proposals (2025-11-20 and 2026-09-09) are tracked in c13-06 and are not counted here. Whether EPA has opened a docket or notice for the section 308 or trading items was not found.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Absence of evidence rests on Federal Register API queries (compensatory mitigation, water quality trading, nationwide permits under the Army Department listing, which returned none) and one web search; the nationwide permit rule was read only in part (a fetch of the govinfo PDF). Nationwide permits were reissued on the Corps' regular five-year cycle and are not what the Mandate asked for, so the match is parallel. Waters of the United States proposals (2025-11-20 and 2026-09-09) are tracked in c13-06 and are not counted here. Whether EPA has opened a docket or notice for the section 308 or trading items was not found. In this pass, Federal Register API searches for compensatory mitigation (from 2026-03-01), water quality trading and section 308 information requests (from 2025-01-20) returned no document on any listed item; the searches matched loosely and returned many unrelated documents. Executive Order 14394 section 2(a) was read and does not mention section 308, nutrient trading or mitigation, and sets no deadline. The nationwide permit final action was read as Federal Register metadata and abstract, not its full 119 pages, so the mitigation threshold statement rests on the earlier review.",
+  "updated_at": "2026-10-18"
 }

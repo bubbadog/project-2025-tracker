@@ -1,13 +1,13 @@
 {
   "agency": "Congress; Department of Defense (DoDEA), Interior (Bureau of Indian Education), D.C. public schools",
   "blockers": [
-    "No Senate action was found on H.R. 2616 and no bill limited to the three federal systems was found.",
+    "H.R. 2616 was referred to the Senate HELP Committee on 2026-05-21 with no later action recorded, and no bill limited to the three federal school systems was found.",
     "The E.D. Va. injunction restricts DoDEA removals at five schools."
   ],
   "chapter": "11",
-  "confidence": 74,
+  "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; EO 14190, the court opinion, the case docket summary, the H.R. 2616 reported text and the House roll call were fetched; absence of BIE and D.C. actions rests on limited searches.",
+  "confidence_reason": "The stage-deciding BILLSTATUS record for H.R. 2616 was read on 2026-10-18 (House passage 217 to 198, Senate referral 2026-05-21, nothing later), and the case tracker was re-read for the injunction status. The absence of D.C.-, BIE- or DoD-school-specific legislation rests on limited searches, and the executive order and court opinion were not re-read in this review.",
   "court_status": {
     "basis": "Preliminary injunction of 2025-10-20 covering five DoDEA schools remains in place; motion to dismiss denied 2026-03-20; consolidated cross-appeals pending in the Fourth Circuit.",
     "date": "2026-03-20",
@@ -35,10 +35,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Bill status confirmed in BILLSTATUS with Senate referral, blocker wording corrected; proposed 15 kept at medium confidence."
     }
   ],
   "id": "c11-14",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -64,16 +68,16 @@
   "research_agent": "N11",
   "review": {
     "flags": [
-      "judgment call: stage lowered from in_progress 25 to proposed 15, since only a one-chamber general bill exists and executive actions do not address compelled belief or speech in the federal systems",
-      "judgment call: kept distinct from c04-16 (not a drop)",
-      "court_status updated to 2026-03-20 for consistency with c04-16",
-      "596-title figure replaced with the opinion figure"
+      "Blocker text updated: the Senate received and referred H.R. 2616 on 2026-05-21, so no Senate action is no longer accurate.",
+      "Stage proposed 15 confirmed: a one-chamber general bill, not specific to the three federal school systems.",
+      "court_status kept enjoined (2026-03-20, latest court action; preliminary injunction unmodified); alternative: pending, since the Fourth Circuit appeals are unresolved.",
+      "Confidence kept medium 78: the deciding record was read but absence of federal-system-specific legislation rests on limited searches; alternative high 80."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 342 to 343 (no compelled belief, no race-based punishment or benefit, add compelled-speech prohibition for federal K-12 systems) and 346 (name and pronoun legislation for D.C., BIE and DoD schools) read; paraphrase and pages accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9e",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V3",
     "source_checks": [
       {
         "note": "EO 14190 confirmed (signed 2025-01-29, 90 FR 8853); does not name the three systems.",
@@ -84,11 +88,6 @@
         "note": "Memos of 2025-02-05, more than 500 books, five-school injunction, systemwide relief denied.",
         "result": "supports",
         "url": "https://www.acluva.org/app/uploads/2025/04/2025.10.20-Dkt-58-Mem-Op-re-Order-Gr-in-part-PI.pdf"
-      },
-      {
-        "note": "Appeals consolidated 2026-01-02, motion to dismiss denied 2026-03-20, latest docket 2026-05-07.",
-        "result": "supports",
-        "url": "https://clearinghouse.net/case/46415/"
       },
       {
         "note": "House passage 217 to 198 on 2026-05-20; scope public elementary and middle schools.",
@@ -109,6 +108,16 @@
         "note": "Not opened; 596 figure replaced by the opinion's figure and source removed.",
         "result": "unreachable",
         "url": "https://www.publishersweekly.com/pw/print/20251027/98912-virginia-district-judge-orders-dodea-to-restore-school-books.html"
+      },
+      {
+        "note": "Introduced 2025-04-03; markup 18 to 12 on 2025-04-09; H. Rept. 119-441 on 2026-01-13; H. Res. 1224 rule 2026-04-29; recommit failed 207 to 208 and passage 217 to 198 on 2026-05-20; Senate HELP referral 2026-05-21, latest action. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2616.xml"
+      },
+      {
+        "note": "Appeals consolidated 2026-01-02; motion to dismiss denied 2026-03-20; motions to modify the injunction and for an indicative ruling pending; latest entry 2026-05-07; no appellate decision. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://clearinghouse.net/case/46415/"
       }
     ]
   },
@@ -183,10 +192,17 @@
       "publisher": "Office of the Clerk, U.S. House",
       "title": "Roll Call 184, H.R. 2616, On Passage",
       "url": "https://clerk.house.gov/Votes/2026184"
+    },
+    {
+      "date": "2026-05-21",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS record for H.R. 2616 (119th Congress), Stopping Indoctrination and Protecting Kids Act",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2616.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "No law applies the recommended bans on compelled race-based belief, compelled speech or name and pronoun use specifically to D.C., BIE and DoD schools, so the stage is proposed. On 2026-05-20 the House passed H.R. 2616 (PROTECT Kids Act) 217 to 198; as reported it conditions ESEA funds on public elementary and middle schools obtaining parental consent before changing a student's gender markers, pronouns or preferred name on school forms, applies to schools generally rather than to the federal systems, has no teacher pronoun or compelled-speech provision, and no Senate action was found. Executive Order 14190 (signed 2025-01-29) directs the Education, Defense and HHS Secretaries to deliver a strategy to end federal support for what it calls discriminatory equity ideology and social transition in K-12 schooling, without naming the three systems. DoDEA removed books and curricular materials under that and related orders from 2025-02-05; the Eastern District of Virginia enjoined further removals at five schools on 2025-10-20 and denied a motion to dismiss on 2026-03-20, with cross-appeals pending in the Fourth Circuit (covered in more detail by c04-16).",
+  "status_summary": "No law applies the recommended bans on compelled race-based belief, compelled speech or name and pronoun use specifically to D.C., BIE and DoD schools, so the stage is proposed. On 2026-05-20 the House passed H.R. 2616 (PROTECT Kids Act) 217 to 198; as reported it conditions ESEA funds on public elementary and middle schools obtaining parental consent before changing a student's gender markers, pronouns or preferred name on school forms, applies to schools generally rather than to the federal systems, has no teacher pronoun or compelled-speech provision, and the Senate received it on 2026-05-21 and referred it to its Health, Education, Labor, and Pensions Committee, with no later action recorded. Executive Order 14190 (signed 2025-01-29) directs the Education, Defense and HHS Secretaries to deliver a strategy to end federal support for what it calls discriminatory equity ideology and social transition in K-12 schooling, without naming the three systems. DoDEA removed books and curricular materials under that and related orders from 2025-02-05; the Eastern District of Virginia enjoined further removals at five schools on 2025-10-20 and denied a motion to dismiss on 2026-03-20, with cross-appeals pending in the Fourth Circuit (covered in more detail by c04-16).",
   "timeline": [
     {
       "date": "2025-01-29",
@@ -208,6 +224,13 @@
       "kind": "primary",
       "source": "Congress.gov",
       "url": "https://www.congress.gov/119/bills/hr2616/BILLS-119hr2616rh.htm"
+    },
+    {
+      "date": "2025-04-09",
+      "event": "The House Education and Workforce Committee ordered H.R. 2616 reported as amended, 18 to 12.",
+      "kind": "primary",
+      "source": "GovInfo (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2616.xml"
     },
     {
       "date": "2025-10-20",
@@ -243,10 +266,17 @@
       "kind": "primary",
       "source": "Office of the Clerk, U.S. House",
       "url": "https://clerk.house.gov/Votes/2026184"
+    },
+    {
+      "date": "2026-05-21",
+      "event": "H.R. 2616 was received in the Senate and referred to the Senate Committee on Health, Education, Labor, and Pensions; no later action is recorded.",
+      "kind": "primary",
+      "source": "GovInfo (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2616.xml"
     }
   ],
   "title": "Bar compelled race-based beliefs and pronoun use in D.C., BIE and DoD schools by statute",
   "tracked": true,
-  "uncertainties": "The executive order does not name D.C., BIE or DoD schools and does not itself ban compelled speech or set a pronoun rule; DoDEA's book removals are about library and curricular content rather than compelled belief, so they are context and overlap c04-16. Nothing was found on Bureau of Indian Education or D.C. public school actions on these topics; a D.C.-specific bill or Interior policy may exist but was not located. H.R. 2616 applies to public elementary and middle schools receiving ESEA funds; whether that reaches BIE-funded or D.C. schools in practice was not analyzed, and DoDEA schools are not generally ESEA-funded. Senate status was not confirmed on congress.gov action pages, which could not be fetched. The court opinion refers to more than 500 books removed; the case clearinghouse cites a list of 596. Fourth Circuit briefing deadlines ran to 2026-05-13; no appellate decision was found. This record is kept distinct from c04-16 (chapter 4 DoD curricula audit) because chapter 11 asks for legislation covering all three federal school systems.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "The executive order does not name D.C., BIE or DoD schools and does not itself ban compelled speech or set a pronoun rule; DoDEA's book removals are about library and curricular content rather than compelled belief, so they are context and overlap c04-16. Nothing was found on Bureau of Indian Education or D.C. public school actions on these topics; a D.C.-specific bill or Interior policy may exist but was not located. H.R. 2616 applies to public elementary and middle schools receiving ESEA funds; whether that reaches BIE-funded or D.C. schools in practice was not analyzed, and DoDEA schools are not generally ESEA-funded. The court opinion refers to more than 500 books removed; the case clearinghouse cites a list of 596. Fourth Circuit briefing deadlines ran to 2026-05-13; no appellate decision was found. The case tracker, read on 2026-10-18 (last updated 2026-07-22, latest entry 2026-05-07), shows the injunction unmodified, with the plaintiffs' motion to modify it and the government's motion for an indicative ruling pending. This record is kept distinct from c04-16 (chapter 4 DoD curricula audit) because chapter 11 asks for legislation covering all three federal school systems. Pass 6 check: the BILLSTATUS record shows the bill's current short title as Stopping Indoctrination and Protecting Kids Act (PROTECT Kids Act when introduced), committee markup on 2025-04-09 (18 to 12), report on 2026-01-13 (H. Rept. 119-441), a failed motion to recommit 207 to 208 (Roll no. 183), passage 217 to 198 (Roll no. 184) on 2026-05-20 and Senate referral on 2026-05-21. The House Clerk roll call page and the Federal Register API (Executive Order 14190, signed 2025-01-29, published 2025-02-03, 90 FR 8853) were confirmed. The 2025-01-29 order's text and the court opinion were not re-read in the 2026-10-18 review. Court status is derived from the latest court event, the 2026-03-20 denial of the motion to dismiss, which a tracker reports; the Fourth Circuit appeals are pending.",
+  "updated_at": "2026-10-18"
 }

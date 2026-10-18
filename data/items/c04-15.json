@@ -4,7 +4,7 @@
   "chapter": "04",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked. The stage-deciding primary documents, the Air Force memorandum of 2025-03-17 and the OUSD(P&R) memorandum of 2025-02-03 attached to it at pages 4 to 5, were read through the owner's browser retrieval and summarized with page citations, which counts as read; because the research tools could not open the Air Force Medicine site themselves, confidence is capped at 79 under the provenance rule, and it is set one point below the cap because the department-wide memorandum was read only as an attachment and the Army and Navy implementing documents were not read. Stage rule applied: the change is operative in substance through agency memoranda that a later memorandum could reverse, so implemented rather than completed; progress 75 is unchanged.",
+  "confidence_reason": "Chapter text p. 104 checked and EO 14182 (90 FR 8751) re-read in full on federalregister.gov, but it does not name DOD; the stage-deciding Air Force and OUSD(P&R) memoranda sit on airforcemedicine.af.mil, which returned a fetch error again, so the record cannot move to high.",
   "durability": {
     "level": "low",
     "why": "The change rests on departmental memoranda and an executive order that a later Administration could reverse, as the 2022 policy was itself created by memo."
@@ -34,10 +34,14 @@
     {
       "date": "2026-10-13",
       "note": "Independent review of new primary evidence: the Air Force memorandum of 2025-03-17 and the OUSD(P&R) memorandum of 2025-02-03 attached to it, read through the owner's browser retrieval from the Air Force Medicine site, confirm that administrative leave and travel reimbursement for elective abortion ended while both were kept for non-covered ART, which resolves the source conflict on fertility care for the Air Force; replaced the 2025-02-03 advocacy-sourced timeline event with the primary memorandum, added a 2025-03-17 event and source, and rewrote the summary, uncertainties and review flags; stage implemented 75 holds; confidence raised from 72 to 78 (capped at 79 under the provenance rule)."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source review re-read Executive Order 14182 on federalregister.gov, confirmed it does not name DOD, could not open the Air Force memorandum on airforcemedicine.af.mil, and left the stage at implemented 75 and confidence at 78."
     }
   ],
   "id": "c04-15",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -98,30 +102,24 @@
   "research_agent": "N04a",
   "review": {
     "flags": [
-      "Stage-deciding memoranda read only through the owner's browser retrieval; confidence capped at 79 until the research tools can open the Air Force Medicine site",
-      "Air Force implementation only: Army and Navy implementing documents not read; the OUSD(P&R) memorandum read only as an attachment",
-      "The 2025-01-29 memorandum reported by AP not read; whether fertility travel went unreimbursed before the ART travel provisions took effect not determined",
-      "FY2026 NDAA text only partly read; the FY27 rider is a proposal only"
+      "Stage kept at implemented 75; in_progress at the top of the band is the alternative if the Army and Navy implementing documents, which were not read, differ.",
+      "Cannot reach high: the stage-deciding memoranda are on a host the research tools cannot open, and the 2025-01-29 DOD memorandum was not located on a reachable primary host.",
+      "Timeline entries of 2025-01-30, 2025-01-31 and 2025-06-12 rest on news or advocacy sources and are kept as kind news."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 104, item 7, says public money should not be used for transgender surgeries or to facilitate abortion for service members; the paraphrase fits.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y4",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 104 (item 7) says public money should not be used for transgender surgeries or to facilitate abortion for service members; the paraphrase fits.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "AP report of 2025-01-31: memo signed on 2025-01-29 by the Pentagon personnel director ends the October 2022 travel reimbursement policy, including fertility travel; administrative absence not addressed.",
-        "result": "supports",
-        "url": "https://www.nbcnewyork.com/news/national-international/pentagon-strips-travel-reimbursement-abortions-fertility-treatment/6130808/"
+        "note": "90 FR 8751 to 8752, doc 2025-02175, signed 2025-01-24; states the Hyde policy, revokes EO 14076 and 14079, directs OMB guidance; does not mention DOD or travel.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/01/31/2025-02175/enforcing-the-hyde-amendment"
       },
       {
-        "note": "Air Force memorandum of 2025-03-17 (11 pages): rescinds the 2023-02-27 Air Force memorandum effective immediately and ends administrative leave and travel and transportation reimbursement for elective abortion (paragraph 1, page 1); keeps administrative absence of up to 21 days per request and travel and transportation allowances for non-covered ART (paragraphs 2 to 3; Attachment 1, page 6; Attachment 2); read through the owner's browser retrieval on 2026-10-13; not reachable from the research tools.",
-        "result": "supports",
-        "url": "https://www.airforcemedicine.af.mil/Portals/1/Documents/Reproductive-Health/Tab%201%20-%20SecAF%20Memorandum%20for%20Non-Covered%20Reproductive%20Health%20Care%20sig%20Ashworth%2017%20Mar%2025%20(002).pdf"
-      },
-      {
-        "note": "OUSD(P&R) memorandum of 2025-02-03, attached at pages 4 to 5 of the same file: rescinds the 2023-02-16 USD(P&R) administrative absence memorandum and directs rescission of Joint Travel Regulations paragraph 033113, while preserving access to non-covered ART; read only as an attachment; read through the owner's browser retrieval on 2026-10-13; not reachable from the research tools.",
-        "result": "supports",
+        "note": "Fetch error on 2026-10-18; the earlier reading rests on a browser retrieval outside the research tools.",
+        "result": "unreachable",
         "url": "https://www.airforcemedicine.af.mil/Portals/1/Documents/Reproductive-Health/Tab%201%20-%20SecAF%20Memorandum%20for%20Non-Covered%20Reproductive%20Health%20Care%20sig%20Ashworth%2017%20Mar%2025%20(002).pdf"
       }
     ]
@@ -232,5 +230,5 @@
   "title": "End DOD funding of travel and leave for service member abortions",
   "tracked": true,
   "uncertainties": "The Air Force memorandum of 2025-03-17 and the OUSD(P&R) memorandum of 2025-02-03 attached to it (pages 4 to 5) were read through the owner's browser retrieval on 2026-10-13 from the Air Force Medicine site, which the research tools could not open; the reading rests on that retrieval's page-cited summary. That memorandum is the Air Force implementation: the Army and Navy implementing documents were not read, and the department-wide OUSD(P&R) memorandum was read only as attached to it. The 2025-01-29 memorandum reported by AP, which ended the October 2022 travel reimbursement policy, was not read, so the travel rescission date of 2025-01-30 still rests on the Center for Reproductive Rights and news reports. The earlier conflict between sources on fertility care is resolved for the Air Force: its memorandum keeps administrative absence and travel allowances for non-covered ART while ending them for elective abortion, which matches the Center's account; the late January 2025 news reports said fertility travel was no longer reimbursable, and whether such travel went unreimbursed for a period before the ART travel provisions took effect was not determined. The Military.com article carries no date in its text; the date is from its URL. Whether military health coverage of abortion under existing law changed was not examined.",
-  "updated_at": "2026-10-13"
+  "updated_at": "2026-10-18"
 }

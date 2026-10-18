@@ -5,9 +5,9 @@
     "Congress has not legislated a unified commercial space authorization framework"
   ],
   "chapter": "21",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "Both the executive order and the pilot notice were read in the Federal Register: the order directs the changes, but as of August 2026 the office was still listed under NOAA and the authorization framework existed only as a proposal and a voluntary pilot without legal effect. A department order moving the office could exist that was not found.",
+  "confidence": 82,
+  "confidence_label": "high",
+  "confidence_reason": "The chapter text (page 677) was checked, and the stage-deciding documents, Executive Order 14335 (sections 5 and 6) and the 2026-08-20 pilot notice (91 FR 53849), were read in full on federalregister.gov; the absence of an order moving the office rests on a limited search.",
   "durability": {
     "level": "low",
     "why": "An executive order and a voluntary pilot can be revised by a later administration; reorganization within Commerce can be reversed by department order."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review re-read Executive Order 14335 and the 2026-08-20 pilot notice (federalregister.gov), repaired a garbled sentence in the uncertainties and raised confidence to high; stage proposed and progress 20 unchanged."
     }
   ],
   "id": "c21-06",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-18",
   "layer": 2,
   "match": "direct",
   "mechanism": "executive_order",
@@ -57,22 +61,21 @@
   "requires_congress": "partial",
   "review": {
     "flags": [
-      "stage changed from in_progress to proposed: the order is a directive, the framework is a proposal and the pilot was only soliciting interest",
-      "elevation of the office unconfirmed"
+      "in_progress at the low end is also defensible given the published pilot notice"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 677 recommends returning the Office of Space Commerce from NESDIS to the Office of the Secretary so it can coordinate a whole-of-government commercial space policy, and asks the President to direct the office by executive order, working with the National Space Council, to set a policy for licensing and oversight of commercial space operations; the paraphrase and page match.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W5",
+    "mandate_check": "confirmed",
+    "mandate_note": "Page 677 recommends returning the Office of Space Commerce from NESDIS to the Office of the Secretary to coordinate a whole-of-government commercial space policy, and asks the President to direct the office by executive order, working with the National Space Council, to set a licensing and oversight policy. The paraphrase is accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "EO 14335 (signed 2025-08-13, 90 FR 40219) section 6(b) directs elevation of the Office of Space Commerce into the Office of the Secretary within 60 days and section 5 directs Commerce to propose a mission authorization process for novel space activities within 150 days; the order does not mention the National Space Council.",
+        "note": "EO 14335, 90 FR 40219, signed 2025-08-13: section 6(b) directs elevation into the Office of the Secretary within 60 days; section 5 directs a mission-authorization proposal within 150 days; no mention of the National Space Council.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/08/19/2025-15822/enabling-competition-in-the-commercial-space-industry"
       },
       {
-        "note": "Notice (91 FR 53849, 2026-08-20) is issued under NOAA and places the office within NOAA, seeks expressions of interest by 2026-10-05 for a voluntary, non-binding pilot of the Space Commerce Certification framework first proposed in March 2026, says a certification issued in the pilot carries no legal effect by itself, and requires participants to meet existing FCC and FAA licensing; it does not mention the elevation or the National Space Council.",
+        "note": "91 FR 53849, docket 260818-0007, published 2026-08-20 under NOAA: voluntary, non-binding pilot, no direct legal effect, existing FCC and FAA licensing still required, expressions of interest due 2026-10-05, OSC listed within NOAA.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/08/20/2026-17016/notice-of-mission-authorization-pilot-program"
       }
@@ -147,6 +150,6 @@
   ],
   "title": "Elevate the Office of Space Commerce and set a unified commercial space licensing policy",
   "tracked": true,
-  "uncertainties": "Whether the Office of Space Commerce has actually been moved could not be confirmed into the Office of the Secretary: the August 2026 Federal Register notice lists it within NOAA, the office's own pages reviewed do not state its placement, and one search for an order or announcement of the move returned only coverage of the executive order itself. A Department Organization Order could exist that was not found. The March 2026 certification framework was described only through the August notice; its text was not read. National Space Council involvement was not found in the order; the Council's current role was not checked. Federal Register search for the office since 2025-01-20 showed the order, the notice and routine information-collection notices.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Whether the Office of Space Commerce has actually been moved into the Office of the Secretary could not be confirmed: the August 2026 Federal Register notice (dated 2026-08-18, issued under NOAA) lists the office within NOAA, the office's own pages reviewed do not state its placement, and one search for an order or announcement of the move returned only coverage of the executive order itself. A Department Organization Order could exist that was not found. The March 2026 certification framework proposal was described only through the August notice; its text was not read. The order does not mention the National Space Council; the Council's current role was not checked. A Federal Register search for the office since 2025-01-20 showed the order, the notice and routine information-collection notices.",
+  "updated_at": "2026-10-18"
 }

@@ -6,13 +6,13 @@
     "Competing views, noted in the chapter, on whether to expand the contribution base at all"
   ],
   "chapter": "28",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "A CRS product confirms the two contribution bills are introduced and that the base has not changed; committee action after July 2026 and the bill details were not checked by this reviewer.",
+  "confidence": 82,
+  "confidence_label": "high",
+  "confidence_reason": "Reviewer read GovInfo bill status for S. 1651 and H.R. 4032 (referral only, no later action), the S. 1651 bill text (18-month rulemaking, exemption thresholds, edge provider services) and the Supreme Court slip opinion; the House bill text and the CRS product were not re-read, and the FCC contribution reform proceeding named by the CRS was not located.",
   "court_status": {
-    "basis": "derived from the latest court event in the timeline",
+    "basis": "The Supreme Court held 6 to 3 that the universal service contribution scheme violates neither the nondelegation doctrine nor the private nondelegation doctrine, reversing the Fifth Circuit en banc judgment and remanding. The case concerned the existing mechanism, not an expansion of the contribution base.",
     "date": "2025-06-27",
-    "state": "pending",
+    "state": "upheld",
     "url": "https://www.supremecourt.gov/opinions/24pdf/24-354_0861.pdf"
   },
   "durability": {
@@ -35,10 +35,14 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: proposed 10 confirmed from bill status and bill text; court_status corrected from pending to upheld after reading the Supreme Court slip opinion."
     }
   ],
   "id": "c28-02",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "direct",
   "mechanism": "legislation",
@@ -61,19 +65,42 @@
   "research_agent": "A16",
   "review": {
     "flags": [
-      "bill provisions (18-month rulemaking, exemption thresholds) not re-read",
-      "committee status after 2026-07-30 unverified"
+      "court_status.state changed from pending to upheld: the latest court event is the 2025-06-27 Supreme Court decision upholding the existing contribution mechanism; the basis notes the case did not concern an expansion of the base.",
+      "Timeline court event reworded to the holding read in the slip opinion; the researcher's page reference (pages 10 to 37) was dropped because the slip opinion shows the majority opinion at pages 1 to 37.",
+      "Process note on the court_status correction moved from uncertainties to these flags.",
+      "Earlier flags resolved: the 18-month rulemaking and exemption thresholds were confirmed in the S. 1651 text, and bill status through 2026-10-18 shows no committee action.",
+      "Stage proposed 10 kept: the text asks Congress to act and the bills are introduced only. A lower proposed 5 is defensible given no committee action in over a year."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 850 says Congress should require Big Tech companies to contribute an appropriate amount to the roughly $9 billion Universal Service Fund now paid through a charge on traditional phone service, and notes conservatives who would instead revisit the whole funding structure through appropriations; page 847 gives the USF background.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "V3",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V1",
     "source_checks": [
       {
         "note": "CRS IF13280 of 2026-07-30: broadband and edge providers do not contribute; contribution factor 37.0 percent in Q2 2026; S. 1651 and H.R. 4032 are described only as introduced, with no committee action; FCC authority over edge providers uncertain after Chevron; a long-pending FCC contribution reform proceeding exists. It does not describe the bills' 18-month rulemaking or exemption thresholds, which come from the bill text.",
         "result": "supports",
         "url": "https://www.everycrsreport.com/files/2026-07-30_IF13280_a76fbad77f571793b84c1577f90c57c570655f1d.html"
+      },
+      {
+        "note": "Decided 2025-06-27, Nos. 24-354 and 24-422, 6 to 3; no nondelegation or private nondelegation violation; Fifth Circuit reversed and remanded (checked 2026-10-18)",
+        "result": "supports",
+        "url": "https://www.supremecourt.gov/opinions/24pdf/24-354_0861.pdf"
+      },
+      {
+        "note": "Introduced and referred to Senate Commerce 2025-05-07; no later action; 6 cosponsors (checked 2026-10-18)",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1651.xml"
+      },
+      {
+        "note": "Introduced and referred to House Energy and Commerce 2025-06-17; no later action; 26 cosponsors (checked 2026-10-18)",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr4032.xml"
+      },
+      {
+        "note": "FCC rulemaking within 18 months to add broadband and edge providers; edge exemption below 3 percent of traffic and 5 billion dollars U.S. revenue; edge services include search, social media, streaming, app stores, cloud (checked 2026-10-18)",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1651is/html/BILLS-119s1651is.htm"
       }
     ]
   },
@@ -146,7 +173,7 @@
     },
     {
       "date": "2025-06-27",
-      "event": "Supreme Court decides FCC v. Consumers' Research, 6-3, reversing the Fifth Circuit and leaving the USF funding structure in place.",
+      "event": "Supreme Court decides FCC v. Consumers' Research (Nos. 24-354 and 24-422), 6 to 3, reversing the Fifth Circuit and holding that the universal service contribution scheme violates neither the nondelegation doctrine nor the private nondelegation doctrine, leaving the USF funding structure in place.",
       "kind": "court",
       "source": "Supreme Court",
       "url": "https://www.supremecourt.gov/opinions/24pdf/24-354_0861.pdf"
@@ -189,6 +216,6 @@
   ],
   "title": "Require large online platforms to contribute to the Universal Service Fund",
   "tracked": true,
-  "uncertainties": "Committee actions, cosponsor changes and any hearings on S. 1651 and H.R. 4032 were not checked on Congress.gov (blocked to the fetch tool); the CRS note of 2026-07-30 is the latest status evidence. Other contribution bills, for example proposals limited to studying edge-provider contributions, were not searched for. The FCC contribution reform proceeding mentioned by the CRS was not located in the Federal Register. The Supreme Court slip opinion was cited by the earlier record and by a reviewer who opened it; it was not re-opened. The 2026 FCC proposals are listed as context only.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Committee actions, cosponsor changes and any hearings on S. 1651 and H.R. 4032 were not checked on Congress.gov (blocked to the fetch tool); the CRS note of 2026-07-30 is the latest status evidence. Other contribution bills, for example proposals limited to studying edge-provider contributions, were not searched for. The FCC contribution reform proceeding mentioned by the CRS was not located in the Federal Register. The Supreme Court slip opinion was cited by the earlier record and by a reviewer who opened it; it was re-opened in this pass and its date, vote and disposition confirmed. The 2026 FCC proposals are listed as context only. Bill status data on GovInfo for S. 1651 (latest action 2025-05-07, referral to Senate Commerce) and H.R. 4032 (latest action 2025-06-17, referral to House Energy and Commerce, with 26 cosponsors) shows no later action as of 2026-10-18. A Federal Register query of FCC documents mentioning universal service contribution methodology found no contribution reform document published since 2025-01-20, so the contribution reform proceeding named by the CRS was not located there.",
+  "updated_at": "2026-10-18"
 }

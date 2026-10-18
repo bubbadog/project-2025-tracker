@@ -4,9 +4,9 @@
     "Covert action findings are classified and shared only with congressional intelligence leaders, so progress is largely unobservable."
   ],
   "chapter": "07",
-  "confidence": 40,
+  "confidence": 50,
   "confidence_label": "low",
-  "confidence_reason": "Text checked and both press sources fetched, but the review the Mandate asks for is classified by nature and the finding rests on absence of public evidence and anonymously sourced reporting.",
+  "confidence_reason": "Chapter text pages 210 and 211 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo search with the H.R. 7632 bill status read, CIA stories page with dni.gov and war.gov blocked, one news search); because covert action findings are classified and check 2 was partial and check 4 partly blocked, confidence stays low at 50.",
   "durability": {
     "level": "low",
     "why": "Findings are presidential decisions that can be modified or rescinded at any time, and little is public."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov), read the H.R. 7632 bill status on govinfo.gov, and reviewed the Unified Agenda fallback, CIA page and news checks, found no qualifying action, and kept not_started 0."
     }
   ],
   "id": "c07-11",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "executive_order",
@@ -55,25 +59,39 @@
   "research_agent": "N07a",
   "review": {
     "flags": [
-      "stage lowered from in_progress 25 to not_started 0",
-      "rests on anonymous-source press reporting",
-      "October 2025 month for the authorities update removed as not stated in the source"
+      "Covert action is classified; absence of public evidence is weak evidence of absence, so confidence stays low at 50 despite the systematic check.",
+      "Existing timeline entries are news reports of new covert action, kept as parallel context; they are not stage-deciding actions."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 210 to 211 ask the President to consider using DOD's full capabilities for covert action, place covert-action-experienced people in key posts, and task the NSC Senior Director for Intelligence Programs with an independent 60-day review of current findings and possible new ones; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y8b",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 210 and 211 recommend an independent 60-day NSC review of current and possible covert action findings that identifies the best-equipped agencies, consideration of DOD capabilities in support, and placing covert action veterans in key NSC, CIA, ODNI and DOD posts. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Dated 2025-10-15; NYT report via anonymous officials of a presidential finding for Venezuela; President confirmed; no review or NSC role described.",
-        "result": "partial",
-        "url": "https://www.bostonglobe.com/2025/10/15/world/trump-venezuela-cia/"
+        "note": "2026-10-18: reviewer rerun with terms covert actions OR presidential finding since 2025-01-20: 0 documents. Researcher query on covert action: 0 documents. Findings are classified and not published.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22covert+actions%22+OR+%22presidential+finding%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Republished 2026-05-12 from CNN; mostly anonymous sources; says authorities were formally updated and expanded but the body gives no month; no DOD role inside Mexico and no covert action review described.",
+        "note": "2026-10-18: reginfo.gov Unified Agenda landing page reached, item listings unavailable through the fetch tool; Federal Register fallback used; not applicable in practice to classified findings.",
         "result": "partial",
-        "url": "https://www.cbc.bb/news/international-news/cia-escalates-secret-war-on-cartels-with-deadly-operations-inside-mexico/"
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: researcher search limited to congress.gov and govinfo.gov surfaced H.R. 7632 (SHADOW Act); reviewer read its BILLSTATUS: introduced 2026-02-20, House Foreign Affairs ordered reported 46 to 0 on 2026-03-26; a hybrid warfare coordinator and sanctions report bill, not about covert action review or DOD support.",
+        "result": "does_not_support",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7632.xml"
+      },
+      {
+        "note": "2026-10-18: CIA stories page fetched by the researcher, no item on a covert action review; dni.gov, war.gov and media.defense.gov blocked; whitehouse.gov NSC page not fetched.",
+        "result": "partial",
+        "url": "https://www.cia.gov/stories/"
+      },
+      {
+        "note": "2026-10-18: one researcher news search on an NSC 60-day covert action review returned historical NSDD, CRS and CIA reading room material; no search URL was recorded, so the CIA page is listed as a placeholder.",
+        "result": "does_not_support",
+        "url": "https://www.cia.gov/stories/"
       }
     ]
   },
@@ -126,6 +144,6 @@
   ],
   "title": "Review all covert action findings in 60 days and use DOD capabilities in support",
   "tracked": true,
-  "uncertainties": "Stage is not_started because none of the Mandate's specific steps (the independent 60-day review, the agency assessment, DOD capabilities under findings, staffing) is publicly documented; new findings reported in the press are shown as parallel context. A review could have occurred without public notice, so this rests on absence of evidence. Both sources rely on anonymous officials, except the President's public confirmation about Venezuela. The CNN article body does not give the month of the authorities update; a linked earlier CNN story is dated October 2025, which is why that month was used in the earlier draft; it is not relied on here. The NSC reorganization is covered in c02-03, and CIA briefings on existing findings in c07-04's chapter pages.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: queries on covert action (researcher) and on covert actions or presidential finding (reviewer) returned no documents since 2025-01-20, as expected for classified findings. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used; the agenda does not cover classified activity. (3) congress.gov and govinfo: one search surfaced NDAA and appropriations bills and H.R. 7632, whose bill status shows a hybrid warfare coordinator and sanctions reporting bill ordered reported on 2026-03-26, unrelated to a covert action review. (4) Agency pages: the CIA stories page showed no item on a review; dni.gov and DOD hosts were blocked and the NSC pages were not fetched. (5) News: one search returned historical material only. Stage is not_started because none of the specific steps (the independent 60-day review, the agency assessment, DOD capabilities under findings, staffing) is publicly documented; new findings reported in the press, which rely mostly on anonymous officials apart from the President's public confirmation about Venezuela, are shown as parallel context. A review could have occurred without public notice. The CNN article body does not give the month of the authorities update. The NSC reorganization is covered in c02-03 and CIA briefings on existing findings in c07-04.",
+  "updated_at": "2026-10-18"
 }

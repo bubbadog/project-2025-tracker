@@ -5,9 +5,9 @@
     "The 2026 conflict and blockade, described by the press as ongoing, make the sanctions track dependent on events outside Treasury's control, and the 2026 memorandum shows the White House has treated sanctions relief as a bargaining term."
   ],
   "chapter": "06",
-  "confidence": 74,
-  "confidence_label": "medium",
-  "confidence_reason": "A Treasury release confirms an expanded sanctions campaign in effect on 2026-10-01, and an Al Jazeera report confirms the June 2026 memorandum's sanctions-relief terms and its collapse. The war, blockade and 2026-09-22 talks rest on press reports, the nuclear aim and three other Mandate elements were not assessed, and renewed talks could change the sanctions posture.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "The chapter text (pp. 180-181, 185) was checked, and the stage-deciding documents were fetched and read in full: NSPM-2 on whitehouse.gov, the 2026-10-01 Treasury release, Executive Orders 14382 and 14389 on federalregister.gov and Public Law 119-111 on govinfo.gov; the memorandum, war and talks context rests on press reports.",
   "durability": {
     "level": "medium",
     "why": "Sanctions designations and the national security memorandum can be changed by the executive branch, and the June 2026 memorandum showed the US agreeing to waive oil sanctions in return for a final deal before it lapsed; the 2031 extension of the Iran Sanctions Act is statutory and UN sanctions were reinstated by the snapback process, so the framework is harder to unwind than a single order."
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c06-24, c12-33 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "An independent AI review re-read NSPM-2 (whitehouse.gov), the October 2026 Treasury release (home.treasury.gov), Executive Orders 14382 and 14389 (federalregister.gov) and Public Law 119-111 (govinfo.gov), added the Iran tariff order and its termination, condensed the summary and kept the stage at implemented."
     }
   ],
   "id": "c06-06",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 2,
   "match": "direct",
   "mechanism": "mixed",
@@ -124,26 +128,40 @@
   "research_agent": "D3",
   "review": {
     "flags": [
-      "2026-09-22 talks and any follow-up meeting rest on wire reports; outcome unknown",
       "nuclear, regional-partner, public diplomacy and Israel elements not assessed",
-      "no-new-sanctions clause comes from a non-government copy of the memorandum text",
-      "Washington Examiner blockade restart date not re-read"
+      "June 2026 memorandum and war context rest on press reports and a non-government copy of the memorandum text",
+      "EO 14382 tariff authority was ended by EO 14389 before any country-specific duty was found"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 180 and 181 criticize the Obama and Biden approach and say the next Administration should neither preserve nor repeat it; page 185 calls for preventing Iranian nuclear and delivery capabilities through reinstated and expanded Trump-era sanctions, security assistance to regional partners, public diplomacy support for Iranians opposing the government, and support for Israel's self-defense. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y1",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 180-181 say the next Administration should not preserve the Obama and Biden Iran approach, and page 185 calls for preventing Iranian nuclear and delivery capabilities by reinstating and expanding Trump-era sanctions, aiding regional partners, supporting Iranians opposing the government and backing Israel's self-defense; the proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Dated 2026-10-01: two OFAC sectoral determinations (automotive, rail) under EO 13902 plus designations under EO 13902 and EO 13871 (auto makers, the state railway company, HEPCO, metals networks, foreign suppliers); says Operation Economic Outcast was announced 2026-08-24; warns foreign financial institutions of secondary sanctions risk; says Iran's oil revenues have fallen to zero as the maritime blockade takes hold; no mention of the memorandum, talks or relief.",
+        "note": "Signed 2025-02-04; Treasury enforcement campaign, State campaign to drive oil exports to zero, UN Ambassador to complete snapback, Justice and Commerce enforcement; Section 1 policy to deny Iran a nuclear weapon and ICBMs.",
+        "result": "supports",
+        "url": "https://www.whitehouse.gov/presidential-actions/2025/02/national-security-presidential-memorandum-nspm-2/"
+      },
+      {
+        "note": "2026-10-01: sectoral determinations for automotive and rail under EO 13902, designations under EO 13902 and EO 13871, secondary sanctions warning; Operation Economic Outcast announced 2026-08-24.",
         "result": "supports",
         "url": "https://home.treasury.gov/news/press-releases/sb0643/"
       },
       {
-        "note": "Dated 2026-08-17: memorandum signed 2026-06-17 by the two presidents in Pakistan-mediated talks; US commitments included ending the blockade within 30 days, lifting sanctions, oil export waivers and access to frozen funds; Trump declared it over on 2026-07-07; it expired in mid-August. It does not say whether waivers were issued and does not mention a no-new-sanctions clause (that comes from the Iran Watch text).",
+        "note": "EO 14382, 91 FR 6493, signed 2026-02-06, effective 2026-02-07; duties not self-executing, require Commerce finding, State recommendation and presidential decision.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/02/11/2026-02813/addressing-threats-to-the-united-states-by-the-government-of-iran"
+      },
+      {
+        "note": "EO 14389, 91 FR 9437, signed 2026-02-20; ends EO 14382 duties among nine orders; emergencies remain in effect.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03832/ending-certain-tariff-actions"
+      },
+      {
+        "note": "H.R. 5334, enacted 2026-09-18; Sec. 201 changes the Iran Sanctions Act expiration from 2026 to 2031 and is excluded from the Sec. 203 sunset.",
         "result": "supports",
-        "url": "https://aljazeera.com/news/2026/8/17/us-iran-memorandum-of-understanding-expires-how-and-why-it-fell-apart"
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ111/html/PLAW-119publ111.htm"
       }
     ]
   },
@@ -201,10 +219,31 @@
       "publisher": "DLA Piper",
       "title": "Snapback sanctions on Iran: understanding the impact on your business",
       "url": "https://www.dlapiper.com/en-am/insights/publications/2025/10/snapback-sanctions-on-iran-understanding-the-impact-on-your-business"
+    },
+    {
+      "date": "2026-02-11",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Executive Order 14382, Addressing Threats to the United States by the Government of Iran (91 FR 6493)",
+      "url": "https://www.federalregister.gov/documents/2026/02/11/2026-02813/addressing-threats-to-the-united-states-by-the-government-of-iran"
+    },
+    {
+      "date": "2026-02-25",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Executive Order 14389, Ending Certain Tariff Actions (91 FR 9437)",
+      "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03832/ending-certain-tariff-actions"
+    },
+    {
+      "date": "2026-03-05",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Continuation of the National Emergency With Respect to Iran (91 FR 10937)",
+      "url": "https://www.federalregister.gov/documents/2026/03/05/2026-04450/continuation-of-the-national-emergency-with-respect-to-iran"
     }
   ],
   "stage": "implemented",
-  "status_summary": "National Security Presidential Memorandum 2 (signed 2025-02-04) directed Treasury, State, Justice and Commerce to enforce Iran sanctions and export controls, including a campaign to drive Iran's oil exports to zero, and directed the US Ambassador to the UN to work with allies to complete the snapback of UN sanctions; a law-firm analysis reports UN sanctions were reinstated on 2025-09-28. NPR reports that the US and Israel launched a war against Iran in February 2026. A US-Iran memorandum of understanding dated 2026-06-17 (the Islamabad memorandum) provided, according to its posted text, that the US would lift its naval blockade, issue Treasury waivers for Iranian oil exports, make frozen funds usable and impose no new sanctions while a final deal was negotiated, with sanctions ending on an agreed schedule under that deal. Al Jazeera reports that President Trump declared the memorandum ended on 2026-07-07 and that it expired in mid-August, and the Washington Examiner reports he announced a restart of the blockade on 2026-07-13; the sources found do not show whether the oil waivers were issued. Treasury Secretary Bessent announced an expanded sanctions campaign called Operation Economic Outcast on 2026-08-24, and Treasury issued further actions under it on 2026-10-01 against Iran's automotive, rail, manufacturing and metals sectors, with a warning of possible secondary sanctions on foreign financial institutions; the release states that Iran's oil revenues have fallen to zero as the US maritime blockade takes hold (Treasury's characterization). US and Iranian officials held direct talks on 2026-09-22 at the UN General Assembly, the first reported direct contact since June, and press reports say President Trump announced another meeting; Iran's stated conditions included lifting the blockade and releasing frozen assets. Public Law 119-111, enacted 2026-09-18, extended the Iran Sanctions Act's expiration from 2026 to 2031. As of 2026-10-01 the sanctions track follows the Mandate's call to reinstate and expand sanctions, but the June 2026 memorandum committed the US to end sanctions in exchange for a final deal, which differs from the Mandate; whether Iran has been denied nuclear capability was not established by the sources found.",
+  "status_summary": "National Security Presidential Memorandum 2 (2025-02-04) directed Treasury, State, Justice, Commerce and the UN Ambassador to enforce Iran sanctions, drive Iran's oil exports to zero and complete the UN snapback, which a law-firm analysis reports took effect on 2025-09-28; Executive Order 14382 (2026-02-06) authorized tariffs on countries trading with Iran, but Executive Order 14389 (2026-02-20) ended those additional duties while keeping the national emergency in place. A US-Iran memorandum signed 2026-06-17 would have exchanged sanctions relief for a final deal, but press reports say it was declared ended on 2026-07-07 and expired in mid-August. Treasury announced Operation Economic Outcast on 2026-08-24 and on 2026-10-01 issued sectoral determinations and designations under Executive Orders 13902 and 13871 with a warning of secondary sanctions on foreign financial institutions, and Public Law 119-111 (2026-09-18) extended the Iran Sanctions Act from 2026 to 2031. Direct US-Iran talks resumed on 2026-09-22 per wire reports, and whether Iran has been denied nuclear capability is not established by the sources found.",
   "timeline": [
     {
       "date": "2025-02-04",
@@ -226,6 +265,20 @@
       "kind": "news",
       "source": "NPR via Michigan Public",
       "url": "https://www.michiganpublic.org/2026-08-24/treasury-secretary-scott-bessent-unveils-new-u-s-economic-sanctions-on-iran"
+    },
+    {
+      "date": "2026-02-06",
+      "event": "Executive Order 14382 (91 FR 6493, document 2026-02813) authorized an additional ad valorem duty on goods from countries that acquire goods or services from Iran, subject to a Commerce finding, a State recommendation and a presidential decision; effective 2026-02-07.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/02/11/2026-02813/addressing-threats-to-the-united-states-by-the-government-of-iran"
+    },
+    {
+      "date": "2026-02-20",
+      "event": "Executive Order 14389 (91 FR 9437, document 2026-03832) ended the additional IEEPA duties under nine orders, including Executive Order 14382 on Iran, while stating that the underlying national emergencies remain in effect.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03832/ending-certain-tariff-actions"
     },
     {
       "date": "2026-06-17",
@@ -279,6 +332,6 @@
   ],
   "title": "Reinstate and expand Iran sanctions and deny Iran nuclear capability",
   "tracked": true,
-  "uncertainties": "The 2026 war, blockade and sanctions-campaign context rests on press reports (Michigan Public, Axios, Al Jazeera, Washington Examiner) and Treasury releases; the war start month and blockade timing were given only at month level in the original sources. The memorandum text is from Iran Watch (a non-government site) and its signing date comes from Wikipedia and Al Jazeera; whether Treasury issued any oil waivers during June to July 2026 was not established, and the Wikipedia article's latest entries are from mid-June. Why the blockade was described as ongoing before the 2026-07-13 restart announcement was not resolved. The DLA Piper article is dated only to October 2025 on its URL (2025-10-01 used as a month-level date). The Federal Register query for Maximum Pressure and Iran since 2025-01-20 returned no documents, so no rule or executive order beyond NSPM-2 was identified for 2025. Public diplomacy, regional security assistance and Israel-related Mandate elements were not researched, and a final nuclear outcome was not found. Reports differ on where the June memorandum was agreed (the posted text is titled for Islamabad; LIGA.net places the meeting in Switzerland), which does not affect its terms. The outcome of the 2026-09-22 talks and any follow-up meeting were not found.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The 2026 war, blockade and memorandum context rests on press reports (Michigan Public, Axios, Al Jazeera, Washington Examiner) and on a memorandum text posted by Iran Watch, a non-government site; whether Treasury issued any oil waivers during June and July 2026 was not established. The UN snapback date rests on a DLA Piper analysis dated only to October 2025. NSPM-2, Executive Orders 14382 and 14389, the 2026-10-01 Treasury release and Public Law 119-111 were read on primary hosts; Executive Order 14382 required later Commerce and State findings and a presidential decision before any duty applied, and no such decision was found before Executive Order 14389 ended the duties, so the tariff track appears not to have become operative. Public diplomacy, regional security assistance and Israel-related Mandate elements were not researched, and a final nuclear outcome was not found. The outcome of the 2026-09-22 talks and any follow-up meeting were not found.",
+  "updated_at": "2026-10-18"
 }

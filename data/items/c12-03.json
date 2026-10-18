@@ -8,7 +8,7 @@
   "chapter": "12",
   "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "The amended U.S. Code and DOE's release were read and confirm major IRA credit terminations and the award cancellations. The other credit dates were not re-read here, and the FY2026 reprogramming of unobligated IIJA funds and the IRA loan rescission rest on law-firm summaries.",
+  "confidence_reason": "Chapter text checked; Public Law 119-21 sections 70502 and 70512 were re-read in this review as codified at 26 U.S.C. 30D and 45Y and support the IRA terminations, but the IIJA side that keeps the stage at in_progress rests on law-firm summaries because Division B of Public Law 119-74 could not be read.",
   "durability": {
     "level": "high",
     "why": "Credit terminations and fund repeals are in statute; administrative award cancellations are more reversible, and courts have vacated some."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c12-25, c12-28 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review re-read 26 U.S.C. 30D and 45Y on law.cornell.edu, which support the IRA credit terminations, and tried Public Law 119-74 on govinfo.gov without reaching Division B; in_progress 60 and medium confidence kept."
     }
   ],
   "id": "c12-03",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-16",
   "layer": 1,
   "match": "partial",
   "mechanism": "legislation",
@@ -66,28 +70,40 @@
   "requires_congress": "yes",
   "research_agent": "A09",
   "review": {
+    "document_reread": {
+      "citation": "Public Law 119-21, title VII, sections 70502(a) and 70512(a), 139 Stat. 250 et seq., as codified at 26 U.S.C. 30D(h) and 45Y(d)(3)-(4) with amendment notes",
+      "note": "Re-read 26 U.S.C. 30D and 45Y at Cornell's Legal Information Institute: 30D(h) now bars the credit for vehicles acquired after 2025-09-30 (Pub. L. 119-21 sec. 70502(a), 139 Stat. 250); 45Y(d)(4) bars the credit for wind and solar facilities placed in service after 2027-12-31 (sec. 70512(a)), applying to facilities whose construction begins after 2026-07-04. The enrolled text on govinfo truncates in Title I. Public Law 119-74 was also tried on govinfo for Division B: the act number, H.R. 6938, date 2026-01-23 and division titles were confirmed, but the text ends in Division A, so the OCED and IIJA reprogramming claims were not reached.",
+      "result": "supports",
+      "url": "https://www.law.cornell.edu/uscode/text/26/30D"
+    },
     "flags": [
-      "FY2026 IIJA reprogramming from a law-firm summary",
-      "overlaps c12-01 and c22-02",
-      "only 45Y re-verified among the credit sections"
+      "Court rulings appear in the timeline only as news-sourced events on individual awards; court_status left null because they concern discrete award cancellations rather than this record's statutory core. A later pass may set it to vacated (2026-06-11) if the scorecard treats those rulings as governing.",
+      "Two law-firm alert timeline entries proposed for removal as not government actions.",
+      "status_summary condensed to four sentences."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 365 supports repealing the IIJA and IRA and rescinding all unspent funds; page 372 says carrying out the DOE proposals requires amending the DOE Organization Act, IIJA and IRA; page 381 calls for rescinding unspent grid program money. The paraphrase is accurate.",
+    "mandate_check": "ok",
+    "mandate_note": "Page 365 supports repeal of the IIJA and IRA and rescission of all unspent funds, page 372 says the IIJA and IRA would need amending, and page 381 asks Congress to rescind unspent grid program money and criticizes OCED's IIJA subsidies; the proposal is accurate, though efficiency programs are not named on the cited pages.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y3",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-1",
     "source_checks": [
       {
-        "note": "26 U.S.C. 45Y(d)(4), added by P.L. 119-21 sec. 70512, ends the credit for wind and solar facilities placed in service after 2027-12-31; the statutory note applies it to facilities whose construction begins more than 12 months after 2025-07-04.",
+        "note": "30D(h): no credit for vehicles acquired after 2025-09-30; Pub. L. 119-21 sec. 70502(a), 139 Stat. 250.",
+        "result": "supports",
+        "url": "https://www.law.cornell.edu/uscode/text/26/30D"
+      },
+      {
+        "note": "45Y(d)(4): no credit for wind or solar placed in service after 2027-12-31; sec. 70512(a) applies to construction beginning after 2026-07-04.",
         "result": "supports",
         "url": "https://www.law.cornell.edu/uscode/text/26/45Y"
       },
       {
-        "note": "Confirms the 2025-10-01 termination of 321 awards (223 projects, about $7.56 billion) across OCED, EERE, GDO, MESC, ARPA-E and Fossil Energy, with 26 percent made between Election Day and Inauguration Day.",
-        "result": "supports",
-        "url": "https://www.energy.gov/articles/energy-department-announces-termination-223-projects-saving-over-75-billion"
+        "note": "P.L. 119-74, H.R. 6938, 2026-01-23, Division B is Energy and Water; Division B text not reached.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ74/html/PLAW-119publ74.htm"
       }
-    ]
+    ],
+    "stage_change_reason": "Major IRA credit terminations and the Greenhouse Gas Reduction Fund repeal are enacted and confirmed in the codified text, but the IIJA has not been repealed and unobligated IIJA funds were not rescinded in FY2026 appropriations, so in_progress at the top of the band stands rather than implemented."
   },
   "significance": {
     "B": 3,
@@ -96,6 +112,24 @@
     "M": 3,
     "R": 2.5,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 3,
+        "F": 3,
+        "F_estimated": true,
+        "M": 3,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 3,
+        "F": 3,
+        "F_estimated": true,
+        "M": 3,
+        "R": 3,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Repealing IRA and IIJA energy programs would remove large tax credits and grants that shape energy investment across the economy.",
     "version": "2026-10-08",
@@ -216,7 +250,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "As of 2026-10-08 the IRA half of this objective is largely enacted through reconciliation, while the IIJA half has not been repealed and Congress chose not to rescind unobligated IIJA funds in FY2026 appropriations. Public Law 119-21 (signed 2025-07-04) ended or restricted many IRA credits: the U.S. Code text shows the residential clean energy credit (26 U.S.C. 25D) applies only to expenditures made through 2025-12-31 (section 70506), the clean vehicle credit (30D) only to vehicles acquired through 2025-09-30 (section 70502), the clean hydrogen credit (45V) only to facilities whose construction begins before 2028-01-01 (section 70511), and the wind and solar credit (45Y) not to wind or solar facilities placed in service after 2027-12-31 (section 70512, applying to facilities whose construction begins more than 12 months after enactment). The law also repealed the Greenhouse Gas Reduction Fund (42 U.S.C. 7434, section 60002), and a law-firm summary reports it rescinded unobligated IRA loan funding while creating an Energy Dominance Financing program. Executive Order 14154 (2025-01-20) paused IRA and IIJA disbursements, and DOE announced on 2025-10-01 the termination of 321 awards supporting 223 projects, estimated at about 7.56 billion dollars in savings, after a case-by-case financial review. Courts have since ordered reinstatement of 27.6 million dollars in commitments (January 2026) and vacated 11 grant cancellations worth 82.1 million dollars (2026-06-11), and 13 states sued over hydrogen hub cancellations (2026-02-18). The FY2026 Energy and Water act (Division B of Public Law 119-74, approved 2026-01-23) gave the Office of Clean Energy Demonstrations no appropriation and, per Holland & Knight, reprogrammed about 5.16 billion dollars in unobligated IIJA funds rather than rescinding them.",
+  "status_summary": "As of 2026-10-08 the IRA half of this objective is largely enacted through reconciliation while the IIJA half has not been repealed: Public Law 119-21 (signed 2025-07-04) limits the residential clean energy credit (26 U.S.C. 25D) to expenditures through 2025-12-31 (section 70506), the clean vehicle credit (30D) to vehicles acquired through 2025-09-30 (section 70502), and the clean hydrogen credit (45V) to facilities whose construction begins before 2028-01-01 (section 70511), denies the wind and solar credit (45Y) to facilities placed in service after 2027-12-31 whose construction begins after 2026-07-04 (section 70512), repeals the Greenhouse Gas Reduction Fund (section 60002), and, per a law-firm summary, rescinded unobligated IRA loan funding while creating an Energy Dominance Financing program. Executive Order 14154 (2025-01-20) paused IRA and IIJA disbursements, and DOE announced on 2025-10-01 the termination of 321 awards supporting 223 projects, estimated at about 7.56 billion dollars in savings. Courts have since ordered reinstatement of 27.6 million dollars in commitments (January 2026) and vacated 11 grant cancellations worth 82.1 million dollars (2026-06-11), and 13 states sued over hydrogen hub cancellations (2026-02-18). The FY2026 Energy and Water act (Division B of Public Law 119-74, approved 2026-01-23) gave the Office of Clean Energy Demonstrations no appropriation and, per Holland & Knight, reprogrammed about 5.16 billion dollars in unobligated IIJA funds rather than rescinding them.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -231,20 +265,6 @@
       "kind": "primary",
       "source": "U.S. Code via Cornell Legal Information Institute",
       "url": "https://www.law.cornell.edu/uscode/text/26/25D"
-    },
-    {
-      "date": "2025-07-07",
-      "event": "A law-firm alert summarizes credit end dates in the enacted law: residential clean energy and home improvement credits 2025-12-31, clean vehicle credits 2025-09-30, clean hydrogen construction start by 2027-12-31, and wind and solar unavailable for construction starting on or after 2026-07-04 when placed in service after 2027-12-31; it lists no termination change for the carbon sequestration and nuclear credits. The alert notes a conflict between its chart and text on the phase-out of other technologies.",
-      "kind": "news",
-      "source": "Pierce Atwood",
-      "url": "https://www.pierceatwood.com/alerts/congress-phases-out-energy-tax-credits"
-    },
-    {
-      "date": "2025-07-10",
-      "event": "A law-firm alert reports that all unobligated Loan Programs Office funding appropriated through the IRA was rescinded, and that a new Energy Dominance Financing program received a 1 billion dollar credit subsidy appropriation available through 2028-09-30.",
-      "kind": "news",
-      "source": "ML Strategies (Mintz)",
-      "url": "https://www.mlstrategies.com/mintz/pdf?id=57321"
     },
     {
       "date": "2025-09-02",
@@ -284,6 +304,6 @@
   ],
   "title": "Repeal IIJA and IRA energy programs and rescind unspent funds",
   "tracked": true,
-  "uncertainties": "The text of Public Law 119-21 was not read directly (govinfo's page stops partway through the first title); the credit end dates were verified against the amended sections of the U.S. Code at Cornell's Legal Information Institute through fetch summaries, which cover sections 25D, 30D, 45V, 45Y and the repealed 42 U.S.C. 7434 but not section 25C or the carbon sequestration and nuclear credits (the Pierce Atwood alert is the source for the home improvement credit ending 2025-12-31 and for no termination change on those two). The wind and solar rule is a placed-in-service cutoff of 2027-12-31 for facilities whose construction begins after 2026-07-04; facilities that begin construction earlier keep the earlier rules, and IRS Notice 2025-42 addresses beginning of construction. The Energy Dominance Financing and IRA loan rescission claims rest on a law-firm alert and the law's table of contents. DOE's 2025-10-01 release was read through a fetch summary; the 13-state suit and the 27.6 million dollar January 2026 outcome rest on S&P Global, and the 2026-06-11 ruling (Judge Mehta, D.D.C., a suit led by the American Institute of Chemical Engineers on equal protection grounds, per Utility Dive) has no caption or docket number and its date is inferred from an article published 2026-06-12. Utility Dive's description of the January outcome (a settlement versus an order) is inconsistent. The text of Division B of Public Law 119-74 could not be read, so the FY2026 reprogramming of unobligated IIJA funds rests on Holland & Knight (written before signing); the two sources conflict on Grid Deployment Office funding, so none is used. Litigation over the January 2025 funding pause (Executive Order 14154) was not researched.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The enrolled text of Public Law 119-21 was not read (govinfo's page stops in the first title); credit end dates rest on the amended U.S. Code at Cornell's Legal Information Institute, re-read in this review for 30D and 45Y and earlier for 25D, 45V and 42 U.S.C. 7434, and not for 25C or the carbon sequestration and nuclear credits (the Pierce Atwood alert is the source for the home improvement credit ending 2025-12-31). Facilities that began construction by 2026-07-04 keep the earlier wind and solar rules, and IRS Notice 2025-42 addresses beginning of construction. The Energy Dominance Financing and IRA loan rescission claims rest on a law-firm alert and the law's table of contents. DOE's 2025-10-01 release was read through a fetch summary; the 13-state suit and the January 2026 outcome rest on S&P Global, and the 2026-06-11 ruling (Judge Mehta, D.D.C., per Utility Dive) has no caption or docket number and its date is inferred from an article published 2026-06-12. Utility Dive's description of the January outcome (a settlement versus an order) is inconsistent. Division B of Public Law 119-74 could not be read because govinfo's text ends in Division A, so the FY2026 reprogramming of unobligated IIJA funds rests on Holland & Knight (written before signing). Litigation over the January 2025 funding pause was not researched.",
+  "updated_at": "2026-10-16"
 }

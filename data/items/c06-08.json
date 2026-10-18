@@ -5,9 +5,9 @@
     "Withdrawal from treaties in force is subject to legal debate over presidential authority; no court ruling on the 2026 withdrawals was found."
   ],
   "chapter": "06",
-  "confidence": 62,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; the stage-deciding primary documents (both executive orders' relevant sections via the Federal Register, the January 2026 memorandum, and both UN depositary notices) were fetched and read. The rating rests on absence of evidence for the Senate-pending and unratified-treaty steps, which limits confidence.",
+  "confidence_reason": "Chapter pages 174 and 175 checked and the 2026-01-07 memorandum (91 FR 2281, Doc. 2026-00976) was re-read on federalregister.gov and supports the stage; confidence stays medium because the stage rests on an absence of any freeze, stand-down or Senate-transmittal action, which no single document can confirm.",
   "durability": {
     "level": "medium",
     "why": "The withdrawals rest on executive action and take effect through treaty notice provisions; a later administration could seek to rejoin, though rejoining some instruments may require new Senate or other action."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review re-read the 2026-01-07 memorandum on federalregister.gov; stage and match unchanged, confidence 62 to 66, FR citation added to the summary."
     }
   ],
   "id": "c06-08",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-16",
   "layer": 3,
   "match": "parallel",
   "mechanism": "executive_order",
@@ -56,37 +60,26 @@
   "requires_congress": "partial",
   "research_agent": "N06a",
   "review": {
-    "flags": [
-      "absence of evidence for the core steps",
-      "partial overlap with c06-03 (withdrawals) and c06-10 (inauguration freeze)"
-    ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 174 and 175 call for freezing ongoing treaty and agreement negotiations, a stand-down on enforcing treaties the Senate has not ratified, a review with the Attorney General and White House Counsel of agreements that are in substance treaties with compliance suspended pending transmittal, and withdrawal from treaties pending in the Senate 20 years or more; the paraphrase is accurate.",
+    "document_reread": {
+      "citation": "Presidential Memorandum of 2026-01-07, 91 FR 2281, Document No. 2026-00976 (published 2026-01-16)",
+      "note": "Read on federalregister.gov: Sec. 2 lists 35 non-UN organizations and 31 UN entities for withdrawal, with the UNFCCC the only convention-linked item; Sec. 1(d) says review of further findings under EO 14199 remains ongoing; the text does not mention the Senate, unratified treaties, a negotiation freeze or treaties pending before the Senate.",
+      "result": "supports",
+      "url": "https://www.federalregister.gov/documents/2026/01/16/2026-00976/withdrawing-the-united-states-from-international-organizations-conventions-and-treaties-that-are"
+    },
+    "flags": [],
+    "mandate_check": "ok",
+    "mandate_note": "Printed pages 174 and 175 recommend directing State to freeze treaty and agreement negotiations pending review, ending enforcement of unratified treaties, reviewing agreements that are in substance treaties for Senate submission, and withdrawing from treaties pending before the Senate for 20 years or more; the proposal paraphrases this accurately.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y8a",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-5",
     "source_checks": [
       {
-        "note": "Signed 2026-01-07, 66 entities (35 non-UN, 31 UN), UNFCCC named; no mention of the Senate, unratified treaties or negotiation freezes; says review of further findings remains ongoing.",
+        "note": "35 plus 31 entities; UNFCCC only convention-linked item; no Senate or unratified-treaty language; Sec. 1(d) review ongoing.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/01/16/2026-00976/withdrawing-the-united-states-from-international-organizations-conventions-and-treaties-that-are"
-      },
-      {
-        "note": "EO 14199 signed 2025-02-04; Sec. 3(b) orders a 180-day review of organizations and of all conventions and treaties to which the US is a party.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/02/10/2025-02504/withdrawing-the-united-states-from-and-ending-funding-to-certain-united-nations-organizations-and"
-      },
-      {
-        "note": "UNFCCC withdrawal effected 2026-02-27, effective 2027-02-27.",
-        "result": "supports",
-        "url": "https://treaties.un.org/doc/Publication/CN/2026/CN.102.2026-Eng.pdf"
-      },
-      {
-        "note": "Paris Agreement withdrawal notice received 2025-01-27, effective 2026-01-27; CN dated 2025-01-27 (source date corrected from 2025-01-28).",
-        "result": "supports",
-        "url": "https://treaties.un.org/doc/Publication/CN/2025/CN.71.2025-Eng.pdf"
       }
-    ]
+    ],
+    "stage_change_reason": "The deciding memorandum and the executive orders address withdrawal from instruments already in force and a directed review, not the freeze, stand-down, Senate-transmittal review or stale-treaty withdrawal the text asks for; proposed 20 with a parallel match remains consistent."
   },
   "self_confidence": 60,
   "significance": {
@@ -96,6 +89,24 @@
     "M": 2.5,
     "R": 2,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 3,
+        "F": 1,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 3,
+        "F": 1,
+        "F_estimated": true,
+        "M": 2,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Freezing negotiations, standing down unratified treaty enforcement and withdrawing from old treaties changes the structure of treaty practice across the executive branch, with limited direct fiscal effect.",
     "version": "2026-10-12",
@@ -139,7 +150,7 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "No government-wide freeze of treaty negotiations, no stand-down on unratified treaties and no review sending treaty-like agreements to the Senate was found. The closest actions are withdrawals from existing instruments: Executive Order 14162 (signed 2025-01-20) directed notice of withdrawal from the Paris Agreement, which the UN depositary records as taking effect for the United States on 2026-01-27, and Executive Order 14199 (signed 2025-02-04) ordered a 180-day review of all treaties and conventions to which the US is a party. A 2026-01-07 memorandum then directed withdrawal from 66 organizations and named one convention, the UNFCCC; the depositary records the US notice as effected 2026-02-27, effective 2027-02-27. These concern instruments already in force, not the Senate-pending or unratified categories the Mandate describes.",
+  "status_summary": "No government-wide freeze of treaty negotiations, no stand-down on unratified treaties and no review sending treaty-like agreements to the Senate was found. The closest actions are withdrawals from existing instruments: Executive Order 14162 (signed 2025-01-20) directed notice of withdrawal from the Paris Agreement, which the UN depositary records as taking effect for the United States on 2026-01-27, and Executive Order 14199 (signed 2025-02-04) ordered a 180-day review of all treaties and conventions to which the US is a party. A 2026-01-07 memorandum (91 FR 2281) then directed withdrawal from 66 organizations and named one convention, the UNFCCC; the depositary records the US notice as effected 2026-02-27, effective 2027-02-27. These concern instruments already in force, not the Senate-pending or unratified categories the Mandate describes.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -179,6 +190,6 @@
   ],
   "title": "Freeze treaty talks, stop enforcing unratified treaties, send treaty-like deals to Senate",
   "tracked": true,
-  "uncertainties": "Searches for a government-wide freeze of treaty negotiations, a stand-down on unratified treaties, a review of agreements that are in substance treaties, and any withdrawal of treaties pending before the Senate found no matching action. The Paris Agreement was concluded without Senate advice and consent, so its withdrawal is parallel to, not the same as, the Mandate's unratified-treaty category. The findings of the Executive Order 14199 treaty review have not been published beyond the January 2026 memorandum, which says the President's review of further findings remains ongoing. Inference: the Paris withdrawal is operative, so a reader could argue for in_progress; the review keeps proposed because the operative step concerns an instrument already in force rather than the freeze, stand-down or Senate-transmittal steps the text asks for.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "Searches for a government-wide freeze of treaty negotiations, a stand-down on unratified treaties, a review of agreements that are in substance treaties, and any withdrawal of treaties pending before the Senate found no matching action; this is an absence finding. The Paris Agreement was concluded without Senate advice and consent, so its withdrawal is parallel to, not the same as, the Mandate's unratified-treaty category. The findings of the Executive Order 14199 treaty review have not been published beyond the January 2026 memorandum, which says review of further findings remains ongoing; the State Department site could not be reached to check for a separate publication. Inference: the Paris withdrawal is operative, so a reader could argue for in_progress; the review keeps proposed because the operative step concerns an instrument already in force rather than the freeze, stand-down or Senate-transmittal steps the text asks for.",
+  "updated_at": "2026-10-16"
 }

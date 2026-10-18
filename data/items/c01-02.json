@@ -2,9 +2,9 @@
   "agency": "White House policy councils (DPC, NSC, NEC)",
   "blockers": [],
   "chapter": "01",
-  "confidence": 57,
+  "confidence": 65,
   "confidence_label": "medium",
-  "confidence_reason": "Federal Register texts confirm that orders route DEI and religious-liberty work through the Domestic Policy Council, and a Reuters report (largely anonymous sourcing) says the Homeland Security Council coordinates immigration policy. How the councils run China, trade and energy processes, and any single-council allocation of overlapping topics, remain undocumented, so the stage is still partly an inference from reporting lines.",
+  "confidence_reason": "Chapter text (pp. 37 to 38) checked; EO 14205 (Sections 3 and 4) and EO 14291 were re-read on the Federal Register along with a 2026-08-07 Commission meeting notice, confirming the Domestic Policy Council roles. No single document decides the stage, the Homeland Security Council role rests on one Reuters report, and the China, trade and energy processes are undocumented, so confidence stays medium.",
   "durability": {
     "level": "low",
     "why": "Council roles and interagency processes are set by orders, memoranda and White House practice that a later President can change at once."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "The history note of 2026-10-08 on closing the low-confidence gaps was cut short; it ended after naming the Reuters report on the Homeland Security Council."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review re-read EO 14205 and EO 14291 and a 2026-08-07 Religious Liberty Commission meeting notice on federalregister.gov, added the Commission's end date and continued meetings, and lowered progress from 40 to 35."
     }
   ],
   "id": "c01-02",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "partial",
   "mechanism": "executive_order",
@@ -41,7 +49,7 @@
     38
   ],
   "position": null,
-  "progress": 40,
+  "progress": 35,
   "proposal": "The chapter says incoming policy councils should move quickly to lead interagency processes on cross-cutting topics, including countering China, enforcing immigration laws, reversing regulatory policies to promote energy production, combating what it calls attacks on life and religious liberty, and confronting what it calls wokeism across the government. It also recommends assigning overlapping topics (immigration, health, energy and environment, trade) to only one council where possible.",
   "related_ids": [
     "c02-08",
@@ -60,31 +68,31 @@
   "research_agent": "A01",
   "review": {
     "flags": [
-      "stage partly inferred from reporting lines",
-      "Homeland Security Council role rests on one Reuters report with anonymous sourcing",
-      "EO 14212 executive-director role not re-read in this review",
-      "China and trade processes undocumented"
+      "progress lowered from 40 to 35: Domestic Policy Council roles on DEI and religious liberty are documented, immigration rests on one news report, and China, trade, energy and single-council allocation are not council-led in the documents read",
+      "30 (researcher suggestion) and 40 (prior value) are both defensible within in_progress",
+      "Religious Liberty Commission continued past its 2026-07-04 end date per a meeting notice; no extension order found",
+      "history note of 2026-10-08 was truncated; closing note added"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 37 to 38 describe the tiered policy-council process, recommend assigning overlapping topics (immigration and border security, health, energy and environment, trade) to one council where possible, and say incoming councils should lead cross-cutting processes on China, immigration enforcement, energy deregulation, life and religious liberty, and what the chapter calls wokeism; the paraphrase is accurate and attributes the loaded terms.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "X1",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 37 to 38 describe the tiered policy-council process, note overlaps such as immigration and border security, health, energy and environment, and trade, recommend assigning overlapping topics to one council where possible, and say incoming councils should lead cross-cutting processes on China, immigration enforcement, energy deregulation, life and religious liberty, and what the chapter calls wokeism. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Reuters, 2025-07-11: Stephen Miller heads the White House Homeland Security Council, which coordinates immigration and other domestic security policy, and his group was unaffected by the NSC downsizing; these internal details come mostly from unnamed current or former officials.",
+        "note": "EO 14205, 90 FR 9499, FR Doc. 2025-02635, signed 2025-02-07: Faith Office housed in the Domestic Policy Council, recommends changes to the President through the Assistant to the President for Domestic Policy.",
         "result": "supports",
-        "url": "https://gvwire.com/2025/07/11/the-white-house-aide-driving-trumps-aggressive-immigration-agenda/"
+        "url": "https://www.federalregister.gov/documents/2025/02/12/2025-02635/establishment-of-the-white-house-faith-office"
       },
       {
-        "note": "EO 14398, signed 2026-03-26, published 2026-03-31 (91 FR 16147): agency heads report contract-clause compliance to the Assistant to the President for Domestic Policy within 120 days; OMB, with the Attorney General, that official and the EEOC Chair, identifies at-risk sectors.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/03/31/2026-06286/addressing-dei-discrimination-by-federal-contractors"
-      },
-      {
-        "note": "EO 14291, signed 2025-05-01, published 2025-05-07: the Commission advises the White House Faith Office and the Domestic Policy Council; the Assistant to the President for Domestic Policy is an ex officio member; DOJ provides funding and support.",
+        "note": "EO 14291, 90 FR 19417, signed 2025-05-01: advises the Faith Office and DPC; Assistant to the President for Domestic Policy ex officio; dissolves 2026-07-04 unless the President extends it.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/05/07/2025-08134/establishment-of-the-religious-liberty-commission"
+      },
+      {
+        "note": "91 FR 51180, published 2026-08-07: eighth meeting set for 2026-08-17 to finalize the report; cites EO 14291 but no extension.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/08/07/2026-16178/meeting-of-the-religious-liberty-commission"
       }
     ]
   },
@@ -184,10 +192,17 @@
       "publisher": "NPR via Michigan Public",
       "title": "Stephen Miller will be Trump's homeland security advisor in new White House role",
       "url": "https://www.michiganpublic.org/2024-11-11/stephen-miller-will-be-trumps-homeland-security-advisor-in-new-white-house-role"
+    },
+    {
+      "date": "2026-08-07",
+      "kind": "primary",
+      "publisher": "Federal Register (Department of Justice)",
+      "title": "Meeting of the Religious Liberty Commission (91 FR 51180, FR Doc. 2026-16178)",
+      "url": "https://www.federalregister.gov/documents/2026/08/07/2026-16178/meeting-of-the-religious-liberty-commission"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Executive orders place several of the chapter's topics under the Domestic Policy Council (DPC) or its head: the Assistant to the President for Domestic Policy convenes DEI-tracking meetings (EO 14151, 2025-01-20) and receives agency compliance reports on DEI in federal contracting (EO 14398, 2026-03-26); the White House Faith Office sits within the DPC (EO 14205, 2025-02-07); the Religious Liberty Commission advises the Faith Office and the DPC (EO 14291, 2025-05-01); and the Assistant to the President for Domestic Policy is executive director of the Make America Healthy Again Commission, which the HHS Secretary chairs (EO 14212, 2025-02-13). On immigration, Reuters reported on 2025-07-11 that Stephen Miller, the deputy chief of staff for policy, leads the White House Homeland Security Council, which coordinates immigration and other domestic security policy across the administration, and that his group was unaffected by the National Security Council (NSC) downsizing; NSPM-1 (2025-01-20) lets the NSC convene as the Homeland Security Council on pre-agreed topics with one staff. Other topics run outside the councils: energy went to a new National Energy Dominance Council chaired by the Interior Secretary (EO 14213, 2025-02-14), while EO 14154 (2025-01-20) names the National Economic Council director only as a consulted official, and the Homeland Security Task Forces in EO 14159 are set up by the Attorney General and the Homeland Security Secretary. The NSC staff was cut sharply in May 2025 with the Secretary of State as interim national security adviser, and a July-August 2026 Foreign Service Journal commentary says policy advice runs largely through informal channels rather than the interagency process. No published allocation of overlapping topics (immigration, health, energy, trade) to a single council was found. Inference: the objective is partly met in the DPC-led and Homeland Security Council-led areas and is not documented as a formal tiered-committee design elsewhere.",
+  "status_summary": "Executive orders place several of the chapter's topics under the Domestic Policy Council (DPC) or its head: the Assistant to the President for Domestic Policy convenes DEI-tracking meetings (EO 14151, 2025-01-20) and receives agency compliance reports on DEI in federal contracting (EO 14398, 2026-03-26); the White House Faith Office sits within the DPC (EO 14205, 2025-02-07); the Religious Liberty Commission advises the Faith Office and the DPC (EO 14291, 2025-05-01); and the Assistant to the President for Domestic Policy is executive director of the Make America Healthy Again Commission, which the HHS Secretary chairs (EO 14212, 2025-02-13). On immigration, Reuters reported on 2025-07-11 that Stephen Miller, the deputy chief of staff for policy, leads the White House Homeland Security Council, which coordinates immigration and other domestic security policy across the administration, and that his group was unaffected by the National Security Council (NSC) downsizing; NSPM-1 (2025-01-20) lets the NSC convene as the Homeland Security Council on pre-agreed topics with one staff. Other topics run outside the councils: energy went to a new National Energy Dominance Council chaired by the Interior Secretary (EO 14213, 2025-02-14), while EO 14154 (2025-01-20) names the National Economic Council director only as a consulted official, and the Homeland Security Task Forces in EO 14159 are set up by the Attorney General and the Homeland Security Secretary. The NSC staff was cut sharply in May 2025 with the Secretary of State as interim national security adviser, and a July-August 2026 Foreign Service Journal commentary says policy advice runs largely through informal channels rather than the interagency process. No published allocation of overlapping topics (immigration, health, energy, trade) to a single council was found. EO 14291 set the Religious Liberty Commission to end on 2026-07-04 unless the President extended it; a Justice Department notice published 2026-08-07 (91 FR 51180) announced the Commission's eighth meeting for 2026-08-17 to finalize its report, without citing an extension. Inference: the objective is partly met in the DPC-led and Homeland Security Council-led areas and is not documented as a formal tiered-committee design elsewhere.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -269,6 +284,6 @@
   ],
   "title": "Have White House policy councils lead cross-cutting priority processes",
   "tracked": true,
-  "uncertainties": "Most evidence is documentary (which official receives which report or chairs which body) and does not show how the councils run their committees day to day. EO 14159's task-force section names the Attorney General and the Homeland Security Secretary and no council (read in the earlier pass, not reopened). Stephen Miller's leadership of the Homeland Security Council rests on a Reuters report of 2025-07-11 that relies largely on anonymous officials, and on an NPR report of the November 2024 announcement; NSPM-1 names no officeholders, and the earlier law-firm alert (Akin Gump, undated) was not reopened. The Foreign Service Journal item is a critical commentary from a Foreign Service association, an attributed characterization, and its page excerpt gives no dates or staffing numbers. A trade-policy report found by search (Bessent, Lutnick and Greer leading negotiations) carried no publication date and was not used. No 2026 report on council jurisdiction changes was found. Searches run: Stephen Miller roles; NSC shrunk under Rubio and interagency process; who runs trade policy; Miller and the Homeland Security Council process.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Most evidence is documentary (which official receives which report or chairs which body) and does not show how the councils run their committees day to day. EO 14159's task-force section names the Attorney General and the Homeland Security Secretary and no council (read in the earlier pass, not reopened). Stephen Miller's leadership of the Homeland Security Council rests on a Reuters report of 2025-07-11 that relies largely on anonymous officials, and on an NPR report of the November 2024 announcement; NSPM-1 names no officeholders, and the earlier law-firm alert (Akin Gump, undated) was not reopened. The Foreign Service Journal item is a critical commentary from a Foreign Service association, an attributed characterization, and its page excerpt gives no dates or staffing numbers. A trade-policy report found by search (Bessent, Lutnick and Greer leading negotiations) carried no publication date and was not used. No 2026 report on council jurisdiction changes was found. Searches run: Stephen Miller roles; NSC shrunk under Rubio and interagency process; who runs trade policy; Miller and the Homeland Security Council process. EO 14291 sets a 2026-07-04 end date for the Religious Liberty Commission unless extended; a Federal Register meeting notice of 2026-08-07 shows the Commission still meeting, but no extension order was found or read.",
+  "updated_at": "2026-10-18"
 }

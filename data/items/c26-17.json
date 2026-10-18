@@ -5,9 +5,9 @@
     "Congressional tax-writing process not started"
   ],
   "chapter": "26",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "The committee page was read; the absence of a bill or proposal rests on limited searches, so not_started is capped.",
+  "confidence": 65,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-18: (1) Federal Register API searches for border adjustment and destination-based terms, all agencies and Treasury, found only a USTR notice on the EU carbon measure; (2) Unified Agenda listings could not be read, so the Federal Register proposed-rule fallback was used (partial); (3) a congress.gov and GovInfo bill search with U.S. Code notes for Public Law 119-21 found no border-adjusted tax bill or provision; (4) Treasury press releases showed nothing; (5) a news search found only advocacy. Rated at the partial-check ceiling; the enacted text of Public Law 119-21 was read only through code notes.",
   "durability": {
     "level": "low",
     "why": "No operative measure exists; interest could change with tariff litigation."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check with independent AI review: Not_started kept; five-part absence check documented and spot-checked; confidence raised from 45 to 65."
     }
   ],
   "id": "c26-17",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -60,18 +64,59 @@
       "Added one search for a 2026 border adjustment bill; none found",
       "Clarified that the Public Law 119-21 point rests on general knowledge, not the text",
       "Overlaps the border adjustment alternative mentioned in c26-01's proposal, which does not track it",
-      "Confidence 45"
+      "Confidence 45",
+      "V7 systematic-check review: not_started 0 kept; researcher's five checks accepted and the border adjustment Federal Register query re-run with the same result; confidence 45 to 65 under the rubric addition (check 2 partial)."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 782 to 783, reciprocal trade discussion (Navarro): the 2017 House border adjustment tax denied deductions for imports and exempted export income; a conservative Administration might look at such a tax as part of its trade agenda. Paraphrase accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V7",
     "source_checks": [
       {
         "note": "Checked 2026-10-14. Hearing set for 2026-03-04, postponed indefinitely; no bill referenced.",
         "result": "supports",
         "url": "https://www.jec.senate.gov/public/index.cfm/2026/3/evaluating-the-u-s-competitiveness-and-investment-advantages-of-a-destination-based-cash-flow-tax-dbcft"
+      },
+      {
+        "note": "Systematic check 1: Phrase border adjustment, all agencies, all document types, on or after 2025-01-20: 1 document, a USTR notice of 2026-10-08 on the EU Carbon Border Adjustment Mechanism, which is a foreign measure and not a U.S. tax. checked 2026-10-18.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"border+adjustment\"&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 1: Phrase destination-based: 2 documents (a suicide hotline rule and an airworthiness rule), neither on taxation. checked 2026-10-18.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"destination-based\"&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 1: Terms border adjustment, agency treasury-department: 26 documents, all information collections, anti-money-laundering special measures, capital rules and similar; none proposes or adopts a border-adjusted tax. Earlier broad term search (border adjustment tax) returned only tariff notices and unrelated rules. checked 2026-10-18.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=border+adjustment&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=treasury-department&per_page=20"
+      },
+      {
+        "note": "Systematic check 2: Reached the current Unified Agenda page (2026 Regulatory Plan edition, publication 202510); the agency listings sit behind a JavaScript dropdown and could not be read, so the Federal Register API was used as the fallback for proposed-rule and agenda notices. PRORULE search for the term returned nothing on a border-adjusted tax. checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Systematic check 3: One search limited to congress.gov and govinfo.gov (border adjustment tax destination-based cash flow tax bill 119th Congress): hits were CRS explainers on border-adjusted taxes (2017), a methane border adjustment bill (H.R. 480) and unrelated border security bills; no 119th Congress bill creating a border-adjusted tax. P.L. 119-21 was checked through the U.S. Code amendment notes for 26 U.S.C. 59A (rate change only) and no destination-based provision was seen; enacted text itself was not read. checked 2026-10-18.",
+        "result": "does_not_support",
+        "url": "https://www.congress.gov/crs-product/R44821"
+      },
+      {
+        "note": "Systematic check 4: Treasury press release listing, newest items 2026-10-08 to 2026-10-16: no release on a border-adjusted tax or destination-based cash flow tax. checked 2026-10-18.",
+        "result": "does_not_support",
+        "url": "https://home.treasury.gov/news/press-releases"
+      },
+      {
+        "note": "Systematic check 5: One news search (border adjustment tax, tariffs, Congress, 2026): top results were local news of 2026-02-24 on a Representative urging a border tax to replace tariffs, and older 2017 coverage; advocacy and commentary, no government action. checked 2026-10-18.",
+        "result": "does_not_support",
+        "url": "https://www.kold.com/2026/02/24/rep-david-schweikert-pushes-bat-tax-replace-trump-tariffs/"
+      },
+      {
+        "note": "Reviewer re-check, 2026-10-18: phrase border adjustment, all agencies, all types, since 2025-01-20: count 1, the USTR request for comments of 2026-10-08 on the EU Carbon Border Adjustment Mechanism; confirms the researcher's result.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"border+adjustment\"&conditions[publication_date][gte]=2025-01-20&per_page=20"
       }
     ]
   },
@@ -124,6 +169,6 @@
   "timeline": [],
   "title": "Consider a border adjustment tax as part of the trade agenda",
   "tracked": true,
-  "uncertainties": "The JEC chairman publicly promoted a border tax to replace tariffs in February 2026 according to local news, but no bill was found in two searches. Public Law 119-21 was not read for international tax provisions; its foreign-derived income changes are not a border adjustment, but this rests on general knowledge of the law rather than on its text. A scheduled or postponed hearing is not counted as an event. congress.gov search could not be opened, so absence is not proven.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The JEC chairman publicly promoted a border tax to replace tariffs in February 2026 according to local news, but no bill was found in two searches. Public Law 119-21 was not read for international tax provisions; its foreign-derived income changes are not a border adjustment, but this rests on general knowledge of the law rather than on its text. A scheduled or postponed hearing is not counted as an event. congress.gov search could not be opened, so absence is not proven. Checked systematically on 2026-10-18: Federal Register search (three term variants), Unified Agenda and proposed-rule listings, a congress.gov and govinfo.gov bill search with U.S. Code notes on Public Law 119-21, the Treasury press listing and a news search found no proposed or final rule, order, bill or law creating a border adjustment; the Unified Agenda agency listings could not be read directly and the enacted text of Public Law 119-21 was not read in full. An independent re-run of the Federal Register phrase search for border adjustment returned the same single USTR notice on the EU Carbon Border Adjustment Mechanism, a foreign measure.",
+  "updated_at": "2026-10-18"
 }

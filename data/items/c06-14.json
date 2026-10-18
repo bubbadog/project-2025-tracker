@@ -7,13 +7,13 @@
   "chapter": "06",
   "confidence": 55,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; the Syria and Ankara reports were fetched and agree with the record, and a law-firm update and a second news report confirm no formal sanctions action as of July 2026; no primary document was available.",
+  "confidence_reason": "Proposal text checked in earlier reviews. Read on 2026-10-18: the US Central Command release on the al-Tanf departure (primary), the EU Agency for Asylum Syria page, and the Al Jazeera report of the 2026-07-07 statements; the envoy statement, integration agreement and sanctions status rest on news reports and a law-firm update. No State, Treasury or White House document on Turkiye sanctions or F-35 sales was found, and the Syria withdrawal completion rests on a secondary account, so the record stays at the medium floor.",
   "durability": {
     "level": "medium",
     "why": "Force posture and diplomatic positioning are executive decisions that can change; sanctions relief and any F-35 transfer would involve statutory conditions and congressional review."
   },
   "est_completion": {
-    "basis": "Inference: the sanctions and F-35 decisions are announced intentions without a formal timetable, and the Syria withdrawal was reported at an estimated two months from February 2026 without confirmation of completion.",
+    "basis": "Inference: the sanctions and F-35 decisions are announced intentions without a formal timetable; the Syria withdrawal was reported complete on 2026-04-16 per an EU agency account of a US announcement.",
     "window": "unknown"
   },
   "headline": false,
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: News-report and law-firm events removed from the timeline, al-Tanf departure and announced Syria withdrawal added; stage kept with medium confidence pending primary Turkiye sanctions documents."
     }
   ],
   "id": "c06-14",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -48,22 +52,24 @@
   "remaining": [
     "Formal removal of CAATSA sanctions on Turkiye's defense procurement agency, if intended.",
     "A decision on F-35 sales, which a 2020 law conditions on Turkiye no longer operating the Russian S-400 systems.",
-    "Completion and confirmation of the Syria force withdrawal.",
+    "Confirmation of the Syria force withdrawal from a Defense Department source.",
     "A stated US policy position on the YPG and PKK-linked groups."
   ],
   "requires_congress": "partial",
   "research_agent": "N06a",
   "review": {
     "flags": [
-      "parallel match for general text",
-      "no primary sources",
-      "progress lowered for statements of intent"
+      "Stage in_progress 40 kept; judgment call: proposed (20) is defensible because the Turkiye-specific steps are statements of intent and the Syria steps carry other stated rationales.",
+      "Removed two non-government timeline events: the 2026-02-18 relay of a Wall Street Journal report (a news report's publication) and the 2026-07-13 law-firm sanctions update; both remain as sources and their content is in uncertainties.",
+      "Added the 2026-02-11 al-Tanf departure from a US Central Command release (primary) and the 2026-04-16 announced completion of the Syria withdrawal (EU Agency for Asylum, secondary); status_summary, remaining and est_completion updated to match.",
+      "Confidence kept at 55 (medium; the researcher's 50 with a medium label was inconsistent). Deciding primary documents not found: an OFAC or State notice removing CAATSA sanctions on Turkiye's defense procurement agency, an F-35 certification under the FY2020 NDAA, and a Defense Department statement on the completed Syria withdrawal.",
+      "One web search used for the Syria withdrawal."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 185 says keeping Turkiye in the Western fold and a NATO ally is a key priority, through vigorous outreach to dissuade hedging toward Russia or China, likely requiring a rethinking of US support for YPG/PKK forces. The paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y8a",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V5",
     "source_checks": [
       {
         "note": "Envoy's X post of 2026-01-20: SDF anti-IS role ended, integration as individuals under a 2026-01-18 agreement, no long-term US presence; no mention of YPG, PKK or Turkiye.",
@@ -76,7 +82,7 @@
         "url": "https://www.aljazeera.com/news/2026/2/18/us-is-withdrawing-all-1000-troops-from-syria-wsj-report"
       },
       {
-        "note": "2026-07-07 in Ankara: sanctions to be lifted, F-35 to be considered; no formal action.",
+        "note": "2026-07-07 Ankara statements on lifting CAATSA sanctions and considering F-35 sales; no formal action; no Kurdish forces mention; checked 2026-10-18.",
         "result": "supports",
         "url": "https://www.aljazeera.com/2026/7/7/trump-says-will-lift-sanctions-on-turkiye-consider-selling-f-35s"
       },
@@ -89,6 +95,16 @@
         "note": "2026-07-10: Turkish foreign minister says ministers are working on removal; no formal step.",
         "result": "supports",
         "url": "https://www.arabnews.pk/node/2650428/middle-east"
+      },
+      {
+        "note": "Release of 2026-02-12: departure from al-Tanf completed 2026-02-11, conditions-based transition; no wider withdrawal announced; no SDF or Turkiye mention; checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4404940/us-forces-depart-base-in-syria-during-orderly-transition/"
+      },
+      {
+        "note": "EU agency report: US announced on 2026-04-16 completion of withdrawal and handover of Qasrak air base, not independently verified; envoy statement of 2026-01-20; checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.euaa.europa.eu/syria-security-situation/131-us-led-coalition"
       }
     ]
   },
@@ -140,10 +156,24 @@
       "publisher": "Arab News Pakistan",
       "title": "Turkiye hopes to have US sanctions lifted soon",
       "url": "https://www.arabnews.pk/node/2650428/middle-east"
+    },
+    {
+      "date": "2026-02-12",
+      "kind": "primary",
+      "publisher": "US Central Command",
+      "title": "US forces depart base in Syria during orderly transition",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4404940/us-forces-depart-base-in-syria-during-orderly-transition/"
+    },
+    {
+      "date": "2026-10-18",
+      "kind": "news",
+      "publisher": "EU Agency for Asylum",
+      "title": "Syria security situation, 1.3.1 US-led coalition",
+      "url": "https://www.euaa.europa.eu/syria-security-situation/131-us-led-coalition"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The US special envoy for Syria said on 2026-01-20 that the Syrian Democratic Forces' role as the main ground partner against the Islamic State had largely ended after the Syrian government joined the coalition, and that the US has no interest in a long-term military presence; an agreement of 2026-01-29, described by Al Jazeera as US-brokered, provides for integrating the SDF into the Syrian army. Al Jazeera, citing a Wall Street Journal report it could not verify, said on 2026-02-18 that the US was preparing to withdraw its roughly 1,000 remaining troops from Syria, and CENTCOM described the departure from al-Tanf as orderly and conditions-based. At the NATO summit in Ankara on 2026-07-07 the President said sanctions on Turkiye would be lifted and that he would consider selling F-35 jets; reports from July 2026 describe no formal sanctions removal or F-35 certification, and none was found later.",
+  "status_summary": "The US special envoy for Syria said on 2026-01-20 that the Syrian Democratic Forces' role as the main ground partner against the Islamic State had largely ended after the Syrian government joined the coalition, and that the US has no interest in a long-term military presence; an agreement of 2026-01-29, described by Al Jazeera as US-brokered, provides for integrating the SDF into the Syrian army. US Central Command reported that US forces completed their departure from the al-Tanf Garrison on 2026-02-11 as part of a conditions-based transition, and the EU Agency for Asylum reports a US announcement on 2026-04-16 that the withdrawal from Syria was complete. At the NATO summit in Ankara on 2026-07-07 the President said sanctions on Turkiye would be lifted and that he would consider selling F-35 jets; a law-firm sanctions update of 2026-07-13 reported no formal sanctions removal or F-35 certification, and none was found later.",
   "timeline": [
     {
       "date": "2026-01-20",
@@ -160,11 +190,18 @@
       "url": "https://www.aljazeera.com/news/2026/2/18/us-is-withdrawing-all-1000-troops-from-syria-wsj-report"
     },
     {
-      "date": "2026-02-18",
-      "event": "The Wall Street Journal reported, as relayed by Al Jazeera (unverified), that the US was preparing to withdraw its nearly 1,000 remaining troops from Syria within about two months; CENTCOM had described the departure from al-Tanf as an orderly, conditions-based transition.",
+      "date": "2026-02-11",
+      "event": "US forces of the coalition task force completed their departure from the al-Tanf Garrison in Syria, which US Central Command described as part of a deliberate, conditions-based transition; the release does not mention the SDF or Turkiye.",
+      "kind": "primary",
+      "source": "US Central Command",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4404940/us-forces-depart-base-in-syria-during-orderly-transition/"
+    },
+    {
+      "date": "2026-04-16",
+      "event": "The United States announced that it had completed its withdrawal from Syria and handed over its last base, Qasrak air base in Hasaka (as reported by the EU Agency for Asylum, which did not independently verify the announcement).",
       "kind": "news",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/2/18/us-is-withdrawing-all-1000-troops-from-syria-wsj-report"
+      "source": "EU Agency for Asylum (Syria security situation report)",
+      "url": "https://www.euaa.europa.eu/syria-security-situation/131-us-led-coalition"
     },
     {
       "date": "2026-07-07",
@@ -172,17 +209,10 @@
       "kind": "news",
       "source": "Al Jazeera",
       "url": "https://www.aljazeera.com/2026/7/7/trump-says-will-lift-sanctions-on-turkiye-consider-selling-f-35s"
-    },
-    {
-      "date": "2026-07-13",
-      "event": "A law-firm sanctions update reported that no formal action had been taken to remove the CAATSA sanctions on Turkiye's defense industry agency and that the F-35 bar in the FY2020 NDAA still requires a certification about the S-400 systems.",
-      "kind": "tracker",
-      "source": "Steptoe",
-      "url": "https://www.steptoe.com/en/news-publications/stepwise-risk-outlook/sanctions-update-july-13-2026.html"
     }
   ],
   "title": "Keep Turkiye in the Western fold, including rethinking support for YPG/PKK-linked forces",
   "tracked": true,
-  "uncertainties": "All sources are news reports or a law-firm update; no State, Defense, Treasury or White House primary document was found. The envoy attributes the shift on the SDF to the changed Syrian government situation and the counter-Islamic State mission, not to Turkish concerns, so the alignment with the Mandate is in direction only (an inference); none of the Syria reports mention the YPG or Turkiye. The troop figures rest on an anonymous-source report, and completion of the withdrawal was not confirmed. A search for a formal removal of the CAATSA sanctions after July 2026 found none. Inference: the match is parallel because the text is general and the visible actions have other stated rationales; progress was lowered to 40 because the Turkiye-specific steps remain statements of intent.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "Apart from a US Central Command release on the al-Tanf departure, all sources are news reports, an EU agency report or a law-firm update; no State, Treasury or White House primary document on the Turkiye steps was found. The envoy attributes the shift on the SDF to the changed Syrian government situation and the counter-Islamic State mission, not to Turkish concerns, so the alignment with the Mandate is in direction only (an inference); none of the Syria reports mention the YPG or Turkiye. The roughly 1,000 troop figure and a two-month withdrawal plan rest on a February 2026 Wall Street Journal report relayed by Al Jazeera, which is no longer a timeline event because it is a news report rather than a government action; completion of the withdrawal on 2026-04-16 rests on the EU Agency for Asylum's account of a US announcement, not on a Defense Department document. The 2026-07-13 law-firm update is kept as a source but is not a government action, so it is not a timeline event. Primary documents that would decide the Turkiye element: an OFAC or State Department notice removing the CAATSA sanctions on Turkiye's Presidency of Defence Industries, or a certification under the FY2020 NDAA F-35 provision. A search for a formal removal of the CAATSA sanctions after July 2026 found none. Inference: the match is parallel because the text is general and the visible actions have other stated rationales; progress was lowered to 40 because the Turkiye-specific steps remain statements of intent. A White House fact sheet on the NATO Ankara summit defense investment of July 2026 was read and does not mention Turkiye, F-35, sanctions or Syria, so it does not support or contradict the sanctions statement; no White House or Treasury document on the Turkiye sanctions or F-35 was located.",
+  "updated_at": "2026-10-18"
 }

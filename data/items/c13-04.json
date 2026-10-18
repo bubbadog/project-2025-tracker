@@ -5,9 +5,9 @@
     "Possible employee and union challenges to reductions in force and administrative leave (only a PEER complaint to the Office of Special Counsel was found; outcomes unknown)."
   ],
   "chapter": "13",
-  "confidence": 74,
-  "confidence_label": "medium",
-  "confidence_reason": "EPA's organization chart and budget page confirm the structural changes and staffing levels, and the earlier red-team check confirmed the environmental justice office eliminations from EPA's reorganization addendum. Enforcement, regional relocation, tribal office and General Counsel elements of the Mandate's plan have not occurred, and the FY2027 Budget in Brief was not re-read.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "The stage-deciding EPA fiscal year 2026 reorganization addendum was fetched and read, confirming the environmental justice eliminations, the Office of Research and Development dissolution, the Office of Finance and Administration merger and the ten enforcement unit cuts, and its silence on the tribal office and General Counsel; the fiscal year 2027 Budget in Brief was read for totals and space optimization, and the E&E News report on regional space was opened. The Budget in Brief was not read in full, and no Federal Register reorganization notice was searched.",
   "durability": {
     "level": "medium",
     "why": "Completed layoffs and office closures are hard to undo quickly, but a later Administrator-level reorganization or appropriations could rebuild offices, and some offices exist by statute or budget line."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c13-25, c13-26, c13-29 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Reorganization addendum re-read and confirmed; regional space event restored and summary wording sourced; implemented 65 confirmed with confidence raised to high."
     }
   ],
   "id": "c13-04",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -83,14 +87,17 @@
   "research_agent": "A09",
   "review": {
     "flags": [
-      "workforce figures mix headcount and FTE",
-      "possible overlap with c13-05 on the Office of Research and Development"
+      "Draft text differs from the published record, so treated as changed content although the draft marked changed false.",
+      "Restored the regional space consolidation event the draft removed, dated 2026-01-01 (month-only, scheduled start reported by E&E News); alternative: omit it as a reported plan rather than a dated action.",
+      "Replaced Budget in Brief page citations in the summary with a sourced statement; the space item appeared on p. 12 in this fetch, not p. 11.",
+      "Confidence raised to high 80 on the deciding addendum read; alternative medium 78 because the Budget in Brief was read only in part.",
+      "Stage implemented 65 confirmed; no court_status: no court event found."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 421 and 422 list a reorganization that eliminates the stand-alone environmental justice and external civil rights office, returns enforcement to media offices, plans regional office relocations, restructures international and tribal affairs and cuts staff; pages 441 and 442 call for moving enforcement and EJ attorneys into the General Counsel's office. Page 440 adds detail on the tribal office. The paraphrase matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W3",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V3",
     "source_checks": [
       {
         "note": "EPA chart last updated 2026-09-09 lists ten headquarters offices including OECA, OITA, the Office of Finance and Administration and OGC, and does not list ORD, the Office of Environmental Justice and External Civil Rights, OASES or the American Indian Environmental Office (the chart shows top-level offices only).",
@@ -101,6 +108,21 @@
         "note": "EPA budget page (updated 2026-05-01) shows FY2026 enacted funding of about 8.82 billion dollars with a workforce of 12,312 and FY2025 enacted of about 9.14 billion with 14,130; the FY2027 request is on a separate page, but 4.203 billion dollars is consistent with the record's 52 percent cut.",
         "result": "supports",
         "url": "https://www.epa.gov/planandbudget/budget"
+      },
+      {
+        "note": "Confirms EJ offices eliminated at headquarters and regions, external civil rights to OCR in the Administrator's office, OASES created, scientists integrated into program offices, OFA combining OCFO and most of OMS, ten OECA units eliminated; no OITA or General Counsel content; no date on its face. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.epa.gov/system/files/documents/2025-09/fy26-cj-addendum-consolidation-reorganization.pdf"
+      },
+      {
+        "note": "FY2027 request 4.203 billion dollars, 52 percent below FY2026 enacted, 12,500 FTE (p. 3); up to 20 million dollars for office and lab space and release of high-cost regional office space (p. 12 in the fetch); read in part. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.epa.gov/system/files/documents/2026-04/00_fy-2027-bib_combined_final.pdf"
+      },
+      {
+        "note": "Published 2025-12-02: Region 9 consolidation to begin January 2026 with space returned to GSA by 2026-08-05; Region 5 giving up two floors; EPA calls it routine space management. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.eenews.net/articles/epa-rightsizing-key-offices-in-california-illinois/"
       }
     ]
   },
@@ -158,35 +180,49 @@
       "publisher": "U.S. EPA",
       "title": "EPA fiscal year 2027 Budget in Brief",
       "url": "https://www.epa.gov/system/files/documents/2026-04/00_fy-2027-bib_combined_final.pdf"
+    },
+    {
+      "date": "2025-05-02",
+      "kind": "primary",
+      "publisher": "U.S. EPA",
+      "title": "EPA announces next phase of organizational improvements to better integrate science into the agency",
+      "url": "https://www.epa.gov/newsreleases/epa-announces-next-phase-organizational-improvements-better-integrate-science-agency"
+    },
+    {
+      "date": "2025-12-02",
+      "kind": "news",
+      "publisher": "E&E News",
+      "title": "EPA rightsizing key offices in California, Illinois",
+      "url": "https://www.eenews.net/articles/epa-rightsizing-key-offices-in-california-illinois/"
+    },
+    {
+      "date": "2025-04-11",
+      "kind": "tracker",
+      "publisher": "Harvard Environmental and Energy Law Program",
+      "title": "EPA launched new Office of Environmental Justice and External Civil Rights",
+      "url": "https://eelp.law.harvard.edu/tracker/epa-launched-new-office-of-environmental-justice-and-external-civil-rights-oejecr/"
     }
   ],
   "stage": "implemented",
-  "status_summary": "EPA ended its environmental justice and DEI units on 2025-03-12, and its fiscal year 2026 reorganization addendum (September 2025) states that the Office of Environmental Justice and External Civil Rights and the ten regional environmental justice divisions were eliminated, with accessibility and external civil rights work moved to an Office of Civil Rights in the Administrator's office. The addendum also created an Office of Applied Science and Environmental Solutions, moved Office of Research and Development scientists into program offices, merged the Chief Financial Officer's office with most of the Office of Mission Support into an Office of Finance and Administration, and eliminated ten organizational units in the Office of Enforcement and Compliance Assurance. The Mandate called for eliminating that enforcement office and restructuring the Office of International and Tribal Affairs, but EPA's organization chart page (updated 2026-09-09) still lists both offices. EPA reported in July 2025 a workforce falling from 16,155 to 12,448; its budget page lists a fiscal year 2026 enacted workforce of 12,312, and the fiscal year 2027 request is $4.203 billion (52 percent below fiscal year 2026 enacted) with 12,500 FTE and up to $20 million to optimize office and laboratory space. No regional office relocation plan, General Counsel consolidation of enforcement attorneys, or tribal office restructuring was found.",
+  "status_summary": "EPA ended its environmental justice and DEI units on 2025-03-12, and its fiscal year 2026 reorganization addendum (September 2025) states that the Office of Environmental Justice and External Civil Rights and the ten regional environmental justice divisions were eliminated, with accessibility and external civil rights work moved to an Office of Civil Rights in the Administrator's office. The addendum also created an Office of Applied Science and Environmental Solutions, moved Office of Research and Development scientists into program offices, merged the Chief Financial Officer's office with most of the Office of Mission Support into an Office of Finance and Administration, and eliminated ten organizational units in the Office of Enforcement and Compliance Assurance. The Mandate called for eliminating that enforcement office and restructuring the Office of International and Tribal Affairs, but EPA's organization chart page (updated 2026-09-09) still lists both offices. EPA reported in July 2025 a workforce falling from 16,155 to 12,448; its budget page lists a fiscal year 2026 enacted workforce of 12,312, and the fiscal year 2027 request is $4.203 billion (52 percent below fiscal year 2026 enacted) with 12,500 FTE and up to $20 million to optimize office and laboratory space. The Budget in Brief proposes releasing office space in high-cost areas of regional offices, and E&E News reported space consolidation in Regions 5 and 9, but no regional office relocation plan, General Counsel consolidation of enforcement attorneys or tribal office restructuring was found.",
   "timeline": [
     {
       "date": "2025-03-12",
-      "event": "EPA announces it will end its environmental justice and DEI units; staff are placed on administrative leave, and EPA ties the step to an executive order on DEI programs.",
+      "event": "EPA announced it was ending its environmental justice and DEI offices, placing employees in both on administrative leave and citing the executive order on DEI programs.",
       "kind": "primary",
       "source": "U.S. EPA",
       "url": "https://www.epa.gov/newsreleases/epa-terminates-bidens-environmental-justice-dei-arms-agency"
     },
     {
-      "date": "2025-04-11",
-      "event": "A nonprofit (PEER) files an administrative complaint with the Office of Special Counsel on behalf of the environmental justice staff on leave; a Harvard tracker also reports Zeldin ordered the closure of the Office of Environmental Justice and External Civil Rights and the ten regional EJ divisions (tracker dates are inconsistent, March 11 to April 11, 2025).",
-      "kind": "tracker",
-      "source": "Harvard Environmental and Energy Law Program",
-      "url": "https://eelp.law.harvard.edu/tracker/epa-launched-new-office-of-environmental-justice-and-external-civil-rights-oejecr/"
-    },
-    {
       "date": "2025-05-02",
-      "event": "EPA announces a next phase of reorganization: a new Office of Applied Science and Environmental Solutions in the Office of the Administrator, a new Office of State Air Partnerships and an Office of Clean Air Programs; EPA says staffing would return to levels near the Reagan era and savings would exceed $300 million a year by fiscal year 2026.",
+      "event": "EPA announced a next phase of reorganization: a new Office of Applied Science and Environmental Solutions in the Office of the Administrator, a new Office of State Air Partnerships and a new Office of Clean Air Programs in the Office of Air and Radiation; EPA stated that employment would return to levels near the Reagan administration and that this phase would save more than 300 million dollars a year by fiscal year 2026.",
       "kind": "primary",
       "source": "U.S. EPA",
       "url": "https://www.epa.gov/newsreleases/epa-announces-next-phase-organizational-improvements-better-integrate-science-agency"
     },
     {
       "date": "2025-07-18",
-      "event": "EPA announces a reduction in force affecting the Office of Research and Development, citing $748.8 million in savings and a workforce falling from 16,155 (January 2025) to 12,448; earlier it had ended EJ and DEI offices with 280 employees in a reduction in force and 195 transferred.",
+      "event": "EPA announced a reduction in force affecting the Office of Research and Development, citing 748.8 million dollars in savings and a workforce falling from 16,155 in January 2025 to about 12,448; the release states the earlier environmental justice and DEI action involved a reduction in force of 280 employees and the transfer of 195 employees.",
       "kind": "primary",
       "source": "U.S. EPA",
       "url": "https://www.epa.gov/newsreleases/epa-announces-reduction-force-reorganization-efforts-save-taxpayers-nearly-three"
@@ -199,8 +235,8 @@
       "url": "https://www.epa.gov/system/files/documents/2025-09/fy26-cj-addendum-consolidation-reorganization.pdf"
     },
     {
-      "date": "2025-12-02",
-      "event": "E&E News reported EPA is reducing office space at its Region 9 and Region 5 offices, which EPA called routine multi-year space management; this is a footprint change, not the regional relocation plan the Mandate describes.",
+      "date": "2026-01-01",
+      "event": "EPA's Region 9 office was scheduled to begin consolidating staff into less office space (month-only date), with space to be returned to the General Services Administration by 2026-08-05, and Region 5 was reported to be giving up two floors in Chicago; EPA described the changes as routine space management, not a relocation of regional offices.",
       "kind": "news",
       "source": "E&E News",
       "url": "https://www.eenews.net/articles/epa-rightsizing-key-offices-in-california-illinois/"
@@ -222,6 +258,6 @@
   ],
   "title": "Reorganize EPA: close environmental justice offices, restructure science, cut staff",
   "tracked": true,
-  "uncertainties": "The 16,155 baseline and 12,448 target come from EPA's July 2025 release (headcount), while the 14,130 and 12,312 budget-page figures are FTE ceilings, so they are not directly comparable. The fiscal year 2026 addendum and the 2026-04 Budget in Brief carry month-level dates only (taken from file paths). The addendum describes planned and completed changes without separate effective dates. The organization chart page lists only top-level offices, so the absence of the American Indian Environmental Office there is not proof it was abolished. A PEER complaint to the Office of Special Counsel on behalf of environmental justice staff is reported only by Harvard's tracker, whose dates are inconsistent. One web search for court challenges to EPA reductions in force returned no usable results, so litigation outcomes are unknown. Not verified: Office of Public Engagement, Children's Health Protection and Small and Disadvantaged Business Utilization changes, and any EPA statement on General Counsel consolidation.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The 16,155 baseline and 12,448 target come from EPA's July 2025 release (headcount), while the 14,130 and 12,312 budget-page figures are FTE ceilings, so they are not directly comparable. EPA's 2025-05-02 release states 175 employees were transferred from the environmental justice and DEI offices while its 2025-07-18 release states 195; the difference was not resolved. The fiscal year 2026 addendum carries no calendar date on its face and the 2025-09-01 date is taken from the file path; the Budget in Brief is dated 2026-04-01 from its file path. The addendum describes planned and completed changes without separate effective dates. The organization chart page lists only top-level offices, so the absence of the American Indian Environmental Office there is not proof it was abolished. A PEER complaint to the Office of Special Counsel on behalf of environmental justice staff, reported by a Harvard tracker with inconsistent dates, is not in the timeline because it is not a government action. The Region 5 and 9 space consolidation rests on a 2025-12-02 E&E News report of an internal EPA email and a union statement; the January 2026 start is the scheduled date, and whether it began on time was not confirmed. The Budget in Brief was read on the space optimization and totals but not in full. No Federal Register notice of the reorganization was searched. Litigation outcomes are unknown. Not verified: Office of Public Engagement, Children's Health Protection and Small and Disadvantaged Business Utilization changes, and any EPA statement on General Counsel consolidation.",
+  "updated_at": "2026-10-18"
 }

@@ -4,9 +4,9 @@
     "Moving a statistical function between departments would need statute or a reorganization authority; none was found"
   ],
   "chapter": "11",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Text checked; the announcement, final rule and fact sheet were read, but the not_started finding rests on absence from a limited search.",
+  "confidence": 55,
+  "confidence_label": "medium",
+  "confidence_reason": "All five systematic checks were documented on 2026-10-18: check 1 (three Federal Register queries, plus a reviewer rerun on College Scorecard) found only the recorded earnings rule and unrelated Education items; check 2 is partial (Unified Agenda unreachable, Education proposed-rule listing from 2026 only); check 3 (one search, one BILLSTATUS read) found only an NCES-based bill and is partial because other enacted laws were not read; check 4 is partial (Education release read, Labor listing stale); check 5 (one news search) showed no move to Labor. With three partial checks and a truncated read of the earnings rule's geographic section, confidence is set at 55.",
   "durability": {
     "level": "medium",
     "why": "The earnings rule rests on a statute, but it is a different instrument from the text and does not meet the recommendation."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check with independent AI review: Systematic absence check confirmed not_started for moving higher education data to Labor; S. 2511 and the IPEDS notice judged non-qualifying; confidence raised from 45 to 55."
     }
   ],
   "id": "c11-27",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -57,13 +61,15 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Judgment call: proposed with a parallel match would be defensible because the statutory earnings test uses a state comparison group, which partly contextualizes regional earnings; not_started is kept because nothing moves data to Labor or risk-adjusts outcomes."
+      "Judgment call: proposed with a parallel match would be defensible because the statutory earnings test uses a state comparison group, which partly contextualizes regional earnings; not_started is kept because nothing moves data to Labor or risk-adjusts outcomes.",
+      "V10: not_started 0 confirmed; S. 2511 and the IPEDS notice checked and judged related but not qualifying because both keep postsecondary data at Education.",
+      "V10: confidence 45 to 55, below the researcher's suggested 65, because checks 2, 3 and 4 are partial."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 338 to 339 recommend housing higher education data at Labor to improve transparency, put outcomes in context, adjust wages for regional earnings and cost of living, and risk-adjust institutional and program outcomes.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V10",
     "source_checks": [
       {
         "note": "No mention of data functions, NCES or College Scorecard in the Labor partnerships; last reviewed 2025-11-18. Checked 2026-10-15.",
@@ -79,6 +85,66 @@
         "note": "Fact sheet of 2026-06-29: benchmark is high school graduates aged 25 to 34 in the state or nationally; no risk adjustment or Labor role. Checked 2026-10-15.",
         "result": "supports",
         "url": "https://www.ed.gov/media/document/fact-sheet-trump-administration-implements-accountability-provisions-of-working-families-tax-cuts-act-june-29-2026-114288.pdf"
+      },
+      {
+        "note": "Systematic check 1 (researcher): Terms: postsecondary, earnings data, Department of Labor, outcomes; agency Education Department; 12 documents. They are the recorded earnings-premium rule (2026-07-01), Workforce Pell, student loan and accreditation rules and privacy notices; none moves higher education data to Labor. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=postsecondary+earnings+data+Department+of+Labor+outcomes&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=education-department&per_page=20"
+      },
+      {
+        "note": "Systematic check 1 (researcher): Terms: College Scorecard or National Center for Education Statistics; all agencies; 4 documents, all Education Department rules on Workforce Pell and student loans. No data-function transfer. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=College+Scorecard+OR+%22National+Center+for+Education+Statistics%22&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 1 (researcher): Terms: higher education, data, Department of Labor, interagency agreement, IPEDS; 1 document (Unified Agenda introduction, 2026-08-14), unrelated. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22higher+education%22+data+%22Department+of+Labor%22+interagency+agreement+IPEDS&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 2 (researcher): Unified Agenda listing is script-driven and the host is refused by the session proxy (HTTP 403 on connect), checked 2026-10-18; the Federal Register proposed-rule listing was used as the fallback (see the next entry).",
+        "result": "unreachable",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Systematic check 2 (researcher): Fallback: Education Department proposed rules since 2026-01-01, 17 listed (earnings premium, loans, accreditation, grant priorities, negotiated rulemaking notice); none on moving data functions to Labor. Earlier 2025 proposals were not listed. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=PRORULE&conditions[agencies][]=education-department&conditions[publication_date][gte]=2026-01-01&per_page=20"
+      },
+      {
+        "note": "Systematic check 3 (researcher): One WebSearch (congress.gov, govinfo.gov) on Labor, higher education data, College Scorecard, NCES, IPEDS. Surfaced S. 2511, College Transparency Act (introduced 2025-07-29; reported by the Senate HELP Committee and placed on the calendar 2026-08-04), which would build a postsecondary data system at NCES within Education, not at Labor, so it does not qualify. H.R. 4806 and H.R. 6951 were also returned but not read through BILLSTATUS. P.L. 119-21 earnings provisions are the recorded separate instrument; other enacted laws were not read for data provisions. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2511.xml"
+      },
+      {
+        "note": "Systematic check 4 (researcher): Education Department FAFSA earnings indicator release (page last reviewed 2025-12-08): data come from Education's own data and the College Scorecard, no Labor role, no regional or value-added adjustment. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-launches-new-earnings-indicator-support-students-and-families-making-informed-college-decisions"
+      },
+      {
+        "note": "Systematic check 4 (researcher): Labor newsroom listing returned items only through 2025-12-05 (stale view); the 2025-11-18 Labor and Education partnership release is the recorded event and does not mention data or the College Scorecard. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.dol.gov/newsroom/releases"
+      },
+      {
+        "note": "Systematic check 5 (researcher): One WebSearch (no domain filter) on Education, Labor, College Scorecard, earnings data and interagency agreement, 2026. Results were the FAFSA earnings indicator coverage (Dec 2025), Scorecard data pages, a Census PSEO partners release (2026-02-12) and older Scorecard items; no government action moving the data to Labor. The govinfo hit read was a 2026-10-09 Education notice on the IPEDS 2026-27 collection, which keeps NCES as collector and does not mention Labor. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20754.pdf"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: query \"College Scorecard\", all agencies, all document types, since 2025-01-20: eight Education Department documents (earnings accountability, Workforce Pell, loan and accreditation rules and proposals, one Privacy Act notice); none moves data to Labor or adjusts wages regionally or risk-adjusts outcomes; the earnings rule uses federal tax earnings data and Census data for thresholds.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22College+Scorecard%22&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: BILLSTATUS for S. 2511 (College Transparency Act): introduced 2025-07-29, ordered reported 2026-07-30, reported and placed on the Senate calendar 2026-08-04; the CRS summary places the data system at NCES in the Department of Education, names no Labor role and no regional or risk adjustment; related but not qualifying.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2511.xml"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: IPEDS 2026-27 through 2028-29 information collection notice of 2026-10-09: Education Department only, a revision of an approved collection, no Labor role; not qualifying.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-20754.json"
       }
     ]
   },
@@ -153,6 +219,6 @@
   ],
   "title": "House higher education data at Labor with regional wage and risk adjustment of outcomes",
   "tracked": true,
-  "uncertainties": "Searches run: two by the researcher (ed.gov and news terms on College Scorecard, Labor and postsecondary data, IPEDS, interagency agreement); the reviewer ran none for this record and re-read the announcement, the final rule page and the fact sheet. The final rule's section on the geographic scope of earnings data was truncated in both reads, so a regional adjustment inside the rule cannot be excluded; the fact sheet describes a state or national comparison group only. The earnings data come from a federal agency with earnings data per the rule, not from Labor. College Scorecard changes since 2025 were not found. Absence of evidence rests on a limited search. Moving NCES to Census is tracked in c11-02.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Searches run: two by the researcher (ed.gov and news terms on College Scorecard, Labor and postsecondary data, IPEDS, interagency agreement); the reviewer ran none for this record and re-read the announcement, the final rule page and the fact sheet. The final rule's section on the geographic scope of earnings data was truncated in both reads, so a regional adjustment inside the rule cannot be excluded; the fact sheet describes a state or national comparison group only. The earnings data come from a federal agency with earnings data per the rule, not from Labor. College Scorecard changes since 2025 were not found. Absence of evidence rests on a limited search. Moving NCES to Census is tracked in c11-02. Checked systematically on 2026-10-18: Federal Register API searches (Education Department and all agencies), the Education Department proposed-rule listing as fallback because the Unified Agenda listing was unreachable, one congress.gov and govinfo search with a BILLSTATUS read, the Education and Labor newsrooms (the Labor listing was stale) and one news search found no transfer of higher education data to the Department of Labor and no regional or value-added adjustment of outcomes. The College Transparency Act (S. 2511), reported by the Senate HELP Committee and placed on the calendar on 2026-08-04, would build a postsecondary data system at NCES within the Department of Education with no Labor role, and the IPEDS collection notice of 2026-10-09 is an Education Department notice that names no change of collector; neither qualifies. Education Department proposed rules from 2025 were not listed, and enacted laws other than P.L. 119-21 were not read for data provisions.",
+  "updated_at": "2026-10-18"
 }

@@ -7,7 +7,7 @@
   "chapter": "13",
   "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; both stage-deciding EPA releases were fetched and read on epa.gov; the fees and Safer Choice absence rests on CRS, law-firm and trade press summaries.",
+  "confidence_reason": "Both EPA releases (2025-08-11 low-volume exemption backlog and 2025-09-18 data center prioritization) were fetched and read in full, and a Federal Register API query of EPA proposed rules since 2025-01-20 mentioning TSCA new chemicals returned 15 documents, none revising the general new chemicals procedures or the fees rule. Final rules, the Unified Agenda entries and primary documents on fee authority and Safer Choice were not opened (those rest on law-firm and trade-press summaries), so the record stays medium.",
   "durability": {
     "level": "low",
     "why": "Review-process changes are administrative practices and announcements that can be altered without rulemaking."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Stage in_progress 25 kept after re-reading both EPA releases and a Federal Register proposed-rule query; proposed 15 named as the alternative; confidence unchanged."
     }
   ],
   "id": "c13-30",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -57,25 +61,30 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Source replaced: the data center prioritization is now cited from the EPA release instead of a law-firm summary.",
-      "Progress lowered from 30 to 25 (stage stays in_progress): process improvements are operative for one of three elements, with no regulatory revision, fees rule change or Safer Choice step.",
-      "Judgment call: proposed 20 would also be defensible, since the statutory-timeline reset and regulatory revision have not occurred and the backlog remained large per a mid-2026 law-firm update."
+      "Stage in_progress 25 kept: operative administrative speed-ups serve the recommendation's central aim of on-time reviews, which the rubric treats as partly operative; proposed 15 is the defensible alternative because none of the named mechanisms (regulation revision, fees rule, Safer Choice transfer) has even a proposal.",
+      "Accepted the researcher's Federal Register search note in uncertainties; the reviewer's own API query of proposed rules confirmed it.",
+      "Confidence unchanged at 75."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 434 asks EPA to reset the new chemicals program so reviews meet the statutory timeline, including revising the review regulations, to right-size the TSCA fees rule to work actually completed on time, and to transition Safer Choice to the private sector.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y4",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V9",
     "source_checks": [
       {
-        "note": "Release dated 2025-08-11: 106 low-volume exemption assessments in two months, monthly assessments up from 15 to 53. Checked 2026-10-15.",
+        "note": "Release of 2025-08-11: 106 low-volume exemption assessments in two months (79 backlogged plus 27), average 15 to 53 per month, cases over 30 days down by more than 23 percent; no rule, fee or Safer Choice change. Checked 2026-10-18.",
         "result": "supports",
         "url": "https://www.epa.gov/node/297110"
       },
       {
-        "note": "Release dated 2025-09-18: prioritized new chemicals review for data center projects and covered components, submissions on or after 2025-09-29; no backlog figures. Checked 2026-10-15.",
+        "note": "Release of 2025-09-18: prioritized TSCA new chemicals review for data center projects and covered components, submissions on or after 2025-09-29, under EO 14318. Checked 2026-10-18.",
         "result": "supports",
         "url": "https://www.epa.gov/node/297538"
+      },
+      {
+        "note": "15 EPA proposed rules since 2025-01-20: significant new use rules, methylene chloride dates, risk evaluation procedures, PFAS reporting; none revises general new chemicals procedures or the fees rule. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22new+chemicals%22+TSCA&conditions[agencies][]=environmental-protection-agency&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=50"
       }
     ]
   },
@@ -164,6 +173,6 @@
   ],
   "title": "Reset the TSCA new chemicals program, right-size the fees rule, move Safer Choice private",
   "tracked": true,
-  "uncertainties": "The two EPA releases were read on epa.gov (the data center prioritization is now cited from EPA rather than a law-firm summary); backlog figures, fee-authority status and Safer Choice status rest on law-firm and trade-press summaries, not primary documents. The CRS report states that fee authority expires at the end of fiscal year 2026 and that discussion drafts to reauthorize it circulated in January and February 2026; a law-firm advisory dated 2026-10-02 reports a stopgap funding law signed 2026-09-02 extended it to 2026-12-11, but the law number was not found and it is not in the timeline. The legislation is about authority, not a fees-rule revision. A Safer Choice Program Authorization Act of 2026 (S. 4664) was reported introduced in June 2026 per the law-firm update; it was not checked on congress.gov, and it would codify rather than privatize the program. The September 2025 proposed amendments to the risk evaluation framework are tracked in c13-18. Searches run: Federal Register API (new chemicals, fees, Safer Choice, risk evaluation procedures) and three web searches.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The two EPA releases were read on epa.gov (the data center prioritization is now cited from EPA rather than a law-firm summary); backlog figures, fee-authority status and Safer Choice status rest on law-firm and trade-press summaries, not primary documents. The CRS report states that fee authority expires at the end of fiscal year 2026 and that discussion drafts to reauthorize it circulated in January and February 2026; a law-firm advisory dated 2026-10-02 reports a stopgap funding law signed 2026-09-02 extended it to 2026-12-11, but the law number was not found and it is not in the timeline. The legislation is about authority, not a fees-rule revision. A Safer Choice Program Authorization Act of 2026 (S. 4664) was reported introduced in June 2026 per the law-firm update; it was not checked on congress.gov, and it would codify rather than privatize the program. The September 2025 proposed amendments to the risk evaluation framework are tracked in c13-18. Searches run: Federal Register API (new chemicals, fees, Safer Choice, risk evaluation procedures) and three web searches. In this pass the Federal Register API was searched for EPA documents since 2025-01-20 on TSCA new chemicals and TSCA fees: results were only significant new use rules, new chemical receipt and status notices, statements of findings, the September 2025 risk evaluation procedures proposal, and an information collection notice on TSCA user fees (2026-09-10; comments to 2026-11-09). No proposed or final rule revising the new chemicals review regulations or the fees rule appeared, and the individual Unified Agenda entries for EPA were not opened. Both EPA releases were re-read and match the record (EO 14318 is titled Accelerating Federal Permitting of Data Center Infrastructure).",
+  "updated_at": "2026-10-18"
 }

@@ -5,9 +5,9 @@
     "State conformity timelines"
   ],
   "chapter": "18",
-  "confidence": 78,
-  "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked and both stage-deciding Federal Register documents were fetched; the statutory items and the internal review were not researched.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text on printed pages 597 and 598 checked. The stage-deciding final rule (91 FR 58593, Doc. 2026-18978) was fetched on federalregister.gov and read in full as rendered in this review, including its regulatory changes, authority and dates. The absence of an enacted statute rests on a limited search, which cannot lift a parallel executive step above proposed but could if a law had passed, so confidence sits at the floor of high.",
   "durability": {
     "level": "medium",
     "why": "A regulation can be amended by rulemaking; a statutory mandate would be more durable."
@@ -29,22 +29,35 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Cross-references added to new layer 3 records c18-34 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Independent review on 2026-10-17 read the final UC data availability rule (91 FR 58593) in full on federalregister.gov, treated it as an executive step parallel to the statutory access the text asks Congress to grant, moved the stage from in_progress 35 to proposed 15 and raised confidence from 78 to 80."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Coordinating session red-team: the stage-deciding document behind the high rating was re-read on govinfo.gov and recorded in review.source_checks, which the 2026-10-17 review had left empty. No change to stage, progress or confidence."
     }
   ],
   "id": "c18-18",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-17",
   "layer": 3,
-  "match": "partial",
+  "match": "parallel",
   "mechanism": "mixed",
   "pages": [
     597,
     598
   ],
   "position": "Federal Unemployment Insurance Program",
-  "progress": 35,
+  "progress": 15,
   "proposal": "The Mandate recommends reforms to restore unemployment insurance program integrity, including statutory access for the DOL Inspector General to state UI records, a required crossmatch of applicants against the National Directory of New Hires, more graduated enforcement tools than revoking the federal tax credit, and a DOL review of fraud-related procurements and state monitoring.",
   "related_ids": [
-    "c18-10"
+    "c18-10",
+    "c18-34"
   ],
   "remaining": [
     "Rule takes effect 2026-11-16 and state law changes by 2027-09-16",
@@ -56,31 +69,31 @@
   "research_agent": "N18",
   "restates_ids": [],
   "review": {
+    "document_reread": {
+      "citation": "Federal-State Unemployment Compensation (UC) Program; Data Availability, final rule, 91 FR 58593 (2026-09-16), Doc. 2026-18978, RIN 1205-AC11",
+      "note": "Read in full as rendered: removes 603.5(i), adds mandatory disclosure at 603.6(c), adds 603.10(e) request limits, amends 603.8(b); effective 2026-11-16; state compliance by 2027-09-16; authority SSA sec. 303(a)(1); no crossmatch or sanctions.",
+      "result": "supports",
+      "url": "https://www.federalregister.gov/documents/2026/09/16/2026-18978/federal-state-unemployment-compensation-uc-program-data-availability"
+    },
     "flags": [
-      "judgment call: proposed (15) is defensible because the Mandate asks Congress for statutory access and an administrative rule not yet in effect is a parallel step; in_progress kept because a final rule on the core data-access item exists and takes effect in November 2026."
+      "stage moved from in_progress 35 to proposed 15 and match from partial to parallel under the rule on executive steps toward a congressional request",
+      "alternative reading: in_progress 25 if the final rule is treated as a direct match (a final rule not yet effective is in_progress)",
+      "progress 35 was also above what an unexecuted rule supports",
+      "legislation search (one query) surfaced only a 2024 Senate Finance Committee bill summary predating the review period, not opened and not added"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 597 and 598 checked: Congress should give the DOL Inspector General statutory access to state UI records, require crossmatching against the National Directory of New Hires, commission technical standards and provide more graduated enforcement tools; DOL should review ARPA fraud-related procurements and state monitoring. Paraphrase accurate, though it omits the technical-standards framework. Overlaps c18-10 (workforce programs and ETA budget) only loosely.",
+    "mandate_check": "ok",
+    "mandate_note": "Pages 597 and 598 ask Congress for UI integrity reforms including statutory Inspector General access to all state UI records and required crossmatching against the National Directory of New Hires, a framework of technical standards, and enforcement tools short of revoking the FUTA credit, and ask DOL to review ARPA fraud-related procurements, improve state monitoring and strengthen ties with the OIG and GAO. The paraphrase is accurate; it omits the technical-standards framework, which does not change the scope tracked.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y18h",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-D",
     "source_checks": [
       {
-        "note": "Final rule published 2026-09-16, effective 2026-11-16, 20 CFR part 603; requires disclosure to federal officials including DOL-OIG.",
+        "note": "DOL ETA final rule (91 FR 58593, published 2026-09-16, effective 2026-11-16, state conformity by 2027-09-16) removes 20 CFR 603.5(i) and adds mandatory disclosure of confidential UC information to federal oversight officials including the DOL Inspector General at 603.6(c), on the methods-of-administration authority of Social Security Act section 303(a)(1), not a new statute. Read 2026-10-18 on govinfo.gov to record the check the 2026-10-17 review described but did not list.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-18978.json"
-      },
-      {
-        "note": "DATES section: states needing law changes must comply no later than 2027-09-16; no crossmatch or graduated sanctions in the first 100,000 characters.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/09/16/2026-18978/federal-state-unemployment-compensation-uc-program-data-availability"
-      },
-      {
-        "note": "Proposed rule published 2025-08-29.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2025-16645.json"
+        "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-16/pdf/2026-18978.pdf"
       }
-    ]
+    ],
+    "stage_change_reason": "Rule applied: executive steps toward something the text asks Congress to do are parallel at most. The text asks Congress for statutory Inspector General access and the other integrity tools; the final rule reaches Inspector General access by regulation under existing Social Security Act authority and is not yet effective, and no statute or DOL procurement review was found, so the record moves from in_progress 35 to proposed 15."
   },
   "significance": {
     "B": 1.5,
@@ -126,8 +139,8 @@
       "url": "https://www.federalregister.gov/documents/2025/08/29/2025-16645/federal-state-unemployment-compensation-uc-program-data-availability"
     }
   ],
-  "stage": "in_progress",
-  "status_summary": "ETA proposed on 2025-08-29 to require state UC agencies to disclose confidential UC information to federal officials, including the DOL Inspector General, for oversight and audits. The final rule was published 2026-09-16 and takes effect 2026-11-16; states that must change their laws have until 2027-09-16, and certification for administrative funding is tied to compliance. It relies on administrative authority rather than the statute the Mandate asks for, and the text read does not address the new-hire crossmatch or graduated sanctions. Congressional action on the statutory items was not researched.",
+  "stage": "proposed",
+  "status_summary": "ETA proposed on 2025-08-29 (90 FR 42143) to require state UC agencies to disclose confidential UC information to federal officials, including the DOL Inspector General, for oversight and audits. The final rule (91 FR 58593, published 2026-09-16) removes the permissive disclosure provision at 20 CFR 603.5(i), adds mandatory disclosure at 603.6(c) and makes the disclosures chargeable to state administrative grants; it takes effect 2026-11-16, and states that must change their laws have until 2027-09-16. It relies on the methods-of-administration requirement in section 303(a)(1) of the Social Security Act rather than the new statute the Mandate asks Congress to enact, so it is an executive step parallel to that request, and the rule does not address the new-hire crossmatch or graduated enforcement tools. No enacted statute on these items was found in a limited search, and the DOL review of fraud-related procurements and state monitoring was not researched.",
   "timeline": [
     {
       "date": "2025-08-29",
@@ -146,6 +159,6 @@
   ],
   "title": "Strengthen unemployment insurance program integrity and federal data access",
   "tracked": true,
-  "uncertainties": "The final rule text was read in its first 100,000 of about 128,000 characters, so the remainder could address other items. Existing law on new-hire crossmatching was not checked, and no bill on the statutory items was searched. The DOL review of American Rescue Plan Act fraud-prevention procurements and state monitoring is internal and was not checked.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The final rule was read on federalregister.gov in full as rendered (the rendering is marked unofficial); it contains no National Directory of New Hires crossmatch, graduated-sanction or enforcement-tool provision and does not create a national claims database. Citations: proposed rule 90 FR 42143 (comments closed 2025-09-29); final rule 91 FR 58593, RIN 1205-AC11, docket ETA-2025-0004. Existing law on new-hire crossmatching was not checked. One web search on legislation for Inspector General access and new-hire crossmatching surfaced only a 2024 Senate Finance bill summary from before the review period and no enacted law; this is a limited search. The DOL review of American Rescue Plan Act fraud-prevention procurements and state monitoring is internal and was not checked. Stage judgment: in_progress 25 would apply if the rule were read as a direct match, because a final rule not yet effective is in_progress; proposed is used because the text frames Inspector General access as a statutory change for Congress.",
+  "updated_at": "2026-10-18"
 }

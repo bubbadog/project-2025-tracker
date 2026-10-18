@@ -1,0 +1,178 @@
+{
+  "agency": "DOT / CFIUS / Congress",
+  "blockers": [
+    "Statutory voting-interest and control limits require an Act of Congress to change"
+  ],
+  "chapter": "19",
+  "confidence": 60,
+  "confidence_label": "medium",
+  "confidence_reason": "All five systematic checks were documented on 2026-10-18: check 1 (two Federal Register queries, plus two reviewer queries) returned nothing on airline foreign ownership or CFIUS screening of airline investment; check 2 is partial (Unified Agenda unreachable, DOT proposed-rule listing used); check 3 (one search with BILLSTATUS reads) found no bill, but the U.S. Code amendment notes were cut off, so it is partial; check 4 (DOT press releases; policy page failed) and check 5 (one news search, only older items) found nothing. With two partial checks and carrier-specific citizenship orders not published in the Federal Register, confidence is set at 60.",
+  "durability": {
+    "level": "high",
+    "why": "If enacted it would be statutory; nothing has been started."
+  },
+  "est_completion": {
+    "basis": "Inference: no action or bill was found, and statutory change is required.",
+    "window": "unlikely this term"
+  },
+  "headline": false,
+  "history": [
+    {
+      "date": "2026-10-16",
+      "note": "Added in the layer 3 enumeration pass (second pass over leftover candidates); researched and sent to independent review."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review: not_started kept; a Federal Register API query in review found no airline ownership action; confidence 30."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check with independent AI review: Systematic absence check confirmed not_started for airline foreign ownership limits; confidence raised from 30 to 60."
+    }
+  ],
+  "id": "c19-16",
+  "last_checked": "2026-10-18",
+  "layer": 3,
+  "match": "direct",
+  "mechanism": "mixed",
+  "pages": [
+    630,
+    631
+  ],
+  "position": "DOT and the administration, with Congress for any statutory change",
+  "progress": 0,
+  "proposal": "The Mandate recommends reviewing the foreign ownership and control limits on U.S. airlines and, if necessary, working with Congress to change the statutes, using the CFIUS process to screen out harmful foreign actors while allowing investment from designated like-minded countries as long as U.S. investors keep plurality ownership (pp. 630 to 631).",
+  "related_ids": [],
+  "remaining": [
+    "A DOT review of the citizenship test under 49 U.S.C. 40102",
+    "Legislation changing the ownership caps",
+    "A CFIUS-based screening framework for airline investment"
+  ],
+  "requires_congress": "yes",
+  "research_agent": "R1920",
+  "restates_ids": [],
+  "review": {
+    "document_reread": {
+      "citation": "Federal Register API query, foreign ownership and air carrier, since 2025-01-20",
+      "note": "No qualifying document.",
+      "result": "supports",
+      "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22foreign+ownership%22+%22air+carrier%22&conditions[publication_date][gte]=2025-01-20&per_page=20"
+    },
+    "flags": [
+      "Named the searches performed in uncertainties.",
+      "Confidence lowered from 35 to 30 because no period source exists.",
+      "V10: not_started 0 confirmed after two Federal Register reruns; no related item to assess.",
+      "V10: confidence 30 to 60, below the researcher's suggested 65, because checks 2 and 3 are partial."
+    ],
+    "mandate_check": "ok",
+    "mandate_note": "Pages 630 to 631 recommend reviewing foreign ownership and control limits and, if necessary, working with Congress to change the statutes, using CFIUS to keep out hostile actors while allowing investment from like-minded countries if U.S. investors keep plurality ownership. The paraphrase is accurate.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V10",
+    "source_checks": [
+      {
+        "note": "Federal Register API query in review: three results, none on airline ownership limits.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22foreign+ownership%22+%22air+carrier%22&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 1 (researcher): Terms: foreign ownership control, air carrier, citizenship; agency Department of Transportation; 3 documents (Tanker Security Program rule, 2 FAA items), none on airline ownership. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=foreign+ownership+control+air+carrier+citizenship&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=transportation-department&per_page=20"
+      },
+      {
+        "note": "Systematic check 1 (researcher): Terms: voting interest, airline, foreign; all agencies; 1 document (FCC submarine cable landing license proposal of 2025-03-13), unrelated. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22voting+interest%22+airline+foreign&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Systematic check 2 (researcher): Unified Agenda listing is script-driven and the host is refused by the session proxy (HTTP 403 on connect), checked 2026-10-18; the Federal Register proposed-rule listing was used as the fallback (see the next entry).",
+        "result": "unreachable",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Systematic check 2 (researcher): Fallback: DOT proposed rules mentioning airline or air carrier since 2025-01-20, 15 listed (passenger rights withdrawal, fare advertising, duty and rest preemption, FAA items); none on citizenship or foreign ownership. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=PRORULE&conditions[agencies][]=transportation-department&conditions[publication_date][gte]=2025-01-20&conditions[term]=airline+OR+air+carrier&per_page=20"
+      },
+      {
+        "note": "Systematic check 3 (researcher): One WebSearch (congress.gov, govinfo.gov) on airline foreign ownership limit and voting bills, 119th Congress; no airline-ownership bill surfaced. Hits H.R. 2192 (Air America payments) and H.R. 3248 (employee-ownership financing) were read through BILLSTATUS and are unrelated; the others were passenger or safety bills by title. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.congress.gov/bill/119th-congress/house-bill/3248/text"
+      },
+      {
+        "note": "Systematic check 3 (researcher): 49 U.S.C. 40102(a)(15) still states the 75 percent voting interest and two-thirds officer tests; the last amendment note shown is Pub. L. 118-63 (2024) and none from the 119th Congress appears, but the excerpt was cut off partway through the historical notes. Not evidence of absence on its own. Checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.law.cornell.edu/uscode/text/49/40102"
+      },
+      {
+        "note": "Systematic check 4 (researcher): DOT press release listing read (ten items, 2026-09-28 to 2026-10-16): none on airline foreign ownership, citizenship or CFIUS. The DOT foreign ownership and control policy page returned a fetch error. Earlier releases not read. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.transportation.gov/newsroom/press-releases"
+      },
+      {
+        "note": "Systematic check 5 (researcher): One WebSearch (no domain filter) on a DOT airline foreign ownership rules change in 2026. Results were older items (AvWeb, FreightWaves, ATW, ICAO paper, a 2005 DOT proposal); none reported a 2025 or 2026 government action. Dates were not all shown. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://avweb.com/leadnews/as-globalization-hits-home/"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: query \"foreign ownership\" airline, all agencies, all document types, since 2025-01-20: six documents (FCC licensing items, the 2026 Unified Agenda introduction, the FAA and TSA drone proposal); none concerns U.S. airline ownership or CFIUS screening.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22foreign+ownership%22+airline&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "Reviewer V10 spot-check, 2026-10-18: query \"citizen of the United States\" \"air carrier\" foreign investment, since 2025-01-20: three documents (O'Hare scheduling order, drone proposal, DHS biometric entry and exit rule); none on airline ownership limits.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22citizen+of+the+United+States%22+%22air+carrier%22+foreign+investment&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      }
+    ]
+  },
+  "significance": {
+    "B": 2,
+    "F": 1,
+    "F_estimated": true,
+    "M": 2,
+    "R": 2,
+    "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 2,
+        "F": 1,
+        "M": 2,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 2,
+        "F": 1,
+        "M": 2,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
+    "raters": 2,
+    "rationale": "Loosening foreign ownership caps on U.S. airlines would affect air travelers and carriers via DOT, CFIUS and statute, with modest direct federal cost.",
+    "version": "2026-10-16",
+    "weight": 1.75
+  },
+  "sources": [
+    {
+      "date": "2019-07",
+      "kind": "primary",
+      "publisher": "GAO",
+      "title": "U.S. Airlines: Information on DOT's Oversight of and Stakeholders' Perspectives on Foreign Ownership",
+      "url": "https://gao.gov/products/gao-19-540r"
+    }
+  ],
+  "stage": "not_started",
+  "status_summary": "No DOT review, White House statement, rule or 119th Congress bill on U.S. airline foreign ownership and control limits was found in the searches run. The results returned older material, including a 2019 GAO report and bills from earlier Congresses.",
+  "timeline": [],
+  "title": "Review airline foreign ownership limits; screen investors through CFIUS",
+  "tracked": true,
+  "uncertainties": "Searches performed: two web searches (airline foreign ownership limits with the Transportation Secretary; a 119th Congress bill on airline foreign ownership), which returned only older material such as the 2019 GAO report and a 115th Congress bill, and in review a Federal Register API query for foreign ownership together with air carrier since 2025-01-20, which returned only a drone proposal, an FCC spectrum rule and the Unified Agenda introduction. BILLSTATUS was not scanned, and DOT citizenship determinations for individual carriers are not published in the Federal Register, so a bill or carrier-specific order could exist without being surfaced. The GAO report is pre-period background only. Checked systematically on 2026-10-18: Federal Register API searches (DOT and all agencies), the DOT proposed-rule listing as fallback because the Unified Agenda listing was unreachable, one congress.gov and govinfo search with BILLSTATUS reads and the 49 U.S.C. 40102 notes (cut off partway), the DOT press release listing and one news search found no action on airline foreign ownership limits or a CFIUS-based framework. DOT carrier-specific citizenship orders are not in the Federal Register and the DOT policy page could not be fetched.",
+  "updated_at": "2026-10-18"
+}

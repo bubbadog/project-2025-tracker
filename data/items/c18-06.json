@@ -7,12 +7,12 @@
   "chapter": "18",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Document text read in this review (printed pages 605 to 607 excerpt) and the proposal matches. The proposed stage rests on the regulatory agenda entry (earlier review), a Federal Register search showing no proposal, and two trade press reports (PlanSponsor, PSCA, both read) that EBSA sent the draft proposed rule to OIRA on 2026-06-30. The OIRA submission was not confirmed on reginfo.gov.",
+  "confidence_reason": "The reginfo.gov agenda entry for RIN 1210-AC37 and Federal Register API searches were read on 2026-10-18 and show a proposed-rule-stage entry with no published proposal; the Fifth Circuit docket was read through a case tracker. The 2026-06-30 White House review submission rests on two trade press reports because the reginfo.gov review listing could not be opened.",
   "court_status": {
-    "basis": "Latest court event: on 2025-02-14, on remand from the Fifth Circuit, the N.D. Tex. (Utah v. Micone, No. 2:23-cv-00016, now Utah v. Chavez-DeRemer) again upheld the 2022 investment-duties rule, granting the defendants summary judgment. A Fifth Circuit appeal followed; DOL's 2025-04-21 and 2025-05-28 letters to that court announced reconsideration and new rulemaking, and no later court action was found. The rule upheld is the one the Mandate wants replaced.",
-    "date": "2025-02-14",
-    "state": "upheld",
-    "url": "https://www.climatecasechart.com/document/utah-v-micone_efc9"
+    "basis": "Latest court action: on 2025-04-28 the Fifth Circuit (Utah v. Chavez-DeRemer, No. 23-11097) granted DOL's abeyance motion for 30 days only, after the N.D. Tex. had upheld the 2022 rule on 2025-02-14. DOL told the court on 2025-05-28 it would pursue new rulemaking, and no later ruling, remand or argument was found, so the appeal is pending and the 2022 rule remains in force.",
+    "date": "2025-04-28",
+    "state": "pending",
+    "url": "https://www.climatecasechart.com/collections/utah-v-chavez-deremer_864d"
   },
   "durability": {
     "level": "medium",
@@ -38,10 +38,14 @@
     {
       "date": "2026-10-15",
       "note": "Update run, independently reviewed. Trade press (plansponsor.com, psca.org, 2026-07) reports the draft ESG proposal went to OIRA on 2026-06-30; still unpublished in the Federal Register through 2026-10-15. Fifth Circuit appeal shows no activity after 2025-05-28. Review (corrected): Progress change 12 to 15 accepted after reading the two trade press reports of the 2026-06-30 OIRA submission and the Mandate excerpt. court_status re-derived from the 2025-02-14 district ruling (upheld) instead of a DOL letter, and a stale uncertainty sentence was removed. Stage proposed 15; confidence 70 to 72."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Agenda entry and Federal Register searches confirm no published proposal; proposed 15 kept, target-month event removed and court_status set to pending from the latest Fifth Circuit order."
     }
   ],
   "id": "c18-06",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -65,16 +69,16 @@
   "research_agent": "A13",
   "review": {
     "flags": [
-      "Progress 12 to 15 accepted: submission of the draft proposed rule to OIRA on 2026-06-30, corroborated by two trade press reports, is a step beyond the agenda listing and stays inside the proposed band (5 to 20)",
-      "court_status corrected to derive from the latest court event (2025-02-14 district ruling upholding the 2022 rule) instead of DOL's 2025-05-28 letter, which is a filing, not a court action",
-      "Stale uncertainty sentence saying OIRA review and the appeal were unchecked removed",
-      "Mandate alternative view on p. 607 still not reflected (carried over)"
+      "Removed the 2026-07-01 agenda target-month event: a projected date is not a government action, and the 2026-08-14 agenda publication event already records the entry; alternative: keep it as a month-only agenda event.",
+      "court_status changed from upheld (2025-02-14) to pending (2025-04-28): the Fifth Circuit's 30-day abeyance order is the latest court action and the appeal is unresolved; alternative: upheld, reflecting the district ruling that keeps the 2022 rule in force.",
+      "Uncertainties consolidated with the agenda entry now read directly; treated as changed content although the draft marked changed false.",
+      "Stage proposed 15 confirmed."
     ],
     "mandate_check": "verified",
     "mandate_note": "Excerpt of printed pages 605 to 607 read on 2026-10-15: page 607 asks DOL to prohibit ERISA plan investing on factors unrelated to risk and return, return to the pecuniary-factors-only approach while allowing legitimate non-ESG factors such as governance, domestic supply chains or family-supporting jobs, and consider enforcement or regulatory action on plan investments in China; page 607 also carries an alternative view. The record's proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "independent",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V3",
     "source_checks": [
       {
         "note": "Dated 2026-07-02: EBSA sent the proposed rule Prudence and Loyalty in Selecting Plan Investments and Exercising Shareholder Rights to OIRA on 2026-06-30; not yet published for comment.",
@@ -90,6 +94,21 @@
         "note": "N.D. Tex. No. 2:23-cv-00016: 2023-09-21 ruling and 2025-02-14 remand ruling upholding the 2022 rule; defendants' cross-motion granted.",
         "result": "supports",
         "url": "https://www.climatecasechart.com/document/utah-v-micone_efc9"
+      },
+      {
+        "note": "Proposed Rule Stage; rulemaking projected 07/00/2026; revises 29 CFR 2550.404a-1 to financial considerations only; cites EO 14219 and EO 14366; economically significant. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1210-AC37"
+      },
+      {
+        "note": "Term Prudence and Loyalty since 2026-06-01: only the 2026 Unified Agenda introduction and two EBSA exemption notices; no proposed or final rule. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json"
+      },
+      {
+        "note": "Fifth Circuit No. 23-11097: 2025-04-21 abeyance motion, 2025-04-28 order granting 30 days only, 2025-05-28 DOL letter on new rulemaking; nothing later. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.climatecasechart.com/collections/utah-v-chavez-deremer_864d"
       }
     ]
   },
@@ -203,13 +222,6 @@
       "url": "https://www.plansponsor.com/dols-replacement-esg-rule-reaches-white-house/"
     },
     {
-      "date": "2026-07-01",
-      "event": "Target month (month only; first of month used) for the proposed rule on prudence and loyalty in selecting plan investments in the regulatory agenda entry RIN 1210-AC37 as shown at reginfo.gov; no proposal appears in the Federal Register through 2026-10-07.",
-      "kind": "primary",
-      "source": "reginfo.gov (Unified Agenda)",
-      "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1210-AC37"
-    },
-    {
       "date": "2026-08-14",
       "event": "The Federal Register publishes the introduction to the 2026 Unified Agenda, which includes the DOL entry titled Prudence and Loyalty in Selecting Plan Investments and Exercising Shareholder Rights at the proposed-rule stage.",
       "kind": "primary",
@@ -219,6 +231,6 @@
   ],
   "title": "Remove ESG factors from ERISA plan investing and limit fiduciaries to pecuniary factors",
   "tracked": true,
-  "uncertainties": "Two views of the reginfo.gov entry for RIN 1210-AC37 gave different stage labels and dates through a summarizing fetch (one reported final rule stage with a May 2026 date, the other proposed rule stage with a July 2026 notice date); the proposed-rule version is used here, which matches the 2026 agenda reading by the earlier reviewer, but the exact stage label and target date are uncertain. The agenda abstract describes the content in general terms only; the Mandate's allowance for legitimate non-ESG factors and its China-scrutiny recommendation are not addressed in it. DOL press statements in 2026 were not checked. A Federal Register search for the term Prudence and Loyalty since 2025-01-20 returned 13 documents with no proposed or final rule; earlier searches by the first-pass agent for ESG terms found none either. Thrift Savings Plan items (pp. 607-609) are not covered. The Mandate's Alternative View on p. 607 (pecuniary-only or opt-in ESG options) is not reflected in the agenda abstract. Re-checked 2026-10-15: a Federal Register API search for Prudence and Loyalty since 2026-09-01 returns none, and an EBSA document list since 2026-06-01 shows no ESG proposal. The White House review submission rests on two trade press reports (reginfo.gov could not be read, so the review status and any conclusion date are unconfirmed); one report calls the draft both a proposed rule and guidance, and it is treated as the proposed rule. A case tracker shows no Fifth Circuit docket entries after 2025-05-28 and no remand; the appeal's current status is unknown. Searches: 4 web searches.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The reginfo.gov agenda entry for RIN 1210-AC37, read on 2026-10-18, shows the Proposed Rule Stage with a July 2026 (month-only) projected date and no Federal Register citation; it cites Executive Order 14219 and, in its statement of need, Executive Order 14366, and revises 29 CFR 2550.404a-1. Earlier summarizing fetches had given conflicting stage labels; the 2026-10-18 reading resolves this in favor of the proposed rule stage. The agenda abstract describes the content in general terms only; the Mandate's allowance for legitimate non-ESG factors, its China-scrutiny recommendation and its Alternative View on p. 607 are not addressed in it. Thrift Savings Plan items (pp. 607 to 609) are not covered. DOL press statements in 2026 were not checked. Federal Register API searches for the term Prudence and Loyalty since 2025-01-20 (earlier review) and since 2026-06-01 (checked 2026-10-18) found no proposed or final rule, only the 2026 Unified Agenda introduction and unrelated exemption notices; an EBSA proposed-rule listing since 2026-06-01 showed only a group health plan electronic disclosure proposal (document 2026-14917). The 2026-06-30 submission to the Office of Information and Regulatory Affairs rests on two trade press reports, since the reginfo.gov review listing could not be opened; one report calls the draft both a proposed rule and guidance, and it is treated as the proposed rule. The Fifth Circuit docket shown by a case tracker has no entries after DOL's 2025-05-28 letter, so the appeal's current status is unknown.",
+  "updated_at": "2026-10-18"
 }

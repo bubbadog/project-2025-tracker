@@ -4,9 +4,9 @@
     "The orders found direct internal submissions, and no public report from them was located"
   ],
   "chapter": "11",
-  "confidence": 72,
+  "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; the three executive orders and the FY2027 table were read on primary hosts; absence of the other reports rests on a limited search.",
+  "confidence_reason": "Executive Orders 14151, 14190 and 14242 were read on Federal Register pages and confirmed on API records (section 3 of EO 14190 re-read on 2026-10-18: strategy to the President within 90 days, no public release required), and the FY2027 budget table was read. Capped at 50 because the proposed stage also rests on the absence of the seven other reports and of any published accounting, found through five web searches only, with no documented systematic check recorded; whether the internal 60-day and 90-day submissions were delivered was not established. Coordinator adjustment on 2026-10-18: the reviewer's 50 applied the not_started absence cap to a record whose stage rests on a positive action read on a primary host; the absence component (no further action found) is noted but does not cap a proposed or in_progress record, so the rating is set at 68.",
   "durability": {
     "level": "low",
     "why": "Executive orders and internal reports are revocable and some outputs may never be published."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-15",
       "note": "Schema conformance for the public repository: event dated 2026-04 set to 2026-04-01 with a month-only note. No change to stage, progress or substance."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Orders confirmed as directing internal reporting only; confidence capped at 50 because the remaining reports rest on absence from a limited search. The coordinator then set confidence to 68 (medium) because the absence cap applies to not_started records, with the reviewer's 50 recorded as the alternative."
     }
   ],
   "id": "c11-34",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "executive_order",
@@ -67,14 +71,16 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Judgment call: the DEI accounting element is directed by operative orders, but their outputs are internal and unpublished, so the bundle stays at proposed 15 rather than in_progress.",
-      "The report-to-Congress element overlaps c11-01, which lists that report in its proposal; kept here because the bundle is staged as a whole."
+      "Stage proposed 15 kept; judgment call: low in_progress (25) is defensible if the operative orders directing the DEI funding accounting are treated as formally underway work.",
+      "Confidence 72 to 50 (low), below the researcher's suggested 75: the orders were read in full, but the stage also rests on the absence of published reports from a five-search check, with no documented systematic check, so the absence cap applies.",
+      "Month-only date marker in the FY2027 budget event normalized to the house form.",
+      "Coordinator adjustment 2026-10-18: confidence set to 68 (medium) from the reviewer's 50; the absence cap of the rubric applies to not_started records and to systematic checks, not to a record whose stage rests on a read bill or order. The reviewer's figure is the alternative."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 358 to 359 recommend a series of executive orders requiring eight reports or reviews, from a DEI accounting and GEAR UP and 21st Century outcome reviews to CARES Act and classroom-dollar accountings; the report to Congress on consolidating the Department also appears in c11-01.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V5",
     "source_checks": [
       {
         "note": "EO 14151 signed 2025-01-20, published 2025-01-29; section 2(b)(ii) 60-day lists including DEI grantees. Checked 2026-10-15.",
@@ -82,7 +88,7 @@
         "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01953/ending-radical-and-wasteful-government-dei-programs-and-preferencing"
       },
       {
-        "note": "EO 14190 signed 2025-01-29, published 2025-02-03; section 3 strategy within 90 days with analysis of federal funding streams. Checked 2026-10-15.",
+        "note": "EO 14190 signed 2025-01-29; section 3 requires a strategy from Education, Defense and HHS to the President within 90 days, including a summary and analysis of federal funding streams; no public release required; checked 2026-10-18.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/02/03/2025-02232/ending-radical-indoctrination-in-k-12-schooling"
       },
@@ -196,7 +202,7 @@
     },
     {
       "date": "2026-04-01",
-      "event": "The FY2027 President's budget request for the Department of Education provides no funding for GEAR UP (FY2025: $388 million) or 21st Century Community Learning Centers (FY2025: about $1.33 billion). (month only; first of month used)",
+      "event": "The FY2027 President's budget request for the Department of Education provides no funding for GEAR UP (FY2025: $388 million) or 21st Century Community Learning Centers (FY2025: about $1.33 billion). (month-only date)",
       "kind": "primary",
       "source": "Department of Education",
       "url": "https://www.ed.gov/media/document/fy-2027-presidents-budget-113611.pdf"
@@ -204,6 +210,6 @@
   ],
   "title": "Executive orders requiring education program reports, reviews and accountings",
   "tracked": true,
-  "uncertainties": "Element by element, found: DEI accounting directed (EO 14151 section 2(b)(ii), EO 14190 section 3); GEAR UP and 21st Century eliminated in the FY2027 request (a budget proposal, not an outcome review). Not found: reissued school safety report, action civics report, Coleman update, CARES Act accounting directed by an order, classroom-dollars report, and a report to Congress on consolidation. Searches run (five): school safety report reissue, ESSER and CARES accounting reports, action civics, Coleman report update, McMahon report to Congress; results were commentary, state pages and older material, so absence rests on a limited search. Whether the 60-day and 90-day submissions under EO 14151 and EO 14190 were delivered or published was not established. The orders were read through fetch summaries of the Federal Register pages, and their numbers, signing dates and publication dates were confirmed there. The FY2027 release is dated April 2026; a law-firm summary gives 2026-04-03. The reviewer re-read Executive Orders 14151, 14190 and 14242 on the Federal Register and the FY2027 table, and ran no searches for this record. Whether the 21st Century program is folded into a consolidated K-12 program was not confirmed in the table read. A bill introduced 2026-07-09 (H.R. 9610) would transfer Department functions, which is relevant to c11-01 and c11-02 rather than to a report. Department inspector general audits of pandemic funds appeared in results and were not opened.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Element by element, found: DEI accounting directed (EO 14151 section 2(b)(ii), EO 14190 section 3); GEAR UP and 21st Century eliminated in the FY2027 request (a budget proposal, not an outcome review). Not found: reissued school safety report, action civics report, Coleman update, CARES Act accounting directed by an order, classroom-dollars report, and a report to Congress on consolidation. Searches run (five): school safety report reissue, ESSER and CARES accounting reports, action civics, Coleman report update, McMahon report to Congress; results were commentary, state pages and older material, so absence rests on a limited search. Whether the 60-day and 90-day submissions under EO 14151 and EO 14190 were delivered or published was not established. The orders were read through fetch summaries of the Federal Register pages, and their numbers, signing dates and publication dates were confirmed there. The FY2027 release is dated April 2026; a law-firm summary gives 2026-04-03. The reviewer re-read Executive Orders 14151, 14190 and 14242 on the Federal Register and the FY2027 table, and ran no searches for this record. Whether the 21st Century program is folded into a consolidated K-12 program was not confirmed in the table read. A bill introduced 2026-07-09 (H.R. 9610) would transfer Department functions, which is relevant to c11-01 and c11-02 rather than to a report. Department inspector general audits of pandemic funds appeared in results and were not opened. Primary-source lift 2026-10-18: the Federal Register API records for documents 2025-01953, 2025-02232 and 2025-05213 confirm Executive Orders 14151 (signed 2025-01-20, published 2025-01-29), 14190 (signed 2025-01-29, published 2025-02-03) and 14242 (signed 2025-03-20, published 2025-03-25). The operative sections were re-read on the Federal Register pages: EO 14151 section 2(b)(ii) requires lists, within 60 days, of agency DEI-related positions and expenditures existing as of 2024-11-04, of DEI training contractors, and of grantees funded since 2021-01-20, delivered to the OMB Director; EO 14190 section 3 requires a strategy from the Secretaries of Education, Defense and Health and Human Services, delivered to the President within 90 days, summarizing federal funding streams for gender ideology or discriminatory equity ideology in K-12; EO 14242 sections 2 and 3 set no report, deadline or report to Congress. These deliverables are internal and none of them is a published accounting of the kind the Mandate describes. No web search was used in this lift; the earlier five searches stand.",
+  "updated_at": "2026-10-18"
 }

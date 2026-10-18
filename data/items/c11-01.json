@@ -8,11 +8,11 @@
     "ED Inspector General review of the Labor agreement (reported 2026-10-06)."
   ],
   "chapter": "11",
-  "confidence": 70,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked. The 2026-06-16 interagency agreements were confirmed in Education Week, and the Supreme Court stay was confirmed from the order text in the prior review (carried forward). ED primary announcements, the FY2026 appropriation figure and D. Mass. litigation status after mid-2026 were not verified in this pass.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Text checked; Executive Order 14242 at 90 FR 13679 and the Supreme Court order in No. 24A1203 of 2025-07-14 were fetched and read in this review and support an operative but non-statutory in_progress stage; appropriations figures and the 2026 agreements rest on news reports.",
   "court_status": {
-    "basis": "derived from the latest court event in the timeline",
+    "basis": "Latest court event in the timeline is the amended complaint in the consolidated D. Mass. cases; the reduction-in-force injunction remains stayed by the Supreme Court order of 2025-07-14 pending appeal.",
     "date": "2025-11-25",
     "state": "pending",
     "url": "https://www.k12dive.com/news/amended-lawsuit-Education-Department-interagency-agreements-McMahon/806592/"
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c11-23, c11-34 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review: Executive Order 14242 was reread on federalregister.gov and the 2025-07-14 stay order on supremecourt.gov; both support the record; Federal Register citation added; stage unchanged."
     }
   ],
   "id": "c11-01",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-16",
   "layer": 1,
   "match": "parallel",
   "mechanism": "mixed",
@@ -69,33 +73,31 @@
   "requires_congress": "yes",
   "research_agent": "A08",
   "review": {
-    "flags": [
-      "Stage and progress unchanged (in_progress, 35); no contrary evidence found.",
-      "Researcher removed the count of 14 agreements with six agencies; the 2026-06-16 EdWeek article implies 14 agreements (4 plus 10) but lists agencies only partly, so the less specific wording is kept.",
-      "FY2026 funding figure (about 79 billion dollars) not reverified in this pass."
-    ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 319 says the Department should ultimately be eliminated; page 325 and page 330 call for a Department of Education Reorganization (or Liquidating Authority) Act to reform, eliminate or move programs; page 359 lists a report to Congress on consolidating the Department and trimming nonessential staff. The paraphrase is accurate.",
+    "document_reread": {
+      "citation": "Executive Order 14242, 90 FR 13679 (FR Doc. 2025-05213), signed 2025-03-20, published 2025-03-25",
+      "note": "Sec. 2(a) directs the Secretary to take steps to facilitate closure of the Department and return authority to states to the extent permitted by law while keeping services running; Sec. 3(b) makes implementation subject to law and appropriations. The order does not itself abolish the Department. The Supreme Court order in McMahon v. New York, No. 24A1203 (2025-07-14) was also read on supremecourt.gov: it stays the 2025-05-22 D. Mass. preliminary injunction pending the First Circuit appeal and any certiorari petition, with three Justices dissenting.",
+      "result": "supports",
+      "url": "https://www.federalregister.gov/documents/2025/03/25/2025-05213/improving-education-outcomes-by-empowering-parents-states-and-communities"
+    },
+    "flags": [],
+    "mandate_check": "ok",
+    "mandate_note": "Printed pages 319 to 359 say federal education policy should be limited and the Department ultimately eliminated, call for a Department of Education Reorganization Act or liquidating authority act passed by Congress, and list a report to Congress on consolidation and trimming nonessential staff; the record's paraphrase matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "U2",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-2",
     "source_checks": [
       {
-        "note": "Fetched. Dated 2026-06-16; four new agreements on top of ten earlier ones; special education and RSA to the HHS Administration on Disabilities; OCR, student privacy enforcement and four equity assistance centers to Justice; ED says it keeps enforcing special education law and OCR keeps the decision on administrative enforcement. Supports the new timeline event and the revised status sentence.",
+        "note": "EO 14242, 90 FR 13679, Doc. 2025-05213, Sec. 2(a) and 3(b) confirmed.",
         "result": "supports",
-        "url": "https://www.edweek.org/policy-politics/education-department-moves-special-ed-and-civil-rights-to-other-agencies/2026/06"
+        "url": "https://www.federalregister.gov/documents/2025/03/25/2025-05213/improving-education-outcomes-by-empowering-parents-states-and-communities"
       },
       {
-        "note": "Carried forward from the 2026-10-07 review (not refetched): order of 2025-07-14 stays the D. Mass. preliminary injunction.",
+        "note": "Stay granted 2025-07-14 of the 2025-05-22 injunction (No. 1:25-cv-10601); duration and dissent confirmed.",
         "result": "supports",
-        "url": "https://www.law.cornell.edu/supremecourt/text/24A1203"
-      },
-      {
-        "note": "Carried forward from the 2026-10-07 review (not refetched): Senate committee advanced S. 5046 on 2026-07-30; House committee advanced codifying bills earlier in July.",
-        "result": "supports",
-        "url": "https://www.edweek.org/policy-politics/senate-panel-advances-bill-to-block-much-of-trump-admin-s-ed-dept-dismantling/2026/07"
+        "url": "https://www.supremecourt.gov/opinions/24pdf/24a1203_new_6j37.pdf"
       }
-    ]
+    ],
+    "stage_change_reason": "The recommendation requires an act of Congress, which has not been passed; the order, the reduction in force allowed by the stay and the interagency agreements are operative executive steps, so in_progress at the low end of the band with a parallel match stands."
   },
   "self_confidence": 85,
   "significance": {
@@ -105,6 +107,24 @@
     "M": 2,
     "R": 3,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 3,
+        "F": 3,
+        "F_estimated": false,
+        "M": 2,
+        "R": 3,
+        "rater": "A"
+      },
+      {
+        "B": 3,
+        "F": 3,
+        "F_estimated": false,
+        "M": 2,
+        "R": 3,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Abolishing the Department of Education would eliminate or relocate programs serving most students and borrowers and restructure a Cabinet department.",
     "version": "2026-10-08",
@@ -159,10 +179,24 @@
       "publisher": "Education Week",
       "title": "Education Department moves special ed and civil rights to other agencies",
       "url": "https://www.edweek.org/policy-politics/education-department-moves-special-ed-and-civil-rights-to-other-agencies/2026/06"
+    },
+    {
+      "date": "2025-03-25",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Executive Order 14242 (90 FR 13679, FR Doc. 2025-05213)",
+      "url": "https://www.federalregister.gov/documents/2025/03/25/2025-05213/improving-education-outcomes-by-empowering-parents-states-and-communities"
+    },
+    {
+      "date": "2025-07-14",
+      "kind": "court",
+      "publisher": "Supreme Court of the United States",
+      "title": "McMahon v. New York, No. 24A1203, order granting stay",
+      "url": "https://www.supremecourt.gov/opinions/24pdf/24a1203_new_6j37.pdf"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "As of 2026-10-07 the Department has not been abolished by statute and still operates. Executive Order 14242 (2025-03-20) directs the Secretary to facilitate closure to the extent permitted by law. A March 2025 reduction in force, plus retirements and separation incentives, cut the workforce by about half according to Federal News Network, and the Supreme Court stayed the lower-court injunction against the layoffs on 2025-07-14. The Department has since signed interagency agreements moving program administration to other agencies, most recently four agreements announced on 2026-06-16 covering special education and civil rights functions (see c11-02, c11-03, c11-04, c11-07). Congress funded the Department at about $79 billion for FY2026 and did not adopt the requested cut. In July 2026 a House committee advanced bills to codify the transfers while a Senate committee advanced a bill to block some of them.",
+  "status_summary": "As of 2026-10-07 the Department has not been abolished by statute and still operates. Executive Order 14242 (signed 2025-03-20, published 2025-03-25 at 90 FR 13679) directs the Secretary to facilitate closure of the Department to the maximum extent appropriate and permitted by law. A March 2025 reduction in force, plus retirements and separation incentives, cut the workforce by about half according to Federal News Network, and the Supreme Court stayed the lower-court injunction against the layoffs on 2025-07-14. The Department has since signed interagency agreements moving program administration to other agencies, most recently four agreements announced on 2026-06-16 covering special education and civil rights functions (see c11-02, c11-03, c11-04, c11-07). Congress funded the Department at about $79 billion for FY2026 and did not adopt the requested cut. In July 2026 a House committee advanced bills to codify the transfers while a Senate committee advanced a bill to block some of them.",
   "timeline": [
     {
       "date": "2025-03-11",
@@ -230,6 +264,6 @@
   ],
   "title": "Abolish the Department of Education and wind down its programs",
   "tracked": true,
-  "uncertainties": "ed.gov pages returned access errors and the Federal News Network September 2026 article was not retrievable, so ED's own announcements were not read directly. Litigation status after mid-2026 (summary judgment in D. Mass.) not confirmed; a Hobbs Straus memo said discovery could close as early as 2026-06-19. Staff counts differ by source (about 1,400 layoff notices; EdWeek reports more than 2,000 employees remaining). The House chair's remark about votes comes from one Daily Signal report. Source dates ending in -01 are approximate (month only). The web search budget ran out mid-task, so some searches (for example any bill introduced to abolish ED outright) were not run.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The Federal Register text of Executive Order 14242 and the Supreme Court stay order were read on federalregister.gov and supremecourt.gov. ED's own announcements of the interagency agreements are cited here through Education Week; ed.gov pages were readable in a related pass (c11-03) but were not cited for this record. The Federal News Network September 2026 article was not retrievable. Litigation status after mid-2026 (summary judgment in D. Mass. and the First Circuit appeal) was not confirmed; a Hobbs Straus memo said discovery could close as early as 2026-06-19. Staff counts differ by source (about 1,400 layoff notices; EdWeek reports more than 2,000 employees remaining). The House chair's remark about votes comes from one Daily Signal report. Source dates ending in -01 are approximate (month only). No search was run for a bill introduced to abolish ED outright.",
+  "updated_at": "2026-10-16"
 }

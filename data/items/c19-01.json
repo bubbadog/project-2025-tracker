@@ -7,11 +7,11 @@
     "The EPCA maximum feasible standard governs the rule and could be tested in court."
   ],
   "chapter": "19",
-  "confidence": 78,
-  "confidence_label": "medium",
-  "confidence_reason": "The final NHTSA rule (effective 2026-11-30), the First Circuit petition and the waiver disapproval laws were confirmed in primary records, and the waiver nullifications are already operative by statute. Implemented is a judgment call because the new fuel economy standards are not yet in effect and face pending challenges.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text checked and the stage-deciding final rule at 91 FR 61988 re-read in this review, whose DATES section sets effectiveness at 2026-11-30 and so supports in_progress; Public Law 119-16 was also re-read for the waiver half, while litigation details rest on law-firm alerts and a filed petition.",
   "court_status": {
-    "basis": "derived from the latest court event in the timeline",
+    "basis": "Latest court event: petition for review of the SAFE Vehicles Rule III filed in the First Circuit on 2026-10-02; no stay found. The 2026-09-02 D.D.C. preliminary injunction concerns EPA's 2026 waiver submissions, not the NHTSA rule or the 2025 laws.",
     "date": "2026-10-02",
     "state": "pending",
     "url": "https://ag.ny.gov/sites/default/files/court-filings/california-et-al-v-national-highway-traffic-safety-administration-et-al-petition-for-review-2026.pdf"
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-08",
       "note": "Event dates and citations checked against the primary documents. The 2025-01-28 memo event now links the memo PDF on transportation.gov (the link printed in NHTSA's rule), with title and date attributed to NHTSA's 2025-06-11 rule, which keeps its own event."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review re-read the SAFE Vehicles Rule III on federalregister.gov (effective 2026-11-30) and a Jones Day alert on the D.D.C. waiver injunction; stage moved from implemented 70 to in_progress 60 because the final rule is not yet effective and the waiver half is only partly operative."
     }
   ],
   "id": "c19-01",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-16",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -46,7 +50,7 @@
     629
   ],
   "position": null,
-  "progress": 70,
+  "progress": 60,
   "proposal": "The Mandate recommends that NHTSA reset fuel economy standards at levels achievable by internal-combustion vehicles, consider a return to the 2020-era statutory minimum aimed at roughly a 35 mpg fleet average, keep DOT's standards ahead of EPA's carbon dioxide limits, and revoke the Biden-era California Clean Air Act waiver and invalidate CARB's conflicting requirements.",
   "redteam": {
     "date": "2026-10-07",
@@ -95,40 +99,36 @@
   "requires_congress": "partial",
   "research_agent": "A11",
   "review": {
+    "document_reread": {
+      "citation": "NHTSA, The Safer Affordable Fuel-Efficient (SAFE) Vehicles Rule III for Model Years 2022 to 2031 Passenger Cars and Light Trucks, final rule, 91 FR 61988 (pp. 61988-62291), FR Doc. 2026-19964, docket NHTSA-2025-0491, RIN 2127-AM76, published 2026-09-30",
+      "note": "First 100,000 of about 128,000 characters read, including the DATES section and summary. DATES states the rule is effective 2026-11-30, after the 2026-10-16 review date. The rule amends standards for model years 2022 to 2031, projects a combined model year 2031 fleet average of about 34.9 mpg (40.2 cars, 26.4 light trucks), ends inter-manufacturer credit trading with credits earned in model year 2028, excludes EV and plug-in electric operation from standard setting, and excludes California's Advanced Clean Cars program from its baseline on EPCA preemption grounds. Read against the rubric, it supports in_progress rather than implemented. Public Law 119-16 was re-read separately for c13-02 and supports the operative nullification of the Advanced Clean Cars II waiver.",
+      "result": "supports",
+      "url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger"
+    },
     "flags": [
-      "stage kept at implemented although the rule is not yet effective; compare c14-08, moved to in_progress on similar facts",
-      "petitioner count corrected",
-      "DOJ v. CARB preemption suit added from a law-firm alert",
-      "est_completion of 2026-Q4 was optimistic given pending litigation",
-      "N.D. Cal. case number differs between sources (3:25-cv-04966 vs 4:25-cv-04966-HSG)"
+      "STAGE CHANGE: implemented 70 to in_progress 60. Final rule effective 2026-11-30 is after today; the waiver half is only partly operative because the 2022 Advanced Clean Cars I reinstatement survives after the D.D.C. injunction. Revisit on or after 2026-11-30.",
+      "Consistent with c14-08, which was moved to in_progress on similar facts.",
+      "Added the 2026-06-12 EPA waiver submission and 2026-09-02 injunction, already sourced in c13-02.",
+      "est_completion should be revisited given the stage change."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 626 to 629 recommend resetting CAFE standards to levels feasible for ICE vehicles, considering a return to the model year 2020 statutory levels aimed at about 35 mpg, keeping EPA carbon dioxide limits subordinate to DOT, revoking California's waiver and using preemption to invalidate CARB's inconsistent requirements; the paraphrase is accurate.",
+    "mandate_check": "ok",
+    "mandate_note": "Pages 626 to 629 ask NHTSA to reset fuel economy standards at levels feasible for internal combustion vehicles, consider keeping the 2020-era levels aimed at about 35 mpg, restore DOT priority over EPA carbon dioxide limits, revoke the Biden-era California waiver and invalidate conflicting CARB requirements including the ICE sales ban; the proposal paraphrases this accurately.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "V2",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16-1",
     "source_checks": [
       {
-        "note": "Batch call returned only 2026-19964: final SAFE Vehicles Rule III, 91 FR 61988, effective 2026-11-30, amending standards for model years 2022 to 2031.",
+        "note": "91 FR 61988, Doc. 2026-19964, NHTSA-2025-0491, RIN 2127-AM76; effective 2026-11-30; 34.9 mpg MY2031 projection; trading ends with MY2028 credits.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-14548,2026-14549,2026-03708,2026-16508,2026-19964,2026-03456,2026-08556,2025-19729,2026-06178,2026-02719,2026-03157,2026-11015.json"
+        "url": "https://www.federalregister.gov/documents/2026/09/30/2026-19964/the-safer-affordable-fuel-efficient-safe-vehicles-rule-iii-for-model-years-2022-to-2031-passenger"
       },
       {
-        "note": "First Circuit petition dated 2026-10-02 against 91 FR 61988 by 20 states including California, plus Massachusetts listed separately, the District of Columbia and five cities; the record's '19 other states' omits Massachusetts from the state count.",
-        "result": "partial",
-        "url": "https://ag.ny.gov/sites/default/files/court-filings/california-et-al-v-national-highway-traffic-safety-administration-et-al-petition-for-review-2026.pdf"
-      },
-      {
-        "note": "Dated 2026-09-08: litigation over the three 2025 waiver resolutions remains ongoing with no ruling described; also reports a 2026-09-02 D.D.C. preliminary injunction in a separate case over EPA's June 2026 waiver submissions (relevant to c13-02).",
+        "note": "2026-09-02 preliminary injunction by Judge Howell, No. 26-cv-2185 (BAH); does not list the four waivers; no congressional vote reported.",
         "result": "supports",
         "url": "https://www.jonesday.com/de/insights/2026/09/clearing-the-air-california-and-epa-clash-over-reclassified-waivers"
-      },
-      {
-        "note": "Reports a March 2026 DOJ suit, United States v. CARB (E.D. Cal. No. 2:26-cv-450), seeking to enjoin Advanced Clean Cars I as preempted by EPCA, which bears on the record's unverified preemption item; lists the N.D. Cal. waiver case as No. 4:25-cv-04966-HSG.",
-        "result": "supports",
-        "url": "https://www.hklaw.com/en/insights/publications/2026/06/epa-sends-4-more-california-vehicle-emission-waivers-to-congress"
       }
-    ]
+    ],
+    "stage_change_reason": "The CAFE reset, the core of the recommendation, is a final rule whose stated effective date is 2026-11-30, after today, and the rubric treats a final rule not yet effective as in_progress. The waiver half is only partly operative: the 2025 Congressional Review Act laws are enacted and nullify the Advanced Clean Cars II waiver behind CARB's 2035 ICE phase-out, but EPA's 2026 attempt to put four older waivers (including the 2022 reinstatement of the Advanced Clean Cars I waiver) through the same process is preliminarily enjoined, and the Justice Department's preemption suit against CARB has no ruling. The enacted laws earn progress at the top of the band (60), not implemented; the record can move to implemented once the rule takes effect on 2026-11-30 if no stay issues."
   },
   "self_confidence": 85,
   "significance": {
@@ -138,6 +138,24 @@
     "M": 2,
     "R": 3,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 2,
+        "F": 3,
+        "F_estimated": true,
+        "M": 2,
+        "R": 3,
+        "rater": "A"
+      },
+      {
+        "B": 2,
+        "F": 2,
+        "F_estimated": true,
+        "M": 2,
+        "R": 3,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Resetting fuel economy standards and revoking California's waiver changes the rules for nearly all new vehicles sold.",
     "version": "2026-10-08",
@@ -192,10 +210,24 @@
       "publisher": "U.S. Department of Transportation",
       "title": "Secretarial Memo re Fixing the CAFE Program",
       "url": "https://www.transportation.gov/sites/dot.gov/files/2025-01/Signed%20Secretarial%20Memo%20re%20Fixing%20the%20CAFE%20Program.pdf"
+    },
+    {
+      "date": "2026-09-08",
+      "kind": "news",
+      "publisher": "Jones Day",
+      "title": "Clearing the Air: California and EPA Clash over Reclassified Waivers",
+      "url": "https://www.jonesday.com/de/insights/2026/09/clearing-the-air-california-and-epa-clash-over-reclassified-waivers"
+    },
+    {
+      "date": "2026-06-12",
+      "kind": "news",
+      "publisher": "Holland and Knight",
+      "title": "EPA sends 4 more California vehicle emission waivers to Congress",
+      "url": "https://www.hklaw.com/en/insights/publications/2026/06/epa-sends-4-more-california-vehicle-emission-waivers-to-congress"
     }
   ],
-  "stage": "implemented",
-  "status_summary": "NHTSA published an interpretive rule on 2025-06-11 limiting what it considers in setting standards, proposed the SAFE Vehicles Rule III on 2025-12-05, and published the final rule on 2026-09-30 (91 FR 61988). The final rule is not yet operative: its stated effective date is 2026-11-30, so the previously codified standards formally remain the regulatory text until then. NHTSA projects a combined fleet average of about 34.9 mpg for model year 2031 and ends inter-manufacturer credit trading for credits earned from model year 2028. Congress nullified three California waivers through Congressional Review Act resolutions signed 2025-06-12 (Public Laws 119-15, 119-16, 119-17), which are operative law, and California and 10 other states have challenged them in the Northern District of California since 2025-06-12 with no merits ruling shown. EPA published a final rule on 2026-02-18, effective 2026-04-20, rescinding its vehicle greenhouse gas standards and the 2009 endangerment finding. On 2026-10-02 California and 20 other states (including Massachusetts), the District of Columbia and five cities petitioned the First Circuit to review the final NHTSA rule. In March 2026 the Justice Department sued the California Air Resources Board in the Eastern District of California, arguing Advanced Clean Cars I is preempted by the Energy Policy and Conservation Act (per a law-firm alert); no ruling was found. No stay or vacatur of these actions was found as of 2026-10-07.",
+  "stage": "in_progress",
+  "status_summary": "NHTSA published an interpretive rule on 2025-06-11 limiting what it considers in setting standards, proposed the SAFE Vehicles Rule III on 2025-12-05, and published the final rule on 2026-09-30 (91 FR 61988), which projects a combined fleet average of about 34.9 mpg for model year 2031 and ends inter-manufacturer credit trading for credits earned from model year 2028; its stated effective date is 2026-11-30, so the previously codified standards remain the regulatory text until then, and on 2026-10-02 California and 20 other states, the District of Columbia and five cities petitioned the First Circuit for review. Congress nullified three California waivers, including the Advanced Clean Cars II waiver behind CARB's 2035 phase-out of new ICE car sales, through Congressional Review Act resolutions signed 2025-06-12 (Public Laws 119-15, 119-16, 119-17), which are operative law and are being challenged by California and 10 other states in the Northern District of California with no merits ruling shown. On 2026-06-12 EPA sent four older California waivers to Congress for the same review, including the 2022 reinstatement of the Advanced Clean Cars I waiver, and on 2026-09-02 the D.D.C. preliminarily enjoined EPA from treating those waivers as rules (per law-firm reports), while a Justice Department suit filed in March 2026 arguing Advanced Clean Cars I is preempted by the Energy Policy and Conservation Act has no ruling found. EPA published a final rule on 2026-02-18, effective 2026-04-20, rescinding its vehicle greenhouse gas standards and the 2009 endangerment finding, and no stay or vacatur of the NHTSA rule or the 2025 laws was found as of 2026-10-07.",
   "timeline": [
     {
       "date": "2025-01-28",
@@ -240,11 +272,18 @@
       "url": "https://www.hklaw.com/en/insights/publications/2026/06/epa-sends-4-more-california-vehicle-emission-waivers-to-congress"
     },
     {
-      "date": "2026-09-28",
-      "event": "DOT and the White House announce the final 'Freedom Means Affordable Cars' rule; DOT projects a 34.9 mpg fleet average for model year 2031.",
-      "kind": "primary",
-      "source": "DOT",
-      "url": "https://www.transportation.gov/briefing-room/president-trump-transportation-secretary-duffy-finalize-freedom-means-affordable-cars"
+      "date": "2026-06-12",
+      "event": "EPA sends four previously granted California vehicle waivers to Congress for review under the Congressional Review Act, including the 2009 greenhouse gas standards waiver, Advanced Clean Cars I and the 2022 reinstatement of that waiver, per a law-firm alert.",
+      "kind": "news",
+      "source": "Holland and Knight",
+      "url": "https://www.hklaw.com/en/insights/publications/2026/06/epa-sends-4-more-california-vehicle-emission-waivers-to-congress"
+    },
+    {
+      "date": "2026-09-02",
+      "event": "In California v. EPA (D.D.C.), Judge Howell grants a preliminary injunction and denies EPA's motion to dismiss, barring EPA from treating the four waiver orders as rules and directing it to restore the status quo before 2026-06-12, per a law-firm alert.",
+      "kind": "court",
+      "source": "Jones Day",
+      "url": "https://www.jonesday.com/de/insights/2026/09/clearing-the-air-california-and-epa-clash-over-reclassified-waivers"
     },
     {
       "date": "2026-09-30",
@@ -263,6 +302,6 @@
   ],
   "title": "Reset CAFE standards to ICE-feasible levels and end California's fuel economy waiver",
   "tracked": true,
-  "uncertainties": "The NHTSA final rule is not effective until 2026-11-30, so the CAFE half of the objective is adopted but not yet operative; the waiver half is operative through statute. If a reader treats the NHTSA rule as the stage-deciding action, the item sits closer to in_progress until that date. The Congressional Review Act waiver case (N.D. Cal.) was checked only through a docket summary site and a law-firm article, not the docket itself. The Mandate's request for further preemption action against CARB beyond the waiver nullification was not verified. Whether any party has asked the First Circuit to stay the rule was not found.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The NHTSA final rule is adopted but not effective until 2026-11-30; the stage should be revisited on that date, and the 34.9 mpg figure is NHTSA's projection rather than the footprint-based standard itself. The final rule was read through about 100,000 of 128,000 characters. The waiver half is operative only for the three waivers covered by the 2025 laws; the Biden-era 2022 reinstatement of the Advanced Clean Cars I waiver remains in place after the 2026-09-02 injunction, and which of the waivers the Mandate's text refers to is a reading of the 2023 text. The list of four waivers comes from a Holland and Knight alert and the injunction from a Jones Day alert; the court orders were not read, and the D.D.C. docket number is given differently by the two firms. The Congressional Review Act waiver case (N.D. Cal.) was checked only through a docket summary site and a law-firm article, and its case number differs between sources (3:25-cv-04966 and 4:25-cv-04966-HSG). Whether any party has asked the First Circuit to stay the NHTSA rule was not found. The Justice Department suit against CARB is dated only to March 2026.",
+  "updated_at": "2026-10-16"
 }

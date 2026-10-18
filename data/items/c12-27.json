@@ -5,9 +5,9 @@
     "Rulemaking steps pending at DOE"
   ],
   "chapter": "12",
-  "confidence": 72,
+  "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked and the stage-deciding Federal Register documents were fetched and read; absence of a FEMP program or budget change rests on a limited search.",
+  "confidence_reason": "All three DOE stay notices were confirmed through their Federal Register API records (dates, citations and abstracts) and Executive Order 14148 was read in earlier review; the stay notices were read as API metadata rather than full text, and the absence of a replacement operations order and of any FEMP program or budget change rests on limited searches.",
   "durability": {
     "level": "low",
     "why": "Executive orders and compliance stays are readily changed by a later administration; the statutory goals persist."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Three DOE compliance-date stays confirmed in the Federal Register API and the intermediate stay accepted; stage in_progress 30 kept; confidence raised to 76."
     }
   ],
   "id": "c12-27",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -57,13 +61,15 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Progress lowered from 40 to 30 within in_progress because only the removal of the extra-statutory goals and a compliance stay are operative; neither the positive Executive Order 13834 direction nor any FEMP refocus or budget cut was found."
+      "Accepted the intermediate 2026-04-20 stay (91 FR 20868) added to the timeline and sources; all three stays confirmed in the Federal Register API.",
+      "Uncertainties tidied: merged the duplicate sentences on the repeal titles and fixed a capitalization error.",
+      "judgment call: in_progress 30 kept; proposed (20) is defensible because the operative steps are a revocation and compliance-date stays rather than the positive Executive Order 13834 direction or a FEMP refocus."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 385 to 386 ask the administration to follow Executive Order 13834's direction that agencies reduce waste, cut costs, improve resilience and support their missions, and to focus FEMP on helping agencies meet statutory energy goals efficiently and cost-effectively with much less money, rather than extra-statutory renewable goals.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V8",
     "source_checks": [
       {
         "note": "EO 14148 signed 2025-01-20; section 2(rr) revokes EO 14057 (checked 2026-10-15).",
@@ -74,6 +80,21 @@
         "note": "Notification of stay published 2026-09-02 moves the compliance date from 2026-09-01 to 2027-03-01; no repeal proposed (checked 2026-10-15).",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/09/02/2026-17979/repeal-of-fossil-fuel-restrictions-for-new-federal-buildings-and-major-renovations-of-federal"
+      },
+      {
+        "note": "Final rule; stay, 90 FR 18911, published and effective 2025-05-05; May 1, 2025 compliance date for 10 CFR 433 and 435 subpart B stayed to 2026-05-01 while DOE reviews implementation guidance. API metadata. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2025-07743.json"
+      },
+      {
+        "note": "Rule, 91 FR 20868, published 2026-04-20; compliance date further stayed to 2026-09-01; no effective date listed. API metadata. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-07628.json"
+      },
+      {
+        "note": "Rule (notification of stay), 91 FR 56371-56372, published 2026-09-02; compliance date further stayed from 2026-09-01 to 2027-03-01; no repeal adopted. API metadata. Checked 2026-10-18.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-17979.json"
       }
     ]
   },
@@ -133,28 +154,42 @@
       "publisher": "FedCenter",
       "title": "Executive Order 14057 status page",
       "url": "https://www.fedcenter.gov/programs/eo14057/"
+    },
+    {
+      "date": "2026-04-20",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Repeal of Fossil Fuel Restrictions for New Federal Buildings and Major Renovations of Federal Buildings (stay notice)",
+      "url": "https://www.federalregister.gov/documents/2026/04/20/2026-07628/repeal-of-fossil-fuel-restrictions-for-new-federal-buildings-and-major-renovations-of-federal"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Executive Order 14148, signed 2025-01-20, revoked in section 2(rr) Executive Order 14057 on federal sustainability, the order that had replaced Executive Order 13834. On 2025-05-05 DOE stayed the compliance date of its rule on clean energy for new federal buildings and major renovations while it reviewed its guidance, and on 2026-09-02 it further stayed that compliance date from 2026-09-01 to 2027-03-01 while it reviews the 2024 rule. No replacement order restating Executive Order 13834 principles and no change to FEMP's own program or budget was found.",
+  "status_summary": "Executive Order 14148, signed 2025-01-20, revoked in section 2(rr) Executive Order 14057 on federal sustainability, the order that had replaced Executive Order 13834 (a FedCenter page states 14057 revoked 13834). DOE stayed the compliance date of its clean energy rule for new federal buildings and major renovations on 2025-05-05 (to 2026-05-01), again on 2026-04-20 (to 2026-09-01) and again on 2026-09-02 (to 2027-03-01) while it reviews implementation guidance; the notices do not propose repeal. No replacement order restating Executive Order 13834 principles and no change to FEMP's own program or budget was found.",
   "timeline": [
     {
       "date": "2025-01-20",
-      "event": "Executive Order 14148 was signed and, in section 2(rr), revoked Executive Order 14057 of 2021 on federal sustainability.",
+      "event": "Executive Order 14148 was signed and, in section 2(rr), revoked Executive Order 14057 of 2021 on federal sustainability (90 FR 8237, page 8239).",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/01/28/2025-01901/initial-rescissions-of-harmful-executive-orders-and-actions"
     },
     {
       "date": "2025-05-05",
-      "event": "DOE published a stay of the compliance date for its rule on clean energy for new federal buildings and major renovations (10 CFR parts 433 and 435), pending review of guidance for alignment with current energy policies; stay to 2026-05-01.",
+      "event": "DOE published a final rule staying the compliance date of its clean energy rule for new federal buildings and major renovations (10 CFR parts 433 and 435, subpart B; 90 FR 18911), effective 2025-05-05, from 2025-05-01 to 2026-05-01, pending review of implementation guidance.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/05/05/2025-07743/clean-energy-for-new-federal-buildings-and-major-renovations-of-federal-buildings-stay"
     },
     {
+      "date": "2026-04-20",
+      "event": "DOE published a notification (91 FR 20868) further staying the compliance date of the 10 CFR parts 433 and 435 subpart B provisions to 2026-09-01 while it reviews guidance.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/04/20/2026-07628/repeal-of-fossil-fuel-restrictions-for-new-federal-buildings-and-major-renovations-of-federal"
+    },
+    {
       "date": "2026-09-02",
-      "event": "DOE published a notification further staying the compliance date of the 10 CFR parts 433 and 435 requirements from 2026-09-01 to 2027-03-01 while it reviews the 2024 final rule.",
+      "event": "DOE published a notification (91 FR 56371) further staying the compliance date of the 10 CFR parts 433 and 435 subpart B provisions from 2026-09-01 to 2027-03-01 while it reviews implementation guidance.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/09/02/2026-17979/repeal-of-fossil-fuel-restrictions-for-new-federal-buildings-and-major-renovations-of-federal"
@@ -162,6 +197,6 @@
   ],
   "title": "Refocus federal energy management on cost-effective use, not climate targets",
   "tracked": true,
-  "uncertainties": "The 2026 notice carries a title referring to repeal but only extends a stay; the move of the compliance date from 2026-09-01 implies an intermediate stay not separately recorded here. Whether a replacement federal operations order exists, and any FEMP staffing or program change, were not found; the FY2027 budget summary page read did not mention FEMP and FY2026 and FY2027 FEMP requests were not located. Searches run on federalregister.gov, fedcenter.gov and budget summaries.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The 2026 notices carry titles referring to repeal of fossil fuel restrictions, but their text only stays the compliance date; the intermediate stay of 2026-04-20 is recorded in the timeline. Whether a replacement federal operations order exists, and any FEMP staffing or program change, were not found; the FY2027 budget summary page read did not mention FEMP and FY2026 and FY2027 FEMP requests were not located. Searches run on federalregister.gov, fedcenter.gov and budget summaries. The Federal Register API list of presidential documents since 2025-01-20 (first 20 of 27 results) showed no federal operations or sustainability order; the remaining 7 were not seen.",
+  "updated_at": "2026-10-18"
 }

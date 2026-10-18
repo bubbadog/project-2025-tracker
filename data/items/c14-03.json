@@ -10,7 +10,13 @@
   "chapter": "14",
   "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked and the AP report of FDA's status report read; the stage rests on the absence of any operative FDA action plus reputable secondary reporting, with no FDA primary document reachable.",
+  "confidence_reason": "Chapter text at pages 457 to 459 checked. The stage rests on the absence of an operative FDA action, confirmed on two primary routes fetched in this review (the FDA mifepristone page, current as of 2025-01-17, and a Federal Register API query from 2025-09-01); the deciding status report of 2026-10-07 was not reachable and is known only from an AP report, and the HHS review announcement rests on KFF.",
+  "court_status": {
+    "basis": "Latest court event: Fifth Circuit argument in Louisiana v. FDA (No. 26-30203) on 2026-09-09 with no ruling found; the Supreme Court order of 2026-05-14 leaves the 2023 REMS in effect while litigation continues, and the related district court cases are paused for the FDA review.",
+    "date": "2026-09-09",
+    "state": "pending",
+    "url": "https://news.bloomberglaw.com/health-law-and-business/fdas-regulation-of-abortion-drug-weighed-by-appeals-court"
+  },
   "durability": {
     "level": "low",
     "why": "A REMS modification or label change is an agency action a later FDA could reverse; withdrawal of approval would also be contestable in court."
@@ -22,7 +28,7 @@
   "history": [
     {
       "date": "2026-10-07",
-      "note": "Re-researched in the in-depth pass; status confirmed. Reviewer confidence 66 to 64. Added the Fifth Circuit argument (2026-09-09, No. 26-30203), the Texas and Florida suit pause (to 2026-12-01), the DOJ description of the review, the FDA Commissioner departure and nominee hearing (2026-09-24) and an FDA source for the 2023 REMS; the 2026-10-07 status report outcome was not found; stage unchanged (proposed, 12), match"
+      "note": "Re-researched in the in-depth pass; status confirmed. Reviewer confidence 66 to 64. Added the Fifth Circuit argument (2026-09-09, No. 26-30203), the Texas and Florida suit pause (to 2026-12-01), the DOJ description of the review, the FDA Commissioner departure and nominee hearing (2026-09-24) and an FDA source for the 2023 REMS; the 2026-10-07 status report outcome was not found; stage unchanged (proposed, 12), match (the rest of this note was cut short when written)."
     },
     {
       "date": "2026-10-08",
@@ -31,10 +37,18 @@
     {
       "date": "2026-10-13",
       "note": "Added FDA's 2026-10-07 status report in the Louisiana case as reported by the Associated Press (study by mid-December 2026, report by March 2027); stage unchanged at proposed 12."
+    },
+    {
+      "date": "2026-10-15",
+      "note": "Cross-references added to new layer 3 records c14-32 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Independent review re-read the FDA mifepristone page and a Federal Register query on federalregister.gov, finding no REMS action through 2026-10-17, and added a pending court status; the 2026-10-07 status report remained unreachable, confidence stayed at 64 and the stage stayed proposed at 12."
     }
   ],
   "id": "c14-03",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-17",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_action",
@@ -47,10 +61,11 @@
   "progress": 12,
   "proposal": "The Mandate recommends that FDA withdraw its approval of mifepristone and, as an interim step, restore in-person dispensing and the pre-2016 protocols (49-day limit, reporting of all serious adverse events by prescribers), strengthen adverse event reporting, publish inspection information on the sponsors, and stop approving or promoting mail-order distribution.",
   "related_ids": [
-    "c00-09"
+    "c00-09",
+    "c14-32"
   ],
   "remaining": [
-    "FDA completes its REMS safety review and acts on it (the Louisiana court's 2026-10-07 deadline for an FDA status report has passed and its content was not found as of 2026-10-08; the Texas suit's pause runs to 2026-12-01 at the latest)",
+    "FDA completes its REMS safety review and acts on it (per AP reporting of FDA's 2026-10-07 status report, the study is expected by mid-December 2026 and a report no later than March 2027; the Texas suit's pause runs to 2026-12-01 at the latest)",
     "REMS modified to restore in-person dispensing, the 49-day limit and reporting of all serious adverse events",
     "FDA withdraws or revisits the original approval, as the Mandate recommends",
     "Improved adverse event reporting by hospitals and emergency departments, and published inspection information for sponsors and manufacturers",
@@ -60,23 +75,34 @@
   "requires_congress": "no",
   "research_agent": "A10",
   "review": {
+    "document_reread": {
+      "citation": "FDA status report, Louisiana v. FDA (W.D. La.), 2026-10-07; docket number not found",
+      "note": "No copy of the filing was located by the researcher; not re-attempted beyond the primary absence checks. Contents known from AP via KSAT only.",
+      "result": "unreachable",
+      "url": ""
+    },
     "flags": [
-      "est_completion window kept at 2027 rather than the proposed 2027-Q1, since March 2027 is the review report date, not completion of the recommendation",
-      "Uncertainties rewritten: first-person wording removed and the stale note about the unknown status report replaced",
-      "Record has court events but no court_status; none added here because the status report is a filing, not a ruling"
+      "deciding status report of 2026-10-07 unreachable; stage rests on absence of action plus secondary reporting",
+      "court_status added as pending, derived from the 2026-09-09 Fifth Circuit argument"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 458 asks FDA to reverse its approval of chemical abortion drugs; page 459 asks for the pre-2016 protocols (49 days, in-person dispensing, prescriber reporting of serious adverse events) and stronger adverse event reporting; the paraphrase fits.",
+    "mandate_check": "ok",
+    "mandate_note": "Page 458 asks FDA to reverse its approval of chemical abortion drugs and restore in-person dispensing; page 459 asks for the pre-2016 49-day limit and prescriber reporting of serious adverse events, fixes to FAERS, inspection transparency and an end to promoting or approving mail-order distribution; the proposal is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-1",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-F",
     "source_checks": [
       {
-        "note": "AP report published 2026-10-07: FDA filing that day in the Louisiana case; study by mid-December 2026, report no later than March 2027, decision after; petitions under consideration; Supreme Court block noted.",
+        "note": "Read in full: content current as of 2025-01-17; latest change described is the 2023-01-03 REMS modification; no 2025 or 2026 review or change listed.",
         "result": "supports",
-        "url": "https://www.ksat.com/news/politics/2026/10/08/fda-says-its-review-of-abortion-pill-will-continue-into-next-year/"
+        "url": "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/information-about-mifepristone-medical-termination-pregnancy-through-ten-weeks-gestation"
+      },
+      {
+        "note": "Three results: NIH patent-license notice 2026-09-02 (2026-17991), HHS rescission of pharmacy guidance 2026-01-27 (2026-01550), VA rule 2025-12-31 (2025-24061); none is an FDA REMS action.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=mifepristone&conditions[publication_date][gte]=2025-09-01&order=newest"
       }
-    ]
+    ],
+    "stage_change_reason": "Stage proposed kept at 12: a review was announced and is underway with no REMS, label or approval change in effect (primary absence checks on fda.gov and federalregister.gov), which fits proposed (announced, nothing operative)."
   },
   "significance": {
     "B": 1,
@@ -163,7 +189,7 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "On 2025-09-19 HHS announced a safety review of the mifepristone REMS (the 2023 REMS allows telehealth prescribing and mail or retail pharmacy dispensing), and on 2025-09-30 FDA approved an additional generic mifepristone under the same REMS. As of 2026-10-13 no completed review, REMS change or label change was found, and FDA's page documenting the REMS was last updated 2025-01-17. In a court-ordered status report filed 2026-10-07 in the Louisiana case, FDA said, according to Associated Press reporting, that its safety study should be complete by mid-December 2026 and a report on the findings is expected no later than March 2027, after which it will decide whether to impose new restrictions or other changes; the filing itself was not read. Courts have deferred to the review: the Western District of Louisiana paused Louisiana v. FDA for six months in April 2026, and a Texas federal court paused Texas and Florida's suit against the 2000 approval until 2026-12-01 or completion of the review (reported 2026-09-01). A Fifth Circuit order of 2026-05-01 reinstating in-person dispensing nationwide was blocked by the Supreme Court on 2026-05-14 (two justices dissenting); the Fifth Circuit heard argument on Louisiana's appeal on 2026-09-09 (No. 26-30203) and no ruling was found. The FDA Commissioner nominee told the Senate HELP Committee on 2026-09-24 that FDA has found the drug safe and effective with its risk mitigation requirements.",
+  "status_summary": "On 2025-09-19 HHS announced a safety review of the mifepristone REMS (the 2023 REMS allows telehealth prescribing and mail or retail pharmacy dispensing), and on 2025-09-30 FDA approved an additional generic mifepristone under the same REMS. As of 2026-10-17 no completed review, REMS change or label change was found, and FDA's page documenting the REMS was last updated 2025-01-17. In a court-ordered status report filed 2026-10-07 in the Louisiana case, FDA said, according to Associated Press reporting, that its safety study should be complete by mid-December 2026 and a report on the findings is expected no later than March 2027, after which it will decide whether to impose new restrictions or other changes; the filing itself was not read. Courts have deferred to the review: the Western District of Louisiana paused Louisiana v. FDA for six months in April 2026, and a Texas federal court paused Texas and Florida's suit against the 2000 approval until 2026-12-01 or completion of the review (reported 2026-09-01). A Fifth Circuit order of 2026-05-01 reinstating in-person dispensing nationwide was blocked by the Supreme Court on 2026-05-14 (two justices dissenting); the Fifth Circuit heard argument on Louisiana's appeal on 2026-09-09 (No. 26-30203) and no ruling was found. The FDA Commissioner nominee told the Senate HELP Committee on 2026-09-24 that FDA has found the drug safe and effective with its risk mitigation requirements.",
   "timeline": [
     {
       "date": "2025-09-19",
@@ -231,6 +257,6 @@
   ],
   "title": "Restore in-person dispensing and stricter FDA rules for mifepristone, or withdraw approval",
   "tracked": true,
-  "uncertainties": "No FDA or HHS primary document announcing the review or the generic approval could be reached (the FDA mifepristone page was last updated 2025-01-17); the September 2025 dates come from KFF, and an earlier review noted a Wikipedia entry placing the generic approval in October 2025, a few days later than KFF's 2025-09-30. A Federal Register query for 'mifepristone' found no FDA REMS action through 2026-10-13. FDA's 2026-10-07 status report is known only from an Associated Press report (via ksat.com) and the filing itself was not read; the report also says FDA is weighing several citizen petitions on prescribing and distribution. The April 2026 DOJ brief is described through a Center for Reproductive Rights summary (an advocacy source) and was not read; the Texas and Florida pause comes from a syndicated report whose order date is inferred; the Fifth Circuit argument is from Bloomberg Law and the nominee's remarks from Fierce Pharma, both read through summarizing fetches. No Fifth Circuit ruling was found as of the AP report. Source dates for the CRR, NewsChannel 9, Bloomberg Law and Fierce items are the filing, report or event dates. The Mandate text on p. 458 is read as restoring in-person dispensing, consistent with p. 459. Month-only events use the first of the month. Stage proposed (12) rests on a review that is announced and underway but has produced no operative change; match is partial because the review does not itself track the specific restrictions the Mandate lists.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "No FDA or HHS primary document announcing the review or the generic approval could be reached (the FDA mifepristone page was last updated 2025-01-17); the September 2025 dates come from KFF, and an earlier review noted a Wikipedia entry placing the generic approval in October 2025, a few days later than KFF's 2025-09-30. A Federal Register query for 'mifepristone' from 2025-09-01 found no FDA REMS action through 2026-10-17 (results were an NIH patent-license notice, an HHS rescission of 2023 pharmacy guidance and a VA rule), and the FDA mifepristone page re-read on 2026-10-17 still shows a currency date of 2025-01-17 and the 2023-01-03 REMS modification as the latest change. FDA's 2026-10-07 status report is known only from an Associated Press report (via ksat.com) and the filing itself was not read; the report also says FDA is weighing several citizen petitions on prescribing and distribution. The April 2026 DOJ brief is described through a Center for Reproductive Rights summary (an advocacy source) and was not read; the Texas and Florida pause comes from a syndicated report whose order date is inferred; the Fifth Circuit argument is from Bloomberg Law and the nominee's remarks from Fierce Pharma, both read through summarizing fetches. No Fifth Circuit ruling was found as of the AP report. Source dates for the CRR, NewsChannel 9, Bloomberg Law and Fierce items are the filing, report or event dates. The Mandate text on p. 458 is read as restoring in-person dispensing, consistent with p. 459. Month-only events use the first of the month. Stage proposed (12) rests on a review that is announced and underway but has produced no operative change; match is partial because the review does not itself track the specific restrictions the Mandate lists. The 2026-10-07 FDA status report remained unread: no copy or docket number was located, and the Center for Reproductive Rights case page, an advocacy source, does not link it; that page gives 2026-04-07 as the date the Western District of Louisiana paused the case (the order was not read).",
+  "updated_at": "2026-10-17"
 }

@@ -9,7 +9,13 @@
   "chapter": "11",
   "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "ED's own releases were read and confirm the agreements, their destination agencies and ED's retained authority. How far day-to-day work has actually moved, the first agreement's signing date and the statistics and research question rest on Labor's release and trade press not re-read here.",
+  "confidence_reason": "ED's two releases, Labor's release and the Supreme Court order were fetched and read in full in review and confirm the agreements, their destinations, ED's retained authority and the court events; the agreement texts were not available, and the February 2026 round, the extent of operational transfer and the committee actions rest on trade press.",
+  "court_status": {
+    "basis": "The District of Massachusetts preliminary injunction of 2025-05-22 against the March 2025 reduction in force, EO 14242 and the 2025-03-21 transfer order (which announced moving the student loan portfolio to the Small Business Administration and special needs and nutrition programs to HHS) was stayed by the Supreme Court on 2025-07-14 pending the First Circuit appeal and any certiorari petition; Labor's release says the stay let the first interagency agreement proceed. Amended complaints challenging the later agreements are pending in the same district court case with no ruling located.",
+    "date": "2025-07-14",
+    "state": "stayed",
+    "url": "https://www.supremecourt.gov/opinions/24pdf/24a1203_pol1.pdf"
+  },
   "durability": {
     "level": "low",
     "why": "Interagency agreements are revocable by a later administration, ED retains statutory responsibility, and their legality is contested in court and by CRS."
@@ -30,10 +36,18 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c11-23, c11-24, c11-26, c11-27 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Primary-source lift: the Education and Labor releases and the Supreme Court order of 2025-07-14 were read, two court actions on the related reduction-in-force injunction were added, and the uncertainties were corrected."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Independent review after the primary-source lift: the Supreme Court order on supremecourt.gov, the Labor release on dol.gov and both Education releases on ed.gov were read, court_status stayed was confirmed, a news-count entry was removed from the timeline, in_progress 50 was kept and confidence stays at 76."
     }
   ],
   "id": "c11-02",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-16",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_action",
@@ -66,25 +80,39 @@
   "research_agent": "A08",
   "review": {
     "flags": [
-      "oversight-by-ED wording applied only to Labor and Interior in ED's release; corrected",
-      "operational transfer extent from trade press",
-      "overlaps c11-03, c11-07"
+      "court_status stayed kept: the 2025-07-14 order stays the injunction against the transfer order, which concerned moving programs to other agencies, so it bears on the record; the challenge to the agreements themselves is pending with no ruling, and pending is the other defensible state.",
+      "Removed the 2026-06-17 agreement-count entry (a news count, not an action)."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 325 to 327 recommend moving CTE and adult education to Labor, postsecondary programs to Labor's ETA with national-security programs to State, Indian education to the Bureau of Indian Education, and NCES to Census with research possibly to NSF; page 330 calls for a Department of Education Reorganization Act. The paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y3",
+    "reviewed_at": "2026-10-16",
+    "reviewer": "P16L-2",
     "source_checks": [
       {
-        "note": "Lists six agreements: Labor (K-12 programs; most HEA postsecondary grants), Interior (Indian education), HHS (foreign medical accreditation; CCAMPIS child care), State (Fulbright-Hays). Only the Labor and Interior partnerships are described as operating with proper oversight by ED; Title I is not named. Only date shown is a last-reviewed date of 2025-11-18.",
+        "note": "2025-07-14: stay granted of the 2025-05-22 D. Mass. injunction pending First Circuit appeal and certiorari; dissent (Sotomayor, Kagan, Jackson) describes the injunction as covering the RIF, EO 14242 and the 2025-03-21 transfer order moving student loans to SBA and special needs and nutrition programs to HHS; no mention of interagency agreements.",
+        "result": "supports",
+        "url": "https://www.supremecourt.gov/opinions/24pdf/24a1203_pol1.pdf"
+      },
+      {
+        "note": "25-1173-NAT, 2025-07-15: agreement signed May 21; WIOA Title II and Perkins; ED keeps statutory responsibilities; says the stay let ED proceed with the agreement.",
+        "result": "supports",
+        "url": "https://www.dol.gov/newsroom/releases/osec/osec20250715"
+      },
+      {
+        "note": "Six agreements (two Labor, Interior, two HHS, State); oversight wording on the three Labor and Interior partnerships; last reviewed 2025-11-18, no printed date.",
         "result": "supports",
         "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-announces-six-new-agency-partnerships-break-federal-bureaucracy"
       },
       {
-        "note": "Four new agreements (HHS special education and rehabilitative services; DOJ civil rights enforcement, student privacy, training and advisory services) after 10 earlier partnerships; ED keeps all statutory authorities and functions for civil rights; last-reviewed date 2026-06-16.",
+        "note": "Four agreements (HHS; three DOJ) after ten earlier; ED retains all statutory authorities under the civil rights partnership; last reviewed 2026-06-16.",
         "result": "supports",
         "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-announces-additional-partnerships-strengthen-coordination-individuals-disabilities-programs-bolster-civil-rights"
+      },
+      {
+        "note": "Law-firm memo of 2026-04-15: amended complaints pending, response deferred until discovery closes, no merits ruling; secondary, used only in uncertainties.",
+        "result": "partial",
+        "url": "https://hobbsstraus.com/wp-content/uploads/2026/04/GM-26-018-.pdf"
       }
     ]
   },
@@ -95,6 +123,24 @@
     "M": 1,
     "R": 2,
     "adjudicated": false,
+    "rater_scores": [
+      {
+        "B": 3,
+        "F": 2,
+        "F_estimated": true,
+        "M": 1,
+        "R": 2,
+        "rater": "A"
+      },
+      {
+        "B": 3,
+        "F": 2,
+        "F_estimated": true,
+        "M": 1,
+        "R": 2,
+        "rater": "B"
+      }
+    ],
     "raters": 2,
     "rationale": "Redistributing Education programs to other departments is an organizational shift that moves tens of billions without necessarily changing benefits.",
     "version": "2026-10-08",
@@ -191,6 +237,20 @@
       "publisher": "Government Executive",
       "title": "ED begins reassigning some employees to other agencies' buildings in the Washing",
       "url": "https://www.govexec.com/management/2026/09/education-department-shutdown-plans-face-new-hurdle/416003/"
+    },
+    {
+      "date": "2025-07-14",
+      "kind": "court",
+      "publisher": "Supreme Court of the United States",
+      "title": "McMahon v. New York, No. 24A1203, order granting stay of injunction",
+      "url": "https://www.supremecourt.gov/opinions/24pdf/24a1203_pol1.pdf"
+    },
+    {
+      "date": "2026-04-15",
+      "kind": "tracker",
+      "publisher": "Hobbs Straus Dean & Walker",
+      "title": "General Memorandum 26-018 on Education Department interagency agreements and litigation",
+      "url": "https://hobbsstraus.com/wp-content/uploads/2026/04/GM-26-018-.pdf"
     }
   ],
   "stage": "in_progress",
@@ -202,6 +262,20 @@
       "kind": "primary",
       "source": "U.S. Department of Labor",
       "url": "https://www.dol.gov/newsroom/releases/osec/osec20250715"
+    },
+    {
+      "date": "2025-05-22",
+      "event": "The U.S. District Court for the District of Massachusetts (No. 1:25-cv-10601) issues a preliminary injunction blocking the March 2025 reduction in force, Executive Order 14242 and the 2025-03-21 Transfer Order (which announced moves of programs to other agencies), as described in the Supreme Court's later order; the order does not name interagency agreements.",
+      "kind": "court",
+      "source": "Supreme Court of the United States",
+      "url": "https://www.supremecourt.gov/opinions/24pdf/24a1203_pol1.pdf"
+    },
+    {
+      "date": "2025-07-14",
+      "event": "The Supreme Court grants the government's application (McMahon v. New York, No. 24A1203) and stays the injunction pending the First Circuit appeal and any certiorari petition, with three Justices dissenting.",
+      "kind": "court",
+      "source": "Supreme Court of the United States",
+      "url": "https://www.supremecourt.gov/opinions/24pdf/24a1203_pol1.pdf"
     },
     {
       "date": "2025-11-18",
@@ -223,13 +297,6 @@
       "kind": "primary",
       "source": "U.S. Department of Education",
       "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-announces-additional-partnerships-strengthen-coordination-individuals-disabilities-programs-bolster-civil-rights"
-    },
-    {
-      "date": "2026-06-17",
-      "event": "ED's count of interagency agreements reaches 14 across HHS, Justice, State, Labor, Interior, and Treasury.",
-      "kind": "news",
-      "source": "K-12 Dive",
-      "url": "https://www.k12dive.com/news/inside-the-education-departments-interagency-agreements/823771/"
     },
     {
       "date": "2026-07-15",
@@ -255,6 +322,6 @@
   ],
   "title": "Move ED program offices to Labor, Interior, State, and HHS",
   "tracked": true,
-  "uncertainties": "The agreement texts and fact sheets were not retrieved (ED's releases link fact sheets but the fetched pages gave no URLs); ED's three press releases were read through a fetch summary and carry no printed release dates (their last-reviewed dates were used: 2025-11-18 and 2026-06-16; the Labor workforce release shows 2026-01-05 and the Labor release 2025-07-15). The February 2026 round was not matched to an ED release and rests on Education Week. Reports differ on how many agreements exist and were published (nine in February 2026, 14 by June 2026; ED's June release refers to ten earlier partnerships). Sources conflict on whether data collection was announced for transfer (NEPC cites an earlier EdWeek report; the later EdWeek FAQ says not yet slated). A Labor TRIO grant solicitation in March 2026 was reported by Inside Higher Ed but not used as a dated event. Tribally controlled postsecondary career and technical education program (Mandate p. 326) not checked. The Labor release also says a Massachusetts federal judge blocked the first agreement's implementation one day after signing and the Supreme Court later stayed that injunction; that litigation was not read here.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "ED's three press releases were re-read and carry no printed release dates (last-reviewed dates 2025-11-18 and 2026-06-16 were used); they link fact sheets but not the agreement texts, which were not retrieved. The Labor release (printed 2025-07-15, release 25-1173-NAT) gives the signing date of 2025-05-21 for the first agreement. The February 2026 round was not matched to an ED release and rests on Education Week. Reports differ on how many agreements exist (nine in February 2026, 14 by June 2026; ED's June release refers to ten earlier partnerships). Sources conflict on whether data collection was announced for transfer. A Labor TRIO grant solicitation in March 2026 was reported by Inside Higher Ed but not used as a dated event. The tribally controlled postsecondary career and technical education program (Mandate p. 326) was not checked. Litigation: the Labor release links the Massachusetts injunction to the first agreement; the Supreme Court order of 2025-07-14 concerns the injunction against the March 2025 reduction in force, the executive order and the transfer order and does not name interagency agreements, so the injunction and stay are recorded as related court actions, not as rulings on the agreements. The later amended complaints (2025-11-25, 2026-01-09) challenging the agreements were not read; a law-firm memorandum of 2026-04-15 (hobbsstraus.com) reports that the department had not yet been required to answer them, that discovery could close as early as 2026-06-19 with summary judgment motions to follow, and no merits ruling, and no later ruling was located in one review search. A K-12 Dive report of 2026-06-17 putting the agreement count at 14 was removed from the timeline because a count is not a dated action; the count remains in the status summary.",
+  "updated_at": "2026-10-16"
 }

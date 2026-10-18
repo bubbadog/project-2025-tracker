@@ -2,9 +2,9 @@
   "agency": "DOJ (FBI)",
   "blockers": [],
   "chapter": "17",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked and the executive order was read in the Federal Register; the task force closure rests on one reputable news report, and the absence of an FBI-specific policy was not systematically checked.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text was checked in an earlier review; Executive Order 14149 and the 2025-02-05 charging policy memorandum that disbanded the Foreign Influence Task Force were fetched and read. The absence of an FBI-specific prohibition or DOJ firewall was not systematically checked, and the task force's prior social media work rests on one news report.",
   "durability": {
     "level": "medium",
     "why": "Rests on an executive order and a memorandum that a later administration can revoke."
@@ -26,10 +26,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-16",
+      "note": "Cross-reference added to new layer 3 record c21-20 written in the second enumeration pass; no change to the status."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift with independent AI review: Task force closure resourced to the primary charging memorandum; stage kept; confidence raised to high."
     }
   ],
   "id": "c17-14",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -43,7 +51,8 @@
   "related_ids": [
     "c17-01",
     "c17-13",
-    "c17-15"
+    "c17-15",
+    "c21-20"
   ],
   "remaining": [
     "A written FBI policy or Justice Manual provision creating the firewall",
@@ -54,36 +63,42 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: implemented (65) is defensible because Executive Order 14149 is an operative government-wide bar that reaches the FBI; in_progress kept because no FBI-specific prohibition or firewall was found."
+      "judgment call: implemented (65) is defensible because Executive Order 14149 is an operative government-wide bar that reaches the FBI; in_progress kept because no FBI-specific prohibition or firewall was found.",
+      "Task force closure now sourced to the primary charging policy memorandum (Part IV); the news report stays as a secondary source. Confidence raised from 72 to 80 (high)."
     ],
     "mandate_check": "corrected",
     "mandate_note": "Pages 550 and 551 checked: the bullet prohibits FBI activities on so-called misinformation and disinformation by Americans not tied to plausible criminal activity; malinformation appears in the explanatory text; the firewall sentence names DOJ. Proposal adjusted accordingly. Not covered by c17-01, which addresses FBI structure.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y17c",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V4",
     "source_checks": [
       {
-        "note": "Executive Order 14149 signed 2025-01-20, published 2025-01-28.",
+        "note": "Executive Order 14149 signed 2025-01-20, published 2025-01-28, 90 FR 8243; checked 2026-10-18.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents/2025-01902.json"
       },
       {
-        "note": "Section 3(a) bars federal personnel from using federal resources contrary to the free-speech policy.",
+        "note": "Section 3(a) bars federal personnel from using federal resources contrary to the free-speech policy; read in an earlier review.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/01/28/2025-01902/restoring-freedom-of-speech-and-ending-federal-censorship"
       },
       {
-        "note": "Dated 2025-02-06; reports the task force was disbanded in one of 14 memoranda issued 2025-02-05 and describes its social media alerts.",
+        "note": "General Policy Regarding Charging, Plea Negotiations, and Sentencing, 2025-02-05; Part IV, Shifting Resources in the National Security Division, disbands the Foreign Influence Task Force and limits criminal FARA and 18 U.S.C. 951 charges to conduct similar to traditional espionage; no FBI mention; checked 2026-10-18.",
+        "result": "partial",
+        "url": "https://www.justice.gov/ag/media/1388541/dl"
+      },
+      {
+        "note": "Dated 2025-02-06; reports the task force was disbanded in one of 14 memoranda issued 2025-02-05 and describes its social media alerts; read in an earlier review.",
         "result": "supports",
         "url": "https://www.nbcwashington.com/news/national-international/bondi-ends-fbi-effort-to-combat-foreign-influence-in-us-politics/3838441/?amp=1"
       },
       {
-        "note": "Checked whether the cartel memorandum disbanded the Foreign Influence Task Force; it does not mention it (it disbands KleptoCapture).",
+        "note": "Cartel memorandum does not mention the Foreign Influence Task Force; read in an earlier review.",
         "result": "does_not_support",
         "url": "https://www.justice.gov/ag/media/1388546/dl?inline="
       },
       {
-        "note": "Checked whether the integrity memorandum mentions the task force; it does not.",
+        "note": "Integrity memorandum does not mention the task force; re-read 2026-10-18.",
         "result": "does_not_support",
         "url": "https://www.justice.gov/ag/media/1388506/dl?inline="
       }
@@ -126,6 +141,13 @@
       "url": "https://www.federalregister.gov/documents/2025/01/28/2025-01902/restoring-freedom-of-speech-and-ending-federal-censorship"
     },
     {
+      "date": "2025-02-05",
+      "kind": "primary",
+      "publisher": "U.S. Department of Justice",
+      "title": "General Policy Regarding Charging, Plea Negotiations, and Sentencing",
+      "url": "https://www.justice.gov/ag/media/1388541/dl"
+    },
+    {
       "date": "2025-02-06",
       "kind": "news",
       "publisher": "NBC Washington",
@@ -134,7 +156,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Executive Order 14149, signed 2025-01-20 and published 2025-01-28, bars federal entities and personnel from acting or using federal resources contrary to its policy against abridging protected speech, and directs the Attorney General to review prior-administration activities that conflicted with it. In memoranda issued 2025-02-05 the Attorney General disbanded the Foreign Influence Task Force, which had alerted social media companies to foreign disinformation, according to press reporting. A specific written FBI prohibition or DOJ firewall policy was not found.",
+  "status_summary": "Executive Order 14149, signed 2025-01-20 and published 2025-01-28, bars federal entities and personnel from acting or using federal resources contrary to its policy against abridging protected speech, and directs the Attorney General to review prior-administration activities that conflicted with it. An Attorney General memorandum of 2025-02-05 on charging policy directed that the Foreign Influence Task Force be disbanded and limited criminal FARA and 18 U.S.C. 951 charges to conduct similar to traditional espionage by foreign government actors. The memorandum does not mention the FBI, and no FBI-specific prohibition or DOJ firewall policy was found.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -145,14 +167,14 @@
     },
     {
       "date": "2025-02-05",
-      "event": "An Attorney General memorandum disbanded the Foreign Influence Task Force, whose work had included alerting social media companies to foreign disinformation, according to press reporting.",
-      "kind": "news",
-      "source": "NBC Washington",
-      "url": "https://www.nbcwashington.com/news/national-international/bondi-ends-fbi-effort-to-combat-foreign-influence-in-us-politics/3838441/?amp=1"
+      "event": "An Attorney General memorandum on charging, plea and sentencing policy directed that the Foreign Influence Task Force be disbanded (Part IV, national security resources) and limited criminal FARA and 18 U.S.C. 951 charges to conduct similar to traditional espionage by foreign government actors.",
+      "kind": "primary",
+      "source": "U.S. Department of Justice, Office of the Attorney General",
+      "url": "https://www.justice.gov/ag/media/1388541/dl"
     }
   ],
   "title": "Bar FBI activity aimed at policing speech and misinformation",
   "tracked": true,
-  "uncertainties": "The specific memorandum that disbanded the Foreign Influence Task Force was not identified; the cartel and integrity memoranda of the same date do not mention it, and the press report says only that it appeared in one of 14 memoranda issued that day. The task force was a foreign-influence unit, so its closure matches the recommendation only in part. No FBI-specific order or Justice Manual change was found.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The memorandum that disbanded the Foreign Influence Task Force was identified as the 2025-02-05 charging policy memorandum; the cartel and integrity memoranda of the same date do not mention it. That memorandum does not mention the FBI, and the task force was a foreign-influence unit, so the match to a bar on FBI misinformation activity is partial. The press report is retained as a source for the task force's prior social media alerts and is not verified against a primary document. No FBI-specific order or Justice Manual change was found.",
+  "updated_at": "2026-10-18"
 }

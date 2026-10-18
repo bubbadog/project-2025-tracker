@@ -6,7 +6,7 @@
   "chapter": "26",
   "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "The Entity List rules, the affiliates rule and its suspension, and Executive Order 14257 were read in the Federal Register; the stage turns on a judgment about the balance of firm-level and blanket measures.",
+  "confidence_reason": "The Entity List rules, the affiliates rule and its suspension, and Executive Order 14257 were read in the Federal Register. Five checks documented on 2026-10-18: (1) a Federal Register search of BIS Entity List documents found only national security listings (partial); (2) the BIS proposed-rule listing returned zero and the agenda listing could not be browsed; (3) a congress.gov and GovInfo search, with S. 330 read in review, found one introduced firm-level IP-theft sanctions bill; (4) USTR, Treasury and BIS newsrooms showed no firm-specific unfair-trade action; (5) a news search found only a pending report. Held at 62 because the stage is a judgment call and S. 330 points toward the recommendation.",
   "durability": {
     "level": "medium",
     "why": "Entity List actions are agency rules that can be revised; the bilateral truce can change which are in force."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check with independent AI review: Diverged kept; an introduced firm-level IP-theft sanctions bill added to the timeline and named as the alternative; confidence held at 62."
     }
   ],
   "id": "c26-11",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -59,13 +63,14 @@
       "Title shortened slightly",
       "Affiliates rule suspension now sourced to the Federal Register instead of a law firm note",
       "Removed the Arrow Electronics removal event as not bearing on the recommendation",
-      "Confidence 62"
+      "Confidence 62",
+      "V7 systematic-check review: diverged 0 kept; S. 330, seen by the researcher by title only, was read and is an introduced firm-level IP-theft sanctions bill, added as a timeline event without a stage change because the operative policy remains blanket tariffs. Alternative: proposed 5 on S. 330. Confidence held at 62 rather than the suggested 65."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 815, China strategy (Lassman): use a target, not a blanket; act against individual Chinese firms known for unfair practices such as IP theft rather than sector-wide tariffs or barriers. Paraphrase accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "V7",
     "source_checks": [
       {
         "note": "Checked 2026-10-14. 90 FR 14046, effective 2025-03-25; 11 China entities, 1 Taiwan; military, AI and supercomputer reasons; no IP theft.",
@@ -81,6 +86,46 @@
         "note": "Checked 2026-10-14 via Federal Register API: suspension published 2025-11-12, runs to 2026-11-09.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities"
+      },
+      {
+        "note": "Systematic check 1: BIS, 'Entity List China', since 2025-01-20: 15 documents, including Entity List additions (2025-03-28, 2025-09-16, 2025-10-09), the affiliates rule (2025-09-30), a suspension revision (2025-11-12) and revisions on 2026-08-24. These are firm-level national security listings, already recorded; none is framed around intellectual property theft or unfair trade practices. checked 2026-10-18",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Entity+List+China&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=industry-and-security-bureau"
+      },
+      {
+        "note": "Systematic check 2: BIS proposed rules since 2025-01-20: count 0; reginfo.gov agency listing could not be browsed (script-driven). checked 2026-10-18",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=industry-and-security-bureau"
+      },
+      {
+        "note": "Systematic check 3: One WebSearch on bills penalizing specific Chinese companies for IP theft returned S. 330 (Combatting China's Pilfering of Intellectual Property Act), H.R. 694, H.R. 1122, S. 672 by title; BILLSTATUS not opened, so passage status not confirmed. checked 2026-10-18",
+        "result": "partial",
+        "url": "https://www.congress.gov/bill/119th-congress/senate-bill/330"
+      },
+      {
+        "note": "Systematic check 4: USTR and Treasury newsrooms (to October 2026) show no firm-specific China unfair-trade action; USTR firm-level items concern Mexico labor matters. BIS newsroom shows enforcement settlements. checked 2026-10-18",
+        "result": "supports",
+        "url": "https://ustr.gov/about-us/policy-offices/press-office/press-releases"
+      },
+      {
+        "note": "Systematic check 5: One WebSearch on Commerce Entity List and Chinese IP theft 2026: results mostly 2018-2020 and 2025 items; one 2026-06-18 report on Chinese firms awaiting Entity List action, a pending national security matter, not an action. checked 2026-10-18",
+        "result": "partial",
+        "url": "https://www.malaymail.com/news/world/2026/06/18/deepseek-cxmt-among-chinese-firms-awaiting-us-entity-list-action-as-washington-weighs-trade-risks/224127"
+      },
+      {
+        "note": "Reviewer re-check, 2026-10-18: bill status read: introduced 2025-01-30, referred to Senate Foreign Relations, one cosponsor added 2025-06-12, hearings listed for the Senate Small Business Committee on 2025-07-23; identical House bill H.R. 6447 referred 2025-12-04.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s330.xml"
+      },
+      {
+        "note": "Reviewer re-check, 2026-10-18: introduced text read: section 2 requires IEEPA blocking and visa bars for PRC persons operating in a sector where they engaged in or received the fruits of a pattern of significant IP theft, with a report naming them within 180 days; firm-level targeting, introduced only.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s330is/xml/BILLS-119s330is.xml"
+      },
+      {
+        "note": "Reviewer re-check, 2026-10-18: BIS, Entity List China, since 2025-01-20: count 15; listings rest on national security or foreign policy grounds and none cites intellectual property theft or unfair trade practices; confirms the researcher's result.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Entity+List+China&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=industry-and-security-bureau"
       }
     ]
   },
@@ -147,11 +192,25 @@
       "publisher": "Federal Register",
       "title": "One Year Suspension of Expansion of End-User Controls for Affiliates of Certain Listed Entities",
       "url": "https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities"
+    },
+    {
+      "date": "2025-01-30",
+      "kind": "primary",
+      "publisher": "U.S. Government Publishing Office",
+      "title": "S. 330, Combatting China's Pilfering of Intellectual Property Act (introduced text)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s330is/xml/BILLS-119s330is.xml"
     }
   ],
   "stage": "diverged",
   "status_summary": "The administration's main China trade tools have been the broad measures the essay argues against: Executive Order 14257 (signed 2025-04-02) set a baseline duty on all trading partners with country-specific rates, and later Section 232 and Section 301 actions apply to whole sectors or economies (see c26-02 and c26-04). Firm-level action has continued through export controls framed around national security rather than unfair trade practices: a BIS rule effective 2025-03-25 (90 FR 14046) added 11 Chinese entities and one in Taiwan to the Entity List for supporting military modernization through AI, chips and supercomputers, without citing intellectual property theft. A BIS interim final rule effective 2025-09-29 (90 FR 47201) extended Entity List restrictions to affiliates at least 50 percent owned by listed parties, and BIS suspended it on 2025-11-12 until 2026-11-09.",
   "timeline": [
+    {
+      "date": "2025-01-30",
+      "event": "S. 330, the Combatting China's Pilfering of Intellectual Property Act, was introduced in the Senate and referred to the Foreign Relations Committee; it would require sanctions, including asset blocking and visa bars, on Chinese persons found to have engaged in a pattern of significant theft of U.S. intellectual property.",
+      "kind": "primary",
+      "source": "U.S. Government Publishing Office",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s330is/xml/BILLS-119s330is.xml"
+    },
     {
       "date": "2025-03-25",
       "event": "BIS added 12 entities (11 in China, 1 in Taiwan) to the Entity List, effective this date.",
@@ -183,6 +242,6 @@
   ],
   "title": "Target individual Chinese firms for unfair practices instead of blanket sector tariffs",
   "tracked": true,
-  "uncertainties": "This is a judgment call: firm-level Entity List actions against Chinese companies continue, so a reader could stage the record in_progress with a partial match; it is staged diverged because the essay's central ask is to use firm targeting instead of blanket tariffs, and those listings cite national security rather than unfair trade practices. Only a few Entity List rules were read; others in 2025 and 2026 (including removals such as Arrow Electronics entries on 2026-08-21) were not reviewed. OFAC designations of Chinese firms were not searched. The affiliates rule suspension ends on 2026-11-09 unless extended. The first-term practice the essay cites was not checked.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "This is a judgment call: firm-level Entity List actions against Chinese companies continue, so a reader could stage the record in_progress with a partial match; it is staged diverged because the essay's central ask is to use firm targeting instead of blanket tariffs, and those listings cite national security rather than unfair trade practices. Only a few Entity List rules were read; others in 2025 and 2026 (including removals such as Arrow Electronics entries on 2026-08-21) were not reviewed. OFAC designations of Chinese firms were not searched. The affiliates rule suspension ends on 2026-11-09 unless extended. The first-term practice the essay cites was not checked. Checked systematically on 2026-10-18: Federal Register search of BIS Entity List documents, the BIS proposed-rule listing (zero; agenda listing not browsable), a congress.gov and GovInfo search, USTR, Treasury and BIS newsrooms, and one news search found no executive action targeting firms on grounds of intellectual property theft or unfair trade practices; Entity List actions found are national security listings, and USTR's December 2025 semiconductor action again targets a sector. One introduced bill points toward the recommendation: S. 330 (introduced 2025-01-30, referred to the Senate Foreign Relations Committee) would require the President to block the property of, and deny visas to, Chinese persons found to have engaged in or benefited from a pattern of significant theft of U.S. intellectual property; its bill status also lists a 2025-07-23 Senate Small Business Committee hearing. Diverged is kept because the operative policy remains the blanket measures the essay opposes; proposed 5 is the other defensible call if the bill is weighed as a step toward firm-level targeting.",
+  "updated_at": "2026-10-18"
 }

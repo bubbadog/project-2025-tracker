@@ -4,9 +4,9 @@
     "A CIA memo cited in reporting said transition timelines and processes needed work, and PDB infrastructure is CIA-owned."
   ],
   "chapter": "07",
-  "confidence": 58,
+  "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked and all three press sources fetched; the ODNI move is attributed to ODNI itself through AP and the Times, but the distribution restriction rests on anonymous sources and completion is unconfirmed.",
+  "confidence_reason": "Chapter text checked (pages 226 and 227). The ODNI organization chart of 2025-05-27 and the ODNI Mission Integration page were fetched on 2026-10-18 and place a PDB staff within ODNI, but the deciding events (the 2025-05-13 production move and the narrowed distribution) rest on AP, New York Times and anonymous-source CNN reporting, so confidence stays medium.",
   "durability": {
     "level": "medium",
     "why": "The location and distribution of the PDB are internal executive decisions that a later DNI or President could reverse."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift: the ODNI organization chart of 2025-05-27 (archive.dni.gov) and the ODNI Mission Integration page (odni.gov) were read and added as supporting sources; stage in_progress 40 kept and confidence moved from 58 to 62."
     }
   ],
   "id": "c07-16",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -56,30 +60,23 @@
   "research_agent": "N07a",
   "review": {
     "flags": [
-      "progress lowered from 55 to 40",
-      "distribution element rests on anonymous sources",
-      "completion of the move unconfirmed"
+      "In_progress 40 kept; proposed is defensible if the ODNI move is treated as announced only, since completion is unconfirmed."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 226 to 227 ask that the PDB serve the President with a much narrower distribution after a review of recipients by the National Security Advisor and DNI, that briefers from IC elements other than CIA be considered, and that all PDB staff and production be located at ODNI; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y8b",
+    "mandate_check": "confirmed",
+    "mandate_note": "Pages 226 and 227 ask that the PDB serve the President with narrower distribution after a transition review of recipients by the National Security Advisor and DNI, that a primary briefer or rotation from IC elements other than CIA be considered, and that all PDB staff and production sit at ODNI. The proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "CNN via KTVZ, 2025-04-10; anonymous sources; DNI decides recipients since February; DNI spokesperson comment.",
-        "result": "supports",
-        "url": "https://ktvz.com/politics/cnn-us-politics/2025/04/10/trump-administration-has-tightly-restricted-access-to-presidents-daily-intelligence-brief/"
+        "note": "Lists an Assistant Director, Presidents Daily Brief Staff, as of 2025-05-27; reporting line not legible.",
+        "result": "partial",
+        "url": "https://archive.dni.gov/files/ODNI/documents/ODNI-Org-Chart-2025-05-27.pdf"
       },
       {
-        "note": "NYT via Hawaii Tribune-Herald, 2025-05-15; decision and internal announcement Tuesday 2025-05-13 (now stated in the source, not inferred); CIA memo on transition; no non-CIA briefers.",
-        "result": "supports",
-        "url": "https://www.hawaiitribune-herald.com/?p=343191"
-      },
-      {
-        "note": "AP via WKMG, 2025-05-14; ODNI email describes moving NIC and PDB staff to ODNI buildings.",
-        "result": "supports",
-        "url": "https://www.clickorlando.com/news/politics/2025/05/14/gabbard-fires-2-top-intelligence-officials-and-will-shift-office-that-preps-trumps-daily-brief/"
+        "note": "Mission Integration produces and delivers the PDB with all-IC input; the DNI selects content; metadata 2026-09-15; no mention of the 2025 move.",
+        "result": "partial",
+        "url": "https://www.odni.gov/about/mission-centers-directorates/mission-integration/"
       }
     ]
   },
@@ -117,6 +114,20 @@
       "publisher": "Associated Press (via WKMG)",
       "title": "Gabbard fires 2 top intelligence officials and will shift office that preps Trump's daily brief",
       "url": "https://www.clickorlando.com/news/politics/2025/05/14/gabbard-fires-2-top-intelligence-officials-and-will-shift-office-that-preps-trumps-daily-brief/"
+    },
+    {
+      "date": "2025-05-27",
+      "kind": "primary",
+      "publisher": "Office of the Director of National Intelligence",
+      "title": "ODNI organization chart as of 27 May 2025",
+      "url": "https://archive.dni.gov/files/ODNI/documents/ODNI-Org-Chart-2025-05-27.pdf"
+    },
+    {
+      "date": "2026-09-15",
+      "kind": "primary",
+      "publisher": "Office of the Director of National Intelligence",
+      "title": "Mission Integration",
+      "url": "https://www.odni.gov/about/mission-centers-directorates/mission-integration/"
     }
   ],
   "stage": "in_progress",
@@ -146,6 +157,6 @@
   ],
   "title": "Narrow the PDB distribution and put all PDB staff and production at ODNI",
   "tracked": true,
-  "uncertainties": "All sources are press accounts; the relocation is attributed to ODNI itself (an ODNI email reported by AP and an on-record ODNI official quoted by the Times), while the distribution restriction rests on anonymous sources. No ODNI public statement was found and the ODNI 2.0 fact sheet does not mention the PDB. A search for completion of the move or for a non-CIA briefer found nothing newer than May 2025, and DNI Gabbard, who made the decisions, left office in June 2026 (per c07-01). The stage reflects two of the three elements (narrower distribution and the ODNI move) as announced or reported, neither confirmed complete, and none of the third; 55 was lowered to 40 for that reason.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "The 2025 changes rest on press accounts; the relocation is attributed to ODNI itself (an ODNI email reported by AP and an on-record ODNI official quoted by the Times), while the distribution restriction rests on anonymous sources. No ODNI public statement was found and the ODNI 2.0 fact sheet does not mention the PDB. A search for completion of the move or for a non-CIA briefer found nothing newer than May 2025, and DNI Gabbard, who made the decisions, left office in June 2026 (per c07-01). The stage reflects two of the three elements (narrower distribution and the ODNI move) as announced or reported, neither confirmed complete, and none of the third; 55 was lowered to 40 for that reason. Two ODNI pages were read on 2026-10-18: the organization chart as of 2025-05-27 lists an Assistant Director, President's Daily Brief Staff, as an ODNI position (its reporting line is not legible in the text extraction), and the Mission Integration page (metadata date 2026-09-15) says that directorate produces and delivers the PDB with input from all IC elements and that the DNI selects its content. Neither shows the physical move completed, the recipient list or the briefers' home agencies, and ODNI described itself as the PDB producer before 2025, so these pages do not by themselves show a change.",
+  "updated_at": "2026-10-18"
 }

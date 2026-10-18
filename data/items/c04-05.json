@@ -7,7 +7,7 @@
   "chapter": "04",
   "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "The Mandate text and CBO testimony on the battleship plan and fleet shortfall were read; fleet counts rest on a CRS mirror and the USNI excerpt of the Navy plan, checked in an earlier review. The absence of a General Board or Rapid Capabilities Office rests on partial texts, and munitions production was not researched.",
+  "confidence_reason": "The Mandate text (pages 111 to 112) was checked. The deciding document, the Navy's FY2027 shipbuilding plan, was read only in part: the Navy press release in full on paemaritime.navy.mil and the plan introduction through the USNI News reprint, since the plan PDF host refuses fetches. Funding rests on CRS IN12580 and the govinfo.gov table of contents of P.L. 119-21, a partly primary route; battleship details rest on CBO testimony and trade press.",
   "durability": {
     "level": "medium",
     "why": "The 355-ship requirement is in statute, but the Golden Fleet concept, ship cancellations and the unmanned-vessel marketplace are executive and budget choices that Congress or a later administration could change."
@@ -23,7 +23,7 @@
     },
     {
       "date": "2026-10-08",
-      "note": "Primary-source check: the deciding document was located and read, and an independent reviewer re-rated the record (confidence 62 to 64). The battleship quantity (15 to 25) and fleet shortfall, previously on Breaking Defense and a CRS mirror, are now also backed by CBO testimony at cbo.gov/publication/62375; the 291-ship count rests on the USNI excerpt and an unopened Navy document copy, and the Golden Fleet announcem"
+      "note": "Primary-source check: the deciding document was located and read, and an independent reviewer re-rated the record (confidence 62 to 64). The battleship quantity (15 to 25) and fleet shortfall, previously on Breaking Defense and a CRS mirror, are now also backed by CBO testimony at cbo.gov/publication/62375; the 291-ship count rests on the USNI excerpt and an unopened Navy document copy, and the Golden Fleet announcem (the rest of this note was cut short when written)."
     },
     {
       "date": "2026-10-14",
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-17",
+      "note": "Primary-source lift: the Navy press release for the Fiscal Year 2027 Shipbuilding Plan was read on paemaritime.navy.mil and the plan excerpt through USNI News (the plan PDF host refuses fetches), funding was added from the P.L. 119-21 table of contents on govinfo.gov and CRS, confidence stays at 64, and the stage stays in_progress at 25."
     }
   ],
   "id": "c04-05",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-17",
   "layer": 1,
   "match": "parallel",
   "mechanism": "mixed",
@@ -60,24 +64,46 @@
   "requires_congress": "yes",
   "research_agent": "A03",
   "review": {
+    "document_reread": {
+      "citation": "Department of the Navy, Fiscal Year 2027 Shipbuilding Plan (press release dated 2026-05-10; plan excerpt reprinted by USNI News 2026-05-11)",
+      "note": "Press release read in full on paemaritime.navy.mil: FY2027 plan, 65.8 billion dollar shipbuilding request, 30-year Golden Fleet plan, force structure adjustments, no ship counts. The plan PDF (Department of Defense media host) was not reachable; the USNI reprint of the introduction gives 291 battle force ships against 355 required by law and the 10 to 50 percent distributed-shipbuilding goal. The unread plan body could hold ship-buy tables but cannot by itself raise the fleet count, so the stage is not at risk; confidence stays medium.",
+      "result": "partial",
+      "url": "https://www.paemaritime.navy.mil/press-release/department-of-the-navy-releases-fiscal-year-2027-shipbuilding-plan"
+    },
     "flags": [
+      "Plan PDF unreachable; counts via USNI reprint",
       "General Board and Rapid Capabilities Office absence based on partial texts",
       "munitions production not researched",
-      "Golden Fleet announcement has no primary document",
-      "battleship cost estimate not located on cbo.gov"
+      "Golden Fleet announcement has no primary document"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Printed page 111 lists a fleet of more than 355 ships, unmanned systems to augment crewed forces, range and lethality as key procurement factors, a re-established General Board with final requirements authority and a Navy Rapid Capabilities Office; page 112 calls for producing key munitions at the maximum rate.",
+    "mandate_check": "ok",
+    "mandate_note": "Printed page 111 asks for a fleet of more than 355 ships, unmanned systems to augment crewed forces, range and lethality as the key procurement factors, a re-established General Board with final authority over ship requirements, and a Navy Rapid Capabilities Office with a board of directors; page 112 asks for key munitions at the maximum rate. The proposal paraphrases these accurately.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y2",
+    "reviewed_at": "2026-10-17",
+    "reviewer": "P17-C",
     "source_checks": [
       {
-        "note": "CBO testimony of 2026-04-22 (Eric Labs) says the Navy plans 15 to 25 battleships of 35,000 tons or more in place of 28 planned DDG(X) destroyers and that the fleet is smaller by an average of 20 ships in 2026 to 2030 than historical build times would have produced; it gives no current fleet count, no battleship cost and does not mention a General Board or Rapid Capabilities Office.",
+        "note": "Reprint of the plan introduction only: 291 battle force ships, 355 required by law, unmanned systems from seabed to space, distributed shipbuilding 10 percent to 50 percent goal; no General Board, Rapid Capabilities Office, munitions or battleship numbers.",
         "result": "supports",
-        "url": "https://www.cbo.gov/publication/62375"
+        "url": "https://news.usni.org/2026/05/11/u-s-navys-2026-shipbuilding-plan"
+      },
+      {
+        "note": "CRS IN12580 (2025-07-24) lists P.L. 119-21 Sec. 20002 shipbuilding at 29,176 million dollars enacted; no program breakdown.",
+        "result": "supports",
+        "url": "https://www.everycrsreport.com/files/2025-07-24_IN12580_4e64292443ec5f76ebb345d35f4970da6a16521b.html"
+      },
+      {
+        "note": "Table of contents confirms Sec. 20002 title and the 2025-07-04 approval note; the page text ends inside Title I, so Title II text was not read.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+      },
+      {
+        "note": "Table of contents confirms titles of Secs. 122, 130, 1011 and 1020 and the 2025-12-18 approval note; section text not reached.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
       }
-    ]
+    ],
+    "stage_change_reason": "in_progress (25-60) kept: funding (P.L. 119-21 Sec. 20002) and unmanned-vessel programs are formally underway and partly operative, but the fleet count (291) shows no growth toward 355 and no General Board or Rapid Capabilities Office was found; progress 25 kept at the bottom of the band."
   },
   "significance": {
     "B": 2,
@@ -154,10 +180,38 @@
       "publisher": "The White House",
       "title": "Restoring America's Maritime Dominance (Executive Order 14269)",
       "url": "https://www.whitehouse.gov/presidential-actions/2025/04/restoring-americas-maritime-dominance/"
+    },
+    {
+      "date": "2026-05-10",
+      "kind": "primary",
+      "publisher": "Department of the Navy",
+      "title": "Department of the Navy Releases Fiscal Year 2027 Shipbuilding Plan (press release)",
+      "url": "https://www.paemaritime.navy.mil/press-release/department-of-the-navy-releases-fiscal-year-2027-shipbuilding-plan"
+    },
+    {
+      "date": "2025-07-04",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Public Law 119-21, reconciliation act (Sec. 20002, Enhancement of Department of Defense resources for shipbuilding), table of contents",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Public Law 119-60, National Defense Authorization Act for Fiscal Year 2026 (Secs. 122, 130, 1011, 1020), table of contents",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
+    },
+    {
+      "date": "2025-07-24",
+      "kind": "primary",
+      "publisher": "Congressional Research Service",
+      "title": "Defense Funding in the 2025 Reconciliation Law (CRS IN12580)",
+      "url": "https://www.everycrsreport.com/files/2025-07-24_IN12580_4e64292443ec5f76ebb345d35f4970da6a16521b.html"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The fleet has not grown toward 355: CRS counted 293 battle force ships on 2025-10-01 and the Navy's 2026 shipbuilding plan (published 2026-05-11) puts it at 291, while describing 355 as the legal requirement. On 2025-12-22 the President announced a Golden Fleet concept with a Trump-class battleship and a new frigate; Breaking Defense reported that the Constellation frigate order was cut from 20 ships to two, and CRS listed planned numbers of 15 to 25 battleships and 50 to 65 frigates in January 2026. CBO estimated the lead battleship at roughly 14.3 to 20.6 billion dollars (per Breaking Defense), and CBO's testimony of 2026-04-22 says the Navy plans 15 to 25 battleships to replace 28 planned DDG(X) destroyers and estimates the fleet will average about 20 ships fewer in 2026 to 2030 than historical build speeds would have produced. The FY2026 request covers 19 new ships, 16 funded through the 2025 reconciliation act. On unmanned systems, the Navy replaced one program with a medium unmanned surface vessel marketplace in March 2026, its 2026 plan calls for unmanned systems integrated with the crewed force, and it opened a robotics and autonomous systems development center on 2026-09-24. No re-created General Board or Navy Rapid Capabilities Office was found in the plan excerpt, the CRS report or news coverage reviewed, and munitions production rates were not verified.",
+  "status_summary": "The fleet has not grown toward 355: CRS counted 293 battle force ships on 2025-10-01, and the Navy's Fiscal Year 2027 shipbuilding plan (released 2026-05-10; excerpt reprinted by USNI News) puts it at 291 against 355 required by law, a goal CRS traces to the FY2018 NDAA. The release pairs the plan with a 65.8 billion dollar FY2027 shipbuilding request and a 30-year Golden Fleet investment plan. The July 2025 reconciliation law (P.L. 119-21, Sec. 20002) provides 29,176 million dollars for shipbuilding per CRS, and the FY2026 NDAA (P.L. 119-60) carries sections on medium and large unmanned surface vessels, Modular Attack Surface Craft, amphibious force structure and unmanned vessel technical authority (titles only read). On 2025-12-22 the President announced a Golden Fleet concept with a Trump-class battleship and a new frigate; Breaking Defense reported that the Constellation frigate order was cut from 20 ships to two, and CRS listed planned numbers of 15 to 25 battleships and 50 to 65 frigates in January 2026. CBO estimated the lead battleship at roughly 14.3 to 20.6 billion dollars (per Breaking Defense), and CBO's testimony of 2026-04-22 says the Navy plans 15 to 25 battleships to replace 28 planned DDG(X) destroyers and estimates the fleet will average about 20 ships fewer in 2026 to 2030 than historical build speeds would have produced. The FY2026 request covers 19 new ships, 16 funded through the 2025 reconciliation act. On unmanned systems, the Navy replaced one program with a medium unmanned surface vessel marketplace in March 2026, its plan describes unmanned systems integrated with the crewed force, and it opened a robotics and autonomous systems development center on 2026-09-24. No re-created General Board or Navy Rapid Capabilities Office was found in the plan excerpt, the CRS report or news coverage reviewed, and munitions production rates were not verified.",
   "timeline": [
     {
       "date": "2025-04-09",
@@ -165,6 +219,20 @@
       "kind": "primary",
       "source": "White House",
       "url": "https://www.whitehouse.gov/presidential-actions/2025/04/restoring-americas-maritime-dominance/"
+    },
+    {
+      "date": "2025-07-04",
+      "event": "P.L. 119-21 is enacted; its Sec. 20002 is titled Enhancement of Department of Defense resources for shipbuilding, and CRS lists 29,176 million dollars enacted for the section (section text not read).",
+      "kind": "primary",
+      "source": "GovInfo (Public Law 119-21); CRS IN12580",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+    },
+    {
+      "date": "2025-12-18",
+      "event": "The FY2026 NDAA becomes law as P.L. 119-60; its table of contents lists Sec. 122 (modification to limitations on Navy medium and large unmanned surface vessels), Sec. 130 (limitation on construction of Modular Attack Surface Craft), Sec. 1011 (requirements for amphibious warfare ship force structure) and Sec. 1020 (exemption of unmanned surface vessels and unmanned underwater vehicles from certain technical authority requirements); section text not read.",
+      "kind": "primary",
+      "source": "GovInfo (Public Law 119-60)",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
     },
     {
       "date": "2025-12-22",
@@ -202,11 +270,11 @@
       "url": "https://www.cbo.gov/publication/62375"
     },
     {
-      "date": "2026-05-11",
-      "event": "The Navy's 2026 shipbuilding plan (published 2026-05-11; the USNI News excerpt and a DocumentCloud copy of the Navy document) reports 291 battle force ships, calls 355 the legal requirement, and describes unmanned systems integrated with the crewed force and a goal of moving shipbuilding work at distributed sites from about 10 percent to about 50 percent. The DocumentCloud copy could not be opened, so ship-buy tables, any General Board or Rapid Capabilities Office, and munitions were not checked.",
-      "kind": "news",
-      "source": "USNI News",
-      "url": "https://news.usni.org/2026/05/11/u-s-navys-2026-shipbuilding-plan"
+      "date": "2026-05-10",
+      "event": "The Department of the Navy releases its Fiscal Year 2027 Shipbuilding Plan with a 30-year investment plan for the Golden Fleet and a 65.8 billion dollar FY2027 shipbuilding request. The plan excerpt reprinted by USNI News on 2026-05-11 reports 291 battle force ships against 355 required by law, unmanned systems integrated with the crewed force, and a goal of raising the share of shipbuilding work at distributed sites from about 10 percent to 50 percent; the full plan was not read.",
+      "kind": "primary",
+      "source": "Department of the Navy (press release); USNI News (plan excerpt)",
+      "url": "https://www.paemaritime.navy.mil/press-release/department-of-the-navy-releases-fiscal-year-2027-shipbuilding-plan"
     },
     {
       "date": "2026-09-24",
@@ -218,6 +286,6 @@
   ],
   "title": "Build a Navy of more than 355 ships and field unmanned systems",
   "tracked": true,
-  "uncertainties": "The USNI page showed only the plan's introduction and the CRS report text was read through its first 100,000 characters, so the plan's ship-buy numbers, any General Board or Rapid Capabilities Office, and munitions production were not found; absence in these sources is not confirmed absence. The fleet counts (293 on 2025-10-01, 291 in the May 2026 plan) come from different sources and dates. No primary Navy or White House document for the Golden Fleet announcement was found; details come from Breaking Defense and CRS. Munitions and amphibious-ship items on the same Mandate pages were not researched. The Mandate's 355 figure matches the statutory requirement the Navy cites, but the CRS report describes an older 381-ship goal that the Golden Fleet goal is to replace. Month-only events use first-of-month dates. CBO's testimony of 2026-04-22 was read in full on cbo.gov; it confirms the battleship plan and fleet-size shortfall but gives no battleship cost, so the 14.3 to 20.6 billion dollar figure remains from Breaking Defense's report of a separate CBO estimate (not located on cbo.gov). The CRS report on congress.gov blocks automated fetches, so the CRS figures rest on a mirror (everycrsreport.com). The DocumentCloud copy of the Navy plan returned HTTP 403. No White House or Department of War document for the December 2025 Golden Fleet announcement was found.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The USNI page reproduces only the plan's introduction and the CRS report text was read through its first 100,000 characters, so the plan's ship-buy numbers, any General Board or Rapid Capabilities Office, and munitions production were not found; absence in these sources is not confirmed absence. The fleet counts (293 on 2025-10-01, 291 in the May 2026 plan) come from different sources and dates. No primary Navy or White House document for the Golden Fleet announcement was found; details come from Breaking Defense and CRS. Munitions and amphibious-ship items on the same Mandate pages were not researched. The Mandate's 355 figure matches the statutory requirement the Navy cites, but the CRS report describes an older 381-ship goal that the Golden Fleet goal is to replace. Month-only events use first-of-month dates. CBO's testimony of 2026-04-22 was read in full on cbo.gov; it confirms the battleship plan and fleet-size shortfall but gives no battleship cost, so the 14.3 to 20.6 billion dollar figure remains from Breaking Defense's report of a separate CBO estimate (not located on cbo.gov). The CRS report on congress.gov blocks automated fetches, so the CRS figures rest on a mirror (everycrsreport.com). The DocumentCloud copy of the Navy plan returned HTTP 403. No White House or Department of War document for the December 2025 Golden Fleet announcement was found. The plan PDF is on a Department of Defense media host that refuses automated fetches, so the plan was read only through the Navy press release (no ship counts) and the USNI excerpt; the official title is the Fiscal Year 2027 Shipbuilding Plan. A trade article reports a 355-ship crewed target by FY2040, 122 ships (63 uncrewed) and 15 battleships over 30 years; none of these was verified against the plan and none is used for the stage. The body text of P.L. 119-21 Sec. 20002 and of the shipbuilding sections of P.L. 119-60 lies beyond the point where the govinfo.gov pages end, so section titles come from the tables of contents and the Sec. 20002 amount from CRS.",
+  "updated_at": "2026-10-17"
 }
