@@ -483,7 +483,7 @@ function renderSummary(){
   function share(v){ return n?Math.round(v/n*100):0; }
   top.appendChild(h('div',{class:'hero'},h('div',{class:'hero-n',text:share(op)+'%'}),
     h('div',{class:'hero-t'},h('b',{text:'of '+n+' tracked objectives are now in effect'}),
-      h('span',{text:op+' are implemented or completed. The count covers every recommendation tracked so far. Chapters are still being read in full, so it will grow.'}),
+      h('span',{text:op+' are implemented or completed. '+((S.meta&&S.meta.deepen_done)?'The count covers every concrete, checkable recommendation found in a full reading of all 30 chapters; it changes as evidence changes.':'The count covers every recommendation tracked so far. Chapters are still being read in full, so it will grow.')}),
       (function(){ var sh=sigShares(); if(sh.weighted==null) return null;
         var d=h('div',{class:'wline'}), bd=(S.meta&&S.meta.significance&&S.meta.significance.band_5_95); d.appendChild(document.createTextNode('Weighted by significance: ')); d.appendChild(h('b',{text:Math.round(sh.weighted)+'%'})); d.appendChild(document.createTextNode((Array.isArray(bd)&&bd.length===2&&isFinite(+bd[0])&&isFinite(+bd[1]))?' (range '+(+bd[0]).toFixed(1)+' to '+(+bd[1]).toFixed(1)+'). ':'. '));
         d.appendChild(h('button',{class:'linkbtn',type:'button',text:'How the weights work',onclick:function(){goMethod('sig-method');}})); return d; })())));
