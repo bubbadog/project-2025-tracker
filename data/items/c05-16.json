@@ -4,9 +4,9 @@
     "Plaintiff-specific injunction in the Fourth Circuit case; further religious-liberty challenges."
   ],
   "chapter": "05",
-  "confidence": 72,
+  "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: implemented (65 to 90) because the rescission is operative nationally and limited only for named plaintiffs by an affirmed preliminary injunction; progress 85 kept, short of 90 because the rescission is a departmental memorandum rather than the executive order the page 152 item names and is reversible. Chapter text checked; the appellate opinion and docket tracker were read in earlier review, and the stage-deciding memorandum was read only through the browser retrieval (partly primary).",
+  "confidence_reason": "Rule applied: implemented (65 to 90) because the rescission is operative nationally and limited only for named plaintiffs by an affirmed preliminary injunction; progress 85 kept, short of 90 because the rescission is a departmental memorandum rather than the executive order the page 152 item names and is reversible. The stage-deciding DHS memorandum was opened by the fetch tool (by the researcher and confirmed by the reviewer) only on a third-party copy hosted by nafsa.org, while the official dhs.gov copy remains unopened, so confidence stays at or below 79; the ICE follow-on memorandum was opened on ice.gov. Court events rest on sources read in earlier reviews and not re-opened in this check. Confidence 72 to 76.",
   "court_status": {
     "basis": "Derived from the latest court event: the Fourth Circuit affirmed a preliminary injunction that bars enforcement under the new policy at the plaintiffs' houses of worship only; the rescission otherwise remains in effect, and the D.C. Circuit appeal is pending.",
     "date": "2026-08-18",
@@ -46,10 +46,14 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to c05-28 (layer 3 enumeration, chapters 00, 04, 05, 28 and 30)."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "DHS memorandum of 2025-01-20 re-read from an opened copy hosted by nafsa.org (the dhs.gov copy returned an error); the dhs.gov URL stays the primary citation and the nafsa.org copy was added as a source. The ICE memorandum of 2025-01-31 was opened on ice.gov and added as a source and timeline event. Match stays direct; stage implemented and progress 85 unchanged; confidence 72 to 76."
     }
   ],
   "id": "c05-16",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -66,7 +70,7 @@
     "c05-28"
   ],
   "remaining": [
-    "Any ICE-level memoranda that still describe sensitive locations were not enumerated.",
+    "Older ICE-level sensitive-location memoranda (as distinct from the DHS memorandum of 2021 and the ICE memorandum of 2025-01-31) were not enumerated.",
     "Outcome of the D.C. Circuit appeal and of the merits proceedings in the Quaker case."
   ],
   "requires_congress": "no",
@@ -80,7 +84,7 @@
     "mandate_check": "verified",
     "mandate_note": "Printed page 142 says all ICE memoranda identifying sensitive zones should be rescinded and officers in the field trusted to use judgment; page 152 item 4 lists rescinding all memoranda limiting immigration enforcement, including those on sensitive zones. The proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
+    "reviewed_at": "2026-10-19",
     "reviewer": "Y9",
     "source_checks": [
       {
@@ -102,6 +106,21 @@
         "note": "Fetch error on one attempt by this reviewer (no HTTP 429); content was read through a browser retrieval supplied to the project: dated 2025-01-20, signed by the Acting Secretary, rescinds the 2021-10-27 protected areas memorandum and leaves officers to use discretion.",
         "result": "unreachable",
         "url": "https://www.dhs.gov/sites/default/files/2025-03/25_0120_S1_enforcement-actions-in-near-protected-areas.pdf"
+      },
+      {
+        "note": "Client error through the fetch tool; the memorandum text was read on a copy hosted elsewhere.",
+        "result": "unreachable",
+        "url": "https://www.dhs.gov/sites/default/files/2025-03/25_0120_S1_enforcement-actions-in-near-protected-areas.pdf"
+      },
+      {
+        "note": "Opened. Rescinds the 2021 memorandum effective immediately and leaves discretion to officers; supports implemented. Re-opened by the reviewer on 2026-10-19: date, Acting Secretary signature, rescission of the 2021-10-27 memorandum effective immediately, no bright-line rules, optional further guidance and the no-rights paragraph confirmed.",
+        "result": "supports",
+        "url": "https://nafsa.org/sites/default/files/media/document/BenjamineHuffmanProtectedAreasMemo_20250120.pdf"
+      },
+      {
+        "note": "Opened. ICE-level memorandum applying the rescission and setting case-by-case discretion; supports implemented, with the caveat that it defines protected areas rather than abolishing the concept. Re-opened by the reviewer on 2026-10-19: dated 2025-01-31, issued by the Acting Director; protected areas listed in a footnote; case-by-case decisions by assistant field office directors and assistant special agents in charge; counsel consultation required for public demonstration sites.",
+        "result": "supports",
+        "url": "https://ice.gov/doclib/foia/policy/CommonSenseEnforcementActInNearProtectedAreas.pdf"
       }
     ]
   },
@@ -146,10 +165,24 @@
       "publisher": "Civil Rights Litigation Clearinghouse",
       "title": "Mennonite Church USA v. DHS (case page)",
       "url": "https://clearinghouse.net/case/46097/"
+    },
+    {
+      "date": "2025-01-20",
+      "kind": "primary",
+      "publisher": "U.S. Department of Homeland Security",
+      "title": "Enforcement Actions in or Near Protected Areas (DHS memorandum, 2025-01-20) (copy hosted by nafsa.org)",
+      "url": "https://nafsa.org/sites/default/files/media/document/BenjamineHuffmanProtectedAreasMemo_20250120.pdf"
+    },
+    {
+      "date": "2025-01-31",
+      "kind": "primary",
+      "publisher": "U.S. Immigration and Customs Enforcement",
+      "title": "Common Sense Enforcement Actions in or Near Protected Areas (ICE memorandum, 2025-01-31)",
+      "url": "https://ice.gov/doclib/foia/policy/CommonSenseEnforcementActInNearProtectedAreas.pdf"
     }
   ],
   "stage": "implemented",
-  "status_summary": "A DHS memorandum dated 2025-01-20 and signed by the Acting Secretary rescinded the 2021-10-27 guidelines on enforcement actions in or near protected areas such as houses of worship, schools and hospitals, and called for officer discretion in place of fixed rules. Courts have since limited the policy only for particular plaintiffs: on 2026-08-18 the Fourth Circuit affirmed a preliminary injunction covering several Quaker meetings, Sikh Temple Sacramento and Cooperative Baptist Fellowship congregations (Philadelphia Yearly Meeting v. DHS, No. 25-1512), while the District of Columbia court denied a similar request from Mennonite Church USA and other religious groups on 2025-04-11 for lack of standing, with an appeal pending (D.C. Cir. No. 25-5209). The Maryland district court had declined to extend the Quaker injunction nationwide, so the rescission is operative in general.",
+  "status_summary": "A DHS memorandum dated 2025-01-20 and signed by the Acting Secretary rescinded the 2021-10-27 guidelines on enforcement actions in or near protected areas such as houses of worship, schools and hospitals, effective immediately, and called for officer discretion in place of fixed rules. An ICE memorandum dated 2025-01-31 followed; it notes the rescission, sets no fixed rules and assigns case-by-case decisions on enforcement in or near protected areas to field supervisors. Courts have since limited the policy only for particular plaintiffs: on 2026-08-18 the Fourth Circuit affirmed a preliminary injunction covering several Quaker meetings, Sikh Temple Sacramento and Cooperative Baptist Fellowship congregations (Philadelphia Yearly Meeting v. DHS, No. 25-1512), while the District of Columbia court denied a similar request from Mennonite Church USA and other religious groups on 2025-04-11 for lack of standing, with an appeal pending (D.C. Cir. No. 25-5209). The Maryland district court had declined to extend the Quaker injunction nationwide, so the rescission is operative in general.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -157,6 +190,13 @@
       "kind": "primary",
       "source": "U.S. Department of Homeland Security",
       "url": "https://www.dhs.gov/sites/default/files/2025-03/25_0120_S1_enforcement-actions-in-near-protected-areas.pdf"
+    },
+    {
+      "date": "2025-01-31",
+      "event": "The Acting ICE Director issued a memorandum noting that the DHS memorandum of 2025-01-20 rescinded the 2021 protected areas guidelines; it treats schools, hospitals, places of worship and sites of public demonstrations as protected areas, leaves case-by-case decisions on enforcement there to assistant field office directors and assistant special agents in charge, and requires consultation with agency counsel before enforcement at a site of a public demonstration.",
+      "kind": "primary",
+      "source": "U.S. Immigration and Customs Enforcement",
+      "url": "https://ice.gov/doclib/foia/policy/CommonSenseEnforcementActInNearProtectedAreas.pdf"
     },
     {
       "date": "2025-04-11",
@@ -175,6 +215,6 @@
   ],
   "title": "Rescind ICE memoranda that designate sensitive zones where enforcement is limited",
   "tracked": true,
-  "uncertainties": "The DHS memorandum was read through a browser retrieval supplied to the project; it was not opened by the research tools or by the independent reviewer (fetch error, no HTTP 429). It is dated 2025-01-20, signed by the Acting Secretary, and rescinds the 2021-10-27 memorandum on protected areas. It names the 2021 DHS memorandum rather than earlier ICE memoranda, so the rescission reaches ICE sensitive-location guidance only indirectly (inference), and it invites further guidance from the ICE Director and CBP Commissioner. A later ICE memo of 2025-01-31 setting case-by-case review was seen only on a tracking site and is not cited. The February 2025 date of the district court injunction in the Quaker case is from the Jurist article and was not checked against the order. The D.C. Circuit appeal status comes from a docket summary updated 2026-07-15. Whether a single executive order rescinding all enforcement-limiting memoranda was issued was not checked; the rescission found is a departmental memorandum.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The DHS memorandum was re-read in the latest check from an opened copy hosted on nafsa.org (a scanned copy whose header lines render jumbled, so the sender and recipient lines were reconstructed from layout); the copy on dhs.gov returned a client error through the fetch tool, a copy on archive.org redirected to a storage host that could not be fetched, and a law-firm copy returned no text. The memorandum is dated 2025-01-20, is effective immediately, rescinds the 2021-10-27 DHS memorandum on protected areas, leaves officers to use discretion and common sense without bright-line rules, invites but does not require further guidance from the ICE Director and CBP Commissioner, and states that it creates no enforceable rights. It names the 2021 DHS memorandum rather than earlier ICE memoranda, so the rescission reaches older ICE sensitive-location guidance only indirectly (inference). An ICE memorandum dated 2025-01-31 was opened on ice.gov: it recites that the 2021 guidelines were replaced, sets no fixed rules, treats schools, hospitals, places of worship and sites of public demonstrations as protected areas for ICE purposes, assigns case-by-case decisions to assistant field office directors and assistant special agents in charge, and requires consultation with agency counsel before enforcement at a site of a public demonstration. Whether that ICE-level text counts as a rescission of all ICE sensitive-zone memoranda, as the Mandate asks, or as a replacement framework is a judgment that was not resolved; no other ICE memoranda were enumerated, and no CBP follow-on guidance was found. The February 2025 date of the district court injunction in the Quaker case is from the Jurist article and was not checked against the order. The D.C. Circuit appeal status comes from a docket summary updated 2026-07-15. The court sources were not re-opened in the latest check. Whether a single executive order rescinding all enforcement-limiting memoranda was issued was not checked; the rescission found is a departmental memorandum.",
+  "updated_at": "2026-10-19"
 }
