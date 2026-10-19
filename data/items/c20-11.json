@@ -5,9 +5,9 @@
     "Mixed wait-time results"
   ],
   "chapter": "20",
-  "confidence": 42,
+  "confidence": 52,
   "confidence_label": "low",
-  "confidence_reason": "Chapter text checked at pages 647 and 648; the stage rests on one fetched news article relaying VA claims, with no primary VA directive found.",
+  "confidence_reason": "Two VA releases read on news.va.gov in review support off-hours scheduling as operative; the remaining elements (productivity standard, formal pilot, MISSION Act compliance) rest on a news analysis and the absence of a directive after limited searches.",
   "durability": {
     "level": "medium",
     "why": "Scheduling and staffing practices are agency decisions that can change with leadership, though wait standards are set in statute."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: reread the Government Executive article and read two VA releases on news.va.gov reporting off-hours appointment counts; added both as sources and revised the summary. No stage change (in_progress 25); confidence 42 to 52."
     }
   ],
   "id": "c20-11",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -56,22 +60,34 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: proposed 10 is defensible because the only evidence is a spokesperson claim and no directive was found, but off-hours scheduling is described as operative, so in_progress 25 is kept.",
-      "Community care wording changed from referrals expanded to the administration having sought expansion, matching the article."
+      "No stage change: in_progress 25. proposed 10 remains defensible because no directive, pilot or productivity standard exists and extended-hours clinics predate the term.",
+      "The only timeline event (2026-04-16) is a set of spokesperson statements dated by a news article; it is kept but is weak as a government action, and the owner may prefer to drop it.",
+      "Added two VA releases as primary sources; their figures are not used as timeline events because they report results rather than actions.",
+      "Confidence 42 to 52 (still low)."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 647 and 648 list seven steps under the wait-time bullet, including the appointment-load assessment, the 19 patients per provider target, an extended-hours and Saturday pilot and the community care referral assessment. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y20e",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages (647 to 648) and proposal field, the text asks VHA to adopt a workflow to meet MISSION Act wait-time frames, including assessing appointment loads, raising patients seen per provider per day toward the Defense Department level of about 19, piloting extended weekday and Saturday hours, and examining community care referrals. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Dated 2026-04-16; VA claims of lower existing-patient waits and flexible off-hours scheduling, mixed new-patient data for 134 centers, net loss of 18,626 VHA employees, no productivity targets.",
+        "note": "Checked 2026-10-18: dated 2026-04-16; spokesperson claims on existing-patient waits; off-hours scheduling flexibility undated; 134-center analysis mixed; no productivity targets or named directive.",
         "result": "partial",
         "url": "https://www.govexec.com/management/2026/04/va-appointment-wait-time-reductions-new-data/412883/"
       },
       {
-        "note": "Dated 2024-05-24; Access Sprints offered night and weekend clinics before this term.",
+        "note": "Checked 2026-10-18: dated 2025-11-10; more than 1.4 million appointments outside normal hours since 2025-01-20; no productivity standard or wait-time figures. Supports off-hours element as operative, consistent with in_progress at the low end.",
+        "result": "partial",
+        "url": "https://news.va.gov/press-room/ahead-of-veterans-day-sec-collins-vows-to-keep-improving-va-services/"
+      },
+      {
+        "note": "Checked 2026-10-18: dated 2026-09-08; lists over 3.2 million off-hours appointments as a past accomplishment; the order it announces concerns records sharing and benefits, not wait-time workflow.",
+        "result": "partial",
+        "url": "https://news.va.gov/press-room/president-trumps-executive-order-means-faster-access-to-va-healthcare-benefits-than-ever-before/"
+      },
+      {
+        "note": "Read by the researcher 2026-10-18: 2024-05-24 Access Sprints with night and weekend clinics predate the term.",
         "result": "supports",
         "url": "https://news.va.gov/press-room/va-improves-access-to-care-reduces-wait-times-for-new-patient-appointments-in-primary-and-mental-health-care/"
       }
@@ -119,10 +135,24 @@
       "publisher": "VA News",
       "title": "VA improves access to care, reduces wait times for new patient appointments in primary and mental health care",
       "url": "https://news.va.gov/press-room/va-improves-access-to-care-reduces-wait-times-for-new-patient-appointments-in-primary-and-mental-health-care/"
+    },
+    {
+      "date": "2025-11-10",
+      "kind": "primary",
+      "publisher": "U.S. Department of Veterans Affairs (VA News)",
+      "title": "Ahead of Veterans Day, Sec. Collins vows to keep improving VA services",
+      "url": "https://news.va.gov/press-room/ahead-of-veterans-day-sec-collins-vows-to-keep-improving-va-services/"
+    },
+    {
+      "date": "2026-09-08",
+      "kind": "primary",
+      "publisher": "U.S. Department of Veterans Affairs (VA News)",
+      "title": "President Trump's executive order means faster access to VA healthcare, benefits than ever before",
+      "url": "https://news.va.gov/press-room/president-trumps-executive-order-means-faster-access-to-va-healthcare-benefits-than-ever-before/"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "In April 2026 VA spokespeople said average waits for existing patients were lower than in fiscal 2024 and that VA had allowed more flexible off-hours appointment scheduling, and the administration has sought to expand community care. An analysis of new-patient waits at 134 medical centers, reported in the same article from VA data supplied to an advocacy group, showed mixed results, and the article did not mention provider productivity targets. No order setting a patients-per-provider requirement was found.",
+  "status_summary": "A VA release of 2025-11-10 said VA had offered more than 1.4 million appointments outside normal operating hours, including early-morning, evening and weekend options, since 2025-01-20, and a VA release of 2026-09-08 put that figure above 3.2 million; neither describes a formal pilot or a productivity standard. In April 2026 VA spokespeople said average waits for existing patients were lower than in fiscal 2024, and the administration has sought to expand community care. An analysis of new-patient waits at 134 medical centers, reported on 2026-04-16 from VA data supplied to an outside group, showed about 42 percent of facility-specialty pairs worsening and 37 percent improving. No order setting a patients-per-provider requirement was found.",
   "timeline": [
     {
       "date": "2026-04-16",
@@ -134,6 +164,6 @@
   ],
   "title": "Bring VHA wait times into MISSION Act time frames through workflow changes",
   "tracked": true,
-  "uncertainties": "The wait-time statements are VA spokesperson claims relayed by a news outlet, and the underlying data in that article came from VA records supplied to an advocacy group; neither was independently verified, and the date of the statements is taken from the article. Extended-hours clinics predate this term (a VA News release of 2024-05-24 describes Access Sprints with night and weekend clinics), so they are not counted as new action. Searches covered VA productivity directives and found no patients-per-provider requirement; a directive could exist that was not public.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "VA releases of 2025-11-10 and 2026-09-08 were read on news.va.gov on 2026-10-18; their off-hours appointment counts are VA's own accomplishment figures, not a directive, and night and weekend clinics predate this term (a VA News release of 2024-05-24 describes Access Sprints), so the extended-hours element may be continuation rather than new action. The Government Executive article of 2026-04-16 was reread in review; its wait-time statements are spokesperson claims and its data came from VA records supplied to an outside group, neither independently verified, and the article does not date the off-hours scheduling change. The 2026-09-08 release describes an executive order on veterans' benefits and records sharing that does not address health care wait times; the order text on whitehouse.gov was not opened. One web search limited to VA hosts and one earlier web search found no VHA directive setting patients per provider per day; a nonpublic directive could exist. Whether facilities meet MISSION Act access standards overall was not verified.",
+  "updated_at": "2026-10-18"
 }

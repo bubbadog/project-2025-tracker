@@ -4,9 +4,9 @@
     "No commission bill or order found; the Fed runs its own reviews"
   ],
   "chapter": "24",
-  "confidence": 42,
-  "confidence_label": "low",
-  "confidence_reason": "The Fed task force release and S. 3476 text were read; absence of a commission rests on limited searches, so not_started is capped.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence of a commission rests on five documented checks: (1) Federal Register API queries (commission with Federal Reserve mission and alternatives, presidential documents, monetary commission) found none (supports); (2) Unified Agenda: the Federal Reserve rule list on reginfo.gov was read in full on 2026-10-19 with no related entry (supports, not informative in practice for a commission set up by Congress or the President); (3) congress.gov and GovInfo search with BILLSTATUS for H.R. 8957 found no commission bill (supports); (4) the Federal Reserve press release index shows only the internal task forces (supports); (5) one news search found the Treasury Secretary's call for a review, a statement (supports). Set at 66 because the agenda adds little and bill texts were not read in full.",
   "durability": {
     "level": "high",
     "why": "Nothing operative exists to be reversed."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review reran a Federal Register API check on federalregister.gov with a new term variant and reviewed the researcher's five checks; no stage change (not_started, 0). Confidence 42 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Federal Reserve Unified Agenda rule list on reginfo.gov and found no related entry; not_started kept and confidence raised from 62 to 66."
     }
   ],
   "id": "c24-06",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -53,32 +61,48 @@
   "research_agent": "N24",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Match set to direct (nothing found; the task forces are context only)",
-      "Added S. 3476 as a context event and source",
-      "Added two searches for a 119th Congress monetary commission bill to uncertainties",
-      "Confidence 42"
-    ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 741, Minimum Effective Reforms: appoint a commission on the Fed's mission, alternatives to the Federal Reserve system, and the financial regulatory apparatus. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 741), the text asks for a commission to explore the Federal Reserve's mission, alternatives to it and the financial regulatory apparatus. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14. Five task forces led by outside advisers, findings for the FOMC; not a commission on alternatives to the Fed.",
+        "note": "2026-10-18 (reviewer variant): all agencies and types since 2025-01-20: 0 documents.",
         "result": "supports",
-        "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20260709a.htm"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Federal+Reserve%22+commission+establishment+%22monetary+commission%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Checked 2026-10-14. Fed Forward Act, introduced 2025-12-15; five-year framework review duty, no commission.",
+        "note": "2026-10-18 (researcher): 26 documents, none a commission; presidential documents variant 0.",
         "result": "supports",
-        "url": "https://www.congress.gov/119/bills/s3476/BILLS-119s3476is.htm"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22commission%22+%22Federal+Reserve+System%22+mission+alternatives&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Checked 2026-10-14. H.R. 2418 brings non-monetary Board functions under appropriations; no commission.",
+        "note": "2026-10-18 (researcher): Unified Agenda fallback; reginfo.gov landing page had no items; 20 Fed proposed rules, none on a commission.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=federal-reserve-system&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): H.R. 8957 ordered reported 2026-09-16, Strategic Bitcoin Reserve, no commission.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/app/details/BILLS-119hr2418ih"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr8957.xml"
+      },
+      {
+        "note": "2026-10-18 (researcher): no commission listed.",
+        "result": "supports",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases.htm"
+      },
+      {
+        "note": "2026-10-18 (researcher news search): the Treasury Secretary's call for a review is a statement; no commission appointed.",
+        "result": "supports",
+        "url": "https://www.nbcnews.com/business/economy/treasury-secretary-bessent-calls-review-entire-federal-reserve-rcna219982"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Reserve list headed 'Agency Rule List - 2026' (agency named Federal Reserve System, 13 rules on capital, stress capital buffer, supervision ratings, reputation risk, GENIUS Act, CRA and data standards, read to the footer by the reviewer on 2026-10-19): none on a commission. Not informative in practice: a commission would be created by Congress or the President.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=7100"
       }
     ]
   },
@@ -160,6 +184,6 @@
   ],
   "title": "Appoint a commission on the Fed's mission, alternatives to it, and financial regulation",
   "tracked": true,
-  "uncertainties": "The Treasury Secretary's July 2025 television call to examine the whole Federal Reserve is a statement, not an event; the Treasury conference remarks listed as a source did not mention such a review. Centennial Monetary Commission bills were found only from the 113th and 114th Congresses; two searches for a 119th Congress counterpart found none, and congress.gov search could not be fetched, so absence is not proven. H.R. 2418, the Federal Reserve Regulatory Oversight Act (introduced 2025-03-27), would put the Board's non-monetary functions under appropriations and is not a commission. The task forces and S. 3476 are listed as context and do not count toward the stage.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "No commission on the Federal Reserve's mission, alternatives to it or the financial regulatory structure was found. The Fed's five task forces of outside advisers announced 2026-07-09 are internal and do not examine alternatives; S. 3476 would require periodic framework reviews and creates no commission; the Treasury Secretary's July 2025 call for a review is a statement. Bill texts were not read in full. The Federal Reserve Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026', 13 rules) lists no related rulemaking; a commission would not need a rule, so the agenda adds little. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

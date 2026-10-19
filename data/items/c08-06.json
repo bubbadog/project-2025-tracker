@@ -6,9 +6,9 @@
     "Career-staff objections the Mandate describes, based on journalistic independence."
   ],
   "chapter": "08",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Text checked at pages 241 to 242 and every cited source fetched, but the not_started call rests on absence of evidence from a limited search, which caps confidence.",
+  "confidence": 60,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented: (1) Federal Register API with a variant, supports (an agency-filtered query failed); (2) Unified Agenda, partial: USAGM appears in the reginfo.gov selector but its list could not be reached, and the subject is internal policy, so the check is treated as not applicable; (3) congress.gov and govinfo with BILLSTATUS for H.R. 3203, supports; (4) usagm.gov news page, partial (older releases unread); (5) one news search, supports. Confidence stays at 60, under the 65 to 68 ceiling.",
   "durability": {
     "level": "low",
     "why": "No measure exists, and agency operations remain contested in court."
@@ -30,10 +30,18 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with a separate term variant (0 documents) and reviewed the researcher's checks of reginfo.gov, govinfo.gov BILLSTATUS for H.R. 3203, usagm.gov and one news search. No stage change (not_started, 0); confidence 45 to 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 found USAGM listed in the reginfo.gov agenda selector but its list unreachable by code, treated the agenda check as not applicable for internal safety policy, kept not_started 0 and kept confidence at 60."
     }
   ],
   "id": "c08-06",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -57,39 +65,44 @@
   "research_agent": "N08",
   "review": {
     "flags": [
-      "judgment call: not_started rather than diverged, because the reductions pursue a different recommendation and are not a decision against safety measures",
-      "status summary reworded: grantee funding cut replaced with the staff-leave notice that was read"
+      "USAGM is listed in the reginfo.gov agenda selector, contrary to the brief's grouping of USAGM with actors that have no Unified Agenda; the list could not be reached by the code tried (7405). Coordinator may wish to locate the correct agency code."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 241 to 242 (Journalists' Security) confirmed; the text describes past resistance to two measures and implies they should be adopted, which the paraphrase reflects.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9a",
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 241 and 242, as described in the record, recommend adopting and enforcing basic safety measures for USAGM journalists: protected remote broadcasting for threatened broadcasters and location reporting by foreign-based journalists in high-risk countries. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "84 on work visas, 11 jailed, court halt, State coordinating; no USAGM safety measure described.",
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms \"Voice of America\" and journalists, all document types since 2025-01-20: 0 documents. Researcher's variant result: supports; terms \"journalist safety\" and \"Agency for Global Media\", all types since 2025-01-20: 0 documents. A query limited to the agency slug agency-for-global-media errored on fetch and was not retried.",
         "result": "supports",
-        "url": "https://www.wsls.com/news/politics/2025/04/06/foreign-journalists-at-us-backed-media-fear-being-sent-to-repressive-homelands-after-trumps-cuts/"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Voice+of+America%22+journalists&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Letters of 2025-05-27; departments did not immediately respond.",
+        "note": "2026-10-18: The page loaded as the landing page of the 2026 Regulatory Plan and Unified Agenda but lists no agenda items (agency selection is script-driven). Recorded as partial; fallback used: the Federal Register term query in check 1; an agency-slug query failed to load. Journalist safety measures are an internal policy matter rather than a rule, so the check is of limited relevance.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: domain-limited search \"119th Congress USAGM journalist safety grantees bill location reporting\" found H.R.3203 and S.1601, the Journalist Protection Act. BILLSTATUS for H.R.3203 (Swalwell, introduced 2025-05-05, referred to Judiciary): creates federal crimes for deliberately harming a journalist; it does not address USAGM networks, remote broadcast protection or location reporting. S.1601 is the companion, assumed the same and not fetched. A 116th Congress USAGM independence bill (S.4808) also appeared and is outside the 119th.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3203.xml"
+      },
+      {
+        "note": "2026-10-18: the USAGM news page showed one item, a 2026-01-02 announcement of a new national security policy (effective 2025-12-23), nothing on journalist safety or location reporting; a Load More control meant older items were not read.",
+        "result": "partial",
+        "url": "https://www.usagm.gov/news/"
+      },
+      {
+        "note": "2026-10-18: news search \"USAGM journalists safety Voice of America security location reporting 2026\" returned 2025 reporting (Axios 2025-05-27, Foreign Policy 2025-04-15, RSF, CPJ) on senators urging Secretaries Rubio and Noem to protect at-risk USAGM journalists after the agency reduction; no report of the Mandate measures being adopted.",
         "result": "supports",
         "url": "https://www.axios.com/2025/05/27/rubio-noem-usagm-journalists"
       },
       {
-        "note": "Signed letter of 2025-06-17 from Comer and Greene; location passage cites the Mandate page 241; no current safety measure mentioned.",
-        "result": "supports",
-        "url": "https://static.foxnews.com/foxnews.com/content/uploads/2025/06/06.17.2025-usagm-letter.pdf"
-      },
-      {
-        "note": "Staff placed on paid leave from 2025-03-15; no mention of journalist safety.",
-        "result": "supports",
-        "url": "https://www.usagm.gov/2025/03/15/u-s-agency-for-global-media-complies-with-presidential-executive-order-to-reduce-the-federal-bureaucracy/"
-      },
-      {
-        "note": "EO 14238 signed 2025-03-14 names USAGM; added from sibling record c08-02.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/03/20/2025-04868/continuing-the-reduction-of-the-federal-bureaucracy"
+        "date": "2026-10-19",
+        "note": "Reviewer checked the agenda selector on 2026-10-19: U.S. Agency for Global Media is listed, but the researcher's code 7405 returned an empty table naming no agency and the USAGM list could not be reached by code. Journalist safety measures are internal security policy rather than rules, so the check is weakly informative in any case; the brief treats USAGM as having no agenda.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       }
     ]
   },
@@ -193,6 +206,6 @@
   ],
   "title": "Adopt and enforce basic journalist safety measures at USAGM and its grantees",
   "tracked": true,
-  "uncertainties": "The AP story refers to work visas generally, so a J-1 link was not confirmed. The 84 and 11 figures come from press-freedom groups cited by AP. The House Oversight letter was read from a copy hosted by Fox News that reproduces the signed letter; it does not date the past location effort it mentions and sources it to the Mandate. No USAGM or State Department policy on location reporting, protected remote broadcasting or grantee safety was found in about five searches across research and review, but internal security measures may not be public. Later outcomes for the visa-holding journalists and current counts of jailed journalists were not found. The stage reflects absence of the recommended measures, not a finding that none exist.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "No USAGM or grantee measure adopting location reporting for journalists in high-risk countries or protected remote broadcasting was found. After Executive Order 14238 of 2025-03-14, USAGM placed most staff on leave, and a House Oversight letter of 2025-06-17 said the agency did not know where foreign-based journalists in high-risk countries were; neither is an agency safety measure. Federal Register searches returned nothing, though an agency-filtered query failed; the Journalist Protection Act (H.R. 3203) does not address USAGM; the usagm.gov news page showed one unrelated item and older releases were not read; one news search found 2025 reporting only. USAGM appears in the reginfo.gov agenda selector, but its list could not be reached by code. Internal security directives may be unpublished. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

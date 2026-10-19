@@ -4,7 +4,7 @@
   "chapter": "14",
   "confidence": 45,
   "confidence_label": "low",
-  "confidence_reason": "Three Federal Register organization notices re-read in review; they show the current structure, not rescission of the specific memos.",
+  "confidence_reason": "The 2026-09-29 OGC statement re-read on federalregister.gov in review and two Federal Register API checks run; they show the current structure, not rescission of the specific memos, which are not public, so confidence stays low.",
   "durability": {
     "level": "low",
     "why": "Internal legal analyses and organization statements can be reissued or replaced by a later administration."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review re-read the 2026-09-29 OGC statement of organization on federalregister.gov and ran a Federal Register API check on a PREP Act rescission (no documents). No stage change (proposed 10); confidence unchanged at 45."
     }
   ],
   "id": "c14-65",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -55,29 +59,29 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage proposed 10 kept with match partial; in_progress 25 is defensible if the blanket rescission of prior OGC organization statements is read as rescinding any statement that moved conscience enforcement to OGC.",
-      "Kept despite overlap with c14-09, whose remaining list marks the OGC memo item as not verified; the PREP Act, eviction and Bowen items are not in c14-09."
+      "No stage change: proposed 10, partial.",
+      "Alternative: in_progress 25 if the blanket rescission of prior OGC organization statements is read as rescinding any statement that moved conscience enforcement to OGC; not_started 0 if the reorganizations are not treated as steps."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 492 to 493 ask OGC to rescind its PREP Act liability memo, the eviction moratorium analysis, the Bowen analysis on newborns with disabilities, and all memos and organization or delegation notices moving OCR conscience and RFRA enforcement to OGC, restoring independent OCR authority.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, pages 492 to 493 ask OGC to rescind its PREP Act liability memo, the eviction moratorium analysis and the Bowen analysis on newborns with disabilities, and all memos and delegations that moved conscience and RFRA enforcement from OCR to OGC; the chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: OGC statement rescinds all prior statements; OGC division advises on conscience laws and serves OCR; no RFRA, eviction or Bowen mention.",
+        "note": "Read 2026-10-18: 91 FR 61422, filed 2026-09-28, no effective date; rescinds all prior statements; OGC division advises on conscience and religious freedom laws and serves OCR; no RFRA, eviction, Bowen or memo rescission. Restructuring only, supports proposed.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2026/09/29/2026-19903/statement-of-organization-functions-and-delegations-of-authority"
       },
       {
-        "note": "Checked 2026-10-15: OGC statement rescinds all prior statements; CRD advises on enforcement of conscience statutes and is counsel to OCR.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2025/03/14/2025-04130/statement-of-organization-functions-and-delegations-of-authority"
+        "note": "Run 2026-10-18: zero documents; no published rescission of an OGC PREP Act memo.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22PREP+Act%22+%22General+Counsel%22+rescind&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Checked 2026-10-15: OCR reorganization effective 2026-06-28; no mention of OGC or RFRA.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/06/30/2026-13142/statement-of-organization-functions-and-delegations-of-authority"
+        "note": "Researcher's check this run: nine documents, no separate delegation notice returning conscience or RFRA enforcement to OCR.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=delegation+conscience+Office+for+Civil+Rights&conditions[agencies][]=health-and-human-services-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -159,6 +163,6 @@
   ],
   "title": "Rescind HHS OGC memos on PREP Act, eviction moratorium, newborns and OCR conscience role",
   "tracked": true,
-  "uncertainties": "The 2025 and 2026 OGC statements were re-read in review; each rescinds all prior statements of organization and describes an advisory role for OGC on conscience laws, but neither mentions RFRA or describes what changed, so whether an earlier statement moved conscience enforcement to OGC and is now superseded cannot be confirmed from these texts. Delegations of authority are separate documents and were not located. The OCR reorganization notice does not mention OGC or RFRA. The 2026 OGC statement mentions the PREP Act only as an area of advice. Internal legal memos on the PREP Act, the eviction moratorium and Bowen are not public, so their withdrawal is not checkable from these sources. Timeline dates for the two OGC notices are Federal Register publication dates. Searches run: OGC PREP Act rescission; Federal Register API on OCR delegations and conscience.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The 2026-09-29 OGC statement (91 FR 61422, filed 2026-09-28) was re-read in review: it rescinds all prior statements of organization, assigns the Civil Rights and Health Information Privacy Division an advisory role on civil rights, conscience and religious freedom laws and legal services to OCR, does not name RFRA, mentions the Public Readiness and Emergency Preparedness Act only as an area of advice to ASPR, does not mention eviction, Bowen or newborns, and states no effective date. The 2025-03-14 OGC statement and the OCR statement were read in earlier review; neither describes what changed, so whether an earlier statement moved conscience enforcement to OGC and is now superseded cannot be confirmed from these texts. Federal Register API searches since 2025-01-20 on delegation and conscience for HHS returned nine documents with no separate delegation notice, and a review variant on the PREP Act, General Counsel and rescission returned none. Internal OGC memos on the PREP Act, the eviction moratorium and Bowen are not public, so their rescission cannot be checked from public sources and the record rests on absence of evidence; the Unified Agenda, Congress and news checks of a full systematic review were not run. Timeline dates for the OGC notices are Federal Register publication dates.",
+  "updated_at": "2026-10-18"
 }

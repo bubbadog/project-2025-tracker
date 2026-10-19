@@ -5,9 +5,9 @@
     "Industry opposition reported"
   ],
   "chapter": "22",
-  "confidence": 60,
+  "confidence": 63,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks documented on 2026-10-18: (1) Federal Register API searches for the four regulators found only bank-merger, capital and licensing items; (2) Unified Agenda listings could not be read, so the proposed-rule fallback was used (partial); (3) a congress.gov and GovInfo bill search found a House-passed deregulatory banking bill (H.R. 6955) but no merger bill, and no enacted law merges regulators; (4) Board and Treasury releases showed nothing, while the FDIC and OCC newsrooms could not be read (partial); (5) a news search found only early 2025 reports of staff transfers. Set to 60 for the partial agenda and newsroom checks.",
+  "confidence_reason": "Not_started rests on five documented checks: (1) Federal Register API queries for the four regulators found only bank-merger, capital and licensing items (supports); (2) Unified Agenda: the Treasury (OCC), FDIC, NCUA and Federal Reserve rule lists on reginfo.gov were read in full on 2026-10-19 with no consolidation entry (supports, weakly informative because a merger needs legislation); (3) congress.gov and GovInfo search found H.R. 6955 and no merger bill or law (supports); (4) Board and Treasury releases showed nothing, while the FDIC and OCC newsrooms could not be read (partial); (5) one news search found only early 2025 reports (supports). Set at 63 because the agenda is weakly informative and two newsrooms were not read.",
   "durability": {
     "level": "high",
     "why": "Merging statutory agencies requires Congress."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Not_started kept; five-part absence check documented and spot-checked; confidence raised from 45 to 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Treasury, FDIC, NCUA and Federal Reserve Unified Agenda rule lists on reginfo.gov and found no consolidation entry; not_started kept and confidence raised from 60 to 63."
     }
   ],
   "id": "c22-18",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -61,16 +65,12 @@
   "research_agent": "N22",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Empty timeline confirmed as intended: neither reported deliberation nor an internal OCC reorganization is a qualifying event",
-      "Related id changed from c22-07 (CFIUS) to c22-08 (same section, Dodd-Frank revisions)",
-      "V7 systematic-check review: not_started 0 kept; regulator-merger Federal Register query re-run with the same nine unrelated results; confidence 45 to 60 (check 2 and check 4 partial)."
-    ],
+    "flags": [],
     "mandate_check": "confirmed",
     "mandate_note": "Page 705, Improved Financial Regulation: support legislation to merge the OCC, FDIC, NCUA and the Federal Reserve's non-monetary supervisory and regulatory functions. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Dated 2025-02-12; options under consideration per a WSJ report; no decision.",
@@ -116,6 +116,30 @@
         "note": "Reviewer re-check, 2026-10-18: terms merge OCC FDIC NCUA consolidation bank regulators, all agencies, since 2025-01-20: count 9 (OCC information collections, the FDIC Merger Transactions proposal of 2026-09-22 on bank mergers, GENIUS Act, capital, CFPB Regulation B items and the 2026 Unified Agenda introduction); none merges regulators; confirms the researcher's result.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=merge+OCC+FDIC+NCUA+consolidation+bank+regulators&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (agency named Department of the Treasury, 216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages, the second holding only the footer). OCC (1557) lists 22 entries, including 1557-AF29 Business Combinations Under the Bank Merger Act; Rescission (Final Rule Stage), which concerns bank mergers; none consolidates supervisors.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "FDIC list headed 'Agency Rule List - 2026' (14 rules, read in full by the reviewer): capital, AML, reputation risk, GENIUS Act, resolution plans, ratings, CRA and data standards; no consolidation entry.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3064"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "NCUA list headed 'Agency Rule List - 2026' (44 rules, read in full by the reviewer): chartering and field of membership entries and 3133-AG01 to AG03 on credit union conversions and mergers concern institutions, not supervisor consolidation.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3133"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Reserve list headed 'Agency Rule List - 2026' (13 rules, read in full by the reviewer): capital, supervision, CRA, GENIUS Act and data standards; no consolidation entry.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=7100"
       }
     ]
   },
@@ -168,6 +192,6 @@
   "timeline": [],
   "title": "Merge the bank and credit union regulators into one supervisor",
   "tracked": true,
-  "uncertainties": "Reported consideration of a plan is not treated as an event, and the OCC internal reorganization is not an agency merger, so the timeline is empty. Two web searches by the researcher and one in review found no merger bill; Congress records were not searched directly. Checked systematically on 2026-10-18: Federal Register searches for the four regulators, the agenda and proposed-rule listings, a congress.gov and govinfo.gov bill search, available agency newsrooms and a news search found no bill, order or law merging the OCC, FDIC, NCUA and the Board's supervisory functions. The FDIC and OCC newsrooms could not be read and the agenda listings were not directly readable, so absence is established from the other checks.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No bill, order or law merging the OCC, FDIC, NCUA and the Board's supervisory functions was found. A 2025-02-12 report of White House deliberation on the FDIC is not an event, and the OCC's 2025 internal combination of supervision units is not an agency merger. The FDIC and OCC newsrooms could not be read. The Unified Agenda rule lists on reginfo.gov for Treasury (including the OCC), the FDIC, the NCUA and the Federal Reserve (all headed 'Agency Rule List - 2026') list no supervisor consolidation; merger entries such as 1557-AF29 and 3133-AG01 to AG03 concern bank and credit union mergers. A merger needs legislation, so the agenda is a weak test. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

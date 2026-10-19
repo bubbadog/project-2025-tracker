@@ -2,9 +2,9 @@
   "agency": "EPA Office of Radiation and Indoor Air",
   "blockers": [],
   "chapter": "13",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Mandate text checked; Executive Order 14300 and the NRC proposal were fetched and confirm the direction runs to the NRC with EPA only consulted; absence of an EPA action rests on the Federal Register API and a limited web search, so capped as not_started.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API (supports); Unified Agenda, EPA rule list read in full on reginfo.gov on 2026-10-19 (supports), with the NRC list and a DOE entry read for context; congress.gov and govinfo with BILLSTATUS (supports); EPA radiation and LNT perspective pages (supports); one news search (supports). EPA standards change by rule, so the agenda is informative; set at 66, below the 70 ceiling, because the EPA result set beyond page one was not read and the NRC proposal was read only in part.",
   "durability": {
     "level": "low",
     "why": "No EPA action exists; the order's direction and the NRC proposal do not bind EPA standards and are reversible."
@@ -26,10 +26,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with a separate term variant (0 documents) and reviewed the researcher's checks of reginfo.gov with the EPA fallback, govinfo.gov BILLSTATUS for H.R. 2541, epa.gov and one news search. No stage change (not_started, 0); confidence 45 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the EPA and NRC rule lists on reginfo.gov in full and opened a DOE occupational radiation protection entry, finding no EPA radiation entry; no stage change (not_started, 0); confidence 62 to 66."
     }
   ],
   "id": "c13-24",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -51,29 +59,58 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage moved from proposed 8 to not_started 0 because the recommendation is for EPA to update its own standards and no EPA step was found; the executive order directs the NRC, and the NRC proposal is a different agency's action, kept as a parallel note.",
-      "Judgment call: proposed 5 to 8 with a parallel match would also be defensible, since the order names EPA as a consulting agency on determinate radiation limits."
+      "no stage change: not_started 0 (match parallel retained)",
+      "confidence 62 to 66",
+      "researcher missed DOE RIN 1901-AB75 (10 CFR 835 occupational radiation protection, NPRM projected 07/2026, unpublished); context only, not EPA"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 427 asks EPA to assess and update its radiation standards to align with NRC, DOE, DOT and international standards, and to correct past statements on radiological risk while reassessing the linear no-threshold model.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y4",
+    "mandate_check": "not_checked",
+    "mandate_note": "Page 427, as described in the record, recommends that EPA assess and update its radiation standards to align with NRC, DOE, DOT and international standards, set aside past misleading statements on radiological risk, and reassess the linear no-threshold model. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "EO 14300 signed 2025-05-23, published 2025-05-29 at 90 FR 22587; section 5(b) directs the NRC to reconsider the linear no-threshold model and consult DOD, DOE and EPA; no section directs EPA to act on its own standards. Checked 2026-10-15.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2025/05/29/2025-09798/ordering-the-reform-of-the-nuclear-regulatory-commission"
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms \"radiation protection\" and no-threshold, EPA, since 2025-01-20: 0 documents. Researcher's variant result: supports; term 'linear no-threshold', all types since 2025-01-20: 2 documents, Executive Order 14300 (published 2025-05-29, directs the Nuclear Regulatory Commission) and the NRC proposed rule of 2026-07-15 (Reforming and Modernizing the NRC's Radiation Protection Framework); neither is an EPA action. Query 'radiation standards' limited to EPA: 376 documents, first page of 20 read, all air-quality plan and rule documents (dated 2026-09-14 to 2026-10-19). Query 'radiation' with 'dose' limited to EPA proposed rules: 3 documents (heavy-duty engines, TSCA PFAS reporting, chemical manufacturing NESHAP), none on radiation standards. A DOE-limited query on radiation protection and ALARA returned 0 documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22radiation+protection%22+%22no-threshold%22&conditions[agencies][]=environmental-protection-agency&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "NRC proposed rule 91 FR 43456 published 2026-07-15, comments due 2026-08-31, cites EO 14300 section 5(b); no EPA mention in the first 100000 of 126362 characters. Checked 2026-10-15.",
+        "note": "2026-10-18: the reginfo.gov Unified Agenda landing page listed no agenda items (agency selector only). Fallback: Federal Register API query of EPA proposed rules on radiation and dose since 2025-01-20 (conditions[type][]=PRORULE) returned 3 documents, none on radiation standards. The check is partial.",
         "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/07/15/2026-14208/reforming-and-modernizing-the-nrcs-radiation-protection-framework"
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       },
       {
-        "note": "EPA page on its LNT paper, last updated 2026-05-12; announces no reassessment. Checked 2026-10-15.",
-        "result": "does_not_support",
-        "url": "https://epa.gov/radiation/perspective-use-lnt-radiation-protection-and-risk-assessment-us-environmental-protection"
+        "note": "2026-10-18: domain-limited search (congress.gov, govinfo.gov) 'linear no-threshold radiation standards EPA NRC alignment bill 119th Congress'. Bills surfaced: H.R. 2541 Nuclear Medicine Clarification Act of 2025 (BILLSTATUS: referred to House Energy and Commerce 2025-04-01; directs NRC reporting of extravasations, no LNT or EPA alignment content), H.R. 1636 Securing our Radioactive Materials Act and S. 243 Radiation Exposure Compensation Reauthorization Act (not opened; titles indicate security and compensation subjects). The NRC proposed rule 2026-07-15 also appeared. No bill on EPA radiation standards or LNT found.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2541.xml"
+      },
+      {
+        "note": "2026-10-18: EPA radiation protection page (last updated 2026-09-09 per metadata) has no news on updating radiation standards, LNT or alignment with NRC or DOE. The EPA page 'Perspective on the use of LNT for Radiation Protection and Risk Assessment' (updated 2026-05-12 per metadata, originally 2015) announces no reassessment.",
+        "result": "supports",
+        "url": "https://www.epa.gov/radiation"
+      },
+      {
+        "note": "2026-10-18: query 'EPA linear no-threshold radiation standards reassess Zeldin 2026'. Results were the EPA LNT perspective page, older GAO and opinion material, and a digest of a news article of 2026-02-23 reporting that the Department of Energy dropped the ALARA principle; the digest does not mention EPA, and no DOE Federal Register document was found to confirm the change. No report of an EPA reassessment.",
+        "result": "supports",
+        "url": "https://visionias.in/current-affairs/upsc-daily-news-summary/article/2026-02-23/the-hindu/science-and-technology/us-drops-a-core-radiation-safety-rule-as-global-reforms-near"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the EPA list (page headed 'Agency Rule List - 2026', 116 rules, rule links carry publication id 202510) in full. No title on radiation, radionuclides, radon, uranium or the linear no-threshold model.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2000"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the NRC list (33 rules): RIN 3150-AL47, Reforming and Modernizing the NRC's Radiation Protection Framework (Proposed Rule Stage), is the NRC proposal of 2026-07-15 already in the record; another agency's parallel action.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3150"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "DOE list entry opened by the reviewer: Revisions to Occupational Radiation Protection Regulations to Support Reform of Nuclear Reactor Testing (Proposed Rule Stage, NPRM projected 07/2026, 10 CFR 835), citing Executive Order 14301; it does not mention the linear no-threshold model, ALARA or EPA. Federal Register documents linked to the RIN: 0 (https://www.federalregister.gov/api/v1/documents.json?conditions[regulation_id_number]=1901-AB75&per_page=20). Another agency's planned action, context only.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1901-AB75"
       }
     ]
   },
@@ -148,6 +185,6 @@
   ],
   "title": "Align EPA radiation standards with other agencies and reassess linear no-threshold",
   "tracked": true,
-  "uncertainties": "The NRC proposed rule was read only to character 100000 of about 126000, and its truncated part may mention EPA. An EPA page on its LNT perspective shows a May 2026 update date, but its content did not indicate a reassessment, so it is not a timeline event. The NRC action is a different agency's action; it is noted as a parallel action and the record is staged not_started because the recommendation is addressed to EPA's own standards. Searches run: Federal Register API (linear no-threshold; radiation protection standards), plus two web searches on EPA radiation LNT and 40 CFR part 190. No EPA Federal Register document on radiation standards since 2025 surfaced in the first 10 results of the radiation query, which were mostly unrelated air documents; a deeper listing was not read. The review ran one additional web search on EPA radiation standards and the linear no-threshold model in 2026; results showed only the NRC proposal and 2018 coverage of an earlier EPA science proposal. The page 427 linear no-threshold element also overlaps c13-05, which tracks rejection of precautionary default models.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No EPA rulemaking, notice or guidance reassessing its radiation standards or the linear no-threshold model was found. The reginfo.gov Unified Agenda rule list for EPA (edition headed Agency Rule List - 2026, 116 rules) has no radiation entry. Other agencies' lists carry related items: the NRC's radiation protection framework (RIN 3150-AL47, proposed 2026-07-15) and a planned DOE revision of occupational radiation protection rules in 10 CFR part 835 for reactor testing (RIN 1901-AB75, no Federal Register document found); neither is an EPA action. The EPA Federal Register result set beyond its first page, the reported DOE ALARA change and any interagency consultation under Executive Order 14300 were not verified. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

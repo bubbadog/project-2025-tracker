@@ -4,7 +4,7 @@
   "chapter": "16",
   "confidence": 65,
   "confidence_label": "medium",
-  "confidence_reason": "Interior release and BLM memorandum fetched in review; neither adopts the state-average benchmark, so the parallel match is an interpretation.",
+  "confidence_reason": "Interior release and BLM memorandum re-read on doi.gov and blm.gov in review; neither adopts the state-average benchmark, so the parallel match is an interpretation, and two 2026 BLM proposed rules were not read in full, so confidence stays medium.",
   "durability": {
     "level": "low",
     "why": "Instruction memoranda and emergency procedures are administrative and can be changed or withdrawn."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review re-read BLM Instruction Memorandum 2026-013 on blm.gov and the Interior emergency permitting release on doi.gov and ran a Federal Register API variant on right-of-way processing time (two proposed rules, not read in full); added the NPR-A proposed rule as a source. No stage change (proposed 15); confidence unchanged at 65."
     }
   ],
   "id": "c16-21",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -52,25 +56,30 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage changed from in_progress 25 to proposed 15 and match from partial to parallel: the operative measures aim at faster permitting but do not adopt the state-average benchmark, and the BLM memorandum mainly governs deficiency extensions.",
+      "No stage change: proposed 15, parallel.",
       "Alternative: in_progress 25 if the emergency procedures are read as operative partial implementation of faster permitting.",
-      "No duplicate: c16-01 (leasing) and c16-06 (NEPA time limits) do not cover the state-average benchmark."
+      "For the owner: the 2026-06-24 BLM Oil and Gas Leasing proposed rule was not read and could contain permit processing timelines."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 523 asks Interior to require its regional offices to complete right-of-way and drilling permits within the average time states in the region take.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 523 recommends that Interior require regional offices to complete right-of-way and drilling permits within the average time states in the region take; the chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: 2025-04-23 emergency permitting procedures for energy and critical minerals, about 14 and 28 day targets; no drilling permit, right-of-way or state comparison.",
+        "note": "Read 2026-10-18: signed 2026-03-17, effective immediately to 2029-09-30; deficiency extensions, processing order and weekly reporting for APDs; no processing target, no state comparison, no rights-of-way. Supports a parallel match at proposed.",
+        "result": "partial",
+        "url": "https://www.blm.gov/policy/im-2026-013"
+      },
+      {
+        "note": "Read 2026-10-18: 2025-04-23 emergency procedures with 14-day and 28-day targets; no drilling permit, right-of-way or state timeline content.",
         "result": "partial",
         "url": "https://www.doi.gov/pressreleases/department-interior-implements-emergency-permitting-procedures-strengthen-domestic"
       },
       {
-        "note": "Checked 2026-10-15: IM 2026-013 issued 2026-03-17, deficiency extension handling and weekly pending-APD reports; no processing target or state benchmark.",
+        "note": "Run 2026-10-18: two BLM proposed rules (2026-06-24 Oil and Gas Leasing, 2026-09-08 NPR-A); excerpts show no state-average deadline, but the rules were not read in full.",
         "result": "partial",
-        "url": "https://www.blm.gov/policy/im-2026-013"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22right-of-way%22+%22processing+time%22&conditions[agencies][]=land-management-bureau&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -123,6 +132,13 @@
       "publisher": "Bureau of Land Management",
       "title": "Table 12, Time to complete an application for permit to drill, federal and Indian, FY25",
       "url": "https://www.blm.gov/sites/default/files/docs/2026-04/Table%2012%20Time%20to%20Complete%20an%20Application%20for%20Permit%20to%20Drill%20APD%20Federal%20and%20Indian%20FY25.pdf"
+    },
+    {
+      "date": "2026-09-08",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "National Petroleum Reserve in Alaska Production Site Development (proposed rule)",
+      "url": "https://www.federalregister.gov/documents/2026/09/08/2026-18261/national-petroleum-reserve-in-alaska-production-site-development"
     }
   ],
   "stage": "proposed",
@@ -145,6 +161,6 @@
   ],
   "title": "Match state average times for Interior rights-of-way and drilling permits",
   "tracked": true,
-  "uncertainties": "In review the Interior release was re-read: it covers energy and critical minerals projects, sets review targets, does not mention drilling permits or rights-of-way specifically, and makes no comparison to state timelines. BLM Instruction Memorandum 2026-013 was re-read: effective on issuance through 2029-09-30, it allows multiple extensions of the 45-day deficiency period and orders weekly reporting of pending applications; it sets no overall processing target and no state comparison, and allowing extensions does not by itself shorten processing. The BLM processing-time table covers federal and Indian drilling permits only; its date is a month-only date taken from the file path. Public Law 119-21 sections on leasing and permitting and secretarial orders of 2025 were not read. Searches run: Interior emergency permitting April 2025; BLM drilling permit processing times.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "In review on 2026-10-18 the Interior release of 2025-04-23 was re-read: it covers energy and critical minerals projects, sets review targets of about 14 days for environmental assessments and about 28 days for environmental impact statements, does not mention drilling permits or rights-of-way specifically, and makes no comparison to state timelines. BLM Instruction Memorandum 2026-013 was re-read: signed 2026-03-17, posted 2026-03-18, effective on issuance through 2029-09-30, it allows multiple extensions of the 45-day deficiency period, asks field offices to process deficiency-free applications first and orders weekly reporting of pending applications; it sets no overall processing target and no state comparison and does not cover rights-of-way. The BLM processing-time table covers federal and Indian drilling permits only; its date is a month-only date taken from the file path. A Federal Register API query of BLM permit-to-drill documents through 2026-10-18 found no state-average benchmark requirement; a review variant on right-of-way processing time returned two BLM proposed rules (Oil and Gas Leasing, 2026-06-24, and the NPR-A production site rule, 2026-09-08), seen only through search excerpts and abstracts, so any processing deadlines in them were not read. Public Law 119-21 permitting sections and 2025 secretarial orders were not read. The stage rests partly on the absence of a requirement.",
+  "updated_at": "2026-10-18"
 }

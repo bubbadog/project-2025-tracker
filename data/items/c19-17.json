@@ -2,9 +2,9 @@
   "agency": "DOT / FAA",
   "blockers": [],
   "chapter": "19",
-  "confidence": 62,
+  "confidence": 65,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text pages 631 and 632 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo search with the H.R. 7553 bill status read, FAA newsroom, one news search) plus the FAA FY2027 budget justification read earlier, so confidence is capped near 62 because check 2 was partial and the H.R. 7553 text was not read.",
+  "confidence_reason": "Chapter text pages 631 and 632 checked; not_started rests on five documented checks: (1) Federal Register API queries (air carrier certification applications; new entrant air carrier fitness) found no deadline or initiative (supports); (2) Unified Agenda: the DOT rule list on reginfo.gov was read in full on 2026-10-19 with no matching entry (supports, weakly informative for an administrative commitment); (3) congress.gov and GovInfo search with the H.R. 7553 bill status read found no application deadline, text unread (supports); (4) the FAA newsroom showed nothing, DOT site not fetched (supports); (5) one news search found law-firm notes on field office backlogs (supports). The FAA FY2027 budget justification was read earlier. Set at 65 because the agenda is weakly informative and the DOT docket was not searched.",
   "durability": {
     "level": "low",
     "why": "A non-binding agency commitment could be changed by later leadership."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov), read the H.R. 7553 bill status on govinfo.gov, and reviewed the Unified Agenda fallback, FAA newsroom and news checks, found no qualifying action, and kept not_started 0."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the DOT Unified Agenda rule list on reginfo.gov and found no new entrant application deadline entry; not_started kept and confidence raised from 62 to 65."
     }
   ],
   "id": "c19-17",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -61,15 +65,12 @@
       "result": "supports",
       "url": "https://www.transportation.gov/sites/dot.gov/files/FAA_FY_2027_Budget_Estimates_CJ.pdf"
     },
-    "flags": [
-      "Check 2 reached only the Federal Register fallback; confidence capped near 62.",
-      "H.R. 7553 and its Senate twin S. 3885 address aircraft type certification; their text was not read for any air carrier application timeline."
-    ],
+    "flags": [],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 631 and 632 recommend a New Entry Initiative committing the government to approve or reject new air carrier applications within 12 months. The proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "2026-10-18: reviewer rerun with terms new entrant, air carrier, fitness since 2025-01-20: 1 document (BVLOS drone proposed rule, 2025-08-07) applying existing economic authority rules; no deadline. Researcher DOT-filtered query on air carrier certification applications: 29 documents, none on a 12-month commitment; New Entry with FAA filter: 0.",
@@ -95,6 +96,12 @@
         "note": "2026-10-18: one researcher news search on a 12-month new air carrier decision commitment returned law-firm aviation updates on field office backlogs; no search URL was recorded, so the FAA newsroom is listed as a placeholder.",
         "result": "does_not_support",
         "url": "https://www.faa.gov/newsroom"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "DOT list headed 'Agency Rule List - 2026' (agency named Department of Transportation), read by the reviewer on 2026-10-19 to the footer across two fetch pages (offset 0 and 100000); the page shows no total, and the sub-agency counts seen were OST 31, FAA 36, FRA 28 on the second page plus others on the first, FTA 14, MARAD 11, SLSDC 2 and PHMSA 45. No FAA or OST title concerns air carrier certification timelines, new entrant applications or a New Entry Initiative; 2120-AL42 (Transport Airplane and Propulsion Certification Modernization) concerns aircraft certification and 2105-AF43 (Updates to Aviation Economic Procedural Regulations) procedural cleanup. Weakly informative: a processing commitment would likely be an administrative initiative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2100"
       }
     ]
   },
@@ -140,6 +147,6 @@
   "timeline": [],
   "title": "New Entry Initiative: decide new air carrier applications within 12 months",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: the researcher's DOT-filtered query on air carrier certification applications returned 29 documents (20 viewed), FAA rules and information collections, and a reviewer rerun on new entrant air carrier fitness returned one drone operations proposed rule that applies existing economic authority rules; none sets a decision deadline or a New Entry Initiative. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used; the DOT agenda summary notice of 2026-08-14 was not read item by item. (3) congress.gov and govinfo: one search surfaced H.R. 7553, whose bill status shows an aircraft type certification bill for new technologies ordered reported on 2026-09-15 with no indication of a deadline for air carrier applications; its text was not read. (4) Agency pages: the FAA newsroom showed no item on air carrier application timelines; the DOT site was not separately fetched. (5) News: one search returned law-firm notes on FAA field office backlogs. The FAA FY2027 budget justification mentions a certification request backlog without a processing target. DOT economic fitness orders sit in the DOT docket, which was not searched. Aircraft certification speed-ups (see c19-04) are a different process and are not counted.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No DOT or FAA initiative, order or published statistic setting a 12-month decision commitment for new air carrier applications was found. The FAA FY2027 budget justification mentions a certification request backlog without a processing target. The H.R. 7553 text was not read, the DOT site was not separately fetched and DOT economic fitness orders in the DOT docket were not searched. The DOT Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists no rulemaking on application deadlines; a commitment of this kind need not be a rule, so the agenda is a weak test. Aircraft certification speed-ups (c19-04) are a different process. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -8,7 +8,7 @@
   "chapter": "24",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "The public law's number, date and CBDC section were confirmed on GovInfo for this review, and the January 2025 executive order bar is a published presidential action. The section's operative text, its 2030 sunset and scope, and the no-signature detail rest on the committee summary, a university blog and trade press.",
+  "confidence_reason": "The executive order, the H.R. 6644 legislative history and the committee section-by-section were read in this review, and the public law number, date and section in an earlier pass on govinfo.gov; the operative text of Sec. 1101 remains unread, so its scope and sunset rest on the committee summary and secondary analyses.",
   "durability": {
     "level": "medium",
     "why": "The bar is now a statute as well as an executive order, which a later administration cannot undo alone, but the statutory bar expires on 2030-12-31 and its definition may leave some designs outside it."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review read the executive order on whitehouse.gov, the H.R. 6644 BILLSTATUS on govinfo.gov and the committee section-by-section; replaced the news-dated 2026-06-01 passage event with the 2026-06-22 Senate and 2026-06-23 House votes and the 2026-06-29 presentment, and confirmed enactment without signature. No stage change (implemented 85, direct); confidence 78 to 78."
     }
   ],
   "id": "c24-03",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "direct",
   "mechanism": "executive_order",
@@ -79,26 +83,41 @@
     "what_was_tested": "Whether a statutory CBDC ban had been enacted since the record was written (the record's own flag), by searching for Senate action, other legislative vehicles and enactment reports."
   },
   "remaining": [
-    "Extend the time-limited statutory bar beyond 2030-12-31 or enact a permanent ban (H.R. 1919 passed the House; no Senate passage found).",
+    "Extend the time-limited statutory bar beyond 2030-12-31 or enact a permanent ban (H.R. 1919 passed the House; no Senate action recorded on it or S. 1124).",
     "Clarify the statute's scope, since a CBDC on a centralized ledger may fall outside its digital asset definition (per a Duke blog)."
   ],
   "requires_congress": "partial",
   "research_agent": "A15",
   "review": {
     "flags": [
-      "Sec. 1101 operative text not read; scope and sunset rest on committee section-by-section and Duke blog",
-      "no-signature detail rests on press reports",
-      "GENIUS Act details from Wikipedia"
+      "No stage change: implemented 85, direct.",
+      "Timeline corrected: 2026-06-01 news event removed; 2026-06-22, 2026-06-23 and 2026-06-29 BILLSTATUS events added.",
+      "Defensible alternative: implemented 75 to 80, since the statutory bar is Fed-only and expires 2030-12-31 and its operative text is unread."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 741 lists preventing the institution of a central bank digital currency, citing unprecedented surveillance and potential control of transactions; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y4",
+    "mandate_check": "not_checked",
+    "mandate_note": "Chapter text not available in this run. Per the record, the chapter recommends preventing a central bank digital currency on surveillance and control grounds; the proposal field matches that paraphrase.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Confirms Public Law 119-101 is H.R. 6644, the 21st Century ROAD to Housing Act, approved 2026-07-11, with Sec. 1101 'Central bank digital currency' listed in Title XI of the table of contents; two fetches (including an offset read) did not reach the operative text of Sec. 1101, so its scope, exemptions and sunset were not read, and the excerpt does not say whether the President signed.",
+        "note": "2026-10-18: signed 2025-01-23; Sec. 5 bars agency action to establish, issue or promote a CBDC unless required by law and directs termination of ongoing plans. Supports the executive part of the stage.",
+        "result": "supports",
+        "url": "https://www.whitehouse.gov/presidential-actions/2025/01/strengthening-american-leadership-in-digital-financial-technology/"
+      },
+      {
+        "note": "2026-10-18: Senate concurred with SA 5823, 85-5, 2026-06-22; House agreed 358-32, 2026-06-23; presented 2026-06-29; became Public Law 119-101 and sent to the Archivist unsigned 2026-07-11. Supports enactment; does not show Sec. 1101 text.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6644.xml"
+      },
+      {
+        "note": "2026-10-18: states Sec. 1101 prohibits the Federal Reserve from issuing a CBDC through 2030-12-31. Committee summary, not statutory text; a time-limited, Fed-only bar only partly matches a permanent prevention.",
         "result": "partial",
+        "url": "https://financialservices.house.gov/uploadedfiles/2026-06-22-_fsc_sxs_-_21st_century_road_housing.pdf"
+      },
+      {
+        "note": "2026-10-18: not reopened; the researcher reports the fetch truncates before Title XI, so Sec. 1101 operative text remains unread.",
+        "result": "unreachable",
         "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ101/html/PLAW-119publ101.htm"
       }
     ]
@@ -171,10 +190,24 @@
       "publisher": "House Committee on Financial Services",
       "title": "Section-by-Section: 21st Century ROAD to Housing Act",
       "url": "https://financialservices.house.gov/uploadedfiles/2026-06-22-_fsc_sxs_-_21st_century_road_housing.pdf"
+    },
+    {
+      "date": "2026-07-11",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 6644 bill status (BILLSTATUS XML)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6644.xml"
+    },
+    {
+      "date": "2025-07-17",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 1919 bill status (BILLSTATUS XML)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1919.xml"
     }
   ],
   "stage": "implemented",
-  "status_summary": "An executive order of 2025-01-23 bars executive agencies from taking action to establish, issue or promote a central bank digital currency in the United States or abroad and directs that any ongoing plans be terminated. A statutory bar followed in mid-2026: the 21st Century ROAD to Housing Act (H.R. 6644, Public Law 119-101, Sec. 1101), which includes a provision barring the Federal Reserve Board and Reserve Banks from issuing or creating a CBDC (or something substantially similar), directly or through intermediaries, passed the Senate 85 to 5 and the House 358 to 32 in June 2026 and became law without the President's signature, with the public law dated 2026-07-11 (one trade report places it a day earlier). The prohibition expires on 2030-12-31, and a Duke blog notes that the statute's digital asset definition may leave a CBDC on a centralized ledger outside its text. The separate House-passed Anti-CBDC Surveillance State Act (H.R. 1919, 2025-07-17) would impose a broader ban; the Senate companion (S. 1124) was reported to be in committee as of March 2026 (secondary source). The Fed's own CBDC page still shows only its 2022 discussion paper and describes no program. Separately, Congress enacted the GENIUS Act on stablecoins in July 2025, and the Fed issued proposals in September 2026 for a GENIUS Act stablecoin issuer framework.",
+  "status_summary": "An executive order of 2025-01-23 (Sec. 5) bars executive agencies, unless required by law, from taking action to establish, issue or promote a central bank digital currency in the United States or abroad and directs that any ongoing plans be terminated. Congress completed passage of the 21st Century ROAD to Housing Act (H.R. 6644) on 2026-06-22 (Senate, 85 to 5) and 2026-06-23 (House, 358 to 32); it was presented on 2026-06-29 and became Public Law 119-101 without the President's signature on 2026-07-11. Its Title XI, Sec. 1101 is summarized by the House Financial Services Committee as prohibiting the Federal Reserve from issuing a CBDC through 2030-12-31, so the statutory bar is time-limited. The House passed the broader H.R. 1919 on 2025-07-17 (219 to 210); no Senate action on it or its companion S. 1124 is recorded.",
   "timeline": [
     {
       "date": "2025-01-23",
@@ -198,15 +231,29 @@
       "url": "https://en.wikipedia.org/wiki/GENIUS_Act"
     },
     {
-      "date": "2026-06-01",
-      "event": "Congress passes the 21st Century ROAD to Housing Act, which contains a time-limited prohibition on the Federal Reserve issuing a CBDC (Senate 85 to 5, House 358 to 32; month only, first of month used, because sources differ on the exact dates and order).",
-      "kind": "news",
-      "source": "Unchained",
-      "url": "https://unchainedcrypto.com/housing-bill-with-a-cbdc-ban-becomes-law-without-trumps-signature/"
+      "date": "2026-06-22",
+      "event": "The Senate concurs in the House amendment to H.R. 6644 (21st Century ROAD to Housing Act) with an amendment (SA 5823), 85 to 5 (Record Vote 182).",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6644.xml"
+    },
+    {
+      "date": "2026-06-23",
+      "event": "The House agrees to the Senate amendment to H.R. 6644, 358 to 32 (Roll no. 224), completing congressional passage of the bill, which includes a time-limited prohibition on the Federal Reserve issuing a CBDC.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6644.xml"
+    },
+    {
+      "date": "2026-06-29",
+      "event": "H.R. 6644 is presented to the President.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6644.xml"
     },
     {
       "date": "2026-07-11",
-      "event": "The 21st Century ROAD to Housing Act (H.R. 6644) becomes Public Law 119-101, dated 2026-07-11 in the law's header. Its table of contents lists Sec. 1101, 'Central bank digital currency,' which the House Financial Services Committee's section-by-section describes as barring the Federal Reserve from issuing a CBDC until the end of 2030 (expiring 2030-12-31). The Duke FinReg Blog reports that it became law without the President's signature and that it covers the Board and Reserve Banks, directly or through intermediaries; The Block places the event on the prior Friday (2026-07-10). The operative text of Sec. 1101 could not be read in the fetched portion.",
+      "event": "The 21st Century ROAD to Housing Act (H.R. 6644) becomes Public Law 119-101, dated 2026-07-11 in the law's header. Its table of contents lists Sec. 1101, 'Central bank digital currency,' which the House Financial Services Committee's section-by-section describes as barring the Federal Reserve from issuing a CBDC until the end of 2030 (expiring 2030-12-31). The Duke FinReg Blog reports that it became law without the President's signature and that it covers the Board and Reserve Banks, directly or through intermediaries; The Block places the event on the prior Friday (2026-07-10). The operative text of Sec. 1101 could not be read in the fetched portion. BILLSTATUS records that the bill was sent to the Archivist unsigned, so it became law without the President's signature.",
       "kind": "primary",
       "source": "GovInfo",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ101/html/PLAW-119publ101.htm"
@@ -221,6 +268,6 @@
   ],
   "title": "Prevent the creation of a central bank digital currency",
   "tracked": true,
-  "uncertainties": "Pass 5: the public law number (119-101), its 2026-07-11 date and the section (Sec. 1101) are confirmed from the GovInfo page for the enrolled law and its table of contents, and the 2030-12-31 sunset from the House Financial Services Committee's section-by-section; the operative text of Sec. 1101 was not reachable by the research tool (the fetch was truncated before Title XI, and congress.gov blocks fetchers), so the scope (directly or through intermediaries), the digital asset definition and the exemptions still rest on the Duke blog and law-firm analyses, and the no-signature detail on press reports. Sources conflict on the order of House and Senate passage. The GENIUS Act date and number come from a Wikipedia summary. Whether the Fed has formally ended CBDC research was not verified beyond the age of its CBDC page. The chapter's other monetary options (free banking, commodity-backed money, a commission on alternatives to the Fed, limits on lender of last resort) were not researched and no action on them was seen.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The executive order (Sec. 5), the H.R. 6644 BILLSTATUS record and the House Financial Services Committee section-by-section were read in this review on whitehouse.gov, govinfo.gov and financialservices.house.gov; the enrolled-law header, number, date and table of contents (Title XI, Sec. 1101) were read on govinfo.gov in an earlier pass. The operative text of Sec. 1101 was not reachable because the fetch tool truncates large GovInfo documents before Title XI and congress.gov refuses fetches, so the scope (directly or through intermediaries), the digital asset definition and exemptions rest on the Duke blog and law-firm analyses, and the 2030-12-31 sunset on the committee summary. BILLSTATUS confirms the final vote order (Senate 2026-06-22, House 2026-06-23) and that the bill was sent to the Archivist unsigned on 2026-07-11, which replaces an earlier news-dated passage event and a trade report giving a day earlier. H.R. 1919 status rests on its BILLSTATUS record as read by the researcher. The GENIUS Act date and number come from a Wikipedia summary. The Federal Reserve CBDC page shows a 2022 update date; whether the Fed has formally ended CBDC research was not verified. The chapter's other monetary options (free banking, commodity-backed money, a commission on alternatives to the Fed, limits on lender of last resort) were not researched.",
+  "updated_at": "2026-10-18"
 }

@@ -5,9 +5,9 @@
     "Producer demand for enrollment: farmers offered about 2.5 million acres in 2026 against 2.2 million accepted (USDA, 2026-07-07)."
   ],
   "chapter": "10",
-  "confidence": 66,
+  "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "Document text verified in an earlier review (page 304). USDA's own 2026 enrollment release and the CRS primer were read in the earlier review; in this review the FY2027 CCC explanatory notes (CRP estimates rise, cap kept, no cut proposed) and the House Clerk roll call for H.R. 7567 were read, so the continued-program finding rests on primary sources. CRP provisions of the bill rest on an advocacy summary.",
+  "confidence_reason": "The diverged stage rests on primary evidence of continued operation (USDA releases of 2026-02-10, 2026-07-07 and 2026-10-08, the last read in review) and the House Clerk roll call, not on absence alone. Five checks: Federal Register API (supports); Unified Agenda, USDA rule list read in full on reginfo.gov on 2026-10-19 (supports; the earlier fallback was partial); congress.gov and govinfo with BILLSTATUS (supports); Farm Service Agency CRP page (supports); one news search (supports). Raised from 66 to 68 because the agenda check is now complete; elimination needs Congress, so the agenda is weakly informative, and CRP authority after FY2026 was not verified.",
   "durability": {
     "level": "high",
     "why": "CRP is authorized in statute and the pending farm bill would extend it, so enrollment in place can only be ended by Congress or by lapse of authority."
@@ -24,10 +24,18 @@
     {
       "date": "2026-10-15",
       "note": "Update run, independently reviewed. Added House passage of H.R. 7567 (2026-04-30, 224-200, CRP reauthorized through 2031 per advocacy group) and FY2027 CCC explanatory notes (CRP outlays about 1.99B for 2027 vs 1.90B 2026, no cut). Stage unchanged at diverged 0. Review (corrected): House passage re-sourced from an advocacy post to the House Clerk roll call (primary); the undated FY2027 USDA document now carries the fiscal year label as its date. Confidence raised slightly from 64 to 66 because the stage-relevant facts now rest on primary documents. Stage diverged 0; confidence 64 to 66."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with a separate term variant (0 documents), read USDA's 2026-10-08 CRP payments release on usda.gov and added it as an event and source, and reviewed the researcher's checks of reginfo.gov with the Farm Service Agency fallback, govinfo.gov BILLSTATUS for H.R. 5365, fsa.usda.gov and one news search. No stage change (diverged, 0); confidence unchanged at 66; status summary rewritten to four sentences."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the USDA rule list on reginfo.gov in full and confirmed no Conservation Reserve Program entry; no stage change (diverged, 0); confidence 66 to 68."
     }
   ],
   "id": "c10-06",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 2,
   "match": "partial",
   "mechanism": "legislation",
@@ -49,32 +57,52 @@
   "requires_congress": "yes",
   "research_agent": "D3",
   "review": {
+    "alternative": "not_started 0, if continued operation of a statutory program is read as inaction rather than divergence.",
     "flags": [
-      "diverged rests on continued enrollment against an elimination recommendation; not_started would also be defensible since CRP is statutory (carried over)",
-      "CRP authority may have lapsed after 2026-09-30 (not extended by P.L. 119-103); unresolved",
-      "FY2027 CCC explanatory notes print no date; source date set to the fiscal year label FY2027",
-      "One WebSearch used to find the House Clerk roll call"
+      "no stage change: diverged 0",
+      "confidence 66 to 68: agenda check now complete (supports)"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 304 says CRP pays farmers not to farm some land and recommends that the next Administration champion its elimination, with USDA working with Congress, and that any need to keep very sensitive land out of production be met by targeted efforts tied to a specific environmental harm (a note on the chapter's end-note page repeats that CRP should be eliminated); the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "independent",
+    "mandate_check": "not_checked",
+    "mandate_note": "Page 304, as described in the record, recommends that the Administration champion eliminating the Conservation Reserve Program, with USDA working with Congress, and meet any need to protect very sensitive land through targeted efforts tied to a concrete environmental harm. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Table CCC-6: CRP 1,899,067 (2025 actual), 1,898,470 (2026 est.), 1,992,139 (2027 est.) thousand dollars; 27-million-acre cap; no CRP reduction proposed. Document prints no date; latest dated figure 2025-09-30.",
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms CRP, \"Conservation Reserve\" and termination, Farm Service Agency, since 2025-01-20: 0 documents. Researcher's variant result: supports; term \"Conservation Reserve Program\", all types since 2025-01-20: 5 documents (Privacy Act matching program 2026-09-03; Agricultural Foreign Investment Disclosure Act proposed rule 2026-06-25; Payment Limitation and Payment Eligibility rule 2026-06-02; Changes to ARC, PLC and DMC rule 2026-01-12; Removal of Unconstitutional Preferences rule 2025-07-10). None eliminates or phases out the program.",
         "result": "supports",
-        "url": "https://www.usda.gov/sites/default/files/documents/FY-2027-Chapter-29-CCC.pdf"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=CRP+%22Conservation+Reserve%22+termination&conditions[agencies][]=farm-service-agency&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Post dated 2026-04-30: House passed the bill 224-200 that day; CRP reauthorized through 2031; SAFE codification amendment adopted by voice vote.",
-        "result": "supports",
-        "url": "https://quailforever.org/upland-news-media/articles/pheasants-forever-and-quail-forever-applaud-house-farm-bill-passage-urge-senate-action/"
+        "note": "2026-10-18: The page loaded as the landing page of the 2026 Regulatory Plan and Unified Agenda but lists no agenda items (agency selection is script-driven). Recorded as partial; fallback used: Farm Service Agency documents since 2025-01-20: 41, first 20 read (loan delivery, ERP 2022, ECP and BCAP information collections, ARC and PLC rule); none on CRP elimination. Pages 2 and 3 not read.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=farm-service-agency&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Roll Call 154, 2026-04-30, H.R. 7567 On Passage, passed 224-200 with 6 not voting.",
+        "note": "2026-10-18: domain-limited search \"119th Congress Conservation Reserve Program eliminate repeal bill\" found H.R.5365 (ENABLE Conservation Act, Schrier, introduced 2025-09-15, referred to subcommittee 2025-12-02: makes SAFE continuous enrollment permanent and allows county-cap waivers; does not eliminate CRP), H.R.2758 and S.1389 (Conservation Reserve Enhancement Program Improvement Act of 2025), and H.R.7567, the House-passed farm bill already in the record. No bill eliminating CRP found.",
         "result": "supports",
-        "url": "https://clerk.house.gov/Votes/2026154"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5365.xml"
+      },
+      {
+        "note": "2026-10-18: FSA CRP page shows FY2026 signups run (general closed 2026-04-17, continuous closed 2026-05-01, grassland open 2026-05-04 to 2026-05-29) and no plan to end or reduce the program.",
+        "result": "supports",
+        "url": "https://www.fsa.usda.gov/resources/programs/conservation-reserve-program"
+      },
+      {
+        "note": "2026-10-18: news search \"Conservation Reserve Program eliminate USDA Rollins 2026 farm bill CRP\" returned 2025 reporting on the Mandate proposal and on farm bill expiration effects on CRP enrollment; no report of an administration move to eliminate the program.",
+        "result": "supports",
+        "url": "https://barnraisingmedia.com/project-2025-farmers-conservation-reserve-program/"
+      },
+      {
+        "note": "2026-10-18: opened by the reviewer. USDA release of 2026-10-08 announces about 1.8 billion dollars in CRP and Grassland CRP rental payments, 2.2 million acres accepted in 2026 and 26.8 million acres to be enrolled in FY2027; it says nothing about ending the program. Fully supports continued operation, the basis of the diverged stage.",
+        "result": "supports",
+        "url": "https://www.usda.gov/about-usda/news/press-releases/2026/10/08/usda-announces-18-billion-2026-conservation-program-payments"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the USDA list (page headed 'Agency Rule List - 2026', 110 rules, rule links carry publication id 202510) in full: no title on the Conservation Reserve Program; the only conservation-compliance title is RIN 0578-AA73, Highly Erodible Land and Wetland Conservation (Final Rule Stage), which the researcher opened and found to concern wetland determinations, not CRP. Replaces the earlier partial fallback as the agenda check.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0500"
       }
     ]
   },
@@ -139,10 +167,17 @@
       "publisher": "Office of the Clerk, U.S. House of Representatives",
       "title": "Roll Call 154, H.R. 7567, On Passage",
       "url": "https://clerk.house.gov/Votes/2026154"
+    },
+    {
+      "date": "2026-10-08",
+      "kind": "primary",
+      "publisher": "U.S. Department of Agriculture",
+      "title": "USDA Announces $1.8 Billion in 2026 Conservation Program Payments",
+      "url": "https://www.usda.gov/about-usda/news/press-releases/2026/10/08/usda-announces-18-billion-2026-conservation-program-payments"
     }
   ],
   "stage": "diverged",
-  "status_summary": "USDA has continued to run the program. On 2026-02-10 it opened 2026 continuous and general signups, noting that CRP was close to its 27-million-acre statutory cap with about 1.9 million acres available for the fiscal year, and on 2026-07-07 it announced acceptance of 2.2 million acres out of about 2.5 million acres offered across the general, grassland and continuous signups. The House Agriculture Committee advanced the Farm, Food, and National Security Act of 2026 (H.R. 7567) by 34-17 in early March 2026, and the House passed it 224-200 on 2026-04-30; Quail Forever reports that it reauthorizes CRP through 2031 and codifies the SAFE initiative within continuous signup. USDA's FY2027 explanatory notes for the Commodity Credit Corporation estimate CRP outlays of about 1.99 billion dollars for 2027 against about 1.90 billion estimated for 2026 and keep the 27-million-acre cap, with no reduction or elimination proposed in the portions read. A CRS primer dated 2026-04-13 says CRP's authority has run on short extensions since the end of FY2023 and was extended through FY2026, and that without authority CRP could not enroll new or expiring acres.",
+  "status_summary": "USDA has continued to run the Conservation Reserve Program: it opened 2026 continuous and general signups on 2026-02-10, announced on 2026-07-07 that it accepted 2.2 million acres for 2026, and announced on 2026-10-08 about 1.8 billion dollars in annual CRP and Grassland CRP rental payments, with 26.8 million acres to be enrolled in FY2027. The House passed the Farm, Food, and National Security Act of 2026 (H.R. 7567) 224-200 on 2026-04-30, and Quail Forever reports that it reauthorizes CRP through 2031 and codifies the SAFE initiative within continuous signup. USDA's FY2027 explanatory notes for the Commodity Credit Corporation estimate CRP outlays of about 1.99 billion dollars for 2027 and keep the 27-million-acre cap, and a CRS primer dated 2026-04-13 says CRP authority has run on short extensions since the end of FY2023 and was extended through FY2026. No administration proposal or bill to eliminate the program was found in a systematic check on 2026-10-18.",
   "timeline": [
     {
       "date": "2026-02-10",
@@ -178,10 +213,17 @@
       "kind": "primary",
       "source": "USDA Farm Service Agency",
       "url": "https://www.fsa.usda.gov/news-events/news/07-07-2026/usda-accepts-22-million-acres-2026-conservation-reserve-program"
+    },
+    {
+      "date": "2026-10-08",
+      "event": "USDA announces about 1.8 billion dollars in annual Conservation Reserve Program and Grassland CRP rental payments, states that 2.2 million acres were accepted across the 2026 signups, and says 26.8 million acres will be enrolled in FY2027.",
+      "kind": "primary",
+      "source": "USDA",
+      "url": "https://www.usda.gov/about-usda/news/press-releases/2026/10/08/usda-announces-18-billion-2026-conservation-program-payments"
     }
   ],
   "title": "Eliminate the Conservation Reserve Program and rely on targeted conservation instead",
   "tracked": true,
-  "uncertainties": "The House-passed bill's CRP text was not read: the 2031 reauthorization comes from an advocacy group's post (congress.gov is blocked); the 224-200 passage vote on 2026-04-30 is confirmed by the House Clerk roll call. Whether the Senate acted on a farm bill, and whether CRP authority was extended past 2026-09-30 (Public Law 119-103's agriculture extensions, as read earlier, do not name CRP), was not established. The FY2027 CRP figures come from the first part of the CCC explanatory notes, which the reader tool truncated; the document prints no publication date (its source date is given as the fiscal year label FY2027), and a FY2027 USDA budget summary and FSA chapter fetched did not mention CRP. A Federal Register search for the program since 2025-01-20 returned no CRP-specific rule, and the FSA program page did not state an authorization end date. The two FSA release titles are descriptive labels written for this record. Searches on 2026-10-15 found no further 2026 general signup beyond Signup 66.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "USDA has continued to run the Conservation Reserve Program, and no administration proposal or bill to eliminate it was found in Federal Register, congress.gov and govinfo bill searches, Farm Service Agency pages or one news search. The reginfo.gov Unified Agenda rule list for USDA (edition headed Agency Rule List - 2026) lists no CRP rulemaking; its Highly Erodible Land and Wetland Conservation entry (RIN 0578-AA73) concerns wetland determinations. The House-passed farm bill's CRP text was not read (the 2031 reauthorization comes from an advocacy post), and whether the Senate acted or CRP enrollment authority continued past 2026-09-30 was not verified. The FY2027 CRP figures come from partly read explanatory notes. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

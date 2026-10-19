@@ -1,18 +1,18 @@
 {
   "agency": "DOL (EBSA)",
   "blockers": [
-    "No proposal found since the withdrawal"
+    "No DOL proposal found since the January 2025 withdrawal"
   ],
   "chapter": "18",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Chapter text checked; the not_started finding rests on a Federal Register API search and a web search, so confidence is capped at 50.",
+  "confidence": 76,
+  "confidence_label": "medium",
+  "confidence_reason": "The stage rests on S. 2403, whose BILLSTATUS and enrolled text were read on govinfo.gov and whose signing was confirmed on whitehouse.gov, together with the five systematic checks for the absence of a DOL rule: Federal Register API (ESOP adequate consideration, employee stock ownership and, in review, employee stock ownership limited to EBSA), Unified Agenda by Federal Register fallback of EBSA proposed rules (partial), congress.gov search with BILLSTATUS, the EBSA pages, and one news search. Medium rather than high because the Mandate pages were not rechecked and the public law number is not yet confirmed on govinfo.gov.",
   "durability": {
-    "level": "medium",
-    "why": "A final regulation would last until amended by rulemaking."
+    "level": "high",
+    "why": "The valuation provision is in statute and can be changed only by Congress; a DOL fiduciary conduct rule, if issued, would last until amended by rulemaking."
   },
   "est_completion": {
-    "basis": "Inference: no reissued proposal found.",
+    "basis": "Inference: the statutory valuation provision applies to determinations made on or after enactment on 2026-10-15; no DOL rulemaking on fiduciary conduct has been announced.",
     "window": "unknown"
   },
   "headline": false,
@@ -28,56 +28,85 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review read the S. 2403 BILLSTATUS and enrolled text on govinfo.gov and the signing statement on whitehouse.gov and reran a Federal Register API check on federalregister.gov. Stage changed from not_started (0) to proposed (20), match direct to parallel; confidence 50 to 76."
     }
   ],
   "id": "c18-17",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
-  "match": "direct",
+  "match": "parallel",
   "mechanism": "agency_rule",
   "pages": [
     610,
     611
   ],
   "position": "Improving Access to Employee Stock Ownership Plans",
-  "progress": 0,
+  "progress": 20,
   "proposal": "The Mandate recommends that DOL make it easier for employers to offer employee stock ownership plans by issuing clear regulations on valuation and fiduciary conduct, in a way that encourages employee participation in governance while recognizing the importance of diversification for retirement security. It records an alternative view that government should not favor one investment form.",
   "related_ids": [],
   "remaining": [
-    "A new or reissued DOL proposal on ESOP valuation and fiduciary conduct"
+    "A DOL regulation on ESOP fiduciary conduct (p. 610 to 611; none found)",
+    "Any DOL interpretive regulation on ESOP valuation under the new ERISA section 3(18)(B), which the statute permits but does not require",
+    "Measures encouraging employee participation in governance while recognizing diversification (none found)"
   ],
   "requires_congress": "no",
   "research_agent": "N18",
   "restates_ids": [],
   "review": {
     "flags": [
-      "The researcher's only timeline entry was a law-firm article reporting the withdrawal; it was removed from the timeline because law-firm commentary is not an event, and the withdrawal is described in the summary."
+      "Stage changed not_started (0) to proposed (20), match direct to parallel, on S. 2403 signed 2026-10-15: an enacted statute addressing ESOP valuation by a different mechanism than the DOL rules the text asks for, and silent on fiduciary conduct rules.",
+      "Defensible alternative: in_progress (25 to 30) parallel, since the statute is operative on the valuation half of the ask; implemented is not supported because no DOL rule on fiduciary conduct exists and the statute expressly leaves section 404 duties unchanged.",
+      "Public law number (reported as 119-124 by a trade tracker) to be confirmed on govinfo.gov when published.",
+      "Researcher's McDermott source URL used the mwe.com host; the record keeps the mcdermottlaw.com URL already listed."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 610 and 611 checked: DOL should provide clear regulations for ESOP valuation and fiduciary conduct that encourage employee participation in corporate governance while recognizing diversification; an Alternative View says government should not favor one form of investment. Paraphrase accurate. No existing record covers it.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y18g",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields (pp. 610 to 611), the text asks DOL to issue clear regulations on ESOP valuation and fiduciary conduct, encouraging employee participation in governance while recognizing diversification, and records an alternative view against favoring one investment form. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (systematic absence check)",
     "source_checks": [
       {
-        "note": "Law firm, 2025-02-04: the 2025-01-16 proposals were withdrawn from Federal Register publication under the freeze.",
+        "note": "2026-10-18: stage-deciding document read by the reviewer. Amends ERISA 3(18) with a new subparagraph (B) on ESOP fiduciary reliance on an independent appraiser following Revenue Ruling 59-60 for non-exchange-traded securities; preserves but does not require DOL interpretive regulations; does not modify section 404 duties; applies to determinations on or after enactment. Partial: covers valuation by statute, not DOL rules on fiduciary conduct.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s2403enr/xml/BILLS-119s2403enr.xml"
+      },
+      {
+        "note": "2026-10-18: reviewer read BILLSTATUS: introduced 2025-07-23, reported 2025-09-11, passed Senate 2025-10-09, passed House 401 to 14 on 2026-09-16, presented 2026-10-05; no signature or public law number yet recorded.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2403.xml"
+      },
+      {
+        "note": "2026-10-18: reviewer read the statement: the President signed S. 2403 on 2026-10-15; it amends ERISA to define adequate consideration for certain closely held stock.",
+        "result": "partial",
+        "url": "https://www.whitehouse.gov/briefings-statements/2026/10/congressional-bills-s-240-s-283-and-s-2403-signed-into-law/"
+      },
+      {
+        "note": "2026-10-18 (reviewer variant): employee stock ownership limited to EBSA, all types since 2025-01-20: 0 documents; no DOL ESOP rule.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22employee+stock+ownership%22&conditions[agencies][]=employee-benefits-security-administration&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): Unified Agenda fallback; reginfo.gov landing page had no items; 10 EBSA proposed rules, none on ESOPs.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=employee-benefits-security-administration&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): no ESOP valuation rulemaking or guidance shown.",
+        "result": "supports",
+        "url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs"
+      },
+      {
+        "note": "2026-10-18 (researcher news search): law firm reporting of the January 2025 proposals placed in the regulatory freeze; no reissued rule reported.",
         "result": "supports",
         "url": "https://www.mcdermottlaw.com/?p=307899"
       },
       {
-        "note": "Federal Register API search: zero DOL documents since 2025-01-20.",
-        "result": "does_not_support",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22employee+stock+ownership%22&conditions[agencies][]=labor-department&conditions[publication_date][gte]=2025-01-20"
-      },
-      {
-        "note": "Found by web search; dated 2025-01-17 and concerns the January 2025 proposal, not a new one.",
-        "result": "does_not_support",
-        "url": "https://www.polsinelli.com/publications/department-of-labor-proposes-rule-on-valuing-stock-for-esop-stock-purchase-and-sale-transactions"
-      },
-      {
-        "note": "Dated 2025-01-16; same January 2025 proposal.",
-        "result": "does_not_support",
-        "url": "https://www.plansponsor.com/ebsa-offers-proposed-esop-appraisal-regulations/"
+        "note": "2026-10-18: trade tracker (lead only) lists the Act as Public Law 119-124 signed 2026-10-15; the public law number was not confirmed on govinfo.gov.",
+        "result": "partial",
+        "url": "https://www.ifebp.org/detail-pages/legislative-tracker/s-2403"
       }
     ]
   },
@@ -116,13 +145,56 @@
       "publisher": "McDermott Will and Emery (law firm)",
       "title": "Trump Places DOL's ESOP Proposals in Regulatory Moratorium",
       "url": "https://www.mcdermottlaw.com/?p=307899"
+    },
+    {
+      "date": "2026-10-15",
+      "kind": "primary",
+      "publisher": "White House",
+      "title": "Congressional Bills S. 240, S. 283, and S. 2403 Signed into Law",
+      "url": "https://www.whitehouse.gov/briefings-statements/2026/10/congressional-bills-s-240-s-283-and-s-2403-signed-into-law/"
+    },
+    {
+      "date": "2026-10-05",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS S. 2403 (119th Congress), Retire through Ownership Act",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2403.xml"
+    },
+    {
+      "date": "2026-10-05",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S. 2403, Retire through Ownership Act (enrolled bill)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s2403enr/xml/BILLS-119s2403enr.xml"
     }
   ],
-  "stage": "not_started",
-  "status_summary": "EBSA released a proposed adequate-consideration regulation and a proposed prohibited transaction exemption for ESOP transactions on 2025-01-16, scheduled for publication on 2025-01-22, but they were withdrawn under the 2025-01-20 regulatory freeze and were never published. No reissued ESOP valuation or fiduciary rule was found in the Federal Register through 2026-10-13.",
-  "timeline": [],
+  "stage": "proposed",
+  "status_summary": "EBSA's ESOP adequate-consideration proposal and prohibited transaction exemption of 2025-01-16 were withdrawn under the 2025-01-20 regulatory freeze and never published, and no reissued DOL ESOP valuation or fiduciary rule appears in the Federal Register through 2026-10-18. Congress instead passed S. 2403, the Retire through Ownership Act (Senate 2025-10-09, House 401 to 14 on 2026-09-16), which the President signed on 2026-10-15. The enrolled text amends ERISA section 3(18) so that an ESOP fiduciary may rely on an independent appraiser following Revenue Ruling 59-60 when determining adequate consideration for stock not traded on a national exchange, leaves DOL free to issue interpretive regulations without requiring them, and states that it does not modify fiduciary duties under section 404.",
+  "timeline": [
+    {
+      "date": "2025-10-09",
+      "event": "The Senate passed S. 2403, the Retire through Ownership Act (introduced 2025-07-23, reported by the HELP Committee 2025-09-11), with an amendment by unanimous consent.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2403.xml"
+    },
+    {
+      "date": "2026-09-16",
+      "event": "The House passed S. 2403 under suspension of the rules, 401 to 14 (Roll no. 314); the bill was presented to the President on 2026-10-05.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2403.xml"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "The President signed S. 2403, the Retire through Ownership Act, which amends ERISA section 3(18) to let an ESOP fiduciary rely on an independent appraiser following Revenue Ruling 59-60 in determining adequate consideration for closely held stock; the Act permits but does not require DOL interpretive regulations.",
+      "kind": "primary",
+      "source": "whitehouse.gov",
+      "url": "https://www.whitehouse.gov/briefings-statements/2026/10/congressional-bills-s-240-s-283-and-s-2403-signed-into-law/"
+    }
+  ],
   "title": "Issue clear ERISA rules on ESOP valuation and fiduciary conduct",
   "tracked": true,
-  "uncertainties": "The withdrawal of the January 2025 proposals rests on law-firm reporting; the freeze itself is a step against, not toward, the recommendation and is not recorded as an event. A Federal Register API search for DOL documents mentioning employee stock ownership since 2025-01-20 returned none, and a web search found only January 2025 coverage. A trade-press sidebar referred to a 2026 House bill on ESOP fair market value, which was not opened. An unpublished regulatory agenda entry could exist.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Checked systematically on 2026-10-18. 1. Federal Register API searches since 2025-01-20 on ESOP adequate consideration (2 unrelated proposals), employee stock ownership (37 documents, bank, FAR and mutual-to-stock notices) and, in review, employee stock ownership limited to EBSA (0) found no DOL ESOP valuation or fiduciary rule. 2. The reginfo.gov Unified Agenda landing page listed no items, so the check is partial; the fallback of EBSA proposed rules since 2025-01-20 (10 documents) shows none on ESOPs. 3. A domain-limited search of congress.gov and govinfo.gov found S. 2403, whose BILLSTATUS shows Senate passage 2025-10-09, House passage 401 to 14 on 2026-09-16 and presentment 2026-10-05, and whose enrolled text was read on govinfo.gov; the companion H.R. 5169 was reported 2026-01-14 (H. Rept. 119-448) and S. 1727 remains in committee, per the researcher. 4. The EBSA FAQ page shows only a link to an Employee Ownership Initiative and no ESOP rulemaking; whitehouse.gov confirms the signing on 2026-10-15. 5. A news search returned law firm items on the January 2025 proposals and their withdrawal, with no reissued rule. The BILLSTATUS file did not yet record the signature or a public law number; a benefits trade tracker (ifebp.org) lists the Act as Public Law 119-124, which could not be confirmed on govinfo.gov, where the public law page was not yet available. The withdrawal of the January 2025 proposals rests on law firm reporting. The statute is a congressional step rather than the DOL regulation the text asks for, which is why it is scored as a parallel match.",
+  "updated_at": "2026-10-18"
 }

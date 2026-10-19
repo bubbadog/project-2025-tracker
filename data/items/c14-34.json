@@ -4,9 +4,9 @@
     "Status of the office is not documented in primary sources found"
   ],
   "chapter": "14",
-  "confidence": 58,
+  "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Rescission notices and the order read on primary pages; the office's status checked on its own site and in an NIH leadership article in review but not resolved.",
+  "confidence_reason": "The rescission of the conference diversity-plan notices was confirmed on the NIH primary host, which decides the in_progress stage; the office's abolition rests on Federal Register queries and a possibly cached site, so medium.",
   "durability": {
     "level": "low",
     "why": "Notice rescissions and office closures are administrative and can be reversed by a later administration."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read NOT-OD-21-053 on grants.nih.gov and ran a Federal Register API query (one unrelated result). No stage change (in_progress 30); confidence 58 to 62."
     }
   ],
   "id": "c14-34",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -53,25 +57,29 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage in_progress kept but progress lowered from 35 to 30: the conference requirement is rescinded, while abolition of the office remains unconfirmed and its site is live.",
-      "Alternative accepted: proposed 20 if the rescinded diversity-plan notices are not read as the quota the text describes.",
-      "Corrected the opinion article's date from year-only to 2025-12-11."
+      "No stage change: in_progress 30, match partial. proposed 20 remains an accepted alternative because the office's abolition is unconfirmed.",
+      "Confidence 58 to 62, medium."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 462 asks NIH to end what it calls a quota of women panelists at NIH-sponsored conferences and to abolish the NIH Office of Equity, Diversity, and Inclusion.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (462) and proposal fields: end the practice of requiring a set number of women panelists at NIH-sponsored conferences and abolish the NIH Office of Equity, Diversity, and Inclusion. Chapter text not available this run; page not re-checked.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: site presents EDI resources and a contact section; no closure or renaming notice, so abolition is not shown.",
-        "result": "does_not_support",
-        "url": "https://www.edi.nih.gov"
+        "note": "Fetched 2026-10-18 (stage-deciding): marked rescinded on 2025-03-10; the R13 and U13 diversity plan is no longer required; the notice set no numerical target for women speakers. Supports in_progress for the conference element only.",
+        "result": "partial",
+        "url": "https://www.grants.nih.gov/grants/guide/notice-files/NOT-OD-21-053.html"
       },
       {
-        "note": "Checked 2026-10-15: dated 2025-12-11; says NIH dismantled its DEI apparatus but names no office and does not mention conference requirements.",
-        "result": "partial",
-        "url": "https://spectator.com/article/how-we-cured-dei-at-the-national-institutes-of-health/"
+        "note": "Fetched 2026-10-18 (reviewer's own term variant): one OPM SES notice, unrelated; no organizational notice abolishing or renaming the office.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Equity%2C+Diversity%2C+and+Inclusion%22+NIH&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "Not re-fetched in review; researcher reports the site still presents EDI resources with no closure notice.",
+        "result": "does_not_support",
+        "url": "https://www.edi.nih.gov"
       }
     ]
   },
@@ -160,6 +168,6 @@
   ],
   "title": "Abolish NIH Office of Equity, Diversity, and Inclusion; end set women-panelist counts",
   "tracked": true,
-  "uncertainties": "The two rescinded NIH notices and the executive order were read on their primary pages by the researcher. In review the edi.nih.gov site was fetched again on 2026-10-15 and still presented EDI resources with no closure or renaming notice; the fetch tool may return a cached copy, so this is weak evidence that the office still operates. The NIH leadership opinion article (dated 2025-12-11) says NIH removed DEI from hiring, promotion, performance review and grant processes but names no office. Searches run: Federal Register API (one unrelated result), four web searches by the researcher and two by the reviewer on the office's closure; an ABC News report of January 2025 on HHS equity offices did not mention this office. Whether the 2021 notices amounted to a numerical quota of women panelists is the Mandate's characterization, not something the notices state. Related record: c00-01.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The two rescinded NIH Guide notices (rescission 2025-03-10) and the edi.nih.gov site were read by the researcher, and NOT-OD-21-053 was re-read in review on 2026-10-18 on grants.nih.gov; the site may be served from a cache and shows no closure notice. A Federal Register API search for NIH documents naming the Office of Equity, Diversity, and Inclusion since 2025-01-20 returned 0 documents, and a review variant (Equity, Diversity, and Inclusion with NIH) returned one unrelated OPM notice. One further web search on the office's closure returned only university and grant-termination items, none about this office. An NIH almanac page for the Office of the Director could not be fetched. The NIH leadership opinion article of 2025-12-11 names no office. Whether the 2021 notices amounted to a numerical quota of women panelists is the Mandate's characterization, not the notices' text. Related record: c00-01.",
+  "updated_at": "2026-10-18"
 }

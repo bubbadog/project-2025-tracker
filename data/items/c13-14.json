@@ -2,9 +2,9 @@
   "agency": "EPA",
   "blockers": [],
   "chapter": "13",
-  "confidence": 92,
+  "confidence": 88,
   "confidence_label": "high",
-  "confidence_reason": "Document text checked and both stage-deciding primary documents (the public law on govinfo and the Federal Register rule) were read.",
+  "confidence_reason": "Chapter text on printed page 426 re-read. Both stage-deciding primary documents were fetched and read: Public Law 119-20 on govinfo (disapproves the 2024 rule, no force or effect) and the EPA final rule in the Federal Register (91 FR 58, effective 2026-01-02, restores the 2020 text, petitions due 2026-03-03). Rule applied: completed (100) because the recommended position is restored in the CFR and in effect; the absence of a petition against the 2026 rule rests on searches and a tracker, and the separate pending challenge to the 2020 rule is a risk noted in uncertainties rather than a block.",
   "durability": {
     "level": "high",
     "why": "A Congressional Review Act disapproval bars a substantially similar rule absent new congressional authorization; reversing would need statute or a materially different rule."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c13-23 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: the rule took effect 2026-01-02 (91 FR 58) and no petition for review, stay or reconsideration was found by the 2026-03-03 deadline; a reported D.C. Circuit dismissal of the challenge to the 2024 rule rests on a tracker and stays in uncertainties; red-team check holds. Independent review (AI) removed an unsourced sentence on the Congressional Review Act and set confidence 88."
     }
   ],
   "id": "c13-14",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -43,6 +47,32 @@
   "position": "Office of Air and Radiation: Air Permitting Reforms for New Source Review and Title V",
   "progress": 100,
   "proposal": "The Mandate recommends restoring the Trump-era position on the Once-In, Always-In policy, under which a major source of hazardous air pollutants can become an area source once the relevant emission standards are met.",
+  "redteam": {
+    "date": "2026-10-19",
+    "evidence": [
+      {
+        "date": "2026-01-02",
+        "note": "Effective 2026-01-02 (91 FR 58); petitions for review due in D.C. Circuit by 2026-03-03.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/01/02/2025-24202/congressional-review-act-revocation-of-2024-review-of-final-rule-reclassification-of-major-sources"
+      },
+      {
+        "date": "2026-08",
+        "note": "Lists dismissal of the 2024-rule challenge on 2026-02-11 and argument set 2026-10-05 in the 2020-rule case; no challenge to the 2026 rule listed.",
+        "source": "Harvard EELP tracker",
+        "url": "https://eelp.law.harvard.edu/tracker/once-in-always-in-guidance-for-major-sources-under-the-clean-air-act"
+      },
+      {
+        "date": "2026-07-06",
+        "note": "Petition filed 2026-06-01 against an unnamed EPA action; held in abeyance; not tied to this rule.",
+        "source": "Justia docket",
+        "url": "https://dockets.justia.com/docket/circuit-courts/cadc/26-1142"
+      }
+    ],
+    "note": "Stage holds. Watch item: the pending D.C. Circuit challenge to the 2020 rule itself (No. 21-1024) could affect the text this rule restored.",
+    "verdict": "holds",
+    "what_was_tested": "Whether any court challenge, petition for review, stay or reconsideration followed the 2026-01-02 rule, and whether its effective date held."
+  },
   "related_ids": [
     "c13-03",
     "c13-23"
@@ -51,22 +81,30 @@
   "requires_congress": "no",
   "research_agent": "N13",
   "review": {
-    "flags": [],
-    "mandate_check": "verified",
-    "mandate_note": "Page 426 checked; the once-in, always-in recommendation is accurately paraphrased.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y13a",
+    "flags": [
+      "D.C. Circuit dismissal of No. 24-1354 rests only on a tracker; kept in uncertainties, not entered as a court event",
+      "pending challenge to the 2020 rule (No. 21-1024, argument reportedly 2026-10-05) could reopen the restored text"
+    ],
+    "mandate_check": "pages re-read",
+    "mandate_note": "Printed page 426, under air permitting reforms, asks EPA to restore the earlier Trump EPA position on Once-In, Always-In, that major sources can convert to area sources when the relevant emission standards are met. Proposal and direct match confirmed.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
-        "note": "Public Law 119-20, S.J. Res. 31, approved 2025-06-20, disapproves the rule at 89 FR 73293 (2024-09-10) on reclassification of major sources as area sources.",
+        "note": "Fetched: EPA final rule, 91 FR 58, published and effective 2026-01-02, docket EPA-HQ-OAR-2023-0330; removes the 2024 amendments and restores the 2020 text; petitions for review due in the D.C. Circuit by 2026-03-03; cites P.L. 119-20. Fully supports completed. Does not mention CRA reissuance limits.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/01/02/2025-24202/congressional-review-act-revocation-of-2024-review-of-final-rule-reclassification-of-major-sources"
+      },
+      {
+        "note": "Fetched: P.L. 119-20, S.J. Res. 31, approved 2025-06-20, disapproves 89 FR 73293 (2024-09-10); rule has no force or effect.",
         "result": "supports",
         "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ20/html/PLAW-119publ20.htm"
       },
       {
-        "note": "Final rule 91 FR 58, published and effective 2026-01-02, removes the 2024 amendments and restores the 2020 reclassification rule text.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/01/02/2025-24202/congressional-review-act-revocation-of-2024-review-of-final-rule-reclassification-of-major-sources"
+        "note": "Fetched: last updated 2026-08-18; reports No. 24-1354 dismissed 2026-02-11 on unopposed motion and No. 21-1024 argument set 2026-10-05; lists no challenge to the 2026 rule. Lead only; not used for a court event.",
+        "result": "partial",
+        "url": "https://eelp.law.harvard.edu/tracker/once-in-always-in-guidance-for-major-sources-under-the-clean-air-act"
       }
     ]
   },
@@ -113,10 +151,24 @@
       "publisher": "govinfo",
       "title": "Public Law 119-20 (S.J. Res. 31)",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ20/html/PLAW-119publ20.htm"
+    },
+    {
+      "date": "2026-08",
+      "kind": "tracker",
+      "publisher": "Harvard Environmental and Energy Law Program",
+      "title": "Regulatory Tracker: Once-In, Always-In Guidance for Major Sources",
+      "url": "https://eelp.law.harvard.edu/tracker/once-in-always-in-guidance-for-major-sources-under-the-clean-air-act"
+    },
+    {
+      "date": "2026-07-06",
+      "kind": "court",
+      "publisher": "Justia dockets",
+      "title": "California Communities Against Toxics v. EPA, No. 26-1142 (docket)",
+      "url": "https://dockets.justia.com/docket/circuit-courts/cadc/26-1142"
     }
   ],
   "stage": "completed",
-  "status_summary": "Public Law 119-20 (S.J. Res. 31), approved 2025-06-20, disapproved EPA's September 2024 rule that had required certain reclassified sources to keep meeting major source standards, and it has no force or effect. EPA then published a rule on 2026-01-02, effective the same day, that removes the 2024 amendments and restores the text of the 2020 reclassification rule. Under the Congressional Review Act a substantially similar rule cannot be reissued without new statutory authority.",
+  "status_summary": "Public Law 119-20 (S.J. Res. 31), approved 2025-06-20, disapproved EPA's September 2024 rule that had required certain reclassified sources to keep meeting major source standards, and it has no force or effect. EPA then published a final rule on 2026-01-02 (91 FR 58), effective the same day, that removes the 2024 amendments and restores the text of the 2020 reclassification rule. The Federal Register document gives 2026-01-02 as the effective date and sets 2026-03-03 as the deadline for petitions for review in the D.C. Circuit; no petition for review of this rule was found.",
   "timeline": [
     {
       "date": "2025-06-20",
@@ -135,6 +187,6 @@
   ],
   "title": "Restore the 2020 policy letting major sources reclassify to area source status",
   "tracked": true,
-  "uncertainties": "The record does not cover the other permitting items in the same section of the document, such as potential-to-emit assumptions or Title V petition standards.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Re-check on 2026-10-19: the Federal Register page confirms the 2026-01-02 effective date and a 2026-03-03 petition deadline; searches and a tracker found no petition for review, stay or reconsideration request aimed at the 2026 rule. The Harvard Environmental and Energy Law Program tracker (last updated 2026-08-18) reports that the D.C. Circuit dismissed the 2024-rule challenge (No. 24-1354) on 2026-02-11 on an unopposed motion, and that oral argument in the separate challenge to the 2020 rule (No. 21-1024) was scheduled for 2026-10-05; neither the dismissal nor the argument date or any outcome was confirmed on a court record, so they are not entered as timeline events. A ruling in No. 21-1024 could affect the 2020 text that the 2026 rule restored. Two D.C. Circuit petitions filed 2026-05-29 and 2026-06-01 (Nos. 26-1139, 26-1142, held in abeyance 2026-07-06) were found, but the docket does not name the EPA action, and their timing suggests a different air toxics rule, so they were not linked to this record. The record does not cover other permitting items in the same section of the document, such as potential-to-emit assumptions or Title V petition standards.",
+  "updated_at": "2026-10-19"
 }

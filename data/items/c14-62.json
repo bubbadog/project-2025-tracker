@@ -33,6 +33,10 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 read H.R. 1226 and H.R. 7592 on govinfo, found that H.R. 1226 would sunset new rules of all agencies including HHS while H.R. 7592 excludes HHS, and moved the record from not_started to proposed 5 as a parallel match after the Federal Register, agenda fallback, Congress, HHS page and news checks."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Further primary-source lift review re-read the H.R. 1226 status record on govinfo.gov and reran a Federal Register API check on the SUNSET rule title (no documents). No stage change (proposed 5); confidence unchanged at 72."
     }
   ],
   "id": "c14-62",
@@ -58,39 +62,29 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Alternative: not_started, because H.R. 1226 covers only new rules and relies on congressional reauthorization rather than codifying the HHS agency-review design.",
-      "H.R. 7592 does not cover HHS and is context only; S. 485 (major rules approval with annual designation of existing major rules) is a further parallel bill read only on its status record."
+      "No stage change: proposed 5, parallel.",
+      "Alternative: not_started, because H.R. 1226 covers only new rules and relies on congressional reauthorization rather than codifying the HHS agency-review design."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 488 recommends reinstating the HHS SUNSET rule and says Congress should codify the reversed rule requiring retrospective review on pain of expiry; the proposal matches.",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 488 recommends reinstating the HHS SUNSET rule requiring retrospective review of regulations on pain of expiry and says Congress should codify it; the chapter text was not available this run (an earlier review that day marked it confirmed).",
     "model": "claude-opus",
     "reviewed_at": "2026-10-18",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "2026-10-18: Federal Register API variant on retrospective review and expire, HHS, since 2025-01-20: 35 matches, first 20 read (payment, program and deregulatory rules such as the family assistance burden reduction rules); none reinstates the SUNSET rule or sets an expiry mechanism. The researcher's query on the full SUNSET rule name returned 0.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=retrospective+review+expire&conditions[agencies][]=health-and-human-services-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
-      },
-      {
-        "note": "2026-10-18: The Unified Agenda itself was not readable (reginfo.gov rule list is form-driven); Federal Register fallback only: no SUNSET document since 2025-01-20.",
+        "note": "Read 2026-10-18: introduced 2025-02-12, referred to Oversight and Government Reform and Judiciary, two original cosponsors, no action after referral. Supports proposed; the bill sunsets new rules of all agencies rather than codifying the HHS review-or-expire design, so the match is parallel.",
         "result": "partial",
-        "url": "https://www.federalregister.gov/api/v1/documents.json"
-      },
-      {
-        "note": "2026-10-18: Bill records read on govinfo: H.R. 1226 status and introduced text (introduced 2025-02-12, Oversight and Judiciary, no later action; five-year sunset of new rules of all agencies unless Congress reauthorizes); H.R. 7592 status and text (introduced 2026-02-17; covers only DOE, FERC and four Interior offices, so not HHS); H.R. 274 and S. 485 status records only. No enacted law.",
-        "result": "supports",
         "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1226.xml"
       },
       {
-        "note": "2026-10-18: HHS regulations index, deregulatory agenda and retrospective review pages read in review; they describe a 2025 request for information, a May 2025 deregulatory plan and reviews under existing executive orders, with no automatic expiry or SUNSET reinstatement.",
+        "note": "Run 2026-10-18: zero documents since 2025-01-20, consistent with no HHS reinstatement of the SUNSET rule.",
         "result": "supports",
-        "url": "https://www.hhs.gov/regulations/deregulatory-agenda/index.html"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Securing+Updated+and+Necessary+Statutory+Evaluations%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "2026-10-18: No URL was recorded for the researcher's news search, so this field holds the agency page fetched in review. The search on reinstating the HHS SUNSET rule in 2026 returned only 2020 to 2021 coverage of its finalization and withdrawal.",
+        "note": "Researcher's check this run: 29 matches, 20 newest read, none reinstates the rule or imposes expiry on existing regulations; 9 older results not read.",
         "result": "supports",
-        "url": "https://www.hhs.gov/regulations/index.html"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=SUNSET+rule&conditions[agencies][]=health-and-human-services-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -179,6 +173,6 @@
   ],
   "title": "Reinstate the HHS SUNSET rule and have Congress codify regulatory expiry",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. The Federal Register API check (the full SUNSET rule name, and a variant on retrospective review and expiry limited to HHS) found no SUNSET document since the 2022 withdrawal; the 20 of 35 HHS results read were payment, program and deregulatory rules with no expiry mechanism. The Unified Agenda check was partial: only the Federal Register fallback was usable. The Congress check read on govinfo the status records and introduced texts of H.R. 7592, which covers only DOE, FERC and four Interior offices, and H.R. 1226, which sunsets new rules of all agencies after five years unless Congress reauthorizes them; the status records of H.R. 274 (sunset of rules upheld under Chevron deference) and S. 485 (congressional approval of major rules, with annual designation of existing major rules) were read but not their texts. Treating H.R. 1226 as a parallel step is a judgment call, since it differs from the HHS rule in covering only new rules and relying on congressional reauthorization; not_started is also defensible. The agency check read the HHS regulations, deregulatory agenda and retrospective review pages, which describe a request for information and reviews under existing executive orders, with no automatic expiry. The news check returned only 2020 to 2021 coverage. Executive Order 14270 was read by an earlier researcher for its covered-agency list.",
+  "uncertainties": "Checked systematically on 2026-10-18. The Federal Register API check (the full SUNSET rule name, and a variant on retrospective review and expiry limited to HHS) found no SUNSET document since the 2022 withdrawal; the 20 of 35 HHS results read were payment, program and deregulatory rules with no expiry mechanism. The Unified Agenda check was partial: only the Federal Register fallback was usable. The Congress check read on govinfo the status records and introduced texts of H.R. 7592, which covers only DOE, FERC and four Interior offices, and H.R. 1226, which sunsets new rules of all agencies after five years unless Congress reauthorizes them; the status records of H.R. 274 (sunset of rules upheld under Chevron deference) and S. 485 (congressional approval of major rules, with annual designation of existing major rules) were read but not their texts. Treating H.R. 1226 as a parallel step is a judgment call, since it differs from the HHS rule in covering only new rules and relying on congressional reauthorization; not_started is also defensible. The agency check read the HHS regulations, deregulatory agenda and retrospective review pages, which describe a request for information and reviews under existing executive orders, with no automatic expiry. The news check returned only 2020 to 2021 coverage. Executive Order 14270 was read by an earlier researcher for its covered-agency list. In a further review on 2026-10-18 the H.R. 1226 status record was re-read on govinfo.gov (two original cosponsors, all actions dated 2025-02-12, nothing later), and a Federal Register API check on the SUNSET rule's full title since 2025-01-20 again returned no documents.",
   "updated_at": "2026-10-18"
 }

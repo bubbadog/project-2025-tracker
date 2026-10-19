@@ -5,9 +5,9 @@
     "No proposal for such a charter was found"
   ],
   "chapter": "22",
-  "confidence": 60,
+  "confidence": 63,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks documented on 2026-10-18 on top of the GENIUS Act status record and the OCC proposed rule: (1) Federal Register API searches found the March 2026 OCC trust-bank chartering rule, which widens activities without an equity trade, and nothing qualifying; (2) Unified Agenda listings could not be read, so the proposed-rule fallback was used (partial); (3) a congress.gov and GovInfo bill search found no charter-for-capital bill or law; (4) Treasury releases showed nothing, while the OCC newsroom could not be fetched (partial); (5) a news search found only older fintech charter coverage. Set to 60 for the two partial checks and the near-neighbor chartering rule.",
+  "confidence_reason": "Not_started rests on five documented checks and the GENIUS Act status record and OCC proposal: (1) Federal Register API queries found the March 2026 OCC chartering rule, adjacent and without an equity trade (partial); (2) Unified Agenda: the Treasury (OCC), FDIC and NCUA rule lists on reginfo.gov were read in full on 2026-10-19 and three licensing or chartering entries opened; none creates the recommended charter (partial; informative for OCC chartering rules, though a new charter type may need legislation); (3) congress.gov and GovInfo search found no charter-for-capital bill or law (supports); (4) Treasury releases showed nothing while the OCC newsroom could not be fetched (partial); (5) one news search found only older fintech charter coverage (supports). Set at 63 because of the partial checks and the adjacent chartering actions.",
   "durability": {
     "level": "low",
     "why": "No action toward the recommended charter exists to assess."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Not_started kept; five-part absence check documented, the trust-bank chartering rule confirmed as adjacent; confidence raised from 45 to 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Treasury, FDIC and NCUA Unified Agenda rule lists and three licensing and chartering entries on reginfo.gov; not_started kept and confidence raised from 60 to 63."
     }
   ],
   "id": "c22-23",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -57,23 +61,19 @@
   "research_agent": "R22",
   "restates_ids": [],
   "review": {
+    "alternative": "Proposed at the low end is defensible if the stablecoin issuer regime is treated as a parallel new charter.",
     "document_reread": {
       "citation": "91 FR 10202 (2026-03-02)",
       "note": "Shows activity restrictions, the opposite of the recommended trade.",
       "result": "does_not_support",
       "url": "https://www.federalregister.gov/documents/2026/03/02/2026-04089/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the"
     },
-    "flags": [
-      "Removed the law-firm-sourced OCC trust charter event and moved it to uncertainties.",
-      "Named the searches performed in uncertainties.",
-      "Other defensible call: proposed 5 parallel, if the stablecoin regime is counted as a materially different enacted charter program.",
-      "V7 systematic-check review: not_started 0 kept; the OCC National Bank Chartering final rule (2026-03-02) opened and confirmed as related but not qualifying (no new charter, no equity trade); confidence 45 to 60."
-    ],
+    "flags": [],
     "mandate_check": "ok",
     "mandate_note": "Page 705 says policymakers should create new charters for financial firms that eliminate activity restrictions and reduce regulation in exchange for straightforward higher equity or risk-retention standards, replacing regulation with competition and market discipline. The paraphrase and page are correct.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Public Law 119-27 signed 2025-07-18; capital, liquidity and reserve rules; a parallel license, not the recommended charter.",
@@ -124,6 +124,42 @@
         "note": "Reviewer re-check, 2026-10-18: researcher's OCC query re-run: count 10, capital, leverage, CRA, GENIUS Act, licensing-manual and unsafe-practice items; none creates a charter traded for higher equity.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"national+bank\"+charter+\"equity\"+activities&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=comptroller-of-the-currency&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (agency named Department of the Treasury, 216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages, the second holding only the footer). OCC entries include 1557-AF25 Licensing Amendments and 1557-AF38 Community Bank Licensing Amendments (both Proposed Rule Stage); no new charter type and no charter traded for higher equity or risk retention.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Detail page read: NPRM 07/00/2026; would amend OCC corporate activities policies and procedures to reduce burden and clarify them; no new charter, activity change or equity standard.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1557-AF25"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Detail page read: NPRM 07/00/2026; community bank licensing procedures, designated deregulatory; no new charter, activity change or equity standard.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1557-AF38"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "FDIC list headed 'Agency Rule List - 2026' (14 rules, read in full by the reviewer): no charter entry.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3064"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "NCUA list headed 'Agency Rule List - 2026' (44 rules, read in full by the reviewer): chartering entries such as 3133-AF71 Chartering of De Novo Credit Unions concern application processes.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3133"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Detail page read: NPRM 07/00/2026; simplifies chartering of new federal credit unions to improve applications and reduce processing time; no activity or capital trade.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=3133-AF71"
       }
     ],
     "stage_change_reason": "Stage changed from proposed 10 to not_started 0: the stablecoin and trust charter paths limit permitted activities rather than trading broader activities for higher equity, so they are not a step toward the recommended charter."
@@ -199,6 +235,6 @@
   ],
   "title": "Create new financial charters with fewer activity limits for higher equity standards",
   "tracked": true,
-  "uncertainties": "Searches performed: two web searches (OCC national trust charters for digital asset firms; new financial charter types in 2026), a Federal Register API query for OCC GENIUS Act documents, and a reading of the GENIUS Act bill status record and the OCC proposed rule. A law firm reports that the OCC conditionally approved five national trust bank charters for digital asset firms on 2025-12-12 with standard capital levels; the OCC release was not read, and trust charters are limited-purpose. Articles on payments or fintech charter proposals returned by search were not opened, so a charter idea under consideration may have been missed. Proposed at the low end is the other defensible call, treating the stablecoin regime as a parallel new charter. Checked systematically on 2026-10-18: Federal Register searches, OCC and Board proposed-rule listings, a congress.gov and govinfo.gov bill search and a news search found no charter that removes activity limits in return for higher equity or risk retention. The March 2026 OCC trust-bank chartering rule widens non-fiduciary activity for an existing limited charter without a capital trade and is treated as adjacent. The OCC newsroom could not be read and agenda listings were not directly readable.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No charter that removes activity restrictions in return for higher equity or risk retention was found. The GENIUS Act and the OCC's 2026 proposal create a narrow stablecoin license, and the March 2026 OCC chartering rule widens activity for trust-limited national banks without a capital trade; both are treated as adjacent. The OCC newsroom could not be read, and reported conditional trust charter approvals of 2025-12-12 were not confirmed from the OCC. The Unified Agenda rule lists on reginfo.gov for Treasury (including the OCC), the FDIC and the NCUA (headed 'Agency Rule List - 2026') list licensing and de novo chartering procedure changes and no new charter type. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

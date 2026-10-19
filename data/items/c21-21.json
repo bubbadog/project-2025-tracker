@@ -4,9 +4,9 @@
     "Statutorily required committees must be kept"
   ],
   "chapter": "21",
-  "confidence": 72,
+  "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "The Federal Register termination notice and the Commerce committee page were read; the reconstitution question rests on absence of evidence.",
+  "confidence_reason": "The Federal Register termination notice and the Commerce advisory committee page, which together decide the stage, were read; the missing review and reconstitution elements rest on absence of evidence.",
   "durability": {
     "level": "medium",
     "why": "Charters can be re-established by a later Secretary, though terminations of discretionary committees are not easily reversed in practice."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-16",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: reread the Commerce advisory committee page on commerce.gov and confirmed the termination notice details from the researcher's federalregister.gov read. No stage change (in_progress 35); confidence 72 to 75."
     }
   ],
   "id": "c21-21",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -54,35 +58,27 @@
   "research_agent": "R21",
   "restates_ids": [],
   "review": {
-    "document_reread": {
-      "citation": "90 FR 24383 (2025-06-10)",
-      "note": "Termination notice read in full.",
-      "result": "supports",
-      "url": "https://www.federalregister.gov/documents/2025/06/10/2025-10398/notice-of-termination-of-14-discretionary-federal-advisory-committees"
-    },
     "flags": [
-      "Removed the Government Executive source (seen only as a search result).",
-      "Added c21-10 to related_ids because the lapsed Baldrige judges panel appears in the termination table.",
-      "Other defensible call: in_progress 45 to 50 if the two rounds are treated as completing the abolition part; not taken because the remaining 45 committees were not shown to be statutory."
+      "No stage change: in_progress 35. in_progress 45 to 50 remains defensible if the two rounds are treated as completing the abolition part.",
+      "Confidence 72 to 75 after the Commerce page was reread in review."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 666 says all Commerce advisory committees should be reviewed on entering office for whether a statute requires them and abolished if not, that the membership of the rest should be reconstituted to provide genuine expert advice, and that FACA compliance and committees written into regulations should be considered. The paraphrase and page are correct.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "V2-1016",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (666) and proposal field, the text asks for a review of all Commerce advisory committees on entering office, abolition of those not required by statute, reconstitution of the rest as sources of expert advice, and attention to FACA compliance and committees written into regulations. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "90 FR 24383; 14 discretionary committees terminated effective 2025-02-28 under EO 14217; no review of all committees and no reconstitution.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/06/10/2025-10398/notice-of-termination-of-14-discretionary-federal-advisory-committees"
-      },
-      {
-        "note": "September 2025 round of four terminations; 45 active committees; no statutory classification; no reconstitution statement; updated 2026-07-14.",
+        "note": "Checked 2026-10-18: updated 2026-07-14; 14 discretionary committees terminated effective 2025-02-28; three presidential and one discretionary committee ended 2025-09-30; 51 stated, 45 unmarked of 65 listed, 20 terminated or lapsed; no statutory classification and no reconstitution. Supports in_progress at the low to middle end.",
         "result": "partial",
         "url": "https://www.commerce.gov/opog/faca/federal-advisory-committees"
+      },
+      {
+        "note": "Read by the researcher 2026-10-18 and in the 2026-10-16 review: 90 FR 24383, 14 terminations effective 2025-02-28 under EO 14217; no department-wide review or reconstitution.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/06/10/2025-10398/notice-of-termination-of-14-discretionary-federal-advisory-committees"
       }
-    ],
-    "stage_change_reason": "Progress lowered from 50 to 35: the record shows two rounds of terminations (cancellations) but no evidence that all non-statutory committees were reviewed and abolished and no reconstitution of the remaining committees, which the rubric places at the low end of in_progress."
+    ]
   },
   "significance": {
     "B": 1,
@@ -148,6 +144,6 @@
   ],
   "title": "Review Commerce advisory committees, abolish non-statutory ones, reconstitute the rest",
   "tracked": true,
-  "uncertainties": "The Commerce page states a committee count of 51 while its table lists 45 active committees, and its narrative accounts for 18 terminations while the table labels 20 (two are lapsed NIST and USPTO panels), so counts are approximate. The page does not classify active committees as statutory or discretionary, so whether non-statutory committees remain was not established. Reconstitution may have occurred without public notice; membership rosters were not reviewed. A Government Executive report on NOAA committee terminations was seen only as a search result and is not relied on. Overlap: c21-02 tracks the Census Bureau committees, which are among those terminated.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The termination notice (90 FR 24383, Doc. 2025-10398, Docket DOC-2025-0010) was read by the researcher and the Commerce advisory committee page was reread in review on 2026-10-18. The notice was signed by a departmental open-government official and states the Secretary's finding. The Commerce page states a committee count of 51 while its tables list 45 committees without a terminated or lapsed marker, and its narrative accounts for 18 terminations while the tables label 20 (two are lapsed NIST and USPTO panels), so counts are approximate. The page does not classify active committees as statutory or discretionary, so whether non-statutory committees remain was not established, and it says nothing about reconstitution or membership changes. A Federal Register API search for Commerce committee documents did not surface a department-wide review or reconstitution notice. Reconstitution may have occurred without public notice; membership rosters were not reviewed. A Government Executive report on NOAA committee terminations was seen only as a search result and is not relied on. Overlap: c21-02 tracks the Census Bureau committees, which are among those terminated.",
+  "updated_at": "2026-10-18"
 }

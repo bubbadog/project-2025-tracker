@@ -2,9 +2,9 @@
   "agency": "White House Office (Office of Cabinet Affairs)",
   "blockers": [],
   "chapter": "01",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "The Mandate text was checked and the White House staffing announcement was read, but the not_started stage rests on absence of evidence about internal meetings that are seldom reported. A limited search cannot rule out unreported Deputy Secretary meetings.",
+  "confidence": 60,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented: (1) Federal Register API with term variants, supports (nothing found); (2) Unified Agenda, not applicable because the White House has no agenda list, confirmed on the reginfo.gov selector on 2026-10-19; (3) congress.gov and govinfo search, supports; (4) whitehouse.gov presidential actions, partial (first page only); (5) one news search, supports. Confidence is 60, below the 65 to 68 ceiling, because internal meetings often go unreported and check 4 is partial.",
   "durability": {
     "level": "low",
     "why": "Meeting practices and office duties are internal White House choices that carry no formal instrument."
@@ -26,10 +26,18 @@
     {
       "date": "2026-10-16",
       "note": "Freshness pass: no change. One web search found no public description of a Cabinet Affairs deputies process; stage not_started unchanged."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with a separate term variant (0 documents) and reviewed the researcher's checks of reginfo.gov, congress.gov and govinfo.gov, whitehouse.gov and one news search. No stage change (not_started, 0); confidence 40 to 58."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 confirmed on the reginfo.gov agenda selector that the White House has no Unified Agenda list, recorded the agenda check as not applicable, kept not_started 0 and raised confidence from 58 to 60."
     }
   ],
   "id": "c01-09",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -51,25 +59,43 @@
   "requires_congress": "no",
   "research_agent": "N01",
   "review": {
-    "flags": [
-      "absence of evidence; not_started capped at 50",
-      "timeline reduced to one context event"
-    ],
-    "mandate_check": "verified",
-    "mandate_note": "Printed page 33 says the office should organize and administer regular Deputy Secretary meetings (a firm 'should'); printed page 34 says amplifying its agenda-tracking role would benefit the President, which is softer. Paraphrase and pages are accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-09",
-    "reviewer": "Y4",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 33 and 34, as described in the record, recommend that the Office of Cabinet Affairs organize regular meetings of Deputy Secretaries and expand its tracking of the President's agenda across departments. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Real event: office staffed and Cabinet Secretary designated 2025-01-24; no mention of Deputy Secretary meetings or agenda tracking. Kept as context.",
-        "result": "partial",
-        "url": "https://www.whitehouse.gov/briefings-statements/2025/01/president-trump-announces-appointments-to-the-white-house-offices-of-communications-public-liaison-and-cabinet-affairs"
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms \"Cabinet Secretary\" and \"Deputy Secretaries\", all document types since 2025-01-20: 0 documents. Researcher's variant result: supports; term \"Office of Cabinet Affairs\", all document types since 2025-01-20: 0 documents. Variant limited to presidential documents on \"Deputy Secretaries\" Cabinet: 0 documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Cabinet+Secretary%22+%22Deputy+Secretaries%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Real event (departure, no successor named) but not a step on the recommendation; removed from timeline, kept in summary.",
+        "note": "2026-10-18: The page loaded as the landing page of the 2026 Regulatory Plan and Unified Agenda but lists no agenda items (agency selection is script-driven). Recorded as partial; fallback used: the same Federal Register queries; the recommendation concerns internal White House staffing and meetings, which are not rulemaking items.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: domain-limited search on 119th Congress, Office of Cabinet Affairs and Deputy Secretaries meetings returned only a Commerce Deputy Secretary nomination hearing (S.Hrg. 119-253), organizational meeting materials and calendars; no bill. No BILLSTATUS fetched.",
         "result": "supports",
-        "url": "https://www.axios.com/2025/09/24/top-white-house-aide-budowich-leaving-trump"
+        "url": "https://www.congress.gov/event/119th-congress/senate-event/LC74974/text"
+      },
+      {
+        "note": "2026-10-18: first page of presidential actions shows nothing on Cabinet Affairs or Deputy Secretary meetings (page 1 of 65 only). The existing record already cites the 2025-01-24 White House staffing announcement.",
+        "result": "partial",
+        "url": "https://www.whitehouse.gov/presidential-actions/"
+      },
+      {
+        "note": "2026-10-18: news search \"Office of Cabinet Affairs deputy secretaries meetings White House 2026\" returned transition-guide material, a Bush-era page and a photo gallery of a Cabinet meeting; no report of regular Deputy Secretary meetings run by the Office. The gallery concerns a full Cabinet meeting, not the recommendation.",
+        "result": "supports",
+        "url": "https://katv.com/news/nation-world/gallery/president-donald-trump-convenes-cabinet-while-seeking-breakthrough-in-ending-iran-war-white-house-strait-of-hormuz-oil-gas-prices-tehran-self-defense-strikes-ceasefire-nuclear-agreement-uranium?photo=1"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Check 2 not applicable, confirmed by the reviewer on 2026-10-19: the agency selector of the 2026 Regulatory Plan and Unified Agenda lists no Executive Office of the President, White House, Domestic Policy Council, National Security Council, ODNI, CIA, FEC or Office of Special Counsel entry, so these actors have no agenda list to read.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       }
     ]
   },
@@ -114,6 +140,6 @@
   ],
   "title": "Have Cabinet Affairs run regular Deputy Secretary meetings and expand agenda tracking",
   "tracked": true,
-  "uncertainties": "Internal White House meetings are rarely reported, so absence of evidence is weak: Deputy Secretary meetings or agenda tracking may exist without public record. The finding rests on the researcher's three web searches, two further searches by the reviewer and the two sources cited. The President's Management Council, a different body, was not treated as a match. A later Cabinet Secretary seen only on a Wikipedia officeholder page was not used as evidence. The 2025-09-24 departure report was moved from the timeline to the summary because it is not a step toward or away from the recommendation. Absence check of 2026-10-16: one web search for a deputies process run by Cabinet Affairs in 2025 to 2026 returned only general Cabinet meeting coverage and transition-guide material, no description of regular Deputy Secretary meetings or an agenda-tracking function. Internal practice would rarely be public, so absence remains weak evidence.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "No report or White House document describing regular Office of Cabinet Affairs meetings of Deputy Secretaries, or an expanded agenda-tracking role for the office, was found. Federal Register searches since 2025-01-20 returned no document; a congress.gov and govinfo search found no bill; only the first page of presidential actions on whitehouse.gov was read; one news search found only coverage of full Cabinet meetings. No successor Cabinet Secretary after the September 2025 departure was confirmed. The reginfo.gov Unified Agenda (2026 Regulatory Plan and Unified Agenda edition) has no White House list, so the agenda check does not apply. Internal White House meetings are rarely reported, so absence of evidence is weak. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

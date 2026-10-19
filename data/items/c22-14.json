@@ -4,9 +4,9 @@
     "No introduced bill to eliminate these taxes was reviewed"
   ],
   "chapter": "22",
-  "confidence": 65,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "The diverged stage rests on Public Law 119-21, now read through U.S. Code amendment notes for sections 59A, 461 and 1411. Five checks documented on 2026-10-18 for any later action toward the recommendation: (1) Federal Register API searches found only a technical BEAT rule and information collections; (2) Unified Agenda listings could not be read, so the proposed-rule fallback was used (partial); (3) a congress.gov and GovInfo bill search with Code notes found no elimination bill or law; (4) the IRS newsroom showed nothing; (5) a news search found only analysis. Rated at the partial-check ceiling; the enrolled statute was read only through Code notes.",
+  "confidence_reason": "The diverged stage rests on Public Law 119-21, read through U.S. Code notes for sections 59A, 461 and 1411 and two law-firm summaries. Five documented checks for later action: (1) Federal Register API found a technical base erosion rule of 2025-12-18 and collections only (partial); (2) Unified Agenda: the Treasury rule list on reginfo.gov was read in full on 2026-10-19 and two IRS entries opened; the planned base erosion guidance applies the tax (partial, weakly informative because elimination needs legislation); (3) congress.gov and GovInfo search with Code notes found no elimination bill or law (supports); (4) the IRS newsroom showed nothing (supports); (5) one news search found analysis only (supports). Set at 66 because the enrolled statute was read only through Code notes.",
   "durability": {
     "level": "high",
     "why": "Provisions made permanent in statute require new legislation to change."
@@ -40,10 +40,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Diverged kept; five-part check documented and spot-checked against Code notes; confidence raised from 52 to 65."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Treasury Unified Agenda rule list and two IRS entries on reginfo.gov; diverged kept and confidence raised from 65 to 66."
     }
   ],
   "id": "c22-14",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -67,16 +71,13 @@
   "research_agent": "N22",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "judgment call: diverged kept because the law retained both taxes permanently and made the loss limitation permanent; in_progress (25) is defensible for the base erosion item alone, since the rate was set below its scheduled level",
-      "Removed the claim that the net investment income tax was not addressed for individuals as attributed to the Cleary summary, which does not say so; added a second law-firm summary",
-      "V7 systematic-check review: diverged 0 kept; base erosion Federal Register query and the 26 U.S.C. 59A notes re-read; confidence 52 to 65. The researcher's note that the BEAT rate rose to 10.5 percent is accurate against the 2025 rate of 10 percent; the record's comparison with the 12.5 percent scheduled rate also holds."
-    ],
+    "alternative": "In_progress 25 is defensible for the base erosion item alone, since the rate was set below its scheduled level.",
+    "flags": [],
     "mandate_check": "confirmed",
     "mandate_note": "Page 697, Entrepreneurship: raise the business loss limitation to at least $500,000, allow full carryforward of net operating losses, and eliminate the net investment income surtax and the base erosion anti-abuse tax. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Approved 2025-07-04. Table of contents confirms Sec. 70204 (Trump accounts and contribution pilot program), Sec. 70331 (extension and modification of base erosion minimum tax amount), Sec. 70432 (repeal of revision to de minimis rules for third party network transactions), Sec. 70433 (increase in threshold for information reporting on certain payees) and Sec. 70601 (modification and extension of limitation on excess business losses). The HTML is truncated at about 130,000 characters, so section text was not read and a missing table entry is not evidence of absence.",
@@ -132,6 +133,24 @@
         "note": "Reviewer re-check, 2026-10-18: amendment notes read: Pub. L. 119-21 section 70331 replaced 10 percent with 10.5 percent, struck the post-2025 increase, and set a one-point add-on for bank and dealer groups, for taxable years beginning after 2025; the tax remains.",
         "result": "supports",
         "url": "https://www.law.cornell.edu/uscode/text/26/59A"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (agency named Department of the Treasury, 216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages, the second holding only the footer). Related entries: 1545-BR86 Base Erosion Minimum Tax Amount Guidance Under Section 59A Related to the One, Big, Beautiful, Bill Act and 1545-BR92 Revision of the Business Interest Limitation Regulations under IRC 163(j), both Proposed Rule Stage; no title on the net investment income tax, excess business losses or net operating losses. Weakly informative: elimination requires legislation.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Detail page read: TREAS/IRS, Proposed Rule Stage, NPRM 07/00/2026, authority Pub. L. 119-21 and 26 U.S.C. 59A(i) and 7805(a); regulations to implement the 2025 amendments to section 59A. Applies the tax rather than ending it; a planned rule, not an operative action.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1545-BR86"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Detail page read: Proposed Rule Stage, NPRM 11/00/2026; revises the section 163(j) business interest regulations under Pub. L. 119-21 sections 70303, 70341 and 70342; does not concern sections 461, 172 or 1411.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1545-BR92"
       }
     ]
   },
@@ -199,6 +218,6 @@
   ],
   "title": "Eliminate the net investment income surtax and the BEAT; raise business loss limit",
   "tracked": true,
-  "uncertainties": "Rates and effects come from two law-firm summaries (commentary, not events) that agree; statutory text was not read because the GovInfo HTML is truncated. The 10.5 percent rate is lower than the 12.5 percent scheduled under prior law, a reduction short of elimination. Whether the law changed the loss limitation dollar amount was not stated in either summary. Absence of a net investment income tax change rests on the summaries and a truncated table of contents. Checked systematically on 2026-10-18: Federal Register searches, Unified Agenda and proposed-rule listings, U.S. Code amendment notes for sections 59A, 461 and 1411 with a bill search, the IRS newsroom and a news search found no rule, order or law eliminating the net investment income tax or the base erosion tax or lifting the loss limit to the stated level; a December 2025 technical BEAT rule and two introduced BEAT bills do not change the stage. The Code notes show the base erosion rate set at 10.5 percent (11.5 percent for groups with a bank or securities dealer) for taxable years beginning after 2025, up from 10 percent but below the 12.5 percent scheduled under prior law. The enacted text of Public Law 119-21 was read only through code notes.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "Public Law 119-21 was read through U.S. Code amendment notes and two law-firm summaries; the enrolled text on GovInfo is truncated. The notes show the base erosion rate set at 10.5 percent (11.5 percent for bank and dealer groups) for taxable years after 2025, below the 12.5 percent scheduled under prior law, and the excess business loss limitation made permanent; whether its dollar amount changed was not stated. The Treasury Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists planned guidance implementing the 2025 base erosion amendments (1545-BR86), which keeps the tax, and no entry on the net investment income tax or loss limits. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

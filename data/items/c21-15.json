@@ -4,9 +4,9 @@
     "The Justice Department data security program already occupies much of this ground under a separate order"
   ],
   "chapter": "21",
-  "confidence": 62,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks documented on 2026-10-18: (1) a Federal Register search of BIS documents for personal data exports found nothing on data exports or an IEEPA data order; (2) the Unified Agenda listing could not be browsed, and the BIS proposed-rule listing since 2025-01-20 returned zero (partial); (3) a congress.gov and GovInfo search with a bill status read of H.R. 8413 found no export-control bill, though enacted 119th Congress laws were not read for data provisions; (4) the BIS newsroom showed nothing on personal data; (5) a news search showed no 2025 or 2026 action. Set to 62 because the agenda listing and enacted laws were not fully read.",
+  "confidence_reason": "Not_started rests on five documented checks: (1) Federal Register API queries of BIS documents for personal data and data exports found nothing qualifying (supports); (2) Unified Agenda: the Commerce and Justice rule lists on reginfo.gov were read in full on 2026-10-19 with no data-export entry (supports; informative for the BIS rule, not for the order itself); (3) congress.gov and GovInfo search with the H.R. 8413 bill status read found no export-control bill, enacted laws unread (supports); (4) the BIS newsroom showed nothing on personal data (supports); (5) one news search found no 2025 or 2026 action (supports). The 2025-01-08 Justice Department rule was read as a parallel measure. Set at 66 because the order route is not covered by the agenda and enacted laws were not read.",
   "durability": {
     "level": "medium",
     "why": "Not applicable to the BIS route until action exists; the parallel Justice Department rule can be amended by a later administration."
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Not_started kept; five-part absence check documented and spot-checked; confidence raised from 45 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Commerce and Justice Unified Agenda rule lists on reginfo.gov and found no data-export entry; not_started kept and confidence raised from 62 to 66."
     }
   ],
   "id": "c21-15",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "executive_order",
@@ -62,15 +66,13 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: not_started kept for the BIS route; implemented (parallel) is defensible if the Justice Department data security program, in effect since April 2025, is treated as meeting the aim",
-      "Replaced the query-only source with the Justice Department rule; match set to parallel; confidence capped for an unsystematic negative finding",
-      "V7 systematic-check review: not_started 0 kept; BIS proposed-rule listing re-run (zero) and a wider sensitive personal data query found only a Justice Department correction to the parallel rule; confidence 45 to 62."
+      "Researcher gave 0694-AJ43 the title 'Revision of End-Use and End-User Based Export Controls, Including U.S. Persons Activities Controls'; the agenda list shows 'End-Use and End-User Based Export Controls: Military and Intelligence'. The list title is used here."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 674, BIS Data Transfer and Apps Used for Surveillance: draft and implement an IEEPA executive order extending export control authority beyond ECRA to restrict exports of U.S. persons' data to countries of concern, with BIS implementing regulations. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Federal Register API query, BIS documents since 2025-01-20 with term personal data: zero results. Check only; removed from sources.",
@@ -121,6 +123,18 @@
         "note": "Reviewer re-check, 2026-10-18: phrase sensitive personal data, all agencies, since 2025-01-20: count 8 (a Justice Department correction of 2025-04-18 to the January 2025 data security rule, a DOJ agenda, NIH biospecimen and data policies, a State delegation, FinCEN and FCC submarine cable items); none is a BIS rule or an executive order extending export controls to data.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"sensitive+personal+data\"&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Commerce list headed 'Agency Rule List - 2026' (agency named Department of Commerce, 176 rules: ADMIN 8, CENSUS 7, EDA 11, ITA 2, NOAA 117, PTO 11, NTIA 1, NIST 2, BIS 17), read to the footer by the reviewer on 2026-10-19. BIS (0694) lists 17 entries, including 0694-AK17 Critical Technologies Controls (Proposed Rule Stage) and 0694-AJ43 End-Use and End-User Based Export Controls: Military and Intelligence (Final Rule Stage); none concerns exports of U.S. persons' data. Informative for the BIS implementing rule; the executive order itself would not appear.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0600"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Justice list headed 'Agency Rule List - 2026' (76 rules, read to the footer by the reviewer): no entry on bulk sensitive personal data or countries of concern.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1100"
       }
     ]
   },
@@ -166,6 +180,6 @@
   "timeline": [],
   "title": "Restrict exports of U.S. persons' personal data to countries of concern by executive order",
   "tracked": true,
-  "uncertainties": "The negative finding rests on a Federal Register API term search of BIS documents and the earlier researcher's one web search; it is not a systematic review. Whether the Justice Department rule took effect on its stated date without change, and how it has been enforced since, were not checked; it is a prior-administration measure and is cited as a parallel, not as a qualifying action. The query used for the BIS check is recorded in the review, not as a source. Checked systematically on 2026-10-18: Federal Register search of BIS documents for personal data, Unified Agenda route via the proposed-rule listing for BIS (zero), a congress.gov and GovInfo search with BILLSTATUS read of one privacy bill, the BIS newsroom, and one news search found no executive order or BIS rule extending export controls to personal data. The only Justice Department action on the parallel data security rule since 2025-01-20 found in the Federal Register is a correction of a cross-reference published 2025-04-18. The Unified Agenda agency listing could not be browsed and the enacted 119th Congress laws were not read for data-export provisions.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No executive order extending export control authority to personal data and no BIS rule implementing one was found. The parallel Justice Department data security rule under Executive Order 14117 predates the period; the only Federal Register action on it since 2025-01-20 found is a 2025-04-18 correction, and its enforcement was not checked. The Unified Agenda rule lists on reginfo.gov for Commerce and Justice (both headed 'Agency Rule List - 2026') list no data-export rulemaking; BIS entries concern technology and end-use controls. Enacted 119th Congress laws were not read for data-export provisions. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

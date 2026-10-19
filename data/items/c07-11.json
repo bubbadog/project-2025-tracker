@@ -6,7 +6,7 @@
   "chapter": "07",
   "confidence": 50,
   "confidence_label": "low",
-  "confidence_reason": "Chapter text pages 210 and 211 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo search with the H.R. 7632 bill status read, CIA stories page with dni.gov and war.gov blocked, one news search); because covert action findings are classified and check 2 was partial and check 4 partly blocked, confidence stays low at 50.",
+  "confidence_reason": "Chapter text pages 210 and 211 checked. Five checks documented: (1) Federal Register API with a variant, supports (nothing found); (2) Unified Agenda, not applicable for the NSC, CIA and ODNI (no lists on the reginfo.gov selector), Department of War list read on 2026-10-19, supports; (3) congress.gov and govinfo with the H.R. 7632 bill status, supports; (4) CIA stories page, partial (dni.gov and defense hosts blocked); (5) one news search, supports. Confidence stays low at 50, well under the 65 to 68 ceiling, because covert action is classified.",
   "durability": {
     "level": "low",
     "why": "Findings are presidential decisions that can be modified or rescinded at any time, and little is public."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov), read the H.R. 7632 bill status on govinfo.gov, and reviewed the Unified Agenda fallback, CIA page and news checks, found no qualifying action, and kept not_started 0."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 confirmed the NSC, CIA and ODNI have no Unified Agenda list on reginfo.gov and read the Department of War list (nothing on covert action), kept not_started 0 and kept confidence at 50."
     }
   ],
   "id": "c07-11",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "executive_order",
@@ -59,14 +63,13 @@
   "research_agent": "N07a",
   "review": {
     "flags": [
-      "Covert action is classified; absence of public evidence is weak evidence of absence, so confidence stays low at 50 despite the systematic check.",
-      "Existing timeline entries are news reports of new covert action, kept as parallel context; they are not stage-deciding actions."
+      "Existing source_checks labeled does_not_support for the Federal Register rerun, the H.R. 7632 bill status and the news search record that nothing qualifying was found; under the rubric they read as supports."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 210 and 211 recommend an independent 60-day NSC review of current and possible covert action findings that identifies the best-equipped agencies, consideration of DOD capabilities in support, and placing covert action veterans in key NSC, CIA, ODNI and DOD posts. The proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "2026-10-18: reviewer rerun with terms covert actions OR presidential finding since 2025-01-20: 0 documents. Researcher query on covert action: 0 documents. Findings are classified and not published.",
@@ -92,6 +95,18 @@
         "note": "2026-10-18: one researcher news search on an NSC 60-day covert action review returned historical NSDD, CRS and CIA reading room material; no search URL was recorded, so the CIA page is listed as a placeholder.",
         "result": "does_not_support",
         "url": "https://www.cia.gov/stories/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Check 2 not applicable, confirmed by the reviewer on 2026-10-19: the agency selector of the 2026 Regulatory Plan and Unified Agenda lists no Executive Office of the President, White House, Domestic Policy Council, National Security Council, ODNI, CIA, FEC or Office of Special Counsel entry, so these actors have no agenda list to read.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the Department of War list on 2026-10-19: 111 rules; the only intelligence-related title is 0790-AL67, a Privacy Act implementation for counterintelligence investigation records; nothing on covert action or DOD support to findings.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0700"
       }
     ]
   },
@@ -144,6 +159,6 @@
   ],
   "title": "Review all covert action findings in 60 days and use DOD capabilities in support",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: queries on covert action (researcher) and on covert actions or presidential finding (reviewer) returned no documents since 2025-01-20, as expected for classified findings. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used; the agenda does not cover classified activity. (3) congress.gov and govinfo: one search surfaced NDAA and appropriations bills and H.R. 7632, whose bill status shows a hybrid warfare coordinator and sanctions reporting bill ordered reported on 2026-03-26, unrelated to a covert action review. (4) Agency pages: the CIA stories page showed no item on a review; dni.gov and DOD hosts were blocked and the NSC pages were not fetched. (5) News: one search returned historical material only. Stage is not_started because none of the specific steps (the independent 60-day review, the agency assessment, DOD capabilities under findings, staffing) is publicly documented; new findings reported in the press, which rely mostly on anonymous officials apart from the President's public confirmation about Venezuela, are shown as parallel context. A review could have occurred without public notice. The CNN article body does not give the month of the authorities update. The NSC reorganization is covered in c02-03 and CIA briefings on existing findings in c07-04.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No public record was found of the 60-day NSC review of covert action findings, an assessment of which agencies are best equipped, or DOD capabilities placed under findings. Press reports describe new covert action in Venezuela and Mexico, mostly on anonymous sources apart from a public presidential confirmation about Venezuela; these are related context. Federal Register searches returned nothing, as expected for classified findings; H.R. 7632 is unrelated; the CIA stories page showed nothing, and dni.gov and defense hosts were blocked; one news search returned historical material. The NSC, CIA and ODNI have no list in the reginfo.gov Unified Agenda (2026 Regulatory Plan and Unified Agenda edition), and the Department of War list holds nothing related. A classified review could have occurred without notice. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

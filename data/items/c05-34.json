@@ -5,9 +5,9 @@
     "FPS placement and the Management Directorate structure are set partly by statute"
   ],
   "chapter": "05",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "CRS and the budget overview were read and confirm where FPS sits in the request; evidence that the other office changes are absent is from a limited search.",
+  "confidence": 56,
+  "confidence_label": "medium",
+  "confidence_reason": "The DHS budget overview (hosted copy with DHS's own header) and CRS were read and agree on where FPS sits in the request; the office-merger items rest on absence of evidence from a limited search, so medium at the low end.",
   "durability": {
     "level": "medium",
     "why": "A headquarters consolidation enacted in appropriations would last, but only the request exists so far."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read the DHS FY2027 Budget Overview through its aila.org hosted copy, CRS R48979 on everycrsreport.com and a Federal Register API query; dhs.gov stayed blocked. No stage change (proposed 10); confidence 45 to 56."
     }
   ],
   "id": "c05-34",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -67,32 +71,29 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Budget overview source date changed from the 2026-04-01 placeholder to undated.",
-      "Pages corrected from 160 to 164 to 160, 161 and 163.",
-      "Not a duplicate of c05-14 (I&A elimination) or c05-01 (dismantling): this record tracks FPS reporting and the communications and appropriations office changes, which neither covers; the I&A consolidation is context only.",
-      "Stage proposed 10 with match parallel kept: the only action is a budget request reorganizing headquarters in a different way. not_started 0 is defensible if the owner gives the consolidation no weight for these items.",
-      "Confidence raised from 40 to 45."
+      "No stage change: proposed 10, match parallel. not_started is defensible because the consolidation request does not change FPS's reporting line.",
+      "Confidence 45 low to 56 medium."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 160 to 161 (Management Directorate: OCFO and FPS): move appropriations staff to OLA with a dotted line to OCFO, or require OLA on communications to Congress; FPS should report to the Secretary and have information-sharing agreements with the Marshals, Park Police and FBI. Page 163 (OLA, OPA, OPE): merge OPE into OPA, have component public and legislative affairs staff report to headquarters counterparts, and move appropriations staff from OCFO into OLA. Proposal is accurate; pages 162 and 164 (OGC, OPS, CRCL) were removed from pages as they do not carry these items.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y7",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields: have FPS report to the Secretary rather than through the Management Directorate with information-sharing agreements, merge Partnership and Engagement into Public Affairs, move appropriations staff from the CFO to Legislative Affairs, and have component public and legislative affairs staff report to headquarters. Chapter text not available this run; pages not re-checked.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Hosted FY2027 budget overview prints no date; OSEM absorbs MGMT (about 1.8 billion, 2,347 FTE) and I&A and OSA; FPS a table line (1,565 FTE, about 2.03 billion in FY2027); no mention of OPE, OPA, OLA or OCFO staff moves (checked 2026-10-14)",
+        "note": "Fetched 2026-10-18 (stage-deciding; hosted copy carrying the DHS FY 2027 Budget Overview header): consolidates OSEM, Management Directorate, I&A and Situational Awareness into one appropriation; FPS line 1,565 FTE and about 2.03 billion dollars; no FPS reporting line described; no mention of Partnership and Engagement, Public Affairs or Legislative Affairs changes. Supports proposed 10 with a parallel match.",
         "result": "partial",
         "url": "https://assets.aila.org/files/ab8304de-937e-48e9-a2d3-bd6a20ef6803/26040604.pdf"
       },
       {
-        "note": "CRS R48979 dated 2026-06-09: revised OSEM 4.67 billion; FPS inside revised OSEM as fee-funded element (checked 2026-10-14)",
-        "result": "supports",
+        "note": "Fetched 2026-10-18: revised OSEM request 4.67 billion dollars; FPS 2.03 billion dollars, level with FY2026 request and fee-funded; no reporting-line change.",
+        "result": "partial",
         "url": "https://www.everycrsreport.com/reports/R48979.html"
       },
       {
-        "note": "Article dated 2026-04-03: consolidation of I&A, MGMT, OSA and Executive Secretary, 53 million dollar saving, needs congressional approval; no mention of FPS or OPE (checked 2026-10-14)",
-        "result": "partial",
-        "url": "https://www.defenseone.com/policy/2026/04/dhs-fold-intelligence-office-headquarters-under-trumps-new-budget-plan/412629"
+        "note": "Fetched 2026-10-18 (reviewer's own term variant): one OPM SES notice, unrelated; no FPS delegation or office merger.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Federal+Protective+Service%22+%22Office+of+the+Secretary%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -167,6 +168,6 @@
   ],
   "title": "Put FPS under the Secretary and merge DHS headquarters communications and budget offices",
   "tracked": true,
-  "uncertainties": "The budget overview copy prints no date and was read through a hosted copy; it has no narrative on FPS, only a table line. The 2026-04-03 date is that of the Defense One report on the request, as in c05-14; the request's own release date was not pinned. Moving FPS with the Management Directorate into the Office of the Secretary and Executive Management could be read as bringing FPS closer to the Secretary, but no source says FPS would report to the Secretary. The office merger and reporting-line items for Partnership and Engagement, Public Affairs and Legislative Affairs were not found in any source, which is absence of evidence from a limited search; the December 2025 Council notice was still issued by the Office of Partnership and Engagement. The Intelligence and Analysis, CRCL and Privacy items are covered by c05-14 and c05-15.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The budget overview copy, hosted by aila.org and carrying DHS's own Fiscal Year 2027 Budget Overview header, prints no date and was read through that hosted copy because dhs.gov is blocked; it has an FPS table line (1,565 FTE and about 2.03 billion dollars for FY2027) and no narrative on FPS reporting. It was re-read in review on 2026-10-18. CRS R48979 was read in part through a summarizing tool; the Management Directorate detail sections and the appendix were not reached. The 2026-04-03 date is that of the Defense One report on the request, as in c05-14; the request's own release date was not pinned. Moving FPS with the Management Directorate into the Office of the Secretary and Executive Management could be read as bringing FPS closer to the Secretary, but no source says FPS would report to the Secretary. The office merger and reporting-line items for Partnership and Engagement, Public Affairs and Legislative Affairs were not found in the two budget documents or in a Federal Register API query (review: one unrelated OPM notice), which is absence of evidence; the December 2025 Council notice was still issued by the Office of Partnership and Engagement. The Intelligence and Analysis, CRCL and Privacy items are covered by c05-14 and c05-15.",
+  "updated_at": "2026-10-18"
 }

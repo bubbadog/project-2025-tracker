@@ -4,9 +4,9 @@
     "No policy or announcement found; NAEP reporting categories are set through National Assessment Governing Board policy and NCES operations"
   ],
   "chapter": "11",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Text checked; absence of action rests on a limited search, supported by a 2026 news report that the data have never been released; not_started is capped at 50.",
+  "confidence": 63,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API, including the 2027 NAEP collection notice read (supports); Unified Agenda, Education rule list read in full on reginfo.gov on 2026-10-19 (supports, weakly informative for a data release); govinfo BILLSTATUS for S. 4689 (supports); NAEP Data Explorer help page and ed.gov press index (partial); one news search (supports). Set at 63, below the 65 to 68 band for a non-regulatory action, because the agency check is partial.",
   "durability": {
     "level": "medium",
     "why": "A data-release practice would be reversible by the agency but would persist once published."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review: reran the Federal Register API check with two Education Department exact-phrase variants and opened the NAEP 2027 collection notice, listed all Education Department proposed rules, opened the S.4689 bill status on govinfo.gov, and read the NAEP Data Explorer help page and the ed.gov press index. No stage change (not_started 0); confidence 50 to 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the Education rule list on reginfo.gov in full and found no NAEP or family-structure entry; no stage change (not_started, 0); confidence 60 to 63."
     }
   ],
   "id": "c11-26",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -53,22 +61,51 @@
   "research_agent": "R11",
   "restates_ids": [],
   "review": {
-    "flags": [],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 338 recommends that whichever agency collects the data publish student data by family structure, including in the NAEP Data Explorer; consolidation of data collection under Census on the same page is in c11-02.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "flags": [
+      "no stage change: not_started 0",
+      "confidence 60 to 63"
+    ],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 338 recommends that whichever agency collects the data make student data, including NAEP results in the Data Explorer, available by family structure; the chapter text was not available to this review, and an earlier review on 2026-10-15 recorded the paraphrase as confirmed.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Undated help page; lists reporting groups without a family-structure variable. Checked 2026-10-15.",
+        "n": 1,
+        "note": "2026-10-18: reviewer variant, exact phrase 'family structure' limited to the Education Department since 2025-01-20: 0 documents. A second variant, exact phrase 'National Assessment of Educational Progress' limited to the Education Department, returned 21 documents (NAEP information collections, Governing Board meeting notices, a civics framework comment request and supplemental priorities); the reviewer opened the 2026-07-22 NAEP 2027 collection notice, which revises questionnaires and burden but mentions no family-structure reporting. No qualifying action.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22family%20structure%22&conditions[agencies][]=education-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "n": 2,
+        "note": "2026-10-18: reginfo.gov eAgendaMain showed only a landing page (researcher). Fallback run by the reviewer: all 33 Education Department proposed rules since 2025-01-20, both pages read (priorities, accreditation, Pell, waivers, negotiated rulemaking and rescissions); none concerns NAEP or NCES reporting by family structure. Partial because only the fallback was available.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=education-department&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "n": 3,
+        "note": "2026-10-18: researcher's domain-limited search on NAEP family-structure reporting bills returned unrelated bills. Reviewer opened the S.4689 BILLSTATUS: READ Act, introduced 2026-06-04, reported by HELP with a substitute and placed on the Senate calendar 2026-08-06 (Calendar No. 549); no NAEP or family-structure provision. No bill requiring reporting by family structure found.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s4689.xml"
+      },
+      {
+        "n": 4,
+        "note": "2026-10-18: the NAEP Data Explorer help page lists variable categories (major reporting groups, student, teacher, school, community and factors beyond school, with home environment and family-school contact) but no household-composition or family-structure variable. The ed.gov press-release index, also read, showed about 10 recent items, none on NAEP or family structure. Partial because only recent releases are visible and nces.ed.gov was not readable to the researcher.",
         "result": "partial",
         "url": "https://www.nationsreportcard.gov/ndecore/help"
       },
       {
-        "note": "Article of 2026-08-05 says NAEP has collected family-structure data since 2013 and has never reported it; no federal decision reported. Checked 2026-10-15.",
+        "n": 5,
+        "note": "2026-10-18: researcher's query on NAEP family-structure data release in 2026. Top relevant result is the Carolina Journal report of 2026-08-05 (already a source, read in the 2026-10-15 review) that NAEP collects family data and has never reported it; the rest were advocacy pieces. No report of a release or Governing Board decision.",
         "result": "supports",
         "url": "https://www.carolinajournal.com/federal-test-collects-family-data-on-nc-students-but-never-reports-it/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the Education list (page headed 'Agency Rule List - 2026', 19 rules, rule links carry publication id 202510) in full. No title on NAEP, NCES, statistics or family-structure reporting. Data releases are not normally made by rule, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1800"
       }
     ]
   },
@@ -121,6 +158,6 @@
   "timeline": [],
   "title": "Publish NAEP and other federal education data by family structure",
   "tracked": true,
-  "uncertainties": "Searches run: two web searches by the researcher (NAEP, family structure, Data Explorer, Governing Board, NCES, 2025 and 2026) and one by the reviewer (NAEP results by family structure, Governing Board, 2026 NCES release); results were think-tank reports, news and commentary, and none reported a Department or Governing Board decision. The Data Explorer help page may not reflect the current variable list. Staffing and contract changes at the Institute of Education Sciences in 2025 were not researched because no primary or major-news source was opened. Absence of evidence rests on a limited search.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No Department, NCES or National Assessment Governing Board action reporting NAEP results by family structure was found. The reginfo.gov Unified Agenda rule list for Education (edition headed Agency Rule List - 2026, 19 rules) lists no NAEP, statistics or family-structure entry; data releases are not normally made by rule, so this check is weakly informative. The NAEP Data Explorer help page may not reflect the full current variable list, nces.ed.gov was not readable, Governing Board minutes since 2025 were not reviewed, and 2025 staffing and contract changes at the Institute of Education Sciences were not researched. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

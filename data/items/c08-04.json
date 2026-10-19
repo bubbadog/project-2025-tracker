@@ -5,9 +5,9 @@
     "Judge Moss's 2026-03-31 ruling found viewpoint discrimination in the funding provisions of Executive Order 14290; whether that reasoning would reach FCC action on NCE status is untested, and appeal status was not found."
   ],
   "chapter": "08",
-  "confidence": 52,
-  "confidence_label": "low",
-  "confidence_reason": "Document text checked (pages 247 and 248). The January 2025 request for an underwriting review was confirmed in trade press, the 2026-03-31 opinion was opened on GovInfo, and Federal Register checks found no FCC action on NCE status through 2026-10-16. The request concerns compliance with NCE advertising rules rather than NCE designation, the FCC's own records could not be checked, and not_started is equally defensible.",
+  "confidence": 58,
+  "confidence_label": "medium",
+  "confidence_reason": "The FCC letter, the only FCC step, was read through a hosted copy carrying FCC letterhead and the Chairman's signature, and Federal Register queries found no FCC action on NCE status; fcc.gov returned HTTP 403 so enforcement records could not be checked, and the stage rests partly on absence, so medium.",
   "court_status": {
     "basis": "Latest court event in the timeline: on 2026-03-31 Judge Randolph D. Moss (D.D.C., National Public Radio, Inc. v. Trump, No. 1:25-cv-01674) resolved cross-motions for summary judgment in part and permanently enjoined the agency defendants from implementing Executive Order 14290's direction to end funding for NPR and PBS (GovInfo copy of the memorandum opinion). The injunction concerns federal funding, not the FCC's NCE designation, which has no litigation of its own; no appeal was found.",
     "date": "2026-03-31",
@@ -38,10 +38,14 @@
     {
       "date": "2026-10-16",
       "note": "Independent review: pages 247 and 248 re-read and the paraphrase confirmed. The added GovInfo source was opened and lists the 2026-03-31 memorandum opinion in National Public Radio, Inc. v. Trump with a permanent injunction against implementing the Executive Order 14290 funding direction, so it supports the text. Court status was reset from pending to enjoined to match that latest court event, with a basis stating it concerns funding rather than NCE status. Stage proposed 5 unchanged under the rule that a requested compliance review without an operative change is at most proposed; confidence stays at 52."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) read the FCC Chairman's 2025-01-29 letter through its WBUR-hosted copy and ran a Federal Register API query for FCC noncommercial educational documents; the letter replaced the news report as the event source. No stage change (proposed 5); confidence 52 to 58."
     }
   ],
   "id": "c08-04",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -61,21 +65,26 @@
   "research_agent": "A06",
   "review": {
     "flags": [
-      "not_started is equally defensible: the only FCC action is a requested underwriting review.",
-      "Absence of later FCC action rests on Federal Register searches; fcc.gov was not reachable.",
-      "The FCC letter itself was not read.",
-      "court_status enjoined describes the funding case, the only litigation in the record; it does not mean the NCE recommendation is blocked."
+      "No stage change: proposed 5, match parallel. not_started 0 is equally defensible because the letter concerns compliance with NCE advertising rules, not NCE designation.",
+      "The 2025-01-29 timeline event now cites the letter itself (hosted copy, primary) instead of the Current news report; Current stays in sources.",
+      "court_status (enjoined, EO 14290 funding case) kept unchanged; it does not concern NCE designation.",
+      "Confidence 52 low to 58 medium."
     ],
-    "mandate_check": "pages re-read",
-    "mandate_note": "Page 247 says NPR, PBS and similar broadcasters should no longer qualify as noncommercial educational stations and describes the FM band reserved for them; page 248 describes the regulatory fee exemption and says the next President should instruct the FCC to exclude PBS- and NPR-affiliated stations from NCE status and its privileges. The proposal paraphrase is faithful.",
-    "model": "claude-opus-5-5",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "independent review (AI)",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages (247 to 248) and proposal fields: the President should instruct the FCC to remove NPR- and PBS-affiliated stations from noncommercial educational status and its privileges, such as reserved FM spectrum and regulatory fee exemption. Chapter text not available this run; pages not re-checked.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Opened 2026-10-16: GovInfo court opinions page for National Public Radio, Inc. et al. v. Trump et al., D.D.C. 25-cv-01674, Judge Moss, lists a memorandum opinion signed 2026-03-31 that grants and denies cross-motions for summary judgment in part and permanently enjoins agency defendants from enforcing the Executive Order 14290 funding direction; supports the added source and the timeline entry.",
+        "note": "Fetched 2026-10-18 (stage-deciding; hosted copy on FCC letterhead, signed by the Chairman, dated 2025-01-29): requests an Enforcement Bureau investigation of underwriting under Section 399B; no change to NCE status, reserved spectrum or fee exemptions. Supports proposed 5 at most.",
+        "result": "partial",
+        "url": "https://media.wbur.org/wp/2025/03/FCC-012925-Letter.pdf"
+      },
+      {
+        "note": "Fetched 2026-10-18 (reviewer's own term variant): 43 FCC documents, first 20 read; translator eligibility, commercial-to-NCE switching, foreign ownership and channel allotment items, none removing NPR or PBS affiliates from NCE status or ending fee exemptions.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/app/details/USCOURTS-dcd-1_25-cv-01674/context"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22noncommercial+educational%22&conditions[agencies][]=federal-communications-commission&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -140,6 +149,13 @@
       "publisher": "GovInfo (U.S. Courts opinions)",
       "title": "National Public Radio, Inc. v. Trump, No. 1:25-cv-01674 (D.D.C.), memorandum opinion of 2026-03-31",
       "url": "https://www.govinfo.gov/app/details/USCOURTS-dcd-1_25-cv-01674/context"
+    },
+    {
+      "date": "2025-01-29",
+      "kind": "primary",
+      "publisher": "FCC (mirror hosted by WBUR)",
+      "title": "FCC Chairman letter of 2025-01-29 to NPR and PBS (copy hosted by WBUR)",
+      "url": "https://media.wbur.org/wp/2025/03/FCC-012925-Letter.pdf"
     }
   ],
   "stage": "proposed",
@@ -147,10 +163,10 @@
   "timeline": [
     {
       "date": "2025-01-29",
-      "event": "Chairman Carr sends letters to NPR and PBS asking the Enforcement Bureau to review whether underwriting by member stations violates the ban on advertising by NCE stations; Current corrected its report to say he requested the review and that an investigation was not confirmed. TV Technology reports the letter also noted that the roughly 1,500 member stations' authorizations limit them to NCE operation.",
-      "kind": "news",
-      "source": "Current",
-      "url": "https://current.org/2025/01/fcc-opens-investigation-into-npr-pbs-underwriting/"
+      "event": "FCC Chairman Carr sent letters to NPR and PBS stating that he had asked the Enforcement Bureau, with the Media Bureau, to open an investigation into whether underwriting announcements by NPR, PBS and member stations violate the Section 399B ban on commercial announcements by NCE stations; the letter notes the roughly 1,500 member stations are licensed for NCE operation only and does not change NCE status, reserved-band access or fee exemptions.",
+      "kind": "primary",
+      "source": "FCC (copy hosted by WBUR)",
+      "url": "https://media.wbur.org/wp/2025/03/FCC-012925-Letter.pdf"
     },
     {
       "date": "2025-05-01",
@@ -176,6 +192,6 @@
   ],
   "title": "Remove NPR- and PBS-affiliated stations from noncommercial educational (NCE) status",
   "tracked": true,
-  "uncertainties": "The stage is a judgment: the only FCC action found is a request for an underwriting-compliance review, which is related to NCE rules but does not change NCE status, so not_started is a defensible alternative. The absence finding rests on Federal Register API queries of FCC documents (underwriting: 2 unrelated results; public broadcasting: 3 results, one an unrelated Savannah TV channel proposal), a prior scan of FCC NCE documents (first 40 of 43 read), Current.org site searches (no 2026 FCC underwriting item), and four web searches that returned only January 2025 coverage. The FCC's own site returned HTTP 403, so FCC Enforcement Bureau letters or consent decrees not reflected in the Federal Register or trade press could have been missed. The letter itself was not opened. The earlier claim of a March 2025 Senate subcommittee inquiry rested on Wikipedia and stays dropped. Appeal status of the Moss ruling was not found. The 2026-04-23 date shown for the Clearinghouse source is the partial final judgment date given on that page. Freshness pass 2026-10-16: the Federal Register API for FCC documents since 2026-06-25 (twelve results, none on NCE status, public broadcasting or underwriting); GovInfo and Civil Rights Litigation Clearinghouse pages for the NPR case showed no notice of appeal, but their dockets may lag, so appeal status remains unconfirmed; web searches for an FCC underwriting outcome in 2026 returned only January 2025 coverage. CPB wind-down status and appropriations text were not separately searched beyond the case materials.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The stage is a judgment: the only FCC action found is a request for an underwriting-compliance review, which is related to NCE rules but does not change NCE status, so not_started is a defensible alternative. The absence finding rests on Federal Register API queries of FCC documents (underwriting: 2 unrelated results; public broadcasting: 3 results, one an unrelated Savannah TV channel proposal), a prior scan of FCC NCE documents (first 40 of 43 read), Current.org site searches (no 2026 FCC underwriting item), and four web searches that returned only January 2025 coverage. The FCC's own site returned HTTP 403, so FCC Enforcement Bureau letters or consent decrees not reflected in the Federal Register or trade press could have been missed. The letter itself was read in review on 2026-10-18 through a copy hosted by WBUR that carries FCC letterhead and the Chairman's signature; it asks the Enforcement Bureau, with the Media Bureau, to open an investigation of underwriting announcements, cites Section 399B and says member stations are limited to NCE operation, and it does not mention reserved spectrum or fee exemptions. The earlier claim of a March 2025 Senate subcommittee inquiry rested on Wikipedia and stays dropped. Appeal status of the Moss ruling was not found. The 2026-04-23 date shown for the Clearinghouse source is the partial final judgment date given on that page. Freshness pass 2026-10-16: the Federal Register API for FCC documents since 2026-06-25 (twelve results, none on NCE status, public broadcasting or underwriting); GovInfo and Civil Rights Litigation Clearinghouse pages for the NPR case showed no notice of appeal, but their dockets may lag, so appeal status remains unconfirmed; web searches for an FCC underwriting outcome in 2026 returned only January 2025 coverage. CPB wind-down status and appropriations text were not separately searched beyond the case materials. Review check 2026-10-18: a Federal Register API query for noncommercial educational in FCC documents since 2025-01-20 returned 43 items; the first 20 read include the 2026-06-25 translator rule, a 2026-05-19 rule letting commercial licensees propose switching to NCE and a 2026-04-09 foreign ownership rule, none changing the NCE status of NPR- or PBS-affiliated stations or fee exemptions.",
+  "updated_at": "2026-10-18"
 }

@@ -2,9 +2,9 @@
   "agency": "VA (VHA)",
   "blockers": [],
   "chapter": "20",
-  "confidence": 62,
+  "confidence": 63,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text page 646 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo search, VA news page, one news search), so confidence is capped near 62 because check 2 was partial.",
+  "confidence_reason": "Chapter text page 646 checked. Five checks documented: (1) Federal Register API with a variant, supports (nothing qualifying); (2) Unified Agenda VA list, 62 rules read on 2026-10-19, supports; (3) congress.gov and govinfo search, partial (119th Congress reintroduction not ruled out); (4) VA news homepage, partial (data pages not evaluated); (5) one news search, supports. Confidence 63 with two partial checks.",
   "durability": {
     "level": "low",
     "why": "Nothing exists; an administrative reporting policy could be reversed."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov) and reviewed the Unified Agenda fallback, congress.gov and govinfo, VA news page and news checks, found no qualifying action, and kept not_started 0."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the VA rule list in the reginfo.gov Unified Agenda (62 rules, none on VHA public reporting), kept not_started 0 and raised confidence from 62 to 63."
     }
   ],
   "id": "c20-13",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -59,14 +63,13 @@
       "url": "https://www.veterans.senate.gov/2025/6/blumenthal-takano-call-on-trump-va-to-maintain-medical-data-transparency-for-veterans-congress"
     },
     "flags": [
-      "Check 2 reached only the Federal Register fallback; confidence capped near 62.",
-      "VA's existing public access and quality data pages were not evaluated; changes there would not be caught by these checks."
+      "Existing source_checks labeled does_not_support for the Federal Register rerun, congress.gov search, VA news page and news search record that nothing qualifying was found; under the rubric they read as supports."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 646 recommends requiring VHA to report publicly on all aspects of operation, including quality, safety, patient experience, timeliness and cost-effectiveness, on standards like those of the Medicare ACO program. The proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "2026-10-18: reviewer rerun with terms Veterans Health Administration, patient experience, transparency since 2025-01-20: 9 CMS rules (OPPS, physician fee schedule, IPPS, GLOBE model); none establishes VHA public reporting. Researcher query on VHA quality, safety, timeliness, cost, public reporting returned 13 unrelated documents.",
@@ -92,6 +95,12 @@
         "note": "2026-10-18: one researcher news search on new VHA public reporting requirements returned press releases on the 117th Congress bill and older items; no search URL was recorded, so the VA news page is listed as a placeholder.",
         "result": "does_not_support",
         "url": "https://news.va.gov"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the VA list on 2026-10-19: Agency Rule List - 2026, 62 rules (32 proposed, 30 final). No title concerns VHA public reporting of quality, safety, patient experience, timeliness or cost, or accountable care standards; nearest titles are 2900-AS65 (reevaluating VHA clinical determinations), 2900-AS67 (medical foster homes oversight) and 2900-AS93 (Veteran Readiness and Employment changes), none a reporting requirement.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2900"
       }
     ]
   },
@@ -144,6 +153,6 @@
   "timeline": [],
   "title": "Require VHA to report publicly on quality, safety, timeliness and cost",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: the researcher's query on VHA quality, safety, timeliness, cost and public reporting returned 13 documents, and a reviewer rerun on the Veterans Health Administration with patient experience and transparency returned 9 CMS payment and quality rules; none requires VHA public reporting on the listed dimensions, the only VHA reference being an eligibility point in a CMS rule. (2) Unified Agenda: item listings could not be reached, so only the Federal Register fallback was used. (3) congress.gov and govinfo: one search returned earlier-Congress transparency and report card bills; a 119th Congress reintroduction was not ruled out. (4) Agency pages: the VA news homepage showed no item on public reporting; VA's existing access and quality data pages were not evaluated for changes. (5) News: one search returned only press releases on a 117th Congress bill and older items. The 2025-06-02 minority letter describes possible reductions in quality data sharing that were not confirmed from a VA source.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No new VA public reporting requirement, dashboard or directive modeled on Medicare Accountable Care Organization standards was found since 2025-01-20. A minority letter of 2025-06-02 described possible reductions in VA quality data sharing that were not confirmed from a VA source. Federal Register searches found only CMS rules; a congress.gov and govinfo search returned earlier-Congress bills and a 119th Congress reintroduction was not ruled out; the VA news homepage showed nothing, and VA's existing access and quality pages were not evaluated for changes; one news search returned older items. The VA list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 62 rules) holds no reporting entry. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

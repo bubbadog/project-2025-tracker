@@ -4,9 +4,9 @@
     "Requires an act of Congress; the one housing law enacted in the period did not address the listed items"
   ],
   "chapter": "15",
-  "confidence": 55,
+  "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks documented on 2026-10-18 on top of the CRS report on Public Law 119-101: (1) Federal Register API searches found nothing on first-time buyer limits, a separate HECM fund, loan limit determinations or shorter terms, only a 2025 HECM request for information and HUD fair housing actions bearing on the closing clause; (2) Unified Agenda listings could not be read, so the proposed-rule fallback was used (partial); (3) a congress.gov and GovInfo bill search found no matching bill, with the Code note for 12 U.S.C. 1709 cut off (partial); (4) the HUD news listing showed nothing on these items while the main press page failed (partial); (5) a news search found only routine loan limit coverage. Set to 55 because several checks were partial and the closing clause has related HUD actions.",
+  "confidence_reason": "Not_started rests on five documented checks and the CRS report on Public Law 119-101: (1) Federal Register API queries found nothing on the four main items, only HUD fair housing actions bearing on the closing clause (partial); (2) Unified Agenda: the HUD rule list on reginfo.gov was read in full on 2026-10-19 and the 2501-AE13 entry opened; no entry on the main items, with the marketing rescission planned at the final stage (partial; informative for HUD's implementing role, though the main items need legislation); (3) congress.gov and GovInfo search found no matching bill, with the U.S. Code note cut off (partial); (4) the HUD news listing showed nothing while the main press page failed (partial); (5) a news search found only routine loan limit coverage (supports). The 2025-06-03 proposed rule and a 2026-10-19 Federal Register query showing no final rescission were read. Raised from 55 to 60 now that the agenda is read; held there by the partial checks.",
   "durability": {
     "level": "high",
     "why": "Statutory changes to FHA insurance authority would persist until Congress amends them again."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Not_started kept after reviewing the drafted move; HUD fair housing items touching only the closing clause noted in uncertainties; confidence raised from 50 to 55."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the HUD Unified Agenda rule list, opened the planned rescission of the affirmative fair housing marketing rules and confirmed no final rule in the Federal Register; not_started kept and confidence raised from 55 to 60."
     }
   ],
   "id": "c15-16",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -60,18 +64,15 @@
   "research_agent": "R14D",
   "restates_ids": [],
   "review": {
+    "alternative": "Proposed 5 is defensible if the 2025 proposal to rescind the affirmative fair housing marketing rules, now listed at the final rule stage in the agenda, is counted as a partial step on the closing clause.",
     "flags": [
-      "Corrected the substance of the proposal and title: the Mandate favors restricting FHA single-family insurance to first-time homebuyers, not ending a first-time limit; the record should be rescored on the corrected text.",
-      "Removed the P.L. 119-101 timeline event and changed match from parallel to direct, since the law does not touch the listed items; stage not_started 0 kept.",
-      "Public Law 119-101 number and date confirmed in the CRS report.",
-      "V7 decision on the researcher's draft move: not_started 0 kept rather than proposed 8. The AFFH interim final rule covers HUD grantees, not single-family programs, and AFFH is tracked in c15-01; the affirmative marketing rescission does reach FHA single-family participants but is a proposal touching only the last of five clauses of a statutory recommendation. Alternative: proposed 5 on the marketing rescission as a partial step on the closing clause.",
-      "Both HUD fair housing items and the HECM request for information noted in uncertainties rather than the timeline."
+      "Researcher's agenda note omitted 2501-AE13 (Rescission of Affirmative Fair Housing Marketing Regulations, Final Rule Stage, final action projected 09/00/2026), which bears on the closing clause; if it is published as a final rule, c15-16 and c15-01 should be re-checked."
     ],
     "mandate_check": "corrected",
     "mandate_note": "Page 510 says Congress should consider a statutory revision restricting FHA single-family insurance to first-time homebuyers, with a HECM special risk fund, revised loan limits and shorter-term product flexibility, and abandon single-family affirmative obligation authorities.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Checked 2026-10-15: P.L. 119-101 enacted 2026-07-11 without signature (presentment 2026-06-29), from H.R. 6644; no HECM, single-family loan limit, first-time homebuyer, shorter-term product or AFFH provisions found in either half of the report.",
@@ -127,6 +128,24 @@
         "note": "Reviewer re-check, 2026-10-18: count 2: the request for information of 2025-10-02 and its comment reopening of 2025-12-10; seeks feedback on strengthening the HECM and HMBS programs, with no separate insurance fund or statutory change; related but not qualifying.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"Future+of+the+HECM\"&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "HUD list headed 'Agency Rule List - 2026' (agency named Department of Housing and Urban Development, 54 rules, read to the footer by the reviewer on 2026-10-19): no entry restricting FHA to first-time buyers, moving HECM to its own fund, revising loan limit determinations or allowing shorter terms. Related to the closing clause only: 2501-AE13, Rescission of Affirmative Fair Housing Marketing Regulations (FR-6533), Final Rule Stage, and 2529-AB08, Affirmatively Furthering Fair Housing, Revisions (FR-6519), Final Rule Stage. The researcher's note did not mention 2501-AE13.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Detail page read: Final Rule Stage; NPRM 06/03/2025 (90 FR 23491), comment period end 07/03/2025, final action projected 09/00/2026; would rescind the regulations requiring participants in FHA insurance or multifamily rental assistance programs to submit affirmative fair housing marketing plans. A planned final rule, not an operative action.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=2501-AE13"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer query on 2026-10-19, phrase Affirmative Fair Housing Marketing since 2025-01-20: 2 documents, the 2025-06-03 proposed rule and an unrelated Section 811 information collection; no final rescission has been published.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Affirmative+Fair+Housing+Marketing%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -179,6 +198,6 @@
   "timeline": [],
   "title": "Legislate FHA changes: first-time buyer limit, HECM fund, loan limits, shorter terms",
   "tracked": true,
-  "uncertainties": "In review the CRS report on Public Law 119-101 was read in full across two passes: it confirms the law number, enactment on 2026-07-11 without the President's signature after presentment on 2026-06-29, origin in H.R. 6644, and finds no provisions on HECM, single-family FHA loan limits, first-time homebuyers, shorter-term mortgages or AFFH; section 211 concerns multifamily loan limits and section 303 Title I loan limits. Because the law does not touch the listed items it is not treated as a parallel step. Bills outside that law were searched once by the researcher and none was found; congress.gov pages could not be opened. The draft's title and proposal described ending the first-time limit; the text instead favors restricting FHA single-family insurance to first-time homebuyers, and the record was corrected. The premium element is tracked in c15-12. Checked systematically on 2026-10-18: Federal Register searches, agenda and proposed-rule listings, a congress.gov and govinfo.gov bill search, the HUD newsroom and a news search found no law, bill or rule restricting FHA insurance to first-time buyers, moving the reverse mortgage program to its own fund, revising single-family loan limit determinations or allowing shorter terms. On the closing clause only, HUD's interim final rule of 2025-03-03 revised the affirmatively furthering fair housing certification for grantees and public housing agencies, not FHA single-family programs, and HUD's proposed rule of 2025-06-03 would rescind the affirmative fair housing marketing regulations that apply to FHA insurance participants, including some single-family applicants; no final rescission was found. Not_started was kept because the recommendation is a statutory revision whose four main items are untouched, the affirmative-obligation clause is tracked in c15-01, and the marketing rescission is a proposal; proposed 5 is the other defensible call if the marketing rescission is counted as a partial step on the closing clause. HUD's October 2025 request for information on the HECM program seeks comment on improvements and mentions no separate insurance fund.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No law, bill or rule restricting FHA single-family insurance to first-time buyers, moving HECM to its own fund, revising loan limit determinations or adding shorter-term flexibility was found; Public Law 119-101 does not address these items, per the CRS report read. The U.S. Code note search was cut off and the main HUD press page failed. On the closing clause, HUD's Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026', 54 rules) lists the rescission of the affirmative fair housing marketing regulations (2501-AE13) at the final rule stage, projected for September 2026; the Federal Register shows only the 2025-06-03 proposal, so no rescission is in effect. That clause is tracked in c15-01. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -6,7 +6,7 @@
   "chapter": "04",
   "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked; the stage-deciding September 2026 memo is known from one fetched news report, supported by a fetched CNN report, with the cyber strategy and EO 14390 read as primary documents.",
+  "confidence_reason": "Diverged rests on the 2026-09-22 memo as reported by two news outlets. Five checks documented: (1) Federal Register API with a variant, supports; (2) Unified Agenda Department of War list read on 2026-10-19, supports but weakly informative for operational policy; (3) congress.gov and govinfo with BILLSTATUS for S. 2602 and S. 2607, partial; (4) war.gov and defense.gov, unreachable, news substitute; (5) one news search, does_not_support in the sense that it found the contrary memo. Confidence stays at 62 because the memo text was not read.",
   "durability": {
     "level": "low",
     "why": "Both the election memo and the strategy are executive documents that can be rewritten at any time."
@@ -32,10 +32,18 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to c04-30 (layer 3 enumeration, chapters 00, 04, 05, 28 and 30)."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with a separate term variant (0 documents), read the Military Times report of the 2026-09-22 Defense memo, and reviewed the researcher's checks of reginfo.gov with the Federal Register fallback, govinfo.gov BILLSTATUS for S. 2602 and S. 2607, and war.gov (blocked). No stage change (diverged, 0); confidence unchanged at 62; one news source added."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the Department of War rule list in the reginfo.gov Unified Agenda (no entry on election security or cyber-effects operations), kept diverged 0 and kept confidence at 62."
     }
   ],
   "id": "c04-21",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -58,40 +66,49 @@
   "requires_congress": "no",
   "research_agent": "N04a",
   "review": {
-    "flags": [
-      "proposal corrected: NSPM-13 item concerns defensive cyber-effects operations",
-      "strategy and EO 14390 split into separate timeline events with their own sources"
-    ],
-    "mandate_check": "corrected",
-    "mandate_note": "Pages 119 and 120 call for offensive cyber-effects operations, expanding defensive cyber-effects operations under NSPM-13, and ending Cyber Command's role in federal election security efforts. The proposal had described the NSPM-13 item as operations generally; it now says defensive.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
-    "reviewer": "Y6",
+    "alternative": "partial or not_started on the offensive-operations items, which are classified; the diverged rating rests on the election item.",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 119 and 120, as described in the record, recommend that Cyber Command end its participation in federal election security efforts, conduct offensive cyber-effects operations at tactical and strategic levels, and expand defensive cyber-effects operations under NSPM-13. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Dated 2026-09-28; memo signed 2026-09-22; Cyber Command, NSA, DIA, NGA; existing authorities; DHS coordination; ESG use unspecified.",
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms \"election security\" and \"Department of Defense\", all document types since 2025-01-20: 0 documents. The 2026-09-22 Defense memo is not a Federal Register document. Researcher's variant result: supports; terms \"Cyber Command\" and election, all types since 2025-01-20: 0 documents. Variant \"Cyber Command\": 1 unrelated OPM notice (2025-08853). The 2026-09-22 Defense memo is not a Federal Register document.",
         "result": "supports",
-        "url": "https://www.nextgov.com/defense/2026/09/hegseth-orders-cyber-intelligence-agencies-prioritize-election-defense/416288/"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22election+security%22+%22Department+of+Defense%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Dated 2026-04-30; ESG operated each election since 2020, not activated; commander quote paraphrased.",
-        "result": "supports",
-        "url": "https://kvia.com/politics/cnn-us-politics/2026/04/30/us-cyber-team-hasnt-been-activated-yet-to-protect-midterm-elections-from-foreign-meddling/"
+        "note": "2026-10-18: The page loaded as the landing page of the 2026 Regulatory Plan and Unified Agenda but lists no agenda items (agency selection is script-driven). Recorded as partial; fallback used: Defense Department proposed rules since 2025-01-20, 29 documents, first 20 read: procurement and Privacy Act items, none on Cyber Command election or cyber-effects operations. Second page not read.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=defense-department&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Cover dated March 2026; Pillar 1 offensive and defensive capabilities; no DOD, Cyber Command or election mention.",
-        "result": "supports",
-        "url": "https://www.whitehouse.gov/wp-content/uploads/2026/03/President-Trumps-Cyber-Strategy-for-America.pdf"
+        "note": "2026-10-18: domain-limited search \"119th Congress Cyber Command election security offensive cyber operations bill\". Found S.2602 (Rounds, introduced 2025-07-31, referred to Armed Services; BILLSTATUS: would expand the statutory affirmation of authority for cyber operations to cover defense of DoD critical infrastructure), S.2606 (AI roadmap for Cyber Command), S.2607 (funds limitation), H.R.9697 (Cyber Letters of Marque and Reprisal Act), H.R.2659 and H.R.6309. Only S.2602 and S.2607 were fetched; none ends the election role. S.2602 broadens defensive-oriented authority and is at most loosely related to the expansion item.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2602.xml"
       },
       {
-        "note": "EO 14390 signed 2026-03-06; Sec. 2(b) Secretary of War supports disruption of malicious cyber actors.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/03/11/2026-04826/combating-cybercrime-fraud-and-predatory-schemes-against-american-citizens"
+        "note": "2026-10-18: war.gov is blocked and was not retried. The Military Times report (2026-09-29) of the Defense memo dated 2026-09-22 states the memo directs Cyber Command and the NSA director to carry out their roles in countering foreign threats to the 2026 elections and to work with DHS; the article describes defensive protection of election infrastructure and says nothing on offensive operations. This opposes the election-role item and is already in the existing record.",
+        "result": "partial",
+        "url": "https://www.militarytimes.com/news/pentagon-congress/2026/09/29/pentagon-directs-cyber-intelligence-agencies-to-counter-foreign-election-threats/"
       },
       {
-        "note": "Strategy and EO released 2026-03-06; mentions a 1 billion dollar offensive cyber appropriation.",
+        "note": "2026-10-18: news search \"Cyber Command election security 2026 midterms role offensive cyber operations Hegseth\": results (Military Times, AP syndication) report the memo directing military cyber forces to guard election systems during the midterms. This is an action opposite to the recommended withdrawal and supports the existing diverged stage; no report found on a new offensive-operations expansion.",
+        "result": "does_not_support",
+        "url": "https://www.militarytimes.com/news/pentagon-congress/2026/09/29/pentagon-directs-cyber-intelligence-agencies-to-counter-foreign-election-threats/"
+      },
+      {
+        "note": "2026-10-18: opened by the reviewer. Military Times (2026-09-29) reports that the Secretary of Defense memo dated 2026-09-22 directs the Cyber Command commander and the directors of NSA, DIA and NGA to counter foreign threats to the 2026 elections, with Cyber Command to work with DHS; it describes defensive protection of election infrastructure and says nothing about offensive operations. This fully supports the diverged reading of the election item; the memo PDF on a defense.gov host was not reached (blocked hosts).",
         "result": "supports",
-        "url": "https://www.globalpolicywatch.com/2026/03/white-house-releases-new-national-cyber-strategy-and-executive-order/"
+        "url": "https://www.militarytimes.com/news/pentagon-congress/2026/09/29/pentagon-directs-cyber-intelligence-agencies-to-counter-foreign-election-threats/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the Department of War list on 2026-10-19: 111 rules; no title concerns Cyber Command, election security or cyber-effects operations; the cyber titles (0790-AM01, 0750-AL95, 0750-AM24) are contracting rules. Operational and classified authorities do not appear in the agenda, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0700"
       }
     ]
   },
@@ -150,6 +167,13 @@
       "publisher": "Congressional Research Service",
       "title": "Defense Funding in the 2025 Reconciliation Law (CRS IN12580)",
       "url": "https://www.everycrsreport.com/files/2025-07-24_IN12580_4e64292443ec5f76ebb345d35f4970da6a16521b.html"
+    },
+    {
+      "date": "2026-09-29",
+      "kind": "news",
+      "publisher": "Military Times",
+      "title": "Pentagon directs cyber, intelligence agencies to counter foreign election threats",
+      "url": "https://www.militarytimes.com/news/pentagon-congress/2026/09/29/pentagon-directs-cyber-intelligence-agencies-to-counter-foreign-election-threats/"
     }
   ],
   "stage": "diverged",
@@ -186,6 +210,6 @@
   ],
   "title": "Cyber Command: end role in federal election security and expand offensive cyber operations",
   "tracked": true,
-  "uncertainties": "The 2026-09-22 memo was read through a Nextgov report, not the memo itself, and the report says the memo does not state whether the Election Security Group will be used. The CNN article does not describe 2025 changes to the group, so reports of 2025 cuts to NSA or Cyber Command election work were not confirmed. The cyber strategy PDF is dated March 2026 on its cover; the 2026-03-06 release date is from a law firm summary. A law firm summary says the 2025 reconciliation law includes 1 billion dollars for offensive cyber operations, while CRS lists 380 million dollars for DOD cybersecurity under Sec. 20006; the 1 billion dollar line was not traced to a section. NSPM-13 is classified and the scope of any expansion is unknown. The diverged stage reflects the election item; the offensive item is closer to the Mandate, and no evidence on defensive operations under NSPM-13 was found.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "A Secretary of Defense memo signed 2026-09-22 directs Cyber Command, NSA, DIA and NGA to counter foreign threats to the 2026 elections, opposite to the recommended withdrawal; it is known from Military Times and Nextgov reports, not the memo text, because defense hosts are blocked. Offensive and defensive cyber-effects activity, including under NSPM-13, is classified and was not verifiable. Federal Register searches found nothing; S. 2602 and S. 2607 do not end the election role, and four other cyber bills were not opened; one news search confirmed the memo reports. The Department of War list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 111 rules) holds no related entry. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

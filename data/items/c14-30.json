@@ -5,9 +5,9 @@
     "Alternative vaccines are licensed abroad and would need manufacturer participation or import authority"
   ],
   "chapter": "14",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Absence of evidence from three web searches and a read of the 2021 waiver document; Mandate text on pp. 459 and 460 checked; not_started is capped.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, no fetal cell, vaccine importation or religious objection document (rerun 2026-10-19: zero for fetal cell); (2) HHS Unified Agenda read directly on reginfo.gov on 2026-10-19, no entry on an importation waiver or cell-line requirement, and the biologics modernization entry (0910-AI14) concerns licensure procedures; (3) congress.gov and GovInfo, H.R. 2075 concerns fetal tissue research; (4) FDA press announcements, nothing (recent items only); (5) one news search, nothing new, with no news URL recorded. Set at 66: the waiver is a non-rule instrument, so the agenda check is only partly informative.",
   "durability": {
     "level": "low",
     "why": "A waiver or an agency policy is revocable by the agency, as the 2021 waiver itself shows."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check and independent review: federalregister.gov API (two reviewer variants) and govinfo.gov BILLSTATUS for H.R.2075 were read; no stage change (not_started 0); confidence 40 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the HHS Unified Agenda list read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 62 to 66."
     }
   ],
   "id": "c14-30",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -55,19 +63,65 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage not_started kept.",
-      "Duplicate check: c14-04 covers NIH fetal tissue funding, not vaccine cell lines or the importation waiver; kept."
+      "Researcher gives the 0937-AA16 title as Exemptions and IRB Oversight; the list shows Exemptions and Clarifying Provisions Related to Institutional Review Board Oversight. Not material."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 459 and 460 ask FDA to restore the January 2021 RFRA waiver for bulk importation of certain Japanese-made vaccines and ask FDA and NIH to require drugs and biologics free of aborted fetal cell lines.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields (pp. 459-460), the Mandate asks FDA to restore the January 2021 Religious Freedom Restoration Act waiver allowing physicians to import certain Japanese-made vaccines in bulk for patients with religious objections, and asks FDA and NIH to require drugs and biologics developed without aborted fetal cell lines. The chapter text was not available to this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Appeared in a review search 2026-10-15 as the HHS-hosted 2021 waiver; it is pre-period background, not a restoration.",
+        "note": "2026-10-18 (reviewer variant of check 1): terms vaccine, 'religious objection', import returned 0 documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=vaccine+%22religious+objection%22+import&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (reviewer variant of check 1): terms 'fetal tissue' with vaccine returned 0 documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22fetal+tissue%22+vaccine&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (reviewer fetch for check 3): BILLSTATUS confirms H.R.2075, Protecting Life and Integrity in Research Act of 2025, introduced 2025-03-11 and referred to Energy and Commerce with no later action; its title bars federal research using fetal tissue from induced abortions and does not mention vaccines, cell lines or FDA importation waivers.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2075.xml"
+      },
+      {
+        "note": "Check 1 (research pass, 2026-10-18): terms 'fetal cell' (0 documents), 'Religious Freedom Restoration Act' with vaccine (2 unrelated: HHS OCR rescission of documents under EO 14192, 2026-01-26; a Selective Service notice), 'vaccine importation' limited to FDA (0), 'cell lines' (20 documents, none a requirement for cell-line-free drugs; NIH policy notices and licensing notices). The 2026-01-26 OCR notice was not opened; its title does not name vaccines.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22fetal+cell%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "Check 2 (research pass, 2026-10-18): Fetched the Unified Agenda entry page; it is an agency selector and links page with no items listed (script-driven). Fallback used, so the check is partial: FDA-limited queries above showed no related proposed rule.",
         "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Check 3 (research pass, 2026-10-18): search (congress.gov, govinfo.gov): '119th Congress bill vaccines aborted fetal cell lines FDA religious exemption importation'. Found H.R.2075 Protecting Life and Integrity in Research Act (introduced 2025-03-11, referred to Energy and Commerce; title concerns human fetal tissue research, cell lines not confirmed), S.987, S.242 Dignity for Aborted Children Act, H.R.4525, S.3853. BILLSTATUS fetched for H.R.2075 only; the Senate bills were not opened. None is shown to direct an FDA waiver restoration or a cell-line-free requirement. Reviewer: BILLSTATUS refetched and confirmed; the search was not rerun (search cap).",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2075.xml"
+      },
+      {
+        "note": "Check 4 (research pass, 2026-10-18): FDA press announcements page (items 2026-09-21 to 2026-10-14) shows nothing on a vaccine importation waiver, religious-objection vaccines or fetal cell lines. Older items were not covered.",
+        "result": "supports",
+        "url": "https://www.fda.gov/news-events/fda-newsroom/press-announcements"
+      },
+      {
+        "note": "Check 5 (research pass, 2026-10-18): query: 'FDA NIH fetal cell lines vaccines religious objection Japan import waiver 2026'. Results were the 2021 HHS limited waiver document, an advocacy letter, commentary and older articles; no report of restoration or a new requirement. Reviewer: Not rerun (search cap). The research pass cited the 2021 HHS waiver document rather than a news URL; no news result URL was recorded.",
+        "result": "supports",
         "url": "https://www.hhs.gov/sites/default/files/limited-waiver-under-the-religious-freedom-restoration-act-regarding-access-to-certain-vaccines-from-japan.pdf"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 183 rules) was read in full on 2026-10-19; no entry concerns a religious-objection vaccine importation waiver or drugs and biologics free of fetal cell lines; Biologics Regulation Modernization (0910-AI14) and the human research protections entry (0937-AA16) are on other subjects. A waiver would not normally appear on the agenda, so the check is partly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: zero documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22fetal+cell%22&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -113,6 +167,6 @@
   "timeline": [],
   "title": "Restore RFRA waiver for ethical imported vaccines; require fetal-cell-line-free drugs",
   "tracked": true,
-  "uncertainties": "Searches run: two web searches (Japanese vaccine importation waiver; Kennedy and fetal cell line vaccines) and read-throughs of the 2021 waiver document and one 2019 news article; none showed an FDA or NIH step since 2025-01-20. The waiver document prints no issuance date; the January 2021 date is from the Mandate text, so the source date is month-only. The Federal Register was not queried for this item because a waiver would not appear there. FDA and NIH web pages were not searched. Absence of evidence from a limited search, so confidence is capped. See c14-04 for NIH fetal tissue funding. In review, one further web search on fetal cell line vaccine policy and the importation waiver returned no FDA, NIH or HHS action since 2025-01-20.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No restoration of the 2021 RFRA importation waiver and no FDA or NIH requirement for drugs and biologics free of aborted fetal cell lines was found. The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) has no entry on either subject. A waiver may not be published in the Federal Register or listed on the agenda, and FDA and NIH guidance pages were not searched beyond the FDA press page, which covered recent items only. The 2021 waiver document prints no issuance date. The 2026-01-26 OCR rescission notice was not opened. NIH fetal tissue funding is tracked in c14-04. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

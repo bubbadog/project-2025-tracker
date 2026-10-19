@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: reread a ch-aviation report and ran one web search for a final DOT order, which found none; the DOT order itself remained unreachable. No stage change (proposed 15); confidence unchanged at 60."
     }
   ],
   "id": "c19-10",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -53,34 +57,32 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: blocked is defensible if the tentative decision stalled without a final order a year later, but no evidence of a stall was found, so proposed is kept.",
-      "Progress lowered from 18 to 15 because the action covers only Chinese carriers and nothing on negotiations."
+      "No stage change: proposed 15. Confidence held at 60 because the stage-deciding DOT order could not be reached.",
+      "The stage-deciding DOT order could not be located on any route (no docket number in any source; transportation.gov gave no release on the topic), so it is unread and no URL for it exists in the record.",
+      "blocked remains a defensible alternative if the proposal stalled a year without a final order, but no evidence of a stall was found.",
+      "Carrier names differ between trade reports (Capital Airlines versus Beijing Airlines); the record says seven carriers without naming them.",
+      "One web search used for a final order; none surfaced."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Pages 631 and 632 recommend not letting foreign carriers serving East and South Asia keep a Russian overflight advantage on U.S. flights and offering no new negotiations with China until it implements signed agreements. Title corrected from a Chinese-carrier framing to the Mandate's broader wording.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y19d",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages (631 to 632) and proposal field, the text asks that foreign carriers serving East and South Asia not keep a Russian overflight advantage on U.S. flights while U.S. carriers are barred, and that no new negotiations with China be offered until it implements signed agreements. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Article dated 2025-10-15 reports the 2025-10-09 tentative decision on seven Chinese carriers, effective 30 days after a final order, and the carriers request for more time.",
+        "note": "Checked 2026-10-18: dated 2025-10-20; three carriers filed opposing comments, DOT rejected an extension request, refers only to a proposed order. Secondary; supports proposed.",
+        "result": "supports",
+        "url": "https://www.ch-aviation.com/news/159602-chinese-carriers-oppose-uss-russia-airspace-ban"
+      },
+      {
+        "note": "Not reopened; earlier review read it (2025-10-15): tentative decision of 2025-10-09 effective 30 days after a final order.",
         "result": "supports",
         "url": "https://www.ch-aviation.com/news/159415"
       },
       {
-        "note": "Article dated 2025-10-10 confirms the 2025-10-09 tentative order, passenger and combination flights only, no final decision.",
-        "result": "supports",
-        "url": "https://www.aircargonews.net/airlines/us-proposes-prohibiting-chinese-airlines-from-flying-over-russia-on-us-routes/1080762.article"
-      },
-      {
-        "note": "Wire report with no printed date; says a final order could take effect as soon as November. Not used as a source.",
-        "result": "partial",
-        "url": "https://www.yahoo.com/news/articles/trump-proposes-barring-chinese-airlines-231154173.html"
-      },
-      {
-        "note": "Federal Register API term search for Russian airspace and Chinese carriers returned no relevant DOT order.",
+        "note": "Run by the researcher 2026-10-18: no DOT order; expected since air services orders are docketed elsewhere.",
         "result": "does_not_support",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Russian+airspace+Chinese+carriers&per_page=20"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Russian+airspace+Chinese+carriers&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -126,10 +128,24 @@
       "publisher": "Air Cargo News",
       "title": "US proposes prohibiting Chinese airlines from flying over Russia on US routes",
       "url": "https://www.aircargonews.net/airlines/us-proposes-prohibiting-chinese-airlines-from-flying-over-russia-on-us-routes/1080762.article"
+    },
+    {
+      "date": "2025-10-20",
+      "kind": "news",
+      "publisher": "ch-aviation",
+      "title": "Chinese carriers oppose US's Russia airspace ban",
+      "url": "https://www.ch-aviation.com/news/159602-chinese-carriers-oppose-uss-russia-airspace-ban"
+    },
+    {
+      "date": "2025-10-10",
+      "kind": "news",
+      "publisher": "ch-aviation",
+      "title": "US seeks to force Chinese carriers to avoid Russia on US ops",
+      "url": "https://www.ch-aviation.com/news/159333-us-seeks-to-force-chinese-carriers-to-avoid-russia-on-us-ops"
     }
   ],
   "stage": "proposed",
-  "status_summary": "DOT issued a tentative decision on 2025-10-09 that would bar seven Chinese carriers from using Russian airspace on scheduled passenger and combination flights between China and the U.S., taking effect 30 days after a final order; all-cargo services were tentatively left unconditioned. Trade reporting days later said the carriers asked for more time to comment. No final order was found.",
+  "status_summary": "DOT issued a tentative decision on 2025-10-09 that would bar seven Chinese carriers from using Russian airspace on scheduled passenger and combination flights between China and the U.S., taking effect 30 days after a final order; all-cargo services were tentatively left unconditioned. Trade reporting of 2025-10-20 said three carriers filed comments opposing the proposed order and that DOT rejected a request for more time from the other covered carriers. No final order was found.",
   "timeline": [
     {
       "date": "2025-10-09",
@@ -141,6 +157,6 @@
   ],
   "title": "Deny foreign carriers a Russian overflight advantage on U.S. routes; hold China talks",
   "tracked": true,
-  "uncertainties": "The DOT order itself was not located; it is known from two trade reports (ch-aviation and Air Cargo News) and a wire report without a printed date. A Federal Register API term search and one web search found no final order; DOT orders under air services agreements are docketed outside the Federal Register, so a final order could exist that these checks did not surface. The Mandate covers carriers serving East and South Asia generally, while the tentative decision names only Chinese carriers. No step on withholding new negotiations with China was found.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The DOT order itself was not located or opened; it is known from trade reports (ch-aviation, Air Cargo News) and a law firm update, which differ on whether it is a tentative decision or an order to show cause, and none gives a docket number. The ch-aviation report of 2025-10-20 was reread on 2026-10-18; it names Capital Airlines among the covered carriers, while another trade report read by the researcher lists Beijing Airlines, so the carrier list is not settled. A Federal Register API term search found no related document, and DOT orders under air services agreements are docketed outside the Federal Register, so a final order could exist that these checks did not surface. One web search on 2026-10-18 for a final order returned only October 2025 reports of the proposal. transportation.gov could not be reached for a release on the topic. The Mandate covers carriers serving East and South Asia generally, while the action names only Chinese carriers. No step on withholding new negotiations with China was found.",
+  "updated_at": "2026-10-18"
 }

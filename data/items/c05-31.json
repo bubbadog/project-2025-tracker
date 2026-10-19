@@ -4,9 +4,9 @@
     "No rulemaking found; the Mandate's data and structure items are internal DHS decisions"
   ],
   "chapter": "05",
-  "confidence": 40,
+  "confidence": 45,
   "confidence_label": "low",
-  "confidence_reason": "The executive order and the senator's letter were read; the CBP memo and the Notice to Appear directive rest on a tracking site summarizing an image and social media, and the structural and data items are absence of evidence.",
+  "confidence_reason": "Executive Order 14165 was read on the Federal Register and confirms the detention element, but the in_progress stage also leans on a CBP memo known only through a tracking site's summary of an image, and the data, merger and Notice to Appear items rest on absence of evidence, so confidence stays low.",
   "durability": {
     "level": "low",
     "why": "Release and data practices rest on memos and an executive order that can be reissued or reversed."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read Executive Order 14165 on federalregister.gov and ran a Federal Register API query for notices to report (0 results); the CBP memo image and dhs.gov stayed unread. No stage change (in_progress 25); confidence 40 to 45."
     }
   ],
   "id": "c05-31",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -64,41 +68,28 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Proposal kept in substance; clarified the turn-over-to-ICE step and added page 151 to pages for the Notice to Report prohibition. The parole plus alternatives to detention item is not on pages 139 to 140 and was removed from remaining and uncertainties.",
-      "CBP encounters page source date changed from the 2026-10-14 placeholder to undated.",
-      "Progress lowered from 35 to 25: Notices to Report ended before this period (court set-aside in 2023), and the only operative step on the NTA element is reported, not read. proposed 10 is defensible if the owner discounts the reported directive.",
-      "Not a duplicate: c05-01 tracks the ICE and CBP merger (BSIA) and dismantling, not the Border Patrol and OAM or Trade and OFO mergers inside CBP; c05-03 lists the Notice to Report prohibition as not checked.",
-      "Confidence lowered from 42 to 40."
+      "No stage change: in_progress 25, match partial. proposed 10 is a defensible alternative: the executive order is a directive and the operative CBP memo is known only through a tracking-site summary.",
+      "Confidence 40 to 45, still low."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Pages 139 to 140 (CBP): remove limits on publishing border data and issue a regulation for regular public data without White House or DHS leadership review; let executives use OAM aircraft; combine Border Patrol with OAM and the Office of Trade with OFO; restart the horseback Border Patrol; CBP should turn aliens over to ICE and issue NTAs only in limited humanitarian cases and end Notices to Report. Page 151 repeats the Notice to Report prohibition among executive orders. The pages do not discuss parole plus alternatives to detention; the draft proposal did not include it, and the remaining and uncertainty references to it were removed.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y7",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields: lift limits on CBP publishing enforcement data and require regular publication by regulation free of leadership review, merge Border Patrol with Air and Marine Operations and Trade with Field Operations, have CBP turn aliens over to ICE and issue Notices to Appear only in limited humanitarian cases, and eliminate Notices to Report. Chapter text not available this run; pages not re-checked.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "EO 14165 signed 2025-01-20; section 5 orders detention until removal and guidance or rules ending catch-and-release; no mention of NTAs, NTRs or CBP data (checked 2026-10-14)",
+        "note": "Fetched 2026-10-18 (stage-deciding): EO 14165, signed 2025-01-20, 90 FR 8467; Sec. 5 directs detention to the fullest extent of the law until removal and guidance or rules ending catch-and-release; Sec. 7 ends CBP One parole use. No Notice to Appear, Notice to Report, data-publication or merger provision. Supports only the detention and turnover element.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02015/securing-our-borders"
       },
       {
-        "note": "Letter dated 2025-02-25: NTR policy began March 2021, set aside in Florida v. United States (N.D. Fla. 2023), no longer in operation; no stop date (checked 2026-10-14)",
-        "result": "partial",
-        "url": "https://www.lankford.senate.gov/wp-content/uploads/2025/02/Letter-to-WH-and-DHS-on-Notices-to-Report_Final.pdf"
+        "note": "Fetched 2026-10-18 (reviewer's own term variant): 0 documents; supports the absence of a published Notice to Report or related CBP rule.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22notices+to+report%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Page prints no date; shows encounter data by component, area and state (checked 2026-10-14)",
-        "result": "partial",
-        "url": "https://www.cbp.gov/newsroom/stats/nationwide-encounters"
-      },
-      {
-        "note": "Tracker entry dated 2025-01-21: Border Patrol reportedly told to stop NTA and release without Deputy Chief approval, medical exceptions; based on a social media post and news (checked 2026-10-14)",
-        "result": "partial",
-        "url": "https://immpolicytracking.org/policies/president-trump-sends-new-directions-to-cbp-halting-the-use-of-ntas-and-reverting-to-the-previous-pursuit-and-use-of-force-policy/"
-      },
-      {
-        "note": "Tracker summary of an image of the 2025-01-20 CBP memo limiting parole authority to named officials with individualized justification (checked 2026-10-14)",
-        "result": "partial",
+        "note": "Not re-opened in review; the memo itself exists only as an image on a tracking site and was not read as text by anyone.",
+        "result": "unreachable",
         "url": "https://immpolicytracking.org/policies/cbp-issues-memorandum-ending-catch-and-release/"
       }
     ]
@@ -166,6 +157,13 @@
       "publisher": "Immigration Policy Tracking Project",
       "title": "President Trump sends new directions to CBP halting the use of NTAs",
       "url": "https://immpolicytracking.org/policies/president-trump-sends-new-directions-to-cbp-halting-the-use-of-ntas-and-reverting-to-the-previous-pursuit-and-use-of-force-policy/"
+    },
+    {
+      "date": "2026-10-18",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Federal Register API search, CBP and notice to appear (no relevant rule)",
+      "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Customs+and+Border+Protection%22+%22notice+to+appear%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
     }
   ],
   "stage": "in_progress",
@@ -181,6 +179,6 @@
   ],
   "title": "CBP: publish enforcement data, limit Notices to Appear, merge Border Patrol and air units",
   "tracked": true,
-  "uncertainties": "The CBP catch-and-release memo was not read as text; the tracking page summarizes an image of it, and the January 2025 Notice to Appear directive rests on a social media post and news reports summarized by the same tracking site, so neither is a timeline event. The senator's letter says Notices to Report are no longer in operation and cites a 2023 federal court decision setting the related release policies aside; the elimination therefore predates this period and is not credited as an action since 2025-01-20. The CBP encounters page prints no date (retrieved 2026-10-14) and shows only that data continue to be published; it does not show whether leadership review changed. The CBP and DHS press release pages failed to load. The Notice to Report prohibition on page 151 is listed as not checked in c05-03, so this record carries it.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The CBP catch-and-release memo was not read as text; the tracking page summarizes an image of it, and the January 2025 Notice to Appear directive rests on a social media post and news reports summarized by the same tracking site, so neither is a timeline event. Executive Order 14165 was read on federalregister.gov by the researcher and again in review (2026-10-18); it has no Notice to Appear, Notice to Report, data-publication or component-merger provision. The senator's letter says Notices to Report are no longer in operation and cites a 2023 federal court decision setting the related release policies aside; the elimination therefore predates this period and is not credited. The CBP encounters page prints no date and shows only that data continue to be published, with a caveat that figures change with corrections; it does not show whether leadership review changed. Federal Register API queries since 2025-01-20 for CBP with notice to appear (researcher: eleven unrelated results) and for notices to report (review: 0 results), and a web search for a Border Patrol and Air and Marine Operations or Trade and Field Operations merger, found no rule or reorganization document. CBP and DHS press release pages failed to load and dhs.gov is blocked. The Notice to Report prohibition on page 151 is carried here because c05-03 lists it as not checked.",
+  "updated_at": "2026-10-18"
 }

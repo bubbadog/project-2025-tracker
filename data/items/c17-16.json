@@ -4,9 +4,9 @@
     "Bill has not advanced in the sources found"
   ],
   "chapter": "17",
-  "confidence": 80,
+  "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Chapter text checked; the charging memorandum and both bill texts were fetched from primary sources. Later bill status was not verified.",
+  "confidence_reason": "Pages 553 and 554 re-read; the charging memorandum and both bill texts were read on primary sources earlier, and both GovInfo bill status records were opened and read in this review. Stage rule applied: an operative charging directive that names the ACCA covers the executive element, while the legislative element has only introduced bills (proposed), so in_progress at the low end.",
   "durability": {
     "level": "medium",
     "why": "Charging policy can change with a later Attorney General; a statute would be more durable if enacted."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: GovInfo bill status records confirm that S. 2250 and H.R. 4334 show only introduction and referral on 2025-07-10, with one Senate cosponsor and none in the House; no 2025 or 2026 Supreme Court decision on the Act found; stage unchanged. Independent review (AI) confirmed both records and set confidence 82."
     }
   ],
   "id": "c17-16",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -47,7 +51,7 @@
     "c17-12"
   ],
   "remaining": [
-    "Committee and floor action on S. 2250 and H.R. 4334",
+    "Committee and floor action on S. 2250 and H.R. 4334 (none in GovInfo status records as of their last updates)",
     "Data on ACCA charging rates"
   ],
   "requires_congress": "partial",
@@ -55,13 +59,15 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: proposed (15) is defensible if the general charging memorandum is not counted as action on ACCA specifically; in_progress kept because the memorandum is operative and names the Act."
+      "Bill status confirmed from GovInfo records; no committee action.",
+      "Unsourced detail on a December 2025 Seventh Circuit decision removed from uncertainties.",
+      "In_progress 35 kept; proposed 15 remains the alternative if the general charging memorandum is not counted as ACCA-specific action."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 553 and 554 checked: within the bullet on policies and legislation encouraging prosecution of violent crime, the text asks that line attorneys consistently pursue ACCA mandatory minimums and that DOJ support the Restoring the Armed Career Criminal Act. Overlaps c17-11, whose proposal mentions encouraging violent-crime prosecution in general; not a duplicate, so c17-11 added to related_ids.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y17e",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Pages 553 and 554: DOJ should ensure line attorneys consistently use tools such as ACCA mandatory minimums in violent offender cases and support legislation such as the Restoring the Armed Career Criminal Act. Proposal paraphrase and partial match confirmed.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
         "note": "Dated 2025-02-05; most serious readily provable offense; names the Armed Career Criminal Act among statutes with significant mandatory minimums.",
@@ -82,6 +88,16 @@
         "note": "Dated 2025-07-11; names the House sponsor but no bill number; an announcement, removed from the timeline and sources.",
         "result": "partial",
         "url": "https://www.blackburn.senate.gov/2025/7/crime/blackburn-cotton-kustoff-introduce-bicameral-legislation-to-protect-americans-from-violent-criminals"
+      },
+      {
+        "note": "S. 2250 bill status, updateDate 2026-08-10: introduced and referred to Senate Judiciary 2025-07-10; one cosponsor (Cotton); no hearings, markups or reports. Fully supports the summary sentence.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2250.xml"
+      },
+      {
+        "note": "H.R. 4334 bill status, updateDate 2026-04-28: introduced and referred to House Judiciary 2025-07-10; no cosponsors; no committee activity beyond referral. Fully supports the summary sentence.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr4334.xml"
       }
     ]
   },
@@ -134,10 +150,24 @@
       "publisher": "GovInfo",
       "title": "H.R. 4334 (IH), Restoring the Armed Career Criminal Act",
       "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr4334ih/pdf/BILLS-119hr4334ih.pdf"
+    },
+    {
+      "date": "2026-08-10",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Bill status, S. 2250 (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2250.xml"
+    },
+    {
+      "date": "2026-04-28",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Bill status, H.R. 4334 (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr4334.xml"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "An Attorney General memorandum of 2025-02-05 directed prosecutors to charge the most serious readily provable offense, defined as those carrying the most significant mandatory minimums, and named the ACCA as an example. S. 2250 and its House companion H.R. 4334, each titled the Restoring the Armed Career Criminal Act, were introduced on 2025-07-10 and referred to the Judiciary Committees. The Senate bill would replace 18 U.S.C. 924(e) with a 15-to-30-year mandatory sentence based on three prior serious felony convictions. No committee action was found.",
+  "status_summary": "An Attorney General memorandum of 2025-02-05 directed prosecutors to charge the most serious readily provable offense, defined as those carrying the most significant mandatory minimums, and named the ACCA as an example. S. 2250 and its House companion H.R. 4334, each titled the Restoring the Armed Career Criminal Act, were introduced on 2025-07-10 and referred to the Judiciary Committees. The Senate bill would replace 18 U.S.C. 924(e) with a 15-to-30-year mandatory sentence based on three prior serious felony convictions. The GovInfo bill status records for both bills (last updated 2026-08-10 and 2026-04-28) list only introduction and referral on 2025-07-10, with no hearing, markup or report; the Senate bill has one cosponsor and the House bill none listed.",
   "timeline": [
     {
       "date": "2025-02-05",
@@ -163,6 +193,6 @@
   ],
   "title": "Pursue Armed Career Criminal Act mandatory minimums and restore the Act by statute",
   "tracked": true,
-  "uncertainties": "Bill status after introduction was not checked on congress.gov, which could not be opened, so committee action cannot be excluded. Actual ACCA charging practice was not examined.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "GovInfo bill status records for S. 2250 and H.R. 4334 were read on 2026-10-19 and show no action after 2025-07-10; the records can lag, and congress.gov could not be opened. A search for a 2025 or 2026 Supreme Court ACCA decision found none; a search cannot fully exclude one. Actual ACCA charging practice was not examined.",
+  "updated_at": "2026-10-19"
 }

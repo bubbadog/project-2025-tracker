@@ -6,9 +6,9 @@
     "Relocation of many positions would need appropriations"
   ],
   "chapter": "16",
-  "confidence": 58,
+  "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked and the bill introduction confirmed on GovInfo; the absence of any executive relocation rests on limited searches.",
+  "confidence_reason": "Text checked in earlier review; the H.R. 1125 status record and introduced text read on govinfo.gov in review support proposed. The absence of an executive relocation rests on Federal Register and news checks short of a full systematic review, so confidence is medium.",
   "durability": {
     "level": "low",
     "why": "A headquarters location can be changed again by a later Secretary, as occurred after the 2020 move."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review read the H.R. 1125 status record and introduced text on govinfo.gov and ran a Federal Register API check on BLM and Grand Junction (no documents); the summary now describes Sections 3 and 4. No stage change (proposed 10); confidence moved from 58 to 64."
     }
   ],
   "id": "c16-10",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -55,39 +59,30 @@
   "research_agent": "N16",
   "review": {
     "flags": [
-      "judgment call: the Mandate asks for an executive relocation; only a bill exists, recorded as proposed 10",
-      "E&E News item removed from sources: not opened; introduction date corrected to 2025-02-07 from GovInfo"
+      "No stage change: proposed 10, direct.",
+      "Confidence raised from 58 to 64 (medium) because the bill status and text were read on govinfo; the executive side still rests on absence.",
+      "Alternative: proposed 5, since the bill has had no action beyond referral in 20 months."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "The headquarters discussion runs from page 524 to page 527 (it ends with the Grand Junction convention passage on 527); page 527 added. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y16a",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's proposal field, pages 524 to 527 recommend returning BLM headquarters and top leadership to the West, pointing to Grand Junction, Colorado; the chapter text was not available this run (the 2026-10-13 review corrected the page range).",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "H.R. 1125 introduced 2025-02-07 by a Colorado member, referred to Natural Resources; page does not describe content.",
+        "note": "Read 2026-10-18: introduced 2025-02-07, 17 cosponsors (15 original), referred to Natural Resources, no later action. Fully supports proposed.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/app/details/BILLS-119hr1125ih"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1125.xml"
       },
       {
-        "note": "Release dated 2025-02-14; bill would move BLM headquarters to Grand Junction.",
+        "note": "Read 2026-10-18: Sec. 3 places BLM headquarters in Grand Junction with no deadline; Sec. 4 requires a relocation study and report within 365 days of enactment. Direct match to the headquarters ask; leadership relocation only through the study.",
         "result": "supports",
-        "url": "https://hurd.house.gov/media/press-releases/hurd-introduces-first-bill-local-act"
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1125ih/html/BILLS-119hr1125ih.htm"
       },
       {
-        "note": "Dated 2025-04-30; bill referred to committee, no update; no administration plan described.",
+        "note": "Run 2026-10-18: zero BLM documents; no relocation notice.",
         "result": "supports",
-        "url": "https://www.kjct8.com/2025/04/30/former-blm-directors-debate-relocation-blm-headquarters-grand-junction/"
-      },
-      {
-        "note": "FR API 2026-10-13: no BLM headquarters relocation document since 2025-01-20.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=headquarters+relocation&conditions[agencies][]=land-management-bureau"
-      },
-      {
-        "note": "Search hit is from 2019 (background only), not a current action.",
-        "result": "does_not_support",
-        "url": "https://www.ksl.com/article/news/utah/interior-secretary-mum-on-whether-utah-will-be-new-home-to-blm-headquarters/46549657"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Grand+Junction%22+headquarters&conditions[agencies][]=land-management-bureau&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -141,10 +136,24 @@
       "publisher": "KJCT",
       "title": "Former BLM directors debate the relocation of the BLM headquarters to Grand Junction",
       "url": "https://www.kjct8.com/2025/04/30/former-blm-directors-debate-relocation-blm-headquarters-grand-junction/"
+    },
+    {
+      "date": "2025-02-07",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 1125 (IH) bill text",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1125ih/html/BILLS-119hr1125ih.htm"
+    },
+    {
+      "date": "2025-02-07",
+      "kind": "primary",
+      "publisher": "GovInfo (Library of Congress bill status)",
+      "title": "BILLSTATUS 119 hr 1125",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1125.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "H.R. 1125, the LOCAL Act, was introduced in the House on 2025-02-07 and referred to the Committee on Natural Resources; the sponsor's release says it would move the BLM headquarters to Grand Junction, Colorado. Local reporting on 2025-04-30 described no further action on the bill. No Secretary's order, announcement or Federal Register notice moving the headquarters was found through October 2026.",
+  "status_summary": "H.R. 1125, the LOCAL Act, was introduced in the House on 2025-02-07 and referred to the Committee on Natural Resources; Section 3 would place the BLM headquarters in Grand Junction, Colorado, and Section 4 would require a Secretary of the Interior study of relocating more positions, with a report within 365 days of enactment. Its GovInfo status record shows 17 cosponsors and no action after the referral. No Secretary's order, announcement or Federal Register notice moving the headquarters was found through October 2026.",
   "timeline": [
     {
       "date": "2025-02-07",
@@ -170,6 +179,6 @@
   ],
   "title": "Relocate BLM headquarters to the American West",
   "tracked": true,
-  "uncertainties": "The bill's later status could not be checked on congress.gov, which was not reachable; GovInfo shows only the introduced text. A Federal Register API search for BLM headquarters relocation since 2025-01-20 and two news searches found no administrative move, but an internal decision could exist that searches did not surface.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The bill status was read from the GovInfo BILLSTATUS file in review on 2026-10-18 (sponsor and 17 cosponsors, introduction and referral on 2025-02-07, no later action); congress.gov was not reachable, so a very recent action could be missing. The bill text was read in full on govinfo.gov: Section 3 sets no deadline and keeps positions already in Grand Junction, and Section 4 requires only a study of further relocation. Federal Register API searches since 2025-01-20 for BLM headquarters and, in review, for BLM documents mentioning Grand Junction and headquarters found no relocation notice, and earlier news searches found no administrative move, but an internal Interior decision could exist that these checks did not surface. The record rests partly on the absence of an executive action, and the Unified Agenda and agency-page checks of a full systematic review were not run.",
+  "updated_at": "2026-10-18"
 }

@@ -6,7 +6,7 @@
   "chapter": "17",
   "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text read at pp. 570 to 571; the Federal Register rule and the justice.gov organization chart were fetched and read in review; internal DOJ orders could not be checked.",
+  "confidence_reason": "The stage-deciding Federal Register rule and the justice.gov organization chart were fetched and read on 2026-10-18; the core merger finding rests on absence (organization chart and Federal Register API checks), so confidence stays under the absence ceiling.",
   "durability": {
     "level": "low",
     "why": "Organization changes made by 28 CFR part 0 rules or internal orders can be reversed by later rules."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: reread the 2025-12-29 rule on federalregister.gov and the organization chart on justice.gov; added the 90 FR 60570 citation. No stage change (proposed 15); confidence unchanged at 64."
     }
   ],
   "id": "c17-21",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -55,22 +59,22 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage lowered from in_progress 25 to proposed 15: the only action is a consolidation of a different support office; the specific merger of public and legislative affairs, which is the core ask, has no step. in_progress 25 would also be defensible as a partial step on the general consolidation element.",
-      "Status summary reworded to match the rule text (functions returned to a Justice Management Division staff; rule cites streamlining initiatives)."
+      "No stage change: proposed 15. in_progress 25 remains a defensible alternative if the Executive Secretariat consolidation is credited toward the general support-function element.",
+      "Citation 90 FR 60570 and AG Order 6570-2025 added to the status summary."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 570 to 571 ask DOJ to explore consolidating support functions (human resources, legal counsel, public relations, IT, management), to place political public information officers for each division under the Director of Public Affairs, to fold the Office of Legislative Affairs and the Office of Public Affairs into one office under the Assistant Attorney General, and to review reporting chains.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages (570 to 571) and proposal field, the text asks DOJ to explore consolidating support functions, to fold the Office of Legislative Affairs and the Office of Public Affairs into one office under one Assistant Attorney General, to place division public information officers under the Director of Public Affairs, and to review reporting chains. The chapter text was not available this run; the proposal field is consistent with the earlier confirmed check.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: rule published and effective 2025-12-29 (90 FR 60570) moves Executive Secretariat functions into the Justice Management Division and cites streamlining; it does not mention the Office of Public Affairs or the Office of Legislative Affairs.",
+        "note": "Checked 2026-10-18: 90 FR 60570, AG Order 6570-2025, Docket JMD165, effective 2025-12-29; removes OES from 28 CFR 0.1, adds 0.77(p) assigning its functions to JMD, removes subpart O-1. Mentions neither OPA nor OLA. Supports only a partial consolidation, consistent with proposed.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23880/office-of-the-attorney-general-consolidation-of-the-office-of-the-executive-secretariat-into-the"
       },
       {
-        "note": "Checked 2026-10-15: chart lists OLA and OPA as separate offices; page metadata shows modified 2026-06-30; no combined office.",
+        "note": "Checked 2026-10-18: OLA and OPA listed as separate entries; no combined office; metadata last modified 2026-06-30. Supports the absence of the merger.",
         "result": "supports",
         "url": "https://www.justice.gov/agencies/chart"
       }
@@ -121,7 +125,7 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "A final rule published and effective 2025-12-29 ended the Office of the Executive Secretariat as a separate DOJ component and returned its document-clearance functions to a staff within the Justice Management Division, citing deregulatory and streamlining initiatives. This consolidates one management support function but does not touch the public and legislative affairs merger the text describes, and the rule does not mention either office. The department's organization chart page, last modified 2026-06-30, still lists the Office of Public Affairs and the Office of Legislative Affairs as separate offices.",
+  "status_summary": "A final rule published and effective 2025-12-29 (90 FR 60570, AG Order 6570-2025) removed the Office of the Executive Secretariat as a separate DOJ component and restored its document-clearance functions to a staff within the Justice Management Division, citing deregulatory and streamlining initiatives. This consolidates one management support function; the rule does not mention the Office of Public Affairs or the Office of Legislative Affairs. The department's organization chart page, last modified 2026-06-30, still lists the two offices as separate entries.",
   "timeline": [
     {
       "date": "2025-12-29",
@@ -133,6 +137,6 @@
   ],
   "title": "Merge DOJ public and legislative affairs offices and consolidate support functions",
   "tracked": true,
-  "uncertainties": "Verified by fetching the Federal Register rule and the justice.gov organization chart page. A Federal Register API search for Department of Justice organization rules since 2025-01-20 also returned a December 2025 rule transferring Tax Division functions to the Civil and Criminal Divisions, a May 2026 DEA subpoena delegation rule and an August 2026 rule creating a National Fraud Enforcement Division; none of these concerns public or legislative affairs or the support functions named in the text, and the Tax Division transfer moves litigating functions. Internal orders not published in the Federal Register would not appear in this check. Searches run: Federal Register API (two queries) and one justice.gov fetch; no WebSearch was needed.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The Federal Register rule (90 FR 60570) and the justice.gov organization chart were both read in full and rechecked on 2026-10-18. Federal Register API queries of Department of Justice documents (organization rules since 2025-01-20, and the term consolidation since 2026-01-01, first 20 of 46 results) found no rule concerning public or legislative affairs; internal orders not published in the Federal Register would not appear in that check. A December 2025 Tax Division transfer rule and an August 2026 National Fraud Enforcement Division rule concern litigating functions, not the support functions named in the text. The organization chart does not state reporting lines, so the placement of division public information officers was not verified. The statutory point that the Assistant Attorney General for Legislative Affairs is Senate-confirmed was not checked. congress.gov was not consulted.",
+  "updated_at": "2026-10-18"
 }

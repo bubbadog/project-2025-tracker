@@ -5,9 +5,9 @@
     "No stated direction to EIA on these items found"
   ],
   "chapter": "12",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Mandate text checked and the two eia.gov pages re-read; not_started rests on absence of evidence from a limited search and is capped at 50.",
+  "confidence": 64,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API (supports); Unified Agenda, DOE rule list read in full on reginfo.gov on 2026-10-19 (supports, weakly informative for report changes); congress.gov and govinfo with BILLSTATUS (partial: an adjacent EIA bill, H.R. 9630, not matching); EIA press release and subsidy report pages (supports); one news search (supports). Set at 64, below the 65 to 68 band, because the bill check is partial and the AEO2026 methodology document was not read.",
   "durability": {
     "level": "medium",
     "why": "Analytical methods at a statistical agency tend to persist once adopted, but none has been adopted here."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with two separate term variants (0 documents each) and reviewed the researcher's checks of reginfo.gov with the proposed-rule fallback, govinfo.gov BILLSTATUS, eia.gov and one news search. No stage change (not_started, 0); confidence 45 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the DOE rule list on reginfo.gov in full and found no EIA entry; no stage change (not_started, 0); confidence 62 to 64."
     }
   ],
   "id": "c12-28",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -58,24 +66,45 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Match set to direct for a not_started record, since the recommended actions themselves are what is being tracked; no stage change.",
-      "Budget justification source dated 2026-04 (month of the DOE FY2027 justifications per CRS) instead of the bare year."
+      "no stage change: not_started 0",
+      "confidence 62 to 64"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 387 to 388 ask EIA to report backup or firming costs for wind and solar as a separate component of levelized cost comparisons, work with FERC, NERC and RTOs to redefine reserve margins around dispatchable resources, make its subsidies report an annual or biennial base product, keep the International Energy Outlook objective, and weigh the case for privatization.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 387 and 388, as described in the record, recommend that EIA show firming or backup costs for wind and solar as a separate levelized cost component, work with FERC, NERC and RTOs to redefine reserve margins around dispatchable resources, make its federal subsidies report a regular product, keep the International Energy Outlook based on current law, and assess privatization. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "AEO2026 levelized cost paper dated 2026-04-08 uses the value-cost ratio; no mention of firming, backup, capacity value or reserve margins (checked 2026-10-15).",
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms \"Energy Information Administration\" and \"reserve margin\", all types since 2025-01-20: 0 documents. A second reviewer variant on federal financial interventions or subsidies with the EIA name and firming also returned 0 documents. Researcher's variant result: supports; terms 'Energy Information Administration' and levelized, all types since 2025-01-20: 72 documents, first page of 20 read; EIA items are routine information-collection notices (Manufacturing Energy Consumption Survey 2026-08-28, generator air permit inventory 2026-07-21, coal markets 2026-05-29, nuclear fuel survey 2026-04-06, petroleum supply 2026-04-03), the rest are other agencies. A proposed-rule-only query on the EIA name returned 30 documents (first page of 20 read), none an EIA rule. Query 'reserve margin' with firming returned 3 notices (TVA gas projects 2025-03-04 and 2026-01-14; a FERC resource adequacy technical conference notice of 2025-06-06). None adds firming costs to LCOE, redefines reserve margins or addresses the subsidy report.",
         "result": "supports",
-        "url": "https://www.eia.gov/outlooks/aeo/electricity_generation/"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Energy+Information+Administration%22+%22reserve+margin%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Latest subsidies report is the FY2016 to FY2022 edition released 2023-08-01; no newer edition or schedule (checked 2026-10-15).",
+        "note": "2026-10-18: the reginfo.gov Unified Agenda landing page was fetched in the run for another record and listed no agenda items (agency selector only); EIA publishes reports rather than rules. Fallback: Federal Register API query of proposed rules mentioning the Energy Information Administration since 2025-01-20 returned 30 documents (page one read), none by EIA or on the recommendation. The check is partial.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: domain-limited search (congress.gov, govinfo.gov) 'Energy Information Administration levelized cost firming backup power wind solar subsidies report bill 119th Congress'. Bills found: H.R. 9630 BILL Drivers Act (introduced 2026-07-09, referred to House Energy and Commerce; directs EIA with FERC to publish a state-by-state analysis of retail electricity bill components; not about LCOE firming, reserve margins or the subsidy report); S. 4559 Energy Cost Fairness and Reliability Act of 2026 (BILLSTATUS: referred to Senate Energy and Natural Resources 2026-05-18; no mention of EIA, levelized cost, firming or the subsidies report); S.Res. 564 and H.R. 7977 appeared but were not opened. H.R. 9630 is an adjacent but non-matching bill.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr9630ih/html/BILLS-119hr9630ih.htm"
+      },
+      {
+        "note": "2026-10-18: EIA press release page lists 12 releases from 2026-01-13 to 2026-10-06 (outlooks, AEO2026 on 2026-04-08, data center pilot survey); none concerns levelized cost, firming, reserve margins, a subsidies report, the International Energy Outlook or privatization. EIA's subsidy report page shows the latest edition still the FY2016-2022 report released 2023-08-01 with no new edition announced.",
         "result": "supports",
-        "url": "https://www.eia.gov/analysis/requests/subsidy/"
+        "url": "https://www.eia.gov/pressroom/releases.php"
+      },
+      {
+        "note": "2026-10-18: query 'EIA levelized cost of electricity firming costs wind solar 2026'. Results were an older trade article on projected levelized costs and an IRENA firm-LCOE report; no report of an EIA change adding firming costs to its levelized cost presentation.",
+        "result": "supports",
+        "url": "https://www.renewableenergyworld.com/solar/eia-levelized-cost-of-onshore-wind-solar-pv-dropping-below-gas-fired-and-conventional-generation-by-2026/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the DOE list (page headed 'Agency Rule List - 2026', 89 rules, NNSA included) in full. No EIA entry and no title on levelized cost, reserve margins, subsidies or privatization; the nearest titles (1904-AF76 renewable energy production incentives, 1904-AG07 cellulosic biofuel incentives rescission) are payment programs, not EIA reporting. EIA publishes reports rather than rules, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1900"
       }
     ]
   },
@@ -142,6 +171,6 @@
   "timeline": [],
   "title": "EIA to add firming costs to LCOE, revise reserve margins, publish annual subsidy report",
   "tracked": true,
-  "uncertainties": "Absence of evidence from a limited search. The researcher ran four searches on eia.gov (levelized cost page, subsidy report page), the DOE FY2027 EIA budget volume and news on EIA staffing; the reviewer re-read the eia.gov levelized cost and subsidy report pages. The AEO2026 methodology document was not opened, so a firming adjustment in the methodology cannot be excluded. A reported staff reduction and delayed reports in 2025 are workforce effects and are not treated as matching actions. FY2026 request details and the International Energy Outlook schedule were not read.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No EIA action adding firming costs to levelized costs, redefining reserve margins, issuing a new subsidy report or assessing privatization was found. The reginfo.gov Unified Agenda rule list for DOE (edition headed Agency Rule List - 2026, 89 rules) has no EIA entry; EIA publishes reports rather than rules, so this check is weakly informative. The AEO2026 methodology document, the International Energy Outlook schedule, later pages of the Federal Register result sets and two bills surfaced in the congress.gov and govinfo search were not read, so a firming adjustment in the methodology cannot be excluded. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

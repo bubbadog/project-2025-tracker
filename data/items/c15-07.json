@@ -7,7 +7,7 @@
   "chapter": "15",
   "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked and the government-wide orders and rule were confirmed on federalregister.gov, but no HUD-specific delegation or conversion could be confirmed.",
+  "confidence_reason": "Document text checked in the 2026-10-13 review; Executive Order 14410 re-read on federalregister.gov and the CRS sidebar read in review, but no HUD-specific delegation or conversion and no HUD coverage in the image-only appendix could be confirmed, so confidence stays medium.",
   "durability": {
     "level": "medium",
     "why": "The authority rests on an OPM rule and executive orders that a later administration could rescind."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review re-read Executive Order 14410 on federalregister.gov and the CRS sidebar on everycrsreport.com and added the CRS source and litigation context. No stage change (in_progress 30); confidence unchanged at 62."
     }
   ],
   "id": "c15-07",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -56,47 +60,28 @@
   "research_agent": "N15",
   "review": {
     "flags": [
-      "judgment call: in_progress rests on government-wide personnel tools; proposed or a parallel match would also be defensible because no HUD-specific step is documented."
+      "No stage change: in_progress 30, partial.",
+      "Alternative: proposed 20 with a parallel match, because Schedule Policy/Career keeps positions career, HUD coverage in the image-only appendix is unconfirmed and no HUD-specific delegation was found; the call is close."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 503 and 504 frame redelegation to political appointees and political heads of Office of the Secretary components; page 508 carries the bullet; footnote 24 on page 514 on placing aligned appointees was added.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y15a",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's proposal field, pages 503, 504, 508 and 514 recommend that HUD assign delegated powers to political appointees, convert career leadership posts to political or non-career appointments, use SES transfers, and have political appointees head most Office of the Secretary components; the chapter text was not available this run (the 2026-10-13 review recorded a page check).",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Executive Order 14171, signed 2025-01-20, published 2025-01-31, 90 FR 8625.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2025-02095.json"
-      },
-      {
-        "note": "OPM final rule published 2026-02-06, effective 2026-03-09, 91 FR 5580.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-02375.json"
-      },
-      {
-        "note": "Rule keeps positions career with merit hiring; President may place positions by order; no printed date.",
-        "result": "supports",
-        "url": "https://www.opm.gov/news/news-releases/opm-finalizes-schedule-policycareer-rule-to-strengthen-accountability/"
-      },
-      {
-        "note": "Confirms Executive Order 14410, signed 2026-06-03, 91 FR 34893, Sec. 5 places appendix positions; appendix unreadable images.",
+        "note": "Read 2026-10-18: EO 14410 signed 2026-06-03, 91 FR 34893; Sec. 5 places Appendix positions in Schedule Policy/Career; Appendix image-only, HUD not named in the text. Government-wide and career-status only, so partly supports in_progress.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2026/06/10/2026-11594/implementing-schedule-policycareer-in-the-excepted-service"
       },
       {
-        "note": "Order text without appendix.",
+        "note": "Read 2026-10-18: final rule published 2026-02-06; positions remain career; NTEU (D.D.C.) and PEER and unions (D. Md.) challenges pending as of 2026-03-26.",
         "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/DCPD-202600378/html/DCPD-202600378.htm"
+        "url": "https://www.everycrsreport.com/files/2026-03-26_LSB11412_c1944205f4a454fdfd7bca88c46b2c134810dd8e.html"
       },
       {
-        "note": "Appendix pages are image placeholders; no HUD text readable.",
+        "note": "Researcher's read this run: HUD chief of staff and two deputy chiefs announced 2025-06-27; appointment type not stated.",
         "result": "partial",
-        "url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/eo-14410.pdf"
-      },
-      {
-        "note": "2025-06-27 release on chief of staff and two deputies; appointment type not stated.",
-        "result": "supports",
         "url": "https://www.hud.gov/news/hud-no-25-087"
       }
     ]
@@ -165,6 +150,13 @@
       "publisher": "HUD",
       "title": "HUD announces key senior leadership appointments",
       "url": "https://www.hud.gov/news/hud-no-25-087"
+    },
+    {
+      "date": "2026-03-26",
+      "kind": "primary",
+      "publisher": "Congressional Research Service via everycrsreport.com",
+      "title": "Schedule Policy/Career: 2026 Final Rule, Legal Challenges, and Issues for Lawmakers (CRS LSB11412)",
+      "url": "https://www.everycrsreport.com/files/2026-03-26_LSB11412_c1944205f4a454fdfd7bca88c46b2c134810dd8e.html"
     }
   ],
   "stage": "in_progress",
@@ -201,6 +193,6 @@
   ],
   "title": "Shift HUD delegated authority and leadership posts to political appointees",
   "tracked": true,
-  "uncertainties": "HUD delegation orders are internal and were not found publicly. The appendix of Executive Order 14410 is image-only on federalregister.gov, govinfo.gov and whitehouse.gov, so HUD coverage is unconfirmed; one targeted web search found no reporting on HUD positions. Schedule Policy/Career keeps positions career rather than converting them to political posts, so the match is partial. The OPM release carries no printed date.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Executive Order 14410 (91 FR 34893, signed 2026-06-03) was re-read on federalregister.gov in review: Sec. 5(a) and (b) place the Appendix positions in Schedule Policy/Career and Sec. 5(c) requires agencies to notify covered employees within 7 days, but the Appendix (printed pages 34896 to 35124) is image-only on federalregister.gov and govinfo.gov and the text elsewhere never names HUD, so HUD coverage is unconfirmed. A news report on the order (just under 8,000 positions) does not name HUD. The CRS legal sidebar of 2026-03-26, read in review, confirms that Schedule Policy/Career positions remain career positions that lose chapter 75 and chapter 43 protections, and describes pending challenges: NTEU in D.D.C. (stayed pending the rule, with an amended complaint allowed within 14 days of a presidential placement order under a 2026-03-17 ruling) and PEER and four unions in D. Md.; the dockets were not opened and no later ruling was checked. HUD delegation orders are internal and were not found publicly. Schedule Policy/Career keeps positions career rather than converting them to political posts, so the match is partial. The OPM release carries no printed date. The record's absence component (no HUD-specific action) was not run through a full systematic check.",
+  "updated_at": "2026-10-18"
 }

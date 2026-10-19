@@ -4,9 +4,9 @@
     "The tax credit would require Congress to amend the tax code"
   ],
   "chapter": "14",
-  "confidence": 58,
+  "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "Not_started after a systematic five-check review on 2026-10-18: Federal Register API (re-run with a term variant, 0 results), Unified Agenda (Federal Register fallback only, so partial), congress.gov and govinfo (S. 3295 status read), ACF agency page (unreachable), and a news search; held below 60 because the agenda check was only the fallback, the agency page could not be opened and the 2025 tax law was not reviewed.",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, no document on visitation, a nonresident parent credit or a payment application (rerun 2026-10-19: child support with visitation returns Federal Case Registry collections and unrelated notices); (2) HHS Unified Agenda read directly on reginfo.gov on 2026-10-19, partial: child support entries 0970-AD33, AD39, AD18 and AD23 were opened and none concerns these items, and the check is weakly informative for a tax credit that would need Congress; (3) congress.gov and GovInfo, S. 3295 is an unrelated caregiver credit, with P.L. 119-21 tax provisions not reviewed; (4) ACF child support page unreachable; (5) one news search, nothing. Set at 60 because the agency check is unreachable.",
   "durability": {
     "level": "low",
     "why": "Nothing operative exists; any administrative incentive for apps would be reversible."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 ran the Federal Register API, Unified Agenda fallback, congress.gov and govinfo, ACF agency page (unreachable) and news checks (Federal Register and govinfo hosts read) and found no qualifying action, so the record stays not_started."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the HHS Unified Agenda list and four child support entry pages read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 58 to 60."
     }
   ],
   "id": "c14-53",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -56,14 +60,12 @@
   "research_agent": "R14C",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Agency page unreachable on two attempts; a payment app or visitation initiative announced only on the ACF site could have been missed."
-    ],
+    "flags": [],
     "mandate_check": "confirmed",
     "mandate_note": "The three items (a nondependent child support tax credit, linking visitation and child support courts, and a state payment and informal-support app) appear on page 479, with the child support section opening on page 478; the proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "2026-10-18: Federal Register API variant on child support with visitation or parenting time, all agencies, since 2025-01-20: 0 documents. The researcher's ACF-filtered query on child support, nonresident parent and visitation also returned 0.",
@@ -89,6 +91,42 @@
         "note": "2026-10-18: No URL was recorded for the researcher's news search, so this field holds the agency page attempted in review. The search on OCSS nonresident parents, visitation access and a payment app in 2026 returned CRS explainers and state Access and Visitation grant documents, with no federal action on the three items.",
         "result": "supports",
         "url": "https://www.acf.gov/css"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 183 rules) was read in full on 2026-10-19; child support entries 0970-AD33, 0970-AD39, 0970-AD18 and 0970-AD23 were opened; none concerns a nonresident parent child support tax credit, linking visitation and support courts or a state payment application. A tax credit would need legislation, so the check is weakly informative for that element.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Enhancing Child Support Enforcement to Improve Outcomes for Unborn Children and Women, Proposed Rule Stage, NPRM projected 07/00/2026, first agenda appearance; would let ACF recognize pregnant women as eligible for child support. Planned rule on a different subject.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0970-AD33"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Reducing Bureaucracy and Burden for Child Support Enforcement, Proposed Rule Stage, NPRM projected 07/00/2026; removes obsolete child support regulations. Not the recommended action.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0970-AD39"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Employment and Training Services for Noncustodial Parents in the Child Support Program Final Rule; Rescission, Proposed Rule Stage, NPRM projected 07/00/2026, 45 CFR parts 302, 303, 304 and 309; would rescind the 2024-12-13 rule. Not the recommended action.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0970-AD18"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Implementation of Direct Federal Tax Offset Access for Tribal Child Support Programs and Technical Corrections, Proposed Rule Stage, NPRM projected 07/00/2026; implements P.L. 118-258 Tribal tax offset access. Unrelated.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0970-AD23"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: five documents, including two ACF Federal Case Registry information collections and an ACF organization notice; none concerns visitation linkage, a credit or a payment application.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22child+support%22+visitation&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -141,6 +179,6 @@
   "timeline": [],
   "title": "Child support tax credit for nonresident parents, visitation linkage and payment app",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. The Federal Register API check (child support, nonresident parent and visitation limited to ACF, and a variant on child support with visitation or parenting time across agencies) returned no documents since 2025-01-20; the two 2026 ACF proposed rules already cited concern other child support topics and do not mention visitation, apps, informal support or a tax credit. The Unified Agenda check was partial: only the Federal Register fallback was usable. The Congress check covered a domain-limited search on congress.gov and govinfo.gov that returned general child tax credit and caregiver bills; the status record of S. 3295 was read in review and shows an adult child caregiver credit, not a nonresident parent child support credit, and the tax provisions of Public Law 119-21 were not reviewed. The agency check was unreachable: the ACF Office of Child Support Services page returned a client error to the researcher and again in review. The news check returned CRS explainers and state Access and Visitation grant documents, with no federal tax credit, visitation linkage or payment application initiative.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No nonresident parent child support tax credit, visitation and support court linkage or state payment application initiative was found. The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) lists child support entries on pregnant women's eligibility, removal of obsolete rules, rescission of the 2024 employment services rule and Tribal tax offset access, none on these items. The ACF child support page returned a client error on every attempt, so an initiative announced only there could have been missed. The tax provisions of Public Law 119-21 were not reviewed, and a credit would need legislation. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

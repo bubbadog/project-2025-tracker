@@ -5,9 +5,9 @@
     "Nonproliferation funding levels are set in appropriations"
   ],
   "chapter": "12",
-  "confidence": 42,
-  "confidence_label": "low",
-  "confidence_reason": "Mandate text checked and the CRS report re-read; not_started rests on absence of evidence from limited searches, capped at 50.",
+  "confidence": 61,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API (supports); Unified Agenda, DOE rule list including NNSA read in full on reginfo.gov on 2026-10-19 (supports, weakly informative for program changes); govinfo BILLSTATUS for H.R. 9022 (partial: House Report 119-667 nonproliferation section unread); the NNSA nonproliferation page (supports); news (supports). Set at 61, below the 65 to 68 band, because the appropriations report language was not read.",
   "durability": {
     "level": "low",
     "why": "Program direction is administrative and budget-driven, and none has been changed in this area."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review: reran the Federal Register API check with NNSA and DOE IAEA variants, opened the H.R.9022 bill status and House Report 119-667 (cut short before the nonproliferation section) on govinfo.gov, read the energy.gov NNSA nonproliferation page and a news result on exchangemonitor.com, and ran one domain-limited search. No stage change (not_started 0); confidence 42 to 58."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the DOE rule list on reginfo.gov in full, including its one NNSA entry; no stage change (not_started, 0); confidence 58 to 61."
     }
   ],
   "id": "c12-33",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -56,19 +64,50 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Match set to direct for a not_started record; no stage change.",
-      "Lead for c04-31: CRS reports Executive Order 14302 halted the plutonium dilute-and-dispose program in May 2025."
+      "no stage change: not_started 0",
+      "confidence 58 to 61"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 372 asks the administration to end NNSA nonproliferation activities it calls ineffective and counterproductive, naming those involving Iran and the United Nations as examples.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 372 asks the administration to end NNSA nonproliferation activities it calls ineffective and counterproductive, naming those involving Iran and the United Nations as examples; the chapter text was not available to this review, and an earlier review on 2026-10-15 recorded the paraphrase as confirmed.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "CRS of 2026-07-14: Nonproliferation and Arms Control supports verification and monitoring of Iranian nuclear capabilities and IAEA safeguards technology; FY2027 request $2.39 billion; Global Material Security down 26 percent (checked 2026-10-15).",
+        "n": 1,
+        "note": "2026-10-18: reviewer variants since 2025-01-20: 'nonproliferation' limited to NNSA returned 1 document (a proposed subsequent arrangement notice of 2025-05-08 under the Australia and Euratom agreements); the exact phrase 'International Atomic Energy Agency' limited to DOE returned 0. The researcher's NNSA nonproliferation query (19 documents, Part 810 and subsequent-arrangement items) and 'nonproliferation Iran' limited to DOE (0) found none either. No qualifying action.",
         "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2026-07-14_R48946_309ced8105a2067cbcc52bbc22d79cc1b0a714f1.html"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=nonproliferation&conditions[agencies][]=national-nuclear-security-administration&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "n": 2,
+        "note": "2026-10-18: reginfo.gov eAgendaMain showed only a landing page (researcher). Fallback: the DOE and NNSA-limited Federal Register queries above, all document types including proposed rules, held nothing ending nonproliferation work; program terminations would not ordinarily appear in a proposed rule. Partial because only the fallback was available.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "n": 3,
+        "note": "2026-10-18: researcher's domain-limited search returned CRS R48946 and unrelated Iran bills; the reviewer's domain-limited search on the FY2027 Energy and Water bill and Defense Nuclear Nonproliferation found H.R.9022 and House Report 119-667. BILLSTATUS: H.R.9022 reported by House Appropriations on 2026-05-22 (Union Calendar No. 581), rule H.Res.1377 reported 2026-06-23 and laid on the table 2026-07-13; no House passage. The govinfo.gov report text was cut off before its Defense Nuclear Nonproliferation section (report page 159), so whether its language targets Iran or UN work was not read. Partial.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9022.xml"
+      },
+      {
+        "n": 4,
+        "note": "2026-10-18: the NNSA Defense Nuclear Nonproliferation page, last modified 2026-06-29, still lists Global Material Security, Material Management and Minimization, Nonproliferation and Arms Control (international safeguards, export controls, verification, civil nuclear cooperation) and research and development, with no ended program. It does not name Iran or the IAEA.",
+        "result": "supports",
+        "url": "https://www.energy.gov/nnsa/missions/nonproliferation"
+      },
+      {
+        "n": 5,
+        "note": "2026-10-18: researcher's query on NNSA nonproliferation programs involving Iran, the IAEA or the UN being cut or ended. Reviewer opened the ExchangeMonitor item of 2025-06-24: the FY2026 request would cut nonproliferation by about $185 million, and a former official warned of effects on IAEA verification tools; no activity was reported ended. A May 2026 trade report of a $282 million House cut does not specify activities. No report that Iran or UN activities were ended.",
+        "result": "supports",
+        "url": "https://www.exchangemonitor.com/former-nnsa-nuclear-nonproliferation-head-dont-cut-nonproliferation-funds/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the DOE list (page headed 'Agency Rule List - 2026', 89 rules, NNSA included) in full. No title on nonproliferation programs, Iran, the IAEA or the United Nations. The only NNSA entry is 1994-AA07, Assistance to Foreign Atomic Energy Activities (Final Rule Stage), which the researcher opened as a part 810 destination update; not opened by the reviewer. Program terminations would not appear as rules, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1900"
       }
     ]
   },
@@ -128,6 +167,6 @@
   "timeline": [],
   "title": "End DOE nonproliferation activities involving Iran and the United Nations",
   "tracked": true,
-  "uncertainties": "Absence of evidence from a limited search. The researcher searched the everycrsreport.com NNSA budget report and ran general web searches on the IAEA and the 66-organization withdrawal; the reviewer re-read the CRS report and ran one web search on NNSA Iran and IAEA program cuts, which found no termination. The withdrawal list was not opened, so IAEA treatment is unknown; the withdrawal is not an NNSA action and is context only. The cut to Global Material Security is not tied by the report to Iran or UN work. The CRS report also notes that plutonium dilute-and-dispose work was halted under Executive Order 14302 in May 2025, which concerns disposition rather than Iran or UN activities.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No NNSA or DOE action ending Iran-related or United Nations-related nonproliferation activities was found. The reginfo.gov Unified Agenda rule list for DOE (edition headed Agency Rule List - 2026, 89 rules, NNSA included) has one NNSA entry, Assistance to Foreign Atomic Energy Activities (RIN 1994-AA07), a planned part 810 update; program terminations would not appear as rules, so this check is weakly informative. The nonproliferation section of House Report 119-667 was not read, budget-level cuts proposed for FY2026 and FY2027 carry no activity detail, and NNSA program-level changes were not traced. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

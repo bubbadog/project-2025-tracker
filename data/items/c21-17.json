@@ -4,9 +4,9 @@
     "NTIS is established in statute, so a full transfer or abolition may need Congress"
   ],
   "chapter": "21",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "The 2026-09-30 RFI on the Federal Register and a budget excerpt were read; not_started rests on absence of evidence from a limited search.",
+  "confidence": 62,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (partial: the 2026-09-30 NTRL modernization RFI, read earlier, and advisory committee notices; supports for rules), Commerce Unified Agenda (supports), congress.gov and govinfo.gov search (supports, bill texts not opened), nist.gov NTIS page (unreachable twice) and a news search (supports). With the agency check unreachable and the agenda weakly informative for an internal transfer, confidence is 62.",
   "durability": {
     "level": "medium",
     "why": "An internal Commerce order could be reversed, but NTIS statutory status limits quick change."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-16",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the Commerce Unified Agenda on reginfo.gov, govinfo.gov, nist.gov unreachable, and a news search), not_started kept and confidence raised to 62."
     }
   ],
   "id": "c21-17",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -57,20 +61,53 @@
       "result": "supports",
       "url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical"
     },
-    "flags": [
-      "Named the searches performed in uncertainties, as required for not_started.",
-      "Trimmed the status summary to sourced statements."
-    ],
+    "flags": [],
     "mandate_check": "ok",
     "mandate_note": "Page 687 says NTIS, funded by user fees, is largely obsolete given internet use by agencies and researchers, and that its functions should move to NIST and be consolidated with the Tech Transfer and ROI initiatives. The paraphrase and page are correct.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "V2-1016",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "NTIS RFI at 91 FR 61835, comments due 2026-11-16, signed by the NIST Executive Secretariat under docket NIST-2026-0166; no transfer language.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Commerce, phrase National Technical Information Service: 4 documents: advisory committee nominations for NIST and NTIS (2025-04-18), the NTRL digitization request for information (2026-09-30, already on the record) and two Limited Access Death Master File information collection notices (2026-01-30, 2026-03-27). None announces a transfer to NIST.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22National+Technical+Information+Service%22&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=commerce-department"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Rules and proposed rules, all agencies, since 2025-01-20: 2 results (an FMCSA technical amendments rule 2026-07-21 and an NRC FOIA rule 2026-03-06); neither concerns an NTIS transfer.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22national+technical+information+service%22+transfer&conditions[publication_date][gte]=2025-01-20&conditions[type][]=RULE&conditions[type][]=PRORULE"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Commerce rule list (176 rules, whole list read): no NTIS entries, no title naming NTIS or technology transfer. Related only: RIN 0693-AB72 (NIST, eliminating obsolete Advanced Technology Program and Technology Innovation Program regulations). Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named. No NTIS entries; NIST entries are 0693-AB72 and 0693-AB73.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0600"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Domain-limited search (congress.gov, govinfo.gov) on NTIS transfer to NIST surfaced appropriations bills (H.R. 6938, H.R. 8845, P.L. 119-74), S. 1235 (Expanding Partnerships for Innovation and Competitiveness Act), H.R. 2209 and a House report; no bill moving NTIS to NIST was identified from titles. Bill texts were not opened, so this is a no-result finding.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1235.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Fetch of the NIST NTIS page failed once; not retried. Reviewer retried on 2026-10-19 and the fetch failed again.",
+        "result": "unreachable",
+        "url": "https://www.nist.gov/ntis"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "One standard news search (NTIS move to NIST Commerce 2026) returned the FY2026 NIST and NTIS budget submission (already on the record) and pre-2020 items; no report of a transfer.",
+        "result": "supports",
+        "url": "https://www.commerce.gov/sites/default/files/2025-06/NIST-NTIS-FY2026-Congressional-Budget-Submission.pdf"
       }
     ]
   },
@@ -138,6 +175,6 @@
   ],
   "title": "Move NTIS functions to NIST and merge them with technology transfer efforts",
   "tracked": true,
-  "uncertainties": "Searches performed: two web searches on an NTIS transfer or Commerce reorganization, and a Federal Register API query of NTIS documents since 2025-01-20; none found a transfer. Only an excerpt of the FY2026 budget submission was read, so later NTIS references and the FY2027 request were not checked. The 2025-04-18 Federal Register notice seeking nominations for NIST and NTIS advisory committees was seen in a query listing but not opened. The absence of a transfer is a limited no-result finding.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The Commerce rule list on reginfo.gov (labeled Agency Rule List - 2026) has no NTIS entries and no title on technology transfer; RIN 0693-AB72 removes obsolete Advanced Technology Program regulations and is not the recommended action. The 2026-09-30 request for information on the National Technical Reports Library points to NTIS continuing as a separate service. Only an excerpt of the FY2026 budget submission was read, the FY2027 request was not checked, and the nist.gov NTIS page could not be fetched. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

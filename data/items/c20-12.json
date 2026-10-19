@@ -4,9 +4,9 @@
     "No audit commissioned in sources found"
   ],
   "chapter": "20",
-  "confidence": 48,
+  "confidence": 52,
   "confidence_label": "low",
-  "confidence_reason": "Chapter text checked at page 646; the parallel step rests on two fetched news reports of an Inspector General review, and no audit was found by a limited search.",
+  "confidence_reason": "The Inspector General report that defines the parallel step was read on vaoig.gov in review; the absence of a department-wide audit rests on limited searches.",
   "durability": {
     "level": "medium",
     "why": "Contract terminations are agency decisions; an audit, if conducted, would produce lasting findings."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: read VA Inspector General report 25-03033-230 on vaoig.gov; re-sourced the timeline to it and corrected the report date from 2026-09-24 to 2026-09-22. No stage change (proposed 10); confidence 48 to 52."
     }
   ],
   "id": "c20-12",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -51,24 +55,25 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: not_started is defensible because no audit was commissioned and the contract review is only a parallel step; proposed 10 is used to reflect that parallel step without counting it as an audit underway.",
-      "Stage changed from in_progress 20, which sat outside the band, to proposed 10."
+      "No stage change: proposed 10, match parallel. not_started remains defensible because no audit was commissioned and the contract review is only a parallel step.",
+      "Timeline re-sourced to the Inspector General report: the two February 2025 events now cite it, and the 2026-09-24 news-dated event is replaced by the report's issue date of 2026-09-22.",
+      "Confidence 48 to 52 (still low): the stage rests on the absence of a department-wide audit."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 646 recommends an independent audit of VA similar to the 2018 Defense Department audit to identify IT, management, financial, contracting and other deficiencies. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y20f",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (646) and proposal field, the text asks for an independent audit of VA modeled on the 2018 Defense Department audit to find IT, management, financial, contracting and other deficiencies. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Dated 2026-09-24; review instruction of 2025-02-21 (1,049 actions, under 11 hours), terminations directed 2025-02-25 by senior advisers and DOGE representatives, 435 terminated worth about $1.1 billion. It does not say DOGE or GSA requested the review, so that wording was removed.",
-        "result": "supports",
-        "url": "https://www.militarytimes.com/veterans/2026/09/24/va-terminated-11-billion-in-contracts-after-doge-requests-watchdog-finds/"
+        "note": "Checked 2026-10-18: issued 2026-09-22 at congressional request; 2,210 actions reviewed, 435 terminated for convenience (about $1.1 billion); 2025-02-21 and 2025-02-25 events confirmed; lists to Congress inaccurate; no recommendations. A contract termination review, not the recommended audit; supports only a parallel match at proposed.",
+        "result": "partial",
+        "url": "https://www.vaoig.gov/sites/default/files/reports/2026-09/vaoig-25-03033-230_final.pdf"
       },
       {
-        "note": "Dated 2026-09-24; 435 terminations, about 86 percent consulting, lists to Congress incomplete and inaccurate.",
+        "note": "Not reopened; read in the 2026-10-13 review: secondary account of the same report.",
         "result": "supports",
-        "url": "https://www.govexec.com/management/2026/09/vas-contracting-crackdown-hours-hundreds-reviews/416219/"
+        "url": "https://www.militarytimes.com/veterans/2026/09/24/va-terminated-11-billion-in-contracts-after-doge-requests-watchdog-finds/"
       }
     ]
   },
@@ -114,35 +119,42 @@
       "publisher": "Government Executive",
       "title": "VA's contracting crackdown gave some staff hours to do hundreds of reviews",
       "url": "https://www.govexec.com/management/2026/09/vas-contracting-crackdown-hours-hundreds-reviews/416219/"
+    },
+    {
+      "date": "2026-09-22",
+      "kind": "primary",
+      "publisher": "VA Office of Inspector General",
+      "title": "Review of Contracts Terminated for Convenience (Report 25-03033-230)",
+      "url": "https://www.vaoig.gov/sites/default/files/reports/2026-09/vaoig-25-03033-230_final.pdf"
     }
   ],
   "stage": "proposed",
-  "status_summary": "No department-wide audit modeled on the Defense Department audit was found. In February 2025 VA reviewed its contracts, with contracting officials told on 2025-02-21 to review 1,049 contract actions in under 11 hours, and VA senior advisers and DOGE representatives directed terminations on 2025-02-25. A VA Inspector General review reported on 2026-09-24 found 435 contract actions worth about $1.1 billion had been terminated and that VA's lists of terminations sent to Congress were incomplete and inaccurate. The review was a contract-termination exercise rather than an audit of IT, management and finance, so it is recorded as a parallel step.",
+  "status_summary": "No department-wide audit modeled on the Defense Department audit was found. In February 2025 VA reviewed its contracts: on 2025-02-21 contracting offices were given less than 11 hours to review 1,049 contract actions, and on 2025-02-25 senior advisers and DOGE representatives directed terminations. A VA Inspector General report dated 2026-09-22, prepared at congressional request, found 435 of 2,210 reviewed contract actions, worth about $1.1 billion, had been terminated for convenience and that VA's lists of terminations sent to Congress were inaccurate. The report is a contract termination review rather than an audit of IT, management and finance, so it is recorded as a parallel step.",
   "timeline": [
     {
       "date": "2025-02-21",
-      "event": "VA contracting officials were told to review 1,049 contract actions in under 11 hours as part of a department contract review.",
-      "kind": "news",
-      "source": "Military Times",
-      "url": "https://www.militarytimes.com/veterans/2026/09/24/va-terminated-11-billion-in-contracts-after-doge-requests-watchdog-finds/"
+      "event": "VA acquisition officials and a senior adviser gave contracting offices less than 11 hours to review 1,049 contract actions (per VA Inspector General report 25-03033-230).",
+      "kind": "primary",
+      "source": "VA Office of Inspector General",
+      "url": "https://www.vaoig.gov/sites/default/files/reports/2026-09/vaoig-25-03033-230_final.pdf"
     },
     {
       "date": "2025-02-25",
-      "event": "VA senior advisers and DOGE representatives directed contract terminations, though some reviews were incomplete.",
-      "kind": "news",
-      "source": "Military Times",
-      "url": "https://www.militarytimes.com/veterans/2026/09/24/va-terminated-11-billion-in-contracts-after-doge-requests-watchdog-finds/"
+      "event": "VA senior advisers and DOGE representatives directed contract terminations although some offices had not finished their reviews (per VA Inspector General report 25-03033-230).",
+      "kind": "primary",
+      "source": "VA Office of Inspector General",
+      "url": "https://www.vaoig.gov/sites/default/files/reports/2026-09/vaoig-25-03033-230_final.pdf"
     },
     {
-      "date": "2026-09-24",
-      "event": "News reports on a VA Inspector General review said VA terminated 435 contract actions worth about $1.1 billion, mostly consulting services, and that its lists of terminations reported to Congress were incomplete and inaccurate.",
-      "kind": "news",
-      "source": "Government Executive",
-      "url": "https://www.govexec.com/management/2026/09/vas-contracting-crackdown-hours-hundreds-reviews/416219/"
+      "date": "2026-09-22",
+      "event": "VA Inspector General issued report 25-03033-230, Review of Contracts Terminated for Convenience, finding 435 of 2,210 reviewed contract actions (about $1.1 billion) were terminated for convenience and that VA's lists of terminations sent to Congress were inaccurate; it made no recommendations.",
+      "kind": "primary",
+      "source": "VA Office of Inspector General",
+      "url": "https://www.vaoig.gov/sites/default/files/reports/2026-09/vaoig-25-03033-230_final.pdf"
     }
   ],
   "title": "Conduct an independent audit of VA to find IT, financial and contracting deficiencies",
   "tracked": true,
-  "uncertainties": "The Inspector General report itself (numbered 25-03033-230 in the download link of news coverage) was not opened; figures come from two news articles. VA's annual financial statement audit by its Inspector General is routine and was not treated as the recommended audit. Whether the contract review counts even as a parallel step is a judgment call; no search was made for a planned department-wide audit beyond the researcher's checks.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The Inspector General report 25-03033-230 was read on vaoig.gov in review on 2026-10-18 and by the researcher; it was conducted under inspection and evaluation standards at the request of two Senators and covers contract terminations and the accuracy of reported values, not IT, management or financial systems. The researcher noted that its executive summary and body differ on one count (1,775 versus 1,675 actions never terminated); the body figure is used. News coverage dated 2026-09-24 (Military Times, Government Executive) is kept as sources, and the news-dated event is replaced by the report's own date. VA's annual financial statement audit is routine and was not treated as the recommended audit. No search was made for a planned department-wide audit beyond earlier checks, so the stage also rests on the absence of one; the five systematic absence checks were not run.",
+  "updated_at": "2026-10-18"
 }

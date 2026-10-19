@@ -4,9 +4,9 @@
     "Research funding levels are set in annual appropriations."
   ],
   "chapter": "15",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Document text checked and the budget justification read, but the not_started status rests on absence of evidence from limited searches.",
+  "confidence": 60,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (partial: the 2026-09-24 HUD Evaluation Policy notice, read, reaffirms competitively awarded external research), HUD Unified Agenda (supports), congress.gov and govinfo.gov search (supports), hud.gov PD&R page (unreachable twice) and a news search (partial). The agency page could not be read and the agenda is only weakly informative for an administrative grant suspension, so confidence is 60.",
   "durability": {
     "level": "low",
     "why": "Budget requests and survey scope changes are year-to-year and depend on appropriations."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the HUD Unified Agenda on reginfo.gov, govinfo.gov, hud.gov and a news search), not_started kept and confidence raised to 60 with the hud.gov page unreachable."
     }
   ],
   "id": "c15-11",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -49,15 +53,12 @@
   "requires_congress": "no",
   "research_agent": "N15",
   "review": {
-    "flags": [
-      "stage changed from proposed 10 to not_started 0: a budget request that keeps external research and cuts surveys is not a step toward suspending research grants; it is recorded as a parallel item.",
-      "requires_congress changed to no because the recommendation is an administrative suspension."
-    ],
+    "flags": [],
     "mandate_check": "verified",
     "mandate_note": "Bullet on page 509 matches the paraphrase.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y15a",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "$63.0 million request versus $122.5 million FY2026 enacted; sample size reductions; 50 percent match on cooperative agreements; new evaluations on administration priorities; no grant suspension; no printed date.",
@@ -68,6 +69,36 @@
         "note": "Confirms 2026-04-03 release; does not give the PD&R amount.",
         "result": "partial",
         "url": "https://www.nahro.org/news/hud-releases-fy-2027-budget-proposal-insufficient-rental-assistance-increases-paired-with-devasting-cuts-to-community-development-programs"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Query: exact phrase Policy Development and Research, HUD, since 2025-01-20: 98 documents, first 20 read (information collection notices, survey RFIs, Performance Review Board). Further query research+grants+suspend, HUD: 3 documents (OMB-led proposed rule Regulation for Federal Financial Assistance 2026-05-29; Moving to Work notice 2026-09-01; work requirements proposed rule 2026-03-02), none suspending PD&R grants. Notice 'HUD Evaluation Policy' (2026-09-24, 2026-19528) states HUD conducts most research through competitively awarded external grants and contracts; no suspension or realignment described.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"Policy%20Development%20and%20Research\"&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=housing-and-urban-development-department&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Agency named: Department of Housing and Urban Development; heading Agency Rule List - 2026; 54 rules; no rule on PD&R, research or evaluation grants. 2529-AB11 detail page read (data collection rescission, FHEO), not matching. Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Results were appropriations bills (H.R.4552, S.2465, H.R.7148 for FY2026; H.R.9170 for FY2027) and the ROAD to Housing Act (P.L. 119-101); none identified as directing suspension of PD&R external research grants. Appropriations text not read in full. Reviewer opened the H.R. 4552 bill status (FY2026 THUD appropriations, placed on the Union Calendar 2025-07-21): its summary lists the PD&R account and describes no grant suspension.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr4552/xml/BILLSTATUS-119hr4552.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Fetch error on the PD&R program office page; the hud.gov press release index page returned navigation only, with no releases visible. Reviewer retried on 2026-10-19 and the fetch failed again.",
+        "result": "unreachable",
+        "url": "https://www.hud.gov/program_offices/policy_development_and_research"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "News web search on HUD PD&R grant suspension or cancellation returned only grant-listing pages and no reporting of a suspension. Primary document HUD Evaluation Policy (91 FR 60638, 2026-09-24) reaffirms external research awards, consistent with no suspension.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/09/24/2026-19528/hud-evaluation-policy"
       }
     ]
   },
@@ -114,6 +145,13 @@
       "publisher": "NAHRO",
       "title": "HUD releases FY 2027 budget proposal",
       "url": "https://www.nahro.org/news/hud-releases-fy-2027-budget-proposal-insufficient-rental-assistance-increases-paired-with-devasting-cuts-to-community-development-programs"
+    },
+    {
+      "date": "2026-09-24",
+      "kind": "primary",
+      "publisher": "Federal Register (HUD)",
+      "title": "HUD Evaluation Policy",
+      "url": "https://www.federalregister.gov/documents/2026/09/24/2026-19528/hud-evaluation-policy"
     }
   ],
   "stage": "not_started",
@@ -129,6 +167,6 @@
   ],
   "title": "Suspend PD&R external research grants and narrow the office to data and surveys",
   "tracked": true,
-  "uncertainties": "The PD&R justification carries no printed date and is labeled undated; the NAHRO account does not give the PD&R figure, which comes from the justification. One targeted web search and the researcher's search of news and HUD pages found no reported grant suspension; staffing reductions were reported only as an early 2025 union estimate. The five systematic absence checks were not all documented.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The HUD rule list on reginfo.gov (labeled Agency Rule List - 2026, 54 rules) lists no rulemaking on PD&R research or evaluation grants; RIN 2529-AB11 rescinds a fair housing data collection requirement and is not the recommended action. HUD's Evaluation Policy notice (2026-09-24) states that most research and evaluation is done through competitively awarded external grants and contracts. The FY2027 PD&R justification carries no printed date, and the hud.gov PD&R page could not be fetched. One early 2025 union estimate of staffing reductions is not counted. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -4,9 +4,9 @@
     "The office relies on staff assigned from other bureaus, and State's 2025 workforce reductions cut some China-related expertise (inference from the NPR report)."
   ],
   "chapter": "06",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Document text checked and the Foreign Affairs Manual re-read (office listed, section dated 2023); continuation after the July 2025 reorganization and the new coordinator rest on two news reports and absence of closure evidence, and no primary State source for 2025 or 2026 was reachable.",
+  "confidence": 55,
+  "confidence_label": "medium",
+  "confidence_reason": "The Foreign Affairs Manual listing (primary) was re-read and the 2025 appointment is reported by three outlets that agree; continuation after July 2025 rests on news and a lagging manual, and no State announcement for 2025 or 2026 was reachable, so medium at the floor.",
   "durability": {
     "level": "medium",
     "why": "An internal State office and its reporting line can be changed by the Secretary without legislation; H.R. 5329 would give part of it a statutory basis if enacted."
@@ -31,7 +31,7 @@
     },
     {
       "date": "2026-10-12",
-      "note": "Second independent review at the owner's request: stage confirmed (implemented 65); confidence 58 to 56. reporting-line change rests on one Chinese-language report citing officials; Taiwan News relies on Nikkei Asia; 2026 status unconfirmed; State manual lags reorganization"
+      "note": "Second independent review at the owner's request: stage confirmed (implemented 65); confidence 58 to 56. reporting-line change rests on one Chinese-language report citing officials; Taiwan News relies on Nikkei Asia; 2026 status unconfirmed; State manual lags reorganization (This earlier note was cut short.)"
     },
     {
       "date": "2026-10-13",
@@ -40,10 +40,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c06-26 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read the Foreign Affairs Manual chapter on fam.state.gov, ran a Federal Register API query (0 results) and one web search; the Taipei Times report was added as a source. No stage change (implemented 65); confidence 50 to 55."
     }
   ],
   "id": "c06-11",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -93,26 +97,32 @@
   "research_agent": "N06a",
   "review": {
     "flags": [
-      "Judgment call: implemented 65 held at band floor; the recommendation is to support an existing office, and keeping it with a new head is operative in substance, but continuation rests on news reports plus a lagging manual",
-      "In_progress would be defensible only if the office were shown to be downgraded; no such evidence found"
+      "No stage change: implemented 65, match partial. in_progress is a defensible alternative if continuation after July 2025 is not taken as shown.",
+      "One review web search (China House 2026) returned no State primary document.",
+      "Confidence 50 low to 55 medium; held at the floor because no State primary source after March 2025 was reachable."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 176 describes the newly opened Office of China Coordination, doubts whether it will streamline coordination given competing agencies and its reliance on staff from other bureaus, and says a Republican Administration should support the concept with adjustments; the paraphrase fits.",
-    "model": "Claude Opus",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields: support, with adjustments, the Office of China Coordination (China House) at State, centralizing China efforts, while noting its reliance on staff detailed from other bureaus and uncertain interagency coordination. Chapter text not available this run; pages not re-checked.",
+    "model": "claude-opus",
     "question": "Has the administration kept and supported China House as the centralized China office through an operative agency action, or is there no reliable sign of support beyond the office existing on paper?",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-1",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "second_review": true,
     "source_checks": [
       {
-        "note": "Lists the office at 1 FAM 134 (dated 2023-10-23) reporting through the East Asia bureau and to the Deputy Secretary; chapter revised 2025-03-25 and still lists the multilateral affairs director, so it lags the July 2025 changes.",
-        "result": "partial",
+        "note": "Fetched 2026-10-18 (stage-deciding): 1 FAM 134 lists the Office of China Coordination (EAP/China, China House), a China Coordinator who is also a Deputy Assistant Secretary, three Deputy Coordinators, reporting to the EAP Assistant Secretary, through EAP to the Under Secretary for Political Affairs and also to the Deputy Secretary; chapter dated 2025-03-25, section dated 2023-10-23. Supports continued existence; does not show post-July 2025 status.",
+        "result": "supports",
         "url": "https://fam.state.gov/FAM/01FAM/01FAM0130.html"
       },
       {
-        "note": "Looked for a State biography confirming the 2025 coordinator; fetch error.",
-        "result": "unreachable",
-        "url": "https://www.state.gov/biographies/joshua-young"
+        "note": "Fetched 2026-10-18: 0 documents; no published closure or reorganization notice.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Office+of+China+Coordination%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "Not re-fetched in review; researcher reports department confirmation on 2025-07-31 of the new head, consistent with two other outlets in the record.",
+        "result": "supports",
+        "url": "https://www.taipeitimes.com/News/taiwan/archives/2025/08/01/2003841298"
       }
     ]
   },
@@ -171,6 +181,13 @@
       "publisher": "U.S. Department of State",
       "title": "1 FAM 130, Bureau of East Asian and Pacific Affairs (section 1 FAM 134, Office of China Coordination)",
       "url": "https://fam.state.gov/FAM/01FAM/01FAM0130.html"
+    },
+    {
+      "date": "2025-08-01",
+      "kind": "news",
+      "publisher": "Taipei Times",
+      "title": "Joshua Young to head US Office of China Coordination",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2025/08/01/2003841298"
     }
   ],
   "stage": "implemented",
@@ -214,6 +231,6 @@
   ],
   "title": "Support and keep a centralized China policy office at State (China House)",
   "tracked": true,
-  "uncertainties": "The 2025 appointment rests on two news reports: World Journal (Chinese-language, citing unnamed officials) and Taiwan News (citing Nikkei Asia and an unnamed State official); only World Journal states the direct reporting line to the Under Secretary. State's Foreign Affairs Manual lists the office, but its China section is dated 2023-10-23 and the chapter still lists the Office of Multilateral Affairs that NPR reported closed in July 2025, so the manual lags the reorganization. A Paraguayan government news agency headline dated 2026-05-05 refers to a meeting with State's coordinator for China affairs, but the page could not be opened, so continuation into 2026 is not confirmed. A National Review commentary of 2025-04-29 said the April 2025 reorganization offered no China-specific reforms. Inference: the Mandate asks only that the concept be supported with adjustments, so keeping the office and naming a new head is rated implemented at the band floor, with match partial because the staffing and interagency concerns the text raises are not shown to be addressed.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The 2025 appointment rests on three news reports: World Journal (Chinese-language, citing unnamed officials), Taiwan News (citing Nikkei Asia and an unnamed State official) and Taipei Times (reporting department confirmation on 2025-07-31); only World Journal states the direct reporting line to the Under Secretary. State's Foreign Affairs Manual (fam.state.gov, re-read in review on 2026-10-18) lists the office at 1 FAM 134, but that section is dated 2023-10-23 and the chapter 2025-03-25, and the chapter still lists the Office of Multilateral Affairs that NPR reported closed in July 2025, so the manual lags the reorganization. The state.gov biography page of the appointee could not be opened, and web searches (researcher and review) found no State announcement or 2026 document on the office. A Federal Register API query for the office's name since 2025-01-20 returned 0 documents. A Paraguayan government news agency headline dated 2026-05-05 refers to a meeting with State's coordinator for China affairs, but the page could not be opened, so continuation into 2026 is not confirmed. A National Review commentary of 2025-04-29 said the April 2025 reorganization offered no China-specific reforms. Inference: the Mandate asks only that the concept be supported with adjustments, so keeping the office and naming a new head is rated implemented at the band floor, with match partial because the staffing and interagency concerns the text raises are not shown to be addressed.",
+  "updated_at": "2026-10-18"
 }

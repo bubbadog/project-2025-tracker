@@ -4,9 +4,9 @@
     "Market demand for long-dated debt"
   ],
   "chapter": "22",
-  "confidence": 55,
+  "confidence": 58,
   "confidence_label": "medium",
-  "confidence_reason": "All five systematic checks were documented on 2026-10-18: check 1 (two Federal Register queries) found no issuance-mix document; check 2 is partial (Unified Agenda unreachable, Fiscal Service proposed-rule listing used; the buyback rule is not issuance); check 3 (one search) found no bill; check 4 (Treasury refunding page, press releases and a review read of the August 2026 statement) is partial because no statement list was shown; check 5 (two news searches) found unchanged guidance and no 50-year security. Confidence is 55 because two checks are partial and the reported rise in bill issuance leaves diverged as a live alternative.",
+  "confidence_reason": "Not_started rests on five documented checks and the 2026-08-05 refunding statement: (1) Federal Register queries found no issuance-mix document (supports); (2) Unified Agenda: the Treasury rule list on reginfo.gov was read in full on 2026-10-19 with no issuance entry (supports, weakly informative because issuance is not set by rule); (3) one congress.gov and GovInfo search found no bill (supports); (4) the Treasury refunding page and press releases showed no change, though no statement list was shown (partial); (5) news searches, including one on 2026-10-19, found unchanged guidance, no 50-year security and a reported rise in bill issuance (partial). Set at 58 because two checks are partial and the bill tilt leaves diverged a live alternative.",
   "durability": {
     "level": "high",
     "why": "Issuance mix is set by Treasury each quarter and has no statutory commitment."
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Systematic absence check confirmed not_started for longer-duration Treasury issuance, with diverged noted as an alternative given reported growth in bill issuance; confidence raised from 48 to 55."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Treasury Unified Agenda rule list on reginfo.gov and ran one news spot-check; not_started kept and confidence raised from 55 to 58."
     }
   ],
   "id": "c22-16",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -59,18 +63,13 @@
   "research_agent": "N22",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Removed the news commentary event of 2025-02-06 from the timeline",
-      "Removed the Treasury Borrowing Advisory Committee blocker, which no source read supports",
-      "V10: not_started 0 kept; the Fiscal Service buyback rule was checked and does not qualify.",
-      "V10: alternative judgment is diverged 0, since Treasury has held coupon sizes and met added financing needs with bills (record bill auction sizes and a bill share above 21 percent per Bloomberg reporting); kept as not_started because the evidence is secondary and Treasury has stated no policy of shortening maturity.",
-      "V10: confidence 48 to 55, below the researcher's suggested 65, because checks 2 and 4 are partial and the diverged alternative is live."
-    ],
+    "alternative": "Diverged is defensible if the reported rise in the bill share is treated as policy running against the recommendation.",
+    "flags": [],
     "mandate_check": "confirmed",
     "mandate_note": "Page 702, Fiscal Responsibility: lock in rates by issuing longer duration bonds, consider a 50-year treasury bill, and issue fewer short-term notes. Paraphrase accurate; the Mandate's own wording is 50-year treasury bill.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V10",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Statement dated 2026-08-05; guidance to maintain coupon and FRN sizes; no new long security; no maturity extension discussed.",
@@ -129,6 +128,18 @@
       },
       {
         "note": "Reviewer V10 spot-check, 2026-10-18: one WebSearch (no domain filter) on a Treasury 50-year bond and longer-maturity issuance in 2026; no 50-year or extension announcement; the Bloomberg report republished here (2025-11-04) says bill auction sizes reached record levels and the bill share was above 21 percent in September 2025, a tilt against the recommendation reported from secondary sources.",
+        "result": "partial",
+        "url": "https://www.advisorperspectives.com/articles/2025/11/04/shift-shorter-debt-getting-started"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (agency named Department of the Treasury, 216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages, the second holding only the footer). Fiscal Service (1530) lists 8 entries (agency receipts and disbursements, DCIA offset, claims collection standards, ACH participation, electronic payment, tax refund offset, delinquent debtor disclosure, eliminating unnecessary regulations); none on debt issuance maturity or a 50-year security. 1545-BQ20 Refunding Bonds concerns tax-exempt bonds. Weakly informative: issuance is set by refunding announcements and auctions.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "One reviewer news search on 2026-10-19 (Treasury 50-year bond, longer maturity issuance, October 2026) returned 2024 commentary and November 2025 reports of a shift toward bills; no announcement of a 50-year security or a maturity extension.",
         "result": "partial",
         "url": "https://www.advisorperspectives.com/articles/2025/11/04/shift-shorter-debt-getting-started"
       }
@@ -198,6 +209,6 @@
   ],
   "title": "Lock in lower rates by issuing longer-duration debt, including a 50-year bond",
   "tracked": true,
-  "uncertainties": "Only two refunding sources were read; interim statements between them were not checked, and bill versus coupon shares were not measured. The 2025 refunding is described from news commentary, which is not treated as an event. The Mandate's text says 50-year treasury bill; the record calls it a bond, the usual term for that maturity. Unchanged guidance is a non-action and is listed only to show status. Checked systematically on 2026-10-18: Federal Register API searches (Treasury-only and all agencies) found no document on longer-duration issuance or a 50-year security; the Unified Agenda listing was unreachable and the Fiscal Service proposed-rule listing held only the buyback rule (proposed 2026-01-14, final 2026-03-30), which concerns redemption operations and does not change issuance; one congress.gov and govinfo search found no related bill; the Treasury refunding page and press releases showed no change; and news searches showed unchanged coupon guidance. The August 2026 statement says financing needs beyond the steady coupon sizes are met with weekly bill auctions and notes growing private demand for bills, and Bloomberg reporting of November 2025 said bill auction sizes had reached record levels and the bill share was above 21 percent in September 2025; this tilt toward shorter debt runs against the recommendation but is not a stated policy, so the record stays not_started rather than diverged. Interim statements were not checked and the bill share was not measured from Treasury data; the next refunding falls after this check.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "Treasury's refunding statement of 2026-08-05 keeps coupon and floating-rate note sizes, meets added needs with weekly bills and announces no new long security. Interim statements were not checked and the bill share was not measured from Treasury data; a November 2025 report put the bill share above 21 percent, a tilt toward shorter debt that is not stated policy, so diverged remains a live alternative. The Treasury Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists no issuance rule; issuance is set by announcement, so the agenda is a weak test. The Mandate's '50-year treasury bill' is read as a bond. The next refunding falls after this check. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

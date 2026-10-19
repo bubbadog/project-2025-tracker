@@ -5,9 +5,9 @@
     "The FDA nutrient review is still at the request-for-information stage (see c10-10)"
   ],
   "chapter": "26",
-  "confidence": 45,
+  "confidence": 48,
   "confidence_label": "low",
-  "confidence_reason": "The HHS release and the FDA program page were fetched and read in review; the absence of tariff and mutual recognition action rests on limited searching.",
+  "confidence_reason": "The HHS release and FDA page were read in earlier reviews and the Executive Order 14360 annex by the researcher; the absence of a tariff, recognition or labeling action rests on Federal Register checks and limited searching rather than the five documented systematic checks.",
   "durability": {
     "level": "low",
     "why": "The personal importation policy is a discretionary agency policy that can change without notice."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-16",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review ran a Federal Register API check for infant formula tariff documents (two unrelated USDA notices) and accepted the researcher's full read of Executive Order 14360 Annex II on public-inspection.federalregister.gov, which shows no formula exemption; that finding moved into the summary. No stage change (proposed 5, parallel); confidence 45 to 48."
     }
   ],
   "id": "c26-23",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -57,35 +61,33 @@
   "research_agent": "R2627",
   "restates_ids": [],
   "review": {
-    "document_reread": {
-      "citation": "HHS, HHS and FDA Announce Operation Stork Speed, 2025-03-18",
-      "note": "Import element limited to extending the personal importation policy.",
-      "result": "supports",
-      "url": "https://www.hhs.gov/press-room/operation-stork-speed.html"
-    },
     "flags": [
-      "Progress lowered from 7 to 5: the import element is a continuation of a 2022 personal importation policy.",
-      "Moved the Executive Order 14360 annex observation from status_summary to uncertainties because it rests on a partial reading.",
-      "Evenly balanced: not_started is defensible because the only import step continues a pre-period policy."
+      "No stage change: proposed 5, parallel.",
+      "Defensible alternative: not_started, since the only import step continues a 2022 policy.",
+      "Executive Order 14360 annex finding moved from uncertainties into the summary on the researcher's full read."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 800 calls for removing never-needed supply chain restrictions, citing baby formula, and enacting mutual recognition with allies; page 807 says a tariff averaging 17 percent and shifting labeling and nutrition standards shut out imports, that the 2022 Formula Act's temporary easing expired, and that the President should encourage bold liberalization; page 808 says mutual recognition would admit formula meeting EU standards even without meeting FDA labeling rules. The paraphrase, which reads the call for bold liberalization as removing or lowering the tariff, is a fair reading.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "V1-1016",
+    "mandate_check": "not_checked",
+    "mandate_note": "Chapter text not available in this run; the earlier review recorded: Page 800 calls for removing never-needed supply chain restrictions, citing baby formula, and enacting mutual recognition with allies; page 807 says a tariff averaging 17 percent and shifting labeling and nutrition standards shut out imports, that the 2022 Formula Act's temporary easing expired, and that the President should encourage bold liberalization; page 808 says mutual recognition would admit formula meeting EU standards even without meeting FDA labeling rules. The paraphrase, which reads the call for bold liberalization as removing or lowering the tariff, is a fair reading.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "2025-03-18; extension of the personal importation policy; labeling encouragement; no tariff, foreign formula or standards language.",
+        "note": "2026-10-18: two results, USDA WTO safeguard trigger level notices of 2025-12-22 and 2026-09-02, neither on formula; supports the absence of a formula tariff action.",
         "result": "supports",
-        "url": "https://www.hhs.gov/press-room/operation-stork-speed.html"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22infant+formula%22+tariff&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Updated 2026-07-13; policy from 2022 continues; no recognition of foreign standards.",
+        "note": "2026-10-18, per the researcher's full read (not reopened here): Annex II of the order dated 2025-11-14 lists no HTS 1901.10 or infant formula entry, so formula was not among the agricultural exemptions.",
         "result": "supports",
-        "url": "https://www.fda.gov/food/infant-formula-homepage/operation-stork-speed"
+        "url": "https://public-inspection.federalregister.gov/2025-21203.pdf"
+      },
+      {
+        "note": "2026-10-18, per the researcher's read: extension of the personal importation policy and encouragement of clearer labeling only; partly matches, supports the low proposed stage.",
+        "result": "partial",
+        "url": "https://www.hhs.gov/press-room/operation-stork-speed.html"
       }
-    ],
-    "stage_change_reason": "Progress lowered from 7 to 5 within proposed: the HHS release and FDA page show the import element only extends a 2022 personal importation policy, the smallest parallel step."
+    ]
   },
   "significance": {
     "B": 2,
@@ -139,7 +141,7 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "HHS and FDA announced Operation Stork Speed on 2025-03-18; among its six actions it extends the FDA's personal importation policy for infant formula and encourages companies to work with the FDA on clearer labeling, and announces no tariff change, foreign standard recognition or labeling rule. The FDA's program page (updated 2026-07-13) says the personal importation policy first put in place in 2022 continues and does not address recognition of foreign standards. No tariff cut, mutual recognition step or 119th Congress formula tariff bill was found.",
+  "status_summary": "HHS and FDA announced Operation Stork Speed on 2025-03-18; among its six actions it extends the FDA's personal importation policy for infant formula and encourages companies to work with the FDA on clearer labeling, and announces no tariff change, foreign standard recognition or labeling rule. The FDA's program page (updated 2026-07-13) says the personal importation policy first put in place in 2022 continues and does not address recognition of foreign standards. Annex II of Executive Order 14360 (2025-11-14), which exempted certain agricultural products from reciprocal tariffs, lists no infant formula entry, and no tariff cut, mutual recognition step or 119th Congress formula tariff bill was found.",
   "timeline": [
     {
       "date": "2025-03-18",
@@ -151,6 +153,6 @@
   ],
   "title": "Liberalize infant formula imports: lower tariffs, loosen labeling, mutual recognition",
   "tracked": true,
-  "uncertainties": "Whether infant formula faced IEEPA reciprocal tariffs before Executive Order 14389 ended them on 2026-02-20 (see c26-02), and whether the agricultural exemptions in Executive Order 14360 (2025-11-14) cover formula, were not confirmed, because only part of the annex text was read. The personal importation policy is a continuation of a 2022 policy and concerns imports for personal use, so it is a small parallel step; a reader could stage this not_started. Searches performed: four web searches (Operation Stork Speed and imports; a formula tariff bill, which returned only 2022 and 2023 bills; HHS formula actions; mutual recognition of EU formula, which returned only 2022 material) and a Federal Register API query for infant formula (31 documents, titles of the first 20 read, including the 2025-05-14 nutrient request for information and a WIC correcting amendment, none a tariff or recognition action). The nutrient review and WIC bidding are tracked in c10-10.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The HHS release (2025-03-18) and the FDA program page (updated 2026-07-13) were read in earlier reviews, and Annex II of Executive Order 14360 was read in full by the researcher on public-inspection.federalregister.gov; it lists no infant formula or HTS 1901.10 entry. This review ran a Federal Register API query for infant formula and tariff since 2025-01-20, which returned two USDA safeguard trigger notices (2025-12-22 and 2026-09-02) that do not mention formula; the researcher's query for infant formula since 2026-01-01 (36 matches, first 20 titles read) found only information collection notices, a WIC rule and unrelated items. Whether formula faced reciprocal tariffs before Executive Order 14389 ended them on 2026-02-20 (see c26-02) was not confirmed against the tariff schedule. The personal importation policy continues a 2022 policy and concerns personal-use imports, so it is a small parallel step and a reader could stage this not_started. Earlier web searches on formula tariff bills, HHS formula actions and mutual recognition of EU formula returned only 2022 and 2023 material. Nutrient review and WIC bidding are tracked in c10-10.",
+  "updated_at": "2026-10-18"
 }

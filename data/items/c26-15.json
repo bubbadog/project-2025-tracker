@@ -4,9 +4,9 @@
     "Reauthorization bills pending; recommendation requires legislation"
   ],
   "chapter": "26",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "The Labor page and both bills were read on primary sites; the absence of an aligned action rests on limited searches, so not_started is capped.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, no action on the workers program (rerun 2026-10-19: eight documents, none qualifying); (2) Labor Unified Agenda read directly on reginfo.gov on 2026-10-19, no Trade Adjustment Assistance entry, weakly informative because the program lapsed by statute and any change would need Congress; (3) congress.gov and GovInfo, S. 1449 and H.R. 7805 would reauthorize the program and remain in committee; (4) ETA Trade Act page, terminated since 2022-07-01; (5) one news search, nothing from the administration. Set at 66 because administration budget positions on reauthorization were not checked.",
   "durability": {
     "level": "low",
     "why": "The lapse is a statutory default that a future Congress could reverse by reauthorizing the program."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review reran a Federal Register API check on federalregister.gov and read the H.R. 7805 BILLSTATUS on govinfo.gov; no stage change (not_started, 0). Confidence 45 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the Labor Unified Agenda list read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 62 to 66."
     }
   ],
   "id": "c26-15",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -55,31 +63,59 @@
   "research_agent": "N26",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Replaced the LegiScan tracker with the GovInfo record for H.R. 7805",
-      "Match set to direct",
-      "Confidence 45"
-    ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 800 and 806, Implementing the conservative vision and Trade Adjustment Assistance: resist more TAA spending, treat trade-displaced workers like other displaced workers, and use cash transfers if it must be expanded. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields (pp. 800 and 806), the essay asks to resist added trade adjustment assistance spending, treat trade-displaced workers like other displaced workers, and use direct cash transfers if the program must expand. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14. Termination effective 2022-07-01; no new petitions or determinations; no mention of reauthorization.",
+        "note": "2026-10-18 (reviewer variant): ETA, all types since 2025-01-20: 0 documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Trade+Act%22+petitions+workers+certification&conditions[agencies][]=employment-and-training-administration&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): 8 documents; the EDA firms-program removal rule (2026-06-11) is housekeeping for a lapsed program, not the workers program.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22trade+adjustment+assistance%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): Unified Agenda fallback; reginfo.gov landing page had no items; 6 ETA proposed rules, none on the program.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=employment-and-training-administration&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reviewer read BILLSTATUS: introduced 2026-03-04, referred to Ways and Means, no later action; a reauthorization bill, opposite direction.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7805.xml"
+      },
+      {
+        "note": "2026-10-18 (researcher): S. 1449 introduced 2025-04-10, referred to Finance, no later action.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1449.xml"
+      },
+      {
+        "note": "2026-10-18 (researcher): program terminated since 2022-07-01; no reauthorization or conversion mentioned.",
         "result": "supports",
         "url": "https://www.dol.gov/agencies/eta/tradeact"
       },
       {
-        "note": "Checked 2026-10-14. S. 1449 introduced 2025-04-10, Finance Committee; extends to 2031-12-31.",
+        "note": "2026-10-18 (researcher news search): congressional press release backing reauthorization; no administration proposal reported.",
         "result": "supports",
-        "url": "https://www.congress.gov/119/bills/s1449/BILLS-119s1449is.htm"
+        "url": "https://www.fetterman.senate.gov/fetterman-colleagues-push-to-revive-successful-program-and-defend-american-workers-from-unfair-trade-policies/"
       },
       {
-        "note": "Checked 2026-10-14. H.R. 7805 introduced 2026-03-04 by Rep. Sanchez, Ways and Means.",
+        "date": "2026-10-19",
+        "note": "The Department of Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 115 rules) was read in full on 2026-10-19; no entry concerns Trade Adjustment Assistance for Workers; WIOA entries (1291-AA50, 1291-AA47) concern nondiscrimination and outreach rules. The program lapsed by statute and changes would need Congress, so the check is weakly informative.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/app/details/BILLS-119hr7805ih"
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1200"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: eight documents, including a 2026-09-29 ETA performance reporting collection, the 2026-08-20 Wagner-Peyser staffing rule and the 2026-06-11 EDA removal of firms program rules; nothing expands, restricts or converts the workers program.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22trade+adjustment+assistance%22&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -132,6 +168,13 @@
       "publisher": "U.S. Government Publishing Office",
       "title": "H.R. 7805, Trade Adjustment Assistance Modernization Act (bill details)",
       "url": "https://www.govinfo.gov/app/details/BILLS-119hr7805ih"
+    },
+    {
+      "date": "2026-03-04",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 7805 BILLSTATUS, Trade Adjustment Assistance Modernization Act",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7805.xml"
     }
   ],
   "stage": "not_started",
@@ -154,6 +197,6 @@
   ],
   "title": "Resist new trade adjustment spending and treat trade-displaced workers like others",
   "tracked": true,
-  "uncertainties": "The program's lapse is consistent with the essay's call to resist new spending, but it results from the expiration of authority in 2022 rather than from an action in the period, so it is not scored as progress; whether the administration's budgets proposed or opposed reauthorization was not checked. The Labor page carries no publication date. Committee action on the two bills was not checked beyond referral. Other Labor pages were not checked for cash-assistance pilots.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The Trade Adjustment Assistance for Workers program remains terminated since 2022-07-01 per the ETA Trade Act page. No law or administration action treating trade-displaced workers like other displaced workers or converting assistance to cash transfers was found. The Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) has no program entry. S. 1449 and H.R. 7805 would reauthorize the program and remain in committee. The lapse aligns with resisting new spending but results from the 2022 expiration rather than an action in the period, so it is not scored; administration budget positions on reauthorization were not checked. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

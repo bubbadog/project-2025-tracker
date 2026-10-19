@@ -4,9 +4,9 @@
     "Dodd-Frank section 342 requires the offices by law"
   ],
   "chapter": "27",
-  "confidence": 42,
+  "confidence": 45,
   "confidence_label": "low",
-  "confidence_reason": "Office closures rest on news reports of web page removals; the SEC office page read contradicts abolition; the Nasdaq event is confirmed in the Federal Register.",
+  "confidence_reason": "The Nasdaq notice was read on federalregister.gov in this review and the SEC office page by the researcher; office closures rest on news reports of web page removals and on absence of evidence.",
   "durability": {
     "level": "low",
     "why": "Removed web pages and staffing changes are administrative and reversible; the statute is unchanged."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review re-read the Nasdaq notice on federalregister.gov and added its operative-on-filing waiver and the 2025-02-04 effective date to the event and summary; the researcher read the SEC office page and ran a Federal Register check. No stage change (in_progress 25, partial); confidence 42 to 45."
     }
   ],
   "id": "c27-06",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -57,32 +61,29 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage lowered from in_progress 30 to in_progress 25: only web pages were reported removed and the SEC office page still describes an active office",
-      "Replaced the law-firm source for the Nasdaq event with the Federal Register notice and corrected it: Nasdaq filed the change, effective on filing, rather than the SEC approving it",
-      "Removed the Fifth Circuit vacatur date, which no cited source states",
-      "Added c22-10 to related_ids",
-      "Raised the absence searches into uncertainties"
+      "No stage change: in_progress 25, partial.",
+      "Close call: proposed 15 is defensible, since the only primary action is a court-driven SRO repeal and office closures rest on reports of web page removals."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 830 (chapter introduction) recommends abolishing offices at financial regulators that promote DEI and eliminating rules requiring appointments by race, ethnicity, sex or sexual orientation; page 832 (Better Capital Markets, Congress bullets) asks Congress to bar securities regulators and SROs from discriminating. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Chapter text not available in this run; the earlier review recorded: Page 830 (chapter introduction) recommends abolishing offices at financial regulators that promote DEI and eliminating rules requiring appointments by race, ethnicity, sex or sexual orientation; page 832 (Better Capital Markets, Congress bullets) asks Congress to bar securities regulators and SROs from discriminating. Paraphrase accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "90 FR 8554, notice dated 2025-01-24 of Nasdaq's filing of 2025-01-21, effective on filing under section 19(b)(3)(A), repealing board diversity listing requirements after a court vacatur. Checked 2026-10-14.",
-        "result": "supports",
+        "note": "2026-10-18: Release No. 34-102281, filed 2025-01-21, notice dated 2025-01-24, published 2025-01-30 at 90 FR 8554 to 8555; repeals the board diversity listing requirement after a court vacated the SEC 2021 approval order; operative on filing with a 2025-02-04 effective date. An SRO action prompted by a court, so only partly matches the recommendation.",
+        "result": "partial",
         "url": "https://www.federalregister.gov/documents/2025/01/30/2025-01932/self-regulatory-organizations-the-nasdaq-stock-market-llc-notice-of-filing-and-immediate"
       },
       {
-        "note": "Page still describes the office as active with an acting director and DEIA programs; modified date 2017; does not show abolition. Checked 2026-10-14.",
+        "note": "2026-10-18, per the researcher's read: the page presents the office as active; shows no abolition.",
         "result": "does_not_support",
         "url": "https://www.sec.gov/about/offices/omwi.htm"
       },
       {
-        "note": "API search returned one FDIC information collection notice of 2025-01-22; no rescission or closure document found. Checked 2026-10-14.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Office+of+Minority+and+Women+Inclusion%22&conditions[publication_date][gte]=2025-01-20&per_page=40"
+        "note": "2026-10-18, researcher query: one FDIC information collection renewal (2025-01-22), no rescission or closure; supports absence of an office closure.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Office+of+Minority+and+Women+Inclusion%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -145,11 +146,11 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Press reporting dated 2025-01-24 said the Fed, FDIC, OCC and CFTC had removed diversity office web pages and the SEC had removed its DEI page, while it was unclear whether any office had closed; Bloomberg Law reported on 2025-04-14 that the SEC's Office of Minority and Women Inclusion web page had disappeared. As of 2026-10-14 an SEC page for that office still describes it as active, with an acting director and diversity programs. On the SRO side, Nasdaq filed on 2025-01-21 an immediately effective rule change (SEC notice published 2025-01-30, 90 FR 8554) repealing its board diversity listing requirements to reflect a federal court's vacatur of the SEC's 2021 approval order. No closure of a financial regulator's diversity office, repeal of the statutory offices, or statute barring discrimination by securities regulators and SROs was found.",
+  "status_summary": "Press reporting dated 2025-01-24 said the Fed, FDIC, OCC and CFTC had removed diversity office web pages and the SEC had removed its DEI page, while it was unclear whether any office had closed; Bloomberg Law reported on 2025-04-14 that the SEC's Office of Minority and Women Inclusion web page had disappeared. As of 2026-10-14 an SEC page for that office still describes it as active, with an acting director and diversity programs. On the SRO side, Nasdaq filed on 2025-01-21 a rule change, operative on filing and tied to a 2025-02-04 effective date (SEC notice published 2025-01-30, 90 FR 8554), repealing its board diversity listing requirements to reflect a federal court's vacatur of the SEC's 2021 approval order. No closure of a financial regulator's diversity office, repeal of the statutory offices, or statute barring discrimination by securities regulators and SROs was found.",
   "timeline": [
     {
       "date": "2025-01-21",
-      "event": "Nasdaq filed an immediately effective rule change (SR-NASDAQ-2025-007) repealing its board diversity listing requirements to reflect a federal court's vacatur of the SEC's 2021 approval order; the SEC notice was published 2025-01-30 at 90 FR 8554.",
+      "event": "Nasdaq filed a rule change (SR-NASDAQ-2025-007) repealing its board diversity listing requirements to reflect a federal court's vacatur of the SEC's 2021 approval order; the SEC waived the 30-day operative delay so the change was operative on filing, tied to the court decision's effective date of 2025-02-04, and the SEC notice (Release No. 34-102281, dated 2025-01-24) was published 2025-01-30 at 90 FR 8554.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/01/30/2025-01932/self-regulatory-organizations-the-nasdaq-stock-market-llc-notice-of-filing-and-immediate"
@@ -171,6 +172,6 @@
   ],
   "title": "End DEI offices and race- or sex-based appointment rules at financial regulators and SROs",
   "tracked": true,
-  "uncertainties": "The SEC page for its Office of Minority and Women Inclusion, read on 2026-10-14 on sec.gov, still describes the office and its programs but shows a 2017 modified date and cites FY2023 materials, so it may be stale; the office's actual operation is unknown. The statutory basis (Dodd-Frank section 342) is from general knowledge. The Nasdaq repeal followed a court vacatur and an exchange filing that took effect on filing, so it reflects alignment with the recommendation, not an SEC policy choice; the Nasdaq rule required board diversity or an explanation, which is close to but not the same as a rule requiring appointments by race or sex. Federal Register API searches since 2025-01-20 for Office of Minority and Women Inclusion and for the joint diversity policies standards returned only an FDIC information collection renewal (2025-01-22), with no rescission found. CFTC action beyond web page removal was not found. Web page removals rest on news reports.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The Nasdaq notice (90 FR 8554) was re-read in this review on federalregister.gov; it does not name the vacating court or list the rule numbers. The SEC Office of Minority and Women Inclusion page was read on sec.gov by the researcher on 2026-10-18 and still presents the office as active, but it shows a 2017 modified date and cites FY 2023 materials, so its currency is unclear. The Federal Reserve OMWI page could not be fetched. The statutory basis (Dodd-Frank section 342) is from general knowledge. The Nasdaq repeal followed a court vacatur and reflects alignment, not an SEC policy choice, and the rule required board diversity or an explanation, close to but not the same as appointment rules by race or sex. Federal Register API searches since 2025-01-20 for Office of Minority and Women Inclusion found only an FDIC information collection renewal (2025-01-22). One web search for closures of financial regulator diversity offices returned only an undated CFPB diversity office story (not opened) and older materials. CFTC action beyond web page removal was not found, and web page removals rest on news reports.",
+  "updated_at": "2026-10-18"
 }

@@ -1,13 +1,20 @@
 {
   "agency": "DOE",
   "blockers": [
-    "Litigation over DEI-related executive orders and stop-work orders",
-    "Existing award terms"
+    "Remand proceedings in the DEI executive order litigation",
+    "Existing award terms",
+    "The OMB financial assistance rule is proposed, not final"
   ],
   "chapter": "12",
-  "confidence": 85,
+  "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Chapter text checked; the executive orders on the Federal Register and the DOE counsel memorandum were fetched and support the operative policy change.",
+  "confidence_reason": "Chapter text on printed page 370 re-read. Stage-deciding primary sources are the executive orders in the Federal Register and the DOE counsel memorandum, carried from earlier review; this pass read the Fourth Circuit opinion (copy with the court's caption and filing header) and the OMB proposed rule. Rule applied: implemented (65 to 90) because DOE suspended Justice40 and community benefit work and removed the terms from awards under orders that remain in force, but the action is executive, reversible and short of the employee-management element; court_status is pending because a vacated preliminary injunction leaves the orders in force with the case on remand.",
+  "court_status": {
+    "basis": "The Fourth Circuit vacated the preliminary injunction on 2026-02-06 in No. 25-1189 and remanded; Executive Orders 14151 and 14173 remain in force while the case continues in the District of Maryland.",
+    "date": "2026-02-06",
+    "state": "pending",
+    "url": "https://democracyforward.org/wp-content/uploads/2026/01/NADOHE-Order.pdf"
+  },
   "durability": {
     "level": "medium",
     "why": "The change rests on executive orders and memoranda that a later administration could rescind."
@@ -33,10 +40,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c12-27 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: added the Fourth Circuit decision of 2026-02-06 vacating the preliminary injunction against parts of Executive Orders 14151 and 14173 and remanding, and the OMB proposed federal financial assistance regulation of 2026-05-29 in which DOE participates; no order or appropriations language restoring the programs found; court_status set to pending; red-team check holds. Independent review (AI) confirmed the opinion on a Democracy Forward mirror carrying the court's caption and docket header, reworded the OMB event to the preamble and set confidence 80."
     }
   ],
   "id": "c12-13",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "executive_order",
@@ -46,6 +57,38 @@
   "position": "New Policies: Energy",
   "progress": 75,
   "proposal": "The Mandate recommends that DOE stop using energy policy to advance politicized social agendas, naming energy justice, Justice40 and diversity, equity and inclusion programs. DOE should instead focus on providing abundant, affordable, reliable and secure energy and manage employees on talent, skills and performance.",
+  "redteam": {
+    "date": "2026-10-19",
+    "evidence": [
+      {
+        "date": "2026-02-06",
+        "note": "Preliminary injunction vacated and case remanded, so the executive orders remain in force; no order restoring programs found.",
+        "source": "Fourth Circuit opinion (copy hosted by Democracy Forward)",
+        "url": "https://democracyforward.org/wp-content/uploads/2026/01/NADOHE-Order.pdf"
+      },
+      {
+        "date": "2026-01-23",
+        "note": "H.R. 6938 became Public Law 119-74; CRS summary of the Energy and Water division reports no Justice40 or energy justice provision.",
+        "source": "govinfo BILLSTATUS",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6938.xml"
+      },
+      {
+        "date": "2026-05-29",
+        "note": "OMB proposal points toward further removal of DEI elements, not restoration.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
+      },
+      {
+        "date": "2026-08-03",
+        "note": "Page lists no energy justice office; closest is the Office of Minority Economic Impact.",
+        "source": "DOE",
+        "url": "https://www.energy.gov/documents/department-energy-organization-chart"
+      }
+    ],
+    "note": "No refuting event found. The stage depends on executive action that remains reversible and on pending remand litigation.",
+    "verdict": "holds",
+    "what_was_tested": "Whether a court order, appropriations language or a later DOE action restored energy justice, Justice40 or DEI programs after 2025-11-20."
+  },
   "related_ids": [
     "c00-01",
     "c12-27"
@@ -58,43 +101,24 @@
   "research_agent": "N12",
   "review": {
     "flags": [
-      "overlaps c00-01 (partial, kept)"
+      "court_status changed from vacated to pending: the vacatur applies to the injunction, not to the executive orders, which remain in force on remand; alternative reading is to omit court_status",
+      "Fourth Circuit opinion read through an advocacy-group copy; replace with the court's own copy when available"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 370 checked; paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y12a",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Printed page 370 asks DOE to stop using energy policy for politicized social agendas, naming energy justice, Justice40 and DEI, to focus on abundant, affordable, reliable and secure energy, and to treat employees fairly by talent, skills and hard work. Proposal and direct match confirmed.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
-        "note": "EO 14154 section 4(a) revokes EO 14008 and EO 14096 among 12 orders; Justice40 not named.",
+        "note": "Fetched: Fourth Circuit caption, No. 25-1189, PUBLISHED, appeal from D. Md. 1:25-cv-00333, argued 2025-09-11, decided 2026-02-06, panel Diaz, Harris, Rushing; header line Doc 106 Filed 02/06/2026 on each page; disposition vacated and remanded. Copy hosted by an advocacy group; court-site copy not opened in this review.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01956/unleashing-american-energy"
+        "url": "https://democracyforward.org/wp-content/uploads/2026/01/NADOHE-Order.pdf"
       },
       {
-        "note": "Dated 2025-02-28; injunction of 2025-02-21; removal from pending and future awards allowed; stop-work orders citing the DEI orders must be rescinded.",
-        "result": "supports",
-        "url": "https://www.energy.gov/sites/default/files/2025-03/NADOHE%20v.%20Trump%20DOE%20Memorandum%20-%20Revised.pdf"
-      },
-      {
-        "note": "Dated 2025-01-24; suspension of community benefit plan and Justice40 work.",
-        "result": "supports",
-        "url": "https://www.eenews.net/articles/doe-halts-diversity-equity-work-and-funding/"
-      },
-      {
-        "note": "Dated 2025-02-06; office at risk, staff on leave.",
-        "result": "supports",
-        "url": "https://www.eenews.net/articles/senate-democrats-press-wright-to-preserve-doe-equity-office/"
-      },
-      {
-        "note": "Dated 2025-11-07; list of 69 DEI employees on leave shared 2025-01-24.",
-        "result": "supports",
-        "url": "https://www.eenews.net/articles/how-the-energy-department-got-doged/"
-      },
-      {
-        "note": "Chart lists Minority Economic Impact; no energy justice office shown.",
+        "note": "Fetched: OMB proposed rule, 91 FR 32198, 2026-05-29, comments to 2026-07-13; DOE listed (RIN 1991-AC21; 2 CFR 901, 902, 910). Preamble supports eliminating unlawful DEI mandates and identity-based preferences and barring unlawful discrimination; adds sections 200.218 and 200.219. Does not use the phrase remaining DEI elements; event reworded to the preamble. Regulatory text not read in full.",
         "result": "partial",
-        "url": "https://www.energy.gov/sites/default/files/2025-11/Organization-Chart-11.20.2025-2.pdf"
+        "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
       }
     ]
   },
@@ -183,10 +207,24 @@
       "publisher": "U.S. Department of Energy",
       "title": "DOE Organization Chart (updated 2025-11-20)",
       "url": "https://www.energy.gov/sites/default/files/2025-11/Organization-Chart-11.20.2025-2.pdf"
+    },
+    {
+      "date": "2026-02-06",
+      "kind": "court",
+      "publisher": "Democracy Forward (mirror of Fourth Circuit opinion)",
+      "title": "National Association of Diversity Officers in Higher Education v. Trump, No. 25-1189 (4th Cir. Feb. 6, 2026), opinion",
+      "url": "https://democracyforward.org/wp-content/uploads/2026/01/NADOHE-Order.pdf"
+    },
+    {
+      "date": "2026-05-29",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Regulation for Federal Financial Assistance (proposed rule)",
+      "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Executive Order 14154 (signed 2025-01-20, published 2025-01-29) revoked Executive Orders 14008 and 14096, among others; the latter concerned environmental justice. Executive Orders 14151 and 14173 directed agencies to end DEI programs. E&E News reported on 2025-01-24 that DOE's acting Secretary told staff the department was suspending work requiring community benefit plans and Justice40 requirements. A DOE counsel memorandum dated 2025-02-28 allows removal of such terms from pending and future awards and, in light of a 2025-02-21 preliminary injunction, directs rescission of stop-work orders citing the DEI orders. The Office of Energy Justice and Equity had staff on leave by 2025-02-06, and the 2025-11-20 DOE organization chart shows no separate energy justice office.",
+  "status_summary": "Executive Order 14154 (published 2025-01-29) revoked Executive Orders 14008 and 14096, among others, and Executive Orders 14151 and 14173 directed agencies to end DEI programs. E&E News reported on 2025-01-24 that DOE was suspending community benefit plan and Justice40 work, and a DOE counsel memorandum dated 2025-02-28 permits removing such terms from pending and future awards. On 2026-02-06 the Fourth Circuit vacated the preliminary injunction that had blocked parts of Executive Orders 14151 and 14173 and remanded the case, which remains pending in district court. On 2026-05-29 OMB proposed a government-wide financial assistance rule, with DOE a participating agency, that would direct agencies to eliminate unlawful DEI mandates and identity-based preferences in grantmaking and would bar unlawful discrimination across the award process. The 2025-11-20 DOE organization chart lists no separate energy justice office.",
   "timeline": [
     {
       "date": "2025-01-24",
@@ -243,10 +281,24 @@
       "kind": "primary",
       "source": "U.S. Department of Energy",
       "url": "https://www.energy.gov/sites/default/files/2025-11/Organization-Chart-11.20.2025-2.pdf"
+    },
+    {
+      "date": "2026-02-06",
+      "event": "The Fourth Circuit, in a published opinion in NADOHE v. Trump (No. 25-1189), vacated the preliminary injunction that had blocked three provisions of Executive Orders 14151 and 14173 and remanded the case to the District of Maryland.",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the Fourth Circuit (opinion copy hosted by Democracy Forward)",
+      "url": "https://democracyforward.org/wp-content/uploads/2026/01/NADOHE-Order.pdf"
+    },
+    {
+      "date": "2026-05-29",
+      "event": "OMB published a proposed government-wide federal financial assistance regulation (91 FR 32198) whose preamble says agencies would eliminate unlawful DEI mandates and identity-based preferences in grantmaking and bar unlawful discrimination across the award process, with new sections on disparate-impact theories and discriminatory event services; DOE is a participating agency with conforming changes to 2 CFR parts 901, 902 and 910 (comments closed 2026-07-13).",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
     }
   ],
   "title": "End DOE energy justice, Justice40 and DEI programs",
   "tracked": true,
-  "uncertainties": "The fair-treatment-of-employees element was not separately checked. Later appeals in the injunction case and their effect on individual DOE awards were not traced. The organization chart shows offices at a high level and does not by itself confirm the abolition of sub-offices.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The fair-treatment-of-employees element was not separately checked. The effect of the Fourth Circuit ruling and remand on individual DOE awards was not traced, and the opinion was read through a copy hosted by Democracy Forward, an advocacy group, rather than on the court's own site; the copy carries the Fourth Circuit caption, case number 25-1189, the panel and the court's filing header (Doc. 106, filed 2026-02-06) on each page. The organization chart shows offices at a high level and does not by itself confirm abolition of sub-offices; the DOE organization chart page was marked as updated 2026-08-03 and still listed no energy justice office, but the dated chart file behind that update was not located. The FY2026 Energy and Water appropriations act (Public Law 119-74, 2026-01-23) was reported by CRS not to carry the House-passed ban on DEI funding, and no appropriations language restoring or mandating these programs was found. A Federal Register search of Energy Department documents from 2025-11-20 onward for environmental justice, community benefits plan and DEI terms returned no results. The regulatory text of the OMB proposed rule, including the DOE-specific changes, was not read in full; the description rests on the preamble, which does not mention Justice40 or environmental justice in the portion read.",
+  "updated_at": "2026-10-19"
 }

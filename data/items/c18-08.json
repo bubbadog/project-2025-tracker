@@ -7,7 +7,7 @@
   "chapter": "18",
   "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "The registered-program proposal and the absence of a final rule were confirmed in the Federal Register. The finding that no IRAP revival, IRAP bill or religious-organization step exists rests on Federal Register searches and two trade articles; Congress.gov and DOL's own apprenticeship pages were not checked.",
+  "confidence_reason": "EO 14278 and the proposed rule were read on federalregister.gov on 2026-10-18 and Federal Register API checks confirm no final rule and no IRAP action; the IRAP, bill and religious-organization halves rest on absence checks that did not include congress.gov or DOL pages.",
   "durability": {
     "level": "low",
     "why": "The executive order, grants and a proposed rule can be changed by a later administration; a final rule would be medium durability and a statute high, neither of which exists yet for this objective."
@@ -24,10 +24,14 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to c00-19 (layer 3 enumeration, chapters 00, 04, 05, 28 and 30)."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: reread EO 14278 and the 2025-07-02 proposed rule on federalregister.gov and reran two Federal Register API checks; removed two non-action timeline entries and refreshed the final-rule check date. No stage change (proposed 15); confidence unchanged at 68."
     }
   ],
   "id": "c18-08",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-18",
   "layer": 2,
   "match": "partial",
   "mechanism": "mixed",
@@ -51,25 +55,35 @@
   "research_agent": "D7",
   "review": {
     "flags": [
-      "IRAP absence based on Federal Register searches; Congress.gov not checked",
-      "grant figure from a single trade article",
-      "part 30 final-rule status may change soon"
+      "No stage change: proposed 15, match partial.",
+      "Removed two timeline entries that are not government actions (a trade report of nominee hearing remarks dated by article, 2025-02-19; the 2026-08-14 regulatory agenda listing); both remain in sources and uncertainties.",
+      "Status summary date for the final-rule check moved from 2026-10-07 to 2026-10-19."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 594 recommends returning to an industry-recognized apprenticeship program separate from Registered Apprenticeship and streamlining the registered program; page 595 asks Congress to re-create IRAPs by statute and asks DOL and the NLRB to help religious organizations take part; the paraphrase and pages match.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W5",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages (594 to 595) and proposal field, the text asks DOL to return to an industry-recognized apprenticeship program separate from Registered Apprenticeship, to streamline the registered program, to have Congress re-create IRAPs by statute, and for DOL and the NLRB to ease religious organizations' participation. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Proposed rule published 2025-07-02 (90 FR 28947, RIN 1205-AC21) would rescind the part 30 affirmative action program provisions and route discrimination complaints to enforcement agencies such as the EEOC, citing burdens on small and mid-sized sponsors; comments closed 2025-09-02 with 382 received; the page shows no final rule, and the portion read does not mention industry-recognized apprenticeships.",
-        "result": "supports",
+        "note": "Checked 2026-10-18: proposed rule 90 FR 28947, RIN 1205-AC21, comments closed 2025-09-02 (382); would rescind part 30 affirmative action provisions and refer complaints to enforcement agencies. Proposed only, and addresses only the registered program, so partial; consistent with proposed.",
+        "result": "partial",
         "url": "https://www.federalregister.gov/documents/2025/07/02/2025-12317/prohibiting-illegal-discrimination-in-registered-apprenticeship-programs"
       },
       {
-        "note": "The 40 most recent Federal Register documents matching 'registered apprenticeship' since 2025-01-20 include no final part 30 rule and no document mentioning industry-recognized apprenticeship programs; DOL's 2026-08-14 regulatory agenda lists the part 30 rulemaking, and ETA published a Registered Apprenticeship awareness campaign notice on 2026-08-19.",
+        "note": "Checked 2026-10-18: EO 14278 signed 2025-04-23; section 3 a 90-day workforce program review, section 4 a 120-day plan for 1 million apprentices via Registered Apprenticeship. No mention of IRAPs or religious organizations.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/04/28/2025-07369/preparing-americans-for-high-paying-skilled-trade-jobs-of-the-future"
+      },
+      {
+        "note": "Run 2026-10-18: zero results. Supports the absence of an IRAP revival.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=registered+apprenticeship&conditions[publication_date][gte]=2025-01-20&per_page=40&order=newest"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22industry+recognized+apprenticeship%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "Run 2026-10-18: 12 DOL documents through 2026-10-19; no final part 30 rule; the 2026-08-14 agenda lists the rulemaking with an NPRM issued.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=labor-department&conditions[term]=apprenticeship&conditions[publication_date][gte]=2026-06-01&per_page=20&order=newest"
       }
     ]
   },
@@ -123,15 +137,8 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "No revival of industry-recognized apprenticeship programs was found; the administration's actions have centered on the registered program. Executive Order 14278 (signed 2025-04-23) ordered a plan to reach and surpass 1 million new active apprentices, including by extending Registered Apprenticeship to new industries, and does not mention industry-recognized programs. DOL proposed on 2025-07-02 to rescind the affirmative action program requirements of the registered program's equal-opportunity rules and to refer discrimination complaints to enforcement agencies, citing burdens that deter employers from registering programs; DOL's August 2026 regulatory agenda lists the rulemaking, and no final rule had appeared in the Federal Register as of 2026-10-07. A trade article reports DOL awarded $84 million in apprenticeship grants to all states and territories around June 2025. At her confirmation hearing the Labor Secretary nominee said discussions about industry-recognized programs had not yet taken place, per a trade news report. No step to help religious organizations take part was found.",
+  "status_summary": "No revival of industry-recognized apprenticeship programs was found; the administration's actions have centered on the registered program. Executive Order 14278 (signed 2025-04-23) ordered a plan to reach and surpass 1 million new active apprentices, including by expanding Registered Apprenticeship into new industries, and does not mention industry-recognized programs or religious organizations. DOL proposed on 2025-07-02 (90 FR 28947) to rescind the affirmative action program requirements of the registered program's equal-opportunity rules and to refer discrimination complaints to enforcement agencies; DOL's August 2026 regulatory agenda still lists the rulemaking at the proposed rule stage, and no final rule appeared in the Federal Register through 2026-10-19. A trade article reports DOL awarded $84 million in apprenticeship grants to all states and territories around June 2025.",
   "timeline": [
-    {
-      "date": "2025-02-19",
-      "event": "A community college trade publication reports that Labor Secretary nominee Lori Chavez-DeRemer, at her Senate confirmation hearing, committed to strengthening registered apprenticeships and said discussions about industry-recognized programs had not yet taken place (the article date is used; the hearing date is not stated).",
-      "kind": "news",
-      "source": "Community College Daily (via Workhands)",
-      "url": "https://workhands.com/news/focused-on-registered-apprenticeships-community-college-daily"
-    },
     {
       "date": "2025-04-23",
       "event": "President signs EO 14278, Preparing Americans for High-Paying Skilled Trade Jobs of the Future (published 2025-04-28). Section 4 directs the Secretaries of Labor, Commerce and Education to produce a plan within 120 days to reach and surpass 1 million new active apprentices, including extending Registered Apprenticeship to new industries; section 3 orders a review of federal workforce programs. The order does not mention industry-recognized apprenticeships.",
@@ -152,17 +159,10 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/07/02/2025-12317/prohibiting-illegal-discrimination-in-registered-apprenticeship-programs"
-    },
-    {
-      "date": "2026-08-14",
-      "event": "DOL's regulatory agenda lists the registered apprenticeship nondiscrimination rule at the final rule stage with a final rule date of August 2026. A Federal Register search of DOL documents through 2026-10-07 found no final rule.",
-      "kind": "primary",
-      "source": "Federal Register",
-      "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16599/agenda-of-regulations"
     }
   ],
   "title": "Re-create industry-recognized apprenticeships and streamline Registered Apprenticeship",
   "tracked": true,
-  "uncertainties": "The absence of an IRAP revival rests on Federal Register searches for 'industry-recognized apprenticeship' (zero results since 2025-01-20), the text of EO 14278, DOL's regulatory agenda, one web search and two trade articles; DOL's own apprenticeship webpages and the 120-day plan were not located, and Congress.gov was not searched for IRAP bills. The $84 million grants and 290,000 registrations are secondary reports (the Secretary's claim as relayed by ACHR News) and were not checked against DOL releases; the ACHR article date is approximated at 2026-02-01. The final-rule status relies on Federal Register searches through 2026-10-07 and could miss a rule published very recently or sent to OIRA. The Mandate's interest in religious organizations' participation has no identified government action. Whether the proposed part 30 rule counts as the 'streamline Registered Apprenticeship' half of the recommendation is a judgment: it removes compliance requirements but was framed by DOL around nondiscrimination law, not duplication.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The absence of an industry-recognized apprenticeship revival rests on a Federal Register API query for the phrase industry recognized apprenticeship (zero results since 2025-01-20, rerun 2026-10-18), the text of Executive Order 14278 (read in full) and DOL's regulatory agenda. A Federal Register API query of Department of Labor apprenticeship documents since 2026-06-01, run 2026-10-18, returned 12 documents through 2026-10-19 with no final nondiscrimination rule and no IRAP document; a rule at OIRA would not appear there. DOL's own apprenticeship pages and the 120-day plan were not located, and congress.gov (which refuses automated fetches) and govinfo were not searched for IRAP bills. The $84 million grant figure is a secondary trade report. A trade report that the Labor Secretary nominee said at her confirmation hearing that IRAP discussions had not taken place, and the agenda listing of the rulemaking, are kept as sources but are not government actions, so they are no longer timeline events. The proposed rule page was read only to about 100,000 of 127,000 characters. The Mandate's interest in religious organizations' participation has no identified government action. Whether the proposed part 30 rule counts as the streamlining half of the recommendation is a judgment, since DOL framed it around nondiscrimination law.",
+  "updated_at": "2026-10-18"
 }

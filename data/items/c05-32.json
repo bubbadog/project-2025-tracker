@@ -4,9 +4,9 @@
     "Preemption of state law needs a statute or further court rulings; appellate decisions have gone both ways"
   ],
   "chapter": "05",
-  "confidence": 52,
-  "confidence_label": "low",
-  "confidence_reason": "The ICE standards page and the CRS sidebar were read; the June 2026 standards text was not opened, and absence of a codifying bill rests on CRS's list and a limited search.",
+  "confidence": 58,
+  "confidence_label": "medium",
+  "confidence_reason": "The CRS legal sidebar (reputable secondary, read in full) and the ICE standards page support the parallel executive revisions and the absence of a codifying bill; congress.gov could not be searched and the 2026 standards were not opened, so medium.",
   "durability": {
     "level": "low",
     "why": "Detention standards are agency documents that can be rewritten, and state law outcomes depend on litigation."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read CRS LSB11463 on everycrsreport.com and ran a Federal Register API query for detention standards (one unrelated result); congress.gov stayed blocked. No stage change (proposed 10); confidence 52 to 58."
     }
   ],
   "id": "c05-32",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -61,30 +65,24 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage lowered from in_progress 30 to proposed 10 and match from partial to parallel: the Mandate asks Congress to codify one preemptive standard; no such bill exists, and ICE's own standards revisions are executive steps, a parallel match. not_started 0 is defensible if the owner gives no weight to the ICE revisions.",
-      "Added c05-22 to related_ids (Flores national standards for child detention, including tents).",
-      "Confidence kept at 52."
+      "No stage change: proposed 10, match parallel. not_started is defensible since the ICE revisions are executive and the text asks for codification.",
+      "Confidence 52 low to 58 medium."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 140 (CBP): lower courts have widened CBP's TEDS standards, producing differing standards by jurisdiction, and ICE has had the same problem; a single nationwide detention standard should be codified that keeps states from imposing expansive and changing standards on federal agencies, while allowing large numbers of temporary facilities such as tents. Proposal is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y7",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields: codify one nationwide detention standard for CBP and ICE that states cannot override, keeping flexibility for temporary facilities such as tents. Chapter text not available this run; pages not re-checked.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "ICE NDS 2025 page: gender-to-sex wording change, language access and technical edits; references Non-Dedicated IGSA Standards issued 2025-03-26; no page date (checked 2026-10-14)",
-        "result": "partial",
-        "url": "https://www.ice.gov/detain/detention-management/2025"
-      },
-      {
-        "note": "AP report dated 2026-06-16: revised standards released Monday 2026-06-15, move toward Marshals standards; no statement on a single standard, tents or state law (checked 2026-10-14)",
-        "result": "partial",
-        "url": "https://www.ksat.com/news/politics/2026/06/16/ice-says-relaxed-detention-standards-reduce-the-burden-on-contractors-running-its-lockups/"
-      },
-      {
-        "note": "CRS LSB11463 dated 2026-07-29: state-law rulings both ways; no enacted uniform standard; pending bills add oversight (checked 2026-10-14)",
+        "note": "Fetched 2026-10-18 (stage-deciding): CRS sidebar dated 2026-07-29 lists pending detention bills that add standards, oversight or inspection rights, none preempting state law; describes case-by-case appellate rulings (GEO Group v. Newsom, CoreCivic v. Murphy struck state laws as applied; McHenry County v. Raoul, GEO Group v. Inslee upheld). Fully supports proposed 10 with a parallel match.",
         "result": "supports",
         "url": "https://www.everycrsreport.com/reports/LSB11463.html"
+      },
+      {
+        "note": "Fetched 2026-10-18 (reviewer's own term variant): one result, a 2025-10-27 DHS biometric entry-exit rule, unrelated; no rule setting a nationwide detention standard.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22detention+standards%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -166,6 +164,6 @@
   ],
   "title": "Codify one nationwide detention standard that state rules cannot override",
   "tracked": true,
-  "uncertainties": "The Mandate item is mostly about CBP's transport, escort, detention and search standards and lower court rulings, with ICE mentioned briefly; CBP's standards were not checked. ICE's standards revisions are agency documents and are scored as a parallel step to the codification the Mandate asks for. The ICE 2025 standards page prints no issue date for the revised standards; the 2025-03-26 date is that of the companion non-dedicated standards. The 2026-06-15 release date comes from a news report of a Monday release; the standards themselves were not opened. Whether ICE now applies one standard to all facility types was not established. Detention of children and the Flores agreement are tracked in c05-22, and tent capacity for ICE in c05-05.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The Mandate item is mostly about CBP's transport, escort, detention and search standards (TEDS) and lower court rulings, with ICE mentioned briefly; CBP's standards were not checked. ICE's standards revisions are agency documents and are scored as a parallel step to the codification the Mandate asks for. The ICE 2025 standards page prints no issue date for the revised standards and does not mention state laws; the 2025-03-26 date is that of the companion non-dedicated standards. The 2026-06-15 release date is inferred from a news report dated 2026-06-16 of a Monday release; the 2026 standards were not opened. CRS LSB11463 (2026-07-29) was read in full by the researcher and re-read in review; it lists the Dignity for Detained Immigrants Act, H.R. 7347, H.R. 7335 and S. 4786 and describes no bill expressly preempting state rules or codifying a national standard, but it is limited to the bills it lists, and congress.gov, which is blocked, was not searched for others. A Federal Register API query for detention standards since 2025-01-20 (review, 2026-10-18) returned one unrelated DHS biometrics rule. Whether ICE now applies one standard to all facility types was not established. Detention of children and the Flores agreement are tracked in c05-22, and tent capacity for ICE in c05-05.",
+  "updated_at": "2026-10-18"
 }

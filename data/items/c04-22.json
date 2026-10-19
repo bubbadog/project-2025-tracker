@@ -2,9 +2,9 @@
   "agency": "DOD (Research and Engineering)",
   "blockers": [],
   "chapter": "04",
-  "confidence": 78,
-  "confidence_label": "medium",
-  "confidence_reason": "Rule applied: implemented (65 to 90) for an operative but reversible internal priority list; progress restored from 85 to 90 because progress measures how far the action goes, and the official release's silence on the old list of 14 is an evidence gap, not a shortfall in implementation; not completed 100 because no governing document was found, the effect on budgets is unverified and the trade sources disagree on whether off-list work keeps funding. Chapter text checked; the official release was opened by the reviewer and confirms the six areas, while the replacement of the 14 rests on two reputable trade reports.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Chapter text on printed page 99 re-read; the official release on war.gov was fetched and read and confirms the six areas (it is undated and does not mention the 14), and AIP was fetched and confirms the cut from 14 to six. Rule applied: implemented (65 to 90) for an operative but reversible internal priority list; progress 90 because two trade reports and DefenseScoop consistently report the reduction from 14 and the official silence on the old list is an evidence gap, not a shortfall; not completed because no governing document was found and budget realignment is unverified. High at the floor because the stage-deciding primary release was read, while the number 14 rests on secondary sources.",
   "durability": {
     "level": "low",
     "why": "The list is a departmental priority set by the Under Secretary and could be revised by a successor without legislation."
@@ -34,10 +34,14 @@
     {
       "date": "2026-10-11",
       "note": "Independent review: official release opened and confirmed; progress set back from 85 to 90 within implemented, with the missing official statement on the old list reflected in confidence. Stage implemented unchanged."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: no later memorandum, list change or budget realignment found; the FY2027 research and development budget exhibit does not name the six areas; the January 2026 naming of area leads, reported by DefenseScoop without a stated date, is recorded in uncertainties; red-team check holds. Independent review (AI) dropped a timeline event whose date was inferred from a news report and set confidence 80."
     }
   ],
   "id": "c04-22",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -47,6 +51,26 @@
   "position": "DOD chapter, Defense Industrial Base and innovation: champion the innovation ecosystem (item 3)",
   "progress": 90,
   "proposal": "The Mandate recommends reducing the number of DOD critical technology areas from 14 to a more manageable number focused on great-power competition (p. 99).",
+  "redteam": {
+    "date": "2026-10-19",
+    "evidence": [
+      {
+        "date": "2026-01-30",
+        "note": "Lead officials named for the same six areas; list described as cut from 14; no memo mentioned.",
+        "source": "DefenseScoop",
+        "url": "https://defensescoop.com/2026/01/30/dod-cto-critical-technology-areas-emil-michael-cta-appointees/"
+      },
+      {
+        "date": "2026-04",
+        "note": "Line-item exhibit; does not name the six areas, so no budget confirmation or contradiction.",
+        "source": "Department of War Comptroller, FY2027 RDT&E R-1",
+        "url": "https://comptroller.war.gov/Portals/45/Documents/defbudget/FY2027/FY2027_r1.pdf"
+      }
+    ],
+    "note": "No change to the list found through 2026-10-19. Stage rests on an internal priority set that is reversible; progress left at 90.",
+    "verdict": "holds",
+    "what_was_tested": "Whether any later memo, budget document or list change after 2025-11-19 reversed, expanded or replaced the six-area list, and whether the list is still the operative set."
+  },
   "related_ids": [
     "c04-04"
   ],
@@ -59,36 +83,40 @@
   "research_agent": "N04a",
   "review": {
     "flags": [
-      "progress restored from 85 to 90 (evidence gap moved into confidence)",
-      "replacement of the 14 stated only by AIP and Breaking Defense, not the official release",
-      "trade sources differ on funding for off-list areas",
-      "official release undated; date from mirror and press"
+      "2026-01-29 lead appointments dropped as an event (article gives no date) and moved to uncertainties",
+      "existing 2025-11-19 timeline entry is a press report rather than a government action; kept as carried over from the original, owner may remove it",
+      "progress 90 rests on trade-press reports of the cut from 14; alternative reading 85 if official confirmation is required"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Printed page 99 item 3 calls for cutting the critical technology areas from 14 to a more manageable number that concentrates effort and resources on great-power competition. The proposal matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
-    "reviewer": "Y9",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Printed page 99, innovation ecosystem item 3, calls for cutting the critical technology areas from 14 to a more manageable number focused on great-power competition. Proposal paraphrase and direct match confirmed.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
-        "note": "Mirror of the 2025-11-17 release; six areas listed; does not mention the 14.",
+        "note": "Fetched: lists the six areas; marked Immediate Release with no date; no mention of a prior list of 14. Supports the implemented stage for the six-area list.",
         "result": "supports",
-        "url": "https://www.globalsecurity.org/military/library/news/2025/11/mil-251117-dod01.htm"
+        "url": "https://www.war.gov/News/Releases/Release/Article/4333074/under-secretary-of-war-for-research-and-engineering-emil-michael-announces-six/"
       },
       {
-        "note": "Dated 2025-11-19; 14 cut to six; FutureG, integrated sensing and cyber, quantum consolidated; microelectronics and renewable energy dropped; off-list items without budget.",
+        "note": "Fetched: dated 2025-11-19; list pared from 14 to six; renewable energy and microelectronics dropped; FutureG, integrated sensing and cyber, and quantum consolidated; off-list areas without effort and budget.",
         "result": "supports",
         "url": "https://www.aip.org/fyi/department-of-defense-narrows-r-d-priorities-list"
       },
       {
-        "note": "Undated in text; replaces 14; continued investment outside list; 12 to 36 month sprints.",
-        "result": "supports",
-        "url": "https://breakingdefense.com/2025/11/from-lasers-to-logistics-pentagon-cto-announces-top-six-tech-priorities/"
+        "note": "Fetched: byline 2026-01-30; leads announced on social media on a Thursday evening with no date stated; no memo; sprint plan not yet released. Not usable as a dated event; moved to uncertainties.",
+        "result": "partial",
+        "url": "https://defensescoop.com/2026/01/30/dod-cto-critical-technology-areas-emil-michael-cta-appointees/"
       },
       {
-        "note": "Opened by this reviewer: lists the six areas (applied AI, biomanufacturing, contested logistics, quantum and battlefield information dominance, scaled directed energy, scaled hypersonics); no date shown; no mention of a prior list of 14, funding or a memo.",
+        "note": "Fetched: byline 2025-08-27; list grew to 14 under the prior administration and the Under Secretary planned to cut it.",
         "result": "supports",
-        "url": "https://www.war.gov/News/Releases/Release/Article/4333074/under-secretary-of-war-for-research-and-engineering-emil-michael-announces-six/"
+        "url": "https://defensescoop.com/2025/08/27/dod-list-critical-technology-areas-emil-michael-cto/"
+      },
+      {
+        "note": "Fetched: FY2027 R-1 exhibit dated April 2026; does not name the critical technology areas; neither confirms nor contradicts budget realignment.",
+        "result": "partial",
+        "url": "https://comptroller.war.gov/Portals/45/Documents/defbudget/FY2027/FY2027_r1.pdf"
       }
     ]
   },
@@ -133,10 +161,24 @@
       "publisher": "Breaking Defense",
       "title": "From lasers to logistics: Pentagon CTO announces top six tech priorities",
       "url": "https://breakingdefense.com/2025/11/from-lasers-to-logistics-pentagon-cto-announces-top-six-tech-priorities/"
+    },
+    {
+      "date": "2026-01-30",
+      "kind": "news",
+      "publisher": "DefenseScoop",
+      "title": "DOD CTO names leads for critical technology areas",
+      "url": "https://defensescoop.com/2026/01/30/dod-cto-critical-technology-areas-emil-michael-cta-appointees/"
+    },
+    {
+      "date": "2025-08-27",
+      "kind": "news",
+      "publisher": "DefenseScoop",
+      "title": "DOD to cut list of critical technology areas (Michael remarks)",
+      "url": "https://defensescoop.com/2025/08/27/dod-list-critical-technology-areas-emil-michael-cto/"
     }
   ],
   "stage": "implemented",
-  "status_summary": "On 2025-11-17 the Under Secretary for Research and Engineering announced six critical technology areas: applied artificial intelligence, biomanufacturing, contested logistics technologies, quantum and battlefield information dominance, scaled directed energy, and scaled hypersonics. The official release names the six areas but does not say they replace an earlier list, mention the number 14, address funding for areas left off, or name a governing memo. AIP and Breaking Defense report that the six replace the 14 areas of the 2023 list, with FutureG, integrated sensing and cyber, and quantum folded into the quantum and battlefield information dominance area and others, including microelectronics and renewable energy generation and storage, dropped. Breaking Defense quotes the office as saying it will keep investing in technologies outside the list, while AIP quotes the Under Secretary as saying items off the list will not have effort and budget behind them. No later change to the list was found.",
+  "status_summary": "On 2025-11-17 the Under Secretary for Research and Engineering announced six critical technology areas: applied artificial intelligence, biomanufacturing, contested logistics technologies, quantum and battlefield information dominance, scaled directed energy, and scaled hypersonics. The official release names the six areas but does not say they replace an earlier list, mention the number 14, address funding for areas left off, or name a governing memo. AIP and Breaking Defense report that the six replace the 14 areas of the 2023 list, with FutureG, integrated sensing and cyber, and quantum folded into the quantum and battlefield information dominance area and others, including microelectronics and renewable energy generation and storage, dropped. Breaking Defense quotes the office as saying it will keep investing in technologies outside the list, while AIP quotes the Under Secretary as saying items off the list will not have effort and budget behind them. DefenseScoop reported on 2026-01-30 that the office had named a lead official for each of the six areas and that a detailed plan for the planned technology sprints had not yet been released. No later change to the list was found.",
   "timeline": [
     {
       "date": "2025-11-17",
@@ -155,6 +197,6 @@
   ],
   "title": "Cut DOD critical technology areas from 14 to a smaller set",
   "tracked": true,
-  "uncertainties": "The official release on war.gov was opened by direct fetch by the researcher and again by the independent reviewer (the original defense.gov address returned not found, and a no-slug war.gov address was reported blocked in a browser retrieval supplied to the project). It lists the six areas and shows no date, no mention of a prior list or the number 14, no funding language and no memo. The replacement of the 14 therefore rests on AIP and Breaking Defense; the stage is implemented because the six-area list is operative as an announced priority set; progress is 90 because the numerical reduction is reported consistently by two trade sources and the official release's silence on the old list is a gap in the evidence rather than a sign of less implementation, which is reflected in confidence instead. The two articles differ on whether work outside the six will still be funded. The release date of 2025-11-17 comes from a mirror and press coverage, not the official page. Stage is not completed because the list is an internal priority set that can be revised without notice and the effect on budgets was not checked. The Breaking Defense article carries no date in the text read.",
-  "updated_at": "2026-10-11"
+  "uncertainties": "The official release on war.gov was opened by direct fetch by the researcher and again by the independent reviewer (the original defense.gov address returned not found, and a no-slug war.gov address was reported blocked in a browser retrieval supplied to the project). It lists the six areas and shows no date, no mention of a prior list or the number 14, no funding language and no memo. The replacement of the 14 therefore rests on AIP and Breaking Defense; the stage is implemented because the six-area list is operative as an announced priority set; progress is 90 because the numerical reduction is reported consistently by two trade sources and the official release's silence on the old list is a gap in the evidence rather than a sign of less implementation, which is reflected in confidence instead. The two articles differ on whether work outside the six will still be funded. The release date of 2025-11-17 comes from a mirror and press coverage, not the official page. Stage is not completed because the list is an internal priority set that can be revised without notice and the effect on budgets was not checked. The Breaking Defense article carries no date in the text read. A third trade report (DefenseScoop, 2025-08-27) says the list had grown to 14 under the prior administration and that the Under Secretary planned to cut it, and DefenseScoop on 2026-01-30 describes the cut from 14 to six, which adds a further press source but no official statement of the number 14. The FY2027 RDT&E R-1 budget exhibit (comptroller site, April 2026) was opened and did not mention the six areas by name, so budget realignment remains unverified. No memo or later list change was found in searches of trade press. The naming of a lead official for each of the six areas is reported by DefenseScoop in an article dated 2026-01-30, which says the leads were announced on social media on a Thursday evening without giving a date; because no source states the date of the announcement, it is kept here rather than as a timeline event (the likely date is 2026-01-29, inferred and not confirmed).",
+  "updated_at": "2026-10-19"
 }

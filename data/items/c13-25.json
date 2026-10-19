@@ -2,9 +2,9 @@
   "agency": "EPA Office of Air and Radiation",
   "blockers": [],
   "chapter": "13",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Mandate text checked; the EPA RFS program page and the trade press report were fetched and show no RFS office change or MOU; the stage rests on absence of evidence from a limited search.",
+  "confidence": 65,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API (supports); Unified Agenda, EPA and USDA rule lists read in full on reginfo.gov on 2026-10-19 (supports, weakly informative for an office move); congress.gov and govinfo with BILLSTATUS for H.R. 1326 (supports); EPA RFS program page (supports); one news search (supports). Set at 65, at the low end of the 65 to 68 band, because the content of the transportation office reorganization was not read.",
   "durability": {
     "level": "low",
     "why": "An internal EPA office arrangement or MOU would be reversible by the agency."
@@ -26,10 +26,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check and independent review: federalregister.gov API (reviewer variant), govinfo.gov BILLSTATUS and the epa.gov RFS page were read; no stage change (not_started 0); confidence 40 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the EPA and USDA rule lists on reginfo.gov in full and found no Renewable Fuel Standard office or memorandum entry; no stage change (not_started, 0); confidence 62 to 65."
     }
   ],
   "id": "c13-25",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -52,23 +60,61 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Source date corrected: the trade press article is dated 2025-09-30, not 2025-09."
+      "no stage change: not_started 0",
+      "confidence 62 to 65"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 428 asks that the Renewable Fuel Standard program be moved out of the transportation office into its own Washington suboffice of equal status, headed by a political appointee, and that EPA sign a memorandum of understanding with USDA and DOE on the program.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y4",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields (p. 428), the Mandate asks that the Renewable Fuel Standard program move out of the transportation office into its own Washington suboffice of equal status headed by a political appointee, and that EPA sign a memorandum of understanding with USDA and DOE on the program. The chapter text was not available to this review, so the match was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Program page last updated 2026-08-18 mentions no reorganization, separate office or MOU. Checked 2026-10-15.",
-        "result": "does_not_support",
+        "note": "2026-10-18 (reviewer variant of check 1): terms 'Office of Transportation and Air Quality' with reorganization, all agencies, since 2025-01-20, returned 1 document: an EPA heavy-duty engine proposed rule (2026-07-14) that corrects a definition to reflect a recent internal reorganization of the transportation office. It does not move the RFS program, create an RFS suboffice or set up a memorandum with USDA and DOE, so nothing qualifying.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Office+of+Transportation+and+Air+Quality%22+reorganization&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (reviewer fetch for check 3): BILLSTATUS confirms H.R.1326, DOE and USDA Interagency Research Act, introduced 2025-02-13, latest action 2025-03-25 (received in the Senate, referred to Energy and Natural Resources); it covers joint biofuel research and does not name the RFS or EPA. Not a qualifying action.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1326.xml"
+      },
+      {
+        "note": "Check 1 (research pass, 2026-10-18): terms 'Renewable Fuel Standard' office, EPA, 20 documents returned (RFS rules, small refinery exemption notices, information collection notices, one unrelated endangerment finding rescission). None creates an RFS office or reorganizes the program. A second query on 'memorandum of understanding' with 'renewable fuel' returned 0 documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Renewable+Fuel+Standard%22+office&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=environmental-protection-agency"
+      },
+      {
+        "note": "Check 2 (research pass, 2026-10-18): Fetched the Unified Agenda entry page; it is an agency selector and links page with no items listed (script-driven). Fallback used, so the check is partial: the EPA RFS query above, which listed proposed rules through 2026-10-16 (small refinery exemption reallocation, 2026 and 2027 standards); none concerns organization or an interagency memorandum.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Check 3 (research pass, 2026-10-18): search (congress.gov, govinfo.gov): '119th Congress bill Renewable Fuel Standard office EPA memorandum of understanding USDA DOE'. Found H.J.Res.157 (disapproval of the 2026-2027 RFS rule), H.Res.628 and S.Res.364 (20th anniversary resolutions), H.R.1346 (RVP ethanol waiver), and H.R.1326 DOE and USDA Interagency Research Act (introduced 2025-02-13, received in the Senate 2025-03-25, referred to Energy and Natural Resources). BILLSTATUS for H.R.1326 shows joint DOE-USDA research, not the RFS program or an EPA office. Nothing qualifying. Reviewer: BILLSTATUS refetched and confirmed; the domain-limited search itself was not rerun (search cap).",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1326.xml"
+      },
+      {
+        "note": "Check 4 (research pass, 2026-10-18): EPA RFS page, last updated 2026-08-18, mentions no separate RFS office, reorganization or memorandum of understanding with USDA and DOE.",
+        "result": "supports",
         "url": "https://www.epa.gov/renewable-fuel-standard"
       },
       {
-        "note": "Article dated 2025-09-30 describes the air office restructuring briefed 2025-09-22 but does not mention the RFS program. Checked 2026-10-15.",
-        "result": "does_not_support",
+        "note": "Check 5 (research pass, 2026-10-18): query: 'EPA Renewable Fuel Standard separate office reorganization USDA DOE memorandum of understanding 2026'. Results were EPA memoranda of understanding with the IRS and CFTC (older), an EPA-USDA biofuels agreement article, and the 2026 RFS rule; no report of a new RFS office or a three-agency memorandum. Reviewer: The news search was not rerun (search cap). The research pass recorded no news URL, so the most relevant news item already in the record (E&E News, 2025-09-30, on the air office restructuring briefed 2025-09-22, which does not mention the RFS program) is cited.",
+        "result": "supports",
         "url": "https://www.eenews.net/articles/epa-launches-air-office-revamp-amid-deregulatory-push/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the EPA list (page headed 'Agency Rule List - 2026', 116 rules, rule links carry publication id 202510) in full. No title on the Renewable Fuel Standard, renewable fuel, biofuel, an RFS office or reorganization. An office move or memorandum would not be a rule, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2000"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the USDA list (110 rules): no Renewable Fuel Standard title and no interagency memorandum; RIN 0503-AA82, Technical Guidelines for the Production of Regenerative Agricultural Biofuel Feedstocks (Final Rule Stage), and RIN 0570-AB14 (biorefinery loan program) are not the recommended action.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0500"
       }
     ]
   },
@@ -128,6 +174,6 @@
   "timeline": [],
   "title": "Create a dedicated Renewable Fuel Standard office and an MOU with USDA and DOE",
   "tracked": true,
-  "uncertainties": "Absence of evidence from a limited search. Searches run: epa.gov and web searches on RFS office reorganization, an EPA-USDA-DOE memorandum of understanding, and the Office of Air and Radiation reorganization; Federal Register API on the RFS. The Office of Air and Radiation reorganization announced in 2025 (briefed to staff 2025-09-22 per a 2025-09-30 trade press report) eliminated two of four major branches and created two new entities, but the report does not mention the RFS program or the transportation office; that restructuring is tracked in c13-04. EPA's internal organization charts were not read.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No separate Renewable Fuel Standard office and no memorandum of understanding with USDA and DOE was found. The reginfo.gov Unified Agenda rule lists for EPA (116 rules) and USDA (110 rules), both headed Agency Rule List - 2026, have no entry on an RFS office or interagency memorandum; the USDA biofuel feedstock guidelines entry (RIN 0503-AA82) is a technical rule. An office move or memorandum would not be a rule, so this check is weakly informative. The content of a recent internal reorganization of the Office of Transportation and Air Quality, noted in a 2026-07-14 EPA proposal, EPA internal organization orders and unpublished memoranda were not verified. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

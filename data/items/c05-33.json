@@ -5,9 +5,9 @@
     "Vacancies Act time limits and challenges to acting appointments (not researched)"
   ],
   "chapter": "05",
-  "confidence": 42,
-  "confidence_label": "low",
-  "confidence_reason": "Both executive orders were read on the Federal Register; the acting-official facts rest on a tracking site and one news article, and absence of bills rests on a limited search.",
+  "confidence": 55,
+  "confidence_label": "medium",
+  "confidence_reason": "Both executive orders were read on the Federal Register and two Federal Register queries found no replacement succession order; the acting-official facts rest on a tracking site and one news article and absence of bills rests on a limited search with congress.gov blocked, so medium at the floor.",
   "durability": {
     "level": "low",
     "why": "Acting designations and succession orders are executive documents that change with each appointment."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read Executive Order 14135 on federalregister.gov and ran a Federal Register API query for presidential documents on DHS succession (0 results). Stage changed from in_progress 25 to proposed 15 under the parallel-at-most rule; confidence 42 to 55."
     }
   ],
   "id": "c05-33",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -46,7 +50,7 @@
     154
   ],
   "position": "Office of the Secretary (SEC)",
-  "progress": 25,
+  "progress": 15,
   "proposal": "The Mandate says the next Administration arguably should place its nominees in acting roles in similar positions while they await confirmation, such as serving as senior official performing the duties of the CBP Commissioner. It recommends legislation removing the confirmation requirement from lower-level DHS posts, including FEMA posts other than the Administrator, and setting a durable, politically oriented line of succession in which a career employee holding a leadership post is treated as vacant for succession purposes and acting Secretaries have explicit authority to finalize agency actions.",
   "related_ids": [
     "c05-01",
@@ -65,31 +69,30 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Proposal changed in substance (minor): added the page 137 acting-authority element and the page 154 FEMA confirmation item; page 137 added to pages.",
-      "Stage in_progress 25 kept under the brief's rule that a practice of using acting officials is an executive step; the actings found are career officials, not nominees, so the match stays partial. proposed 10 fits if the owner reads the Mandate as asking specifically for nominees placed as actings, which was not shown.",
-      "No private individual named; Pete Flores is a public official.",
-      "Confidence raised from 40 to 42."
+      "Stage changed from in_progress 25 to proposed 15: the revocation of EO 14135 removed a succession list without setting the political-only line the text asks for, the acting officials found were career officials or unconfirmed directors rather than nominees placed as actings, and the confirmation and succession items ask Congress to act, so executive steps are parallel at most and do not make the recommendation formally underway. in_progress 25 remains a defensible alternative if the revocation and acting practice are read as operative partial steps.",
+      "Match kept partial.",
+      "Confidence 42 low to 55 medium."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Pages 136 to 137 (Office of the Secretary): place nominees in similar acting roles while awaiting confirmation (example: senior official performing the duties of the CBP Commissioner); seek legislation removing Senate confirmation from lower-level posts; legislate a durable, political-only line of succession treating career-held leadership posts as vacant, with acting Secretaries given explicit authority to finalize actions. Page 154 adds that only the FEMA Administrator should be Senate-confirmed. The draft omitted the acting-authority and FEMA items.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y7",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields: arguably place nominees in acting roles while they await confirmation, and seek legislation removing Senate confirmation from lower DHS posts (including FEMA posts other than the Administrator) and setting a durable, politically oriented line of succession that treats career officials in leadership posts as vacant for succession purposes. Chapter text not available this run; pages not re-checked.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "EO 14148 signed 2025-01-20; section 2(kkk) revokes EO 14135 (DHS order of succession) (checked 2026-10-14)",
-        "result": "supports",
+        "note": "Fetched 2026-10-18 (stage-deciding): EO 14135, signed 2025-01-03, 90 FR 2579, lists TSA Administrator, Under Secretary for I&A, FLETC Director and FEMA Region 3 Administrator; does not mention career employees; revoked EO 13753 and struck Sec. 88 of EO 13286; page metadata shows revocation by EO 14148 on 2025-01-20. Its revocation removes a list but does not set the political-only line the text asks for.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/01/13/2025-00603/providing-an-order-of-succession-within-the-department-of-homeland-security"
+      },
+      {
+        "note": "Not re-fetched in review; researcher confirmed Sec. 2(kkk) revokes EO 14135, consistent with the EO 14135 page metadata read in review.",
+        "result": "partial",
         "url": "https://www.federalregister.gov/documents/2025/01/28/2025-01901/initial-rescissions-of-harmful-executive-orders-and-actions"
       },
       {
-        "note": "Tracker summary of an image of the 2025-01-20 CBP memo signed by Pete Flores as Senior Official Performing the Duties of the Commissioner (checked 2026-10-14)",
-        "result": "partial",
-        "url": "https://immpolicytracking.org/policies/cbp-issues-memorandum-ending-catch-and-release/"
-      },
-      {
-        "note": "NPR (URL dated 2026-04-17): official performing the duties of ICE director leaving effective May 31; no Senate-confirmed ICE director since the Obama administration; no nominee-as-acting placement described (checked 2026-10-14)",
-        "result": "partial",
-        "url": "https://www.npr.org/2026/04/17/g-s1-117780/ice-acting-director-lyons-will-resign-at-end-of-may"
+        "note": "Fetched 2026-10-18 (reviewer's own term variant): 0 presidential documents; supports the absence of a replacement DHS succession order.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=succession+%22Secretary+of+Homeland+Security%22&conditions[type][]=PRESDOCU&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -149,10 +152,17 @@
       "publisher": "NPR",
       "title": "Acting ICE director says he's resigning amid record-breaking shutdown",
       "url": "https://www.npr.org/2026/04/17/g-s1-117780/ice-acting-director-lyons-will-resign-at-end-of-may"
+    },
+    {
+      "date": "2026-10-18",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Federal Register API search for DHS order of succession since 2025-01-20",
+      "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22order+of+succession%22+%22Homeland+Security%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
     }
   ],
-  "stage": "in_progress",
-  "status_summary": "On 2025-01-20 Executive Order 14148 revoked the prior administration's Executive Order 14135 on the order of succession within DHS. The same day a career CBP official, Pete Flores, was serving as senior official performing the duties of the CBP Commissioner, and by April 2026 the ICE director post had gone without a Senate-confirmed occupant since the Obama administration, with an official performing the director's duties who announced his departure effective 2026-05-31. No bill on DHS succession or on removing Senate confirmation from DHS posts was found, so the legislative parts remain unaddressed.",
+  "stage": "proposed",
+  "status_summary": "On 2025-01-20 Executive Order 14148 revoked the prior administration's Executive Order 14135 of 2025-01-03, which had set an order of succession within DHS running through the TSA Administrator, the Under Secretary for Intelligence and Analysis, the FLETC Director and the FEMA Region 3 Administrator; no replacement DHS succession order was found in the Federal Register. The same day a career CBP official, Pete Flores, was serving as senior official performing the duties of the CBP Commissioner, and by April 2026 the ICE director post had gone without a Senate-confirmed occupant since the Obama administration, with an official performing the director's duties who announced his departure effective 2026-05-31. No bill on DHS succession or on removing Senate confirmation from DHS posts was found, so the legislative parts remain unaddressed.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -171,6 +181,6 @@
   ],
   "title": "Use acting officials, set a political line of succession, cut Senate-confirmed DHS posts",
   "tracked": true,
-  "uncertainties": "Executive Order 14135, revoked by 14148, was itself an order of succession; whether DHS issued a replacement order was not found, so the revocation may only return DHS to the statutory default and is not shown to match the Mandate's political-only succession. The CBP acting role rests on a tracking site summary of an image of a memo. The NPR article, read for ICE, does not say when the acting ICE director began, who follows, or that anyone was a nominee placed as acting; use of actings is therefore a parallel executive practice, not shown to be the Mandate's nominee-as-acting method. Confirmation of CBP Commissioner and other acting practices at TSA, CISA and FEMA were not researched. Searches for 119th Congress succession bills found none.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Executive Order 14135, revoked by Executive Order 14148 (Sec. 2(kkk), confirmed on federalregister.gov), was itself an order of succession that revoked EO 13753 and struck section 88 of EO 13286, and it does not mention career employees; it was re-read in review on 2026-10-18. Whether DHS issued a replacement order was not found in Federal Register API queries since 2025-01-20 (researcher: order of succession and Homeland Security, one result, EO 14148 itself; review: presidential documents on succession and the Secretary of Homeland Security, 0 results), so the revocation may only return DHS to the statutory default and is not shown to match the Mandate's political-only succession. The Federal Register pages were read through a summarizing tool. The CBP acting role rests on a tracking site summary of an image of a memo. The NPR article, read for ICE, does not say when the acting ICE director began, who follows, or that anyone was a nominee placed as acting; use of actings is therefore a parallel executive practice, not shown to be the Mandate's nominee-as-acting method. Confirmation of CBP Commissioner and other acting practices at TSA, CISA and FEMA were not researched. Searches for 119th Congress succession bills found none, but congress.gov is blocked and the govinfo BILLSTATUS route returned an error for the probe request.",
+  "updated_at": "2026-10-18"
 }

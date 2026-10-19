@@ -8,7 +8,13 @@
   "chapter": "13",
   "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "EPA's own release and a law firm account of its September 2025 filing confirm EPA reviewed and kept the PFOA and PFOS listing, and a law firm summary confirms the D.C. Circuit upheld it. The diverged label is a judgment: the Mandate asks only to revisit the designation, EPA did review it, and the label rests on reading the recommendation, which sits among burden-reducing Superfund changes, as seeking a rollback.",
+  "confidence_reason": "The diverged stage rests on positive actions: EPA's retention of the listing (EPA pages) and the D.C. Circuit's 2026-08-18 denial of the petitions (law firm summaries). Five checks: Federal Register API (supports); Unified Agenda, EPA rule list read in full on reginfo.gov on 2026-10-19 with the RCRA PFAS entry opened (supports); congress.gov and govinfo with BILLSTATUS (supports); EPA PFAS key actions page (supports); one news search (supports). Kept at 68 because the EPA filing and the opinion were not read.",
+  "court_status": {
+    "basis": "The D.C. Circuit denied the petitions for review in Chamber of Commerce v. EPA, No. 24-1193, leaving the 2024 CERCLA designation of PFOA and PFOS in place; known from law firm summaries, the opinion itself was not read, and no rehearing petition was verified.",
+    "date": "2026-08-18",
+    "state": "upheld",
+    "url": "https://www.alston.com/en/insights/publications/2026/08/dc-circuit-upholds-epas-designation-of-pfoa"
+  },
   "durability": {
     "level": "medium",
     "why": "The designation is a final rule upheld by the D.C. Circuit; changing it would need a new rulemaking, while the planned designation framework and any passive receiver relief are not yet in place."
@@ -29,10 +35,18 @@
     {
       "date": "2026-10-16",
       "note": "Cross-reference added to new layer 3 record c13-31 written in the second enumeration pass; no change to the status."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with a separate term variant (1 unrelated document), read the Jones Day summary of the D.C. Circuit decision, set court_status from the 2026-08-18 court event, and reviewed the researcher's checks of reginfo.gov, govinfo.gov BILLSTATUS for H.R. 1267, epa.gov and one news search. No stage change (diverged, 0); confidence unchanged at 68; status summary shortened."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the EPA rule list on reginfo.gov in full and opened the RCRA PFAS entry, finding no CERCLA designation or section 102(a) framework entry; no stage change (diverged, 0); confidence unchanged at 68."
     }
   ],
   "id": "c13-08",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-19",
   "layer": 2,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -56,30 +70,53 @@
   "requires_congress": "no",
   "research_agent": "D5",
   "review": {
+    "alternative": "proposed or in_progress at the low end on a literal reading, since EPA did revisit the designation; diverged reflects that the revisit kept the listing.",
     "flags": [
-      "stage depends on how 'revisit' is read; EPA did complete a review but kept the listing",
-      "EPA's 2025-09-17 court filing not read; details of the planned section 102(a) rulemaking rest on law firm summaries"
+      "no stage change: diverged 0",
+      "confidence unchanged at 68",
+      "the agenda carries no section 102(a) framework entry although EPA's 2025-09-17 filing said it would begin one"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 431 lists, among Superfund changes, revising groundwater cleanup rules and policies for omnipresent contaminants such as PFAS and revisiting the designation of PFAS chemicals as CERCLA hazardous substances, without stating the intended outcome; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W3",
+    "mandate_check": "not_checked",
+    "mandate_note": "Page 431, as described in the record, recommends revisiting EPA's CERCLA hazardous substance designation of PFAS chemicals and revising groundwater cleanup rules and policies to reflect omnipresent contaminants such as PFAS, without stating the outcome the revisit should reach. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Law firm article dated 2025-09-26 confirms EPA announced on 2025-09-17, through an unopposed court motion and a press release, that it had completed its review and would keep the rule, and that Zeldin said a full fix for passive receiver liability needs Congress; it does not mention the section 102(a) framework rulemaking.",
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms perfluorooctanoic and \"hazardous substance\", EPA, since 2025-01-20: 1 document, the 2026-05-20 proposal extending the PFOA and PFOS drinking water compliance deadline (2026-10086), not a CERCLA action. Researcher's variant result: supports; terms PFAS, 'hazardous substance', CERCLA, all types since 2025-01-20: 1 document, the EPA proposed rule of 2026-05-20 extending the PFOA and PFOS drinking water compliance deadline (not a CERCLA action). Query 'CERCLA PFOA' limited to EPA: 1 document, the same proposal. Query 'passive receiver': 0 documents. No proposal to remove or narrow the PFOA/PFOS designation and no section 102(a) designation framework proposal was found.",
         "result": "supports",
-        "url": "https://www.bclplaw.com/en-US/events-insights-news/epa-retains-pfoa-and-pfos-as-hazardous-substances.html"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22perfluorooctanoic%22+%22hazardous+substance%22&conditions[agencies][]=environmental-protection-agency&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "EPA release dated 2026-02-06 lists affirming the CERCLA hazardous substance listing for PFOA and PFOS among first-year actions (no date given) and mentions revised drinking water compliance dates; it does not mention a section 102(a) framework rule, passive receiver relief or groundwater policy.",
-        "result": "supports",
-        "url": "https://www.epa.gov/newsreleases/trump-epa-highlights-major-year-one-pfas-actions-combat-risks-and-make-america-healthy"
+        "note": "2026-10-18: the reginfo.gov Unified Agenda landing page listed no agenda items (agency selector only). Fallback: the Federal Register queries above, which include EPA-limited and all-type searches, returned no CERCLA designation or passive-receiver rulemaking document. A longer query combining EPA, proposed rules and several terms was rejected by the fetch proxy for URL length and was not rerun. The check is partial; the Unified Agenda entry for the section 102(a) rulemaking was not read.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       },
       {
-        "note": "Law firm advisory dated 2026-08-28 confirms that a unanimous D.C. Circuit panel on 2026-08-18 denied all petitions in Chamber of Commerce v. EPA and upheld the designation; it gives no docket number and does not discuss rehearing or Supreme Court review.",
+        "note": "2026-10-18: domain-limited search (congress.gov, govinfo.gov) 'PFAS CERCLA hazardous substance designation passive receiver liability bill 119th Congress PFOA PFOS'. Found H.R. 1267 Water Systems PFAS Liability Protection Act (BILLSTATUS: referred to House Subcommittee on Water Resources and Environment 2025-02-12; would shield certain water entities from CERCLA liability for PFAS releases, does not revisit the designation) and a House Energy and Commerce hearing transcript of 2025-12-18 titled 'Examining the Impact of EPA's CERCLA Designation for Two PFAS Chemistries'. A hearing is not an enacted or introduced measure to revisit the designation; no bill repealing the designation was identified. CRS report R49479 also surfaced and was not opened.",
         "result": "supports",
-        "url": "https://www.alston.com/en/insights/publications/2026/08/dc-circuit-upholds-epas-designation-of-pfoa"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1267.xml"
+      },
+      {
+        "note": "2026-10-18: EPA Key Actions page (last updated 2026-07-01 per metadata) states the CERCLA hazardous substance listing of PFOA and PFOS was affirmed in February 2026 (year-one highlights of 2026-02-06), mentions an April 2025 plan to work with Congress and industry on a passive receiver liability framework, and does not mention section 102(a) or a designation framework rulemaking. The EPA news release search page returned no content.",
+        "result": "supports",
+        "url": "https://www.epa.gov/pfas/key-epa-actions-address-pfas"
+      },
+      {
+        "note": "2026-10-18: query 'EPA PFOA PFOS CERCLA hazardous substance designation October 2026'. Results were law firm advisories (Kelley Drye, Jones Day, Snell & Wilmer, Faegre Baker Daniels, Womble) on the D.C. Circuit decision upholding the designation, consistent with the record; no report of a proposal to remove the designation.",
+        "result": "supports",
+        "url": "https://www.jonesday.com/en/insights/2026/08/dc-circuit-upholds-epa-designation-of-pfoa-and-pfos-under-cercla"
+      },
+      {
+        "note": "2026-10-18: opened by the reviewer. Jones Day (August 2026) reports that on 2026-08-18 the D.C. Circuit denied industry petitions challenging the May 2024 CERCLA designation of PFOA and PFOS, reading the section 102(a) standard to require a serious and real risk, and upheld the regulatory impact analysis; no rehearing, framework rulemaking or passive receiver relief is mentioned. Supports the retained designation; the opinion itself was not read.",
+        "result": "supports",
+        "url": "https://www.jonesday.com/en/insights/2026/08/dc-circuit-upholds-epa-designation-of-pfoa-and-pfos-under-cercla"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the EPA list (page headed 'Agency Rule List - 2026', 116 rules, rule links carry publication id 202510) in full. No entry removing the CERCLA designation of PFOA and PFOS, setting a section 102(a) designation framework or addressing passive receivers. RIN 2050-AH26 Listing of Specific PFAS as Hazardous Constituents (Final Rule Stage, final 01/2027; opened by the reviewer) rests on RCRA authority only and does not mention CERCLA. 2050-AH38 and 2050-AH41 concern hazardous substance facility response plans and 2050-AH43 the contingency plan product schedule; other PFAS entries are Clean Water Act, drinking water, TSCA and TRI actions. The researcher's 'partial' is reset to supports because nothing related to the designation appears.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2000"
       }
     ]
   },
@@ -147,7 +184,7 @@
     }
   ],
   "stage": "diverged",
-  "status_summary": "EPA revisited the designation and kept it. The 2024 rule designating PFOA and PFOS as CERCLA hazardous substances took effect 2024-07-08; on 2025-09-17 EPA stated in a court filing in the Chamber of Commerce's challenge that it had finished its review and would keep the listing, said it would begin a rulemaking under CERCLA section 102(a) to set a framework for designating future hazardous substances, and said it would address liability for passive receivers within current authority while a full fix needs Congress. EPA's 2026-02-06 year-one release again lists the affirmation of the listing. On 2026-08-18 the D.C. Circuit denied all petitions in Chamber of Commerce v. EPA, No. 24-1193, leaving the designation in place. No proposed rule for the section 102(a) framework, no passive receiver rulemaking, no proposal to remove the designation and no revision of the groundwater cleanup rules for PFAS was found. Separately, on 2026-05-20 EPA proposed to extend the compliance deadline for the PFOA and PFOS drinking water limits from 2029-04-26 to 2031-04-26 for systems that request it.",
+  "status_summary": "EPA revisited the 2024 designation of PFOA and PFOS as CERCLA hazardous substances and kept it: in a 2025-09-17 court filing in the Chamber of Commerce challenge, EPA said it had finished its review and would keep the listing, would begin a section 102(a) rulemaking on a framework for future designations, and would address passive receiver liability within current authority while a full fix needs Congress. EPA's 2026-02-06 year-one release again lists the affirmation of the listing, and on 2026-08-18 the D.C. Circuit denied all petitions in Chamber of Commerce v. EPA, No. 24-1193, leaving the designation in place. No proposed rule for the section 102(a) framework, no passive receiver rulemaking, no proposal to remove the designation and no revision of the groundwater cleanup rules for PFAS was found in a systematic check on 2026-10-18. Separately, on 2026-05-20 EPA proposed to extend the compliance deadline for the PFOA and PFOS drinking water limits from 2029-04-26 to 2031-04-26 for systems that request it.",
   "timeline": [
     {
       "date": "2025-04-01",
@@ -187,6 +224,6 @@
   ],
   "title": "Revisit the CERCLA hazardous substance designation of PFAS chemicals",
   "tracked": true,
-  "uncertainties": "Stage is a judgment call. The Mandate says only to revisit the designation without stating an outcome; EPA did complete a review, but it kept and defended the listing, so the record is labeled diverged (0) rather than completed. EPA's own 2025-09-17 filing and press release were not reached; the September 2025 facts come from two law firm summaries, and the filing's court was not named in them (the later decision is in the D.C. Circuit). The D.C. Circuit decision date, docket number and holding come from Beveridge & Diamond and Alston & Bird summaries, not the opinion. The Alston page is dated by its URL month and the 2026-08-28 advisory label in search results. Federal Register queries for CERCLA and PFAS rules and proposals since 2025-01-20 found only the drinking water deadline proposal and a draft Contaminant Candidate List 6; no CERCLA designation framework proposal. The Unified Agenda entry for the section 102(a) rulemaking was not read. EPA's April 2025 passive receiver statement is dated by month only, from EPA's PFAS actions page. Not examined: the Mandate's groundwater cleanup recommendation beyond a Federal Register search, other PFAS designations proposed by the prior administration, and any rehearing petition.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "EPA kept the 2024 CERCLA designation of PFOA and PFOS, and the D.C. Circuit denied the petitions on 2026-08-18. The reginfo.gov Unified Agenda rule list for EPA (edition headed Agency Rule List - 2026, 116 rules) has no entry removing the designation, setting the section 102(a) framework EPA said it would begin, or addressing passive receivers; the PFAS hazardous constituents entry (RIN 2050-AH26) is a RCRA corrective action rule, and other PFAS entries fall under the Clean Water Act, Safe Drinking Water Act, TSCA and the Toxics Release Inventory. EPA's 2025-09-17 filing and the court's opinion were not read; the decision is known from law firm summaries. The groundwater cleanup element and any rehearing petition were not verified. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

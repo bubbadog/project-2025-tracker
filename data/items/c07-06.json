@@ -6,9 +6,9 @@
     "LeBlanc v. PCLOB (D.C. Cir. No. 25-5197): argument set for 2026-11-17 on the removals of two board members"
   ],
   "chapter": "07",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Federal Register results through 2026-10-08 show no published presidential action on Executive Order 14086, and PCLOB and Commerce documents show the order and framework still operating. A study or a message to European governments need not be published, so this remains an absence-of-evidence finding.",
+  "confidence": 60,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented: (1) Federal Register API with a variant, supports (only notices continuing the framework); (2) Unified Agenda Commerce list, 176 rules read on 2026-10-19, supports, with ODNI and NSA having no agenda list (not applicable for the intelligence part); (3) congress.gov and govinfo search, supports; (4) dni.gov, unreachable; (5) one news search, supports. Confidence stays at 60, under the 65 to 68 ceiling, because the agency host is unreachable and a classified review cannot be excluded.",
   "court_status": {
     "basis": "derived from the latest court event in the timeline",
     "date": "2025-07-01",
@@ -35,10 +35,18 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with a separate term variant (0 documents) and reviewed the researcher's checks of reginfo.gov with the Defense fallback, congress.gov and govinfo.gov, dni.gov (blocked) and one news search. No stage change (not_started, 0); confidence 50 to 60; status summary shortened."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the Commerce rule list in the reginfo.gov Unified Agenda (176 rules, none on Executive Order 14086) and confirmed ODNI has no agenda list, kept not_started 0 and kept confidence at 60."
     }
   ],
   "id": "c07-06",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-19",
   "layer": 2,
   "match": "partial",
   "mechanism": "executive_order",
@@ -57,32 +65,49 @@
   "requires_congress": "no",
   "research_agent": "D3",
   "review": {
-    "flags": [
-      "absence-of-evidence finding (cap 50)",
-      "unpublished study or private diplomatic message cannot be ruled out",
-      "Mandate's two-year window ends about 2027-01-20",
-      "LeBlanc argument date and Latombe appeal not re-checked by this reviewer"
-    ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 225 describes Executive Order 14086 as aligning US signals intelligence practice with European privacy demands to support the Data Privacy Framework; page 226 says an incoming President should order an immediate study of its implementation, suspend provisions that unduly burden collection, and make clear in talks with Europe that continued intelligence sharing depends on resolving the issue within two years. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "X1",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 225 and 226, as described in the record, recommend an immediate study of how Executive Order 14086 is implemented, suspension of provisions that unduly burden intelligence collection, and a message to European governments that continued intelligence sharing depends on resolving the data-transfer issue within two years. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Six results since 2025-01-20, none presidential: four Commerce Data Privacy Framework notices (2026-02-23 twice, 2026-06-01, 2026-06-02) cite the order as a basis for the framework; two others match only on document number. Nothing revokes, amends, suspends or orders a study of the order.",
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms \"Data Privacy Framework\" and \"signals intelligence\", all document types since 2025-01-20: 0 documents. Researcher's variant result: supports; term \"Executive Order 14086\", all types since 2025-01-20: 4 documents, all Commerce information-collection notices on the Data Privacy Framework program (2026-02-23 two notices, 2026-06-01, 2026-06-02), which continue the framework. A presidential-documents query on \"signals intelligence\" returned 1 unrelated document (Addressing Threats to the United States by the Government of Cuba, 2026-02-03, 2026-02-02250).",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=14086&conditions[publication_date][gte]=2025-01-20&per_page=40"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Data+Privacy+Framework%22+%22signals+intelligence%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "PCLOB release of 2025-09-25: staff report finds intelligence community elements updated policies to comply with the order, align handling of non-US persons' data with US persons' rules, and report no significant non-compliance; Board Member Williams endorsed it; no presidential action mentioned.",
-        "result": "supports",
-        "url": "https://documents.pclob.gov/prod/Documents/EventsAndPress/af98b693-0c84-41a4-ab8d-b7b7efd0a569/PCLOB%20EO%2014086%20press%20release%20-%20Completed%20508%20-%20September%2025,%202025.pdf"
+        "note": "2026-10-18: The page loaded as the landing page of the 2026 Regulatory Plan and Unified Agenda but lists no agenda items (agency selection is script-driven). Recorded as partial; fallback used: Defense proposed rules (first 20 of 29), none on signals intelligence or the Data Privacy Framework. ODNI and NSA issue no rules on this subject; the Federal Register queries in check 1 are the better test.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=defense-department&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "CRS Legal Sidebar of 2026-06-22: Section 702 (all of FISA Title VII) was automatically repealed on 2026-06-12 under the 2008 Act as amended by P.L. 119-87; pre-repeal orders and directives stay in effect until they expire, reportedly about March 2027 for a one-year authorization approved in March 2026. It does not mention EO 14086.",
+        "note": "2026-10-18: domain-limited search \"119th Congress Executive Order 14086 signals intelligence Data Privacy Framework bill\" returned a CRS legal sidebar on the Data Privacy Framework and unrelated privacy and AI bills (S.4211, H.R.8031, S.3202, H.R.8413, S.4082); none revokes or reviews the order. BILLSTATUS not fetched for these because titles are off-topic.",
         "result": "supports",
-        "url": "https://www.everycrsreport.com/reports/LSB11444.html"
+        "url": "https://www.congress.gov/crs-product/LSB10846"
+      },
+      {
+        "note": "2026-10-18: dni.gov is blocked and was not retried; no agency page was readable for ODNI.",
+        "result": "unreachable",
+        "url": "https://www.dni.gov/"
+      },
+      {
+        "note": "2026-10-18: news search \"Executive Order 14086 Trump review revoke Data Privacy Framework 2026\" returned commentary (Lawfare, 2025-01-17, advocacy before inauguration, reporting no executive action), law-firm notes and encyclopedia entries; no report of a study, suspension or revocation of the order.",
+        "result": "supports",
+        "url": "https://lawfaremedia.org/article/the-trump-administration-should-not-mess-with-the-eu-u.s.-data-privacy-framework"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the Commerce list on 2026-10-19: Agency Rule List - 2026, 176 rules. Titles with privacy or data terms concern census data, NOAA fisheries data and PTO Privacy Act exemptions; none mentions the Data Privacy Framework, Executive Order 14086, signals intelligence, transfers or Europe.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0600"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Check 2 not applicable, confirmed by the reviewer on 2026-10-19: the agency selector of the 2026 Regulatory Plan and Unified Agenda lists no Executive Office of the President, White House, Domestic Policy Council, National Security Council, ODNI, CIA, FEC or Office of Special Counsel entry, so these actors have no agenda list to read.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       }
     ]
   },
@@ -171,7 +196,7 @@
     }
   ],
   "stage": "not_started",
-  "status_summary": "No presidential order, memorandum or study revoking, suspending, amending or reviewing Executive Order 14086 was found as of 2026-10-08. Federal Register queries for the order (since 2025-01-20), for presidential documents on signals intelligence, and for the Data Privacy Framework through 2026-10-08 returned only Commerce information-collection notices (2026-02-23, 2026-06-01, 2026-06-02) that cite the order as a basis for the framework, and the Berkeley Technology Law Journal (2026-02-26) reports no action to revoke or alter it. The order's machinery has continued to operate: the Privacy and Civil Liberties Oversight Board (PCLOB) published a staff report on 2025-09-25 finding that intelligence community elements updated their policies to comply, and said on 2025-11-13 that the redress mechanism (operational since 2023-07-10) had one qualifying complaint pending. Related events are not the step the Mandate describes: three Democratic PCLOB members were removed on 2025-01-22 (a district court's reinstatement of two was stayed on 2025-07-01; the D.C. Circuit has argument set for 2026-11-17), and FISA Section 702 was repealed under its sunset on 2026-06-12 without renewal (CRS), with collection continuing under existing certifications. No public US message to European governments tying intelligence sharing to the data-transfer issue was found. In the EU, the General Court dismissed the Latombe challenge on 2025-09-03 and Latombe appealed on 2025-10-31.",
+  "status_summary": "No presidential order, memorandum or study revoking, suspending, amending or reviewing Executive Order 14086 was found as of 2026-10-18; Federal Register queries returned only Commerce information-collection notices of 2026-02-23 and 2026-06-01 that continue the Data Privacy Framework, and the Berkeley Technology Law Journal (2026-02-26) reports no action to revoke or alter the order. The order's machinery has continued to operate: PCLOB reported on 2025-09-25 that intelligence community elements had updated their policies to comply, and said on 2025-11-13 that the redress mechanism had one qualifying complaint pending. Related events are not the step the Mandate describes: three Democratic PCLOB members were removed on 2025-01-22 (a district court's reinstatement of two was stayed by the D.C. Circuit on 2025-07-01), and CRS reports that FISA Section 702 lapsed under its sunset on 2026-06-12 with collection continuing under existing certifications. No public US message to European governments tying intelligence sharing to the data-transfer issue was found, and in the EU the General Court dismissed the Latombe challenge on 2025-09-03, which Latombe appealed on 2025-10-31.",
   "timeline": [
     {
       "date": "2025-01-22",
@@ -246,6 +271,6 @@
   ],
   "title": "Study and suspend burdensome parts of EO 14086 and press the EU on data flows",
   "tracked": true,
-  "uncertainties": "This is a no-action finding; a classified or unpublished study, or a private diplomatic message to European governments, would not appear in the Federal Register or press. Federal Register queries run: the order's number and title, presidential documents mentioning signals intelligence, and the Data Privacy Framework (only Commerce notices after 2025-01-20); the index may lag by a few days. Web searches covered a revocation or amendment of the order, US assurances or warnings to the EU, the PCLOB, and the Latombe appeal; none showed presidential action. The Berkeley Technology Law Journal dates the General Court ruling to September 2024, while WilmerHale and the StreamLex tracker give 2025-09-03; the later date is used. The Just Security item is undated on the fetched page; its 2025-01-22 removal date is the article's statement. The current number of seated PCLOB members after July 2025 was not confirmed from a primary source. The CEPA piece is a think-tank analysis; its Section 702 statement is consistent with a CRS Legal Sidebar of 2026-06-22 reporting Section 702's repeal on 2026-06-12 with orders continuing for up to a year, and neither source ties that lapse to EO 14086.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "No presidential order, memorandum or study revoking, suspending, amending or reviewing Executive Order 14086 was found; Commerce information-collection notices of 2026 continue the Data Privacy Framework, and PCLOB reported in 2025 that agencies had updated policies to comply. Federal Register searches found nothing qualifying; a congress.gov and govinfo search found no related bill; dni.gov is blocked; one news search returned commentary only. The Commerce list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 176 rules) holds no related entry, and ODNI and NSA have no agenda list. A classified review or a private diplomatic message to European governments could exist without public record. The PCLOB removals and the Section 702 lapse are related context only. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

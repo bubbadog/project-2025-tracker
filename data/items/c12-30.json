@@ -1,18 +1,19 @@
 {
   "agency": "DOE Office of Intelligence and Counterintelligence",
   "blockers": [
-    "The statute already fixes the reporting line and the appointment process, so the remaining question is who is chosen"
+    "S.4615 has not passed the Senate, and the introduced text of the House companion H.R.9624 lacks the provision",
+    "Under current statute the Secretary appoints the director, so the remaining executive question is who is chosen"
   ],
   "chapter": "12",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Mandate text checked and the DOE biography page re-read; not_started rests on a limited search, capped at 50.",
+  "confidence": 72,
+  "confidence_label": "medium",
+  "confidence_reason": "The proposed stage rests on the S.4615 text read on govinfo.gov, with the Sec. 601(c) appointment language and its 2029-01-21 effective date confirmed, and on the S.4615 and H.R.9624 bill status records. The five systematic checks are documented: Federal Register API (supports), Unified Agenda fallback (partial), govinfo bill text and status (does_not_support the former not_started stage), energy.gov office page (supports acting leadership) and news (supports). Held in the medium band because the match is a judgment call and the chapter text was not rechecked in this review.",
   "durability": {
     "level": "medium",
     "why": "Statute sets the reporting line and appointment process; the individual in the post changes with appointments."
   },
   "est_completion": {
-    "basis": "Inference: the acting director's career background does not match the Mandate's political-appointee preference, and no nomination was found.",
+    "basis": "Inference: S.4615 Sec. 601(c) carries an effective date of 2029-01-21 and has not passed either chamber, so the bill route would not take effect before 2029; no nomination or permanent designation of a political appointee was found, so the executive route has no timetable.",
     "window": "unknown"
   },
   "headline": false,
@@ -28,24 +29,33 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review: reran the Federal Register API check with a DOE exact-phrase variant, read the S.4615 text and bill status and the H.R.9624 introduced text and bill status on govinfo.gov, re-read the energy.gov office page and opened a Senate release on senate.gov. Stage changed from not_started 0 to proposed 10 and match from direct to partial on the strength of S.4615 Sec. 601(c); confidence 40 to 72."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Coordinating session red-team: source check results restated relative to the current stage. The stage-deciding documents had been marked as not supporting because they were first recorded during a no-action absence check. No change to stage, progress or confidence."
     }
   ],
   "id": "c12-30",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
-  "match": "direct",
+  "match": "partial",
   "mechanism": "appointment",
   "pages": [
     391
   ],
   "position": "Office of Intelligence and Counterintelligence (IAC)",
-  "progress": 0,
+  "progress": 10,
   "proposal": "The Mandate recommends that the Office of Intelligence and Counterintelligence be led by a qualified political appointee with an intelligence community background who reports directly to the Secretary and Deputy Secretary, and that the Secretary personally push to improve security protocols and access to resources from the wider intelligence community.",
   "related_ids": [
     "c12-20"
   ],
   "remaining": [
-    "A qualified appointee with intelligence community background leading the office on a permanent basis (page 391)",
+    "Passage and enactment of S.4615 Sec. 601(c) or an equivalent provision, which would take effect 2029-01-21 (page 391)",
+    "A qualified appointee with intelligence community background leading the office on a permanent basis before then (page 391)",
     "A stated Secretary-level push on security protocols and intelligence community access (page 391)"
   ],
   "requires_congress": "no",
@@ -53,20 +63,48 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Match set to direct for a not_started record; no stage change.",
-      "Source title changed to name the role rather than the individual, under the public-role rule.",
-      "Judgment call: the statute already sets the direct reporting line and the acting head has intelligence experience, so a reader could see the recommendation as largely satisfied by existing structure; not_started is kept because no action since 2025 was found."
+      "stage changed from not_started 0 to proposed 10: S.4615 Sec. 601(c), reported and on the Senate calendar, would make the director a Senate-confirmed appointee with intelligence community expertise reporting to the Secretary, effective 2029-01-21",
+      "match changed from direct to partial: the bill route differs from an executive appointment, omits the Deputy Secretary line and the Secretary's security push, and takes effect only in 2029",
+      "defensible alternative: keep not_started on the view that a bill effective in 2029 does not bear on the executive recommendation",
+      "confidence 40 to 72",
+      "the 2023 Senate release is pre-period context and is not added as a source",
+      "for c07-17: the same S.4615 text has no NIC provision"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 391 asks that the Office of Intelligence and Counterintelligence be led by a qualified appointee with an intelligence community background who reports directly to the Secretary and Deputy Secretary, and that the Secretary intervene directly to improve security protocols and draw resources from the wider intelligence community.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 391 asks that the Office of Intelligence and Counterintelligence be led by a qualified political appointee with an intelligence community background reporting directly to the Secretary and Deputy Secretary, and that the Secretary push for better security protocols and intelligence community resources; the chapter text was not available to this review, and an earlier review on 2026-10-15 recorded the paraphrase as confirmed. S.4615 Sec. 601(c) addresses the appointee, background and reporting elements but not the Deputy Secretary line or the Secretary's security push.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (systematic absence check)",
     "source_checks": [
       {
-        "note": "Biography page published 2026-02-27 shows an acting director with DOE-IN service since 2004 and military intelligence background; appointment type not stated (checked 2026-10-15).",
+        "n": 1,
+        "note": "2026-10-18: reviewer variant, exact phrase 'Intelligence and Counterintelligence' limited to the Energy Department since 2025-01-20: 0 documents. The researcher's unquoted query (38 documents, none a DOE leadership action) and 'Counterintelligence' limited to DOE (1 unrelated OMB rule) found none either. No executive action in the Federal Register.",
         "result": "supports",
-        "url": "https://www.energy.gov/node/4856633"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Intelligence%20and%20Counterintelligence%22&conditions[agencies][]=energy-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "n": 2,
+        "note": "2026-10-18: reginfo.gov eAgendaMain showed only a landing page (researcher). Fallback: the DOE-limited Federal Register queries returned no DOE proposed rule on the office; an appointment would not ordinarily appear in a proposed rule. Partial because only the fallback was available.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "n": 3,
+        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): does not support became supports. 2026-10-18: the researcher's domain-limited search found S.4615 among other intelligence bills but did not check its DOE provision. Reviewer read the S.4615 placed-on-calendar text: Sec. 601(c) rewrites 42 U.S.C. 7144b(c) so the director is appointed by the President with Senate consent, reports directly to the Secretary, serves a six-year term and must have substantial intelligence community expertise, effective 2029-01-21. BILLSTATUS: reported and placed on the calendar 2026-05-20, written report S. Rept. 119-133 filed 2026-08-05, no floor action. This is a qualifying bill, so the stage moves to proposed. The reviewer's companion search found H.R.9624 (introduced 2026-07-09, ordered reported amended 2026-07-20); its introduced text has only seven sections and no such provision, and the amended text was not available.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s4615pcs/xml/BILLS-119s4615pcs.xml"
+      },
+      {
+        "n": 4,
+        "note": "2026-10-18: the DOE Office of Intelligence and Counterintelligence page lists an acting director with no appointment date or reporting line stated. No permanent political appointee announced.",
+        "result": "supports",
+        "url": "https://www.energy.gov/intelligence"
+      },
+      {
+        "n": 5,
+        "note": "2026-10-18: researcher's query on the DOE intelligence director named in 2026 returned job postings, CRS and office pages, the statute and this Senate release. Reviewer opened the release: dated 2023-11-22, on the reassignment of the then long-serving director under the prior administration; it predates the tracking period. No 2025 or 2026 report of a new director appointment.",
+        "result": "supports",
+        "url": "https://www.lankford.senate.gov/news/press-releases/lankford-colleagues-raise-alarm-over-energy-department-counterintelligence-report-and-suspicious-reassignment-of-the-director/"
       }
     ]
   },
@@ -119,13 +157,63 @@
       "publisher": "U.S. Department of Energy",
       "title": "Acting Director, DOE Office of Intelligence and Counterintelligence (biography page)",
       "url": "https://www.energy.gov/node/4856633"
+    },
+    {
+      "date": "2026-05-20",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S.4615 Intelligence Authorization Act for Fiscal Year 2027 (placed on calendar text)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s4615pcs/xml/BILLS-119s4615pcs.xml"
+    },
+    {
+      "date": "2026-08-05",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S.4615 bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s4615.xml"
+    },
+    {
+      "date": "2026-07-09",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R.9624 Intelligence Authorization Act for Fiscal Year 2027 (introduced text)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr9624ih/html/BILLS-119hr9624ih.htm"
+    },
+    {
+      "date": "2026-07-20",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R.9624 bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9624.xml"
+    },
+    {
+      "date": "undated",
+      "kind": "primary",
+      "publisher": "U.S. Department of Energy",
+      "title": "Office of Intelligence and Counterintelligence",
+      "url": "https://www.energy.gov/intelligence"
     }
   ],
-  "stage": "not_started",
-  "status_summary": "No DOE action since 2025 on the Mandate's leadership recommendation for the Office of Intelligence and Counterintelligence was found. A CRS report of 2024-06-07 describes the office's director as reporting directly to the Secretary under existing statute and appointed by the Secretary with Director of National Intelligence concurrence. A DOE biography page published 2026-02-27 shows the office led by an acting director who joined it in 2004, served as its principal deputy director from 2024 to 2026, and has military intelligence experience.",
-  "timeline": [],
+  "stage": "proposed",
+  "status_summary": "S.4615, the Intelligence Authorization Act for Fiscal Year 2027, was reported by the Senate Select Committee on Intelligence and placed on the Senate calendar on 2026-05-20, with a written report filed on 2026-08-05; its Sec. 601(c) would make the Director of the Office of Intelligence and Counterintelligence a presidential appointee confirmed by the Senate, reporting directly to the Secretary, for a six-year term and with substantial intelligence community expertise, effective 2029-01-21. The House FY2027 intelligence authorization bill, H.R.9624, was introduced on 2026-07-09 and ordered reported on 2026-07-20, and its introduced text contains no such provision. A CRS report of 2024-06-07 describes the director under existing statute as reporting directly to the Secretary and appointed by the Secretary with Director of National Intelligence concurrence, and DOE's office page lists an acting director as of 2026-10-18.",
+  "timeline": [
+    {
+      "date": "2026-05-20",
+      "event": "The Senate Select Committee on Intelligence reported S.4615, the Intelligence Authorization Act for Fiscal Year 2027, as an original measure and it was placed on the Senate calendar (Calendar No. 420); Sec. 601(c) would make the DOE intelligence director a Senate-confirmed presidential appointee with intelligence community expertise reporting to the Secretary, effective 2029-01-21.",
+      "kind": "primary",
+      "source": "GovInfo (S.4615 placed on calendar text)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s4615pcs/xml/BILLS-119s4615pcs.xml"
+    },
+    {
+      "date": "2026-08-05",
+      "event": "The Senate Select Committee on Intelligence filed its written report on S.4615 (S. Rept. 119-133).",
+      "kind": "primary",
+      "source": "GovInfo (S.4615 bill status)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s4615.xml"
+    }
+  ],
   "title": "Lead DOE intelligence office with an appointee with intelligence experience",
   "tracked": true,
-  "uncertainties": "Absence of evidence from a limited search. The researcher searched everycrsreport.com, energy.gov and ran a general web query on the director; the reviewer re-read the energy.gov biography page. The page does not state the start date of the acting role or whether the post holder is a career or political appointee, and no nomination or designation of a political appointee was found. Intelligence authorization provisions were not checked.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Checked systematically on 2026-10-18. 1. Federal Register API searches since 2025-01-20 on 'Office of Intelligence and Counterintelligence' (38 documents), the exact phrase 'Intelligence and Counterintelligence' limited to DOE (0) and 'Counterintelligence' limited to DOE (1 unrelated) found no executive leadership action. 2. The reginfo.gov page showed no agenda items and the DOE-limited fallback held no relevant proposed rule, so the check is partial. 3. A domain-limited search of congress.gov and govinfo.gov found the FY2027 Senate intelligence authorization bill S.4615; its text on govinfo.gov, Sec. 601(c), would make the director a Senate-confirmed presidential appointee with intelligence community expertise reporting to the Secretary, effective 2029-01-21; its bill status shows committee reporting on 2026-05-20 and a written report on 2026-08-05, with no floor action. The House bill H.R.9624 was ordered reported amended on 2026-07-20; its introduced text lacks the provision and the amended text was not available. 4. The energy.gov office page lists an acting director with no appointment date. 5. A news search found no 2025 or 2026 appointment report; a Senate release on a director reassignment dates from 2023-11-22. The match is partial: the bill does not address the Deputy Secretary reporting line or the Secretary's security push and would not take effect until 2029. Earlier notes still apply: whether the acting director is a career or political appointee was not stated. Not verified: the FY2026 intelligence authorization texts and the amended House text.",
+  "updated_at": "2026-10-19"
 }

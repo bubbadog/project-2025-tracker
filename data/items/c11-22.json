@@ -5,9 +5,9 @@
     "The Department itself is using negotiated rulemaking, which suggests it is working inside the existing requirement."
   ],
   "chapter": "11",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Mandate text checked and ED's own proposed rule (primary) confirms the requirement is unchanged after P.L. 119-21, but absence of a bill rests on limited searches without congress.gov, so the not_started cap of 50 applies.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API (supports); Unified Agenda, Education rule list read in full on reginfo.gov on 2026-10-19 (supports: no entry ending the process, three planning its use); congress.gov and govinfo with BILLSTATUS, including the S. 2990 text (supports); Education negotiated rulemaking page (supports); one news search (supports). The recommendation asks Congress to amend the statute, so the agenda is only weakly informative; set at 66 within the 65 to 68 band.",
   "durability": {
     "level": "high",
     "why": "A statutory change would persist, but none exists; current practice follows the existing statute."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with a separate term variant (13 documents, all continuing negotiated rulemaking), ran one domain-limited search and read the S. 2990 BILLSTATUS and text on govinfo.gov, and reviewed the researcher's checks of reginfo.gov with the Education fallback, ed.gov and one news search. No stage change (not_started, 0); confidence 50 to 64."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the Education rule list on reginfo.gov in full and opened the Reducing Anti-Competitive Regulatory Barriers entry, which plans further negotiated rulemaking; no stage change (not_started, 0); confidence 64 to 66."
     }
   ],
   "id": "c11-22",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -56,43 +64,51 @@
   "research_agent": "N11",
   "review": {
     "flags": [
-      "not_started capped at 50"
+      "no stage change: not_started 0",
+      "confidence 64 to 66",
+      "researcher listed two negotiated rulemaking entries; the list carries a third (1840-AE01)"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 339 to 340 recommend that ED work with Congress to amend the HEA to eliminate negotiated rulemaking or at least allow public hearings instead; paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9f",
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 339 and 340, as described in the record, recommend that the Department work with Congress to amend the Higher Education Act to eliminate negotiated rulemaking for Title IV regulations, or at least to allow public hearings in its place. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "90 FR 35261; hearing 2025-08-07; RISE and AHEAD; cites section 492; no exemption claimed.",
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms \"negotiated rulemaking\" and \"section 492\", Education Department, since 2025-01-20: 13 documents (accreditation proposal 2026-08-20; STATS proposed and final rules; Workforce Pell proposed and final rules; RISE proposed and final rules; notices of intent of 2025-04-04 and 2026-01-27; hearing notice of 2025-07-25; nominations notice of 2025-05-12; PSLF documents). All continue negotiated rulemaking; none proposes ending it or replacing it with hearings. Researcher's variant result: supports; terms \"negotiated rulemaking\" and \"Higher Education Act\", all types since 2025-01-20: 25 documents, first 20 read (2026-08-20 accreditation proposed rule, Unified Agenda 2026-08-14, RISE, AHEAD and STATS rules, intent to establish a committee 2026-01-27, contingent meeting dates 2025-09-30). All show the Department continuing negotiated rulemaking; none ends it or substitutes hearings. The remaining 5 were not read.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/07/25/2025-13998/public-hearing-negotiated-rulemaking-committees"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22negotiated+rulemaking%22+%22section+492%22&conditions[agencies][]=education-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "91 FR 4254; consensus 2025-11-06; complies with section 492; OBBB does not waive negotiated rulemaking; master calendar implicitly waived per ED.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/01/30/2026-01912/reimagining-and-improving-student-education"
+        "note": "2026-10-18: The page loaded as the landing page of the 2026 Regulatory Plan and Unified Agenda but lists no agenda items (agency selection is script-driven). Recorded as partial; fallback used: Education proposed rules mentioning hearing since 2025-01-20: 33, first 20 read; none proposes ending negotiated rulemaking (the statute, not a rule, requires it). Second page not read.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=education-department&conditions[type][]=PRORULE&conditions[term]=hearing&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "91 FR 53940; AIM met 2026-04-13 to 17 and 2026-05-18 to 21; consensus 2026-05-21.",
+        "note": "2026-10-18: domain-limited search \"119th Congress Higher Education Act negotiated rulemaking section 492 eliminate bill\" returned S.1948 and H.R.3711 (POST GRAD Act, Padilla and Chu, introduced 2025-06-04, referred to committee), H.R.2899 (PROTECT Students Act, Takano, introduced 2025-04-10) and CRS material on the Title IV rulemaking process. BILLSTATUS and text for these do not address negotiated rulemaking. No bill amending Section 492 found. H.R.2899 text mentions Department regulations but not negotiated rulemaking.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/08/20/2026-17001/accreditation-innovation-and-modernization-the-secretarys-recognition-of-accrediting-agencies"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3711.xml"
       },
       {
-        "note": "Committee session dates and NPRM dates.",
+        "note": "2026-10-18: Education 2026 negotiated rulemaking page (last reviewed 2025-11-20) announces continuing negotiated rulemaking on Title IV and states no plan to end it or to use hearings instead.",
         "result": "supports",
-        "url": "https://www.ed.gov/laws-and-policy/higher-education-laws-and-policy/higher-education-policy/negotiated-rulemaking-for-higher-education-2025-2026"
+        "url": "https://www.ed.gov/laws-and-policy/higher-education-laws-and-policy/higher-education-policy/negotiated-rulemaking-higher-education-2026"
       },
       {
-        "note": "Announces RISE and AHEAD and the 2025-08-07 hearing; last reviewed 2026-01-06.",
+        "note": "2026-10-18: news search \"Education Department negotiated rulemaking eliminate Congress Higher Education Act public hearings 2026\" returned Department announcements of negotiated rulemaking sessions (AIM, RISE, AHEAD) and a public hearing notice; no report of a push to amend Section 492.",
         "result": "supports",
         "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-announces-negotiated-rulemaking-implement-president-trumps-one-big-beautiful-bill"
       },
       {
-        "note": "Read in full; no mention of negotiated rulemaking changes.",
+        "note": "2026-10-18: reviewer's own domain-limited search (congress.gov, govinfo.gov) \"bill amend section 492 Higher Education Act negotiated rulemaking repeal 2025 OR 2026\" returned Education Department rules, CRS material, H.R. 2899 and S. 994 (PROTECT Students Act) and S. 2990. BILLSTATUS for S. 2990 (Campus Accountability and Safety Act, introduced 2025-10-08, referred to the HELP Committee) and its introduced text were read: the bill requires regulations to follow section 492 and several determinations to be made through negotiated rulemaking, the opposite of eliminating it. No bill amending section 492 to end negotiated rulemaking or allow hearings instead was found.",
         "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2025-09-29_R48727_5b3b7e67089897e9f233e617c16e09a2f8862a03.html"
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s2990is/html/BILLS-119s2990is.htm"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the Education list (page headed 'Agency Rule List - 2026', 19 rules, rule links carry publication id 202510) in full. No rule on ending negotiated rulemaking, which section 492 requires. Three entries plan further use of the process: 1840-AD82 Accreditation Issues (Proposed Rule Stage), 1840-AE04 Addressing Title IV Eligibility Issues (Prerule) and 1840-AE01 Reducing Anti-Competitive Regulatory Barriers (Prerule; entry opened by the reviewer: negotiated rulemaking under Executive Order 14267 on textbook packaging and credit transfer, notice of intent projected 09/2026).",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1800"
       }
     ]
   },
@@ -203,6 +219,6 @@
   ],
   "title": "Amend the HEA to end negotiated rulemaking, or at least allow public hearings instead",
   "tracked": true,
-  "uncertainties": "No bill was found in four searches (two by the researcher, two in review) and in Federal Register searches; congress.gov could not be searched, so an introduced bill on the topic cannot be ruled out. The CRS report on P.L. 119-21 was read in full in review (two passes) and does not mention negotiated rulemaking or HEA section 492, and ED's RISE proposed rule states that the law does not waive negotiated rulemaking. The same proposed rule argues that the law implicitly waived the HEA master calendar for provisions effective 2026-07-01; that is a reading by ED of one deadline and not a change to the negotiated rulemaking requirement. The ED program page does not state committee votes, and the ED press release page is dated only by its last-reviewed date (2026-01-06). The College Cost Reduction Act text named in an earlier lead was not located.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "No bill or law amending Higher Education Act section 492 to end negotiated rulemaking or allow hearings in its place was found, and the Department continues to use the process. The reginfo.gov Unified Agenda rule list for Education (edition headed Agency Rule List - 2026, 19 rules) lists no rule on ending negotiated rulemaking, which the statute requires; the Accreditation Issues (RIN 1840-AD82), Addressing Title IV Eligibility Issues (1840-AE04) and Reducing Anti-Competitive Regulatory Barriers (1840-AE01) entries plan further negotiated rulemaking. congress.gov could not be searched directly, so an introduced bill cannot be fully ruled out, and draft legislation or technical assistance not made public could not be checked. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

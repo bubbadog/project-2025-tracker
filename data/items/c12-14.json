@@ -1,12 +1,13 @@
 {
   "agency": "DOE/State",
   "blockers": [
-    "Fund is run by an international body that continues without US participation"
+    "Fund is run by an international body that continues without US participation",
+    "UNFCCC withdrawal takes effect 2027-02-27, after the one-year notice period"
   ],
   "chapter": "12",
-  "confidence": 82,
-  "confidence_label": "high",
-  "confidence_reason": "Chapter text checked; EO 14162 and the 2026 withdrawal memorandum were fetched on the Federal Register; the board withdrawal rests on a reputable tracker.",
+  "confidence": 72,
+  "confidence_label": "medium",
+  "confidence_reason": "Chapter text on printed pages 389 and 390 re-read. Executive Order 14162 (carried from earlier review), the 2026-01-07 memorandum on the Federal Register and UN depositary notification C.N.102.2026 were read; the 2025-03-04 board withdrawal, the most direct action on the loss and damage fund, rests on a law school tracker and an ASIL note, and the letter itself was not opened. Rule applied: implemented (65 to 90) at 80 because refusal to fund and exit from the fund board and the convention are operative executive actions, reversible and without evidence of the recommended diplomatic effort to persuade other countries; medium because the fund-specific step rests on secondary sources.",
   "durability": {
     "level": "medium",
     "why": "Withdrawal rests on executive action and could be reversed by a later administration."
@@ -28,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: added the UN depositary notification recording the UNFCCC withdrawal as effected 2026-02-27 and taking effect 2027-02-27, consistent with the record on the Paris Agreement withdrawal, which is now cross-referenced; the 2025-03-04 fund board letter still rests on secondary accounts; red-team check holds. Independent review (AI) opened the notification and set confidence 72."
     }
   ],
   "id": "c12-14",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -42,9 +47,36 @@
   "position": "Office of International Affairs (IA)",
   "progress": 80,
   "proposal": "The Mandate recommends that DOE's international affairs office oppose payments described as climate reparations to developing countries through a fund run by a non-U.S. organization. It says the President should refuse to provide such payments and that the office should encourage other countries to reconsider theirs.",
+  "redteam": {
+    "date": "2026-10-19",
+    "evidence": [
+      {
+        "date": "2026-02-27",
+        "note": "Convention withdrawal effected 2026-02-27, effective 2027-02-27; no reversal.",
+        "source": "UN Treaty Collection",
+        "url": "https://treaties.un.org/doc/Publication/CN/2026/CN.102.2026-Eng.pdf"
+      },
+      {
+        "date": "2026-07-29",
+        "note": "FY2027 State appropriations bill passed the House 217 to 209 and is in the Senate; not enacted.",
+        "source": "govinfo BILLSTATUS",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr8595.xml"
+      },
+      {
+        "date": "2026-01",
+        "note": "Summary says the FY2026 bill dropped the House loss and damage funding ban; no provision requiring US funding was reported.",
+        "source": "House Appropriations Democrats",
+        "url": "https://democrats-appropriations.house.gov/sites/evo-subsites/democrats-appropriations.house.gov/files/evo-media-document/fy26-state-foreign-operations-and-related-programs-summary.pdf"
+      }
+    ],
+    "note": "No refuting event found. The stage rests on an executive board withdrawal and policy, and the Senate-pending FY2027 text could add statutory language.",
+    "verdict": "holds",
+    "what_was_tested": "Whether any action after 2026-01-07 reversed or changed the refusal to participate in or pay the loss and damage fund, including UNFCCC withdrawal timing, fund board decisions and appropriations language."
+  },
   "related_ids": [
     "c00-02",
-    "c06-03"
+    "c06-03",
+    "c22-11"
   ],
   "remaining": [
     "Evidence of diplomatic efforts to persuade other countries to withdraw funding"
@@ -53,28 +85,38 @@
   "research_agent": "N12",
   "review": {
     "flags": [
-      "overlaps c00-02 and c06-03 on international withdrawals (partial, kept)"
+      "fund board withdrawal rests on two secondary sources; the letter and any Treasury or fund secretariat record were not opened"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 389 to 390 checked; paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y12a",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Printed page 389 asks DOE's Office of International Affairs to oppose climate reparations, saying a fund run by a non-U.S. organization should not be supported in any form; page 390 says the President should refuse such payments under an unratified treaty and the office should encourage other countries to reconsider theirs. Proposal and direct match confirmed.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
-        "note": "EO 14162 sec. 3(c) and 3(e): cease or revoke UNFCCC financial commitments; Climate Finance Plan revoked. No mention of loss and damage fund.",
+        "note": "Fetched: C.N.102.2026.TREATIES-XXVII.7, UNFCCC, withdrawal by the United States effected 2026-02-27, effective 2027-02-27. Matches the c22-11 record (same URL, dates and event).",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02010/putting-america-first-in-international-environmental-agreements"
+        "url": "https://treaties.un.org/doc/Publication/CN/2026/CN.102.2026-Eng.pdf"
       },
       {
-        "note": "Undated tracker entry describing the 2025-03-04 letter; no pledge amounts.",
+        "note": "Fetched: memorandum of 2026-01-07, 91 FR 2281, published 2026-01-16; lists the UNFCCC in section 2(b); withdrawal for UN entities means ceasing participation or funding; does not name the loss and damage fund.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/01/16/2026-00976/withdrawing-the-united-states-from-international-organizations-conventions-and-treaties-that-are"
+      },
+      {
+        "note": "Fetched: undated tracker page; letter dated 2025-03-04 from the U.S. board member announcing the member and alternate stepping down, not to be replaced by a U.S. representative. Secondary.",
         "result": "supports",
         "url": "https://climate.law.columbia.edu/content/trump-administration-withdraws-united-nations-fund-responding-loss-and-damage"
       },
       {
-        "note": "Memorandum signed 2026-01-07, published 2026-01-16; UNFCCC listed; withdrawal means ceasing participation and funding.",
+        "note": "Fetched: dated 2025-03-11; U.S. Treasury letter of 2025-03-04 withdrawing from the fund board. Secondary.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/01/16/2026-00976/withdrawing-the-united-states-from-international-organizations-conventions-and-treaties-that-are"
+        "url": "https://asil.org/ilib/us-withdraws-climate-damage-fund/"
+      },
+      {
+        "note": "Fetched: FY2027 national security and State appropriations bill passed the House 2026-07-15, 217 to 209; received in the Senate 2026-07-29; not enacted.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr8595.xml"
       }
     ]
   },
@@ -128,10 +170,24 @@
       "publisher": "Federal Register",
       "title": "Withdrawing the United States From International Organizations, Conventions, and Treaties That Are Contrary to the Interests of the United States",
       "url": "https://www.federalregister.gov/documents/2026/01/16/2026-00976/withdrawing-the-united-states-from-international-organizations-conventions-and-treaties-that-are"
+    },
+    {
+      "date": "2026-02-27",
+      "kind": "primary",
+      "publisher": "United Nations Treaty Collection",
+      "title": "Depositary Notification C.N.102.2026.TREATIES-XXVII.7, UNFCCC, United States withdrawal",
+      "url": "https://treaties.un.org/doc/Publication/CN/2026/CN.102.2026-Eng.pdf"
+    },
+    {
+      "date": "2025-03-11",
+      "kind": "news",
+      "publisher": "American Society of International Law",
+      "title": "US Withdraws from Climate Damage Fund",
+      "url": "https://asil.org/ilib/us-withdraws-climate-damage-fund/"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Executive Order 14162 (signed 2025-01-20, published 2025-01-30) directed ending or revoking financial commitments made under the UN climate framework and revoked the U.S. International Climate Finance Plan. A letter dated 2025-03-04 announced that the US board member and alternate on the Fund for Responding to Loss and Damage were stepping down and would not be replaced by a US representative. A presidential memorandum signed 2026-01-07 directed withdrawal from the UN Framework Convention on Climate Change, among other bodies, including ending funding. The sources reviewed do not show efforts to persuade other countries to reconsider their contributions.",
+  "status_summary": "Executive Order 14162 (signed 2025-01-20, published 2025-01-30) directed ending financial commitments made under the UN climate framework and revoked the U.S. International Climate Finance Plan. A letter dated 2025-03-04 announced that the US board member and alternate on the Fund for Responding to Loss and Damage were stepping down and would not be replaced by a US representative. A presidential memorandum signed 2026-01-07 directed withdrawal from the UN Framework Convention on Climate Change, and the UN depositary recorded that withdrawal on 2026-02-27, effective 2027-02-27. The sources reviewed do not show efforts to persuade other countries to reconsider their contributions.",
   "timeline": [
     {
       "date": "2025-01-30",
@@ -153,10 +209,17 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/01/16/2026-00976/withdrawing-the-united-states-from-international-organizations-conventions-and-treaties-that-are"
+    },
+    {
+      "date": "2026-02-27",
+      "event": "The UN depositary recorded the U.S. withdrawal from the UN Framework Convention on Climate Change (notification C.N.102.2026.TREATIES-XXVII.7), effective 2027-02-27.",
+      "kind": "primary",
+      "source": "United Nations Treaty Collection",
+      "url": "https://treaties.un.org/doc/Publication/CN/2026/CN.102.2026-Eng.pdf"
     }
   ],
   "title": "Refuse climate reparations and exit the UN loss and damage fund",
   "tracked": true,
-  "uncertainties": "The board withdrawal is documented by a Columbia Law School tracker page (undated) rather than an official State Department or UN document. The 2026 memorandum does not name the loss and damage fund. Whether any US pledge to the fund was paid was not checked.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The board withdrawal letter is documented by a Columbia Law School tracker page (undated, which links the letter through an archive service that refused automated fetching) and an American Society of International Law note dated 2025-03-11 that attributes the transmission to the Treasury Department; neither the letter nor an official State, Treasury or fund secretariat document was read. The 2026 memorandum does not name the loss and damage fund. Whether any US pledge to the fund was paid was not checked. A House Appropriations Democratic summary says the final FY2026 State and foreign operations bill dropped the House ban on funding loss and damage compensation, and a similar summary says the House FY2027 bill (H.R. 8595, passed the House 2026-07-15, received in the Senate 2026-07-29) bars it; the text of the engrossed H.R. 8595 was searched in part and the provision was not located, and neither bill is shown as enacted with such a rider. No fund board decision on US membership was found. The Federal Register search for loss and damage after 2026-01-08 returned only unrelated documents.",
+  "updated_at": "2026-10-19"
 }

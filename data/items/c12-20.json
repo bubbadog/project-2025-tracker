@@ -2,12 +2,12 @@
   "agency": "DOE",
   "blockers": [
     "Renaming requires amending the DOE Organization Act",
-    "No bill identified in the sources reviewed"
+    "No renaming bill identified in the sources reviewed; H.R. 7258 awaits the Senate"
   ],
   "chapter": "12",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Chapter text checked; the DOE organization chart was fetched and shows the department name and structure, supported by two trade press accounts.",
+  "confidence_reason": "Chapter text on printed pages 365 to 368 re-read. The DOE organization chart dated 2025-11-20, the H.R. 7258 bill status on govinfo, the FY2027 Budget in Brief, the Office of Science bulletin and the 2026-10-01 Office of Science chart were fetched and read. Rule applied: in_progress at the low end (25) because the departmental reorganization and renamed offices are operative executive steps toward the refocusing, while the renaming and an Under Secretary for Energy Security require Congress and have not occurred; H.R. 7258 is a House-passed bill on assistant-secretary functions and does not move the stage.",
   "durability": {
     "level": "medium",
     "why": "The reorganization is internal and can be revised by a future Secretary, while a statutory rename would be durable."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c12-26, c12-29, c12-30, c12-31, c12-34 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: added the Office of Science realignment bulletin of 2026-03-17 and H.R. 7258, the Energy Emergency Leadership Act, passed by the House 2026-06-29 and referred in the Senate 2026-07-13; the FY2027 budget brief shows the renamed offices; no renaming bill or reorganization notice found; stage unchanged. Independent review (AI) located the DOE bulletin, noted that the 2026-10-01 Office of Science chart still lists the offices the realignment was reported to merge, removed a budget page from the timeline and kept confidence 80."
     }
   ],
   "id": "c12-20",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -60,39 +64,52 @@
   ],
   "remaining": [
     "Statutory renaming of the Department, which requires Congress",
-    "An Under Secretary for Energy Security overseeing the security-related offices"
+    "An Under Secretary for Energy Security overseeing the security-related offices",
+    "Senate action on H.R. 7258, which is a partial, assistant-secretary-level step"
   ],
   "requires_congress": "partial",
   "research_agent": "N12",
   "review": {
     "flags": [
-      "judgment call: match changed from parallel to partial because the internal regrouping under an Under Secretary of Energy resembles the recommended structure, while the rename still requires Congress"
+      "2026-04-01 budget page event removed: budget request document with month-only date, not a dated action; kept as a source",
+      "Office of Science realignment event now rests on the DOE bulletin itself; merger details from AIP conflict with the 2026-10-01 chart",
+      "stage alternative: proposed at or below 20 if the renaming is treated as the core recommendation and executive steps as parallel; kept in_progress 25 because office renaming and reorganization are operative"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 365 to 368 checked; paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y12a",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Printed pages 365 to 368 call for renaming DOE the Department of Energy Security and Advanced Science, refocusing it on five core missions, and creating an Under Secretary of Energy Security over CESER (elevated to an assistant secretary), Electricity, Nuclear Energy, Fossil Energy without carbon management, EERE and the SPR. Proposal paraphrase and partial match confirmed.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
-        "note": "Updated 2025-11-20; header DEPARTMENT OF ENERGY; Under Secretaries of Energy, Science and Nuclear Security; CESER, OE, NE, HGEO, EDF shown; no Under Secretary for Energy Security.",
+        "note": "Fetched: Department of Energy name, updated 2025-11-20; Under Secretaries for Science, of Energy and for Nuclear Security; CESER, OE, NE, HGEO, CMEI, EDF listed; reporting lines not shown.",
         "result": "supports",
         "url": "https://www.energy.gov/sites/default/files/2025-11/Organization-Chart-11.20.2025-2.pdf"
       },
       {
-        "note": "2025-11-26; Infrastructure renamed Energy; NE and OE moved under it; CESER unchanged.",
+        "note": "Fetched: Energy Emergency Leadership Act, sponsor Rep. Laurel Lee, introduced 2026-01-27, reported 2026-05-11 (H. Rept. 119-645), passed House by voice vote under suspension 2026-06-29, referred to Senate ENR 2026-07-13; CRS summary adds energy emergency and security functions to assistant-secretary functions; no rename.",
         "result": "supports",
-        "url": "https://www.ans.org/news/article-7582/the-doe-reorganizations-impact-on-nuclear/"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7258.xml"
       },
       {
-        "note": "2025-11-20; energy dominance purpose; CMEI reports to the Secretary; no department rename.",
-        "result": "supports",
-        "url": "https://www.latitudemedia.com/news/the-department-of-energy-is-reorganizing/"
+        "note": "Fetched: Office of Science bulletin titled Office of Science Realignment, 2026-03-17, signed by the two deputy directors; realignment begun, a few months to take effect; offices affected shown only in an embedded image.",
+        "result": "partial",
+        "url": "https://content.govdelivery.com/accounts/USDOEOS/bulletins/40eb662"
       },
       {
-        "note": "2025-08-28; describes the rename as a recommendation and does not say whether it was implemented; removed.",
+        "note": "Fetched: dated 2026-03-20; reports the chart merges High Energy Physics and Nuclear Physics and condenses eleven operations offices into five; links the bulletin. Secondary description of the image.",
+        "result": "partial",
+        "url": "https://www.aip.org/fyi/doe-reorganizes-office-of-science"
+      },
+      {
+        "note": "Fetched: Office of Science chart dated 2026-10-01 lists High Energy Physics and Nuclear Physics separately (one head, acting for NP) and still lists Sponsored Activities and IRIC; does not show the merger AIP described.",
         "result": "does_not_support",
-        "url": "https://www.latitudemedia.com/news/project-2025s-overhaul-of-the-department-of-energy-is-well-underway/"
+        "url": "https://science.osti.gov/-/media/About/pdf/organization/10012026-ORG-CHART-Website.pdf"
+      },
+      {
+        "note": "Fetched: Budget in Brief FY 2027 Congressional Justification, DOE/CF-0222, April 2026; names CMEI, HGEO, EDF and a total for the Under Secretary for Energy; department name unchanged. Budget request, not a dated government action; removed from timeline.",
+        "result": "supports",
+        "url": "https://www.energy.gov/documents/doe-fy-2027-budget-brief"
       }
     ]
   },
@@ -146,10 +163,52 @@
       "publisher": "American Nuclear Society",
       "title": "The DOE reorganization's impact on nuclear",
       "url": "https://www.ans.org/news/article-7582/the-doe-reorganizations-impact-on-nuclear/"
+    },
+    {
+      "date": "2026-03-17",
+      "kind": "primary",
+      "publisher": "U.S. Department of Energy, Office of Science (GovDelivery)",
+      "title": "Office of Science Realignment (bulletin)",
+      "url": "https://content.govdelivery.com/accounts/USDOEOS/bulletins/40eb662"
+    },
+    {
+      "date": "2026-03-20",
+      "kind": "news",
+      "publisher": "AIP FYI",
+      "title": "DOE reorganizes Office of Science",
+      "url": "https://www.aip.org/fyi/doe-reorganizes-office-of-science"
+    },
+    {
+      "date": "2026-04",
+      "kind": "primary",
+      "publisher": "U.S. Department of Energy",
+      "title": "Budget in Brief, FY 2027 Congressional Justification (DOE/CF-0222)",
+      "url": "https://www.energy.gov/documents/doe-fy-2027-budget-brief"
+    },
+    {
+      "date": "2026-07-13",
+      "kind": "primary",
+      "publisher": "govinfo",
+      "title": "H.R. 7258 Energy Emergency Leadership Act (bill status)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7258.xml"
+    },
+    {
+      "date": "2026-08-03",
+      "kind": "primary",
+      "publisher": "U.S. Department of Energy",
+      "title": "DOE organization chart page (updated 2026-08-03)",
+      "url": "https://www.energy.gov/documents/department-energy-organization-chart"
+    },
+    {
+      "date": "2026-10-01",
+      "kind": "primary",
+      "publisher": "U.S. Department of Energy, Office of Science",
+      "title": "Office of Science organization chart (dated 2026-10-01)",
+      "url": "https://science.osti.gov/-/media/About/pdf/organization/10012026-ORG-CHART-Website.pdf"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "DOE has not been renamed: its organization chart dated 2025-11-20 still carries the Department of Energy name. In that reorganization the Under Secretary for Infrastructure was renamed the Under Secretary of Energy, with Nuclear Energy and Electricity moved under it and CESER left in place, and new offices include the Hydrocarbons and Geothermal Energy Office and the Office of Energy Dominance Financing, with the stated aim of advancing an energy dominance agenda. The chart lists no Under Secretary for Energy Security, and the Office of Critical Minerals and Energy Innovation reports directly to the Secretary. The reorganization overlaps the elimination of applied offices tracked in c12-01.",
+  "status_summary": "DOE has not been renamed: its organization chart dated 2025-11-20 and the department's chart page updated 2026-08-03 still carry the Department of Energy name, with an Under Secretary of Energy, Under Secretary for Science and Under Secretary for Nuclear Security and no Under Secretary for Energy Security. The 2025-11-20 reorganization renamed or created offices including Critical Minerals and Energy Innovation, Hydrocarbons and Geothermal Energy and Energy Dominance Financing, and the FY2027 Budget in Brief (April 2026) uses those names and a budget line for the Under Secretary for Energy. On 2026-03-17 the Office of Science announced a realignment of its own structure; AIP reported that the accompanying chart merged High Energy Physics and Nuclear Physics, but the Office of Science chart dated 2026-10-01 still lists them as separate offices, with one official heading the first and acting head of the second. On 2026-06-29 the House passed H.R. 7258, which would add energy emergency and security functions to those assigned to assistant secretaries; it was referred to a Senate committee on 2026-07-13 and is not a rename. No bill renaming the department was found.",
   "timeline": [
     {
       "date": "2025-11-20",
@@ -157,10 +216,31 @@
       "kind": "primary",
       "source": "U.S. Department of Energy",
       "url": "https://www.energy.gov/sites/default/files/2025-11/Organization-Chart-11.20.2025-2.pdf"
+    },
+    {
+      "date": "2026-03-17",
+      "event": "The DOE Office of Science issued a bulletin announcing a realignment of its organizational structure, stating that the realignment had begun and would take a few months to take effect.",
+      "kind": "primary",
+      "source": "U.S. Department of Energy, Office of Science",
+      "url": "https://content.govdelivery.com/accounts/USDOEOS/bulletins/40eb662"
+    },
+    {
+      "date": "2026-06-29",
+      "event": "The House passed H.R. 7258, the Energy Emergency Leadership Act of 2026, by voice vote; it amends the DOE Organization Act to add energy emergency and energy security functions to those assigned to assistant secretaries. It does not rename the department.",
+      "kind": "primary",
+      "source": "govinfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7258.xml"
+    },
+    {
+      "date": "2026-07-13",
+      "event": "H.R. 7258 was received in the Senate and referred to the Energy and Natural Resources Committee.",
+      "kind": "primary",
+      "source": "govinfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7258.xml"
     }
   ],
   "title": "Rename and restructure DOE as a Department of Energy Security and Advanced Science",
   "tracked": true,
-  "uncertainties": "The chart text lacks full reporting lines, so placement of offices relies on trade press (ANS, Latitude Media). No renaming bill was found, but congress.gov could not be searched. An earlier timeline item citing a trade press article for the claim that the renaming had not been implemented was removed because that article does not say so.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The chart text lacks full reporting lines, so placement of offices relies on trade press (ANS, Latitude Media, Holland and Knight). No renaming bill was found in searches of AIP's science bill tracker and govinfo bill status pages, but congress.gov could not be searched directly. The 2026-08-03 date is the update line on the DOE chart page, and the dated chart file behind it was not located. The Office of Science bulletin of 2026-03-17 was opened; its text does not name the offices affected and shows the new structure only as an embedded image, so the merger of High Energy Physics and Nuclear Physics and the consolidation of operations offices rest on AIP's reading of that image. The Office of Science chart dated 2026-10-01 still shows High Energy Physics, Nuclear Physics, Sponsored Activities and the international and research security office as separate units, so whether the announced realignment has taken effect is unclear. FY2026 Energy and Water appropriations (Public Law 119-74) did not rename the department, per CRS. The FY2027 Budget in Brief was read through a summarizing fetch; it is a budget request document dated only to the month (April 2026) and is used as a source for office names rather than as a timeline event. Federal Register searches for DOE reorganization notices after 2025-11-20 returned only unrelated rules.",
+  "updated_at": "2026-10-19"
 }

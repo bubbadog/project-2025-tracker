@@ -5,9 +5,9 @@
     "A rebate exemption would likely require legislation"
   ],
   "chapter": "14",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Two FDA notices (researcher) and Executive Order 14293 (reviewer) read on the Federal Register host; rebate and new-use trial items searched only lightly.",
+  "confidence": 58,
+  "confidence_label": "medium",
+  "confidence_reason": "Executive Order 14293, the FDA onshoring notice and the FDA program presentation were read on primary hosts and show only parallel steps; the rebate and new-use trial items rest on light searches, so medium.",
   "durability": {
     "level": "low",
     "why": "A voluntary pilot assessment program can be changed or ended by notice."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read Executive Order 14293 and the FDA onshoring notice on federalregister.gov and the FDA program presentation on fda.gov; one timeline event and two sources were added. No stage change (proposed 10); confidence 50 to 58."
     }
   ],
   "id": "c14-29",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -54,24 +58,30 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Added Executive Order 14293 as a parallel timeline event and source.",
-      "Stage proposed 10, parallel, kept; not_started would also be defensible since neither the pilot nor the order adopts graded ratings or facility codes."
+      "No stage change: proposed 10, match parallel. not_started 0 is defensible because the program predates 2025-01-20 and is voluntary.",
+      "Added the 2025-08-08 FDA onshoring notice as a timeline event and two sources, verified in review.",
+      "Confidence 50 low to 58 medium."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 457 asks FDA to move to graded facility inspection outcomes, put facility codes on packaging with a searchable database, asks HHS to exempt multi-source generics from Medicaid and other rebates, and asks FDA and NIH to promote new-use trials of generics.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (457) and proposal fields: replace pass/fail facility inspection outcomes with graded ratings, add facility codes to packaging with a searchable database, exempt multi-source generics from Medicaid and other rebates, and promote FDA and NIH efficacy trials of new uses of generics. Chapter text not available this run; page not re-checked.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: sections 3(c) and 4 direct consideration of a public list of noncompliant facilities and disclosure of foreign inspection counts; no graded ratings or packaging codes.",
+        "note": "Fetched 2026-10-18: EO 14293 signed 2025-05-05, 90 FR 19615; Sec. 3(c) considers a public list of facilities not complying with 510(j)(3) reporting; Sec. 4 requires disclosure of foreign inspection counts by country and manufacturer; no graded ratings, packaging codes, rebates, shortages or new-use trials. Parallel only.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2025/05/08/2025-08267/regulatory-relief-to-promote-domestic-production-of-critical-medicines"
       },
       {
-        "note": "Researcher read; not reopened in review 2026-10-15. Voluntary pilot, consistent with a parallel match.",
+        "note": "Fetched 2026-10-18 (stage-deciding for the ratings item): CDER QMM presentation of 2026-04-22; scored maturity across five practice areas, anonymized establishment scores, links quality issues to shortages; no statement that ratings replace pass/fail outcomes or will be published. Supports proposed 10 with a parallel match.",
         "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/02/11/2026-02768/voluntary-quality-management-maturity-prototype-assessment-protocol-evaluation-program"
+        "url": "https://www.fda.gov/media/194076/download"
+      },
+      {
+        "note": "Fetched 2026-10-18: FDA notice published 2025-08-08 (90 FR 38475), meeting 2025-09-30, comments to 2025-10-30; QMM practices appear only in the proposed PreCheck Type V DMF content; no ratings, packaging codes or rebates.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/08/08/2025-15083/onshoring-manufacturing-of-drugs-and-biological-products-public-meeting-request-for-comments"
       }
     ]
   },
@@ -124,10 +134,24 @@
       "publisher": "Federal Register",
       "title": "Regulatory Relief To Promote Domestic Production of Critical Medicines (Executive Order 14293)",
       "url": "https://www.federalregister.gov/documents/2025/05/08/2025-08267/regulatory-relief-to-promote-domestic-production-of-critical-medicines"
+    },
+    {
+      "date": "2026-04-22",
+      "kind": "primary",
+      "publisher": "FDA",
+      "title": "An Update on CDER's Quality Management Maturity Program",
+      "url": "https://www.fda.gov/media/194076/download"
+    },
+    {
+      "date": "2025-08-08",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Onshoring Manufacturing of Drugs and Biological Products; Public Meeting; Request for Comments",
+      "url": "https://www.federalregister.gov/documents/2025/08/08/2025-15083/onshoring-manufacturing-of-drugs-and-biological-products-public-meeting-request-for-comments"
     }
   ],
   "stage": "proposed",
-  "status_summary": "FDA's Center for Drug Evaluation and Research has continued a voluntary Quality Management Maturity prototype assessment program, with notices on 2025-04-23 and 2026-02-11 opening second and third years for up to nine volunteer establishments that receive scored reports; the notices do not say scores are published. Executive Order 14293 of 2025-05-05 directed FDA to consider publicly listing noncompliant facilities and to disclose foreign inspection counts by country and manufacturer, which is related to but not the same as facility codes on packaging or a graded inspection system. No step on exempting generics from rebates or on NIH or FDA new-use trials was found.",
+  "status_summary": "FDA's Center for Drug Evaluation and Research has continued a voluntary Quality Management Maturity prototype assessment program, with notices on 2025-04-23 and 2026-02-11 opening second and third years for up to nine volunteer establishments that receive scored reports; the notices do not say scores are published. Executive Order 14293 of 2025-05-05 directed FDA to consider publicly listing noncompliant facilities and to disclose foreign inspection counts by country and manufacturer, which is related to but not the same as facility codes on packaging or a graded inspection system. An FDA notice of 2025-08-08 on onshoring drug manufacturing (public meeting held 2025-09-30) mentions quality management maturity only as content of a proposed PreCheck application, and no step on exempting generics from rebates or on NIH or FDA new-use trials was found.",
   "timeline": [
     {
       "date": "2025-04-23",
@@ -144,6 +168,13 @@
       "url": "https://www.federalregister.gov/documents/2025/05/08/2025-08267/regulatory-relief-to-promote-domestic-production-of-critical-medicines"
     },
     {
+      "date": "2025-08-08",
+      "event": "FDA published a notice of a public meeting (held 2025-09-30) and request for comments on onshoring manufacturing of drugs and biological products, mentioning quality management maturity within proposed PreCheck application content.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/08/08/2025-15083/onshoring-manufacturing-of-drugs-and-biological-products-public-meeting-request-for-comments"
+    },
+    {
       "date": "2026-02-11",
       "event": "FDA published a notice opening a third year of the voluntary Quality Management Maturity program, accepting requests through 2026-04-13.",
       "kind": "primary",
@@ -153,6 +184,6 @@
   ],
   "title": "Cut drug shortages: graded facility ratings, facility codes, rebate exemption, trials",
   "tracked": true,
-  "uncertainties": "Only the two Federal Register notices were read; the match is parallel because the program began before 2025-01-20 and is voluntary, with no stated public rating. The Federal Register API returned no FDA drug shortage documents from the boolean query, which may not have matched. Not checked: the FDA onshoring public meeting notice of 2025-08-08 and any 2025 executive order on drug supply, any Medicaid rebate rule on generics, and NIH or FDA new-use trial announcements. Searches run: Federal Register API queries (drug shortage, quality management maturity) and one web search on FDA quality rating programs. In review, Executive Order 14293 was read on the Federal Register host; it does not mention graded inspection ratings, facility codes on labels or drug shortages by name. Whether FDA has since published a list of noncompliant facilities under section 3(c) of the order was not checked. The August 2025 order on the strategic active pharmaceutical ingredients reserve was listed by the Federal Register API but not read.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Executive Order 14293 and the onshoring public meeting notice (federalregister.gov) and the CDER Quality Management Maturity presentation of 2026-04-22 (fda.gov) were read by the researcher and again in review on 2026-10-18; none adopts graded inspection ratings in place of pass/fail outcomes, facility codes on packaging or a searchable product-facility database. The program is voluntary per its Federal Register notices and predates 2025-01-20; the presentation shows anonymized scores, links quality problems to shortages and does not say ratings will be published. Federal Register API searches for drug shortage since 2025-01-20 returned 15 documents (including CMS pricing models and a Medicare proposed rule on made in America essential medicines of 2026-01-29) and none on generic rebate exemptions; the GLOBE and GUARD models and the 2026-01-29 CMS proposed rule were not read. Not checked: whether FDA has published the section 3 list of noncompliant facilities, the August 2025 order on the strategic API reserve, NIH or FDA new-use trial announcements. One web search was used; it surfaced a RAPS and trade-press account of an FDA rating-system proposal that was not opened.",
+  "updated_at": "2026-10-18"
 }

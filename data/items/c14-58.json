@@ -4,9 +4,9 @@
     "Any change to coverage requirements would likely face litigation and may need the notice-and-comment process the Mandate itself calls for"
   ],
   "chapter": "14",
-  "confidence": 62,
+  "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "Not_started after a systematic five-check review on 2026-10-18: Federal Register API (re-run with a term variant), Unified Agenda (Federal Register fallback only, so partial), congress.gov and govinfo (search run in review, H.R. 8083 status read), the HRSA guidelines page re-read, and a news search; capped near 60 to 65 because the agenda check was only the fallback.",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, only the cervical cancer screening comment request and update notice and CMS collections (rerun 2026-10-19: same two HRSA notices); (2) HHS Unified Agenda read directly on reginfo.gov on 2026-10-19, no HRSA entry on women's preventive services, with the three HRSA entries on a COVID-19 injury table, OPTN oversight and program policy methodology; informative because the Mandate asks for notice-and-comment rulemaking; (3) congress.gov and GovInfo, bills run toward wider access and none is enacted; (4) HRSA guidelines page re-read, condoms and ulipristal still listed; (5) one news search, nothing, with no news URL recorded. Set at 68 because the ACOG cooperative agreement status was not checked.",
   "durability": {
     "level": "low",
     "why": "Guideline changes are administrative and can be reversed."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 ran the Federal Register API, Unified Agenda fallback, a congress.gov and govinfo search, the HRSA guidelines page and news checks (Federal Register, govinfo and HRSA hosts read) and found no qualifying action, so the record stays not_started."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the HHS Unified Agenda list read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 62 to 68."
     }
   ],
   "id": "c14-58",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -61,13 +65,13 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Introduced bills found (Right to Contraception Act, H.R. 8083) run toward wider contraceptive access; none is enacted or operative, so they do not support diverged."
+      "Check 5 in the earlier review cites the HRSA guidelines page because no news URL was recorded; it is weak evidence for a news check."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 484 to 485 recommend notice-and-comment repromulgation, ending the ACOG-linked arrangement in favor of a FACA-compliant committee, covering fertility awareness methods and supplies, and removing male condoms and ulipristal; the proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "2026-10-18: Federal Register API variant on contraceptive guidelines and HRSA since 2025-01-20: 3 documents (two CMS information collections, 2026-01005 and 2025-07302, describing the existing exemptions and accommodation; the GUARD Model proposed rule 2025-23705); none revises the contraception guideline. The researcher's HRSA-filtered women's preventive services query returned only the cervical screening comment request and notice.",
@@ -93,6 +97,18 @@
         "note": "2026-10-18: No URL was recorded for the researcher's news search, so this field holds the agency page fetched in review. The search on HRSA women's preventive services guidelines and contraception in 2026 returned older coverage and advocacy pages, with no report of a revised contraception guideline.",
         "result": "supports",
         "url": "https://www.hrsa.gov/womens-guidelines"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 183 rules) was read in full on 2026-10-19; its three HRSA entries (0906-AB31 COVID-19 countermeasures injury table, 0906-AB34 OPTN oversight, 0906-AB37 program policy methodology) do not concern women's preventive services, the contraception guideline or an advisory committee; the CMS excepted benefits entry (0938-AV94) concerns fertility benefits.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: two HRSA notices, the 2025-10-01 cervical cancer screening comment request and the 2026-01-05 guideline update; no contraception change.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22women%27s+preventive+services%22&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -166,6 +182,6 @@
   "timeline": [],
   "title": "Repromulgate the women's preventive services mandate; revise the contraceptive guidelines",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. The Federal Register API check (women's preventive services filtered to HRSA, contraceptive coverage rules and proposed rules, and a variant on contraceptive guidelines and HRSA) found only the October 2025 comment request and January 2026 notice on cervical cancer screening and CMS information collections that describe the existing religious and moral exemptions; nothing revises the contraception guideline or repromulgates the mandate by rule. The Unified Agenda check was partial: only the Federal Register fallback was usable, with no rule or proposed rule found. The Congress check, run in review as one search limited to congress.gov and govinfo.gov, found bills that would protect or widen contraceptive access (the Right to Contraception Act in both chambers, and H.R. 8083 on access to oral contraceptives with a GAO study, whose status record was read); none revises the HRSA guidelines along the lines recommended and none is enacted. The agency check re-read the HRSA guidelines page (last reviewed December 2025): condoms and ulipristal acetate remain listed, fertility awareness instruction is listed without supplies, and the guidelines are still developed through the Women's Preventive Services Initiative under HRSA cooperative agreements; whether those agreements still run through ACOG was not checked. The news check found no 2025 or 2026 report of a revised contraception guideline. The Supreme Court opinion concerns the Preventive Services Task Force; KFF reports HRSA and ACIP claims returned to the district court, not independently checked. The 2025-08-13 vacatur of the exemption rules is tracked in c14-57.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No rulemaking, advisory committee change or revision of the HRSA contraception guideline was found. The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) has no HRSA entry on women's preventive services. The HRSA guidelines page (last reviewed December 2025) still lists condoms and ulipristal acetate and lists fertility awareness instruction without supplies; whether the Women's Preventive Services Initiative agreements still run through ACOG was not checked. Introduced bills run toward wider contraceptive access and none is enacted. The 2025-08-13 vacatur of the exemption rules is tracked in c14-57. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

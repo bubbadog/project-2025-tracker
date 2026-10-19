@@ -5,9 +5,9 @@
     "Office structure involves appropriations and statutory delegations"
   ],
   "chapter": "13",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Document text checked; status rests on absence of evidence from EPA pages, a Federal Register search and one news search, without Unified Agenda or congress.gov checks.",
+  "confidence": 63,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API (supports); Unified Agenda, EPA rule list read in full on reginfo.gov on 2026-10-19 (supports, weakly informative for a reorganization); govinfo BILLSTATUS for S. 2431 (supports, report texts unread); EPA organization chart and tribal pages (supports); one news search (supports, agency pages only). Set at 63, below the 65 to 68 band, because committee reports were not read and the news search found no independent coverage.",
   "durability": {
     "level": "low",
     "why": "EPA internal organization can be changed by later administrators without legislation."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review: reran the Federal Register API check with an exact-phrase EPA variant and an EPA proposed-rule fallback, opened the S.2431 bill status on govinfo.gov, and re-read the EPA organization chart and tribal listening session page on epa.gov. No stage change (not_started 0); confidence 45 to 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the EPA rule list on reginfo.gov in full and found no organizational or tribal office entry; no stage change (not_started, 0); confidence 60 to 63."
     }
   ],
   "id": "c13-20",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -54,43 +62,50 @@
   "research_agent": "N13",
   "review": {
     "flags": [
-      "absence-based status: only three of the five systematic checks were done, so confidence is capped below 50"
+      "no stage change: not_started 0",
+      "confidence 60 to 63"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 440 checked; the stand-alone office, western location, one-stop grants and Senate-confirmed Assistant Administrator recommendations are accurately paraphrased. The related reorganization bullet on page 421 is covered by c13-04, a partial overlap, not a duplicate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y13a",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 440 recommends making EPA's tribal functions a stand-alone American Indian Office under its own Senate-confirmed Assistant Administrator, ideally in the West, running all tribal grants and staff, with international functions returned to media offices; the chapter text was not available to this review, and an earlier review on 2026-10-13 recorded the paraphrase as verified.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Testimony of 2025-06-25 before Senate EPW; page published 2026-04-21; no restructuring mentioned.",
+        "n": 1,
+        "note": "2026-10-18: reviewer variant, exact phrase 'American Indian Environmental Office' limited to EPA since 2025-01-20: 0 documents. The researcher's unquoted query (1,304 boilerplate matches) and 'tribal affairs' limited to EPA (46 documents) found no creation of a stand-alone office. No qualifying action.",
         "result": "supports",
-        "url": "https://www.epa.gov/node/299643"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22American%20Indian%20Environmental%20Office%22&conditions[agencies][]=environmental-protection-agency&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "EPA release dated 2025-10-07 announcing confirmation; replaces the farm news report.",
-        "result": "supports",
-        "url": "https://www.epa.gov/node/297749"
-      },
-      {
-        "note": "Congressional Record Index shows the committee report in July 2025; confirmation entry not shown; not cited.",
+        "n": 2,
+        "note": "2026-10-18: reginfo.gov eAgendaMain showed only a landing page (researcher). Fallback run by the reviewer: EPA proposed rules with the exact phrase 'Tribal Affairs' (no date limit, to keep the URL short): 2 documents, one from 2010 and the NEPA procedures update of 2026-06-25, which would rename the Office of International Affairs and its Assistant Administrator in the NEPA rules as the Office of International and Tribal Affairs, a naming change that does not create a separate tribal office. Partial because only the fallback was available.",
         "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/CRI-2025/html/CRI-2025-TURNER-USHA-MARIA.htm"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Tribal%20Affairs%22&conditions[agencies][]=environmental-protection-agency&conditions[type][]=PRORULE&per_page=20&order=newest"
       },
       {
-        "note": "Updated 2026-09-09; lists the Office of International and Tribal Affairs; no American Indian office at headquarters level.",
+        "n": 3,
+        "note": "2026-10-18: researcher's domain-limited search returned committee reports (H. Rept. 119-687, 119-215), S.2431, H.R.7396, S.870 and other items, none identified as creating an EPA American Indian Office. Reviewer opened the S.2431 BILLSTATUS: the FY2026 Senate Interior and Environment appropriations bill, introduced and reported 2025-07-24 with S. Rept. 119-46 and placed on the calendar; its related bill H.R.6938 became Public Law 119-74 on 2026-01-23; no EPA tribal office named. Committee report texts were not read (congress.gov refuses fetches).",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2431.xml"
+      },
+      {
+        "n": 4,
+        "note": "2026-10-18: reviewer re-read the EPA organization chart, last updated 2026-09-09: ten headquarters offices including the Office of International and Tribal Affairs and no stand-alone American Indian or tribal office.",
         "result": "supports",
         "url": "https://www.epa.gov/aboutepa/epa-organization-chart"
       },
       {
-        "note": "The American Indian Environmental Office is running a tribal partnership network review in 2026; no reorganization mentioned.",
+        "n": 5,
+        "note": "2026-10-18: researcher's query on an EPA stand-alone American Indian or tribal office reorganization in 2026 returned EPA tribal pages, older AIEO and OITA documents and 2009 and 2010 items, with no major-news coverage. Reviewer opened the most relevant result: the American Indian Environmental Office's Tribal Partnership Network review page announcing a second session on 2026-09-01, which reviews network operations and does not propose a separate office.",
         "result": "supports",
         "url": "https://www.epa.gov/tribal/july-29-2026-tribal-virtual-listening-session-epa-tribal-partnership-network-review"
       },
       {
-        "note": "Query: American Indian Environmental Office, from 2025-01-20. Zero results on 2026-10-13.",
+        "date": "2026-10-19",
+        "note": "Reviewer read the EPA list (page headed 'Agency Rule List - 2026', 116 rules, rule links carry publication id 202510) in full. No organizational entry and no title on a tribal office. The two Indian country entries, 2008-AA04 (Uinta Basin ozone-precursor credits, Proposed Rule Stage) and 2012-AA02 (Clean Air Act plans for reservations in Idaho, Oregon and Washington, Final Rule Stage), are air implementation plans. Reorganizations are not made by rule, so the check is weakly informative.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json"
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2000"
       }
     ]
   },
@@ -173,6 +188,6 @@
   ],
   "title": "Create a stand-alone American Indian Office led by a confirmed Assistant Administrator",
   "tracked": true,
-  "uncertainties": "Absence of action rests on a Federal Register search for the American Indian Environmental Office (no results since 2025-01-20), EPA's organization chart and tribal pages, and one news search; the Unified Agenda and congress.gov were not searched. The listening session page gives conflicting session dates in its metadata and body. The farm news report of confirmation was replaced by EPA's own release.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "No stand-alone American Indian Office was found; EPA's organization chart (updated 2026-09-09) lists only the combined Office of International and Tribal Affairs. The reginfo.gov Unified Agenda rule list for EPA (edition headed Agency Rule List - 2026, 116 rules) has no organizational entry; its two Indian country entries (RINs 2008-AA04 and 2012-AA02) are Clean Air Act implementation plans. Reorganizations are not made by rule, so this check is weakly informative. Appropriations committee report texts and the full text of the 2026-06-25 NEPA procedures proposal were not read, and the news search found no independent coverage. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

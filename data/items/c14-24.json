@@ -5,9 +5,9 @@
     "Likely litigation over any repeal"
   ],
   "chapter": "14",
-  "confidence": 48,
-  "confidence_label": "low",
-  "confidence_reason": "Document text checked and the OLC opinion read; the rulemaking status rests on news reports and on absence from Federal Register searches.",
+  "confidence": 62,
+  "confidence_label": "medium",
+  "confidence_reason": "The OLC opinion, the only government action, was read on justice.gov, and Federal Register queries and the HHS agenda show no ORR rule; the reported OMB submission rests on one outlet and reginfo.gov could not be searched, so the stage rests partly on whether something further happened and confidence is medium.",
   "durability": {
     "level": "medium",
     "why": "A rulemaking would be more durable than guidance, but none is published."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read the 2025-07-11 OLC opinion on justice.gov, ran a Federal Register API query (0 results) and one web search. No stage change (proposed 20); confidence 48 to 62."
     }
   ],
   "id": "c14-24",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -54,39 +58,25 @@
   "research_agent": "N14",
   "review": {
     "flags": [
-      "Rights-group source dropped; the OLC opinion itself discusses ORR.",
-      "EMTALA record c14-12 removed from related_ids as not overlapping."
+      "No stage change: proposed 20, match direct. proposed 15 is defensible because no ORR action is shown and the OMB submission rests on one outlet; in_progress 25 is defensible only if the OLC opinion is read as operative on ORR transport funding.",
+      "The researcher's new source (2026-06-26 proposed rule) was not added because it was not opened in review; it is described in uncertainties as the researcher's read.",
+      "Confidence 48 low to 62 medium."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 478 confirmed; paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y14a",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields: ORR should withdraw its policy allowing elective abortions for children in its care, instruct care providers not to transport girls for elective abortions, and have HHS counsel and DOJ defend that policy. Chapter text not available this run; pages not re-checked.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Opinion of 2025-07-11 discusses ORR and bars HHS transport funding outside exceptions.",
-        "result": "supports",
+        "note": "Fetched 2026-10-18 (stage-deciding): OLC opinion dated 2025-07-11 withdraws the 2022 opinion and concludes Hyde bars federal funds for abortion-related transportation; under its reasoning ORR may not pay for a minor's transportation outside the exceptions. A legal basis change, not an ORR policy or rule; supports proposed at the top of the band.",
+        "result": "partial",
         "url": "https://www.justice.gov/olc/media/1408241/dl"
       },
       {
-        "note": "Reports ORR changes submitted for OMB review; unnamed official; no RIN.",
+        "note": "Fetched 2026-10-18 (reviewer's own term variant): 0 documents; supports the absence of a published ORR abortion rule or notice.",
         "result": "supports",
-        "url": "https://www.dailysignal.com/2026/01/23/exclusive-hhs-advances-rule-ending-taxpayer-funded-abortion-travel-for-alien-children/"
-      },
-      {
-        "note": "Rule announced in late January 2026; text not released as of 2026-04-04.",
-        "result": "supports",
-        "url": "https://msmagazine.com/2026/04/04/trump-abortion-unaccompanied-minors-immigration-pregnant-girls-women/"
-      },
-      {
-        "note": "13 documents, none on abortion or Hyde (absence check, 2026-10-13).",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Unaccompanied+Children+Program%22&conditions[publication_date][gte]=2025-01-20&per_page=20"
-      },
-      {
-        "note": "HHS agenda lists no ORR abortion or Hyde entry (absence check).",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/full_text/html/2026/08/14/2026-16597.html"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=abortion+%22unaccompanied%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -183,6 +173,6 @@
   ],
   "title": "Stop ORR from facilitating abortions for unaccompanied children in its custody",
   "tracked": true,
-  "uncertainties": "No ORR policy withdrawal, instruction to care providers or proposed rule was found; a Federal Register search of documents mentioning the Unaccompanied Children Program since 2025-01-20 and of Hyde Amendment documents since July 2025 returned no abortion-related ORR rule, and the HHS regulatory agenda published 2026-08-14 lists no such entry. The OMB submission is reported by a single outlet citing an unnamed official. Reports that ORR routed pregnant children to a Texas shelter from July 2025 were seen only in an aggregator and were not used. The proposal to move ORR to DHS is tracked in another record.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The OLC opinion of 2025-07-11 was read in full by the researcher and re-read in review on 2026-10-18 on justice.gov; it withdraws the 2022 opinion, notes the 2022 opinion had served as the basis for ORR transporting minors for abortions over the prior three years and concludes the Hyde Amendment bars ORR from paying for such transportation outside its exceptions, but it is a legal opinion, not an ORR policy withdrawal or provider instruction. No ORR policy withdrawal, instruction to care providers or abortion-related proposed rule was found: Federal Register API searches of Foundational Rule documents since 2025-01-20 (researcher) listed only the 2025-03-25 interim final rule and the 2026-06-26 proposed sponsor-assessment rule, which the researcher read and which has no abortion or Hyde text; a term search on abortion and the Unaccompanied Children Program since 2025-10-01 (researcher) and on abortion and unaccompanied since 2025-01-20 (review) each returned 0. The OMB submission of abortion-funding changes is reported by one outlet citing an unnamed ORR official, with no rule name, RIN or date given, and reginfo.gov listings could not be searched. The HHS regulatory agenda of 2026-08-14 lists no such entry per the earlier check. Web searches (researcher and review) returned only the already-cited outlet reports. Reports of ORR routing pregnant children to a Texas shelter were not used.",
+  "updated_at": "2026-10-18"
 }

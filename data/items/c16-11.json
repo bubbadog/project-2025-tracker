@@ -5,9 +5,9 @@
     "Internal organization changes may not be publicized"
   ],
   "chapter": "16",
-  "confidence": 38,
-  "confidence_label": "low",
-  "confidence_reason": "Text checked; the status rests on absence of evidence from a Federal Register search and one news search, without the full set of systematic checks.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19 (with the 2026-10-15 Secretary's Order review kept as history): Federal Register API (supports), Interior Unified Agenda (supports), congress.gov and govinfo.gov search (supports), blm.gov press releases (supports) and a news search (supports, only 2021 coverage). The agenda check is weakly informative because a chain-of-command change is internal and would not be a rule, so confidence is 66.",
   "durability": {
     "level": "low",
     "why": "Internal reporting lines can be reversed by a later director or Secretary, as happened in 2021."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Rotation check (update run): Systematic absence check 2026-10-15: Federal Register API, doi.gov Secretary's Orders 3434 to 3453 and two news searches show no BLM law enforcement chain-of-command action; Order 3440 concerns the Park Police only. Orders 3417 to 3433 and congress.gov not read. Stage unchanged at not_started 0; no review needed because only uncertainties changed."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the Interior Unified Agenda on reginfo.gov, govinfo.gov, blm.gov and a news search), not_started kept and confidence set to 66."
     }
   ],
   "id": "c16-11",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -55,13 +59,13 @@
   "research_agent": "N16",
   "review": {
     "flags": [
-      "not_started rests on absence; capped at low confidence"
+      "Existing uncertainties began with a lowercase 'checked systematically' sentence and listed raw check details; replaced."
     ],
     "mandate_check": "corrected",
     "mandate_note": "The law enforcement passage is on pages 527 and 528; page 526 only notes the move of the top law enforcement official to Washington within the headquarters argument, so it was removed. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y16a",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Archived BLM release dated 2021-01-08 on the centralized chain of command (background).",
@@ -82,6 +86,36 @@
         "note": "Page not found.",
         "result": "unreachable",
         "url": "https://www.grassley.senate.gov/news/news-releases/grassley-calls-on-interior-department-to-reorganize-law-enforcement-function"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Queries since 2025-01-20: 'law enforcement' ranger, BLM: 0 documents; 'special agents', Interior: 0 documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"law%20enforcement\"%20ranger&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=land-management-bureau&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Agency named: Department of the Interior; heading Agency Rule List - 2026; about 201 rules (count by the fetch tool), 13 from BLM; none touches law enforcement, rangers, special agents or reorganization. Internal chain-of-command change would not be a rule. Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named. The 13 BLM titles were read; none concerns law enforcement.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1000"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Results were H.R.1 (P.L. 119-21), FY2026 appropriations, CRS In Focus IF11709 on Interior law enforcement, a BLM law enforcement GPO document, and H.R.3226 (Law Enforcement Officers Equity Act); none identified as addressing the BLM reporting structure. Reviewer opened the H.R. 3226 bill status (introduced 2025-05-07, referred to Oversight): it concerns retirement coverage for law enforcement positions, not BLM reporting lines.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr3226/xml/BILLSTATUS-119hr3226.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "BLM press release index page 1 of 522 (2026-09-17 to 2026-10-16) read; no release on law enforcement chain of command, rangers or reorganization. Earlier pages not read.",
+        "result": "supports",
+        "url": "https://www.blm.gov/press-release"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "News web search on BLM law enforcement reporting structure since 2025 returned the 2021 BLM announcement and 2021 coverage (E&E News, Regulatory Review) only; no 2025-2026 reporting.",
+        "result": "supports",
+        "url": "https://www.blm.gov/press-release/bureau-land-management-modernizes-law-enforcement-reporting"
       }
     ]
   },
@@ -135,6 +169,6 @@
   "timeline": [],
   "title": "Place BLM law enforcement officers in an exclusive law enforcement chain of command",
   "tracked": true,
-  "uncertainties": "checked systematically on 2026-10-15: (1) federalregister.gov API, law enforcement in BLM documents since 2025-01-20: 1 document (a 2026-02-19 Oregon plan revision notice, unrelated); Interior and Fish and Wildlife Service documents with law enforcement and Secretary's Order terms: 18, none on bureau law enforcement organization. (2) reginfo.gov Unified Agenda: not searched, since a chain-of-command change would be internal and not a rule. (3) congress.gov: blocked by the host's robots rules, so bills were not searched; one web search found only older Senate and CRS material on the subject. (4) doi.gov Secretary's Order list read for orders 3434 to 3453 (2025-06-25 to 2026-08-27): none mentions BLM law enforcement; Order 3440 (2025-08-25) realigns supervision of the Park Police chief, which concerns the National Park Service, not BLM; orders 3417 to 3433 were not read (a page not retrieved). blm.gov hosts the 2021 straight-line announcement as an archived page with no update. (5) news: two web searches found only 2021 and older coverage. Internal reporting changes may not be publicized.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The Interior rule list on reginfo.gov (labeled Agency Rule List - 2026) includes 13 BLM entries, none on law enforcement reporting; a chain-of-command change would be internal and would not appear as a rule. Interior Secretary's Orders 3434 to 3453 were read on 2026-10-15 and none concerns BLM law enforcement (Order 3440 concerns the Park Police); orders 3417 to 3433 were not read. Only the first page of the blm.gov press release index was read, and internal reporting changes may not be publicized. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

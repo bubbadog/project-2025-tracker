@@ -5,9 +5,9 @@
     "No proposal was found"
   ],
   "chapter": "14",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Absence of evidence from two Federal Register API queries and two web searches; Mandate text on pp. 452, 454 and 462 checked; not_started is capped.",
+  "confidence": 65,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, no document on the CDC Foundation and one unrelated FNIH notice (rerun 2026-10-19: zero for CDC Foundation); (2) HHS Unified Agenda read directly on reginfo.gov on 2026-10-19, no entry on either foundation or industry gifts, weakly informative because both foundations are statutory and a ban could be an administrative policy; (3) congress.gov and GovInfo, S. 999 does not address the foundations; (4) CDC newsroom script-driven (partial); (5) one news search, nothing. Set at 65: the 65 to 68 band for a weakly informative agenda check, at its floor because the agency check is partial.",
   "durability": {
     "level": "high",
     "why": "If enacted in statute, a ban would be durable; no such measure exists, so the rating reflects the form the recommendation asks for."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check and independent review: federalregister.gov API (two reviewer variants) and govinfo.gov BILLSTATUS for S.999 were read; no stage change (not_started 0); confidence 40 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the HHS Unified Agenda list read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 62 to 65."
     }
   ],
   "id": "c14-26",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -56,26 +64,64 @@
   "research_agent": "R14A",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Stage not_started kept; no qualifying action found.",
-      "Added a second Federal Register query on the Foundation for the NIH as a source.",
-      "Duplicate check: not covered by c14-01 (CDC split) or any other chapter 14 record."
-    ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 452, 454 and 462 ask that CDC, NIH and FDA regulators be free of private biopharmaceutical funding, that CDC pharma money through the CDC Foundation be banned, and that the CDC and NIH Foundations be decommissioned.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields (pp. 452, 454, 462), the Mandate asks that CDC be barred from taking pharmaceutical industry money through the CDC Foundation and that the CDC and NIH Foundations be decommissioned, as part of a goal of keeping health regulators free of drug-industry funding. The chapter text was not available to this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: zero documents on the CDC Foundation since 2025-01-20.",
+        "note": "2026-10-18 (reviewer variant of check 1): terms 'CDC Foundation' or 'NIH Foundation' with donations, all agencies, returned 0 documents.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22CDC+Foundation%22&conditions[publication_date][gte]=2025-01-20&order=newest"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22CDC+Foundation%22+OR+%22NIH+Foundation%22+donations&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Checked 2026-10-15: one result, an FDA biomarker request for information of 2026-05-13 naming the foundation only as a past data partner.",
+        "note": "2026-10-18 (reviewer variant of check 1): terms foundation, pharmaceutical, donations limited to CDC returned 0 documents.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Foundation+for+the+National+Institutes+of+Health%22&conditions[publication_date][gte]=2025-01-20&order=newest"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=foundation+pharmaceutical+donations&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=centers-for-disease-control-and-prevention"
+      },
+      {
+        "note": "2026-10-18 (reviewer fetch for check 3): BILLSTATUS confirms S.999, Public Health Improvement Act, introduced 2025-03-12 and referred to HELP the same day with no later action; its summary concerns CDC and NIH and does not mention the CDC Foundation or the Foundation for the NIH.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s999.xml"
+      },
+      {
+        "note": "Check 1 (research pass, 2026-10-18): term 'CDC Foundation' returned 0 documents; term 'Foundation for the National Institutes of Health' returned 1 unrelated FDA notice (Biomarker Incubator request for information, 2026-05-13).",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22CDC+Foundation%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "Check 2 (research pass, 2026-10-18): Fetched the Unified Agenda entry page; it is an agency selector and links page with no items listed (script-driven). Fallback used, so the check is partial: no HHS or CDC proposed rule on foundations appeared in the Federal Register queries above.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Check 3 (research pass, 2026-10-18): search (congress.gov, govinfo.gov): '119th Congress bill CDC Foundation pharmaceutical contributions prohibit; Foundation for the National Institutes of Health'. Found S.999 Public Health Improvement Act (introduced 2025-03-12, referred to HELP, no later action) and H.R.7173, H.R.2855, H.R.10522, H.Res.601. BILLSTATUS for S.999 shows CDC priorities, 12-year director terms and office transfers; nothing on the CDC Foundation or FNIH. The other bills were not opened and are not shown by their titles to address the subject. Reviewer: BILLSTATUS refetched and confirmed; the search itself was not rerun (search cap).",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s999.xml"
+      },
+      {
+        "note": "Check 4 (research pass, 2026-10-18): CDC newsroom page fetched but returned no release listing (script-driven), so it could not be reviewed.",
+        "result": "partial",
+        "url": "https://www.cdc.gov/media/releases/index.html"
+      },
+      {
+        "note": "Check 5 (research pass, 2026-10-18): query: 'CDC Foundation pharmaceutical donations ban Kennedy CDC Foundation FNIH 2026'. Results were older transparency coverage and advocacy pieces; no report of a ban on pharmaceutical contributions or decommissioning of either foundation. Reviewer: Not rerun (search cap).",
+        "result": "supports",
+        "url": "https://www.ajmc.com/newsroom/congress-addresses-transparency-issues-raised-by-the-fnih-and-cdc-foundation-"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 183 rules) was read in full on 2026-10-19; no entry concerns the CDC Foundation, the Foundation for the NIH or gifts from the pharmaceutical industry. Both foundations are chartered by statute and a gift ban could be set by policy, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: zero documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22CDC+Foundation%22&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -128,6 +174,6 @@
   "timeline": [],
   "title": "Bar CDC pharma money via the CDC Foundation; decommission CDC and NIH Foundations",
   "tracked": true,
-  "uncertainties": "Searches run: a Federal Register API query for the CDC Foundation from 2025-01-20 (no documents) and one web search on CDC Foundation pharmaceutical donations and HHS action (results were unrelated or opinion pages and none was opened as support). The cdcfoundation.org site could not be fetched, so the foundations' current donor policies were not checked. The status rests on absence of evidence from a limited search, so confidence is capped. The related structural record is c14-01. In review, a second Federal Register API query (Foundation for the NIH) returned only an unrelated FDA biomarker notice, and one further web search on HHS action on foundation donations returned no relevant government action. Both foundations are chartered by statute (the CDC Foundation and the Foundation for the NIH), so the decommissioning element would likely need legislation; the statutory basis was not read.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No action since 2025-01-20 bars CDC from accepting pharmaceutical money through the CDC Foundation or decommissions the CDC Foundation or the Foundation for the NIH. The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) has no entry on either foundation. Both foundations are chartered by statute, so decommissioning would likely need legislation; the statutory basis was not read. The CDC newsroom listing is script-driven and could not be reviewed, and the foundations' current donor policies were not checked, so an internal gift policy change could have been missed. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

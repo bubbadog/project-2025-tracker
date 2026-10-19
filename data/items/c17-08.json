@@ -5,9 +5,9 @@
     "Reported staffing losses in the Public Integrity Section and an unfilled Election Crimes Branch directorship (NOTUS, 2026-06-08) may limit Criminal Division capacity."
   ],
   "chapter": "17",
-  "confidence": 46,
-  "confidence_label": "low",
-  "confidence_reason": "The regulation, read for this review, shows no reassignment of election-related section 241 cases, and the July 2026 Civil Rights Division letters warn of liability without moving prosecution authority. The finding rests on an absence of evidence: unpublished Attorney General orders were not searched, and the reported suspension of Public Integrity Section consultation rests on one outlet.",
+  "confidence": 62,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (supports), Justice Unified Agenda (supports; informative because a reassignment could be made by amending 28 CFR part 0), congress.gov and govinfo.gov search (supports), justice.gov press search (unreachable) and a news search (partial: the NOTUS article of 2026-07-15, read, reports no reassignment). The eCFR text of 28 CFR 0.50 was read earlier. With the agency check unreachable and unpublished Attorney General orders not searchable, confidence is 62.",
   "durability": {
     "level": "low",
     "why": "Allocation of work between divisions is set by regulation and Attorney General order and can be changed by a later Attorney General."
@@ -23,7 +23,7 @@
     },
     {
       "date": "2026-10-08",
-      "note": "Re-researched to close the gaps behind a low confidence rating; status confirmed. Reviewer confidence 45 to 46. Closed the Justice Manual gap using justice.gov/jm/jm-8-3000-enforcement-civil-rights-criminal-statutes (section 241 still under Civil Rights Division oversight, last modified 2022-12-19) and the regulation gap using the eCFR version history; could not close unpublished Attorney General orders or the Title "
+      "note": "Re-researched to close the gaps behind a low confidence rating; status confirmed. Reviewer confidence 45 to 46. Closed the Justice Manual gap using justice.gov/jm/jm-8-3000-enforcement-civil-rights-criminal-statutes (section 241 still under Civil Rights Division oversight, last modified 2022-12-19) and the regulation gap using the eCFR version history; could not close unpublished Attorney General orders or the Title (The rest of this note was cut short in an earlier edit.)"
     },
     {
       "date": "2026-10-08",
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the Justice Unified Agenda on reginfo.gov, govinfo.gov, justice.gov unreachable, and a news search), not_started kept and confidence raised to 62."
     }
   ],
   "id": "c17-08",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-19",
   "layer": 1,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -56,17 +60,17 @@
   "requires_congress": "no",
   "research_agent": "A12",
   "review": {
+    "alternative": "diverged 0, if the July 2026 Civil Rights Division letters are read as the division keeping election 241 work.",
     "flags": [
-      "absence-of-evidence finding (cap 50)",
-      "California Globe article dated 2026-07-08 (record lists 2026-07-07, the letter date)",
-      "regulation already gives the Criminal Division non-race election 241 matters, so the Mandate's premise differs from 28 CFR 0.50",
-      "not_started vs diverged is a judgment; not_started kept"
+      "History note of 2026-10-08 ('Re-researched to close the gaps...') is cut off mid-sentence at 'or the Title'; suggested completion: '...could not close unpublished Attorney General orders or the Justice Manual Title 9 election provisions.'",
+      "History note of 2026-10-08 ('Open reviewer flag resolved...') ends with bare domain names in parentheses and reads as truncated.",
+      "Previous uncertainties ran well over 120 words; replaced with a shorter text."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 562 says the Attorney General should reassign responsibility for prosecuting 18 U.S.C. 241 from the Civil Rights Division to the Criminal Division so that voter registration fraud and unlawful ballot correction are investigated; pages 563 and 564 argue the Criminal Division no longer reviews 241 cases and cite Pennsylvania curing guidance. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y1",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Up to date as of 2026-08-07; section history shows last change 2019-01-25. 28 CFR 0.50(a)(2) assigns 18 U.S.C. 241, 242 and 594 voting and election matters not involving race or color discrimination or intimidation to the Criminal Division; no reassignment.",
@@ -77,6 +81,36 @@
         "note": "Article dated 2026-07-08 (letter dated 2026-07-07, signed by the Civil Rights Division's Assistant Attorney General) to election officials in all states and DC: knowingly keeping noncitizens on voter lists could bring criminal liability; the letter's closing paragraph says vote dilution could violate 18 U.S.C. 241; the article says criminal prosecution goes through the Criminal Division or U.S. attorneys; no reassignment mentioned.",
         "result": "supports",
         "url": "https://californiaglobe.com/fr/us-doj-civil-rights-letter-to-elections-officials-in-all-50-states/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Queries since 2025-01-20, Justice: 'section 241': 3 documents (immigration security bars and civil penalties rules), unrelated; '\"Civil Rights Division\" election': 1 document (OMB-led proposed rule Regulation for Federal Financial Assistance, 2026-05-29), unrelated.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"section%20241\"&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=justice-department&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Agency named: Department of Justice; heading Agency Rule List - 2026; 76 rules; only Civil Rights Division entry is RIN 1190-AA82 (web accessibility); no rule on election work, 18 U.S.C. 241 or 28 CFR part 0 organization. Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1100"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Results included H.R.4894 (Deceptive Practices and Voter Intimidation Prevention Act of 2025), the 2017 DOJ election offenses handbook, CRS items and appropriations H.R.8845; none identified as reassigning section 241 election prosecution between divisions. Bill texts not opened. Reviewer opened the H.R. 4894 bill status (introduced 2025-08-05, referred to Judiciary): it sets criminal penalties for deceptive election practices and names no DOJ division.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr4894/xml/BILLSTATUS-119hr4894.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Fetch error on the justice.gov press release search; not retried.",
+        "result": "unreachable",
+        "url": "https://www.justice.gov/opa/pr/search?search_api_fulltext=18+U.S.C.+241+election"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "News web search (reassignment of 241 election work, 2026) surfaced Project 2025 commentary and a NOTUS piece on the Civil Rights Division's changes; no report of a reassignment order. Search result snippet only; page not opened. Reviewer opened the article (NOTUS, republished by The Washington Sun, dated 2026-07-15): it describes the Civil Rights Division warning election officials and seeking voter lists, and does not mention 18 U.S.C. 241, the Criminal Division or any reassignment.",
+        "result": "partial",
+        "url": "https://www.washingtonsun.com/agencies/how-trump-transformed-the-doj-civil-rights-division?redirected=notus_org"
       }
     ]
   },
@@ -240,6 +274,6 @@
   ],
   "title": "Move election-related 18 U.S.C. 241 prosecutions from Civil Rights to Criminal Division",
   "tracked": true,
-  "uncertainties": "Stage decision (not_started kept; diverged considered). Basis: the recommendation concerns where election-related 241 prosecutions are assigned. Searches in this pass (241 election indictments in 2025 and 2026; Civil Rights Division and Public Integrity Section election roles; the July 2026 Civil Rights Division letters; the Voting Section refocus) found no order, regulation or Justice Manual change in either direction and no 241 election indictment by either division. The Civil Rights Division's election activity found is civil (the Voting Section, which AP says does not investigate crimes) or takes the form of warning letters that a California Globe report says cite 241; letters are not charges and do not change who prosecutes. Election-crime enforcement reported elsewhere runs through the 93 U.S. attorney's offices, which the Justice Manual already shares with the Civil Rights Division for 241. diverged would apply if a DOJ order or an indictment showed the Civil Rights Division taking over or keeping election 241 prosecutions against the Mandate's recommendation; none was found, so a reader could reasonably choose diverged on the strength of the July 2026 letters and the reduced Public Integrity Section. Evidence limits: the 241 citation in the July 2026 letter rests on one outlet (California Globe, which names the statute) and a student newspaper (The Dartmouth, read but not cited) that names a 'Conspiracy Against Rights' provision; Votebeat's account does not name it (nor did a Reuters-credited report on the Fulton Sun site, read but not cited), and the letter itself was not retrieved. The NOTUS facts (director vacancy, suspended consultation requirement, USAO-centered prosecutions) rest on a single outlet, and the Public Integrity Section staffing and 'chief election fraud prosecutor' reports appear only in a Senate Democrats' letter of 2026-06-08, which was not relied on. Not checked: Justice Manual Title 9 election provisions, unpublished Attorney General orders or delegations, and the 'Federal Prosecution of Election Offenses' handbook (reported removed from the DOJ website; not verified). The Lawfare account of the Eastern District of Missouri U.S. attorney's authority is secondhand. The match field is parallel because EO 14248 and the U.S. attorney directions are related election-enforcement actions. The California Globe article date is taken from the letter date (the page says the letters went out on a Tuesday).",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The Justice rule list on reginfo.gov (labeled Agency Rule List - 2026, 76 rules) lists no rulemaking on election prosecution assignments or 28 CFR part 0; the only Civil Rights Division entry (RIN 1190-AA82) concerns web accessibility. 28 CFR 0.50 already gives the Criminal Division non-race election 241 matters, while the Justice Manual lists 241 under the Civil Rights Division. The July 2026 Civil Rights Division letters warn of liability without moving prosecution authority; the 241 citation in them rests on one outlet. Unpublished Attorney General orders, Justice Manual Title 9 and the justice.gov press search were not checked. diverged remains a reasonable alternative reading. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

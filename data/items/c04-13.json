@@ -2,9 +2,9 @@
   "agency": "DOD (Personnel and Readiness) and White House",
   "blockers": [],
   "chapter": "04",
-  "confidence": 42,
-  "confidence_label": "low",
-  "confidence_reason": "Chapter text checked and the DOD and news articles on related actions fetched; the not_started stage rests on absence of evidence from limited searches, capped at 50.",
+  "confidence": 57,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented: (1) Federal Register API with a Defense-limited variant, supports (nothing found); (2) Unified Agenda Department of War list, 111 rules read on 2026-10-19, supports; (3) govinfo BILLSTATUS for H.R. 6381, supports; (4) defense.gov and war.gov, unreachable; (5) one news search, supports (older coverage only). Confidence 57, below the ceiling, because the agency check is unreachable and the White House staff list was not checked.",
   "durability": {
     "level": "low",
     "why": "Recruiting policy and waiver rules are set by memo and can be changed by the next Secretary."
@@ -30,10 +30,18 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to c04-25 (layer 3 enumeration, chapters 00, 04, 05, 28 and 30)."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review: reran the Federal Register API check with a new Defense Department term and a proposed-rule fallback, opened the H.R.6381 bill status on govinfo.gov and the top news result on taskandpurpose.com; defense.gov returned an error. No stage change (not_started 0); confidence 42 to 55."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the Department of War rule list in the reginfo.gov Unified Agenda (no entry on MHS Genesis or entrance processing), kept not_started 0 and raised confidence from 55 to 57."
     }
   ],
   "id": "c04-13",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -55,30 +63,48 @@
   "requires_congress": "no",
   "research_agent": "N04a",
   "review": {
-    "flags": [
-      "stage changed from in_progress 25 to not_started 0: parallel actions do not carry out either named step",
-      "co-chair roles specified"
-    ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 102 items 1 and 2 call for a Special Assistant to the President on recruiting and retention and for suspending MHS Genesis use at MEPS, which the text says causes delays and unwarranted rejections. The proposal matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
-    "reviewer": "Y6",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 102 items 1 and 2 recommend a Special Assistant to the President on recruiting and retention and suspension of MHS Genesis use at Military Entrance Processing Stations; the chapter text was not available to this review, and an earlier review on 2026-10-11 recorded the paraphrase as verified.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Memo of 2025-04-24 orders review of disqualifying conditions and waivers; article undated; no MHS Genesis or MEPS mention.",
+        "n": 1,
+        "note": "2026-10-18: reviewer variant, exact phrase 'entrance processing' limited to the Defense Department since 2025-01-20: 1 document, a Privacy Act system of records notice of 2026-03-03 that lists MEPCOM applicant fingerprints; nothing on MHS Genesis or MEPS medical screening. The researcher's queries on 'MHS Genesis' (3 DOD notices) and 'military entrance processing' (61 loose matches) also found no qualifying action.",
         "result": "supports",
-        "url": "https://www.aflcmc.af.mil/NEWS/Article/4167888/defense-secretary-orders-review-of-medical-standards-for-military-enlistment/"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22entrance%20processing%22&conditions[agencies][]=defense-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Dated 2025-07-02; task force set up 2025-06-13, 12 months, co-chairs by role, waiver backlog and recruiting technology tasks, Army 61,000 goal; no MHS Genesis mention.",
-        "result": "supports",
-        "url": "https://www.army.mil/article/286799/recruitment_task_force_seeks_to_capitalize_on_2025_enlistment_surge"
+        "n": 2,
+        "note": "2026-10-18: reginfo.gov eAgendaMain showed only a landing page (researcher). Fallback run by the reviewer: Defense Department proposed rules with the term 'accession' since 2025-01-20 returned 0 documents. Recorded as partial because only the fallback was available.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=defense-department&conditions[type][]=PRORULE&conditions[term]=accession&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Guidance signed the week before publication; congestive heart failure, schizophrenia and paraphilic disorders ineligible for waiver; no date in text.",
+        "n": 3,
+        "note": "2026-10-18: researcher's domain-limited search (congress.gov, govinfo.gov) found H.R.6381 and unrelated bills. Reviewer opened the BILLSTATUS: GAP for Military Service Act, introduced 2025-12-03, referred to House Armed Services the same day, directs a GAO feasibility study of a one-year enlistment program; no MEPS, MHS Genesis or presidential recruiting adviser provision.",
         "result": "supports",
-        "url": "https://news.clearancejobs.com/2025/07/28/pentagon-tightens-medical-waivers-for-military-service/"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6381.xml"
+      },
+      {
+        "n": 4,
+        "note": "2026-10-18: the defense.gov releases page returned a fetch error to the reviewer as it did to the researcher; war.gov is a blocked host. No agency statement verified either way.",
+        "result": "unreachable",
+        "url": "https://www.defense.gov/News/Releases/"
+      },
+      {
+        "n": 5,
+        "note": "2026-10-18: researcher's query on MHS Genesis, MEPS, suspension and recruiting delays. Reviewer opened the top result: Task and Purpose of 2022-09-15 on recruiter complaints that MHS Genesis lengthened MEPS processing, with no suspension reported. Other results were 2023 and 2024 items; none reported a suspension or a White House recruiting special assistant in 2025 or 2026.",
+        "result": "supports",
+        "url": "https://taskandpurpose.com/news/army-military-genesis-medical-screening-recruiting/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the Department of War list on 2026-10-19: 111 rules; no title contains MHS Genesis, entrance, medical or accession standards. Recruitment-related titles are 0790-AL47 (Privacy Act exemption, Recruitment and Accession Records) and 0750-AM19 (recruitment advertising certification, DFARS); neither is the recommended action.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0700"
       }
     ]
   },
@@ -145,6 +171,6 @@
   ],
   "title": "Appoint a recruiting adviser and suspend MHS Genesis screening at MEPS",
   "tracked": true,
-  "uncertainties": "No White House Special Assistant for recruiting was found, but the White House staff list was not checked directly. No suspension of MHS Genesis at MEPS was found; the DOD articles read do not mention the system, and a review search returned only 2023 coverage of MHS Genesis delays at MEPS. The memos themselves were not read, only articles describing them. The ClearanceJobs article gives no date in its text (the date is from its URL) and says the guidance was signed the week before. The parallel actions concern recruiting and medical standards generally and do not carry out either named step, so the stage is not_started.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Neither recommended step was found: no White House Special Assistant for recruiting and retention and no suspension of MHS Genesis at Military Entrance Processing Stations. Related DOD memos of 2025-04-24 and 2025-06-13 ordered a medical standards review and a Recruitment Task Force; they were read only through news reports. Federal Register searches found only privacy notices; H.R. 6381 is unrelated; defense.gov returned an error and war.gov is blocked; one news search returned only 2022 to 2024 coverage. The Department of War list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 111 rules) holds no entry on MHS Genesis or entrance processing. The White House staff list was not checked, and non-public DOD direction on MEPS screening cannot be excluded. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

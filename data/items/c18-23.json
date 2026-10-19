@@ -2,9 +2,9 @@
   "agency": "Department of Labor (Wage and Hour Division)",
   "blockers": [],
   "chapter": "18",
-  "confidence": 42,
-  "confidence_label": "low",
-  "confidence_reason": "Mandate text read; two Federal Register API checks and four web searches found no proposal; the Unified Agenda was not searched directly.",
+  "confidence": 68,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence-based. Five checks, informative for a rule: (1) Federal Register API, no hazard-order proposal (rerun 2026-10-19: hazardous occupations returns one H-2A wage rule); (2) Labor Unified Agenda read directly on reginfo.gov on 2026-10-19, partial: the one child labor entry, 1235-AA53, was opened and concerns hours for 14- and 15-year-olds, not the hazardous occupations orders; (3) congress.gov and GovInfo, H.R. 1193 and S. 509 are logging bills in committee; (4) YouthRules page, nothing; (5) one news search, a 2018 item only. Set at 68 because the planned hours rule shows active child labor rulemaking and a hazard-order item could follow.",
   "durability": {
     "level": "medium",
     "why": "A regulatory change would require notice and comment but could be reversed by later rulemaking."
@@ -26,10 +26,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review read the H.R. 1193 and S. 509 BILLSTATUS files and the H.R. 1193 text on govinfo.gov and reran a Federal Register API check on federalregister.gov; the logging bills were added as related context and the proposed move to proposed was not accepted, so no stage change (not_started, 0). Confidence 42 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the Labor Unified Agenda list and the 1235-AA53 entry page read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 62 to 68."
     }
   ],
   "id": "c18-23",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -47,19 +55,71 @@
   "research_agent": "R1718",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Stage not_started kept; no alternative stage defensible on this evidence."
-    ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 595 asks DOL to amend its hazard-order regulations so teenage workers may work in regulated jobs with proper training and parental consent.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "alternative": "Proposed 5 with a parallel match on the logging bills H.R. 1193 and S. 509.",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 595), the text asks DOL to amend its hazard-order regulations so teens can work in regulated hazardous jobs with training and parental consent. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: zero Wage and Hour Division documents since 2025-01-20 for these terms, consistent with no rulemaking.",
+        "note": "2026-10-18 (reviewer variant): 29 CFR part 570, all types since 2025-01-20: 1 document, the 2025-07-02 Labor Department proposal on statements of general policy not related to regulations; no hazard-order amendment.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22hazardous+occupations%22+OR+%22youth+employment%22+OR+%22minors%22&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=wage-and-hour-division&order=newest"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%2229+CFR+part+570%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): 0 documents; hazardous occupations variant 1 unrelated document.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=child+labor+hazardous+orders+apprentices&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=wage-and-hour-division"
+      },
+      {
+        "note": "2026-10-18 (researcher): Unified Agenda fallback; reginfo.gov landing page had no items; 8 Wage and Hour proposed rules, none on child labor.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=wage-and-hour-division&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reviewer read BILLSTATUS: introduced 2025-02-11, referred to Education and Workforce, seven cosponsors (latest 2026-06-09), no further action. A narrow statutory logging bill, not a DOL rule; does not change the no-rule stage.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1193.xml"
+      },
+      {
+        "note": "2026-10-18: reviewer read BILLSTATUS: introduced 2025-02-11, referred to HELP, no further action.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s509.xml"
+      },
+      {
+        "note": "2026-10-18: reviewer read the introduced text: amends FLSA sections 3 and 13(c) for timber harvesting employers with a parent-owned exception; no training condition and no direction to amend the hazard orders.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1193ih/html/BILLS-119hr1193ih.htm"
+      },
+      {
+        "note": "2026-10-18 (researcher): no rulemaking or news on amending the hazard orders.",
+        "result": "supports",
+        "url": "https://www.dol.gov/agencies/whd/youthrules"
+      },
+      {
+        "note": "2026-10-18 (researcher news search): the closest result is a 2018 report on a first-term planned rule; no 2025 or 2026 rulemaking reported.",
+        "result": "supports",
+        "url": "https://www.ishn.com/articles/109153-dol-may-loosen-rules-on-hazardous-work-for-teens"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The Department of Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 115 rules) was read in full on 2026-10-19; the only child labor entry, Hours of Work Standards for Young Workers Under the Fair Labor Standards Act (1235-AA53), was opened; no entry amends the hazardous occupations orders.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1200"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Wage and Hour Division, Proposed Rule Stage, 29 CFR part 570, NPRM projected 09/00/2026; would amend hours standards for 14- and 15-year-olds; no mention of hazardous occupations orders, training, parental consent or 16- and 17-year-olds. Planned rule, not operative.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1235-AA53"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: one document, the 2025-10-02 H-2A adverse effect wage rate rule; nothing on the hazard orders.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22hazardous+occupations%22&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -112,13 +172,42 @@
       "publisher": "J. J. Keller",
       "title": "Wage and Hour Division publishes its 2026 regulatory agenda",
       "url": "https://www.jjkeller.com/news/article/Wage-and-Hour-Division-publishes-its-2026-regulatory-agenda_id-7f63c53d-1b2a-4e91-db73-c84688f408cb"
+    },
+    {
+      "date": "2026-06-09",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS H.R. 1193 (119th Congress), Future in Logging Careers Act",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1193.xml"
+    },
+    {
+      "date": "2025-02-11",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS S. 509 (119th Congress), Future Logging Careers Act",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s509.xml"
+    },
+    {
+      "date": "2025-02-11",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 1193, Future in Logging Careers Act (introduced text)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1193ih/html/BILLS-119hr1193ih.htm"
     }
   ],
   "stage": "not_started",
-  "status_summary": "No proposed or final rule amending the child labor hazardous occupations orders was found since 2025-01-20. The Federal Register search of Labor Department documents for child labor returned only a joint employer proposal (2026-04-23) and a proposal on removing non-notice-and-comment interpretive provisions (2025-07-02). A trade-press report of the Wage and Hour Division head's March 2026 remarks described a priority on enforcement against the worst forms of child labor, including minors in dangerous jobs, and the division's 2026 regulatory agenda as published 2026-07-06 listed a joint employer proposal and an independent contractor rule, not child labor.",
-  "timeline": [],
+  "status_summary": "No proposed or final rule amending the child labor hazardous occupations orders was found since 2025-01-20. The Federal Register search of Labor Department documents for child labor returned only a joint employer proposal (2026-04-23) and a proposal on removing non-notice-and-comment interpretive provisions (2025-07-02). A trade-press report of the Wage and Hour Division head's March 2026 remarks described a priority on enforcement against the worst forms of child labor, including minors in dangerous jobs. Two narrow logging bills introduced on 2025-02-11, H.R. 1193 and S. 509, concern 16 and 17 year olds in timber harvesting by statute and have had no action beyond committee referral.",
+  "timeline": [
+    {
+      "date": "2025-02-11",
+      "event": "H.R. 1193 (Future in Logging Careers Act) and S. 509 (Future Logging Careers Act) were introduced and referred to the House Education and Workforce and Senate HELP Committees; they address FLSA child labor coverage of 16 and 17 year olds in timber harvesting, with an exception for parent-owned operations. No further action is recorded; this is related legislation, not a DOL hazard-order amendment.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1193.xml"
+    }
+  ],
   "title": "Amend child labor hazard orders so teens can do regulated jobs with training and consent",
   "tracked": true,
-  "uncertainties": "This is an absence-of-evidence finding. Checks run: Federal Register API queries on child labor (Labor Department) by the researcher and, in review, on hazardous occupations, youth employment and minors for the Wage and Hour Division since 2025-01-20 (no documents); four WebSearches in all (three by the researcher, one in review on teen hazardous-occupation proposals, which returned only 2018 coverage); fetches of the two trade-press articles. The Unified Agenda database at reginfo.gov could not be searched, so an agenda entry might exist that was not seen. A first-term proposal on 16 and 17 year old hazardous work was reported in 2018 by a safety trade publication; it predates the window and is not counted.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No proposed or final rule amending the child labor hazardous occupations orders was found. The Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) lists one child labor item (RIN 1235-AA53), a proposal projected for September 2026 on hours of work for 14- and 15-year-olds; it does not touch the hazard orders and is not an operative action. The logging bills H.R. 1193 and S. 509 would change the statute for one industry and remain in committee. A 2026 trade-press report described an enforcement priority on minors in dangerous jobs. S. 4817 status was not fetched. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

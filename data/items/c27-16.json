@@ -4,9 +4,9 @@
     "Requires an act of Congress"
   ],
   "chapter": "27",
-  "confidence": 58,
+  "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "Bill text read on GovInfo; absence of an enacted change checked against a secondary Code publication.",
+  "confidence_reason": "The bill text and BILLSTATUS record were read on govinfo.gov; absence of an enacted change rests on a secondary Code publication and absence of a crowdfunding-specific bill on one search.",
   "durability": {
     "level": "high",
     "why": "A statute would be durable if enacted."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review read the S. 1371 BILLSTATUS record on govinfo.gov, which shows no action after the 2025-04-09 referral and one cosponsor added 2025-09-09; the bill status source was added. No stage change (proposed 6, parallel); confidence 58 to 75."
     }
   ],
   "id": "c27-16",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "legislation",
@@ -53,24 +57,24 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Replaced the tracker source for S. 1371 with the GovInfo bill text",
-      "Replaced the undated law-firm tax summary with the Code text as published by Cornell LII"
+      "No stage change: proposed 6, parallel.",
+      "Defensible alternative: not_started, since the only bill takes a different approach."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 831, Entrepreneurial Capital Formation (Congress bullet): amend the IRC to disregard crowdfunding and Regulation A shareholders for the 100-shareholder S corporation limit. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Chapter text not available in this run; the earlier review recorded: Page 831, Entrepreneurial Capital Formation (Congress bullet): amend the IRC to disregard crowdfunding and Regulation A shareholders for the 100-shareholder S corporation limit. Paraphrase accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "S. 1371 introduced 2025-04-09 by Sen. Boozman, referred to Finance; strikes 100 and inserts 250 in 1361(b)(1)(A) for taxable years after 2025-12-31; no mention of crowdfunding or Regulation A. Checked 2026-10-14.",
+        "note": "2026-10-18: sponsor Sen. Boozman; introduced and referred to Finance 2025-04-09; cosponsor added 2025-09-09; latest action the referral. Supports a proposed stage.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1371is/html/BILLS-119s1371is.htm"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1371.xml"
       },
       {
-        "note": "Section 1361(b)(1)(A) still reads 100 shareholders; latest listed amendment 2018; no crowdfunding or Regulation A provision. Checked 2026-10-14.",
-        "result": "supports",
-        "url": "https://www.law.cornell.edu/uscode/text/26/1361"
+        "note": "2026-10-18, per the researcher's full read: raises the cap from 100 to 250 for taxable years after 2025-12-31; no crowdfunding or Regulation A exclusion, so only partly matches.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1371is/html/BILLS-119s1371is.htm"
       }
     ]
   },
@@ -116,10 +120,17 @@
       "publisher": "Legal Information Institute, Cornell Law School",
       "title": "26 U.S. Code 1361, S corporation defined",
       "url": "https://www.law.cornell.edu/uscode/text/26/1361"
+    },
+    {
+      "date": "2025-09-09",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S. 1371 bill status (BILLSTATUS XML)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1371.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "S. 1371, the S-CAP Act of 2025 (Sen. Boozman, introduced 2025-04-09, referred to the Finance Committee), would raise the S corporation shareholder limit in IRC section 1361(b)(1)(A) from 100 to 250 for taxable years beginning after 2025; it does not mention crowdfunding or Regulation A shareholders, so it is a different approach to the same constraint. The section as published by Cornell's Legal Information Institute still sets the limit at 100 and lists no 2025 amendment.",
+  "status_summary": "S. 1371, the S-CAP Act of 2025 (Sen. Boozman, introduced 2025-04-09, referred to the Finance Committee), would raise the S corporation shareholder limit in IRC section 1361(b)(1)(A) from 100 to 250 for taxable years beginning after 2025; it does not mention crowdfunding or Regulation A shareholders, so it is a different approach to the same constraint. Its bill status record shows one cosponsor added on 2025-09-09 and no action after the referral. The section as published by Cornell's Legal Information Institute still sets the limit at 100 and lists no 2025 amendment.",
   "timeline": [
     {
       "date": "2025-04-09",
@@ -131,6 +142,6 @@
   ],
   "title": "Disregard crowdfunding and Regulation A holders in the S corporation shareholder limit",
   "tracked": true,
-  "uncertainties": "Later actions on S. 1371 were not checked on congress.gov. The current text of section 1361 was read on the Legal Information Institute site, which may lag recent amendments; no CRS or JCT summary of Public Law 119-21 was opened, so absence of a change in that law is not fully confirmed. A bill specific to crowdfunding or Regulation A shareholders may exist. Staging an introduced bill with a different approach as proposed parallel is a judgment call; not_started is defensible.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The S. 1371 BILLSTATUS record was read in this review on govinfo.gov (introduced and referred 2025-04-09, one cosponsor added 2025-09-09, no later action); the bill text was read by the researcher on govinfo.gov. Section 1361 text on the Legal Information Institute site may lag recent amendments, and no CRS or JCT summary of Public Law 119-21 was opened, so absence of a change in that law is not fully confirmed. One web search for a bill specific to crowdfunding or Regulation A shareholders returned only a 115th Congress bill (H.R. 531) and advocacy pages, so no 119th Congress bill of that kind was found; this is not proof none exists. congress.gov refuses fetches. Staging an introduced bill with a different approach as proposed parallel is a judgment call; not_started is defensible.",
+  "updated_at": "2026-10-18"
 }

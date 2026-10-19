@@ -4,9 +4,9 @@
     "No published NIC staffing rule; membership data are not public."
   ],
   "chapter": "07",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Text checked and all three sources fetched; the not_started finding rests on absence of public information about internal NIC staffing (capped at 50).",
+  "confidence": 57,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented: (1) Federal Register API with an exact-phrase variant, supports (nothing found); (2) Unified Agenda, not applicable because ODNI has no list on the reginfo.gov selector, confirmed on 2026-10-19; (3) govinfo BILLSTATUS and full S. 4615 text, supports; (4) dni.gov newsroom, unreachable; (5) one news search, supports. Confidence 57, under the 65 to 68 ceiling, because the agency check is unreachable and internal staffing may be unpublished.",
   "durability": {
     "level": "low",
     "why": "Any NIC staffing practice is internal to ODNI and would be easy for a later DNI to change."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review: reran the Federal Register API check with an exact-phrase variant and an ODNI-limited fallback, opened the S.4615 bill status and full text on govinfo.gov and the top news result on hstoday.us; dni.gov is blocked. No stage change (not_started 0); confidence 45 to 55."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 confirmed ODNI has no Unified Agenda list on reginfo.gov, recorded the agenda check as not applicable, kept not_started 0 and raised confidence from 55 to 57."
     }
   ],
   "id": "c07-17",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -53,35 +61,48 @@
   "requires_congress": "no",
   "research_agent": "N07a",
   "review": {
-    "flags": [
-      "Defense One date corrected",
-      "not_started confirmed"
-    ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 227 asks that non-CIA officers make up at least 50 percent of NIC membership and that the NIC chairman be an outsider from one of the three major non-CIA agencies reporting to the PDDNI; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y8b",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 227 asks that non-CIA officers make up at least half of NIC membership and that the NIC chairman be an outsider from one of the three major non-CIA agencies reporting to the Principal Deputy DNI; the chapter text was not available to this review, and an earlier review on 2026-10-12 recorded the paraphrase as verified.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "AP via WKMG, 2025-05-14; firing of acting NIC chair Mike Collins and deputy; NIC moving to ODNI buildings, per ODNI email.",
+        "n": 1,
+        "note": "2026-10-18: reviewer variant, exact phrase 'National Intelligence Council' since 2025-01-20: 1 document, a DHS rule of 2026-07-17 on nonimmigrant student admission periods that mentions a NIC report only in a public comment. No NIC composition or chair action. The researcher's unquoted query (178 loose matches) found none either.",
         "result": "supports",
-        "url": "https://www.clickorlando.com/news/politics/2025/05/14/gabbard-fires-2-top-intelligence-officials-and-will-shift-office-that-preps-trumps-daily-brief/"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22National%20Intelligence%20Council%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Core functions of three centers into MI and NIC; SFG eliminated; NIC moves from Reston to main campus.",
-        "result": "supports",
-        "url": "https://archive.dni.gov/files/ODNI/documents/ODNI-20-Fact-Sheet.pdf"
+        "n": 2,
+        "note": "2026-10-18: reginfo.gov eAgendaMain showed only a landing page (researcher). Fallback run by the reviewer: all Federal Register documents from the Office of the National Director of National Intelligence since 2025-01-20: 3 notices (a Privacy Act system of records notice of 2025-08-05 and two National Intelligence University Board of Visitors meeting notices of 2025-02-13 and 2025-03-11), no proposed rule and nothing on the NIC. Partial because only the fallback was available.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=national-intelligence-office-of-the-national-director&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Dated 2025-08-21 (corrected); no NIC chair or composition information.",
+        "n": 3,
+        "note": "2026-10-18: researcher's domain-limited search found S.2202, S.4615, S.2342 and H.R.5167. Reviewer opened the S.4615 BILLSTATUS (Intelligence Authorization Act for FY2027, reported and placed on the Senate calendar 2026-05-20 as Calendar No. 420, written report S. Rept. 119-133 filed 2026-08-05) and read the full placed-on-calendar text including its tail: the table of contents has no NIC section; Sec. 302 repeals the National Intelligence Management Council (section 103M) and Sec. 303 terminates the Joint Intelligence Community Council and other units, without touching section 103B on the NIC. No NIC composition or chair rule. Companion check (reviewer search made for c12-30): H.R.9624, the House FY2027 bill, introduced 2026-07-09 and ordered reported amended 2026-07-20; its introduced text has seven sections and none on the NIC.",
         "result": "supports",
-        "url": "https://www.defenseone.com/policy/2025/08/odni-shrink-further-under-new-reorganization-plan/407618/"
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s4615pcs/xml/BILLS-119s4615pcs.xml"
       },
       {
-        "note": "Sec. 405 NIC reform in the Senate-reported FY2026 bill; not enacted.",
+        "n": 4,
+        "note": "2026-10-18: dni.gov is a blocked host; the researcher's fetch failed and it was not retried. No ODNI statement verified.",
+        "result": "unreachable",
+        "url": "https://www.dni.gov/index.php/newsroom"
+      },
+      {
+        "n": 5,
+        "note": "2026-10-18: researcher's query on the NIC chair, non-CIA officers and ODNI in 2026. Reviewer opened the top result: Homeland Security Today on the firing of the acting NIC chair and deputy and the move of the NIC into ODNI (already in the record; article undated in the fetched text), with no membership rule or named replacement. No result reported a 50 percent non-CIA rule or an outside chair under the Principal Deputy DNI.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s2342rs/html/BILLS-119s2342rs.htm"
+        "url": "https://www.hstoday.us/subject-matter-areas/intelligence/gabbard-fires-deep-state-heads-of-national-intelligence-council-to-root-out-politicization-of-intel/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Check 2 not applicable, confirmed by the reviewer on 2026-10-19: the agency selector of the 2026 Regulatory Plan and Unified Agenda lists no Executive Office of the President, White House, Domestic Policy Council, National Security Council, ODNI, CIA, FEC or Office of Special Counsel entry, so these actors have no agenda list to read.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       }
     ]
   },
@@ -119,6 +140,13 @@
       "publisher": "Defense One",
       "title": "ODNI to shrink further under new reorganization plan",
       "url": "https://www.defenseone.com/policy/2025/08/odni-shrink-further-under-new-reorganization-plan/407618/"
+    },
+    {
+      "date": "2026-05-20",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S.4615 Intelligence Authorization Act for Fiscal Year 2027 (placed on calendar text)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s4615pcs/xml/BILLS-119s4615pcs.xml"
     }
   ],
   "stage": "not_started",
@@ -141,6 +169,6 @@
   ],
   "title": "Require at least half non-CIA officers on the NIC and an outside chair under the PDDNI",
   "tracked": true,
-  "uncertainties": "The relocation and firings are related to the Mandate's goal of independence only loosely and do not implement its 50 percent rule or chair design; they are shown as context and the stage is not_started. Who currently chairs the NIC, and the NIC's current agency mix, were not found; internal staffing may not be public. The Senate-reported FY2026 authorization bill (S. 2342, Sec. 405) would have reformed the NIC and National Intelligence Officers, but no NIC section appears in the table of contents of the enacted Division F of Public Law 119-60 or, by title, in the Senate's FY2027 bill.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "No National Intelligence Council composition rule requiring at least half non-CIA officers, or an outside chair reporting to the Principal Deputy DNI, was found. ODNI actions reported in 2025 were of a different kind: firing of the acting NIC chair and deputy, relocation of the NIC to ODNI buildings and a consolidation of centers. Federal Register searches found no ODNI action on the NIC; S. 4615 read in full and H.R. 9624 introduced text have no NIC composition rule; dni.gov is blocked; one news search found only the 2025 items. ODNI has no list in the reginfo.gov Unified Agenda (2026 Regulatory Plan and Unified Agenda edition), so the agenda check does not apply. The current NIC chair and agency mix were not found, and internal staffing may not be public. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

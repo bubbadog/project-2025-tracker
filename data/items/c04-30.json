@@ -2,12 +2,12 @@
   "agency": "Department of Defense",
   "blockers": [
     "Both strategies chose different framing (homeland, hemisphere, burden-sharing) and omit the term irregular warfare",
-    "Content of FY2026 NDAA Secs. 1094 and 1204 not read"
+    "Content of FY2026 NDAA Sec. 1094 not read"
   ],
   "chapter": "04",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Strategy PDF and U.S. Code read through a summarizing tool on primary hosts; absence findings and unread NDAA section text keep confidence low.",
+  "confidence": 56,
+  "confidence_label": "medium",
+  "confidence_reason": "Strategy PDF re-read on the White House host and the Sec. 1204 change confirmed through the law.cornell.edu U.S. Code note; Sec. 1094 text unread and the stage rests partly on absence of further steps, so medium at the low end.",
   "durability": {
     "level": "low",
     "why": "No operative action was found; any future directive would be reversible."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read the National Security Strategy on whitehouse.gov, the 10 U.S.C. 345 amendment note on law.cornell.edu and a Federal Register API query; the Sec. 1204 Executive Agent change was added to the summary and the blocker narrowed to Sec. 1094. No stage change (proposed 5); confidence 50 to 56."
     }
   ],
   "id": "c04-30",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -55,7 +59,7 @@
   "remaining": [
     "Irregular warfare defined and regional irregular threats characterized in the National Security Strategy",
     "Irregular warfare incorporated in the National Defense Strategy with USSOCOM as lead",
-    "A Center of Excellence beyond the existing statutory Irregular Warfare Center (content of FY2026 NDAA Secs. 1094 and 1204 unread)",
+    "A Center of Excellence beyond the existing statutory Irregular Warfare Center (Sec. 1204 of the FY2026 NDAA changed only its Executive Agent; Sec. 1094 unread)",
     "USSOCOM or Pentagon regional operations and information operations against the Belt and Road Initiative",
     "Operative steps implementing the strategy's Western Hemisphere language on foreign control of ports and infrastructure",
     "A public name-and-shame mechanism and interagency economic warfare or lawfare against hostile actors"
@@ -65,42 +69,33 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Proposal changed in substance: added the omitted information operations, hemisphere economic and economic warfare or lawfare items, and noted the offensive cyber item is tracked in c04-21; record needs rescoring.",
-      "Stage changed from not_started 0 to proposed 5: with the hemisphere item included, the strategy's Western Hemisphere language on denying competitors control of ports and infrastructure is a strategy-level match to one element; not_started 0 remains defensible if a strategy statement is not counted.",
-      "Added a 2025-12-18 event for the FY2026 NDAA irregular warfare sections (titles only) and the CFR source confirming the 2025-12-04 release; corrected the law firm source date from 2025-12-05 to 2025-12-09.",
-      "Irregular Warfare Center attribution confirmed: 10 U.S.C. 345, subsection added by section 1204 of Public Law 117-263 (2022-12-23).",
-      "Removed c04-11 from related_ids (NSA dual-hat, no overlap); kept c04-21 for the offensive cyber item and c04-08 for the NDS.",
-      "Title revised to name the counters to China's BRI.",
-      "Confidence raised from 45 to 50."
+      "No stage change: proposed 5, match partial. not_started 0 remains defensible if a strategy statement is not counted.",
+      "Sec. 1204 of Public Law 119-60 now described from the U.S. Code note; blocker narrowed to Sec. 1094.",
+      "Confidence 50 low to 56 medium."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "pp. 121 to 123, Special Operations Forces: make irregular warfare a cornerstone of security strategy (define it broadly, characterize threats by region in the NSS, incorporate it in the NDS, establish an Irregular Warfare Center of Excellence); counter China's BRI globally (USSOCOM regional operations, information operations on Chinese violations, directly counter Chinese economic power in North America, Central America and the Caribbean); establish deterrence through irregular warfare (USSOCOM as irregular warfare lead in the NDS, offensive cyber against attackers, name and shame, economic warfare and lawfare with the Interagency, aggressive counterterrorism authorities). The draft omitted the information operations, hemisphere economic and economic warfare or lawfare items.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y6",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages (121 to 123) and proposal fields: make irregular warfare a cornerstone of the NSS and NDS with USSOCOM as lead and a Center of Excellence, counter China's Belt and Road Initiative through USSOCOM regional and information operations and in the Western Hemisphere, and use name-and-shame, economic warfare and lawfare. The chapter text was not available in this run, so the pages were not re-checked; the proposal field is consistent with the earlier corrected mandate note.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14: cover dated November 2025; summarizing read reports no irregular warfare, Belt and Road, special operations, SOCOM, name and shame, lawfare or economic warfare; terrorism and influence operations appear; Western Hemisphere section on denying non-hemispheric competitors control of ports and key infrastructure, debt traps, hardening networks.",
+        "note": "Fetched 2026-10-18 (stage-deciding): no use of irregular warfare, Belt and Road, special operations or lawfare; Western Hemisphere section on denying non-hemispheric competitors control of strategic assets, ports and key infrastructure and on hidden costs of low-cost assistance. Supports proposed 5 for the hemisphere element only.",
         "result": "partial",
         "url": "https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Security-Strategy.pdf"
       },
       {
-        "note": "Checked 2026-10-14: CFR article updated 2025-12-06 says the strategy was released on December 4.",
-        "result": "supports",
-        "url": "https://www.cfr.org/articles/unpacking-trump-twist-national-security-strategy"
+        "note": "Fetched 2026-10-18: Pub. L. 119-60 note substitutes the Assistant Secretary of Defense for Special Operations and Low-Intensity Conflict for the DSCA Director as Executive Agent in (c)(4)(B); no USSOCOM lead designation. An administrative change to an existing Center, not the recommended cornerstone.",
+        "result": "partial",
+        "url": "https://www.law.cornell.edu/uscode/text/10/345"
       },
       {
-        "note": "Checked 2026-10-14: client alert dated 2025-12-09 says the White House released the strategy on Dec. 4.",
+        "note": "Fetched 2026-10-18 (reviewer's own term variant): one result, the 2025-03-20 Alien Enemies Act proclamation, unrelated; supports the absence of a published irregular warfare directive.",
         "result": "supports",
-        "url": "https://www.bhfs.com/insight/white-house-releases-2025-national-security-strategy/"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22irregular+warfare%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Checked 2026-10-14: 10 U.S.C. 345(c) Irregular Warfare Center added by Pub. L. 117-263, div. A, title XII, sec. 1204(a)(5), Dec. 23, 2022.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title10/html/USCODE-2023-title10-subtitleA-partI-chap16-subchapV-sec345.htm"
-      },
-      {
-        "note": "Checked 2026-10-14: table of contents lists Sec. 1094 Irregular Warfare Exercise Laboratory and Sec. 1204 Modification to Irregular Warfare Center and Regional Defense Fellowship Program; no section text.",
+        "note": "Not re-fetched in review; researcher reports the table of contents lists Secs. 1094 and 1204 and the HTML is cut short before their bodies.",
         "result": "partial",
         "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
       }
@@ -176,10 +171,17 @@
       "publisher": "GlobalSecurity (DOD News mirror)",
       "title": "Senate Armed Services posture hearing for special operations (DOD News)",
       "url": "https://www.globalsecurity.org/military/library/news/2025/04/mil-250409-dodnews03.htm"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "primary",
+      "publisher": "Legal Information Institute (Cornell)",
+      "title": "10 U.S.C. 345 with Pub. L. 119-60 Sec. 1204 amendment note",
+      "url": "https://www.law.cornell.edu/uscode/text/10/345"
     }
   ],
   "stage": "proposed",
-  "status_summary": "The National Security Strategy, released 2025-12-04 with a cover dated November 2025, does not use the terms irregular warfare, Belt and Road, special operations, name and shame or lawfare, but its Western Hemisphere section says the United States will deny non-hemispheric competitors control of strategically vital assets, press partners to end foreign control of ports and key infrastructure, warn of debt traps in foreign assistance and harden regional communications networks. The record for the 2026 National Defense Strategy (c04-08) found no use of the phrase irregular warfare there. The Irregular Warfare Center already exists in statute (10 U.S.C. 345, subsection added by Public Law 117-263 Sec. 1204 in December 2022), and the FY2026 NDAA lists a Sec. 1204 modifying it and a Sec. 1094 on an Irregular Warfare Exercise Laboratory, whose texts were not read. No USSOCOM tasking against the Belt and Road Initiative or lead designation for irregular warfare was found.",
+  "status_summary": "The National Security Strategy, released 2025-12-04 with a cover dated November 2025, does not use the terms irregular warfare, Belt and Road, special operations or lawfare, but its Western Hemisphere section says the United States will deny non-hemispheric competitors control of strategically vital assets, press partners to wind down foreign control of ports and key infrastructure and warn of the hidden costs of low-cost foreign assistance. The record for the 2026 National Defense Strategy (c04-08) found no use of the phrase irregular warfare there. The Irregular Warfare Center already existed in statute (10 U.S.C. 345, subsection added by Public Law 117-263 Sec. 1204 in December 2022); Public Law 119-60 Sec. 1204 (2025-12-18) made the Assistant Secretary of Defense for Special Operations and Low-Intensity Conflict its Executive Agent in place of the Director of the Defense Security Cooperation Agency, and the same law lists a Sec. 1094 on an Irregular Warfare Exercise Laboratory whose text was not read. No USSOCOM tasking against the Belt and Road Initiative or lead designation for irregular warfare was found.",
   "timeline": [
     {
       "date": "2025-12-04",
@@ -198,6 +200,6 @@
   ],
   "title": "Make irregular warfare a strategy cornerstone with a SOCOM lead and China BRI counters",
   "tracked": true,
-  "uncertainties": "The National Security Strategy text was read through a summarizing fetch tool, not word by word, both by the researcher and in review; the absence of terms is that tool's report. The release date of 2025-12-04 comes from the Council on Foreign Relations and a law firm summary; the White House PDF has a November 2025 cover and a December 2025 upload path. The National Defense Strategy was not read directly; its omission of the phrase irregular warfare relies on record c04-08. The Irregular Warfare Center: the 2023 U.S. Code on GovInfo credits the Center provisions of 10 U.S.C. 345(c) to Public Law 117-263 Sec. 1204(a)(5) (2022-12-23); an earlier briefing note tying it to the FY2021 NDAA is not supported; either way it predates 2025-01-20. The Western Hemisphere language is a strategy statement, which counts at most as proposed. A DOD News item of 2025-04-09 shows SOCOM leaders describing irregular warfare as department-wide and counterterrorism as continuing, which is context, not a tracked action. The counterterrorism-authorities item was not tested separately.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The National Security Strategy text was read through a summarizing fetch tool, not word by word, by the researcher and again in this review; the absence of terms is that tool's report. The release date of 2025-12-04 comes from the Council on Foreign Relations and a law firm summary; the White House PDF has a November 2025 cover and a December 2025 upload path. The National Defense Strategy was not read directly; its omission of the phrase irregular warfare relies on record c04-08. The Sec. 1204 effect is taken from the U.S. Code amendment note on law.cornell.edu, which is partly primary and was re-read in review; the govinfo.gov HTML and XML of Public Law 119-60 and S. 1071 are cut short before Titles X and XII, so neither section body was read there, and the Sec. 1094 body is unread. congress.gov is blocked. A Federal Register API query for irregular warfare since 2025-01-20 (run in review on 2026-10-18) returned one unrelated presidential document on the Alien Enemies Act. The Western Hemisphere language is a strategy statement, which counts at most as proposed. A DOD News item of 2025-04-09 shows SOCOM leaders describing irregular warfare as department-wide, which is context, not a tracked action. The counterterrorism-authorities item was not tested separately. A statutory Center that predates 2025-01-20 is not evidence of a new action beyond the Executive Agent change.",
+  "updated_at": "2026-10-18"
 }

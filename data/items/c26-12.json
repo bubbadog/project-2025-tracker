@@ -5,9 +5,9 @@
     "China does not recognize the Missouri ruling"
   ],
   "chapter": "26",
-  "confidence": 42,
-  "confidence_label": "low",
-  "confidence_reason": "The White House page and committee release were read; the absence of a commission or bill rests on limited searches, so not_started is capped.",
+  "confidence": 65,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (supports, 0 documents), Unified Agenda (not applicable to a White House or congressional body, recorded as partial), congress.gov and govinfo.gov search (partial: S. 3291 on declassification of COVID-19 intelligence), the whitehouse.gov lab-leak page (supports) and a news search (supports). One check is not applicable and the bill search depends on search engine results, so confidence is 65.",
   "durability": {
     "level": "low",
     "why": "The White House page can be edited at will, and a congressional investigation lapses with the Congress."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, Unified Agenda not applicable, govinfo.gov, whitehouse.gov and a news search), the agenda check relabeled as not applicable, not_started kept and confidence raised to 65."
     }
   ],
   "id": "c26-12",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -55,16 +59,14 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage changed from proposed 10 to not_started: no commission, select committee or bill was found, and a statement page is not a proposal",
-      "Removed the Missouri state judgment from the timeline (state action, local news only); kept as context in the summary",
-      "Added one search for 119th Congress accountability bills, none found",
-      "Confidence 42"
+      "Researcher recorded the not-applicable agenda check as does_not_support; relabeled partial with a not-applicable note.",
+      "S. 3291 text reportedly enacted within S. 1071 (P.L. 119-60); a declassification review is not the recommended commission, but the coordinator may wish to note it as related context."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 790, Policy options for decoupling from China: hold the CCP accountable for COVID-19 through a presidential commission or select congressional committee on origins, costs and means of collecting damages. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Checked 2026-10-14. Page cites the completed House select subcommittee report and EcoHealth actions; announces no commission and seeks no damages from China.",
@@ -75,6 +77,36 @@
         "note": "Not refetched 2026-10-14; as described in the draft, subpoenas to 14 U.S. agencies released 2025-01-27 by a standing committee. Context only.",
         "result": "partial",
         "url": "https://www.hsgac.senate.gov/?p=187626"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Register API, phrase COVID-19 origins, all agencies and types, since 2025-01-20: 0 results.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22COVID-19+origins%22&conditions[publication_date][gte]=2025-01-20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Check not applicable: the recommended action is a presidential commission or a congressional select committee, which are White House and Congress items with no agency Unified Agenda; the reviewer confirmed on 2026-10-19 that the eAgendaMain agency selector has no Executive Office of the President entry. Recorded as partial because the schema has no not-applicable value; this is not a finding of a related or qualifying action (relabeled from does_not_support).",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Domain-limited search (congress.gov, govinfo.gov) returned mostly 116th to 118th Congress material. One 119th Congress item: S. 3291, Enhanced COVID-19 Transparency Act of 2025 (Sen. Young), introduced 2025-12-01 and referred to the Select Committee on Intelligence; it concerns a declassification review of COVID-19 intelligence and creates no commission or select committee and no suits against China. Introduced bill only. Reviewer opened the S. 3291 bill status: referred to the Select Committee on Intelligence; the page notes its text is contained in S. 1071, which became Public Law 119-60; it creates no commission or committee.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119s3291/xml/BILLSTATUS-119s3291.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Re-read 2026-10-19: page metadata shows publication 2025-04-18 and last modification 2025-08-15; it cites the House Select Subcommittee final report and HHS debarment proceedings against EcoHealth and a DOJ investigation; it announces no commission and no plan to seek damages from China.",
+        "result": "supports",
+        "url": "https://www.whitehouse.gov/lab-leak-true-origins-of-covid-19/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "One standard news search (COVID-19 origins commission, hold China accountable, damages, 2026) returned think-tank commentary and a 2024 Heritage commission report; no report of a government commission, select committee or damages action.",
+        "result": "supports",
+        "url": "https://www.heritage.org/china/commentary/its-not-too-late-hold-china-accountable-covid"
       }
     ]
   },
@@ -134,6 +166,13 @@
       "publisher": "NPR (via KUNC)",
       "title": "Lab Leak, a flashy page on the virus' origins, replaces government COVID sites",
       "url": "https://www.kunc.org/npr-news/2025-04-18/lab-leak-a-flashy-page-on-the-virus-origins-replaces-government-covid-sites"
+    },
+    {
+      "date": "2025-12-01",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Enhanced COVID-19 Transparency Act of 2025 (S. 3291), bill status",
+      "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119s3291/xml/BILLSTATUS-119s3291.xml"
     }
   ],
   "stage": "not_started",
@@ -156,6 +195,6 @@
   ],
   "title": "Hold the CCP accountable for COVID-19 via a commission or select committee",
   "tracked": true,
-  "uncertainties": "Searches for 119th Congress bills creating a select committee or commission, or authorizing suits against China, found only bills from earlier Congresses; congress.gov could not be fetched, so absence is not proven. The White House page is a statement of position and the Senate subpoenas are standing-committee oversight of U.S. agencies; both are context and do not set the stage. The Missouri judgment comes from a local news report (the order was not opened) and is a state suit, so it is kept out of the timeline. A later Senate subpoena of a former official reported in June 2026 was not verified.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The Unified Agenda check is not applicable because the recommended body would be a White House or congressional item with no agency rule list on reginfo.gov. S. 3291 (Enhanced COVID-19 Transparency Act of 2025, introduced 2025-12-01) concerns a declassification review of COVID-19 intelligence; its bill status says the text was carried in S. 1071, which became Public Law 119-60; it creates no commission or committee. The White House page and the 2025 Senate subpoenas are context only. The Missouri judgment rests on a local news report and is a state suit. A Senate subpoena reported in June 2026 was not verified. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

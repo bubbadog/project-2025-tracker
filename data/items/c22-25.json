@@ -6,9 +6,9 @@
     "The DHS restructuring record c05-01 tracks a recommendation to move the Coast Guard to DOJ or DOD instead"
   ],
   "chapter": "22",
-  "confidence": 60,
+  "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks documented on 2026-10-18: (1) Federal Register API searches of Treasury and ATF documents found no transfer; (2) Unified Agenda listings could not be read, so the proposed-rule fallback was used (partial); (3) a congress.gov and GovInfo bill search found only Coast Guard authorization bills with no Treasury transfer; (4) ATF and Treasury releases showed nothing, while DHS and Coast Guard pages were blocked (partial); (5) a news search found only the 2025 ATF and DEA merger proposal already recorded. Set to 60 for the partial agenda and newsroom checks.",
+  "confidence_reason": "Not_started rests on five documented checks and the CRS FY2026 CJS overview: (1) Federal Register API queries of Treasury and ATF documents found no transfer (supports); (2) Unified Agenda: the Treasury, DHS and Justice rule lists on reginfo.gov were read in full on 2026-10-19 with no transfer entry (supports, weakly informative because the text asks Congress to act); (3) congress.gov and GovInfo search found only Coast Guard authorization bills (supports); (4) ATF and Treasury releases showed nothing, while DHS and Coast Guard pages were blocked (partial); (5) one news search found only the 2025 ATF and DEA merger proposal (partial). Set at 62 because the agenda is weakly informative, DHS pages were blocked and Public Law 119-74 was not read.",
   "durability": {
     "level": "high",
     "why": "Agency placement is set in statute, so any move would need legislation."
@@ -34,10 +34,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Not_started kept; five-part absence check documented and spot-checked; confidence raised from 45 to 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Treasury, DHS and Justice Unified Agenda rule lists on reginfo.gov and found no transfer entry; not_started kept and confidence raised from 60 to 62."
     }
   ],
   "id": "c22-25",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "legislation",
@@ -59,23 +63,19 @@
   "research_agent": "R22",
   "restates_ids": [],
   "review": {
+    "alternative": "Diverged is defensible if the FY2026 request to fold ATF into DEA is weighed as a move away from the recommendation.",
     "document_reread": {
       "citation": "CRS R48643",
       "note": "Funding confirmed; merger not addressed.",
       "result": "partial",
       "url": "https://www.everycrsreport.com/files/2026-02-25_R48643_5ab63e26141d07cabb8c7a7008f1b1844906000c.html"
     },
-    "flags": [
-      "The 2026-01-23 event text no longer claims the enacted law carries a merger bar.",
-      "Named the searches performed in uncertainties.",
-      "Other defensible call: diverged 0, treating the ATF and DEA merger request as an opposite step; not taken because it was not adopted.",
-      "V7 systematic-check review: not_started 0 kept; Coast Guard transfer Federal Register query re-run with the same single unrelated result; confidence 45 to 60 rather than the suggested 62, since check 2 and check 4 are both partial."
-    ],
+    "flags": [],
     "mandate_check": "ok",
     "mandate_note": "Pages 709 to 710 say Congress should examine whether to return the Coast Guard and ATF to Treasury from Homeland Security and Justice, which for the Coast Guard would let Treasury strengthen border security through attention to economic crimes such as drug smuggling and tax evasion. The paraphrase and pages are correct.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "ATF enacted at 1,585.0 million dollars, P.L. 119-74 signed 2026-01-23; no mention of a merger or funding bar.",
@@ -116,6 +116,24 @@
         "note": "Reviewer re-check, 2026-10-18: terms Coast Guard Treasury transfer, Treasury, since 2025-01-20: count 1, the Community Reinvestment Act proposal of 2026-08-12, unrelated; confirms the researcher's result.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"Coast+Guard\"+Treasury+transfer&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=treasury-department&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (agency named Department of the Treasury, 216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages, the second holding only the footer). No entry on receiving the Coast Guard or ATF.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "DHS list headed 'Agency Rule List - 2026' (59 rules, read in full by the reviewer): 11 Coast Guard (1625) entries on fairways, vessel traffic, mariner training, fire-extinguishing systems, TWIC readers, cybersecurity and casualty reporting; none on a transfer.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1600"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Justice list headed 'Agency Rule List - 2026' (76 rules, read in full by the reviewer): 47 ATF (1140) entries on firearms and explosives rules; none on a transfer to Treasury or a merger with DEA.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1100"
       }
     ]
   },
@@ -190,6 +208,6 @@
   ],
   "title": "Examine returning the Coast Guard and ATF to Treasury",
   "tracked": true,
-  "uncertainties": "Searches performed: four web searches (Coast Guard transfer to Treasury; ATF transfer; the ATF and DEA merger proposal; its 2026 status), with the CRS FY2026 CJS overview, a news report and S. 1190 read. Bills moving ATF to Treasury were not searched separately. The enacted text of Public Law 119-74 was not read; the CRS overview gives ATF funding but does not mention the merger, so whether the enacted law carries a funding bar is not confirmed. The DOJ merger request was read through news summaries. Not_started was chosen over diverged because the ATF and DEA merger was a request that was not adopted, so no opposite action was taken; diverged is the other defensible call if the request itself is weighed. Checked systematically on 2026-10-18: Federal Register searches for both agencies, agenda and proposed-rule listings, a congress.gov and govinfo.gov bill search, the ATF and Treasury newsrooms and a news search found no bill, order or law moving the Coast Guard or ATF to Treasury. DHS pages are blocked and the defense authorization law was not read for Coast Guard provisions.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No bill, order or law moving the Coast Guard or ATF to Treasury was found. The Justice Department's FY2026 request to fold ATF into DEA, read through news summaries, was a move within Justice and was not carried out; the enacted text of Public Law 119-74 was not read, so a funding bar is unconfirmed. DHS pages are blocked and the defense authorization law was not read for Coast Guard provisions. The Unified Agenda rule lists on reginfo.gov for Treasury, Homeland Security and Justice (headed 'Agency Rule List - 2026') list no transfer; a transfer needs legislation, so the agenda is a weak test. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

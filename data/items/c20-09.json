@@ -4,9 +4,9 @@
     "Statutory basis for the office requires Congress to act"
   ],
   "chapter": "20",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Chapter text checked at page 653; the statute was read and a documented check of four searches and a Federal Register query found no sunset step, with not_started capped at 50.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (supports), VA Unified Agenda (supports), congress.gov and govinfo.gov search (partial: H.R. 472 and other accountability bills, none sunsetting OAWP), VA staff office page (supports, OAWP still listed) and a news search (partial: only 2021 to 2022 coverage). The statute (38 U.S.C. 323) was read earlier. The agenda is weakly informative for a statutory repeal, so confidence is 66.",
   "durability": {
     "level": "high",
     "why": "Absent action, the statutory office remains in place."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the VA Unified Agenda on reginfo.gov, govinfo.gov, department.va.gov and a news search), not_started kept and confidence raised to 66."
     }
   ],
   "id": "c20-09",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -52,9 +56,9 @@
     "flags": [],
     "mandate_check": "confirmed",
     "mandate_note": "Page 653 recommends working with Congress to sunset OAWP as redundant with supervisors, EEO, the Inspector General and the Office of Special Counsel. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y20c",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Section heading Office of Accountability and Whistleblower Protection; added by Pub. L. 115-41 on 2017-06-23; no amendments after 2025. Found by web search for the statute text.",
@@ -75,6 +79,42 @@
         "note": "Web search for bills eliminating OAWP; this result describes a 2022 House discussion draft, outside the period tracked.",
         "result": "does_not_support",
         "url": "https://federalnewsnetwork.com/?p=4105191"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Query since 2025-01-20, VA: 0 documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"Whistleblower%20Protection\"&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=veterans-affairs-department&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Agency named: Department of Veterans Affairs; Agency Rule List - 2026; 62 rules (32 proposed, 30 final); no title mentions whistleblower or OAWP; RIN 2900-AS80 concerns grants. Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named. RIN 2900-AS80 is titled 'Veterans Cemetery Grants Program: Improvements to Grant Process and Accountability'.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Congress search found H.R.472 / S.124 (Restore VA Accountability Act of 2025), H.R.3185, S.1068, H.R.4271, H.R.770. Bill status for H.R.472 (introduced 2025-01-16, last action 2025-12-19 referred to subcommittee): summary concerns removal standards for supervisors and does not repeal or sunset OAWP. H.R.3185 (personnel record notation) and S.1068 (no summary available) show nothing on OAWP. Related VA accountability bills, not the recommended action. Reviewer reopened the H.R. 472 bill status: summary concerns removal procedures and never mentions 38 U.S.C. 323 or OAWP; full text not read.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr472/xml/BILLSTATUS-119hr472.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Page lists the Office of Accountability and Whistleblower Protection as a current VA staff office (leader performing delegable duties of the Assistant Secretary).",
+        "result": "supports",
+        "url": "https://department.va.gov/administrations-and-offices/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "News web search on elimination of OAWP, 2026, returned 2021-2022 coverage of a House committee discussion draft and no 2025-2026 item.",
+        "result": "partial",
+        "url": "https://federalnewsnetwork.com/?p=4105191"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the staff office page: OAWP is listed, led by an official performing the delegable duties of the Assistant Secretary.",
+        "result": "supports",
+        "url": "https://department.va.gov/administrations-and-offices/"
       }
     ]
   },
@@ -120,6 +160,13 @@
       "publisher": "Department of Veterans Affairs",
       "title": "Whistleblower Rights and Protections - Accountability and Whistleblower Protection",
       "url": "https://department.va.gov/accountability/whistleblower-rights-and-protections/"
+    },
+    {
+      "date": "2025-12-19",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Restore VA Accountability Act of 2025 (H.R. 472), bill status",
+      "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr472/xml/BILLSTATUS-119hr472.xml"
     }
   ],
   "stage": "not_started",
@@ -127,6 +174,6 @@
   "timeline": [],
   "title": "Sunset the Office of Accountability and Whistleblower Protection",
   "tracked": true,
-  "uncertainties": "The statute was read on the Cornell Legal Information Institute copy because the House Law Revision Counsel page returned a not-found page. Four web searches and a Federal Register API query found no repeal bill in the period tracked; a 2022 House committee discussion draft to strip the office of retaliation investigations predates the period. A bill could exist that these searches missed.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The VA rule list on reginfo.gov (labeled Agency Rule List - 2026, 62 rules) lists no rulemaking on OAWP; RIN 2900-AS80 concerns cemetery grant accountability and is not the recommended action. The statute was read on the Cornell Legal Information Institute copy because the House Law Revision Counsel page returned a not-found page. H.R. 472 (Restore VA Accountability Act of 2025) changes removal procedures and its summary does not mention OAWP; its full text was not read. A 2022 House discussion draft predates the period. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -4,9 +4,9 @@
     "Congress has not taken up monetary-rule legislation; Fed retains discretion"
   ],
   "chapter": "24",
-  "confidence": 65,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks documented on 2026-10-18 on top of the FOMC statement read on the Fed site: (1) Federal Register API searches for monetary rule (all agencies, zero) and monetary policy rule (Board) found no rule action; (2) Unified Agenda listings could not be read, so the Federal Register proposed-rule fallback was used (partial); (3) a congress.gov and GovInfo bill search and U.S. Code notes found no bill or law mandating a policy rule; (4) Board press releases showed nothing; (5) a news search found only commentary. Rated at the partial-check ceiling; bill searching rests on title matching.",
+  "confidence_reason": "Not_started rests on the FOMC statement read on the Fed site and five documented checks: (1) Federal Register API queries for monetary rule (zero) and monetary policy rule at the Board found no rule action (supports); (2) Unified Agenda: the Federal Reserve rule list on reginfo.gov was read in full on 2026-10-19 with no monetary rule entry (supports, weakly informative because strategy is set by statement or statute); (3) congress.gov and GovInfo search and U.S. Code notes found no bill or law mandating a rule (supports); (4) Board press releases showed nothing (supports); (5) one news search found only commentary (supports). Set at 66 because the agenda is weakly informative and the bill search rests on title matching.",
   "durability": {
     "level": "high",
     "why": "No operative change exists; a discretionary framework is the status quo."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Not_started kept; five-part absence check documented and spot-checked; confidence raised from 45 to 65."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Federal Reserve Unified Agenda rule list on reginfo.gov and found no monetary rule entry; not_started kept and confidence raised from 65 to 66."
     }
   ],
   "id": "c24-07",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -62,19 +66,12 @@
   "research_agent": "N24",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Title shortened from 96 to under 90 characters",
-      "Proposal reworded as a menu of options with page cites (minor correction, not a change in substance)",
-      "Replaced Brookings support for the averaging change with the Fed's statement text",
-      "Added 2026-01-28 reaffirmation event",
-      "Confidence 45",
-      "V7 systematic-check review: not_started 0 kept; monetary rule Federal Register query re-run with zero results; confidence 45 to 65 under the rubric addition (check 2 partial)."
-    ],
+    "flags": [],
     "mandate_check": "corrected",
     "mandate_note": "Pages 735-740, Monetary Rule Reform Options and Minimum Effective Reforms. The chapter frames these as a menu with free banking first and a K-percent rule as possibly most feasible, leaving the choice to lawmaking; proposal reworded to say so, page cites added, and the inflation and growth targeting option named correctly. Title shortened.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Checked 2026-10-14. Current statement: 2 percent goal, federal funds rate primary tool, no averaging or shortfalls language, no policy or money growth rule.",
@@ -125,6 +122,12 @@
         "note": "Reviewer re-check, 2026-10-18: phrase monetary rule, all agencies, since 2025-01-20: count 0; confirms the researcher's result.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"monetary+rule\"&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Reserve list headed 'Agency Rule List - 2026' (agency named Federal Reserve System, 13 rules on capital, stress capital buffer, supervision ratings, reputation risk, GENIUS Act, CRA and data standards, read to the footer by the reviewer on 2026-10-19): no monetary policy rule, money growth target, commodity money or free banking entry. Weakly informative: monetary strategy is set by FOMC statement or statute.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=7100"
       }
     ]
   },
@@ -206,6 +209,6 @@
   ],
   "title": "Replace discretionary Fed policy with a monetary rule, such as a K-percent rule",
   "tracked": true,
-  "uncertainties": "Bill searches were limited and congress.gov search could not be opened, so absence of a rule bill is not proven; a bill under a different name could be missed. The statement text was read in the current PDF, which the Fed says is identical to the August 2025 version. H.R. 3795 and S. 3218 were seen only on tracker pages and their content is inferred from their titles. The Brookings account used in the draft was removed in favor of the primary text. Checked systematically on 2026-10-18: Federal Register searches, the agenda and proposed-rule listing, a congress.gov and govinfo.gov bill search, the Board press release list and a news search found no bill, rule, order or law establishing a statutory monetary rule, commodity-backed money or free banking. The agenda listing for the Board could not be read directly, and a bill under an unrelated name could still be missed.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No bill establishing free banking, commodity-backed money, a K-percent rule or another statutory policy rule was found; congress.gov search could not be opened and the bill search rests on title matching, so a bill under another name could be missed. The FOMC statement revised 2025-08-22 and reaffirmed 2026-01-28 references no policy or money growth rule. H.R. 3795 and S. 3218 were seen only on tracker pages. The Federal Reserve Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026', 13 rules) lists no monetary rule entry; strategy is set by statement or statute, so the agenda is a weak test. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

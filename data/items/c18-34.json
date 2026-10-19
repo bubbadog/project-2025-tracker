@@ -4,9 +4,9 @@
     "Labor law waivers need Congress; UI conformity requirements are statutory"
   ],
   "chapter": "18",
-  "confidence": 62,
+  "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks documented on 2026-10-18: (1) Federal Register searches of ETA and DOL documents on unemployment insurance and waivers found no waiver or approval of non-public administrators; (2) the Unified Agenda listing could not be browsed, and the DOL proposed-rule listing for unemployment insurance, run in review, showed none (partial); (3) a congress.gov and GovInfo search with a bill status read found no qualifying bill; (4) the ETA advisories page for 2026 letters showed none; (5) a news search found none. Set to 62 because 2025 advisory letters and enacted laws were not read.",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, no UI waiver or approval of a non-public administrator (rerun 2026-10-19: 15 documents, none qualifying); (2) Labor Unified Agenda read directly on reginfo.gov on 2026-10-19, the UI entries on work search (1205-AC31) and data availability (1205-AC11) and the Employment Service staffing entry (1205-AC22) do not concern waivers or non-public UI administrators, weakly informative because approvals or waivers could come by advisory letter; (3) congress.gov and GovInfo, no qualifying bill; (4) ETA advisories page, 2026 letters only; (5) one news search, nothing. Set at 64 because 2025 advisory letters and enacted laws were not read.",
   "durability": {
     "level": "low",
     "why": "Any approval or waiver would be an administrative decision that could be reversed."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Not_started kept; five-part absence check documented and completed with a DOL proposed-rule query; confidence raised from 40 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the Labor Unified Agenda list read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 62 to 64."
     }
   ],
   "id": "c18-34",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -60,15 +64,14 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Proposal reworded to add the charity-style political spending condition and the five-year state and local labor law waiver detail from p. 605; pages kept as 604 to 605 since the section begins on p. 604.",
-      "Stage not_started kept.",
-      "V7 systematic-check review: not_started 0 kept; ran the DOL proposed-rule query missing from check 2 (six proposals, none qualifying; the Employment Service staffing proposal is tracked in c18-12); confidence 40 to 62."
+      "Researcher omitted 1205-AC22 (Wagner-Peyser Employment Service Staffing), the closest state-flexibility item on the Labor list; it concerns Employment Service staffing, not UI administration.",
+      "An earlier check labeled does_not_support (DOL proposed rules on unemployment insurance) describes non-qualifying results; the label appears misused. Kept as history."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 605 asks DOL to approve non-public worker organizations as UI administrators, to offer section 303(a) and 303(d) waivers to states with suitable alternatives, and to condition funds on charity-style political spending limits, and asks Congress for state and local waivers from federal labor laws; p. 604 introduces the section.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Checked 2026-10-15: four ETA documents since 2025-01-20 match; none is a UI waiver or administrator approval.",
@@ -104,6 +107,18 @@
         "note": "Reviewer re-check, 2026-10-18: DOL proposed rules, unemployment insurance, since 2025-01-20: count 6 (UC data availability, Wagner-Peyser Employment Service staffing, prevailing wage, independent contractor status, ERISA electronic disclosure, H-2A rescission); none offers section 303 waivers or approves non-public administrators; fills the proposed-rule query the researcher did not run.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=PRORULE&conditions[term]=unemployment+insurance&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=labor-department"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The Department of Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 115 rules) was read in full on 2026-10-19; the unemployment insurance entries (Work Search Requirements 1205-AC31, NPRM 11/00/2026; Data Availability 1205-AC11, final 12/00/2026) and the Wagner-Peyser Employment Service Staffing entry (1205-AC22, Final Rule Stage) do not concern waivers under sections 303(a) and 303(d) or approval of non-public UI administrators. Approvals or waivers could come by advisory letter, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1200"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: 15 documents across agencies, including the 2026-08-20 Wagner-Peyser staffing rule and HUD and HHS proposals; none is a UI waiver or administrator approval.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22unemployment+compensation%22+waiver&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -156,6 +171,6 @@
   "timeline": [],
   "title": "Offer state UI waivers and allow non-public worker organizations to administer UI",
   "tracked": true,
-  "uncertainties": "Absence-of-evidence finding. The ETA unemployment insurance advisory letters (UIPL series) were not searched directly; one WebSearch by the researcher for waivers and non-public administration returned only the advisory letter index pages, which were not opened. A waiver or approval could appear in an advisory letter rather than the Federal Register. In review a Federal Register API query of ETA documents for unemployment and waiver since 2025-01-20 returned four documents (Employment Service staffing rule, prevailing wage proposal, H-2B supplemental visas, FUTA credit reductions), none a waiver program. The Employment Service staffing and data availability items are tracked in other records (c18-12 and c18-18). No bill on state labor law waivers was searched for. Checked systematically on 2026-10-18: Federal Register queries of ETA and DOL documents on unemployment insurance and waivers, the Unified Agenda route (landing page plus a DOL proposed-rule query on unemployment insurance), a congress.gov and GovInfo search with a BILLSTATUS read, the ETA advisory page for 2026 UIPLs, and one news search found no approval of non-public worker organizations as unemployment insurance administrators and no waiver offered under the named Social Security Act sections. The 2025 proposal letting states choose Employment Service staffing concerns Wagner-Peyser functions, not unemployment insurance administration. Enacted 119th Congress laws and 2025 advisory letters were not read.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No DOL approval of a non-public worker organization as an unemployment insurance administrator, and no waiver offered under sections 303(a) or 303(d) of the Social Security Act, was found. The Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) lists UI work search and data availability items and the Employment Service staffing rule, none on these subjects. A waiver or approval could appear in an advisory letter; 2026 letters were checked but 2025 letters and enacted 119th Congress laws were not read, and no bill on state labor law waivers was searched for. The staffing rule concerns Wagner-Peyser functions and is tracked in c18-12. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

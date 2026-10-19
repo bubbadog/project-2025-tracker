@@ -4,9 +4,9 @@
     "No public IARPA or S&T directorate change found"
   ],
   "chapter": "07",
-  "confidence": 45,
+  "confidence": 50,
   "confidence_label": "low",
-  "confidence_reason": "Text checked; the ODNI release and the FedScoop report were fetched and read, but the stage rests largely on the absence of any IARPA or S&T step after limited searching.",
+  "confidence_reason": "The CIA reorganization rests on trade-press reporting of the Director's remarks, and the absence of any step toward IARPA or the Science and Technology directorate rests on Federal Register queries and a partial read of the authorization text; ODNI pages are blocked, so confidence stays low.",
   "durability": {
     "level": "low",
     "why": "CIA directorate names and acquisition frameworks are internal management choices that a later Director could revise."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read the FedScoop report, the latter part of the authorization text on intelligence.senate.gov and a Federal Register API query for IARPA (0 results); dni.gov stayed blocked. No stage change (proposed 10); confidence 45 to 50."
     }
   ],
   "id": "c07-21",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -55,24 +59,29 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Timeline event reworded to show it is dated by the Director's public remarks, with the reorganization's own dates unknown.",
-      "Judgment call: proposed 10 (parallel) kept; not_started 0 would also be defensible."
+      "No stage change: proposed 10, match parallel. not_started 0 is a defensible alternative since nothing reached IARPA or the Science and Technology directorate.",
+      "Confidence 45 to 50, still low: the deciding facts rest on one trade-press report and dni.gov and odni.gov are blocked."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 228 and 229 say ODNI and CIA S&T projects focus on costly AI-driven open-source work that likely duplicates private-sector progress, and that IARPA and S&T should focus primarily on hard technology problems and avoid duplicating private-sector work such as practical defensive cyber intelligence and AI research.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages (228 to 229) and proposal fields: IARPA and the CIA science and technology directorate should focus on hard technology problems and stop duplicating private-sector work such as defensive cyber intelligence and AI research. Chapter text not available this run; pages not re-checked.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Report of 2026-06-30 on the Director's remarks: Directorate of Mission Systems, Center for Cyber Intelligence, Office of Corporate Partnerships, commercial acquisition framework; no mention of S&T or IARPA. Checked 2026-10-15.",
+        "note": "Fetched 2026-10-18 (stage-deciding): dated 2026-06-30; Directorate of Digital Innovation renamed Directorate of Mission Systems, Center for Cyber Intelligence elevated, Office of Corporate Partnerships created, commercial acquisition framework; no mention of IARPA or the Science and Technology directorate. Supports a parallel match only.",
         "result": "partial",
         "url": "https://fedscoop.com/cia-restructures-tech-acquisition-offices-for-the-age-of-ai/"
       },
       {
-        "note": "ODNI 2.0 release of 2025-08-20: more than 40 percent reduction, redundant missions eliminated; IARPA not mentioned. Checked 2026-10-15.",
+        "note": "Fetched 2026-10-18 from offset 100,000: Secs. 6612 to 6703 (biotechnology, technology adoption metrics, critical technologies, China) name neither IARPA nor the CIA Science and Technology directorate.",
+        "result": "does_not_support",
+        "url": "https://www.intelligence.senate.gov/2025/12/18/intelligence-authorization-act-for-fiscal-year-2026-division-f-of-the-national-defense-authorization-act-for-fiscal-year-2026-public-law-119-60-dec-18-2025-119th-congress-in/"
+      },
+      {
+        "note": "Fetched 2026-10-18 (reviewer's own term variant): 0 documents; supports the absence of a published IARPA action.",
         "result": "supports",
-        "url": "https://www.odni.gov/3547/pr-24-25/"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=IARPA&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -147,6 +156,6 @@
   ],
   "title": "Refocus IARPA and CIA science and technology on hard problems, not private-sector work",
   "tracked": true,
-  "uncertainties": "The 2026-06-30 date is the date of the Director's remarks and of the FedScoop report; the effective dates of the reorganization steps were not given. The coverage did not mention the Science and Technology directorate. Only the first 100,000 characters of the FY2026 authorization text on the Senate intelligence committee site were read by the researcher, and no IARPA provision appeared in that portion. A Federal Register term search for IARPA since 2025-01-20 returned nothing. Searches run by the researcher: ODNI 2.0 and IARPA, IARPA budget and authorization, IARPA 2026 news, CIA S&T reorganization. Judgment: not_started would also be defensible, since nothing reached the named organizations.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The 2026-06-30 date is the date of the Director's remarks and of the FedScoop report (re-read in review on 2026-10-18); effective dates of the reorganization steps were not given, and the report does not mention IARPA or the Science and Technology directorate. The FY2026 intelligence authorization text on the Senate intelligence committee site (about 124,500 characters) was read in two parts; the portion after the first 100,000 characters, re-read in review, covers biotechnology, technology adoption metrics (Sec. 6621) and China sections and names neither IARPA nor the Science and Technology directorate, and no IARPA provision appeared in the first portion read earlier. Federal Register API term searches for Intelligence Advanced Research Projects (researcher) and IARPA (review) since 2025-01-20 returned 0 documents. One additional web search on IARPA restructuring returned only ODNI 2.0 coverage; odni.gov and dni.gov are blocked from this environment, so ODNI primary pages could not be opened in this run. Judgment: not_started would also be defensible, since nothing reached the named organizations.",
+  "updated_at": "2026-10-18"
 }
