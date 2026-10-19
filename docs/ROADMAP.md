@@ -18,12 +18,13 @@ Done (Fact): primary-source pass on the first 219 (0 records without a primary o
 
 | Run | Schedule (Pacific) | State |
 | --- | --- | --- |
-| Update (news sweep, 25 deep checks, review) | Tuesday and Thursday 6:54 am | Live since 2026-10-08 |
-| Freshness (12 oldest records, watch items) | Monday, Wednesday, Friday 4:47 am | Live since 2026-10-12 |
-| Enumeration (2 to 4 chapters per firing) | Nightly 11:11 pm and 1:51 am | Live since 2026-10-09; two firings since 2026-10-13 |
+| Daily (requests and leads, news sweep, rotation of about 10 records with refutation checks, review) | Every day 4:47 am | Live from 2026-10-20; replaces the three runs below |
 | Significance recompute (band, kappa, sensitivity) | Sunday 3:31 am | First run 2026-10-18 |
+| Update (news sweep, 25 deep checks, review) | Tuesday and Thursday 6:54 am | 2026-10-08 to 2026-10-19; paused, folded into the daily run |
+| Freshness (12 oldest records, watch items) | Monday, Wednesday, Friday 4:47 am | 2026-10-12 to 2026-10-19; paused, folded into the daily run |
+| Enumeration, then primary-source lift and absence checks | Nightly 11:11 pm and 1:51 am | 2026-10-09 to 2026-10-19; paused, work complete |
 
-Every run reads the standing guidance and the backlog first, does its mandate, writes with version-pinned writes, and (Phase 1 below) opens a pull request here. Daily updates are planned once two consecutive runs validate clean.
+Every run reads the standing guidance and the backlog first, does its mandate, writes with version-pinned writes, and (Phase 1 below) opens a pull request here. The schedule was consolidated into one daily run on 2026-10-19, once the full reading of the document, the primary-source lift and the systematic absence checks were complete; the primary-source lift (B16) and the absence checks (B17) continue as maintenance inside the daily run.
 
 ## C. Site features (ranked)
 
