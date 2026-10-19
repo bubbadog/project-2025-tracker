@@ -8,7 +8,7 @@
   "chapter": "09",
   "confidence": 50,
   "confidence_label": "low",
-  "confidence_reason": "Text at pp. 277 to 278 checked and the National Security Strategy read directly, but the regional cut figure is an advocacy-group estimate and the State strategy was read only through a news summary; the stage is a close call between in_progress and diverged.",
+  "confidence_reason": "The National Security Strategy and the FY2026 appropriations bill status were read on primary hosts, but the program terminations rest on news and advocacy reporting and the State five-year strategy was read only through a news summary; no primary document on the Latin America portfolio was reached, so confidence stays low.",
   "durability": {
     "level": "medium",
     "why": "The terminations are hard to reverse in the short term, but the new priorities rest on a State strategy and annual appropriations rather than law."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read the National Security Strategy on whitehouse.gov and the H.R. 7148 BILLSTATUS file on govinfo.gov, which was added as a source. No stage change (in_progress 25); confidence unchanged at 50."
     }
   ],
   "id": "c09-18",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -58,49 +62,30 @@
   "research_agent": "N09b",
   "review": {
     "flags": [
-      "judgment call: in_progress 25 kept rather than diverged or proposed; terminations are operative and a trade-over-aid regional strategy is stated, while democracy grant cancellations run against the civil-society element and localization is not shown",
-      "National Security Strategy placeholder date replaced with release date 2025-12-04 (Lawfare)"
+      "No stage change: in_progress 25, match partial. diverged and proposed both remain defensible (democracy grant cancellations run against the text's civil society element).",
+      "The researcher's proposed 2026-02-03 timeline event for Public Law 119-75 was not added: enactment was verified but the foreign operations text bearing on this record was not read, so it is listed as a source only.",
+      "Confidence unchanged at 50 low: no primary document on the Latin America portfolio was reached."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 277 to 278 confirm: reassess all Latin America aid and end programs without results; focus on free-market fundamentals, challenge socialist ideas, fund private-sector partnerships and pro-market civil society; shift the regional portfolio to local organizations by 2030; America Crece described as cancelled by the prior administration.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9d",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages (277 to 278) and proposal fields: reassess all Latin America aid programs and end those without results, focus USAID on free-market fundamentals, challenge socialist ideas, fund private-sector partnerships and pro-market civil society, and commit to shifting the regional portfolio to local organizations by 2030. Chapter text not available this run; pages not re-checked.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Dated 2026-01-16; more than 84 percent is WOLA's estimate from a March 2025 memo; 389 of 391 grants per a Senate source; Argentina 20 billion dollars.",
-        "result": "supports",
-        "url": "https://www.wola.org/es/analysis/el-objetivo-de-la-administracion-trump-de-dominar-america-latina-balance-del-ano/"
-      },
-      {
-        "note": "Devex Newswire 2026-01-29; about 40 percent for Western Hemisphere and East Asia; partner criteria; no dollar amounts; strategy not named.",
-        "result": "supports",
-        "url": "https://usaidalumni.org/wp-content/uploads/2026/01/US-aid-focus-on-Western-Hemisphere.-By-Anna-Gawel-Devex-Newswire-29-Jan-2026.pdf"
-      },
-      {
-        "note": "Cover November 2025; commercial diplomacy, DFC financing, aid terms contingent on winding down adversary influence.",
-        "result": "supports",
+        "note": "Fetched 2026-10-18: Western Hemisphere section calls for commercial diplomacy, use of EXIM, DFC and MCC, local private economies and aid terms tied to winding down adversary influence; no results-based regional review or 2030 localization commitment. Supports only the stated reorientation.",
+        "result": "partial",
         "url": "https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Security-Strategy.pdf"
       },
       {
-        "note": "Added; release date 2025-12-04.",
-        "result": "supports",
-        "url": "https://www.lawfaremedia.org/article/trump-administration-releases-2025-national-security-strategy"
+        "note": "Fetched 2026-10-18: Consolidated Appropriations Act, 2026 became Public Law 119-75 on 2026-02-03. Context only; its foreign operations text was not read.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7148.xml"
       },
       {
-        "note": "About 5,200 of 6,200 programs; page undated, Monday about six weeks after inauguration.",
-        "result": "supports",
+        "note": "Not re-fetched in review; the stage-deciding 2025-03-10 announcement rests on this wire report because state.gov pages for it could not be opened by the researcher.",
+        "result": "unreachable",
         "url": "https://abcnews.go.com/amp/US/wireStory/secretary-state-rubio-purge-usaid-programs-complete-83-119628492"
-      },
-      {
-        "note": "EO 14217 signed 2025-02-19, published 2025-02-25, names the Inter-American Foundation; background only.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/02/25/2025-03133/commencing-the-reduction-of-the-federal-bureaucracy"
-      },
-      {
-        "note": "Not re-fetched; verified in sibling records.",
-        "result": "supports",
-        "url": "https://www.wwno.org/npr-news/2025-07-01/usaid-officially-shuts-down-and-merges-remaining-operations-with-state-department"
       }
     ]
   },
@@ -182,6 +167,13 @@
       "publisher": "Lawfare",
       "title": "Trump Administration Releases 2025 National Security Strategy",
       "url": "https://www.lawfaremedia.org/article/trump-administration-releases-2025-national-security-strategy"
+    },
+    {
+      "date": "2026-02-03",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Consolidated Appropriations Act, 2026 (H.R. 7148), bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7148.xml"
     }
   ],
   "stage": "in_progress",
@@ -225,6 +217,6 @@
   ],
   "title": "Reassess Latin America aid, end failed programs, back free markets and localize by 2030",
   "tracked": true,
-  "uncertainties": "The 84 percent figure for Latin America is WOLA's estimate from a memo to Congress that was not read; the 83 percent figure is global and is computed from the program counts in the AP report, whose page shows no date (the announcement was on a Monday about six weeks after 2025-01-20, consistent with 2025-03-10). The State five-year strategy was read only through a Devex newsletter copy hosted by the USAID Alumni Association, not the State document; the article does not name the strategy. The National Security Strategy was read directly; its cover reads November 2025 and its release date of 2025-12-04 comes from Lawfare (the earlier placeholder date of the first of November was replaced). Its Western Hemisphere section does not address local organizations and mentions property rights only through opposition to expropriation. No revival of America Crece, no 2030 localization commitment and no funding line for pro-market civil society were found. Executive Order 14217 (signed 2025-02-19, published 2025-02-25) lists the Inter-American Foundation for reduction to its statutory functions; the foundation is a separate agency not named in the Mandate text and the order is background only; litigation over it was not verified. The Argentina rescue is Treasury financial support, not foreign aid. Assistance to Haiti and Venezuelan migrants was not examined. WOLA also notes that FY2026 democracy funds were appropriated but their use was uncertain as of January 2026.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "The 84 percent figure for Latin America is WOLA's estimate from a memo to Congress that was not read; the 83 percent figure is global and computed from AP program counts. The State five-year strategy was read only through a Devex newsletter copy, not the State document, and state.gov is blocked from this environment. The National Security Strategy was read directly by the researcher and again in review on 2026-10-18 (cover November 2025; release date 2025-12-04 from Lawfare); its Western Hemisphere section supports commercial diplomacy and aid terms tied to winding down adversary influence and does not use the term localization. The Consolidated Appropriations Act, 2026 (Public Law 119-75, enacted 2026-02-03) was confirmed on its govinfo.gov BILLSTATUS record (re-read in review) only; its foreign operations text was not opened, and the WOLA account of its democracy and Central America provisions is advocacy-source. No revival of America Crece, 2030 localization commitment or pro-market civil society funding line was found. Executive Order 14217 is background only. A CRS search returned only a pre-2025 report (R48266) with no usable figures. Judgment: in_progress 25 kept over diverged or proposed.",
+  "updated_at": "2026-10-18"
 }

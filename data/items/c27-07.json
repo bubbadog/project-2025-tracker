@@ -4,9 +4,9 @@
     "Statutory change would be needed to remove the Commission's administrative adjudication authority"
   ],
   "chapter": "27",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Absence rests on limited Federal Register and web searches, not a systematic review; cap applies.",
+  "confidence": 68,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence of action rests on five documented checks: (1) Federal Register API queries (SEC administrative proceedings, Rules of Practice, final SEC rules amending the Rules of Practice, with three rules read) found nothing on forum (supports); (2) Unified Agenda: the SEC rule list on reginfo.gov was read in full on 2026-10-19 with no matching entry (supports, informative for the rule route); (3) two congress.gov and GovInfo searches with the reported text of H.R. 9329 read found no forum change (supports); (4) the SEC press release page showed nothing (supports); (5) one news search found only a 2024 report (supports). Set at 68 rather than 70 because the SEC could stop using administrative proceedings by enforcement practice without a rule, which the agenda would not show, and the H.R. 9329 status file was not fetched.",
   "durability": {
     "level": "low",
     "why": "Litigation forum choices are Commission practice and can change without rulemaking."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review reran a Federal Register API check on federalregister.gov and read the three SEC Rules of Practice rules there, ran one domain-limited bill search and read the H.R. 9329 reported text on govinfo.gov; no stage change (not_started, 0). Confidence 40 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the SEC Unified Agenda rule list on reginfo.gov and found no administrative proceedings entry; not_started kept and confidence raised from 62 to 68."
     }
   ],
   "id": "c27-07",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -53,20 +61,58 @@
   "research_agent": "N27",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "not_started confirmed",
-      "Added the reviewer's Federal Register API and bill search to uncertainties"
-    ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 833, SEC Administration: eliminate SEC administrative proceedings except stop orders on defective registration statements, or alternatively let respondents elect an administrative or Article III forum. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y2",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 833), the text asks to eliminate SEC administrative proceedings other than stop orders on defective registration statements or, as an alternative, let respondents elect an administrative forum or an Article III court. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "No SEC rule or proposed rule changing administrative proceedings since 2025-01-20; one unrelated FINRA notice. Checked 2026-10-14.",
+        "note": "2026-10-18 (reviewer variant): SEC final rules since 2025-01-20: 3 documents (2025-09-19 Rules of Practice stay change, 2025-12-31 delegation, 2026-07-20 delegations modernization); none on forum.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22administrative+proceedings%22+%22Rules+of+Practice%22&conditions[agencies][]=securities-and-exchange-commission&conditions[publication_date][gte]=2025-01-20&per_page=40"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Rules+of+Practice%22&conditions[agencies][]=securities-and-exchange-commission&conditions[type][]=RULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reviewer read: amends Rule 431(e) to end automatic stays of staff decisions making registration statements and Regulation A statements effective; no change to administrative proceedings or forum.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/09/19/2025-18237/commissions-rules-of-practice"
+      },
+      {
+        "note": "2026-10-18: reviewer read: moves registration and cancellation functions among staff offices, effective 2026-07-26; no ALJ or forum change.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/07/20/2026-14540/modernization-of-delegations-of-authority-to-commission-staff"
+      },
+      {
+        "note": "2026-10-18 (researcher): 73 documents, first 20 read; nothing qualifying.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22administrative+proceedings%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=securities-and-exchange-commission"
+      },
+      {
+        "note": "2026-10-18 (researcher): Unified Agenda fallback; reginfo.gov landing page had no items; 27 SEC proposed rules, 20 read, none on administrative proceedings.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=securities-and-exchange-commission&conditions[type][]=PRORULE&conditions[term]=practice&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reviewer search (congress.gov, govinfo.gov) surfaced H.R. 9329; reported text read: penalty counting changes in section 801, no end to administrative proceedings and no respondent election.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr9329rh/xhtml/BILLS-119hr9329rh.html"
+      },
+      {
+        "note": "2026-10-18 (researcher): first 25 items; nothing on administrative proceedings or forum election.",
+        "result": "supports",
+        "url": "https://www.sec.gov/newsroom/press-releases"
+      },
+      {
+        "note": "2026-10-18 (researcher news search): 2024 report before the window; no 2025 or 2026 report of an SEC decision on the forum.",
+        "result": "supports",
+        "url": "https://corpgov.law.harvard.edu/2024/09/16/sec-dismisses-in-house-proceedings-against-accountants-following-jarkesy/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "SEC list headed 'Agency Rule List - 2026' (agency named Securities and Exchange Commission, 38 rules: 2 prerule, 36 proposed, on offerings, disclosure, crypto assets, custody, Form PF, proxy rules and market structure), read to the footer by the reviewer on 2026-10-19; no entry on administrative proceedings, Rules of Practice, administrative law judges or forum choice. Informative for the rule route, though the SEC can also change practice through enforcement choices.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3235"
       }
     ]
   },
@@ -119,6 +165,6 @@
   "timeline": [],
   "title": "Eliminate SEC administrative proceedings or let respondents elect a federal court",
   "tracked": true,
-  "uncertainties": "The D&O Diary post date is approximate (May 2025 from its URL). The Federal Register term search for administrative proceedings returned mostly unrelated notices. Bills were searched once and none was found; the search may have missed a bill. The Winston piece is a prediction and is not treated as an event. Review checks on 2026-10-14: a Federal Register API search for SEC documents mentioning administrative proceedings and the Rules of Practice since 2025-01-20 returned only a FINRA hearing-portal notice (2025-08-15), with no SEC rule or proposal on the adjudication forum; one web search for a 119th Congress bill or SEC action on respondent election returned only pre-2025 material. These are limited checks, not a systematic review.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "No SEC rule, statement or enacted law eliminating administrative proceedings or creating a respondent election was found. SEC final rules since 2025 that touch the Rules of Practice concern stays of staff decisions and delegations. H.R. 9329, reported 2026-09-03, changes penalty counting and does not end administrative proceedings; its bill status file was not fetched. Reporting of April 2025 federal court filings after SEC v. Jarkesy does not say proceedings were discontinued, and the D&O Diary date is approximate. The SEC Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026', 38 rules) lists no rulemaking on administrative proceedings or forum. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -4,9 +4,9 @@
     "MARAD's powers are vested in the Secretary by statute, so a transfer needs law"
   ],
   "chapter": "19",
-  "confidence": 48,
-  "confidence_label": "low",
-  "confidence_reason": "Chapter text checked at pages 637 and 638; the CRS report was fetched and two web searches found no proposal, so the not_started finding rests on absence of evidence from a limited check.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence of a transfer rests on five documented checks: (1) Federal Register API queries (Merchant Marine Academy, MARAD transfer or reorganization, presidential documents on MARAD and Defense) found no transfer (supports); (2) Unified Agenda: the DOT and DHS rule lists on reginfo.gov were read in full on 2026-10-19 with no transfer entry (supports, weakly informative because a transfer needs legislation); (3) congress.gov and GovInfo search with BILLSTATUS for H.R. 2429 and S. 1541 and a partial read of the S. 1541 text found no transfer (supports); (4) the MARAD newsroom showed nothing (supports); (5) one news search found only older placement studies (supports). The CRS report of 2025-08-27 and Executive Order 14269 were read. Set at 66 because the agenda is weakly informative and part of the S. 1541 text was not read.",
   "durability": {
     "level": "low",
     "why": "No action exists to be durable."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review reran a Federal Register API check on federalregister.gov and read the S. 1541 BILLSTATUS and most of its text on govinfo.gov; no stage change (not_started, 0). Confidence 48 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the DOT and DHS Unified Agenda rule lists on reginfo.gov and found no MARAD transfer entry; not_started kept and confidence raised from 62 to 66."
     }
   ],
   "id": "c19-14",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -52,17 +60,66 @@
   "research_agent": "N19",
   "restates_ids": [],
   "review": {
-    "flags": [],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 637 and 638 recommend transferring MARAD and the Merchant Marine Academy to DHS, or to DoD if the Coast Guard is located there. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y19h",
+    "flags": [
+      "Researcher's estimate of about 130 DOT entries understates the list; the sub-agency counts seen exceed 160. The finding is unaffected."
+    ],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields (pp. 637 to 638), the text asks for MARAD and the Merchant Marine Academy to move from DOT to DHS, or to DoD if the Coast Guard is placed there. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "CRS R48651 dated 2025-08-27: MARAD powers vested in the Secretary under 49 U.S.C. 109(d); no specific DOT reorganization plan announced; no proposal to move MARAD.",
+        "note": "2026-10-18 (reviewer variant): presidential documents since 2025-01-20: 1 document, Executive Order 14269 (2025-04-15), which keeps maritime tasks in DOT; no transfer.",
         "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2025-08-27_R48651_4d11b334192b9c6ce13c35057cba341310ba332f.html"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Maritime+Administration%22+%22Department+of+Defense%22+transfer+functions&conditions[type][]=PRESDOCU&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): 18 documents, none transferring MARAD or the Academy.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Merchant+Marine+Academy%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): Unified Agenda fallback; reginfo.gov landing page had no items; 5 MARAD proposed rules, none on placement.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=maritime-administration&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reviewer read BILLSTATUS: introduced 2025-04-30, referred to Commerce, no later action.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1541.xml"
+      },
+      {
+        "note": "2026-10-18: reviewer read about 100,000 of 144,000 characters: an EOP Maritime Security Advisor and MARAD funding through the Secretary of Transportation; no transfer seen in the portion read.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1541is/html/BILLS-119s1541is.htm"
+      },
+      {
+        "note": "2026-10-18 (researcher): Academy campus plan bill, introduced 2025-03-27, assigns work to the Secretary of Transportation.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2429.xml"
+      },
+      {
+        "note": "2026-10-18 (researcher): no transfer or reorganization item.",
+        "result": "supports",
+        "url": "https://www.maritime.dot.gov/newsroom"
+      },
+      {
+        "note": "2026-10-18 (researcher news search): commentary and older placement studies; no 2025 or 2026 proposal reported.",
+        "result": "supports",
+        "url": "https://www.winston.com/en/blogs-and-podcasts/maritime-fedwatch/study-released-on-u-s-maritime-administration-s-role"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "DOT list headed 'Agency Rule List - 2026' (agency named Department of Transportation), read by the reviewer on 2026-10-19 to the footer across two fetch pages (offset 0 and 100000); the page shows no total, and the sub-agency counts seen were OST 31, FAA 36, FRA 28 on the second page plus others on the first, FTA 14, MARAD 11, SLSDC 2 and PHMSA 45. MARAD (2133) lists 11 entries, including 2133-AB96, Amendment to the United States Merchant Marine Academy Regulations; Maritime Service Obligation (Proposed Rule Stage), and 2133-AB94 on state and regional maritime academies; none concerns moving MARAD or the Academy out of DOT. Weakly informative: a transfer needs statute or a reorganization plan.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2100"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "DHS list headed 'Agency Rule List - 2026' (59 rules, read to the footer by the reviewer): no MARAD or Merchant Marine Academy entry.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1600"
       }
     ]
   },
@@ -101,6 +158,13 @@
       "publisher": "Congressional Research Service",
       "title": "U.S. Department of Transportation: Background on Modal Administrations (CRS R48651)",
       "url": "https://www.everycrsreport.com/files/2025-08-27_R48651_4d11b334192b9c6ce13c35057cba341310ba332f.html"
+    },
+    {
+      "date": "2025-04-15",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Executive Order 14269, Restoring America's Maritime Dominance",
+      "url": "https://www.federalregister.gov/documents/2025/04/15/2025-06465/restoring-americas-maritime-dominance"
     }
   ],
   "stage": "not_started",
@@ -108,6 +172,6 @@
   "timeline": [],
   "title": "Transfer MARAD and the Merchant Marine Academy to DHS or DoD",
   "tracked": true,
-  "uncertainties": "Two web searches (one by the researcher, one in review), one Federal Register API search and a CRS report dated 2025-08-27 found no plan to move MARAD; a plan could exist that these did not surface. The CRS report notes that a first-term reorganization plan proposed moving military sealift programs from DOT to the Defense Department, which Congress did not act on; that predates the period tracked. The Mandate's choice of DHS or DoD depends on where the Coast Guard sits.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "No proposal, order or bill to move MARAD or the Merchant Marine Academy out of DOT was found. The CRS report of 2025-08-27 says MARAD's powers are vested by statute in the Secretary of Transportation, and Executive Order 14269 assigns maritime tasks to DOT. About 100,000 of 144,000 characters of the S. 1541 text were read, so its Academy section was not reviewed. The Unified Agenda rule lists on reginfo.gov for DOT and DHS (both headed 'Agency Rule List - 2026') show 11 MARAD rulemakings issued under DOT, including an Academy service obligation rule, and none on a transfer; a transfer would need legislation, so the agenda is a weak test. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -2,9 +2,9 @@
   "agency": "HHS",
   "blockers": [],
   "chapter": "14",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Absence of evidence from a limited search; the one related rulemaking was re-read in review.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence-based. Five checks, informative for an OCR rule: (1) Federal Register API, no OCR rule on QALYs, crisis standards or newborns (rerun 2026-10-19: crisis standards of care returns zero); (2) HHS Unified Agenda read directly on reginfo.gov on 2026-10-19, partial: the OCR disability entries 0945-AA27, AA30 and AA32 were opened and concern the gender dysphoria exclusion, web accessibility deadlines and Section 1557; (3) congress.gov and GovInfo, H.R. 3864 bars QALY use by statute and is in committee (partial, related only); (4) HHS OCR disability page, nothing; (5) one news search, older coverage only. Set at 66 because the 2024 Section 504 rule text was not opened and the OCR newsroom was not fetched.",
   "durability": {
     "level": "medium",
     "why": "A final rule would need notice and comment to reverse, but none exists on these subjects."
@@ -26,10 +26,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review read the H.R. 3864 BILLSTATUS and introduced text on govinfo.gov and reran a Federal Register API check on federalregister.gov; the bill was added as related context and the researcher's proposed move to proposed was not accepted, so no stage change (not_started, 0). Confidence 45 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the HHS Unified Agenda list and three OCR entry pages read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 62 to 66."
     }
   ],
   "id": "c14-67",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -51,20 +59,80 @@
   "research_agent": "R14D",
   "restates_ids": [],
   "review": {
+    "alternative": "Proposed 5 with a parallel match on H.R. 3864.",
     "flags": [
-      "Removed the December 2025 gender dysphoria proposal from the timeline because it is not a qualifying action for this recommendation; it remains in the summary and sources.",
-      "Stage not_started 0 kept; noted that the pre-period 2024 rule partly overlaps the substance."
+      "Match is partial on a not_started record, while sibling absence records carry direct; the owner may want to align."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 496 asks OCR to issue and finalize Trump-era draft disability rules on crisis standards of care and QALYs and to reissue and finalize the withdrawn rule barring discriminatory application of assisted suicide and denial of life-saving treatment to disabled newborns.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 496), the text asks OCR to finalize the earlier draft rules on crisis standards of care and QALY use and to reissue the withdrawn rule on assisted suicide and denial of life-saving treatment to disabled newborns. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: amends only 84.4(g); no crisis standards, QALY or newborn provisions; declines full repeal of the 2024 rule; comments closed 2026-01-20.",
+        "note": "2026-10-18 (reviewer variant): value assessment with disability discrimination, all types: 0 documents.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/12/19/2025-23484/nondiscrimination-on-the-basis-of-disability-in-programs-or-activities-receiving-federal-financial"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22value+assessment%22+disability+discrimination&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): 2 documents, neither an OCR rule; crisis standards 0.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22quality-adjusted+life+years%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: landing page only; fallback HHS Section 504 proposed-rule query found only the 2025-12-19 proposal on 45 CFR 84.4(g).",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: reviewer read BILLSTATUS: introduced 2025-06-10 by one sponsor, referred to Ways and Means and Energy and Commerce, cosponsors added 2026-03-17 and 2026-07-16, no committee action. Bears on the QALY item by statute only.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3864.xml"
+      },
+      {
+        "note": "2026-10-18: reviewer read the introduced text: section 2 amends Social Security Act 1182(e) to bar QALY and similar measures across federal programs, effective 2027-01-01; no crisis standards, newborn, Section 504 or OCR content.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr3864ih/html/BILLS-119hr3864ih.htm"
+      },
+      {
+        "note": "2026-10-18 (researcher): no mention of crisis standards, QALYs, newborns or a 2025 to 2026 rule.",
+        "result": "supports",
+        "url": "https://www.hhs.gov/civil-rights/for-individuals/disability/index.html"
+      },
+      {
+        "note": "2026-10-18 (researcher news search): results were older coverage and documents; no 2025 to 2026 OCR rule reported.",
+        "result": "supports",
+        "url": "https://www.hhs.gov/sites/default/files/504-rfi.pdf"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 183 rules) was read in full on 2026-10-19; the OCR disability entries (0945-AA27, 0945-AA30, 0945-AA32) were opened; they concern the gender dysphoria exclusion under 45 CFR 84, extended web and mobile accessibility deadlines and Section 1557, and none addresses crisis standards of care, quality-adjusted life years, assisted suicide or treatment of disabled newborns.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Nondiscrimination on the Basis of Disability in Programs or Activities Receiving Federal Financial Assistance, Final Rule Stage, 45 CFR 84; NPRM 12/19/2025 (90 FR 59478), reopened 02/02/2026 (91 FR 4467), comments closed 02/20/2026, final action 09/00/2026; limited to the definition of disability as to gender dysphoria. Not the recommended action.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0945-AA27"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Nondiscrimination on the Basis of Disability by Recipients of HHS Financial Assistance (Section 610 review), Final Rule Stage, 45 CFR 84; interim final rule 05/11/2026 (91 FR 25496) extending web and mobile accessibility compliance dates. Operative but unrelated to the recommendation.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0945-AA30"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Modify Portions of HHS Regulations Implementing Section 1557, Proposed Rule Stage, NPRM projected 02/00/2027; conforms Section 1557 rules to statute, orders and court decisions; no disability treatment content. Planned rule, not operative.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0945-AA32"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: zero documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22crisis+standards+of+care%22&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -110,13 +178,35 @@
       "publisher": "AJMC",
       "title": "DOJ abandons Olmstead defense as Texas v. Kennedy advances",
       "url": "https://www.ajmc.com/view/doj-abandons-olmstead-defense-as-texas-v-kennedy-advances"
+    },
+    {
+      "date": "2026-07-16",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 3864 BILLSTATUS, Protecting Health Care for All Patients Act of 2025",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3864.xml"
+    },
+    {
+      "date": "2025-06-10",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 3864, Protecting Health Care for All Patients Act of 2025 (introduced text)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr3864ih/html/BILLS-119hr3864ih.htm"
     }
   ],
   "stage": "not_started",
-  "status_summary": "No proposed or final OCR rule since 2025-01-20 on crisis standards of care, quality-adjusted life years or denial of treatment to disabled newborns was found. HHS published a proposed rule on 2025-12-19 that would amend only the Section 504 exclusions provision on gender dysphoria, and the proposal declined a full repeal of the 2024 Section 504 rule as broader than necessary, leaving that rule's existing provisions in place.",
-  "timeline": [],
+  "status_summary": "No proposed or final OCR rule since 2025-01-20 on crisis standards of care, quality-adjusted life years or denial of treatment to disabled newborns was found. HHS published a proposed rule on 2025-12-19 that would amend only the Section 504 exclusions provision on gender dysphoria, leaving the 2024 Section 504 rule's other provisions in place. H.R. 3864, introduced 2025-06-10 and still in committee, would bar federal health programs from using quality-adjusted life years in coverage and payment decisions by statute; it is not the OCR rulemaking the recommendation describes.",
+  "timeline": [
+    {
+      "date": "2025-06-10",
+      "event": "H.R. 3864, the Protecting Health Care for All Patients Act of 2025, was introduced in the House and referred to the Ways and Means and Energy and Commerce Committees; it would amend Social Security Act section 1182(e) to bar federal health programs from using quality-adjusted life years in coverage and payment decisions. No later action is recorded; it is related legislation, not an OCR rule.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3864.xml"
+    }
+  ],
   "title": "Issue disability rules on crisis standards of care, QALYs and denial of care to newborns",
   "tracked": true,
-  "uncertainties": "The December 2025 proposed rule was re-read in review: it revises only 45 CFR 84.4(g), does not address crisis standards, value assessment, life-sustaining treatment or newborns, and declines a full repeal of the 2024 rule. The 2024 Section 504 final rule (89 FR 40066) is reported to contain value assessment and medical treatment provisions that overlap in part with the recommendation; that rule predates the period, its text was not opened, and it is not counted here. No 2025 to 2026 OCR action on those provisions was found; the states' challenge in Texas v. Kennedy is reported to concern the integration provisions. The Trump-era drafts and the older newborn rule were not located. Searches run: Section 504 value assessment 2025 2026; Federal Register API on Section 504 and OCR.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No proposed or final OCR rule since 2025-01-20 on crisis standards of care, quality-adjusted life years or denial of treatment to disabled newborns was found. The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) lists OCR Section 504 entries on the gender dysphoria exclusion and web accessibility deadlines and a Section 1557 revision, none on these subjects. The 2024 Section 504 rule reportedly contains overlapping value assessment provisions; it predates the period and its text was not opened. H.R. 3864 would bar QALY use by statute and remains in committee. The Trump-era drafts and the older newborn rule were not located. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

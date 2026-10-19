@@ -4,9 +4,9 @@
     "Requires an Act of Congress"
   ],
   "chapter": "20",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Chapter text checked at page 647; the 118th Congress bill summary was fetched, and three searches found no 119th Congress bill, so the finding rests on absence of evidence from a limited search.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (supports), VA Unified Agenda (supports), congress.gov and govinfo.gov search (partial: H.R. 9237 bill status read, summary silent on the term), VA pages (supports) and a news search (partial: only 118th Congress H.R. 1256 material). The agenda is weakly informative for a statutory term change, so confidence is 66.",
   "durability": {
     "level": "high",
     "why": "A statutory term would persist across administrations if enacted."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the VA Unified Agenda on reginfo.gov, govinfo.gov, department.va.gov and a news search), one agency check relabeled to supports, not_started kept and confidence raised to 66."
     }
   ],
   "id": "c20-10",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -49,17 +53,49 @@
   "research_agent": "N20",
   "restates_ids": [],
   "review": {
-    "flags": [],
+    "flags": [
+      "Researcher labeled the VA agency check unreachable although its note describes a reachable page; the reviewer fetched it and relabeled it supports."
+    ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 647 recommends extending the Under Secretary for Health term to five years with authority to reappoint for a second five-year term. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y20d",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "CRS summary of H.R. 1256, introduced 2023-02-28, five-year limit on the term; background only.",
         "result": "supports",
         "url": "https://www.govinfo.gov/bulkdata/BILLSUM/118/hr/BILLSUM-118hr1256.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Query since 2025-01-20, VA: 15 documents (advisory committee meeting notices, pay ranges, Privacy Act notices, Reproductive Health Services rules, OMB-led financial assistance proposed rule); none on a term of office.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"Under%20Secretary%20for%20Health\"&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=veterans-affairs-department&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Agency named: Department of Veterans Affairs; Agency Rule List - 2026; 62 rules; none concerns the Under Secretary for Health. A term change requires statute, not a rule. Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Congress search returned H.R.961, H.R.6522, H.R.9237, S.219, H.R.71, H.R.2623, H.R.9433, S.3466. Bill status read for H.R.961 (direct primary care pilot), H.R.6522 (community care recommendations) and H.R.9237 (Take Care of America's Veterans Act, introduced 2026-06-10, proceedings postponed 2026-07-16): none shows a fixed term for the Under Secretary for Health in summary or title; H.R.9237 is a broad omnibus whose full text was not read. H.R.1256 of the 119th Congress is an unrelated bill (Long-Term Care Transparency Act). Reviewer opened the H.R. 9237 bill status: the CRS summary (compensation, education, health care, personnel, hiring and infrastructure) does not mention the Under Secretary for Health's term or reappointment; full text not read.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr9237/xml/BILLSTATUS-119hr9237.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the VA administrations and offices page on 2026-10-19 (reachable); it gives no term information. The researcher reports the news.va.gov press room (2026-09-14 to 2026-10-15) lists nothing on an Under Secretary term. Relabeled from unreachable.",
+        "result": "supports",
+        "url": "https://department.va.gov/administrations-and-offices/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "News web search on a VA Under Secretary for Health fixed term, 2026, returned 118th Congress H.R.1256 (VHA Leadership Transformation Act) material only; no 119th Congress counterpart reported.",
+        "result": "partial",
+        "url": "https://www.cbo.gov/publication/59125"
       }
     ]
   },
@@ -105,6 +141,6 @@
   "timeline": [],
   "title": "Extend the Under Secretary for Health term to five years with one reappointment",
   "tracked": true,
-  "uncertainties": "Three web searches did not locate a 119th Congress bill; congress.gov bill pages were not individually checked, so an introduced bill could exist that the searches did not surface. The 118th Congress bill is cited only as background and is not counted as progress; its reported House passage was not verified.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The VA rule list on reginfo.gov (labeled Agency Rule List - 2026, 62 rules) lists no rulemaking on the Under Secretary for Health, whose term is set by statute. No 119th Congress bill setting a five-year term was found; the CRS summary of the broad H.R. 9237 (Take Care of America's Veterans Act, proceedings postponed 2026-07-16) is silent on the term, though its full text was not read. The 118th Congress H.R. 1256 is background only and its reported House passage was not verified. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

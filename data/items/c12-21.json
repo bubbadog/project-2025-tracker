@@ -4,9 +4,9 @@
     "The special hiring authority sits in the infrastructure law and Corps hires became ordinary DOE staff, so ending the program as such may require Congress"
   ],
   "chapter": "12",
-  "confidence": 35,
-  "confidence_label": "low",
-  "confidence_reason": "Chapter text checked; sources fetched do not name the Corps, so the stage rests on absence of evidence from a limited search.",
+  "confidence": 61,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API (supports, 0 exact-phrase matches); Unified Agenda, DOE rule list read in full on reginfo.gov on 2026-10-19 (supports, weakly informative for a hiring program); govinfo BILLSTATUS for H.R. 2207 (supports); the energy.gov former Corps address (supports); news searches (supports). Set at 61, below the 65 to 68 band for a non-regulatory action, because the appropriations text that could rescind Corps funding was not read.",
   "durability": {
     "level": "low",
     "why": "Nothing program-specific has been done; general staff reductions can be reversed by new hiring."
@@ -32,10 +32,18 @@
     {
       "date": "2026-10-15",
       "note": "Rotation check (update run): Systematic absence check 2026-10-15: federalregister.gov API 0 documents on Clean Energy Corps; energy.gov Corps address still a general careers page (modified 2026-04-16); two news searches found nothing ending the program. congress.gov blocked to fetch. Stage unchanged at not_started 0; no review needed because only uncertainties changed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review: reran the Federal Register API check with an exact-phrase variant and a DOE proposed-rule fallback, opened the H.R.2207 bill status on govinfo.gov, re-read the energy.gov former Corps address and a news result on nefi.com, and ran one news search. No stage change (not_started 0); confidence 35 to 58."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the DOE rule list on reginfo.gov in full and opened the personnel-references entry, which is unrelated to the Corps; no stage change (not_started, 0); confidence 58 to 61."
     }
   ],
   "id": "c12-21",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -58,44 +66,51 @@
   "research_agent": "N12",
   "review": {
     "flags": [
-      "weakest evidence in chapter: no source names the Corps being ended",
-      "judgment call: in_progress at low progress is defensible given broad DOE staff losses, but none is tied to the program, so not_started is used with a parallel match"
+      "no stage change: not_started 0",
+      "confidence 58 to 61",
+      "Public Law 119-74 text still unread for a Corps rescission"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 386 checked; paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y12a",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 386 recommends eliminating the DOE Clean Energy Corps by revoking its funding and ending the positions hired under its infrastructure-law authority; the chapter text was not available to this review, and an earlier review on 2026-10-13 recorded the paraphrase as verified.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Careers page, last modified 2026-04-16, first published 2024-11-24; no Corps mention.",
+        "n": 1,
+        "note": "2026-10-18: reviewer variant, exact phrase 'Clean Energy Corps' since 2025-01-20, all agencies and types: 0 documents. The researcher's unquoted queries (89 all-agency and 23 DOE loose word matches on pipelines, LNG and hydropower) found none either. No qualifying action.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Clean%20Energy%20Corps%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "n": 2,
+        "note": "2026-10-18: reginfo.gov eAgendaMain showed only a landing page (researcher). Fallback run by the reviewer: DOE proposed rules with the term 'personnel' since 2025-01-20: 5 documents (financial assistance, zero-based regulating, pricing of DOE materials and services, a seaplane base designation and reliability standards), none on hiring authority or the Corps. A hiring program would not ordinarily appear in a proposed rule. Partial because only the fallback was available.",
         "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=energy-department&conditions[type][]=PRORULE&conditions[term]=personnel&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "n": 3,
+        "note": "2026-10-18: researcher's domain-limited search found H.R.2207, S.2595, H.R.8517 and appropriations items. Reviewer opened the H.R.2207 BILLSTATUS: Saving DOE's Workforce Act, a DOE reduction-in-force moratorium, introduced and referred to Energy and Commerce on 2025-03-18 with no later action and no Corps mention. No bill ending the Corps found; appropriations texts (H.R.6938, S.2431) were not read.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2207.xml"
+      },
+      {
+        "n": 4,
+        "note": "2026-10-18: reviewer re-fetch: the former Corps address resolves to the general careers page 'Work at the U.S. Department of Energy', last modified 2026-04-16, which does not mention the Corps. No DOE statement ending the program; the researcher's other energy.gov page (Arctic Energy Office) was unrelated.",
+        "result": "supports",
         "url": "https://www.energy.gov/CleanEnergyCorps"
       },
       {
-        "note": "2022-01-13 launch release (background): 1,000 hires under the infrastructure law authority.",
+        "n": 5,
+        "note": "2026-10-18: researcher's query on the Corps eliminated in 2026 and the reviewer's exact-phrase query on the Corps ended, eliminated or rescinded in 2025 or 2026 both returned coverage of DOE office closures and project cancellations (Axios, Bloomberg Law, Rigzone, NEFI) and no report naming the Corps. Reviewer opened the NEFI item of 2025-12-02: the DOE reorganization eliminates the Office of Clean Energy Demonstrations and the Office of Energy Efficiency and Renewable Energy and does not mention the Corps or its hiring authority.",
         "result": "supports",
-        "url": "https://www.energy.gov/node/4816639"
+        "url": "https://nefi.com/news-publications/recent-news/doe-reorganization-eliminates-clean-energy-and-renewables-offices"
       },
       {
-        "note": "Dated 2026-07-28; over 2,700 staff lost; 43 percent in science and energy innovation offices; no Corps mention.",
-        "result": "partial",
-        "url": "https://fas.org/publication/doe-staff-shortages/"
-      },
-      {
-        "note": "Dated 2025-11-07; staff departures in several offices; no Corps mention.",
-        "result": "partial",
-        "url": "https://www.eenews.net/articles/how-the-energy-department-got-doged/"
-      },
-      {
-        "note": "2025-10-15; layoff notices in EERE, OCED, SCEP and Minority Economic Impact; no Corps mention.",
-        "result": "partial",
-        "url": "https://news.bgov.com/bloomberg-government-news/clean-energy-minority-business-staff-targeted-in-trump-layoffs"
-      },
-      {
-        "note": "2025-02-13; probationary layoffs, no Corps mention; not cited.",
-        "result": "does_not_support",
-        "url": "https://www.latitudemedia.com/news/mass-layoffs-bring-an-end-to-does-weird-quiet-limbo/"
+        "date": "2026-10-19",
+        "note": "Reviewer read the DOE list (page headed 'Agency Rule List - 2026', 89 rules, NNSA included) in full. No title on the Clean Energy Corps or hiring. RIN 1901-AB58, Technical Amendments: Updates to Personnel and Website References (direct final rule projected 07/2026, 10 CFR 1004), opened by the reviewer, updates personnel references to match delegations of authority and does not mention the Corps or hiring authority. Ending a hiring program would not require a rule, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1900"
       }
     ]
   },
@@ -178,6 +193,6 @@
   ],
   "title": "Eliminate the DOE Clean Energy Corps and its positions",
   "tracked": true,
-  "uncertainties": "checked systematically on 2026-10-15: (1) federalregister.gov API, term Clean Energy Corps, all document types since 2025-01-20: 0 documents (also 0 with no date limit). (2) reginfo.gov Unified Agenda: not applicable, no rulemaking is expected for a hiring program, and the host was not searched. (3) congress.gov search: blocked by the host's robots rules, so bills were not searched. (4) energy.gov: the former Corps address resolves to a general careers page modified 2026-04-16 that does not mention the program. (5) news: two web searches on the Corps and on DOE reductions in force found only 2022 to 2023 launch coverage and general 2025 DOE staffing cuts, none naming the Corps as ended. Earlier notes: the October 2025 layoff notices were issued during a shutdown and their later status was not traced; the careers page dates from 2024, so when the Corps address began redirecting is unknown. No DOE reduction in force document naming the Corps was located. The not_started finding rests on absence in these checks, with the congress.gov and agenda steps not completed.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "No order, notice or law ending the Clean Energy Corps, its funding or its positions was found. The reginfo.gov Unified Agenda rule list for DOE (edition headed Agency Rule List - 2026, 89 rules) has no Corps or hiring entry; a planned direct final rule updating personnel references in 10 CFR part 1004 (RIN 1901-AB58) concerns delegations of authority. Ending a hiring program would not require a rule, so this check is weakly informative. The text of Public Law 119-74 (FY2026 appropriations including Energy and Water) was not read for a Corps rescission, the later status of the October 2025 layoff notices was not traced, and any internal DOE memo ending Corps hiring authority could not be checked. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

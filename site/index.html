@@ -217,7 +217,7 @@ dialog.sheet::backdrop{background:var(--shade)}
 .srcs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
 .srcs li{overflow-wrap:anywhere}
 .srcs .s{font-size:12.5px;color:var(--ink-3)}
-.chk{font-size:12px;font-weight:600;border-radius:4px;padding:0 6px;border:1px solid var(--line);white-space:nowrap}
+.chk{font-size:12px;font-weight:600;border-radius:4px;padding:0 6px;border:1px solid var(--line);max-width:100%;display:inline-block;overflow-wrap:anywhere;vertical-align:top}
 
 /* prose views */
 .prose{padding:22px 24px;display:flex;flex-direction:column;gap:18px}
@@ -451,6 +451,11 @@ function sigShares(){ var c=counted(), w=0, we=0, n=0, ne=0, wn=0;
   c.forEach(function(it){ var g=it.significance, st=stageOf(it), eff=(st==='completed'||st==='implemented'); n++; if(eff) ne++;
     if(g&&typeof g.weight==='number'){ wn++; w+=g.weight; if(eff) we+=g.weight; } });
   return {n:n, wn:wn, weighted:w?we/w*100:null, unweighted:n?ne/n*100:null}; }
+function liveBand(){ var g=(S.meta&&S.meta.significance)||{}, bd=g.band_5_95;
+  if(!(Array.isArray(bd)&&bd.length===2&&isFinite(+bd[0])&&isFinite(+bd[1]))) return null;
+  var lo=+bd[0], hi=+bd[1], sh=sigShares();
+  if(g.band_method==='centered'&&isFinite(+g.weighted_share)&&sh.weighted!=null){ var d=sh.weighted-(+g.weighted_share); lo+=d; hi+=d; }
+  return [lo,hi]; }
 function hiddenCount(){ return 0; }
 function goMethod(anchor){ setView('method'); setTimeout(function(){ var el=document.getElementById(anchor); if(el){ try{ el.scrollIntoView({block:'start'}); }catch(e){} } },80); }
 function passes(it){
@@ -485,7 +490,7 @@ function renderSummary(){
     h('div',{class:'hero-t'},h('b',{text:'of '+n+' tracked objectives are now in effect'}),
       h('span',{text:op+' are implemented or completed. '+((S.meta&&S.meta.deepen_done)?'The count covers every concrete, checkable recommendation found in a full reading of all 30 chapters; it changes as evidence changes.':'The count covers every recommendation tracked so far. Chapters are still being read in full, so it will grow.')}),
       (function(){ var sh=sigShares(); if(sh.weighted==null) return null;
-        var d=h('div',{class:'wline'}), bd=(S.meta&&S.meta.significance&&S.meta.significance.band_5_95); d.appendChild(document.createTextNode('Weighted by significance: ')); d.appendChild(h('b',{text:Math.round(sh.weighted)+'%'})); d.appendChild(document.createTextNode((Array.isArray(bd)&&bd.length===2&&isFinite(+bd[0])&&isFinite(+bd[1]))?' (range '+(+bd[0]).toFixed(1)+' to '+(+bd[1]).toFixed(1)+'). ':'. '));
+        var d=h('div',{class:'wline'}), bd=liveBand(); d.appendChild(document.createTextNode('Weighted by significance: ')); d.appendChild(h('b',{text:Math.round(sh.weighted)+'%'})); d.appendChild(document.createTextNode((Array.isArray(bd)&&bd.length===2&&isFinite(+bd[0])&&isFinite(+bd[1]))?' (range '+(+bd[0]).toFixed(1)+' to '+(+bd[1]).toFixed(1)+'). ':'. '));
         d.appendChild(h('button',{class:'linkbtn',type:'button',text:'How the weights work',onclick:function(){goMethod('sig-method');}})); return d; })())));
   var side=h('div',{class:'hero-side'});
   side.appendChild(h('div',{class:'stat'},h('b',{text:share(under)+'%'}),h('span',{text:'underway ('+under+')'})));
@@ -740,7 +745,7 @@ function renderMethod(main){
   para('Significance is the expected consequence of an objective for people in the United States if the recommendation were fully carried out, judged from the recommendation itself and not from whether it has been carried out. It says nothing about whether an objective is good or bad. The weighted share shown under the headline reweights the same recommendations by this score, so that a government-wide law and a single pilot program no longer count the same. The unweighted share stays the headline.');
   para('How it is scored. Two independent AI raters score every objective blind, from the recommendation text and page citations only, with no sight of its status or of each other, on four dimensions with written anchors: reach (how many people it touches directly: under 1 percent, 1 to 20 percent, or most people or the structure of government), magnitude (procedural, material, or large), breadth of government (one program, one agency or sector, or government-wide), and fiscal scale (under 1 billion dollars a year, 1 to 50 billion, or over 50 billion or a structural change to taxes or entitlements). Each is 1, 2 or 3. The weight is the average of the four, so it runs from 1 to 3 and no objective counts more than three times another. Where the two raters differ by more than half a point on the weight, or by two points on any dimension, a third rater scores it and the median is used. Where no published fiscal figure could be sourced, the fiscal score is marked as estimated.');
   (function(){ var sh=sigShares(), kp=sg.kappa||{}; if(sh.weighted==null) return;
-    var bd=sg.band_5_95, bandTxt=(Array.isArray(bd)&&bd.length===2&&isFinite(+bd[0])&&isFinite(+bd[1]))?' The uncertainty range is '+(+bd[0]).toFixed(1)+' to '+(+bd[1]).toFixed(1)+' percent: the 5th to 95th percentile of 1,000 recomputations that draw each recommendation\'s weight from one of its raters at random (and, for estimated fiscal scores, from the neighboring anchors), recomputed weekly'+(sg.band_as_of?' (last on '+fmtDate(sg.band_as_of)+')':'')+(sg.band_n?' over the '+sg.band_n+' recommendations with stored per-rater scores':'')+'.':' The uncertainty range (5th to 95th percentile over rater disagreement) is recomputed weekly from each rater\'s stored scores and shown here once the next weekly recomputation has run.';
+    var bd=liveBand(), bandTxt=(Array.isArray(bd)&&bd.length===2&&isFinite(+bd[0])&&isFinite(+bd[1]))?' The uncertainty range is '+(+bd[0]).toFixed(1)+' to '+(+bd[1]).toFixed(1)+' percent: the spread between the 5th and 95th percentiles of 1,000 recomputations that draw each recommendation\'s weight from one of its raters at random (and, for estimated fiscal scores, from the neighboring anchors), recomputed weekly and centered on the weighted share, so it moves with the share as records change between recomputations'+(sg.band_as_of?' (last on '+fmtDate(sg.band_as_of)+')':'')+(sg.band_n?' over the '+sg.band_n+' recommendations with stored per-rater scores':'')+'.':' The uncertainty range (5th to 95th percentile over rater disagreement) is recomputed weekly from each rater\'s stored scores and shown here once the next weekly recomputation has run.';
     para('Current result, computed on this page from the scores stored on each record: weighted share in effect '+sh.weighted.toFixed(1)+' percent against '+sh.unweighted.toFixed(1)+' percent unweighted, across '+sh.n+' counted recommendations.'+bandTxt+(kp.composite!=null?' Rater agreement'+(sg.kappa_n?' across the '+sg.kappa_n+' recommendations with stored per-rater scores':' on the first 219 objectives scored')+', quadratic-weighted kappa: reach '+kp.R+', magnitude '+kp.M+', breadth '+kp.B+', fiscal '+kp.F+', composite '+kp.composite+' (0.6 and above is substantial agreement).':'')+' Every record shows its four scores and weight, so the figure can be recomputed by anyone.'); })();
   para('Scores are frozen per objective and versioned; they are rescored only when the recommendation text of a record changes, never when its status changes, and the change is logged in the record history.');
   p.appendChild(h('h2',{text:'Estimated timeframes'}));

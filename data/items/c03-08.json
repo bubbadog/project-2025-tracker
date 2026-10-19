@@ -5,9 +5,9 @@
     "The Mandate's design and the administration's OPM-centered design point to different forums for the same appeals"
   ],
   "chapter": "03",
-  "confidence": 60,
+  "confidence": 63,
   "confidence_label": "medium",
-  "confidence_reason": "The diverged finding rests on recorded primary rules moving three appeal categories from the MSPB to OPM. All five systematic checks were documented on 2026-10-18: check 1 (three Federal Register queries plus a full read of the joint OPM and MSPB proposal) found no EEOC or OSC transfer; check 2 is partial (Unified Agenda unreachable, OPM proposed-rule listing used); check 3 (one search plus a BILLSTATUS read) found no transfer bill but enacted laws were not read, so it is partial; check 4 (OPM newsroom) and check 5 (one news search) showed no transfer. With two partial checks and the diverged versus not_started judgment, confidence stays at 60.",
+  "confidence_reason": "Stage rests on the recorded OPM final rules read on federalregister.gov. Five checks documented: (1) Federal Register API, supports (no EEOC or OSC transfer); (2) Unified Agenda OPM, MSPB and EEOC lists read on 2026-10-19, partial (related appeal-venue entries consistent with the divergence, no transfer; OSC has no list); (3) congress.gov and govinfo with a BILLSTATUS read, partial (enacted laws not read); (4) OPM newsroom, supports; (5) one news search, supports. Confidence 63 on the ordinary medium scale, limited by the diverged versus not_started judgment and partial reads of the rules.",
   "durability": {
     "level": "medium",
     "why": "The forum changes are final OPM and MSPB rules that a later administration could reverse by rulemaking, though they are harder to undo than orders."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Systematic absence check confirmed diverged for appeals consolidation; the joint OPM and MSPB accountability proposal was added as a non-qualifying timeline event and confidence held at 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the OPM, MSPB and EEOC rule lists in the reginfo.gov Unified Agenda and the OPM appeal entries, found them to be the already recorded appeal-venue rules rather than the recommended transfers, kept diverged 0 and raised confidence from 60 to 63."
     }
   ],
   "id": "c03-08",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 2,
   "match": "parallel",
   "mechanism": "mixed",
@@ -54,19 +58,17 @@
   "requires_congress": "yes",
   "research_agent": "D1",
   "review": {
+    "alternative": "not_started 0, if moving appeals to OPM is read as a separate reform rather than a move opposite to consolidation at the MSPB.",
     "flags": [
-      "stage is a judgment between diverged and not_started",
-      "overlap with c03-03, whose proposal also includes MSPB as main reviewer; consider removing that clause there",
-      "litigation against the OPM appeal rules not checked",
-      "V10: the joint OPM and MSPB proposal of 2026-07-02 was read in full; it keeps the MSPB as reviewer and changes penalty review only, so it neither advances the Mandate's consolidation nor deepens the divergence; added as a timeline event and source, stage stays diverged 0.",
-      "V10: the MSPB final rule of 2026-09-03 on penalties appears to finalize the MSPB part of that proposal; it is already noted in uncertainties and not added to the timeline.",
-      "V10: confidence held at 60 rather than the researcher's 65 because checks 2 and 3 are partial."
+      "Researcher's agenda source_check URL field held text after the URL ('(OPM), 3124 (MSPB)...'); replaced with clean per-agency list URLs.",
+      "Researcher's code 3209 check was labeled does_not_support although it found an unrelated agency (Office of Government Ethics); replaced by a selector check showing OSC has no list.",
+      "Uncertainties shortened from about 600 words to under 130; earlier detail remains in history and source_checks."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 75 and 76 describe forum shopping across the MSPB, EEOC, FLRA and OSC, suggest handling lower-priority issues in-house, and recommend moving the EEOC's federal employee section to the MSPB, returning many OSC investigatory functions to OPM, and making the MSPB the main reviewer of adverse actions. The proposal matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V10",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "MSPB final rule published 2026-08-12 (91 FR 51997), effective 2026-09-02: removes probationary terminations, reductions in force (except Foreign Service) and suitability actions from 5 CFR 1201.3(a), noting OPM's rules moved those appeals to OPM; MSPB keeps cases tied to earlier actions.",
@@ -132,6 +134,30 @@
         "note": "Reviewer V10 spot-check, 2026-10-18: full text of the joint proposal (91 FR 40444) read to the end through the API full-text link: the MSPB keeps hearing chapter 75 appeals (the cost analysis counts initial appeals filed at the MSPB), proposed 5 CFR 1201.56(b)(3) replaces the Douglas factors with a totality-of-the-circumstances reasonableness test, and short suspensions may be excluded from negotiated grievance procedures unless the agency and OPM agree otherwise; the EEOC appears only in cost estimates and OSC is not named.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/full_text/html/2026/07/02/2026-13445.html"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the OPM list on 2026-10-19: Agency Rule List - 2026, 36 rules (17 proposed, 19 final). Detail pages opened: 3206-AO96 Streamlining Probationary and Trial Period Appeals (NPRM 2025-12-30, 90 FR 61070; final projected 08/2026), 3206-AO97 Suitability Action Appeals (proposed 2026-02-06, 91 FR 5352; abstract notes eliminating MSPB appeals for suitability actions; final projected 08/2026) and 3206-AO99 Reduction in Force Appeals (NPRM 2026-02-10, 91 FR 5861; returns RIF appeal venue from MSPB to OPM; final projected 09/2026). None mentions the EEOC or OSC. These are the appeal-venue rules already recorded as final (published 2026-08-03, effective 2026-09-02); they move appeals away from the MSPB and are not the recommended transfers.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3206"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the MSPB list on 2026-10-19: 6 rules, including 3124-AA35 Promoting Employee Accountability (proposed) and 3124-AA33 Appellate Jurisdiction Update II (final); none moves EEOC federal-sector functions to the MSPB.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3124"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the EEOC list on 2026-10-19: 10 rules (Pregnant Workers Fairness Act, EEO report rescissions, guideline rescissions, FEP agency designation, penalty amendment); none concerns transferring federal-sector functions to the MSPB. The EEOC federal-sector proposal of 2026-08-28 already in the record does not appear on the list.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3046"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer checked the agenda selector on 2026-10-19: the Office of Special Counsel is not listed, so no OSC agenda exists. The researcher's code 3209 returns the Office of Government Ethics, not OSC, and is not informative.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       }
     ]
   },
@@ -271,6 +297,6 @@
   ],
   "title": "Consolidate federal employee appeals at MSPB and shift OSC investigations to OPM",
   "tracked": true,
-  "uncertainties": "The three OPM rules and the EEOC proposal were read only through their first 100,000 characters, so later sections could add details on MSPB review or EEOC transfers. Litigation: Federal News Network reported (August 2026) that AFGE and three other unions sued in the Northern District of California to halt OPM's June suitability rule and July performance-management rule, and mentioned the separate suitability-appeals rule without saying it is challenged; no ruling was reported and the docket was not read (CourtListener is blocked), so whether the appeals rules are enjoined is unverified. The status of the MSPB's quorum and independence in 2025 and 2026, and any bill to move EEOC or OSC functions, were not examined (congress.gov blocks automated fetches). The rules' substance on reductions in force and probationary employees overlaps with c03-03 and c03-06, but this record tracks only the forum question. The June 2025 OPM rescission of subpart H is described in the 2026 final rule and was not fetched separately. Federal Register queries run: OPM appeal documents (39 results), MSPB rules, EEOC federal sector, OPM and Office of Special Counsel, and Executive Order 14284. No web search was used for this record. Re-check on 2026-10-15: Federal Register API searches of MSPB and OPM documents since 2026-08-28 found no rule or order moving appeal categories. MSPB's final rule on determining the appropriate penalty (published 2026-09-03) changes how the Board reviews penalties in misconduct cases, dropping mandatory weighing of all Douglas factors; it does not move appeals between forums, so it does not bear on this record's forum question. OPM's 2026-09-15 interim rule on shared certificates and 2026-09-18 proposal on the excepted service also do not concern appeals. Checked systematically on 2026-10-18: Federal Register API searches (appeals, MSPB, EEOC, OSC; OPM-only), the OPM proposed-rule listing as fallback because the Unified Agenda listing was unreachable, one congress.gov and govinfo search with a BILLSTATUS read, the OPM newsroom and one news search found no transfer of EEOC federal-sector functions to the MSPB or of OSC investigative functions to OPM. The joint OPM and MSPB proposal of 2026-07-02, read in full in review, keeps the MSPB as the body hearing appeals of chapter 43 and chapter 75 actions, moves its penalty review to a totality-of-the-circumstances test, and lets agency grievance procedures exclude short suspensions only with OPM agreement; it names no change for the EEOC or OSC and is not a transfer. Enacted 119th Congress laws were not read for appeals provisions, and the EEOC and MSPB newsrooms were not fetched.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No transfer of EEOC federal-employee functions to the MSPB, or of OSC investigative functions to OPM, was found. Instead, OPM final rules published 2026-08-03 moved probationary, reduction-in-force and suitability appeals from the MSPB to OPM, and a joint OPM and MSPB proposal of 2026-07-02 keeps the MSPB as reviewer while changing penalty review. The reginfo.gov Unified Agenda (Agency Rule List - 2026) lists these OPM appeal rules (RINs 3206-AO96, AO97, AO99) and the joint accountability entries, none touching the EEOC or OSC; the EEOC list has no federal-sector transfer and OSC has no list. The OPM rules were read only through their first 100,000 characters; litigation status of the appeal rules and enacted 119th Congress laws were not checked. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

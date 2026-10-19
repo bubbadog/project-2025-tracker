@@ -5,9 +5,9 @@
     "Office space availability"
   ],
   "chapter": "20",
-  "confidence": 72,
-  "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked at page 651; the presidential memorandum was confirmed through the Federal Register API and the VA schedule through two fetched news reports; the VA directive itself was not opened.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "The stage-deciding VA release of 2025-02-03 and the 2025-02-24 VA post were read on news.va.gov in review and the presidential memorandum on federalregister.gov; 2026 headquarters attendance was not verified.",
   "durability": {
     "level": "medium",
     "why": "The policy is an agency decision that a later Secretary could revise, though it follows a government-wide memorandum."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-16",
       "note": "Cross-reference added to new layer 3 record c20-16 written in the second enumeration pass; no change to the status."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: read VA's 2025-02-03 release and 2025-02-24 post on news.va.gov; re-sourced the announcement event to VA and added the 2025-02-24 event. No stage change (implemented 75); confidence 72 to 80."
     }
   ],
   "id": "c20-08",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -58,28 +62,30 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: completed is arguable because the recommended review was overtaken by a broad return to the office, but exceptions remain and later practice was not checked, so implemented 75 is kept."
+      "No stage change: implemented 75, match direct. completed remains arguable because the review the text asks for was overtaken by a broad return to the office, but exceptions remain and 2026 practice was not checked.",
+      "The 2025-02-03 event is re-sourced from Federal Times to VA's own release; added a 2025-02-24 VA event.",
+      "Confidence raised 72 to 80 (high) because VA's own release, the deciding document, was read."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 651 asks for an analytically critical look at where hybrid and remote work is a functional necessity and where in-person presence would help, from the Office of the Secretary across headquarters, and criticizes the leadership's routine absence from the office. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y20b",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (651) and proposal field, the text asks for a critical review of where hybrid and remote work is a functional necessity across VA from the Office of the Secretary through headquarters, and criticizes routine remote work by leadership. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Presidential memorandum Return to In-Person Work, signed 2025-01-20, published 2025-01-28.",
+        "note": "Checked 2026-10-18: dated 2025-02-03; phases 2025-02-24 (appointees, SES and equivalents, nearby supervisors) and 2025-04-28 (nearby non-bargaining); bargaining-unit dates later; exceptions listed. Fully supports implemented; goes beyond a review.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2025-01907.json"
+        "url": "https://news.va.gov/press-room/va-announces-return-to-in-person-work-policy/"
       },
       {
-        "note": "Dated 2025-02-03; schedule by 2025-02-24 for appointees and senior executives, April 28 for nearby non-bargaining employees, exceptions listed.",
+        "note": "Checked 2026-10-18 (first 100,000 characters): dated 2025-02-24; nationwide return began, all personnel expected on site by July 2025; photo caption places the Secretary in the VA Central Office lobby.",
         "result": "supports",
-        "url": "https://www.federaltimes.com/veterans/2025/02/03/va-will-end-remote-work-status-for-thousands-of-staffers-this-month/"
+        "url": "https://news.va.gov/138595/va-secretary-doug-collins-in-person-work/"
       },
       {
-        "note": "No printed date; schedule of February 24, May 5 and July 28 with exceptions and Secretary exemptions.",
+        "note": "Read by the researcher 2026-10-18: memorandum of 2025-01-20 directing an end to remote work as soon as practicable.",
         "result": "supports",
-        "url": "https://federalnewsnetwork.com/workforce/2025/02/va-rescinds-most-telework-remote-work-policies-for-employees-that-still-have-them/"
+        "url": "https://www.federalregister.gov/documents/2025/01/28/2025-01907/return-to-in-person-work"
       }
     ]
   },
@@ -132,10 +138,24 @@
       "publisher": "Federal News Network",
       "title": "VA rescinds most telework, remote work policies for employees that still have them",
       "url": "https://federalnewsnetwork.com/workforce/2025/02/va-rescinds-most-telework-remote-work-policies-for-employees-that-still-have-them/"
+    },
+    {
+      "date": "2025-02-03",
+      "kind": "primary",
+      "publisher": "U.S. Department of Veterans Affairs (VA News)",
+      "title": "VA announces return to in-person work policy",
+      "url": "https://news.va.gov/press-room/va-announces-return-to-in-person-work-policy/"
+    },
+    {
+      "date": "2025-02-24",
+      "kind": "primary",
+      "publisher": "U.S. Department of Veterans Affairs (VA News)",
+      "title": "VA Secretary welcomes employees back to in-person work",
+      "url": "https://news.va.gov/138595/va-secretary-doug-collins-in-person-work/"
     }
   ],
   "stage": "implemented",
-  "status_summary": "VA announced on 2025-02-03 that it would end most telework and remote work agreements in phases, beginning with political appointees, senior executives and equivalents by 2025-02-24, with exceptions for disability, military spouses and other cases. A later VA schedule, reported without a printed date, extended the end of telework to bargaining and non-bargaining employees within 50 miles of federal office space by 2025-05-05 and to more distant employees by 2025-07-28. The policy followed a presidential memorandum on return to in-person work dated 2025-01-20.",
+  "status_summary": "VA announced on 2025-02-03 that it would end most telework and remote work agreements in phases, beginning with political appointees, senior executives and equivalents and nearby supervisors by 2025-02-24, then non-bargaining employees within 50 miles of an agency facility by 2025-04-28, with exceptions for disability, medical conditions and military spouses. On 2025-02-24 VA reported that employees nationwide had returned to in-person work and that all personnel were expected on site by July 2025. A later schedule reported by Federal News Network gave 2025-05-05 and 2025-07-28 for other groups. The policy followed a presidential memorandum on return to in-person work dated 2025-01-20.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -146,14 +166,21 @@
     },
     {
       "date": "2025-02-03",
-      "event": "VA announced that telework agreements would end for political appointees and senior executives by 2025-02-24, with later dates for other employees.",
-      "kind": "news",
-      "source": "Federal Times",
-      "url": "https://www.federaltimes.com/veterans/2025/02/03/va-will-end-remote-work-status-for-thousands-of-staffers-this-month/"
+      "event": "VA announced that telework and remote work agreements would end by 2025-02-24 for political appointees, senior executives and equivalents and supervisors within 50 miles of an agency facility, and by 2025-04-28 for non-bargaining employees within 50 miles, with bargaining-unit dates to follow and exceptions for disability, medical conditions and military spouses.",
+      "kind": "primary",
+      "source": "VA News",
+      "url": "https://news.va.gov/press-room/va-announces-return-to-in-person-work-policy/"
+    },
+    {
+      "date": "2025-02-24",
+      "event": "VA's first telework end date took effect; the Secretary welcomed employees back to in-person work nationwide, and VA said all personnel were expected on site by July 2025.",
+      "kind": "primary",
+      "source": "VA News",
+      "url": "https://news.va.gov/138595/va-secretary-doug-collins-in-person-work/"
     }
   ],
   "title": "Review hybrid and remote work at VA headquarters and favor in-person presence",
   "tracked": true,
-  "uncertainties": "The Federal News Network article prints no date to the reader; its URL places it in February 2025, so it is used as a source but not as a dated timeline event. Its schedule (May 5 and July 28) differs from the Federal Times report (April 28 for non-bargaining employees within 50 miles); the later dates are not used in the timeline. The Mandate asks for a review of where remote work is necessary, and VA's broad end of telework goes further than a review. Actual headquarters attendance by the Secretary and staff in 2026 was not verified.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "VA's release of 2025-02-03 was read in full on news.va.gov in review on 2026-10-18, and the Secretary's 2025-02-24 post was read for its first 100,000 of about 114,000 characters; the presidential memorandum was read on federalregister.gov by the researcher. The Federal News Network memo schedule (2025-05-05, 2025-07-28) carries no printed memo date and differs from VA's release (2025-04-28 for non-bargaining employees); the later dates are not used in the timeline. The Mandate asks for a review of where remote work is necessary, and VA's broad end of telework goes further than a review. Actual headquarters attendance in 2026 and the outcome of exceptions and bargaining-unit schedules were not verified. The news.va.gov search page returned a fetch error.",
+  "updated_at": "2026-10-18"
 }

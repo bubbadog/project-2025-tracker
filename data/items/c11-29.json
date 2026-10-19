@@ -4,9 +4,9 @@
     "No rulemaking on this definition was found; the definition sits in 34 CFR 600.2 and could be changed only through negotiated rulemaking under the Higher Education Act"
   ],
   "chapter": "11",
-  "confidence": 48,
-  "confidence_label": "low",
-  "confidence_reason": "Text checked; the notice of intent, the proposed rule and the Workforce Pell final rule were read in part on primary hosts; not_started rests on absence and is capped at 50.",
+  "confidence": 68,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API (supports); Unified Agenda, Education rule list read in full on reginfo.gov on 2026-10-19 with three entries opened (supports); congress.gov and govinfo with BILLSTATUS (supports); ed.gov press releases (supports); one news search (supports). The 2026-08-20 accreditation proposal, the likeliest vehicle, was read through section 602.17. A rule is the recommended vehicle, so all five checks are informative; set at 68, just under the 70 ceiling, because parts of two rules and five surfaced bills were not read.",
   "durability": {
     "level": "medium",
     "why": "A regulation, if issued, would last until rewritten; none exists yet."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with a separate term variant (0 documents), read the federalregister.gov full text of the 2026-08-20 accreditation proposal, and reviewed the researcher's checks of reginfo.gov with the Education fallback, govinfo.gov BILLSTATUS, ed.gov and one news search. No stage change (not_started, 0); confidence 48 to 64."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the Education rule list on reginfo.gov in full and opened three postsecondary entries, none on regular and substantive interaction; no stage change (not_started, 0); confidence 64 to 68."
     }
   ],
   "id": "c11-29",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -53,28 +61,50 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Judgment call: the Workforce Pell exclusion of direct assessment points the other way for one narrow program, but it does not address the interaction definition, so the record stays not_started rather than diverged."
+      "no stage change: not_started 0",
+      "confidence 64 to 68"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 356 recommends new regulations clarifying regular and substantive interaction for competency-based education and online programs, so that direct assessment programs are less hampered.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Page 356, as described in the record, recommends new regulations clarifying the definition and requirements of regular and substantive interaction for competency-based education and online programs. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Notice of 2026-01-27, docket ED-2025-OPE-1042, ten topics; none names regular and substantive interaction, distance education, direct assessment or competency-based education. Checked 2026-10-15.",
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms \"distance education\" and \"substantive interaction\", Education Department, since 2025-01-20: 0 documents. Researcher's variant result: supports; exact phrase 'regular and substantive interaction', all document types since 2025-01-20: 1 document, a Veterans Affairs proposed rule of 2025-09-03 (State Approving Agency Jurisdiction Rule), not an Education Department action. A second query (distance education and competency-based, Education Department only) returned 7 documents (Workforce Pell final rule of 2026-05-19, literacy priorities, grant-program notices); none clarifies regular and substantive interaction.",
         "result": "supports",
-        "url": "https://public-inspection.federalregister.gov/2026-01620.pdf"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22distance+education%22+%22substantive+interaction%22&conditions[agencies][]=education-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "None of those terms appear in either portion read of 91 FR 53940. Checked 2026-10-15.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/08/20/2026-17001/accreditation-innovation-and-modernization-the-secretarys-recognition-of-accrediting-agencies"
+        "note": "2026-10-18: the reginfo.gov landing page loaded but listed no agenda items (agency selector only). Fallback: Federal Register API query of Education Department proposed rules since 2025-01-20 (conditions[type][]=PRORULE) returned 33 documents; those on postsecondary subjects were the Workforce Pell and accountability proposals (2026-03-09, 2026-04-20), the Reimagining and Improving Student Education notice (2026-01-30), the negotiated rulemaking notice of intent (2026-01-27) and the Accreditation, Innovation, and Modernization proposed rule (2026-08-20, document 2026-17001). None is titled or described as clarifying regular and substantive interaction. The public inspection copy of 2026-17001 was read in part (text cut off during section 602.14) and the terms regular and substantive interaction, distance education, direct assessment and competency-based were not found in the portion read.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       },
       {
-        "note": "Final rule 91 FR 29254 of 2026-05-19 adds 690.92(c) prohibiting direct assessment in eligible workforce programs. Checked 2026-10-15.",
+        "note": "2026-10-18: domain-limited search (congress.gov, govinfo.gov) 'regular and substantive interaction competency-based education online programs bill 119th Congress'. Bills surfaced and checked in BILLSTATUS: H.R. 6282 Providing Distance Education for Foreign Institutions Act (referred to House Education and Workforce Committee 2025-11-21; concerns program eligibility of foreign institutions, does not mention regular and substantive interaction), H.R. 8210 A Stronger Workforce for America Act of 2026 (WIOA reauthorization, ordered reported 2026-04-21; no mention of the terms), H.R. 7117 Fast Track To and Through College Act (referred 2026-01-15; no mention). No bill on the subject found. H.R. 896, H.R. 5442, H.R. 2465, H.R. 3587 and S. 1768 appeared in results but were not opened (titles do not indicate the subject).",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/05/19/2026-10013/accountability-in-higher-education-and-access-through-demand-driven-workforce-pell-pell-grant"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6282.xml"
+      },
+      {
+        "note": "2026-10-18: Education Department press release page fetched; recent items concern Title IX, the 1776 Award, a higher education fraud summit, state flexibilities and a postsecondary accountability final rule. None concerns regular and substantive interaction, distance education or competency-based education.",
+        "result": "supports",
+        "url": "https://www.ed.gov/about/news/press-release"
+      },
+      {
+        "note": "2026-10-18: query 'Education Department regular and substantive interaction distance education rule 2026'. Results were institutional policies and explainers (WCET, UPCEA, college policy pages) on the existing definition; no report of a new Education Department rule or proposal.",
+        "result": "supports",
+        "url": "https://wcet.wiche.edu/initiatives/policy/regular-substantive-interaction/"
+      },
+      {
+        "note": "2026-10-18: reviewer read the Federal Register full text of the 2026-08-20 accreditation proposal (document 2026-17001) in two parts, about 134,000 characters, through the discussion of section 602.17. The terms regular and substantive, substantive interaction, direct assessment and competency-based do not appear; distance education appears once, in describing the existing identity-verification standard in section 602.17; 34 CFR 600.2 appears only as a cross-reference for the term institution. The summary of major provisions lists part 600 changes only for section 600.11. The proposal does not clarify regular and substantive interaction; any text after section 602.17 was not seen.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/full_text/text/2026/08/20/2026-17001.txt"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the Education list (page headed 'Agency Rule List - 2026', 19 rules, rule links carry publication id 202510) in full. No rule on regular and substantive interaction, distance education or competency-based education. Entries 1840-AD82 Accreditation Issues, 1840-AE04 Addressing Title IV Eligibility Issues (researcher opened both) and 1840-AE01 Reducing Anti-Competitive Regulatory Barriers (reviewer opened: textbook packaging and credit transfer) do not mention the subject.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1800"
       }
     ]
   },
@@ -149,6 +179,6 @@
   ],
   "title": "Clarify regular and substantive interaction rules for competency-based and online programs",
   "tracked": true,
-  "uncertainties": "Searches run: two by the researcher (federalregister.gov, ed.gov and higher education association terms on regular and substantive interaction, direct assessment, distance education and negotiated rulemaking) and one by the reviewer (regular and substantive interaction with 2026 negotiated rulemaking or proposed rule); results were mostly material on the 2019 to 2020 rulemaking, whose final rule (effective 2021-07-01) already revised the definition before the period tracked. A Federal Register API query for the phrase since 2025-01-20 returned only a Veterans Affairs document (researcher). The 2026-08-20 proposal and the 2026-05-19 final rule were read only in part, so a provision in unread sections cannot be excluded. The Unified Agenda and the earlier AHEAD and RISE committee records were not opened. Absence of evidence rests on a limited search.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No proposed or final rule clarifying regular and substantive interaction was found. The reginfo.gov Unified Agenda rule list for Education (edition headed Agency Rule List - 2026, 19 rules) lists no such rule; the Accreditation Issues (RIN 1840-AD82), Addressing Title IV Eligibility Issues (1840-AE04) and Reducing Anti-Competitive Regulatory Barriers (1840-AE01) entries do not mention it, though later negotiated rulemaking could take up the topic. The 2026-08-20 accreditation proposal was read through its discussion of section 602.17 and does not touch the definition; any later text, and the 2026-05-19 Workforce Pell final rule beyond the portion read, were not seen. Five bills surfaced in a congress.gov and govinfo search were not opened. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

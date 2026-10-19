@@ -4,9 +4,9 @@
     "No order or removal announcement found"
   ],
   "chapter": "11",
-  "confidence": 48,
-  "confidence_label": "low",
-  "confidence_reason": "Text checked; the ed.gov archive page was fetched and still posted; not_started rests on absence and is capped at 50.",
+  "confidence": 62,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API (supports); Unified Agenda, Education rule list read in full on reginfo.gov on 2026-10-19 (supports, weakly informative for an executive order); govinfo BILLSTATUS for S. 5573 (supports); ed.gov archive page (supports on the researcher's 2026-10-18 read, not re-fetchable by two reviewers; the parent page was read and is inconclusive); one news search (supports, older coverage). Set at 62, below the 65 to 68 band, because the agency page could not be re-verified.",
   "durability": {
     "level": "low",
     "why": "A page removal or an order barring a list would be reversible by a later administration."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review: reran the Federal Register API check with an exact-phrase Education Department variant, listed all Education Department proposed rules, opened the S.5573 bill status on govinfo.gov and the top news result on christianpost.com; the reviewer's re-fetch of the ed.gov archive page failed and the researcher's same-day read was relied on. No stage change (not_started 0); confidence 48 to 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the Education rule list on reginfo.gov in full and the parent Title IX exemptions page on ed.gov (the archive page itself could not be fetched); no stage change (not_started, 0); confidence 60 to 62."
     }
   ],
   "id": "c11-33",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "executive_order",
@@ -52,17 +60,58 @@
   "research_agent": "R11",
   "restates_ids": [],
   "review": {
-    "flags": [],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 357 recommends an executive order removing the archived 2016 list of religious exemption requests from the Department website and barring such lists in future.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "flags": [
+      "no stage change: not_started 0",
+      "confidence 60 to 62",
+      "archive page unreachable to two reviewers; parent page no longer links to it, which could mean the archive was unlinked or removed; worth a manual browser check"
+    ],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 357 recommends an executive order removing the archived 2016 list of Title IX religious exemption requests from the Department website and barring such lists in future; the chapter text was not available to this review, and an earlier review on 2026-10-15 recorded the paraphrase as confirmed.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Page still posted with historical banner, index updated as of 2016-12-31, page last reviewed 2026-01-29; entries not visible in fetched text. Checked 2026-10-15.",
+        "n": 1,
+        "note": "2026-10-18: reviewer variant, exact phrase 'religious exemption' limited to the Education Department since 2025-01-20: 1 document, the Workforce Pell and earnings accountability final rule published 2026-07-01, where the phrase appears only in a public comment on administrative capability. The researcher's query 'Title IX religious exemption' (51 loose matches, including the 2026-09-29 Title IX recodification rule) found nothing on the list either. No qualifying action.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22religious%20exemption%22&conditions[agencies][]=education-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "n": 2,
+        "note": "2026-10-18: reginfo.gov eAgendaMain showed only a landing page (researcher). Fallback run by the reviewer: all 33 Education Department proposed rules since 2025-01-20, both pages read; none concerns Title IX religious exemptions or the exemption index. Partial because only the fallback was available.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=education-department&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "n": 3,
+        "note": "2026-10-18: researcher's domain-limited search found S.5573 and only older-Congress bills on publishing exemption data. Reviewer opened the S.5573 BILLSTATUS: Religious Education Fairness Act, introduced and referred to HELP on 2026-09-29; it concerns Title IV eligibility of theology and religious programs at Title IX-exempt institutions and says nothing about publishing or removing exemption-request lists.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s5573.xml"
+      },
+      {
+        "n": 4,
+        "note": "2026-10-18: the researcher read the Religious Exemptions Index Archive page that day: still posted with a banner marking it historical and no longer maintained, index updated as of 2016-12-31, page last reviewed 2026-01-29, and no removal statement. The reviewer's re-fetch returned a fetch error, so the reading rests on the researcher's same-day fetch and the 2026-10-15 review's matching fetch.",
         "result": "supports",
         "url": "https://www.ed.gov/laws-and-policy/civil-rights-laws/title-ix-and-sex-discrimination/title-ix-key-issues/title-ix-exemptions/religious-exemptions-index-archive"
+      },
+      {
+        "n": 5,
+        "note": "2026-10-18: researcher's query on the Education Department religious exemptions list removed in 2026. Reviewer opened the top result: Christian Post of 2017-04-13 on a senator's letter asking that the list be removed or moved to the FOIA room, with no removal reported. No 2025 or 2026 report of removal or a bar on future lists.",
+        "result": "supports",
+        "url": "https://www.christianpost.com/news/senator-lankford-trump-obama-shame-list-christian-colleges-180392/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the Education list (page headed 'Agency Rule List - 2026', 19 rules, rule links carry publication id 202510) in full. No entry on a religious exemption list. RIN 1870-AA23 (Title IX definition of sex, Final Rule Stage) and RIN 1801-AA32 (faith-based organizations' participation) are unrelated to the archived list. An executive order would not appear on the agenda.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1800"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer: the archive page itself returned a fetch error again on 2026-10-19. The parent Title IX exemptions page (updated 2021-03-08, last reviewed 2026-01-29) links historical OCR memos and an other-correspondence page but no religious exemptions index archive, and states nothing about removal. Inconclusive on whether the archive remains posted.",
+        "result": "partial",
+        "url": "https://www.ed.gov/laws-and-policy/civil-rights-laws/title-ix-and-sex-discrimination/title-ix-key-issues/title-ix-exemptions"
       }
     ]
   },
@@ -108,6 +157,6 @@
   "timeline": [],
   "title": "Remove the archived list of Title IX religious exemption requests and bar future lists",
   "tracked": true,
-  "uncertainties": "Searches run: two by the researcher (general web and ed.gov-restricted terms on the Title IX religious exemption list, its archive and removal); the reviewer ran none and re-fetched the archive page, which still shows the historical banner, the 2016-12-31 index date and a review date of 2026-01-29. The page describes a searchable database; the institution entries did not appear in the fetched text and may load dynamically, so whether the list itself is still reachable was not confirmed. A related ed.gov page of correspondence on religious exemption claims was not opened. Broader religious liberty orders were not researched. Absence of evidence rests on a limited search.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No executive order or Department announcement removing the archived Title IX religious exemption list or barring future lists was found. The reginfo.gov Unified Agenda rule list for Education (edition headed Agency Rule List - 2026, 19 rules) has no entry on the list; the Title IX entry (RIN 1870-AA23) concerns the definition of sex, and an executive order would not appear on the agenda. The ed.gov archive page could not be fetched on 2026-10-18 or 2026-10-19, and the parent Title IX exemptions page (last reviewed 2026-01-29) does not link to it, so whether the archive remains posted rests on the researcher's read of 2026-10-18. Whether institution entries load dynamically was not confirmed. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -4,9 +4,9 @@
     "Requires legislation for the data mandates"
   ],
   "chapter": "22",
-  "confidence": 60,
-  "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked; the proposed rule read in full on the Federal Register and the reported bill confirmed through CBO; the match is partial.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Mandate text checked in an earlier review; the stage-deciding bill text and BILLSTATUS record were read on govinfo.gov in this review, and the proposed rule was read in full earlier on the Federal Register.",
   "durability": {
     "level": "medium",
     "why": "Rules can be reversed; a statutory mandate would last longer."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review read the H.R. 1602 reported text and BILLSTATUS on govinfo.gov and corrected the bill description from the CBO paraphrase to the bill text (a report to Congress on reports filed with FinCEN by type, expiring after seven years); added the 2025-03-05 committee vote. No stage change (proposed 12, parallel); confidence 60 to 80."
     }
   ],
   "id": "c22-17",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "legislation",
@@ -55,29 +59,25 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: proposed 12 on a committee-reported bill with a narrower reporting duty; not_started (0) is defensible because the bill covers only a congressional SAR count and the proposed rule is parallel",
-      "Added H.R. 1602 as the closest legislative match"
+      "No stage change: proposed 12, parallel.",
+      "Summary corrected from CBO paraphrase (suspicious activity reports) to bill text (reports filed with FinCEN by type, report to Congress, seven-year sunset).",
+      "Defensible alternative: not_started, since the bill reaches only a narrow congressional report."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 706-707, Anti-Money Laundering: Congress should require FinCEN to publish annual data on SARs, CTRs, prosecutions, convictions, fines and private costs; require separate FinCEN and GAO evaluations; and require a public retrospective review of FinCEN regulations. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y22i",
+    "mandate_check": "not_checked",
+    "mandate_note": "Chapter text not available in this run. Per the record and the earlier review (pages 706 to 707), the chapter asks Congress to require FinCEN to publish annual data on suspicious activity and currency transaction reports, prosecutions, convictions, fines and private costs, separate FinCEN and GAO evaluations, and a public retrospective review of FinCEN regulations; the proposal field matches that paraphrase.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "CBO estimate 2025-03-31; H.R. 1602 reported 2025-03-21; annual SAR report to Congress only; found by web search.",
-        "result": "partial",
-        "url": "https://www.cbo.gov/publication/61280"
-      },
-      {
-        "note": "Proposed rule published 2026-04-10, comments closed 2026-06-09; cites EO 14192; full text read in two passes with no data publication, GAO or retrospective review provision.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/04/10/2026-07033/anti-money-laundering-and-countering-the-financing-of-terrorism-programs"
-      },
-      {
-        "note": "Dated 2026-06-26; letter sent 2026-06-09 by committee and subcommittee chairs.",
+        "note": "2026-10-18: introduced 2025-02-26, ordered reported 48-0 on 2025-03-05, reported with H. Rept. 119-24 and placed on the Union Calendar 2025-03-21; no later action. Fully supports a proposed stage.",
         "result": "supports",
-        "url": "https://infobytes.orrick.com/2026-06-26/house-financial-services-committee-republicans-urge-fincen-to-finalize-bsa-rule-with-reduced-compliance-burdens/"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1602.xml"
+      },
+      {
+        "note": "2026-10-18: Sec. 3 adds 31 U.S.C. 5327, an annual report to the House Financial Services and Senate Banking committees on reports filed with FinCEN by type since 2022, reports retained and agency access protocols; repealed after seven years. No public data, no prosecutions, fines or costs, no GAO study or retrospective review, so it only partly matches the recommendation.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1602rh/html/BILLS-119hr1602rh.htm"
       }
     ]
   },
@@ -130,17 +130,38 @@
       "publisher": "Orrick",
       "title": "House Financial Services Committee Republicans urge FinCEN to finalize BSA rule with reduced compliance burdens",
       "url": "https://infobytes.orrick.com/2026-06-26/house-financial-services-committee-republicans-urge-fincen-to-finalize-bsa-rule-with-reduced-compliance-burdens/"
+    },
+    {
+      "date": "2025-03-21",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 1602 bill status (BILLSTATUS XML)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1602.xml"
+    },
+    {
+      "date": "2025-03-21",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 1602, Financial Privacy Act of 2025, reported in House (text)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1602rh/html/BILLS-119hr1602rh.htm"
     }
   ],
   "stage": "proposed",
-  "status_summary": "H.R. 1602, the Financial Privacy Act of 2025, was reported by the House Financial Services Committee on 2025-03-21; per the CBO estimate of 2025-03-31 it would require FinCEN to report annually to Congress on the number and types of suspicious activity reports, a narrower step than the public data on reports, prosecutions, fines and costs the chapter asks for. FinCEN published a proposed rule on anti-money laundering programs on 2026-04-10, citing Executive Order 14192 and aiming to reduce compliance burdens; it does not require the annual data, the FinCEN and GAO evaluations, or the retrospective review the chapter describes. Committee leaders urged FinCEN on 2026-06-09 to finalize that rule with reduced burdens.",
+  "status_summary": "H.R. 1602, the Financial Privacy Act of 2025, was ordered reported 48 to 0 on 2025-03-05 and reported by the House Financial Services Committee on 2025-03-21, and it remains on the Union Calendar with no floor or Senate action recorded. Its Sec. 3 would require the Treasury Secretary to report annually to the House and Senate committees on the number of reports filed with FinCEN by type and the number retained, expiring after seven years; it does not require public data or reporting on prosecutions, convictions, fines or compliance costs. FinCEN published a proposed rule on anti-money laundering programs on 2026-04-10, citing Executive Order 14192 and aiming to reduce compliance burdens; it does not require the annual data, the FinCEN and GAO evaluations, or the retrospective review the chapter describes. Committee leaders urged FinCEN on 2026-06-09 to finalize that rule with reduced burdens.",
   "timeline": [
     {
-      "date": "2025-03-21",
-      "event": "The House Financial Services Committee reported H.R. 1602, which would require FinCEN to report annually to Congress on the number and types of suspicious activity reports (CBO estimate dated 2025-03-31).",
+      "date": "2025-03-05",
+      "event": "The House Financial Services Committee ordered H.R. 1602 reported, as amended, by a vote of 48 to 0.",
       "kind": "primary",
-      "source": "Congressional Budget Office",
-      "url": "https://www.cbo.gov/publication/61280"
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1602.xml"
+    },
+    {
+      "date": "2025-03-21",
+      "event": "The House Financial Services Committee reported H.R. 1602, the Financial Privacy Act of 2025 (H. Rept. 119-24), and the bill was placed on the Union Calendar; its Sec. 3 would require the Treasury Secretary to report annually to the House and Senate committees on the number of reports filed with FinCEN by type since 2022 and the number retained, with the provision repealed after seven years.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1602.xml"
     },
     {
       "date": "2026-04-10",
@@ -159,6 +180,6 @@
   ],
   "title": "Publish annual AML data and require a retrospective review of FinCEN rules",
   "tracked": true,
-  "uncertainties": "The H.R. 1602 provisions come from the CBO description, not the bill text, and later floor action was not checked. The proposed rule was read in full through two passes and contains no data publication or retrospective review requirement. The FinCEN SAR statistics page prints no date and was not treated as evidence. A letter from legislators is listed because it was a dated official act, though it does not advance the specific items.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The H.R. 1602 reported text and its BILLSTATUS record were read on govinfo.gov in this review; the bill names reports filed with FinCEN generally rather than suspicious activity and currency transaction reports by name, sends its report to two congressional committees rather than the public, and does not mention a GAO study or a retrospective review. BILLSTATUS shows no House floor passage or Senate action through the run date. The 2026-04-10 proposed rule was read in full in an earlier pass and not reopened; the researcher's Federal Register listing of FinCEN documents since 2026-04-01 shows no final program rule and no retrospective review document. The CBO estimate remains a source but its wording on suspicious activity reports is a reading of the bill. The FinCEN SAR statistics page prints no date and was not treated as evidence. The legislators' letter is a dated official act but does not advance the specific items.",
+  "updated_at": "2026-10-18"
 }

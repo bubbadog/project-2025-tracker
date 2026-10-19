@@ -7,7 +7,7 @@
   "chapter": "30",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Reviewer read EO 14267 on the Federal Register API, the FTC letter to OMB, the FTC request for comment and the DOJ release; the list itself and any resulting repeals were not seen.",
+  "confidence_reason": "Chapter text on printed pages 871 and 872 re-read. The stage-deciding primary source, the FTC Chairman's 2025-09-16 letter to OMB, was fetched and read in this review, and Executive Order 14267, the FTC request for comment and the DOJ release were read in earlier review. Rule applied: in_progress (25 to 60) at 30 because the order-driven inventory is formally underway and an initial report was sent, while no regulation has been repealed or changed as a result and the sectors the chapter names are not addressed; the absence of later steps rests on a limited search.",
   "durability": {
     "level": "low",
     "why": "An executive order and a non-binding Chairman's report can be revised by a later order, and any rule changes would need separate rulemaking."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: no supplemental FTC report, OMB action or consolidated list traced to the 2025-09-16 letter found; uncertainties reworded. Independent review (AI) opened the letter and kept confidence 80."
     }
   ],
   "id": "c30-05",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -57,37 +61,19 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Title shortened from 92 to 84 characters.",
-      "Proposal wording adjusted from rising corporate profits to incumbency profits to match the text; not a change in substance.",
-      "Stage kept at in_progress 30 with a partial match: the order-driven review is operative and the initial report was sent, but no repeal followed and the named sectors are not addressed (health care only appears in the DOJ task force focus list). proposed 20 is defensible if the chapter is read as asking for FTC analysis rather than an inventory; implemented is not, since no regulation changed.",
-      "One reviewer search found no supplemental report or resulting repeal.",
-      "Duplicate check: c30-04 (consumer welfare standard) and c02-07 (regulatory review) do not cover government's role in concentration; kept."
+      "uncertainties-only update; no new timeline event",
+      "stage alternative carried from earlier review: proposed 20 if the chapter is read as asking for FTC analysis rather than an inventory"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 871 to 872, under Mission/Overview: large U.S. firms appear to earn substantial incumbency rents; the chapter calls it disturbing that these may be extracted partly through regulatory capture that bars entry, notes compliance costs favor large firms, and says the FTC must consider government's own role in maintaining concentration in areas from pharmaceuticals and health care to avionics, banking and real estate brokerage. Paraphrase confirmed; wording on profits adjusted to the text's incumbency rents.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y5",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Printed pages 871 and 872 describe incumbency rents of large firms, raise the possibility that they come partly from regulatory capture that bars entry, note that compliance costs favor large firms, and say the FTC must consider government's role in maintaining concentration in pharmaceuticals, health care, avionics, banking and real estate brokerage. Proposal and partial match confirmed.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
-        "note": "EO 14267, Reducing Anti-Competitive Regulatory Barriers, signed 2025-04-09, published 2025-04-15, 90 FR 15629 (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2025-06463.json"
-      },
-      {
-        "note": "Letter dated 2025-09-16 to the OMB Director transmitting an initial report recommending deletion or modification of over 125 regulations; Chairman views only; supplemental report planned; examples are DOT contracting preferences, ED textbook costs, a withdrawn CPSC table saw rule and Forest Service grazing permits, none in the chapter named sectors (checked 2026-10-14)",
+        "note": "Fetched: dated 2025-09-16, FTC Chairman to the OMB Director; over 125 regulations recommended for deletion or modification; Chairman's views only; supplemental report planned; examples are DOT contracting preferences, Education textbook charges, a withdrawn CPSC table saw rule and Forest Service grazing permits. Supports in_progress; no sector named in the chapter among the examples.",
         "result": "supports",
         "url": "https://www.ftc.gov/system/files/ftc_gov/pdf/Anticompetitive-Regulations-Ferguson-Letter.pdf"
-      },
-      {
-        "note": "Opened 2025-04-13, comments due 2025-05-27, no sectors named (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.ftc.gov/policy/public-comments/request-public-comment-regarding-reducing-anti-competitive-regulatory-barriers"
-      },
-      {
-        "note": "Release 2025-03-27 (updated 2025-04-24); focus on housing, transportation, food and agriculture, health care and energy; comments due 2025-05-27 (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.justice.gov/opa/pr/justice-department-launches-anticompetitive-regulations-task-force"
       }
     ]
   },
@@ -218,6 +204,6 @@
   ],
   "title": "FTC to weigh government's role in market concentration, including regulatory capture",
   "tracked": true,
-  "uncertainties": "Pages and sources were read through summarizing fetch tools, not as raw text. The full consolidated list was not found public; a law-firm article reports it had not been released and a House member asked OMB for it on 2025-09-30, so the sectors it covers are unknown beyond the cover letter examples. No repeal, rule or supplemental report resulting from the list was found, but only five searches were run and absence is not proven. The executive order's date was confirmed on the Federal Register; the Task Force page was updated 2025-04-24 and the announcement date comes from that page. The chapter's concern is the FTC weighing government's role in concentration, and the order-driven inventory is counted as a partial match because the order's categories cover entry barriers and incumbent protection generally while the chapter names specific sectors. Whether the Mandate text asks for analysis in enforcement rather than deregulatory lists is a judgment call.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Pages and sources were read through summarizing fetch tools, not as raw text. The full consolidated list was not found public; a law-firm article reports it had not been released and a House member asked OMB for it on 2025-09-30, so the sectors it covers are unknown beyond the cover letter examples. No repeal, rule or supplemental report resulting from the list was found, but searches were limited in number and absence is not proven. The executive order's date was confirmed on the Federal Register; the Task Force page was updated 2025-04-24 and the announcement date comes from that page. The chapter's concern is the FTC weighing government's role in concentration, and the order-driven inventory is counted as a partial match because the order's categories cover entry barriers and incumbent protection generally while the chapter names specific sectors. Whether the Mandate text asks for analysis in enforcement rather than deregulatory lists is a judgment call. A Federal Register search for the order title after 2025-09-17 returned only unrelated agency rules; no supplemental report, no published consolidated list and no rule resulting from it were found in the FTC press release listing, trade searches or a law-firm update. An FTC staff comment of 2026-09-22 supporting a Department of Education proposal on accreditation was found; the page does not cite the order or the phrase anticompetitive regulations, and education is not a sector named in the chapter, so it was not counted. Through 2026-10-19, absence of a later report is not proven.",
+  "updated_at": "2026-10-19"
 }

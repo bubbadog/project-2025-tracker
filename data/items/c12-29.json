@@ -4,9 +4,9 @@
     "No stated direction to the office on these items found"
   ],
   "chapter": "12",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Mandate text checked and the office page re-read; not_started rests on a limited search and the linked strategic plan was not opened.",
+  "confidence": 61,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API (supports); Unified Agenda, DOE rule list read in full on reginfo.gov on 2026-10-19 (supports, weakly informative for an office mandate); govinfo BILLSTATUS for H.R. 3328 (supports); the energy.gov office page and a 2026 DOE item (supports); one news search (supports, older coverage). Set at 61, below the 65 to 68 band, because the office's strategic plan was not opened.",
   "durability": {
     "level": "medium",
     "why": "The office has persisted across administrations since 2020, but its scope is set administratively."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review: reran the Federal Register API check with exact-phrase and DOE Antarctic variants, opened the H.R.3328 bill status on govinfo.gov, re-read the energy.gov office page, read a 2026 DOE conference item (added as a source) and the top news result on arctictoday.com. No stage change (not_started 0); confidence 40 to 58."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the DOE rule list on reginfo.gov in full and found no Arctic entry; no stage change (not_started, 0); confidence 58 to 61."
     }
   ],
   "id": "c12-29",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -57,18 +65,50 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Match set to direct for a not_started record; no stage change."
+      "no stage change: not_started 0",
+      "confidence 58 to 61"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 390 to 391 ask the Arctic Energy Office to help define U.S. strategic and economic interests and threats in the Arctic, focus on energy interests and foreign activity there, expand Alaska operations to rare earths, oil and gas, lead DOE's Antarctic work, and supply a senior energy official to the Arctic Council delegation.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, pages 390 to 391 ask the Arctic Energy Office to help define U.S. strategic and economic interests and threats in the Arctic, expand Alaska operations to rare earths, oil and gas, lead DOE's Antarctic work and supply a senior energy official to the Arctic Council delegation; the chapter text was not available to this review, and an earlier review on 2026-10-15 recorded the paraphrase as confirmed.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Office page lists an acting director, 2025 and 2026 items (Alaska visit 2025-06-06, Arctic Seeds 2026-06-23), no Antarctic, Arctic Council or expansion mention; links a strategic plan not opened (checked 2026-10-15).",
+        "n": 1,
+        "note": "2026-10-18: reviewer variants since 2025-01-20: exact phrase 'Arctic Energy Office', all agencies, 0 documents; 'Antarctic' limited to the Energy Department, 0 documents. The researcher's unquoted query (72 loose matches, none DOE) and 'Arctic Energy' limited to DOE (3 unrelated documents) found none either. No qualifying action.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Arctic%20Energy%20Office%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "n": 2,
+        "note": "2026-10-18: reginfo.gov eAgendaMain showed only a landing page. Fallback (researcher): DOE proposed rules with the term 'Arctic' since 2025-01-20 returned 1 unrelated FERC rehearing rule of 2025-06-24. An office tasking would not ordinarily appear in a proposed rule. Partial because only the fallback was available.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Arctic&conditions[agencies][]=energy-department&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "n": 3,
+        "note": "2026-10-18: researcher's domain-limited search found Arctic Council resolutions (H.Res.431, S.Res.167, S.Res.763) and H.R.3328. Reviewer opened the H.R.3328 BILLSTATUS: a bill to establish an Ambassador-at-Large for Arctic Affairs, introduced and referred to Foreign Affairs on 2025-05-13 with no later action and no mention of DOE or the Arctic Energy Office.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3328.xml"
+      },
+      {
+        "n": 4,
+        "note": "2026-10-18: reviewer re-read the Arctic Energy Office page: led by a Deputy Under Secretary of Energy as acting director with an acting deputy director; items dated 2025-01-16 to 2026-06-25; links an undated strategic plan; no Antarctic, Arctic Council or rare earths expansion mention. The DOE item of 2026-06-25 on the Alaska Sustainable Energy Conference lists Arctic seed funding, hydroelectricity incentives, a critical minerals accelerator and tribal energy funding, with no expansion or Antarctic role, and names the acting deputy as acting director.",
         "result": "supports",
         "url": "https://www.energy.gov/arctic"
+      },
+      {
+        "n": 5,
+        "note": "2026-10-18: researcher's query on the office's expansion to Alaska rare earths in 2026. Reviewer opened the Arctic Today result: dated 2020-09-17, on the office's reopening with a focus on methane hydrates, microgrids and nuclear. Other results were 2020 establishment coverage and the 2026 DOE conference item. No 2025 or 2026 report of expansion, an Antarctic lead or an Arctic Council role.",
+        "result": "supports",
+        "url": "https://www.arctictoday.com/?p=28013"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the DOE list (page headed 'Agency Rule List - 2026', 89 rules, NNSA included) in full. No title on the Arctic Energy Office, the Arctic, Alaska or Antarctica. Office mandates are organizational, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1900"
       }
     ]
   },
@@ -121,6 +161,13 @@
       "publisher": "GovInfo (Federal Register)",
       "title": "Unleashing Alaska's Extraordinary Resource Potential (EO 14153)",
       "url": "https://www.govinfo.gov/content/pkg/FR-2025-01-29/pdf/2025-01955.pdf"
+    },
+    {
+      "date": "2026-06-25",
+      "kind": "primary",
+      "publisher": "U.S. Department of Energy",
+      "title": "U.S. Department of Energy to Showcase Arctic Energy Leadership at ASEC 2026",
+      "url": "https://www.energy.gov/node/4859189"
     }
   ],
   "stage": "not_started",
@@ -128,6 +175,6 @@
   "timeline": [],
   "title": "Define Arctic energy interests, expand Alaska operations, lead Antarctic work",
   "tracked": true,
-  "uncertainties": "Absence of evidence from a limited search. The researcher ran three searches on energy.gov Arctic pages, govinfo.gov (Executive Order 14153) and Alaska LNG items; the reviewer re-read the energy.gov Arctic page. That page links an Arctic Energy Office strategic plan whose date and contents were not opened, so a statement of interests cannot be excluded. Alaska LNG export authorizations are DOE actions on LNG exports and are tracked under c12-04, not here.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No expansion of the Arctic Energy Office's Alaska operations, Antarctic lead role, Arctic Council seat or new statement of Arctic energy interests was found. The reginfo.gov Unified Agenda rule list for DOE (edition headed Agency Rule List - 2026, 89 rules) has no Arctic, Alaska or Antarctic entry; office mandates are organizational, so this check is weakly informative. The office's linked strategic plan, which could state Arctic interests, was not opened, Arctic Council delegation membership for 2025 and 2026 was not checked, and the office page and a 2026-06-25 DOE item name different acting directors. Alaska LNG export steps are tracked under c12-04. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -2,15 +2,15 @@
   "agency": "Office of Science and Technology Policy",
   "blockers": [],
   "chapter": "02",
-  "confidence": 80,
+  "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "The page 60 text was checked and the executive order and OSTP release were fetched and read, with a fetched news report for the NSF action. Agency follow-through was not tallied.",
+  "confidence_reason": "Page 60 re-read; Executive Order 14303 and the OSTP release were checked earlier, and in this review every new agency document was opened and read (DOE policy, EPA policy page, Interior order and listing, EPA memorandum, Commerce order, NSF policy PDF). Stage rule applied: operative executive and agency action that only partly meets the recommendation is implemented; progress 70 reflects agency follow-through at five agencies with the separation element unmet.",
   "durability": {
     "level": "low",
     "why": "The steps rest on an executive order and OSTP guidance that a later administration can revoke."
   },
   "est_completion": {
-    "basis": "Inference: agency policy updates were due in the months after the June 2025 guidance, but no completion tally was located.",
+    "basis": "Inference: several agencies revised policies within 14 months of the guidance and others remain, but no government-wide tally was located.",
     "window": "2027"
   },
   "headline": false,
@@ -22,10 +22,14 @@
     {
       "date": "2026-10-10",
       "note": "Independent review: confirmed the order and guidance; added the April 2025 NSF award terminations; stage and progress unchanged."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: added agency follow-through on Executive Order 14303 (DOE policy P 411.2C of 2025-07-24, EPA's August 2025 reinstatement of its 2012 policy, Interior Secretary's Order 3441 listed 2025-08-29, the EPA risk assessment memorandum of 2026-04-27, Commerce DAO 216-23 effective 2026-08-19, the NSF policy of 2026-09-01); progress 65 to 70; the separation prong stays unmet; red-team check holds. Independent review (AI) opened each document, dated the Interior order by Interior's listing, removed a by-implication reading of the EPA memorandum and set confidence 82."
     }
   ],
   "id": "c02-18",
-  "last_checked": "2026-10-10",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "partial",
   "mechanism": "executive_order",
@@ -33,44 +37,102 @@
     60
   ],
   "position": "Office of Science and Technology Policy",
-  "progress": 65,
+  "progress": 70,
   "proposal": "The Mandate recommends separating scientific risk assessment from risk management, unwinding gender, racial and equity initiatives carried out under the banner of science, scrubbing them from policy manuals and guidance, and restoring scientific excellence and innovation as OSTP's top priority.",
+  "redteam": {
+    "date": "2026-10-19",
+    "evidence": [
+      {
+        "date": "2026-08-19",
+        "note": "Order issued under Executive Order 14303 and the OSTP guidance, so the order remained operative as of August 2026.",
+        "source": "Department of Commerce",
+        "url": "https://www.commerce.gov/opog/directives/DAO_216-23"
+      },
+      {
+        "date": "2026-09-30",
+        "note": "Policy page ties the August 2025 reinstatement of the 2012 integrity policy to the executive order.",
+        "source": "EPA",
+        "url": "https://www.epa.gov/node/297850"
+      },
+      {
+        "date": "2025-09-04",
+        "note": "Interior announced Secretary's Order 3441 implementing the executive order.",
+        "source": "Department of the Interior",
+        "url": "https://www.doi.gov/node/63386"
+      }
+    ],
+    "note": "No injunction, vacatur or revocation was found in three searches; agency follow-through is documented at several agencies, so the stage holds. Progress was raised from 65 to 70 on the added agency actions; the risk assessment separation element remains unmet.",
+    "verdict": "holds",
+    "what_was_tested": "Looked for a court action against Executive Order 14303 or the OSTP guidance, any revocation of the order, and whether the stage rested on guidance alone without agency follow-through; read agency policy pages and a Federal Register term search on Gold Standard Science since 2025-06-01."
+  },
   "related_ids": [
     "c13-05",
     "c00-01"
   ],
   "remaining": [
-    "A distinct policy separating scientific risk assessment from risk management (not found)",
-    "Documented removal of equity-related content from science policy manuals government-wide",
-    "Completed agency rewrites of scientific integrity policies"
+    "A distinct policy separating scientific risk assessment from risk management (not found; the EPA memorandum of 2026-04-27 places assessment work in regulatory program offices rather than separating it)",
+    "Documented removal of equity-related content from science policy manuals government-wide (the 2026 NSF policy contains no such terms; other agencies not checked for this)",
+    "Completed scientific integrity policy rewrites at the remaining agencies (USDA, HHS and others not individually confirmed)"
   ],
   "requires_congress": "no",
   "research_agent": "N02b",
   "review": {
     "flags": [
-      "added NSF award terminations as a DEI unwinding event in science",
-      "risk assessment and management separation not found"
+      "Interior event dated by the document library listing (2025-08-29) because the order text has no date; the draft's signed-per-filename wording was removed.",
+      "EPA risk assessment memorandum: the draft read it as separating assessment from management by implication; on reading it places assessment work in regulatory program offices and does not support the separation element. Event, summary and remaining reworded; c13-05 describes the memo the same way.",
+      "Progress 70 kept: operative order plus five agency revisions. 65 is the alternative if the unmet separation element is weighed heavily.",
+      "AIP news report kept as a listed lead source; its characterizations are not asserted."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Printed page 60 supports the recommendations to separate risk assessment from risk management, unwind equity initiatives pursued under the banner of science and scrub them from manuals and guidance, and restore scientific excellence as OSTP's top priority.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-10",
-    "reviewer": "Y6",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Page 60: separate the scientific risk assessment function from risk management (the domain of elected policymakers); unwind gender, racial and equity initiatives advanced under the banner of science and scrub them from manuals, guidance and agendas; restore scientific excellence and innovation as OSTP's top priority. Proposal paraphrase and partial match confirmed.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
-        "note": "EO 14303 signed 2025-05-23, published 2025-05-29; OSTP guidance within 30 days; agencies to revise or rescind 2021 to 2025 integrity policies; DEI appears only in the purpose section; no risk assessment and management separation.",
+        "note": "DOE P 411.2C approved 2025-07-24, supersedes DOE P 411.2B of 2024-01-19; does not cite EO 14303, Gold Standard Science, risk management or equity. Supports the event as worded.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/05/29/2025-09802/restoring-gold-standard-science"
+        "url": "https://www.energy.gov/documents/scientific-integrity-policy"
       },
       {
-        "note": "Release of 2025-06-23 on OSTP guidance with a 60-day public reporting requirement.",
+        "note": "Page (last updated 2026-09-30) says EPA rescinded its 2025 policy and reinstated the 2012 policy in August 2025, tied to the 2025-05-23 Restoring Gold Standard Science order; no day given, so the month-only convention is confirmed.",
         "result": "supports",
-        "url": "https://www.whitehouse.gov/releases/2025/06/ostp-issues-agency-guidance-for-gold-standard-science"
+        "url": "https://www.epa.gov/node/297850"
       },
       {
-        "note": "Article of 2025-04-18: NSF began terminating awards including DEI-focused grants, citing its priorities.",
+        "note": "Listing shows SO 3441 under 2025-08-29 with the full title naming EO 14303; the listing date is used for the event.",
         "result": "supports",
-        "url": "https://www.nextgov.com/policy/2025/04/nsf-begins-terminating-select-grant-funding/404698"
+        "url": "https://www.doi.gov/document-library/secretary-order/so-3441-implementing-requirements-executive-order-14303-restoring"
+      },
+      {
+        "note": "Order text has no date line; effective immediately; rescinds 305 DM 3 and SO 3397, reinstates SO 3369 Amendment 1, 30-day bureau policy review, open data requirements. The draft's signed-per-filename wording was replaced with the listing date.",
+        "result": "supports",
+        "url": "https://www.doi.gov/sites/default/files/document_secretarys_orders/so_implementing-executive-order-14303_restoring-gold-standard-science_08292025_final-signed_508.pdf"
+      },
+      {
+        "note": "Release dated 2025-09-04 announcing the order and its contents; no signing date stated.",
+        "result": "supports",
+        "url": "https://www.doi.gov/node/63386"
+      },
+      {
+        "note": "Memorandum dated 2026-04-27 from the Deputy Administrator implements EO 14303; it moves hazard and dose-response work to regulatory program offices and adds an IRIS disclaimer, and does not use the term risk management. Supports the event as reworded but does not support any part of the separation element; the draft's by-implication reading was removed. Consistent with c13-05.",
+        "result": "does_not_support",
+        "url": "https://www.epa.gov/system/files/documents/2026-08/future-development-and-use-of-risk-assessments.pdf"
+      },
+      {
+        "note": "DAO 216-23 effective 2026-08-19, supersedes the 2025-01-15 version, issued under EO 14303 and the 2025-06-23 OSTP guidance; no express political interference provision.",
+        "result": "supports",
+        "url": "https://www.commerce.gov/opog/directives/DAO_216-23"
+      },
+      {
+        "note": "Policy page: NSF.601.P published 2026-09-01, replaces NSF 24-007; text not on the page.",
+        "result": "supports",
+        "url": "https://www.nsf.gov/policies/document/scientific-integrity-policy"
+      },
+      {
+        "note": "Policy PDF version 1.0 dated 2026-09-01 cites EO 14303, has no express political interference clause and no diversity, equity or inclusion terms; supersedes field blank.",
+        "result": "supports",
+        "url": "https://nsf-gov-resources.nsf.gov/files/US-National-Science-Foundation-Scientific-Integrity-Policy.pdf"
       }
     ]
   },
@@ -126,10 +188,80 @@
       "publisher": "Nextgov/FCW",
       "title": "NSF begins terminating select grant funding",
       "url": "https://www.nextgov.com/policy/2025/04/nsf-begins-terminating-select-grant-funding/404698"
+    },
+    {
+      "date": "2025-07-24",
+      "kind": "primary",
+      "publisher": "Department of Energy",
+      "title": "DOE Scientific Integrity Policy (DOE P 411.2C)",
+      "url": "https://www.energy.gov/documents/scientific-integrity-policy"
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "primary",
+      "publisher": "EPA",
+      "title": "EPA Scientific Integrity Policy page",
+      "url": "https://www.epa.gov/node/297850"
+    },
+    {
+      "date": "2025-08-29",
+      "kind": "primary",
+      "publisher": "Department of the Interior",
+      "title": "SO 3441, Implementing the Requirements of Executive Order 14303",
+      "url": "https://www.doi.gov/document-library/secretary-order/so-3441-implementing-requirements-executive-order-14303-restoring"
+    },
+    {
+      "date": "2025-09-04",
+      "kind": "primary",
+      "publisher": "Department of the Interior",
+      "title": "Interior Department Restores Gold Standard Science Across Federal Decision-Making",
+      "url": "https://www.doi.gov/node/63386"
+    },
+    {
+      "date": "2026-04-27",
+      "kind": "primary",
+      "publisher": "EPA",
+      "title": "Future development and use of risk assessments (EPA memorandum)",
+      "url": "https://www.epa.gov/system/files/documents/2026-08/future-development-and-use-of-risk-assessments.pdf"
+    },
+    {
+      "date": "2026-08-19",
+      "kind": "primary",
+      "publisher": "Department of Commerce",
+      "title": "Scientific Integrity, DAO 216-23",
+      "url": "https://www.commerce.gov/opog/directives/DAO_216-23"
+    },
+    {
+      "date": "2026-09-01",
+      "kind": "primary",
+      "publisher": "National Science Foundation",
+      "title": "NSF Scientific Integrity Policy",
+      "url": "https://www.nsf.gov/policies/document/scientific-integrity-policy"
+    },
+    {
+      "date": "2026-09-11",
+      "kind": "news",
+      "publisher": "American Institute of Physics (FYI)",
+      "title": "Science agencies pull political interference protections from scientific integrity policies",
+      "url": "https://www.aip.org/fyi/science-agencies-pull-political-interference-protections-from-scientific-integrity-policies"
+    },
+    {
+      "date": "2025-08-29",
+      "kind": "primary",
+      "publisher": "Department of the Interior",
+      "title": "Secretary's Order 3441 (signed order, PDF)",
+      "url": "https://www.doi.gov/sites/default/files/document_secretarys_orders/so_implementing-executive-order-14303_restoring-gold-standard-science_08292025_final-signed_508.pdf"
+    },
+    {
+      "date": "2026-09-01",
+      "kind": "primary",
+      "publisher": "National Science Foundation",
+      "title": "NSF Scientific Integrity Policy, NSF.601.P (PDF)",
+      "url": "https://nsf-gov-resources.nsf.gov/files/US-National-Science-Foundation-Scientific-Integrity-Policy.pdf"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Executive Order 14303 (signed 2025-05-23) directed OSTP to issue Gold Standard Science guidance, which it published on 2025-06-23 with a 60-day agency reporting requirement. The order requires agencies to reevaluate and revise or rescind scientific integrity policies issued between 2021-01-20 and 2025-01-20. Its background text criticizes diversity, equity and inclusion considerations in science but it has no operative directive on them; separately, the National Science Foundation began terminating awards focused on diversity, equity and inclusion in April 2025. No policy separating risk assessment from risk management by that name was found.",
+  "status_summary": "Executive Order 14303 (signed 2025-05-23) directed OSTP to issue Gold Standard Science guidance, which it published on 2025-06-23 with a 60-day agency reporting requirement; the order also requires agencies to reevaluate and revise or rescind scientific integrity policies issued between 2021-01-20 and 2025-01-20. Several agencies have since replaced or revised those policies: the Department of Energy (2025-07-24, a policy that does not cite the order), EPA (August 2025, reinstating its 2012 policy), Interior through Secretary's Order 3441 (listed 2025-08-29), Commerce (effective 2026-08-19) and the National Science Foundation (2026-09-01, a new policy that cites the order and contains no diversity, equity or inclusion terms). An EPA memorandum of 2026-04-27 implementing the order moves hazard and dose-response assessment work to the regulatory program offices; it does not separate risk assessment from risk management, and no policy doing so was found. The order's background text criticizes diversity, equity and inclusion considerations in science without an operative directive on them; the National Science Foundation began terminating such awards in April 2025.",
   "timeline": [
     {
       "date": "2025-04-18",
@@ -151,10 +283,52 @@
       "kind": "primary",
       "source": "White House",
       "url": "https://www.whitehouse.gov/releases/2025/06/ostp-issues-agency-guidance-for-gold-standard-science"
+    },
+    {
+      "date": "2025-07-24",
+      "event": "The Department of Energy approved DOE P 411.2C, a new Scientific Integrity Policy superseding DOE P 411.2B of 2024-01-19; the policy text read does not cite Executive Order 14303 or Gold Standard Science.",
+      "kind": "primary",
+      "source": "Department of Energy",
+      "url": "https://www.energy.gov/documents/scientific-integrity-policy"
+    },
+    {
+      "date": "2025-08-01",
+      "event": "EPA rescinded its January 2025 scientific integrity policy and reinstated its 2012 policy, which EPA's policy page ties to Executive Order 14303 (month-only date: August 2025).",
+      "kind": "primary",
+      "source": "EPA",
+      "url": "https://www.epa.gov/node/297850"
+    },
+    {
+      "date": "2025-08-29",
+      "event": "Interior's document library lists Secretary's Order 3441, Implementing the Requirements of Executive Order 14303, under the date 2025-08-29 (the order text carries no date line and takes effect immediately). It rescinds the 2024 departmental scientific integrity chapter (305 DM 3) and Secretary's Order 3397, reinstates the 2018 open science order (SO 3369 Amendment 1), requires public release of relied-upon data and models, and gives bureaus 30 days to propose revisions to their scientific integrity policies; Interior announced it on 2025-09-04.",
+      "kind": "primary",
+      "source": "Department of the Interior",
+      "url": "https://www.doi.gov/document-library/secretary-order/so-3441-implementing-requirements-executive-order-14303-restoring"
+    },
+    {
+      "date": "2026-04-27",
+      "event": "EPA's Deputy Administrator issued a memorandum implementing Executive Order 14303 on risk assessments: regulatory program offices are to make the science policy judgments and develop the hazard and dose-response assessments their programs need, and IRIS values are to carry a disclaimer that they are not necessarily regulatory levels. The memorandum does not use the term risk management and places assessment work in the offices that make regulatory decisions.",
+      "kind": "primary",
+      "source": "EPA",
+      "url": "https://www.epa.gov/system/files/documents/2026-08/future-development-and-use-of-risk-assessments.pdf"
+    },
+    {
+      "date": "2026-08-19",
+      "event": "Commerce Department Administrative Order DAO 216-23, Scientific Integrity, took effect, replacing the 2025-01-15 version; it is issued under Executive Order 14303 and the OSTP guidance and does not expressly address political interference.",
+      "kind": "primary",
+      "source": "Department of Commerce",
+      "url": "https://www.commerce.gov/opog/directives/DAO_216-23"
+    },
+    {
+      "date": "2026-09-01",
+      "event": "The National Science Foundation published Scientific Integrity Policy NSF.601.P (version 1.0, dated 2026-09-01), which its policy page lists as replacing NSF 24-007; the policy cites Executive Order 14303, defines inappropriate influence without an express political interference clause, and contains no diversity, equity or inclusion terms.",
+      "kind": "primary",
+      "source": "National Science Foundation",
+      "url": "https://www.nsf.gov/policies/document/scientific-integrity-policy"
     }
   ],
   "title": "Separate risk assessment from management; unwind equity initiatives in science policy",
   "tracked": true,
-  "uncertainties": "Agency implementation plans were not individually reviewed. One web search for litigation over the order found no court case. An EPA memo implementing the order on risk assessments is tracked in c13-05 and was not assessed here for whether it separates assessment from management. EPA science is covered by c13-05 and government-wide removal of DEI terms by c00-01. The progress figure is an inference from the order and guidance being operative but only partly matching the recommendation.",
-  "updated_at": "2026-10-10"
+  "uncertainties": "Agency implementation plans were not individually reviewed. Two web searches on 2026-10-19 for litigation over the order, in addition to one earlier search, found no court case. Secretary's Order 3441 carries no date line in its text; it is dated by Interior's document library listing (2025-08-29), and Interior announced it on 2025-09-04. The NSF policy was read in its PDF form; its own supersedes field is blank while the policy page lists it as replacing NSF 24-007. An AIP news report of 2026-09-11 characterizes several agencies as removing political interference protections; that characterization was checked only where a primary policy was read (DOE, EPA, Interior, Commerce, NSF) and is not asserted. The EPA rescission date is month-only; the EPA page gives no day. The DOE policy does not cite the order, so its link to the order is timing only. The EPA risk assessment memorandum is also tracked in c13-05 and was read here only for whether it separates assessment from management; it does not. USDA, HHS and NIH policy changes were not confirmed from primary pages. EPA science is covered by c13-05 and government-wide removal of DEI terms by c00-01. The progress figure is an inference from the order, guidance and several agency policy revisions being operative while the separation element is unmet.",
+  "updated_at": "2026-10-19"
 }

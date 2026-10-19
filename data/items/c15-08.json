@@ -5,9 +5,9 @@
     "Membership changes would require presidential or congressional action."
   ],
   "chapter": "15",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Document text checked and the CRS membership list read, but not_started rests on absence of evidence without all five systematic checks.",
+  "confidence": 65,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence of an order adding HUD to CFIUS rests on five documented checks: (1) Federal Register API queries (presidential CFIUS documents, CFIUS with the HUD Secretary, CFIUS real estate) found only transaction-specific orders (supports); (2) Unified Agenda: the HUD and Treasury rule lists on reginfo.gov were read in full on 2026-10-19 and the outbound investment entry opened, with no matching entry (supports, but weakly informative because membership is set by executive order); (3) congress.gov and GovInfo search with the S. 2573 bill status read found no membership bill (supports); (4) the CFIUS site shows no membership change, while the HUD newsroom was not fetched (supports); (5) one news search found nothing relevant (supports). The CRS In Focus membership list was read. Set at 65 because the agenda check is only weakly informative for an executive order.",
   "durability": {
     "level": "medium",
     "why": "A membership change could be made by order but could also be reversed by order."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review reran a Federal Register API check on federalregister.gov with a new term variant and reviewed the researcher's five checks; no stage change (not_started, 0). Confidence 45 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review completed the Unified Agenda check by reading the HUD and Treasury rule lists and one entry on reginfo.gov; not_started kept and confidence raised from 62 to 65."
     }
   ],
   "id": "c15-08",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "executive_order",
@@ -54,21 +62,59 @@
   "research_agent": "N15",
   "review": {
     "flags": [],
-    "mandate_check": "verified",
-    "mandate_note": "Bullet on page 508 and footnote 26 on page 515 (foreign buyers crowding out Americans) match; page 515 added.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y15a",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields (pp. 508 and 515), the text asks for an executive order making the HUD Secretary a CFIUS member to widen oversight of foreign ownership of housing. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Membership list without HUD; no membership change reported; real estate jurisdiction near military sites, ports and airports.",
+        "note": "2026-10-18 (reviewer variant): CFIUS with residential real estate, all types since 2025-01-20: 0 documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=CFIUS+%22residential+real+estate%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): 4 transaction-specific presidential orders; none adds HUD.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Committee+on+Foreign+Investment+in+the+United+States%22&conditions[type][]=PRESDOCU&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: landing page only; Treasury Federal Register fallback found only the 2026-02-09 request for information.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18 (researcher): S. 2573 introduced 2025-07-31, GAO study only, in committee; no HUD membership bill found.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2573.xml"
+      },
+      {
+        "note": "2026-10-18 (researcher): no membership change or HUD role shown.",
+        "result": "supports",
+        "url": "https://www.cfius.gov/"
+      },
+      {
+        "note": "Existing record source: CRS In Focus updated 2026-08-28 lists nine voting and two ex officio members, none HUD. The news search (check 5) returned only unrelated syndicated items, so no news URL is relied on.",
         "result": "supports",
         "url": "https://www.everycrsreport.com/files/2026-08-28_IF10177_4d09b70f0b2917c2be6deba13d83a4e1c2224224.pdf"
       },
       {
-        "note": "2025-02-21 memorandum; Sec. 2(f) farmland and real estate near sensitive facilities; Treasury implements; HUD not mentioned.",
+        "date": "2026-10-19",
+        "note": "HUD list headed 'Agency Rule List - 2026' (agency named Department of Housing and Urban Development, 54 rules, read to the footer by the reviewer on 2026-10-19): no title on CFIUS, foreign investment or foreign ownership of housing. Weakly informative: CFIUS membership is set by statute and executive order, not by HUD rulemaking.",
         "result": "supports",
-        "url": "https://www.whitehouse.gov/presidential-actions/2025/02/america-first-investment-policy/"
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (216 rows, read to the footer across two fetch pages, the second holding only the footer): no CFIUS membership entry; the only foreign investment entry is 1505-AC94, Provisions Pertaining to U.S. Investments in Certain National Security Technologies and Products in Countries of Concern (Proposed Rule Stage).",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Detail page read: Proposed Rule Stage, NPRM 09/00/2026, authority 50 U.S.C. 4581-4589; implements the COINS Act notification and prohibition regime for U.S. persons' outbound transactions; no mention of CFIUS or HUD.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1505-AC94"
       }
     ]
   },
@@ -130,6 +176,6 @@
   ],
   "title": "Add the HUD Secretary to CFIUS to review foreign ownership of housing",
   "tracked": true,
-  "uncertainties": "Searches of Federal Register executive order listings and news found no order on HUD membership; the CRS report is the main evidence of current membership. The five systematic absence checks were not all documented, so confidence is capped.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "No executive order adding the HUD Secretary to CFIUS was found. A CRS In Focus report updated 2026-08-28 lists nine voting and two ex officio members, none HUD, and reports no enacted membership change. The HUD newsroom was not fetched and H.R. 6644 was not opened for this item. The Unified Agenda rule lists on reginfo.gov for HUD and Treasury (both headed 'Agency Rule List - 2026') list no CFIUS or housing foreign-investment rulemaking; the Treasury entry 1505-AC94 concerns outbound investment by U.S. persons. CFIUS membership is set by statute and executive order, so the agenda is a weak test for this item. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

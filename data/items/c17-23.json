@@ -4,9 +4,9 @@
     "Appropriations for BJS and NIJ are set by Congress"
   ],
   "chapter": "17",
-  "confidence": 48,
-  "confidence_label": "low",
-  "confidence_reason": "Mandate text read; the enacted appropriation was read in GovInfo and confirmed by CRS; the refocusing elements rest on absence of evidence, so the not_started cap of 50 applies.",
+  "confidence": 64,
+  "confidence_label": "medium",
+  "confidence_reason": "Funding facts rest on Public Law 119-74 on govinfo.gov and CRS R48643. Five checks documented: (1) Federal Register API with a variant, supports (nothing qualifying); (2) Unified Agenda Justice list, 76 rules read on 2026-10-19, supports but weakly informative for directives; (3) congress.gov and govinfo with BILLSTATUS for H.R. 2240, supports; (4) BJS website, supports; (5) one news search, supports. With one weakly informative check, confidence is 64, just under the 65 to 68 range because the funding element is a judgment call.",
   "durability": {
     "level": "low",
     "why": "Research agendas and survey design are set administratively and funding is annual."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check and independent review: federalregister.gov API (reviewer variant) and govinfo.gov BILLSTATUS for H.R.2240 were read; no stage change (not_started 0); confidence 48 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the Justice rule list in the reginfo.gov Unified Agenda (76 rules, none on BJS, NIJ or the victimization survey), kept not_started 0 and raised confidence from 62 to 64."
     }
   ],
   "id": "c17-23",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -54,36 +62,54 @@
   "research_agent": "R1718",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Replaced the stakeholder letter with the enacted appropriation (GovInfo) and CRS as the funding sources; the letter is no longer cited.",
-      "Removed the September 2025 report timeline entry (not shown on the page in review) and added the 2026-01-23 appropriation as the timeline event.",
-      "Stage not_started kept; diverged 0 would also be defensible on the funding element, since enacted and requested funding for the statistics account fell, but the refocusing elements have no action either way."
-    ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 571 to 572 ask BJS to focus on core crime and punishment statistics presented clearly, keep official statistics separate from contractor reports, have NIJ fund unbiased research of broad interest, and prioritize and sufficiently fund the National Crime Victimization Survey.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "alternative": "diverged on the funding element, if the FY2026 cut to the statistics account is read as opposite to prioritizing the survey.",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields (pp. 571 to 572), the Mandate asks that BJS concentrate on core crime and punishment statistics and keep official statistics distinct from contractor reports, that NIJ fund unbiased research of broad interest, and that DOJ prioritize and sufficiently fund the National Crime Victimization Survey. The chapter text was not available to this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: Public Law 119-74, approved 2026-01-23; OJP research, evaluation and statistics 55 million dollars, 33 million statistics and 22 million research; survey not named in the portion read (page cut short).",
+        "note": "2026-10-18 (reviewer variant of check 1): terms 'victimization survey' with funding, limited to DOJ, returned 0 documents; no directive refocusing BJS or NIJ or prioritizing survey funding.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ74/html/PLAW-119publ74.htm"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22victimization+survey%22+funding&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=justice-department"
       },
       {
-        "note": "Checked 2026-10-15: CRS gives the account at 65.0 million in fiscal year 2025 and 55.0 million enacted for fiscal year 2026, equal to the request, about 15.4 percent lower.",
+        "note": "2026-10-18 (reviewer fetch for check 3): BILLSTATUS confirms H.R.2240, Improving Law Enforcement Officer Safety and Wellness Through Data Act, introduced 2025-03-21, passed the House 403 to 11 on 2025-05-15 and referred to Senate Judiciary on 2025-05-19; the CRS summary concerns DOJ reports on attacks on officers and does not mention BJS, NIJ or the survey. Not qualifying.",
         "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2026-02-25_R48643_5ab63e26141d07cabb8c7a7008f1b1844906000c.html"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2240.xml"
       },
       {
-        "note": "Checked 2026-10-15: latest report listed is dated March 2026; no 2025 or 2026 sample change or refocusing statement on the page.",
-        "result": "partial",
-        "url": "https://bjs.ojp.gov/data-collection/ncvs"
+        "note": "Check 1 (research pass, 2026-10-18): terms 'National Crime Victimization Survey' (2 DOJ Paperwork Reduction Act notices proposing a revision of the collection, 2025-07-24 and 2025-10-02), 'Bureau of Justice Statistics' (105 documents, first 20 reviewed: routine information collections and Privacy Act notices) and 'National Institute of Justice' (14, routine notices). None refocuses BJS or NIJ.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22National+Crime+Victimization+Survey%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Checked 2026-10-15: letter of ten organizations dated 2026-04-28 reports 5.7 and 26.7 percent cuts; advocacy source, removed from sources and kept only as context in uncertainties.",
+        "note": "Check 2 (research pass, 2026-10-18): Fetched the Unified Agenda entry page; it is an agency selector and links page with no items listed (script-driven). Fallback used, so the check is partial: the DOJ-related queries above.",
         "result": "partial",
-        "url": "https://www.cu.edu/doc/fy27-ojp-community-letterpdf"
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Check 3 (research pass, 2026-10-18): search (congress.gov, govinfo.gov): '119th Congress bill Bureau of Justice Statistics National Crime Victimization Survey National Institute of Justice'. Found H.R.2240 Improving Law Enforcement Officer Safety and Wellness Through Data Act (introduced 2025-03-21; passed House 2025-05-15, 403-11; in Senate Judiciary since 2025-05-19): DOJ report on attacks on officers, no BJS, NIJ or NCVS mention in BILLSTATUS. Other results were hearing documents and CRS reports. Reviewer: BILLSTATUS refetched and confirmed; the search was not rerun (search cap).",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr2240.xml"
+      },
+      {
+        "note": "Check 4 (research pass, 2026-10-18): BJS site lists NCVS redesign updates, 2024 victimization estimates from the redesigned instrument, and other statistical releases; no refocus or reorganization notice found (dates not shown on the page).",
+        "result": "supports",
+        "url": "https://bjs.ojp.gov/"
+      },
+      {
+        "note": "Check 5 (research pass, 2026-10-18): query: 'Bureau of Justice Statistics National Institute of Justice overhaul National Crime Victimization Survey funding 2026'. Results were BJS publications, a statistics-community appropriations letter and a funding notice; no news of a directive refocusing either office. Reviewer: Not rerun (search cap); the cited URL is a BJS publication from the research pass results, as no news article URL was recorded.",
+        "result": "supports",
+        "url": "https://bjs.ojp.gov/library/publications/victimization-estimates-redesigned-ncvs-instrument-2024"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the Justice list on 2026-10-19: 76 rules; no title concerns the Bureau of Justice Statistics, the National Institute of Justice, the National Crime Victimization Survey or Office of Justice Programs research and statistics. Refocusing directives and funding are not rulemaking subjects, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1100"
       }
     ]
   },
@@ -151,6 +177,6 @@
   ],
   "title": "Refocus BJS and NIJ and prioritize funding for the National Crime Victimization Survey",
   "tracked": true,
-  "uncertainties": "The fiscal year 2026 amounts were read in the GovInfo text of Public Law 119-74 and the CRS overview R48643 (2026-02-25 version); the fiscal year 2025 split between statistics and research was not read in a primary source. A research-community letter dated 2026-04-28 to the appropriations subcommittees reports cuts of 5.7 percent for BJS and 26.7 percent for NIJ and a reduced survey sample; these figures are consistent with the enacted split but come from an advocacy letter and are not cited as support. The BJS survey page was fetched; it lists no 2025 or 2026 sample change and no refocusing statement. The researcher's timeline entry for a September 2025 Criminal Victimization report was removed because the page fetched in review did not show it. Searches run: one WebSearch by the researcher and one in review (fiscal year 2026 appropriations for BJS and NIJ), plus fetches of GovInfo, the CRS report, the BJS page and the letter. Whether the funding cut counts as divergence from the text, or reflects topline budget choices unrelated to it, is a judgment call.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No directive refocusing the Bureau of Justice Statistics or the National Institute of Justice was found. Public Law 119-74 (2026-01-23) funds the OJP research, evaluation and statistics account at 55 million dollars, about 15.4 percent below FY2025 per CRS, which runs against the text's funding element; the survey's own funding line was not identified, and the FY2025 split was not read in a primary source. Federal Register searches found only routine notices; H.R. 2240 does not qualify; the BJS site shows no refocus notice; one news search found no directive. The Justice list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 76 rules) holds no related entry. Separation of official from contractor reports was not checked. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

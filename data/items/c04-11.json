@@ -5,9 +5,9 @@
     "Reported preference of the acting leader and the Joint Chiefs Chairman to keep the dual-hat (The Record, May 2025)"
   ],
   "chapter": "04",
-  "confidence": 62,
+  "confidence": 63,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: diverged requires an action materially different from or opposite to the recommendation, while not_started means no qualifying action. Here there is an affirmative action at a decision point: after the dual-hat leader was removed in April 2025, with separate nominations reported as an option, the administration nominated one officer for both posts and the Senate confirmed him in March 2026 (roll call read; dual posts from DefenseScoop, SecurityWeek and the Washington Examiner), and The Record reports the split was dropped. That choice runs opposite to separation, so diverged holds rather than not_started. Confidence is medium because the dual posts and the shelved review rest on news reports and no DOD or White House document was found.",
+  "confidence_reason": "Diverged rests on the reported continuation of the dual-hat and the March 2026 confirmation. Five checks documented: (1) Federal Register API with a variant, supports (nothing toward separation); (2) Unified Agenda Department of War list, 111 rules read on 2026-10-19, supports but weakly informative; (3) congress.gov and govinfo with BILLSTATUS for S. 2607 and S. 4784, partial; (4) war.gov, unreachable; (5) one news search, supports. Confidence 63 on the medium scale.",
   "durability": {
     "level": "medium",
     "why": "The dual-hat continues under statute that conditions any split on certification, so either outcome would need formal steps, but a later administration could still decide to separate the roles."
@@ -23,7 +23,7 @@
     },
     {
       "date": "2026-10-08",
-      "note": "Primary-source check: the deciding document was located and read, and an independent reviewer re-rated the record (confidence 64 to 62). The Rudd confirmation, previously on a Washington Examiner report, is now backed by Senate roll call votes 48 and 49 on senate.gov (71 to 29 on 2026-03-10); the dual-hat role itself and the 2025 review still rest on the Examiner and The Record because no DOD or White House statement"
+      "note": "Primary-source check: the deciding document was located and read, and an independent reviewer re-rated the record (confidence 64 to 62). The Rudd confirmation, previously on a Washington Examiner report, is now backed by Senate roll call votes 48 and 49 on senate.gov (71 to 29 on 2026-03-10); the dual-hat role itself and the 2025 review still rest on the Examiner and The Record because no DOD or White House statement (this earlier note was cut short in the source record)."
     },
     {
       "date": "2026-10-12",
@@ -32,10 +32,18 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with a separate term variant (0 documents) and reviewed the researcher's checks of reginfo.gov with the Federal Register fallback, govinfo.gov BILLSTATUS for S. 2607 and S. 4784, war.gov (blocked) and one news search. No stage change (diverged, 0); confidence unchanged at 62; status summary shortened."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the Department of War rule list in the reginfo.gov Unified Agenda (111 rules, none on the Cyber Command and NSA arrangement), kept diverged 0 and raised confidence from 62 to 63."
     }
   ],
   "id": "c04-11",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-19",
   "layer": 2,
   "match": "direct",
   "mechanism": "appointment",
@@ -87,36 +95,44 @@
   "requires_congress": "partial",
   "research_agent": "D2",
   "review": {
-    "flags": [
-      "dual-hat assignment from news reports (now three outlets)",
-      "stage decided as diverged over not_started: the dual-hat nomination is an affirmative action opposite to separation",
-      "statutory certification rule not checked against current law"
-    ],
-    "mandate_check": "verified",
-    "mandate_note": "Printed page 106 calls for reevaluating the NSA and Cyber Command dual-hat structure, and page 119 lists separating Cyber Command from NSA per congressional direction under a bullet on mission creep and overlap. Rechecked 2026-10-12.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "independent review",
+    "alternative": "not_started 0, if keeping the dual-hat is read as inaction rather than a choice opposite to the recommendation.",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 106 and 119, as described in the record, recommend reevaluating the arrangement in which one officer leads both NSA and Cyber Command and separating Cyber Command from NSA per congressional direction. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Dated 2025-09-09: unnamed sources say officials quietly accepted the status quo and dropped a split without a presidential memo (split could take up to three years); a White House official said no long-term decisions were made; quotes the Defense Secretary's June 2025 testimony and the Chairman's written view that the arrangement should remain.",
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms dual-hat or Cyber Command with commander, all document types since 2025-01-20: 0 documents. Researcher's variant result: supports; terms \"Cyber Command\" and \"National Security Agency\", all types since 2025-01-20: 0 documents. Variant \"Cyber Command\" alone: 1 document, an OPM notice on Senior Executive Service positions career reserved in 2024 (2025-05-20, 2025-08853), not relevant.",
         "result": "supports",
-        "url": "https://therecord.media/cyber-command-nsa-dual-hat-single-leader-trump-administration"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22dual-hat%22+OR+%22Cyber+Command%22+commander&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Dated 2026-01-15: nominee for NSA Director and Cyber Command commander cites effectiveness and efficiency and says he will keep assessing the arrangement; no decision or timeline.",
-        "result": "supports",
-        "url": "https://defensescoop.com/2026/01/15/gen-rudd-cybercom-nsa-dual-hat-cyber-force/"
-      },
-      {
-        "note": "Dated 2026-03-11: Senate confirmed Rudd 71 to 29 to lead NSA and Cyber Command.",
-        "result": "supports",
-        "url": "https://www.securityweek.com/senate-confirms-joshua-rudd-to-lead-nsa-and-us-cyber-command/"
-      },
-      {
-        "note": "Not re-fetched in this pass; confirmed in the 2026-10-08 review: vote 49 on 2026-03-10 confirms PN711, 71 to 29, without naming the posts.",
+        "note": "2026-10-18: The page loaded as the landing page of the 2026 Regulatory Plan and Unified Agenda but lists no agenda items (agency selection is script-driven). Recorded as partial; fallback used: a Federal Register query of Defense Department proposed rules since 2025-01-20: 29 documents, first 20 read (FAR overhaul parts, DFARS cases, waters of the United States, Privacy Act systems); none on Cyber Command or NSA leadership. Second page not read. The leadership arrangement is set by statute and command decision, not rulemaking.",
         "result": "partial",
-        "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00049.htm"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=defense-department&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: domain-limited search \"119th Congress separate Cyber Command from National Security Agency dual-hat NDAA\". Found S.2607 (Rounds, introduced 2025-07-31, referred to Armed Services, no later action per BILLSTATUS): text bars FY2026 DoD funds from changing the Commander of Cyber Command responsibilities, authorities or command structure from those in effect on 2025-06-01; it does not name NSA or the dual-hat. Also S.4784, the FY2027 NDAA (Wicker, introduced 2026-06-15, motion to proceed 2026-07-27), whose BILLSTATUS summary does not name the dual-hat. FY2026 NDAA (S.2296) dual-hat provisions were not read here; companion or House text not checked.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2607.xml"
+      },
+      {
+        "note": "2026-10-18: war.gov is blocked in this environment and was not retried. The substitute is the news record: a report of 2025-09-12 (via a republishing site) that officials shelved the plan to end the dual-hat, and the existing record entries through the 2026-03-10 confirmation of Gen. Rudd to lead both.",
+        "result": "unreachable",
+        "url": "https://www.war.gov/"
+      },
+      {
+        "note": "2026-10-18: news search \"NSA Cyber Command dual-hat split decision 2026\" returned a Heritage commentary opposing a split, a 2025-05-16 DefenseScoop report that members of Congress vowed not to split the commands, and a republished 2025-09-12 report that the administration abandoned plans to split leadership, with no documented White House action. Consistent with the existing diverged stage; the sources are already largely in the record.",
+        "result": "supports",
+        "url": "https://www.fortgordonalliance.com/cyber-command-nsa-to-remain-under-single-leader-as-officials-shelve-plan-to-end-dual-hat"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the Department of War list on 2026-10-19: Agency Rule List - 2026, 111 rules. No title concerns Cyber Command, NSA or dual-hat leadership; cyber-titled entries (0790-AM01 CMMC, 0750-AL95, 0750-AM24) are contracting rules. Command structure is set by statute and command decision, so the agenda is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0700"
       }
     ]
   },
@@ -198,7 +214,7 @@
     }
   ],
   "stage": "diverged",
-  "status_summary": "No separation has occurred; the administration has kept one officer in both roles. President Trump ordered the firing of Gen. Timothy Haugh, who led both organizations, in April 2025, and The Record reported on 2025-05-14 that the administration had not decided on a split, that the acting leader and the Joint Chiefs Chairman favored keeping the dual-hat, and that the White House would nominate one officer for both roles or a three-star officer for Cyber Command alone. On 2026-03-10 the Senate confirmed Gen. Joshua Rudd, 71 to 29 (Senate roll call vote 49 on PN711; cloture was invoked 68 to 28 on 2026-03-09), and the Washington Examiner reports that he will lead NSA and also serve as dual-hat leader of Cyber Command, after a year without Senate-confirmed leadership. Under an earlier defense policy law, as described by The Record, a split requires the Defense Secretary and the Joint Chiefs Chairman to certify jointly that it will not hinder Cyber Command's effectiveness; no certification or separation plan was found. The Record reported on 2025-09-09, citing unnamed sources, that senior officials had dropped a possible split without a formal presidential document, judging it too lengthy, while a White House official said no long-term decisions had been made. At his 2026-01-15 confirmation hearing the nominee for both posts cited the arrangement's effectiveness and said he would keep assessing it; SecurityWeek reports the March 2026 confirmation was to lead both organizations. No decision to split, certification or separation plan was found through 2026-10-12.",
+  "status_summary": "No separation of U.S. Cyber Command from the National Security Agency has occurred, and the administration has kept one officer in both roles. After Gen. Timothy Haugh, who led both organizations, was fired in April 2025, The Record reported on 2025-05-14 that no decision on a split had been made and on 2025-09-09, citing unnamed sources, that senior officials had dropped a possible split without a formal presidential document. On 2026-03-10 the Senate confirmed Gen. Joshua Rudd, 71 to 29 (roll call vote 49 on PN711), to lead NSA and also serve as dual-hat leader of Cyber Command, after he told his 2026-01-15 confirmation hearing that he would keep assessing the arrangement. Under an earlier defense policy law, as described by The Record, a split requires a joint certification by the Defense Secretary and the Joint Chiefs Chairman, and no certification, decision to split or separation plan was found through 2026-10-18.",
   "timeline": [
     {
       "date": "2025-05-14",
@@ -231,6 +247,6 @@
   ],
   "title": "Separate U.S. Cyber Command from the National Security Agency",
   "tracked": true,
-  "uncertainties": "No DOD or White House statement was found on the dual-hat decision or the date Rudd was nominated; his confirmation testimony on the dual-hat is known from a DefenseScoop report, not the hearing record. The Senate roll call records (votes 48 and 49) show the cloture and confirmation votes on PN711 for Lt. Gen. Rudd to be a general in the Army; that the post is NSA Director and Cyber Command commander in a dual-hat arrangement rests on the Washington Examiner report, which the roll call does not state. The vote date is 2026-03-10 (the 2026-03-09 date in the earlier version was the cloture vote). The Haugh firing is dated only as April 2025 from The Record. The statutory certification rule is described from 2017 and 2024 articles, not the current statute text, and whether the FY2026 NDAA changed it was not checked. Stage 'diverged' reflects that, at a vacancy where separate nominations were an open option, the administration nominated and the Senate confirmed one officer for both roles; if the dual-hat is later ended, the record should change. Searches run: one news search on the dual-hat and Senate confirmation; Senate roll call pages for votes 47 to 50. Freshness pass 2026-10-12: searches on the dual-hat after March 2026 and on the FY2027 defense authorization found no separation order, certification or enacted provision; whether FY2027 bill text touches the dual-hat was not confirmed. The September 2025 account rests on unnamed sources, and a White House official quoted there said no long-term decision had been made.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No separation of Cyber Command from NSA was found; one officer continues to lead both. The Record reported in September 2025, citing unnamed sources, that a split was dropped, and the Senate confirmed Gen. Joshua Rudd on 2026-03-10 for the dual-hat role, which rests on news reports rather than the roll call. Federal Register searches found nothing on the subject; S. 2607 and S. 4784 do not separate the commands, and FY2026 and FY2027 defense authorization texts on the certification rule were not read; war.gov is blocked; one news search found reports consistent with the dual-hat remaining. The Department of War list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 111 rules) holds no related entry. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

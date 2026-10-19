@@ -4,7 +4,7 @@
   "chapter": "14",
   "confidence": 45,
   "confidence_label": "low",
-  "confidence_reason": "One primary order re-read in review; the task force, strategic plan and special representative elements rest on absence of evidence.",
+  "confidence_reason": "Executive Order 14182 and the HHS strategic plan page read on primary hosts in review; the task force, pro-life task force and special representative elements rest on absence of evidence from limited checks, so confidence stays low.",
   "durability": {
     "level": "low",
     "why": "Task forces, mission statements and advisory posts are administrative and can be reversed by a later administration."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review re-read Executive Order 14182 on federalregister.gov and the HHS strategic plan page on hhs.gov and ran a Federal Register API variant on a pro-life task force (no documents); the summary now cites the strategic plan page. No stage change (proposed 10); confidence unchanged at 45."
     }
   ],
   "id": "c14-63",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -54,19 +58,29 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Progress lowered from 15 to 10 within proposed: the only verified step is revocation of the underlying orders, a cancellation that leaves the task force status and the other three elements unverified.",
-      "Alternative: not_started 0 if revocation of the orders is not treated as a step toward eliminating the task force."
+      "No stage change: proposed 10, partial.",
+      "Alternative: not_started 0 if revocation of the underlying orders is not treated as a step toward eliminating the task force."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 489 asks the Office of the Secretary to eliminate the HHS Reproductive Healthcare Access Task Force, install a pro-life task force, restore conception-to-natural-death language in the mission and strategic plan, and create a Special Representative for Domestic Women's Health.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 489 asks the Office of the Secretary to eliminate the HHS Reproductive Healthcare Access Task Force, install a pro-life task force, restore conception-to-natural-death language in the mission and strategic plan, and create a Special Representative for Domestic Women's Health; the chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: EO 14182 signed 2025-01-24 revokes EOs 14076 and 14079; no mention of HHS, a task force or a strategic plan.",
+        "note": "Read 2026-10-18: EO 14182 signed 2025-01-24, Sec. 2 revokes EO 14076 and EO 14079; no mention of HHS or a task force. A policy-basis revocation only, supports proposed at the low end.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2025/01/31/2025-02175/enforcing-the-hyde-amendment"
+      },
+      {
+        "note": "Read 2026-10-18: 2022 to 2026 plan, updated plan forthcoming, no conception or natural death language. Supports that the mission wording step has not occurred.",
+        "result": "supports",
+        "url": "https://www.hhs.gov/about/strategic-plan/index.html"
+      },
+      {
+        "note": "Run 2026-10-18: zero HHS documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22pro-life%22+%22task+force%22&conditions[agencies][]=health-and-human-services-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -105,10 +119,17 @@
       "publisher": "Federal Register",
       "title": "Executive Order 14182, Enforcing the Hyde Amendment",
       "url": "https://www.federalregister.gov/documents/2025/01/31/2025-02175/enforcing-the-hyde-amendment"
+    },
+    {
+      "date": "2026-10-18",
+      "kind": "primary",
+      "publisher": "HHS",
+      "title": "HHS Strategic Plan",
+      "url": "https://www.hhs.gov/about/strategic-plan/index.html"
     }
   ],
   "stage": "proposed",
-  "status_summary": "Executive Order 14182, signed 2025-01-24, revoked Executive Orders 14076 and 14079 of 2022, the orders on access to reproductive healthcare services. No source read confirms that the HHS task force was disbanded, that a pro-life task force was installed, that the HHS mission or strategic plan was reworded, or that a Special Representative for Domestic Women's Health was created.",
+  "status_summary": "Executive Order 14182, signed 2025-01-24, revoked Executive Orders 14076 and 14079 of 2022, the orders on access to reproductive healthcare services. The HHS strategic plan page, read on 2026-10-18, still presents the 2022 to 2026 plan with an updated plan described as forthcoming and no conception-to-natural-death language. No source read confirms that the HHS task force was disbanded, that a pro-life task force was installed, or that a Special Representative for Domestic Women's Health was created.",
   "timeline": [
     {
       "date": "2025-01-24",
@@ -120,6 +141,6 @@
   ],
   "title": "Replace HHS reproductive access task force with a pro-life task force and mission language",
   "tracked": true,
-  "uncertainties": "The order text was re-read in review: Executive Order 14182, signed 2025-01-24, revokes Executive Orders 14076 and 14079 and does not mention HHS, a task force or a strategic plan. The HHS Reproductive Healthcare Access Task Force was an HHS-level body, and no HHS document disbanding it was found; revoking the underlying orders removes its policy basis but is not confirmation that it was eliminated. HHS web pages for the task force, strategic plan or any women's health representative were not found; search results returned only older strategic plan commentary from 2017 and 2018 and advocacy summaries, which were not used. Searches run: task force disbanded query; special representative and strategic plan query.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Executive Order 14182 was re-read on federalregister.gov in review: signed 2025-01-24 (90 FR 8751), Sec. 2 revokes Executive Orders 14076 and 14079 and the order does not mention HHS, a task force or a strategic plan. The HHS strategic plan page on hhs.gov is labeled 2022 to 2026 with an updated plan described as forthcoming and contains no conception-to-natural-death language. Federal Register API searches since 2025-01-20 for the task force name and, in review, for HHS documents mentioning a pro-life task force returned zero documents. Internal HHS task force records, staff pages and any women's health representative appointment would not appear in these sources, so the record rests on absence of evidence; the Unified Agenda, Congress and news checks of a full systematic review were not run. Revoking the underlying orders is not confirmation that an HHS-level task force was eliminated.",
+  "updated_at": "2026-10-18"
 }

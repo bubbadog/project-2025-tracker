@@ -5,9 +5,9 @@
     "Trade negotiations with China in 2025 and 2026 (see c26-02) favor managed trade over new technology sanctions"
   ],
   "chapter": "26",
-  "confidence": 55,
+  "confidence": 58,
   "confidence_label": "medium",
-  "confidence_reason": "All five systematic checks were documented on 2026-10-18: check 1 (three Federal Register queries plus a reviewer query on Geedge and Great Firewall, all zero) found nothing; check 2 is unreachable on reginfo.gov and only partly covered by a term-filtered API fallback; check 3 (one search, BILLSTATUS and text for H.R. 10670) found no sanctions bill and enacted laws were not read, so it is partial; check 4 is partial (Treasury listing read, BIS newsroom failed, state.gov blocked); check 5 (two news searches) found no designation. With one unreachable and two partial checks, confidence is set at 55.",
+  "confidence_reason": "Not_started rests on five documented checks: (1) Federal Register API queries (all agencies, BIS, Treasury, Geedge or Great Firewall) returned zero (supports); (2) Unified Agenda: the Commerce and Treasury rule lists on reginfo.gov were read in full on 2026-10-19 and the Entity List entry opened, with no matching entry (supports, not informative in practice for designations); (3) congress.gov and GovInfo search with the H.R. 10670 status and text read found no sanctions bill, enacted laws unread (partial); (4) the Treasury listing showed nothing, while the BIS newsroom failed and state.gov is blocked (partial); (5) news searches found only 2019 Entity List coverage and advocacy (supports). Raised from 55 to 58 now that the agenda is read; held there because the agenda adds little and two checks are partial.",
   "durability": {
     "level": "low",
     "why": "Any listing would be an executive designation that a later administration or a trade deal could reverse."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Systematic absence check confirmed not_started for sanctions on Great Firewall facilitators; H.R. 10670 judged non-qualifying; confidence raised from 35 to 55."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Commerce and Treasury Unified Agenda rule lists and the Entity List entry on reginfo.gov; not_started kept and confidence raised from 55 to 58."
     }
   ],
   "id": "c26-20",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -64,19 +68,12 @@
       "result": "partial",
       "url": "https://www.thompsonhinesmartrade.com/2025/03/bis-adds-over-80-companies-to-entity-list-with-heavy-focus-on-china/"
     },
-    "flags": [
-      "Removed the March 2025 Entity List event: a law-firm summary of an action the draft itself said does not qualify.",
-      "Removed a Federal Register API query URL and an unrelated drone rule from sources; described the queries in uncertainties.",
-      "Match set to direct for a not_started record.",
-      "Named the searches performed in uncertainties.",
-      "V10: not_started 0 confirmed; H.R. 10670 checked and judged related but not qualifying (procurement ban on Chinese AI models, no sanctions).",
-      "V10: confidence 35 to 55, below the researcher's suggested 65, because check 2 is unreachable and checks 3 and 4 are partial."
-    ],
+    "flags": [],
     "mandate_check": "ok",
     "mandate_note": "Page 790 recommends sanctioning any companies, including American ones such as Apple, that help the Chinese government use its Great Firewall surveillance and censorship capabilities. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V10",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Draft reading relied on; March 2025 Entity List grounds unrelated to censorship.",
@@ -137,6 +134,24 @@
         "note": "Reviewer V10 spot-check, 2026-10-18: one WebSearch (no domain filter) on Entity List or OFAC sanctions on Chinese censorship and surveillance firms, Great Firewall and Geedge, 2026: results were 2019 Entity List coverage (Xinjiang surveillance firms) and older items; no 2025 or 2026 designation for facilitating censorship.",
         "result": "supports",
         "url": "https://www.cyberscoop.com/china-surveillance-companies-entity-list/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Commerce list headed 'Agency Rule List - 2026' (176 rules, including 17 BIS and 2 ITA entries, read to the footer by the reviewer on 2026-10-19): no title on censorship, surveillance or the Great Firewall; 0694-AK42 Revisions to the Entity List states no grounds. Not informative in practice: listings and designations are not announced by target in the agenda.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0600"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Detail page read: Final Rule Stage, final action 07/00/2026; revises the Entity List; no mention of China, censorship or surveillance.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0694-AK42"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages): no OFAC entry on censorship or surveillance firms; sanctions designations are not agenda items.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
       }
     ]
   },
@@ -182,6 +197,6 @@
   "timeline": [],
   "title": "Sanction firms, including U.S. firms, that enable China's Great Firewall censorship",
   "tracked": true,
-  "uncertainties": "Searches performed: three web searches (Entity List additions for surveillance or censorship; OFAC and the Great Firewall vendor Geedge Networks; in review, 2026 sanctions or Entity List actions on Chinese censorship firms), which returned 2019 and 2025 Entity List material and advocacy reports on Geedge Networks but no U.S. designation; and Federal Register API queries since 2025-01-20 (Entity List with surveillance or censorship, zero results; Great Firewall or surveillance technology with China, zero results; surveillance in Bureau of Industry and Security documents, one unrelated drone export rule of 2026-08-14). Federal Register text searches can miss listings worded differently, and OFAC list entries and State visa restrictions were not reviewed separately. The March 2025 Entity List actions are context and not a qualifying event. Checked systematically on 2026-10-18: Federal Register API searches (all agencies, Bureau of Industry and Security, Treasury, and in review Geedge or Great Firewall) returned zero documents; the Unified Agenda listing was unreachable; one congress.gov and govinfo search surfaced the China FIREWALL Act of 2026 (H.R. 10670, introduced 2026-10-01, referred to committee), which would bar Chinese AI models from government devices and procurement rather than sanction firms facilitating censorship, so it does not qualify; the Treasury press release listing and news searches, including one in review that returned only 2019 Entity List coverage, found no designation of firms facilitating the Great Firewall. The Bureau of Industry and Security newsroom could not be fetched and state.gov is blocked, so visa restrictions and listings worded differently could be missed.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No sanctions designation or export-control listing aimed at companies supporting Chinese internet censorship or the Great Firewall was found since 2025-01-20. Federal Register text searches can miss listings worded differently; OFAC list entries and State visa restrictions were not reviewed separately, the BIS newsroom could not be fetched and state.gov is blocked. H.R. 10670 concerns Chinese AI models on government devices, not sanctions. The Unified Agenda rule lists on reginfo.gov for Commerce and Treasury (headed 'Agency Rule List - 2026') list no censorship-related entry; designations are not agenda items, so this check adds little. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -7,7 +7,7 @@
   "chapter": "15",
   "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "Document text on page 508 checked and the task force report on foxnews.com fetched; the reversals rest on Federal Register notices verified here or in sibling records, but no primary HUD document on the task force was found. This call is not evenly balanced; implemented follows from the rule that an ask operative in substance, even by a different instrument, is implemented, since the task force is the means and the reversals it was meant to produce are in effect across HUD.",
+  "confidence_reason": "Document text on page 508 checked in earlier review and both HUD withdrawal notices read on federalregister.gov in review; the task force itself rests on news reports and no primary HUD document on it was found, so confidence stays medium. Implemented follows from treating the task force as the means and the operative reversals as the end.",
   "court_status": {
     "basis": "The temporary restraining order was dissolved on 2025-04-14 and the plaintiffs voluntarily dismissed the case without prejudice on 2025-12-22, per a docket summary.",
     "date": "2025-12-22",
@@ -39,10 +39,14 @@
     {
       "date": "2026-10-13",
       "note": "Second independent review on 2026-10-13 kept implemented 65, treating the task force as the means and the operative reversals at HUD as the substance of the ask, and added the 2025 AFFH interim final rule from a sibling record."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review read both HUD guidance withdrawal notices (2026-04-06 and 2026-07-17) on federalregister.gov and ran a Federal Register API check for later withdrawal rounds (none); neither notice mentions a task force. No stage change (implemented 65); confidence unchanged at 60."
     }
   ],
   "id": "c15-09",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -66,17 +70,15 @@
   "research_agent": "N15",
   "review": {
     "flags": [
-      "second review: implemented 65 kept; operative reversals satisfy the ask under the different-instrument clause, since the task force is the means and reversal is the end",
-      "second review: the record overlaps c15-01, c15-05, c15-06 and c15-10; if the scorecard prefers to score only the task force structure, in_progress would follow",
-      "second review: operative ask: The HUD Secretary should set up a task force of political appointees to identify and reverse all prior-administration HUD actions that the document says advance progressive ideology (page 508; related first-year steps on pages 503 and 515).",
-      "second review: rule applied: Implemented at the band floor. Test (a): the task force is the means and identification and reversal of prior-administration actions is the end; the end is operative in substance by other instruments, including the AFFH interim final rule of 2025-03-03, the cancellation of diversity-related contracts after a HUD task force was launched in February 2025, the Fair Housing Initiatives Program grant terminations, and guidance withdrawals formalized in 2026, so the rubric's different-instrument clause applies; a reported HUD task force exists but is framed around spending and its political-appointee composition is not documented. Test (b): nothing is opposite to the ask. Test (c): no congressional action is required. In_progress would follow only if the task force structure itself were treated as the operative ask.",
-      "second review: not evenly balanced"
+      "No stage change: implemented 65, partial.",
+      "Alternative: in_progress 40, because no task force of political appointees was found and the reversals, though operative, do not cover all prior-administration actions; the call is close.",
+      "Overlap with c15-01, c15-05, c15-06 and c15-10 remains."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 508 asks the Secretary to start a HUD task force of political appointees to identify and reverse all prior-administration actions advancing what the text calls progressive ideology, followed by a review of subregulatory guidance and specific reversals (PAVE, climate spending, AFFH); the paraphrase fits. Pages 503 and 515 were not re-read in this review.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y15a, U13-4",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's proposal field, page 508 (with pages 503 and 515) recommends that the HUD Secretary form a task force of political appointees to identify and reverse prior-administration actions advancing what the document calls progressive ideology; the chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "second_review": {
       "balanced": false,
       "date": "2026-10-13",
@@ -87,54 +89,19 @@
     },
     "source_checks": [
       {
-        "note": "Task force of HUD employees to review spending; no ideology mandate or political-appointee composition stated.",
+        "note": "Read 2026-10-18: 91 FR 44867, Docket FR-6617-N-01, withdraws 13 OGC guidance documents effective 2025-09-25 under EO 14192 and EO 14219 and states HUD is undertaking a comprehensive review of its sub-regulatory guidance; no task force is mentioned.",
         "result": "partial",
-        "url": "https://themortgagepoint.com/2025/02/14/hud-to-launch-doge-task-force/"
+        "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14432/notice-of-the-withdrawal-of-ogc-guidance-documents"
       },
       {
-        "note": "2025-02-20 cancellation of about $4 million in DEI contracts.",
-        "result": "supports",
-        "url": "https://www.foxnews.com/media/exclusive-trump-hud-secretary-cancels-4m-dei-contracts-after-launching-doge-task-force.amp"
-      },
-      {
-        "note": "TRO reported; exact date not stated (inferred Tuesday).",
+        "note": "Read in full 2026-10-18: 91 FR 17291, FHEO withdraws eight documents effective 2025-09-17 under a three-part test, cites EO 14192 and EO 14219, describes a comprehensive review and says FHEO is still reviewing its guidance; no task force is mentioned.",
         "result": "partial",
-        "url": "https://www.housingwire.com/articles/federal-judge-temporarily-cancels-hud-cuts-fair-housing-grants/"
+        "url": "https://www.federalregister.gov/documents/2026/04/06/2026-06624/notification-of-withdrawal-of-fair-housing-and-equal-opportunity-guidance-documents"
       },
       {
-        "note": "Docket chronology: TRO 2025-03-26, extended 2025-04-01, dissolved 2025-04-14, First Circuit remand 2025-11-18, voluntary dismissal 2025-12-22.",
+        "note": "Run 2026-10-18: five HUD documents since 2026-04-01; the only guidance withdrawal notices are the 2026-04-06 and 2026-07-17 notices; the others are waiver and demonstration notices.",
         "result": "supports",
-        "url": "https://clearinghouse.net/case/46219/"
-      },
-      {
-        "note": "Dissolution on 2025-04-14 and reasoning.",
-        "result": "supports",
-        "url": "https://www.nar.realtor/washington-report/judge-allows-hud-to-cancel-fair-housing-grants"
-      },
-      {
-        "note": "91 FR 17291, published 2026-04-06, effective 2025-09-17.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-06624.json"
-      },
-      {
-        "note": "2025-09-17 memo withdrawing nine documents.",
-        "result": "supports",
-        "url": "https://leadingage.org/hud-withdraws-wide-ranging-fair-housing-policies/"
-      },
-      {
-        "note": "13 documents withdrawn, effective 2025-09-25.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-17/html/2026-14432.htm"
-      },
-      {
-        "note": "Task force set up under the efficiency order to review spending; members not named; cancellation of about $4 million in diversity-related contracts; no ideology-reversal mandate or appointee composition stated.",
-        "result": "partial",
-        "url": "https://www.foxnews.com/media/exclusive-trump-hud-secretary-cancels-4m-dei-contracts-after-launching-doge-task-force.amp"
-      },
-      {
-        "note": "Copied from sibling c15-01 where it is verified; repeal of the 2021 AFFH rule.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/03/03/2025-03360/affirmatively-furthering-fair-housing-revisions"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=withdrawal+guidance&conditions[agencies][]=housing-and-urban-development-department&conditions[publication_date][gte]=2026-04-01&per_page=20&order=newest"
       }
     ]
   },
@@ -230,6 +197,13 @@
       "publisher": "Federal Register",
       "title": "Affirmatively Furthering Fair Housing Revisions",
       "url": "https://www.federalregister.gov/documents/2025/03/03/2025-03360/affirmatively-furthering-fair-housing-revisions"
+    },
+    {
+      "date": "2026-07-17",
+      "kind": "primary",
+      "publisher": "Federal Register / HUD",
+      "title": "Notice of the Withdrawal of OGC Guidance Documents (91 FR 44867, Docket FR-6617-N-01)",
+      "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14432/notice-of-the-withdrawal-of-ogc-guidance-documents"
     }
   ],
   "stage": "implemented",
@@ -294,6 +268,6 @@
   ],
   "title": "Create a HUD task force to reverse Biden-era progressive-ideology actions",
   "tracked": true,
-  "uncertainties": "The task force's charter and membership were not found; the HUD task force reported by Fox News in February 2025 was set up under the government efficiency order to review spending, its members are not named, and it is not described as limited to political appointees or as charged with reversing ideology-based actions. The stage therefore rests on operative reversals by other instruments; several of those reversals (AFFH, PAVE, climate initiatives, guidance withdrawals) are tracked as their own records (c15-01, c15-05, c15-06, c15-10), so this record overlaps them. The AFFH interim final rule event is copied from the verified sibling record c15-01. The temporary restraining order date (2025-03-26) and the 2025-12-22 dismissal come from a docket summary on clearinghouse.net; the court docket itself could not be opened. The 2025-09-17 memo and the 2026-04-06 notice cover largely the same documents.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The task force's charter and membership were not found in any primary HUD document; the HUD task force reported by news outlets in February 2025 was set up under the government efficiency order to review spending, its members are not named, and it is not described as limited to political appointees or as charged with reversing ideology-based actions. The stage therefore rests on operative reversals by other instruments; several of those reversals (AFFH, PAVE, climate initiatives, guidance withdrawals) are tracked as their own records (c15-01, c15-05, c15-06, c15-10), so this record overlaps them. The AFFH interim final rule event is copied from the verified sibling record c15-01. Both guidance withdrawal notices (2026-04-06 and 2026-07-17) were read in full on federalregister.gov in review; neither mentions a task force. A Federal Register API query of HUD documents since 2026-04-01, run in review on 2026-10-18, found no guidance withdrawal notice after 2026-07-17. The temporary restraining order date (2025-03-26) and the 2025-12-22 dismissal come from a docket summary on clearinghouse.net; the court docket itself could not be opened. The 2025-09-17 memo and the 2026-04-06 notice cover largely the same documents.",
+  "updated_at": "2026-10-18"
 }

@@ -4,9 +4,9 @@
     "No executive order or rulemaking found; the manual is issued as internal procedure"
   ],
   "chapter": "11",
-  "confidence": 48,
-  "confidence_label": "low",
-  "confidence_reason": "Text checked; the hosted copy of the 2025 manual and the Federal Register API were checked; not_started rests on absence and is capped at 50.",
+  "confidence": 65,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API including presidential documents and a RIN query (supports); Unified Agenda, Education rule list read in full on reginfo.gov on 2026-10-19 (partial: a planned OCR procedures rule, RIN 1870-AA21, entry opened, not the manual); govinfo BILLSTATUS (supports); ed.gov OCR pages (supports); one news search (supports); GAO-26-108320 confirms the 2025-02-19 edition. The recommended action is an executive order, which the agenda does not carry, so set at 65 within the 65 to 68 band.",
   "durability": {
     "level": "low",
     "why": "An executive order would be revocable; none exists, and the manual itself is reissued by the Office."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence review: reran the Federal Register API check with an exact-phrase variant and a presidential-documents variant, listed all Education Department proposed rules, opened the H.R.3282 bill status on govinfo.gov, the ed.gov OCR resources page and manual copy, a news result and a GAO report on gao.gov, which was added as a source. No stage change (not_started 0); confidence 48 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the Education rule list on reginfo.gov in full, opened the planned OCR investigation procedures entry (RIN 1870-AA21) and confirmed on federalregister.gov that no document has been published; no stage change (not_started, 0); confidence 62 to 65."
     }
   ],
   "id": "c11-30",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "executive_order",
@@ -52,29 +60,66 @@
   "research_agent": "R11",
   "restates_ids": [],
   "review": {
+    "alternative": "partial match at proposed (low end) if the planned OCR procedures rule is read as moving case-processing rules into regulation, though it is an agenda entry only and does not name the manual.",
     "flags": [
-      "Judgment call: the 2025-02-19 manual reissue is kept in the timeline as the government action that bears on the recommendation, though it is sourced to a news-hosted copy."
+      "no stage change: not_started 0",
+      "confidence 62 to 65",
+      "researcher missed RIN 1870-AA21 (OCR investigation and enforcement procedures, final action projected 07/2026); agenda check recorded as partial, not supports",
+      "for the owner: if 1870-AA21 is published and codifies case-processing steps that the manual now holds, the record could warrant re-staging as a partial match"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 357 recommends an executive order requiring the OCR Case Processing Manual to go through APA notice and comment.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 357 recommends an executive order requiring the OCR Case Processing Manual to go through APA notice and comment; the chapter text was not available to this review, and an earlier review on 2026-10-15 recorded the paraphrase as confirmed.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Cover shows effective date 2025-02-19; introduction has no mention of public comment or the APA. Checked 2026-10-15.",
+        "n": 1,
+        "note": "2026-10-18: reviewer variant, exact phrase 'Case Processing Manual' since 2025-01-20, all agencies and types: 0 documents. A second variant, presidential documents with the exact phrase 'guidance documents' since 2025-01-20, returned 14 orders and memoranda; only the NRC reform order directs rulemaking on guidance, and none concerns the OCR manual. The researcher's unquoted query (1,087 loose matches) found none either. No qualifying action.",
         "result": "supports",
-        "url": "https://ednc.org/wp-content/uploads/2025/03/ocrcpm.pdf"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Case%20Processing%20Manual%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "ed.gov copy still shows the 2022-07-18 edition; no comment process mentioned. Checked 2026-10-15.",
+        "n": 2,
+        "note": "2026-10-18: reginfo.gov eAgendaMain showed only a landing page (researcher). Fallback run by the reviewer: all 33 Education Department proposed rules since 2025-01-20, both pages read; none concerns OCR case processing or civil rights complaint procedures. Partial because only the fallback was available.",
         "result": "partial",
-        "url": "https://www.ed.gov/ocr/docs/ocrcpm.pdf"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=education-department&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Zero documents since 2025-01-20. Checked 2026-10-15.",
+        "n": 3,
+        "note": "2026-10-18: researcher's domain-limited search on OCR Case Processing Manual and notice-and-comment bills returned mostly unrelated bills. Reviewer opened the H.R.3282 BILLSTATUS: Preventing Antisemitic Harassment on Campus Act of 2025, introduced and referred to Judiciary and Education and Workforce on 2025-05-08, no later action; no manual or notice-and-comment provision.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Case+Processing+Manual%22&conditions[publication_date][gte]=2025-01-20"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3282.xml"
+      },
+      {
+        "n": 4,
+        "note": "2026-10-18: the OCR reports and resources page lists Case Processing Manual editions from Feb. 2015 to Aug. 2020 and says nothing about notice and comment or rulemaking; the ed.gov copy of the manual at the OCR documents path still shows the 2022-07-18 edition with no public-comment statement in its introduction; the ed.gov press index showed no related release. The agency pages are out of date relative to the 2025-02-19 edition but show no comment process.",
+        "result": "supports",
+        "url": "https://www.ed.gov/about/ed-offices/ocr/reports-and-resources"
+      },
+      {
+        "n": 5,
+        "note": "2026-10-18: reviewer query on the OCR Case Processing Manual revised in 2025 or 2026. Results were the news-hosted copy of the 2025 manual, a special-education newsletter, law-firm alerts, a 2018 Higher Ed Dive item and a GAO report; no major-news item. The most relevant result, an equity assistance center page last modified 2026-08-28, describes an updated manual and mentions no notice and comment or executive order.",
+        "result": "supports",
+        "url": "https://maec.org/office-for-civil-rights-case-processing-compliance-readiness-what-districts-should-know-in-2026/"
+      },
+      {
+        "n": 6,
+        "note": "2026-10-18: GAO-26-108320 of 2026-01-29 on the OCR reduction in force cites the Case Processing Manual dated 2025-02-19, confirming that edition from a government source; it mentions no public comment process.",
+        "result": "supports",
+        "url": "https://www.gao.gov/assets/gao-26-108320.pdf"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the Education list (page headed 'Agency Rule List - 2026', 19 rules, rule links carry publication id 202510) in full. No entry on the Case Processing Manual. The researcher's note that OCR appears only in the agency column is incomplete: RIN 1870-AA21, Procedures for Investigations and Enforcement of Title VI Violations (Final Rule Stage, final action projected 07/2026, 34 CFR 100 to 101), opened by the reviewer, would amend OCR's procedural regulations on complaint evaluation, dismissal, investigation and administrative enforcement under Title VI, Title IX and Section 504. It does not mention the manual or notice and comment; related, not the recommended action.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1800"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Register documents linked to RIN 1870-AA21: 0. A query of Education Department rules on Title VI enforcement procedures returned only the Title IX recodification (2026-09-29), the Title VI disparate-impact rescission (2026-07-24), a vocational guidelines rescission (2026-07-23) and an inflation adjustment; no OCR procedures rule has been published.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[regulation_id_number]=1870-AA21&per_page=20"
       }
     ]
   },
@@ -120,6 +165,13 @@
       "publisher": "Department of Education",
       "title": "OCR Reports and Resources (editions of the Case Processing Manual listed)",
       "url": "https://www.ed.gov/about/ed-offices/ocr/reports-and-resources"
+    },
+    {
+      "date": "2026-01-29",
+      "kind": "primary",
+      "publisher": "U.S. Government Accountability Office",
+      "title": "Department of Education: Full Costs and Savings Estimate Needed for Reduction-in-Force and Restructuring of the Office for Civil Rights (GAO-26-108320)",
+      "url": "https://www.gao.gov/assets/gao-26-108320.pdf"
     }
   ],
   "stage": "not_started",
@@ -135,6 +187,6 @@
   ],
   "title": "Executive order requiring the OCR Case Processing Manual to go through notice and comment",
   "tracked": true,
-  "uncertainties": "Searches run: two by the researcher (ed.gov, news and law-firm terms on the OCR Case Processing Manual) and one by the reviewer (OCR Case Processing Manual 2025 revision); plus a Federal Register API query for the manual's name since 2025-01-20, rerun by the reviewer with zero results. The manual PDF at the ed.gov OCR documents path still showed the 2022-07-18 edition when fetched, so the 2025-02-19 edition is cited from a copy hosted by a news organization; a special-education newsletter dated 2025-02-26 also reported the 2025 update. Neither edition's introduction mentions public comment or the APA in the portion read. The ed.gov resources page lists editions only through 2020 and may be out of date. Whether the manual went through notice and comment is inferred from the absence of a Federal Register document.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No executive order or Department action subjecting the Office for Civil Rights Case Processing Manual to notice and comment was found. The reginfo.gov Unified Agenda rule list for Education (edition headed Agency Rule List - 2026, 19 rules) has no entry on the manual; a Final Rule Stage entry, Procedures for Investigations and Enforcement of Title VI Violations (RIN 1870-AA21, projected 07/2026), would amend OCR's complaint evaluation, dismissal and investigation regulations in 34 CFR parts 100 and 101, but it is an agenda entry only, with no Federal Register document found, and it does not concern the manual. An executive order would not appear on the agenda. The 2025-02-19 manual edition is read only through a news-hosted copy. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

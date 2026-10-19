@@ -5,9 +5,9 @@
     "Congressional tax-writing process not started"
   ],
   "chapter": "26",
-  "confidence": 65,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks documented on 2026-10-18: (1) Federal Register API searches for border adjustment and destination-based terms, all agencies and Treasury, found only a USTR notice on the EU carbon measure; (2) Unified Agenda listings could not be read, so the Federal Register proposed-rule fallback was used (partial); (3) a congress.gov and GovInfo bill search with U.S. Code notes for Public Law 119-21 found no border-adjusted tax bill or provision; (4) Treasury press releases showed nothing; (5) a news search found only advocacy. Rated at the partial-check ceiling; the enacted text of Public Law 119-21 was read only through code notes.",
+  "confidence_reason": "Not_started rests on five documented checks: (1) Federal Register API queries for border adjustment and destination-based terms found only a USTR notice on the EU carbon measure (supports); (2) Unified Agenda: the Treasury rule list on reginfo.gov was read in full on 2026-10-19 with no matching entry (supports, weakly informative because the tax needs legislation); (3) congress.gov and GovInfo search with U.S. Code notes for Public Law 119-21 found no border-adjusted tax bill or provision (supports); (4) Treasury press releases showed nothing (supports); (5) one news search found only advocacy (supports). The JEC hearing page was read. Set at 66 because the agenda is weakly informative and the enacted text was read only through Code notes.",
   "durability": {
     "level": "low",
     "why": "No operative measure exists; interest could change with tariff litigation."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Not_started kept; five-part absence check documented and spot-checked; confidence raised from 45 to 65."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Treasury Unified Agenda rule list on reginfo.gov and found no border adjustment entry; not_started kept and confidence raised from 65 to 66."
     }
   ],
   "id": "c26-17",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -60,18 +64,12 @@
   "research_agent": "N26",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Added one search for a 2026 border adjustment bill; none found",
-      "Clarified that the Public Law 119-21 point rests on general knowledge, not the text",
-      "Overlaps the border adjustment alternative mentioned in c26-01's proposal, which does not track it",
-      "Confidence 45",
-      "V7 systematic-check review: not_started 0 kept; researcher's five checks accepted and the border adjustment Federal Register query re-run with the same result; confidence 45 to 65 under the rubric addition (check 2 partial)."
-    ],
+    "flags": [],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 782 to 783, reciprocal trade discussion (Navarro): the 2017 House border adjustment tax denied deductions for imports and exempted export income; a conservative Administration might look at such a tax as part of its trade agenda. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Checked 2026-10-14. Hearing set for 2026-03-04, postponed indefinitely; no bill referenced.",
@@ -117,6 +115,12 @@
         "note": "Reviewer re-check, 2026-10-18: phrase border adjustment, all agencies, all types, since 2025-01-20: count 1, the USTR request for comments of 2026-10-08 on the EU Carbon Border Adjustment Mechanism; confirms the researcher's result.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"border+adjustment\"&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages): no entry on a border adjustment or destination-based cash flow tax. Weakly informative: such a tax needs legislation.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
       }
     ]
   },
@@ -169,6 +173,6 @@
   "timeline": [],
   "title": "Consider a border adjustment tax as part of the trade agenda",
   "tracked": true,
-  "uncertainties": "The JEC chairman publicly promoted a border tax to replace tariffs in February 2026 according to local news, but no bill was found in two searches. Public Law 119-21 was not read for international tax provisions; its foreign-derived income changes are not a border adjustment, but this rests on general knowledge of the law rather than on its text. A scheduled or postponed hearing is not counted as an event. congress.gov search could not be opened, so absence is not proven. Checked systematically on 2026-10-18: Federal Register search (three term variants), Unified Agenda and proposed-rule listings, a congress.gov and govinfo.gov bill search with U.S. Code notes on Public Law 119-21, the Treasury press listing and a news search found no proposed or final rule, order, bill or law creating a border adjustment; the Unified Agenda agency listings could not be read directly and the enacted text of Public Law 119-21 was not read in full. An independent re-run of the Federal Register phrase search for border adjustment returned the same single USTR notice on the EU Carbon Border Adjustment Mechanism, a foreign measure.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No border adjustment was found in an enacted law, an introduced bill or an administration proposal. The Joint Economic Committee hearing set for 2026-03-04 on a destination-based cash flow tax is listed as postponed, and a member's February 2026 advocacy is not an action. Public Law 119-21 was read only through U.S. Code notes, and congress.gov search could not be opened. The only Federal Register border adjustment item concerns the EU carbon measure. The Treasury Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists no such rulemaking; the tax would need legislation, so the agenda is a weak test. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

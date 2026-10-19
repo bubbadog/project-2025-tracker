@@ -6,7 +6,7 @@
   "chapter": "15",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Document text checked and the July 2026 notice fetched and read on govinfo.gov, including its statement of a comprehensive review; whether a partly documented review counts as operative in substance or as formally underway is a matter of reading the rubric. This call is evenly balanced between implemented and in_progress.",
+  "confidence_reason": "Document text checked in earlier review and both withdrawal notices read in full on federalregister.gov in review, including the statement of a comprehensive review; confidence stays medium because whether a partly documented review counts as operative in substance or as formally underway is evenly balanced.",
   "durability": {
     "level": "medium",
     "why": "Guidance withdrawals can be reversed by reissuing guidance."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-13",
       "note": "Second independent review on 2026-10-13 kept implemented 65 because the July 2026 Federal Register notice on govinfo.gov describes a comprehensive HUD review of subregulatory guidance with withdrawals in effect; the call against in_progress is evenly balanced."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review read both HUD guidance withdrawal notices in full on federalregister.gov and ran a Federal Register API check for later rounds (none). No stage change (implemented 65); confidence unchanged at 78."
     }
   ],
   "id": "c15-10",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -56,16 +60,14 @@
   "research_agent": "N15",
   "review": {
     "flags": [
-      "second review: kept implemented 65; HUD describes a comprehensive department-wide review, but documented results cover two offices, so in_progress remains defensible and the call is balanced. Confidence lowered to medium for that reason.",
-      "second review: operative ask: The Office of the Secretary or the Office of General Counsel at HUD should conduct a thorough review of all subregulatory guidance issued outside the Administrative Procedure Act process (page 508).",
-      "second review: rule applied: Implemented (65 to 90): the ask is a review, and HUD states in the July 2026 Federal Register notice that it is undertaking a comprehensive review of its subregulatory guidance, with two rounds of withdrawals already in effect. Test (a): yes in substance, the review is being conducted and producing results, though documented withdrawals cover only fair housing and general counsel guidance. Test (b): no, the action matches the ask. Test (c): no congressional action required.",
-      "second review: evenly balanced"
+      "No stage change: implemented 65, direct.",
+      "Alternative: in_progress 50, because documented results cover only the fair housing and general counsel offices; the call is evenly balanced."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 508, first-day and first-year administrative reforms list: the Office of the Secretary or General Counsel leadership should thoroughly review all subregulatory guidance instituted outside the APA. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y15a, U13-5",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's proposal field, page 508 recommends that the Office of the Secretary or the Office of General Counsel review all subregulatory guidance issued outside the APA process; the chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "second_review": {
       "balanced": true,
       "date": "2026-10-13",
@@ -76,39 +78,19 @@
     },
     "source_checks": [
       {
-        "note": "91 FR 17291, effective 2025-09-17.",
+        "note": "Read 2026-10-18: 91 FR 44867, Docket FR-6617-N-01, withdraws 13 OGC guidance documents effective 2025-09-25 under EO 14192 and EO 14219 and states HUD is undertaking a comprehensive review of its sub-regulatory guidance; no task force is mentioned. Supports implemented at the band floor with a direct match: the review is stated and results are operative.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-06624.json"
+        "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14432/notice-of-the-withdrawal-of-ogc-guidance-documents"
       },
       {
-        "note": "Eight documents, three-part test, Executive Orders 14192 and 14219.",
-        "result": "supports",
-        "url": "https://infobytes.orrick.com/2026-04-10/hud-withdraws-eight-fair-housing-guidance-documents-as-part-of-deregulatory-review/"
+        "note": "Read in full 2026-10-18: 91 FR 17291, FHEO withdraws eight documents effective 2025-09-17 under a three-part test, cites EO 14192 and EO 14219, describes a comprehensive review and says FHEO is still reviewing its guidance; no task force is mentioned.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/04/06/2026-06624/notification-of-withdrawal-of-fair-housing-and-equal-opportunity-guidance-documents"
       },
       {
-        "note": "91 FR 44867, 13 documents, effective 2025-09-25, Executive Orders 14192 and 14219.",
+        "note": "Run 2026-10-18: five HUD documents since 2026-04-01; the only guidance withdrawal notices are the 2026-04-06 and 2026-07-17 notices; the others are waiver and demonstration notices.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-17/html/2026-14432.htm"
-      },
-      {
-        "note": "2025-09-17 memo, nine documents.",
-        "result": "supports",
-        "url": "https://leadingage.org/hud-withdraws-wide-ranging-fair-housing-policies/"
-      },
-      {
-        "note": "2025-02-28 remarks on taking inventory of regulations.",
-        "result": "supports",
-        "url": "https://www.housingwire.com/articles/hud-secretary-scott-turner-nahb-terminate-costly-housing-regulations/"
-      },
-      {
-        "note": "OGC notice, 13 documents dated 1990 to 2024, effective 2025-09-25, Executive Orders 14192 and 14219, three-part test, states HUD is undertaking a comprehensive review of its subregulatory guidance.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-17/html/2026-14432.htm"
-      },
-      {
-        "note": "Only two HUD guidance withdrawal notices since 2025-01-20 (2026-06624 and 2026-14432).",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=housing-and-urban-development-department&conditions[term]=withdrawal%20guidance&conditions[publication_date][gte]=2025-01-20"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=withdrawal+guidance&conditions[agencies][]=housing-and-urban-development-department&conditions[publication_date][gte]=2026-04-01&per_page=20&order=newest"
       }
     ]
   },
@@ -176,6 +158,13 @@
       "publisher": "HousingWire",
       "title": "HUD Secretary Scott Turner, NAHB: terminate costly housing regulations",
       "url": "https://www.housingwire.com/articles/hud-secretary-scott-turner-nahb-terminate-costly-housing-regulations/"
+    },
+    {
+      "date": "2026-07-17",
+      "kind": "primary",
+      "publisher": "Federal Register / HUD",
+      "title": "Notice of the Withdrawal of OGC Guidance Documents (91 FR 44867, Docket FR-6617-N-01)",
+      "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14432/notice-of-the-withdrawal-of-ogc-guidance-documents"
     }
   ],
   "stage": "implemented",
@@ -212,6 +201,6 @@
   ],
   "title": "Review and withdraw HUD subregulatory guidance issued outside notice and comment",
   "tracked": true,
-  "uncertainties": "Both notices carry effective dates in September 2025, earlier than their publication, because they formalize withdrawals made by memo. The memo and the April 2026 notice overlap almost entirely. A Federal Register API search of HUD documents since 2025-01-20 on 2026-10-13 found only these two guidance withdrawal notices; no withdrawal rounds from single family, public housing or community development offices were documented, and HUD has not published an inventory of the guidance reviewed.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Both notices carry effective dates in September 2025, earlier than publication, because they formalize withdrawals made earlier. Both were read in full on federalregister.gov in review: the July 2026 notice (91 FR 44867) states that HUD is undertaking a comprehensive review of its sub-regulatory guidance, and the April 2026 notice (91 FR 17291) applies a three-part test (statutorily prescribed, consistent with statute or regulation, reduces compliance burdens) and says FHEO is still reviewing its guidance. A Federal Register API query of HUD documents since 2026-04-01, run in review on 2026-10-18, found only these two guidance withdrawal notices; no rounds from single family, public housing or community development offices were documented, and no inventory of reviewed guidance has been published. The memo of 2025-09-17 and the April 2026 notice overlap almost entirely.",
+  "updated_at": "2026-10-18"
 }

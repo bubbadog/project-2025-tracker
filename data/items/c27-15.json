@@ -4,9 +4,9 @@
     "Requires an act of Congress"
   ],
   "chapter": "27",
-  "confidence": 38,
-  "confidence_label": "low",
-  "confidence_reason": "Absence of evidence from two web searches; cap applies.",
+  "confidence": 64,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (supports), CFTC Unified Agenda (supports), congress.gov and govinfo.gov search (partial: S. 5161 and H.R. 3690 silent; S. 3755 and S. 4064 bill status read but texts not read), cftc.gov organization and press pages (supports) and a news search (partial). The agenda is weakly informative for a statutory amendment and two calendared market-structure bills were not read in full, so confidence is 64.",
   "durability": {
     "level": "high",
     "why": "A statute would be durable, but none is proposed."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the CFTC Unified Agenda on reginfo.gov, govinfo.gov, cftc.gov and a news search), not_started kept and confidence raised to 64."
     }
   ],
   "id": "c27-15",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -51,20 +55,60 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "not_started confirmed",
-      "Added the reviewer's search to uncertainties",
-      "Confidence raised from 35 to 38 for the added search"
+      "Text of S. 3755 and S. 4064 (Digital Commodity Intermediaries Act, on the Senate calendar) should be read for CFTC governance provisions before confidence is raised further."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 834, CFTC Administration (Congress bullets): amend CEA section 2 so the Chairman can remove the Executive Director without a Commission vote, and set commissioners' office funding by statute with inflation adjustment and no Chairman approval. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y2",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "H.R. 6899 introduced 2025-12-18, referred to Agriculture; rewrites CEA 2(a)(15) on advisory committees; silent on the Executive Director and office budgets. Checked 2026-10-14.",
         "result": "supports",
         "url": "https://www.congress.gov/119/bills/hr6899/BILLS-119hr6899ih.htm"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "CFTC, phrase Executive Director, since 2025-01-20: 3 documents (Privacy Act system of records notice 2025-11-28; whistleblower award determination proposed rule 2026-06-15 and rule 2026-09-16); none concerns removal of the Executive Director or office funding.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Executive+Director%22&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=commodity-futures-trading-commission"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "CFTC rule list (18 rules, whole list read): no title on Executive Director, commissioner offices, delegations or budget; only the staff ethics rule RIN 3038-AF11 is loosely governance-related. Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named. All 18 titles were read; none concerns the Executive Director or commissioners' offices.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3038"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Domain-limited search (congress.gov, govinfo.gov) surfaced S. 5161 (CFTC Whistleblower Protection and Program Improvement Act of 2026; Sen. Grassley; introduced 2026-07-29; referred to Agriculture) and H.R. 3690 (Securing Innovation in Financial Regulation Act; Rep. Lucas; introduced 2025-06-03; Financial Services and Agriculture), plus S. 3755 and S. 4064 (not opened). Neither opened bill addresses the Executive Director or commissioners' office funding. Introduced bills only; H.R. 6899 already on the record.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119s5161/xml/BILLSTATUS-119s5161.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "CFTC organization page describes the Chairman as chief executive and lists divisions; no mention of the Executive Director's removal or commissioner office budgets. The press release page (first page only, 2026-07-30 to 2026-10-09) showed no related item; earlier pages were not read.",
+        "result": "supports",
+        "url": "https://www.cftc.gov/About/CFTCOrganization/index.htm"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "One standard news search (CFTC Executive Director, Chairman Selig, commissioners' office budgets) returned commentary on the Selig chairmanship and a Law360 piece on staffing concerns; no report of a statutory change or CFTC action on the two recommended items. Result pages were not opened.",
+        "result": "partial",
+        "url": "https://law360.com/articles/2466276"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the S. 3755 bill status: Digital Commodity Intermediaries Act (Sen. Boozman, introduced and placed on the Senate calendar 2026-02-02); no CRS summary; title concerns CFTC regulation of digital commodities. Bill text not read, so CFTC governance provisions are not excluded.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119s3755/xml/BILLSTATUS-119s3755.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the S. 4064 bill status: Digital Commodity Intermediaries Act (Sen. Boozman, introduced 2026-03-11, placed on the Senate calendar 2026-03-12); no CRS summary; bill text not read.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119s4064/xml/BILLSTATUS-119s4064.xml"
       }
     ]
   },
@@ -110,6 +154,6 @@
   "timeline": [],
   "title": "Let CFTC Chairman remove the Executive Director; fund commissioners' offices by statute",
   "tracked": true,
-  "uncertainties": "Researcher ran one search; the reviewer ran one more web search on 2026-10-14 for a CFTC reauthorization or governance bill covering the Executive Director or commissioners' office funding and found only 116th Congress material. H.R. 6899 was read on congress.gov and does not address either item; it is cited only to show what the searches returned. A market structure or reauthorization bill with such provisions may exist and was not found; this is not a systematic review.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The CFTC rule list on reginfo.gov (labeled Agency Rule List - 2026, 18 rules) lists no rulemaking on the Executive Director or commissioners' offices; RIN 3038-AF11 concerns employee ethics standards. S. 5161, H.R. 3690 and H.R. 6899 are silent on both items. Two calendared Senate market-structure bills (S. 3755 and S. 4064, Digital Commodity Intermediaries Act) were seen only in bill status records without summaries, so a governance provision in their text is not excluded. Only the first page of CFTC press releases was read. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

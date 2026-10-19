@@ -7,7 +7,7 @@
   "chapter": "04",
   "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text page 107 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo search, OPM news releases with DCSA and war.gov hosts blocked, one news search) plus the GAO statement read earlier, so confidence is capped near 62 because check 2 was partial and the DOD hosts were unreachable.",
+  "confidence_reason": "Chapter text page 107 checked. Five checks documented: (1) Federal Register API with a variant, supports (nothing found); (2) Unified Agenda OPM and Department of War lists read on 2026-10-19, partial (related vetting entries, no transfer; weakly informative for an executive-order action); (3) congress.gov and govinfo search, partial (NDAA text not searched); (4) OPM news releases, partial (DCSA and DOD hosts blocked); (5) one news search, supports. Confidence stays at 62.",
   "durability": {
     "level": "medium",
     "why": "A transfer would probably need an executive order and possibly statute, and a prior transfer took several years to complete."
@@ -41,10 +41,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov) and reviewed the Unified Agenda fallback, congress.gov and govinfo, OPM news page and news checks, found no qualifying action, and kept not_started 0."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the OPM and Department of War rule lists in the reginfo.gov Unified Agenda, found related vetting entries but none returning investigations to OPM, kept not_started 0 and kept confidence at 62."
     }
   ],
   "id": "c04-12",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "executive_order",
@@ -66,14 +70,14 @@
   "research_agent": "N04a",
   "review": {
     "flags": [
-      "Check 2 reached only the Federal Register fallback and the DCSA and DOD hosts were blocked; confidence capped near 62.",
-      "NDAA text for FY2026 and FY2027 was not searched for investigation-transfer provisions."
+      "Researcher's c04-12 agenda block listed DoD RIN 0790-AL93 under the OPM code; it is on the Department of War list.",
+      "Existing source_checks labeled does_not_support for the Federal Register rerun, the congress.gov search and the news search record that nothing qualifying was found; under the rubric they read as supports."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 107 calls the 2019 move of civilian clearance and suitability investigations from OPM to DCSA a mistake and says the function should return to OPM, leaving military clearance investigations with DOD. The proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "2026-10-18: reviewer rerun with terms background investigations plus Defense Counterintelligence and Security Agency since 2025-01-20: 4 notices (DOD information collections 2025-09-02 and 2026-09-02, Army Privacy Act notice 2026-01-23, OPM Privacy Act notice 2026-06-26 restating the earlier transfer to DCSA); none returns investigations to OPM. Researcher query on personnel vetting: 17 documents on suitability standards and appeals.",
@@ -99,6 +103,18 @@
         "note": "2026-10-18: one researcher news search on a DCSA to OPM reversal returned only 2019 coverage of the original transfer; no search URL was recorded, so the OPM news page is listed as a placeholder.",
         "result": "does_not_support",
         "url": "https://www.opm.gov/news/news-releases/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the OPM list on 2026-10-19: Agency Rule List - 2026, 36 rules. Related vetting entries: 3206-AO53 Designating National Security Positions (proposed) and 3206-AO97 Suitability Action Appeals (final stage); neither returns investigations from DCSA to OPM.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3206"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the Department of War list on 2026-10-19: 111 rules; 0790-AL93 DoD Investigative and Adjudicative Guidance for Issuing the Common Access Card (final stage) and 0790-AM00 Researcher Vetting and Security SORN (proposed) touch vetting but do not transfer the investigation function. A transfer would most likely come by executive order, so the agenda is weakly informative.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0700"
       }
     ]
   },
@@ -144,6 +160,6 @@
   ],
   "title": "Return civilian clearance and suitability investigations from DCSA to OPM",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: the researcher's query on personnel vetting returned 17 documents, including OPM suitability and fitness and suitability appeal rules and DCSA information collections, and a reviewer rerun on background investigations with the Defense Counterintelligence and Security Agency returned 4 notices, one of which restates that OPM had transferred the investigation mission to DCSA; no document moves investigations back to OPM. (2) Unified Agenda: item listings could not be reached, so only the Federal Register fallback was used. (3) congress.gov and govinfo: one search surfaced the 2019 executive order on the transfer and unrelated firearm background check bills; no 119th Congress bill returning investigations to OPM was identified, and NDAA text was not searched for transfer provisions. (4) Agency pages: OPM news releases showed no transfer item; DCSA and DOD hosts were blocked and not read. (5) News: one search returned only 2019 coverage of the original transfer. The GAO statement of 2026-02-24 and press coverage describe continued DCSA investment in NBIS through FY2031. Unpublished planning would not appear in these checks.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No executive or legislative action returning civilian background investigations from DCSA to OPM was found. Federal Register searches found only notices restating the 2019 transfer and routine vetting rules; a congress.gov and govinfo search found no 119th Congress bill on the transfer, though NDAA texts were not searched for such provisions; OPM news releases showed nothing, and DCSA and war.gov hosts were blocked; one news search returned only 2019 coverage. The OPM and Department of War lists in the reginfo.gov Unified Agenda (Agency Rule List - 2026) hold related vetting entries (3206-AO53, 3206-AO97, 0790-AL93) but none on the transfer. A GAO statement of 2026-02-24 describes continued DCSA investment in NBIS. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

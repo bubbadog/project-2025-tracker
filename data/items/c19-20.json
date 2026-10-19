@@ -2,9 +2,9 @@
   "agency": "DOT",
   "blockers": [],
   "chapter": "19",
-  "confidence": 35,
-  "confidence_label": "low",
-  "confidence_reason": "The FCC Unified Agenda was opened in review; not_started rests on absence of a DOT statement in limited searches and is capped at 50.",
+  "confidence": 58,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (supports and partial: a 2026-02-04 OST-R digital infrastructure RFI mentions V2X once), DOT Unified Agenda (partial: RIN 2120-AM21, FAA radio altimeters), congress.gov and govinfo.gov search (partial: CRS products and general spectrum bills), transportation.gov briefing room (unreachable) and a news search (supports, only 2020 coverage). With the agency check unreachable, the agenda weakly informative for advocacy, and DOT filings in FCC dockets not searched, confidence is 58.",
   "durability": {
     "level": "low",
     "why": "A statement or filing would be non-binding and easily revised."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-16",
       "note": "Significance scored blind by two AI raters from the recommendation text only; they differed beyond the adjudication threshold, so a third rater scored it and the median is used."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the DOT Unified Agenda on reginfo.gov, congress.gov, transportation.gov unreachable, and a news search), one news check relabeled to supports, not_started kept and confidence set to 58."
     }
   ],
   "id": "c19-20",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -57,19 +61,60 @@
       "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16615/unified-agenda-of-federal-regulatory-and-deregulatory-actions-2026"
     },
     "flags": [
-      "Opened the previously unopened Unified Agenda source and added its finding.",
-      "Named the searches performed in uncertainties."
+      "Researcher's news check was labeled does_not_support although it found no qualifying action; the FreightWaves item is dated 2020-01-15. Relabeled supports."
     ],
     "mandate_check": "ok",
     "mandate_note": "Pages 625 to 626 say DOT should ensure transportation gets its share of spectrum, recount the FCC's 2020 reduction of the 5.9 GHz safety band from 75 to 30 MHz, and say DOT should represent the transportation community and make the case for needed spectrum to the public and Congress. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "V1-1016",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Opened in review; lists FCC item Use of the 5.850-5.925 GHz Band, ET Docket 19-138, RIN 3060-AK96, as a long-term action; not a DOT action.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16615/unified-agenda-of-federal-regulatory-and-deregulatory-actions-2026"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Register API, phrase 5.9 GHz, DOT, since 2025-01-20: 0 results.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%225.9+GHz%22&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=transportation-department"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "All agencies, term V2X: 12 documents. One DOT item: OST-R request for information on a national strategy for transportation digital infrastructure, published 2026-02-04 (comments closed 2026-03-06), which mentions V2X once as an example in a latency question and does not mention 5.9 GHz or spectrum. Other hits are FCC 6 GHz rule, FCC information collections, FCC Unified Agenda notices and unrelated DOJ and DoD notices.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=V2X&conditions[publication_date][gte]=2025-01-20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "DOT, term spectrum: 28 documents, first 20 read (page 2 not read). Titles concern FAA radio altimeter rules (2026-01-07 proposed, 2026-07-31 final), an aviation spectrum interference detection industry day (2026-09-30), frequency coordination information collections and airworthiness directives; none is an advocacy statement on the 5.9 GHz band.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=spectrum&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=transportation-department"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "DOT rule list read in full over two fetches (offset 100000 used); no title names 5.9 GHz, V2X, connected vehicles or intelligent transportation. Only related entry RIN 2120-AM21 (FAA radio altimeter, Upper C-Band). Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named. Both parts of the page were read.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2100"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Domain-limited search (congress.gov, govinfo.gov) on 5.9 GHz returned CRS products on spectrum provisions of P.L. 119-21 (R48862), a pre-period CRS In Focus on vehicle safety spectrum (IF11260) and general spectrum bills (S. 792, H.R. 651); none directs DOT advocacy on the 5.9 GHz band.",
+        "result": "partial",
+        "url": "https://www.congress.gov/crs-product/IF11260"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Fetch of the DOT briefing room failed. A second DOT page (transportation.gov/v2x) was reachable but last updated 2019-06-14, and the safety-band testing page shows a last-updated date of 2021-08-31; neither shows a DOT statement dated 2025 or later.",
+        "result": "unreachable",
+        "url": "https://www.transportation.gov/briefing-room"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "One standard news search (DOT, Duffy, 5.9 GHz, V2X, FCC, 2026) returned older material only. Reviewer opened this result on 2026-10-19: FreightWaves, dated 2020-01-15, on Secretary Chao opposing the FCC reallocation; it predates the period, so the check found no qualifying action (relabeled from does_not_support).",
+        "result": "supports",
+        "url": "https://www.freightwaves.com/news/dot-chief-pushes-regulators-to-keep-wi-fi-safety-bandwidth"
       }
     ]
   },
@@ -122,6 +167,6 @@
   "timeline": [],
   "title": "DOT to advocate for 5.9 GHz spectrum for transportation safety",
   "tracked": true,
-  "uncertainties": "Searches performed: four web searches (DOT V2X and 5.9 GHz; FCC 5.9 GHz in 2026; USDOT V2X in 2025; in review, DOT 5.9 GHz safety spectrum with the Secretary and V2X), all returning pre-2025 material, and Federal Register API queries for 5.9 GHz and C-V2X since 2025-01-20, which returned FCC information collections, the 6 GHz rule and Unified Agenda notices. The FCC Unified Agenda entry for the 5.9 GHz band was seen only in its summary table, without a timetable. DOT filings in FCC dockets are not indexed in the Federal Register and were not searched. Pre-period context only: the FCC's 2020 reallocation and the 2024 V2X plan.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The DOT rule list on reginfo.gov (labeled Agency Rule List - 2026, read in two parts) lists no rulemaking on the 5.9 GHz band or V2X; RIN 2120-AM21 concerns FAA radio altimeter requirements tied to the Upper C-Band and is not the recommended action. The FCC's 2026 agenda lists its 5.9 GHz proceeding (ET Docket 19-138) as a long-term FCC item. DOT filings in FCC dockets are not indexed in the Federal Register and were not searched, and the transportation.gov briefing room could not be fetched; the DOT V2X pages read were last updated in 2019 and 2021. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

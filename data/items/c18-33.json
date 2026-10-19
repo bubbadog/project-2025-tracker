@@ -4,9 +4,9 @@
     "Statutory preemption under ERISA is a matter for Congress and the courts; DOL guidance would not bind courts (Inference)"
   ],
   "chapter": "18",
-  "confidence": 60,
+  "confidence": 65,
   "confidence_label": "medium",
-  "confidence_reason": "Not_started after a systematic five-check review on 2026-10-18: Federal Register API (re-run with a term variant), Unified Agenda (Federal Register fallback only, so partial), congress.gov and govinfo (H.R. 4265 status read), EBSA agency page, and a news search; capped near 60 because the agenda check was only the fallback and the agency check covered the landing page only.",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, only Transparency in Coverage and the excepted fertility benefits proposal (rerun 2026-10-19: ERISA preemption abortion returns the fertility proposal only); (2) Labor Unified Agenda read directly on reginfo.gov on 2026-10-19, no ERISA preemption entry, with Amendments to Excepted Benefits (1210-AC40) on fertility benefits; partly informative because a clarification could be issued as guidance or by Congress; (3) congress.gov and GovInfo, H.R. 4265 has no ERISA content; (4) EBSA landing page only; (5) one news search, commentary only. Set at 65 because EBSA advisory opinion and bulletin indexes were not searched.",
   "durability": {
     "level": "medium",
     "why": "A statutory clarification would be durable, but none exists."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 ran the Federal Register API, Unified Agenda fallback, congress.gov and govinfo, EBSA agency page and news checks (Federal Register, govinfo and DOL hosts read) and found no qualifying action, so the record stays not_started."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the Labor Unified Agenda list read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 60 to 65."
     }
   ],
   "id": "c18-33",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -56,15 +60,12 @@
   "research_agent": "R1718",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "The Excepted Fertility Benefits proposed rule (2026-05-13) has no preemption or abortion content per the researcher and the Federal Register abstract; context only.",
-      "H.R. 4265 runs in the opposite direction (abortion travel grants) and is not enacted, so it does not support diverged."
-    ],
+    "flags": [],
     "mandate_check": "confirmed",
     "mandate_note": "Page 585 asks Congress and DOL to clarify that ERISA does not preempt state power to restrict abortion, surrogacy or similar benefits in employer plans; the proposal paraphrases it accurately.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "2026-10-18: Federal Register API re-run with terms ERISA, preemption, state law, limited to EBSA, since 2025-01-20: 3 documents (Transparency in Coverage final rule 2026-20447 and proposed rule 2025-23693; Excepted Fertility Benefits proposed rule 2026-09479); none addresses preemption of state abortion or surrogacy restrictions. The researcher's query on ERISA, preemption and abortion returned only the fertility benefits proposed rule.",
@@ -90,6 +91,18 @@
         "note": "2026-10-18: No URL was recorded for the researcher's news search, so this field holds the agency home page fetched in review. The search on ERISA preemption of state abortion limits on employer plans returned legal commentary and state-level debate coverage; no federal action was reported.",
         "result": "supports",
         "url": "https://www.dol.gov/agencies/ebsa"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The Department of Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 115 rules) was read in full on 2026-10-19; no entry concerns ERISA preemption of state abortion or surrogacy restrictions; Amendments to Excepted Benefits (1210-AC40, NPRM 07/00/2026) concerns fertility benefits, and the association health plan entry (1210-AC43) is unrelated. A clarification could come by guidance or legislation, so the check is partly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1200"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: one document, the 2026-05-13 Excepted Fertility Benefits proposed rule; no preemption clarification.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=ERISA+preemption+abortion&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -135,6 +148,6 @@
   "timeline": [],
   "title": "Clarify that ERISA does not preempt state limits on abortion benefits in employer plans",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. The Federal Register API check (terms on ERISA, preemption and abortion, plus a variant on ERISA, preemption and state law limited to EBSA) found only the Transparency in Coverage rules and the Excepted Fertility Benefits proposed rule, none of which addresses preemption of state abortion or surrogacy restrictions; the fertility benefits proposed rule is cited only as a search result and was not read beyond its abstract. The Unified Agenda check was partial: the reginfo.gov agenda page opened but its rule list is form-driven, so only the Federal Register fallback was used. The Congress check covered a domain-limited search on congress.gov and govinfo.gov; the one bill found and read on its status record (H.R. 4265) funds abortion travel and has no ERISA content, and no bill clarifying ERISA non-preemption was found. The agency check covered the EBSA landing page only; EBSA advisory opinion and field assistance bulletin indexes were not searched. The news check found only legal commentary on state debates, with no federal action reported.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No DOL rule or guidance, and no bill, clarifying that ERISA does not preempt state abortion or surrogacy restrictions as applied to employer plans was found. The Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) has no preemption entry; its excepted benefits item concerns fertility benefits. The excepted fertility benefits proposal was read only at the abstract level. The EBSA check covered the landing page only, and advisory opinion and field assistance bulletin indexes were not searched. H.R. 4265 funds abortion travel and has no ERISA content. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

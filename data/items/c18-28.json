@@ -2,9 +2,9 @@
   "agency": "Department of Labor (Bureau of International Labor Affairs)",
   "blockers": [],
   "chapter": "18",
-  "confidence": 62,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text read; the ILAB release listing and the January 2026 release were fetched in review; the cancellations rest on one trade press report without a DOL statement.",
+  "confidence_reason": "Four ILAB releases and the release listing were read on dol.gov in review; the cancellations rest on one trade press report, and the absence of a refocusing directive rests on the listing and Federal Register checks.",
   "durability": {
     "level": "low",
     "why": "Priorities and grants are discretionary and can shift with leadership and appropriations."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: read four ILAB releases and the ILAB release listing on dol.gov; added three events and three primary sources and re-pointed two events to their releases. No stage change (in_progress 35); confidence 62 to 66."
     }
   ],
   "id": "c18-28",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -51,30 +55,40 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Pages corrected from 613 to 614 to 614 only: the ILAB passage is on p. 614; p. 613 concerns visa fraud and USMCA provisions for future trade agreements.",
-      "Replaced the trade association source for the contract cancellations with trade press (Fashion Dive); removed the law firm blog.",
-      "Progress lowered from 40 to 35: enforcement activity matches named categories but no refocusing directive exists and the cancellations are a contraction. proposed 20 would also be defensible if the activity is read as continuation of existing USMCA work."
+      "No stage change: in_progress 35. proposed 20 remains defensible if the activity is read as continuation of existing USMCA work without a refocusing directive.",
+      "Added three events (2026-03-27, 2026-04-08, 2026-06-12); the 2026-03-27 and 2026-06-12 entries rest on listing titles only.",
+      "Existing 2025-06-04 and 2025-08-19 events now point to the individual releases, and the 2025-08-19 event notes the strategy is DHS-led."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 614 asks the next administration to focus ILAB investigations on foreign labor violations that most damage American workers' earning power: child and forced labor, denial of organizing rights and hazardous or exploitative conditions.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (614) and proposal field, the text asks that ILAB focus investigations on foreign labor violations that most damage American workers' earning power: child and forced labor, denial of organizing rights and hazardous or exploitative conditions. The chapter text was not available this run; the page correction to 614 from the prior review is kept.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: article dated 2025-03-27 reports cancellations announced 2025-03-26 (Better Work, safety and education projects); cites a government efficiency office post; no DOL comment.",
-        "result": "supports",
-        "url": "https://www.fashiondive.com/news/aafa-alarm-ilab-contracts-cancelled/743740/"
-      },
-      {
-        "note": "Checked 2026-10-15: listing shows 20 releases from 2025-06-04 to 2026-06-12, mostly USMCA rapid response requests and resolutions, the 2025-08-19 China forced labor strategy and 2026 grant awards.",
+        "note": "Checked 2026-10-18: 20 releases from 2025-06-04 to 2026-06-12, eight rapid response requests, resolutions, two panel wins, grants. Shows sustained trade-labor enforcement; no refocusing directive. Supports in_progress as a partial match.",
         "result": "supports",
         "url": "https://www.dol.gov/newsroom/releases/ilab"
       },
       {
-        "note": "Checked 2026-10-15: Release No. 25-1605-NAT of 2026-01-12, 15.4 million and 8 million dollar awards; mission framed around U.S. job and wage growth; no stated refocusing.",
+        "note": "Checked 2026-10-18: Release 25-932-NAT, 36th RRM request, union interference at a Chihuahua wheel plant.",
         "result": "supports",
-        "url": "https://www.dol.gov/newsroom/releases/ilab/ilab20260112"
+        "url": "https://www.dol.gov/newsroom/releases/ilab/ilab20250604"
+      },
+      {
+        "note": "Checked 2026-10-18: Release 25-1218-NAT, DHS-led FLETF UFLPA strategy; ILAB co-chairs the Entity List subcommittee. ILAB contributes rather than leads.",
+        "result": "partial",
+        "url": "https://www.dol.gov/newsroom/releases/ilab/ilab20250819"
+      },
+      {
+        "note": "Checked 2026-10-18: Release 26-591-NAT, four voluntary supply chain tools; mission framed around U.S. job and wage growth; not a directive.",
+        "result": "partial",
+        "url": "https://www.dol.gov/newsroom/releases/ilab/ilab20260408"
+      },
+      {
+        "note": "Not reopened in review; earlier review read it (2025-03-27); secondary only, no DOL statement.",
+        "result": "partial",
+        "url": "https://www.fashiondive.com/news/aafa-alarm-ilab-contracts-cancelled/743740/"
       }
     ]
   },
@@ -127,10 +141,31 @@
       "publisher": "Fashion Dive",
       "title": "AAFA alarmed as US Labor Department cancels ILAB contracts",
       "url": "https://www.fashiondive.com/news/aafa-alarm-ilab-contracts-cancelled/743740/"
+    },
+    {
+      "date": "2026-04-08",
+      "kind": "primary",
+      "publisher": "Department of Labor",
+      "title": "US Department of Labor launches new tools to help businesses strengthen supply chains, stop unfair foreign labor practices",
+      "url": "https://www.dol.gov/newsroom/releases/ilab/ilab20260408"
+    },
+    {
+      "date": "2025-08-19",
+      "kind": "primary",
+      "publisher": "Department of Labor",
+      "title": "US Department of Labor announces joint strategy targeting forced labor in China to protect American workers",
+      "url": "https://www.dol.gov/newsroom/releases/ilab/ilab20250819"
+    },
+    {
+      "date": "2025-06-04",
+      "kind": "primary",
+      "publisher": "Department of Labor",
+      "title": "United States seeks review of alleged denial of rights at automobile wheel manufacturer in Mexico",
+      "url": "https://www.dol.gov/newsroom/releases/ilab/ilab20250604"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "On 2025-03-26 DOL cancelled ILAB grants and contracts, including Better Work and worker safety projects, as reported by Fashion Dive the next day, which cites a government efficiency office post and no DOL statement. From 2025-06-04 DOL issued a series of USMCA rapid response requests on alleged denial of organizing rights at Mexican facilities, announced a joint strategy on forced labor in China on 2025-08-19, and on 2026-01-12 awarded about 23 million dollars to strengthen Mexican labor law enforcement, describing ILAB's mission as combating foreign abusive labor and unfair trade practices to support U.S. job and wage growth. No formal reorganization or published refocusing directive was found.",
+  "status_summary": "On 2025-03-26 DOL cancelled ILAB grants and contracts, including Better Work and worker safety projects, as reported by Fashion Dive the next day, which cites a government efficiency office post and no DOL statement. From 2025-06-04 the United States filed a series of USMCA rapid response requests on alleged denial of organizing rights at Mexican facilities, and on 2025-08-19 DOL announced an updated DHS-led forced labor enforcement strategy in which ILAB co-chairs the Entity List subcommittee. On 2026-01-12 ILAB awarded about 23 million dollars for Mexican labor law enforcement and on 2026-04-08 coordinated the launch of voluntary supply chain tools, with releases describing ILAB's mission as combating foreign labor abuse and unfair trade practices to support U.S. job and wage growth. No formal reorganization or published refocusing directive was found.",
   "timeline": [
     {
       "date": "2025-03-26",
@@ -141,17 +176,17 @@
     },
     {
       "date": "2025-06-04",
-      "event": "United States seeks review of alleged denial of rights at an automobile wheel manufacturer in Mexico under the USMCA rapid response mechanism, the first of eight such requests shown on the listing through 2026-06-12 (date and title from the ILAB release listing).",
+      "event": "United States seeks review under the USMCA rapid response labor mechanism of alleged interference with union supporters at an automobile wheel plant in Chihuahua, Mexico (Release 25-932-NAT, the 36th request), the first of eight such requests on the ILAB release listing through 2026-06-12.",
       "kind": "primary",
       "source": "Department of Labor",
-      "url": "https://www.dol.gov/newsroom/releases/ilab"
+      "url": "https://www.dol.gov/newsroom/releases/ilab/ilab20250604"
     },
     {
       "date": "2025-08-19",
-      "event": "DOL announces a joint strategy targeting forced labor in China to protect American workers (date and title from the ILAB release listing).",
+      "event": "DOL announces the updated 2025 Uyghur Forced Labor Prevention Act enforcement strategy of the DHS-led Forced Labor Enforcement Task Force, adding five priority sectors; ILAB co-chairs the Entity List subcommittee (Release 25-1218-NAT).",
       "kind": "primary",
       "source": "Department of Labor",
-      "url": "https://www.dol.gov/newsroom/releases/ilab"
+      "url": "https://www.dol.gov/newsroom/releases/ilab/ilab20250819"
     },
     {
       "date": "2026-01-12",
@@ -159,10 +194,31 @@
       "kind": "primary",
       "source": "Department of Labor",
       "url": "https://www.dol.gov/newsroom/releases/ilab/ilab20260112"
+    },
+    {
+      "date": "2026-03-27",
+      "event": "United States reports a second win before a USMCA panel in a labor rights dispute at a Mexican critical minerals mine (title and date from the ILAB release listing; the individual release was not opened).",
+      "kind": "primary",
+      "source": "Department of Labor",
+      "url": "https://www.dol.gov/newsroom/releases/ilab"
+    },
+    {
+      "date": "2026-04-08",
+      "event": "DOL, with ILAB coordinating, launches four voluntary supply chain tools (LaborShield, ImportWatch, SourcingStrong and a traceability portal) aimed at foreign labor abuse and unfair trade practices (Release 26-591-NAT).",
+      "kind": "primary",
+      "source": "Department of Labor",
+      "url": "https://www.dol.gov/newsroom/releases/ilab/ilab20260408"
+    },
+    {
+      "date": "2026-06-12",
+      "event": "United States seeks Mexico's review of alleged denial of workers' rights at a mining facility under the USMCA rapid response mechanism (title and date from the ILAB release listing; the individual release was not opened).",
+      "kind": "primary",
+      "source": "Department of Labor",
+      "url": "https://www.dol.gov/newsroom/releases/ilab"
     }
   ],
   "title": "Refocus ILAB on foreign labor violations that harm U.S. workers and on trade enforcement",
   "tracked": true,
-  "uncertainties": "The grant and contract cancellations rest on trade press (Fashion Dive, 2025-03-27), which reports a government efficiency office post and trade association reaction and includes no DOL statement; no DOL release on the cancellations was found in review. A trade association statement and a law firm blog cited by the researcher were removed as sources (the first is an advocacy source, the second was relied on only for staff cuts not stated in the record). The 2025-06-04 and 2025-08-19 timeline entries come from titles on the ILAB release listing, which was re-read in review; the individual releases were not opened. The Federal Register API returned no ILAB rules. Searches run: two WebSearches by the researcher and one in review (ILAB grant terminations), plus fetches. Whether the changes are a refocusing or simply a contraction is an interpretation; the rapid response cases concern organizing rights and the China strategy concerns forced labor, two of the categories the text names.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The grant and contract cancellations rest on trade press (Fashion Dive, 2025-03-27), which reports a government efficiency office post and trade association reaction and includes no DOL statement; no DOL release on the cancellations was found. The releases of 2025-06-04, 2025-08-19 and 2026-04-08 and the ILAB release listing were read on dol.gov on 2026-10-18; the 2026-01-12 release was read in an earlier review and by the researcher. The 2026-03-27 and 2026-06-12 events are known from titles and dates on the ILAB listing only. The Federal Register API returned no ILAB rules. The 2025-08-19 strategy is a DHS-led interagency product, so ILAB's part is a contribution to it. Whether the changes are a refocusing or simply a contraction is an interpretation; the rapid response cases concern organizing rights and the China strategy concerns forced labor, two of the categories the text names. No directive confining ILAB to trade enforcement was located.",
+  "updated_at": "2026-10-18"
 }

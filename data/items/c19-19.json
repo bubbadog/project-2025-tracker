@@ -4,9 +4,9 @@
     "The 1,500-hour minimum is set by statute, so reduction beyond existing FAA discretion needs Congress"
   ],
   "chapter": "19",
-  "confidence": 35,
-  "confidence_label": "low",
-  "confidence_reason": "Absence of evidence from a limited search; the only source is a news report of a hearing.",
+  "confidence": 67,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence of action rests on five documented checks: (1) Federal Register API queries (airline transport pilot, first officer, restricted privileges pilot) found only collections and individual exemption petitions (supports); (2) Unified Agenda: the DOT rule list on reginfo.gov was read in full on 2026-10-19 and the 2120-AL14 entry opened; it concerns simulator use in training, not the hours requirement (partial; informative for the simulator-credit route, less so for hours set by statute); (3) two congress.gov and GovInfo searches with BILLSTATUS for H.R. 3530 found no hours bill (supports); (4) the FAA newsroom showed nothing (supports); (5) one news search found only the 2025-06-11 hearing report (supports). Set at 67 because the statutory basis was not verified from a primary source.",
   "durability": {
     "level": "medium",
     "why": "No change exists; any FAA change would be reversible, a statutory change durable."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-16",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review reran a Federal Register API check on federalregister.gov, ran one domain-limited bill search and read the H.R. 3530 BILLSTATUS on govinfo.gov; no stage change (not_started, 0). Confidence 35 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the DOT Unified Agenda rule list and the FAA simulation training device entry on reginfo.gov; not_started kept and confidence raised from 62 to 67."
     }
   ],
   "id": "c19-19",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -49,26 +57,59 @@
   "research_agent": "R1920",
   "restates_ids": [],
   "review": {
-    "document_reread": {
-      "citation": "NPR via WFAE, hearing report of 2025-06-11",
-      "note": "Draft reading relied on; context only.",
-      "result": "partial",
-      "url": "https://www.wfae.org/united-states-world/2025-06-11/senators-grill-trumps-faa-nominee-over-past-effort-to-alter-pilot-certification-rule"
-    },
-    "flags": [
-      "Named the searches performed in uncertainties.",
-      "Removed the earlier-Congress amendment from status_summary, since it has no source in the record."
-    ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 631 says the 1,500-hour rule adopted after the 2009 Colgan crash, with the pilot shortage, is pushing two-pilot aircraft out of small airports and that the trend could be reversed if copilots needed fewer hours or could count certified simulator training. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "V1-1016",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 631), the text asks to reduce the 1,500-hour copilot requirement or let certified simulator training count toward it. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Context only (hearing); not re-fetched in review.",
+        "note": "2026-10-18 (reviewer variant): 2 FAA information collection notices (2026-02-13, 2026-08-27); no rule change.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22restricted+privileges%22+pilot&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): 10 FAA documents; petitions are individual exemption requests, none on the hours requirement.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22airline+transport+pilot%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): Unified Agenda fallback; reginfo.gov landing page had no items; 713 FAA proposed rules, first page only read.",
         "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=federal-aviation-administration&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: reviewer search (congress.gov, govinfo.gov) for 119th Congress bills on the 1,500 hours and simulator credit surfaced H.R. 3530; BILLSTATUS: introduced 2025-05-21, referred to Education and Workforce, student loan limits for flight training, not the hours requirement.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3530.xml"
+      },
+      {
+        "note": "2026-10-18 (researcher): domain-limited search returned CRS reports only; no bill number surfaced.",
+        "result": "partial",
+        "url": "https://www.congress.gov/crs-product/R48585"
+      },
+      {
+        "note": "2026-10-18 (researcher): no item on pilot qualification.",
+        "result": "supports",
+        "url": "https://www.faa.gov/newsroom"
+      },
+      {
+        "note": "2026-10-18 (researcher news search): only the 2025-06-11 hearing report; no action reported.",
+        "result": "supports",
         "url": "https://www.wfae.org/united-states-world/2025-06-11/senators-grill-trumps-faa-nominee-over-past-effort-to-alter-pilot-certification-rule"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "DOT list headed 'Agency Rule List - 2026' (agency named Department of Transportation), read by the reviewer on 2026-10-19 to the footer across two fetch pages (offset 0 and 100000); the page shows no total, and the sub-agency counts seen were OST 31, FAA 36, FRA 28 on the second page plus others on the first, FTA 14, MARAD 11, SLSDC 2 and PHMSA 45. No title mentions the 1,500-hour requirement, the restricted airline transport pilot certificate, first officer qualification or flight-hour credit. Related: 2120-AL14, Flight Simulation Training Device Usage in Training Programs (Proposed Rule Stage); 2120-AM24 (pilot use of oxygen) is unrelated.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2100"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Detail page read: Proposed Rule Stage, NPRM 02/00/2027; would align pilot training tasks and authorized FSTD levels in air carrier training programs with the Part 60 qualification standards and allow lower-fidelity devices for some tasks; no mention of the 1,500-hour requirement, the ATP certificate or crediting simulator time toward hours. A planned rule on training, not the recommended action.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=2120-AL14"
       }
     ]
   },
@@ -114,6 +155,6 @@
   "timeline": [],
   "title": "Reduce the 1,500-hour copilot requirement or credit simulator training",
   "tracked": true,
-  "uncertainties": "Searches performed: two web searches (FAA 1,500-hour rule changes in 2025 and 2026; a 119th Congress bill on the hours requirement) and two Federal Register API queries (first officer qualification; 14 CFR 61.160 restricted privileges), which returned no documents. BILLSTATUS XML was not scanned. A 2023 House amendment preserving the hours belongs to an earlier Congress. The statutory basis and the current extent of FAA discretion over credit hours were not verified from a primary source.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "No FAA rule or proposal changing the first officer qualification requirement, and no 119th Congress bill reducing the hours or crediting simulator time, was found; senators' questions at the 2025-06-11 nominee hearing are context. The DOT Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists 2120-AL14, a planned proposal on simulation device use in air carrier training programs (projected February 2027), which does not address the hours requirement. The statutory basis of the requirement and the extent of FAA discretion over credit hours were not verified from a primary source, and a bill search is not an exhaustive list. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

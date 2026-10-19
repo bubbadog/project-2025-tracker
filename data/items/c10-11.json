@@ -6,9 +6,9 @@
     "The February 2025 reconciliation option was not carried into the enacted law, per CRS."
   ],
   "chapter": "10",
-  "confidence": 60,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "All five systematic checks were documented on 2026-10-18: check 1 (three Federal Register queries, rerun by the reviewer) found no USDA rule on CEP grouping or the threshold and none limiting summer meals; check 2 is partial (Unified Agenda unreachable, Food and Nutrition Service proposed-rule listing used); check 3 (one search and a BILLSTATUS read) found only access-expanding bills and P.L. 119-21 is covered by a CRS Insight, though other enacted laws were not read; check 4 (USDA CEP page and press releases) found no change; check 5 (one news search) returned only 2023 coverage and is partial. With two partial checks, confidence is set at 60.",
+  "confidence_reason": "Stage rests on absence. Five checks: Federal Register API (supports, three term queries plus RIN queries for the three agenda entries, 0 documents each); Unified Agenda, USDA rule list read in full on reginfo.gov on 2026-10-19 (partial: related child nutrition entries, none on CEP or summer meal eligibility); congress.gov and govinfo with BILLSTATUS (supports); USDA CEP page and press releases (supports); one news search (partial, 2023 coverage only). Documents read: the three agenda entry pages and the 2023 final rule. A rule is the recommended vehicle, so the agenda is informative; set at 66, below the 70 ceiling, because the news check is weak and other enacted laws were not read.",
   "durability": {
     "level": "low",
     "why": "No action has been taken; any future rule would be reversible by rulemaking."
@@ -34,10 +34,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Systematic absence check confirmed not_started for the CEP and summer meal limits; related Federal Register items judged non-qualifying; confidence raised from 50 to 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Unified Agenda review: read the USDA rule list on reginfo.gov in full, opened the three planned child nutrition entries and confirmed on federalregister.gov that none has a published document; no stage change (not_started, 0); confidence 60 to 66."
     }
   ],
   "id": "c10-11",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -63,15 +67,15 @@
   "research_agent": "N10",
   "review": {
     "flags": [
-      "CEP claim on Public Law 119-21 now supported by a CRS Insight rather than inference from a news report",
-      "V10: not_started 0 confirmed; the DHS public charge rule and the June 2025 Summer EBT streamlining and rescission rules were checked and do not move the stage.",
-      "V10: confidence 50 to 60, below the researcher's suggested 65, because checks 2 and 5 are partial."
+      "no stage change: not_started 0",
+      "confidence 60 to 66",
+      "three FNS rules (0584-AF17, AF24, AF25) confirmed as agenda entries only: 0 Federal Register documents by RIN; none concerns CEP or summer meal eligibility"
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 302 to 303 confirmed; the text recommends a CEP grouping rule, congressional elimination of CEP, no summer meals for students not in summer school, and rejection of universal free meals.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V10",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Final rule 88 FR 65778, effective 2023-10-26; ISP threshold 40 to 25 percent; groups allowed if the aggregate ISP is at least 25 percent.",
@@ -152,6 +156,30 @@
         "note": "Reviewer V10 spot-check, 2026-10-18: query \"Summer EBT\", agency Food and Nutrition Service, since 2025-01-20: six documents, the 2025-06-06 rule removing the Coordinated Services Plan requirement, a 2025-06-11 rescission of two obsolete Summer EBT state options, and benefit-level and income-guideline notices; none limits summer meals to summer school students.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Summer+EBT%22&conditions[agencies][]=food-and-nutrition-service&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer read the USDA list (page headed 'Agency Rule List - 2026', 110 rules) in full: no title on the Community Eligibility Provision, its threshold or universal free meals. Child nutrition entries: 0584-AF17 Reducing Complexity and Food Waste in the Child Nutrition Programs (Proposed Rule Stage, NPRM 09/2026; meal patterns and monitoring, no CEP mention), 0584-AF24 Enhancing Integrity in Non-Congregate Meal Service in the Summer Meal Programs (Proposed Rule Stage, NPRM 07/2026; non-congregate operations and sponsor oversight), 0584-AF25 Combating Fraud in the Child and Adult Care Food Program and the Summer Food Service Program (Proposed Rule Stage, NPRM 07/2026; fraud controls and disqualification), plus final-stage 0584-AF06 (geographic preference) and 0584-AF28 (fluid milk). The three proposed-stage entry pages were opened by the reviewer; none restricts summer meals to summer-school students or changes CEP.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Register documents linked to RIN 0584-AF24: 0. The planned summer meal integrity rule is an agenda entry only.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[regulation_id_number]=0584-AF24&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Register documents linked to RIN 0584-AF25: 0. The planned CACFP and SFSP fraud rule is an agenda entry only.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[regulation_id_number]=0584-AF25&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Register documents linked to RIN 0584-AF17: 0. The planned child nutrition meal pattern rule is an agenda entry only.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[regulation_id_number]=0584-AF17&per_page=20"
       }
     ]
   },
@@ -276,6 +304,6 @@
   ],
   "title": "Limit CEP to whole schools or districts, end CEP and summer meals for non-students",
   "tracked": true,
-  "uncertainties": "Public Law 119-21's effect on CEP rests on the CRS Insight of 2025-12-16, read in review, and on the July 2026 K-12 Dive report that the 25 percent threshold remains; the law text itself was not searched for school-meal provisions. The 2023 final rule was read on the Federal Register in review (threshold lowered to 25 percent, groups allowed on an aggregate basis). A search of Federal Register documents mentioning CEP since 2023 returned no 2025 or 2026 USDA CEP rule; the Unified Agenda and the FY2026 and FY2027 President's budget child nutrition proposals were searched and not found. Whether any other 119th Congress bill on CEP exists was not established. Summer EBT status is shown only through one state release; it is a grocery benefit rather than school meal service, and no action on summer meal sites for students outside summer school was found. Checked systematically on 2026-10-18: Federal Register API searches (CEP, Food and Nutrition Service school meals, summer programs) found no USDA rule on CEP grouping or the threshold and none limiting summer meals; the Unified Agenda listing was unreachable and the Food and Nutrition Service proposed-rule listing held only SNAP items; one congress.gov and govinfo search surfaced only access-expanding bills at committee stage; the USDA CEP page and press releases showed no change; and one news search returned only coverage of the 2023 expansion. Enacted laws other than P.L. 119-21 were not read for school-meal provisions.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No USDA rule on CEP grouping or the threshold and none limiting summer meals to summer-school students was found. The reginfo.gov Unified Agenda rule list for USDA (edition headed Agency Rule List - 2026) lists no Community Eligibility Provision rulemaking; three planned Food and Nutrition Service proposed rules, on summer meal integrity (RIN 0584-AF24), child care and summer program fraud (0584-AF25) and child nutrition meal patterns (0584-AF17), are agenda entries only, with no Federal Register document, and none addresses CEP or summer meal eligibility. Public Law 119-21's lack of a direct CEP change rests on a CRS Insight; other enacted laws were not read for school-meal provisions, and the news check returned only 2023 coverage. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

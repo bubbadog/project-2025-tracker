@@ -1,18 +1,24 @@
 {
   "agency": "Department of Health and Human Services, Centers for Medicare and Medicaid Services",
   "blockers": [
-    "No pending proposal was found"
+    "District of Maryland stay of 2026-07-16 under 5 U.S.C. 705 of the non-network plan provisions of the 2027 Payment Notice (City of Columbus v. Kennedy), pending a merits ruling."
   ],
   "chapter": "14",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Absence of action rests on a Federal Register listing re-run in review and a partial read of one rule; no web search; not_started is capped.",
+  "confidence": 62,
+  "confidence_label": "medium",
+  "confidence_reason": "Re-staged on the ordinary scale. The stage-deciding documents were read in part: the federalregister.gov page of the 2027 Payment Notice final rule (the finalized 156.236 non-network standard and its plan-year timing; page truncated, no reference-pricing passage located in the part read), the CMS fact sheet of 2026-05-15, the District of Maryland stay order of 2026-07-16 and the CMS statement of 2026-08-04 confirming the non-network provisions are paused. The link to reference pricing rests on Federal Register search excerpts and an Epstein Becker Green analysis (secondary). The chapter text was not re-read. Medium, 62.",
+  "court_status": {
+    "basis": "District of Maryland order in City of Columbus v. Kennedy (No. 1:26-cv-02215) staying under 5 U.S.C. 705 the addition of 45 CFR 156.236, with the related State Exchange non-network provision paused per CMS, pending a merits ruling; briefing ongoing.",
+    "date": "2026-07-16",
+    "state": "stayed",
+    "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2026/07/Columbus_2026.07.16_ORDER-ON-MOTION-FOR-STAY.pdf"
+  },
   "durability": {
     "level": "low",
     "why": "Any future guidance would be administrative and reversible."
   },
   "est_completion": {
-    "basis": "Inference: no proposal or schedule was found.",
+    "basis": "Inference: the provision is stayed pending a merits ruling with no decision date set, and no action on shared savings designs was found.",
     "window": "unknown"
   },
   "headline": false,
@@ -28,46 +34,151 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review reran a Federal Register API check on federalregister.gov with a new term variant and read the 2027 benefit and payment parameters final rule page in part; no stage change (not_started, 0). Confidence 40 to 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Review re-staged the record from not_started 0 to blocked 30 (partial match) after reading the 2027 Payment Notice on federalregister.gov, the CMS fact sheet and statement on cms.gov and the District of Maryland stay order via the Georgetown litigation tracker, with the HHS Unified Agenda list read on reginfo.gov; confidence 60 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Coordinating session red-team: source check results restated relative to the current stage. The stage-deciding documents had been marked as not supporting because they were first recorded during a no-action absence check. No change to stage, progress or confidence."
     }
   ],
   "id": "c14-42",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
-  "match": "parallel",
+  "match": "partial",
   "mechanism": "agency_rule",
   "pages": [
     469
   ],
   "position": "Center for Consumer Information and Insurance Oversight (CCIIO)",
-  "progress": 0,
+  "progress": 30,
   "proposal": "The Mandate recommends that CMS ensure that shared savings and reference pricing plan designs, which reward consumers for choosing lower-cost care, are permitted and that barriers to rewarding such choices are removed (p. 469).",
   "related_ids": [
     "c14-13",
     "c14-21"
   ],
   "remaining": [
-    "CMS guidance or rule confirming that shared savings and reference pricing designs that reward consumers are permitted (p. 469)",
-    "Removal of any remaining barriers to rewarding lower-cost choices (p. 469)"
+    "Resolution of the stay and the merits in City of Columbus v. Kennedy.",
+    "Any action permitting shared savings plan designs (none found)."
   ],
   "requires_congress": "no",
   "research_agent": "R14B",
   "restates_ids": [],
   "review": {
+    "alternative": "Not_started 0 if non-network plans are treated as a network-adequacy policy rather than a reference pricing design that rewards lower-cost choices.",
     "flags": [
-      "Stage not_started kept.",
-      "Duplicate check: c14-13 lists shared savings and reference pricing as not covered, and c14-21 covers hospital price transparency, so the record is kept.",
-      "Added the Federal Register API listing as a source."
+      "Stage change: not_started 0 to blocked 30, match parallel to partial, on the 2027 Payment Notice non-network plan standard (45 CFR 156.236) and the 2026-07-16 District of Maryland stay.",
+      "The prior check that none of the five reference-based pricing results permits the designs is contradicted by the excerpts; the coordinator may wish to have the full rule text read for the reference-pricing passages.",
+      "The Transparency in Coverage final rule (2026-10-06) excerpt says plans and issuers may use reference-based pricing structures; the passage was not read in context and was not counted.",
+      "The FR page citation was reported as 91 FR 29526 by one fetch and 91 FR 29256 by the court and CMS; only the document number is used.",
+      "blockers, remaining, est_completion and mechanism fields still describe no proposal; they should be updated to reflect the stayed final rule."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 469 asks CMS to remove barriers to rewarding patients for lower-cost choices and to ensure shared savings and reference pricing plan designs are permitted.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 469), the text asks CMS to ensure shared savings and reference pricing plan designs that reward consumers for lower-cost care are permitted and barriers removed. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: six results (Transparency in Coverage proposed and final rules, GLOBE and GUARD drug pricing models, CY 2026 OPPS rule); none addresses consumer shared savings or reference pricing plan designs in its title.",
+        "note": "2026-10-18 (reviewer variant): reference-based pricing, all types: 5 documents (Transparency in Coverage proposed 2025-12-23 and final 2026-10-06; 2027 benefit and payment parameters proposed 2026-02-11 and final 2026-05-20; DOJ OhioHealth judgment 2026-07-23); none permits the designs.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22reference+pricing%22&conditions[publication_date][gte]=2025-01-20&order=newest"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22reference-based+pricing%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): supports became partial. 2026-10-18: reviewer read the federalregister.gov page (about 140,000 characters); no passage on reference pricing or shared savings located in the text read; value-based insurance designs for multi-year catastrophic plans are a different design.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/05/20/2026-10050/patient-protection-and-affordable-care-act-hhs-notice-of-benefit-and-payment-parameters-for-2027-and"
+      },
+      {
+        "note": "2026-10-18 (researcher): 6 documents, disclosure and drug payment rules only.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22reference+pricing%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: landing page only; Federal Register proposed-rule fallback found no proposed rule on these designs.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18 (researcher): H.R. 9393 ordered reported 2026-07-21; incentive disclosure only in the text read; H.R. 9645 similar.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9393.xml"
+      },
+      {
+        "note": "2026-10-18 (researcher, checks 4 and 5): fact sheet describes price disclosure files and a self-service tool, no shared savings or reference pricing provision; news results were summaries of the same rule.",
+        "result": "supports",
+        "url": "https://www.cms.gov/newsroom/fact-sheets/transparency-coverage-final-rules-cms-9882-f"
+      },
+      {
+        "note": "Prior review: final rule read in part; expands disclosure, does not establish or clarify the designs.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/10/06/2026-20447/transparency-in-coverage"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 183 rules) was read in full on 2026-10-19; no entry concerns shared savings or reference pricing designs. Transparency in Coverage (0938-AV64, Final Rule Stage), Expanding Access to Individual Coverage HRAs (0938-AW00, NPRM 07/00/2026) and Amendments to Excepted Benefits (0938-AV94, NPRM 07/00/2026) are related coverage rules. The 2027 Payment Notice entry (0938-AV62) is still listed at Proposed Rule Stage although its final rule was published 2026-05-20.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Transparency in Coverage (CMS-9882), Final Rule Stage, 45 CFR 147; RFI 06/02/2025 (90 FR 23303), NPRM 12/23/2025 (90 FR 60432), final action 07/00/2026; abstract on price data transparency; no mention of shared savings or reference pricing.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0938-AV64"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Expanding Access to Individual Coverage Health Reimbursement Arrangements (CMS-9876), Proposed Rule Stage, NPRM 07/00/2026; administrative streamlining of ICHRAs; no mention of shared savings or reference pricing.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0938-AW00"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Amendments to Excepted Benefits (CMS-9879), Proposed Rule Stage, NPRM 07/00/2026; fertility benefits as excepted benefits under EO 14216; unrelated.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0938-AV94"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): does not support became supports. Reviewer rerun of check 1 on 2026-10-19: five documents. The excerpts show the 2027 Payment Notice proposed (2026-02-11) and final (2026-05-20) rules matching the term in their non-network plan discussion, and the Transparency in Coverage final rule (2026-10-06) matching in a passage stating that plans and issuers may use reference-based pricing structures. The earlier reading that none permits the designs is not sustained for the 2027 Payment Notice.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22reference-based+pricing%22&conditions[publication_date][gte]=2025-01-20&order=newest"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): does not support became supports. Reviewer read of the federalregister.gov page on 2026-10-19 (first 100,000 of about 140,000 characters): finalizes new 45 CFR 156.236 allowing non-network plans to receive QHP certification, with providers accepting the plan benefit amount as payment in full, effective for the federal Exchange from plan year 2028; also allows value-based insurance designs in multi-year catastrophic plans. No reference-pricing passage located in the part read.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/05/20/2026-10050/patient-protection-and-affordable-care-act-hhs-notice-of-benefit-and-payment-parameters-for-2027-and-basic-health-program"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): does not support became supports. CMS fact sheet of 2026-05-15 read on 2026-10-19: non-network plans set specific benefit amounts for covered services that providers accept as payment in full; value-based insurance designs in catastrophic plans incentivize higher-value, lower-cost services.",
+        "result": "supports",
+        "url": "https://www.cms.gov/newsroom/fact-sheets/hhs-notice-benefit-payment-parameters-2027-final-rule"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "District of Maryland order of 2026-07-16 (City of Columbus v. Kennedy, No. 1:26-cv-02215) read on 2026-10-19: stays under 5 U.S.C. 705, pending a merits ruling, eight groups of provisions including the addition of 45 CFR 156.236.",
+        "result": "partial",
+        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2026/07/Columbus_2026.07.16_ORDER-ON-MOTION-FOR-STAY.pdf"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "CMS statement of 2026-08-04 read on 2026-10-19: both non-network provisions (156.236 for the federal Exchange from 2028 and 155.1050(a) for State Exchanges from 2027) are paused while the litigation is pending.",
+        "result": "partial",
+        "url": "https://www.cms.gov/files/document/statement-re-city-columbus-080426.pdf"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Georgetown litigation tracker read on 2026-10-19: Columbus II filed 2026-06-03, stay granted, briefing ongoing, plaintiffs summary judgment motion due 2026-11-18; no appeal shown.",
+        "result": "partial",
+        "url": "https://litigationtracker.law.georgetown.edu/issues/marketplace-rules"
       }
     ]
   },
@@ -113,13 +224,63 @@
       "publisher": "Federal Register",
       "title": "Federal Register API search for reference pricing, 2025-01-20 onward (six results, none on plan designs)",
       "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22reference+pricing%22&conditions[publication_date][gte]=2025-01-20&order=newest"
+    },
+    {
+      "date": "2026-05-20",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "HHS Notice of Benefit and Payment Parameters for 2027 final rule",
+      "url": "https://www.federalregister.gov/documents/2026/05/20/2026-10050/patient-protection-and-affordable-care-act-hhs-notice-of-benefit-and-payment-parameters-for-2027-and-basic-health-program"
+    },
+    {
+      "date": "2026-05-15",
+      "kind": "primary",
+      "publisher": "CMS",
+      "title": "HHS Notice of Benefit and Payment Parameters for 2027 Final Rule (fact sheet)",
+      "url": "https://www.cms.gov/newsroom/fact-sheets/hhs-notice-benefit-payment-parameters-2027-final-rule"
+    },
+    {
+      "date": "2026-07-16",
+      "kind": "court",
+      "publisher": "U.S. District Court for the District of Maryland",
+      "title": "City of Columbus v. Kennedy, order on motion for stay",
+      "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2026/07/Columbus_2026.07.16_ORDER-ON-MOTION-FOR-STAY.pdf"
+    },
+    {
+      "date": "2026-08-04",
+      "kind": "primary",
+      "publisher": "CMS",
+      "title": "CMS statement regarding City of Columbus v. Kennedy",
+      "url": "https://www.cms.gov/files/document/statement-re-city-columbus-080426.pdf"
+    },
+    {
+      "date": "2026-06-09",
+      "kind": "news",
+      "publisher": "Epstein Becker Green",
+      "title": "Non-network plans may be on the ACA Exchanges: what the final 2027 Payment Notice means for health plans and providers",
+      "url": "https://www.ebglaw.com/insights/publications/non-network-plans-may-be-on-the-aca-exchanges-what-the-final-2027-payment-notice-means-for-health-plans-and-providers"
     }
   ],
-  "stage": "not_started",
-  "status_summary": "No CMS or tri-agency action since 2025-01-20 was found that addresses shared savings or reference pricing plan designs for consumers. The Transparency in Coverage final rule published 2026-10-06 (effective 2026-12-07) expands price disclosure by group health plans and insurers, but it does not establish or clarify shared savings or reference pricing designs.",
-  "timeline": [],
+  "stage": "blocked",
+  "status_summary": "The 2027 Notice of Benefit and Payment Parameters final rule, published 2026-05-20 and effective 2026-07-20, adds 45 CFR 156.236 to let non-network plans, which set benefit amounts that providers accept as payment in full and which analysts describe as relying on reference-based pricing, be certified as qualified health plans from plan year 2027 on State Exchanges and 2028 on the federal Exchange. It also allows value-based insurance designs in multi-year catastrophic plans. On 2026-07-16 the District of Maryland stayed the non-network provisions pending a merits ruling in City of Columbus v. Kennedy, and CMS confirmed both are paused. No action addresses shared savings designs. The Transparency in Coverage final rule of 2026-10-06 expands price disclosure.",
+  "timeline": [
+    {
+      "date": "2026-05-20",
+      "event": "HHS publishes the 2027 Notice of Benefit and Payment Parameters final rule (FR doc 2026-10050, effective 2026-07-20), adding 45 CFR 156.236 so that non-network plans, which set benefit amounts that providers accept as payment in full, can be certified as qualified health plans, from plan year 2027 on State Exchanges that allow them and from 2028 on the federal Exchange.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/05/20/2026-10050/patient-protection-and-affordable-care-act-hhs-notice-of-benefit-and-payment-parameters-for-2027-and-basic-health-program"
+    },
+    {
+      "date": "2026-07-16",
+      "event": "The U.S. District Court for the District of Maryland, in City of Columbus v. Kennedy (No. 1:26-cv-02215), stays under 5 U.S.C. 705 eight groups of the rule's provisions, including the addition of 45 CFR 156.236, pending a ruling on the merits.",
+      "kind": "court",
+      "source": "U.S. District Court for the District of Maryland (via Georgetown litigation tracker)",
+      "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2026/07/Columbus_2026.07.16_ORDER-ON-MOTION-FOR-STAY.pdf"
+    }
+  ],
   "title": "Ensure shared savings and reference pricing plan designs are permitted",
   "tracked": true,
-  "uncertainties": "Mandate text on page 469 was checked. The Transparency in Coverage final rule was read only in part (the page was truncated). The Federal Register API was queried for reference pricing since 2025-01-20 and returned only the transparency rule, hospital price and international drug pricing model rules, which are different subjects. Shared savings designs were already addressed in earlier-period transparency rules, which are not counted here. No WebSearch was run for this item; absence of evidence rests on the Federal Register listing only. Related record c14-13 covers HSA and direct primary care; c14-21 covers hospital price transparency.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The stage rests on the 2027 Payment Notice's non-network plan standard, read in part on federalregister.gov; whether non-network plans are reference pricing designs rests on Federal Register search excerpts and law firm analysis, since the reference-pricing passages were not located in the text read. No action on shared savings designs was found. The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) has no entry on either design. The Transparency in Coverage final rule contains a passage on plans using reference-based pricing structures that was not read in context. The stay is pending a merits ruling, with summary judgment briefing under way. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

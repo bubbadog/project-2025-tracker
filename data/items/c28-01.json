@@ -5,9 +5,9 @@
     "Any statutory rewrite needs 60 Senate votes; S. 3546 (Sunset Section 230 Act) and the House bills H.R. 6746 and H.R. 10332 showed only introduction and committee referral in the GovInfo bill status read on 2026-10-16"
   ],
   "chapter": "28",
-  "confidence": 58,
+  "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "Pages 825 to 826 and 847 to 850 were re-read earlier, and the five checks are documented again on 2026-10-18: (1) Federal Register searches of FCC documents for Section 230 found 13 incidental matches and none on the subject; (2) the Unified Agenda listing could not be browsed, and FCC proposed rules mentioning platforms included nothing on moderation or transparency (partial); (3) a congress.gov and GovInfo search with bill status reads found sunset and repeal bills referred to committee only; (4) the FCC headlines page could not be fetched on two attempts (unreachable); (5) news searches found no 2025 or 2026 FCC action. Set to 58 because the FCC's own pages remain unreachable, so an FCC item outside the Federal Register cannot be fully excluded.",
+  "confidence_reason": "Chapter pages 825 to 826 and 847 to 850 were re-read earlier. Five documented checks: (1) Federal Register queries of FCC documents for Section 230 found 13 incidental matches and none on the subject (supports); (2) Unified Agenda: the FCC rule list on reginfo.gov was read in full on 2026-10-19 with no Section 230 or platform entry (supports; informative for transparency rules, less so for a declaratory ruling); (3) congress.gov and GovInfo search with bill status reads found sunset and repeal bills referred to committee only (supports); (4) the FCC headlines page was unreachable on three dates (unreachable); (5) news searches, including one on 2026-10-19, found no 2025 or 2026 Commission action (supports). Raised from 58 to 60; held there because the FCC's own pages remain unreachable.",
   "durability": {
     "level": "low",
     "why": "An FCC interpretive order or rule could be reversed by a later Commission or set aside in court."
@@ -48,10 +48,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Not_started kept; five-part check documented with the FCC newsroom unreachable; one referred repeal bill added to the timeline; confidence raised from 55 to 58."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the FCC Unified Agenda rule list on reginfo.gov, retried the FCC headlines page without success, ran one news spot-check and corrected the agenda edition label; not_started kept and confidence raised from 58 to 60."
     }
   ],
   "id": "c28-01",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -80,17 +84,13 @@
   "research_agent": "A16",
   "review": {
     "flags": [
-      "The FCC part of the systematic absence check rests on a site-restricted search because fcc.gov pages could not be fetched; a non-Federal Register FCC item cannot be fully excluded.",
-      "Alternative reading: the chapter also asks the FCC to work with Congress on legislation that scraps Section 230's current approach; if the introduced sunset and repeal bills were counted as a parallel legislative step, the record would sit at proposed (about 5). not_started was kept because the bills involve no FCC action and repeal differs from the reform the chapter describes.",
-      "H.R. 7045 (a repeal bill seen in search results) was not opened.",
-      "V7 systematic-check review: not_started 0 kept; FCC Section 230 Federal Register matches confirmed as incidental; H.R. 7045, previously unopened, read in bill status and added to the timeline as a referred repeal bill; confidence 55 to 58 (FCC newsroom unreachable, agenda partial).",
-      "Alternative unchanged: proposed about 5 if the referred sunset and repeal bills were counted as a parallel legislative step."
+      "Existing status_summary and uncertainties called the agenda the 'Fall 2025' edition; the reginfo.gov page is headed 'Agency Rule List - 2026' and names no season. The status_summary is corrected here and the uncertainties text is replaced."
     ],
     "mandate_check": "pages re-read",
     "mandate_note": "Pages 847 to 849 ask the FCC to issue an order reading Section 230 narrowly ((c)(1) only where a platform leaves content up, (c)(2) for restricting access), to adopt transparency rules modeled on the broadband disclosure rule with specific terms of service and an appeals process, and to work with Congress on more fundamental reform; page 850 records conservative dissent on First Amendment grounds. The proposal paraphrase is faithful.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Opened 2026-10-16: S. 3546, Sunset Section 230 Act, introduced 2025-12-17 by Sen. Graham with nine original cosponsors including Sen. Durbin; read twice and referred to Senate Commerce, Science, and Transportation the same day; no later action (status updated 2026-01-20).",
@@ -175,6 +175,24 @@
       {
         "note": "Reviewer re-check, 2026-10-18: one news search (FCC Section 230 declaratory ruling or notice of inquiry 2026) returned 2020 to 2025 items; this result, dated 2024-11-24, reports statements and a letter only, no Commission action.",
         "result": "does_not_support",
+        "url": "https://broadbandbreakfast.com/carr-links-section-230-immunity-to-acting-in-good-faith"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "FCC list headed 'Agency Rule List - 2026' (agency named Federal Communications Commission, 18 rules: 10 proposed, 8 final, on spectrum, deployment, supply chain, broadcast ownership, NEPA, fees and 'Delete Delete Delete'), read to the footer by the reviewer on 2026-10-19; none on Section 230, platforms, content moderation or transparency. Partly informative: transparency rules would appear, but a declaratory ruling may issue without an agenda entry. The page does not label a season.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3060"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer retry on 2026-10-19: client error again.",
+        "result": "unreachable",
+        "url": "https://www.fcc.gov/news-events/headlines"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "One reviewer news search on 2026-10-19 (FCC Section 230, Carr, notice of inquiry or declaratory ruling, October 2026) returned 2020 to 2025 items on statements, letters and the Chairman's views, including this 2024 item; no Commission order, notice or inquiry.",
+        "result": "supports",
         "url": "https://broadbandbreakfast.com/carr-links-section-230-immunity-to-acting-in-good-faith"
       }
     ]
@@ -310,7 +328,7 @@
     }
   ],
   "stage": "not_started",
-  "status_summary": "No FCC order interpreting Section 230 and no FCC transparency or appeals rules for large online platforms were found as of 2026-10-16. FCC Chairman Brendan Carr, the author of the chapter, said on 2025-02-27 that it is appropriate for the FCC to take another look at Section 230, but no notice, petition, declaratory ruling or docket on the subject was found. Federal Register queries for FCC documents published since 2025-01-20 returned no results for Section 230, content moderation, Big Tech or interactive computer service, and a query for social media returned twelve FCC documents, none about platform moderation or Section 230; a query across all agencies for Section 230 returned five documents, none from the FCC. Congress has moved on the legislative side of the topic: a bipartisan Senate bill to repeal Section 230 two years after enactment (the Sunset Section 230 Act) was introduced on 2025-12-17 as S. 3546 and referred to the Senate Commerce Committee, and the Senate Commerce Committee held a hearing titled 'Liability or Deniability? Platform Power as Section 230 Turns 30' on 2026-03-18; neither involves an FCC order or rule. Two House bills, H.R. 6746 (introduced 2025-12-16, a sunset of Section 230) and H.R. 10332 (introduced 2026-09-10, a repeal), were referred to the House Energy and Commerce Committee and show no later action, and the FCC's entries in the current Unified Agenda (Fall 2025) include no Section 230 or platform item. As of the 2026-10-16 check, the GovInfo bill status for S. 3546 showed no action after referral, and the FCC's own document system could not be searched, so non-Federal Register FCC items cannot be ruled out.",
+  "status_summary": "No FCC order interpreting Section 230 and no FCC transparency or appeals rules for large online platforms were found as of 2026-10-16. FCC Chairman Brendan Carr, the author of the chapter, said on 2025-02-27 that it is appropriate for the FCC to take another look at Section 230, but no notice, petition, declaratory ruling or docket on the subject was found. Federal Register queries for FCC documents published since 2025-01-20 returned no results for Section 230, content moderation, Big Tech or interactive computer service, and a query for social media returned twelve FCC documents, none about platform moderation or Section 230; a query across all agencies for Section 230 returned five documents, none from the FCC. Congress has moved on the legislative side of the topic: a bipartisan Senate bill to repeal Section 230 two years after enactment (the Sunset Section 230 Act) was introduced on 2025-12-17 as S. 3546 and referred to the Senate Commerce Committee, and the Senate Commerce Committee held a hearing titled 'Liability or Deniability? Platform Power as Section 230 Turns 30' on 2026-03-18; neither involves an FCC order or rule. Two House bills, H.R. 6746 (introduced 2025-12-16, a sunset of Section 230) and H.R. 10332 (introduced 2026-09-10, a repeal), were referred to the House Energy and Commerce Committee and show no later action, and the FCC's 18 entries in the current Unified Agenda (the reginfo.gov list headed Agency Rule List - 2026) include no Section 230 or platform item. As of the 2026-10-16 check, the GovInfo bill status for S. 3546 showed no action after referral, and the FCC's own document system could not be searched, so non-Federal Register FCC items cannot be ruled out.",
   "timeline": [
     {
       "date": "2025-02-27",
@@ -357,6 +375,6 @@
   ],
   "title": "FCC to narrow Section 230 immunity by order and impose transparency rules on Big Tech",
   "tracked": true,
-  "uncertainties": "Absence finding. Federal Register queries are weak evidence because many FCC items (declaratory rulings, public notices, notices of inquiry) are not published there, and the FCC's own search and events pages could not be fetched (search is script-driven; events page returned an access error). Web searches this pass (Carr and Section 230 orders or petitions in 2025 and 2026; NTIA or new Section 230 petitions; FCC oversight hearings) returned only 2020 to 2025 material and no FCC action, so a non-Federal Register FCC statement, letter or inquiry on Section 230 or platform transparency in 2025 or 2026 cannot be ruled out. The 2026-03-18 Senate Commerce hearing is now confirmed by the committee's hearing listing; the bill number and committee referral of S. 3546 are now confirmed by GovInfo bill status (see the 2026-10-16 update). The Federal Register queries for FCC documents on 'section 230', 'content moderation', 'big tech' and 'interactive computer service' (zero results each) and for all agencies on 'section 230' (five results, none from the FCC: an FTC impersonation rule, two Sentencing Commission notices, a CEQ rule and an SSA notice) were re-run in this pass on 2026-10-08. Not checked: FTC actions on platform content moderation (a different agency, outside this item), Executive Order language on online speech, and whether any FCC bureau-level inquiry exists. Freshness pass 2026-10-16: the Federal Register API was re-queried for Section 230 across all agencies since 2026-03-18 (two documents, an FTC rule and a Sentencing Commission notice, none from the FCC) and for FCC documents since 2025-01-20 (zero). The fcc.gov document search page loaded as an empty script-driven filter page and could not be read, and two web searches found no FCC order, inquiry, petition or advisory opinion on Section 230 after 2026-03-18, so a non-Federal Register FCC item cannot be fully ruled out. GovInfo bill status for S. 3546 showed introduction on 2025-12-17 and referral to Commerce only; other 119th Congress Section 230 bills were not enumerated beyond one news search. Checked systematically on 2026-10-16 in five parts: (1) Federal Register API queries for Section 230 across all agencies and for FCC documents (researcher, 2026-10-16); (2) the FCC's entries in the current Unified Agenda on reginfo.gov (Fall 2025 publication, 18 rules, none on Section 230, content moderation or platform transparency); (3) a congress.gov and GovInfo search for 119th Congress Section 230 bills, with GovInfo bill status read for S. 3546, H.R. 6746 and H.R. 10332 (all referred to committee, no later action; a further result, H.R. 7045, a repeal bill, was not opened); (4) the FCC's own pages, where fcc.gov headline and document search pages returned fetch errors, so a site-restricted search of fcc.gov and docs.fcc.gov was used and the 2026 FCC items it returned (a wireline deployment rulemaking, a robocall rulemaking and a statement on broadcast lowest unit charges) concern other subjects; (5) major news searches by the researcher on 2026-10-16. The FCC part rests on a site search rather than a read of the FCC's document system, so an FCC item outside the Federal Register cannot be fully excluded. Checked systematically on 2026-10-18: Federal Register queries of FCC documents on Section 230 (13 incidental matches, none on the subject) and FCC proposed rules on platforms, the Unified Agenda landing page (agency listing not browsable), a congress.gov and GovInfo search with BILLSTATUS read, one news search, and an attempt at the FCC newsroom (fetch error) found no FCC order, notice or rule on Section 230 or platform transparency. FCC items outside the Federal Register remain unexcluded. H.R. 7045, the PROTECT Act, introduced 2026-01-13 to repeal Section 230, was referred to the House Energy and Commerce Committee with no later action and involves no FCC role; a further news search in review returned only 2024 and earlier statements by the FCC Chairman, not formal action.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No FCC order interpreting Section 230 and no FCC transparency or appeals rules for large platforms were found. Many FCC items, such as declaratory rulings and notices of inquiry, are not published in the Federal Register, and the FCC headlines and document search pages could not be read on 2026-10-16, 2026-10-18 or 2026-10-19, so an FCC item outside the Federal Register cannot be fully excluded. Section 230 sunset and repeal bills (S. 3546, H.R. 6746, H.R. 10332, H.R. 7045) remain referred to committee with no FCC role. The FCC Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026', 18 rules) lists no Section 230 or platform item. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

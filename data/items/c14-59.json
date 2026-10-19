@@ -6,7 +6,7 @@
   "chapter": "14",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "HRSA general terms read on hrsa.gov and two government court filings read in review; the Ryan White notices themselves and any guidance withdrawal not read.",
+  "confidence_reason": "HRSA general terms read on hrsa.gov, two government court filings read, the HRSA policy notices page and the tracker docket re-read in review on 2026-10-18; the Ryan White notices themselves and any guidance withdrawal not read, so confidence stays medium.",
   "court_status": {
     "basis": "Bench trial held (2026-09-23 per plaintiffs counsel) on the consolidated preliminary injunction and merits; post-hearing briefs filed, including the government brief of 2026-10-09; no decision found and the terms were not found to be enjoined.",
     "date": "2026-10-09",
@@ -34,10 +34,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review read the HRSA Ryan White policy notices page, the Georgetown tracker docket and a news report of the 2026-09-23 bench trial, and ran one search that found no ruling; added the trial event and three sources. No stage change (implemented 65); confidence unchanged at 72."
     }
   ],
   "id": "c14-59",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -60,35 +64,35 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage implemented 65 kept with match partial; in_progress 50 is defensible because the recommendation's literal ask (withdrawal of guidance) is unverified and the operative terms are under a pending challenge.",
-      "Re-sourced the 2026-03-11 event to the HRSA terms document and the filing event to the government brief; replaced the advocacy case-page events for consolidation and trial with the 2026-10-09 post-hearing brief.",
-      "court_status kept as pending, date updated to 2026-10-09; the terms document confirms nothing is enjoined as of the sources read."
+      "No stage change: implemented 65, partial.",
+      "Alternative: in_progress 50, because the literal ask (withdrawal of guidance) is unverified and the operative terms face a pending challenge.",
+      "Tracker labels the case stayed while the docket shows active briefing; court_status kept pending."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 485 asks HRSA to withdraw all guidance encouraging Ryan White HIV/AIDS Program providers to offer gender transition procedures or gender-affirming care.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, page 485 asks HRSA to withdraw all guidance encouraging Ryan White providers to offer gender transition procedures or gender-affirming care; the chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: applies to awards on or after 2026-03-11; section 5 priorities include no support for gender dysphoria interventions in minors lacking strong evidence and sex-based definitions grounded in biology; Ryan White not named.",
-        "result": "supports",
+        "note": "Not re-opened in this review; researcher read it in full this run and the 2026-10-15 review confirmed: applies to awards on or after 2026-03-11, priorities on gender dysphoria interventions for minors and sex-based definitions; Ryan White not named. Operative award terms, not a withdrawal of guidance.",
+        "result": "partial",
         "url": "https://www.hrsa.gov/sites/default/files/hrsa/grants/manage/fy2026-hrsa-general-terms-and-conditions-2026-03-11-update.pdf"
       },
       {
-        "note": "Checked 2026-10-15: describes 2025-09-15 priorities, 2026-03-11 terms, Ryan White notice terms first published 2026-06-04 on ADAP hormones and the sex binary; no mention of withdrawn guidance.",
-        "result": "supports",
-        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2026/06/American-Academy-of-HIV-Medicine_2026.06.26_DEFENDANTS-RESPONSE-TO-MOTION-FOR-PRELIMINARY-INJUNCTION.pdf"
-      },
-      {
-        "note": "Checked 2026-10-15: government post-hearing brief dated 2026-10-09 in No. 26-cv-12638-WGY; trial held, no ruling.",
-        "result": "supports",
-        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2026/06/American-Academy-of-HIV-Medicine_2026.10.09_DEFENDANTS-BRIEF.pdf"
-      },
-      {
-        "note": "Checked 2026-10-15: plaintiffs counsel page lists consolidation 2026-07-20 and bench trial 2026-09-23, no ruling; used only for dates in uncertainties and court_status basis.",
+        "note": "Read 2026-10-18: no notice marked rescinded or withdrawn; a general disclaimer on gender ideology content without naming a notice; last reviewed January 2026. Withdrawal of guidance not shown.",
         "result": "partial",
-        "url": "https://lambdalegal.org/case/american-academy-of-hiv-medicine-v-us-dept-health-and-human-services/"
+        "url": "https://ryanwhite.hrsa.gov/grants/policy-notices"
+      },
+      {
+        "note": "Read 2026-10-18: docket entries 2026-06-10 to 2026-10-09, no ruling listed; label says stayed without explanation. Supports court_status pending.",
+        "result": "supports",
+        "url": "https://litigationtracker.law.georgetown.edu/litigation/american-academy-of-hiv-medicine-et-al-v-health-resources-and-services-administration-et-al/"
+      },
+      {
+        "note": "Read 2026-10-18: report of 2026-09-26 on the 2026-09-23 bench trial; no ruling; decision deferred until after 2026-10-02.",
+        "result": "supports",
+        "url": "https://www.ibtimes.co.uk/boston-judge-questions-trump-hiv-funding-restrictions-1822029"
       }
     ]
   },
@@ -162,6 +166,27 @@
       "publisher": "Fierce Healthcare",
       "title": "Provider groups file lawsuit against HHS over new Ryan White funding rules",
       "url": "https://www.fiercehealthcare.com/providers/provider-groups-file-lawsuit-against-hhs-over-new-ryan-white-funding-rules"
+    },
+    {
+      "date": "2026-01",
+      "kind": "primary",
+      "publisher": "HRSA",
+      "title": "HRSA Ryan White HIV/AIDS Program policy notices",
+      "url": "https://ryanwhite.hrsa.gov/grants/policy-notices"
+    },
+    {
+      "date": "2026-10-09",
+      "kind": "tracker",
+      "publisher": "Georgetown Law Litigation Tracker",
+      "title": "American Academy of HIV Medicine et al v. HRSA et al (docket summary)",
+      "url": "https://litigationtracker.law.georgetown.edu/litigation/american-academy-of-hiv-medicine-et-al-v-health-resources-and-services-administration-et-al/"
+    },
+    {
+      "date": "2026-09-26",
+      "kind": "news",
+      "publisher": "International Business Times",
+      "title": "Federal Judge Questions the Trump Administration Policy Blocking Transgender Patients From HIV Care",
+      "url": "https://www.ibtimes.co.uk/boston-judge-questions-trump-hiv-funding-restrictions-1822029"
     }
   ],
   "stage": "implemented",
@@ -196,6 +221,13 @@
       "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2026/06/American-Academy-of-HIV-Medicine_2026.06.26_DEFENDANTS-RESPONSE-TO-MOTION-FOR-PRELIMINARY-INJUNCTION.pdf"
     },
     {
+      "date": "2026-09-23",
+      "event": "The District of Massachusetts held a bench trial on the consolidated preliminary injunction and merits; no ruling issued from the bench and a decision was deferred at the parties' request (as reported).",
+      "kind": "news",
+      "source": "International Business Times",
+      "url": "https://www.ibtimes.co.uk/boston-judge-questions-trump-hiv-funding-restrictions-1822029"
+    },
+    {
       "date": "2026-10-09",
       "event": "Following a trial on the consolidated motion and merits, the government filed a post-hearing brief asking for judgment; no ruling had issued.",
       "kind": "court",
@@ -205,6 +237,6 @@
   ],
   "title": "Withdraw HRSA Ryan White guidance allowing funds for gender transition support",
   "tracked": true,
-  "uncertainties": "In review the HRSA FY 2026 General Terms and Conditions were read on hrsa.gov: they apply to awards on or after 2026-03-11, contain the priorities on gender dysphoria interventions for minors and sex-based definitions, do not name the Ryan White program, and state that terms enjoined by a court do not apply to covered recipients. The Ryan White funding notice terms were read only as described in the government's June 2026 brief; the notices themselves were not opened. The government gives 2026-06-04 for the first notice and plaintiffs' counsel gives 2026-06-08. Consolidation (2026-07-20) and the trial date (2026-09-23) come from plaintiffs' counsel's case page and are not separate timeline events; the 2026-10-09 government post-hearing brief confirms a trial was held and no ruling had issued. Neither government brief mentions withdrawal of earlier HRSA guidance on gender transition services, and that withdrawal remains unverified. The match is partial because the recommendation asks for withdrawal of guidance while the action restricts funding through award terms.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The HRSA FY 2026 General Terms and Conditions and the government's 2026-10-09 post-hearing brief were read; the Ryan White funding notices themselves were not opened and are described only in the government briefs. The government gives 2026-06-04 for the first notice and plaintiffs' counsel gives 2026-06-08. The HRSA Ryan White policy notices page (last reviewed January 2026) was read in review: no notice is marked rescinded or withdrawn, no notice title concerns gender transition services, and the page carries a general disclaimer about content promoting gender ideology without naming any notice; neither the brief nor the terms state that earlier guidance was withdrawn, so withdrawal remains unverified. The Georgetown tracker docket page lists entries through 2026-10-09 (including a motion to dismiss of 2026-08-14 and an untitled order of 2026-09-11) and no ruling, but labels the case stayed without explanation; a news report of 2026-09-26 describes the 2026-09-23 bench trial, says no ruling issued from the bench and that the judge agreed to defer a decision until after 2026-10-02 while settlement was considered. The court docket itself was not opened (courtlistener.com refuses automated fetches; the clearinghouse.net case page failed to load). A review search on 2026-10-18 found no ruling. The match is partial because the recommendation asks for withdrawal of guidance while the action restricts funding through award terms.",
+  "updated_at": "2026-10-18"
 }

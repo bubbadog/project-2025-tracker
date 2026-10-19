@@ -4,9 +4,9 @@
     "Both elements require Congress"
   ],
   "chapter": "18",
-  "confidence": 58,
+  "confidence": 61,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks documented on 2026-10-18: (1) Federal Register searches on contractor citizenship across agencies and for GSA found no workforce citizenship requirement; (2) the FAR overhaul page shows none, while the Unified Agenda listing could not be browsed (partial); (3) a congress.gov and GovInfo search found no matching bill, read by title only; (4) the Justice Department newsroom showed nothing, while GSA and DOL newsrooms were not fetched (partial); (5) a news search found only a 2020 order and a 2025 federal-hiring order. Set to 58 because bill texts and two agency newsrooms were not read.",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, no contractor workforce citizenship requirement (rerun 2026-10-19: three unrelated documents); (2) Labor (115 rules) and FAR Council (17 rules) Unified Agenda lists read directly on reginfo.gov on 2026-10-19, no citizenship share entry, weakly informative because the recommendation is directed to Congress; (3) congress.gov and GovInfo search, no matching bill, read by title only (partial); (4) Justice Department newsroom read, GSA and DOL newsrooms not fetched (partial); (5) one news search, a 2020 order and a 2025 federal-hiring order only. Set at 61 because two checks are partial and bill texts were not read.",
   "durability": {
     "level": "medium",
     "why": "A statute would be durable, but none exists."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Not_started kept; five-part absence check documented and spot-checked; confidence raised from 40 to 58."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the Labor and FAR Council Unified Agenda lists read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 58 to 61."
     }
   ],
   "id": "c18-35",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -56,14 +60,13 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage not_started kept; H.R. 9063 is a different measure (federal employees), so it is not counted even as proposed.",
-      "V7 systematic-check review: not_started 0 kept; an independent Federal Register query found nothing; confidence 40 to 58 rather than the suggested 60, since bill texts were read by title only and check 2 and check 4 are partial."
+      "Earlier checks labeled does_not_support (H.R. 9063 page, FedSmith article, a Federal Register phrase query) describe non-qualifying results; the label appears misused. Kept as history."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 612 to 613 ask Congress to require at least 70 percent U.S. citizen employees on new federal contracts, rising to 95 percent over ten years, and to amend the law so employers may prefer U.S. citizens in hiring; an alternative view favors economy and efficiency over quotas.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Checked 2026-10-15: H.R. 9063 introduced 2026-05-29, referred to Oversight; title concerns federal employment; no contractor mention on the page.",
@@ -104,6 +107,24 @@
         "note": "Reviewer re-check, 2026-10-18: phrase United States citizens with contractor workforce percent, all agencies, since 2025-01-20: count 1, the 2026 Unified Agenda introduction; no citizenship share for contractor workforces; consistent with the researcher's result.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"United+States+citizens\"+contractor+workforce+percent&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The Department of Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 115 rules) was read in full on 2026-10-19; no entry imposes a citizenship share on contractor workforces; PERM (1205-AC29), foreign worker wage protections (1205-AC30), the PRWORA federal public benefit interpretation (1205-AC33) and rescission of EO 11246 regulations (1250-AA17) are on other subjects. The recommendation is directed to Congress, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1200"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "FAR Council Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, DOD/GSA/NASA (FAR), 17 rules) read on 2026-10-19: semiconductor prohibition, thirteen Revolutionary FAR Overhaul part cases (titles list part numbers only, including Part 22 in 9000-AO89), cyber cases, merit-based opportunity (9000-AO77) and paper straws; no title concerns contractor employee citizenship.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=9000"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: three documents (a DHS registration rule, the Unified Agenda introduction, an FCC proposal); nothing qualifying.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=contractor+employees+%22United+States+citizens%22+percent&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -156,6 +177,6 @@
   "timeline": [],
   "title": "Require 70 percent U.S. citizens among workers on new federal contracts",
   "tracked": true,
-  "uncertainties": "Absence-of-evidence finding from two WebSearches (one by the researcher, one in review on contractor citizenship bills) and fetches of the GovInfo bill page, whose text was not available, and of a trade-press summary of H.R. 9063. The GovInfo listing cites 8 U.S.C. 1324b among its references, so the bill may touch the citizenship discrimination provision for federal employment; its text was not read. A first-term executive order on federal contractor use of foreign labor appeared in results and predates the window. A bill could exist that the searches missed; congress.gov could not be fetched. A federal acquisition rule imposing a citizenship share was not searched beyond the web searches. Checked systematically on 2026-10-18: Federal Register queries on contractor citizenship across agencies and for GSA, the FAR overhaul page, a congress.gov and GovInfo search of titles, the Justice Department newsroom, and one news search found no law, bill, executive order or rule requiring a citizenship share of contractor employees. Bill texts for contractor workforce bills were not opened and the Unified Agenda listing could not be browsed.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No enacted law, bill or federal contracting rule imposing a citizenship share on contractor workforces was found, and no bill letting private employers prefer citizens in hiring. The Labor and FAR Council Unified Agenda rule lists on reginfo.gov (Agency Rule List - 2026) carry no such entry; the FAR overhaul cases list part numbers only and were not opened. H.R. 9063 concerns federal employees, not contractors, and its text was not read. Bill searches were read by title, congress.gov could not be fetched, and the GSA and DOL newsrooms were not checked, so a bill the searches missed cannot be excluded. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -4,9 +4,9 @@
     "Governmentwide migration timing set by OPM, with adoption targeted for FY2028"
   ],
   "chapter": "20",
-  "confidence": 58,
+  "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "The OPM release was fetched and read in review and confirms the award; VA's first-wave status and the dates rest on a fetched MeriTalk report.",
+  "confidence_reason": "The OPM award release and the MeriTalk report were read in review; VA's first-wave status and the award date rest on trade press and the opm.gov listing, and no VA document was found.",
   "durability": {
     "level": "medium",
     "why": "Multi-year governmentwide contract is harder to reverse than a VA-only decision, but implementation is early."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-16",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: reread the OPM award release on opm.gov and the MeriTalk report; corrected attribution of the contract term. No stage change (proposed 15); confidence 58 to 60."
     }
   ],
   "id": "c20-15",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -50,35 +54,28 @@
   "research_agent": "R1920",
   "restates_ids": [],
   "review": {
-    "document_reread": {
-      "citation": "OPM news release, Oracle Core HCM award",
-      "note": "Award confirmed; VA not named.",
-      "result": "partial",
-      "url": "https://www.opm.gov/news/news-releases/opm-awards-contract-for-first-ever-governmentwide-hr-platform/"
-    },
     "flags": [
-      "Stage changed from in_progress 25 to proposed 15.",
-      "Re-sourced the timeline event to the OPM release (primary) and added MeriTalk.",
-      "Evenly balanced: in_progress 25 is defensible if the governmentwide contract is counted as VA's acquisition; proposed chosen because VA migration is not documented by any VA or OPM source."
+      "No stage change: proposed 15, match parallel. in_progress 25 remains defensible if the governmentwide contract is counted as VA's acquisition.",
+      "Summary corrected: the up-to-10-year term is attributed to one trade report (GovConWire), not to MeriTalk.",
+      "Confidence 58 to 60."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 651 recommends expediting acquisition of a new HR information technology system because the current one is hard to use, poorly integrated and does not support data-driven personnel decisions, noting shadow personnel systems. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "V1-1016",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (651) and proposal field, the text asks VA to expedite acquisition of a new HR information technology system because the current one is hard to use, poorly integrated and does not support data-driven personnel decisions. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Confirms the Oracle Core HCM award and phased consolidation; undated; no value or agency list.",
+        "note": "Checked 2026-10-18: undated release; Oracle awarded the Core HCM contract for one FedRAMP SaaS platform, phased approach, about two million employees, more than 100 systems; no agency named, VA not mentioned. Supports a parallel governmentwide route at proposed.",
         "result": "partial",
         "url": "https://www.opm.gov/news/news-releases/opm-awards-contract-for-first-ever-governmentwide-hr-platform/"
       },
       {
-        "note": "Dated 2026-06-11; award on 2026-06-10; Wave 1 includes VA, beginning FY2026; adoption targeted FY2028.",
-        "result": "supports",
+        "note": "Checked 2026-10-18: dated 2026-06-11; award 2026-06-10, nearly $400 million, no term stated; Wave 1 includes VA (FY2026), adoption by FY2028. Secondary.",
+        "result": "partial",
         "url": "https://www.meritalk.com/?p=207916"
       }
-    ],
-    "stage_change_reason": "Lowered from in_progress 25 to proposed 15: the operative step is an OPM governmentwide contract, a parallel route, and VA's own migration is documented only by trade reports, so the recommendation is not yet formally underway at VA."
+    ]
   },
   "significance": {
     "B": 1,
@@ -146,7 +143,7 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "OPM awarded Oracle a contract on 2026-06-10 for a single governmentwide Core Human Capital Management platform to replace the more than 100 HR systems agencies use, to be implemented in phases. Trade reports put the contract at about $396 million over up to 10 years and list VA among eight first-wave agencies beginning the transition in FY2026, with governmentwide adoption targeted for FY2028. This is an OPM-led route rather than the VA acquisition the text describes, and no VA-specific migration schedule, contract or go-live date was found.",
+  "status_summary": "OPM awarded Oracle the Federal HRIT Modernization Core Human Capital Management contract, reported as awarded on 2026-06-10, for a single governmentwide HR platform to replace the more than 100 Core HCM systems agencies use, to be implemented in phases. Trade reports put the contract at nearly $400 million, one report gives a term of up to 10 years, and MeriTalk lists VA among eight first-wave agencies beginning the transition in FY2026, with governmentwide adoption targeted for FY2028. This is an OPM-led route rather than the VA acquisition the text describes, and no VA-specific migration schedule, contract or go-live date was found.",
   "timeline": [
     {
       "date": "2026-06-10",
@@ -158,6 +155,6 @@
   ],
   "title": "Acquire a new human resources IT system for VA",
   "tracked": true,
-  "uncertainties": "The OPM release confirms the award and the phased consolidation but carries no date, contract value or agency list; the award date, value and term come from trade reports, and VA's place in the first wave comes from MeriTalk and FedWeek, not from an OPM or VA document. Whether the platform replaces VA's HR Smart system was not confirmed. VA published market research for its own cloud HCM platform in November 2024, before the period. Searches performed: five web searches (HR Smart, twice; Core HCM award; OPM migration wave; in review, the OPM release and first-wave agencies).",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The OPM release was read on opm.gov in review on 2026-10-18; it carries no date, contract value, wave schedule or agency list and does not mention VA, and the 2026-06-10 date comes from the opm.gov release listing read by the researcher and from MeriTalk. MeriTalk (2026-06-11) was read in review and lists VA in Wave 1 but gives no contract term; the up-to-10-year term comes from a GovConWire report that was not reopened. Whether the platform replaces VA's HR Smart system was not confirmed; a further web search by the researcher returned only older VA market research items. VA published market research for its own cloud HCM platform in November 2024, before the period. No VA or OPM document with a VA migration schedule was found.",
+  "updated_at": "2026-10-18"
 }

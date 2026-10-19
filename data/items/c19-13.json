@@ -2,9 +2,9 @@
   "agency": "DOT (FRA)",
   "blockers": [],
   "chapter": "19",
-  "confidence": 74,
+  "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked at pages 636 and 637; the 2025 proposed and 2026 final brake rules were fetched and the final rule read for scope; Federal Register API searches checked the named electronic air brake slip rulemaking and track inspection items.",
+  "confidence_reason": "The stage-deciding final rule was read on federalregister.gov in review and the proposed rule by the researcher; the absence of action on the named air brake slip rulemaking and on track inspection rests on Federal Register API checks.",
   "durability": {
     "level": "medium",
     "why": "Agency rules can be amended; codified waivers are harder to reverse than waiver extensions."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-16",
       "note": "Cross-reference added to new layer 3 record c19-22 written in the second enumeration pass; no change to the status."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: read the 2026-08-31 FRA final brake rule on federalregister.gov and added its citations to the summary. No stage change (in_progress 25); confidence 74 to 78."
     }
   ],
   "id": "c19-13",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -58,44 +62,30 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: proposed or not_started is defensible because the specific rulemaking named was not finalized, but the 2026 final rule is an operative partial brake modernization, so in_progress 25 is used.",
-      "Progress lowered from 50 to 25 because the final rule codifies locomotive and passenger waivers only."
+      "No stage change: in_progress 25. proposed or not_started remains defensible because the named air brake slip rulemaking was not finalized.",
+      "Researcher's proposed 2025-11-19 BNSF waiver petition notice not added: its page returned a server error and a published petition is not an FRA modernization action.",
+      "Confidence raised 74 to 78 after the final rule was read in review; it stays medium because the remaining elements rest on absence."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Pages 636 and 637 criticize FRA for refusing to amend 50-year-old track inspection rules and for not finalizing the electronic air brake slip rulemaking, and object to planned dispatcher certification and breathing apparatus proposals. Proposal corrected to say take final action on that rulemaking, to add the block-of-cars point, and to describe the last two items as planned proposals.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y19g",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages (636 to 637) and proposal field, the text asks FRA to replace 50-year-old track inspection rules with a technology-based program, to take final action on the electronic air brake slip rulemaking with longer brake inspection intervals and eased block-of-cars restrictions, and criticizes planned dispatcher certification and breathing apparatus proposals. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Proposed rule of 2025-07-01, RIN 2130-AD24, would codify locomotive brake waivers.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2025-12168.json"
-      },
-      {
-        "note": "Final rule published 2026-08-31, effective 2026-09-30, codifies longstanding brake waivers.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-17784.json"
-      },
-      {
-        "note": "Final rule text: electronic records allowed only for some passenger equipment, digital air flow indicator interval of 184 days, no change to freight train brake test frequency or block-of-cars restrictions.",
+        "note": "Checked 2026-10-18: 91 FR 55779, RIN 2130-AD24, docket FRA-2025-0130, effective 2026-09-30; codifies brake waivers in parts 229, 232, 238; 184-day digital AFM indicator interval; electronic record only for passenger equipment; no mention of air brake slips or blocks of cars. Operative partial step, consistent with in_progress at the low end.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17784/amendments-to-brake-system-maintenance-and-inspection-requirements"
       },
       {
-        "note": "API term search for air brake slip identifies the 2021-01-15 electronic air brake slip proposal (2020-28870) as the rulemaking the Mandate names.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22air+brake+slip%22&conditions[agencies][]=federal-railroad-administration&per_page=20"
+        "note": "Read by the researcher 2026-10-18: 90 FR 28660 proposal; no reference to the 2021 air brake slip proposal.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/07/01/2025-12168/amendments-to-brake-system-maintenance-and-inspection-requirements"
       },
       {
-        "note": "API term search found no later action on the electronic air brake slip rulemaking.",
+        "note": "Run by the researcher 2026-10-18: waiver notices only; no track inspection modernization rule.",
         "result": "does_not_support",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Electronic+Air+Brake+Slip%22&conditions[publication_date][gte]=2021-02-01&per_page=20"
-      },
-      {
-        "note": "API term search since 2025-01-20 found only a 2025-05-09 notice of an industry waiver petition, not an FRA rule.",
-        "result": "does_not_support",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22automated+track+inspection%22&conditions[publication_date][gte]=2025-01-20&per_page=20"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=track+inspection+waiver&conditions[agencies][]=federal-railroad-administration&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -144,7 +134,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The electronic air brake slip rulemaking that the Mandate refers to, proposed on 2021-01-15, has no later Federal Register action found. FRA instead proposed brake system amendments on 2025-07-01 and published a final rule on 2026-08-31, effective 2026-09-30, which writes long-standing locomotive and passenger equipment brake waivers into regulation, allows some electronic records for passenger equipment and longer verification intervals for digital air flow indicators. It does not change freight train air brake test intervals or block-of-cars restrictions. No track inspection modernization rule was found; a May 2025 notice published a railroad industry petition for waiver of track inspection rules.",
+  "status_summary": "The electronic air brake slip rulemaking that the Mandate refers to, proposed on 2021-01-15, has no later Federal Register action found. FRA instead proposed brake system amendments on 2025-07-01 (90 FR 28660) and published a final rule on 2026-08-31 (91 FR 55779), effective 2026-09-30, which writes long-standing locomotive and passenger equipment brake waivers into regulation, allows an electronic maintenance record for passenger equipment and sets a 184-day verification interval for digital air flow indicators used in freight Class I brake tests. It does not mention air brake slips and does not change freight train air brake test intervals more broadly or block-of-cars restrictions. No track inspection modernization rule was found; a May 2025 notice published a railroad industry petition for waiver of track inspection rules.",
   "timeline": [
     {
       "date": "2025-07-01",
@@ -170,6 +160,6 @@
   ],
   "title": "Modernize FRA brake and track inspection requirements",
   "tracked": true,
-  "uncertainties": "Federal Register API term searches found no action on the electronic air brake slip proposal after 2021 and, since 2025-01-20, only a waiver petition notice for automated track inspection; term searches can miss titles, and FRA waiver decisions are docketed outside the Federal Register. The status of the dispatcher certification and breathing apparatus proposals was not checked. The 2026 rule is a related brake modernization step, not the specific proceeding the Mandate names.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The final brake rule (91 FR 55779) was read on federalregister.gov in review on 2026-10-18 and by the researcher; the proposed rule (90 FR 28660) was read by the researcher. Neither mentions air brake slips or blocks of cars; electronic records appear only in the passenger equipment section. Federal Register API term searches found no action on the electronic air brake slip proposal after 2021 and, since 2025-01-20, only waiver petition notices touching track inspection; a 2025-11-19 notice of a BNSF petition to extend a track inspection waiver was seen in an API listing but its page returned a server error, so it was not added as an event. Term searches can miss titles, and FRA waiver decisions are docketed outside the Federal Register. The status of the dispatcher certification and breathing apparatus proposals was not checked. The 2026 rule is a related brake modernization step, not the specific proceeding the Mandate names.",
+  "updated_at": "2026-10-18"
 }

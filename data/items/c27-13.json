@@ -4,9 +4,9 @@
     "Staff no-action relief can be withdrawn; statutory change needs Congress"
   ],
   "chapter": "27",
-  "confidence": 70,
-  "confidence_label": "medium",
-  "confidence_reason": "Stage-deciding CFTC letter read on cftc.gov; the weight given to staff relief is a judgment call.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "The stage-deciding staff letter 25-42 was read on cftc.gov in this review and letter 26-10 by the researcher; the weight given to non-binding staff relief is a judgment call, and the statutory item rests on absence of evidence.",
   "durability": {
     "level": "low",
     "why": "No-action relief is non-binding staff action that the Commission or staff can withdraw."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review re-read CFTC letter 25-42 on cftc.gov and confirmed its scope, duration and non-binding status; letter 26-10 details were added to its event, and the unrelated 2026-07-17 margin rule was removed from the sources. No stage change (in_progress 45, partial); confidence 70 to 80."
     }
   ],
   "id": "c27-13",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -56,25 +60,30 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage lowered from implemented 65 to in_progress 45: staff no-action relief is reversible, non-binding on the Commission, and leaves the statutory SEF item and the foreign consolidated subsidiary category unaddressed",
-      "Replaced the law-firm source for the 2025-12-09 event with the CFTC letter",
-      "Added uncleared margin to the letter's scope and the letter's non-binding status"
+      "No stage change: in_progress 45, partial.",
+      "Defensible alternative: implemented 65, if staff relief is counted as operative implementation of the definitions item.",
+      "Removed the 2026-07-17 margin rule from sources as unrelated."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 833 to 834, CFTC Administration: Congress should clarify by CEA amendment when foreign platforms must register as SEFs; the CFTC should apply the 2020 rule's U.S. person and guarantee definitions to requirements under the 2013 guidance and remove the affiliate conduit and foreign consolidated subsidiary categories. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Chapter text not available in this run; the earlier review recorded: Pages 833 to 834, CFTC Administration: Congress should clarify by CEA amendment when foreign platforms must register as SEFs; the CFTC should apply the 2020 rule's U.S. person and guarantee definitions to requirements under the 2013 guidance and remove the affiliate conduit and foreign consolidated subsidiary categories. Paraphrase accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Letter 25-42 dated 2025-12-09 from MPD, DCR and DMO; staff no-action on use of the 2020 definitions and disregard of conduit affiliates until Commission rules; not binding on the Commission; silent on foreign consolidated subsidiary. Checked 2026-10-14.",
+        "note": "2026-10-18: letter of 2025-12-09 from three divisions at the request of IIB, ISDA and SIFMA; no-action positions on using the 2020 U.S. person and guarantee definitions for clearing, trade execution and reporting requirements and uncleared margin, and on disregarding non-U.S. conduit affiliates; silent on foreign consolidated subsidiaries; binds only the divisions until Commission rules. Partly matches; supports in_progress.",
         "result": "partial",
         "url": "https://www.cftc.gov/csl/25-42/download"
       },
       {
-        "note": "Letter 26-10 dated 2026-03-24 from DMO adds two UK facilities to Appendix A of letter 24-11; terms not shown. Checked 2026-10-14.",
+        "note": "2026-10-18, per the researcher's full read: adds OptAxe Limited and Capitolis UK Limited to letter 24-11 relief from SEF registration; a staff exemption route, not the statutory clarification.",
         "result": "partial",
-        "url": "https://www.cftc.gov/node/258471"
+        "url": "https://www.cftc.gov/csl/26-10/download"
+      },
+      {
+        "note": "2026-10-18, per the researcher's full read: seeded funds and money market fund collateral only; no cross-border content. Removed from sources.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14509/margin-requirements-for-uncleared-swaps-for-swap-dealers-and-major-swap-participants"
       }
     ]
   },
@@ -134,13 +143,6 @@
       "publisher": "U.S. Commodity Futures Trading Commission",
       "title": "CFTC staff letter 26-10",
       "url": "https://www.cftc.gov/node/258471"
-    },
-    {
-      "date": "2026-07-17",
-      "kind": "primary",
-      "publisher": "Federal Register",
-      "title": "Margin Requirements for Uncleared Swaps for Swap Dealers and Major Swap Participants",
-      "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14509/margin-requirements-for-uncleared-swaps-for-swap-dealers-and-major-swap-participants"
     }
   ],
   "stage": "in_progress",
@@ -155,7 +157,7 @@
     },
     {
       "date": "2026-03-24",
-      "event": "CFTC Division of Market Oversight issued no-action letter 26-10 adding two UK swap trading facilities to the appendix of staff letter 24-11, tagged to SEF registration.",
+      "event": "CFTC Division of Market Oversight issued staff letter 26-10 adding two UK facilities (OptAxe Limited and Capitolis UK Limited) to the appendix of staff letter 24-11, under which staff will not recommend enforcement for failure to register as a SEF under CEA section 5h(a)(1) and Regulation 37.3(a)(1) or against counterparties using those facilities under the trade execution requirement.",
       "kind": "primary",
       "source": "U.S. Commodity Futures Trading Commission",
       "url": "https://www.cftc.gov/node/258471"
@@ -163,6 +165,6 @@
   ],
   "title": "Harmonize CFTC cross-border swap definitions and clarify foreign platform SEF registration",
   "tracked": true,
-  "uncertainties": "Letter 25-42 was read on cftc.gov through a summarizing fetch tool; a mirrored copy was used for its detailed terms. Whether applying the 2020 definitions to uncleared margin in practice displaces the foreign consolidated subsidiary concept is not stated in the letter and is not assumed. Staff relief is treated as partly operative but not as the Commission action the Mandate asks for, so the record is in_progress rather than implemented; implemented 65 is defensible. The 2026-07-17 margin rule (91 FR 45134) was read only in part by the researcher. The page for letter 26-10 gives no detail on its terms. Bills on SEF registration were not searched.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Letter 25-42 was re-read in this review on cftc.gov through a summarizing fetch tool; it gives no separate relief on the foreign consolidated subsidiary category, and whether applying the 2020 definitions to uncleared margin displaces that concept in practice is not stated and is not assumed. It also allows reliance on pre-2020 representations for Group B and Group C requirements, supersedes inconsistent cross-references in letters 20-18, 20-21, 21-09 and 25-16, and applies before and after 2027-12-31 until the Commission adopts rules. Letter 26-10 was read in full by the researcher on cftc.gov. The 2026-07-17 uncleared margin rule (91 FR 45134), read in full by the researcher, concerns seeded funds and money market fund collateral and has no cross-border content, so it was removed from the sources. Staff relief is treated as partly operative but not as the Commission action the Mandate asks for, so the record is in_progress rather than implemented; implemented 65 is defensible. Bills on SEF registration were not searched; no Commission rulemaking on these items was found in the sources read.",
+  "updated_at": "2026-10-18"
 }

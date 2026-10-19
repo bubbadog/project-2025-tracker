@@ -6,9 +6,9 @@
     "Removing independent litigating authority requires an act of Congress"
   ],
   "chapter": "29",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Court filings posted by the FEC, read for this review, confirm the FEC was defaulted in July 2026 after service on DOJ with no DOJ appearance, and a law-firm update confirms the stalled nominations. The absence of any FECA prosecution directive, bill or guidance rests on a limited search, which caps confidence.",
+  "confidence": 64,
+  "confidence_label": "medium",
+  "confidence_reason": "Court filings read on fec.gov in earlier passes. Five checks documented: (1) Federal Register API with a variant, supports (nothing qualifying); (2) Unified Agenda Justice list, 76 rules read on 2026-10-19, supports but weakly informative, and the FEC has no list (not applicable); (3) congress.gov and govinfo with BILLSTATUS for H.R. 8738, supports; (4) FEC updates and DOJ news pages, supports (first pages only); (5) one news search, supports. Confidence 64, at the low end of the 65 to 68 ceiling, because only first pages of the agency listings were read.",
   "court_status": {
     "basis": "derived from the latest court event in the timeline",
     "date": "2026-07-08",
@@ -34,15 +34,23 @@
     },
     {
       "date": "2026-10-08",
-      "note": "Re-researched to close the gaps behind a low confidence rating; status confirmed. Reviewer confidence 48 to 50. Closed the gap on DOJ appearances in suits against the FEC for Seegers v. FEC with (fec.gov) and (fec.gov) could not close: Justice Manual changes speci"
+      "note": "Re-researched to close the gaps behind a low confidence rating; status confirmed. Reviewer confidence 48 to 50. Closed the gap on DOJ appearances in suits against the FEC for Seegers v. FEC with (fec.gov) and (fec.gov) could not close: Justice Manual changes speci (note cut short in an earlier pass)."
     },
     {
       "date": "2026-10-08",
       "note": "Estimated window set by AI inference from the route the objective needs; the basis is shown with the estimate."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check and independent review: federalregister.gov API (reviewer variant) and govinfo.gov BILLSTATUS for H.R.8738 were read; an earlier history note cut short was closed; no stage change (not_started 0); confidence 50 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the Justice rule list in the reginfo.gov Unified Agenda (76 rules, none on FECA prosecutions or the FEC) and confirmed the FEC has no agenda list, kept not_started 0 and raised confidence from 62 to 64."
     }
   ],
   "id": "c29-01",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-19",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_action",
@@ -64,26 +72,60 @@
   "requires_congress": "partial",
   "research_agent": "A16",
   "review": {
-    "flags": [
-      "absence-of-evidence finding (cap 50)",
-      "proposal reworded: the Mandate asks DOJ to take FEC actions into account, not to follow them",
-      "Seegers involves a quorumless FEC rather than a deliberate refusal to authorize defense, the Mandate's scenario; outcome (default without DOJ defense) is the same"
-    ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 863 asks the President to direct DOJ to prosecute only clear FECA violations, not under readings the FEC rejects, and to consult FEC enforcement actions, regulations and advisory opinions; page 864 extends this to tied FEC votes and asks the attorney general to defend the FEC when commissioners do not authorize its defense; page 865 suggests asking Congress to remove the FEC's independent litigating authority and asks for FEC or DOJ guidance on voided provisions; page 826 summarizes. The proposal says DOJ should follow FEC actions, which overstates the Mandate's call to take them into account, so it is reworded.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "X2",
+    "alternative": "diverged, if the DOJ non-appearance in Seegers v. FEC is read as a decision not to defend.",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields (pp. 863 to 865, summarized at p. 826), the Mandate asks the President to direct DOJ to bring criminal FECA cases only for clear violations, to take FEC enforcement actions, regulations, advisory opinions and tied votes into account, and to defend the FEC when commissioners cannot authorize a defense; it suggests asking Congress to remove the FEC's independent litigating authority and asks for FEC or DOJ guidance on voided FECA provisions. An earlier review (2026-10-08) checked these pages; the chapter text was not available to this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Seegers v. FEC (D.D.C. No. 1:26-cv-00276-JMC), motion filed 2026-07-28: clerk's default entered 2026-07-08; U.S. Attorney's Office served 2026-02-24 and the Attorney General by certified mail delivered 2026-03-04; no DOJ appearance described; the FEC's only filing is its 2026-04-24 quorum notice; underlying complaint concerns ActBlue (MUR 8404).",
+        "note": "2026-10-18 (reviewer variant of check 1): terms 'Federal Election Commission', 'Attorney General' and defend, all agencies, returned 0 documents; no directive on FECA prosecution standards, DOJ defense of the FEC or guidance on voided provisions.",
         "result": "supports",
-        "url": "https://www.fec.gov/documents/6279/seegers_v_fec_pls_mot_default_against_fec-07-28-26.pdf"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Federal+Election+Commission%22+%22Attorney+General%22+defend&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Published 2026-02-12 with a later note: nominees Ashley Stow (term to 2029) and Andrew Woodson (term to 2031) named 2026-02-11 to replace Trainor and Dickerson; two sitting commissioners (Broussard and Lindenbaum); no confirmation hearing scheduled as of August 2026; no mention of DOJ defending the FEC.",
+        "note": "2026-10-18 (reviewer fetch for check 3): BILLSTATUS confirms H.R.8738, FEC Administrative Improvements Act, introduced 2026-05-12, ordered reported 11 to 0 on 2026-05-14, passed the House by voice vote on 2026-07-13 and referred to Senate Rules and Administration on 2026-07-14; per the CRS summary it covers electronic filing of electioneering communications and disbursement methods, not FEC litigating authority or DOJ representation. Not qualifying.",
         "result": "supports",
-        "url": "https://www.ashurstperkinscoie.com/en/insights/federal-election-commission-poised-to-regain-quorum/"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr8738.xml"
+      },
+      {
+        "note": "Check 1 (research pass, 2026-10-18): terms 'Federal Election Campaign Act' with prosecution (2 documents: OLMS Labor Organization Annual Financial Reports rule, 2026-06-01, a keyword artifact; Presidential document 'Ensuring Accountability for All Agencies', 2025-02-24, already in the record), 'Federal Election Commission' with litigation (0) and 'Federal Election Campaign Act' limited to DOJ (0). No prosecution policy or FEC defense directive.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Federal+Election+Campaign+Act%22+prosecution&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "Check 2 (research pass, 2026-10-18): Fetched the Unified Agenda entry page; it is an agency selector and links page with no items listed (script-driven). Fallback used, so the check is partial: the DOJ-limited query above (0 documents).",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Check 3 (research pass, 2026-10-18): search (congress.gov, govinfo.gov): '119th Congress bill Federal Election Campaign Act FEC litigating authority Department of Justice defend Commission'. Found H.R.8738 FEC Administrative Improvements Act (introduced 2026-05-12; passed House 2026-07-13 by voice vote; in Senate Rules and Administration since 2026-07-14): electioneering communication e-filing and disbursement methods, nothing on litigation authority or DOJ defense. Also found H.R.7802 DISCLOSE Act of 2026, H.R.7193, H.R.8831, S.3991, S.3129, H.R.2476, H.R.118 (not opened; not shown by title to address FEC litigating authority). Reviewer: BILLSTATUS refetched and confirmed; the search was not rerun (search cap). The other bills listed were not opened.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr8738.xml"
+      },
+      {
+        "note": "Check 4 (research pass, 2026-10-18): FEC updates page shows litigation items from 2026-09 (SMP v. FEC, Giffords v. FEC, DCCC v. FEC outcomes), none about DOJ representation or a DOJ prosecution policy; DOJ news page (justice.gov/news, items 2026-10-15 and 2026-10-16) showed election-related charges and a civil suit, no FECA policy.",
+        "result": "supports",
+        "url": "https://www.fec.gov/updates/"
+      },
+      {
+        "note": "Check 5 (research pass, 2026-10-18): query: 'Justice Department defend Federal Election Commission lawsuit quorum FECA prosecutions policy 2026'. Results were a 2019 law-firm newsletter on whether DOJ would defend the FEC, a Perkins Coie quorum-loss update, and 2026 FEC filings in Bernegger v. FEC; no DOJ defense or prosecution policy reported. (Law-firm items are leads only.) Reviewer: Not rerun (search cap). The cited item is a 2019 law-firm newsletter, a lead only.",
+        "result": "supports",
+        "url": "https://www.wiley.law/newsletter-The-FECs-Litigation-Dilemma"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the Justice list on 2026-10-19: 76 rules; no title concerns the Federal Election Campaign Act, campaign finance, the FEC or prosecution policy. Prosecution policy is not a rulemaking subject, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1100"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Check 2 not applicable, confirmed by the reviewer on 2026-10-19: the agency selector of the 2026 Regulatory Plan and Unified Agenda lists no Executive Office of the President, White House, Domestic Policy Council, National Security Council, ODNI, CIA, FEC or Office of Special Counsel entry, so these actors have no agenda list to read.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       }
     ]
   },
@@ -179,7 +221,7 @@
     }
   ],
   "stage": "not_started",
-  "status_summary": "No presidential or DOJ directive limiting criminal FECA prosecutions to clear violations, no DOJ defense of the FEC when it cannot authorize its own, no bill to end the FEC's independent litigating authority, and no DOJ or FEC guidance on court-voided FECA provisions was found as of 2026-10-08. The FEC has lacked a quorum since 2025-05-01 (two commissioners remain, both Democrats) and told the D.C. district court on 2026-03-31 and 2026-04-24 that it cannot authorize a defense; the nominations of two Republican commissioners announced 2026-02-11 had no scheduled confirmation hearing as of August 2026. In Seegers v. FEC (D.D.C., No. 1:26-cv-00276), a suit to compel FEC action on an administrative complaint, the clerk entered default against the FEC on 2026-07-08; the plaintiff's motion (filed 2026-07-28) reports service on the U.S. Attorney for D.C. (2026-02-24) and the Attorney General (delivered 2026-03-04) and describes no DOJ appearance, which is the situation the chapter asks DOJ to prevent. Related DOJ and White House actions are of a different kind: a 2025-04-24 presidential memorandum directs the Attorney General to investigate straw-donor and foreign contributions made through online fundraising platforms, the Public Integrity Section had shrunk from about 30 prosecutors to fewer than five by May 2025 per press reports, and in NRSC v. FEC (decided 2026-06-30) the Solicitor General's office argued against FECA's party coordination limits, a position the chapter also takes (p. 866). None of these sets a standard for choosing FECA prosecutions or provides for DOJ to defend the FEC.",
+  "status_summary": "No presidential or DOJ directive limiting criminal FECA prosecutions to clear violations, no DOJ defense of the FEC when it cannot authorize its own, no bill to end the FEC's independent litigating authority, and no DOJ or FEC guidance on court-voided FECA provisions was found in records and systematic checks run through 2026-10-18. The FEC has lacked a quorum since 2025-05-01 (two commissioners remain, both Democrats) and told the D.C. district court on 2026-03-31 and 2026-04-24 that it cannot authorize a defense; the nominations of two Republican commissioners announced 2026-02-11 had no scheduled confirmation hearing as of August 2026. In Seegers v. FEC (D.D.C., No. 1:26-cv-00276), a suit to compel FEC action on an administrative complaint, the clerk entered default against the FEC on 2026-07-08; the plaintiff's motion (filed 2026-07-28) reports service on the U.S. Attorney for D.C. (2026-02-24) and the Attorney General (delivered 2026-03-04) and describes no DOJ appearance, which is the situation the chapter asks DOJ to prevent. Related DOJ and White House actions are of a different kind: a 2025-04-24 presidential memorandum directs the Attorney General to investigate straw-donor and foreign contributions made through online fundraising platforms, the Public Integrity Section had shrunk from about 30 prosecutors to fewer than five by May 2025 per press reports, and in NRSC v. FEC (decided 2026-06-30) the Solicitor General's office argued against FECA's party coordination limits, a position the chapter also takes (p. 866). None of these sets a standard for choosing FECA prosecutions or provides for DOJ to defend the FEC.",
   "timeline": [
     {
       "date": "2025-02-18",
@@ -240,6 +282,6 @@
   ],
   "title": "Limit DOJ prosecution to clear FECA violations and have DOJ defend the FEC in court",
   "tracked": true,
-  "uncertainties": "Absence findings rest on targeted searches and fetches, not a full review: a Justice Manual or memo change specific to FECA prosecutions, DOJ appearances in other suits against the FEC (Bernegger v. FEC and others were seen only as FEC-posted filings; the FEC's litigation pages and CourtListener could not be fetched), bills to end the FEC's litigating authority, and DOJ or FEC guidance on voided FECA provisions were searched for without result. The DOJ Election Crimes Branch page (updated 2026-10-06 per the page) describes liaison with the FEC and a prosecution monograph but no policy on standards for FECA charges. The final size of the Public Integrity Section after May 2025 and the outcome of the Justice Manual proposal were not confirmed; the ADN item is undated except by its URL. Whether the April 2025 memorandum has produced charges was not determined: a press report of 2025-10-10 mentions none, and later developments were not found in one search. A reviewer could classify the DOJ non-appearance as divergence rather than non-start, and the Solicitor General's NRSC position matches the chapter's own criticism of coordination limits. Trump v. Slaughter (decided 2026-06-29, treating the FTC's removal protection as unconstitutional) was read through a law-firm summary that does not address the FEC; its effect on FEC independence, and any DOJ position on defending a quorumless FEC, was not found. The FEC commissioner roster page was fetched without a capture date; the two-commissioner count agrees with the FEC's own filings through 2026-04-24 and the August 2026 law-firm update.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "No directive limiting criminal FECA prosecutions to clear violations, no DOJ defense of the FEC when it cannot authorize its own, no bill ending the FEC's independent litigating authority and no guidance on court-voided FECA provisions was found. The FEC has lacked a quorum since 2025-05-01, and in Seegers v. FEC default was entered against it on 2026-07-08 with no DOJ appearance described. Federal Register searches found nothing qualifying; H.R. 8738 concerns filing methods and other bills were not opened; the FEC updates and DOJ news pages showed nothing on first pages; one news search found no DOJ defense. The Justice list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 76 rules) holds no related entry, and the FEC has no agenda list. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

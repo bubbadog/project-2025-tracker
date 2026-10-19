@@ -4,9 +4,9 @@
     "The text asks for congressional reform; trade press describes Assistant U.S. Attorneys as paid on an administratively determined schedule set within statutory limits, so the precise legal route was not verified (Inference)"
   ],
   "chapter": "17",
-  "confidence": 32,
-  "confidence_label": "low",
-  "confidence_reason": "Absence of evidence from two web searches; congress.gov and DOJ budget justifications were not checked.",
+  "confidence": 65,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (supports), Justice Unified Agenda (supports), congress.gov and govinfo.gov search (supports), justice.gov EOUSA salary page (supports, read, 2015 background) and a news search (partial: only older advocacy items). The agenda is only weakly informative for a legislative pay proposal, and DOJ budget justifications were not checked, so confidence is 65.",
   "durability": {
     "level": "medium",
     "why": "A statutory pay change would be durable once enacted, but none exists."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-18",
       "note": "Validation fix: the background trade-press article the reviewer opened (fedmanager.com, undated, apparently 2022, dated here by year only) is listed as the record's one source; it describes the pay schedule and an association request and supports no 2025 or 2026 action."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the Justice Unified Agenda on reginfo.gov, govinfo.gov, justice.gov and a news search), not_started kept and confidence raised to 65."
     }
   ],
   "id": "c17-22",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -53,19 +57,45 @@
   "research_agent": "R1718",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Pages corrected from 570 to 571 to 571 only: the compensation passage is entirely on p. 571.",
-      "Blocker reworded: the draft said pay scales are set by statute; trade press describes an administratively determined schedule, so the statement was softened and marked as inference.",
-      "Stage not_started kept; no alternative stage seems defensible without a proposal."
-    ],
+    "flags": [],
     "mandate_check": "corrected",
     "mandate_note": "Page 571 asks the administration to seek congressional reform of field Assistant U.S. Attorney pay, at minimum compensating them on at least the same basis as Main Justice General Schedule attorneys.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Checked 2026-10-15: undated, apparently 2022; describes the pay gap and an association request; no 2025 or 2026 action; background only, not cited.",
+        "result": "partial",
+        "url": "https://fedmanager.com/news/federal-prosecutors-seek-equitable-pay-and-working-conditions-to-doj-counterparts"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Query since 2025-01-20, all agencies: 4 documents (two Social Security immigration memorandum items, a DOJ proposed rule on State bar complaints against DOJ attorneys 2026-03-05, a DEA decision and order); none on AUSA pay.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"Assistant%20United%20States%20Attorneys\"&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Agency named: Department of Justice; Agency Rule List - 2026; 76 rules; no title on Assistant U.S. Attorney pay or compensation. A pay scale change is statutory (28 U.S.C. 548) and would not appear as a rule in any case. Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1100"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Results were appropriations and pay-adjustment items (H.R.6938, P.L. 119-37, alternative pay plan documents, H.R.7147), 28 U.S.C. 549, H.R.200, S.5183, S.5503; none identified as moving AUSAs to General Schedule pay. Bill texts not individually opened. Reviewer opened the H.R. 200 bill status (Federal Freeze Act, introduced 2025-01-03): a one-year pay increase freeze, not AUSA pay parity.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr200/xml/BILLSTATUS-119hr200.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the page on 2026-10-19: EOUSA Salary Information page, last updated 2015-09-18, describing the Administratively Determined pay plan for AUSAs; no pay parity proposal. Informative only as background on the current pay plan.",
+        "result": "supports",
+        "url": "https://www.justice.gov/node/17756"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "News web search (AUSA pay parity, 2026) returned NAAUSA letters for FY2024, 2021 GovExec and older items; no 2025-2026 proposal, bill or DOJ request.",
         "result": "partial",
         "url": "https://fedmanager.com/news/federal-prosecutors-seek-equitable-pay-and-working-conditions-to-doj-counterparts"
       }
@@ -113,6 +143,6 @@
   "timeline": [],
   "title": "Seek legislation to pay Assistant U.S. Attorneys on the General Schedule basis",
   "tracked": true,
-  "uncertainties": "Searches run: two WebSearches (one by the researcher, one in review) for bills or DOJ proposals on Assistant U.S. Attorney pay parity in the 119th Congress; results were pre-2025 materials from an employee association and trade press and are not cited as support. An undated trade-press article on fedmanager.com, apparently from 2022, describes the administratively determined pay schedule and an association request to move to the General Schedule; it was read for background only. The salary statute (28 U.S.C. 548) could not be opened on the mirror site tried. Congress.gov could not be searched directly. A bill or a DOJ budget proposal could exist that the searches missed.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The Justice rule list on reginfo.gov (labeled Agency Rule List - 2026, 76 rules) lists no rulemaking on Assistant U.S. Attorney pay, and none would be expected for a legislative pay proposal. The EOUSA salary page (last updated 2015-09-18) describes the Administratively Determined pay plan. No bill, DOJ legislative proposal or budget request for General Schedule parity was found; DOJ budget justifications were not read, and the salary statute (28 U.S.C. 548) was not opened. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

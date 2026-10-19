@@ -4,9 +4,9 @@
     "No proposal found"
   ],
   "chapter": "18",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Chapter text checked; the not_started finding rests on Federal Register searches that were not exhaustive, so confidence is capped at 50.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence-based. Five checks, informative for a rule: (1) Federal Register API, no rule reinstating the 2020 good guidance rule, with the 2026-10-07 withdrawal notice read (rerun 2026-10-19: good guidance results are FDA guidance notices); (2) Labor Unified Agenda read directly on reginfo.gov on 2026-10-19, partial: the only related entry, 1235-AA52 on interpretive statements, was opened and does not mention the 2020 rule, a guidance database or limits on enforcement use; (3) congress.gov and GovInfo, S. 252 requires posting of guidance (partial, substitute not read); (4) DOL newsroom, nothing; (5) one news search, nothing. Set at 66 because the congress check is partial and an internal guidance policy would not be published.",
   "durability": {
     "level": "low",
     "why": "A DOL rule on its own guidance can be rescinded by a later administration, as occurred with the 2020 rule."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check and independent review: federalregister.gov API (reviewer variant), the 2026-10-07 withdrawal notice on federalregister.gov and govinfo.gov BILLSTATUS for S.252 were read; withdrawal added as a related event and source; no stage change (not_started 0); confidence 50 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the Labor Unified Agenda list and the 1235-AA52 entry page read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 62 to 66."
     }
   ],
   "id": "c18-16",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_rule",
@@ -50,29 +58,71 @@
   "research_agent": "N18",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "judgment call: proposed (5) is defensible if the opinion letter expansion and the 2025-07-02 proposal are treated as steps toward the Mandate's guidance goals; not_started kept because neither restores the 2020 rule."
-    ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 593 checked: under Clear and Restrictive Rules on Guidance Documents, DOL should reinstitute the PRO Good Guidance rule via notice and comment and Congress should amend the APA to limit guidance. Proposal expanded slightly to state the rule's features as the chapter describes them. No existing record covers it.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y18f",
+    "alternative": "Proposed 5 with a parallel match on S. 252 if its reported substitute limits the use of guidance.",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 593), the Mandate asks DOL to reinstate through notice and comment its 2020 good guidance rule (limits on guidance in enforcement, no binding guidance, a searchable guidance database, public comment on guidance) and asks Congress to amend the APA to limit guidance documents. The chapter text was not available to this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Proposed rule of 2025-07-02 (Wage and Hour Division) to remove FLSA interpretive rules from the CFR and recast them as sub-regulatory guidance; not a reinstatement of the 2020 rule.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/api/v1/documents/2025-12314.json"
+        "note": "2026-10-18 (reviewer variant of check 1): terms 'guidance documents' with 'notice and comment', limited to DOL, returned 2 documents: an OMB-led federal financial assistance proposed rule (2026-05-29) and the WHD interpretive-rules proposal (2025-07-02). Neither reinstates the 2020 good guidance rule.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22guidance+documents%22+%22notice+and+comment%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=labor-department"
       },
       {
-        "note": "Federal Register API search of DOL documents since 2025-01-20; first 36 of 165 results read; none reinstates the good guidance rule.",
-        "result": "does_not_support",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=guidance+documents&conditions[agencies][]=labor-department&conditions[publication_date][gte]=2025-01-20&per_page=40"
+        "note": "2026-10-18 (reviewer read): the WHD notice, dated 2026-09-28, published 2026-10-07 (91 FR 64129) and effective 2026-10-06, withdraws the 2025-07-02 proposal (90 FR 28985) as no longer aligned with Department priorities after six substantive comments. It does not mention the 2020 good guidance rule, set guidance procedures or commit to new guidance rules. Recorded as a related event that ends a parallel step already in the timeline; it does not bear on the stage, which stays not_started.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/10/07/2026-20523/statements-of-general-policy-or-interpretation-not-directly-related-to-regulations-withdrawal-of"
       },
       {
-        "note": "Law firm, 2025-06-03; DOL expanded its opinion letter program on 2025-06-02 across five agencies; no guidance rulemaking mentioned.",
+        "note": "2026-10-18 (reviewer fetch for check 3): BILLSTATUS confirms S.252, GOOD Act, introduced 2025-01-24 and referred to HSGAC, ordered reported favorably with an amendment in the nature of a substitute on 2026-08-06. The CRS summary of the introduced version requires agencies to post guidance documents online in one location; it does not amend the APA to limit the use of guidance. The reported substitute text was not available. Partial overlap with the posting element only, not qualifying.",
         "result": "partial",
-        "url": "https://www.littler.com/news-analysis/asap/us-department-labor-expands-opinion-letter-program"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s252.xml"
+      },
+      {
+        "note": "Check 1 (research pass, 2026-10-18): terms 'good guidance' (DOL, 2 documents: the 2026-04-23 joint employer proposed rule and the 2025-07-02 interpretive-rules proposed rule), 'guidance' limited to DOL proposed rules (88 documents, first 20 reviewed: OSHA, EBSA, OWCP and WHD items). Found the 2025-07-02 WHD proposal to remove FLSA interpretive rules and its formal withdrawal published 2026-10-07 (document 2026-20523): withdrawal of a proposal, not reinstatement of the good guidance rule. No document reinstating the 2020 PRO Good Guidance rule.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=guidance&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=labor-department&conditions[type][]=PRORULE"
+      },
+      {
+        "note": "Check 2 (research pass, 2026-10-18): Fetched the Unified Agenda entry page; it is an agency selector and links page with no items listed (script-driven). Fallback used, so the check is partial: the DOL proposed-rule query above (88 documents, first 20 reviewed).",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Check 3 (research pass, 2026-10-18): search (congress.gov, govinfo.gov): '119th Congress bill good guidance Department of Labor guidance documents notice and comment'. Found S.252 GOOD Act (Guidance Out Of Darkness Act, introduced 2025-01-24, Sen. Johnson; Senate HSGAC ordered reported with an amendment in the nature of a substitute on 2026-08-06): government-wide posting of guidance documents, not a DOL notice-and-comment rule and not an APA amendment limiting guidance. Also found H.R.4154 Employee Rights Act (introduced 2025-06-26; no mention of guidance in BILLSTATUS). Related to the congressional half of the item only in part. Reviewer: BILLSTATUS refetched and confirmed; the search was not rerun (search cap).",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s252.xml"
+      },
+      {
+        "note": "Check 4 (research pass, 2026-10-18): DOL newsroom page showed a 2025-11-25 ETA workforce guidance release and nothing on a good guidance rule.",
+        "result": "supports",
+        "url": "https://www.dol.gov/newsroom/releases"
+      },
+      {
+        "note": "Check 5 (research pass, 2026-10-18): query: 'Labor Department good guidance rule reinstate guidance documents notice and comment 2026'. Results covered the 2020 rule and its 2021 revocation (first-term and Biden-era coverage); no 2025-2026 reinstatement reported. Reviewer: Not rerun (search cap).",
+        "result": "supports",
+        "url": "https://www.safetyandhealthmagazine.com/articles/20277-lawfully-and-appropriately-dol-revising-procedures-and-policies-for-issuing-guidance"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The Department of Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 115 rules) was read in full on 2026-10-19; the only related entry, Statements of General Policy or Interpretation Not Directly Related to Regulations (1235-AA52, Final Rule Stage, final projected 08/00/2026), was opened; no entry reinstates the 2020 good guidance rule.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1200"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Wage and Hour Division, Final Rule Stage, 29 CFR parts 775 to 794; NPRM 07/02/2025 (90 FR 28985), comments closed 08/01/2025, final rule projected 08/00/2026; would rescind interpretive parts of Subchapter B and asks whether to reissue them as sub-regulatory guidance; no mention of the 2020 rule, a guidance database or limits on enforcement use. The agenda still lists it although the record shows the proposal withdrawn 2026-10-07.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1235-AA52"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: 196 documents, the newest 20 all FDA guidance notices citing good guidance practices; no DOL guidance procedure rule. The DOL-limited query was not rerun.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22good+guidance%22&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -118,10 +168,24 @@
       "publisher": "Littler Mendelson (law firm)",
       "title": "US Department of Labor expands opinion letter program",
       "url": "https://www.littler.com/news-analysis/asap/us-department-labor-expands-opinion-letter-program"
+    },
+    {
+      "date": "2026-10-07",
+      "kind": "primary",
+      "publisher": "Federal Register (DOL)",
+      "title": "Statements of General Policy or Interpretation Not Directly Related to Regulations; Withdrawal of Proposed Rule",
+      "url": "https://www.federalregister.gov/documents/2026/10/07/2026-20523/statements-of-general-policy-or-interpretation-not-directly-related-to-regulations-withdrawal-of"
+    },
+    {
+      "date": "2026-08-06",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S.252 GOOD Act (Guidance Out Of Darkness Act), bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s252.xml"
     }
   ],
   "stage": "not_started",
-  "status_summary": "No Federal Register document reinstating the DOL good guidance rule was found for the period since 2025-01-20. DOL announced an expanded opinion letter program on 2025-06-02, and on 2025-07-02 proposed to remove FLSA interpretive rules from the CFR and recast them as sub-regulatory guidance; neither restores the 2020 rule.",
+  "status_summary": "No Federal Register document reinstating the DOL good guidance rule was found for the period since 2025-01-20. DOL announced an expanded opinion letter program on 2025-06-02, and on 2025-07-02 proposed to remove FLSA interpretive rules from the CFR and recast them as sub-regulatory guidance; neither restores the 2020 rule. The Wage and Hour Division withdrew that 2025-07-02 proposal in a notice published 2026-10-07, without mentioning the 2020 rule or new guidance procedures.",
   "timeline": [
     {
       "date": "2025-06-02",
@@ -136,10 +200,17 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/07/02/2025-12314/statements-of-general-policy-or-interpretation-not-directly-related-to-regulations"
+    },
+    {
+      "date": "2026-10-07",
+      "event": "DOL Wage and Hour Division published the withdrawal (effective 2026-10-06) of its 2025-07-02 proposed rule to remove interpretive rules not issued through notice and comment from Title 29 and recast them as sub-regulatory guidance, ending that rulemaking.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/10/07/2026-20523/statements-of-general-policy-or-interpretation-not-directly-related-to-regulations-withdrawal-of"
     }
   ],
   "title": "Reinstate DOL's good guidance rule through notice and comment",
   "tracked": true,
-  "uncertainties": "A Federal Register API search for DOL documents mentioning guidance documents since 2025-01-20 (first 36 of 165 results read) and the researcher's title search found no rule reinstating the 2020 rule; the full result set was not read, so a later document cannot be fully excluded. The two listed steps are related but do not do what the Mandate asks, so the match is parallel. A DOL internal policy on guidance, if any, would not appear in the Federal Register. The opinion letter expansion is described by a law firm; the DOL announcement itself was not opened.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "No Federal Register document reinstating the DOL good guidance rule was found. The Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) lists only the Wage and Hour interpretive statements item (RIN 1235-AA52), which the division withdrew in a notice published 2026-10-07 and which the agenda still shows with a final rule projected for August 2026; it is not the recommended action. S. 252 would require online posting of guidance government-wide; its reported substitute text was not read. A DOL internal guidance policy would not appear in the Federal Register, and the opinion letter expansion rests on a law firm description. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

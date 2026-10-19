@@ -6,7 +6,7 @@
   "chapter": "22",
   "confidence": 55,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text checked and the executive order read; Treasury-specific closure rests on partial news reporting and an absence of notices.",
+  "confidence_reason": "EO 14151 was read on federalregister.gov in review; Treasury-specific closure rests on one paywalled news report and on the absence of Federal Register notices, and Treasury's own pages could not be fetched.",
   "durability": {
     "level": "medium",
     "why": "Offices and committees created by departmental action can be recreated by a later administration."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to new layer 3 record(s) c27-06 from the fuller reading of chapters 24 to 27."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: reread EO 14151 on federalregister.gov, ran a Federal Register API check on Treasury racial equity documents, partly read the committee charter on home.treasury.gov and ran one web search, which found no Treasury termination notice. No stage change (in_progress 30); confidence unchanged at 55."
     }
   ],
   "id": "c22-10",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "executive_order",
@@ -59,29 +63,35 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: in_progress 30; implemented (65) is defensible if the government-wide order is taken as having ended these Treasury units, which no Treasury source confirms",
-      "Reworded the Bloomberg Tax event to match the article (the group was placed on leave)"
+      "No stage change: in_progress 30. proposed 20 is a defensible alternative under the rubric (directed by an order, with only one news-reported operative Treasury step); implemented 65 is defensible only if the government-wide order is taken as having ended these units, which no Treasury source confirms.",
+      "One web search used for a Treasury termination announcement; nothing new found.",
+      "Confidence unchanged at 55; the five systematic absence checks were not all run (Unified Agenda and govinfo not checked, Treasury pages refused)."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 708, The Equity Agenda: eliminate the Counselor for Racial Equity, the Advisory Committee on Racial Equity and the DEIA office, identify and interview DEI participants, release communications and training materials, treat unobjected participation as grounds for termination, and eliminate the 25-member advisory committee. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y22b",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (708) and proposal field, the text asks Treasury to eliminate the Counselor for Racial Equity, the 25-member Advisory Committee on Racial Equity and the DEIA office, to identify DEI participants, release related communications and training materials, and treat unobjected participation as grounds for dismissal. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Signed 2025-01-20, published 2025-01-29; section 2(b)(i) 60-day termination direction.",
-        "result": "supports",
+        "note": "Checked 2026-10-18: EO 14151, signed 2025-01-20, 90 FR 8339; sec. 2(b)(i) directs termination of DEI, DEIA and environmental justice offices and positions and equity action plans within 60 days, to the extent allowed by law; names no Treasury unit. Government-wide direction only.",
+        "result": "partial",
         "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01953/ending-radical-and-wasteful-government-dei-programs-and-preferencing"
       },
       {
-        "note": "Dated 2025-03-18; Equity Hub group placed on leave; paywalled; no mention of the counselor, committee or DEIA office.",
-        "result": "partial",
-        "url": "https://news.bloombergtax.com/daily-tax-report/irs-effort-to-end-racial-bias-threatened-by-trump-dei-mandate"
+        "note": "Run 2026-10-18: one unrelated OMB-led proposed rule; no committee meeting or termination notice.",
+        "result": "does_not_support",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22racial+equity%22&conditions[agencies][]=treasury-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Federal Register API query for the committee name since 2024-06-01 returned only this 2024-08-01 meeting notice.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2024/08/01/2024-16965/meeting-of-the-treasury-advisory-committee-on-racial-equity"
+        "note": "Checked 2026-10-18, partly read: charter dated 2024-03-22; duration and size terms not reached. Confirms creation, not termination.",
+        "result": "partial",
+        "url": "https://home.treasury.gov/system/files/136/Treasury-Advisory-Committee-on-Racial-Equity-Charter.pdf"
+      },
+      {
+        "note": "Not reopened (paywalled); earlier review read part: 2025-03-18, Equity Hub group placed on leave.",
+        "result": "partial",
+        "url": "https://news.bloombergtax.com/daily-tax-report/irs-effort-to-end-racial-bias-threatened-by-trump-dei-mandate"
       }
     ]
   },
@@ -134,6 +144,13 @@
       "publisher": "Federal Register",
       "title": "Meeting of the Treasury Advisory Committee on Racial Equity (last Federal Register meeting notice)",
       "url": "https://www.federalregister.gov/documents/2024/08/01/2024-16965/meeting-of-the-treasury-advisory-committee-on-racial-equity"
+    },
+    {
+      "date": "2024-03-22",
+      "kind": "primary",
+      "publisher": "Department of the Treasury",
+      "title": "Treasury Advisory Committee on Racial Equity Charter",
+      "url": "https://home.treasury.gov/system/files/136/Treasury-Advisory-Committee-on-Racial-Equity-Charter.pdf"
     }
   ],
   "stage": "in_progress",
@@ -156,6 +173,6 @@
   ],
   "title": "Eliminate Treasury's racial equity counselor, advisory committee and DEIA office",
   "tracked": true,
-  "uncertainties": "The Bloomberg Tax article is paywalled and was read in part; it does not mention the counselor, the advisory committee or the DEIA office. The Treasury offices page lists no equity office or counselor, but it prints no date and is not treated as an event. A Federal Register API search for the advisory committee name since 2024-06-01 returned only the 2024-08-01 meeting notice. Treasury's own announcement, if any, was not found, and the personnel steps on page 708 were not found.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "EO 14151 (90 FR 8339) was reread on federalregister.gov in review on 2026-10-18; section 2(b)(i) is government-wide and names neither Treasury nor advisory committees. Federal Register API queries since 2025-01-20 for the committee name (researcher, zero results) and for the term racial equity in Treasury documents (review, one OMB-led financial assistance proposed rule of 2026-05-29 that is unrelated) found no meeting or termination notice; absence of a notice is not proof that the committee ended. The committee charter of 2024-03-22 on home.treasury.gov was read only in part in review (the text ended in section 8), so its duration terms were not seen. The Bloomberg Tax article is paywalled, was read in part in an earlier review, and does not mention the counselor, committee or DEIA office; the Equity Hub it describes sits in the IRS. Two web searches (researcher and review) for a Treasury termination announcement returned only 2023 and 2024 committee materials and commentary. Other Treasury committee and HR pages refused fetching. The Unified Agenda and govinfo were not checked. The personnel steps on page 708 were not found.",
+  "updated_at": "2026-10-18"
 }

@@ -2,9 +2,9 @@
   "agency": "Department of Labor (ETA, Wage and Hour Division, Office of Foreign Labor Certification)",
   "blockers": [],
   "chapter": "18",
-  "confidence": 64,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text read; the Project Firewall release and both debarment lists were fetched and read in review; the Inspector General recommendations and any speed measure were not found.",
+  "confidence_reason": "The Project Firewall release and the 2026-07-08 Inspector General release were read on primary hosts in review and the debarment lists were read this run or earlier; the speedier-debarment, contract-exclusion and Inspector General recommendation elements rest on absence.",
   "durability": {
     "level": "medium",
     "why": "Enforcement initiatives are discretionary, but debarment listings continue as routine program administration."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: read the Project Firewall release on dol.gov and the 2026-07-08 Inspector General release on oig.dol.gov; added the latter as an event. No stage change (in_progress 30; researcher's 35 not adopted); confidence 64 to 66."
     }
   ],
   "id": "c18-27",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -53,29 +57,30 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Progress lowered from 40 to 30 within in_progress: the investigation initiative is operative, but speedier debarment, contract exclusion and the Inspector General recommendations are unshown. proposed 20 would also be defensible, since debarments are routine and predate the window.",
-      "Timeline trimmed to the initiative and the latest debarment entry; the debarment-start entries are effects of orders rather than dated orders, so only one is kept as an illustration."
+      "No stage change: in_progress 30 kept. The researcher proposed 35 on the 2026-07-08 Inspector General announcement; 35 is a defensible alternative, but the new step adds to the already-credited investigations element and does not advance speedier debarment, contract exclusion or the 2020 recommendations.",
+      "proposed 20 also remains defensible, since debarments are routine and predate the window.",
+      "Added the 2026-07-08 OIG announcement as an event and source; the undated DOL accomplishments page and a law-firm report were not added."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 613 says visa-fraud employers should not benefit from federal spending and asks DOL to follow the 2020 Inspector General recommendations and to institute more robust investigations of suspected visa fraud and speedier debarments.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (613) and proposal field, the text says visa-fraud employers should not benefit from federal spending and asks DOL to follow the 2020 Inspector General recommendations and to institute more robust investigations and speedier debarments. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: release of 2025-09-19 confirms Secretary-certified H-1B investigations and debarment as a sanction; no mention of the Inspector General, contract exclusion or speed.",
+        "note": "Checked 2026-10-18: Release 25-1476-NAT of 2025-09-19; Secretary-certified H-1B investigations, sanctions include H-1B debarment; no mention of the Inspector General, contract exclusion or faster debarment. Supports the investigations element only, consistent with in_progress at the low end.",
         "result": "partial",
         "url": "https://www.dol.gov/newsroom/releases/osec/osec20250919"
       },
       {
-        "note": "Checked 2026-10-15: six H-1B entries, start dates 2025-05-12 to 2026-09-24; page last updated 2026-09-30.",
-        "result": "supports",
-        "url": "https://www.dol.gov/agencies/whd/immigration/h1b/debarment"
+        "note": "Checked 2026-10-18: dated 2026-07-08; OIG investigation into H-1B and PERM fraud and trafficking with law enforcement partners; no mention of debarment, contract exclusion or the 2020 report.",
+        "result": "partial",
+        "url": "https://www.oig.dol.gov/public/Press%20Releases/OIG-Press-Release-070826.htm"
       },
       {
-        "note": "Checked 2026-10-15: undated list of 54 entries with 2025 and 2026 start dates across PERM, H-2A and H-2B.",
+        "note": "Not reopened in review; researcher read it 2026-10-18: six entries, starts 2025-05-12 to 2026-09-24, updated 2026-09-30. Shows ongoing debarments, not speed.",
         "result": "supports",
-        "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/Debarment_List.pdf"
+        "url": "https://www.dol.gov/agencies/whd/immigration/h1b/debarment"
       }
     ]
   },
@@ -128,10 +133,17 @@
       "publisher": "Department of Labor, ETA OFLC",
       "title": "Permanent Labor Certification, H-2A and H-2B Debarment List",
       "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/Debarment_List.pdf"
+    },
+    {
+      "date": "2026-07-08",
+      "kind": "primary",
+      "publisher": "DOL Office of Inspector General",
+      "title": "DOL Office of Inspector General press release, H-1B and PERM fraud investigation",
+      "url": "https://www.oig.dol.gov/public/Press%20Releases/OIG-Press-Release-070826.htm"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "On 2025-09-19 DOL launched Project Firewall, an H-1B enforcement initiative under which the Secretary of Labor personally certifies the start of investigations where there is reasonable cause to suspect noncompliance, led by the Office of Immigration Policy, ETA and the Wage and Hour Division; violations can lead to back wages, civil penalties or debarment from the H-1B program. DOL debarment lists show H-1B debarments with periods beginning from 2025-05-12 to 2026-09-24 and dozens of H-2A, H-2B and permanent certification debarments beginning in 2025 and 2026. The lists do not show whether debarments became faster, the release does not mention exclusion from federal contracts, and action on the 2020 Inspector General recommendations was not found.",
+  "status_summary": "On 2025-09-19 DOL launched Project Firewall, an H-1B enforcement initiative under which the Secretary of Labor personally certifies the start of investigations where there is reasonable cause to suspect noncompliance, led by the Office of Immigration Policy, ETA and the Wage and Hour Division; violations can lead to back wages, civil penalties or debarment from the H-1B program. On 2026-07-08 the DOL Office of Inspector General announced a major investigation into fraud and human trafficking in the H-1B and PERM programs with federal law enforcement partners. DOL debarment lists show H-1B debarments with periods beginning from 2025-05-12 to 2026-09-24 and dozens of H-2A, H-2B and permanent certification debarments beginning in 2025 and 2026. Neither release mentions faster debarment or exclusion from federal contracts, and action on the 2020 Inspector General recommendations was not found.",
   "timeline": [
     {
       "date": "2025-09-19",
@@ -139,6 +151,13 @@
       "kind": "primary",
       "source": "Department of Labor",
       "url": "https://www.dol.gov/newsroom/releases/osec/osec20250919"
+    },
+    {
+      "date": "2026-07-08",
+      "event": "The DOL Office of Inspector General announces a major investigation and stepped-up enforcement against fraud and human trafficking in the H-1B and PERM programs, working with federal law enforcement partners and the Task Force to Eliminate Fraud; the release does not mention debarment.",
+      "kind": "primary",
+      "source": "DOL Office of Inspector General",
+      "url": "https://www.oig.dol.gov/public/Press%20Releases/OIG-Press-Release-070826.htm"
     },
     {
       "date": "2026-09-24",
@@ -150,6 +169,6 @@
   ],
   "title": "Step up visa fraud investigations and debarments of abusive foreign labor employers",
   "tracked": true,
-  "uncertainties": "The release and both debarment lists were fetched and re-read in review. The OFLC list is undated and has 54 entries (2 permanent certification, 25 H-2A, 27 H-2B), with debarment start dates in 2025 and 2026; the start date of a debarment period is not necessarily the date of the final order, and the lists show only current debarments, so earlier periods cannot be compared to judge speed. The Inspector General's 2020 report and any DOL response were not located. A Federal Register API search of ETA documents for debarment returned no rules specific to debarment. Searches run: three WebSearches by the researcher (debarment announcements, Project Firewall, debarment list) and fetches; no WebSearch in review. Press coverage of H-1B debarments was seen in results but not cited. Project Firewall targets H-1B compliance generally, which overlaps with but is not the same as visa fraud.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The Project Firewall release and the Inspector General press release of 2026-07-08 were read in full on dol.gov and oig.dol.gov on 2026-10-18; the H-1B debarment list was read by the researcher this run and in an earlier review. The OFLC debarment list (54 entries) was read in an earlier review; its start dates are not necessarily final-order dates, and the lists show only current debarments, so speed cannot be judged. A DOL accomplishments page reportedly cites nearly 200 Project Firewall investigations with no stated date; it was not opened in review and is not cited. September 2026 PERM suspensions were seen only in a law-firm report that links a social media post; no primary release was opened, so no event was added. The Inspector General's 2020 report and any DOL response were not located. Project Firewall targets H-1B compliance generally, which overlaps with but is not the same as visa fraud.",
+  "updated_at": "2026-10-18"
 }

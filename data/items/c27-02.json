@@ -7,7 +7,7 @@
   "chapter": "27",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "The proposed rescission, the end of the SEC's defense, and the Eighth Circuit abeyance were confirmed in the Federal Register, and no final rescission appears there as of 2026-10-07; the congressional ban on non-material disclosure mandates was not searched.",
+  "confidence_reason": "The proposed rescission was read on federalregister.gov in this review (the long document only partly), and a Federal Register API check and one news search found no final rescission through 2026-10-18; the congressional ban on non-material disclosure mandates was not searched.",
   "court_status": {
     "basis": "derived from the latest court event in the timeline",
     "date": "2025-09-12",
@@ -25,11 +25,15 @@
   "history": [
     {
       "date": "2026-10-08",
-      "note": "Event dates and citations checked against the primary documents. The 2025-09-12 court order date is correct (the SEC's proposal and the Sabin Center docket summary both give it), so the event keeps its date and citation and its text now says the date is as stated in the SEC's 2026-06-03 proposal; I added the docket summary as a corroborating source."
+      "note": "Event dates and citations checked against the primary documents. The 2025-09-12 court order date is correct (the SEC's proposal and the Sabin Center docket summary both give it), so the event keeps its date and citation and its text now says the date is as stated in the SEC's 2026-06-03 proposal; the docket summary was added as a corroborating source."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review read the proposed rescission on federalregister.gov (91 FR 33296, first 100,000 characters) and ran a Federal Register API check and one web search, which found no final rescission through 2026-10-18; a first-person phrase in an older history note was rephrased. No stage change (in_progress 45, direct); confidence 78 to 78."
     }
   ],
   "id": "c27-02",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -49,24 +53,26 @@
   "research_agent": "A16",
   "review": {
     "flags": [
-      "progress lowered from 58: rescission is still a proposal and the rules are unenforced mainly because of a 2024 stay",
-      "congressional half not researched"
+      "No stage change: in_progress 45, direct.",
+      "Match direct applies to the SEC half; the congressional ban half has no action found, and partial is a defensible match.",
+      "court_status kept as pending: the 2025-09-12 abeyance leaves the petitions undecided.",
+      "Older history note rephrased to remove a first-person phrase."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 829 criticizes the proposed SEC climate reporting rule as greatly raising public company costs and says the SEC should be reducing barriers to capital formation; page 832 asks Congress to bar SEC-required disclosure of non-material social, ideological, political or human capital information and singles out the climate rule; the proposal is a fair paraphrase, with the first sentence an inference from page 829 rather than an explicit directive.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R09",
+    "mandate_check": "not_checked",
+    "mandate_note": "Chapter text not available in this run; the earlier review recorded: Page 829 criticizes the proposed SEC climate reporting rule as greatly raising public company costs and says the SEC should be reducing barriers to capital formation; page 832 asks Congress to bar SEC-required disclosure of non-material social, ideological, political or human capital information and singles out the climate rule; the proposal is a fair paraphrase, with the first sentence an inference from page 829 rather than an explicit directive.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Proposed full rescission published 2026-06-03 (File S7-2026-19, comments due 2026-08-03); recites the 2024-04-04 stay, the 2025-03-27 vote to end the defense, and the Eighth Circuit abeyance order of 2025-09-12, and gives statutory-authority and major-questions reasons.",
+        "note": "2026-10-18: proposed rule, 91 FR 33296 to 33345, Release Nos. 33-11421 and 34-105572, File No. S7-2026-19, comments due 2026-08-03; recites the 2024-04-04 stay, the 2025-03-27 vote and the 2025-09-12 Eighth Circuit abeyance. A proposal, so fully supports in_progress rather than implemented.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/06/03/2026-11091/rescission-of-climate-related-disclosure-rules"
       },
       {
-        "note": "Federal Register search run 2026-10-07 shows only the proposed rescission and an agenda entry listing it as pending; no final rescission rule has been published.",
+        "note": "2026-10-18: only result is the 2026-08-14 Regulatory Flexibility Agenda; no final rescission published.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=securities-and-exchange-commission&conditions[term]=climate-related+disclosure&conditions[publication_date][gte]=2026-01-01&per_page=20"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22climate-related%22&conditions[agencies][]=securities-and-exchange-commission&conditions[publication_date][gte]=2026-06-04&per_page=20&order=newest"
       }
     ]
   },
@@ -121,7 +127,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The 2024 climate disclosure rules were stayed by the SEC on 2024-04-04 and have not taken effect. On 2025-03-27 the Commission voted to stop defending them, and on 2025-09-12 the Eighth Circuit held the consolidated challenges in abeyance until the SEC either reconsiders the rules through rulemaking or renews its defense. On 2026-05-29 the SEC proposed to rescind the rules entirely (Federal Register 2026-06-03, comments closed 2026-08-03); no final rescission had been published in the Federal Register as of 2026-10-07. No statute barring non-material ESG disclosure mandates was identified, though legislation was not searched in depth.",
+  "status_summary": "The 2024 climate disclosure rules were stayed by the SEC on 2024-04-04 and have not taken effect. On 2025-03-27 the Commission voted to stop defending them, and on 2025-09-12 the Eighth Circuit held the consolidated challenges in abeyance until the SEC either reconsiders the rules through rulemaking or renews its defense. On 2026-05-29 the SEC proposed to rescind the rules entirely (Federal Register 2026-06-03, comments closed 2026-08-03); no final rescission had been published in the Federal Register as of 2026-10-18. No statute barring non-material ESG disclosure mandates was identified, though legislation was not searched in depth.",
   "timeline": [
     {
       "date": "2025-03-27",
@@ -146,7 +152,7 @@
     },
     {
       "date": "2026-06-03",
-      "event": "Proposed rescission published in the Federal Register (File No. S7-2026-19); comments due 2026-08-03. The SEC argues the rules exceed its disclosure authority and, alternatively, are unnecessary and costly.",
+      "event": "Proposed rescission published in the Federal Register at 91 FR 33296 (File No. S7-2026-19, Release Nos. 33-11421 and 34-105572); comments due 2026-08-03. The SEC argues the rules exceed its disclosure authority and, alternatively, are unnecessary and costly.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/06/03/2026-11091/rescission-of-climate-related-disclosure-rules"
@@ -161,6 +167,6 @@
   ],
   "title": "Withdraw the SEC climate disclosure rule and bar non-material ESG disclosure mandates",
   "tracked": true,
-  "uncertainties": "Not verified: whether the Commission has voted on a final rescission after the 2026-08-03 comment deadline, any Eighth Circuit action after 2025-09-12, and any pending bill to bar non-material ESG disclosure. The SEC human capital disclosure and board diversity items mentioned in the Mandate's endnotes were not checked. Dates for the 2025-09-12 abeyance order come from the SEC's own proposing release, not the court docket.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The proposed rescission (91 FR 33296) was read in this review on federalregister.gov for its first 100,000 of 116,133 characters, which confirm the 2024-04-04 stay, the 2025-03-27 vote to end the defense, the 2025-09-12 abeyance order and the 2026-08-03 comment deadline; the SEC press release was read in full by the researcher. The Eighth Circuit order of 2025-09-12 is described through the SEC's own release and a docket summary, not the court docket. A Federal Register API query run in this review for SEC documents mentioning climate-related since 2026-06-04 returned only the 2026-08-14 Regulatory Flexibility Agenda, and one web search for a final adoption returned only law-firm summaries of the proposal, so no final rescission is found through 2026-10-18. An SEC press release listing fetched by the researcher was stale and was not used as evidence of absence, and the sec.gov page for File No. S7-2026-19 returned a fetch error. Any Commission vote not yet published, any Eighth Circuit action after 2025-09-12 and any pending bill to bar non-material ESG disclosure were not verified. The Mandate endnotes on human capital and board diversity were not checked.",
+  "updated_at": "2026-10-18"
 }

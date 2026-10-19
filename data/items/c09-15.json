@@ -6,9 +6,9 @@
     "Continuing disputes with Congress over withheld and rescinded funds."
   ],
   "chapter": "09",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Text at pp. 270 to 272 checked; GAO report, CRS sidebar, Supreme Court docket, both copies of the explanatory statement and the delegation were read, but the not_started call rests on absence of evidence of 653(a) timing and notification practice from a limited search (cap 50).",
+  "confidence": 57,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented: (1) Federal Register API with a variant, supports (nothing qualifying); (2) Unified Agenda State list (33 rules) and USAID list (0 rules) read on 2026-10-19, supports but weakly informative for internal budget processes; (3) congress.gov and govinfo with BILLSTATUS for H.R. 5300, partial (texts unread); (4) state.gov, unreachable; (5) one search, supports. Confidence 57 because the agency host is blocked and bill texts were not read.",
   "court_status": {
     "basis": "Supreme Court order of 2025-09-26 in No. 25A269 granted the government's stay application as to funds in the 2025-08-28 special message, pending the D.C. Circuit appeal and any certiorari; not a merits ruling.",
     "date": "2025-09-26",
@@ -36,10 +36,18 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review: reran the Federal Register API check with a separate term variant (2 unrelated documents) and reviewed the researcher's checks of reginfo.gov with the State fallback, govinfo.gov BILLSTATUS for H.R. 5300, state.gov (blocked) and one search. No stage change (not_started, 0); confidence 40 to 56; status summary shortened."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the State and USAID rule lists in the reginfo.gov Unified Agenda (no related entry; USAID lists 0 rules), kept not_started 0 and raised confidence from 56 to 57."
     }
   ],
   "id": "c09-15",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -65,66 +73,50 @@
   "requires_congress": "no",
   "research_agent": "N09b",
   "review": {
-    "flags": [
-      "judgment call: not_started kept rather than diverged; the obligation pause and withheld funds slowed availability but do not show the 653(a), resource request or notification process the text addresses",
-      "court_status added (stayed, 2025-09-26) because the timeline carries a court event",
-      "explanatory statement source date taken from House file name, statement itself undated"
-    ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 270 to 272 confirm: F to be led by the USAID Administrator at Deputy Secretary rank, staff refocused on execution, end of Mission and Bureau Resource Requests, 653(a) report within 60 days, fast-tracked CNs (p. 271), LPA to accelerate CN review and publish all CNs and congressional reports, BRM to fast-track CNs (p. 272).",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9d",
+    "alternative": "diverged, if the obligation pause and the special message are read as opposite to faster execution of funds.",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 270 to 272, as described in the record, recommend refocusing the foreign assistance office from budget formulation to executing funds, dropping the Mission and Bureau Resource Requests, delivering the section 653(a) report within 60 days, fast-tracking congressional notifications and publishing all notifications and reports. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Enclosure states State announced a pause of all new obligations on 2025-01-24; no documented guidance; State could not provide staffing data; no mention of 653(a) or F. Timeline wording adjusted.",
+        "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms \"congressional notification\" and \"foreign assistance\", State Department, all types since 2025-01-20: 2 documents, the OMB-led Regulation for Federal Financial Assistance proposed rule (2026-05-29, 2026-10817) and an ITAR exemption rule (2025-12-30, 2025-23998); neither changes foreign assistance budget formulation, the 653(a) report or notification practice. Researcher's variant result: supports; terms \"foreign assistance\" and \"Mission Resource Request\", all types since 2025-01-20: 0 documents.",
         "result": "supports",
-        "url": "https://www.gao.gov/assets/gao-26-108607.pdf"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22congressional+notification%22+%22foreign+assistance%22&conditions[agencies][]=state-department&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Product page dated 2026-09-30; three recommendations, State agreed.",
-        "result": "supports",
-        "url": "https://www.gao.gov/products/gao-26-108607"
+        "note": "2026-10-18: The page loaded as the landing page of the 2026 Regulatory Plan and Unified Agenda but lists no agenda items (agency selection is script-driven). Recorded as partial; fallback used: State Department proposed rules since 2025-01-20: 7 documents (ITAR, passports, exchange visitor, visas, and the OMB federal financial assistance proposal of 2026-05-29), none on foreign assistance budget formulation, the 653(a) report or notifications.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=state-department&conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Nearly 5 billion dollars, message 2025-08-28, fewer than 45 days, OMB reapportioned funds as unavailable.",
-        "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2025-09-25_LSB11374_1e4dfb015fd572b255f5f79dad08f163f6b489fd.html"
+        "note": "2026-10-18: domain-limited search \"119th Congress foreign assistance section 653(a) report notifications Mission Resource Request State Department reform\". BILLSTATUS for H.R.5300 (Department of State Policy Provisions Act, Mast, introduced 2025-09-11, ordered reported amended 2025-09-18, 27 to 24): general State policy provisions; the record does not show changes to the 653(a) report or the notification process, text not read. Appropriations texts (H.R.7148 Consolidated Appropriations Act 2026, H.R.4779, H.R.8595 for FY2027) appeared and were not read for notification or 653(a) provisions.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5300.xml"
       },
       {
-        "note": "Stay granted 2025-09-26 as to special-message funds, not a merits ruling; court_status added.",
-        "result": "supports",
-        "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/25a269.html"
+        "note": "2026-10-18: state.gov is blocked and was not retried. The CRS In Focus IF11515 (2020) was read for how the 653(a) report and Mission and Bureau Resource Requests work, as background only.",
+        "result": "unreachable",
+        "url": "https://www.state.gov/"
       },
       {
-        "note": "653(a) basis and availability regardless of transmission date; 45-day posting; undated, header Division B.",
+        "note": "2026-10-18: news search \"State Department foreign assistance office budget formulation congressional notifications 653(a) report 2026\" returned no news coverage, only CRS, GAO (GAO-19-600 on timeliness of required budgetary reporting) and appropriations explanatory statements; no report of the Mandate process changes. The GAO page is not news and is the closest result.",
         "result": "supports",
-        "url": "https://www.appropriations.senate.gov/imo/media/doc/fy26_sfops_jes.pdf"
+        "url": "https://www.gao.gov/products/gao-19-600"
       },
       {
-        "note": "Same text; file name dated 2026-01-11; added.",
+        "date": "2026-10-19",
+        "note": "Reviewer opened the State list on 2026-10-19: 33 rules; no title concerns foreign assistance budgeting, congressional notifications or the section 653(a) report; 1400-AG22 concerns federal financial assistance regulations. These are internal management matters, so the check is weakly informative.",
         "result": "supports",
-        "url": "https://docs.house.gov/billsthisweek/20260112/FSGG%20NSRP%20Minibus%20-%20JES%20-%20Division%20B%20-%20NSRP%20-%201-11-2026.pdf"
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1400"
       },
       {
-        "note": "Public Law 119-75, H.R. 7148, approved 2026-02-03; table of contents lists Division F as the NSRP act.",
+        "date": "2026-10-19",
+        "note": "Reviewer opened the Agency for International Development list on 2026-10-19: heading Agency Rule List - 2026, 0 rules listed.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/app/details/PLAW-119publ75"
-      },
-      {
-        "note": "Dual role and about 5,200 cancellations; page undated, date from address.",
-        "result": "supports",
-        "url": "https://www.npr.org/sections/goats-and-soda/2025/03/25/g-s1-50582/usaid-pete-marocco-trump-foreign-aid"
-      },
-      {
-        "note": "Not re-fetched; same source verified in sibling record c09-01.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/09/05/2025-17084/delegation-of-authority-to-the-under-secretary-for-foreign-assistance-humanitarian-affairs-and"
-      },
-      {
-        "note": "Not re-fetched; verified in sibling records c09-01 and c09-02.",
-        "result": "supports",
-        "url": "https://www.wwno.org/npr-news/2025-07-01/usaid-officially-shuts-down-and-merges-remaining-operations-with-state-department"
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0412"
       }
     ]
   },
@@ -237,7 +229,7 @@
     }
   ],
   "stage": "not_started",
-  "status_summary": "No source found shows the Mandate's process changes for the foreign assistance office: no end to the Mission and Bureau Resource Requests, no 60-day section 653(a) report, no fast-track for congressional notifications and no policy of publishing all notifications and reports. In the successor structure USAID no longer exists (its remaining operations merged into State on 2025-07-01), so there is no USAID-led F office; State Delegation of Authority No. 597 (published 2025-09-05) placed the Director of Foreign Assistance's powers under an Under Secretary, and the FY2026 explanatory statement makes enacted amounts available regardless of when the 653(a) report is sent. On timing of funds, GAO reported on 2026-09-30 that State announced a pause of all new obligations on 2025-01-24 pending review and lacked documented standards for aid decisions, and a special message of 2025-08-28 proposed rescinding nearly 5 billion dollars of foreign aid funds with fewer than 45 days left before they expired, which the Supreme Court let stand on an interim basis on 2025-09-26. These steps slowed rather than sped the availability of funds, but they concern whether funds are spent rather than the budget and notification process the text addresses, so the record stays at not_started rather than diverged.",
+  "status_summary": "No source found shows the Mandate's process changes for the foreign assistance office: no end to the Mission and Bureau Resource Requests, no 60-day section 653(a) report, no fast-track for congressional notifications and no policy of publishing all notifications and reports. In the successor structure USAID no longer exists (its remaining operations merged into State on 2025-07-01), and State Delegation of Authority No. 597 (published 2025-09-05) placed the Director of Foreign Assistance's powers under an Under Secretary, while the FY2026 explanatory statement makes enacted amounts available regardless of when the 653(a) report is sent. GAO reported on 2026-09-30 that State paused all new obligations on 2025-01-24 pending review, and a special message of 2025-08-28 proposed rescinding nearly 5 billion dollars of foreign aid funds shortly before they expired, which the Supreme Court let stand on an interim basis on 2025-09-26. These steps slowed rather than sped the availability of funds, but they concern whether funds are spent rather than the budget and notification process the text addresses, so the record stays at not_started rather than diverged.",
   "timeline": [
     {
       "date": "2025-03-25",
@@ -284,6 +276,6 @@
   ],
   "title": "Shift State's aid office from budget formulation to executing funds, speed notifications",
   "tracked": true,
-  "uncertainties": "Searches for the FY2025 and FY2026 section 653(a) reports (CRS, GAO, appropriators, one further web search in review) found no transmittal dates, so their timing is unknown; a Federal Register search for section 653(a) returned nothing relevant. The FY2026 explanatory statement says its funding tables are the basis for the 653(a) report and that amounts are available regardless of when the report is transmitted; the statement itself carries no date and its header labels the act Division B of a January 2026 minibus, so its source date (2026-01-11) is taken from the file name of the House-posted copy, and the act was enacted as Division F of Public Law 119-75 on 2026-02-03 per the GovInfo table of contents. The public posting requirement (reports posted within 45 days, section 7016(b) as described in the explanatory statement) is a congressional requirement, not an executive choice. The GAO 2019 report documents late 653(a) reports before 2025 and is background only. The GAO 2026 report does not mention the 653(a) report or an F bureau. The status of the Mission and Bureau Resource Request process and of public posting of notifications is unknown. The NPR article page shows no date; the date comes from its address. The withheld-funds evidence (special message, Supreme Court interim order, GAO pause finding) is context: it shows funds slowed, which some readers may judge as diverged; the stage is held at not_started because the text's specific process steps were not observed either way. Whether the 2025 special message qualifies as a lawful pocket rescission is a legal question not resolved here.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "No source shows the recommended process changes for the foreign assistance office: no end to Mission and Bureau Resource Requests, no 60-day section 653(a) report, no fast-track for congressional notifications and no policy of publishing all notifications. USAID merged into State on 2025-07-01. The 2025 obligation pause and the August 2025 special message slowed funds, which is context rather than the process steps. Federal Register searches found nothing qualifying; H.R. 5300 and appropriations texts were not read for 653(a) or notification provisions; state.gov is blocked; one search returned only CRS and GAO material. The State list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 33 rules) holds no related entry, and the USAID list shows 0 rules. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

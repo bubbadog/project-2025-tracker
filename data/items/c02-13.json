@@ -6,7 +6,7 @@
   "chapter": "02",
   "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text page 49 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda reached only through its Federal Register fallback, congress.gov and govinfo search, agency page check where the OIRA page on whitehouse.gov was unreachable, and one news search), so confidence is capped near 60 because check 2 was partial and check 4 unreachable.",
+  "confidence_reason": "Five checks documented: (1) Federal Register API with a term variant, supports (nothing found); (2) Unified Agenda OMB list, 12 rules read on 2026-10-19, supports but weakly informative for funding and staffing; (3) congress.gov and govinfo search, partial (appropriation lines not read); (4) whitehouse.gov OIRA page, unreachable; (5) one news search, supports. Chapter text page 49 checked. Confidence stays at 60 because the agency check is unreachable and the agenda says little about staffing.",
   "durability": {
     "level": "low",
     "why": "Staffing levels depend on annual appropriations and OMB internal choices."
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov) and reviewed the Unified Agenda fallback, congress.gov and govinfo, agency page and news checks, found no qualifying action, and kept not_started 0."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the OMB rule list in the reginfo.gov Unified Agenda (12 rules, none on OIRA funding or advance teams), kept not_started 0 and kept confidence at 60."
     }
   ],
   "id": "c02-13",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -61,14 +65,14 @@
   "research_agent": "N02a",
   "review": {
     "flags": [
-      "Check 2 reached only the Federal Register fallback and check 4 (whitehouse.gov OIRA page) was unreachable, so confidence is capped near 60.",
-      "OMB appropriation lines and budget justifications for FY2026 and FY2027 were not examined; an OIRA staffing increase could exist without a public announcement."
+      "Existing source_checks labeled does_not_support for the Federal Register rerun, the congress.gov search and the news search record that nothing qualifying was found; under the rubric they read as supports. Kept as history; coordinator may relabel.",
+      "Existing check 5 lists the whitehouse.gov OIRA page as a placeholder URL for a news search."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 49 recommends reversing the decline in OIRA funding and budgeting enough staff for regulatory advance teams that consult early with agencies, with those staff kept apart from later review. The proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "2026-10-18: reviewer rerun with terms Office of Information and Regulatory Affairs plus staffing, since 2025-01-20: 675 loose matches; the newest 20 (2026-10-05 to 2026-10-19) were unrelated rules citing OIRA only for comments or acronyms. Researcher query on regulatory advance teams returned 0 results the same day.",
@@ -94,6 +98,12 @@
         "note": "2026-10-18: one researcher news search on OIRA staff cuts and funding returned only older Brookings, GW Regulatory Studies and Mercatus pieces; no URL was recorded for the search, so the agency page is listed here as a placeholder.",
         "result": "does_not_support",
         "url": "https://www.whitehouse.gov/omb/information-regulatory-affairs/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the OMB list on 2026-10-19: heading Agency Rule List - 2026, 12 rules; none concerns OIRA funding, staffing or regulatory advance teams. Funding and staffing are set by appropriations and internal decisions, so the agenda is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0348"
       }
     ]
   },
@@ -149,6 +159,6 @@
   "timeline": [],
   "title": "Raise OIRA funding and staff regulatory advance teams, separate from reviewers",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: the researcher's query on regulatory advance teams returned no documents since 2025-01-20, and a reviewer rerun on the Office of Information and Regulatory Affairs with staffing returned 675 loosely matched documents whose most recent page held only unrelated rulemakings that name OIRA as a comment destination; no document on OIRA funding, staffing or advance teams was seen, though only the first page of results was examined. (2) Unified Agenda: the reginfo.gov landing page was reached but agenda items could not be listed, so only the Federal Register fallback was used; an internal staffing matter would not normally appear there in any case. (3) congress.gov and govinfo: one search surfaced a CRS overview of OIRA and FY2026 appropriations bills, with no bill on OIRA advance teams or a dedicated OIRA funding increase; appropriation line amounts for OMB and the OMB budget justifications for FY2026 and FY2027 were not examined. (4) Agency pages: the OIRA page on whitehouse.gov did not load, so no agency statement was seen. (5) News: one search returned only older think-tank and CRS pieces. OIRA staffing levels therefore remain unknown and the not_started finding rests on absence in these checks.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No source reports an increase in OIRA funding or staffing, or the creation of early-engagement regulatory advance teams, since 2025-01-20. Federal Register searches found no document on OIRA staffing or advance teams, though a loose query was read only on its first page; a congress.gov and govinfo search found no bill on advance teams, and OMB appropriation lines and budget justifications for FY2026 and FY2027 were not examined; the whitehouse.gov OIRA page did not load; one news search returned only older commentary. The OMB list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 12 rules) holds no related entry. OIRA staffing levels remain unknown. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

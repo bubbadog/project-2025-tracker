@@ -2,9 +2,9 @@
   "agency": "Department of State; National Security Council",
   "blockers": [],
   "chapter": "06",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Text checked and the National Security Strategy PDF fetched and read in summary; the stage also rests on the absence of a China-specific paper after a limited search, which caps confidence in the low band.",
+  "confidence": 56,
+  "confidence_label": "medium",
+  "confidence_reason": "The National Security Strategy, the only candidate document, was read twice on the White House host and confirms a general strategy with a China section and no China-specific assessment or tasking; the stage also rests on the absence of a separate paper after a limited search, so medium at the low end.",
   "durability": {
     "level": "low",
     "why": "A strategy document is an executive statement that a later administration can replace."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review (primary-source lift) re-read the National Security Strategy on whitehouse.gov and confirmed no China-specific assessment or drafting direction. No stage change (proposed 10); confidence 50 to 56."
     }
   ],
   "id": "c06-20",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -51,24 +55,19 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Judgment call: proposed 10 (parallel) on a general strategy document; not_started 0 would also be defensible because the NSS is not a China-specific paper.",
-      "Mechanism changed from executive_order to agency_action because the step is a strategy document drafted by State and the NSC, not an order."
+      "No stage change: proposed 10, match parallel. not_started 0 is a defensible alternative since no China-specific document was found.",
+      "Confidence 50 low to 56 medium."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 179 says the President should use State to reassess and lead a cost-imposing China effort and that State, with the NSC, should draft a presidentially mandated Article X, a deeply philosophical look at the China challenge.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (179) and proposal fields: State with the NSC should draft an Article X for China, a presidentially mandated, philosophical assessment of PRC and CCP designs modeled on the 1947 X article, underpinning a cost-imposing strategy. Chapter text not available this run; page not re-checked.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "PDF cover dated November 2025; China treated in the Asia section (rebalance the economic relationship), no standalone China strategy; Hormuz and Red Sea named as core interests, no regional pact; Africa shift from aid to investment favoring capable, reliable states; India and Quad named, Pakistan only as party to a peace deal with India, Afghanistan not mentioned; Western Hemisphere nearshore manufacturing and energy infrastructure with regional partners; offensive cyber, no international norms framework. Checked 2026-10-15.",
-        "result": "supports",
+        "note": "Fetched 2026-10-18 (stage-deciding): China treated within the Asia section; no standalone China strategy, no State or NSC drafting direction, no cost-imposition term. A general strategy only, supporting a parallel match at the low end of proposed.",
+        "result": "partial",
         "url": "https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Security-Strategy.pdf"
-      },
-      {
-        "note": "Law firm alert dated 2025-12-09 states the White House released the strategy on 2025-12-04. Checked 2026-10-15.",
-        "result": "supports",
-        "url": "https://www.bhfs.com/insight/white-house-releases-2025-national-security-strategy/"
       }
     ]
   },
@@ -129,6 +128,6 @@
   ],
   "title": "Draft a presidentially mandated 'Article X' strategy paper on the China challenge",
   "tracked": true,
-  "uncertainties": "The release date of 2025-12-04 rests on a law firm alert; the PDF itself is dated November 2025. The strategy text was read through a fetch summary, which found no standalone China strategy and no use of the phrase cost imposition. One search of general news for an Article X style China document found only think-tank material from earlier years, so a non-public or classified China strategy cannot be ruled out. A congressional reporting requirement for a China strategy was not searched. Judgment: a general strategy with a China section is treated as a parallel step at the low end of proposed; not_started would also be defensible.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The strategy PDF on whitehouse.gov was re-read by the researcher and again in review (2026-10-18) through a summarizing fetch tool; both reads found no standalone China strategy, no direction to State or the NSC to draft one and no use of the phrase cost imposition, and the only NSC tasking found concerns Western Hemisphere strategic points. The release date of 2025-12-04 rests on a law firm alert; the cover is dated November 2025. Page references for the Asia section (about pp. 19 to 24) are inferred from extracted page markers. A non-public or classified China strategy cannot be ruled out, and congressional reporting requirements for a China strategy were not searched. state.gov was not checked for a China strategy page and dni.gov is blocked from this environment. Judgment: a general strategy with a China section is a parallel step at the low end of proposed; not_started would also be defensible.",
+  "updated_at": "2026-10-18"
 }

@@ -2,9 +2,9 @@
   "agency": "DOT / FAA",
   "blockers": [],
   "chapter": "19",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Three FAA orders were read on federalregister.gov, but not_started rests on Federal Register listings without a Unified Agenda check and is capped at 50.",
+  "confidence": 70,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence of a slot allocation rulemaking rests on five documented checks: (1) Federal Register API queries (FAA slot allocation airports, slot rule variants, slot allocation or slot pairs across agencies) found only orders, extensions, notices and an exemption (supports); (2) Unified Agenda: the DOT rule list on reginfo.gov was read in full on 2026-10-19 with no slot entry (supports, directly informative because the recommendation is a rulemaking); (3) congress.gov and GovInfo search with the S. 5387 text read found a statutory DCA bill that directs no allocation rulemaking (supports); (4) the FAA newsroom showed no slot item (supports); (5) one news search found only the LaGuardia exemption and older items (supports). The JFK extension notice and LaGuardia exemption were read. All five checks are documented and informative, so confidence reaches the 70 ceiling.",
   "durability": {
     "level": "low",
     "why": "Orders are temporary and expire; no allocation rule exists."
@@ -26,10 +26,18 @@
     {
       "date": "2026-10-16",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review reran a Federal Register API check on federalregister.gov, read the JFK extension and LaGuardia exemption there and the S. 5387 text on govinfo.gov; two context events added, no stage change (not_started, 0). Confidence 50 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the DOT Unified Agenda rule list on reginfo.gov and found no slot rulemaking; not_started kept and confidence raised from 62 to 70."
     }
   ],
   "id": "c19-18",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -47,31 +55,58 @@
   "research_agent": "R1920",
   "restates_ids": [],
   "review": {
-    "document_reread": {
-      "citation": "FAA LaGuardia slot exemption, Federal Register 2026-20664",
-      "note": "No allocation rulemaking proposed.",
-      "result": "supports",
-      "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20664/petition-for-exemption-of-the-terms-of-the-order-limiting-scheduled-operations-at-laguardia-airport"
-    },
-    "flags": [
-      "Confidence capped at 50 for not_started (draft 65).",
-      "Named the searches performed in uncertainties."
-    ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 631 recommends initiating a rulemaking to allocate slot pairs more consistently at capacity-controlled airports, primarily on safety, maximizing capacity and competition, and notes slot rules date from the 1990s. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "V1-1016",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 631), the text asks for a rulemaking to allocate slot pairs at capacity-controlled airports primarily on safety, capacity and competition, noting rules unchanged since the 1990s. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Extension of the LaGuardia order (draft reading; not re-fetched in review).",
+        "note": "2026-10-18 (reviewer variant): all agencies and types since 2025-01-20: 0 documents.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12592/operating-limitations-at-new-york-laguardia-airport"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22slot+allocation%22+OR+%22slot+pairs%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Read in review; single-transaction relief; mentions future rulemaking only in general terms.",
+        "note": "2026-10-18 (researcher): 12 FAA orders, extensions, notices and an exemption; no allocation rulemaking.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22slot%22+allocation+airports&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=federal-aviation-administration"
+      },
+      {
+        "note": "2026-10-18: landing page only; the FAA proposed-rule fallback query was rejected for URL length, so the all-types query stands in.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: reviewer read the text: DCA Air Safety Act, introduced 2026-09-14, statutory DCA arrival cap and exemption cuts; no allocation rulemaking. BILLSTATUS fetch failed.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLS/119/2/s/BILLS-119s5387is.xml"
+      },
+      {
+        "note": "2026-10-18: reviewer read: unchanged extension to 2028-10-28 effective 2026-10-25; rulemaking only under consideration.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12591/operating-limitations-at-john-f-kennedy-international-airport"
+      },
+      {
+        "note": "2026-10-08 document read by the reviewer on 2026-10-18: single 22-slot transfer exemption with conditions; rulemaking comments deferred.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20664/petition-for-exemption-of-the-terms-of-the-order-limiting-scheduled-operations-at-laguardia-airport"
+      },
+      {
+        "note": "2026-10-18 (researcher): no slot item.",
+        "result": "supports",
+        "url": "https://www.faa.gov/newsroom"
+      },
+      {
+        "note": "2026-10-18 (researcher news search): top result was the LaGuardia exemption public inspection copy; no news of a slot allocation rulemaking.",
+        "result": "supports",
+        "url": "https://public-inspection.federalregister.gov/2026-20664.pdf"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "DOT list headed 'Agency Rule List - 2026' (agency named Department of Transportation), read by the reviewer on 2026-10-19 to the footer across two fetch pages (offset 0 and 100000); the page shows no total, and the sub-agency counts seen were OST 31, FAA 36, FRA 28 on the second page plus others on the first, FTA 14, MARAD 11, SLSDC 2 and PHMSA 45. No OST or FAA title mentions slots, the High Density Rule, capacity-controlled airports or slot allocation; FAA entries include 2120-AA66 Airspace Actions and 2120-AL86 passenger facility charge updates. Directly informative, since the recommendation is a rulemaking.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2100"
       }
     ]
   },
@@ -124,10 +159,31 @@
       "publisher": "Federal Register",
       "title": "Operating Limitations at New York LaGuardia Airport",
       "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12592/operating-limitations-at-new-york-laguardia-airport"
+    },
+    {
+      "date": "2026-06-23",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Operating Limitations at John F. Kennedy International Airport",
+      "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12591/operating-limitations-at-john-f-kennedy-international-airport"
+    },
+    {
+      "date": "2026-10-08",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Petition for Exemption of the Terms of the Order Limiting Scheduled Operations at LaGuardia Airport",
+      "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20664/petition-for-exemption-of-the-terms-of-the-order-limiting-scheduled-operations-at-laguardia-airport"
+    },
+    {
+      "date": "2026-09-14",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S. 5387, DCA Air Safety Act (introduced in Senate)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLS/119/2/s/BILLS-119s5387is.xml"
     }
   ],
   "stage": "not_started",
-  "status_summary": "No FAA or DOT rulemaking to reform slot allocation was found; the Federal Register search for slot actions since 2025-01-20 returned orders and notices only. The FAA issued interim and then targeted scheduling-limit orders at Newark in 2025 (published 2025-05-23 and 2025-06-10), a scheduling-limit order at Chicago O'Hare published 2026-04-20 effective 2026-05-17 to 2026-10-24, and on 2026-06-23 published an extension of the LaGuardia order to 2028-10-28 with no changes. These are capacity and extension orders, not a slot allocation rulemaking.",
+  "status_summary": "No FAA or DOT rulemaking to reform slot allocation was found; Federal Register searches for slot actions since 2025-01-20 returned orders, extensions, notices and an exemption only. The FAA issued scheduling-limit orders at Newark in 2025 (published 2025-05-23 and 2025-06-10) and at Chicago O'Hare (published 2026-04-20), and on 2026-06-23 published unchanged extensions of the LaGuardia and JFK orders to 2028-10-28, the JFK notice saying the FAA will continue to consider potential rulemaking to codify slot-control policies. On 2026-10-08 the FAA granted an exemption letting Spirit transfer 22 LaGuardia slots to JetBlue with conditions. These are capacity, extension and exemption actions, not a slot allocation rulemaking.",
   "timeline": [
     {
       "date": "2025-06-10",
@@ -149,10 +205,24 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12592/operating-limitations-at-new-york-laguardia-airport"
+    },
+    {
+      "date": "2026-06-23",
+      "event": "FAA published an extension of the order limiting operations at John F. Kennedy International Airport to 2028-10-28, effective 2026-10-25, with no substantive changes; the notice says the FAA will continue to consider potential rulemaking to codify policies for slot-controlled airports.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12591/operating-limitations-at-john-f-kennedy-international-airport"
+    },
+    {
+      "date": "2026-10-08",
+      "event": "FAA published a grant of a JetBlue and Spirit petition for exemption at LaGuardia permitting Spirit to transfer 22 slots to JetBlue, with no trade or lease until after April 2028 and a use-or-lose waiver through April 2027; it is a single-transaction exemption, not an allocation rulemaking.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20664/petition-for-exemption-of-the-terms-of-the-order-limiting-scheduled-operations-at-laguardia-airport"
     }
   ],
   "title": "Rulemaking to allocate airport slot pairs on safety, capacity and competition",
   "tracked": true,
-  "uncertainties": "Searches performed: Federal Register API term searches for FAA slot documents since 2025-01-20 (31 results; the first page and part of the second were reviewed) and reading of the Newark, O'Hare and LaGuardia orders; no web search. Slot usage waivers, extension orders and the 2026-10-08 LaGuardia exemption for a single slot transfer are not an allocation rulemaking. The JFK order text was not read and the Unified Agenda was not checked, so a planned slot rulemaking could be listed there; the 2026-10-08 FAA exemption says the agency will consider certain slot concerns in future rulemaking, without dates.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "No FAA or DOT slot allocation rulemaking was found. FAA actions since 2025 are scheduling orders at Newark and O'Hare, unchanged extensions of the LaGuardia and JFK orders to 2028-10-28 and a 2026-10-08 LaGuardia slot transfer exemption; the JFK notice says rulemaking to codify slot policy remains under consideration, which is a statement, not an action. The DOT Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026', read in full) lists no slot rulemaking. The S. 5387 bill status file could not be fetched, so later actions on that bill were not confirmed. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -1,18 +1,19 @@
 {
   "agency": "Securities and Exchange Commission",
   "blockers": [
-    "Requires legislation; no vehicle found"
+    "Requires legislation; H.R.9329 has cleared committee only, with a 28 to 23 vote, and no Senate companion was found",
+    "No bill limiting the length of SEC investigations was found"
   ],
   "chapter": "27",
-  "confidence": 38,
-  "confidence_label": "low",
-  "confidence_reason": "Absence rests on a few web searches and an OIG title list; not a systematic bill review.",
+  "confidence": 72,
+  "confidence_label": "medium",
+  "confidence_reason": "The stage rests on H.R.9329, whose introduced text and bill status were read on govinfo.gov; the amended committee text was not available, which keeps confidence medium. The absence of a two-year investigation limit rests on the five systematic checks documented on 2026-10-18: Federal Register API (research terms plus a reviewer variant); Unified Agenda, partial, via the SEC proposed-rule fallback; congress.gov and govinfo search (research and reviewer) with BILLSTATUS for H.R.9329 and H.R.216; SEC press releases and the OIG report list; one news search.",
   "durability": {
     "level": "high",
     "why": "A statute would be durable, but none exists."
   },
   "est_completion": {
-    "basis": "Inference: no bill or committee interest was found.",
+    "basis": "Inference: the GAO audit provision sits in a broad committee-approved bill without a Senate companion found, about two and a half months before the end of the 119th Congress, and no vehicle exists for the investigation time limit.",
     "window": "unlikely this term"
   },
   "headline": false,
@@ -28,50 +29,101 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check and independent review: the govinfo.gov bill status and introduced text of H.R.9329 were read, with a federalregister.gov API variant, govinfo.gov status for H.R.216 and the sec.gov press page; stage changed from not_started 0 to proposed 10 (match direct to partial) on H.R.9329 Sec. 301; confidence 38 to 72."
     }
   ],
   "id": "c27-09",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
-  "match": "direct",
+  "match": "partial",
   "mechanism": "legislation",
   "pages": [
     833
   ],
   "position": "SEC Administration",
-  "progress": 0,
+  "progress": 10,
   "proposal": "The Mandate recommends that Congress require an Inspector General or GAO report on SEC information technology spending and contracting, which the chapter says appears too high and poorly managed. It also recommends a statutory two-year limit on SEC investigations with no extensions.",
   "related_ids": [
     "c27-07"
   ],
   "remaining": [
-    "Statutory two-year cap on investigations",
-    "IG or GAO report on SEC IT spending and contracting"
+    "Statutory two-year cap on SEC investigations with no extensions (no bill found)",
+    "Enactment of an IG or GAO report on SEC IT spending and contracting (H.R.9329 Sec. 301 ordered reported by committee 2026-06-30; not passed by either chamber)"
   ],
   "requires_congress": "yes",
   "research_agent": "N27",
   "restates_ids": [],
   "review": {
     "flags": [
-      "not_started confirmed",
-      "Removed the 116th Congress news item, which is not evidence on this record",
-      "Added the Chairman's announced technology and contract review as context, not an event"
+      "Stage change: not_started 0 to proposed 10; match direct to partial. H.R.9329 Sec. 301 (introduced 2026-06-18, ordered reported 28 to 23 on 2026-06-30) is a direct match to the GAO report element (IT spending comparison and IT contracting quality), so the bill is a partial match to the two-part recommendation, not parallel.",
+      "Progress set at 10 rather than the research pass's 8 to reflect committee approval; defensible alternative proposed 8.",
+      "The two-year investigation limit appears nowhere in H.R.9329 (the 'two years' passages are PCAOB transition provisions) and in no other bill found.",
+      "The amended committee text of H.R.9329 is not on govinfo.gov; Sec. 301 was read only in the introduced version.",
+      "Confidence 38 to 72: the stage-deciding bill was read on govinfo.gov, but the amended text is unavailable and the absence of an investigation-limit bill rests on systematic checks."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 833, SEC Administration (Congress bullets): require an IG or GAO report on SEC IT spending and contracting, and limit investigations by statute to two years with no extensions. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 833, Congress recommendations under SEC administration), the Mandate asks Congress to require an IG or GAO report on SEC IT spending and contracting and to limit SEC investigations by statute to two years with no extensions. An earlier review (2026-10-14) confirmed this paraphrase against the page; the chapter text was not available to this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (systematic absence check)",
     "source_checks": [
       {
-        "note": "Listing read; reports from 2025-03-11 to 2026-09-28; none is a review of IT spending and contracting. Checked 2026-10-14.",
-        "result": "supports",
-        "url": "https://www.sec.gov/oig/issued-reports"
+        "note": "2026-10-18 (stage-deciding document, reviewer read on govinfo.gov): introduced text of H.R.9329. Sec. 301 (Title III, SEC Cybersecurity) requires the Comptroller General, within one year of enactment, to audit SEC IT infrastructure and data handling, covering (A) SEC IT spending compared with other federal financial regulators, (B) the quality and effectiveness of SEC IT contracting, (C) data and cybersecurity systems and (D) recent IT incidents, with a report to the SEC and the House and Senate committees. This matches the GAO report element of the recommendation. No time limit on SEC investigations appears anywhere: the 'two years' references are PCAOB transfer provisions in Title V (Secs. 501(d), 509, 511), and Sec. 801 concerns counting violations. No inspector general role. Partial match to the recommendation as a whole.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr9329ih/html/BILLS-119hr9329ih.htm"
       },
       {
-        "note": "2025-05-06 remarks mention a review of technology infrastructure and contracts; internal, not a statutory report. Checked 2026-10-14.",
+        "note": "2026-10-18 (reviewer read for check 3): BILLSTATUS shows introduction 2026-06-18 (sponsor a Republican member from Missouri), referral to Financial Services, markup and order to report as amended by yeas and nays 28 to 23 on 2026-06-30, and no later action. Only the introduced text version is listed; the amended committee text is not on govinfo.gov, so whether the amendment changed Sec. 301 was not verified. Related bills listed: H.R.9434 (REG Act of 2026) and H.R.216 (SEC Act of 2025).",
         "result": "partial",
-        "url": "https://www.sec.gov/newsroom/speeches-statements/atkins-townhall-05062025"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9329.xml"
+      },
+      {
+        "note": "2026-10-18 (reviewer fetch): H.R.216, SEC Act of 2025 (Securities Enforcement Clarity Act), introduced 2025-01-07 and in committee; per its CRS summary it treats related violations as one for penalty purposes and has no investigation time limit or IT report.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr216.xml"
+      },
+      {
+        "note": "2026-10-18 (reviewer search, congress.gov and govinfo.gov only): query 'bill limit SEC enforcement investigations two years 119th Congress'. Results were H.R.216 and unrelated enforcement bills; no bill limiting SEC investigations to two years. The page itself was not fetched (congress.gov refuses fetches).",
+        "result": "supports",
+        "url": "https://www.congress.gov/bill/119th-congress/house-bill/216"
+      },
+      {
+        "note": "2026-10-18 (reviewer variant of check 1): term 'enforcement investigations', SEC, all document types, returned 4 notices (investor form information collections and Consolidated Audit Trail plan orders); none limits investigation length or reviews IT spending.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22enforcement+investigations%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=securities-and-exchange-commission"
+      },
+      {
+        "note": "2026-10-18 (reviewer fetch for check 4): first 25 releases (2026-09-01 to 2026-10-14) show nothing on investigation duration, enforcement process reform or an IT spending review.",
+        "result": "supports",
+        "url": "https://www.sec.gov/newsroom/press-releases"
+      },
+      {
+        "note": "Check 1 (research pass, 2026-10-18): SEC proposed rules matching 'investigations' (12 documents: market-structure, custody, reporting rules) and 'statute of limitations' with investigation (2 documents: Consolidated Audit Trail items), and 'information technology' with spending (47 documents, first 20 reviewed: rule proposals and information collections). None limits investigation length or reviews IT spending.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=investigations&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=securities-and-exchange-commission&conditions[type][]=PRORULE"
+      },
+      {
+        "note": "Check 2 (research pass, 2026-10-18): Fetched the Unified Agenda entry page; it is an agency selector and links page with no items listed (script-driven). Fallback used, so the check is partial: the SEC proposed-rule query above. The record also cites the SEC Office of Inspector General issued-reports list in its existing sources.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Check 3 (research pass, 2026-10-18): search (congress.gov, govinfo.gov): '119th Congress bill SEC investigations two-year limit; SEC information technology spending GAO report'. Found H.R.9329 SEC Reform and Restructuring Act (Rep. Wagner; introduced 2026-06-18; House Financial Services ordered reported as amended 28-23 on 2026-06-30). Bill text (introduced version, govinfo BILLS-119hr9329ih) Title III Sec. 301 directs the Comptroller General to audit SEC IT infrastructure, including a comparison of SEC IT spending with other federal financial regulators. No two-year investigation limit found: Title VIII concerns the number of violations and the 'two years' references in Title V concern the PCAOB transfer. Companion Senate bill: none surfaced in the search; not otherwise verified. Also found H.R.6161 SEC Data Protection Act and S.4378, H.R.2069 (not on topic as shown). Reviewer: Reviewer read the BILLSTATUS and the introduced text and confirms Sec. 301 and the absence of a two-year investigation limit; result recorded as partial because the bill matches one of the two elements (the research pass labelled it does_not_support, meaning it contradicts the not_started stage).",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9329.xml"
+      },
+      {
+        "note": "Check 4 (research pass, 2026-10-18): SEC press releases (25 items, 2026-09-01 to 2026-10-14) show nothing on a cap on investigation duration or an IT spending review; the existing record cites the SEC OIG reports list.",
+        "result": "supports",
+        "url": "https://www.sec.gov/newsroom/press-releases"
+      },
+      {
+        "note": "Check 5 (research pass, 2026-10-18): query: 'SEC enforcement investigations time limit two years Atkins Wells process; SEC IT spending inspector general GAO'. Results covered the 2025-10-07 Wells process reforms (four-week Wells response period) and enforcement manual updates; none sets a two-year limit. Reviewer: Not rerun; the reviewer search was spent on check 3. The Wells process reforms announced 2025-10-07 set a response period, not a duration cap.",
+        "result": "supports",
+        "url": "https://www.stblaw.com/about-us/publications/view/2026/02/09/atkins-announces-procedural-reforms-for-sec-s-enforcement-program-(registered-funds-regulatory-update)"
       }
     ]
   },
@@ -117,13 +169,42 @@
       "publisher": "U.S. Securities and Exchange Commission",
       "title": "Opening Remarks at the SEC Town Hall",
       "url": "https://www.sec.gov/newsroom/speeches-statements/atkins-townhall-05062025"
+    },
+    {
+      "date": "2026-06-18",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R.9329, SEC Reform and Restructuring Act, introduced text",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr9329ih/html/BILLS-119hr9329ih.htm"
+    },
+    {
+      "date": "2026-06-30",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R.9329, SEC Reform and Restructuring Act, bill status",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9329.xml"
     }
   ],
-  "stage": "not_started",
-  "status_summary": "No 119th Congress bill limiting SEC investigations to two years or requiring an IG or GAO review of SEC IT spending was found in the searches run. The SEC Office of Inspector General's report list from 2025 through 2026-09-28 includes a 2025-06-24 management letter on consolidating disclosure review IT systems and a 2026-02-25 information security evaluation, neither of which is the IT spending and contracting review the Mandate describes. At a 2025-05-06 town hall the SEC Chairman mentioned a review of technology infrastructure and contracts, an internal step rather than the statutory report or time limit the Mandate asks Congress to require.",
-  "timeline": [],
+  "stage": "proposed",
+  "status_summary": "H.R.9329, the SEC Reform and Restructuring Act, was introduced on 2026-06-18, and the House Financial Services Committee ordered it reported as amended by 28 to 23 on 2026-06-30. In the introduced text, Sec. 301 directs the Comptroller General to audit SEC information technology within one year of enactment, including a comparison of SEC IT spending with other federal financial regulators and the quality and effectiveness of SEC IT contracting, which matches the report element of the recommendation. No provision limiting SEC investigations to two years was found in that text or in any other bill, and the SEC Office of Inspector General's report list through 2026-09-28 shows no IT spending and contracting review. At a 2025-05-06 town hall the SEC Chairman mentioned an internal review of technology infrastructure and contracts, which is not the statutory step the Mandate asks Congress to take.",
+  "timeline": [
+    {
+      "date": "2026-06-18",
+      "event": "H.R.9329, the SEC Reform and Restructuring Act, is introduced in the House and referred to the Committee on Financial Services; Sec. 301 of the introduced text directs a Comptroller General audit of SEC information technology, including a comparison of SEC IT spending with other federal financial regulators and the quality of SEC IT contracting. The text sets no time limit on SEC investigations.",
+      "kind": "primary",
+      "source": "GovInfo (bill text, introduced version)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr9329ih/html/BILLS-119hr9329ih.htm"
+    },
+    {
+      "date": "2026-06-30",
+      "event": "The House Committee on Financial Services holds a markup and orders H.R.9329 reported, as amended, by a recorded vote of 28 to 23; no reported text, report number or floor action appears in the bill status record.",
+      "kind": "primary",
+      "source": "GovInfo (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9329.xml"
+    }
+  ],
   "title": "Limit SEC investigations to two years and require an IG or GAO report on SEC IT spending",
   "tracked": true,
-  "uncertainties": "Researcher ran two searches; the reviewer ran one more web search on 2026-10-14 for a bill on SEC investigation time limits and found only pre-2025 material on statutes of limitations. The OIG report list was read by title only, and GAO work was not checked. A bill might exist under different wording. The Chairman's mention of a technology and contract review is an announcement and is not treated as an event.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Checked systematically on 2026-10-18. 1. federalregister.gov API searches since 2025-01-20 on SEC proposed rules matching investigations, statute of limitations and IT spending, and a reviewer variant on 'enforcement investigations' across all SEC document types, found nothing limiting investigation length or reviewing IT spending. 2. The reginfo.gov Unified Agenda page is script-driven and listed no items, so this check is partial and the SEC proposed-rule results on federalregister.gov were used as the fallback. 3. Two congress.gov and govinfo.gov searches (one in research, one in review) found H.R.9329, the SEC Reform and Restructuring Act; its govinfo.gov bill status shows introduction on 2026-06-18 and a 28 to 23 committee vote to report it as amended on 2026-06-30, and its introduced text on govinfo.gov contains the Sec. 301 GAO audit of SEC IT spending and contracting but no investigation time limit. H.R.216 (penalty counting) has no such limit per its CRS summary, and H.R.9434 (REG Act of 2026) was not opened. No Senate companion surfaced. 4. The sec.gov press release page (2026-09-01 to 2026-10-14) showed nothing related, and the SEC Office of Inspector General report list (read by title in an earlier pass, through 2026-09-28) shows no IT spending and contracting review. 5. A news search found the 2025-10-07 Wells process reforms, which set a response period and no duration cap. The amended committee text of H.R.9329 is not on govinfo.gov, so changes to Sec. 301 in markup were not verified. GAO work already under way on SEC IT was not checked. The Chairman's 2025-05-06 mention of an internal technology and contract review is an announcement and is not treated as an event.",
+  "updated_at": "2026-10-18"
 }

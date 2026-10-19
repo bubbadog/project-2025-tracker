@@ -2,9 +2,9 @@
   "agency": "Department of Labor (Office of Labor-Management Standards)",
   "blockers": [],
   "chapter": "18",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Absence of evidence; the rule's worker center discussion could not be located in the text read.",
+  "confidence": 65,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, worker centers appears only in a commenter summary in the 2026-06-01 OLMS rule (rerun 2026-10-19, same single document); (2) Labor Unified Agenda read directly on reginfo.gov on 2026-10-19, the two OLMS entries (1245-AA10, 1245-AA15) concern union report forms and thresholds, weakly informative because the recommendation calls for investigations and enforcement rather than a rule; (3) congress.gov and GovInfo, H.R. 4154 status read, texts not opened; (4) DOL newsroom, nothing; (5) one news search, nothing. Set at 65 because OLMS enforcement releases and bill texts were not searched.",
   "durability": {
     "level": "low",
     "why": "Enforcement posture toward particular organizations is discretionary and can change."
@@ -26,10 +26,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check and independent review: federalregister.gov API (reviewer variant) and govinfo.gov BILLSTATUS for H.R.4154 were read; status summary clarified on the 2026-06-01 rule; no stage change (not_started 0); confidence 40 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the Labor Unified Agenda list read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 62 to 65."
     }
   ],
   "id": "c18-26",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -50,20 +58,59 @@
   "research_agent": "R1718",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Pages corrected from 600 to 601 to 601 only: the worker center passage is on p. 601; p. 600 concerns union trust and Intermediate Bodies reporting (c18-19).",
-      "Stage not_started kept."
-    ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 601 asks DOL to investigate worker centers that look and act like unions and to bring enforcement actions requiring them to file the same financial disclosures.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 601), the Mandate asks DOL to investigate worker centers that function like unions and bring enforcement actions requiring them to file the annual financial disclosures that unions file. The chapter text was not available to this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: final rule published 2026-06-01, effective 2026-07-01, revises LM-2, LM-3 and LM-4; no mention of worker centers in the parts returned; not an action on this recommendation.",
-        "result": "does_not_support",
-        "url": "https://www.federalregister.gov/documents/2026/06/01/2026-10849/labor-organization-annual-financial-reports"
+        "note": "2026-10-18 (reviewer variant of check 1): term 'worker centers', all agencies, returned 1 document: the OLMS Labor Organization Annual Financial Reports final rule (2026-06-01). The search excerpt shows the phrase only in a commenter summary urging DOL to require worker centers to file financial disclosures; the excerpt does not show DOL adopting it. Nothing qualifying.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22worker+centers%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (reviewer fetch for check 3): BILLSTATUS confirms H.R.4154, Employee Rights Act, introduced 2025-06-26 and referred to Education and Workforce and Judiciary with no later action; no summary or text in the record and no mention of worker centers. Not shown to qualify.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr4154.xml"
+      },
+      {
+        "note": "Check 1 (research pass, 2026-10-18): terms 'worker center' (0 documents) and 'worker centers' limited to the Labor-Management Standards Office (1 document: Labor Organization Annual Financial Reports final rule, 2026-06-01, which revises union forms LM-2, LM-3, LM-4 and does not address worker centers). A 'Federal Election Campaign Act' hit for the same rule is a keyword artifact.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22worker+centers%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=labor-management-standards-office"
+      },
+      {
+        "note": "Check 2 (research pass, 2026-10-18): Fetched the Unified Agenda entry page; it is an agency selector and links page with no items listed (script-driven). Fallback used, so the check is partial: the LMSO-limited query above.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Check 3 (research pass, 2026-10-18): search (congress.gov, govinfo.gov): '119th Congress bill worker centers labor organization LMRDA reporting disclosure'. Found H.R.4154 Employee Rights Act (introduced 2025-06-26, referred to Education and Workforce and Judiciary; BILLSTATUS has no summary or text, and worker centers are not mentioned in it), S.3114 Union Members Right to Know Act, H.R.20 and S.852 PRO Act, S.3396, H.R.4954, H.R.6141. Bill texts other than as listed were not opened, so a worker-center provision in them is not excluded. Reviewer: BILLSTATUS refetched and confirmed; the search was not rerun (search cap).",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr4154.xml"
+      },
+      {
+        "note": "Check 4 (research pass, 2026-10-18): DOL newsroom page showed no release on worker centers or an OLMS investigation. A search result for the OLMS civil enforcement page (dol.gov/agencies/olms/civil-enforcement) was not fetched.",
+        "result": "supports",
+        "url": "https://www.dol.gov/newsroom/releases"
+      },
+      {
+        "note": "Check 5 (research pass, 2026-10-18): query: 'Labor Department worker centers investigation OLMS LM-2 reporting unions 2026'. Results were a law-firm blog on worker centers, a 2024-10-17 House committee letter to DOL about worker centers, and OLMS reporting rule material; no DOL investigation reported. (Law-firm blog and committee letter are leads only.) Reviewer: Not rerun (search cap).",
+        "result": "supports",
+        "url": "https://btlaw.com/en/insights/blogs/is-it-a-union-that-is-the-question"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The Department of Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 115 rules) was read in full on 2026-10-19; the two OLMS entries, Labor Organization Annual Financial Reports (1245-AA10, final projected 07/00/2026) and Filing Thresholds for Forms LM-2, LM-3 and LM-4 (1245-AA15, final projected 10/00/2026), concern union report forms and thresholds and do not mention worker centers. Investigations and enforcement would not appear on the agenda, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1200"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: one document, the 2026-06-01 OLMS Labor Organization Annual Financial Reports rule, where the phrase appears in a summary of commenters urging worker-center disclosures.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22worker+centers%22&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -105,10 +152,10 @@
     }
   ],
   "stage": "not_started",
-  "status_summary": "No DOL investigation, enforcement action or rule directed at worker centers was found. The Office of Labor-Management Standards published a final rule on 2026-06-01, effective 2026-07-01, revising union annual financial report forms LM-2, LM-3 and LM-4; a Federal Register full-text search matched the phrase worker centers in that document, but the portions of the rule text read did not show the phrase or any Department position on worker centers.",
+  "status_summary": "No DOL investigation, enforcement action or rule directed at worker centers was found. The Office of Labor-Management Standards published a final rule on 2026-06-01, effective 2026-07-01, revising union annual financial report forms LM-2, LM-3 and LM-4; the phrase worker centers appears in that document only in a summary of public comments urging DOL to require worker centers to file disclosures, and the rule does not adopt such a requirement.",
   "timeline": [],
   "title": "Investigate worker centers as labor organizations and require financial disclosures",
   "tracked": true,
-  "uncertainties": "Absence-of-evidence finding. The rule text is long and the fetch tool returned it in parts; in review both parts were searched for the phrase worker centers without a match, so where the full-text search hit lies was not established. Checks run: Federal Register API full-text search for worker centers since 2025-01-20 (one document); two WebSearches (one by the researcher that returned commentary and a 2024 congressional letter, one in review on OLMS and worker centers that returned only the LM-2 rule pages and commentary), and fetches of the rule. OLMS enforcement releases and criminal enforcement actions were not searched individually.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No DOL investigation, enforcement action or rule directed at worker centers was found. The Labor Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) lists two OLMS union-report items, neither on worker centers; investigations and enforcement would not appear there. The 2026-06-01 OLMS rule mentions worker centers only in a summary of commenters and does not adopt a requirement. OLMS enforcement releases and individual actions were not searched one by one, and the texts of H.R. 4154 and other labor bills were not opened, so a worker-center provision is not excluded. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

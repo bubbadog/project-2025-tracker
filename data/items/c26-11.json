@@ -4,9 +4,9 @@
     "The administration relies on country-wide and sector-wide tariffs as its main trade tool"
   ],
   "chapter": "26",
-  "confidence": 62,
+  "confidence": 63,
   "confidence_label": "medium",
-  "confidence_reason": "The Entity List rules, the affiliates rule and its suspension, and Executive Order 14257 were read in the Federal Register. Five checks documented on 2026-10-18: (1) a Federal Register search of BIS Entity List documents found only national security listings (partial); (2) the BIS proposed-rule listing returned zero and the agenda listing could not be browsed; (3) a congress.gov and GovInfo search, with S. 330 read in review, found one introduced firm-level IP-theft sanctions bill; (4) USTR, Treasury and BIS newsrooms showed no firm-specific unfair-trade action; (5) a news search found only a pending report. Held at 62 because the stage is a judgment call and S. 330 points toward the recommendation.",
+  "confidence_reason": "The Entity List rules, the affiliates rule and its suspension, and Executive Order 14257 were read in the Federal Register. Five documented checks: (1) a Federal Register search of BIS Entity List documents found only national security listings (partial); (2) Unified Agenda: the Commerce, Treasury and USTR lists on reginfo.gov were read on 2026-10-19 and two BIS entries opened; Entity List entries state no unfair trade basis (partial; informative for BIS listings, not for tariffs or designations); (3) congress.gov and GovInfo search with S. 330 read found one introduced firm-level IP-theft bill (partial); (4) USTR, Treasury and BIS newsrooms showed no firm-specific unfair-trade action (supports); (5) one news search found only a pending report (partial). Set at 63 because the stage is a judgment call and S. 330 points toward the recommendation.",
   "durability": {
     "level": "medium",
     "why": "Entity List actions are agency rules that can be revised; the bilateral truce can change which are in force."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Diverged kept; an introduced firm-level IP-theft sanctions bill added to the timeline and named as the alternative; confidence held at 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Commerce, Treasury and USTR Unified Agenda lists and two Entity List entries on reginfo.gov; diverged kept and confidence raised from 62 to 63."
     }
   ],
   "id": "c26-11",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -58,19 +62,15 @@
   "research_agent": "N26",
   "restates_ids": [],
   "review": {
+    "alternative": "In_progress with a partial match is defensible if continuing firm-level Entity List actions are weighed; proposed 5 if S. 330 is counted.",
     "flags": [
-      "Stage changed from in_progress 30 to diverged: the dominant approach is the blanket tariff the essay opposes, and the firm-level listings cite security, not unfair trade",
-      "Title shortened slightly",
-      "Affiliates rule suspension now sourced to the Federal Register instead of a law firm note",
-      "Removed the Arrow Electronics removal event as not bearing on the recommendation",
-      "Confidence 62",
-      "V7 systematic-check review: diverged 0 kept; S. 330, seen by the researcher by title only, was read and is an introduced firm-level IP-theft sanctions bill, added as a timeline event without a stage change because the operative policy remains blanket tariffs. Alternative: proposed 5 on S. 330. Confidence held at 62 rather than the suggested 65."
+      "The 0694-AK11 agenda timetable lists the affiliates interim final rule as effective 11/10/2026, the day after the suspension ends; the record's statement that the suspension ends 2026-11-09 unless extended should be re-checked after that date."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 815, China strategy (Lassman): use a target, not a blanket; act against individual Chinese firms known for unfair practices such as IP theft rather than sector-wide tariffs or barriers. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Checked 2026-10-14. 90 FR 14046, effective 2025-03-25; 11 China entities, 1 Taiwan; military, AI and supercomputer reasons; no IP theft.",
@@ -126,6 +126,36 @@
         "note": "Reviewer re-check, 2026-10-18: BIS, Entity List China, since 2025-01-20: count 15; listings rest on national security or foreign policy grounds and none cites intellectual property theft or unfair trade practices; confirms the researcher's result.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Entity+List+China&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=industry-and-security-bureau"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Commerce list headed 'Agency Rule List - 2026' (176 rules, including 17 BIS and 2 ITA entries, read to the footer by the reviewer on 2026-10-19): BIS Entity List entries 0694-AJ23 (Export Controls on Semiconductor Manufacturing Items; Entity List Modifications), 0694-AK11, 0694-AK34 (one-year suspension of the affiliates rule) and 0694-AK42 (Revisions to the Entity List); no title cites intellectual property theft or unfair trade practices.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0600"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Detail page read: Final Rule Stage, final action 07/00/2026; revises the Entity List; states no country, grounds, intellectual property theft or unfair trade basis.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0694-AK42"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Detail page read: interim final rule addressing diversion concerns for affiliates of listed entities; timetable lists the 2025-09-30 action (90 FR 47201) and an interim final rule effective 11/10/2026 after the suspension; no intellectual property or unfair trade basis.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0694-AK11"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages): no OFAC entry on Chinese firms; sanctions designations are not agenda items.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "USTR code 3290 page read by the reviewer: heading 'Agency Rule List - 2026', no agency named and zero rules; USTR trade actions do not appear in the agenda, so this list is not informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3290"
       }
     ]
   },
@@ -242,6 +272,6 @@
   ],
   "title": "Target individual Chinese firms for unfair practices instead of blanket sector tariffs",
   "tracked": true,
-  "uncertainties": "This is a judgment call: firm-level Entity List actions against Chinese companies continue, so a reader could stage the record in_progress with a partial match; it is staged diverged because the essay's central ask is to use firm targeting instead of blanket tariffs, and those listings cite national security rather than unfair trade practices. Only a few Entity List rules were read; others in 2025 and 2026 (including removals such as Arrow Electronics entries on 2026-08-21) were not reviewed. OFAC designations of Chinese firms were not searched. The affiliates rule suspension ends on 2026-11-09 unless extended. The first-term practice the essay cites was not checked. Checked systematically on 2026-10-18: Federal Register search of BIS Entity List documents, the BIS proposed-rule listing (zero; agenda listing not browsable), a congress.gov and GovInfo search, USTR, Treasury and BIS newsrooms, and one news search found no executive action targeting firms on grounds of intellectual property theft or unfair trade practices; Entity List actions found are national security listings, and USTR's December 2025 semiconductor action again targets a sector. One introduced bill points toward the recommendation: S. 330 (introduced 2025-01-30, referred to the Senate Foreign Relations Committee) would require the President to block the property of, and deny visas to, Chinese persons found to have engaged in or benefited from a pattern of significant theft of U.S. intellectual property; its bill status also lists a 2025-07-23 Senate Small Business Committee hearing. Diverged is kept because the operative policy remains the blanket measures the essay opposes; proposed 5 is the other defensible call if the bill is weighed as a step toward firm-level targeting.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "This is a judgment call: firm-level Entity List actions against Chinese companies continue, so in_progress with a partial match is defensible; diverged is kept because the essay's central ask is firm targeting instead of blanket tariffs and the listings cite national security, not unfair trade practices. Only a few Entity List rules were read and OFAC designations were not searched. S. 330, an introduced IP-theft sanctions bill, points toward the recommendation. The Commerce Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists Entity List entries (0694-AK42, 0694-AK11) that state no intellectual property or unfair trade basis; the 0694-AK11 timetable shows the affiliates rule taking effect 2026-11-10. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

@@ -7,7 +7,7 @@
   "chapter": "04",
   "confidence": 58,
   "confidence_label": "medium",
-  "confidence_reason": "CSIS and Reagan Institute analyses of the 2026 strategy agree on a one-war-plus construct; the strategy text itself was not read. Five checks documented on 2026-10-18: (1) a Federal Register search of Defense Department documents found nothing on force sizing; (2) the Unified Agenda listing could not be browsed and force sizing is not a rulemaking subject (partial); (3) a congress.gov and GovInfo search with bill status reads found H.R. 8800 with two-conflict munitions inventory provisions, House-passed only (partial); (4) Defense Department pages were blocked (partial); (5) news searches found no adoption of a two-war construct. Set to 58 because three checks are partial and the strategy text was not read.",
+  "confidence_reason": "Diverged rests on CSIS and Reagan Institute analyses of the 2026 strategy; the strategy text was not read. Five checks documented: (1) Federal Register API, supports; (2) Unified Agenda Department of War list read on 2026-10-19, supports but weakly informative for a strategy; (3) congress.gov and govinfo with BILLSTATUS and engrossed text of H.R. 8800, partial; (4) Defense pages, partial (blocked); (5) news searches, supports. Confidence stays at 58.",
   "durability": {
     "level": "medium",
     "why": "A strategy document is reversible by the Secretary, but force structure choices follow it over several budget cycles."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Diverged kept; House-passed munitions sufficiency language for two simultaneous conflicts judged not to be a force-sizing construct and added to the timeline; confidence lowered from 60 to 58."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the Department of War rule list in the reginfo.gov Unified Agenda (no entry on force sizing), kept diverged 0 and kept confidence at 58."
     }
   ],
   "id": "c04-29",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -65,20 +69,15 @@
   "research_agent": "N04",
   "restates_ids": [],
   "review": {
+    "alternative": "proposed 5 with a partial match if the House-passed two-conflict sufficiency language is read as a step toward the construct; not_started if the strategy's silence on force sizing is read as no decision.",
     "flags": [
-      "Stage kept at diverged 0: the strategy states a one-war-plus construct, materially different from the Mandate's two-war standard; not_started is the defensible alternative.",
-      "Stimson source date changed from the placeholder 2026-01-01 to undated; CSIS date 2026-01-27 confirmed on the page, so it is no longer an estimate.",
-      "Timeline event now cites the strategy itself (source copied from c04-08) instead of the CSIS commentary, with the construct attributed to CSIS.",
-      "Added c04-17 (Army two-contingency sizing) to related_ids. Duplicate check: c04-08 tracks sizing for a Taiwan scenario and allied burden-sharing, not a two-war construct; kept.",
-      "Confidence raised from 55 to 60: CSIS and Reagan Institute read; strategy text not read in this review.",
-      "V7 decision on H.R. 8800: diverged 0 kept. The two-simultaneous-conflict language governs torpedo and sonobuoy inventories in an unenacted bill and does not set a force-sizing construct or service scenarios; House passage added as a timeline event. Alternative: proposed 5 with a partial match if the sufficiency standard is read as a step toward a two-war construct; not_started remains the alternative on the strategy side.",
-      "Confidence 60 to 58: checks 2, 3 and 4 partial and the strategy text unread."
+      "Existing reviewer check of thelobbynews.com for S. 4784 is labeled does_not_support although its note reports no Senate passage; under the rubric it reads as supports or partial."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "p. 113, Air Force section, under Increase spending and budget accuracy in line with a threat-based strategy, item 1: adopt a two-war defense strategy with scenarios for each service so the Air Force can obtain needed resources through a force-sizing construct reflecting what strategic objectives require. Proposal matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Checked 2026-10-14: page dated 2026-01-27 (Cancian and Park); NDS keeps one-plus with the second conflict largely allied; acknowledges simultaneity; no force size, structure or posture figures.",
@@ -139,6 +138,12 @@
         "note": "Reviewer re-check, 2026-10-18: one news search (FY2027 NDAA two simultaneous conflicts force sizing); S. 4784 tracker shows a motion to proceed on 2026-07-27 and Senate passage pending; a contract-news report of 2026-07-23 confirms House passage only.",
         "result": "does_not_support",
         "url": "https://thelobbynews.com/congress/bills/119/senate-bill/4784"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the Department of War list on 2026-10-19: 111 rules; no title concerns force sizing, defense strategy or a two-war construct. Strategy documents are not issued by rulemaking, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0700"
       }
     ]
   },
@@ -241,6 +246,6 @@
   ],
   "title": "Adopt a two-war force-sizing construct with scenarios for each service",
   "tracked": true,
-  "uncertainties": "The strategy text could not be fetched in this review (the hosting site blocks the research tools); its source entry is copied from c04-08, which read it through a browser retrieval, and the posting date comes from the hosting address. Descriptions of the force-sizing construct come from CSIS (dated 2026-01-27) and the Reagan Institute (dated 2026-07-01), which agree that the strategy does not plan for two simultaneous wars; a Stimson Center analysis, whose page prints no date and is marked undated, says the strategy admits the United States cannot manage concurrent conflicts alone. Diverged is chosen because the stated construct is materially different from a two-war standard; not_started is an alternative if the strategy's silence on force sizing is read as no decision. The classified force-planning guidance is not public. Public Law 119-60 Sec. 364 (report on critical munitions for simultaneous conflicts) was seen only as a title. Checked systematically on 2026-10-18: Federal Register queries of Defense Department documents, the Unified Agenda landing page (not applicable to a strategy document), a congress.gov and GovInfo search with BILLSTATUS reads, Defense Department pages (blocked or unfetched), and one news search found no adoption of a two-war construct. H.R. 8800, the FY2027 defense authorization bill, passed the House 216 to 212 on 2026-07-22 and was received in the Senate on 2026-09-14; sections 130 and 255 direct torpedo and sonobuoy strategies sized to inventories for not fewer than two simultaneous regional conflicts. These are munitions-inventory planning assumptions in an unenacted bill, not a force-sizing construct or service scenarios, so the stage is unchanged; proposed 5 with a partial match is the other defensible call if a House-passed two-conflict sufficiency standard is read as a step toward the construct. The Senate bill (S. 4784) had a motion to proceed on 2026-07-27 and has not passed. The GovInfo engrossed text could be read only through section 133.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The 2026 National Defense Strategy keeps a one-war-plus construct according to CSIS and the Reagan Institute; the strategy text itself could not be fetched, and the classified force-planning guidance is not public. H.R. 8800, the FY2027 defense authorization bill, passed the House on 2026-07-22 with torpedo and sonobuoy strategies sized for two simultaneous regional conflicts; these are munitions-inventory assumptions in an unenacted bill, not a force-sizing construct. Federal Register searches found nothing; Defense pages were blocked; one news search found no adoption of a two-war construct. The Department of War list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 111 rules) holds no related entry, as expected for a strategy document. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

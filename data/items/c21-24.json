@@ -5,9 +5,9 @@
     "Statutory limits on Office rulemaking for AIA trials"
   ],
   "chapter": "21",
-  "confidence": 74,
-  "confidence_label": "medium",
-  "confidence_reason": "The USPTO rescission page, the 2025-10-17 Director memorandum, the backlog release and the fast-track notice were read, and a Federal Register query confirmed no final PTAB rule; judging balance and speed is partly interpretive.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "The proposed PTAB rule and its extension notice were read on federalregister.gov in review, the Director memorandum was read by the researcher and in the earlier review, and Federal Register API queries confirm no final rule; judging balance is partly interpretive.",
   "durability": {
     "level": "low",
     "why": "Memoranda and interim processes can be changed by a later Director; the proposed rule is not final."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-16",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: read the 2025-10-17 PTAB proposed rule and the 2025-11-07 extension notice on federalregister.gov and ran a Federal Register API check of USPTO final rules; added the extension as an event. No stage change (in_progress 40); confidence 74 to 80."
     }
   ],
   "id": "c21-24",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -54,51 +58,39 @@
   "research_agent": "R21",
   "restates_ids": [],
   "review": {
-    "document_reread": {
-      "citation": "USPTO Director memorandum of 2025-10-17",
-      "note": "Operative institution practice confirmed.",
-      "result": "supports",
-      "url": "https://www.uspto.gov/sites/default/files/documents/Director_Institution_of_AIA_Trial_Proceedings.pdf"
-    },
     "flags": [
-      "Staged against the text's ask (a balanced PTAB and rapid, transparent processing), not against USPTO reform generally.",
-      "Added the backlog report as a dated agency action and noted it is a statistic.",
-      "Softened the court-review blocker, which had no source.",
-      "Other defensible call: in_progress 45; lowered slightly because Director institution by summary notice weighs against transparency."
+      "No stage change: in_progress 40. in_progress 45 remains defensible; Director institution by summary notice weighs against transparency.",
+      "Added the 2025-11-07 comment-extension event; the researcher's 2026-07-22 ex parte reexamination proposal was not added because it concerns a different proceeding.",
+      "Citation note: the extension notice cites the proposal at 90 FR 48342 while the proposal page shows 90 FR 48335; the record uses 90 FR 48335.",
+      "Confidence 74 to 80 (high)."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 685 lists, among USPTO priorities, taking a balanced approach to the Patent Trial and Appeal Board and prioritizing rapid and transparent processing of applications and appeals. The paraphrase and page are correct.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "V2-1016",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (685) and proposal field, the text asks USPTO political leadership to take a balanced approach to the PTAB and to prioritize rapid and transparent processing of applications and appeals. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Rescission of the 2022 memorandum announced 2025-02-28.",
-        "result": "supports",
-        "url": "https://www.uspto.gov/about-us/news-updates/uspto-rescinds-memorandum-addressing-discretionary-denial-procedures"
+        "note": "Checked 2026-10-18: 90 FR 48335, RIN 0651-AD89, proposed 42.108(d) to (g) limits on IPR institution; comments due 2025-11-17. Proposed only, consistent with in_progress resting on operative guidance.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/10/17/2025-19580/revision-to-rules-of-practice-before-the-patent-trial-and-appeal-board"
       },
       {
-        "note": "Memo dated 2025-10-17, effective 2025-10-20; Director decides institution, summary notices.",
+        "note": "Checked 2026-10-18: 90 FR 50492, comment period extended to 2025-12-02.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2025/11/07/2025-19817/revision-to-rules-of-practice-before-the-patent-trial-and-appeal-board"
+      },
+      {
+        "note": "Run 2026-10-18: four USPTO final rules since 2025-10-01, none on PTAB practice. Supports that the PTAB rule is not final.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=patent-and-trademark-office&conditions[type][]=RULE&conditions[publication_date][gte]=2025-10-01&per_page=20&order=newest"
+      },
+      {
+        "note": "Read by the researcher 2026-10-18: memo of 2025-10-17, effective 2025-10-20; Director with at least three PTAB judges decides IPR and PGR institution by summary notice. The operative step that supports in_progress.",
         "result": "supports",
         "url": "https://www.uspto.gov/sites/default/files/documents/Director_Institution_of_AIA_Trial_Proceedings.pdf"
-      },
-      {
-        "note": "Pilot extended to 2028-05-06; four-month target; pendency about 8.5 months.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/05/06/2026-08798/extension-and-modification-of-the-fast-track-appeals-pilot-program"
-      },
-      {
-        "note": "776,995 as of 2026-04-06; peak 837,928 January 2025.",
-        "result": "supports",
-        "url": "https://www.uspto.gov/about-us/news-updates/uspto-turns-corner-unexamined-patent-application-backlog-reduction"
-      },
-      {
-        "note": "17 documents; PTAB rules items are proposed only.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Patent+Trial+and+Appeal+Board%22&conditions[agencies][]=patent-and-trademark-office&conditions[publication_date][gte]=2025-01-20&per_page=40"
       }
-    ],
-    "stage_change_reason": "Progress lowered from 45 to 40: the speed measures are operative, but the institution changes move to summary notices, which cuts against the transparency part of the ask, and the PTAB rules remain proposed."
+    ]
   },
   "significance": {
     "B": 1,
@@ -170,10 +162,17 @@
       "publisher": "USPTO",
       "title": "USPTO turns the corner on unexamined patent application backlog reduction",
       "url": "https://www.uspto.gov/about-us/news-updates/uspto-turns-corner-unexamined-patent-application-backlog-reduction"
+    },
+    {
+      "date": "2025-11-07",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Revision to Rules of Practice Before the Patent Trial and Appeal Board (comment period extension)",
+      "url": "https://www.federalregister.gov/documents/2025/11/07/2025-19817/revision-to-rules-of-practice-before-the-patent-trial-and-appeal-board"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "USPTO rescinded its June 2022 interim memorandum on discretionary denials on 2025-02-28, began an interim process splitting discretionary and merits institution decisions on 2025-03-26, and under a Director memorandum of 2025-10-17 has had the Director decide institution of all inter partes and post-grant reviews from 2025-10-20, usually by summary notice. It proposed rules on 2025-10-17 that would limit inter partes review where claims were previously upheld or parallel proceedings are likely to decide validity first; no final rule appears in the Federal Register. On processing speed, the Office reported on 2026-04-10 a backlog of 776,995 unexamined applications, down from a January 2025 peak of 837,928, and on 2026-05-06 extended its fast-track appeals pilot to 2028-05-06 with a four-month decision target against average appeal pendency of about 8.5 months. Whether these changes are balanced is disputed and is not assessed here.",
+  "status_summary": "USPTO rescinded its June 2022 interim memorandum on discretionary denials on 2025-02-28, began an interim process splitting discretionary and merits institution decisions on 2025-03-26, and under a Director memorandum of 2025-10-17 has had the Director decide institution of all inter partes and post-grant reviews from 2025-10-20, usually by summary notice. It proposed rules on 2025-10-17 (90 FR 48335) that would limit inter partes review where claims were previously upheld or parallel proceedings are likely to decide validity first, extended the comment period to 2025-12-02, and no final rule appears in the Federal Register through 2026-10-18. On processing speed, the Office reported on 2026-04-10 a backlog of 776,995 unexamined applications, down from a January 2025 peak of 837,928, and on 2026-05-06 extended its fast-track appeals pilot to 2028-05-06 with a four-month decision target against average appeal pendency of about 8.5 months. Whether these changes are balanced is disputed and is not assessed here.",
   "timeline": [
     {
       "date": "2025-02-28",
@@ -204,6 +203,13 @@
       "url": "https://www.uspto.gov/sites/default/files/documents/Director_Institution_of_AIA_Trial_Proceedings.pdf"
     },
     {
+      "date": "2025-11-07",
+      "event": "USPTO extends the comment period on its proposed inter partes review rule to 2025-12-02 (90 FR 50492) and says it does not expect further extensions.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/11/07/2025-19817/revision-to-rules-of-practice-before-the-patent-trial-and-appeal-board"
+    },
+    {
       "date": "2026-04-10",
       "event": "USPTO reports 776,995 unexamined patent applications as of 2026-04-06, down from a peak of 837,928 in January 2025.",
       "kind": "primary",
@@ -220,6 +226,6 @@
   ],
   "title": "Take a balanced approach to the PTAB and speed up application and appeal processing",
   "tracked": true,
-  "uncertainties": "A companion proposed rule of 2025-10-17 on briefing discretionary denial issues and a 2025-11-07 comment-extension notice were seen in a Federal Register listing but not opened; a Federal Register query of USPTO PTAB documents since 2025-01-20 showed no final rule. Application pendency figures were not in the backlog release. The 2026-04-10 backlog figure is a reported statistic, not an agency rule. Director institution by summary notice can be read as less transparent, which cuts against the text's call for transparent processing. Court challenges to the Director's institution practice were not reviewed.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The proposed rule (90 FR 48335, RIN 0651-AD89, docket PTO-P-2025-0025) and the 2025-11-07 extension notice (90 FR 50492) were read on federalregister.gov in review on 2026-10-18; the extension notice cites the proposal at 90 FR 48342, which may refer to a companion proposed rule on briefing discretionary denial issues that was seen in a listing but not opened. The Director memorandum of 2025-10-17 was read by the researcher and in the earlier review. A Federal Register API query of USPTO final rules since 2025-10-01 returned four rules, none on PTAB practice, and an inter partes review term query since 2025-11-01 showed no final PTAB rule. A 2026-07-22 USPTO proposed rule on real parties in interest in ex parte reexamination concerns a different proceeding and is not added. The 2026-04-10 backlog release and the 2026-05-06 pilot notice were not reopened this run. Application pendency figures were not checked. Director institution by summary notice can be read as less transparent, which cuts against the text's call for transparent processing. Court challenges to the Director's institution practice were not reviewed.",
+  "updated_at": "2026-10-18"
 }

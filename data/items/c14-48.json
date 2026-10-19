@@ -4,9 +4,9 @@
     "A 2019 version of the requirement was previously litigated; its court history was not verified in this run"
   ],
   "chapter": "14",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Two payment rules read by the researcher and a further Federal Register listing checked in review; Unified Agenda not checked; not_started is capped.",
+  "confidence": 68,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence-based. Five checks, all informative for a rule: (1) Federal Register API, no rule reinstating separate billing (rerun 2026-10-19: section 1303 returns only a VA rule); (2) HHS Unified Agenda read directly on reginfo.gov on 2026-10-19, no Section 1303 or separate billing entry, with the 2027 payment parameters (0938-AV62) and pre-enrollment verification (0938-AW03) entries on other subjects; (3) congress.gov and GovInfo, H.R. 7 and S. 186 take a different statutory approach; (4) CMS newsroom, nothing; (5) one news search, first-term coverage only. Set at 68, below the 70 ceiling, because the last six CMS separate-payment results and CMS sub-regulatory guidance were not reviewed.",
   "durability": {
     "level": "low",
     "why": "A regulation could be rescinded by a later administration, as the Mandate says happened to the earlier version."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check and independent review: federalregister.gov API (two reviewer variants) and govinfo.gov BILLSTATUS for H.R.7 were read; no stage change (not_started 0); confidence 45 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the HHS Unified Agenda list read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 62 to 68."
     }
   ],
   "id": "c14-48",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -50,19 +58,64 @@
   "research_agent": "R14C",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Stage not_started kept; added a second Federal Register query as a source."
-    ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 473 asks HHS to reinstate the Trump-era Section 1303 separate billing regulation for abortion coverage in exchange plans and strengthen it so consumers pay truly separate charges.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 473), the Mandate asks HHS to reinstate the first-term rule enforcing ACA Section 1303 separate payment and segregation of funds for non-Hyde abortion coverage in exchange plans, and to strengthen it so consumers pay truly separate charges. The chapter text was not available to this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: four results, all IPPS or OPPS Medicare payment rules; nothing on Section 1303.",
+        "note": "2026-10-18 (reviewer variant of check 1): terms 'separate billing' with abortion returned 0 documents.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22separate+payment%22+abortion&conditions[publication_date][gte]=2025-01-20&order=newest"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22separate+billing%22+abortion&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (reviewer variant of check 1): terms 'abortion services' with exchange returned 3 CMS documents (Medicaid and CHIP rule on gender-transition procedures for minors, 2026-08-13; FY 2027 inpatient payment rule, 2026-08-04; CY 2026 outpatient payment rule, 2025-11-25); none addresses Section 1303 or separate payments.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22abortion+services%22+exchange&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (reviewer fetch for check 3): BILLSTATUS confirms H.R.7, No Taxpayer Funding for Abortion and Abortion Insurance Full Disclosure Act of 2025, introduced 2025-01-22 and referred to Energy and Commerce, Judiciary and Ways and Means with no later action; the CRS summary says it would bar qualified health plans from covering abortion and does not describe a separate-payment requirement. A different statutory approach, not a qualifying action.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7.xml"
+      },
+      {
+        "note": "Check 1 (research pass, 2026-10-18): term 'separate payment' limited to CMS returned 26 documents (first 20 reviewed by title: payment-system rules and models); term 'abortion' limited to CMS returned 8 payment and Medicaid documents; term 'section 1303' returned 1 VA rule (Reproductive Health Services, 2025-12-31), not an ACA exchange rule. The existing record reports that the 2025-06-25 and 2026-05-20 exchange rules were read in full and do not reinstate the requirement.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22separate+payment%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=centers-for-medicare-medicaid-services"
+      },
+      {
+        "note": "Check 2 (research pass, 2026-10-18): Fetched the Unified Agenda entry page; it is an agency selector and links page with no items listed (script-driven). Fallback used, so the check is partial: the CMS-limited queries above.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Check 3 (research pass, 2026-10-18): search (congress.gov, govinfo.gov): '119th Congress bill ACA section 1303 separate payment abortion coverage exchange plans'. Found H.R.7 and S.186 No Taxpayer Funding for Abortion and Abortion Insurance Full Disclosure Act of 2025 (H.R.7 introduced 2025-01-22, referred to Energy and Commerce, Judiciary and Ways and Means, no later action in BILLSTATUS), plus S.3011, H.R.3080, H.R.4611, S.3386, H.R.6538. H.R.7 per CRS summary would bar abortion coverage in qualified health plans; this is a statutory approach different from a rule requiring separate billing. S.186 and the others were not opened. Reviewer: BILLSTATUS refetched and confirmed; the search was not rerun (search cap).",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7.xml"
+      },
+      {
+        "note": "Check 4 (research pass, 2026-10-18): CMS newsroom (items dated 2026-10-16) shows nothing on abortion coverage, section 1303 or separate billing; only excerpts were visible.",
+        "result": "supports",
+        "url": "https://www.cms.gov/newsroom"
+      },
+      {
+        "note": "Check 5 (research pass, 2026-10-18): query: 'CMS ACA exchange abortion coverage separate payment rule section 1303 2026 HHS rule'. Results concerned the 2019 first-term rule and its court history, and congressional letters; no 2025-2026 reinstatement reported. Reviewer: Not rerun (search cap).",
+        "result": "supports",
+        "url": "https://www.fiercehealthcare.com/payer/cms-rule-aims-to-ensure-aca-insurers-meet-federal-law-abortion-coverage"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 183 rules) was read in full on 2026-10-19; no entry concerns Section 1303 separate billing or segregation of abortion premiums; the 2027 payment parameters entry (0938-AV62, still at Proposed Rule Stage) and Exchange Pre-Enrollment Eligibility Verification (0938-AW03) concern other subjects.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: one document, the VA Reproductive Health Services rule of 2025-12-31; nothing on ACA Section 1303.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22section+1303%22&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -122,6 +175,6 @@
   "timeline": [],
   "title": "Reinstate and strengthen the ACA Section 1303 separate payment rule for abortion coverage",
   "tracked": true,
-  "uncertainties": "Both rules were read in full and neither mentions Section 1303 or separate billing. The Federal Register API was searched for section 1303 with abortion since 2025-01-20 and returned only an unrelated Department of Veterans Affairs rule. One web search returned only older items. The Unified Agenda and any CMS sub-regulatory guidance or enforcement statement on Section 1303 were not checked, and the history of the earlier rule and its rescission was not verified. Absence of evidence from a limited search, so confidence is capped. In review a further Federal Register API query for separate payment with abortion returned only four Medicare hospital payment rules, none on exchange plan billing.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No proposed or final rule reinstating the Section 1303 separate billing requirement was found. The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) has no Section 1303 entry. The 2025 Marketplace Integrity rule and the 2027 payment notice were read in an earlier pass and do not address Section 1303. The last six results of the CMS separate-payment search were not reviewed, and CMS sub-regulatory guidance and the history of the first-term rule and its rescission were not verified. H.R. 7 and S. 186 would bar abortion coverage in qualified health plans, a different approach. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

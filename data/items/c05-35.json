@@ -5,9 +5,9 @@
     "Sanctions depend on diplomatic cooperation and are reviewed case by case"
   ],
   "chapter": "05",
-  "confidence": 56,
+  "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "The executive orders, Public Law 119-1 and the FLRA decision were read on primary pages and the State statement through a hosted copy; the union's current status and the breadth of sanctions use were not established.",
+  "confidence_reason": "Page 167 re-read; the executive orders, Public Law 119-1, the FLRA decision and the 2025-08-28 temporary judge rule were read on primary pages and the State statement through a hosted copy; headcounts rest on a CRS Insight read through a mirror; the union's current status and the breadth of sanctions use were not established. Stage rule applied: sanctions are operative for one country and the other elements have only general or partial steps, so in_progress at the lower middle of the band.",
   "durability": {
     "level": "low",
     "why": "Visa sanctions can be lifted when a country cooperates, and the labor exclusions rest on an executive order and agency rulings."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Chapter field normalized to the two-digit form used by every other record."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: added the EOIR final rule on temporary immigration judges (90 FR 41883, published and effective 2025-08-28) and CRS figures on the permanent immigration judge headcount (735 at the end of FY2024 to 557 at the end of the first quarter of FY2026) with the 25 and 27 temporary appointments; no further section 243(d) sanction announcement and no union action found; stage unchanged. Independent review (AI) located the rule through the Federal Register API, replaced a month-only event with the dated rule and set confidence 60."
     }
   ],
   "id": "c05-35",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -58,7 +62,7 @@
     "Decision on the immigration judges' petition to restore their union, if still pending (not found)",
     "Treating immigration judges and BIA members as national security personnel in an EOIR-specific step (EO 14251 covers DOJ as a whole)",
     "Moving EOIR and the Office of Immigration Litigation to DHS (tracked in c05-01; no proposal found)",
-    "Significant increase in immigration judge hiring (not checked)",
+    "Significant increase in immigration judge hiring (CRS reports a decline in permanent judges through the first quarter of FY2026; temporary judges are being designated under the 2025-08-28 rule)",
     "The HUD, Education, Treasury items on page 167 (not tracked here; the Labor wage-level item is in c05-07 and the Intelligence Community item in c05-14)"
   ],
   "requires_congress": "partial",
@@ -66,58 +70,25 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "South Sudan visa action of 2025-04-05 confirmed through the hosted copy; state.gov found by search but did not load.",
-      "Immigration judges' union element: the record carries only pre-period decertification events plus EO 14251's DOJ-wide exclusion (2025-03-27); no EOIR-specific post-2025-01-20 action was found. The owner may prefer to treat that element as not_started on its own.",
-      "Added the Laken Riley Act (P.L. 119-1, section 3(c)) as a primary timeline event.",
-      "Progress lowered from 45 to 40 within in_progress: sanctions are used (one country confirmed) but the union and hiring items have no element-specific step. proposed 15 is defensible if the owner weighs the union item equally.",
-      "related_ids extended with c05-07 (Labor wage levels on page 167) and c05-14 (Intelligence Community item on page 167). The EOIR transfer element is covered by c05-01 and is kept here only as context.",
-      "Confidence raised from 50 to 56."
+      "The draft's month-only 2025-08-01 event was replaced by the 2025-08-28 Federal Register final rule (FR Doc. 2025-16573); headcount and temporary judge counts moved from the event to the status summary, cited to CRS, because they are not themselves a government action of that date.",
+      "Progress kept at 40. Reading the temporary judge rule as a hiring step could support 45; the decline in permanent judges argues against any rise.",
+      "CRS source kind changed from primary to secondary (analytic report on agency data)."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 167 (cross-agency list): DOJ should move EOIR and the Office of Immigration Litigation to DHS or, alternatively, treat immigration judges and BIA members as national security personnel, decertify their union and increase hiring significantly; State should quickly impose stiff sanctions on recalcitrant countries until deportees are actually accepted. Proposal is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y7",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Page 167: DOJ should move EOIR and the Office of Immigration Litigation to DHS or alternatively treat immigration judges and BIA members as national security personnel, decertify their union and increase hiring significantly; State should quickly impose stiff sanctions on recalcitrant countries until deportees are actually accepted. Proposal paraphrase and partial match confirmed.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
-        "note": "EO 14159 section 13 directs 243(d) sanctions on recalcitrant countries and removal of repatriation barriers (checked 2026-10-14)",
+        "note": "Final rule published and effective 2025-08-28, 90 FR 41883, RIN 1125-AA77; any attorney may be designated a temporary immigration judge with Attorney General approval for renewable terms up to six months. Fully supports the new event. Found through the Federal Register API search for temporary immigration judges published since 2025-07-01.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/29/2025-02006/protecting-the-american-people-against-invasion"
+        "url": "https://www.federalregister.gov/documents/2025/08/28/2025-16573/designation-of-temporary-immigration-judges"
       },
       {
-        "note": "Hosted copy of the State statement dated 2025-04-05 by the Secretary of State: revokes all South Sudanese passport holders' visas, halts issuance, review on full cooperation (checked 2026-10-14)",
+        "note": "CRS Insight IN12664 dated 2026-03-02: permanent judges 735 at end of FY2024, 634 at end of FY2025, 557 at end of FY2026 Q1; 25 temporary judges announced October 2025 and 27 in February 2026; P.L. 119-21 funds hiring and sets a ceiling of not more than 800 judges effective 2028-11-01. Headcount figures in the draft confirmed.",
         "result": "supports",
-        "url": "https://iptp-production.s3.amazonaws.com/media/documents/2025.04.06_-_Dept_of_State_-_Def._Americas_Sec._through_Visa_and_Travel_Restri_idpS5Fk.pdf"
-      },
-      {
-        "note": "state.gov page found by search did not load (checked 2026-10-14)",
-        "result": "unreachable",
-        "url": "https://www.state.gov/defending-americas-security-through-visa-and-travel-restrictions-on-south-sudan/"
-      },
-      {
-        "note": "Public Law 119-1 approved 2025-01-29; section 3(c) adds INA 243(e) state suits over failure to discontinue visas under 243(d) (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ1/html/PLAW-119publ1.htm"
-      },
-      {
-        "note": "EO 14251 signed 2025-03-27; section 2 new 1-405 lists the Department of Justice as a whole; EOIR and immigration judges not named (checked 2026-10-14)",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2025/04/03/2025-05836/exclusions-from-federal-labor-management-relations-programs"
-      },
-      {
-        "note": "72 FLRA No. 146 of 2022-04-12 reaffirms 2020 finding that immigration judges are management officials excluded from the NAIJ unit (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.flra.gov/node/79277"
-      },
-      {
-        "note": "Article dated 2024-12-10: hearings on a petition to restore NAIJ recognition began; regional director ruling to follow (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://news.bloomberglaw.com/bloomberg-government-news/immigration-judges-renew-bid-for-labor-board-to-restore-union"
-      },
-      {
-        "note": "Page dated 2025-02-10: no central public list of 243(d) countries; describes the Laken Riley Act state-suit provision (checked 2026-10-14)",
-        "result": "supports",
-        "url": "https://www.nafsa.org/professional-resources/browse-by-interest/discontinuance-visa-issuance-under-ina-243d"
+        "url": "https://www.everycrsreport.com/reports/IN12664.html"
       }
     ]
   },
@@ -205,10 +176,24 @@
       "publisher": "U.S. Department of State",
       "title": "Defending America's Security through Visa and Travel Restrictions on South Sudan (state.gov page, did not load)",
       "url": "https://www.state.gov/defending-americas-security-through-visa-and-travel-restrictions-on-south-sudan/"
+    },
+    {
+      "date": "2026-03-02",
+      "kind": "primary",
+      "publisher": "Congressional Research Service (everycrsreport.com)",
+      "title": "Executive Office for Immigration Review Immigration Judge Staffing Issues (CRS Insight IN12664)",
+      "url": "https://www.everycrsreport.com/reports/IN12664.html"
+    },
+    {
+      "date": "2025-08-28",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Designation of Temporary Immigration Judges (final rule, FR Doc. 2025-16573)",
+      "url": "https://www.federalregister.gov/documents/2025/08/28/2025-16573/designation-of-temporary-immigration-judges"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Executive Order 14159, section 13 (signed 2025-01-20), directs State and DHS to apply INA section 243(d) visa sanctions to countries that refuse removable nationals; the Laken Riley Act (approved 2025-01-29) lets states sue the Secretary of State over a failure to apply them; and on 2025-04-05 the Secretary of State announced revocation of all visas held by South Sudanese passport holders and a halt to new issuance over South Sudan's failure to accept returns. For the immigration judges' union, the Federal Labor Relations Authority had already excluded immigration judges from their bargaining unit as management officials in 2020 and 2022, before this period; the only later step found is EO 14251 of 2025-03-27, which excludes the Department of Justice as a whole from the federal labor-management relations program without naming EOIR. The outcome of the judges' December 2024 petition to restore the union was not found, and no step moving EOIR to DHS was found.",
+  "status_summary": "Executive Order 14159, section 13 (signed 2025-01-20), directs State and DHS to apply INA section 243(d) visa sanctions to countries that refuse removable nationals; the Laken Riley Act (approved 2025-01-29) lets states sue the Secretary of State over a failure to apply them; and on 2025-04-05 the Secretary of State announced revocation of all visas held by South Sudanese passport holders and a halt to new issuance over South Sudan's failure to accept returns. For the immigration judges' union, the Federal Labor Relations Authority had already excluded immigration judges from their bargaining unit as management officials in 2020 and 2022, before this period; the only later step found is EO 14251 of 2025-03-27, which excludes the Department of Justice as a whole from the federal labor-management relations program without naming EOIR. The outcome of the judges' December 2024 petition to restore the union was not found, and no step moving EOIR to DHS was found. On 2025-08-28 EOIR published a final rule letting the Director designate any attorney as a temporary immigration judge for renewable terms of up to six months. A March 2026 CRS Insight reports that permanent immigration judge numbers fell from 735 at the end of FY2024 to 557 at the end of the first quarter of FY2026, while EOIR announced 25 temporary judges in October 2025 and 27 more in February 2026; the same Insight notes that Public Law 119-21 funds immigration judge hiring and sets a ceiling of not more than 800 judges from 2028-11-01. A significant increase in permanent hiring was not found.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -237,10 +222,17 @@
       "kind": "primary",
       "source": "U.S. Department of State (copy hosted by the Immigration Policy Tracking Project)",
       "url": "https://iptp-production.s3.amazonaws.com/media/documents/2025.04.06_-_Dept_of_State_-_Def._Americas_Sec._through_Visa_and_Travel_Restri_idpS5Fk.pdf"
+    },
+    {
+      "date": "2025-08-28",
+      "event": "EOIR published a final rule, Designation of Temporary Immigration Judges (90 FR 41883, effective on publication), letting the Director, with Attorney General approval, designate any attorney as a temporary immigration judge for renewable terms of up to six months.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2025/08/28/2025-16573/designation-of-temporary-immigration-judges"
     }
   ],
   "title": "Sanction countries that refuse deportees; decertify the immigration judges' union",
   "tracked": true,
-  "uncertainties": "The page 167 list is heterogeneous, so this record covers the sanctions item and the immigration judges' union item; the EOIR transfer is tracked in c05-01, the Labor wage-level item in c05-07 and the Intelligence Community item in c05-14, and the HUD, Education and Treasury items are not tracked and need their own research. The South Sudan statement was read through a hosted copy because state.gov did not load. A Cuban delegation visa denial reported in February 2026 under section 243(d) comes from a tracking site summary of a newspaper report and is not used. For the union element, the decertification events (FLRA 2020 and 2022) predate this period; the only event since 2025-01-20 is EO 14251's DOJ-wide exclusion, which does not name EOIR or immigration judges, and a search found no FLRA ruling on the December 2024 restoration petition. Whether any 2025 DOJ action treats judges as national security personnel was not found.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The page 167 list is heterogeneous, so this record covers the sanctions item and the immigration judges' union item; the EOIR transfer is tracked in c05-01, the Labor wage-level item in c05-07 and the Intelligence Community item in c05-14, and the HUD, Education and Treasury items are not tracked and need their own research. The South Sudan statement was read through a hosted copy because state.gov did not load. A Cuban delegation visa denial reported in February 2026 under section 243(d) comes from a tracking site summary of a newspaper report and is not used. For the union element, the decertification events (FLRA 2020 and 2022) predate this period; the only event since 2025-01-20 is EO 14251's DOJ-wide exclusion, which does not name EOIR or immigration judges, and a search found no FLRA ruling on the December 2024 restoration petition. Whether any 2025 DOJ action treats judges as national security personnel was not found. A 2026-10-19 check found no FLRA or court action on the immigration judges' union or on EO 14251 as it touches EOIR in the sources reachable (results were from 2020 to 2022 or 2024), and no further 243(d) sanction announcement beyond South Sudan from a primary source; one low-quality aggregator article on 2026 country lists was not used. The CRS Insight was read through the everycrsreport.com mirror and its headcount stops at the end of the first quarter of FY2026 (2025-12-31); the temporary judge announcements of October 2025 and February 2026 are carried in the summary on the CRS account rather than as dated events because the EOIR announcements themselves were not opened. Whether designating temporary judges counts toward the hiring item is a judgment call; it adds adjudicators without raising the permanent corps.",
+  "updated_at": "2026-10-19"
 }

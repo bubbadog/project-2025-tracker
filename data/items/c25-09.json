@@ -4,7 +4,7 @@
   "chapter": "25",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Both executive orders were read on the Federal Register and both SBA releases were read on SBA's site; the stage rests on an implied recommendation and on SBA's own account of the rescission.",
+  "confidence_reason": "Both executive orders were read on the Federal Register (EO 14248 section 9 re-read in this review), both SBA releases were read on SBA's site earlier, and the three EO 14248 court orders were opened and read; the stage rests on an implied recommendation and on SBA's own account of the rescission. Chapter text was not available in this run, so the page 749 paraphrase rests on the 2026-10-14 review. Stage rule applied: the revocation, the section 9 cease directive and the rescission of the only designation found end the role the chapter objects to, and no court order reaches section 9, so completed holds.",
   "durability": {
     "level": "medium",
     "why": "A future administration could issue a new voting access order and redesignate agencies, but no statute fixes the role."
@@ -30,10 +30,18 @@
     {
       "date": "2026-10-15",
       "note": "Maintainer spot-check: EO 14148 (90 FR 8237), EO 14248 section 9 (90 FR 14005) and SBA release 25-32 of 2025-02-24 re-opened; each says what the record says. A 2025-03-19 House Small Business Committee letter confirms the Michigan MOU rescission was the stated commitment. Stage held at completed."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: red-team check holds; the three court orders on Executive Order 14248 (D.D.C. 2026-03-31, D. Mass. 2026-07-13, W.D. Wash. 2026-01-09) were read and none reaches section 9, which directs agencies to cease implementing Executive Order 14019. Independent review (AI) re-read section 9 on the Federal Register, opened the orders, dated the order event by its signing and kept completed 100 at confidence 80."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Coordinating session: review.mandate_check set to the short label not_checked and its explanation moved into mandate_note (the sentence-length label overflowed the record panel on the page). No change of substance."
     }
   ],
   "id": "c25-09",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -43,6 +51,38 @@
   "position": "Mission Creep and Enlargement",
   "progress": 100,
   "proposal": "The chapter lists, among its concerns about SBA mission creep, the agency's request to become a designated voter registration agency in response to the prior administration's executive order on promoting access to voting. The chapter's framing implies ending that role.",
+  "redteam": {
+    "date": "2026-10-19",
+    "evidence": [
+      {
+        "date": "2025-03-28",
+        "note": "Section 9 is headed Federal Actions to Address Executive Order 14019; it directs agencies to cease implementing that order and report on compliance.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2025/03/28/2025-05523/preserving-and-protecting-the-integrity-of-american-elections"
+      },
+      {
+        "date": "2026-03-31",
+        "note": "Addresses sections 2(a), 2(b), 2(d), 3(a), 3(d), 4 and 7; enjoins SBA only as to section 2(d); no mention of section 9.",
+        "source": "D.D.C.",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.279032/gov.uscourts.dcd.279032.256.0.pdf"
+      },
+      {
+        "date": "2026-07-13",
+        "note": "Permanently enjoins sections 2(a), 3(d), 4(a), 7(a), 7(b) as to named defendants; section 9 not addressed.",
+        "source": "D. Mass.",
+        "url": "https://www.democracydocket.com/wp-content/uploads/2025/04/2026-07-13-Judgment-and-order-of-permanent-injunction.pdf"
+      },
+      {
+        "date": "2026-01-09",
+        "note": "Addresses sections 2, 3, 4, 5 and 7; section 9 not addressed.",
+        "source": "W.D. Wash.",
+        "url": "https://www.democracydocket.com/wp-content/uploads/2025/04/2026-01-09-Order.pdf"
+      }
+    ],
+    "note": "No order touching section 9 found, and no sign that SBA resumed voter registration activity; stage holds at completed. Absence of any later SBA statement is not proof, and the section 9 reporting duty itself was not independently checked.",
+    "verdict": "holds",
+    "what_was_tested": "Whether any court order enjoins, stays or vacates section 9 of EO 14248 (the direction to cease implementing EO 14019) or otherwise revives SBA's voter registration role; whether SBA later resumed voter registration activity."
+  },
   "related_ids": [
     "c25-13"
   ],
@@ -52,36 +92,35 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Title shortened from 91 to under 90 characters",
-      "Confirmed and added the number of the 2025-03-28 order (EO 14248) and its section 9",
-      "Completed kept: the revocation and the rescission of the only designation found end the role the chapter objects to",
-      "Confidence 80"
+      "None of the three EO 14248 court orders reaches section 9; the D.D.C. injunction against SBA concerns section 2(d) (citizenship checks by voter registration agencies), a different provision, and does not restore the SBA registration role.",
+      "Redteam evidence entries checked: each is an object with url, source, date and note, and each matches the fetched document.",
+      "EO 14248 timeline event re-dated from publication (2025-03-28) to signing (2025-03-25) so it is dated by the action, matching the EO 14148 event; 'Biden-era' replaced with '2024' in the 2025-04-29 event for neutral register."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 749, Mission Creep and Enlargement: SBA's request to become a designated voter agency under the 2021 Promoting Access to Voting order is listed as a concern. Paraphrase accurate and correctly flags the recommendation as implied.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "mandate_check": "not_checked",
+    "mandate_note": "Chapter text not re-read in the 2026-10-19 freshness review (chapter 25 text was not among the inputs for this run; the paraphrase was confirmed against page 749 in the 2026-10-14 review). Page 749 (per the 2026-10-14 review): SBA's request to become a designated voter registration agency under the 2021 Promoting Access to Voting order is listed among mission creep concerns; the recommendation to end the role is implied. Paraphrase and direct match kept.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14. EO 14148, 90 FR 8237; section 2(aa) revokes EO 14019.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/28/2025-01901/initial-rescissions-of-harmful-executive-orders-and-actions"
-      },
-      {
-        "note": "Checked 2026-10-14. EO 14248, signed 2025-03-25, 90 FR 14005; section 9 directs agencies to cease actions implementing EO 14019.",
+        "note": "Section 9 is headed Federal Actions to Address Executive Order 14019; directs all agencies and the EAC to cease actions implementing EO 14019 and report within 90 days; signed 2025-03-25, 90 FR 14005. Fully supports the event.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/03/28/2025-05523/preserving-and-protecting-the-integrity-of-american-elections"
       },
       {
-        "note": "Checked 2026-10-14. Priority to end taxpayer-funded voter registration, starting with rescinding the 2024 Michigan memorandum.",
+        "note": "Final judgment of 2026-03-31 in the consolidated LULAC, DNC and LWV cases (Doc. 256): addresses sections 2(a), 2(b), 2(d), 3(a), 3(d), 4(a)-(d), 7(a), 7(b); SBA and its Administrator permanently enjoined only as to section 2(d); section 9 and EO 14019 not mentioned. Supports the redteam entry and uncertainties.",
         "result": "supports",
-        "url": "https://legacy.sba.gov/article/2025/02/24/sba-administrator-loeffler-issues-memo-day-one-priorities"
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.279032/gov.uscourts.dcd.279032.256.0.pdf"
       },
       {
-        "note": "Checked 2026-10-14. Lists termination of the Michigan memorandum among actions.",
+        "note": "Judgment and order of permanent injunction of 2026-07-13, California v. Trump, 25-cv-10810-DJC: enjoins sections 2(a), 3(d), 4(a), 7(a), 7(b); section 9, EO 14019 and SBA not mentioned.",
         "result": "supports",
-        "url": "https://legacy.sba.gov/article/2025/04/29/small-business-administration-celebrates-first-100-days-accomplishments"
+        "url": "https://www.democracydocket.com/wp-content/uploads/2025/04/2026-07-13-Judgment-and-order-of-permanent-injunction.pdf"
+      },
+      {
+        "note": "Order of 2026-01-09, Washington v. Trump, 2:25-cv-00602-JHC, on partial summary judgment and motion to dismiss: addresses sections 2, 3, 4, 5(b) and 7; section 9, EO 14019 and SBA not mentioned.",
+        "result": "supports",
+        "url": "https://www.democracydocket.com/wp-content/uploads/2025/04/2026-01-09-Order.pdf"
       }
     ]
   },
@@ -141,6 +180,27 @@
       "publisher": "U.S. Small Business Administration",
       "title": "Small Business Administration Celebrates First 100 Days Accomplishments",
       "url": "https://legacy.sba.gov/article/2025/04/29/small-business-administration-celebrates-first-100-days-accomplishments"
+    },
+    {
+      "date": "2026-03-31",
+      "kind": "court",
+      "publisher": "U.S. District Court for the District of Columbia (CourtListener)",
+      "title": "LULAC v. Executive Office of the President, D.D.C. 25-cv-0946 (consolidated), final judgment (Doc. 256)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.279032/gov.uscourts.dcd.279032.256.0.pdf"
+    },
+    {
+      "date": "2026-07-13",
+      "kind": "court",
+      "publisher": "U.S. District Court for the District of Massachusetts (Democracy Docket copy)",
+      "title": "State of California v. Trump, D. Mass. 25-cv-10810, judgment and order of permanent injunction (Doc. 194)",
+      "url": "https://www.democracydocket.com/wp-content/uploads/2025/04/2026-07-13-Judgment-and-order-of-permanent-injunction.pdf"
+    },
+    {
+      "date": "2026-01-09",
+      "kind": "court",
+      "publisher": "U.S. District Court for the Western District of Washington (Democracy Docket copy)",
+      "title": "State of Washington v. Trump, W.D. Wash. 2:25-cv-00602, order",
+      "url": "https://www.democracydocket.com/wp-content/uploads/2025/04/2026-01-09-Order.pdf"
     }
   ],
   "stage": "completed",
@@ -161,15 +221,15 @@
       "url": "https://legacy.sba.gov/article/2025/02/24/sba-administrator-loeffler-issues-memo-day-one-priorities"
     },
     {
-      "date": "2025-03-28",
-      "event": "Executive Order 14248, Preserving and Protecting the Integrity of American Elections (signed 2025-03-25), was published; section 9 directs agencies to cease all actions implementing Executive Order 14019.",
+      "date": "2025-03-25",
+      "event": "Executive Order 14248, Preserving and Protecting the Integrity of American Elections, was signed (90 FR 14005, published 2025-03-28); section 9 directs agencies to cease all actions implementing Executive Order 14019 and to report on compliance within 90 days.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/03/28/2025-05523/preserving-and-protecting-the-integrity-of-american-elections"
     },
     {
       "date": "2025-04-29",
-      "event": "SBA's first 100 days release listed the Biden-era memorandum of understanding with the Michigan Secretary of State as terminated.",
+      "event": "SBA's first 100 days release listed the 2024 memorandum of understanding with the Michigan Secretary of State as terminated.",
       "kind": "primary",
       "source": "U.S. Small Business Administration",
       "url": "https://legacy.sba.gov/article/2025/04/29/small-business-administration-celebrates-first-100-days-accomplishments"
@@ -177,6 +237,6 @@
   ],
   "title": "End SBA's role as a designated voter registration agency under the 2021 voting order",
   "tracked": true,
-  "uncertainties": "The chapter lists SBA's request to become a designated voter agency as a concern rather than giving an explicit directive, so treating it as a recommendation to end that role is an inference. The only designation found is the 2024 Michigan memorandum; whether SBA had other state voter-registration arrangements was not checked, and the memorandum's terms were not read. The SBA releases describe the rescission in the agency's own words, and the 100-day release does not give the termination date. Litigation over Executive Order 14248 concerns other sections and was not reviewed for this record.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The chapter lists SBA's request to become a designated voter agency as a concern rather than giving an explicit directive, so treating it as a recommendation to end that role is an inference. The only designation found is the 2024 Michigan memorandum; whether SBA had other state voter-registration arrangements was not checked, and the memorandum's terms were not read. The SBA releases describe the rescission in the agency's own words, and the 100-day release does not give the termination date. Litigation over Executive Order 14248 was reviewed on 2026-10-19: orders in the D.D.C. consolidated case (2026-03-31), the D. Mass. case (permanent injunction 2026-07-13) and the W.D. Wash. case (2026-01-09) address sections 2, 3, 4 and 7 and none discusses section 9 or Executive Order 14019. The 2026-03-31 D.D.C. order permanently enjoins SBA, among other agencies, from implementing section 2(d), which concerns citizenship checks by voter registration agencies; that is a different provision from section 9 and does not restore SBA's former registration role. The D.D.C. final judgment identifies the judge only by initials; appeals (First Circuit 25-01726 and a D.C. Circuit appeal of the section 2(a) judgment) were not tracked to a result. Orders were read through tracker or mirror copies hosted off the court sites.",
+  "updated_at": "2026-10-19"
 }

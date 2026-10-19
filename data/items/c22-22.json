@@ -5,9 +5,9 @@
     "Delivering statements to households would need a mailing or online mechanism and likely funding"
   ],
   "chapter": "22",
-  "confidence": 62,
+  "confidence": 65,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text page 702 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo with the H.R. 7808 bill status read, Fiscal Service results page, one news search), so confidence is capped near 62 because check 2 was partial.",
+  "confidence_reason": "Chapter text page 702 checked; not_started rests on five documented checks: (1) Federal Register API queries found no household statement document (supports); (2) Unified Agenda: the Treasury rule list on reginfo.gov was read in full on 2026-10-19 with no matching entry (supports, weakly informative for an administrative step); (3) congress.gov and GovInfo search with the H.R. 7808 bill status read found only a budget-ratio bill (supports); (4) the Fiscal Service results-in-brief page shows national totals only (supports); (5) one news search found advocacy items and private calculators (supports). Set at 65 because the agenda is weakly informative and the full Financial Report was not opened.",
   "durability": {
     "level": "low",
     "why": "A Treasury publication practice could be changed administratively."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov), read the H.R. 7808 bill status on govinfo.gov, and reviewed the Unified Agenda fallback, Fiscal Service page and news checks, found no qualifying action, and kept not_started 0."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Treasury Unified Agenda rule list on reginfo.gov and found no household statement entry; not_started kept and confidence raised from 62 to 65."
     }
   ],
   "id": "c22-22",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -64,15 +68,12 @@
       "result": "supports",
       "url": "https://fiscal.treasury.gov/accounting/us-financial-report/results-in-brief"
     },
-    "flags": [
-      "Check 2 reached only the Federal Register fallback; confidence capped near 62.",
-      "H.R. 7808 concerns budget ratios only and is not counted; its full text was not read."
-    ],
+    "flags": [],
     "mandate_check": "confirmed",
     "mandate_note": "Page 702 recommends an annual financial statement of the US government to Americans covering revenues, spending, deficit and debt for the prior fiscal year, including the family's pro-rata debt share by family size. The proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "2026-10-18: reviewer rerun with terms national debt, household, statement, taxpayer since 2025-01-20: 2 Education Department Workforce Pell documents (2026-03-09 proposed, 2026-05-19 final), unrelated. Researcher queries on financial statement per family (Fiscal Service) and Financial Report of the U.S. Government: 0 each.",
@@ -98,6 +99,12 @@
         "note": "2026-10-18: one researcher news search on a federal household financial statement returned advocacy items, a 2024 petition and private calculators; no search URL was recorded, so the Fiscal Service page is listed as a placeholder.",
         "result": "does_not_support",
         "url": "https://fiscal.treasury.gov/accounting/us-financial-report/results-in-brief"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (agency named Department of the Treasury, 216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages, the second holding only the footer). No entry on a household financial statement; Fiscal Service (1530) entries concern payments, offsets and claims collection, and 1557-AF22 Financial Data Transparency Act concerns data standards. Weakly informative: a statement to households would be an administrative or statutory step.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
       }
     ]
   },
@@ -143,6 +150,6 @@
   "timeline": [],
   "title": "Send Americans an annual federal financial statement with a family debt share",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: researcher queries on a per-family financial statement filtered to the Fiscal Service and on the Financial Report of the U.S. Government returned no documents, and a reviewer rerun on national debt, household, statement and taxpayer returned two unrelated Education Department Pell grant documents; no Treasury document sets up a household statement. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used. (3) congress.gov and govinfo: one search surfaced H.R. 7808, whose bill status shows it would add debt-to-GDP and deficit-to-GDP ratios to budget documents and has remained in committee since 2026-03-04; it does not provide for household statements, and its full text was not read. (4) Agency pages: the Fiscal Service results-in-brief page reports national totals without per-person or per-family figures; the full Financial Report and Treasury's online guide to federal finances were not opened. (5) News: one search returned advocacy items and private debt calculators, which are not government statements.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No Treasury action sending a federal financial statement to households was found. The Fiscal Service results-in-brief page for the FY2025 Financial Report gives national totals without per-person or per-family figures; the full Financial Report and Treasury's online guide to federal finances were not opened, and the H.R. 7808 text was not read. The news check recorded no search URL. The Treasury Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists no such rulemaking; a household statement would not need a rule, so the agenda is a weak test. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

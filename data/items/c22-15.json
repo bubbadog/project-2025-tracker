@@ -4,9 +4,9 @@
     "The Administration's own requests continue funding the agency"
   ],
   "chapter": "22",
-  "confidence": 50,
-  "confidence_label": "low",
-  "confidence_reason": "Mandate text checked; one CRS product read, a reliable secondary source; not_started rests on it without a search for bills, so the not_started cap applies.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (supports, no agency documents; partial for executive orders naming the agency), Unified Agenda (not applicable: USTDA has no agenda entry, recorded as partial), congress.gov and govinfo.gov search (partial: H.R. 8625 would modernize the agency), ustda.gov About page (supports) and a news search (supports). The CRS In Focus of 2026-07-13 was read earlier. One check is not applicable, so confidence is 66.",
   "durability": {
     "level": "high",
     "why": "Status quo funding by statute continues absent new legislation."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the reginfo.gov agenda selector with no USTDA entry, govinfo.gov, ustda.gov and a news search), not_started kept and confidence raised to 66 with the agenda check not applicable."
     }
   ],
   "id": "c22-15",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -51,16 +55,52 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Moved the CRS product from the timeline to the summary: a report describing budget levels is a source, not an event"
+      "Agenda check relabeled from supports to partial with a not-applicable note, for consistency with the rule that USTDA has no Unified Agenda."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 710, Other Reforms: Congress should eliminate the U.S. Trade and Development Agency because its activities belong to the private sector. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y22g",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Updated 2026-07-13; no elimination proposal; $87 million in P.L. 119-75 for FY2026; $77 million FY2027 request; no wind-down.",
+        "result": "supports",
+        "url": "https://www.everycrsreport.com/files/2026-07-13_IF10673_02c34e916292d08589a39a20ea84022cfca9b4bb.html"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Register API, agency slug trade-and-development-agency, all document types since 2025-01-20: 0 results.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=trade-and-development-agency&conditions[publication_date][gte]=2025-01-20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Phrase search, all agencies: 8 documents mentioning the agency, including Executive Order texts (Unleashing America's Offshore Critical Minerals and Resources, 2025-04-29; Unleashing American Drone Dominance, 2025-06-11; and others), the revocation of PPD-6 (2025-07-31) and an OPM and an MCC notice. None eliminates or winds down the agency.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Trade+and+Development+Agency%22&conditions[publication_date][gte]=2025-01-20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Check not applicable: the agency selector on eAgendaMain (edition 2026 Regulatory Plan and the Unified Agenda of Federal Regulatory and Deregulatory Actions) has no entry for the U.S. Trade and Development Agency, as the reviewer confirmed on 2026-10-19, so there is no agency rule list to read. Recorded as partial because the schema has no not-applicable value; this is not a finding of a related action.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Domain-limited search (congress.gov, govinfo.gov) found H.R. 8625, USTDA Modernization Act of 2026, introduced 2026-04-30 (sponsor Del. Moylan, original cosponsor Rep. Tokuda), referred to House Foreign Affairs; its official title authorizes assistance for development activities in high-income countries. It continues the agency and is not an elimination bill. Other results were USAID abolition bills (H.R. 1123, H.R. 1029) and appropriations; no 119th Congress bill eliminating USTDA was identified. Reviewer opened the H.R. 8625 bill status: no CRS summary; short titles refer to modernizing the agency.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr8625/xml/BILLSTATUS-119hr8625.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Agency About page describes USTDA as active (first mover on critical infrastructure in emerging markets); no wind-down, restructuring or dated announcement shown.",
+        "result": "supports",
+        "url": "https://ustda.gov/about/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "One standard news search (USTDA future, abolish, 2026) returned only CRS products on the agency (2026-01-30 and 2026-07-13 versions of IF10673) and trade-policy commentary; no report of an elimination proposal.",
         "result": "supports",
         "url": "https://www.everycrsreport.com/files/2026-07-13_IF10673_02c34e916292d08589a39a20ea84022cfca9b4bb.html"
       }
@@ -101,6 +141,13 @@
       "publisher": "Congressional Research Service",
       "title": "U.S. Trade and Development Agency: Background and Issues (CRS In Focus IF10673)",
       "url": "https://www.everycrsreport.com/files/2026-07-13_IF10673_02c34e916292d08589a39a20ea84022cfca9b4bb.html"
+    },
+    {
+      "date": "2026-04-30",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "USTDA Modernization Act of 2026 (H.R. 8625), bill status",
+      "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119hr8625/xml/BILLSTATUS-119hr8625.xml"
     }
   ],
   "stage": "not_started",
@@ -108,6 +155,6 @@
   "timeline": [],
   "title": "Eliminate the U.S. Trade and Development Agency",
   "tracked": true,
-  "uncertainties": "Only the CRS product was read; its update date is used for its statements, which describe budget actions rather than a single dated event, so the timeline is empty. No search of Congress records for a bill to eliminate the agency was made; FY2026 appropriations and the FY2027 request are as reported by CRS.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The Unified Agenda agency selector (2026 Regulatory Plan and Unified Agenda) on reginfo.gov has no entry for the U.S. Trade and Development Agency, so the agenda check is not applicable. The CRS In Focus updated 2026-07-13 reports no elimination proposal, $87 million appropriated for FY2026 and $77 million requested for FY2027. H.R. 8625 (USTDA Modernization Act of 2026, introduced 2026-04-30, referred to House Foreign Affairs) would extend the agency's authorities and is not an elimination bill; its text was not read. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

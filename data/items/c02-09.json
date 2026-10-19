@@ -2,9 +2,9 @@
   "agency": "OMB",
   "blockers": [],
   "chapter": "02",
-  "confidence": 55,
+  "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "All five systematic checks were documented on 2026-10-18: check 1 (Federal Register API, all agencies and OMB-only, rerun by the reviewer) found no document on the Resource Management Offices or new Program Associate Director posts; check 2 is partial because the Unified Agenda was unreachable and the OMB proposed-rule listing was used; check 3 (congress.gov and govinfo search) found no bill but enacted laws were not read, so it is partial; check 4 (the whitehouse.gov OMB page) is partial because OMB publishes no office structure; check 5 (one news search) found no reporting. With three partial checks and an internal reorganization that may never be published, confidence is set at 55 rather than the 60 to 65 ceiling.",
+  "confidence_reason": "Five checks documented: (1) Federal Register API, all agencies and OMB-only, supports (nothing found); (2) Unified Agenda OMB list, 12 rules read on 2026-10-19, supports but weakly informative for internal staffing; (3) congress.gov and govinfo search, partial (enacted laws not read); (4) whitehouse.gov OMB page, partial (no office structure published); (5) one news search, supports. With one weakly informative and two partial checks, confidence is 60.",
   "durability": {
     "level": "low",
     "why": "An internal OMB organization choice that any later Director could reverse."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Systematic absence check confirmed not_started for the OMB office split; confidence raised from 40 to 55 with three partial checks."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the OMB rule list in the reginfo.gov Unified Agenda (12 rules, none on the office split), kept not_started 0 and raised confidence from 55 to 60."
     }
   ],
   "id": "c02-09",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -48,16 +52,12 @@
   "requires_congress": "no",
   "research_agent": "N02a",
   "review": {
-    "flags": [
-      "not_started rests on absence of public evidence; internal OMB staffing changes may not be published.",
-      "V10: not_started 0 confirmed after a Federal Register rerun; confidence 40 to 55 under the systematic-check rubric, held below the researcher's suggested 60 because checks 2, 3 and 4 are partial.",
-      "V10: enacted 119th Congress laws were not read for OMB staffing provisions."
-    ],
+    "flags": [],
     "mandate_check": "verified",
     "mandate_note": "Page 47 lists the six resource management offices and says they should be divided into smaller subject-matter areas with more PADs, each with a Deputy PAD. The proposal matches and is a firm recommendation.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V10",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "OMB notice effective 2025-02-11 delegates apportionment authority to the Program Associate Directors; names no new offices.",
@@ -113,6 +113,12 @@
         "note": "Reviewer V10 spot-check, 2026-10-18: query \"Program Associate Director\", all agencies, all document types, since 2025-01-20: two documents, the April 2025 OMB apportionment delegation notice and an OPM notice on career-reserved SES positions in 2024; neither creates or splits OMB offices.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Program+Associate+Director%22&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the OMB list on 2026-10-19: heading Agency Rule List - 2026, 12 rules (cost accounting standards, presumption of accessibility, CIPSEA data access, federal financial assistance, 0348-AB92 Managing Senior Professional Performance, drone list elements). No entry concerns the Resource Management Offices or Program Associate Director posts. Internal OMB organization is not normally a rulemaking subject, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0348"
       }
     ]
   },
@@ -165,6 +171,6 @@
   ],
   "title": "Divide OMB's six resource management offices into smaller areas with more political PADs",
   "tracked": true,
-  "uncertainties": "The whitehouse.gov OMB pages fetched did not list leadership or offices, and the OMB leadership page could not be fetched. News searches returned no reporting on a split of the resource management offices or new deputy PAD roles. Absence of public evidence is not proof that no internal reorganization or hiring occurred. A reviewer rerun on 2026-10-10 of a Federal Register API query for Program Associate Director since 2025-01-20 returned only the April 2025 OMB notice and an unrelated OPM notice, and one web search found no report of a reorganization. Whether the April notice replaced the February one is not stated in it. Checked systematically on 2026-10-18: Federal Register API searches (all agencies and OMB-only) returned no document on the Resource Management Offices or Program Associate Directors, the OMB proposed-rule listing served as fallback because the Unified Agenda listing was unreachable, one congress.gov and govinfo search surfaced no related bill or law, the whitehouse.gov OMB page held no organizational content and one news search found no reporting of a reorganization. Internal OMB staffing changes may not be published, so the check cannot exclude an unannounced reorganization.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No public record was found of OMB splitting its six Resource Management Offices or creating additional Program Associate Director and Deputy posts since 2025-01-20. Federal Register searches returned only the 2025 apportionment delegation notices, which describe the existing structure; a congress.gov and govinfo search found no related bill, though enacted 119th Congress laws were not read for OMB staffing provisions; the whitehouse.gov OMB page shows no office structure; one news search found no reporting. The OMB list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 12 rules) holds no entry on the subject, and internal staffing would not normally appear there. An unannounced reorganization cannot be excluded. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

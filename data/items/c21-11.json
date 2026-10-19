@@ -4,9 +4,9 @@
     "No announcement found"
   ],
   "chapter": "21",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "Mandate text checked; CRS report read; not_started rests on one report and a limited Federal Register query, below the systematic check needed to exceed the cap.",
+  "confidence": 66,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (supports), Commerce Unified Agenda (supports), congress.gov and govinfo.gov search (supports, CRS R48908), trade.gov About page (supports, neutral on the two units) and a news search (supports). The agenda is weakly informative for an internal reorganization and the agency page does not itemize the two units, so confidence is 66.",
   "durability": {
     "level": "medium",
     "why": "An internal ITA reorganization could be reversed by a later Assistant Secretary."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the Commerce Unified Agenda on reginfo.gov, congress.gov, trade.gov and a news search), not_started kept and confidence raised to 66."
     }
   ],
   "id": "c21-11",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -52,13 +56,13 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Removed the unsupported September 2025 month for the withdrawn amendment from the summary"
+      "Existing check on the 2026-06-22 user-fee notice is labeled does_not_support though it found no reorganization; kept as history, label appears wrong (should be supports)."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 670-671, Global Markets: consolidate and elevate the Advocacy Center and SelectUSA into an Office of Trade and Investment Advocacy headed by a Deputy Assistant Secretary, which should seek congressional authorization to use FDI tools for reshoring. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y21d",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Dated 2026-04-15; Advocacy Center and SelectUSA remain separate Global Markets components; FY2026 cuts proposed and not enacted; H.R. 5248 markup amendment withdrawn, no date in text.",
@@ -69,6 +73,42 @@
         "note": "Federal Register API query of ITA documents since 2025-01-20 with term SelectUSA returned only this user-fee notice; no reorganization. Check only, not cited as a source.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/documents/2026/06/22/2026-12507/revisions-to-user-fees-for-export-and-investment-promotion-servicesevents"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Register API, phrase Advocacy Center, Commerce, since 2025-01-20: 0 results.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Advocacy+Center%22&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=commerce-department"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "ITA, term reorganization: 4 documents (a foreign-trade zone information collection and antidumping review notices); none concerns an ITA reorganization. The earlier SelectUSA query (user-fee notice 2026-06-22) is already on the record.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=reorganization&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=international-trade-administration"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Commerce rule list (176 rules, whole list read): no title mentions SelectUSA, Advocacy Center, trade advocacy or investment promotion; only two ITA entries (trade remedies and Section 232 inclusions). Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named. The reviewer's fetch counted about 160 rules; the count differs by tool, the ITA entries match.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0600"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Domain-limited search (congress.gov, govinfo.gov) on SelectUSA, Advocacy Center and ITA reorganization surfaced CRS report R48908 and IF13048 plus appropriations bills (H.R. 6938, S. 2354, H.R. 5342) and trade-authority bills; no bill text consolidating the two units was identified in the results. Bill texts were not opened.",
+        "result": "supports",
+        "url": "https://www.congress.gov/crs-product/R48908"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "ITA About page (metadata last changed 2026-07-20) lists three units: Global Markets, Industry and Analysis, Enforcement and Compliance; no Office of Trade and Investment Advocacy. SelectUSA and the Advocacy Center are not listed as units on that page, so the page neither shows nor excludes a consolidation.",
+        "result": "supports",
+        "url": "https://www.trade.gov/about-us"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "One standard news search (SelectUSA Advocacy Center reorganization consolidation 2026) returned the CRS report of 2026-04-15, already on the record, and older pieces (a 2012 article on a different reorganization proposal); no report of a consolidation.",
+        "result": "supports",
+        "url": "https://www.everycrsreport.com/files/2026-04-15_R48908_793f951ea3b75a9a03e023beeb0b3d621d46c5e9.html"
       }
     ]
   },
@@ -114,6 +154,6 @@
   "timeline": [],
   "title": "Consolidate the Advocacy Center and SelectUSA into one trade promotion office",
   "tracked": true,
-  "uncertainties": "Rests on one CRS report and a negative finding. A Federal Register API query of International Trade Administration documents since 2025-01-20 mentioning SelectUSA returned one user-fee notice (2026-06-22) that describes no reorganization. The markup date is not stated in the CRS text; a footnote link suggests September 2025. An internal reorganization could exist without a Federal Register notice.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The Commerce rule list on reginfo.gov (labeled Agency Rule List - 2026) lists no rulemaking on the Advocacy Center or SelectUSA; the two ITA entries (RINs 0625-AB27 and 0625-AB30) concern trade remedies and tariff inclusions. The CRS report of 2026-04-15 describes the two units as separate, non-statutory parts of Global Markets; the H.R. 5248 markup date is not stated in its text. The trade.gov About page lists ITA's three business units and does not itemize the two offices. An internal reorganization could exist without a Federal Register notice. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

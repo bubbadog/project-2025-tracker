@@ -6,9 +6,9 @@
     "Appropriators gave SBA more than the administration requested for FY2026 (per CRS), so FY2027 funding cuts depend on Congress."
   ],
   "chapter": "25",
-  "confidence": 62,
+  "confidence": 63,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text pages 749, 750 and 754 checked; not_started rests on five systematic checks of 2026-10-18 (Federal Register API rerun by the reviewer with a term variant, Unified Agenda through its Federal Register fallback only, congress.gov and govinfo with the H.R. 4238 and S. 300 bill status read, SBA disaster page with the newsroom unreachable, one news search) plus the GAO report and CRS summaries read earlier; capped near 62 because check 2 was partial and the FEMA Review Council report and SBA budget justification were not read.",
+  "confidence_reason": "Chapter text pages 749, 750 and 754 checked. Five checks documented: (1) Federal Register API with a variant, supports (nothing qualifying); (2) Unified Agenda SBA list, 67 rules and the 3245-AI52 entry read on 2026-10-19, partial (related entries keep the program in place); (3) congress.gov and govinfo with BILLSTATUS for H.R. 4238 and S. 300, supports; (4) SBA disaster page, partial (newsroom unreachable); (5) one news search, supports. Confidence 63 because the FEMA Review Council report and budget justification were not read.",
   "durability": {
     "level": "high",
     "why": "A transfer of disaster lending would be statutory; current administrative steps point the other way and could change quickly."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 reran the Federal Register API query (federalregister.gov), read the H.R. 4238 and S. 300 bill status on govinfo.gov, and reviewed the Unified Agenda fallback, SBA page and news checks, found no qualifying action, kept not_started 0, removed a research-note timeline entry and closed a truncated history note."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review on 2026-10-19 read the SBA rule list in the reginfo.gov Unified Agenda and the 3245-AI52 entry, found disaster loan entries that revise rather than end the direct program, kept not_started 0 and raised confidence from 62 to 63."
     }
   ],
   "id": "c25-01",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -60,18 +64,15 @@
   "requires_congress": "partial",
   "research_agent": "A14",
   "review": {
+    "alternative": "diverged 0, because SBA is continuing and speeding direct disaster lending.",
     "flags": [
-      "Alternative: diverged 0 is defensible because SBA is continuing and speeding direct disaster lending; not_started kept as no explicit reversal was found.",
-      "H.R. 4238 (House-passed 2026-06-23) and S. 300 add oversight of the disaster loan program and are related, not qualifying.",
-      "Removed the 2026-10-01 timeline entry describing the SBA disaster page's last-modified state, a research note rather than an action; the fact remains in status_summary with its source.",
-      "Closed the truncated 2026-10-08 history note.",
-      "GAO report and CRS budget summary timeline entries are reports rather than actions; kept as context but not stage-deciding."
+      "Existing source_checks labeled does_not_support for the Federal Register rerun, the H.R. 4238 bill status and the news search record that nothing qualifying was found; under the rubric they read as supports."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 749 and 750 call for an end to SBA direct lending, and page 754 recommends working with Congress to assess moving disaster loans to another agency or private channels and stating that no new SBA direct lending programs will be created, citing FEMA overlap, insurance incentives and the share of loans to individuals. The proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "2026-10-18: reviewer rerun with terms disaster loan, transfer, privatize since 2025-01-20: 4 documents (SBA size standards proposed rules 2025-08-22 and 2026-08-20, DHS/FEMA Privacy Act matching notice 2025-07-22); none ends or transfers SBA lending. Researcher SBA-filtered query on direct lending: 0.",
@@ -97,6 +98,12 @@
         "note": "2026-10-18: one researcher news search on ending SBA direct lending or moving disaster loans returned GAO, CRS and 2024 funding items; no search URL was recorded, so the SBA disaster page is listed as a placeholder.",
         "result": "does_not_support",
         "url": "https://www.sba.gov/funding-programs/disaster-assistance"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer opened the SBA list on 2026-10-19: Agency Rule List - 2026, 67 rules. Disaster and loan entries: 3245-AH80 Disaster Loan Program Changes (final), 3245-AI71 Improving SBA Disaster Loan Ability to Provide Meaningful and Timely Assistance (final), 3245-AI52 Disaster Loan Program (proposed) and 3245-AI44 Business Loans (proposed). The 3245-AI52 detail page describes a deregulatory cleanup of 13 CFR part 123 under Executive Order 14219 (NPRM projected 07/2026) with no end to direct lending or transfer of disaster loans. The entries revise the existing direct program.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3245"
       }
     ]
   },
@@ -239,6 +246,6 @@
   ],
   "title": "End SBA direct lending and explore moving disaster loans to other agencies or lenders",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. (1) Federal Register API: the researcher's SBA-filtered query on direct lending returned no documents, and a reviewer rerun on disaster loan with transfer and privatize returned SBA size standard proposed rules and a FEMA data-matching notice, which show SBA still administering disaster loans; no document ends direct lending or moves disaster loans. (2) Unified Agenda: item listings could not be reached and the Federal Register fallback was used. (3) congress.gov and govinfo: H.R. 4238, passed by the House on 2026-06-23 and on the Senate calendar since 2026-06-24, and its Senate counterpart S. 300, on the Senate calendar since 2025-03-04, add reporting, budget disclosure and oversight requirements to the SBA disaster loan program and do not end or transfer it; no bill moving disaster lending was found, and bill texts were read only through their CRS summaries. (4) Agency pages: the SBA disaster page (modified 2026-10-01) shows SBA offering loans for several declared disasters; the SBA newsroom could not be loaded. (5) News: one search returned GAO, CRS and older funding items. The FEMA Review Council report and the SBA FY2027 budget justification were not read directly; the first is known from a CRS summary and two press summaries that do not mention SBA, and the second from a CRS Insight, so a recommendation or budget line on SBA disaster loans could sit in the full documents. CRS did not explain the proposed FY2027 cut to disaster loan funding. The testimony figures are SBA's own. Judgment: SBA is continuing and speeding up direct disaster lending, which a reader could classify as diverged from the goal of ending direct lending; not_started is kept because no step toward, or explicit reversal of, the recommendation was found and the FY2027 request halves the program's funding.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No action ending SBA direct lending, stating that no new direct lending programs will be developed, or moving disaster lending to another agency or private channel was found. SBA continues to run and adjust its direct disaster loan program, including an interim final rule of 2026-01-29. Federal Register searches found nothing qualifying; H.R. 4238 (House-passed 2026-06-23) and S. 300 add oversight without ending or transferring the program; the SBA disaster page shows active loans and the newsroom failed to load; one news search returned GAO and CRS items. The SBA list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 67 rules) holds disaster loan entries (3245-AI52, AI71, AH80) that revise the existing program. The FEMA Review Council report and the FY2027 budget justification were not read directly. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

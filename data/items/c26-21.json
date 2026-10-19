@@ -7,7 +7,7 @@
   "chapter": "26",
   "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "The Attorney General memorandum was read on justice.gov and the State Department and CISA closures rest on reputable news reports. Five checks documented on 2026-10-18: (1) a Federal Register search for foreign malign influence across agencies found no DHS or DOJ contract or program; (2) the Unified Agenda listing could not be browsed and contracting is not a rulemaking subject (partial); (3) a congress.gov and GovInfo search with a bill status read found only an assessment bill in committee; (4) the Justice Department newsroom showed nothing, while dhs.gov was blocked (partial); (5) a news search found no dated DHS or DOJ award, and the contract-news item opened in review is an August 2026 report of a platform takedown with no award. Set to 60, below the earlier 65, because contract awards are not systematically searchable here and DHS pages were blocked.",
+  "confidence_reason": "The Attorney General memorandum was read on justice.gov and the State Department and CISA closures rest on reputable news reports. Five documented checks: (1) a Federal Register search for foreign malign influence found no DHS or DOJ contract or program (supports); (2) Unified Agenda: the DHS and Justice rule lists on reginfo.gov were read in full on 2026-10-19 with no related entry (supports, not applicable in practice because contracting is not rulemaking); (3) congress.gov and GovInfo search with the H.R. 7969 bill status read found only an assessment bill (supports); (4) the Justice Department newsroom showed nothing, while dhs.gov was blocked (partial); (5) one news search found no dated DHS or DOJ award (supports). Kept at 60 because the agenda is not applicable and contract awards are not systematically searchable here.",
   "durability": {
     "level": "medium",
     "why": "The disbanding was by memorandum and reorganization, which could be reversed administratively, but no reversal was found."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Diverged kept; five-part check documented and spot-checked; confidence lowered from 65 to 60 for partial agenda and DHS coverage."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the DHS and Justice Unified Agenda rule lists on reginfo.gov and found no related entry; diverged and confidence 60 kept."
     }
   ],
   "id": "c26-21",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -57,23 +61,19 @@
   "research_agent": "R2627",
   "restates_ids": [],
   "review": {
+    "alternative": "Not_started is defensible if the closures of influence-tracking units are treated as unrelated to the contracting recommendation.",
     "document_reread": {
       "citation": "Attorney General memorandum, 2025-02-05",
       "note": "Foreign Influence Task Force disbanded.",
       "result": "supports",
       "url": "https://www.justice.gov/ag/media/1388541/dl"
     },
-    "flags": [
-      "Re-sourced the 2025-02-05 event to the memorandum on justice.gov.",
-      "Corrected the Defense One source date from month-only to 2026-10-14 and gave its title.",
-      "Evenly balanced: diverged kept because the units that did this work were closed by an affirmative decision; not_started is the other defensible call because the specific ask is contracting.",
-      "V7 systematic-check review: diverged 0 kept; the researcher's unopened contract-news item opened and found to contain no award; confidence 65 to 60 (the researcher suggested 55) because check 2 and check 4 are partial and contract awards are hard to search."
-    ],
+    "flags": [],
     "mandate_check": "ok",
     "mandate_note": "Page 790 recommends ordering DHS and DOJ to contract with U.S.-owned and operated AI companies able to detect, identify and disrupt domestic groups' and CCP influencers' social media operations and funding streams using public information, as an offensive measure. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Memorandum dated 2025-02-05 disbands the Foreign Influence Task Force and narrows FARA criminal charging.",
@@ -124,6 +124,18 @@
         "note": "Reviewer re-check, 2026-10-18: opened: dated 2026-08-29; reports a platform's identification of about 200,000 inauthentic accounts reportedly linked to China and ongoing FBI and DOJ investigations; names no solicitation or contract award.",
         "result": "does_not_support",
         "url": "https://samsearch.co/government-contracting-news/x-identifies-significant-chinese-bot-farm-targeting-us-ai-and-energy-policy-181802"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "DHS list headed 'Agency Rule List - 2026' (agency named Department of Homeland Security, 59 rules, read to the footer by the reviewer on 2026-10-19): no entry on artificial intelligence, social media or influence operations. Not applicable in practice: contracting is not rulemaking.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1600"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Justice list headed 'Agency Rule List - 2026' (76 rules, read in full by the reviewer): no entry on artificial intelligence, social media, foreign influence or FARA; 1140-AA80 concerns NFA firearms leaving government contracts.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1100"
       }
     ]
   },
@@ -205,6 +217,6 @@
   ],
   "title": "Contract with U.S. AI firms to detect and disrupt CCP influence operations",
   "tracked": true,
-  "uncertainties": "The State Department closure and the CISA change rest on news reports; the date of the CISA change and of a reported reduction at the ODNI Foreign Malign Influence Center were not given in the sources read. Classified or unpublicized DHS or DOJ contracts for social media analytics, and ordinary commercial licenses, would not appear in the sources reviewed; DHS social media monitoring contracts for immigration enforcement, if any, would not target CCP influence operations and were not researched. Searches performed: three web searches (Foreign Influence Task Force; CISA and the Global Engagement Center; in review, the Attorney General memorandum) and a Federal Register API query for foreign malign influence since 2025-01-20, which returned no documents. Diverged is a judgment call: the text asks for contracting, and a reader could treat the closures as unrelated and stage this not_started. Checked systematically on 2026-10-18: Federal Register search for foreign malign influence across agencies, the Unified Agenda landing page (contracting is outside rulemaking), a congress.gov and GovInfo search with a bill status read of H.R. 7969, the Justice Department newsroom (dhs.gov blocked), and one news search found no DHS or DOJ contract with AI firms for influence-operation detection. A contract-news item returned by the search, dated 2026-08-29, reports a platform's takedown of a reportedly China-linked bot network and related FBI and Justice Department investigations, with no contract award; contract awards are not systematically searchable through these routes.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No DHS or DOJ contract with AI companies to detect influence operations was found. The 2025-02-05 Attorney General memorandum disbanded the FBI Foreign Influence Task Force; the State Department and CISA closures rest on news reports, and the dates of the CISA change and of a reported ODNI reduction were not given. Classified or unpublicized contracts would not appear in the sources reviewed, contract awards are not systematically searchable through these routes, and dhs.gov is blocked. The Unified Agenda rule lists on reginfo.gov for Homeland Security and Justice (headed 'Agency Rule List - 2026') list no related entry; contracting is not rulemaking, so the agenda check is not applicable in practice. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

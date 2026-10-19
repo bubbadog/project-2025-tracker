@@ -7,7 +7,7 @@
   "chapter": "11",
   "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Mandate text checked and the stage-deciding USDA memo read on usda.gov; the government-wide part of the recommendation is unmet, which the progress value reflects.",
+  "confidence_reason": "Page 337 re-read; the stage-deciding USDA memo was read on usda.gov earlier, and both new Rapides Parish court filings and the H.R. 8781 govinfo record were opened in this review. Stage rule applied: the USDA-specific rescission is operative through agency action but the any-agency bar is not codified, so implemented, not completed.",
   "durability": {
     "level": "medium",
     "why": "The rescission is a guidance memo that could be reversed by a later administration, and the change rests on court decisions that continue to develop."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: no later USDA memo, rule, statute or order found; the 2025-07-02 stipulation is now described as dismissing only the count against USDA, with the case continuing against other federal defendants (filing of 2026-07-23); H.R. 8781, reported 2026-09-08, added as a source; red-team check holds. Independent review (AI) opened the court filings and the govinfo record and kept implemented 70 at confidence 82."
     }
   ],
   "id": "c11-21",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -42,6 +46,32 @@
   "position": "Provide School Meals to Children in Need; Do Not Use Federal Meals to Support Radical Ideology",
   "progress": 70,
   "proposal": "The Mandate recommends that the next administration prohibit USDA or any other federal agency from withholding services, in context school meal funding, from federal or state agencies, including K-12 schools, that decline to read \"sex\" in Title IX to mean sexual orientation and gender identity. It points to USDA's May 2022 policy update, a 22-state attorneys general lawsuit against it, and 2022 legislation proposed in Congress.",
+  "redteam": {
+    "date": "2026-10-19",
+    "evidence": [
+      {
+        "date": "2025-07-07",
+        "note": "Rescission memo; no later document found that supersedes it.",
+        "source": "USDA Food and Nutrition Service",
+        "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.cn-bostock-policy-recission-070725.pdf"
+      },
+      {
+        "date": "2025-07-02",
+        "note": "Stipulation dismisses Count IV against USDA and its Secretary only.",
+        "source": "W.D. La. docket (tracker copy)",
+        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/03/Rapides-Parish_2025.07.02._JOINT-STIPULATION.pdf"
+      },
+      {
+        "date": "2026-07-23",
+        "note": "Case still pending against other federal defendants; filing does not discuss the USDA rescission.",
+        "source": "W.D. La. docket (tracker copy)",
+        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/03/Rapides-Parish_2026.07.23_PLAINTIFFS-NOTICE-OF-SUPPLEMENTAL-AUTHORITY.pdf"
+      }
+    ],
+    "note": "Stage holds at implemented: the USDA-specific policy stays rescinded. The government-wide bar remains unmet, as already reflected in progress 70.",
+    "verdict": "holds",
+    "what_was_tested": "Searched for a reinstatement or replacement of the 2022 Bostock policy, a court order against the 2025-07-07 rescission, any later USDA rule or memo, a government-wide statutory or regulatory bar on withholding school meal funds, and later litigation touching the Rapides Parish settlement."
+  },
   "related_ids": [
     "c11-06",
     "c10-11"
@@ -54,15 +84,14 @@
   "research_agent": "N11",
   "review": {
     "flags": [
-      "Maine freeze kept as neutral context, not alignment",
-      "judgment call: implemented 70 for USDA rescission while the any-agency bar is not codified",
-      "title shortened to 90 characters or fewer"
+      "Implemented 70 kept. The Title IX Clarification Act bills could be read as toward the Congress-facing bar; kept out because the record shows no school meal or withholding provision and the House bill is only reported.",
+      "Senate bill detail (S. 5179) dropped from uncertainties because no source for it was listed; H.R. 8781 now carries a govinfo source."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 337 recommends prohibiting USDA or any agency from withholding services from agencies that decline to replace sex with SOGI in Title IX; the text says services (context: meal funding), so the paraphrase was adjusted and the 2022 legislation mention added. Not a change in substance.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9f",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Page 337: prohibit USDA or any other federal agency from withholding services from federal or state agencies, including K-12 schools, that choose not to replace sex with SOGI in administering Title IX; cites the May 2022 USDA policy, the 22-state lawsuit and 2022 legislation. Proposal paraphrase and direct match confirmed.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
         "note": "Added. Memo dated 2025-07-07 from FNS Administrator; rescinds 2022 Bostock documents; cites EO 14168; 2020 Title IX rule; ends compliance reviews; Rapides Parish settlement 2025-07-02.",
@@ -83,6 +112,21 @@
         "note": "Freeze 2025-04-02, April TRO, settlement 2025-05-02; article dated 2025-05-05.",
         "result": "supports",
         "url": "https://www.k12dive.com/news/maine-usda-rollins-title-ix-victory-trump-administration-transgender-athlete-policy/747181/"
+      },
+      {
+        "note": "W.D. La. 1:25-cv-00070, Doc. 28 filed 2025-07-02: Rule 41 stipulation dismissing Count IV against USDA and Secretary Rollins only; claims against other defendants not dismissed. Does not itself mention the rescission (the USDA memo does). Supports the summary sentence.",
+        "result": "supports",
+        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/03/Rapides-Parish_2025.07.02._JOINT-STIPULATION.pdf"
+      },
+      {
+        "note": "Doc. 53 filed 2026-07-23, plaintiff's notice of supplemental authority citing West Virginia v. B.P.J. (2026-06-30) and arguing the case is not moot; caption HHS et al.; USDA not mentioned. Supports the summary sentence that the case continued against other federal defendants.",
+        "result": "supports",
+        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/03/Rapides-Parish_2026.07.23_PLAINTIFFS-NOTICE-OF-SUPPLEMENTAL-AUTHORITY.pdf"
+      },
+      {
+        "note": "H.R. 8781 reported in House 2026-09-08, H. Rept. 119-798, Education and Workforce Committee; metadata only, no mention of school meals or withholding. Supports the uncertainty wording, not a stage change.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/app/details/BILLS-119hr8781rh"
       }
     ]
   },
@@ -143,10 +187,31 @@
       "publisher": "K-12 Dive",
       "title": "Maine reaches settlement with USDA over frozen school funding",
       "url": "https://www.k12dive.com/news/maine-usda-rollins-title-ix-victory-trump-administration-transgender-athlete-policy/747181/"
+    },
+    {
+      "date": "2025-07-02",
+      "kind": "court",
+      "publisher": "Georgetown Law Institute for Constitutional Advocacy and Protection litigation tracker (court filing)",
+      "title": "Rapides Parish School Board v. HHS et al., W.D. La. 1:25-cv-00070, joint stipulation of dismissal of Count IV against USDA and its Secretary (Doc. 28)",
+      "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/03/Rapides-Parish_2025.07.02._JOINT-STIPULATION.pdf"
+    },
+    {
+      "date": "2026-07-23",
+      "kind": "court",
+      "publisher": "Georgetown Law Institute for Constitutional Advocacy and Protection litigation tracker (court filing)",
+      "title": "Rapides Parish School Board v. HHS et al., plaintiff's notice of supplemental authority (Doc. 53)",
+      "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/03/Rapides-Parish_2026.07.23_PLAINTIFFS-NOTICE-OF-SUPPLEMENTAL-AUTHORITY.pdf"
+    },
+    {
+      "date": "2026-09-08",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 8781, Title IX Clarification Act of 2026, reported in House (govinfo)",
+      "url": "https://www.govinfo.gov/app/details/BILLS-119hr8781rh"
     }
   ],
   "stage": "implemented",
-  "status_summary": "A USDA Food and Nutrition Service memo dated 2025-07-07, Guidance on the Interpretation of Discrimination Based on Sex in USDA Child Nutrition Programs, rescinds the May 2022 Bostock policy update and its related documents, cites Executive Order 14168, applies the 2020 Title IX rule and USDA's longstanding Title IX regulations, and ends pending compliance reviews based on the 2022 policy. The memo follows a 2025-07-02 settlement in which the Justice Department, for USDA, agreed to the rescission in exchange for dismissal of a Louisiana school board's lawsuit. No statute or government-wide rule barring all agencies from such withholding in the future was found. Separately, USDA froze some funds to Maine on 2025-04-02 in a dispute over the state's policy on transgender students in sports; a temporary restraining order in April and a court-approved settlement on 2025-05-02 ended the freeze. That episode involved a state with a gender-identity-inclusive policy and falls outside what this recommendation addresses.",
+  "status_summary": "A USDA Food and Nutrition Service memo dated 2025-07-07, Guidance on the Interpretation of Discrimination Based on Sex in USDA Child Nutrition Programs, rescinds the May 2022 Bostock policy update and its related documents, cites Executive Order 14168, applies the 2020 Title IX rule and USDA's longstanding Title IX regulations, and ends pending compliance reviews based on the 2022 policy. The memo follows a 2025-07-02 settlement in which the Justice Department, for USDA, agreed to the rescission in exchange for dismissal of a Louisiana school board's lawsuit; the joint stipulation filed that day dismisses only the count against USDA and its Secretary, and the school board's claims against the Department of Health and Human Services and other federal defendants were still being litigated in a filing dated 2026-07-23. No statute or government-wide rule barring all agencies from such withholding in the future was found. Separately, USDA froze some funds to Maine on 2025-04-02 in a dispute over the state's policy on transgender students in sports; a temporary restraining order in April and a court-approved settlement on 2025-05-02 ended the freeze. That episode involved a state with a gender-identity-inclusive policy and falls outside what this recommendation addresses.",
   "timeline": [
     {
       "date": "2025-04-02",
@@ -186,6 +251,6 @@
   ],
   "title": "Bar agencies from withholding school meal funds over SOGI readings of Title IX",
   "tracked": true,
-  "uncertainties": "The USDA memo was read in full on usda.gov; it has no memo code. The FNS guidance page shows a last-updated date of 2026-02-20, which may reflect later edits and is not used as an event. Executive Order 14168 is cited in the memo and is covered in c11-06; its directive to agencies to rescind inconsistent guidance is a government-wide policy but not a specific bar on funding withholding. The outcome of the 22-state attorneys general lawsuit filed in 2022 and the 2022 House bill were not checked. The Maine episode concerns athletics policy rather than the Mandate's SOGI reading of Title IX and is listed for context only; the TRO date was not stated in the source. Whether other agencies (HHS, DOJ) retain comparable policies was not checked.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "The USDA memo was read in full on usda.gov; it has no memo code. The FNS guidance page shows a last-updated date of 2026-02-20, which may reflect later edits and is not used as an event. Executive Order 14168 is cited in the memo and is covered in c11-06; its directive to agencies to rescind inconsistent guidance is a government-wide policy but not a specific bar on funding withholding. The outcome of the 22-state attorneys general lawsuit filed in 2022 and the 2022 House bill were not checked. The Maine episode concerns athletics policy rather than the Mandate's SOGI reading of Title IX and is listed for context only; the TRO date was not stated in the source. Whether other agencies (HHS, DOJ) retain comparable policies was not checked. Freshness check of 2026-10-19: no later USDA memo, proposed or final rule, statute or court order concerning the 2025-07-07 rescission was found; the USDA guidance page still carries only the title and a link to the memo (updated 2026-02-20). A Federal Register API search for Bostock and school nutrition since 2025-07-01 returned two unrelated documents (an HHS Medicaid rule and a proposed government-wide federal financial assistance rule, 2026-05-29); the latter was not read and its bearing on school meal funds is unknown. H.R. 8781, the Title IX Clarification Act of 2026, was reported by the House Committee on Education and Workforce on 2026-09-08 (H. Rept. 119-798); its govinfo record does not mention school meals or withholding of funds and the bill text was not read, so it is not counted as the recommended bar on withholding; a Senate bill of the same name noted by the researcher was not checked in review. The Supreme Court decision in West Virginia v. B.P.J. (2026-06-30) is cited in the 2026-07-23 Rapides Parish filing; it is a sports case and was not read here. No appropriations provision barring withholding of school meal funds was located.",
+  "updated_at": "2026-10-19"
 }

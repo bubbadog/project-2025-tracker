@@ -4,9 +4,9 @@
     "Reversal by a future administration is possible because the changes are guidance-level."
   ],
   "chapter": "15",
-  "confidence": 78,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked; the 2026 withdrawal notice was read on govinfo.gov, while the July 2025 mortgagee letter terminations rest on consistent trade and law-firm accounts rather than HUD text.",
+  "confidence": 82,
+  "confidence_label": "high",
+  "confidence_reason": "Stage-deciding HUD documents (Mortgagee Letter 2025-08 and the 2025-07-10 release) read on hud.gov in review and the 2026 OGC notice read on govinfo.gov; document text was checked at pages 508 and 515 in the 2026-10-13 review. Other appraisal-integrity actions beyond PAVE were not searched, which keeps progress short of completed.",
   "durability": {
     "level": "medium",
     "why": "The changes rest on rescinded mortgagee letters and guidance rather than statute, so a later administration could restore them."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review read HUD Mortgagee Letter 2025-08 and the HUD release of 2025-07-10 on hud.gov, re-sourced the two 2025 timeline events to them and refreshed the summary. No stage change (implemented 80); confidence moved from 78 to 82 (medium to high)."
     }
   ],
   "id": "c15-05",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -51,30 +55,30 @@
   "requires_congress": "no",
   "research_agent": "N15",
   "review": {
-    "flags": [],
-    "mandate_check": "verified",
-    "mandate_note": "Proposal matches the first numbered item under the subregulatory guidance bullet on page 508; footnote 28 on page 515 carries the duplication and arbitrary-procedure rationale, so page 515 was added.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y15a",
+    "flags": [
+      "No stage change: implemented 80, direct.",
+      "Confidence raised from 78 (medium) to 82 (high) because the HUD primary documents now replace trade-press sourcing.",
+      "Timeline events of 2025-03-19 and 2025-07-10 re-sourced from the National Association of Realtors page to the HUD mortgagee letter and release.",
+      "Alternative: completed 100 is not supported because the Handbook update and other appraisal-integrity actions were not verified."
+    ],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's proposal field, pages 508 and 515 recommend that HUD immediately end the PAVE policies and reverse other actions seen as undermining appraisal integrity; the chapter text was not available this run, and the 2026-10-13 review recorded that it had checked the page 508 bullet and footnote 28 on page 515.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Names ML 2024-16, ML 2024-07 and ML 2021-27, the 2025-03-19 ML 2025-08 rescission and the statement that fair housing and fair lending laws remain enforced.",
+        "note": "Read 2026-10-18: ML 2025-08 dated 2025-03-19, effective immediately, rescinds ML 2024-07, ML 2024-16 and ML 2021-27 and restores prior appraisal requirements; Handbook 4000.1 update forthcoming. Fully supports implemented with a direct match; guidance-level, so short of completed.",
         "result": "supports",
-        "url": "https://www.nar.realtor/washington-report/hud-and-omb-announce-termination-of-policies-introduced-under-pave-task-force"
+        "url": "https://www.hud.gov/sites/dfiles/OCHCO/documents/2025-08hsgml.pdf"
       },
       {
-        "note": "Confirms 2025-07-10 HUD and OMB announcement, disbanding, and ML 2025-08 rescinding three letters.",
+        "note": "Read 2026-10-18: release of 2025-07-10 terminates the three letters, describes the PAVE task force as effectively disbanded, and states fair housing and fair lending laws continue to be enforced.",
         "result": "supports",
-        "url": "https://infobytes.orrick.com/2025-07-17/hud-omb-update-appraisal-policies-and-disband-task-force/"
+        "url": "https://www.hud.gov/news/hud-no-25-092"
       },
       {
-        "note": "Confirms 2025-07-10 announcement and disbanding; does not list letters.",
-        "result": "partial",
-        "url": "https://www.housingwire.com/articles/trump-disbands-pave-task-force-biden-appraisals/"
-      },
-      {
-        "note": "91 FR 44867, published 2026-07-17, effective 2025-09-25; item 9 is the 2022 appraisal elements of proof guidance.",
+        "note": "Not re-opened in review; researcher read it this run: 91 FR 44867, withdraws the 2022 appraisal elements of proof guidance among 13 documents, effective 2025-09-25.",
         "result": "supports",
         "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-17/html/2026-14432.htm"
       }
@@ -137,24 +141,45 @@
       "publisher": "Federal Register / HUD",
       "title": "Notice of the Withdrawal of OGC Guidance Documents (91 FR 44867)",
       "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-17/html/2026-14432.htm"
-    }
-  ],
-  "stage": "implemented",
-  "status_summary": "On 2025-07-10 HUD and OMB announced the end of policies introduced under the PAVE task force, effectively disbanding it, and terminated three FHA mortgagee letters on appraisal review, reconsideration of value and appraiser fair housing compliance (ML 2024-16, ML 2024-07 and ML 2021-27). Those policies had first been rescinded on 2025-03-19 through Mortgagee Letter 2025-08. HUD stated that the Fair Housing Act and the Equal Credit Opportunity Act continue to be enforced. A HUD notice published 2026-07-17 (91 FR 44867) withdrew 13 Office of General Counsel guidance documents, including the 2022 appraisal elements of proof guidance, effective 2025-09-25.",
-  "timeline": [
+    },
     {
       "date": "2025-03-19",
-      "event": "HUD Mortgagee Letter 2025-08 rescinded appraisal-related mortgagee letters for FHA single family programs.",
-      "kind": "news",
-      "source": "National Association of Realtors",
-      "url": "https://www.nar.realtor/washington-report/hud-and-omb-announce-termination-of-policies-introduced-under-pave-task-force"
+      "kind": "primary",
+      "publisher": "HUD",
+      "title": "HUD Mortgagee Letter 2025-08, Rescinding Multiple Appraisal Policy Related Mortgagee Letters",
+      "url": "https://www.hud.gov/sites/dfiles/OCHCO/documents/2025-08hsgml.pdf"
     },
     {
       "date": "2025-07-10",
-      "event": "HUD and OMB announced termination of PAVE-era FHA mortgagee letters and the effective disbanding of the PAVE task force.",
-      "kind": "news",
-      "source": "National Association of Realtors",
-      "url": "https://www.nar.realtor/washington-report/hud-and-omb-announce-termination-of-policies-introduced-under-pave-task-force"
+      "kind": "primary",
+      "publisher": "HUD",
+      "title": "HUD, OMB Streamline Home Appraisal Process, Effectively Disband Woke Biden-Era Task Force",
+      "url": "https://www.hud.gov/news/hud-no-25-092"
+    },
+    {
+      "date": "2026-10-18",
+      "kind": "primary",
+      "publisher": "HUD",
+      "title": "HUD Single Family Housing superseded policy documents",
+      "url": "https://www.hud.gov/hudclips/sfhsuperseded"
+    }
+  ],
+  "stage": "implemented",
+  "status_summary": "HUD Mortgagee Letter 2025-08, issued 2025-03-19 and effective immediately, rescinded the FHA appraisal letters ML 2024-07, ML 2024-16 and ML 2021-27 and restored the earlier appraisal requirements. On 2025-07-10 HUD and OMB announced the end of policies introduced under the PAVE task force, effectively disbanding it, and stated that the Fair Housing Act and the Equal Credit Opportunity Act continue to be enforced. A HUD Office of General Counsel notice published 2026-07-17 (91 FR 44867) withdrew 13 guidance documents, including the 2022 appraisal elements of proof guidance, effective 2025-09-25. The changes rest on rescinded letters and withdrawn guidance rather than rulemaking.",
+  "timeline": [
+    {
+      "date": "2025-03-19",
+      "event": "HUD Mortgagee Letter 2025-08, effective immediately, rescinded ML 2024-07, ML 2024-16 and ML 2021-27 and restored prior FHA single family appraisal requirements, pending an update to Handbook 4000.1.",
+      "kind": "primary",
+      "source": "HUD Mortgagee Letter 2025-08",
+      "url": "https://www.hud.gov/sites/dfiles/OCHCO/documents/2025-08hsgml.pdf"
+    },
+    {
+      "date": "2025-07-10",
+      "event": "HUD and OMB announced the termination of the PAVE-era FHA mortgagee letters on appraisal review, reconsideration of value and appraiser fair housing compliance, effectively disbanding the PAVE task force.",
+      "kind": "primary",
+      "source": "HUD press release No. 25-092",
+      "url": "https://www.hud.gov/news/hud-no-25-092"
     },
     {
       "date": "2026-07-17",
@@ -166,6 +191,6 @@
   ],
   "title": "End the Biden-era PAVE appraisal-equity policies",
   "tracked": true,
-  "uncertainties": "The July 2025 action is known through trade and law-firm accounts (National Association of Realtors, Orrick, HousingWire); no HUD press release or mortgagee letter text was opened, and no Federal Register citation exists for it because mortgagee letters are not published there. The 2026 notice was read on govinfo.gov.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Mortgagee Letter 2025-08 and the HUD release of 2025-07-10 were read in full on hud.gov in review, and the 2026 OGC notice was read on govinfo.gov by the researcher; mortgagee letters are not published in the Federal Register. The release describes the task force as effectively disbanded in its headline but does not state a formal dissolution. The HUD superseded-documents page lists ML 2024-07 and ML 2021-27 as superseded but gives no supersession dates and omits ML 2024-16. The 2026 OGC notice does not mention PAVE, so it is recorded as a related guidance withdrawal. Whether Handbook 4000.1 was formally updated was not checked. The Mandate recommendation also covers other appraisal-integrity actions beyond PAVE, which were not separately searched. Trade and law-firm accounts (National Association of Realtors, Orrick, HousingWire) are consistent with the HUD documents.",
+  "updated_at": "2026-10-18"
 }

@@ -4,9 +4,9 @@
     "The 2023 final rule that removed the loan authorization requirement and lifted the SBLC moratorium has not been reversed by a rule that was found"
   ],
   "chapter": "25",
-  "confidence": 65,
+  "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "The SBA release, the CRS Insight and the Inspector General report were read; the loan authorization status rests on absence of evidence.",
+  "confidence_reason": "The SBA release was re-read and a Federal Register check for loan authorization documents was run in this review; the 2023 rule and the Inspector General report were read in full by the researcher; the loan authorization status rests on absence of evidence.",
   "durability": {
     "level": "low",
     "why": "The moratorium and SOP are agency actions that SBA can change without notice and comment."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review re-read the SBA release on legacy.sba.gov and ran a Federal Register API check for SBA loan authorization documents since 2025-01-20 (none); the researcher read the 2023 rule and the Inspector General report in full, which documents the Mission-Based to Community Advantage naming link. No stage change (in_progress 40, partial); confidence 65 to 66."
     }
   ],
   "id": "c25-08",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -54,32 +58,29 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Title shortened to under 90 characters",
-      "Replaced the law firm source for SOP 50 10 8 with a CRS Insight",
-      "Corrected the OIG response: SBA partially agreed to one of three recommendations",
-      "Added related_ids c25-06",
-      "Confidence 65"
+      "No stage change: in_progress 40, partial.",
+      "Defensible alternative: in_progress 30, since only the Community Advantage licensing element is operative and the loan authorization and general SBLC cap items rest on absence."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 759, Organizational Issues and Budget: Personnel Challenges. Rein in SBA efforts to expand SBLC licenses, create a Mission-Based SBLC and remove the loan authorization requirement in 7(a) and 504; get programs under control and staffed, outsourcing where efficient. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y1",
+    "mandate_check": "not_checked",
+    "mandate_note": "Chapter text not available in this run; the earlier review recorded: Page 759, Organizational Issues and Budget: Personnel Challenges. Rein in SBA efforts to expand SBLC licenses, create a Mission-Based SBLC and remove the loan authorization requirement in 7(a) and 504; get programs under control and staffed, outsourcing where efficient. Paraphrase accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14. Community Advantage expansion moratorium and license moratorium, new SOP with higher capital reserves; nothing on loan authorization or general SBLC licensing.",
-        "result": "supports",
+        "note": "2026-10-18: release 25-51 of 2025-05-19 imposes an immediate moratorium on Community Advantage expansion, reinstates the moratorium on new Community Advantage licenses and requires higher capital reserves under a new SOP; no loan authorization change. Supports the in_progress stage for the licensing part only.",
+        "result": "partial",
         "url": "https://legacy.sba.gov/article/2025/05/19/sba-overhauls-reckless-biden-era-lending-program"
       },
       {
-        "note": "Checked 2026-10-14. SOP 50 10 8 announced 2025-04-22, effective 2025-06-01; restores pre-2023 underwriting; silent on loan authorization and SBLCs.",
-        "result": "partial",
-        "url": "https://www.everycrsreport.com/files/2025-04-28_IN12549_747ba3619ab620f87ababdaf70278efb869b7f49.html"
+        "note": "2026-10-18: zero SBA documents containing loan authorization since 2025-01-20; supports the absence of a rule restoring the requirement.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22loan+authorization%22&conditions[agencies][]=small-business-administration&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Checked 2026-10-14. Report dated 2026-09-17; 16 SBLC licenses as of 2025-04-05; no exams since 2023-04-04; two recommendations agreed, one partially agreed.",
-        "result": "supports",
-        "url": "https://www.oversight.gov/sites/default/files/documents/reports/2026-09/SBA%20OIG%20Report%2026-14%20-%20Small%20Business%20Lending%20Companies%E2%80%99%20Performance%20in%20the%207%28a%29%20Loan%20Program%20and%20SBA%E2%80%99s%20Oversight.pdf"
+        "note": "2026-10-18: client error reported by the researcher; not retried.",
+        "result": "unreachable",
+        "url": "https://www.sba.gov/document/sop-50-10-8-lender-development-company-loan-programs"
       }
     ]
   },
@@ -168,6 +169,6 @@
   ],
   "title": "Rein in SBLC licensing growth, Mission-Based SBLCs and the end of loan authorizations",
   "tracked": true,
-  "uncertainties": "The 2023 final rule that lifted the SBLC moratorium, created the Community Advantage SBLC category (the mission-based SBLC the chapter names; this link is an inference from the rule title and the release) and removed the loan authorization requirement was seen as a Federal Register search result only. A Federal Register API search for Small Business Lending Company documents since 2025-01-20 returned none, and CRS does not mention loan authorization, so the finding that it was not restored is an absence of evidence. The SBA release does not name the SOP number for the new capital reserve standards, so its link to SOP 50 10 8 is not confirmed. A law firm summary of SOP 50 10 8 used in the draft was replaced by the CRS Insight.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The SBA release of 2025-05-19 (No. 25-51) was re-read in this review on legacy.sba.gov: it imposes a moratorium on expansion of the Community Advantage program, reinstates the moratorium on new Community Advantage lending licenses and requires higher capital reserves under an unnumbered new SOP, and says nothing on loan authorization. The 2023 final rule (88 FR 21890) was read in full by the researcher and states that the Community Advantage SBLC type replaces the Mission-Based SBLC named in the proposal and removed the regulatory loan authorization definition; this review did not reopen it. The Inspector General report 26-14 was read in full by the researcher. The SOP 50 10 8 page on sba.gov returned a client error, so the link between the capital reserve standards and SOP 50 10 8 rests on the CRS Insight. A Federal Register API query for SBA documents containing loan authorization since 2025-01-20, run in this review, returned no documents, and a Small Business Lending Company query in an earlier pass returned none, so the finding that loan authorization was not restored is an absence of evidence.",
+  "updated_at": "2026-10-18"
 }

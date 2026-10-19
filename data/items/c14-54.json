@@ -6,7 +6,7 @@
   "chapter": "14",
   "confidence": 50,
   "confidence_label": "low",
-  "confidence_reason": "READY4Life listing re-read in review; the other four elements rest on absence of evidence after limited searching.",
+  "confidence_reason": "READY4Life listing and the 2025-09-30 ACF award announcement read on primary hosts; the other four elements rest on absence of evidence after limited searching, so confidence stays low.",
   "durability": {
     "level": "low",
     "why": "Funding announcements are annual or multi-year grant decisions and can be changed administratively."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review read the ACF award release of 2025-09-30 on acf.gov and reran a Federal Register API check for Title X and marriage (no documents); added the award event and source and refreshed the summary. No stage change (proposed 10); confidence unchanged at 50."
     }
   ],
   "id": "c14-54",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -58,19 +62,29 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage proposed 10 kept; not_started is also defensible if the 2025 youth opportunity is treated as a routine re-competition of an existing grant line rather than a new step.",
-      "Added to uncertainties that the opportunity funds local grantees, not state-level curricula."
+      "No stage change: proposed 10, partial.",
+      "Alternative: not_started if the 2025 youth opportunity and awards are a routine re-competition; in_progress 25 is a weaker alternative because none of the five specific elements is operative."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 479 to 481 ask HHS to use HMRE funds for high school curricula on marriage, sexual risk avoidance and relationships, Congress to allow CAPTA Title II and Title IV-B funds for marriage education, Title X clinics to give marriage information, a fair assessment of HMRE, and protection of faith-based grantees holding a one man and one woman definition of marriage.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields, pages 479 to 481 ask HHS to use HMRE funds for state-level high school curricula on marriage, sexual risk avoidance and relationships, Congress to allow CAPTA Title II and Title IV-B funds for marriage education, Title X clinics to give marriage information, a fair assessment of HMRE and protection of faith-based grantees; the chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: posted 2025-07-15, $23.1 million, 26 awards, youth grades 9 to 12 and ages 14 to 24; no sexual risk avoidance; faith-based applicants treated equally; new or continuing not stated.",
+        "note": "2025-09-30 release read on 2026-10-18: over $100 million to 109 grantees in 38 states across FORGE Fatherhood, HEART and READY4Life (ages 14 to 24); no mention of high schools, sexual risk avoidance or new priorities. Shows the grant line proceeded; only partly matches the recommendation.",
+        "result": "partial",
+        "url": "https://acf.gov/media/press/2025/over-100-million-healthy-marriage"
+      },
+      {
+        "note": "Not re-opened in this review; researcher and the 2026-10-15 review read it: posted 2025-07-15, about $23.1 million, youth grades 9 to 12 and ages 14 to 24, no sexual risk avoidance.",
         "result": "partial",
         "url": "https://simpler.grants.gov/opportunity/fe3c30d5-0983-4200-b62f-40ccf6500043"
+      },
+      {
+        "note": "2026-10-18: zero documents, consistent with no Title X marriage-information requirement.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Title+X%22+marriage&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       }
     ]
   },
@@ -116,10 +130,17 @@
       "publisher": "Grants.gov",
       "title": "HEART funding opportunity HHS-2025-ACF-OFA-ZB-0109",
       "url": "https://simpler.grants.gov/opportunity/355694"
+    },
+    {
+      "date": "2025-09-30",
+      "kind": "primary",
+      "publisher": "Administration for Children and Families",
+      "title": "ACF Awards Over $100 Million to Promote Healthy Marriage, Responsible Fatherhood, and Strong Families Across America",
+      "url": "https://acf.gov/media/press/2025/over-100-million-healthy-marriage"
     }
   ],
   "stage": "proposed",
-  "status_summary": "On 2025-07-15 ACF's Office of Family Assistance posted a funding opportunity, READY4Life, with about $23.1 million for healthy marriage and relationship education for high-school-aged and young adult participants, alongside an adult-focused HEART opportunity of about $34.65 million. Neither listing mentions sexual risk avoidance. No change to CAPTA or Title IV-B law, no Title X requirement to give marriage information, and no specific protection for grantees' definition of marriage was found.",
+  "status_summary": "On 2025-07-15 ACF's Office of Family Assistance posted a funding opportunity, READY4Life, with about $23.1 million for healthy marriage and relationship education for youth in grades 9 to 12 and ages 14 to 24, alongside an adult-focused HEART opportunity of about $34.65 million. On 2025-09-30 ACF announced over $100 million in Healthy Marriage and Responsible Fatherhood awards to 109 organizations in 38 states, including both programs. Neither the listing nor the announcement mentions sexual risk avoidance or high schools, and no change to CAPTA or Title IV-B law, no Title X requirement to give marriage information and no specific protection for grantees' definition of marriage was found.",
   "timeline": [
     {
       "date": "2025-07-15",
@@ -134,10 +155,17 @@
       "kind": "primary",
       "source": "Grants.gov",
       "url": "https://simpler.grants.gov/opportunity/355694"
+    },
+    {
+      "date": "2025-09-30",
+      "event": "ACF announced over $100 million in Healthy Marriage and Responsible Fatherhood awards to 109 organizations in 38 states, including HEART (marriage and relationship education) and READY4Life (ages 14 to 24).",
+      "kind": "primary",
+      "source": "Administration for Children and Families",
+      "url": "https://acf.gov/media/press/2025/over-100-million-healthy-marriage"
     }
   ],
   "title": "Use HMRE funds for high school marriage education; marriage information at Title X clinics",
   "tracked": true,
-  "uncertainties": "The READY4Life listing was re-read during review: it funds healthy marriage and relationship education for youth in grades 9 to 12 and ages 14 to 24 under Section 403(a)(2) of the Social Security Act, does not mention sexual risk avoidance, does not define marriage, and treats faith-based applicants on the same basis as others. The listing does not say whether it is new or a re-competition; a youth-focused HMRE grant line appears to have existed before 2025, so the 2025 opportunity may be a routine renewal rather than a change, which was not verified. The opportunities fund local grantees rather than state-level curricula. A Federal Register API search for Title X, family planning and marriage since 2025-01-20 returned no documents, and Title X notices of April 2026 tracked in c14-07 were not read for marriage content. Congressional action on CAPTA or Title IV-B was not searched. Confidence is capped by limited searching. Related teen pregnancy prevention redirection is tracked in c14-25.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The READY4Life listing and the ACF award announcement of 2025-09-30 were read in full; the announcement refers to a new cohort of grantees but does not mention high schools, sexual risk avoidance or new priorities. The listing does not say whether it is new or a re-competition, and a youth-focused HMRE grant line appears to have existed before 2025, so the 2025 opportunity and awards may be routine; this was not verified. The awards fund local grantees rather than state-level curricula. A Federal Register API search for Healthy Marriage since 2025-01-20 returned four ACF documents (HMRF performance-measure information collections of 2026-01-29 and 2026-05-04, a Head Start proposed rule, a research information collection), none read for marriage content; a Federal Register API search for Title X with marriage since 2025-01-20, rerun in review on 2026-10-18, returned no documents. Congressional action on CAPTA or Title IV-B was not searched. Related teen pregnancy prevention redirection is tracked in c14-25.",
+  "updated_at": "2026-10-18"
 }

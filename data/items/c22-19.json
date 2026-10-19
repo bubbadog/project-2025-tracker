@@ -5,9 +5,9 @@
     "Employers and benefit sponsors have broad interest in current exclusions"
   ],
   "chapter": "22",
-  "confidence": 60,
+  "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks documented on 2026-10-18 on top of the enacted provisions read in Code amendment notes: (1) Federal Register API searches of Treasury and IRS documents found only information collections; (2) Unified Agenda listings could not be read, so the Federal Register proposed-rule fallback was used (partial); (3) a congress.gov and GovInfo bill search found only income-exclusion bills such as H.R. 317, not a per-employee deduction cap, with one bill text read in part (partial); (4) Treasury and IRS releases showed nothing; (5) a news search found an unnamed reintroduced exclusion-cap bill (partial). Held at 60 because that bill could not be matched to a number.",
+  "confidence_reason": "The diverged stage rests on sections 70401 and 70404 of Public Law 119-21, read in U.S. Code amendment notes. Five documented checks: (1) Federal Register API queries of Treasury and IRS documents found only information collections (supports); (2) Unified Agenda: the Treasury rule list on reginfo.gov was read in full on 2026-10-19 with no deduction cap entry (supports, weakly informative because a cap needs legislation); (3) congress.gov and GovInfo search found only income-exclusion bills such as H.R. 317 (partial); (4) Treasury and IRS releases showed nothing (supports); (5) one news search found an unnamed exclusion-cap bill (partial). Set at 62 because that bill could not be matched to a number and the enrolled text was not read.",
   "durability": {
     "level": "high",
     "why": "The expansions are in statute and can be changed only by Congress."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Diverged kept; five-part check documented and spot-checked; confidence held at 60 because an unnamed exclusion-cap bill could not be identified."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Treasury Unified Agenda rule list on reginfo.gov and found no benefit deduction cap; diverged kept and confidence raised from 60 to 62."
     }
   ],
   "id": "c22-19",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "legislation",
@@ -59,6 +63,7 @@
   "research_agent": "R22",
   "restates_ids": [],
   "review": {
+    "alternative": "Not_started is defensible, since no cap was rejected as such and the enacted changes concern other preferences.",
     "document_reread": {
       "citation": "26 U.S.C. 129 and 45F as amended by Pub. L. 119-21",
       "note": "Amendment notes confirm the section numbers and effective dates.",
@@ -66,16 +71,13 @@
       "url": "https://www.law.cornell.edu/uscode/text/26/129"
     },
     "flags": [
-      "Removed the sentence on the judgment call from the status summary and moved it to uncertainties.",
-      "Named the search performed in uncertainties.",
-      "Other defensible call: not_started 0 (no cap was proposed or rejected); diverged kept because the law moved benefit preferences the opposite way.",
-      "V7 systematic-check review: diverged 0 kept (stage rests on the 2025 law expanding benefit preferences); the unnamed May 2026 bill was opened and cannot be matched to a number or cap; confidence held at 60."
+      "Researcher's agenda note omitted 1545-BS19 (Employer Contributions to Trump Accounts and Nondiscrimination Rules for Dependent Care Assistance Programs), a planned implementation of benefit provisions; it does not change the stage."
     ],
     "mandate_check": "ok",
     "mandate_note": "Page 697 says the next Administration should set a cap of no more than 12,000 dollars a year per full-time-equivalent employee, not indexed, on untaxed benefits employers can deduct, counting all benefits except tax-deferred retirement contributions, counting only part of HSA contributions, and denying deductions for benefits to dependents aged 23 or older. The paraphrase and page are correct.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "129(a)(2)(A) limit 7,500 dollars (3,750 separate) by Pub. L. 119-21 section 70404(a), tax years after 2025.",
@@ -126,6 +128,12 @@
         "note": "Reviewer re-check, 2026-10-18: article of 2026-05-15 opened; it gives no sponsor name, bill number or cap amount and does not say whether the cap applies to the employee exclusion or the employer deduction; not a qualifying action.",
         "result": "partial",
         "url": "https://www.benefitspro.com/amp/2026/05/15/republican-brings-back-bill-that-could-cap-employers-health-benefits-tax-exclusion/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (agency named Department of the Treasury, 216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages, the second holding only the footer). No entry caps the employer deduction for untaxed benefits. Benefit entries include 1545-BR15 Welfare Benefit Fund Guidance, 1545-BO29 Rules Relating to Employer-Provided Meals and Employer-Operated Eating Facilities and 1545-BS19 Employer Contributions to Trump Accounts and Nondiscrimination Rules for Dependent Care Assistance Programs (all Proposed Rule Stage), which implement existing provisions rather than cap benefits. Weakly informative: a cap needs legislation.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
       }
     ]
   },
@@ -193,6 +201,6 @@
   ],
   "title": "Cap untaxed employee benefits that employers deduct at 12,000 dollars per worker",
   "tracked": true,
-  "uncertainties": "Searches performed: one web search for a bill capping employer benefit deductions in the 119th Congress, which returned explainers of the 2025 law and an unopened benefits-industry page; the absence of a cap bill is a limited no-result finding. Provisions were read on the Cornell Legal Information Institute copy of the Code with its amendment notes, not the enrolled text of Public Law 119-21. Other benefit changes in the law were not reviewed. Diverged was chosen over not_started because the only enacted action on the subject expanded benefit-related tax preferences, the opposite direction from a cap; not_started is the other defensible call, since no cap was rejected as such. Checked systematically on 2026-10-18: Federal Register searches, agenda and proposed-rule listings, a congress.gov and govinfo.gov bill search, Treasury and IRS releases and a news search found no rule, order or law capping deductible employer benefits. A reintroduced health-exclusion bill reported in May 2026 and H.R. 317 act on the employee income exclusion rather than a per-employee deduction cap and are unpassed; the unnamed bill could not be matched to a number, and the trade article reporting it names no sponsor, bill number or cap amount.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No law or bill capping deductible employer benefits per employee was found. Public Law 119-21 raised the dependent care assistance limit (section 70404) and the employer child care credit (section 70401), read through U.S. Code notes rather than the enrolled text; other benefit changes in the law were not reviewed. A health-exclusion bill reported in May 2026 could not be matched to a number, and H.R. 317 acts on the employee exclusion. The Treasury Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists benefit guidance, including a planned rule on Trump account contributions and dependent care programs, and no deduction cap. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

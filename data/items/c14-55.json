@@ -2,9 +2,9 @@
   "agency": "Department of Health and Human Services (ACF Office of Family Assistance)",
   "blockers": [],
   "chapter": "14",
-  "confidence": 45,
-  "confidence_label": "low",
-  "confidence_reason": "FORGE listing re-read in review; absence of a new campaign rests on limited searching and undated campaign pages.",
+  "confidence": 68,
+  "confidence_label": "medium",
+  "confidence_reason": "Five checks documented on 2026-10-19: Federal Register API (supports), HHS Unified Agenda (partial: RIN 0991-AC44 on faith-based participation generally, a planned rule only), congress.gov and govinfo.gov search (partial: introduced Dads Matter Act bills on a perinatal awareness campaign), ACF press and program pages (supports; the 2025-09-30 award release was read) and a news search (supports). The agenda check is only weakly informative because HMRF messaging and allocation priorities are set in funding notices rather than rules, so confidence is held at 68.",
   "durability": {
     "level": "low",
     "why": "Funding priorities are set in each grant announcement and can change administratively."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence review: five checks documented (Federal Register, the HHS Unified Agenda on reginfo.gov, congress.gov and govinfo.gov, acf.gov and a news search), not_started kept and confidence set to 68."
     }
   ],
   "id": "c14-55",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -50,15 +54,13 @@
   "research_agent": "R14C",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Match changed from parallel to direct: the FORGE opportunity is a standard HMRF competition and does not amount to a parallel step toward a campaign or a faith-based priority.",
-      "Stage not_started 0 kept; proposed 5 would be defensible only if the clearinghouse PSA campaign is shown to have new HMRF-funded material after 2025-01-20."
-    ],
+    "alternative": "proposed 5 would be defensible only if new HMRF-funded clearinghouse campaign material dated after 2025-01-20 were found.",
+    "flags": [],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 481 to 482 ask that HMRF funds support national pro-fatherhood messaging campaigns and that grant allocations protect and prioritize faith-based, church-linked fatherhood programs that teach fatherhood on a biological and sociological basis.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "Checked 2026-10-15: posted 2025-07-15, $55 million, 66 awards; equal treatment of faith-based applicants; fathers or father figures; no messaging campaign mentioned.",
@@ -69,6 +71,42 @@
         "note": "Checked 2026-10-15: Ad Council fatherhood PSA page sponsored by the National Responsible Fatherhood Clearinghouse and ACF; no release date shown, so it cannot be placed after 2025-01-20; not cited.",
         "result": "unreachable",
         "url": "https://adcouncil.org/learn-with-us/press-releases/new-dadication-ads-aim-to-inspire-responsible-fatherhood"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Federal Register API, term fatherhood, HHS, since 2025-01-20: 5 documents, all HMRF information-collection notices (2026-01-29, 2026-05-04), an ACF research collection (2026-08-05), a delegations notice (2025-12-19) and a Medicare rule; none sets a messaging campaign or faith-based priority.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=fatherhood&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=health-and-human-services-department"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Same pattern for ACF with term marriage: 6 documents (HMRF performance measures notices, Head Start, TANF work participation and Unaccompanied Children proposed rules); none addresses fatherhood messaging or allocation priority.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=marriage&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=children-and-families-administration"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "HHS rule list (183 rules, whole list read) has no title naming fatherhood, marriage or the Office of Family Assistance. Related: RIN 0991-AC44 (faith-based participation, NPRM projected 11/00/2026), which does not address HMRF. Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named. Titles naming family are 0970-AD38 and 0970-AD42 (burden reduction), not HMRF priorities.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Domain-limited search (congress.gov, govinfo.gov) surfaced S. 2131 and H.R. 5828, Dads Matter Act of 2025, which would require HHS to run a public awareness campaign on father engagement in perinatal health. S. 2131 introduced 2025-06-18, referred to HELP; H.R. 5828 introduced 2025-10-24, referred to Energy and Commerce. Introduced bills only; not an HMRF messaging campaign. H.Res.487 (sense of the House on fatherhood) also seen.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119s2131/xml/BILLSTATUS-119s2131.xml"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "ACF press release dated 2025-09-30: over $100 million in HMRF grants to 109 organizations in 38 states; no messaging campaign, no faith-based or biological-basis priority mentioned. ACF HMRF program page (acf.gov/ofa/programs/healthy-marriage-responsible-fatherhood) likewise mentions neither and lists the FORGE Fatherhood, HEART and READY4Life cohorts running through 2030-09-29. Reviewer reopened the release on 2026-10-19: same content.",
+        "result": "supports",
+        "url": "https://acf.gov/media/press/2025/over-100-million-healthy-marriage"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "One standard web search (HMRF national campaign, faith-based fatherhood grants, 2026) returned only grant listings and the ACF 2025 award release; no news of a national messaging campaign or faith-based allocation priority.",
+        "result": "supports",
+        "url": "https://simpler.grants.gov/opportunity/ec9ff032-9782-447f-abc5-88b20fcbc12a"
       }
     ]
   },
@@ -121,6 +159,13 @@
       "publisher": "Federal Register",
       "title": "HMRF Performance Measures and Additional Data Collection (OMB submission)",
       "url": "https://www.federalregister.gov/documents/2026/05/04/2026-08577/submission-for-office-of-management-and-budget-review-healthy-marriage-and-responsible-fatherhood"
+    },
+    {
+      "date": "2025-09-30",
+      "kind": "primary",
+      "publisher": "Administration for Children and Families",
+      "title": "ACF Awards Over $100 Million to Promote Healthy Marriage, Responsible Fatherhood, and Strong Families Across America",
+      "url": "https://acf.gov/media/press/2025/over-100-million-healthy-marriage"
     }
   ],
   "stage": "not_started",
@@ -128,6 +173,6 @@
   "timeline": [],
   "title": "Fund a pro-fatherhood messaging campaign and prioritize faith-based fatherhood programs",
   "tracked": true,
-  "uncertainties": "The FORGE Fatherhood listing was re-read during review; it does not mention a media or messaging campaign, says faith-based organizations may apply on the same basis as others, and does not say whether it continues an earlier fatherhood grant line. Its full notice document was not opened. A review search found Ad Council public service announcements on responsible fatherhood sponsored by the National Responsible Fatherhood Clearinghouse and ACF; the pages read carry no release dates, so whether any new campaign material was issued after 2025-01-20 is unknown and the long-running clearinghouse campaign is not counted as a step here (lead, unverified). The HEART notice and the HMRF performance measures notice were read by the researcher and do not address these items. Absence of evidence from a limited search, so confidence is capped.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The HHS rule list on reginfo.gov (labeled Agency Rule List - 2026) lists no rulemaking on fatherhood messaging or HMRF allocation priorities; RIN 0991-AC44 concerns faith-based participation in HHS programs generally and is a planned rule only. The FORGE Fatherhood listing (2025-07-15) treats faith-based applicants on the same basis as others and carries no messaging campaign. Ad Council fatherhood PSA pages sponsored by the National Responsible Fatherhood Clearinghouse and ACF carry no release dates, so new campaign material after 2025-01-20 is not shown. The introduced Dads Matter Act bills (S. 2131, H.R. 5828) would require a perinatal father-engagement awareness campaign and are not an HMRF action. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

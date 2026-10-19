@@ -4,15 +4,15 @@
     "Five-year reviews are required by CERCLA section 121(c), and the extent of agency flexibility to delegate them to responsible parties was not analyzed"
   ],
   "chapter": "13",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "The EPA 2026-06-03 release and a trade report on the mines office were read; not_started rests on absence of evidence from a limited search, and internal items may exist without public trace.",
+  "confidence": 64,
+  "confidence_label": "medium",
+  "confidence_reason": "Stage rests on S. 2741, whose engrossed text and BILLSTATUS were read on govinfo.gov, plus the five systematic checks for the other four items: Federal Register API (several term variants), Unified Agenda by Federal Register fallback only (partial), congress.gov search with govinfo BILLSTATUS for S. 2741 and H.R. 3713, EPA five-year review page, and one news search. The bill touches only one of five items and the internal delegation and Lean items may not be published, so confidence stays medium near the fallback ceiling.",
   "durability": {
     "level": "low",
     "why": "Delegations and organizational changes are internal EPA decisions that can be revised without rulemaking."
   },
   "est_completion": {
-    "basis": "Inference: no related action was found, and internal delegations or training may exist without public documents.",
+    "basis": "Inference: S. 2741 awaits House action and no EPA step on the other four items was found; internal delegations or training may exist without public documents.",
     "window": "unknown"
   },
   "headline": false,
@@ -28,19 +28,23 @@
     {
       "date": "2026-10-16",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review read the S. 2741 engrossed text and BILLSTATUS and the H.R. 3713 BILLSTATUS on govinfo.gov and reran a Federal Register API check on federalregister.gov. Stage changed from not_started (0) to proposed (5), match direct to parallel; confidence 40 to 64."
     }
   ],
   "id": "c13-31",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-18",
   "layer": 3,
-  "match": "direct",
+  "match": "parallel",
   "mechanism": "agency_action",
   "pages": [
     431,
     432
   ],
   "position": "The EPA Administrator and the OLEM Assistant Administrator",
-  "progress": 0,
+  "progress": 5,
   "proposal": "The Mandate recommends that the Office of Land and Emergency Management allow potentially responsible parties to perform the statutory five-year reviews of Superfund cleanups, expand and fully stand up the Office of Mountains, Deserts and Plains for abandoned mine cleanup, delegate CERCLA authority from the Administrator to the OLEM Assistant Administrator rather than to Regional Administrators, require project management training for project managers, and adopt EPA's Lean Management System across OLEM programs (pp. 431 to 432).",
   "related_ids": [
     "c13-28",
@@ -48,8 +52,8 @@
     "c13-29"
   ],
   "remaining": [
+    "House passage and enactment of S. 2741 or H.R. 3713, or EPA action to expand and fully stand up the Office of Mountains, Deserts and Plains",
     "Rule or guidance letting responsible parties perform five-year reviews",
-    "Expansion of the Office of Mountains, Deserts and Plains",
     "Change in the delegation of CERCLA authority to the OLEM Assistant Administrator",
     "Required project management training and Lean Management System adoption"
   ],
@@ -57,33 +61,56 @@
   "research_agent": "R2627",
   "restates_ids": [],
   "review": {
-    "document_reread": {
-      "citation": "Circle of Blue, Federal Water Tap, 2025-10-19",
-      "note": "Mines office active under an acting director; no expansion.",
-      "result": "partial",
-      "url": "https://www.circleofblue.org/newsletter/federal-water-tap-october-19-2025-abandoned-mine-cleanup-application-review-to-begin-this-fall-epa-says/"
-    },
     "flags": [
-      "Duplicate check: c13-28 covers the NCP, removals, ARARs and lead plan; c13-29 covers RCRA and OLEM restructuring; c13-08 covers PFAS and groundwater rules; none covers the five items here, so the record is kept.",
-      "Match set to direct for a not_started record.",
-      "Added a trade report on the mines office's 2025 status.",
-      "The states-and-tribes transfer item on page 431 is untracked by any record reviewed; noted for the owner."
+      "Stage changed not_started (0) to proposed (5), match direct to parallel, on the Senate-passed S. 2741 that would codify the Office of Mountains, Deserts, and Plains; legislation touching one of five agency-action items.",
+      "Defensible alternative: keep not_started with S. 2741 as related context, since the text asks EPA to expand an office that already exists administratively and the bill covers one of five items.",
+      "The page 431 item on transferring work and funding to states and tribes remains untracked (carried from the prior review)."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 431 lists, for OLEM cleanup management, project management training for project managers, adoption of EPA's Lean Management System across OLEM, delegation of all CERCLA authority to the OLEM Assistant Administrator rather than Regional Administrators, and letting responsible parties perform the statutory five-year reviews; page 432 calls for expanding and fully standing up the Office of Mountains, Deserts and Plains. The paraphrase is accurate; the page 431 item on transferring work and funding to states and tribes is not included in this record.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "V1-1016",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields (pp. 431 to 432), the text asks OLEM to let responsible parties perform statutory five-year reviews, expand and fully stand up the Office of Mountains, Deserts and Plains, delegate CERCLA authority to the OLEM Assistant Administrator, require project management training and adopt the Lean Management System. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (systematic absence check)",
     "source_checks": [
       {
-        "note": "2025-10-19 newsletter: the office's acting director describes the Good Samaritan pilot review; no expansion stated.",
-        "result": "partial",
-        "url": "https://www.circleofblue.org/newsletter/federal-water-tap-october-19-2025-abandoned-mine-cleanup-application-review-to-begin-this-fall-epa-says/"
+        "note": "2026-10-18 (researcher): 3 EPA Good Samaritan pilot notices, none expanding the office; variants on five-year reviews, Lean and CERCLA delegation found nothing qualifying.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Mountains%2C+Deserts+and+Plains%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
       },
       {
-        "note": "Draft reading relied on; no mention of the five items.",
+        "note": "2026-10-18 (reviewer variant): abandoned mine with Superfund, limited to EPA, all types since 2025-01-20: 0 documents.",
         "result": "supports",
-        "url": "https://www.epa.gov/newsreleases/trump-epa-announces-new-superfund-cleanup-initiative-prioritize-faster-remediation-and"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22abandoned+mine%22+Superfund&conditions[agencies][]=environmental-protection-agency&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18: landing page only with no agenda items; fallback was Federal Register API queries, which found no EPA proposed rule on the five items.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "2026-10-18: stage-deciding document, read by the reviewer. Introduced 2025-09-09, reported by EPW 2025-10-29, passed Senate with an amendment by unanimous consent 2025-11-19, held at the House desk 2025-11-20; not enacted. Partial because it bears on one of five items through legislation.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2741.xml"
+      },
+      {
+        "note": "2026-10-18: engrossed Senate text read by the reviewer: section 2 establishes the Office of Mountains, Deserts, and Plains with priority-site, best-practice, Navajo uranium plan and technical assistance duties and a savings clause; no mention of five-year reviews, delegations, training or Lean.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLS/119/1/s/BILLS-119s2741es.xml"
+      },
+      {
+        "note": "2026-10-18: House companion introduced 2025-06-04, referred to the Water Resources and Environment Subcommittee 2025-06-05; no later action.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3713.xml"
+      },
+      {
+        "note": "2026-10-18 (researcher): EPA page describes reviews by EPA or the lead agency, no policy letting responsible parties perform them.",
+        "result": "supports",
+        "url": "https://www.epa.gov/superfund/superfund-five-year-reviews"
+      },
+      {
+        "note": "2026-10-18 (researcher news search): results were regional five-year review pages and a trade article; no report of a policy change or office expansion.",
+        "result": "supports",
+        "url": "https://www.epa.gov/aboutepa/f9-fy2026-superfund-reviews"
       }
     ]
   },
@@ -150,13 +177,49 @@
       "publisher": "Circle of Blue",
       "title": "Federal Water Tap, October 19, 2025: abandoned mine cleanup application review to begin this fall, EPA says",
       "url": "https://www.circleofblue.org/newsletter/federal-water-tap-october-19-2025-abandoned-mine-cleanup-application-review-to-begin-this-fall-epa-says/"
+    },
+    {
+      "date": "2025-11-19",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S. 2741, Legacy Mine Cleanup Act of 2025 (engrossed in Senate)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLS/119/1/s/BILLS-119s2741es.xml"
+    },
+    {
+      "date": "2025-11-20",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "S. 2741 BILLSTATUS, 119th Congress",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2741.xml"
+    },
+    {
+      "date": "2025-06-05",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 3713 BILLSTATUS, 119th Congress",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3713.xml"
     }
   ],
-  "stage": "not_started",
-  "status_summary": "No EPA action on the five management items was found in the sources read. The Office of Mountains, Deserts and Plains was created in September 2020 for western hardrock mine cleanups; in October 2025 its acting director was reported as overseeing EPA's review of applications under the statutory Good Samaritan abandoned mine pilot program, and no expansion of the office was found. EPA's Superfund Solutions release of 2026-06-03 describes faster investigations and more state cooperation but does not mention five-year reviews, delegations, project management training or Lean management.",
-  "timeline": [],
+  "stage": "proposed",
+  "status_summary": "No EPA action on the five management items was found. The Senate passed S. 2741, the Legacy Mine Cleanup Act of 2025, with an amendment on 2025-11-19; the engrossed text establishes the Office of Mountains, Deserts, and Plains within EPA's solid waste office with site-listing, best-practice and reporting duties, and the bill has been held at the House desk since 2025-11-20. The House companion, H.R. 3713, has been in subcommittee since 2025-06-05. Neither bill addresses five-year reviews by responsible parties, delegations of CERCLA authority, project management training or Lean management, and EPA's Superfund Solutions release of 2026-06-03 does not mention those items either.",
+  "timeline": [
+    {
+      "date": "2025-06-04",
+      "event": "H.R. 3713, the Legacy Mine Cleanup Act of 2025, was introduced in the House to establish the Office of Mountains, Deserts, and Plains within EPA; it was referred to a subcommittee on 2025-06-05.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3713.xml"
+    },
+    {
+      "date": "2025-11-19",
+      "event": "The Senate passed S. 2741, the Legacy Mine Cleanup Act of 2025 (introduced 2025-09-09, reported by Environment and Public Works 2025-10-29), with an amendment by unanimous consent; it was received in the House and held at the desk on 2025-11-20. The engrossed text establishes the Office of Mountains, Deserts, and Plains within EPA.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2741.xml"
+    }
+  ],
   "title": "Superfund management: PRP five-year reviews, mines office, delegations, Lean training",
   "tracked": true,
-  "uncertainties": "A trade report of 2025-10-29 (Inside EPA, paywalled) says a merged Office of Superfund and Emergency Management was to launch on 2025-11-02; its effect on the mines office or on delegations is unknown and it is not an event (see c13-29). The office's acting status in 2025 suggests it is not fully stood up, but staffing was not found. Delegations of authority and Lean Management System use are internal documents that may not be published, and EPA's delegations manual was not searched. Searches performed: four web searches (the mines office, twice including one in review; five-year reviews with Lean and delegation; OLEM reorganization), which returned mostly older regional documents, the 2020 launch release and the Good Samaritan program report. This record covers only items not tracked in c13-28 (National Contingency Plan, removals, ARARs, lead plan), c13-29 (RCRA and OLEM restructuring) and c13-08 (PFAS designation and groundwater rules).",
-  "updated_at": "2026-10-16"
+  "uncertainties": "Checked systematically on 2026-10-18. 1. Federal Register API searches since 2025-01-20 on Mountains, Deserts and Plains (3 EPA Good Samaritan pilot notices), Superfund five-year review (2 unrelated Coast Guard documents), Lean Management System (0), CERCLA delegation limited to EPA (4, unrelated) and, in review, abandoned mine with Superfund limited to EPA (0) found no agency action on the five items. 2. The reginfo.gov Unified Agenda landing page listed no items, so the check is partial, with Federal Register queries as the fallback. 3. A domain-limited search of congress.gov and govinfo.gov found S. 2741 (passed the Senate 2025-11-19, held at the House desk 2025-11-20) and H.R. 3713 (in subcommittee since 2025-06-05); the engrossed Senate text was read on govinfo.gov and establishes the office without addressing the other four items, and neither bill is enacted per BILLSTATUS. 4. EPA's five-year review page does not mention reviews performed by responsible parties; the EPA news release list was blocked by robots rules. 5. A news search returned regional review pages and a trade article only. A trade report of 2025-10-29 (Inside EPA, paywalled) says a merged Office of Superfund and Emergency Management was to launch on 2025-11-02; its effect on the mines office or on delegations is unknown (see c13-29). Delegations of authority and Lean Management System use are internal documents that may not be published, and EPA's delegations manual was not searched. The office already exists administratively since 2020, so codification by statute would be a parallel step rather than the expansion the text asks for. This record covers only items not tracked in c13-28, c13-29 and c13-08.",
+  "updated_at": "2026-10-18"
 }

@@ -5,9 +5,9 @@
     "Funding studies would depend on appropriations and on staff capacity in the CDC reproductive health division"
   ],
   "chapter": "14",
-  "confidence": 35,
-  "confidence_label": "low",
-  "confidence_reason": "Absence of evidence from Federal Register queries and one web search; CDC web pages and grant listings were not searched; Mandate text on pp. 454 and 455 checked.",
+  "confidence": 65,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, CDC abortion search returned two information collections and fertility awareness one interagency excepted benefits proposal (rerun 2026-10-19, same); (2) HHS Unified Agenda read directly on reginfo.gov on 2026-10-19, partial: the Title X entry (0937-AA15) and the OCR conscience entry (0945-AA24) were opened and neither is a CDC program, messaging or study action, and the check is weakly informative for messaging and grant choices; (3) congress.gov and GovInfo, H.R. 7237 does not involve CDC; (4) CDC newsroom script-driven (partial); (5) one news search, nothing. Set at 65 because the agency check is partial.",
   "durability": {
     "level": "low",
     "why": "Messaging and grant priorities can be changed administratively at any time."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Systematic absence check and independent review: federalregister.gov API (reviewer variant) and govinfo.gov BILLSTATUS for H.R.7237 were read; no stage change (not_started 0); confidence 35 to 62."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the HHS Unified Agenda list and two entry pages read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 62 to 65."
     }
   ],
   "id": "c14-27",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -57,20 +65,69 @@
   "research_agent": "R14A",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "Stage not_started kept.",
-      "Status sentence on the 2025 contraception team cut reworded to attribute it to a news report.",
-      "The fetal cell research sentence on p. 455 is covered by c14-04 and c14-30 and is left out of this record.",
-      "Confidence kept at 35 because no CDC site search was made by either researcher or reviewer."
-    ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 454 and 455 ask CDC to end programs that do not respect life and conscience, stop promoting abortion as health care, fund abortion-risk studies, correct childbirth versus abortion messaging, and update and fund research on fertility awareness-based methods.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's pages and proposal fields (pp. 454-455), the Mandate asks CDC to end programs that do not respect life and conscience rights, stop presenting abortion as health care, fund studies of abortion risks, correct messaging comparing childbirth and abortion, update messaging on fertility awareness-based methods and fund studies of them. The chapter text was not available to this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: one result, the Excepted Fertility Benefits proposed rule of 2026-05-13 (Treasury, Labor, HHS); nothing on CDC messaging or studies.",
+        "note": "2026-10-18 (reviewer variant of check 1): term 'fertility awareness', all agencies, returned 1 document: the Excepted Fertility Benefits proposed rule (Treasury, Labor and HHS, 2026-05-13), which concerns employer benefit coverage, not CDC messaging or studies. A combined variant with 'abortion complications' returned 0.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22fertility+awareness%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (reviewer fetch for check 3): BILLSTATUS confirms H.R.7237, Chemical Abortion Risk Awareness Act, introduced 2026-01-23 and referred to Energy and Commerce with no later action; its title concerns making patients aware of risks and it does not mention CDC.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7237.xml"
+      },
+      {
+        "note": "Check 1 (research pass, 2026-10-18): term 'abortion' limited to CDC returned 2 documents: Paperwork Reduction Act notices (2025-06-16 and 2026-06-12). Term 'fertility awareness' returned 1 document: an interagency Excepted Fertility Benefits proposed rule (2026-05-13). None funds abortion-risk studies or changes CDC messaging.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=abortion&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest&conditions[agencies][]=centers-for-disease-control-and-prevention"
+      },
+      {
+        "note": "Check 2 (research pass, 2026-10-18): Fetched the Unified Agenda entry page; it is an agency selector and links page with no items listed (script-driven). Fallback used, so the check is partial: the CDC-limited query above, which showed no relevant proposed rule.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
+      },
+      {
+        "note": "Check 3 (research pass, 2026-10-18): search (congress.gov, govinfo.gov): '119th Congress bill CDC abortion complications study fertility awareness based methods'. Found H.R.7237 Chemical Abortion Risk Awareness Act (introduced 2026-01-23, referred to Energy and Commerce), plus Right to Contraception Act, RESTORE Act and S.5565, S.1882. Bill text of H.R.7237 imposes informed-consent duties on providers and does not mention CDC or fund studies. Nothing qualifying. Reviewer: BILLSTATUS refetched and confirmed; the search was not rerun (search cap).",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7237.xml"
+      },
+      {
+        "note": "Check 4 (research pass, 2026-10-18): CDC newsroom page fetched but returned no release listing, so it could not be reviewed.",
+        "result": "partial",
+        "url": "https://www.cdc.gov/media/releases/index.html"
+      },
+      {
+        "note": "Check 5 (research pass, 2026-10-18): query: 'CDC abortion complications study fertility awareness methods messaging change 2026'. Results were unrelated studies about fertility-tracking among abortion patients; no CDC action reported. Reviewer: Not rerun (search cap).",
+        "result": "supports",
+        "url": "https://www.euronews.com/health/2025/01/14/rising-number-of-abortion-patients-used-fertility-tracking-methods-or-apps-for-contracepti"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 183 rules) was read in full on 2026-10-19; no CDC entry concerns abortion messaging, abortion-risk studies or fertility awareness methods; the Title X entry (0937-AA15) and the OCR conscience entry (0945-AA24) are in the subject area but are not the recommended CDC actions.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Compliance with Title X Statutory Program Integrity Requirements (OASH), Proposed Rule Stage, NPRM projected 07/00/2026, 42 CFR 59 subpart A; abstract concerns Title X program integrity only; no mention of CDC, abortion messaging, abortion-risk studies or fertility awareness methods. Planned rule, not operative.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0937-AA15"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Unified Agenda detail page (reginfo.gov, 2026-10-19): Making Technical Changes and Clarifying How OCR Addresses Conscience Authorities in Health Care; Delegation of Authority (Section 610 review), Proposed Rule Stage, NPRM projected 07/00/2026, 45 CFR 88; amends the 2024 conscience rule; no CDC program or messaging content. Planned rule, not operative.",
+        "result": "partial",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0945-AA24"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: one document, the 2026-05-13 Excepted Fertility Benefits proposed rule; not CDC messaging or studies.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22fertility+awareness%22&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
@@ -125,6 +182,6 @@
   "timeline": [],
   "title": "CDC: end programs conflicting with life and conscience; fund abortion-risk, FABM studies",
   "tracked": true,
-  "uncertainties": "Searches run: Federal Register API queries for fertility awareness and for abortion in CDC documents (the latter returned only two routine information collection notices), and one web search on CDC reproductive health cuts. The CDC website and grant listings were not searched for messaging changes or study funding, so a non-Federal Register action could have been missed. The April 2025 contraception team cut was reported by OPB and a local station without any link to this recommendation, so it is mentioned here only as context. Related records: c14-14 (abortion data reporting) and c14-07.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No CDC action was found that ends programs on life and conscience grounds, funds abortion-risk or fertility awareness studies, or revises messaging on childbirth, abortion or fertility awareness methods. The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) lists a Title X program integrity proposal and an OCR conscience proposal, both planned for July 2026 and neither a CDC action. Messaging and grant priorities can change without any Federal Register document; CDC web content and grant listings were not searched and the CDC newsroom listing could not be read. The April 2025 cut of a CDC contraception team is context only. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

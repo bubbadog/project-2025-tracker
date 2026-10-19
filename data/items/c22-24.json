@@ -4,9 +4,9 @@
     "No announced proposal found"
   ],
   "chapter": "22",
-  "confidence": 40,
-  "confidence_label": "low",
-  "confidence_reason": "Not_started rests on a limited search; a law-firm NDAA summary was read and mentions no such school.",
+  "confidence": 62,
+  "confidence_label": "medium",
+  "confidence_reason": "Absence of action rests on five documented checks: (1) Federal Register API queries (financial warfare, economic warfare or statecraft, economic defense, sanctions academy or training) returned zero (supports); (2) Unified Agenda: the Treasury rule list on reginfo.gov was read in full on 2026-10-19 with no matching entry (supports, but not informative in practice for an administrative training body); (3) congress.gov and GovInfo search with BILLSTATUS for H.R. 6717 found no school, NDAA text unsearched (supports); (4) Treasury press releases showed nothing, while war.gov is unreachable (supports, Defense side unchecked); (5) one news search found an older book review (supports). Set at 62 because the agenda adds little, the Defense host could not be checked and the NDAA text was not searched.",
   "durability": {
     "level": "low",
     "why": "An administrative training body could be created or closed without legislation."
@@ -28,10 +28,18 @@
     {
       "date": "2026-10-16",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent systematic absence review reran a Federal Register API check on federalregister.gov with a new term variant and reviewed the researcher's five checks; no stage change (not_started, 0). Confidence 40 to 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Independent review read the Treasury Unified Agenda rule list on reginfo.gov and found no training school entry; not_started kept and confidence raised from 60 to 62."
     }
   ],
   "id": "c22-24",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -50,27 +58,48 @@
   "research_agent": "R22",
   "restates_ids": [],
   "review": {
-    "document_reread": {
-      "citation": "Covington, New Sanctions Authorities in the FY 2026 NDAA",
-      "note": "No school or training body in the provisions summarized.",
-      "result": "supports",
-      "url": "https://www.globalpolicywatch.com/2025/12/new-sanctions-authorities-in-the-fy-2026-ndaa/"
-    },
-    "flags": [
-      "The law-firm NDAA summary was re-fetched and supports the summary sentence; no stage-deciding document exists for not_started.",
-      "Removed the Economic Defense Unit sentence from the summary and its advocacy source, keeping it in uncertainties as a lead.",
-      "Named the searches performed in uncertainties."
-    ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 704 says Treasury should examine creating a school of financial warfare jointly with DOD, a specially trained group dedicated to the study, training, testing and preparedness of financial tools for defensive and offensive aims. The paraphrase and page are correct.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "V2-1016",
+    "flags": [],
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page and proposal fields (p. 704), the text asks Treasury to examine creating, with the Department of Defense, a school of financial warfare for study, training, testing and preparedness of financial tools. The chapter text was not available in this run, so the paraphrase was not rechecked against the page.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
-        "note": "FY2026 NDAA signed 2025-12-18; sanctions and outbound investment provisions; no financial warfare school; public law number not stated.",
+        "note": "2026-10-18 (reviewer variant): all agencies and types since 2025-01-20: 0 documents.",
         "result": "supports",
-        "url": "https://www.globalpolicywatch.com/2025/12/new-sanctions-authorities-in-the-fy-2026-ndaa/"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22economic+defense%22+OR+%22sanctions+academy%22+OR+%22sanctions+training%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): 0 documents; economic warfare or statecraft variant 0.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22financial+warfare%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): Unified Agenda fallback; reginfo.gov landing page had no items; 22 Treasury proposed rules, none on a school.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=treasury-department&conditions[type][]=PRORULE&conditions[term]=sanctions&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-18 (researcher): H.R. 6717 financial literacy bill, no action after referral; NDAA and appropriations texts not read in full.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6717.xml"
+      },
+      {
+        "note": "2026-10-18 (researcher): first page only; no school or academy item. war.gov unreachable by policy.",
+        "result": "supports",
+        "url": "https://home.treasury.gov/news/press-releases"
+      },
+      {
+        "note": "2026-10-18 (researcher news search): review of an earlier book; no report of a Treasury and Defense school.",
+        "result": "supports",
+        "url": "https://ctc.westpoint.edu/treasurys-war-unleashing-new-era-financial-warfare/"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Treasury list headed 'Agency Rule List - 2026' (agency named Department of the Treasury, 216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages, the second holding only the footer). No entry on a school, academy or training body for financial warfare; the nearest national security entry, 1505-AC94, implements outbound investment rules. Not informative in practice: a training body would be set up administratively.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
       }
     ]
   },
@@ -116,6 +145,6 @@
   "timeline": [],
   "title": "Examine a joint Treasury and Defense school of financial warfare",
   "tracked": true,
-  "uncertainties": "Searches performed: two web searches (a Treasury or Defense school of financial warfare; NDAA provisions on economic warfare training), with a law-firm summary of the FY2026 NDAA sanctions provisions and a think-tank report read. Treasury press releases and Office of Terrorism and Financial Intelligence pages were not searched directly, and the full NDAA text was not searched for training or institute language; the NDAA public law number was not confirmed. An advocacy group reports a Defense Department Economic Defense Unit created by internal memo in April 2026, an economic-competition office rather than a joint training school; it is a lead only. The absence of a school is a limited no-result finding.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "No Treasury or Defense announcement of a school of financial warfare was found. The Defense host war.gov is unreachable, Office of Terrorism and Financial Intelligence pages were not fetched, and the FY2026 NDAA and appropriations texts were not searched for training language. A reported Defense Department Economic Defense Unit of April 2026 is an economic-competition office and a lead only. The Treasury Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists no such rulemaking; a training body would not need a rule, so the agenda adds little. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

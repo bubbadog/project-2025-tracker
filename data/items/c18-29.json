@@ -2,9 +2,9 @@
   "agency": "Department of Labor",
   "blockers": [],
   "chapter": "18",
-  "confidence": 58,
+  "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Mandate text read; the hiring freeze memorandum was read in review and the hiring order is confirmed in a sibling record; DOL appointee counts and Office of Compliance Initiatives staffing could not be checked.",
+  "confidence_reason": "The two government-wide hiring instruments were read on federalregister.gov; the DOL-specific appointee and Office of Compliance Initiatives elements rest on absence, with Plum Book data and DOL staffing records not checked.",
   "durability": {
     "level": "low",
     "why": "Hiring controls are set by presidential memorandum and order and can be lifted or exempted."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Primary-source lift review: read Executive Order 14356 on federalregister.gov and confirmed it does not revoke the January 2025 memorandum. No stage change (in_progress 30); confidence 58 to 62."
     }
   ],
   "id": "c18-29",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -54,25 +58,30 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Duplicate check: the record overlaps c03-06 (government-wide hiring freeze) and c00-20 (political appointees) but is not fully covered, because the Office of Compliance Initiatives element and the DOL-specific appointee goal appear in no other record; kept. Dropping it in favor of c03-06 would be defensible if the coordinator prefers to track only the compliance office item.",
-      "Stage in_progress 30 kept as a partial match: the freeze element is operative through government-wide orders, the other two elements are unshown; proposed 20 would also be defensible.",
-      "Status summary now notes that the freeze exempted noncareer appointments, per the memorandum text."
+      "No stage change: in_progress 30. proposed 20 remains defensible because the freeze element is satisfied only by government-wide instruments and the other two elements are unshown.",
+      "Overlap with c03-06 and c00-20 remains; kept for the compliance office and DOL appointee items.",
+      "Confidence raised 58 to 62 after EO 14356 was read in review."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 615 asks DOL to maximize political appointees (noting up to about 150 in the first term), impose a hiring freeze for career officials, and fully staff the Office of Compliance Initiatives.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "mandate_check": "not_checked",
+    "mandate_note": "Per the record's page (615) and proposal field, the text asks DOL to maximize political appointees (noting about 150 in the first term), impose a hiring freeze on career officials and fully staff the Office of Compliance Initiatives. The chapter text was not available this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "Checked 2026-10-15: memorandum signed 2025-01-20 (90 FR 8247) freezes vacant civilian positions in all executive agencies with exemptions including noncareer appointments; expires for agencies other than the IRS when the OMB plan issues.",
-        "result": "supports",
+        "note": "Checked 2026-10-18: EO 14356 signed 2025-10-15, 90 FR 48387; sec. 2 bars filling vacant civilian positions except via agency Strategic Hiring Committee approval; sec. 3 exempts noncareer PAS, noncareer SES, Schedule C and G and others; does not revoke the January memorandum. Government-wide, so supports only the freeze element.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/10/20/2025-19614/ensuring-continued-accountability-in-federal-hiring"
+      },
+      {
+        "note": "Not reopened in review; read by the researcher this run and in the 2026-10-15 review: 90 FR 8247 freeze with noncareer exemptions. Freeze element only.",
+        "result": "partial",
         "url": "https://www.federalregister.gov/documents/2025/01/28/2025-01905/hiring-freeze"
       },
       {
-        "note": "Not re-fetched in review; the same order and date are verified in sibling record c03-06.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/10/20/2025-19614/ensuring-continued-accountability-in-federal-hiring"
+        "note": "Read by the researcher 2026-10-18: undated page, no staffing information; does not show full staffing.",
+        "result": "does_not_support",
+        "url": "https://www.dol.gov/agencies/oasp/compliance-initiatives"
       }
     ]
   },
@@ -147,6 +156,6 @@
   ],
   "title": "DOL personnel: career hiring freeze, more political appointees, restaff compliance office",
   "tracked": true,
-  "uncertainties": "The hiring freeze memorandum was fetched and re-read in review; Executive Order 14356 was fetched by the researcher and is also cited in record c03-06. The government-wide freeze and hiring rule are tracked in c03-06 and political appointee growth government-wide in c00-20; this record is kept only for the Labor chapter's three items, and the Office of Compliance Initiatives element is not tracked elsewhere. Reports from a congressional letter dated 2026-05-06 and press items describe DOL staff reductions and a deferred resignation program, but those sources do not describe a hiring freeze and are not relied on. No source for DOL political appointee numbers was found; Plum Book data were not checked. Searches run: three WebSearches by the researcher (compliance office, appointees and staffing) plus Federal Register API queries; no WebSearch in review. The Federal Register API returned no DOL-specific freeze or reorganization notices.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The hiring freeze memorandum (90 FR 8247) was read in an earlier review and by the researcher, and Executive Order 14356 (90 FR 48387) was read on federalregister.gov in review on 2026-10-18; the order's text does not revoke the January memorandum and keeps OPM exemptions granted under it. The government-wide freeze and hiring rule are tracked in c03-06 and political appointee growth in c00-20; this record is kept for the Labor chapter's three items. The Office of Compliance Initiatives page on dol.gov was read by the researcher and carries no date or staffing information. No source for DOL political appointee numbers was found; Plum Book data were not checked. Press items on DOL staff reductions do not describe a hiring freeze and are not relied on. The Federal Register API returned no DOL-specific freeze or reorganization notices.",
+  "updated_at": "2026-10-18"
 }

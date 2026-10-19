@@ -6,9 +6,9 @@
     "USDA chose an in-department reorganization, and congressional Democrats have contested its process and effects (letters of 2026-05-08 and 2026-05-19)."
   ],
   "chapter": "10",
-  "confidence": 60,
+  "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks documented on 2026-10-18 on top of USDA's reorganization page and the farm bill record: (1) Federal Register API searches found only SNAP demonstration notices and program rules, with one query failing on URL length; (2) Unified Agenda listings could not be read, so the proposed-rule fallback was used (partial); (3) a congress.gov and GovInfo bill search found no transfer bill and no 119th Congress amendment note (page cut off); (4) USDA, HHS and HUD releases showed nothing, while the FNS newsroom could not be fetched (partial); (5) a news search returned only 2018 and 2024 material. Set to 60 for the partial agenda and newsroom checks.",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, nothing moving programs to HHS (rerun 2026-10-19 finds only the Unified Agenda introduction); (2) Unified Agenda lists for USDA (110 rules) and HHS (183 rules) read directly on reginfo.gov on 2026-10-19, no transfer or FNS elimination entry, though the check is weakly informative because a transfer would need legislation or a reorganization rather than a rule; (3) congress.gov and GovInfo search, no transfer bill; (4) USDA, HHS and HUD releases, with the FNS newsroom unreadable (partial); (5) one news search, 2018 material only (partial). Set at 64: below the 65 to 68 band for a weakly informative agenda check because the agency check is partial.",
   "durability": {
     "level": "medium",
     "why": "The reorganization is an administrative restructuring that a later administration could reverse, but it did not move the programs and the underlying statutes are unchanged."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence check with independent AI review: Not_started kept; five-part absence check documented and spot-checked, including a 2018-dated WIC transfer item; confidence raised from 50 to 60."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the USDA and HHS Unified Agenda lists read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 60 to 64."
     }
   ],
   "id": "c10-02",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 1,
   "match": "partial",
   "mechanism": "legislation",
@@ -66,18 +70,17 @@
   "requires_congress": "yes",
   "research_agent": "A07",
   "review": {
+    "alternative": "Diverged 0, since USDA restructured FNS while keeping the programs at USDA, a design different from the Mandate.",
     "flags": [
-      "absence-of-evidence finding (cap 50)",
-      "USDA notification of Congress not supported by Agri-Pulse and disputed in the House letter; removed from summary",
-      "timeline hub assignment for WIC and food distribution not matched in Agri-Pulse",
-      "diverged arguable",
-      "V7 systematic-check review: not_started 0 kept; the news result titled as a proposal to move WIC to HHS was opened and dates from 2018; confidence 50 to 60 rather than the suggested 62, since check 2 and check 4 are both partial."
+      "Researcher output cited the HHS list URL (agencyCd 0900) twice; the USDA check now uses the USDA list URL (agencyCd 0500).",
+      "FNS entry count differs: researcher 24, review fetch about 20 to 21; the finding does not depend on the count.",
+      "Earlier checks labeled does_not_support (Federal Register query, H.R. 5950, the 2018 nwica item) describe non-qualifying results; the label appears misused (supports or partial would fit). Kept as history."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 298 recommends separating farm and nutrition legislation and moving USDA food and nutrition programs to HHS, continuing on page 299 (all means-tested programs in one department, HHS); pages 309 to 310 say FNS would be eliminated once the programs move. The paraphrase and pages are accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V7",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "USDA page updated 2026-09-25: FNS and its mission area are now the Food and Nutrition Administration, whose administrator reports to the Secretary of Agriculture; staff vacate the Northern Virginia headquarters by 2026-08-31; hubs open by summer 2027; no programs eliminated among 16; no mention of HHS or any transfer.",
@@ -123,6 +126,24 @@
         "note": "Reviewer re-check, 2026-10-18: phrases Food and Nutrition Administration and Health and Human Services with transfer, all agencies, since 2025-01-20: count 1, the 2026 Unified Agenda introduction; no transfer document.",
         "result": "does_not_support",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"Food+and+Nutrition+Administration\"+\"Health+and+Human+Services\"+transfer&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "USDA Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 110 rules) read on 2026-10-19: about 20 Food and Nutrition Service entries (RINs 0584-), all program rules on SNAP, WIC and child nutrition (for example 0584-AE71, 0584-AF26, 0584-AF17); no entry transfers nutrition programs to HHS, eliminates FNS or concerns its renaming. A transfer would need legislation or a reorganization, so the check is weakly informative.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0500"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 183 rules) was read in full on 2026-10-19; no entry concerns nutrition programs, FNS or a transfer from USDA.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: one document, the 2026-08-14 Unified Agenda introduction; nothing qualifying.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Food+and+Nutrition+Administration%22+HHS&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -276,6 +297,6 @@
   ],
   "title": "Move USDA food and nutrition programs to HHS and eliminate the Food and Nutrition Service",
   "tracked": true,
-  "uncertainties": "The not_started stage rests on absence of evidence, now from more searches: web searches for bills or proposals to move SNAP, WIC or school meals to HHS (results were the 2018 plan and unrelated 2025 SNAP bills such as H.R. 5822, a USDA funding bill, and the SNAP Study Act, a reporting bill, neither of which moves programs), searches on the FNS reorganization and congressional reaction, and reads of the FNA reorganization page, Agri-Pulse, the Wiley alert, the CRS farm bill report, and two letters. Congress.gov, govtrack and the congress.gov API were blocked or rate limited, so a bill introduced by a member and not covered in news could still have been missed. The HHS FY2027 Budget in Brief text was truncated and its date is not stated in the document (the 2026-04-07 date is approximate); an excerpt of a USDA FY2027 budget summary PDF (date not stated in the document) also showed no transfer. The Rollins memo date appears as July 24 and July 25, 2025 in one alert. Agri-Pulse and Mondaq differ on hub counts and locations; the FNA page is treated as controlling. The choice between not_started and diverged remains a judgment: USDA acted on the same agency but kept the programs and the agency in USDA, which is a different design from the Mandate's. Checked systematically on 2026-10-18: Federal Register searches, agenda and proposed-rule listings, a congress.gov and govinfo.gov bill search with a U.S. Code note check, the USDA press release list and a news search found no bill, order or rule moving the nutrition programs to HHS or eliminating the Food and Nutrition Service; the April 2026 renaming keeps the programs at USDA. The FNS newsroom could not be read and the agenda listings were not directly readable. A news result whose title refers to an administration proposal to move WIC to HHS was opened and is dated 2018-06-21, describing the 2018 reorganization plan and that year's House farm bill.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The not_started stage rests on absence of evidence. No bill, order or rule moving SNAP, WIC or school meals to HHS or eliminating the Food and Nutrition Service was found; the April 2026 reorganization renames FNS the Food and Nutrition Administration and keeps all programs at USDA. The USDA and HHS Unified Agenda rule lists on reginfo.gov (Agency Rule List - 2026) carry no transfer entry, though a transfer would need legislation or a reorganization rather than a rule. The FNS newsroom could not be read, and a bill not covered in news could have been missed. Not_started versus diverged remains a judgment, since USDA reorganized the agency on a different design. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

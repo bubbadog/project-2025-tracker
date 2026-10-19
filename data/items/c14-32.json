@@ -5,9 +5,9 @@
     "No proposal found"
   ],
   "chapter": "14",
-  "confidence": 60,
+  "confidence": 65,
   "confidence_label": "medium",
-  "confidence_reason": "Not_started after a systematic five-check review on 2026-10-18: Federal Register API (re-run with a term variant, 0 results), Unified Agenda (Federal Register fallback only, so partial), congress.gov and govinfo (H.R. 2161 status read), NIH news page (first page only), and a news search; capped near 60 because the agenda check was only the fallback and the agency check was limited.",
+  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, no document on three-parent embryos, human cloning or mitochondrial replacement (rerun 2026-10-19: zero for human cloning); (2) HHS Unified Agenda read directly on reginfo.gov on 2026-10-19, no entry on cloning, three-parent embryos or a bioethics council, and the human research protections entry (0937-AA16) concerns Common Rule exemptions; (3) congress.gov and GovInfo, H.R. 2161 covers chimeras only; (4) NIH news releases, first page only (partial); (5) one news search, older coverage only. Set at 65 because the agency check is partial and a research agenda or council could be set without rulemaking.",
   "durability": {
     "level": "low",
     "why": "A research agenda or advisory council is administrative and could be dropped by a later administration; a statutory ban would be durable."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-18",
       "note": "Systematic absence review on 2026-10-18 ran the Federal Register API, Unified Agenda fallback, congress.gov and govinfo, NIH news page and news checks (Federal Register, govinfo and NIH hosts read) and found no qualifying action, so the record stays not_started."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Systematic absence check completed with the HHS Unified Agenda list read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 60 to 65."
     }
   ],
   "id": "c14-32",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -59,15 +63,12 @@
   "research_agent": "R14A",
   "restates_ids": [],
   "review": {
-    "flags": [
-      "H.R. 2161 (chimeras) is an adjacent bill; if read as covering the cloning element it would support proposed 5, but its title and status show chimeras only.",
-      "Long-standing appropriations riders on embryo research and heritable modification continue but predate the period and are not a new action."
-    ],
+    "flags": [],
     "mandate_check": "confirmed",
     "mandate_note": "Page 461 recommends banning three-parent embryo creation and human cloning research, convening a new National Council on Bioethics and an HHS research agenda on harms of abortion; the proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
         "note": "2026-10-18: Federal Register API variant on embryo and cloning limited to HHS since 2025-01-20: 0 documents. The researcher's queries (three-parent, human cloning, mitochondrial replacement; embryo and fetal tissue limited to NIH) also returned 0.",
@@ -93,6 +94,18 @@
         "note": "2026-10-18: No URL was recorded for the researcher's news search, so this field holds the agency page fetched in review. The search on an NIH human embryo research ban, mitochondrial replacement and three-parent embryos in 2026 returned only 2016 to 2019 coverage of the appropriations rider.",
         "result": "supports",
         "url": "https://www.nih.gov/news-events/news-releases"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026, 183 rules) was read in full on 2026-10-19; no entry concerns human cloning, three-parent embryos, a bioethics council or an abortion-harms research agenda; Human Research Protections: Exemptions and Clarifying Provisions Related to IRB Oversight (0937-AA16) and Institutional Review Boards; Cooperative Research (0910-AI08) are on other subjects.",
+        "result": "supports",
+        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0900"
+      },
+      {
+        "date": "2026-10-19",
+        "note": "Reviewer spot-check of check 1 on 2026-10-19: zero documents.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22human+cloning%22&conditions[publication_date][gte]=2025-01-20&order=newest"
       }
     ]
   },
@@ -145,6 +158,6 @@
   "timeline": [],
   "title": "Ban three-parent embryos and human cloning research; abortion-harms research agenda",
   "tracked": true,
-  "uncertainties": "Checked systematically on 2026-10-18. The Federal Register API check (three-parent, human cloning and mitochondrial replacement; embryo, human embryos and fetal tissue limited to NIH; and a variant on embryo and cloning limited to HHS) returned no documents since 2025-01-20. The Unified Agenda check was partial: only the Federal Register fallback was usable, and it showed no rule or proposed rule. The Congress check found H.R. 2161, whose status record was read in review (introduced 2025-03-14, referred to Judiciary, no later action); it covers human-animal chimeras only and does not address human cloning or three-parent embryos. The fiscal year 2026 appropriations law surfaced in results, but its embryo research and heritable modification riders were not read; they continue restrictions from before the period and are not counted as a new ban. The agency check covered the first page of NIH news releases (September 2026) only, with nothing on embryo research, cloning, a bioethics council or abortion-harms research; NIH grant notices and earlier release pages were not searched. The news check returned only older coverage. The National Council on Bioethics element is also tracked in c14-04, and a mifepristone safety review is tracked in c14-03; the January 2026 report on fetal tissue funding is month-only and is tracked in c14-04.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No ban on three-parent embryo creation or human cloning research, no reconvened National Council on Bioethics and no HHS research agenda on abortion harms was found. The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) has no entry on these subjects; its human research protections entry concerns Common Rule exemptions. Only the first page of NIH news releases was read and NIH grant notices were not searched. Long-standing appropriations riders on embryo research continue but predate the period and are not counted. H.R. 2161 covers chimeras only. The bioethics council element is also tracked in c14-04. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-19"
 }

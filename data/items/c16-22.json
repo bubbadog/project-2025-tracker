@@ -2,9 +2,9 @@
   "agency": "Interior",
   "blockers": [],
   "chapter": "16",
-  "confidence": 82,
+  "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Signed order text fetched and read in review and the listing and archived pages confirm its status; only the live portal is unverified.",
+  "confidence_reason": "Page 533 re-read; the signed order was read on doi.gov and the listing and archived pages confirm its status; the Solicitor page link to the portal was confirmed in this review, but the portal itself refused automated access. Stage rule applied: completed requires the specified outcome (a public, searchable list of settlements and consent decrees since fiscal year 2012 with fee data) to be shown in effect; an operative order plus a link to an unreadable portal shows the mechanism but not the outcome, so implemented 75.",
   "durability": {
     "level": "low",
     "why": "The earlier policy was reversed by the next administration; a secretarial order can be revoked in the same way."
@@ -26,10 +26,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Freshness pass: the Solicitor's office page links a Litigation Transparency Portal, but the portal itself refused automated access, so whether it is live and populated remains unconfirmed; stage held at implemented 75 with completed as the alternative after a browser check. Independent review (AI) re-read page 533, tried the portal once and set confidence 80."
     }
   ],
   "id": "c16-22",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -41,22 +45,21 @@
   "proposal": "The Mandate recommends that a new administration reinstate the earlier Interior policy requiring prominent display of, and open access to, all litigation settlements entered by Interior or its agencies and any attorneys' fees paid, which the prior administration ended (p. 533).",
   "related_ids": [],
   "remaining": [
-    "Confirmation that the Litigation Transparency Portal is live and lists settlements and attorneys' fees as the order directs (p. 533; not verified)"
+    "Confirmation that the Litigation Transparency Portal lists settlements, consent decrees and attorneys' fees as the order directs (p. 533); the portal address is linked from the Interior Solicitor page but its contents could not be read"
   ],
   "requires_congress": "no",
   "research_agent": "R14D",
   "restates_ids": [],
   "review": {
     "flags": [
-      "Order text, which the researcher could not open, was fetched and confirms the display and fee disclosure requirements; progress raised from 65 to 75 within implemented and confidence from 60 to 82.",
-      "Alternative: completed 100 if the portal is confirmed live; held at implemented because public posting was not verified.",
-      "Source date for the archived Order 3408 page corrected to 2022-06-17."
+      "Implemented 75 kept, not completed 100: the portal could not be opened, so posting of the settlement list and fee data is unverified. Alternative: completed 100 if a person with a browser confirms the portal lists settlements and consent decrees since fiscal year 2012 with attorneys' fee data.",
+      "Manual check suggested: open the portal in a browser and confirm entries, fee data and update dates."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 533 asks a new administration to reinstate the earlier Interior policy of prominently displaying and giving open access to all litigation settlements and attorneys' fees paid.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y2",
+    "mandate_check": "pages re-read",
+    "mandate_note": "Page 533 (Settlement Transparency): the earlier Interior policy of prominently displaying and giving open access to all litigation settlements and attorneys' fees paid was ended and a new administration should reinstate it. Proposal paraphrase and direct match confirmed.",
+    "model": "claude-opus-4",
+    "reviewed_at": "2026-10-19",
+    "reviewer": "independent review (AI)",
     "source_checks": [
       {
         "note": "Checked 2026-10-15: signed 2025-06-23, effective immediately; rescinds SO 3408, reinstates SO 3368 with updates, mandates a public Litigation Transparency Portal with settlements and fee payments.",
@@ -72,6 +75,16 @@
         "note": "Checked 2026-10-15: SO 3408 marked canceled and replaced by SO 3433 of 2025-06-23.",
         "result": "supports",
         "url": "https://www.doi.gov/document-library/secretary-order/archived-so-3408-rescission-secretarys-order-3368"
+      },
+      {
+        "note": "Fetched 2026-10-19: the In This Section menu includes a Litigation Transparency Portal link to the litigationtransparency subdomain; no visible date. Shows the portal address exists, not its contents.",
+        "result": "partial",
+        "url": "https://www.doi.gov/solicitor"
+      },
+      {
+        "note": "One fetch attempt in review refused by robots rules; a shell attempt was refused by the network proxy. One web search for the portal's contents returned only 2018 to 2022 coverage of the earlier orders.",
+        "result": "unreachable",
+        "url": "https://litigationtransparency.doi.gov/"
       }
     ]
   },
@@ -131,10 +144,17 @@
       "publisher": "E&E News",
       "title": "Interior order erases litigation website (2022)",
       "url": "https://www.eenews.net/articles/interior-order-erases-litigation-website/"
+    },
+    {
+      "date": "2026-10-19",
+      "kind": "primary",
+      "publisher": "Interior",
+      "title": "Office of the Solicitor (section menu links the Litigation Transparency Portal; checked 2026-10-19)",
+      "url": "https://www.doi.gov/solicitor"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Secretary's Order 3433, signed 2025-06-23 and effective immediately, rescinds Order 3408 of 2022 in full and reinstates, with updates, Order 3368 of 2018. It directs the Solicitor's office and the Chief Information Officer to maintain a public Litigation Transparency Portal, post within 30 days a searchable list of consent decrees and settlements since fiscal year 2012 with associated attorneys' fee payments, and post final agreements within 15 days of execution. Whether the portal is live and populated was not confirmed.",
+  "status_summary": "Secretary's Order 3433, signed 2025-06-23 and effective immediately, rescinds Order 3408 of 2022 in full and reinstates, with updates, Order 3368 of 2018. It directs the Solicitor's office and the Chief Information Officer to maintain a public Litigation Transparency Portal, post within 30 days a searchable list of consent decrees and settlements since fiscal year 2012 with associated attorneys' fee payments, and post final agreements within 15 days of execution. The Interior Solicitor's page lists a Litigation Transparency Portal among its resources, but the portal's contents (settlements, fee data, dates covered) could not be read, so whether it is populated as the order directs was not confirmed.",
   "timeline": [
     {
       "date": "2025-06-23",
@@ -146,6 +166,6 @@
   ],
   "title": "Reinstate the Interior policy on open access to litigation settlements and fees",
   "tracked": true,
-  "uncertainties": "In review the signed order was opened on doi.gov and read: section 5 rescinds Order 3408, reinstates Order 3368 with updates, requires the Litigation Transparency Portal with case-level details including fees and their source, requires 30-day comment periods for qualifying proposed settlements and posting of final agreements within 15 days, and certification of fee payments over $10,000; section 6 allows written waivers that must themselves be posted. The archived page for Order 3408 says it was canceled and replaced by Order 3433. Whether the portal has been published and populated was not confirmed; two web searches did not surface it. The order creates no enforceable rights and can be revoked by a later Secretary.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "In review the signed order was opened on doi.gov and read: section 5 rescinds Order 3408, reinstates Order 3368 with updates, requires the Litigation Transparency Portal with case-level details including fees and their source, requires 30-day comment periods for qualifying proposed settlements and posting of final agreements within 15 days, and certification of fee payments over $10,000; section 6 allows written waivers that must themselves be posted. The archived page for Order 3408 says it was canceled and replaced by Order 3433. Whether the portal has been published and populated was not confirmed; two web searches did not surface it. The order creates no enforceable rights and can be revoked by a later Secretary. On 2026-10-19 the Interior Solicitor page was fetched and its resources menu includes a Litigation Transparency Portal link pointing to a litigationtransparency subdomain of doi.gov; automated fetching of that subdomain was refused by its robots rules for both the researcher and the independent review, so its contents, entry count and update dates were not read. Four web searches (three by the researcher, one in review) found no news report or Interior release on the portal's launch or contents. The Solicitor page carries no visible date for the link (its metadata date is from 2015). The stage stays implemented because the order is operative and a portal link exists, and is not moved to completed because population of the portal is unverified.",
+  "updated_at": "2026-10-19"
 }

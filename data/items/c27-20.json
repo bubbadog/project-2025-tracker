@@ -4,9 +4,9 @@
     "No announced plan for an annual data book or an enforcement data series was found"
   ],
   "chapter": "27",
-  "confidence": 55,
+  "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "Both SEC press releases were fetched and read in review; the agenda item and enforcement data rest on absence in limited searching.",
+  "confidence_reason": "The statistics page was read in this review and both SEC press releases by the researcher; the enforcement data and agenda items rest on absence in limited searching.",
   "durability": {
     "level": "medium",
     "why": "Published data pages are administrative and can be changed, but they are public and updated regularly."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-16",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-18",
+      "note": "Independent review read the SEC statistics and data visualizations page on sec.gov (26 series, updated through 2026-09-22, no enforcement series or data book) and added it as a source. No stage change (proposed 15, partial); confidence 55 to 60."
     }
   ],
   "id": "c27-20",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-18",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -52,34 +56,27 @@
   "research_agent": "R2627",
   "restates_ids": [],
   "review": {
-    "document_reread": {
-      "citation": "SEC Press Release 2025-106",
-      "note": "No data book or enforcement data.",
-      "result": "supports",
-      "url": "https://www.sec.gov/newsroom/press-releases/2025-106-sec-launches-new-statistics-data-visualizations-webpage"
-    },
     "flags": [
-      "Stage changed from in_progress 25 to proposed 15.",
-      "Evenly balanced: in_progress 25 is defensible because the statistics page is operative; proposed chosen because the data book, enforcement series and agenda power are all absent."
+      "No stage change: proposed 15, partial.",
+      "Defensible alternative: in_progress 25, since the statistics page is a maintained, operative time-series product."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 832 recommends that the SEC publish better data on offerings, markets and enforcement, including an annual data book of time series with DERA collecting data on offerings, regulatory costs, violations, enforcement, investors and state regulators, and that any three Commissioners be able to place an item on the agenda with staff support without the Chairman. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "V1-1016",
+    "mandate_check": "not_checked",
+    "mandate_note": "Chapter text not available in this run; the earlier review recorded: Page 832 recommends that the SEC publish better data on offerings, markets and enforcement, including an annual data book of time series with DERA collecting data on offerings, regulatory costs, violations, enforcement, investors and state regulators, and that any three Commissioners be able to place an item on the agenda with staff support without the Chairman. The paraphrase is accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-18",
+    "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
-        "note": "New page 2025-08-13; offerings and issuer series; no enforcement data; no stated schedule.",
-        "result": "supports",
-        "url": "https://www.sec.gov/newsroom/press-releases/2025-106-sec-launches-new-statistics-data-visualizations-webpage"
+        "note": "2026-10-18: 26 series in four groups (capital formation 8, market participants 10, market activity 6, investors 2), most capital formation series updated 2026-09-22; no enforcement, violations or regulatory cost series and no annual data book. Partly matches the data book idea; supports proposed.",
+        "result": "partial",
+        "url": "https://www.sec.gov/data-research/statistics-data-visualizations"
       },
       {
-        "note": "2025-04-28; six DERA reports; exempt offerings report is an update; no enforcement data.",
-        "result": "supports",
-        "url": "https://www.sec.gov/newsroom/press-releases/2025-70"
+        "note": "2026-10-18, per the researcher's full read: launch of the page on 2025-08-13; no enforcement data or data book.",
+        "result": "partial",
+        "url": "https://www.sec.gov/newsroom/press-releases/2025-106-sec-launches-new-statistics-data-visualizations-webpage"
       }
-    ],
-    "stage_change_reason": "Lowered from in_progress 25 to proposed 15: the 2025 data releases improve offering and market statistics but are not the annual data book, omit enforcement data, partly continue an existing DERA series, and leave the agenda item untouched, so they are a partial step, not formal implementation."
+    ]
   },
   "significance": {
     "B": 1,
@@ -123,10 +120,17 @@
       "publisher": "SEC",
       "title": "SEC Launches New Statistics and Data Visualizations Webpage (Press Release 2025-106)",
       "url": "https://www.sec.gov/newsroom/press-releases/2025-106-sec-launches-new-statistics-data-visualizations-webpage"
+    },
+    {
+      "date": "2026-09-22",
+      "kind": "primary",
+      "publisher": "SEC",
+      "title": "SEC Statistics and Data Visualizations page",
+      "url": "https://www.sec.gov/data-research/statistics-data-visualizations"
     }
   ],
   "stage": "proposed",
-  "status_summary": "DERA published six reports on 2025-04-28, including updated statistics on exempt offerings under Regulations A, D and Crowdfunding through 2024 and multi-year issuance series. The SEC launched a statistics and data visualization webpage on 2025-08-13 covering IPOs, exempt and bond offerings, reporting issuers and other series, which the Chairman described as an unprecedented window into the capital markets. Neither release includes enforcement data or an annual data book, and no change allowing three Commissioners to set the agenda was found.",
+  "status_summary": "DERA published six reports on 2025-04-28, including updated statistics on exempt offerings under Regulations A, D and Crowdfunding through 2024. The SEC launched a statistics and data visualization webpage on 2025-08-13; as read on 2026-10-18 it lists 26 series on capital formation, market participants, market activity and investors, most capital formation series updated 2026-09-22. None of these includes enforcement data, violations or regulatory cost series, or an annual data book, and no change allowing three Commissioners to set the agenda was found.",
   "timeline": [
     {
       "date": "2025-04-28",
@@ -145,6 +149,6 @@
   ],
   "title": "SEC data book from DERA and three-commissioner agenda power",
   "tracked": true,
-  "uncertainties": "The exempt offerings report is described as an update of an existing DERA series, so part of the 2025 publication continues earlier practice. No search was run for internal SEC procedures on agenda setting, which are rarely public. The Division of Enforcement publishes its own annual results, which were not reviewed, and other DERA releases in 2026 were not enumerated. Searches performed: one web search (DERA data book).",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The SEC statistics page was read in this review on sec.gov and lists 26 series with update dates through 2026-09-22 and no enforcement, violations or regulatory cost series and no data book; the two 2025 press releases were read in full by the researcher. The exempt offerings report is an update of an existing DERA series, so part of the 2025 publication continues earlier practice. No search was run for internal SEC procedures on agenda setting, which are rarely public, so that element rests on absence of evidence. The Division of Enforcement's own annual results were not reviewed, and other DERA releases in 2026 were not enumerated.",
+  "updated_at": "2026-10-18"
 }
