@@ -29,7 +29,7 @@ Status: **beta**. The fuller enumeration of the document is being completed chap
 1. **Research.** AI research agents read each chapter of the document in full, list the concrete and checkable recommendations, and research what the federal government has done on each since January 20, 2025, primary sources first (Federal Register, congress.gov, govinfo, courts, agency sites).
 2. **Independent review.** A different AI model that did not see the research re-reads the cited pages, opens the sources that decide the status, corrects errors, re-derives the status from the rubric, and sets the confidence rating.
 3. **Blind significance scoring.** Two raters who see only the recommendation text score reach, magnitude, breadth of government and fiscal scale; a third rater adjudicates disagreements.
-4. **Scheduled runs** keep the record current: a news sweep and deep-check rotation on Tuesdays and Thursdays, a freshness pass on Mondays, Wednesdays and Fridays, a nightly enumeration pass, and a weekly significance recomputation. Every run writes a log under `data/runs/` and a dated note in each changed record's `history`.
+4. **Scheduled runs** keep the record current: a daily run (news sweep of federal developments, a rotation of deep checks and refutation checks, independent review) and a weekly significance recomputation. Every run writes a log under `data/runs/` and a dated note in each changed record's `history`.
 5. **Validation.** `scripts/validate.py` holds every record to the same rules, machine-written or hand-edited.
 
 Full detail: [docs/METHOD.md](docs/METHOD.md), [docs/DATA_MODEL.md](docs/DATA_MODEL.md), [docs/PIPELINE.md](docs/PIPELINE.md).
