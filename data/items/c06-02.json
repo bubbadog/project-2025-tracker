@@ -7,7 +7,7 @@
   "chapter": "06",
   "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: implemented (65 to 90) because the reorganization and reductions in force are operative through executive action, short of the full recommendation since no change to political control of bureaus is shown. Document text was checked and the AFSA statement, the inspector general testimony and news reports on the injunction were read, but the stage rests on news and an interested party's statement rather than a State primary record, so confidence is medium.",
+  "confidence_reason": "Rule applied: implemented (65 to 90) because the reorganization and reductions in force are operative through executive action, short of the full recommendation since no change to political control of bureaus is shown. State's statement on state.gov, the stage-deciding primary record, was not opened by the fetch tool; the stage rests on Nextgov and AP (re-opened), a court complaint opened only on a third-party host, and earlier-read AFSA, inspector general and news sources, so the record stays at or below 79. Congressional-notification figures known only through an external retrieval add nothing verified. Confidence unchanged at 68.",
   "court_status": {
     "basis": "The 2025-12-17 preliminary injunction barred further reduction-in-force steps only through 2026-01-30 (Maryland Matters, Foreign Policy); on 2026-01-09 the judge said it did not reach State's July notices and the government withdrew its appeal (Government Executive). The case remains open, and no order blocking the May 2026 Foreign Service separations was found. CourtListener could not be reached from this review.",
     "date": "2026-01-09",
@@ -50,10 +50,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c06-27 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Re-check of State's reorganization statement: the statement on state.gov and a May 2025 State press statement could not be opened. Nextgov (2025-07-11) and a complaint filed in the District of Maryland on 2026-02-13 (copy hosted by dclawcollective.com) were read and added as sources, and a 2025-09-11 event for the alleged civil-service separations was added citing the complaint; the AP report was re-read. Congressional-notification figures reported by an external retrieval are recorded as unverified. Stage implemented, progress 75 and confidence 68 unchanged."
     }
   ],
   "id": "c06-02",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -123,7 +127,7 @@
     "mandate_check": "verified",
     "mandate_note": "Re-read pages 193 and 194: the Mandate calls for a complete (described as hypothetical) reorganization plan that tightens accountability to political leadership, reduces overhead and redundancy, recommends personnel changes and sorts office closures by whether Congress must approve, with speed a priority; paraphrase and pages are accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
+    "reviewed_at": "2026-10-19",
     "reviewer": "independent review",
     "source_checks": [
       {
@@ -160,6 +164,26 @@
         "note": "CourtListener blocked to the fetch tool (robots) and to the shell (proxy), so the docket was not read.",
         "result": "unreachable",
         "url": "https://www.courtlistener.com/api/rest/v4/search/?type=r&q=docketNumber%3A%223%3A25-cv-08302%22"
+      },
+      {
+        "note": "Client error through the fetch tool; the statement was not read, so it could not be checked against stage implemented.",
+        "result": "unreachable",
+        "url": "https://www.state.gov/building-an-america-first-state-department/"
+      },
+      {
+        "note": "Opened. Notices to about 1,350 employees on 2025-07-11 and a stated completion date of 2025-08-04; consistent with an operative reorganization (implemented). Re-opened by the reviewer on 2026-10-19: headline and date 2025-07-11 confirmed; about 1,100 civil servants and nearly 250 Foreign Service officers; 120 and 60 day leave; nearly 3,000 total departures; completion by 2025-08-04; no further reductions in force planned.",
+        "result": "supports",
+        "url": "https://www.nextgov.com/people/2025/07/state-department-lays-1350-employees/406675/"
+      },
+      {
+        "note": "Opened. Alleges notice and separation dates for State plaintiffs, consistent with operative reductions; plaintiffs' allegations only and silent on the wider reorganization. Re-opened by the reviewer on 2026-10-19: complaint in No. 8:26-cv-00573 (D. Md.), filed 2026-02-13 per the header; State plaintiffs noticed 2025-07-11 and separated 2025-09-11; one Foreign Service officer separated by involuntary resignation on 2025-11-16.",
+        "result": "partial",
+        "url": "https://dclawcollective.com/wp-content/uploads/2026/02/RIF-Federal-Employees-Lawsuit.pdf"
+      },
+      {
+        "note": "Opened. Announcement of a 15 percent staff cut and consolidation of 734 offices into 602 as a roadmap; consistent with the plan stage preceding implementation.",
+        "result": "supports",
+        "url": "https://www.wcax.com/2025/04/22/rubio-unveils-massive-overhaul-state-department-with-reduction-staff-bureaus/"
       }
     ]
   },
@@ -259,10 +283,24 @@
       "publisher": "Foreign Policy",
       "title": "Judge Bans Trump From Laying off Hundreds of Diplomats Through January",
       "url": "https://foreignpolicy.com/2025/12/18/trump-firing-diplomats-rif-injunction-foreign-service/"
+    },
+    {
+      "date": "2025-07-11",
+      "kind": "news",
+      "publisher": "Nextgov/FCW",
+      "title": "State Department lays off 1,350 employees",
+      "url": "https://www.nextgov.com/people/2025/07/state-department-lays-1350-employees/406675/"
+    },
+    {
+      "date": "2026-02-13",
+      "kind": "court",
+      "publisher": "U.S. District Court for the District of Maryland (complaint filed by former federal employees)",
+      "title": "Complaint for declaratory and injunctive relief, No. 8:26-cv-00573 (D. Md., filed 2026-02-13) (copy hosted by dclawcollective.com)",
+      "url": "https://dclawcollective.com/wp-content/uploads/2026/02/RIF-Federal-Employees-Lawsuit.pdf"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Secretary Rubio announced a reorganization on 2025-04-22 (date per AP; State's statement shows no date) that, per AP, would cut domestic staff by 15% and consolidate 734 bureaus and offices into 602. State sent reduction-in-force notices to more than 1,300 employees on 2025-07-11 (about 1,100 civil servants and about 250 Foreign Service officers); civil servants left in early September 2025. The Foreign Service separations were delayed by Section 120 of Public Law 119-37, which barred reduction-in-force actions through 2026-01-30, and by a 2025-12-17 preliminary injunction from a federal court in San Francisco that barred further steps through the same date. On 2026-01-09 the judge said the order did not reach the July notices, the government withdrew its appeal, and State declined to rescind the July notices. AFSA stated on 2026-05-05 that State separated more than 200 Foreign Service members under the reduction in force that week. State's FY2027 budget justification projects about 11,000 Foreign Service and 6,000 civil service employees, down from over 14,000 and nearly 13,000 before 2025 (as reported by Federal News Network). In 2026-06-03 testimony, State's Office of Inspector General called the reorganization and integration of selected USAID functions the department's main staffing and organizational challenge. State's own statement describes the plan only in general terms and does not mention political leadership of bureaus, so those specifics rest on AP and the other sources above.",
+  "status_summary": "Secretary Rubio announced a reorganization on 2025-04-22 that, per AP, would cut domestic staff by 15 percent and consolidate 734 bureaus and offices into 602 (State's own statement is general and does not mention political leadership of bureaus), and on 2025-07-11 State sent reduction-in-force notices to about 1,100 civil servants and nearly 250 Foreign Service officers, saying changes would be complete by 2025-08-04, that nearly 3,000 members of the workforce would depart in all and that no further reductions in force were planned (per Nextgov). Civil-service employees were separated on 2025-09-11 according to a complaint filed by affected employees on 2026-02-13 (an allegation, not a finding), while the Foreign Service separations were delayed by Section 120 of Public Law 119-37, which barred reduction-in-force actions through 2026-01-30, and by a 2025-12-17 preliminary injunction from a federal court in San Francisco through the same date; on 2026-01-09 the judge said the order did not reach the July notices, the government withdrew its appeal, and State declined to rescind the July notices. AFSA stated on 2026-05-05 that State separated more than 200 Foreign Service members under the reduction in force that week, and State's FY2027 budget justification projects about 11,000 Foreign Service and 6,000 civil service employees, down from over 14,000 and nearly 13,000 before 2025 (as reported by Federal News Network). In 2026-06-03 testimony, State's Office of Inspector General called the reorganization and integration of selected USAID functions the department's main staffing and organizational challenge.",
   "timeline": [
     {
       "date": "2025-04-22",
@@ -291,6 +329,13 @@
       "kind": "news",
       "source": "Federal News Network",
       "url": "https://federalnewsnetwork.com/workforce/2025/12/state-dept-finalizes-mass-layoffs-says-employees-wont-be-reinstated-under-shutdown-ending-deal/"
+    },
+    {
+      "date": "2025-09-11",
+      "event": "State civil-service employees who received reduction-in-force notices on 2025-07-11 were separated on this date, according to a complaint filed by former federal employees in the District of Maryland on 2026-02-13 (allegations in a court filing, not findings); the same complaint alleges that one Foreign Service officer was separated through an involuntary resignation on 2025-11-16.",
+      "kind": "court",
+      "source": "Complaint, No. 8:26-cv-00573 (D. Md.), copy hosted by dclawcollective.com",
+      "url": "https://dclawcollective.com/wp-content/uploads/2026/02/RIF-Federal-Employees-Lawsuit.pdf"
     },
     {
       "date": "2025-11-12",
@@ -351,6 +396,6 @@
   ],
   "title": "Reorganize State to cut offices and overhead and tighten political control",
   "tracked": true,
-  "uncertainties": "State's reorganization statement on its own site could not be fetched by the research tools; it is general, undated and gives no numbers, so the figures come from AP and Federal News Network and describe the plan, not a verified end state. The FY2027 budget justification and State's organizational chart were not opened. The temporary restraining order date, case number and appeal number rest on a case tracker (Civil Rights Litigation Clearinghouse) whose docket summary has no 2026 entries; the court orders were not read, and CourtListener could not be reached from this review. The injunction's 2026-01-30 end date and the appeal withdrawal are confirmed by news reports. The 2026-05-05 separations rest on a statement by AFSA, an interested party. No source in this record shows a change to political control of bureaus, which the Mandate's recommendation mentions. A limited search found no court ruling on the May 2026 separations, no fiscal 2027 reduction-in-force bar and no State authorization bill.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "State's reorganization statement on its own site (state.gov) could not be fetched in the latest check either (client error), and neither could a State press statement of May 2025 reportedly announcing the congressional notification of the plan. The statement is general and gives no numbers by the account of the earlier review, so the figures come from AP and Federal News Network and describe the plan, not a verified end state. An external retrieval reported figures from a congressional notification letter of 2025-05-29 (more than 300 of 734 bureaus and offices streamlined, merged or eliminated, 3,448 domestic positions cut from 18,780, an 18 percent staff reduction) and a foreign service separation date of 2025-11-10; these are known only through that retrieval, the letter itself is not public in full according to the retrieval, and they are not stated as verified. They differ in form from the AP figures in the record (15 percent cut, 734 offices reduced to 602) and the difference was not reconciled. Read in the latest check: Nextgov (2025-07-11) confirms notices to about 1,100 civil servants and nearly 250 Foreign Service officers on 2025-07-11, 60 and 120 day notice periods, a completion date of 2025-08-04 and no plans for further reductions in force; a complaint filed on 2026-02-13 in the District of Maryland (No. 8:26-cv-00573, read on a copy hosted by a plaintiffs' counsel collective; the court docket was not reached) alleges that State plaintiffs received notices on 2025-07-11 and civil service plaintiffs were separated on 2025-09-11, with one Foreign Service officer separated by involuntary resignation on 2025-11-16 (plaintiffs' allegations; the 2025-11-10 date from the retrieval was not found there). The FY2027 budget justification and State's organizational chart were not opened. The temporary restraining order date, case number and appeal number rest on a case tracker (Civil Rights Litigation Clearinghouse) whose docket summary has no 2026 entries; the court orders were not read, and CourtListener could not be reached from this review. The injunction's 2026-01-30 end date and the appeal withdrawal are confirmed by news reports. The 2026-05-05 separations rest on a statement by AFSA, an interested party. No source in this record shows a change to political control of bureaus, which the Mandate's recommendation mentions. A limited search found no court ruling on the May 2026 separations, no fiscal 2027 reduction-in-force bar and no State authorization bill.",
+  "updated_at": "2026-10-19"
 }

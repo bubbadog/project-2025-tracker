@@ -4,7 +4,7 @@
   "chapter": "04",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "The Mandate text was checked and an Army primary article confirms the program is operating and was extended to 2027-04-01; a July 2026 Military Times report confirms low uptake and back pay offsets. Counts of returnees and interested members differ between reports, and no primary document on rank restoration or pay outcomes was read.",
+  "confidence_reason": "Rule applied: high requires the stage-deciding primary record to be opened and read; the operative documents that were opened (Executive Order 14184 on govinfo, the 2026-03-23 Army article, and on 2026-10-19 the 2026-05-07 memorandum on media.defense.gov, opened by the researcher and confirmed by the reviewer) support implementation in substance, but none addresses how rank is restored or whether back pay is paid, which rests on news reports, and return counts differ between reports, so confidence stays medium at 78.",
   "durability": {
     "level": "low",
     "why": "The program rests on an executive order and DOD memoranda that a later administration could end or narrow."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-references added to new layer 3 records c14-46 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Primary-source review opened the 2026-05-07 Secretary of War memorandum on media.defense.gov and a copy attached to a Federal Circuit filing (added as a court source); the memorandum extends the program one year and directs correction boards, and is silent on rank and back pay. The 2026-05-08 timeline event was replaced by a 2026-05-07 event; stage implemented 65 and confidence 78 unchanged."
     }
   ],
   "id": "c04-02",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-19",
   "layer": 1,
   "match": "direct",
   "mechanism": "executive_order",
@@ -84,7 +88,7 @@
     "mandate_check": "verified",
     "mandate_note": "Page 103 (item 3 under the politicization heading) recommends reinstating members discharged for not receiving the COVID vaccine, restoring their appropriate rank, and providing back pay; the paraphrase matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
+    "reviewed_at": "2026-10-19",
     "reviewer": "R02",
     "source_checks": [
       {
@@ -96,6 +100,16 @@
         "note": "Report dated 2026-07-23 gives about 200 troops and 85 Coast Guard members reinstated, nearly 900 discharge upgrades, back pay offsets for civilian earnings and VA payments, multi-month delays, and more than 800 who expressed interest (the item says 600 or more); it says nearly 8,000 were involuntarily separated.",
         "result": "supports",
         "url": "https://www.militarytimes.com/news/your-military/2026/07/23/trump-promised-redemption-for-troops-who-refused-covid-shots-a-year-later-many-are-still-waiting/"
+      },
+      {
+        "note": "2026-10-19: opened by the researcher and re-opened by the reviewer; dated 2026-05-07 (garbled stamp), extends the expedited program one year, sets correction board criteria and offers upgrades to non-returners. Supports implemented 65 in substance but is silent on rank and back pay, so only partial against the full recommendation.",
+        "result": "partial",
+        "url": "https://media.defense.gov/2026/May/08/2003928563/-1/-1/1/reinstating-service-members-unjustly-discharged-underthe-coronavirus-disease.pdf"
+      },
+      {
+        "note": "2026-10-19: opened by the researcher and the reviewer; Federal Circuit notice of supplemental authority (No. 2025-1363) whose Exhibit A reproduces the same memorandum; no filing date shown in the document. Same limits on rank and back pay as against implemented 65.",
+        "result": "partial",
+        "url": "https://kneselaw.com/docs/2026-0526%20Petitioner%27s%20Notice%20of%20Suppl%20Authority.pdf"
       }
     ]
   },
@@ -121,6 +135,20 @@
       "url": "https://www.govinfo.gov/content/pkg/DCPD-202500188/html/DCPD-202500188.htm"
     },
     {
+      "date": "2025-04-23",
+      "kind": "news",
+      "publisher": "Straight Arrow News",
+      "title": "Hegseth welcomes 8,700 warriors of conscience who refused COVID vaccine",
+      "url": "https://san.com/cc/hegseth-welcomes-8700-warriors-of-conscience-who-refused-covid-vaccine/"
+    },
+    {
+      "date": "2025-06-30",
+      "kind": "news",
+      "publisher": "Military.com",
+      "title": "After offer of back pay, only 13 COVID vaccine refusers returned to military service",
+      "url": "https://www.military.com/daily-news/2025/06/30/after-offer-of-back-pay-only-13-covid-vaccine-refusers-returned-military-service.html"
+    },
+    {
       "date": "2026-03-23",
       "kind": "primary",
       "publisher": "U.S. Army",
@@ -133,6 +161,13 @@
       "publisher": "Department of Defense (Department of War)",
       "title": "Memorandum on reinstating service members unjustly discharged under the COVID-19 vaccine mandate",
       "url": "https://media.defense.gov/2026/May/08/2003928563/-1/-1/1/reinstating-service-members-unjustly-discharged-underthe-coronavirus-disease.pdf"
+    },
+    {
+      "date": "2026-05-26",
+      "kind": "court",
+      "publisher": "kneselaw.com (court filing, U.S. Court of Appeals for the Federal Circuit)",
+      "title": "Notice of supplemental authority in Federal Circuit No. 2025-1363, Exhibit A reproducing the 2026-05-07 memorandum (copy hosted by kneselaw.com)",
+      "url": "https://kneselaw.com/docs/2026-0526%20Petitioner%27s%20Notice%20of%20Suppl%20Authority.pdf"
     },
     {
       "date": "2026-07-17",
@@ -150,7 +185,7 @@
     }
   ],
   "stage": "implemented",
-  "status_summary": "Executive Order 14184 (2025-01-27) directed reinstatement at former rank with back pay and benefits, and DOD announced an outreach program on 2025-04-23 for roughly 8,700 separated members (a July 2026 report puts involuntary separations at nearly 8,000). Uptake has been small: 13 had returned by late June 2025, and in July 2026 the Pentagon put returns at about 230, while a 2026-07-23 report gave about 200 troops and 85 Coast Guard members reinstated, nearly 900 discharge upgrades, and more than 800 who had expressed interest. The window to rejoin was extended on 2026-03-23 to 2027-04-01 and the service obligation for returnees was cut from four years to two. Under DOD policy back pay is reduced by interim civilian income and VA payments, and some applicants described waits of months to over a year.",
+  "status_summary": "Executive Order 14184 (2025-01-27) directed reinstatement at former rank with back pay and benefits, and DOD announced an outreach program on 2025-04-23 for roughly 8,700 separated members (a July 2026 report puts involuntary separations at nearly 8,000). Uptake has been small: 13 had returned by late June 2025, and in July 2026 the Pentagon put returns at about 230, while a 2026-07-23 report gave about 200 troops and 85 Coast Guard members reinstated, nearly 900 discharge upgrades, and more than 800 who had expressed interest. The window to rejoin was extended on 2026-03-23 to 2027-04-01 with the returnee service obligation cut from four years to two, and a Secretary of War memorandum dated 2026-05-07 extends the expedited reinstatement program by one year, directs correction boards to treat discharges preceded only by vaccine-refusal-related adverse actions as unjust, and offers discharge upgrades and repayment of recouped bonuses to those who do not return, without addressing rank or back pay. Under DOD policy back pay is reduced by interim civilian income and VA payments, and some applicants described waits of months to over a year.",
   "timeline": [
     {
       "date": "2025-01-27",
@@ -181,8 +216,8 @@
       "url": "https://www.army.mil/article/291293/dow_extends_invitation_to_bring_back_troops_separated_for_refusing_covid_19_vaccine"
     },
     {
-      "date": "2026-05-08",
-      "event": "A Secretary of War memo (header date appears to be about 2026-05-07, URL dated 2026-05-08) continues the program for another year and directs correction boards to treat discharges tied only to vaccine refusal as presumptively unjust, with discharge upgrades and record corrections available even to those who do not return. The text reviewed does not address back pay or rank.",
+      "date": "2026-05-07",
+      "event": "A Secretary of War memorandum to the Secretaries of the Military Departments and the Chief of the National Guard Bureau extends the expedited reinstatement program by one year and directs correction boards to evaluate petitioners for unjust discharge, treating adverse actions tied solely to vaccine refusal that led to separation as grounds; it offers record corrections and discharge upgrades to those who do not return. It does not address rank or back pay and prints no calendar end date.",
       "kind": "primary",
       "source": "Department of Defense (Department of War)",
       "url": "https://media.defense.gov/2026/May/08/2003928563/-1/-1/1/reinstating-service-members-unjustly-discharged-underthe-coronavirus-disease.pdf"
@@ -204,6 +239,6 @@
   ],
   "title": "Reinstate members discharged over the COVID-19 vaccine, with rank and back pay",
   "tracked": true,
-  "uncertainties": "Counts differ between Military Times reports (about 230 rejoined on 2026-07-16 versus about 200 troops plus 85 Coast Guard members a week later); they were not reconciled. No primary document confirms how rank restoration works in practice or whether any back pay has been paid in full; the May 2026 memo text reviewed was an OCR copy and did not address pay. The 2025-06-30 return count comes from a search-result headline and snippet that was not opened. The Military.com and Military Times pieces are news reports; no court challenge to this program was found. Update 2026-10-15: one search for post-July figures returned only earlier reports.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Counts differ between Military Times reports (about 230 rejoined on 2026-07-16 versus about 200 troops plus 85 Coast Guard members a week later); they were not reconciled. No primary document confirms how rank restoration works in practice or whether any back pay has been paid in full. The May 2026 memorandum was opened on media.defense.gov as extracted text with a garbled date stamp, read as 2026-05-07 (the URL path shows 2026-05-08, and a second copy attached to a Federal Circuit filing on kneselaw.com shows the same stamp); it does not mention rank, back pay or a calendar end date and describes the extension only as one year, so its end date relative to the 2027-04-01 window was not determined. The filing date of that court copy is taken from its file name because the document shows none, and the filing, an appeal in which the memorandum is offered as supplemental authority, was not read beyond the exhibit. The 2025-06-30 return count comes from a search-result headline and snippet that was not opened. The Military.com and Military Times pieces are news reports; no court challenge to this program itself was found. Update 2026-10-15: one search for post-July figures returned only earlier reports.",
+  "updated_at": "2026-10-19"
 }

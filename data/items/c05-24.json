@@ -7,7 +7,7 @@
   "chapter": "05",
   "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked; the bills, EO 14351, the State Department guidance and the Medani order were read, but the DV-2027 registration dispute rests on one news report and its ruling is pending.",
+  "confidence_reason": "Rule applied: in_progress 25 rests on the absence of legislation plus executive pauses that a court vacated for FY2026 subclasses. The State Department page (official host) was opened by the researcher and re-opened by the reviewer, and the Medani order was opened on a third-party host; the pause date and the 2026-09-10 cable rest on a tracker, and later court developments (September and October 2026 orders, the DV-2027 injunction) are known only through an external retrieval, which caps the record at 79. The absence of legislation was not re-checked in this pass. Confidence unchanged at 76.",
   "court_status": {
     "basis": "Derived from the latest dated court event: on 2026-08-28 the Medani court temporarily vacated the USCIS hold and the State Department diversity visa pause for FY2026 selectee subclasses pending further litigation; a separate suit over DV-2027 registration was heard on 2026-09-24 with a ruling expected by 2026-10-14.",
     "date": "2026-08-28",
@@ -35,10 +35,14 @@
     {
       "date": "2026-10-11",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Re-check opened the State Department guidance page, the Medani order on courthousenews.com and an Immigration Policy Tracking Project entry, which was added as a tracker source. Added a 2025-12-23 State pause event citing the State page (date from the tracker) and a 2026-09-10 event for a State cable to posts, worded as reported by the tracker; removed from the 2026-08-28 event the statement that State said it was resuming issuance, which the State page does not say. Later October 2026 court developments are left unverified. Stage in_progress, progress 25 and confidence 76 unchanged."
     }
   ],
   "id": "c05-24",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -57,7 +61,7 @@
   "remaining": [
     "Legislation repealing the diversity lottery.",
     "Legislation ending extended-family categories and creating a merit-based system.",
-    "A decision on DV-2027 registration and on the Medani litigation after the preliminary order."
+    "A decision on DV-2027 registration (a ruling was expected 2026-10-14; its result was not verified) and on the Medani litigation after the preliminary order and any appeal."
   ],
   "requires_congress": "yes",
   "research_agent": "N05a",
@@ -69,7 +73,7 @@
     "mandate_check": "verified",
     "mandate_note": "Page 145 says the administration should lead a legislative push for merit-based immigration: repeal the diversity lottery, end chain migration while keeping a nuclear-family focus, and replace the employment visa system with one awarding visas only to the best and brightest. The proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
+    "reviewed_at": "2026-10-19",
     "reviewer": "Y7",
     "source_checks": [
       {
@@ -111,6 +115,21 @@
         "note": "EO 14351 signed 2025-09-19; 1 and 2 million dollar gifts as evidence under 8 U.S.C. 1153(b)(1)(A) and (b)(2).",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/09/24/2025-18602/the-gold-card"
+      },
+      {
+        "note": "Opened (travel.state.gov, without the www prefix). Supports in_progress 25: shows the executive pause and the 2026-08-31 notice that it ended under the court order; it does not say issuance is resuming, and it retains the original pause text. Re-opened by the reviewer on 2026-10-19 (same content): last updated 2026-08-31; notice of the end of the pause as of 2026-08-28 under the Medani order; undated original pause text retained; FAQ says applicants may apply and interview; no statement that issuance is resuming.",
+        "result": "supports",
+        "url": "https://www.travel.state.gov/content/travel/en/News/visas-news/diversity-visa-issuance-updated-guidance.html"
+      },
+      {
+        "note": "Opened. Order dated 2026-08-28 certifies three FY2026 subclasses and temporarily vacates the USCIS hold (PM-602-0193), the State DV pause and the 75-country pause pending further litigation; consistent with the court_status of vacated.",
+        "result": "supports",
+        "url": "https://www.courthousenews.com/wp-content/uploads/2026/08/order-prelim-davila.pdf"
+      },
+      {
+        "note": "Opened. Secondary tracker consistent with the record's stage and court status; adds the pause date and the 2026-09-10 resumption cable. Re-opened by the reviewer on 2026-10-19: State pause dated 2025-12-23 (Medani summary gives 2025-12-20); cable of 2026-09-10 lifting the pauses, with a source notice dated 2026-09-11; page metadata date 2026-10-07; current status field none.",
+        "result": "supports",
+        "url": "https://immpolicytracking.org/policies/dhs-pauses-diversity-immigrant-visa-program/"
       }
     ]
   },
@@ -208,10 +227,17 @@
       "publisher": "Fragomen",
       "title": "State Department to resume diversity visa issuance",
       "url": "https://www.fragomen.com/insights/state-department-to-resume-diversity-visa-issuance.html"
+    },
+    {
+      "date": "2026-10-07",
+      "kind": "tracker",
+      "publisher": "Immigration Policy Tracking Project",
+      "title": "DHS pauses diversity immigrant visa program (Immigration Policy Tracking Project entry)",
+      "url": "https://immpolicytracking.org/policies/dhs-pauses-diversity-immigrant-visa-program/"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "No law has repealed the diversity lottery, ended family-based categories beyond the immediate family or created a points system; bills have been introduced (H.R. 1241, 2025-02-12, repealing the diversity program, and H.R. 3466, 2025-05-15, a points-based system that would limit family categories to spouses and minor children and end the diversity program). Executive action reached the lottery: State postponed DV-2027 registration on 2025-11-05 and had not opened it by the end of FY2026, the Homeland Security Secretary announced a pause on 2025-12-18, and USCIS and State then held DV adjustment cases and paused DV visa issuance. On 2026-08-28 a federal court in California temporarily vacated those holds for FY2026 selectees and State said it was resuming issuance; a separate suit over DV-2027 registration awaited a ruling expected 2026-10-14. EO 14351 (signed 2025-09-19) created a Gold Card gift-based pathway using existing employment categories; the H-1B element is in c05-07.",
+  "status_summary": "No law has repealed the diversity lottery, ended family-based categories beyond the immediate family or created a points system; bills have been introduced (H.R. 1241, 2025-02-12, repealing the diversity program, and H.R. 3466, 2025-05-15, a points-based system that would limit family categories to spouses and minor children and end the diversity program). Executive action reached the lottery: State postponed DV-2027 registration on 2025-11-05, the Homeland Security Secretary announced a pause on 2025-12-18, and USCIS (2025-12-19) and State (2025-12-23 per a tracker) then held DV adjustment cases and paused DV visa issuance; a separate suit over DV-2027 registration awaited a ruling expected 2026-10-14. On 2026-08-28 a federal court in California temporarily vacated those holds for FY2026 selectee subclasses, and the State Department page, updated 2026-08-31, carries a notice that the December 2025 pause is no longer in effect under that order while retaining its original pause text; a tracker reports a State cable of 2026-09-10 directing posts to resume processing and issuance. EO 14351 (signed 2025-09-19) created a Gold Card gift-based pathway using existing employment categories; the H-1B element is in c05-07.",
   "timeline": [
     {
       "date": "2025-02-12",
@@ -256,6 +282,13 @@
       "url": "https://www.courthousenews.com/wp-content/uploads/2026/08/order-prelim-davila.pdf"
     },
     {
+      "date": "2025-12-23",
+      "event": "The State Department paused all visa issuance to diversity immigrant visa applicants, effective immediately, while applicants could still apply and attend interviews. The State page carries no date for the pause; 2025-12-23 is the date given by a tracker, which notes that the Medani order dates the guidance 2025-12-20.",
+      "kind": "primary",
+      "source": "U.S. Department of State",
+      "url": "https://www.travel.state.gov/content/travel/en/News/visas-news/diversity-visa-issuance-updated-guidance.html"
+    },
+    {
       "date": "2026-08-19",
       "event": "A law firm sued the Secretary of State in the Southern District of California to compel a DV-2027 registration process; a hearing was held 2026-09-24 and an oral ruling on a preliminary injunction was scheduled for 2026-10-14.",
       "kind": "court",
@@ -271,14 +304,21 @@
     },
     {
       "date": "2026-08-28",
-      "event": "The State Department said its December 2025 pause on diversity visa issuance was no longer in effect following the Medani court order and that it was resuming issuance.",
+      "event": "The State Department posted a notice (page updated 2026-08-31) that, as of 2026-08-28 and in accordance with the Medani court order, its December 2025 pause on diversity visa issuance was no longer in effect.",
       "kind": "primary",
       "source": "travel.state.gov",
       "url": "https://www.travel.state.gov/content/travel/en/News/visas-news/diversity-visa-issuance-updated-guidance.html"
+    },
+    {
+      "date": "2026-09-10",
+      "event": "A State Department cable reportedly lifted the diversity and immigrant visa pauses and instructed embassies and consulates to resume processing and issuance (reported by a tracker; the cable was not opened).",
+      "kind": "tracker",
+      "source": "Immigration Policy Tracking Project",
+      "url": "https://immpolicytracking.org/policies/dhs-pauses-diversity-immigrant-visa-program/"
     }
   ],
   "title": "Merit-based immigration: repeal diversity lottery, end chain migration, top-talent visas",
   "tracked": true,
-  "uncertainties": "The State Department guidance page is undated apart from its 2026-08-31 update and does not give the exact December 2025 pause date; the USCIS hold date (2025-12-19) and memo number come from the Medani order, which was read. Whether the State pause was formally linked to the Secretary's 2025-12-18 announcement was not confirmed. The DV-2027 litigation account comes from one news article, and the ruling expected 2026-10-14 had not been issued at the time of review. The H.R. 3466 description rests on its full title. A federal lawsuit over the Gold Card filed 2026-02-03 was seen only on a law-firm site and is not relied on. No bill ending chain migration other than H.R. 3466 was checked, and the RAISE Act was not found in this Congress. The State rule of 2026-03-11 on passport information and the 75-country pause are covered in c06-05.",
-  "updated_at": "2026-10-11"
+  "uncertainties": "The State Department guidance page was opened on 2026-10-19. It is undated apart from its 2026-08-31 update and carries both a notice that the December 2025 pause ended under the Medani order and the original undated pause text, and its FAQ still says no diversity visas will be issued; it does not state that issuance is resuming. The exact pause date (2025-12-23 per the Immigration Policy Tracking Project, 2025-12-20 per that tracker's summary of the Medani order) rests on secondary reporting, and whether the State pause was formally linked to the Secretary's 2025-12-18 announcement was not confirmed. The 2026-09-10 State cable to posts is known only from the tracker, which cites a court notice of filing dated 2026-09-11; the cable itself was not opened. The USCIS hold date (2025-12-19) and memo number come from the Medani order, which was opened and read. Later Medani orders (a supplemental relief order of 2026-09-30 and an October order setting an adjudication window ending 2026-10-23), the Ninth Circuit appeal, and an injunction of 2026-10-14 in the DV-2027 registration suit with registration deadlines were reported by an external retrieval but were not opened, so they are not relied on. The DV-2027 litigation account in the record comes from one news article. The H.R. 3466 description rests on its full title. A federal lawsuit over the Gold Card filed 2026-02-03 was seen only on a law-firm site and is not relied on. No bill ending chain migration other than H.R. 3466 was checked, and the RAISE Act was not found in this Congress. The State rule of 2026-03-11 on passport information and the 75-country pause are covered in c06-05.",
+  "updated_at": "2026-10-19"
 }

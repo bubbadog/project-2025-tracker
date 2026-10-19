@@ -4,7 +4,7 @@
   "chapter": "04",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text p. 104 checked and EO 14182 (90 FR 8751) re-read in full on federalregister.gov, but it does not name DOD; the stage-deciding Air Force and OUSD(P&R) memoranda sit on airforcemedicine.af.mil, which returned a fetch error again, so the record cannot move to high.",
+  "confidence_reason": "Rule applied: high requires the stage-deciding primary document to be opened and read, and a document known only through the external retrieval caps the record at 79. The Air Force memorandum of 2025-03-17 was opened on af.mil on 2026-10-19 (by the researcher, confirmed by the reviewer) and supports implemented 75 for the Department of the Air Force, and EO 14182 was read on federalregister.gov, but the department-wide OUSD(P&R) memorandum of 2025-02-03 is still known only through the external retrieval, EO 14182 does not name DOD, and the Army and Navy documents were not read, so confidence stays 78.",
   "durability": {
     "level": "low",
     "why": "The change rests on departmental memoranda and an executive order that a later Administration could reverse, as the 2022 policy was itself created by memo."
@@ -38,10 +38,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source review re-read Executive Order 14182 on federalregister.gov, confirmed it does not name DOD, could not open the Air Force memorandum on airforcemedicine.af.mil, and left the stage at implemented 75 and confidence at 78."
+    },
+    {
+      "date": "2026-10-19",
+      "note": "Primary-source review opened the 2025-03-17 Air Force memorandum as a 2-page copy on af.mil (added as a source), confirming the end of leave and travel reimbursement for elective abortion and continued ART access. The 2025-03-17 event was replaced by one citing that copy without the 21-day and closest-facility details, which the copy does not contain; the OUSD(P&R) memorandum text could not be verified. Stage implemented 75 and confidence 78 unchanged."
     }
   ],
   "id": "c04-15",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-19",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -109,7 +113,7 @@
     "mandate_check": "confirmed",
     "mandate_note": "Page 104 (item 7) says public money should not be used for transgender surgeries or to facilitate abortion for service members; the paraphrase fits.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-19",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
@@ -119,6 +123,16 @@
       },
       {
         "note": "Fetch error on 2026-10-18; the earlier reading rests on a browser retrieval outside the research tools.",
+        "result": "unreachable",
+        "url": "https://www.airforcemedicine.af.mil/Portals/1/Documents/Reproductive-Health/Tab%201%20-%20SecAF%20Memorandum%20for%20Non-Covered%20Reproductive%20Health%20Care%20sig%20Ashworth%2017%20Mar%2025%20(002).pdf"
+      },
+      {
+        "note": "2026-10-19: opened by the researcher and re-opened by the reviewer; 2-page memorandum dated 2025-03-17 citing EO 14182 and the OUSD(P&R) memorandum of 2025-02-03, rescinding the 2023-02-27 Air Force memorandum and ending leave and travel reimbursement for elective abortion, with ART absence and travel kept. Supports implemented 75 for the Air Force; it gives no 21-day limit and no closest-facility rule.",
+        "result": "supports",
+        "url": "https://www.af.mil/Portals/1/documents/2025SAF/Non_Covered_Assisted_Reproductive_Technology.pdf"
+      },
+      {
+        "note": "2026-10-19: fetch error again for the researcher; the af.mil copy opened instead. Not re-fetched by the reviewer.",
         "result": "unreachable",
         "url": "https://www.airforcemedicine.af.mil/Portals/1/Documents/Reproductive-Health/Tab%201%20-%20SecAF%20Memorandum%20for%20Non-Covered%20Reproductive%20Health%20Care%20sig%20Ashworth%2017%20Mar%2025%20(002).pdf"
       }
@@ -179,10 +193,17 @@
       "publisher": "Department of the Air Force (Air Force Medicine)",
       "title": "Non-Covered Assisted Reproductive Technology (Acting Secretary of the Air Force memorandum, with the OUSD(P&R) memorandum of 2025-02-03 attached)",
       "url": "https://www.airforcemedicine.af.mil/Portals/1/Documents/Reproductive-Health/Tab%201%20-%20SecAF%20Memorandum%20for%20Non-Covered%20Reproductive%20Health%20Care%20sig%20Ashworth%2017%20Mar%2025%20(002).pdf"
+    },
+    {
+      "date": "2025-03-17",
+      "kind": "primary",
+      "publisher": "Department of the Air Force (af.mil)",
+      "title": "Non-Covered Assisted Reproductive Technology (Acting Secretary of the Air Force memorandum, 2-page copy without attachments)",
+      "url": "https://www.af.mil/Portals/1/documents/2025SAF/Non_Covered_Assisted_Reproductive_Technology.pdf"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Executive Order 14182 (signed 2025-01-24) states a policy of ending the use of federal taxpayer dollars to fund or promote elective abortion, revokes EO 14076 and EO 14079, and directs OMB to issue implementing guidance; it does not name DOD. A memorandum of 2025-02-03 from the Office of the Under Secretary of Defense for Personnel and Readiness, titled Non-Covered Assisted Reproductive Technology, rescinds the 2023-02-16 USD(P&R) memorandum on administrative absence for non-covered reproductive health care and directs the Defense Human Resources Activity to rescind the Joint Travel Regulations travel policy for non-covered reproductive health care (paragraph 033113), while stating that access to non-covered assisted reproductive technology (ART) such as IVF is preserved. The Acting Secretary of the Air Force's memorandum of 2025-03-17 implements the order and that memorandum for the Department of the Air Force: it rescinds the Air Force memorandum of 2023-02-27, ends administrative leave and travel and transportation reimbursement for elective abortion effective immediately, and keeps administrative absence of up to 21 days per request and travel and transportation allowances for non-covered ART. News reports of late January 2025 describe an earlier Pentagon memorandum, signed 2025-01-29, ending the October 2022 travel reimbursement policy. The Army and Navy implementing documents were not read, and the sources show no statute or rule making the change permanent.",
+  "status_summary": "Executive Order 14182 (signed 2025-01-24) states a policy of ending the use of federal taxpayer dollars to fund or promote elective abortion, revokes EO 14076 and EO 14079, and directs OMB to issue implementing guidance; it does not name DOD. A memorandum of 2025-02-03 from the Office of the Under Secretary of Defense for Personnel and Readiness, titled Non-Covered Assisted Reproductive Technology, is reported through an earlier browser retrieval of a file that could not be opened in the latest review to rescind the 2023-02-16 USD(P&R) memorandum on administrative absence for non-covered reproductive health care and the Joint Travel Regulations travel policy for that care (paragraph 033113), while preserving access to non-covered assisted reproductive technology (ART) such as IVF. The Acting Secretary of the Air Force's memorandum of 2025-03-17, read on af.mil, implements the order and that memorandum for the Department of the Air Force: it rescinds the Air Force memorandum of 2023-02-27, ends administrative leave and travel and transportation reimbursement for elective abortion effective immediately, and keeps administrative absence and Joint Travel Regulations travel allowances available for non-covered ART. News reports of late January 2025 describe an earlier Pentagon memorandum, signed 2025-01-29, ending the October 2022 travel reimbursement policy; the Army and Navy implementing documents were not read, and the sources show no statute or rule making the change permanent.",
   "timeline": [
     {
       "date": "2025-01-24",
@@ -214,10 +235,10 @@
     },
     {
       "date": "2025-03-17",
-      "event": "The Acting Secretary of the Air Force rescinded the Air Force memorandum of 2023-02-27, Ensuring Access to Reproductive Health Care, effective immediately, implementing EO 14182 and the OUSD(P&R) memorandum: administrative leave and travel and transportation reimbursement for elective abortion end, while non-covered ART keeps administrative absence of up to 21 days per request and travel and transportation allowances limited to the closest capable facility.",
+      "event": "The Acting Secretary of the Air Force signed the memorandum Non-Covered Assisted Reproductive Technology, implementing EO 14182 and the OUSD(P&R) memorandum of 2025-02-03: it rescinds the 2023-02-27 Air Force memorandum, ends administrative leave and travel and transportation reimbursement for elective abortion effective immediately, and preserves access to non-covered ART through a request process for administrative absence and Joint Travel Regulations travel allowances when the care is not available locally.",
       "kind": "primary",
       "source": "Department of the Air Force",
-      "url": "https://www.airforcemedicine.af.mil/Portals/1/Documents/Reproductive-Health/Tab%201%20-%20SecAF%20Memorandum%20for%20Non-Covered%20Reproductive%20Health%20Care%20sig%20Ashworth%2017%20Mar%2025%20(002).pdf"
+      "url": "https://www.af.mil/Portals/1/documents/2025SAF/Non_Covered_Assisted_Reproductive_Technology.pdf"
     },
     {
       "date": "2025-06-12",
@@ -229,6 +250,6 @@
   ],
   "title": "End DOD funding of travel and leave for service member abortions",
   "tracked": true,
-  "uncertainties": "The Air Force memorandum of 2025-03-17 and the OUSD(P&R) memorandum of 2025-02-03 attached to it (pages 4 to 5) were read through the owner's browser retrieval on 2026-10-13 from the Air Force Medicine site, which the research tools could not open; the reading rests on that retrieval's page-cited summary. That memorandum is the Air Force implementation: the Army and Navy implementing documents were not read, and the department-wide OUSD(P&R) memorandum was read only as attached to it. The 2025-01-29 memorandum reported by AP, which ended the October 2022 travel reimbursement policy, was not read, so the travel rescission date of 2025-01-30 still rests on the Center for Reproductive Rights and news reports. The earlier conflict between sources on fertility care is resolved for the Air Force: its memorandum keeps administrative absence and travel allowances for non-covered ART while ending them for elective abortion, which matches the Center's account; the late January 2025 news reports said fertility travel was no longer reimbursable, and whether such travel went unreimbursed for a period before the ART travel provisions took effect was not determined. The Military.com article carries no date in its text; the date is from its URL. Whether military health coverage of abortion under existing law changed was not examined.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The Air Force memorandum of 2025-03-17 was opened on 2026-10-19 as a 2-page copy on af.mil (by the researcher, confirmed by the reviewer); it confirms its date, signer, references to EO 14182 and the OUSD(P&R) memorandum of 2025-02-03, the rescission of the 2023-02-27 Air Force memorandum, the end of administrative leave and travel reimbursement for elective abortion, and continued ART access. The 11-page file on the Air Force Medicine site, which also bundles the OUSD(P&R) memorandum, could not be opened, and the copy of the OUSD(P&R) memorandum on the war.gov host was blocked. Details reported from the earlier browser retrieval and not found in the opened copy are not verified: the 21-day limit on administrative absence per request, the closest-capable-facility limit on ART travel, and the OUSD(P&R) memorandum's rescission of the 2023-02-16 memorandum and Joint Travel Regulations paragraph 033113. This memorandum is the Air Force implementation: the Army and Navy implementing documents were not read. The 2025-01-29 memorandum reported by AP, which ended the October 2022 travel reimbursement policy, was not read, so the travel rescission date of 2025-01-30 still rests on the Center for Reproductive Rights and news reports. The earlier conflict between sources on fertility care is resolved for the Air Force: its memorandum keeps ART access and travel allowances while ending leave and travel reimbursement for elective abortion; whether fertility travel went unreimbursed for a period before the ART provisions took effect was not determined. The Military.com article carries no date in its text; the date is from its URL. Whether military health coverage of abortion under existing law changed was not examined.",
+  "updated_at": "2026-10-19"
 }
