@@ -7,7 +7,7 @@
   "chapter": "06",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "The chapter text (pp. 180-181, 185) was checked, and the stage-deciding documents were fetched and read in full: NSPM-2 on whitehouse.gov, the 2026-10-01 Treasury release, Executive Orders 14382 and 14389 on federalregister.gov and Public Law 119-111 on govinfo.gov; the memorandum, war and talks context rests on press reports.",
+  "confidence_reason": "The stage-deciding NSPM-2, the 2026-10-01 Treasury release, Executive Orders 14382 and 14389 and Public Law 119-111 were read on primary hosts in prior review, and the new 2026-10-16 order was read on whitehouse.gov in this review; the memorandum, war and talks context rests on press reports.",
   "durability": {
     "level": "medium",
     "why": "Sanctions designations and the national security memorandum can be changed by the executive branch, and the June 2026 memorandum showed the US agreeing to waive oil sanctions in return for a final deal before it lapsed; the 2031 extension of the Iran Sanctions Act is statutory and UN sanctions were reinstated by the snapback process, so the framework is harder to unwind than a single order."
@@ -40,10 +40,18 @@
     {
       "date": "2026-10-18",
       "note": "An independent AI review re-read NSPM-2 (whitehouse.gov), the October 2026 Treasury release (home.treasury.gov), Executive Orders 14382 and 14389 (federalregister.gov) and Public Law 119-111 (govinfo.gov), added the Iran tariff order and its termination, condensed the summary and kept the stage at implemented."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Daily news sweep of 2026-10-20 added the executive order of 2026-10-16 implementing Public Law 119-111, read on whitehouse.gov, noting that it waives the new duties and sanctions and adds no Iran-specific measure; stage implemented 70 unchanged."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Independent AI review: the 2026-10-16 implementing order was read on whitehouse.gov and matches the event (Russia-related duties and sanctions waived, no Iran-specific measure); the event was kept as context and its clause removed from the Iran-focused status summary; stage implemented kept at 70; confidence 80 to 80."
     }
   ],
   "id": "c06-06",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-20",
   "layer": 2,
   "match": "direct",
   "mechanism": "mixed",
@@ -128,40 +136,20 @@
   "research_agent": "D3",
   "review": {
     "flags": [
-      "nuclear, regional-partner, public diplomacy and Israel elements not assessed",
-      "June 2026 memorandum and war context rest on press reports and a non-government copy of the memorandum text",
-      "EO 14382 tariff authority was ended by EO 14389 before any country-specific duty was found"
+      "the 2026-10-16 order is Russia-focused and kept only as context for the law that extended the Iran Sanctions Act; it could be moved to a Russia sanctions record",
+      "stage-deciding NSPM-2, Treasury release and Public Law 119-111 were read in the 2026-10-18 review, not re-read here",
+      "nuclear, regional-partner, public diplomacy and Israel elements still not assessed"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 180-181 say the next Administration should not preserve the Obama and Biden Iran approach, and page 185 calls for preventing Iranian nuclear and delivery capabilities by reinstating and expanding Trump-era sanctions, aiding regional partners, supporting Iranians opposing the government and backing Israel's self-defense; the proposal matches.",
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 180-181 and 185 were checked in the 2026-10-18 review; not re-read in this review.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-20",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Signed 2025-02-04; Treasury enforcement campaign, State campaign to drive oil exports to zero, UN Ambassador to complete snapback, Justice and Commerce enforcement; Section 1 policy to deny Iran a nuclear weapon and ICBMs.",
-        "result": "supports",
-        "url": "https://www.whitehouse.gov/presidential-actions/2025/02/national-security-presidential-memorandum-nspm-2/"
-      },
-      {
-        "note": "2026-10-01: sectoral determinations for automotive and rail under EO 13902, designations under EO 13902 and EO 13871, secondary sanctions warning; Operation Economic Outcast announced 2026-08-24.",
-        "result": "supports",
-        "url": "https://home.treasury.gov/news/press-releases/sb0643/"
-      },
-      {
-        "note": "EO 14382, 91 FR 6493, signed 2026-02-06, effective 2026-02-07; duties not self-executing, require Commerce finding, State recommendation and presidential decision.",
+        "note": "Order dated 2026-10-16 implementing Public Law 119-111: delegations in section 5, duty increases in section 2 tied to purchases on or after 2026-10-18, section 4 waivers of those duties and most sanctions until further determination; no Iran-specific provision, so it neither adds to nor subtracts from the Iran stage (checked 2026-10-20).",
         "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/02/11/2026-02813/addressing-threats-to-the-united-states-by-the-government-of-iran"
-      },
-      {
-        "note": "EO 14389, 91 FR 9437, signed 2026-02-20; ends EO 14382 duties among nine orders; emergencies remain in effect.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03832/ending-certain-tariff-actions"
-      },
-      {
-        "note": "H.R. 5334, enacted 2026-09-18; Sec. 201 changes the Iran Sanctions Act expiration from 2026 to 2031 and is excluded from the Sec. 203 sunset.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ111/html/PLAW-119publ111.htm"
+        "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
       }
     ]
   },
@@ -240,6 +228,13 @@
       "publisher": "Federal Register",
       "title": "Continuation of the National Emergency With Respect to Iran (91 FR 10937)",
       "url": "https://www.federalregister.gov/documents/2026/03/05/2026-04450/continuation-of-the-national-emergency-with-respect-to-iran"
+    },
+    {
+      "date": "2026-10-16",
+      "kind": "primary",
+      "publisher": "White House",
+      "title": "Implementing the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026 (executive order)",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
     }
   ],
   "stage": "implemented",
@@ -328,10 +323,17 @@
       "kind": "primary",
       "source": "US Treasury",
       "url": "https://home.treasury.gov/news/press-releases/sb0643/"
+    },
+    {
+      "date": "2026-10-16",
+      "event": "The President signs an executive order implementing the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026 (Public Law 119-111): it delegates the Act's functions to State, Treasury, the Trade Representative and Energy, sets duty increases on Russian goods and on the largest importers of Russian oil and gas and evasion facilitators tied to purchases on or after 2026-10-18, and in section 4 waives those duties and most of the Act's sanctions provisions until the President or the Secretary of State determines otherwise; the order text contains no Iran-specific measure and does not mention the Iran Sanctions Act.",
+      "kind": "primary",
+      "source": "White House",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
     }
   ],
   "title": "Reinstate and expand Iran sanctions and deny Iran nuclear capability",
   "tracked": true,
-  "uncertainties": "The 2026 war, blockade and memorandum context rests on press reports (Michigan Public, Axios, Al Jazeera, Washington Examiner) and on a memorandum text posted by Iran Watch, a non-government site; whether Treasury issued any oil waivers during June and July 2026 was not established. The UN snapback date rests on a DLA Piper analysis dated only to October 2025. NSPM-2, Executive Orders 14382 and 14389, the 2026-10-01 Treasury release and Public Law 119-111 were read on primary hosts; Executive Order 14382 required later Commerce and State findings and a presidential decision before any duty applied, and no such decision was found before Executive Order 14389 ended the duties, so the tariff track appears not to have become operative. Public diplomacy, regional security assistance and Israel-related Mandate elements were not researched, and a final nuclear outcome was not found. The outcome of the 2026-09-22 talks and any follow-up meeting were not found.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The 2026 war, blockade and memorandum context rests on press reports (Michigan Public, Axios, Al Jazeera, Washington Examiner) and on a memorandum text posted by Iran Watch, a non-government site; whether Treasury issued any oil waivers during June and July 2026 was not established. The UN snapback date rests on a DLA Piper analysis dated only to October 2025. NSPM-2, Executive Orders 14382 and 14389, the 2026-10-01 Treasury release and Public Law 119-111 were read on primary hosts; Executive Order 14382 required later Commerce and State findings and a presidential decision before any duty applied, and no such decision was found before Executive Order 14389 ended the duties, so the tariff track appears not to have become operative. Public diplomacy, regional security assistance and Israel-related Mandate elements were not researched, and a final nuclear outcome was not found. The outcome of the 2026-09-22 talks and any follow-up meeting were not found. The implementing executive order of 2026-10-16 was read on whitehouse.gov; its Federal Register number and citation were not yet available on 2026-10-20. Review 2026-10-20: the implementing order is recorded only because it implements the law that extended the Iran Sanctions Act; its operative provisions concern Russia, so it is not reflected in the status summary.",
+  "updated_at": "2026-10-20"
 }

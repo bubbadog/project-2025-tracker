@@ -9,12 +9,12 @@
   "chapter": "02",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Both OMB delegation notices were read and confirm the shift of apportionment authority to political PADs, and the 2025 and 2026 rescission events were confirmed in two fetched sources. Who actually signs individual apportionments was not verified, since PADs may re-delegate in writing, and the CREW v. OMB transparency rulings were not re-read.",
+  "confidence_reason": "The two OMB delegation notices that decide the stage were read (the April 2025 notice re-read in this review); the new 2026-01-28 court event rests on a docket listing and counsel's page, which is peripheral to the stage.",
   "court_status": {
-    "basis": "derived from the latest court event in the timeline",
-    "date": "2025-08-28",
+    "basis": "Latest court event: on 2026-01-28 the district court in CREW v. OMB granted a motion to enforce its July 2025 judgment on the public apportionment database; this concerns apportionment transparency rather than the delegation to Program Associate Directors, and the government's D.C. Circuit appeal (No. 25-5266) is pending. The Supreme Court's 2025-09-26 order in the foreign aid case was an interim stay, not a merits ruling, so no court has finally resolved the spending-control practice.",
+    "date": "2026-01-28",
     "state": "pending",
-    "url": "https://www.scotusblog.com/cases/case-files/department-of-state-v-aids-vaccine-advocacy-coalition-2"
+    "url": "https://clearinghouse.net/case/46355/"
   },
   "durability": {
     "level": "low",
@@ -36,10 +36,18 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Freshness check on 2026-10-20 added the 2026-01-28 order enforcing disclosure of spend plans in the apportionment database case; stage and progress unchanged."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Independent AI review: the 2026-01-28 enforcement order was confirmed as docket entry ECF 46 on the Clearinghouse listing and on counsel's case page (order text not read), event kind set to tracker and court_status re-dated to that order; the 2025-04-23 delegation notice was re-read; stage implemented kept at 80; confidence 80 to 80."
     }
   ],
   "id": "c02-01",
-  "last_checked": "2026-10-07",
+  "last_checked": "2026-10-20",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_action",
@@ -77,36 +85,30 @@
   "research_agent": "A01",
   "review": {
     "flags": [
-      "progress lowered from 85: PAD re-delegation allowed, personal signing not confirmed",
-      "2026 rescission amount differs by source",
-      "CREW v. OMB details not re-verified",
-      "pocket rescissions go beyond the apportionment recommendation itself"
+      "2026-01-28 enforcement order rests on a litigation-database docket listing and counsel's case page; the order itself was not read",
+      "court_status re-dated from 2025-08-28 (a rescission date, not a court action) to the 2026-01-28 order",
+      "alternative considered: progress 85 if personal PAD signing of apportionments were confirmed; not confirmed"
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "The recommendation (PADs personally signing apportionments, a Director aggressive in using the tool and able to defend it against Congress) is on printed page 45; page 46 discusses the Budget Review Division and General Counsel, not apportionment, so the page cite is narrowed.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R01",
+    "mandate_check": "not_checked",
+    "mandate_note": "Proposal text and page 45 were checked in the 2026-10-07 review; not re-read in this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-20",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "OMB notice effective 2025-02-11 (published 2025-02-18) delegates the Director's apportionment authority to the Program Associate Directors and supersedes prior delegations; it also lets PADs re-delegate in writing.",
-        "result": "supports",
-        "url": "https://public-inspection.federalregister.gov/2025-02720.pdf"
+        "note": "Docket listing shows ECF 46 dated 2026-01-28, an order granting the motion to enforce (ECF 39), followed by a 2026-05-22 motion to set compliance deadlines and later orders; supports the enforcement event, which bears on transparency, not the stage itself (checked 2026-10-20).",
+        "result": "partial",
+        "url": "https://clearinghouse.net/case/46355/"
       },
       {
-        "note": "Notice effective 2025-04-18 (90 FR 17084) sets a succession list (DAD, branch chiefs, other officials) used only when the responsible PAD is unavailable because of a continuity event.",
+        "note": "Counsel's page says the 2026-01-28 order requires posting of spend plans incorporated by reference in apportionments, that a later motion to set compliance deadlines was granted, and that the appeal remains pending (checked 2026-10-20).",
+        "result": "partial",
+        "url": "https://www.citizen.org/litigation/crew-v-omb/"
+      },
+      {
+        "note": "90 FR 17084, effective 2025-04-18: career officials hold apportionment authority only when the responsible PAD is unavailable during a continuity event; consistent with the implemented stage (checked 2026-10-20).",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06953/notice-delegation-of-apportionment-authority-pursuant-to-31-usc-1513b"
-      },
-      {
-        "note": "Dated 2026-09-29: request sent 2026-09-25, 11 cuts totaling about 810 million dollars; August 2025 package of 4.9 billion dollars; 2025-09-26 Supreme Court interim stay of a lower-court order covering about 4 billion dollars, not a merits ruling.",
-        "result": "supports",
-        "url": "https://www.americanactionforum.org/insight/the-810-million-pocket-rescissions-request-what-it-would-cut-and-why-its-timing-matters/"
-      },
-      {
-        "note": "Minority press release dated 2026-09-30: Republicans blocked a bill to end pocket rescissions; describes the 2026 request as nearly 1 billion dollars; says GAO reaffirmed on 2026-09-29 that the Act does not allow withholding funds past expiration.",
-        "result": "partial",
-        "url": "https://www.budget.senate.gov/ranking-member/newsroom/press/republicans-block-merkleys-bill-to-eliminate-pocket-rescissions"
       }
     ]
   },
@@ -191,6 +193,20 @@
       "publisher": "Senate Budget Committee minority",
       "title": "Republicans block Merkley's bill to eliminate pocket rescissions (Senate Budget Committee Democrats press release)",
       "url": "https://www.budget.senate.gov/ranking-member/newsroom/press/republicans-block-merkleys-bill-to-eliminate-pocket-rescissions"
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "tracker",
+      "publisher": "Civil Rights Litigation Clearinghouse",
+      "title": "CREW v. OMB docket listing",
+      "url": "https://clearinghouse.net/case/46355/"
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "tracker",
+      "publisher": "Public Citizen",
+      "title": "CREW v. OMB case page",
+      "url": "https://www.citizen.org/litigation/crew-v-omb/"
     }
   ],
   "stage": "implemented",
@@ -239,6 +255,13 @@
       "url": "https://www.cbsnews.com/amp/miami/news/supreme-court-trump-foreign-aid-funding"
     },
     {
+      "date": "2026-01-28",
+      "event": "In CREW v. OMB (D.D.C. No. 1:25-cv-01051), the district court grants the plaintiff's motion to enforce its July 2025 judgment (ECF 46), directing OMB to post in the public apportionment database the spend plans whose terms apportionments incorporate by reference; after a 2026-05-22 motion the court later set compliance deadlines. The government's appeal (D.C. Cir. No. 25-5266) remained pending per the cited pages.",
+      "kind": "tracker",
+      "source": "Civil Rights Litigation Clearinghouse docket listing; Public Citizen case page",
+      "url": "https://clearinghouse.net/case/46355/"
+    },
+    {
       "date": "2026-03-12",
       "event": "Nextgov reports an OMB update to its internal-controls circular that says GAO's views are not binding on the executive branch; GAO objected.",
       "kind": "news",
@@ -255,6 +278,6 @@
   ],
   "title": "OMB political appointees sign apportionments and use them to steer agency spending",
   "tracked": true,
-  "uncertainties": "No reporting was found that directly describes who signs individual FY2025 or FY2026 apportionments, so the PAD-signing point rests on the two Federal Register delegation notices. Figures differ by source for the 2026 request: American Action Forum and the Independent Institute give about 810 million dollars, while the Senate Budget Committee Democrats and a Hill headline say nearly 1 billion dollars. The Rescissions Act of 2025 (enacted 2025-07-24, per a search result) is context, not an apportionment action. The Peace Corps and NIH examples of spending-plan footnotes came from advocacy or secondhand sources and are not relied on. The GAO count of violations changed over time and was not updated to October 2026.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "No reporting was found that directly describes who signs individual FY2025 or FY2026 apportionments, so the PAD-signing point rests on the two Federal Register delegation notices. Figures differ by source for the 2026 request: American Action Forum and the Independent Institute give about 810 million dollars, while the Senate Budget Committee Democrats and a Hill headline say nearly 1 billion dollars. The Rescissions Act of 2025 (enacted 2025-07-24, per a search result) is context, not an apportionment action. The Peace Corps and NIH examples of spending-plan footnotes came from advocacy or secondhand sources and are not relied on. The GAO count of violations changed over time and was not updated to October 2026. Freshness check 2026-10-20: the 2026-01-28 enforcement order in CREW v. OMB is taken from a litigation-database docket listing and counsel's case page because CourtListener could not be fetched; the order itself was not read. No D.C. Circuit merits ruling, no new court ruling on pocket rescissions and no GAO lawsuit were found after 2026-09-25 (a 2026-10-05 Daily Signal piece says none has been filed); the 2026-09-25 request status beyond that was not checked.",
+  "updated_at": "2026-10-20"
 }

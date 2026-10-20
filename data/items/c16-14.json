@@ -7,12 +7,12 @@
   "chapter": "16",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Text checked; the public land order and executive order were read on federalregister.gov and the July 2026 ruling confirmed by a state release and court news.",
+  "confidence_reason": "The stage rests on Public Land Order 7966 read at the Federal Register; in this review the Ninth Circuit docket copy and the appeal release were read, confirming no injunction, while the district ruling itself rests on news and State sources.",
   "court_status": {
-    "basis": "On 2026-07-24 the District of Alaska dismissed claims over about 1.38 million acres on sovereign immunity grounds and denied a preliminary injunction, but claims over the remaining roughly 700,000 acres remain pending.",
-    "date": "2026-07-24",
+    "basis": "The District of Alaska on 2026-07-24 dismissed claims over about 1.38 million acres and denied a preliminary injunction, leaving claims over about 700,000 acres pending; the plaintiffs' appeal was docketed in the Ninth Circuit as No. 26-5518 on 2026-08-26 with no ruling, and no injunction against Public Land Order 7966 is in place.",
+    "date": "2026-08-26",
     "state": "pending",
-    "url": "https://www.courthousenews.com/judge-allows-transfer-of-federal-land-along-dalton-highway-to-alaska/"
+    "url": "https://dockets.justia.com/docket/circuit-courts/ca9/26-5518"
   },
   "durability": {
     "level": "medium",
@@ -35,10 +35,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Refutation check on 2026-10-20 found Public Land Order 7966 still in effect with no injunction, added the Ninth Circuit appeal docketed 2026-08-26, and found no new public land orders; stage unchanged."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Independent AI review: the Justia copy of the Ninth Circuit docket was opened and shows No. 26-5518 with the expected caption and originating case, opened 2026-08-26, and the plaintiffs' appeal release was read; the event was kept with wording tightened and the status summary updated to mention the appeal; stage implemented kept at 70; confidence 80 to 80."
     }
   ],
   "id": "c16-14",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-20",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -49,6 +57,44 @@
   "position": "Immediate Actions Regarding Alaska",
   "progress": 70,
   "proposal": "The Mandate recommends revoking old BLM public land orders that block Alaska and Alaska Natives from selecting the roughly 5 million acres each is still owed, making revocation of Public Land Order 5150 (about 1.3 million acres for the state) a top priority. It also recommends revoking all other remaining orders more than 50 years old.",
+  "redteam": {
+    "date": "2026-10-20",
+    "evidence": [
+      {
+        "date": "2026-02-25",
+        "note": "Fetched: partial revocation of Orders 5150 and 5180 on about 2,127,845 acres, effective 2026-02-25, opened to public land and mining laws at 8 a.m. 2026-03-27, subject to valid existing rights. The operative paragraph does not itself mention state selection; the state selection framing comes from the Interior announcement and the environmental statement discussion.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03777/public-land-order-no-7966-partial-revocation-of-public-land-order-nos-5150-and-5180-as-amended"
+      },
+      {
+        "date": "2026-08-26",
+        "note": "Fetched: appeal opened 2026-08-26, only initial filings and a briefing schedule through 2026-11-04; no merits ruling.",
+        "source": "Justia Ninth Circuit docket",
+        "url": "https://dockets.justia.com/docket/circuit-courts/ca9/26-5518"
+      },
+      {
+        "date": "2026-08-11",
+        "note": "Fetched: ten groups appeal the preliminary injunction denial and the jurisdictional ruling; no injunction in place.",
+        "source": "Trustees for Alaska",
+        "url": "https://trustees.org/wp-content/uploads/2026/08/2026.08.GroupsAppeal9thCircuitToStopInteriorTransferOfMoreFederalLandsToState.pdf"
+      },
+      {
+        "date": "2026-07-24",
+        "note": "Fetched: Judge Peterson dismissed claims over about 1.38 million acres on sovereign immunity grounds, denied a preliminary injunction, and kept claims over about 700,000 acres.",
+        "source": "Courthouse News",
+        "url": "https://www.courthousenews.com/judge-allows-transfer-of-federal-land-along-dalton-highway-to-alaska/"
+      },
+      {
+        "date": "2026-03",
+        "note": "Fetched: decision rationale page covers only Orders 5150 and 5180 north of the Yukon River; no other orders mentioned.",
+        "source": "BLM Alaska",
+        "url": "https://www.blm.gov/alaska/public-room/planningnepa/public-land-order-7966-decision-rationale-revocation-plos-5150-and"
+      }
+    ],
+    "note": "Order 7966 remains in effect with no injunction, and an appeal is pending in the Ninth Circuit. Revocation reaches only the Dalton corridor orders, not the other old orders the Mandate names, so implemented 70 holds.",
+    "verdict": "holds",
+    "what_was_tested": "Whether Public Land Order 7966 was enjoined or stayed, whether an appeal reversed the district court, and whether the order opened lands to state selection as the record states."
+  },
   "related_ids": [
     "c16-03"
   ],
@@ -61,43 +107,30 @@
   "research_agent": "N16",
   "review": {
     "flags": [
-      "court_status updated from the 2026-03-10 filing to the 2026-07-24 ruling; state remains pending"
+      "district ruling date conflict: plaintiffs' release says June, court news and the State release say 2026-07-24",
+      "notice of appeal 2026-08-11 versus docket opening 2026-08-26 not reconciled",
+      "alternative considered: implemented 65, since only the Dalton corridor orders were revoked"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 529 and 530 call for revoking public land orders that block Alaska and Native selections, PLO 5150 first, and revoking all other orders over 50 years old. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y16a",
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 529 and 530 were checked in the 2026-10-13 review; not re-read in this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-20",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Published 2026-02-25 (91 FR 9293); about 2,127,845 acres; opens to mining and public land laws 2026-03-27; text does not itself list state selection.",
+        "note": "Justia copy: No. 26-5518, Northern Alaska Environmental Center v. State of Alaska, opened 2026-08-26 from 3:26-cv-00108-ACP; only the opening entry and a schedule notice (last brief 2026-11-04); no ruling, consistent with the order remaining operative (checked 2026-10-20).",
+        "result": "supports",
+        "url": "https://dockets.justia.com/docket/circuit-courts/ca9/26-5518"
+      },
+      {
+        "note": "Release dated 2026-08-11: ten groups appealed the denial of a preliminary injunction and the ruling that tentatively approved lands are outside the court's jurisdiction; dates that ruling to June (checked 2026-10-20).",
+        "result": "partial",
+        "url": "https://trustees.org/wp-content/uploads/2026/08/2026.08.GroupsAppeal9thCircuitToStopInteriorTransferOfMoreFederalLandsToState.pdf"
+      },
+      {
+        "note": "Public Land Order 7966 partially revokes Orders 5150 and 5180 on about 2,127,845 acres; read by the researcher and in the 2026-10-13 review; not re-read here (checked 2026-10-20).",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03777/public-land-order-no-7966-partial-revocation-of-public-land-order-nos-5150-and-5180-as-amended"
-      },
-      {
-        "note": "2026-02-20 release: about 2.1 million acres made available for state selection.",
-        "result": "supports",
-        "url": "https://www.doi.gov/node/66001"
-      },
-      {
-        "note": "EO 14153 signed 2025-01-20; Sec. 3(b)(vii) evaluate rescission of PLO 5150; (xvi) review ANC selection orders.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01955/unleashing-alaskas-extraordinary-resource-potential"
-      },
-      {
-        "note": "Dated 2026-06-04; suit filed 2026-03-10, case 3:26-cv-00108; 1.4 million acres conveyed 2026-05-06; motion to dismiss 2026-05-07.",
-        "result": "supports",
-        "url": "https://www.schwabe.com/publication/dalton-corridor-land-transfer-withdrawal-revocation-litigation/"
-      },
-      {
-        "note": "2026-07-24: claims dismissed as to 1.38 million acres; preliminary injunction denied.",
-        "result": "supports",
-        "url": "https://law.alaska.gov/press/releases/2026/072426-Dalton.html"
-      },
-      {
-        "note": "2026-07-24 ruling: dismissal for 1.38 million acres, PI denied, motion to dismiss denied for remaining about 700,000 acres.",
-        "result": "supports",
-        "url": "https://www.courthousenews.com/judge-allows-transfer-of-federal-land-along-dalton-highway-to-alaska/"
       }
     ]
   },
@@ -172,10 +205,24 @@
       "publisher": "Courthouse News Service",
       "title": "Judge allows transfer of federal land along Dalton Highway to Alaska",
       "url": "https://www.courthousenews.com/judge-allows-transfer-of-federal-land-along-dalton-highway-to-alaska/"
+    },
+    {
+      "date": "2026-08-26",
+      "kind": "court",
+      "publisher": "Justia",
+      "title": "Ninth Circuit docket No. 26-5518, Northern Alaska Environmental Center v. State of Alaska (Justia copy)",
+      "url": "https://dockets.justia.com/docket/circuit-courts/ca9/26-5518"
+    },
+    {
+      "date": "2026-08-11",
+      "kind": "news",
+      "publisher": "Trustees for Alaska",
+      "title": "Groups appeal to Ninth Circuit to stop Interior transfer of more federal lands to the State",
+      "url": "https://trustees.org/wp-content/uploads/2026/08/2026.08.GroupsAppeal9thCircuitToStopInteriorTransferOfMoreFederalLandsToState.pdf"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Executive Order 14153 (2025-01-20) directed Interior to evaluate rescinding Public Land Order 5150. Public Land Order 7966, published 2026-02-25, partially revoked Orders 5150 and 5180 on about 2.1 million acres of the Dalton Utility Corridor, which Interior said makes that land available for state selection. Environmental groups sued on 2026-03-10; on 2026-07-24 the court dismissed claims covering about 1.38 million acres tentatively approved for conveyance to the State, denied a preliminary injunction on the remaining roughly 700,000 acres and kept those claims pending. Revocation of the other old orders the Mandate names was not found.",
+  "status_summary": "Executive Order 14153 (2025-01-20) directed Interior to evaluate rescinding Public Land Order 5150. Public Land Order 7966, published 2026-02-25, partially revoked Orders 5150 and 5180 on about 2.1 million acres of the Dalton Utility Corridor, which Interior said makes that land available for state selection. Environmental groups sued on 2026-03-10, and on 2026-07-24 the court dismissed claims covering about 1.38 million acres tentatively approved for conveyance to the State, denied a preliminary injunction on the remaining roughly 700,000 acres and kept those claims pending. The plaintiffs appealed, and the Ninth Circuit docketed the appeal as No. 26-5518 on 2026-08-26 with no ruling found. Revocation of the other old orders the Mandate names was not found.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -218,10 +265,17 @@
       "kind": "court",
       "source": "Courthouse News Service",
       "url": "https://www.courthousenews.com/judge-allows-transfer-of-federal-land-along-dalton-highway-to-alaska/"
+    },
+    {
+      "date": "2026-08-26",
+      "event": "The Ninth Circuit opens appeal No. 26-5518, Northern Alaska Environmental Center v. State of Alaska, from District of Alaska case 3:26-cv-00108 and sets a briefing schedule with the last brief due 2026-11-04; the plaintiffs' release says the notice of appeal was filed 2026-08-11 and challenges the preliminary injunction denial and the jurisdictional ruling.",
+      "kind": "court",
+      "source": "Justia copy of the Ninth Circuit docket",
+      "url": "https://dockets.justia.com/docket/circuit-courts/ca9/26-5518"
     }
   ],
   "title": "Revoke old Alaska public land orders to finish state and Native land conveyances",
   "tracked": true,
-  "uncertainties": "Litigation facts come from a law firm summary, a news report and the State's press release, not the docket. The law firm describes a 2026-05-06 conveyance, while the court news report describes the lands as tentatively approved. Whether other old public land orders were revoked was not determined. The Mandate's 1.3 million acre figure and the 2.1 million acre order are different measures.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Litigation facts come from a law firm summary, a news report and the State's press release, not the docket. The law firm describes a 2026-05-06 conveyance, while the court news report describes the lands as tentatively approved. Whether other old public land orders were revoked was not determined. The Mandate's 1.3 million acre figure and the 2.1 million acre order are different measures. Refutation check 2026-10-20: the Federal Register text of the order opens lands to public land and mining laws and does not itself mention state selection; a trade press release dates the preliminary injunction denial to June while the news report and State release date the ruling to 2026-07-24; no new public land orders or BLM conveyance records after July 2026 were found in the searches made; the Ninth Circuit docket was read through a Justia copy. Review 2026-10-20: the Justia copy of the Ninth Circuit docket shows the caption Northern Alaska Environmental Center v. State of Alaska, originating case 3:26-cv-00108, opened 2026-08-26, while the plaintiffs' release says the notice of appeal was filed 2026-08-11 and describes the appealed ruling as issued in June; the docket's schedule notice uses cross-appeal labels, and whether a cross-appeal exists was not determined.",
+  "updated_at": "2026-10-20"
 }
