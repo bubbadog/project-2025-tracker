@@ -1,18 +1,18 @@
 {
   "agency": "EEOC / NLRB",
   "blockers": [
-    "Challenges by removed officials (for example the Wilcox litigation, cited in the Slaughter opinion); a law-firm analysis of 2026-07-02 says Slaughter appears to resolve Wilcox's challenge although the Court has not ruled on the NLRB, and that she had not filed a certiorari petition.",
-    "Senate confirmation is needed for a permanent EEOC general counsel; the 2025 nomination was withdrawn."
+    "The Wilcox challenge has ended (certiorari denied 2026-10-19); litigation by removed EEOC commissioners was not traced to a reported judgment in the sources read.",
+    "Senate confirmation is needed for a permanent EEOC general counsel; the November 2025 nomination was withdrawn."
   ],
   "chapter": "18",
-  "confidence": 80,
+  "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "The NLRB and EEOC lists of general counsels were fetched and read and show the replacement sequence after the January 2025 removals, and the Trump v. Slaughter opinion was read through the majority; the removal date itself rests on a law-firm alert, the EEOC list gives month-only dates and names no one after September 2026, and the nomination withdrawal rests on a paywalled news lead.",
+  "confidence_reason": "The NLRB and EEOC general counsel lists that decide the stage were read in prior review, and in this review the Supreme Court docket and order list for Wilcox v. Trump were read; the D.C. Circuit holding rests on a clearinghouse summary and the removal date on a law-firm alert.",
   "court_status": {
-    "basis": "Derived from the latest court event: on 2026-06-29 Trump v. Slaughter held the FTC removal protection unconstitutional but expressly left the fate of officials not before the Court undecided and did not rule on the NLRB or EEOC, so the legality of the removals tracked here remains pending.",
-    "date": "2026-06-29",
-    "state": "pending",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/25-332_qn12.pdf"
+    "basis": "Derived from the latest court event: the Supreme Court denied certiorari in Wilcox v. Trump on 2026-10-19, leaving in place the D.C. Circuit judgment of 2025-12-05 that the President may remove NLRB members without cause, so the removal of the Board member, part of the refusal to honor fixed terms that this recommendation covers, has been sustained. No court ruled on the general counsel removals themselves, the EEOC commissioners' removals were not traced to a reported judgment, and Trump v. Slaughter (2026-06-29) addressed the FTC only.",
+    "date": "2026-10-19",
+    "state": "upheld",
+    "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-5.html"
   },
   "durability": {
     "level": "medium",
@@ -42,10 +42,18 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift with independent AI review: EEOC acting general counsel sequence confirmed on the EEOC list with month-only dates; court_status pending confirmed against Trump v. Slaughter; confidence raised to 80."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Daily news sweep of 2026-10-20 added the Supreme Court's denial of certiorari in Wilcox v. Trump (2026-10-19, read on the supremecourt.gov docket) together with the D.C. Circuit merits decision of 2025-12-05 and the rehearing denial of 2026-01-28 from a litigation clearinghouse summary and a law-firm blog; court_status moved from pending to upheld; stage implemented 85 unchanged."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Independent AI review: the Supreme Court docket for No. 26-5 and the 2026-10-19 order list confirm the certiorari denial and give the D.C. Circuit decision and rehearing dates, so the rehearing event was re-pointed from a law-firm blog to the docket; two law-firm commentary entries were removed from the timeline, the Crow withdrawal re-dated to the inferred notice date of 2026-04-27, blockers updated and the status summary condensed; court_status upheld accepted; stage implemented kept at 85; confidence 80 to 82."
     }
   ],
   "id": "c18-09",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-20",
   "layer": 2,
   "match": "direct",
   "mechanism": "appointment",
@@ -97,50 +105,31 @@
   "research_agent": "D7",
   "review": {
     "flags": [
-      "Accepted the EEOC acting general counsel sequence from the EEOC list, with month-only dates written as first of month and marked; reworded the two EEOC events to describe the service change rather than the page.",
-      "court_status pending confirmed: Slaughter reserves officials not before the Court and does not decide the NLRB or EEOC; basis expanded.",
-      "judgment call: implemented 85 kept; completed (100) is not reached because no permanent EEOC general counsel is in place and the EEOC list names no one after September 2026."
+      "court_status upheld reflects the Board member removal, not the general counsel removals, which were not litigated in the sources read",
+      "D.C. Circuit holding rests on a clearinghouse summary; dates confirmed on the Supreme Court docket",
+      "alternative considered: implemented 90 now that the NLRB removal is final; 85 kept because the EEOC has no permanent general counsel and the current acting general counsel is unverified",
+      "Crow withdrawal re-dated to 2026-04-27 by inference"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 615 recommends appointing new EEOC and NLRB general counsels on Day One, following the Biden administration's removal of those officers despite their terms, and extending that approach by refusing to acknowledge terms in other offices where applicable and installing acting or full replacements immediately; the paraphrase and page match.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V8",
+    "mandate_check": "not_checked",
+    "mandate_note": "Page 615 was checked in the 2026-10-18 review; not re-read in this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-20",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Client alert dated 2025-02-06: EEOC General Counsel Gilbride and Commissioners Burrows and Samuels removed 2025-01-27, hours after NLRB General Counsel Abruzzo and Board member Wilcox; both agencies left without a quorum; Burrows's term ran to July 2028 and Samuels's to July 2026; EEOC general counsel serves a four-year term.",
+        "note": "Wilcox v. Trump, No. 26-5, from D.C. Cir. No. 25-5057 decided 2025-12-05, rehearing denied 2026-01-28; petition filed 2026-06-27, response requested 2026-08-13, brief in opposition 2026-09-14, petition denied 2026-10-19 (checked 2026-10-20).",
         "result": "supports",
-        "url": "https://www.kslaw.com/attachments/000/012/502/original/ca020625-2.pdf"
+        "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-5.html"
       },
       {
-        "note": "Crystal Stowe Carey sworn in as NLRB General Counsel on 2026-01-07; no confirmation date given.",
+        "note": "Order list of 2026-10-19 lists 26-5 Wilcox v. Trump under certiorari denied (checked 2026-10-20).",
         "result": "supports",
-        "url": "https://www.nlrb.gov/about-nlrb/who-we-are/general-counsel"
+        "url": "https://www.supremecourt.gov/orders/courtorders/101926zor_q8l1.pdf"
       },
       {
-        "note": "NLRB list: Abruzzo 2021-07-22 to 2025-01-28; Jessica Rutter acting 2025-01-28 to 2025-02-01; William Cowen acting 2025-02-01 to 2026-01-07; Carey from 2026-01-07. Supports the removal and replacement sequence; dates differ by a day or two from the law-firm reports the record used, so the record is corrected.",
+        "note": "Summary: on 2025-12-05 the D.C. Circuit, Judge Katsas writing, reversed and held Congress may not restrict removal of NLRB members; rehearing en banc denied 2026-01-28 (checked 2026-10-20).",
         "result": "partial",
-        "url": "https://www.nlrb.gov/about-nlrb/who-we-are/general-counsel/general-counsels-since-1935"
-      },
-      {
-        "note": "Visible lead dated 2026-04-28: the White House withdrew Carter Crow's nomination as EEOC general counsel about five months after it was made, by a notice sent to the Senate on the preceding Monday; the EEOC has had no permanent general counsel since Gilbride was fired; no acting general counsel named.",
-        "result": "supports",
-        "url": "https://news.bgov.com/daily-labor-report/white-house-pulls-norton-rose-attorney-for-eeoc-general-counsel"
-      },
-      {
-        "note": "EEOC list read: Gilbride General Counsel October 2023 to January 2025; Rogers Acting January 2025 to October 2025; Eschbach Acting October 2025 to September 2026; no later entry; month-only dates. Checked 2026-10-18.",
-        "result": "supports",
-        "url": "https://www.eeoc.gov/history/general-counsels-eeoc"
-      },
-      {
-        "note": "NLRB list re-read: Abruzzo 07/22/21 to 01/28/25; Rutter acting 01/28/25 to 02/01/25; Cowen acting 02/01/25 to 01/07/26; Carey from 01/07/26. Checked 2026-10-18.",
-        "result": "supports",
-        "url": "https://www.nlrb.gov/about-nlrb/who-we-are/general-counsel/general-counsels-since-1935"
-      },
-      {
-        "note": "Trump v. Slaughter, decided 2026-06-29, 6-3, Roberts for the Court: FTC for-cause protection unconstitutional, Humphrey's Executor overruled to the extent anything remains; Federal Reserve and non-Article III courts reserved; officials not before the Court not decided; NLRB appears only in a citation; reversed and remanded. Text cut off in the concurrence. Supports court_status pending. Checked 2026-10-18.",
-        "result": "partial",
-        "url": "https://www.supremecourt.gov/opinions/25pdf/25-332_qn12.pdf"
+        "url": "https://clearinghouse.net/case/46045/"
       }
     ]
   },
@@ -212,10 +201,31 @@
       "publisher": "EEOC",
       "title": "General Counsels of the EEOC",
       "url": "https://www.eeoc.gov/history/general-counsels-eeoc"
+    },
+    {
+      "date": "2026-10-19",
+      "kind": "court",
+      "publisher": "Supreme Court of the United States",
+      "title": "Supreme Court docket No. 26-5, Wilcox v. Trump",
+      "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-5.html"
+    },
+    {
+      "date": "2026-10-19",
+      "kind": "court",
+      "publisher": "Supreme Court of the United States",
+      "title": "Supreme Court order list of 2026-10-19",
+      "url": "https://www.supremecourt.gov/orders/courtorders/101926zor_q8l1.pdf"
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "tracker",
+      "publisher": "Civil Rights Litigation Clearinghouse",
+      "title": "Case: Wilcox v. Trump",
+      "url": "https://clearinghouse.net/case/46045/"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Both general counsels were removed within the first weeks of the term: law-firm reports date the removals of NLRB General Counsel Jennifer Abruzzo and EEOC General Counsel Karla Gilbride to 2025-01-27, along with NLRB Board member Gwynne Wilcox and EEOC commissioners Charlotte Burrows and Jocelyn Samuels, whose terms had not expired. At the NLRB, the agency's list of general counsels shows Abruzzo's tenure ending 2025-01-28, Jessica Rutter as acting general counsel from 2025-01-28 to 2025-02-01, and William Cowen as acting general counsel from 2025-02-01 (a law-firm report dates his designation 2025-02-03); Crystal Carey is now General Counsel, sworn in 2026-01-07. At the EEOC, Andrew Rogers was named acting general counsel on 2025-02-04; the EEOC's own list shows Rogers acting from January to October 2025 and Catherine Eschbach acting from October 2025 to September 2026 (month-only dates), with no successor named on that page. Carter Crow was nominated in November 2025; Bloomberg Government reported on 2026-04-28 that the White House withdrew the nomination, and no later nominee was found, so the EEOC has had no permanent general counsel. On 2026-06-29 the Supreme Court held in Trump v. Slaughter that the FTC commissioners' for-cause removal protection is unconstitutional; the opinion did not decide the status of the NLRB or EEOC, and a law-firm analysis dated 2026-07-02 says Wilcox had not filed a certiorari petition.",
+  "status_summary": "Law-firm reports date the removals of NLRB General Counsel Jennifer Abruzzo and EEOC General Counsel Karla Gilbride to 2025-01-27, along with NLRB Board member Gwynne Wilcox and EEOC commissioners Charlotte Burrows and Jocelyn Samuels, whose terms had not expired. The NLRB's list shows acting general counsels from 2025-01-28 and Crystal Carey sworn in as General Counsel on 2026-01-07, while the EEOC's list shows Andrew Rogers acting from January to October 2025 and Catherine Eschbach acting from October 2025 to September 2026 (month-only dates) with no successor named, and Bloomberg Government reported on 2026-04-28 that the November 2025 nomination of Carter Crow had been withdrawn, so the EEOC has had no permanent general counsel. On 2026-06-29 the Supreme Court held in Trump v. Slaughter that the FTC commissioners' for-cause removal protection is unconstitutional, without deciding the NLRB or EEOC. In the Wilcox challenge, a D.C. Circuit panel held on 2025-12-05 that the President may remove NLRB members, rehearing en banc was denied on 2026-01-28, and the Supreme Court denied certiorari on 2026-10-19 (No. 26-5).",
   "timeline": [
     {
       "date": "2025-01-27",
@@ -253,6 +263,13 @@
       "url": "https://www.berkshireassociates.com/blog/houston-attorney-nominated-to-serve-as-eeoc-general-counsel"
     },
     {
+      "date": "2025-12-05",
+      "event": "A D.C. Circuit panel (opinion by Judge Katsas) reverses the district court in Wilcox v. Trump (No. 25-5057), holding that Congress cannot restrict the President's power to remove NLRB members because the Board exercises substantial executive power outside the Humphrey's Executor exception; the decision date is confirmed on the Supreme Court docket for No. 26-5 and the holding rests on a litigation clearinghouse summary.",
+      "kind": "court",
+      "source": "Civil Rights Litigation Clearinghouse (case summary)",
+      "url": "https://clearinghouse.net/case/46045/"
+    },
+    {
       "date": "2026-01-07",
       "event": "Crystal Carey is sworn in as NLRB General Counsel, per the NLRB's General Counsel page (the page gives the swearing-in date but not the confirmation date).",
       "kind": "primary",
@@ -260,15 +277,15 @@
       "url": "https://www.nlrb.gov/about-nlrb/who-we-are/general-counsel"
     },
     {
-      "date": "2026-02-06",
-      "event": "A law-firm article reports Catherine Eschbach, the principal deputy general counsel, is serving as EEOC Acting General Counsel and that the November 2025 nominee has not been confirmed.",
-      "kind": "news",
-      "source": "Mondaq",
-      "url": "https://mondaq.com/unitedstates/employee-rights-labour-relations/1741496/eeoc-enforcement-priorities-take-shape-under-new-general-counsel-leadership"
+      "date": "2026-01-28",
+      "event": "The D.C. Circuit denies rehearing en banc in Wilcox v. Trump (No. 25-5057), per the Supreme Court docket for No. 26-5 and a litigation clearinghouse summary.",
+      "kind": "court",
+      "source": "Supreme Court of the United States (docket)",
+      "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-5.html"
     },
     {
-      "date": "2026-04-28",
-      "event": "Bloomberg Government reports that the White House sent the Senate a notice withdrawing the nomination of Carter Crow as EEOC general counsel (the notice was sent on the preceding Monday); the EEOC has had no permanent general counsel since January 2025.",
+      "date": "2026-04-27",
+      "event": "The White House sends the Senate a notice withdrawing the nomination of Carter Crow as EEOC general counsel, per a Bloomberg Government report dated 2026-04-28 that places the notice on the preceding Monday (date inferred from that wording); the EEOC has had no permanent general counsel since January 2025.",
       "kind": "news",
       "source": "Bloomberg Government",
       "url": "https://news.bgov.com/daily-labor-report/white-house-pulls-norton-rose-attorney-for-eeoc-general-counsel"
@@ -281,22 +298,22 @@
       "url": "https://www.supremecourt.gov/opinions/25pdf/25-332_qn12.pdf"
     },
     {
-      "date": "2026-07-02",
-      "event": "A law-firm analysis reads Trump v. Slaughter as strongly signaling that NLRB members' removal protection is unconstitutional, notes the Court has not ruled on the NLRB, and says Wilcox had not filed a certiorari petition.",
-      "kind": "news",
-      "source": "Proskauer Rose",
-      "url": "https://www.proskauer.com/blog/what-the-supreme-courts-slaughter-decision-means-for-the-nlrb"
-    },
-    {
       "date": "2026-09-01",
       "event": "Catherine Eschbach's service as EEOC Acting General Counsel ended in September 2026 (month-only date), per the EEOC's list of its general counsels, which names no successor.",
       "kind": "primary",
       "source": "EEOC",
       "url": "https://www.eeoc.gov/history/general-counsels-eeoc"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "The Supreme Court denies the petition for certiorari in Wilcox v. Trump (No. 26-5, filed 2026-06-27; the government first waived a response, the Court requested one on 2026-08-13 and the brief in opposition was filed 2026-09-14), leaving in place the D.C. Circuit judgment that the removal of NLRB member Wilcox was lawful; the case appears under certiorari denied in the order list of the same date.",
+      "kind": "court",
+      "source": "Supreme Court of the United States (docket)",
+      "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-5.html"
     }
   ],
   "title": "Replace the EEOC and NLRB general counsels immediately and disregard office terms",
   "tracked": true,
-  "uncertainties": "Most removal facts come from law firm and trade reports because no Federal Register or agency notice records them; the King & Spalding web article date is approximated at 2025-02-04. The withdrawal of Crow's nomination comes from the visible lead of a paywalled Bloomberg Government article (the reason was not visible), and the EEOC list of general counsels (read in this pass) shows Eschbach acting to September 2026 but names no one after that, so the current acting general counsel is not verified. The date Eschbach became acting and the NLRB Carey confirmation date were not found. The Wilcox and Burrows/Samuels litigation outcomes were not read from court records; the Slaughter opinion was read through the fetch tool, which cut the text off inside the concurrence and omitted the dissent. This record overlaps in subject with c30-01 (at-will removal of FTC commissioners) and c03-02 (federal unions) but covers a distinct Mandate recommendation (page 615). The Mandate's 'Day One' framing and the breadth of 'other offices' make 85 a judgment.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "Most removal facts come from law firm and trade reports because no Federal Register or agency notice records them; the King & Spalding web article date is approximated at 2025-02-04. The withdrawal of Crow's nomination comes from the visible lead of a paywalled Bloomberg Government article (the reason was not visible), and the EEOC list of general counsels (read in this pass) shows Eschbach acting to September 2026 but names no one after that, so the current acting general counsel is not verified. The date Eschbach became acting and the NLRB Carey confirmation date were not found. The Wilcox outcome rests on the Supreme Court docket for No. 26-5 and the 2026-10-19 order list (both read on supremecourt.gov), which give the D.C. Circuit decision date of 2025-12-05 and the rehearing denial of 2026-01-28; the D.C. Circuit holding rests on a litigation clearinghouse summary, and the opinion itself was not read. The Crow withdrawal date of 2026-04-27 is inferred from the report's wording. Law-firm commentary of 2026-02-06 and 2026-07-02 was removed from the timeline as reports rather than actions and remains cited in the red-team evidence. The Burrows and Samuels litigation outcomes were not read from court records; the Slaughter opinion was read through the fetch tool, which cut the text off inside the concurrence and omitted the dissent. This record overlaps in subject with c30-01 (at-will removal of FTC commissioners) and c03-02 (federal unions) but covers a distinct Mandate recommendation (page 615). The Mandate's 'Day One' framing and the breadth of 'other offices' make 85 a judgment.",
+  "updated_at": "2026-10-20"
 }

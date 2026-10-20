@@ -6,7 +6,7 @@
   "chapter": "26",
   "confidence": 63,
   "confidence_label": "medium",
-  "confidence_reason": "The Entity List rules, the affiliates rule and its suspension, and Executive Order 14257 were read in the Federal Register. Five documented checks: (1) a Federal Register search of BIS Entity List documents found only national security listings (partial); (2) Unified Agenda: the Commerce, Treasury and USTR lists on reginfo.gov were read on 2026-10-19 and two BIS entries opened; Entity List entries state no unfair trade basis (partial; informative for BIS listings, not for tariffs or designations); (3) congress.gov and GovInfo search with S. 330 read found one introduced firm-level IP-theft bill (partial); (4) USTR, Treasury and BIS newsrooms showed no firm-specific unfair-trade action (supports); (5) one news search found only a pending report (partial). Set at 63 because the stage is a judgment call and S. 330 points toward the recommendation.",
+  "confidence_reason": "The Entity List rules, the affiliates rule and its suspension, Executive Order 14257 and the 2026-10-20 DHS notice were read in the Federal Register, with documented Unified Agenda and newsroom absence checks; the stage remains a judgment call between diverged and a partial in_progress match.",
   "durability": {
     "level": "medium",
     "why": "Entity List actions are agency rules that can be revised; the bilateral truce can change which are in force."
@@ -36,10 +36,18 @@
     {
       "date": "2026-10-19",
       "note": "Independent review read the Commerce, Treasury and USTR Unified Agenda lists and two Entity List entries on reginfo.gov; diverged kept and confidence raised from 62 to 63."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Daily news sweep of 2026-10-20 added the DHS supply-chain security order excluding DeepSeek products from civilian procurement (notice published 2026-10-20, read on federalregister.gov) as a further firm-level action taken under supply-chain security authority rather than an unfair trade finding; diverged 0 unchanged."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Independent AI review: the DHS notice (91 FR 66346) was read on federalregister.gov and confirms the FASCSA authority, the exclusion and removal of DeepSeek products and a public inspection filing on 2026-10-19, with no stated intellectual property or unfair trade basis; the event text gained the filing date; stage diverged kept at 0; confidence 63 to 63."
     }
   ],
   "id": "c26-11",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-20",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -62,100 +70,21 @@
   "research_agent": "N26",
   "restates_ids": [],
   "review": {
-    "alternative": "In_progress with a partial match is defensible if continuing firm-level Entity List actions are weighed; proposed 5 if S. 330 is counted.",
+    "alternative": "In_progress with a partial match is defensible if continuing firm-level Entity List and procurement exclusion actions are weighed; proposed 5 if S. 330 is counted.",
     "flags": [
-      "The 0694-AK11 agenda timetable lists the affiliates interim final rule as effective 11/10/2026, the day after the suspension ends; the record's statement that the suspension ends 2026-11-09 unless extended should be re-checked after that date."
+      "standing alternative: in_progress with a partial match if firm-level national security and supply-chain actions are weighed; the DeepSeek exclusion adds to that side",
+      "signed order date and reasons not readable (scanned appendix)"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 815, China strategy (Lassman): use a target, not a blanket; act against individual Chinese firms known for unfair practices such as IP theft rather than sector-wide tariffs or barriers. Paraphrase accurate.",
+    "mandate_check": "not_checked",
+    "mandate_note": "Page 815 was checked in the 2026-10-19 review; not re-read in this review.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
-    "reviewer": "independent AI reviewer (absence checks)",
+    "reviewed_at": "2026-10-20",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Checked 2026-10-14. 90 FR 14046, effective 2025-03-25; 11 China entities, 1 Taiwan; military, AI and supercomputer reasons; no IP theft.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/03/28/2025-05427/additions-to-the-entity-list"
-      },
-      {
-        "note": "Checked 2026-10-14. 90 FR 47201, effective 2025-09-29; 50 percent affiliates rule.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/09/30/2025-19001/expansion-of-end-user-controls-to-cover-affiliates-of-certain-listed-entities"
-      },
-      {
-        "note": "Checked 2026-10-14 via Federal Register API: suspension published 2025-11-12, runs to 2026-11-09.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities"
-      },
-      {
-        "note": "Systematic check 1: BIS, 'Entity List China', since 2025-01-20: 15 documents, including Entity List additions (2025-03-28, 2025-09-16, 2025-10-09), the affiliates rule (2025-09-30), a suspension revision (2025-11-12) and revisions on 2026-08-24. These are firm-level national security listings, already recorded; none is framed around intellectual property theft or unfair trade practices. checked 2026-10-18",
+        "note": "91 FR 66346, published 2026-10-20 (filed 2026-10-19), signed by the DHS General Counsel: order under 41 U.S.C. 1321 to 1328 excludes DeepSeek and affiliate IT products from civilian procurement and orders their removal, citing only review of a Federal Acquisition Security Council recommendation; firm-level but not framed around unfair trade, consistent with the existing diverged judgment (checked 2026-10-20).",
         "result": "partial",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Entity+List+China&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=industry-and-security-bureau"
-      },
-      {
-        "note": "Systematic check 2: BIS proposed rules since 2025-01-20: count 0; reginfo.gov agency listing could not be browsed (script-driven). checked 2026-10-18",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=PRORULE&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=industry-and-security-bureau"
-      },
-      {
-        "note": "Systematic check 3: One WebSearch on bills penalizing specific Chinese companies for IP theft returned S. 330 (Combatting China's Pilfering of Intellectual Property Act), H.R. 694, H.R. 1122, S. 672 by title; BILLSTATUS not opened, so passage status not confirmed. checked 2026-10-18",
-        "result": "partial",
-        "url": "https://www.congress.gov/bill/119th-congress/senate-bill/330"
-      },
-      {
-        "note": "Systematic check 4: USTR and Treasury newsrooms (to October 2026) show no firm-specific China unfair-trade action; USTR firm-level items concern Mexico labor matters. BIS newsroom shows enforcement settlements. checked 2026-10-18",
-        "result": "supports",
-        "url": "https://ustr.gov/about-us/policy-offices/press-office/press-releases"
-      },
-      {
-        "note": "Systematic check 5: One WebSearch on Commerce Entity List and Chinese IP theft 2026: results mostly 2018-2020 and 2025 items; one 2026-06-18 report on Chinese firms awaiting Entity List action, a pending national security matter, not an action. checked 2026-10-18",
-        "result": "partial",
-        "url": "https://www.malaymail.com/news/world/2026/06/18/deepseek-cxmt-among-chinese-firms-awaiting-us-entity-list-action-as-washington-weighs-trade-risks/224127"
-      },
-      {
-        "note": "Reviewer re-check, 2026-10-18: bill status read: introduced 2025-01-30, referred to Senate Foreign Relations, one cosponsor added 2025-06-12, hearings listed for the Senate Small Business Committee on 2025-07-23; identical House bill H.R. 6447 referred 2025-12-04.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s330.xml"
-      },
-      {
-        "note": "Reviewer re-check, 2026-10-18: introduced text read: section 2 requires IEEPA blocking and visa bars for PRC persons operating in a sector where they engaged in or received the fruits of a pattern of significant IP theft, with a report naming them within 180 days; firm-level targeting, introduced only.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s330is/xml/BILLS-119s330is.xml"
-      },
-      {
-        "note": "Reviewer re-check, 2026-10-18: BIS, Entity List China, since 2025-01-20: count 15; listings rest on national security or foreign policy grounds and none cites intellectual property theft or unfair trade practices; confirms the researcher's result.",
-        "result": "does_not_support",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Entity+List+China&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=industry-and-security-bureau"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Commerce list headed 'Agency Rule List - 2026' (176 rules, including 17 BIS and 2 ITA entries, read to the footer by the reviewer on 2026-10-19): BIS Entity List entries 0694-AJ23 (Export Controls on Semiconductor Manufacturing Items; Entity List Modifications), 0694-AK11, 0694-AK34 (one-year suspension of the affiliates rule) and 0694-AK42 (Revisions to the Entity List); no title cites intellectual property theft or unfair trade practices.",
-        "result": "partial",
-        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0600"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Detail page read: Final Rule Stage, final action 07/00/2026; revises the Entity List; states no country, grounds, intellectual property theft or unfair trade basis.",
-        "result": "partial",
-        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0694-AK42"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Detail page read: interim final rule addressing diversion concerns for affiliates of listed entities; timetable lists the 2025-09-30 action (90 FR 47201) and an interim final rule effective 11/10/2026 after the suspension; no intellectual property or unfair trade basis.",
-        "result": "partial",
-        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0694-AK11"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Treasury list headed 'Agency Rule List - 2026' (216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages): no OFAC entry on Chinese firms; sanctions designations are not agenda items.",
-        "result": "supports",
-        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "USTR code 3290 page read by the reviewer: heading 'Agency Rule List - 2026', no agency named and zero rules; USTR trade actions do not appear in the agenda, so this list is not informative.",
-        "result": "supports",
-        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3290"
+        "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21447/notice-of-order-regarding-exclusion-and-removal-of-deepseek-products-from-federal-civilian-executive"
       }
     ]
   },
@@ -229,10 +158,17 @@
       "publisher": "U.S. Government Publishing Office",
       "title": "S. 330, Combatting China's Pilfering of Intellectual Property Act (introduced text)",
       "url": "https://www.govinfo.gov/content/pkg/BILLS-119s330is/xml/BILLS-119s330is.xml"
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "primary",
+      "publisher": "Federal Register (DHS)",
+      "title": "Notice of Order Regarding Exclusion and Removal of DeepSeek Products From Federal Civilian Executive Branch Information Technology (91 FR 66346)",
+      "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21447/notice-of-order-regarding-exclusion-and-removal-of-deepseek-products-from-federal-civilian-executive"
     }
   ],
   "stage": "diverged",
-  "status_summary": "The administration's main China trade tools have been the broad measures the essay argues against: Executive Order 14257 (signed 2025-04-02) set a baseline duty on all trading partners with country-specific rates, and later Section 232 and Section 301 actions apply to whole sectors or economies (see c26-02 and c26-04). Firm-level action has continued through export controls framed around national security rather than unfair trade practices: a BIS rule effective 2025-03-25 (90 FR 14046) added 11 Chinese entities and one in Taiwan to the Entity List for supporting military modernization through AI, chips and supercomputers, without citing intellectual property theft. A BIS interim final rule effective 2025-09-29 (90 FR 47201) extended Entity List restrictions to affiliates at least 50 percent owned by listed parties, and BIS suspended it on 2025-11-12 until 2026-11-09.",
+  "status_summary": "The administration's main China trade tools have been the broad measures the essay argues against: Executive Order 14257 (signed 2025-04-02) set a baseline duty on all trading partners with country-specific rates, and later Section 232 and Section 301 actions apply to whole sectors or economies (see c26-02 and c26-04). Firm-level action has continued through export controls framed around national security rather than unfair trade practices: a BIS rule effective 2025-03-25 (90 FR 14046) added 11 Chinese entities and one in Taiwan to the Entity List for supporting military modernization through AI, chips and supercomputers, without citing intellectual property theft. A BIS interim final rule effective 2025-09-29 (90 FR 47201) extended Entity List restrictions to affiliates at least 50 percent owned by listed parties, and BIS suspended it on 2025-11-12 until 2026-11-09. A further firm-level measure, a DHS supply-chain security order published 2026-10-20 excluding DeepSeek products from civilian agency procurement, rests on the Federal Acquisition Supply Chain Security Act rather than on an unfair trade practice finding.",
   "timeline": [
     {
       "date": "2025-01-30",
@@ -268,10 +204,17 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "DHS publishes notice of a Secretary of Homeland Security order under the Federal Acquisition Supply Chain Security Act (41 U.S.C. 1321 to 1328), issued after review of a Federal Acquisition Security Council recommendation, excluding information technology products and services of Hangzhou DeepSeek Artificial Intelligence Co. and its affiliates from federal civilian agency procurements and directing removal of DeepSeek-based products from civilian agency systems (91 FR 66346; filed for public inspection 2026-10-19; the signed order's date appears only in a scanned appendix).",
+      "kind": "primary",
+      "source": "Federal Register (DHS)",
+      "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21447/notice-of-order-regarding-exclusion-and-removal-of-deepseek-products-from-federal-civilian-executive"
     }
   ],
   "title": "Target individual Chinese firms for unfair practices instead of blanket sector tariffs",
   "tracked": true,
-  "uncertainties": "This is a judgment call: firm-level Entity List actions against Chinese companies continue, so in_progress with a partial match is defensible; diverged is kept because the essay's central ask is firm targeting instead of blanket tariffs and the listings cite national security, not unfair trade practices. Only a few Entity List rules were read and OFAC designations were not searched. S. 330, an introduced IP-theft sanctions bill, points toward the recommendation. The Commerce Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists Entity List entries (0694-AK42, 0694-AK11) that state no intellectual property or unfair trade basis; the 0694-AK11 timetable shows the affiliates rule taking effect 2026-11-10. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "This is a judgment call: firm-level Entity List actions against Chinese companies continue, so in_progress with a partial match is defensible; diverged is kept because the essay's central ask is firm targeting instead of blanket tariffs and the listings cite national security, not unfair trade practices. Only a few Entity List rules were read and OFAC designations were not searched. S. 330, an introduced IP-theft sanctions bill, points toward the recommendation. The Commerce Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists Entity List entries (0694-AK42, 0694-AK11) that state no intellectual property or unfair trade basis; the 0694-AK11 timetable shows the affiliates rule taking effect 2026-11-10. Checked systematically on 2026-10-19. The DHS DeepSeek exclusion notice of 2026-10-20 was read on federalregister.gov; the signed order is a scanned appendix without a text layer, so its date and stated reasons were not read, and the notice itself names no intellectual property or unfair trade basis.",
+  "updated_at": "2026-10-20"
 }

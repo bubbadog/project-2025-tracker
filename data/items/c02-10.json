@@ -6,7 +6,13 @@
   "chapter": "02",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Chapter text checked; EO 14173, EO 14398 and the April 2026 deviation guidance that make the anti-DEI contract terms operative were fetched and read. The DOJ initiative rests on a law firm summary and the transparency element is unmatched.",
+  "confidence_reason": "The stage-deciding FAR Council guidance and the Federal Register listing of the September 2026 proposed rules were read; the new court event rests on a law firm summary, which is peripheral to the stage.",
+  "court_status": {
+    "basis": "The District of Maryland denied temporary relief against EO 14398 and the FAR Council guidance on 2026-10-14 (per a law firm summary, order not read), so the clause stays in effect and the challenge continues. A separate suit by 19 states and D.C. (Maryland v. Hegseth, D. Md. No. 1:26-cv-02322, filed 2026-06-10) was reported pending with no ruling.",
+    "date": "2026-10-14",
+    "state": "pending",
+    "url": "https://www.morganlewis.com/pubs/2026/10/maryland-court-declines-to-block-contractor-dei-executive-order-adopts-narrow-reading"
+  },
   "durability": {
     "level": "medium",
     "why": "Deviations and executive orders can be reversed, but a codified FAR clause and False Claims Act exposure would be harder to unwind."
@@ -28,10 +34,18 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to new layer 3 record(s) c26-13 from the fuller reading of chapters 24 to 27."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Refutation check on 2026-10-20 found no injunction against the EO 14398 clause, recorded the 2026-10-14 District of Maryland denial of preliminary relief and the September 2026 second FAR overhaul proposal, and left the stage at implemented 70."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Independent AI review: the 2026-09-18 overhaul event was re-pointed from a law firm page to the Federal Register (four proposed rules confirmed), the 2026-10-14 ruling was reworded to temporary relief as the summary states, the case caption flagged as linked from a separate summary, and the status summary updated; stage implemented kept at 70; confidence 80 to 80."
     }
   ],
   "id": "c02-10",
-  "last_checked": "2026-10-10",
+  "last_checked": "2026-10-20",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -41,6 +55,44 @@
   "position": "OMB, Management (OFPP)",
   "progress": 70,
   "proposal": "The Mandate recommends engaging OFPP and the Federal Acquisition Regulatory Council early to drive policy, including by obtaining transparency about entities awarded federal contracts and grants and by using government contracts to push back on corporate diversity and social policies the text criticizes.",
+  "redteam": {
+    "date": "2026-10-20",
+    "evidence": [
+      {
+        "date": "2026-04-17",
+        "note": "Fetched: clause 52.222-90 (deviation APR 2026) starts 2026-04-24 in new solicitations above the micro-purchase threshold; bilateral modification of existing contracts by 2026-07-24; applies to US performance and flows down; plans notice-and-comment rulemaking.",
+        "source": "FAR Council guidance (primary)",
+        "url": "https://acquisition.gov/sites/default/files/page_file_uploads/FAR%20Council%20Guidance%20to%20Implement%20EO%2014398.pdf"
+      },
+      {
+        "date": "2026-10-14",
+        "note": "Fetched: D. Md. denied temporary relief, left the clause in place, read the order as limited to intentional discrimination tied to performance of the contract.",
+        "source": "Morgan Lewis",
+        "url": "https://www.morganlewis.com/pubs/2026/10/maryland-court-declines-to-block-contractor-dei-executive-order-adopts-narrow-reading"
+      },
+      {
+        "date": "2026-06-15",
+        "note": "Fetched: challenge filed 2026-06-04 with a motion for preliminary injunction; the earlier injunction concerned the 2025 certification order, later vacated by the Fourth Circuit.",
+        "source": "Schwabe",
+        "url": "https://www.schwabe.com/publication/dei-clause-challenge-what-ancs-tribes-and-nhos-should-know/"
+      },
+      {
+        "date": "2026-06",
+        "note": "Fetched: states suit pending, no ruling reported.",
+        "source": "HCA Magazine",
+        "url": "https://www.hcamag.com/us/specialization/diversity-inclusion/19-states-sue-over-anti-dei-terms-added-to-federal-contracts/578627"
+      },
+      {
+        "date": "2026-09-25",
+        "note": "Fetched: only proposed overhaul rules (2026-06-23 and 2026-09-18); no final rule listed.",
+        "source": "Wiley",
+        "url": "https://www.wiley.law/FAR-Overhaul-Rulemaking"
+      }
+    ],
+    "note": "No injunction, stay or vacatur of the 2026 clause was found, and the District of Maryland declined preliminary relief on 2026-10-14. The operative action remains a class deviation, not a codified FAR rule, and the court read the order narrowly, so stage implemented at 70 stays within the 65 to 90 band.",
+    "verdict": "holds",
+    "what_was_tested": "Whether an injunction, stay or vacatur blocks EO 14398 or FAR 52.222-90, whether the clause was withdrawn or limited, and whether a final FAR rule changed the picture since the 2026-06-23 event."
+  },
   "related_ids": [
     "c00-01",
     "c18-01",
@@ -55,49 +107,40 @@
   "research_agent": "N02a",
   "review": {
     "flags": [
-      "title shortened to 86 characters (was 91)",
-      "est_completion previously cited September 2026 proposals not in any cited source; reworded"
+      "2026-10-14 denial rests on a law firm summary (acceptable, flagged); order not read",
+      "case caption for the 2026-10-14 ruling linked from a separate June 2026 summary (inference)",
+      "alternative considered: implemented 65, since the operative clause is a class deviation and the transparency element is unmatched"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 48 says OFPP should be engaged early and often in OMB's policy drive, including by obtaining transparency about contract and grant awardees and using government contracts to push back against corporate policies the text criticizes. The proposal matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-10",
-    "reviewer": "Y5",
+    "mandate_check": "not_checked",
+    "mandate_note": "Page 48 was checked in the 2026-10-10 review; not re-read in this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-20",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "EO 14173 signed 2025-01-21; section 3(b)(iv) payment-materiality term and certification.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/31/2025-02097/ending-illegal-discrimination-and-restoring-merit-based-opportunity"
-      },
-      {
-        "note": "CD-2025-04 dated 2025-02-15, public 2025-02-18; removed clauses from GSA contracts with more than six months remaining; no new certifications. Reworded to say GSA contracts.",
-        "result": "supports",
-        "url": "https://www.akingump.com/en/insights/alerts/dei-implementation-gsa-announces-class-deviation-to-the-federal-acquisition-regulation-to-implement-dei-related-executive-orders"
-      },
-      {
-        "note": "EO 14275 signed 2025-04-15; FAR to keep only required or necessary provisions; deviations meanwhile.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/04/18/2025-06839/restoring-common-sense-to-federal-procurement"
-      },
-      {
-        "note": "Initiative announced 2025-05-19 by DOJ memorandum; False Claims Act use against funding recipients.",
-        "result": "supports",
-        "url": "https://www.mayerbrown.com/en/insights/publications/2025/05/deputy-ag-blanche-establishes-doj-civil-rights-fraud-initiative-to-target-dei-and-deia-using-the-false-claims-act"
-      },
-      {
-        "note": "EO 14398 signed 2026-03-26; clause content; FAR Council deviation guidance within 60 days and FAR amendment.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/03/31/2026-06286/addressing-dei-discrimination-by-federal-contractors"
-      },
-      {
-        "note": "Dated 2026-04-17; clause 52.222-90; new solicitations from 2026-04-24; modify existing contracts by 2026-07-24.",
+        "note": "Guidance dated 2026-04-17 by OMB, DoD, GSA and NASA acquisition leads; clause FAR 52.222-90 (deviation April 2026) from 2026-04-24; bilateral modification of existing contracts by 2026-07-24 (checked 2026-10-20).",
         "result": "supports",
         "url": "https://acquisition.gov/sites/default/files/page_file_uploads/FAR%20Council%20Guidance%20to%20Implement%20EO%2014398.pdf"
       },
       {
-        "note": "Proposed rule published 2026-06-23 covering parts 1, 2, 4, 33, 39, 40, 52, 53; 'first proposed rules' not shown, so reworded.",
+        "note": "Federal Register API lists four Revolutionary FAR Overhaul proposed rules published 2026-09-18 (2026-19158, 19159, 19160, 19162); all proposed, none final, consistent with the overhaul remaining open (checked 2026-10-20).",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19162/federal-acquisition-regulation-revolutionary-far-overhaul-parts-8-12-13-15-38-44-and-51"
+      },
+      {
+        "note": "Published 2026-10-16: on 2026-10-14 the District of Maryland denied temporary relief, read EO 14398 as limited to intentional discrimination, left the clause in place and did not dismiss the case; no caption given (checked 2026-10-20).",
+        "result": "supports",
+        "url": "https://www.morganlewis.com/pubs/2026/10/maryland-court-declines-to-block-contractor-dei-executive-order-adopts-narrow-reading"
+      },
+      {
+        "note": "Names National Association of Diversity Officers in Higher Education v. Trump, No. 8:26-cv-01532 (D. Md.), challenging EO 14398, and notes the Fourth Circuit vacated the 2025 injunction against the EO 14173 certification (checked 2026-10-20).",
         "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33"
+        "url": "https://www.schwabe.com/publication/dei-clause-challenge-what-ancs-tribes-and-nhos-should-know/"
+      },
+      {
+        "note": "Dated 2026-06-11: Maryland v. Hegseth, No. 1:26-cv-02322, filed 2026-06-10 by 19 states and D.C. against the anti-DEI contract clauses; no ruling reported (checked 2026-10-20).",
+        "result": "partial",
+        "url": "https://www.hcamag.com/us/specialization/diversity-inclusion/19-states-sue-over-anti-dei-terms-added-to-federal-contracts/578627"
       }
     ]
   },
@@ -181,10 +224,52 @@
       "publisher": "Mayer Brown",
       "title": "Deputy AG establishes DOJ Civil Rights Fraud Initiative",
       "url": "https://www.mayerbrown.com/en/insights/publications/2025/05/deputy-ag-blanche-establishes-doj-civil-rights-fraud-initiative-to-target-dei-and-deia-using-the-false-claims-act"
+    },
+    {
+      "date": "2026-09-18",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "FAR: Revolutionary FAR Overhaul Parts 8, 12, 13, 15, 38, 44, and 51 (proposed rule, 2026-19162)",
+      "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19162/federal-acquisition-regulation-revolutionary-far-overhaul-parts-8-12-13-15-38-44-and-51"
+    },
+    {
+      "date": "2026-09-18",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "FAR: Revolutionary FAR Overhaul Parts 9, 27, and 47 (proposed rule, 2026-19159)",
+      "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19159/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-9-27-and"
+    },
+    {
+      "date": "2026-10-16",
+      "kind": "news",
+      "publisher": "Morgan Lewis",
+      "title": "Maryland court declines to block contractor DEI executive order, adopts narrow reading",
+      "url": "https://www.morganlewis.com/pubs/2026/10/maryland-court-declines-to-block-contractor-dei-executive-order-adopts-narrow-reading"
+    },
+    {
+      "date": "2026-09-25",
+      "kind": "news",
+      "publisher": "Wiley",
+      "title": "FAR Overhaul Rulemaking",
+      "url": "https://www.wiley.law/FAR-Overhaul-Rulemaking"
+    },
+    {
+      "date": "2026-06-15",
+      "kind": "news",
+      "publisher": "Schwabe",
+      "title": "DEI clause challenge: what ANCs, tribes and NHOs should know",
+      "url": "https://www.schwabe.com/publication/dei-clause-challenge-what-ancs-tribes-and-nhos-should-know/"
+    },
+    {
+      "date": "2026-06-11",
+      "kind": "news",
+      "publisher": "HCA Magazine",
+      "title": "19 states sue over anti-DEI terms added to federal contracts",
+      "url": "https://www.hcamag.com/us/specialization/diversity-inclusion/19-states-sue-over-anti-dei-terms-added-to-federal-contracts/578627"
     }
   ],
   "stage": "implemented",
-  "status_summary": "EO 14173 (signed 2025-01-21) directed agencies to put into every contract and grant a term making compliance with anti-discrimination law material to payment and a certification that the recipient runs no unlawful DEI programs. A GSA FAR class deviation dated 2025-02-15 removed the EO 11246-based clauses from GSA contracts and dropped DEI evaluation factors, and DOJ announced a False Claims Act Civil Rights Fraud Initiative on 2025-05-19. EO 14398 (signed 2026-03-26) required a contract clause barring racially discriminatory DEI activities, and guidance of 2026-04-17 from OFPP, DoD, GSA and NASA put deviation clause FAR 52.222-90 into new solicitations from 2026-04-24 and asked contracting officers to make every effort to modify existing contracts by 2026-07-24. The record is partial: no source was found for the transparency-about-awardees element, and the FAR overhaul is still at the proposed stage.",
+  "status_summary": "EO 14173 (signed 2025-01-21) directed agencies to put into every contract and grant a term making compliance with anti-discrimination law material to payment and a certification that the recipient runs no unlawful DEI programs; a GSA FAR class deviation dated 2025-02-15 removed the EO 11246-based clauses from GSA contracts, and DOJ announced a False Claims Act Civil Rights Fraud Initiative on 2025-05-19. EO 14398 (signed 2026-03-26) required a contract clause barring racially discriminatory DEI activities, and guidance of 2026-04-17 from OFPP, DoD, GSA and NASA put deviation clause FAR 52.222-90 into new solicitations from 2026-04-24 and asked contracting officers to make every effort to modify existing contracts by 2026-07-24. On 2026-10-14 the District of Maryland, per a law firm summary, declined temporary relief against EO 14398, reading it as reaching only intentional discrimination and leaving the clause in place. The record is partial: no source was found for the transparency-about-awardees element, and the FAR overhaul remains at the proposed stage, with proposed rules published on 2026-06-23 and 2026-09-18.",
   "timeline": [
     {
       "date": "2025-01-21",
@@ -234,10 +319,24 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33"
+    },
+    {
+      "date": "2026-09-18",
+      "event": "FAR Council publishes four further Revolutionary FAR Overhaul proposed rules in the Federal Register (documents 2026-19158, 2026-19159, 2026-19160 and 2026-19162), covering FAR parts 8, 9, 12, 13, 14, 15, 16, 17, 27, 28, 35, 36, 38, 44, 47 and 51 with related part 52 changes; no final overhaul rule was found.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19162/federal-acquisition-regulation-revolutionary-far-overhaul-parts-8-12-13-15-38-44-and-51"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "The District of Maryland denies the plaintiffs' request for temporary relief against EO 14398 and the FAR Council guidance, reading the order as reaching only intentional discrimination and leaving the contract requirements, including FAR 52.222-90, in place; the case was not dismissed (per a law firm summary; the challenge is National Association of Diversity Officers in Higher Education v. Trump, No. 8:26-cv-01532, per a June 2026 summary).",
+      "kind": "court",
+      "source": "Morgan Lewis (law firm summary of the order)",
+      "url": "https://www.morganlewis.com/pubs/2026/10/maryland-court-declines-to-block-contractor-dei-executive-order-adopts-narrow-reading"
     }
   ],
   "title": "Use procurement rules and contract terms to advance policy, including on corporate DEI",
   "tracked": true,
-  "uncertainties": "The DOJ initiative is sourced to a law firm summary, not the DOJ memorandum itself. The transparency-about-awardees element was not matched to a specific action. The 2026-07-24 date for modifying existing contracts is taken from the April 2026 guidance itself, which resolves a difference between two law firm summaries. Whether the June 2026 proposed rule was the first in the overhaul series was not confirmed. EO 11246 revocation and OFCCP are covered in c18-01 and are not restated.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The DOJ initiative is sourced to a law firm summary, not the DOJ memorandum itself. The transparency-about-awardees element was not matched to a specific action. The 2026-07-24 date for modifying existing contracts is taken from the April 2026 guidance itself, which resolves a difference between two law firm summaries. Whether the June 2026 proposed rule was the first in the overhaul series was not confirmed. EO 11246 revocation and OFCCP are covered in c18-01 and are not restated. Refutation check and review 2026-10-20: the 2026-10-14 ruling is read from a law firm summary that gives no case caption, so its link to National Association of Diversity Officers in Higher Education v. Trump (No. 8:26-cv-01532) rests on a June 2026 law firm summary of that challenge, and the order itself was not read. The four 2026-09-18 proposed rules were confirmed through the Federal Register API. Whether any overhaul set covers FAR part 22 was not determined.",
+  "updated_at": "2026-10-20"
 }

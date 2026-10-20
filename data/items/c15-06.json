@@ -7,7 +7,13 @@
   "chapter": "15",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Document text checked and the stage-deciding Federal Register notices were read through the Federal Register API and document pages.",
+  "confidence_reason": "The stage-deciding rescission notice was re-read at the Federal Register, and the premium notices were read in prior review; the retrofit item rests on trade press and the floodplain item remains proposed.",
+  "court_status": {
+    "basis": "No court order against HUD's rescissions or the floodplain proposal was found. The only court event, the 2026-03-05 E.D. Texas decision in State of Utah v. Secretary of HUD, vacated the 2024 energy efficiency determination that HUD and USDA then rescinded, so it aligns with rather than blocks the tracked action; state is recorded as pending because no court has ruled on the rescissions themselves.",
+    "date": "2026-03-05",
+    "state": "pending",
+    "url": "https://www.federalregister.gov/documents/2026/05/01/2026-08531/rescission-of-final-determination-adoption-of-energy-efficiency-standards-for-new-construction-of"
+  },
   "durability": {
     "level": "medium",
     "why": "Most steps are notices and premium changes that a later administration could reverse, while the floodplain item awaits a final rule."
@@ -29,10 +35,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Refutation check on 2026-10-20 found no reinstatement of the repealed requirements and no final floodplain rule after the 2026-09-08 comment close, added the 2026-03-05 vacatur of the 2024 energy determination noted in the rescission notice; stage unchanged."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Independent AI review: the 2026-05-01 rescission notice (91 FR 23450) was re-read and recites the 2026-03-05 E.D. Texas vacatur, so the event was kept with the case caption and parties added; a court_status was set because a court event was added; an unread law firm search result was removed from the red-team evidence; stage implemented kept at 75; confidence 80 to 80."
     }
   ],
   "id": "c15-06",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-20",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -43,6 +57,32 @@
   "position": "First-Day and First-Year Administrative Reforms",
   "progress": 75,
   "proposal": "The Mandate recommends that HUD repeal climate change initiatives and remove climate spending from the department's budget request. A supporting note adds that HUD should revise regulatory and subregulatory guidance, within its statutory authority, that adds unnecessary delay and cost to building new housing. It treats these as first-year administrative actions.",
+  "redteam": {
+    "date": "2026-10-20",
+    "evidence": [
+      {
+        "date": "2026-05-01",
+        "note": "Fetched: rescinds the 2024 Final Determination and three later extension notices, effective 2026-05-01, with the prior standards applying; the notice states E.D. Texas vacated the determination on 2026-03-05 in a suit by 15 states and a home builders group.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/05/01/2026-08531/rescission-of-final-determination-adoption-of-energy-efficiency-standards-for-new-construction-of"
+      },
+      {
+        "date": "2026-07-10",
+        "note": "Fetched: proposed rule to rescind and replace most of the 2024 floodplain rule; comments closed 2026-09-08; still proposed.",
+        "source": "Federal Register, 91 FR 42685",
+        "url": "https://www.federalregister.gov/documents/2026/07/10/2026-13939/rescission-of-floodplain-management-and-protection-of-wetlands-minimum-property-standards-for-flood"
+      },
+      {
+        "date": "2026-10-20",
+        "note": "Fetched: HUD final rules since 2026-07-11 are a Section 3 benchmarks rule, a Section 108 fee notice and a noise-regulation correction; no floodplain final rule.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=housing-and-urban-development-department&conditions[publication_date][gte]=2026-07-11&conditions[type][]=RULE&per_page=40"
+      }
+    ],
+    "note": "No reinstatement or court order against the rescissions was found, and the floodplain rule remains proposed. The energy rescission followed a court vacatur of the earlier determination, which does not reverse the repeal. Implemented 75 holds with the floodplain final rule outstanding.",
+    "verdict": "holds",
+    "what_was_tested": "Whether any court order or agency action reinstated the rescinded energy, premium or floodplain requirements, and whether the floodplain rescission was finalized or withdrawn after 2026-07-10."
+  },
   "related_ids": [],
   "remaining": [
     "Final rule on the floodplain rescission.",
@@ -52,38 +92,26 @@
   "research_agent": "N15",
   "review": {
     "flags": [
-      "judgment call: implemented reflects several operative rollbacks; the floodplain rescission and budget items remain open."
+      "court_status set to pending as the closest fit: the only court event vacated the rule being repealed and no challenge to the rescissions was found",
+      "2026-03-05 vacatur rests on the agency notice's recital, not the court order",
+      "Nixon Peabody search-result-only item removed from red-team evidence",
+      "Notice H 2026-01 still sourced only to undated trade press"
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "The numbered item on page 508 asks to repeal climate initiatives and spending in the budget request; the guidance revision for construction costs is in footnote 29 on page 515, so the proposal now attributes it to the note and page 515 was added.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y15a",
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 508 and 515 were checked in the 2026-10-13 review; not re-read in this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-20",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Federal Register API confirmed titles, dates (2025-06-26, 2025-07-07, 2025-09-23, 2026-07-10), effective or applicability dates and comment close 2026-09-08.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2025-11808,2025-12522,2025-18379,2026-13939.json"
-      },
-      {
-        "note": "Federal Register API record: rescission notice published and effective 2026-05-01, 91 FR 23450.",
+        "note": "91 FR 23450, effective 2026-05-01: rescinds the 2024 Final Determination in its entirety and three extension notices; recites that on 2026-03-05 the court in State of Utah v. Secretary of HUD (E.D. Tex.) vacated the determination (checked 2026-10-20).",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/05/01/2026-08531/rescission-of-final-determination-adoption-of-energy-efficiency-standards-for-new-construction-of"
       },
       {
-        "note": "Executive Order 14394, signed 2026-03-13, published 2026-03-18; Sec. 2(c) directs reform of energy-efficiency requirements for HUD-financed housing.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/03/18/2026-05388/removing-regulatory-barriers-to-affordable-home-construction"
-      },
-      {
-        "note": "Undated page; Notice H 2026-01 issued 2026-01-26, effective 2026-03-01, loans conversion, solar and EV funding ended.",
-        "result": "supports",
-        "url": "https://maryscottnabers.com/2026/02/18/hud-restructures-green-housing-program-with-new-requirements-deadlines/"
-      },
-      {
-        "note": "No HUD floodplain document after 2026-07-10 as of review.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=housing-and-urban-development-department&conditions[term]=floodplain&conditions[publication_date][gte]=2026-07-11&per_page=10"
+        "note": "Floodplain rescission remains a proposed rule with comments closed 2026-09-08, per the researcher's fetch and the Federal Register API listing; not re-read in this review (checked 2026-10-20).",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/07/10/2026-13939/rescission-of-floodplain-management-and-protection-of-wetlands-minimum-property-standards-for-flood"
       }
     ]
   },
@@ -168,7 +196,7 @@
     }
   ],
   "stage": "implemented",
-  "status_summary": "HUD has unwound several climate-related measures since 2025. A notice published 2025-06-26 ended the reduced green and energy-efficient premium category for Section 232 healthcare loans effective 2025-08-25, and a notice published 2025-09-23 set a single 0.25 percent premium for FHA multifamily programs and removed the 2016 premium categories for applications from 2025-10-01. After a 2025-07-07 request for comment, HUD and USDA rescinded the 2024 energy code determination for HUD- and USDA-financed new construction in a notice published 2026-05-01, following Executive Order 14394 (published 2026-03-18), which directed reform of such energy requirements. Notice H 2026-01 (issued 2026-01-26) restructured the Green and Resilient Retrofit Program and ended new funding for solar panels and EV chargers from 2026-03-01, and a proposed rule published 2026-07-10 would rescind most of the 2024 floodplain rule, with comments due 2026-09-08.",
+  "status_summary": "HUD has unwound several climate-related measures since 2025. A notice published 2025-06-26 ended the reduced green and energy-efficient premium category for Section 232 healthcare loans effective 2025-08-25, and a notice published 2025-09-23 set a single 0.25 percent premium for FHA multifamily programs and removed the 2016 premium categories for applications from 2025-10-01. After a 2025-07-07 request for comment and a 2026-03-05 federal court vacatur of the 2024 energy code determination, HUD and USDA rescinded the 2024 energy code determination for HUD- and USDA-financed new construction in a notice published 2026-05-01, following Executive Order 14394 (published 2026-03-18), which directed reform of such energy requirements. Notice H 2026-01 (issued 2026-01-26) restructured the Green and Resilient Retrofit Program and ended new funding for solar panels and EV chargers from 2026-03-01, and a proposed rule published 2026-07-10 would rescind most of the 2024 floodplain rule, with comments due 2026-09-08.",
   "timeline": [
     {
       "date": "2025-06-26",
@@ -199,6 +227,13 @@
       "url": "https://maryscottnabers.com/2026/02/18/hud-restructures-green-housing-program-with-new-requirements-deadlines/"
     },
     {
+      "date": "2026-03-05",
+      "event": "In State of Utah v. Secretary of HUD (E.D. Tex.), brought by 15 states and the National Association of Home Builders, the court denies the agencies' motion to dismiss and grants summary judgment in part, setting aside and vacating the 2024 energy efficiency Final Determination for HUD- and USDA-financed housing; the 2026-05-01 rescission notice recites this decision as a basis.",
+      "kind": "court",
+      "source": "Federal Register (HUD and USDA notice, 91 FR 23450)",
+      "url": "https://www.federalregister.gov/documents/2026/05/01/2026-08531/rescission-of-final-determination-adoption-of-energy-efficiency-standards-for-new-construction-of"
+    },
+    {
       "date": "2026-03-18",
       "event": "Executive Order 14394 was published, directing HUD, USDA, DOE and FHFA to reform energy-efficiency and related requirements for housing.",
       "kind": "primary",
@@ -222,6 +257,6 @@
   ],
   "title": "Repeal HUD climate change initiatives and related spending",
   "tracked": true,
-  "uncertainties": "The retrofit program details come from one undated trade-press account; Notice H 2026-01 itself was not opened. That account also reports an April 2025 preliminary injunction requiring agencies to resume processing infrastructure and climate funds. A Federal Register search found no final floodplain rule after 2026-07-10. HUD budget documents were not searched for climate line items.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The retrofit program details come from one undated trade-press account; Notice H 2026-01 itself was not opened. That account also reports an April 2025 preliminary injunction requiring agencies to resume processing infrastructure and climate funds. A Federal Register search found no final floodplain rule after 2026-07-10. HUD budget documents were not searched for climate line items. Refutation check 2026-10-20: Notice H 2026-01 and HUD budget documents were still not opened; the Federal Register check covered HUD final rules by agency filter only; the last 14,493 characters of the proposed floodplain rule were not read; a July 2026 law firm alert on the floodplain proposal was seen only as a search result and is not relied on. The E.D. Texas vacatur of 2026-03-05 is taken from the recital in the 2026-05-01 rescission notice; the court's order itself was not read.",
+  "updated_at": "2026-10-20"
 }
