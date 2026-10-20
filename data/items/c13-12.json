@@ -2,17 +2,17 @@
   "agency": "EPA",
   "blockers": [
     "The AIM Act statute fixes the phasedown schedule, so regulatory relief cannot reach it",
-    "Pending D.C. Circuit petitions for review of the 2026 rule from both industry and environmental petitioners"
+    "Pending D.C. Circuit petitions for review of the 2026 rule from industry, environmental and state petitioners"
   ],
   "chapter": "13",
   "confidence": 85,
   "confidence_label": "high",
-  "confidence_reason": "Document text checked and the final rule and related Federal Register documents were read; litigation confirmed from the petitions.",
+  "confidence_reason": "The stage rests on the 2026 final rule read at the Federal Register in prior review and the researcher's re-fetch; in this review the states' petition and the October 2026 allocation notice were opened and read, and no stay was found.",
   "court_status": {
-    "basis": "Petitions for review of the 2026 rule were filed in the D.C. Circuit on 2026-06-25 and 2026-07-20; no ruling was found.",
-    "date": "2026-07-20",
+    "basis": "Petitions for review of 91 FR 31284 were filed in the D.C. Circuit by industry groups (No. 26-1174, 2026-06-25), an environmental group (No. 26-1188, 2026-07-20) and 18 states, the District of Columbia and the City of New York (signed 2026-07-21); the rule took effect 2026-07-27 and no stay, vacatur or merits ruling was found as of 2026-10-20.",
+    "date": "2026-07-21",
     "state": "pending",
-    "url": "https://www.epa.gov/system/files/documents/2026-08/nrdc-petition-for-review.pdf"
+    "url": "https://oag.ca.gov/system/files/attachments/press-docs/hfc-petition.pdf"
   },
   "durability": {
     "level": "medium",
@@ -35,10 +35,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Refutation check on 2026-10-20 found the rule not stayed, added the states coalition petition dated 2026-07-21 to the pending D.C. Circuit challenges, and found no further EPA proposal or final action after 2026-07-28; stage unchanged."
+    },
+    {
+      "date": "2026-10-20",
+      "note": "Independent AI review: the states' petition was opened and carries the D.C. Circuit caption, 20 petitioners and a 2026-07-21 signature date (no case number), so the event was kept with the petitioner count corrected; the 2026-10-06 allocation notice was confirmed at 91 FR 63548; status summary and blockers updated for the third petition; stage implemented kept at 65; confidence 85 to 85."
     }
   ],
   "id": "c13-12",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-20",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -49,6 +57,44 @@
   "position": "Office of Air and Radiation: Regulating Hydrofluorocarbons Under the AIM Act",
   "progress": 65,
   "proposal": "The Mandate recommends repealing Biden-era regulations implementing the AIM Act that are unnecessarily stringent and costly, and declining petitions from manufacturers to add restrictions that push the market toward costlier refrigerants and equipment. It also recommends realistic cost assessments reflecting consumer experience.",
+  "redteam": {
+    "date": "2026-10-20",
+    "evidence": [
+      {
+        "date": "2026-05-26",
+        "note": "Fetched: final rule effective 2026-07-27; interim GWP limit of 1,400 for supermarket systems from 2027 until 2032; residential AC and heat pump installation deadline removed for pre-2025 components (unofficial XML rendition).",
+        "source": "Federal Register, 91 FR 31284",
+        "url": "https://www.federalregister.gov/documents/2026/05/26/2026-10387/phasedown-of-hydrofluorocarbons-reconsideration-of-certain-regulatory-requirements-promulgated-under"
+      },
+      {
+        "date": "2026-07-21",
+        "note": "Fetched: states and City of New York petition the D.C. Circuit against 91 FR 31284; no case number on the copy.",
+        "source": "California Attorney General",
+        "url": "https://oag.ca.gov/system/files/attachments/press-docs/hfc-petition.pdf"
+      },
+      {
+        "date": "2026-07-22",
+        "note": "Fetched: reports the states suit; no ruling.",
+        "source": "Cooling Post",
+        "url": "https://www.coolingpost.com/world-news/epa-sued-over-rule-weakening-hfc-phaseout/"
+      },
+      {
+        "date": "2026-10-06",
+        "note": "Fetched (first 100,000 characters): 2027 allowance allocation notice, petitions due 2026-12-07; no mention of a stay or a reversal of the 2026 rule.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/10/06/2026-20389/phasedown-of-hydrofluorocarbons-notice-of-2027-allowance-allocations-for-production-and-consumption"
+      },
+      {
+        "date": "2026-10-20",
+        "note": "Fetched: no later EPA HFC rule or proposal on Technology Transitions, leak repair or the 2029 allowance rulemaking appears after 2026-07-28.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=hydrofluorocarbons&conditions[publication_date][gte]=2026-07-29&per_page=20"
+      }
+    ],
+    "note": "The rule stays operative; three sets of petitions are pending and no stay or ruling was found. Court review is a risk to durability, not an earned-progress loss, so implemented 65 holds.",
+    "verdict": "holds",
+    "what_was_tested": "Whether the 2026 rule was stayed or vacated, whether its effective date (2026-07-27) was delayed, and whether EPA proposed or finalized anything that reverses the relaxation."
+  },
   "related_ids": [],
   "remaining": [
     "Finalize the transport refrigeration leak repair exemption",
@@ -58,42 +104,25 @@
   "requires_congress": "no",
   "research_agent": "N13",
   "review": {
-    "flags": [],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 425 to 426 checked; repeal of stringent rules, declining new restriction petitions and realistic cost assessment are accurately paraphrased.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y13a",
+    "flags": [
+      "filing date of the states' petition not confirmed; event dated by signature date",
+      "alternative considered: implemented 70, as the final rule is operative and a leak repair exemption is proposed; 65 kept because pending petitions and the statutory phasedown limit the relief"
+    ],
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 425 to 426 were checked in the 2026-10-13 review; not re-read in this review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-20",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Final rule 91 FR 31284, effective 2026-07-27; interim limits revert in 2032; installation deadline removed for pre-2025 components; PV savings 976 million dollars at 3 percent, 2026 to 2050.",
+        "note": "Petition captioned in the U.S. Court of Appeals for the D.C. Circuit; petitioners are 18 states, the District of Columbia and the City of New York against EPA and its Administrator; challenges 91 FR 31284, effective 2026-07-27; signed 2026-07-21; case number blank (checked 2026-10-20).",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/05/26/2026-10387/phasedown-of-hydrofluorocarbons-reconsideration-of-certain-regulatory-requirements-promulgated-under"
+        "url": "https://oag.ca.gov/system/files/attachments/press-docs/hfc-petition.pdf"
       },
       {
-        "note": "Proposed rule 91 FR 30532 exempting transport refrigeration units from leak repair; comments to 2026-07-10.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/05/26/2026-10388/phasedown-of-hydrofluorocarbons-excluding-road-and-intermodal-container-transport-refrigeration"
-      },
-      {
-        "note": "Final rule 90 FR 41676, effective 2025-09-25, includes Technology Transitions revisions for application-specific uses.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/08/26/2025-16357/phasedown-of-hydrofluorocarbons-review-and-renewal-of-eligibility-for-application-specific"
-      },
-      {
-        "note": "Notice says the future rulemaking will seek comment on allowances starting in 2029.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15219/notice-of-data-availability-analysis-of-hfc-allocation-program-data-for-2022-2025"
-      },
-      {
-        "note": "D.C. Cir. No. 26-1174 filed 2026-06-25, challenging remote condensing unit and supermarket provisions and the effective date.",
-        "result": "supports",
-        "url": "https://www.epa.gov/system/files/documents/2026-08/alliance-ahri-petition-for-review.pdf"
-      },
-      {
-        "note": "D.C. Cir. No. 26-1188 filed 2026-07-20.",
-        "result": "supports",
-        "url": "https://www.epa.gov/system/files/documents/2026-08/nrdc-petition-for-review.pdf"
+        "note": "91 FR 63548, published 2026-10-06: 2027 HFC allowance allocations and administrative consequences under the statutory phasedown; no mention of the Technology Transitions rule in the portion read (checked 2026-10-20).",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/10/06/2026-20389/phasedown-of-hydrofluorocarbons-notice-of-2027-allowance-allocations-for-production-and-consumption"
       }
     ]
   },
@@ -168,10 +197,24 @@
       "publisher": "EPA",
       "title": "Petition for review, No. 26-1188 (D.C. Cir.), challenge to 91 FR 31284",
       "url": "https://www.epa.gov/system/files/documents/2026-08/nrdc-petition-for-review.pdf"
+    },
+    {
+      "date": "2026-07-21",
+      "kind": "court",
+      "publisher": "California Attorney General",
+      "title": "Petition for review of 91 FR 31284 (states and City of New York)",
+      "url": "https://oag.ca.gov/system/files/attachments/press-docs/hfc-petition.pdf"
+    },
+    {
+      "date": "2026-10-06",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Phasedown of Hydrofluorocarbons: 2027 allowance allocations and administrative consequences",
+      "url": "https://www.federalregister.gov/documents/2026/10/06/2026-20389/phasedown-of-hydrofluorocarbons-notice-of-2027-allowance-allocations-for-production-and-consumption"
     }
   ],
   "stage": "implemented",
-  "status_summary": "A final rule published 2026-05-26 and effective 2026-07-27 relaxes parts of the 2023 Technology Transitions restrictions: it sets interim global warming potential limits for supermarket systems, remote condensing units and cold storage warehouses that run until 2032, delays some compliance dates, and removes the installation deadline for residential and light commercial air conditioning and heat pump equipment whose components were made or imported before 2025. EPA estimated engineering cost savings with a present value of about 976 million dollars at a 3 percent discount rate (2026 to 2050). A proposal of the same date would exempt road and intermodal transport refrigeration units from the leak repair requirements. Petitions for review of the final rule were filed in the D.C. Circuit by industry groups on 2026-06-25 and by an environmental group on 2026-07-20. The statutory HFC phasedown remains in place, and on 2026-07-28 EPA released allocation data ahead of a planned rulemaking that will seek comment on allowances starting in 2029.",
+  "status_summary": "A final rule published 2026-05-26 and effective 2026-07-27 relaxes parts of the 2023 Technology Transitions restrictions: it sets interim global warming potential limits for supermarket systems, remote condensing units and cold storage warehouses that run until 2032, delays some compliance dates, and removes the installation deadline for residential and light commercial air conditioning and heat pump equipment whose components were made or imported before 2025. EPA estimated engineering cost savings with a present value of about 976 million dollars at a 3 percent discount rate (2026 to 2050). A proposal of the same date would exempt road and intermodal transport refrigeration units from the leak repair requirements. Petitions for review of the final rule were filed in the D.C. Circuit by industry groups on 2026-06-25, by an environmental group on 2026-07-20 and by 18 states, the District of Columbia and the City of New York in a petition signed 2026-07-21, with no stay or ruling found. The statutory HFC phasedown remains in place, and on 2026-07-28 EPA released allocation data ahead of a planned rulemaking that will seek comment on allowances starting in 2029.",
   "timeline": [
     {
       "date": "2025-08-26",
@@ -202,6 +245,13 @@
       "url": "https://www.epa.gov/system/files/documents/2026-08/nrdc-petition-for-review.pdf"
     },
     {
+      "date": "2026-07-21",
+      "event": "Eighteen states, the District of Columbia and the City of New York petition the D.C. Circuit for review of the 2026 Technology Transitions final rule (91 FR 31284); the petition copy is signed 2026-07-21 and shows no case number or separate filing date.",
+      "kind": "court",
+      "source": "California Attorney General (petition copy)",
+      "url": "https://oag.ca.gov/system/files/attachments/press-docs/hfc-petition.pdf"
+    },
+    {
       "date": "2026-07-28",
       "event": "EPA published a notice of data availability on HFC allocation program data ahead of a planned rulemaking on allowances starting in 2029.",
       "kind": "primary",
@@ -211,6 +261,6 @@
   ],
   "title": "Roll back stringent AIM Act HFC regulations and refrain from adding restrictions",
   "tracked": true,
-  "uncertainties": "The D.C. Circuit docket was not read beyond the two petitions posted by EPA; later filings or a ruling may exist. Whether EPA's cost estimate meets the document's call for realistic cost assessment is a judgment, not stated by EPA in those terms.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The D.C. Circuit docket was not read; the three petitions were read only as copies posted by EPA and the California Attorney General, so later filings, consolidation or a ruling may exist. Whether EPA's cost estimate meets the document's call for realistic cost assessment is a judgment, not stated by EPA in those terms. Refutation check and review 2026-10-20: the states' petition copy carries the D.C. Circuit caption but no case number and shows a signature date of 2026-07-21 rather than a filing date; the last 5,626 characters of the 2026-10-06 allocation notice were not read.",
+  "updated_at": "2026-10-20"
 }
