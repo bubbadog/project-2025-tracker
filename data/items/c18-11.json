@@ -39,10 +39,14 @@
     {
       "date": "2026-10-14",
       "note": "Court status set to the standard state \"vacated\" (the free-text state failed validation); the dismissal of the appeals is kept in the basis. No change to stage or evidence."
+    },
+    {
+      "date": "2026-10-21",
+      "note": "Refutation check: Federal Register API and the eCFR version history of 29 CFR part 541 show no Wage and Hour Division document after 2026-05-15; the 2019 levels still govern and no Fifth Circuit action after May 2026 was found. Verdict holds; redteam entry replaced."
     }
   ],
   "id": "c18-11",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-21",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -52,6 +56,32 @@
   "position": "Overtime Pay Threshold",
   "progress": 70,
   "proposal": "The Mandate recommends that DOL maintain an overtime salary threshold that does not penalize businesses in lower-cost regions, noting that the first-term threshold is high enough to cover most line workers there. It floats automatic five-year updates tied to a price index, which would likely need Congress, and asks Congress to base the regular rate on salary rather than all benefits and to allow two- or four-week overtime periods.",
+  "redteam": {
+    "date": "2026-10-21",
+    "evidence": [
+      {
+        "date": "2026-10-21",
+        "note": "No documents found after 2026-05-15.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22white-collar+exemptions%22&conditions[agencies][]=wage-and-hour-division&conditions[publication_date][gte]=2026-05-15"
+      },
+      {
+        "date": "2026-10-21",
+        "note": "No documents found.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=overtime+exemption&conditions[agencies][]=wage-and-hour-division&conditions[publication_date][gte]=2026-05-16"
+      },
+      {
+        "date": "2026-05-15",
+        "note": "Latest amendment of part 541 is 2026-05-15; section 541.607 reserved; no later change.",
+        "source": "eCFR",
+        "url": "https://www.ecfr.gov/api/versioner/v1/versions/title-29?part=541"
+      }
+    ],
+    "note": "2019 levels remain in the CFR with no later DOL rulemaking or court action found.",
+    "verdict": "holds",
+    "what_was_tested": "Federal Register API for Wage and Hour Division or part 541 documents after 2026-05-15; eCFR version history of 29 CFR part 541; web search for new DOL rulemaking or reversal of the threshold."
+  },
   "related_ids": [
     "c18-04"
   ],
@@ -137,5 +167,5 @@
   "title": "Keep the overtime salary threshold near the first-term level; seek statutory changes",
   "tracked": true,
   "uncertainties": "Only the Federal Register notice was read; the court orders and dismissal orders were not opened, and the notice does not say which party sought the dismissals. The 2019 level was restored through vacatur and a conforming amendment rather than a new policy choice, so alignment with the Mandate is by result. Whether any bill on the regular rate or multiweek overtime periods moved was not checked.",
-  "updated_at": "2026-10-14"
+  "updated_at": "2026-10-21"
 }

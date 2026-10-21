@@ -29,10 +29,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-21",
+      "note": "Refutation check: Federal Register API for BLM documents after 2026-05-12 and a search for suits found no injunction, stay, vacatur or reversal of the 2026-05-12 rescission (effective 2026-06-11); a May 2026 local news report said no suit had yet been filed. Verdict holds; redteam entry replaced."
     }
   ],
   "id": "c16-19",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-21",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -42,6 +46,32 @@
   "position": "Administration Priorities: Actions",
   "progress": 70,
   "proposal": "The Mandate recommends reviewing all BLM resource management plans finalized in the previous four years and, where needed, selecting alternatives already studied in order to restore the multiple-use approach of FLPMA and remove management decisions that advance the 30 by 30 agenda.",
+  "redteam": {
+    "date": "2026-10-21",
+    "evidence": [
+      {
+        "date": "2026-10-21",
+        "note": "Only the 2026-05-12 final rescission appears; no later correction, stay or reversal.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Conservation+and+Landscape+Health%22&conditions[publication_date][gte]=2026-05-12"
+      },
+      {
+        "date": "2026-05-23",
+        "note": "Reports no filed suit against the rescission; challenge only expected. Earlier suits against the 2024 rule expected to wind down.",
+        "source": "Moab Sun News",
+        "url": "https://moabsunnews.com/2026/05/23/blm-ends-public-lands-rule/"
+      },
+      {
+        "date": "2026-10-21",
+        "note": "Later BLM plan notices are unrelated new amendments; no Rock Springs decision or notice of availability.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22resource+management+plan%22&conditions[agencies][]=land-management-bureau&conditions[publication_date][gte]=2026-06-05"
+      }
+    ],
+    "note": "No injunction, stay, vacatur or reversal found; the rescission was effective 2026-06-11. A court challenge was only anticipated in May 2026 coverage and none was found filed.",
+    "verdict": "holds",
+    "what_was_tested": "Federal Register API for BLM documents mentioning the rescinded rule or resource management plans after 2026-05-12; web search for suits against the rescission and for Rock Springs plan amendment developments."
+  },
   "related_ids": [
     "c16-01",
     "c16-02",
@@ -248,5 +278,5 @@
   "title": "Review recent BLM land plans and drop conservation-first management decisions",
   "tracked": true,
   "uncertainties": "The Mandate does not name the 2024 public lands rule in this passage, so that rescission is treated as part of the same policy direction, not as a literal match. Review of every plan from the prior four years is only partly documented, and the Rock Springs amendment had no later Federal Register notice in an API search. Public law numbers for H.J.Res. 104, 105, 106 and 131 come from GovInfo bill status; the Buffalo law number (119-51) comes from the 2026-06-04 notice.",
-  "updated_at": "2026-10-13"
+  "updated_at": "2026-10-21"
 }
