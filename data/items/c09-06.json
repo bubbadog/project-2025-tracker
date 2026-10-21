@@ -5,9 +5,9 @@
     "USTR's recommendations on modernization had not been published in the sources found."
   ],
   "chapter": "09",
-  "confidence": 86,
+  "confidence": 88,
   "confidence_label": "high",
-  "confidence_reason": "The 2028 extension was read in the text of Public Law 119-103 and the 2026 extension in Proclamation 11030; earlier reviews confirmed USTR's modernization request. Whether the existing eligibility criteria amount to the Mandate's strategic framework is a judgment, and no change to them has been enacted.",
+  "confidence_reason": "The 2028 extension was read in the text of Public Law 119-103 in an earlier review, and for this review GovInfo BILLSTATUS for H.R. 6500 (enactment and votes) and the 2026-09-18 CITA notice applying Section 2008 through 2028-12-31 were read directly. Public Law 119-75's AGOA text was not read, and whether existing eligibility criteria amount to the Mandate's strategic framework is a judgment.",
   "durability": {
     "level": "high",
     "why": "The extension is in statute (Public Laws 119-75 and 119-103), which the executive branch cannot undo, though the program sunsets at the end of 2028 and has been extended in short increments."
@@ -27,11 +27,15 @@
     },
     {
       "date": "2026-10-08",
-      "note": "Event dates and citations checked against the primary documents. The 2026-02-03 enactment event now cites the GovInfo public law page instead of USTR's 2026-04-29 notice (the notice keeps its own 2026-04-29 event); the 2025-09-30 expiry event is left with USTR's notice, which states that date and is named as the source in the event text (I could not confirm the AGOA section text inside the GovInfo page, so the AGOA c"
+      "note": "Event dates and citations checked against the primary documents. The 2026-02-03 enactment event now cites the GovInfo public law page instead of USTR's 2026-04-29 notice (the notice keeps its own 2026-04-29 event); the 2025-09-30 expiry event is left with USTR's notice, which states that date and is named as the source in the event text, because the AGOA section text inside the GovInfo page could not be confirmed."
+    },
+    {
+      "date": "2026-10-21",
+      "note": "Freshness check: added the H.R. 6500 legislative history (House passage 2026-01-12, Senate passage 2026-08-08, House concurrence 2026-09-01) from GovInfo BILLSTATUS and the CITA apparel-limit notice of 2026-09-18 from federalregister.gov, which cites Section 2008 of Public Law 119-103 and the 2028-12-31 end date; a first-person phrase in an earlier history note was reworded. Stage and progress unchanged (implemented, 80); confidence from 86 to 88; independent review Y5."
     }
   ],
   "id": "c09-06",
-  "last_checked": "2026-10-08",
+  "last_checked": "2026-10-21",
   "layer": 2,
   "match": "direct",
   "mechanism": "legislation",
@@ -68,14 +72,14 @@
   "research_agent": "D3",
   "review": {
     "flags": [
-      "2026-06-30 eligibility review notice not re-fetched",
-      "P.L. 119-75 AGOA text not read directly (reauthorization and retroactivity via USTR notice)"
+      "alternative stage: completed if existing eligibility criteria are taken as the strategic framework",
+      "framework element unenacted; extension runs only to 2028"
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 276 says the next Administration should extend AGOA beyond its 2025 term within a strategic framework that rewards good governance and pro-market policies, and not waste aid on governments that fail to reform; the paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y1",
+    "reviewed_at": "2026-10-21",
+    "reviewer": "Y5",
     "source_checks": [
       {
         "note": "Approved 2026-09-02. Section 2008 changes 2026 to 2028 in Trade Act section 506B and AGOA section 112(g), sets the regional apparel program to run each year until 2028-12-31, and moves the third-country fabric dates to 2028; no separate effective date, no conditions, no link to the 2026-12-11 continuing-appropriations end date, and no new eligibility criteria.",
@@ -86,6 +90,16 @@
         "note": "Proclamation 11030, signed 2026-05-19, published 2026-05-22 (91 FR 30469), implements P.L. 119-75 section 5019: AGOA preferences, the regional apparel program and the third-country fabric program remain in effect through 2026-12-31; designates Gabon effective 2026-01-01; does not itself state retroactivity.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/05/22/2026-10398/to-implement-certain-provisions-in-the-consolidated-appropriations-act-2026-and-for-other-purposes"
+      },
+      {
+        "note": "BILLSTATUS: H.R. 6500 introduced 2025-12-09 to extend AGOA, House 340-54 on 2026-01-12, Senate 90-6 on 2026-08-08, House concurrence 370-48 on 2026-09-01, Public Law 119-103 on 2026-09-02; supports the extension in statute behind implemented.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6500.xml"
+      },
+      {
+        "note": "CITA notice 91 FR 59114 (2026-09-18) applies Section 2008 of P.L. 119-103 and states preferential treatment runs through 2028-12-31; shows the extension operating, consistent with implemented.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19191/limitations-of-duty-free-imports-of-apparel-articles-assembled-in-beneficiary-sub-saharan-african"
       }
     ]
   },
@@ -136,10 +150,24 @@
       "publisher": "GovInfo",
       "title": "Public Law 119-75, Consolidated Appropriations Act, 2026",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
+    },
+    {
+      "date": "2026-09-02",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS H.R. 6500, 119th Congress (Continuing Appropriations and Extensions Act, 2027; passed by the House as the AGOA Extension Act)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6500.xml"
+    },
+    {
+      "date": "2026-09-18",
+      "kind": "primary",
+      "publisher": "Federal Register (Committee for the Implementation of Textile Agreements)",
+      "title": "Limitations of Duty-Free Imports of Apparel Articles Assembled in Beneficiary Sub-Saharan African Countries From Regional and Third-Country Fabric (91 FR 59114)",
+      "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19191/limitations-of-duty-free-imports-of-apparel-articles-assembled-in-beneficiary-sub-saharan-african"
     }
   ],
   "stage": "implemented",
-  "status_summary": "AGOA's prior authorization expired on 2025-09-30. Public Law 119-75 (the Consolidated Appropriations Act, 2026, enacted 2026-02-03) reauthorized it through 2026-12-31 retroactive to the expiration, and Proclamation 11030 (signed 2026-05-19) implemented the extension and designated Gabon as a beneficiary effective 2026-01-01. Public Law 119-103, the Continuing Appropriations and Extensions Act, 2027 (enacted 2026-09-02), then changed the 2026 dates for AGOA's main provisions to 2028 in its Section 2008. On the framework element, USTR published a request for comments on modernizing AGOA on 2026-04-29 (136 comments received), asking about eligibility criteria, graduation, reciprocity and enforcement to inform recommendations to Congress, and on 2026-06-30 began the annual country eligibility review for 2027 under the program's existing criteria. No legislation changing those criteria was found, so the extension is in law but the strategic-framework element remains at the recommendation stage.",
+  "status_summary": "AGOA's prior authorization expired on 2025-09-30. Public Law 119-75 (Consolidated Appropriations Act, 2026, enacted 2026-02-03) reauthorized it through 2026-12-31 retroactive to the expiration, and Proclamation 11030 (signed 2026-05-19) implemented the extension and designated Gabon as a beneficiary effective 2026-01-01. Public Law 119-103 (H.R. 6500, which passed the House as the AGOA Extension Act 340-54 on 2026-01-12 and the Senate 90-6 on 2026-08-08) became law on 2026-09-02; its Section 2008 moves AGOA dates from 2026 to 2028, and a CITA notice of 2026-09-18 sets apparel limits for 2026-10-01 to 2027-09-30 and describes preferential treatment as running through 2028-12-31. USTR requested comments on modernizing AGOA on 2026-04-29 and began the 2027 country eligibility review on 2026-06-30, but no legislation changing eligibility, graduation or reciprocity criteria and no 2027 eligibility determinations were found as of 2026-10-21, so the extension is in law while the strategic-framework element remains at the recommendation stage.",
   "timeline": [
     {
       "date": "2025-09-30",
@@ -147,6 +175,13 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/04/29/2026-08347/request-for-comments-on-the-modernization-of-the-african-growth-and-opportunity-act-agoa"
+    },
+    {
+      "date": "2026-01-12",
+      "event": "The House passes H.R. 6500, introduced on 2025-12-09 as a bill to extend AGOA (passed under the title AGOA Extension Act, reported by Ways and Means on 2025-12-30), 340-54 (Roll no. 14) under suspension of the rules; the bill later became the vehicle for Public Law 119-103.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS (H.R. 6500)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6500.xml"
     },
     {
       "date": "2026-02-03",
@@ -177,15 +212,36 @@
       "url": "https://www.federalregister.gov/documents/2026/06/30/2026-13177/request-for-comments-and-notice-of-public-hearing-concerning-the-annual-review-of-country"
     },
     {
+      "date": "2026-08-08",
+      "event": "The Senate passes H.R. 6500 with an amendment and an amendment to the title, 90-6 (Record Vote 228).",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS (H.R. 6500)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6500.xml"
+    },
+    {
+      "date": "2026-09-01",
+      "event": "The House agrees to the Senate amendments to H.R. 6500, 370-48 (Roll no. 286) under suspension of the rules; the bill is presented and signed on 2026-09-02 as Public Law 119-103.",
+      "kind": "primary",
+      "source": "GovInfo BILLSTATUS (H.R. 6500)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6500.xml"
+    },
+    {
       "date": "2026-09-02",
       "event": "Public Law 119-103 (Continuing Appropriations and Extensions Act, 2027) is enacted; its Section 2008 changes the 2026 dates in AGOA's termination provision, regional apparel program and third-country fabric program to 2028 and sets the apparel program's end at 2028-12-31. The text states no new eligibility conditions.",
       "kind": "primary",
       "source": "GovInfo",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm"
+    },
+    {
+      "date": "2026-09-18",
+      "event": "The Committee for the Implementation of Textile Agreements publishes a notice (91 FR 59114), effective 2026-10-01, setting the AGOA duty-free apparel import limit at 1,690,799,016 square meter equivalents (845,399,508 for the lesser-developed country rule) for 2026-10-01 through 2027-09-30, citing Section 5019 of Division I of Public Law 119-75 and Section 2008 of Division B of Public Law 119-103, and stating the latter extends preferential treatment through 2028-12-31.",
+      "kind": "primary",
+      "source": "Federal Register (CITA notice)",
+      "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19191/limitations-of-duty-free-imports-of-apparel-articles-assembled-in-beneficiary-sub-saharan-african"
     }
   ],
   "title": "Extend AGOA past 2025 within a framework that rewards good governance",
   "tracked": true,
-  "uncertainties": "Public Law 119-75's AGOA text was not read directly; the 2026-02-03 reauthorization and its retroactivity come from USTR's 2026-04-29 notice. Section 2008 of Public Law 119-103 was read through a fetch summary, which reported that each 2026 reference becomes 2028 and that no effective-date clause or new conditions appear; the exact statutory end date of the main provision (beyond the apparel program's 2028-12-31 end) was not confirmed. The eligibility-review notice has an internal conflict on the testimony deadline (2026-07-09 versus 2026-07-13). Congress's role in modernizing AGOA and any pending reform bill were not searched. The Mandate does not define the strategic framework, so the match between existing eligibility criteria and the Mandate's good-governance condition is a judgment.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "Public Law 119-75's AGOA text was not read directly; the 2026-02-03 reauthorization and its retroactivity come from USTR's 2026-04-29 notice. Section 2008 of Public Law 119-103 was read through a fetch summary, which reported that each 2026 reference becomes 2028 and that no effective-date clause or new conditions appear; the exact statutory end date of the main provision (beyond the apparel program's 2028-12-31 end) was not confirmed. The eligibility-review notice has an internal conflict on the testimony deadline (2026-07-09 versus 2026-07-13). Congress's role in modernizing AGOA and any pending reform bill were not searched. The Mandate does not define the strategic framework, so the match between existing eligibility criteria and the Mandate's good-governance condition is a judgment. Freshness check on 2026-10-21: GovInfo BILLSTATUS for H.R. 6500 confirms the vehicle, vote counts and enactment of Public Law 119-103 on 2026-09-02, and the 2026-09-18 CITA notice cites Section 2008 of Division B of that law and Section 5019 of Division I of Public Law 119-75 and describes preferential treatment as running through 2028-12-31, which narrows the earlier doubt on the end date for the apparel and preference program but does not quote the main termination provision. USTR's eligible-country page showed no 2027 list, and no reform bill or enacted change to the eligibility criteria was located in a web search. Public Law 119-75's own AGOA text was still not read directly.",
+  "updated_at": "2026-10-21"
 }

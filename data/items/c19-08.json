@@ -26,10 +26,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-21",
+      "note": "Refutation check: eCFR shows 14 CFR 399.75 and 399.79 as amended 2026-07-31 with no later change; no petition for review or new DOT rulemaking on the hearing procedures was found (two July 2026 airline proposals on fare advertising and ancillary fees do not touch them). Verdict holds; redteam entry replaced."
     }
   ],
   "id": "c19-08",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-21",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -39,6 +43,32 @@
   "position": "Aviation: consumer protection",
   "progress": 100,
   "proposal": "The Mandate recommends that a new administration restore the first-term reforms to the process for issuing airline unfair and deceptive practices rules, which the prior administration reversed in 2022. It says that since the Obama administration this authority has been used to justify broad regulations with burdensome disclosure mandates and other costly requirements without a sufficient process for gathering supporting evidence.",
+  "redteam": {
+    "date": "2026-10-21",
+    "evidence": [
+      {
+        "date": "2026-10-21",
+        "note": "The 2026-07-01 final rule plus two separate substantive airline proposals (fare advertising, 2026-07-01; ancillary fee disclosure rule, 2026-07-02); no change to the procedures rule.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Unfair+or+Deceptive+Practices%22&conditions[agencies][]=transportation-department&conditions[publication_date][gte]=2026-07-01"
+      },
+      {
+        "date": "2026-07-31",
+        "note": "Sections 399.75 and 399.79 amended 2026-07-31, none removed; no later changes.",
+        "source": "eCFR",
+        "url": "https://www.ecfr.gov/api/versioner/v1/versions/title-14?part=399"
+      },
+      {
+        "date": "2026-07-01",
+        "note": "Final rule, effective 2026-07-31 (listed in API results).",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/07/01/2026-13295/procedures-in-regulating-and-enforcing-unfair-or-deceptive-practices"
+      }
+    ],
+    "note": "Rule codified in 14 CFR 399.75 and 399.79 effective 2026-07-31; no petition for review or repeal found.",
+    "verdict": "holds",
+    "what_was_tested": "Federal Register API for DOT unfair or deceptive practices documents after 2026-07-01; eCFR history for 14 CFR part 399; search for petitions for review or new DOT rulemaking on the procedures."
+  },
   "related_ids": [
     "c19-07"
   ],
@@ -142,5 +172,5 @@
   "title": "Restore first-term hearing process for airline unfair and deceptive practice rules",
   "tracked": true,
   "uncertainties": "Final rule text was not read in full; the Federal Register record says it reinstates the 2020 hearing protections and also rescinds a 2023 clarification on federal court enforcement, which goes slightly beyond the Mandate's text. The Mandate's footnote cites the 2020 rule that also defined unfair and deceptive; whether every element of that rule is now in force was not checked beyond the abstract.",
-  "updated_at": "2026-10-13"
+  "updated_at": "2026-10-21"
 }

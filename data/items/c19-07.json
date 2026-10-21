@@ -26,10 +26,14 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-21",
+      "note": "Refutation check: Federal Register API shows only the 2026-04-27 final rule; eCFR shows 49 CFR part 5 and 14 CFR part 302 current as of 2026-05-27 with no later change, and no suit or repeal was found. Verdict holds; redteam entry replaced."
     }
   ],
   "id": "c19-07",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-21",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -39,6 +43,38 @@
   "position": "Introduction: DOT regulatory procedures",
   "progress": 100,
   "proposal": "The Mandate recommends that DOT return to the first-term administrative rulemaking, guidance and enforcement procedures rule implemented in late 2019 (RIN 2105-AE84), which the prior administration moved away from, and revive it without delay. It says the rule strengthened efforts to remove outdated regulations, find cost-saving reforms and treat guidance documents as guidance rather than mandatory requirements.",
+  "redteam": {
+    "date": "2026-10-21",
+    "evidence": [
+      {
+        "date": "2026-10-21",
+        "note": "Only the 2026-04-27 final rule appears for that title; no correction or repeal.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Administrative+Rulemaking%2C+Guidance%2C+and+Enforcement+Procedures%22&conditions[publication_date][gte]=2026-04-27"
+      },
+      {
+        "date": "2026-05-27",
+        "note": "Part 5 sections current as of 2026-05-27, none removed.",
+        "source": "eCFR",
+        "url": "https://www.ecfr.gov/api/versioner/v1/versions/title-49?part=5"
+      },
+      {
+        "date": "2026-05-27",
+        "note": "Section 302.16 amended 2026-05-27; no later changes.",
+        "source": "eCFR",
+        "url": "https://www.ecfr.gov/api/versioner/v1/versions/title-14?part=302"
+      },
+      {
+        "date": "2026-04-27",
+        "note": "Copy of the final rule, effective 2026-05-27; establishes 49 CFR part 5.",
+        "source": "DOT",
+        "url": "https://www.transportation.gov/sites/dot.gov/files/2026-09/Administrative%20Rulemaking%2C%20Guidance%2C%20and%20Enforcement%20Procedures.pdf"
+      }
+    ],
+    "note": "Rule is codified and in force since 2026-05-27 with no amendment, suit or repeal found.",
+    "verdict": "holds",
+    "what_was_tested": "Federal Register API for the rule title after 2026-04-27; eCFR version history for 49 CFR part 5 and 14 CFR part 302; search for lawsuits, corrections or amendments; the published rule PDF."
+  },
   "related_ids": [
     "c19-08"
   ],
@@ -152,5 +188,5 @@
   "title": "Restore DOT's 2019 rule on rules for rulemaking, guidance and enforcement",
   "tracked": true,
   "uncertainties": "The final rule was read in part (background and section 5.1). It refers to the April 2021 rescission rule rather than naming the December 2019 rule, so the link to RIN 2105-AE84 rests on the matching title and on the 2021 rule having rescinded those procedures. Later application of the procedures in individual rulemakings was not checked.",
-  "updated_at": "2026-10-13"
+  "updated_at": "2026-10-21"
 }

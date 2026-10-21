@@ -41,6 +41,10 @@
     {
       "date": "2026-10-19",
       "note": "Systematic absence check completed with the USDA and HHS Unified Agenda lists read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; not_started kept; confidence 60 to 64."
+    },
+    {
+      "date": "2026-10-21",
+      "note": "Review label pass (task B17): 4 source check results that reported no qualifying action were relabeled from does_not_support to supports, because for a not_started record the documented absence is what supports the stage; no evidence, stage or confidence changed."
     }
   ],
   "id": "c10-02",
@@ -94,7 +98,7 @@
       },
       {
         "note": "Systematic check 1: Phrase Food and Nutrition Administration: 44 documents, mostly 2026-09-15 and 2026-10-02 notices on state SNAP demonstration projects plus a Privacy Act notice; no document announcing a transfer to HHS. Terms reorganization nutrition programs, agency agriculture-department: 8 documents (SNAP retailer stocking standards, WIC food package revision, NEPA and financial assistance rules); none moves programs to HHS. A third query with the agency filter for the Food and Nutrition Service and HHS terms failed (URL too long) and was not rerun. checked 2026-10-18.",
-        "result": "does_not_support",
+        "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"Food+and+Nutrition+Administration\"&conditions[publication_date][gte]=2025-01-20&per_page=20"
       },
       {
@@ -104,7 +108,7 @@
       },
       {
         "note": "Systematic check 3: One search limited to congress.gov and govinfo.gov (transfer SNAP WIC school meals to HHS, eliminate Food and Nutrition Service): hits were H.R. 5950 and S. 3071 and S. 3024 (Keep SNAP and WIC Funded Act of 2025, shutdown funding), H.R. 2680 (school meals access) and H.R. 5836 (Keep WIC Working Act); none transfers programs to HHS. U.S. Code note for 7 U.S.C. 2011 (Food and Nutrition Act) shows no 119th Congress amendment (latest P.L. 118-5; the page ended mid-text, so not conclusive). P.L. 119-21 SNAP changes (cost share and work requirements) are not a transfer. checked 2026-10-18.",
-        "result": "does_not_support",
+        "result": "supports",
         "url": "https://www.congress.gov/bill/119th-congress/house-bill/5950"
       },
       {
@@ -119,12 +123,12 @@
       },
       {
         "note": "Reviewer re-check, 2026-10-18: opened: byline 2018-06-21; describes the 2018 OMB reorganization plan moving WIC to HHS and House passage of H.R. 2 (2018) by 213 to 211; not a 2025 or 2026 action.",
-        "result": "does_not_support",
+        "result": "supports",
         "url": "https://www.nwica.org/blog/washington-update-trump-administration-proposes-moving-wic-to-hhs-imposing-work-requirements-and-house-passes-partisan-farm-bill"
       },
       {
         "note": "Reviewer re-check, 2026-10-18: phrases Food and Nutrition Administration and Health and Human Services with transfer, all agencies, since 2025-01-20: count 1, the 2026 Unified Agenda introduction; no transfer document.",
-        "result": "does_not_support",
+        "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"Food+and+Nutrition+Administration\"+\"Health+and+Human+Services\"+transfer&conditions[publication_date][gte]=2025-01-20&per_page=20"
       },
       {
@@ -298,5 +302,5 @@
   "title": "Move USDA food and nutrition programs to HHS and eliminate the Food and Nutrition Service",
   "tracked": true,
   "uncertainties": "The not_started stage rests on absence of evidence. No bill, order or rule moving SNAP, WIC or school meals to HHS or eliminating the Food and Nutrition Service was found; the April 2026 reorganization renames FNS the Food and Nutrition Administration and keeps all programs at USDA. The USDA and HHS Unified Agenda rule lists on reginfo.gov (Agency Rule List - 2026) carry no transfer entry, though a transfer would need legislation or a reorganization rather than a rule. The FNS newsroom could not be read, and a bill not covered in news could have been missed. Not_started versus diverged remains a judgment, since USDA reorganized the agency on a different design. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-10-21"
 }
