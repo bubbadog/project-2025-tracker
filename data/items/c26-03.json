@@ -1,12 +1,18 @@
 {
   "agency": "CBP / White House (customs)",
   "blockers": [
-    "Possible appeal of Axle of Dearborn v. Department of Commerce (Court of International Trade, Slip Op. 26-94, decided 2026-08-13, upholding the suspension); the ruling is reported as subject to appeal, and an appeal would mainly affect duties paid on low-value shipments from 2025-08-29 to the statutory end date."
+    "Any appeal of Axle of Dearborn v. Department of Commerce (Court of International Trade, Slip Op. 26-94, decided 2026-08-13, upholding the suspension); no appeal was found as of 2026-10-22, and an appeal would mainly affect duties paid on low-value shipments from 2025-08-29 to the statutory end date."
   ],
   "chapter": "26",
-  "confidence": 82,
+  "confidence": 84,
   "confidence_label": "high",
-  "confidence_reason": "Text checked; the de minimis executive orders and CBP rules are primary and read, and the statutory end date is now stated in a primary CBP document, though Section 70531 itself was not read.",
+  "confidence_reason": "The 2026-10-22 CBP final rule was fetched from the Federal Register and confirms the suspension remains operative; the executive orders were read in earlier reviews, the 2027-07-01 end date is stated in CBP's 2026-10-08 proposed rule, and the court ruling rests on a reputable report. Section 70531, the 2026-06-24 interim final rules and the court's slip opinion were not read directly.",
+  "court_status": {
+    "basis": "The Court of International Trade granted summary judgment to the government in Axle of Dearborn v. Department of Commerce (Slip Op. 26-94), upholding the presidential suspension of duty-free de minimis treatment, as reported by Alvarez & Marsal; no appeal was found.",
+    "date": "2026-08-13",
+    "state": "upheld",
+    "url": "https://www.alvarezandmarsal.com/thought-leadership/uscit-upholds-ieepa-suspension-of-de-minimis-treatment-in-axle-of-dearborn"
+  },
   "durability": {
     "level": "medium",
     "why": "The current suspension rests on an executive order, while the statutory change is law but takes effect only in mid-2027."
@@ -31,10 +37,14 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to new layer 3 record(s) c26-16 from the fuller reading of chapters 24 to 27."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Independent review confirmed the 2026-10-22 CBP postal compliance-date rule on federalregister.gov and kept the implemented stage; review trimmed the summary, added an upheld court status for the 2026-08-13 Court of International Trade ruling reported by Alvarez & Marsal, and reworded the appeal blocker since no appeal was found."
     }
   ],
   "id": "c26-03",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-22",
   "layer": 1,
   "match": "direct",
   "mechanism": "mixed",
@@ -72,25 +82,33 @@
     "c26-16"
   ],
   "remaining": [
-    "Statutory termination of the de minimis privilege takes effect (reported as 2027-07-01)",
-    "Clarity on the legal basis of the executive suspension after the IEEPA ruling (not verified whether it has been challenged)"
+    "Statutory termination of the de minimis privilege takes effect (stated by CBP as 2027-07-01).",
+    "Formal-entry requirements for certain postal shipments take effect on the extended compliance date of 2027-01-20.",
+    "Clarity on the legal basis of the executive suspension after the IEEPA ruling; the Court of International Trade upheld it on 2026-08-13 and no appeal was found."
   ],
   "requires_congress": "partial",
   "research_agent": "A15",
   "review": {
     "flags": [
-      "Event reworded with the de minimis link from the rule text; uncertainties updated since the 2027-07-01 date now has a primary source."
+      "court_status was absent although a court event exists; added as upheld",
+      "blocker said the ruling was reported as subject to appeal; the cited report does not say so, reworded",
+      "summary trimmed from 7 to 4 sentences; unsourced EO 14256 detail moved to uncertainties"
     ],
-    "mandate_check": "verified",
-    "mandate_note": "p.789 recommends stopping China's use of the de minimis exemption; the CBP rule is a follow-on processing step for low-value shipments generally.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-2",
+    "mandate_check": "not_checked",
+    "mandate_note": "The recommendation text was taken from the record's proposal and page (p. 789: stop China's use of the de minimis exemption) since the chapter text was not opened in this review; the 2026-10-13 review verified the paraphrase. The global suspension goes beyond the China-specific recommendation, which the summary states.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-22",
+    "reviewer": "independent",
     "source_checks": [
       {
-        "note": "Fetched (first 100,000 characters): CBP NPRM 91 FR 64532, comments due 2026-12-07; type 11 and new type 13 entries, broker and bond rules; cites EO 14324 and EO 14388; states the de minimis exemption ends 2027-07-01 under the 2025 law. No China-specific provisions seen.",
+        "note": "91 FR 66638, RIN 1685-AA45, published 2026-10-22: extends the 19 CFR 145.12(a)(2)(v) and (vi) compliance date from 2026-10-22 to 2027-01-20 under good cause; states the suspension took effect 2026-06-24 (IFR 91 FR 37801) and stays in place; cites EO 14324 and EO 14388. Supports an operative executive suspension (implemented).",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20650/low-value-shipments"
+        "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21600/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry"
+      },
+      {
+        "note": "Dated 2026-08-13: CIT Slip Op. 26-94 grants the government summary judgment upholding the suspension; states the statutory exemption is repealed 2027-07-01 and CBP's 2026-06-24 interim rules suspend it indefinitely; says nothing about an appeal of Axle itself.",
+        "result": "supports",
+        "url": "https://www.alvarezandmarsal.com/thought-leadership/uscit-upholds-ieepa-suspension-of-de-minimis-treatment-in-axle-of-dearborn"
       }
     ]
   },
@@ -156,10 +174,24 @@
       "publisher": "Federal Register (CBP)",
       "title": "Low-Value Shipments (CBP proposed rule, 91 FR 64532)",
       "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20650/low-value-shipments"
+    },
+    {
+      "date": "2026-10-22",
+      "kind": "primary",
+      "publisher": "Federal Register / U.S. Customs and Border Protection",
+      "title": "Indefinite Suspension of the De Minimis Exemption for Mail Shipments and New Postal Informal Entry (final rule extending compliance date, 91 FR 66638)",
+      "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21600/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry"
+    },
+    {
+      "date": "2026-08-13",
+      "kind": "news",
+      "publisher": "Alvarez & Marsal",
+      "title": "USCIT upholds IEEPA suspension of de minimis treatment in Axle of Dearborn",
+      "url": "https://www.alvarezandmarsal.com/thought-leadership/uscit-upholds-ieepa-suspension-of-de-minimis-treatment-in-axle-of-dearborn"
     }
   ],
   "stage": "implemented",
-  "status_summary": "The administration went further than the recommendation. Executive Order 14256 (2025-04-02) ended duty-free de minimis treatment for goods from China effective 2025-05-02, and later April 2025 orders raised the duties on those low-value shipments. Executive Order 14324 (signed 2025-07-30, 90 FR 37775) suspended duty-free de minimis treatment for all countries, effective 2025-08-29 according to later Federal Register documents. Executive Order 14388 (2026-02-20) kept the suspension in force after the Supreme Court ruling on IEEPA tariffs, citing IEEPA and other authorities, and Executive Order 14389 states that the suspension is unaffected by its ending of IEEPA duties. On 2026-06-24 CBP published interim final rules implementing an indefinite suspension of the de minimis exemption for all modes, including mail. Public Law 119-21 (Section 70531) modifies the statutory de minimis privilege; a secondary source reports the statutory exemption ends 2027-07-01.",
+  "status_summary": "Executive Order 14266 (2025-04-09) raised duties on low-value shipments from China as part of closing de minimis treatment for China, and Executive Order 14324 (signed 2025-07-30) suspended duty-free de minimis treatment for all countries effective 2025-08-29, which goes beyond the China-focused recommendation. Executive Order 14388 (2026-02-20) kept the suspension in force after the Supreme Court ruling on IEEPA tariffs, Executive Order 14389 states that the suspension is unaffected by its ending of IEEPA duties, and on 2026-08-13 the Court of International Trade upheld the suspension in Axle of Dearborn v. Department of Commerce, as reported by Alvarez & Marsal. CBP implemented an indefinite suspension by interim final rules of 2026-06-24, and on 2026-10-22 it moved the compliance date for formal entry of certain postal shipments to 2027-01-20 without changing the suspension. Public Law 119-21 (Section 70531) modifies the statutory de minimis privilege, and CBP's proposed rule of 2026-10-08 states that the statutory exemption ends 2027-07-01.",
   "timeline": [
     {
       "date": "2025-04-09",
@@ -209,10 +241,17 @@
       "kind": "primary",
       "source": "Federal Register (CBP)",
       "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20650/low-value-shipments"
+    },
+    {
+      "date": "2026-10-22",
+      "event": "CBP publishes a final rule (91 FR 66638, RIN 1685-AA45), issued without notice and comment under the good-cause exception, extending the compliance date for formal entry of postal shipments subject to partner agency requirements, Chapter 98 or 99 duties, or certain duty-free claims under 19 CFR 145.12(a)(2)(v) and (vi) from 2026-10-22 to 2027-01-20; the de minimis suspension and the informal postal entry process from the 2026-06-24 interim final rule (91 FR 37801) stay in place.",
+      "kind": "primary",
+      "source": "Federal Register (CBP)",
+      "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21600/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry"
     }
   ],
   "title": "End the de minimis exemption that lets low-value Chinese shipments avoid tariffs",
   "tracked": true,
-  "uncertainties": "The 2027-07-01 statutory end date is reported by Alvarez & Marsal and Wikipedia and stated in CBP's 2026-10-08 proposed rule, but the text of Section 70531 was not read. The 2025-08-29 start of the global suspension rests on Federal Register records and secondary sources. The initial China-only order (Executive Order 14256) was not read; its details are inferred from Executive Order 14266. Whether the Court of International Trade ruling has been appealed was not found.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The 2027-07-01 statutory end date is stated in CBP's 2026-10-08 proposed rule and reported by Alvarez & Marsal and Wikipedia, but the text of Section 70531 was not read. The 2025-08-29 start of the global suspension rests on the order text and Federal Register records. Executive Order 14256 (2025-04-02), which earlier record text describes as ending duty-free de minimis treatment for goods from China effective 2025-05-02, was not read; the China-specific steps rest on Executive Order 14266. The 2026-06-24 interim final rules were not read directly; they are known through the 2026-10-22 final rule, which cites 91 FR 37801, and the Alvarez & Marsal report. The 2026-10-22 final rule was read through a summary of its Federal Register page; it cites 19 U.S.C. 1321 and Executive Orders 14324 and 14388 but not Public Law 119-21. The Alvarez & Marsal report on the Court of International Trade ruling does not say whether that ruling was appealed, and a search on 2026-10-22 found no appeal; the court's slip opinion was not read.",
+  "updated_at": "2026-10-22"
 }

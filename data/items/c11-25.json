@@ -28,10 +28,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Refutation check on 2026-10-22 found GEN-25-03 still superseding GEN-22-10 and GEN-22-11 and the GEN-22-11 page still marked historical, with no final accreditation rule and still no sign of the 2022-07-19 accreditor letter being withdrawn; Federal Register API, Partner Connect pages and two searches."
     }
   ],
   "id": "c11-25",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -41,6 +45,44 @@
   "position": "Federal Student Aid and Office of Postsecondary Education",
   "progress": 70,
   "proposal": "The Mandate recommends that the next Administration rescind Dear Colleague Letters GEN 22-11 and GEN 22-10 and the Department's letters to accreditation agencies dated July 19, 2022, which it describes as attempts to undercut Florida's SB 7044, a state law giving universities more flexibility on accreditation (p. 332).",
+  "redteam": {
+    "date": "2026-10-22",
+    "evidence": [
+      {
+        "date": "2026-10-22",
+        "note": "58 results on page 1 (newest first), none an Education Department final accreditation rule or withdrawal notice; the 2026-08-20 NPRM remains the latest Education action found.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=accrediting+agencies&conditions[publication_date][gte]=2026-08-20"
+      },
+      {
+        "date": "2025-05-01",
+        "note": "GEN-25-03 still published and still states that it supersedes GEN-22-10 and GEN-22-11; no later revision noted.",
+        "source": "Federal Student Aid Partner Connect",
+        "url": "https://fsapartners.ed.gov/knowledge-center/library/dear-colleague-letters/2025-04-30/changes-approval-process-changing-accrediting-agencies"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "GEN-22-11 page still carries a banner that it is maintained for historical purposes and is not currently applicable; the page does not mention the letter to accreditors.",
+        "source": "Federal Student Aid Partner Connect",
+        "url": "https://fsapartners.ed.gov/knowledge-center/library/dear-colleague-letters/2022-07-19/procedures-institutions-seeking-approval-request-change-or-add-accrediting-agencies-updated-sept-26-2022"
+      },
+      {
+        "date": "2026-08-01",
+        "note": "Search for a final accreditation rule returned only NPRM-stage commentary (month only); no final rule found.",
+        "source": "Foley Hoag",
+        "url": "https://www.foleyhoag.com/news-and-insights/publications/alerts-and-updates/2026/august/u-s-department-of-education-proposes-sweeping-overhaul-of-higher-education-accreditation-system/"
+      },
+      {
+        "date": "2022-08-22",
+        "note": "Search for rescission of the 2022-07-19 accreditor letter found only 2022 commentary; no withdrawal notice located.",
+        "source": "Faegre Drinker",
+        "url": "https://www.faegredrinker.com/en/insights/publications/2022/8/us-department-of-education-issues-three-accreditation-guidance-documents"
+      }
+    ],
+    "note": "The two Dear Colleague letters remain superseded and GEN-22-11 remains marked historical. Withdrawal of the 2022-07-19 letter to accrediting agencies was again not found, so the known open point stands. No final rule yet.",
+    "verdict": "holds",
+    "what_was_tested": "Federal Register API for accrediting agencies since 2026-08-20 (any final rule or withdrawal); re-fetch of GEN-25-03 and GEN-22-11 pages; two searches on withdrawal of the 2022-07-19 accreditor letter and on a final accreditation rule."
+  },
   "related_ids": [
     "c11-10"
   ],
@@ -170,5 +212,5 @@
   "title": "Rescind Dear Colleague Letters GEN 22-10 and 22-11 and the 2022 letters to accreditors",
   "tracked": true,
   "uncertainties": "The GEN-25-03 page URL carries 2025-04-30 while the page prints 2025-05-01; the printed date is used. The 2022 page read is GEN-22-11 (confirmed on its own page); the GEN-22-10 page was not opened, so its banner status is inferred from the supersession statement in GEN-25-03. GEN-25-03 does not mention the 2022-07-19 letter to accrediting agencies on voluntary membership, and the 2026 proposed rule discusses voluntary membership in its section 602.13 and 602.15 proposals without naming the 2022 letter, in the portion read. Searches: fsapartners.ed.gov and federalregister.gov terms on the GEN letters and the accreditation proposed rule (researcher); one search on withdrawal of the July 2022 letter to accreditors (reviewer), which returned only 2022 commentary and Florida litigation filings. Accreditation reform generally is in c11-10.",
-  "updated_at": "2026-10-15"
+  "updated_at": "2026-10-22"
 }
