@@ -7,7 +7,7 @@
   "chapter": "05",
   "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked at pages 143 to 145 and 151. The 2026-10-14 final rule (91 FR 65306) was reread in part on federalregister.gov in this review and a Federal Register API listing of recent DHS final rules showed the three proposals still unfinalized; the California ruling rests on one Bloomberg Law report and the USCIS referral targets on a tracker, and the structural items were not found, so confidence stays medium.",
+  "confidence_reason": "Chapter text checked at pages 143 to 145 and 151. The 2026-10-14 final rule (91 FR 65306) was reread in part on federalregister.gov in this review and a Federal Register API listing of recent DHS final rules showed the three proposals still unfinalized; the California ruling rests on one Bloomberg Law report, the reported USCIS referral targets are unverified, and the structural items were not found. Rule applied: the stage-deciding rules were opened, but facts known only through news reports cap the record at 79, so confidence stays medium at 74.",
   "court_status": {
     "basis": "Latest court event: on 2026-09-11 Judge David O. Carter (C.D. Cal., Jane Doe v. Department of Homeland Security, No. 8:26-cv-00060) held, per Bloomberg Law, that DHS had not justified skipping notice and comment for the 2025 interim final rule on automatic work-permit extensions and that the rule should be set aside as to the seven plaintiffs only; the rule was not vacated generally, and DHS then adopted it as a final rule effective 2026-10-14 after notice and comment. Further proceedings and the effect of the final rule on the case were not found. No injunction or vacatur of the law-enforcement authorities rule or the H.R. 1 fee rule was found.",
     "date": "2026-09-11",
@@ -46,10 +46,14 @@
     {
       "date": "2026-10-17",
       "note": "Independent review reread the 2026-10-14 final rule in part on federalregister.gov and checked a Federal Register listing of recent DHS final rules, found no finalized proposal, and kept the stage at in_progress 58 with confidence unchanged at 74."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Source cleanup: the December 2025 denaturalization referral entry, which rested on an advocacy tracker's summary of a news article, was removed with its source because the stage does not depend on it; the reported USCIS target of 100 to 200 cases a month in FY2026 is now stated in uncertainties as reported by a regional news outlet but unverified. Stage, progress and confidence (74) are unchanged."
     }
   ],
   "id": "c05-11",
-  "last_checked": "2026-10-17",
+  "last_checked": "2026-10-22",
   "layer": 2,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -94,13 +98,18 @@
     "mandate_check": "ok",
     "mandate_note": "Page 143 calls for returning USCIS to vetting and restructuring FDNS so field staff report to headquarters; page 144 calls for a denaturalization effort with DOJ, a criminal enforcement component prosecuting through special assistant U.S. attorneys and FLETC training; page 145 calls for shorter work-permit validity and an end to COVID flexibilities including biometrics reuse; page 151 calls for limiting work authorization. The proposal paraphrase matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-17",
+    "reviewed_at": "2026-10-22",
     "reviewer": "P17-B",
     "source_checks": [
       {
         "note": "Federal Register API listing of DHS final rules; the visible part (2026-09-02 to 2026-10-19) shows no final biometrics, asylum-applicant or discretionary work-permit rule; other new DHS rules of 2026-10-14 (civil penalties, refugee termination notice) were not assessed.",
         "result": "partial",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=homeland-security-department&conditions[type][]=RULE&conditions[publication_date][gte]=2026-06-01&per_page=100&order=newest"
+      },
+      {
+        "note": "Opened 2026-10-22: regional news report dated 2025-12-18 (byline Ernice Gilbert) citing internal USCIS documents for a plan of 100 to 200 denaturalization cases a month from FY2026 and the 2025-06-11 DOJ Civil Division memo; no field-office or Office of Immigration Litigation detail and no results. Does not bear on in_progress, which rests on the Federal Register rules; under the cleanup fallback the target is stated in uncertainties as unverified and the outlet is not added as a source.",
+        "result": "partial",
+        "url": "https://viconsortium.com/vi-federal/virgin-islands-federal-agencies-prepare-sharp-increase-in-citizenship-revocation-cases-in-2026"
       }
     ],
     "stage_change_reason": "in_progress kept: the enforcement-authorities rule and the work-permit extension rule are operative, while the biometrics, asylum-applicant and discretionary work-permit proposals remain unfinalized and the structural items were not found, so the objective is formally underway and partly operative; progress 58 sits in band."
@@ -138,13 +147,6 @@
       "publisher": "Federal Register",
       "title": "Collection and Use of Biometrics by U.S. Citizenship and Immigration Services",
       "url": "https://www.federalregister.gov/documents/2025/11/03/2025-19747/collection-and-use-of-biometrics-by-us-citizenship-and-immigration-services"
-    },
-    {
-      "date": "2025-12-17",
-      "kind": "tracker",
-      "publisher": "Immigration Policy Tracking Project",
-      "title": "USCIS reportedly set to escalate denaturalization case referrals",
-      "url": "https://immpolicytracking.org/policies/uscis-reportedly-set-to-escalate-denaturalization-case-referrals/"
     },
     {
       "date": "2026-02-23",
@@ -197,7 +199,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "A DHS final rule published 2025-09-05 (effective 2025-10-06) codifies law-enforcement authorities that the Homeland Security Secretary delegated to the USCIS Director in May 2025, covering investigations, warrants, arrests and firearms; it was issued without notice and comment. An interim final rule effective 2025-10-30 (90 FR 48799) ended automatic extensions of expiring work permits for renewals filed on or after that date, citing vetting; DHS adopted it without change as a final rule published and effective 2026-10-14 (91 FR 65306), after a federal court in California (Jane Doe v. Department of Homeland Security, No. 8:26-cv-00060) ruled on 2026-09-11, per Bloomberg Law, that DHS had not justified skipping notice and comment, with relief limited to seven plaintiffs. An interim final rule published 2026-04-29 (FR document 2026-08333, corrected 2026-07-21) codifies provisions of the 2025 reconciliation law (H.R. 1), including new asylum-related fees and a limit on the validity period of certain work permits (for TPS holders, one year or the period of status, per a Federal Register search excerpt of the rule). Three proposed rules were not final as of 2026-10-17 as far as found: universal biometrics collection with no age limit and a DNA option (published 2025-11-03, comments closed 2026-01-02), limits on work permits for asylum applicants (2026-02-23, comments closed 2026-04-24), and stricter discretionary work permits for parolees, deferred-action recipients and people on orders of supervision (2026-06-05, comments closed 2026-08-04). On 2025-06-11 the Justice Department's Civil Division issued a memorandum, Civil Division Enforcement Priorities, whose section 5 directs the division to pursue denaturalization cases where the law and evidence permit, listing ten priority categories; a policy tracker summarizing a New York Times report says USCIS field offices were told in December 2025 to refer 100 to 200 denaturalization cases a month to DOJ in FY2026; restructuring of the fraud directorate, FLETC training and a standing denaturalization unit were not verified.",
+  "status_summary": "A DHS final rule published 2025-09-05 (effective 2025-10-06) codifies law-enforcement authorities that the Homeland Security Secretary delegated to the USCIS Director in May 2025, covering investigations, warrants, arrests and firearms; it was issued without notice and comment. An interim final rule effective 2025-10-30 (90 FR 48799) ended automatic extensions of expiring work permits for renewals filed on or after that date, citing vetting; DHS adopted it without change as a final rule published and effective 2026-10-14 (91 FR 65306), after a federal court in California (Jane Doe v. Department of Homeland Security, No. 8:26-cv-00060) ruled on 2026-09-11, per Bloomberg Law, that DHS had not justified skipping notice and comment, with relief limited to seven plaintiffs. An interim final rule published 2026-04-29 (FR document 2026-08333, corrected 2026-07-21) codifies provisions of the 2025 reconciliation law (H.R. 1), including new asylum-related fees and a limit on the validity period of certain work permits (for TPS holders, one year or the period of status, per a Federal Register search excerpt of the rule). Three proposed rules were not final as of 2026-10-17 as far as found: universal biometrics collection with no age limit and a DNA option (published 2025-11-03, comments closed 2026-01-02), limits on work permits for asylum applicants (2026-02-23, comments closed 2026-04-24), and stricter discretionary work permits for parolees, deferred-action recipients and people on orders of supervision (2026-06-05, comments closed 2026-08-04). On 2025-06-11 the Justice Department's Civil Division issued a memorandum, Civil Division Enforcement Priorities, whose section 5 directs the division to pursue denaturalization cases where the law and evidence permit, listing ten priority categories; restructuring of the fraud directorate, FLETC training and a standing denaturalization unit were not verified.",
   "timeline": [
     {
       "date": "2025-06-11",
@@ -226,13 +228,6 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/11/03/2025-19747/collection-and-use-of-biometrics-by-us-citizenship-and-immigration-services"
-    },
-    {
-      "date": "2025-12-17",
-      "event": "A policy tracker summarizing a New York Times article of this date reports that USCIS field offices were directed to send the DOJ Office of Immigration Litigation 100 to 200 denaturalization cases per month in FY2026; a USCIS spokesperson said the agency would prioritize people who unlawfully obtained citizenship. The tracker's page does not say whether the guidance was a memo.",
-      "kind": "tracker",
-      "source": "Immigration Policy Tracking Project",
-      "url": "https://immpolicytracking.org/policies/uscis-reportedly-set-to-escalate-denaturalization-case-referrals/"
     },
     {
       "date": "2026-02-23",
@@ -272,6 +267,6 @@
   ],
   "title": "Refocus USCIS on vetting and fraud: enforcement powers, biometrics, work permits",
   "tracked": true,
-  "uncertainties": "The DOJ side of the denaturalization item is now documented by the Civil Division memorandum of 2025-06-11 (read on justice.gov), but the USCIS referral targets still rest on a policy tracker's summary of a New York Times article that was not read; the tracker does not say whether the guidance was a memo, and it lists DOJ results (cases filed and won) that were not verified. Not found: whether any of the three proposed rules was finalized after its comment period, and USCIS's own pages could not be fetched. Only the first part of the long Federal Register pages for the interim rule and the biometrics proposal was read. The Mandate items on the fraud directorate, FLETC training, and a denaturalization unit were not located, which does not prove they have not happened. Progress of 58 weighs operative rules against three unfinished proposals and several unverified structural items. Searches run: one news search on denaturalization referrals; Federal Register queries on USCIS rules. Freshness pass of 2026-10-16: the Federal Register API was searched for USCIS rules and proposed rules from 2026-06-06 and for employment-authorization rules and proposed rules; the only final rule within scope was the 2026-10-14 adoption of the automatic-extension interim rule, and no final biometrics, asylum-applicant work-permit or discretionary work-permit rule was found. The 2026-09-11 California ruling rests on a Bloomberg Law report (opened 2026-10-16, naming the case and judge); the court record was not reachable, a search for the case number on 2026-10-16 found no court opinion copy, and the visible parts of the final rule's Federal Register text do not mention the case. A law-firm alert also described the order as limited to the plaintiffs. A separate District of Columbia suit against the interim rule (Jane Doe v. U.S. Citizenship and Immigration Services), filed 2026-04-20, is shown closed on the plaintiffs' counsel page; it is distinct from the California case. No court challenge to the 2025 law-enforcement authorities rule was found in one news search. Newer proposed rules published 2026-10-14 (removing deference to prior USCIS determinations) and 2026-10-08 (optional practical training fees) were noted but not assessed against the Mandate text. A July 2025 announcement of USCIS special agents was not separately verified on a primary host. Review of 2026-10-17: the 2026-10-14 final rule was reread on federalregister.gov through about 100,000 of 121,000 characters (citation, RIN, docket, adoption without change and 653 comment submissions confirmed; the closing part, which could mention litigation, was not read), and a Federal Register API listing of DHS final rules published from 2026-09-02 to 2026-10-19 showed no final biometrics, asylum-applicant work-permit or discretionary work-permit rule; the June to August 2026 part of that listing was not visible.",
-  "updated_at": "2026-10-17"
+  "uncertainties": "The DOJ side of the denaturalization item is now documented by the Civil Division memorandum of 2025-06-11 (read on justice.gov), but a reported USCIS target of 100 to 200 denaturalization cases a month starting in FY2026 is unverified: it was reported by a regional news outlet (viconsortium.com, 2025-12-18) citing internal USCIS documents that were not seen, a New York Times article of 2025-12-17 on the subject could not be opened, and the form of any directive and any DOJ results (cases filed and won) were not verified. Not found: whether any of the three proposed rules was finalized after its comment period, and USCIS's own pages could not be fetched. Only the first part of the long Federal Register pages for the interim rule and the biometrics proposal was read. The Mandate items on the fraud directorate, FLETC training, and a denaturalization unit were not located, which does not prove they have not happened. Progress of 58 weighs operative rules against three unfinished proposals and several unverified structural items. Searches run: one news search on denaturalization referrals; Federal Register queries on USCIS rules. Freshness pass of 2026-10-16: the Federal Register API was searched for USCIS rules and proposed rules from 2026-06-06 and for employment-authorization rules and proposed rules; the only final rule within scope was the 2026-10-14 adoption of the automatic-extension interim rule, and no final biometrics, asylum-applicant work-permit or discretionary work-permit rule was found. The 2026-09-11 California ruling rests on a Bloomberg Law report (opened 2026-10-16, naming the case and judge); the court record was not reachable, a search for the case number on 2026-10-16 found no court opinion copy, and the visible parts of the final rule's Federal Register text do not mention the case. A law-firm alert also described the order as limited to the plaintiffs. A separate District of Columbia suit against the interim rule (Jane Doe v. U.S. Citizenship and Immigration Services), filed 2026-04-20, is shown closed on the plaintiffs' counsel page; it is distinct from the California case. No court challenge to the 2025 law-enforcement authorities rule was found in one news search. Newer proposed rules published 2026-10-14 (removing deference to prior USCIS determinations) and 2026-10-08 (optional practical training fees) were noted but not assessed against the Mandate text. A July 2025 announcement of USCIS special agents was not separately verified on a primary host. Review of 2026-10-17: the 2026-10-14 final rule was reread on federalregister.gov through about 100,000 of 121,000 characters (citation, RIN, docket, adoption without change and 653 comment submissions confirmed; the closing part, which could mention litigation, was not read), and a Federal Register API listing of DHS final rules published from 2026-09-02 to 2026-10-19 showed no final biometrics, asylum-applicant work-permit or discretionary work-permit rule; the June to August 2026 part of that listing was not visible.",
+  "updated_at": "2026-10-22"
 }

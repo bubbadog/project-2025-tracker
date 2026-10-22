@@ -4,7 +4,7 @@
   "chapter": "01",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked (pages 27 and 28). Justice Manual section 1-8.600 on justice.gov was fetched and read on 2026-10-18 and still carries the 2021 memorandum, which decides the DOJ side. The White House Counsel policy is attested only by a senators' letter and commentary relaying press reports, and the absence of any added channel rests on a limited search, so confidence stays medium.",
+  "confidence_reason": "Chapter text checked (pages 27 and 28). Justice Manual section 1-8.600 on justice.gov was fetched and read on 2026-10-18 and still carries the 2021 memorandum, which decides the DOJ side. The White House Counsel policy is attested only by a senators' letter, its reported terms rest on press reporting that was not opened, and the absence of any added channel rests on a limited search. Rule applied: high requires the stage-deciding primary text to be opened and read, and no primary text of the Counsel policy is available, so confidence stays medium at 72.",
   "durability": {
     "level": "low",
     "why": "Contact policies are internal memoranda issued by the White House Counsel and the Attorney General, and each administration has replaced its predecessor's."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift: Justice Manual section 1-8.600 (justice.gov) was re-read and still carries the 2021 memorandum; with no operative document adding channels and the Counsel policy not public, the stage moved from in_progress 35 to proposed 20 and confidence from 70 to 72."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Source cleanup: two newsletter-based entries were removed. The July 2026 entry on questions to the Acting Attorney General was dropped because no primary or news source confirmed that such questions were formally submitted, and the February 2025 entry on the reported terms of the White House Counsel policy was dropped because its only cited support was a newsletter commentary post; those terms, attributed to Washington Post reporting that was not opened, are now stated in uncertainties as unverified. Stage, progress and confidence (72) are unchanged."
     }
   ],
   "id": "c01-04",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-22",
   "layer": 2,
   "match": "partial",
   "mechanism": "agency_action",
@@ -64,13 +68,23 @@
     "mandate_check": "confirmed",
     "mandate_note": "Pages 27 and 28 describe the tradition of limiting contact to the Counsel's office and the Attorney General or Deputy Attorney General and ask the next Administration to reexamine it and consider additional channels. The proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-22",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
         "note": "Section 1-8.600 reproduces the 2021-07-21 memorandum in full, marked updated April 2022 (page modified 2022-04-06); no 2025 or 2026 revision referenced. Supports no DOJ-side change.",
         "result": "supports",
         "url": "https://www.justice.gov/jm/jm-1-8000-congressional-relations"
+      },
+      {
+        "note": "Opened in the 2026-10-22 pass: a newsletter commentary post dated 2025-02-17 that relays Washington Post reporting on the Counsel policy terms; consistent with the proposed stage but treated as a lead only, so its event and source entry were removed and the terms moved to uncertainties as unverified.",
+        "result": "partial",
+        "url": "https://www.execfunctions.org/p/the-white-house-counsel-and-the-adams"
+      },
+      {
+        "note": "Regional newspaper e-edition page found as a possible copy of reporting on the Counsel; it redirected to a gated host and could not be opened, so nothing about the proposed stage rests on it.",
+        "result": "unreachable",
+        "url": "https://tollbit.buffalonews.com/eedition/page_9b81dd2e-4e51-508e-aa41-5def5237c475.html"
       }
     ]
   },
@@ -116,13 +130,6 @@
       "url": "https://www.aol.com/ag-pam-bondi-promised-depoliticize-090841605.html"
     },
     {
-      "date": "2025-02-17",
-      "kind": "news",
-      "publisher": "Executive Functions",
-      "title": "The White House Counsel and the Adams Affair",
-      "url": "https://www.execfunctions.org/p/the-white-house-counsel-and-the-adams"
-    },
-    {
       "date": "2025-10-22",
       "kind": "news",
       "publisher": "Bloomberg Government",
@@ -149,17 +156,10 @@
       "publisher": "Office of Sen. Sheldon Whitehouse",
       "title": "Whitehouse and Blumenthal release on the Blanche nomination and unanswered FOIA requests",
       "url": "https://www.whitehouse.senate.gov/?p=16770"
-    },
-    {
-      "date": "2026-07-17",
-      "kind": "news",
-      "publisher": "Justice Connection",
-      "title": "Questions for the Record: Nomination of Todd Blanche to be U.S. Attorney General",
-      "url": "https://justiceconnection.substack.com/p/questions-for-the-record-nomination"
     }
   ],
   "stage": "proposed",
-  "status_summary": "A senators' letter of 2025-11-21 says the current White House Counsel adopted a new contacts policy with the Justice Department, and a commentary post of 2025-02-17 relaying Washington Post reporting says it lets the same four officials named in the 2021 policy (the President, Vice President, Counsel and a Deputy Counsel) start contacts about specific cases; the policy itself is not public. On 2025-10-22 the nominee to lead the Criminal Division said a new DOJ contacts policy was forthcoming, and on 2025-10-24 he wrote that the existing policy had not been rescinded and remained in the Justice Manual (Bloomberg Government, 2025-10-29). Justice Manual section 1-8.600, read on justice.gov on 2026-10-18, still reproduces the Attorney General's memorandum of 2021-07-21 and shows no revision after April 2022, and senators said on 2026-06-25 that DOJ had not answered their records request on the policy. No document authorizing channels beyond the Counsel's office and the Attorney General or Deputy Attorney General was found, so the reexamination is reported but has no documented operative result.",
+  "status_summary": "A senators' letter of 2025-11-21 says the current White House Counsel adopted a new contacts policy with the Justice Department; the policy itself is not public, and its reported terms could not be confirmed from an opened primary or news source. On 2025-10-22 the nominee to lead the Criminal Division said a new DOJ contacts policy was forthcoming, and on 2025-10-24 he wrote that the existing policy had not been rescinded and remained in the Justice Manual (Bloomberg Government, 2025-10-29). Justice Manual section 1-8.600, read on justice.gov on 2026-10-18, still reproduces the Attorney General's memorandum of 2021-07-21 and shows no revision after April 2022, and senators said on 2026-06-25 that DOJ had not answered their records request on the policy. No document authorizing channels beyond the Counsel's office and the Attorney General or Deputy Attorney General was found, so the reexamination is reported but has no documented operative result.",
   "timeline": [
     {
       "date": "2021-07-21",
@@ -181,13 +181,6 @@
       "kind": "news",
       "source": "USA Today (via AOL)",
       "url": "https://www.aol.com/ag-pam-bondi-promised-depoliticize-090841605.html"
-    },
-    {
-      "date": "2025-02-17",
-      "event": "A commentary post citing The Washington Post says White House Counsel David Warrington issued a not-yet-public contacts policy that lets the President, Vice President, Counsel and a Deputy Counsel start contacts about any specific criminal or civil case or investigation.",
-      "kind": "news",
-      "source": "Executive Functions (commentary)",
-      "url": "https://www.execfunctions.org/p/the-white-house-counsel-and-the-adams"
     },
     {
       "date": "2025-10-22",
@@ -216,17 +209,10 @@
       "kind": "primary",
       "source": "Office of Sen. Sheldon Whitehouse",
       "url": "https://www.whitehouse.senate.gov/?p=16770"
-    },
-    {
-      "date": "2026-07-17",
-      "event": "A Justice Connection commentary post lists questions for the record to Blanche, including whether the Justice Manual contacts policy dated 2021-07-21 is still in force and whether he will commit to issuing a new one; it reports no answers.",
-      "kind": "news",
-      "source": "Justice Connection (commentary)",
-      "url": "https://justiceconnection.substack.com/p/questions-for-the-record-nomination"
     }
   ],
   "title": "Reexamine the White House Counsel and Attorney General contact policy with DOJ",
   "tracked": true,
-  "uncertainties": "The 2025 White House Counsel policy is not public. Its description rests on a commentary post that relays Washington Post reporting (the Post article was not read) and on a USA Today piece that does not identify the issuer of the Feb. 9 memo, so the memo's date, author and terms are unconfirmed; the senators' letter of 2025-11-21 confirms only that the current Counsel adopted a new policy and does not describe its contents, and it asks for records on 'the adoption of the previous administration's policy', which the record does not resolve. The Bloomberg Government articles are partly paywalled; the correction article states that the Justice Manual policy was not rescinded, but its text was read only in part. The Justice Manual page (section 1-8.600) was read on justice.gov on 2026-10-08 and still carries the 2021 memorandum, with the section marked updated April 2022 (Bloomberg Government's reference to a 2022 policy appears to reflect that update); a revision published elsewhere, or a policy not posted in the Manual, would not show there. No published DOJ policy replacing the 2021 one was found; the absence also rests on the senators' June 2026 release, the July 2026 questions for the record and web searches on Blanche, Bondi and Duva. Blanche's answers to the questions for the record were not found. The Justice Connection post and the Executive Functions post are commentary; the senators' release is a party press statement. Searches run: DOJ new policy contacts with White House 2026 and Blanche; Blanche hearing and contacts policy; Warrington memo; Justice Manual 1-8.000; Warrington memo contacts policy. Justice Manual section 1-8.600 (Communication with the White House) on justice.gov was re-read on 2026-10-08 and again on 2026-10-18: it still reproduces the Attorney General's 2021-07-21 memorandum in full, is marked updated April 2022 and cites no 2025 or 2026 revision. The Attorney General memoranda of 2025-02-05 listed on justice.gov include none on White House contacts, as far as their titles show.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The 2025 White House Counsel policy is not public. Its reported terms (that the President, Vice President, Counsel and a Deputy Counsel may each start contacts about any specific criminal or civil case or investigation) are attributed to Washington Post reporting of February 2025 that was not opened, so they are unverified; a USA Today piece does not identify the issuer of the Feb. 9 memo, so the memo's date, author and terms are unconfirmed; the senators' letter of 2025-11-21 confirms only that the current Counsel adopted a new policy and does not describe its contents, and it asks for records on 'the adoption of the previous administration's policy', which the record does not resolve. The Bloomberg Government articles are partly paywalled; the correction article states that the Justice Manual policy was not rescinded, but its text was read only in part. The Justice Manual page (section 1-8.600) was read on justice.gov on 2026-10-08 and still carries the 2021 memorandum, with the section marked updated April 2022 (Bloomberg Government's reference to a 2022 policy appears to reflect that update); a revision published elsewhere, or a policy not posted in the Manual, would not show there. No published DOJ policy replacing the 2021 one was found; the absence also rests on the senators' June 2026 release and web searches on Blanche, Bondi and Duva. Whether written questions put to Blanche in July 2026 addressed the policy, and any answers, could not be verified from a primary or news source. The senators' release is a party press statement. Searches run: DOJ new policy contacts with White House 2026 and Blanche; Blanche hearing and contacts policy; Warrington memo; Justice Manual 1-8.000; Warrington memo contacts policy. Justice Manual section 1-8.600 (Communication with the White House) on justice.gov was re-read on 2026-10-08 and again on 2026-10-18: it still reproduces the Attorney General's 2021-07-21 memorandum in full, is marked updated April 2022 and cites no 2025 or 2026 revision. The Attorney General memoranda of 2025-02-05 listed on justice.gov include none on White House contacts, as far as their titles show. Two searches on 2026-10-22 for the Washington Post report on the Counsel policy found no openable copy; a regional newspaper e-edition page that may reprint related reporting could not be opened.",
+  "updated_at": "2026-10-22"
 }
