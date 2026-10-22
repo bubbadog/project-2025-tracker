@@ -2,9 +2,9 @@
   "agency": "DHS Office of the Secretary",
   "blockers": [],
   "chapter": "05",
-  "confidence": 80,
-  "confidence_label": "high",
-  "confidence_reason": "Chapter text checked (page 138). The charter renewal notice (90 FR 11749, Doc. 2025-03856) was read in full on federalregister.gov and the 2025-01-20 termination memo was read in full from a hosted copy on 2026-10-18; the full replacement of members rests on the memo plus the swearing-in notice, with no roster read.",
+  "confidence": 79,
+  "confidence_label": "medium",
+  "confidence_reason": "Chapter text checked (page 138). The charter renewal notice (90 FR 11749, Doc. 2025-03856) was read in full on federalregister.gov, and the 2025-01-20 termination memo was read in full from a third-party copy (iptp-production.s3.amazonaws.com) on 2026-10-18 and re-opened in review on 2026-10-22; no official dhs.gov copy was found. Rule applied: the removal step rests only on a third-party copy of the deciding memo, which keeps the record at or below 79, so confidence moves from 80 to 79; the full replacement of members rests on the memo plus the swearing-in notice, with no roster read.",
   "durability": {
     "level": "low",
     "why": "Advisory committee membership is set by the Secretary and can change at any time."
@@ -34,10 +34,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift: the charter renewal notice and the June 2025 date-change notice (federalregister.gov) and the 2025-01-20 termination memo (hosted copy) were read; the 90 FR 11749 citation and the 2025-07-02 meeting date were added and confidence moved from 72 to 80, stage unchanged."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Source cleanup: the third-party copy of the 2025-01-20 DHS memorandum was kept, re-opened in review and retitled to name its host; a search of official DHS pages found no original. Because the removal step rests only on that copy, confidence moves from 80 to 79 (medium). Stage implemented and progress 78 unchanged."
     }
   ],
   "id": "c05-27",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -65,7 +69,7 @@
     "mandate_check": "confirmed",
     "mandate_note": "Page 138 asks the Secretary to plan to remove all current members of the Homeland Security Advisory Committee quickly and replace them as soon as feasible. The proposal matches; the text uses Committee for the body chartered as the Council.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-22",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
@@ -87,6 +91,16 @@
         "note": "Fetch failed on 2026-10-18; not cited.",
         "result": "unreachable",
         "url": "https://www.dhs.gov/news/2025/06/24/president-trump-announces-appointments-homeland-security-advisory-council"
+      },
+      {
+        "note": "Re-opened in review on 2026-10-22 (the researcher's re-open was blocked): third-party copy of the 2025-01-20 memo signed by the Acting Secretary to all members of DHS advisory committees; ends all current memberships effective immediately; former members may reapply; names no committee. Supports the implemented stage for the removal step; a third-party copy caps confidence at 79.",
+        "result": "supports",
+        "url": "https://iptp-production.s3.amazonaws.com/media/documents/2025.01.20_DHS_Memorandum_for_all_Members_of_Department_of_Homeland_Security_A_iBvPF7T.pdf"
+      },
+      {
+        "note": "Opened by the researcher only, not re-opened in review: a Reuters report republished 2025-01-21 on a market-news site gives the memo's date, signatory and scope but not the reapplication point or the Council by name. Corroboration only; not added to sources.",
+        "result": "partial",
+        "url": "https://uk.marketscreener.com/news/latest/US-Department-of-Homeland-Security-firing-all-advisory-committee-members-letter-says-48828013/"
       }
     ]
   },
@@ -122,8 +136,8 @@
     {
       "date": "2025-01-20",
       "kind": "primary",
-      "publisher": "Immigration Policy Tracking Project (hosting the DHS memo)",
-      "title": "DHS memorandum terminating advisory committee memberships (2025-01-20)",
+      "publisher": "U.S. Department of Homeland Security (hosted copy)",
+      "title": "DHS memorandum terminating advisory committee memberships, 2025-01-20 (copy hosted by iptp-production.s3.amazonaws.com)",
       "url": "https://iptp-production.s3.amazonaws.com/media/documents/2025.01.20_DHS_Memorandum_for_all_Members_of_Department_of_Homeland_Security_A_iBvPF7T.pdf"
     },
     {
@@ -169,7 +183,7 @@
       "date": "2025-01-20",
       "event": "Acting Secretary Benjamine Huffman issued a memorandum terminating all current memberships on DHS advisory committees effective immediately; former members could reapply.",
       "kind": "primary",
-      "source": "DHS memorandum (copy hosted by the Immigration Policy Tracking Project)",
+      "source": "DHS memorandum (copy hosted by iptp-production.s3.amazonaws.com)",
       "url": "https://iptp-production.s3.amazonaws.com/media/documents/2025.01.20_DHS_Memorandum_for_all_Members_of_Department_of_Homeland_Security_A_iBvPF7T.pdf"
     },
     {
@@ -189,6 +203,6 @@
   ],
   "title": "Remove all members of the Homeland Security Advisory Council and replace them",
   "tracked": true,
-  "uncertainties": "The January memo does not name the Homeland Security Advisory Council; its coverage of the Council rests on the memo's wording that it applies to all DHS advisory committees, and the Council is chartered as one. The March 2025 termination notice (eight committees) does not list the Council, consistent with the Council being kept and reconstituted rather than terminated. The meeting notices do not list members or name the new Chair and Vice Chair, a notice published 2025-06-26 (90 FR 27330) moved the meeting from 2025-06-30 to 2025-07-02 without restating the agenda, and it was not verified that the meeting occurred as noticed. The Mandate text uses the word Committee; the body is called Council. The memo copy was read through a third-party host, not dhs.gov. A DHS release of 2025-06-24 announcing appointments to the Council could not be fetched from dhs.gov on 2026-10-18, so no roster was read.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The January memo does not name the Homeland Security Advisory Council; its coverage of the Council rests on the memo's wording that it applies to all DHS advisory committees, and the Council is chartered as one. The March 2025 termination notice (eight committees) does not list the Council, consistent with the Council being kept and reconstituted rather than terminated. The meeting notices do not list members or name the new Chair and Vice Chair, a notice published 2025-06-26 (90 FR 27330) moved the meeting from 2025-06-30 to 2025-07-02 without restating the agenda, and it was not verified that the meeting occurred as noticed. The Mandate text uses the word Committee; the body is called Council. The memo copy was read through a third-party host, not dhs.gov, and a search of dhs.gov on 2026-10-22 found no official copy. A DHS release of 2025-06-24 announcing appointments to the Council could not be fetched from dhs.gov on 2026-10-18, so no roster was read.",
+  "updated_at": "2026-10-22"
 }
