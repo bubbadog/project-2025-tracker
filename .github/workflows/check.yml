@@ -57,6 +57,8 @@ jobs:
           assert re.search(r'<meta charset="utf-8">', s), 'charset meta missing'
           print('page ok')
           PY
+      - name: Check the page script parses (a syntax error blanks the site)
+        run: node -e "const s=require('fs').readFileSync('site/index.html','utf8');const m=s.match(/<script>([\\s\\S]*?)<\\/script>/);if(!m)throw new Error('no script block');new Function(m[1]);console.log('script parses')"
 
   ui:
     name: ui
