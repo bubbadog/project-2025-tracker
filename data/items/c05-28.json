@@ -6,7 +6,7 @@
   "chapter": "05",
   "confidence": 50,
   "confidence_label": "low",
-  "confidence_reason": "Chapter text checked at pages 142 and 153. EO 14159 was read in full on federalregister.gov in this review, but it only directs the shift; the evidence that the shift is operative rests on one news article about a DHS inspector general report that could not be opened (two fetch errors), and no directive or Blackie's warrant memo was found, so confidence is low.",
+  "confidence_reason": "Chapter text checked at pages 142 and 153. EO 14159 was read in full on federalregister.gov in this review, but it only directs the shift; the evidence that the shift is operative rests on one news article about a DHS inspector general report that could not be opened (two fetch errors), and no directive or Blackie's warrant memo was found, so confidence is low. A further attempt on 2026-10-22 (the report PDF and the OIG listing page) also failed; confidence stays at 50.",
   "durability": {
     "level": "low",
     "why": "HSI priorities rest on an executive order and internal assignments that a later administration can reverse."
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-17",
       "note": "Independent review read EO 14159 in full on federalregister.gov, could not open the DHS inspector general report on oig.dhs.gov, kept the stage at in_progress but lowered progress from 45 to 35, and lowered confidence from 55 to 50."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Re-check of the DHS inspector general report on oig.dhs.gov: the report PDF and the listing page returned client errors, so the report stays unopened. Retrieval-only report details (number, date, hours figures, recommendations) were added to the uncertainties as unverified; no stage, progress, source, timeline or confidence change (50)."
     }
   ],
   "id": "c05-28",
-  "last_checked": "2026-10-17",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -79,13 +83,23 @@
     "mandate_check": "ok",
     "mandate_note": "Pages 142 and 153 ask that HSI agents make Title 8 and Title 18 crimes the largest share of their work, that a DHS management directive and ICE companion directive refocus HSI and turn over work without a border or Title 8 link, and that ICE legal, enforcement and investigative offices issue a joint memo putting Blackie's warrants into use. The proposal paraphrase matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-17",
+    "reviewed_at": "2026-10-22",
     "reviewer": "P17-B",
     "source_checks": [
       {
         "note": "Fetch client error; the PDF copy also failed. Not added as a source.",
         "result": "unreachable",
         "url": "https://www.oig.dhs.gov/reports/2026/ice-homeland-security-investigations-hindered-countering-fentanyl-entering-united-states/oig-26-23-aug26"
+      },
+      {
+        "note": "Client error through the fetch tool in two rounds on 2026-10-22; could not be checked against the current stage (in_progress).",
+        "result": "unreachable",
+        "url": "https://www.oig.dhs.gov/sites/default/files/assets/2026-08/OIG-26-23-Aug26.pdf"
+      },
+      {
+        "note": "OIG listing page returned a client error on 2026-10-22; nothing checked against stage in_progress.",
+        "result": "unreachable",
+        "url": "https://www.oig.dhs.gov/reports/audits-inspections-and-evaluations?field_dhs_agency_target_id=3&field_oversight_area=All&field_fy_value=All"
       }
     ],
     "stage_change_reason": "in_progress kept at the low end of the band (35): EO 14159 directs the refocus, and a reported shift of more than 1.7 million HSI hours to immigration enforcement indicates partial operation, but no management directive, hand-off of non-immigration work or Blackie's warrant memo exists in sources found and the shift rests on one secondary source."
@@ -154,6 +168,6 @@
   ],
   "title": "Refocus HSI on immigration offenses and operationalize Blackie's warrants",
   "tracked": true,
-  "uncertainties": "The inspector general report itself could not be opened: a search restricted to the DHS OIG site (oig.dhs.gov) returned a report numbered OIG-26-23 (August 2026) on HSI and fentanyl, but both the report page and its PDF returned fetch errors in two runs, so the number, title and month rest on search result titles and the hours figures rest on a news article dated 2026-08-24; the report is therefore not a timeline event or a cited source. The article says agencies were directed to provide personnel for immigration enforcement and HSI agents were reassigned, which is a shift of HSI effort but not the transfer of non-immigration work to other agencies that the Mandate describes. The law firm piece on worksite enforcement names no ICE memo, and a separate May 2025 ICE memo on home entry with administrative warrants, reported in January 2026, concerns residences and is not treated as a Blackie's warrant step. Worksite enforcement guidance since 2025-01-20 was searched only briefly. EO 14159 was reread in full on federalregister.gov (90 FR 8443 to 8448); HSI appears only in section 4 and worksite enforcement is not mentioned.",
-  "updated_at": "2026-10-17"
+  "uncertainties": "The inspector general report itself could not be opened: a search restricted to the DHS OIG site (oig.dhs.gov) returned a report numbered OIG-26-23 (August 2026) on HSI and fentanyl, but both the report page and its PDF returned fetch errors in two runs, so the number, title and month rest on search result titles and the hours figures rest on a news article dated 2026-08-24; the report is therefore not a timeline event or a cited source. The article says agencies were directed to provide personnel for immigration enforcement and HSI agents were reassigned, which is a shift of HSI effort but not the transfer of non-immigration work to other agencies that the Mandate describes. The law firm piece on worksite enforcement names no ICE memo, and a separate May 2025 ICE memo on home entry with administrative warrants, reported in January 2026, concerns residences and is not treated as a Blackie's warrant step. Worksite enforcement guidance since 2025-01-20 was searched only briefly. EO 14159 was reread in full on federalregister.gov (90 FR 8443 to 8448); HSI appears only in section 4 and worksite enforcement is not mentioned. Latest check (2026-10-22): the report PDF on oig.dhs.gov and the OIG listing page failed with client errors in a second round, so the report remains unopened and cannot be added as a source or timeline event. An external retrieval reports that the report is numbered OIG-26-23, dated 2026-08-20, and finds that HSI prioritized immigration enforcement over fentanyl work in FY2025 (fentanyl investigative hours down by more than 250,000, about 31 percent in the body and about 30 percent in the highlights; immigration enforcement hours up by more than 1.7 million, over 800 percent; fentanyl investigations initiated down 24 percent; seizures down 39 percent; agents in 9 of 11 field offices reporting reduced fentanyl capacity). It reports four recommendations (evaluate analytic tools, ensure timely funds for purchases of information and evidence, update the HSI and CBP referral memorandum in light of recent executive orders, and review staffing for fentanyl coverage), all concurred in by ICE, and that none tells HSI to refocus on immigration offenses. These are retrieval-only and unverified, although the hours figures match the news report the record already cites. As the retrieval describes it, the report documents a shift of effort and does not itself recommend or direct one, so it would be evidence of operative reassignment and not of a directive.",
+  "updated_at": "2026-10-22"
 }
