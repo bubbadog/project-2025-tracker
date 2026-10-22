@@ -4,9 +4,9 @@
     "Both elements require Congress"
   ],
   "chapter": "18",
-  "confidence": 61,
+  "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "Absence-based. Five checks: (1) Federal Register API, no contractor workforce citizenship requirement (rerun 2026-10-19: three unrelated documents); (2) Labor (115 rules) and FAR Council (17 rules) Unified Agenda lists read directly on reginfo.gov on 2026-10-19, no citizenship share entry, weakly informative because the recommendation is directed to Congress; (3) congress.gov and GovInfo search, no matching bill, read by title only (partial); (4) Justice Department newsroom read, GSA and DOL newsrooms not fetched (partial); (5) one news search, a 2020 order and a 2025 federal-hiring order only. Set at 61 because two checks are partial and bill texts were not read.",
+  "confidence_reason": "Rule applied: not_started is absence-based, so the record may exceed 50 only with the documented five-part check and stays at or below 70; facts known only through the external retrieval are not relied on. Five checks, documented in source_checks: (1) Federal Register API, no contractor workforce citizenship requirement (rerun 2026-10-19: three unrelated documents); (2) Labor (115 rules) and FAR Council (17 rules) Unified Agenda lists read on reginfo.gov on 2026-10-19, no citizenship share entry, weakly informative because the recommendation is directed to Congress; (3) congress.gov and GovInfo: bill status for H.R. 9063, S. 5638 and H.R. 10799 opened and re-opened in review on 2026-10-22, none a match, plus an external retrieval of 16 searches dated 2026-10-22 (supports, though bill texts were not read); (4) Justice Department newsroom read, GSA and DOL newsrooms not fetched (partial); (5) news searches found a 2020 order and a 2025 federal-hiring order only. Raised from 61 to 64 for the stronger congressional check; held there because the newsroom check is partial, bill texts were not read and the 8 U.S.C. 1324b reading is unverified.",
   "durability": {
     "level": "medium",
     "why": "A statute would be durable, but none exists."
@@ -40,10 +40,14 @@
     {
       "date": "2026-10-21",
       "note": "Review label pass (task B17): 3 source check results that reported no qualifying action were relabeled from does_not_support to supports, because for a not_started record the documented absence is what supports the stage; no evidence, stage or confidence changed."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Congress search pass, independently reviewed. GovInfo bill status for H.R. 9063 and two related H-1B wage bills (S. 5638, H.R. 10799) was opened and confirmed to concern federal employment and H-1B wages, not contractor workforce citizenship shares; all three added as sources, with no timeline events. An external retrieval of 16 searches dated 2026-10-22 found no matching bill or FAR case; its reading of 8 U.S.C. 1324b could not be verified because the Code page was blocked, so the second remaining item was left as written. Not_started kept; confidence 61 to 64."
     }
   ],
   "id": "c18-35",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -69,7 +73,7 @@
     "mandate_check": "confirmed",
     "mandate_note": "Pages 612 to 613 ask Congress to require at least 70 percent U.S. citizen employees on new federal contracts, rising to 95 percent over ten years, and to amend the law so employers may prefer U.S. citizens in hiring; an alternative view favors economy and efficiency over quotas.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-22",
     "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
@@ -129,6 +133,36 @@
         "note": "Reviewer spot-check of check 1 on 2026-10-19: three documents (a DHS registration rule, the Unified Agenda introduction, an FCC proposal); nothing qualifying.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=contractor+employees+%22United+States+citizens%22+percent&conditions[publication_date][gte]=2025-01-20&order=newest"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against not_started: re-opened in review; Hire American Act, introduced 2026-05-29, referred to House Oversight and Government Reform, one cosponsor added 2026-06-02, no later action; title restricts federal government employment only; no contractor workforce share.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9063.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against not_started: re-opened in review; H-1B wage bill introduced 2026-09-30, referred to Senate Judiciary; title sets no citizen share and no employer preference; no summary or text in the record.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s5638.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against not_started: re-opened in review; H-1B wage bill introduced 2026-10-13, referred to House Judiciary; title sets no citizen share and no employer preference; no summary or text in the record.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr10799.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Tried once in review on 2026-10-22 to verify the external retrieval's reading of the equally qualified citizen preference in 8 U.S.C. 1324b; the request was blocked. The second remaining item is left unchanged.",
+        "result": "unreachable",
+        "url": "https://www.law.cornell.edu/uscode/text/8/1324b"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "External retrieval of 2026-10-22: 16 searches of Congress.gov, the Federal Register, acquisition.gov and the open web reported no bill or FAR case requiring a citizen share of a contractor workforce. Recorded as an external retrieval, not cited as a source; serves as the congressional part of the five-part check alongside the opened bill status records.",
+        "result": "supports",
+        "url": "https://www.congress.gov/"
       }
     ]
   },
@@ -174,13 +208,34 @@
       "publisher": "FedSmith",
       "title": "Legislation would make U.S. citizenship permanent condition of federal employment",
       "url": "https://www.fedsmith.com/2026/06/01/legislation-would-make-us-citizenship-permanent-condition-of-federal-employment/"
+    },
+    {
+      "date": "2026-05-29",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "Bill status for H.R. 9063, Hire American Act (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9063.xml"
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "Bill status for S. 5638, Protecting American Workers Through H-1B Modernization Act (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s5638.xml"
+    },
+    {
+      "date": "2026-10-13",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "Bill status for H.R. 10799, H-1B exempt-worker wage bill (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr10799.xml"
     }
   ],
   "stage": "not_started",
-  "status_summary": "No enacted law, bill or federal contracting rule imposing a citizenship share on contractor workforces was found. H.R. 9063, the Hire American Act, introduced 2026-05-29, would amend Title 5 to require that federal employees be U.S. citizens or nationals, with limited exceptions; per its GovInfo listing and trade press, it covers federal employment, not contractor workforces, and it is not counted as this recommendation. No bill amending the law to let private employers prefer citizens in hiring was found.",
+  "status_summary": "No enacted law, bill or federal contracting rule imposing a citizenship share on contractor workforces was found. H.R. 9063, the Hire American Act, introduced 2026-05-29, would amend Title 5 to require that federal employees be U.S. citizens or nationals, with limited exceptions; per its GovInfo listing and trade press, it covers federal employment, not contractor workforces, and it is not counted as this recommendation. No bill amending the law to let private employers prefer citizens in hiring was found. Two H-1B wage bills, S. 5638 (introduced 2026-09-30) and H.R. 10799 (introduced 2026-10-13), were referred to the Senate and House Judiciary Committees; by their bill status titles they concern the wage required for exempt H-1B workers and set no citizen share or employer preference.",
   "timeline": [],
   "title": "Require 70 percent U.S. citizens among workers on new federal contracts",
   "tracked": true,
-  "uncertainties": "No enacted law, bill or federal contracting rule imposing a citizenship share on contractor workforces was found, and no bill letting private employers prefer citizens in hiring. The Labor and FAR Council Unified Agenda rule lists on reginfo.gov (Agency Rule List - 2026) carry no such entry; the FAR overhaul cases list part numbers only and were not opened. H.R. 9063 concerns federal employees, not contractors, and its text was not read. Bill searches were read by title, congress.gov could not be fetched, and the GSA and DOL newsrooms were not checked, so a bill the searches missed cannot be excluded. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-21"
+  "uncertainties": "No enacted law, bill or federal contracting rule imposing a citizenship share on contractor workforces was found, and no bill letting private employers prefer citizens in hiring. The Labor and FAR Council Unified Agenda rule lists on reginfo.gov (Agency Rule List - 2026) carry no such entry; the FAR overhaul cases list part numbers only and were not opened. Bill searches before 2026-10-22 were read by title, congress.gov could not be fetched, and the GSA and DOL newsrooms were not checked, so a bill the searches missed cannot be excluded. Checked systematically on 2026-10-19. Update 2026-10-22: GovInfo bill status for H.R. 9063 (Hire American Act) was opened: introduced 2026-05-29, referred to the House Committee on Oversight and Government Reform, one cosponsor added 2026-06-02, no later action; its title restricts federal government employment to citizens and nationals, and the status record shows no contractor provision, though bill text was not read. Two related H-1B wage bills were also opened and differ from this recommendation: S. 5638 (introduced 2026-09-30, referred to the Senate Judiciary Committee) and H.R. 10799 (introduced 2026-10-13, referred to the House Judiciary Committee) concern the wage level for exempt H-1B workers and, by title, set no citizen share or employer preference; neither record carries a summary or text. An external retrieval ran 16 searches on 2026-10-22 (Congress.gov, Federal Register, acquisition.gov and the open web) and reported no bill or FAR case requiring a citizen share of a contractor workforce; those searches cannot be reproduced. The same retrieval reported that existing law at 8 U.S.C. 1324b already treats preferring an equally qualified citizen or national over a noncitizen as not an unfair immigration-related employment practice, which would bear on how the second remaining item is framed; the law.cornell.edu copy of that section could not be opened in this review on 2026-10-22, so that reading is unverified and the item is left as written. The retrieval also reported that FAR overhaul cases 2026-003, 2026-006, 2026-010 and 2026-011 show no citizenship workforce requirement; that point was not verified. A bill missed by title-based searches still cannot be excluded.",
+  "updated_at": "2026-10-22"
 }

@@ -5,9 +5,9 @@
     "Employers and benefit sponsors have broad interest in current exclusions"
   ],
   "chapter": "22",
-  "confidence": 62,
+  "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "The diverged stage rests on sections 70401 and 70404 of Public Law 119-21, read in U.S. Code amendment notes. Five documented checks: (1) Federal Register API queries of Treasury and IRS documents found only information collections (supports); (2) Unified Agenda: the Treasury rule list on reginfo.gov was read in full on 2026-10-19 with no deduction cap entry (supports, weakly informative because a cap needs legislation); (3) congress.gov and GovInfo search found only income-exclusion bills such as H.R. 317 (partial); (4) Treasury and IRS releases showed nothing (supports); (5) one news search found an unnamed exclusion-cap bill (partial). Set at 62 because that bill could not be matched to a number and the enrolled text was not read.",
+  "confidence_reason": "Rule applied: under the owner's 2026-10-22 rule, a law.cornell.edu U.S. Code page whose amendment notes cite the enacting Public Law section and date counts as primary text; high confidence still needs the stage-deciding text opened and confirmed in review, and a fact known only through an external retrieval caps at 79. The diverged stage rests on sections 70401 and 70404 of Public Law 119-21: on 2026-10-22 the researcher opened both Code pages, and review re-opened 26 U.S.C. 45F and confirmed the 40 percent (50 percent) rate, the 500,000 (600,000) dollar caps and the sec. 70401 note dated 2025-07-04; review's re-fetch of 26 U.S.C. 129 did not complete, so 129 rests on the researcher's reading of the same day. The five documented checks (Federal Register, Unified Agenda, congress.gov and GovInfo, Treasury and IRS releases, news) stand, with the bill search refreshed by an external retrieval whose one related bill, H.R. 8840, was opened on govinfo.gov. Raised from 62 to 74 and held at medium because the absence of a cap elsewhere in the law rests on earlier checks and an unverified external retrieval of a truncated enrolled text.",
   "durability": {
     "level": "high",
     "why": "The expansions are in statute and can be changed only by Congress."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-19",
       "note": "Independent review read the Treasury Unified Agenda rule list on reginfo.gov and found no benefit deduction cap; diverged kept and confidence raised from 60 to 62."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Statute and Congress pass: the U.S. Code reproductions of 26 U.S.C. 45F and 129 on law.cornell.edu were re-opened and confirmed sections 70401 and 70404 of Public Law 119-21 with their dates and effective dates, and both sources were retitled as U.S. Code reproductions; an external retrieval's whole-law absence finding stays unverified. An external retrieval of Congress.gov found H.R. 8840 (Fair Care Act of 2026), in committee since 2026-05-14, which it reports caps the employee exclusion for employer health coverage; added as a related source, not a match. Diverged kept; confidence raised from 62 to 74."
     }
   ],
   "id": "c22-19",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "parallel",
   "mechanism": "legislation",
@@ -76,7 +80,7 @@
     "mandate_check": "ok",
     "mandate_note": "Page 697 says the next Administration should set a cap of no more than 12,000 dollars a year per full-time-equivalent employee, not indexed, on untaxed benefits employers can deduct, counting all benefits except tax-deferred retirement contributions, counting only part of HSA contributions, and denying deductions for benefits to dependents aged 23 or older. The paraphrase and page are correct.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-22",
     "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
@@ -134,6 +138,42 @@
         "note": "Treasury list headed 'Agency Rule List - 2026' (agency named Department of the Treasury, 216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages, the second holding only the footer). No entry caps the employer deduction for untaxed benefits. Benefit entries include 1545-BR15 Welfare Benefit Fund Guidance, 1545-BO29 Rules Relating to Employer-Provided Meals and Employer-Operated Eating Facilities and 1545-BS19 Employer Contributions to Trump Accounts and Nondiscrimination Rules for Dependent Care Assistance Programs (all Proposed Rule Stage), which implement existing provisions rather than cap benefits. Weakly informative: a cap needs legislation.",
         "result": "supports",
         "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Confirms the 40/50 percent rate and the 500,000/600,000 dollar caps for amounts paid after 2025-12-31 via sec. 70401, consistent with the diverged stage (expansion, not a cap). Re-opened in review on 2026-10-22: subsection (a) 40 percent (50 percent eligible small business); (b) 500,000 and 600,000 dollars, indexed for taxable years after 2026; note cites Pub. L. 119-21 title VII sec. 70401(a)-(f), 2025-07-04, 139 Stat. 212-213, effective for amounts after 2025-12-31 (sec. 70401(g)). Confirms.",
+        "result": "supports",
+        "url": "https://www.law.cornell.edu/uscode/text/26/45F"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Confirms the 7,500/3,750 dollar limit via sec. 70404 for taxable years after 2025-12-31, consistent with the diverged stage. Same page as the record's 26/129 source. Researcher's reading of 2026-10-22.",
+        "result": "supports",
+        "url": "https://www.law.cornell.edu/uscode/text/26/129.html"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Opened; truncated in Title I, so it does not reach sections 70401 or 70404. Researcher's reading of 2026-10-22; not re-fetched in review.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against diverged: confirms a health costs bill introduced 2026-05-14 and still in committee; carries no text, so a cap on the exclusion is unverified, and an exclusion cap is not the recommended employer deduction cap. Does not contradict the enacted expansions. Re-opened in review on 2026-10-22: Rep. Westerman, introduced 2026-05-14, no cosponsors, referred to Energy and Commerce and eight other committees, no later action, policy area Health, no CRS summary, record updated 2026-07-17. Confirms the status facts; content unverified.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr8840.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Review re-fetch on 2026-10-22 did not complete (permission request unanswered); not retried. The researcher's same-day reading of the 129.html copy is relied on for the 7,500 dollar limit and the sec. 70404 note.",
+        "result": "unreachable",
+        "url": "https://www.law.cornell.edu/uscode/text/26/129"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "External retrieval of 2026-10-22: 12 Congress.gov and web queries (not reproducible here; not cited as a source) found no bill capping the employer deduction for untaxed benefits per worker; one related exclusion-cap bill (H.R. 8840). Against diverged: supports (no matching bill moves the stage).",
+        "result": "supports",
+        "url": "https://www.congress.gov/"
       }
     ]
   },
@@ -170,15 +210,22 @@
       "date": "2025-07-04",
       "kind": "primary",
       "publisher": "Cornell Legal Information Institute",
-      "title": "26 U.S.C. 129, Dependent care assistance programs",
+      "title": "26 U.S.C. 129, Dependent care assistance programs (U.S. Code reproduction hosted by law.cornell.edu)",
       "url": "https://www.law.cornell.edu/uscode/text/26/129"
     },
     {
       "date": "2025-07-04",
       "kind": "primary",
       "publisher": "Cornell Legal Information Institute",
-      "title": "26 U.S.C. 45F, Employer-provided child care credit",
+      "title": "26 U.S.C. 45F, Employer-provided child care credit (U.S. Code reproduction hosted by law.cornell.edu)",
       "url": "https://www.law.cornell.edu/uscode/text/26/45F"
+    },
+    {
+      "date": "2026-05-14",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "H.R. 8840, Fair Care Act of 2026 (119th Congress), bill status record",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr8840.xml"
     }
   ],
   "stage": "diverged",
@@ -201,6 +248,6 @@
   ],
   "title": "Cap untaxed employee benefits that employers deduct at 12,000 dollars per worker",
   "tracked": true,
-  "uncertainties": "No law or bill capping deductible employer benefits per employee was found. Public Law 119-21 raised the dependent care assistance limit (section 70404) and the employer child care credit (section 70401), read through U.S. Code notes rather than the enrolled text; other benefit changes in the law were not reviewed. A health-exclusion bill reported in May 2026 could not be matched to a number, and H.R. 317 acts on the employee exclusion. The Treasury Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists benefit guidance, including a planned rule on Trump account contributions and dependent care programs, and no deduction cap. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "No law or bill capping deductible employer benefits per employee was found. Public Law 119-21 raised the dependent care assistance limit (section 70404) and the employer child care credit (section 70401); both were confirmed on 2026-10-22 from the U.S. Code reproductions of 26 U.S.C. 129 and 45F hosted by law.cornell.edu, whose amendment notes cite the sections, dates and effective dates. An external retrieval of the enrolled text reports that no section of the law caps an employer deduction or an employee exclusion for benefits per worker; the govinfo.gov copy opened ends in Title I, so that whole-law absence finding is unverified, and other benefit changes in the law (for example the section 70204 exclusion for employer contributions to children's accounts) were not read. An external retrieval of Congress.gov and web searches (12 queries, run 2026-10-22; it cannot be reproduced here) found H.R. 8840 (Fair Care Act of 2026), introduced 2026-05-14 and referred to nine House committees with no later action, whose govinfo.gov status record carries no bill text; the retrieval reports that it caps the employee income exclusion for employer health coverage rather than the employer deduction the recommendation targets, so it is treated as related and does not change the stage. A health-exclusion bill reported in May 2026 could not be matched to a number, and H.R. 317 acts on the employee exclusion. The Treasury Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists benefit guidance, including a planned rule on Trump account contributions and dependent care programs, and no deduction cap. Checked systematically on 2026-10-19; Code pages and bill search refreshed 2026-10-22.",
+  "updated_at": "2026-10-22"
 }

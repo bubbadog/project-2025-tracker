@@ -7,7 +7,7 @@
   "chapter": "05",
   "confidence": 55,
   "confidence_label": "medium",
-  "confidence_reason": "Both executive orders were read on the Federal Register and two Federal Register queries found no replacement succession order; the acting-official facts rest on a tracking site and one news article and absence of bills rests on a limited search with congress.gov blocked, so medium at the floor.",
+  "confidence_reason": "Rule applied: medium at the floor because the stage-deciding executive orders were read on the Federal Register, while the acting-official facts rest on news reports and a tracking site and the absence of bills rests on an external retrieval (which caps a record at 79). Both executive orders were read and two Federal Register queries found no replacement succession order; on 2026-10-22 three news reports on acting leadership at ICE, FEMA and TSA and the S. 2838 status record were opened and re-opened in review, but none shows a nominee placed as acting or a DHS-specific bill, and the related bill's text could not be read. Unchanged at 55.",
   "durability": {
     "level": "low",
     "why": "Acting designations and succession orders are executive documents that change with each appointment."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-18",
       "note": "Independent review (primary-source lift) re-read Executive Order 14135 on federalregister.gov and ran a Federal Register API query for presidential documents on DHS succession (0 results). Stage changed from in_progress 25 to proposed 15 under the parallel-at-most rule; confidence 42 to 55."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Follow-up check of bills and acting leadership: an external retrieval of Congress.gov and web searches found no bill removing Senate confirmation from lower-level DHS posts or setting a DHS line of succession; one general bill on presidential power (S. 2838) is in committee, with its text unverified. News reports opened show acting leadership at ICE, FEMA and TSA, with a Senate-confirmed TSA administrator reported 2026-08-11; FEMA (2025-05-08) and ICE (2026-05-13) events added. Stage proposed 15 and confidence 55 unchanged."
     }
   ],
   "id": "c05-33",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -76,7 +80,7 @@
     "mandate_check": "not_checked",
     "mandate_note": "Per the record's pages and proposal fields: arguably place nominees in acting roles while they await confirmation, and seek legislation removing Senate confirmation from lower DHS posts (including FEMA posts other than the Administrator) and setting a durable, politically oriented line of succession that treats career officials in leadership posts as vacant for succession purposes. Chapter text not available this run; pages not re-checked.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-22",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
@@ -93,6 +97,36 @@
         "note": "Fetched 2026-10-18 (reviewer's own term variant): 0 presidential documents; supports the absence of a replacement DHS succession order.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=succession+%22Secretary+of+Homeland+Security%22&conditions[type][]=PRESDOCU&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against proposed: a general bill on presidential power, in committee since 2025-09-17; the record has no text or summary, so any Vacancies Act amendment is unverified, and nothing DHS-specific is shown. Re-opened in review on 2026-10-22: Sen. Schiff, 10 cosponsors (8 original; added 2025-10-03 and 2026-06-24), referred to Homeland Security and Governmental Affairs, no later action, record updated 2026-08-10; confirms.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2838.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against proposed: shows continued acting leadership at ICE and no Senate-confirmed director since 2017; does not show nominees placed as actings or any legislative step. Re-opened in review on 2026-10-22: article of 2026-05-13 (States Newsroom); DHS spokesperson named the acting leader; outgoing acting director to leave by May 31; no permanent Senate-confirmed director since 2017; no nominee mentioned. Confirms.",
+        "result": "partial",
+        "url": "https://www.govexec.com/management/2026/05/familiar-name-returns-lead-ice-amid-renewed-political-pressure/413529/"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against proposed: shows acting leadership at FEMA from 2025-05-08; does not show a nominee placed as acting or any legislative step. Re-opened in review on 2026-10-22: CBS News report of 2025-11-17; acting as senior official performing the duties from 2025-05-08, predecessor removed that day, resignation 2025-11-17, chief of staff to take over 2025-12-01. Confirms.",
+        "result": "partial",
+        "url": "https://wghn.com/2025/11/17/fema-acting-head-david-richardson-resigns-sources-say/"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against proposed: shows an acting TSA administrator replaced by a Senate-confirmed one; no legislative step. Re-opened in review on 2026-10-22: Business Travel News article of 2026-08-11; confirmed by the Senate and sworn in as eighth administrator; acting administrator since April 2025; no confirmation date or vote given. Confirms.",
+        "result": "partial",
+        "url": "https://www.travelweekly.com/Travel-News/Government/David-Cummins-confirmed-as-TSA-administrator"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "External retrieval of 2026-10-22: 17 Congress.gov and web queries (not reproducible here; not cited as a source) found no bill removing Senate confirmation from lower-level DHS posts and none setting a DHS line of succession; one general bill (S. 2838). Against proposed 15: supports that the legislative parts are unaddressed.",
+        "result": "supports",
+        "url": "https://www.congress.gov/"
       }
     ]
   },
@@ -159,10 +193,38 @@
       "publisher": "Federal Register",
       "title": "Federal Register API search for DHS order of succession since 2025-01-20",
       "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22order+of+succession%22+%22Homeland+Security%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+    },
+    {
+      "date": "2025-09-17",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "S. 2838, Protecting Our Democracy Act (119th Congress), bill status record",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s2838.xml"
+    },
+    {
+      "date": "2026-05-13",
+      "kind": "news",
+      "publisher": "Government Executive (States Newsroom report)",
+      "title": "A familiar name returns to lead ICE amid renewed political pressure",
+      "url": "https://www.govexec.com/management/2026/05/familiar-name-returns-lead-ice-amid-renewed-political-pressure/413529/"
+    },
+    {
+      "date": "2025-11-17",
+      "kind": "news",
+      "publisher": "WGHN (CBS News report)",
+      "title": "FEMA acting chief resigns amid criticism over Texas flood response",
+      "url": "https://wghn.com/2025/11/17/fema-acting-head-david-richardson-resigns-sources-say/"
+    },
+    {
+      "date": "2026-08-11",
+      "kind": "news",
+      "publisher": "Business Travel News (Travel Weekly)",
+      "title": "David Cummins is confirmed as TSA administrator",
+      "url": "https://www.travelweekly.com/Travel-News/Government/David-Cummins-confirmed-as-TSA-administrator"
     }
   ],
   "stage": "proposed",
-  "status_summary": "On 2025-01-20 Executive Order 14148 revoked the prior administration's Executive Order 14135 of 2025-01-03, which had set an order of succession within DHS running through the TSA Administrator, the Under Secretary for Intelligence and Analysis, the FLETC Director and the FEMA Region 3 Administrator; no replacement DHS succession order was found in the Federal Register. The same day a career CBP official, Pete Flores, was serving as senior official performing the duties of the CBP Commissioner, and by April 2026 the ICE director post had gone without a Senate-confirmed occupant since the Obama administration, with an official performing the director's duties who announced his departure effective 2026-05-31. No bill on DHS succession or on removing Senate confirmation from DHS posts was found, so the legislative parts remain unaddressed.",
+  "status_summary": "On 2025-01-20 Executive Order 14148 revoked the prior administration's Executive Order 14135 of 2025-01-03, which had set an order of succession within DHS running through the TSA Administrator, the Under Secretary for Intelligence and Analysis, the FLETC Director and the FEMA Region 3 Administrator; no replacement DHS succession order was found in the Federal Register. The same day a career CBP official, Pete Flores, was serving as senior official performing the duties of the CBP Commissioner. Acting leadership has continued at DHS components: news reports state that ICE has had no Senate-confirmed director since 2017 and that on 2026-05-13 DHS named a new acting leader to replace the outgoing acting director, that FEMA had an acting head from 2025-05-08, and that TSA had an acting administrator from April 2025 until a Senate-confirmed administrator was sworn in (reported 2026-08-11). No bill on DHS succession or on removing Senate confirmation from DHS posts was found; one general bill on presidential power, S. 2838 (Protecting Our Democracy Act), has been in committee since 2025-09-17 with no later action, so the legislative parts remain unaddressed.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -177,10 +239,24 @@
       "kind": "tracker",
       "source": "Immigration Policy Tracking Project",
       "url": "https://immpolicytracking.org/policies/cbp-issues-memorandum-ending-catch-and-release/"
+    },
+    {
+      "date": "2025-05-08",
+      "event": "David Richardson became acting head of FEMA, as senior official performing the duties of the Administrator, on the day the prior head was removed; he resigned on 2025-11-17 and the FEMA chief of staff was to take over on 2025-12-01. The report does not show a nominee placed as an acting official.",
+      "kind": "news",
+      "source": "WGHN (CBS News report)",
+      "url": "https://wghn.com/2025/11/17/fema-acting-head-david-richardson-resigns-sources-say/"
+    },
+    {
+      "date": "2026-05-13",
+      "event": "A DHS spokesperson said David Venturella would lead ICE on an acting basis, replacing the outgoing acting director, who was to leave by 2026-05-31; the report states ICE has had no Senate-confirmed director since 2017.",
+      "kind": "news",
+      "source": "Government Executive",
+      "url": "https://www.govexec.com/management/2026/05/familiar-name-returns-lead-ice-amid-renewed-political-pressure/413529/"
     }
   ],
   "title": "Use acting officials, set a political line of succession, cut Senate-confirmed DHS posts",
   "tracked": true,
-  "uncertainties": "Executive Order 14135, revoked by Executive Order 14148 (Sec. 2(kkk), confirmed on federalregister.gov), was itself an order of succession that revoked EO 13753 and struck section 88 of EO 13286, and it does not mention career employees; it was re-read in review on 2026-10-18. Whether DHS issued a replacement order was not found in Federal Register API queries since 2025-01-20 (researcher: order of succession and Homeland Security, one result, EO 14148 itself; review: presidential documents on succession and the Secretary of Homeland Security, 0 results), so the revocation may only return DHS to the statutory default and is not shown to match the Mandate's political-only succession. The Federal Register pages were read through a summarizing tool. The CBP acting role rests on a tracking site summary of an image of a memo. The NPR article, read for ICE, does not say when the acting ICE director began, who follows, or that anyone was a nominee placed as acting; use of actings is therefore a parallel executive practice, not shown to be the Mandate's nominee-as-acting method. Confirmation of CBP Commissioner and other acting practices at TSA, CISA and FEMA were not researched. Searches for 119th Congress succession bills found none, but congress.gov is blocked and the govinfo BILLSTATUS route returned an error for the probe request.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "Executive Order 14135, revoked by Executive Order 14148 (Sec. 2(kkk), confirmed on federalregister.gov), was itself an order of succession that revoked EO 13753 and struck section 88 of EO 13286, and it does not mention career employees; it was re-read in review on 2026-10-18. Whether DHS issued a replacement order was not found in Federal Register API queries since 2025-01-20 (researcher: order of succession and Homeland Security, one result, EO 14148 itself; review: presidential documents on succession and the Secretary of Homeland Security, 0 results), so the revocation may only return DHS to the statutory default and is not shown to match the Mandate's political-only succession. The Federal Register pages were read through a summarizing tool. The CBP acting role rests on a tracking site summary of an image of a memo. News articles opened on 2026-10-22 (govexec.com, wghn.com, travelweekly.com) show acting leaders at ICE (successor named 2026-05-13), FEMA (from 2025-05-08) and TSA (from April 2025, ended by a Senate-confirmed administrator reported 2026-08-11); none describes a nominee placed as an acting official, so use of actings is a parallel executive practice and not shown to be the Mandate's nominee-as-acting method. Whether the ICE successor took office, and when the earlier ICE acting period began, were not shown; the TSA report gives no confirmation date or vote. Acting histories for CBP, USCIS, the Coast Guard, CISA and the Secret Service reported by an external retrieval rest on pages that could not be opened and are not relied on. On bills, an external retrieval of Congress.gov and web searches (17 queries, run 2026-10-22; it cannot be reproduced here) found no bill removing Senate confirmation from lower-level DHS posts and none setting a DHS line of succession. It found one general bill, S. 2838 (Protecting Our Democracy Act), introduced 2025-09-17 and referred to the Senate Committee on Homeland Security and Governmental Affairs with no later action (status record opened on govinfo.gov, 10 cosponsors). That record carries no text or summary, so the external retrieval's report that it amends the Vacancies Act provisions on acting service is unverified, and the bill is not specific to DHS; it is treated as related context and not as a timeline event. The congress.gov search could not be opened here.",
+  "updated_at": "2026-10-22"
 }
