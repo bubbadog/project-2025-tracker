@@ -8,7 +8,7 @@
   "chapter": "05",
   "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: the stage-deciding document (the DHS FY2027 CISA budget justification) was not opened by the fetch tool, and details known only through an external retrieval cap the record at 79. The FY2027 claims now rest on three trade reports of 2026-04-07 (Cybersecurity Dive and Nextgov re-opened and confirmed by the reviewer, SecurityWeek opened by the researcher) plus CRS R48979, and the operative parts on a state official's letter and trade reporting. The baseline label and the misinformation point remain unresolved and the Cybersecurity Advisory Committee status is unverified, so confidence rises only from 58 to 62.",
+  "confidence_reason": "Rule applied: the stage-deciding document (the DHS FY2027 CISA budget justification) was not opened by the fetch tool, and details known only through an external retrieval cap the record at 79. The FY2027 claims now rest on three trade reports of 2026-04-07 (Cybersecurity Dive and Nextgov re-opened and confirmed by the reviewer, SecurityWeek opened by the researcher) plus CRS R48979, and the operative parts on a state official's letter and trade reporting. The baseline label and the misinformation point remain unresolved and the Cybersecurity Advisory Committee status is unverified, so confidence rises only from 58 to 62. A further attempt on 2026-10-22 (dhs.gov and an archived copy) also failed, so the justification remains unread; confidence stays at 62.",
   "durability": {
     "level": "medium",
     "why": "Workforce losses and office closures are hard to undo quickly, but they rest on administrative and budget decisions that a later administration or Congress can rebuild."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-19",
       "note": "Re-check of the FY2027 CISA budget justification: the dhs.gov file returned an error and an archived copy on web.archive.org was blocked. Cybersecurity Dive and Nextgov reports of 2026-04-07 were read and added as sources; they agree on 867 positions and the elimination of the election security program, and Cybersecurity Dive gives a net cut of 386 million dollars and the end of the chemical facilities program; a 2026-04-07 event citing Cybersecurity Dive was added. SecurityWeek's misinformation-termination report is kept as attributed, and the baseline-label conflict is recorded in uncertainties; details from an external retrieval are recorded as unverified. Stage in_progress and progress 40 unchanged; confidence 58 to 62."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Re-check of the CISA FY2027 budget justification: the dhs.gov file returned a client error and an archived copy on web.archive.org was blocked, so the document stays unread. Further retrieval-only details (no printed release date, comparison base, program amounts) were added to the uncertainties as unverified; no stage, progress, source, timeline or confidence change (62)."
     }
   ],
   "id": "c05-09",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-22",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -77,7 +81,7 @@
     "mandate_check": "verified",
     "mandate_note": "Printed page 133 moves CISA to Transportation and page 135 returns it to a narrow mission; pages 154 and 155 limit CISA to federal network protection and infrastructure coordination, end its counter-mis/disinformation work, dismiss the Cybersecurity Advisory Committee, limit election work and move emergency communications and CFATS to FEMA and school security to states.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-22",
     "reviewer": "Y2",
     "source_checks": [
       {
@@ -109,6 +113,16 @@
         "note": "Opened. Supports the proposal of a 707 million dollar cut and misinformation program termination, but gives no baseline and does not mention election security.",
         "result": "partial",
         "url": "https://www.securityweek.com/white-house-seeks-to-slash-cisa-funding-by-707-million/"
+      },
+      {
+        "note": "Client error through the fetch tool in two rounds on 2026-10-22; could not be checked against the current stage (in_progress).",
+        "result": "unreachable",
+        "url": "https://www.dhs.gov/sites/default/files/2026-04/26_0403_ocfo-budget-cisa.pdf"
+      },
+      {
+        "note": "Archived copy blocked by the fetch tool on 2026-10-22; nothing checked against stage in_progress.",
+        "result": "unreachable",
+        "url": "https://web.archive.org/web/2026/https://www.dhs.gov/sites/default/files/2026-04/26_0403_ocfo-budget-cisa.pdf"
       }
     ]
   },
@@ -314,6 +328,6 @@
   ],
   "title": "Narrow CISA to two core missions and end its counter-disinformation work",
   "tracked": true,
-  "uncertainties": "Not verified: whether the CISA Cybersecurity Advisory Committee specifically was terminated (reports of the 2025-01-20 DHS memo name only the Cyber Safety Review Board; a Federal Register search for the committee returned no termination or meeting notice); and the date and form of the end of CISA's mis/disinformation work (evidence is staff leave reported in a state official's letter, plus SecurityWeek's report that the FY2027 request terminates such programs). The 2026 staffing figures differ across outlets (about 1,000 positions lost; a target of 2,800 staff reported against about 2,200 currently, which the source itself left unclear). An AOL copy of a report on 12 CISA employees placed on leave returned an error and was not used. Searches run: CSAC termination, CISA election and disinformation staff, CISA director and FY2027 budget; no search found any proposal to move CISA to Transportation. The DHS FY2027 CISA budget document and the DHS Budget in Brief (dhs.gov; dates taken from file names) were not opened: in the latest check the dhs.gov CISA document returned a client error again and an archived copy on web.archive.org was blocked, so the program eliminations rest on trade reporting. Cybersecurity Dive and Nextgov (both dated 2026-04-07 and read in the latest check) agree on 867 positions and on the elimination of the election security program; Cybersecurity Dive gives a net cut of 386 million dollars and Nextgov about 360 million dollars after transfers, so the net figure differs slightly between them. An external retrieval reported a fuller account of the justification (a request of 2,487 million dollars against a FY2026 annualized continuing-resolution baseline of 2,873 million, 2,528 FTE, and no use of the words misinformation or disinformation in its 279 pages); these details are known only through that retrieval and are not stated as verified. Two conflicts remain unresolved: the baseline label (the retrieval names the FY2026 annualized continuing resolution, whereas CRS R48979 describes the 386 million dollar gap as against the FY2025 continuing-resolution level); and SecurityWeek's report that the request terminates programs combating misinformation, which the two other trade reports do not mention and the retrieval contradicts. CRS R48979 (read through its first 100,000 characters) does not reconcile with the press reports of a 707 million dollar cut to about 2 billion dollars; the comparison base for the 707 million figure was not established, so the size of the proposed cut is uncertain.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "Not verified: whether the CISA Cybersecurity Advisory Committee specifically was terminated (reports of the 2025-01-20 DHS memo name only the Cyber Safety Review Board; a Federal Register search for the committee returned no termination or meeting notice); and the date and form of the end of CISA's mis/disinformation work (evidence is staff leave reported in a state official's letter, plus SecurityWeek's report that the FY2027 request terminates such programs). The 2026 staffing figures differ across outlets (about 1,000 positions lost; a target of 2,800 staff reported against about 2,200 currently, which the source itself left unclear). An AOL copy of a report on 12 CISA employees placed on leave returned an error and was not used. Searches run: CSAC termination, CISA election and disinformation staff, CISA director and FY2027 budget; no search found any proposal to move CISA to Transportation. The DHS FY2027 CISA budget document and the DHS Budget in Brief (dhs.gov; dates taken from file names) were not opened: in the latest check the dhs.gov CISA document returned a client error again and an archived copy on web.archive.org was blocked, so the program eliminations rest on trade reporting. Cybersecurity Dive and Nextgov (both dated 2026-04-07 and read in the latest check) agree on 867 positions and on the elimination of the election security program; Cybersecurity Dive gives a net cut of 386 million dollars and Nextgov about 360 million dollars after transfers, so the net figure differs slightly between them. An external retrieval reported a fuller account of the justification (a request of 2,487 million dollars against a FY2026 annualized continuing-resolution baseline of 2,873 million, 2,528 FTE, and no use of the words misinformation or disinformation in its 279 pages); these details are known only through that retrieval and are not stated as verified. Two conflicts remain unresolved: the baseline label (the retrieval names the FY2026 annualized continuing resolution, whereas CRS R48979 describes the 386 million dollar gap as against the FY2025 continuing-resolution level); and SecurityWeek's report that the request terminates programs combating misinformation, which the two other trade reports do not mention and the retrieval contradicts. CRS R48979 (read through its first 100,000 characters) does not reconcile with the press reports of a 707 million dollar cut to about 2 billion dollars; the comparison base for the 707 million figure was not established, so the size of the proposed cut is uncertain. Latest check (2026-10-22): the dhs.gov CISA justification and its archived copy on web.archive.org failed again in a second round (client error at dhs.gov; web.archive.org blocked by the fetch tool), so nothing from the external retrieval is verified. The retrieval also reports, unverified, that the document prints no release date (April 2026 comes from the file name and PDF metadata, with 2026-04-03 as the date in the file name), whereas the record and trade reports date the request 2026-04-07; that the net change is a decrease of 385,814 thousand dollars against the annualized continuing-resolution base; that the election security elimination is 39,610 thousand dollars and 14 positions at page CISA-O&S-30; and that a separate chemical facilities program elimination is 35,076 thousand dollars and 223 positions.",
+  "updated_at": "2026-10-22"
 }

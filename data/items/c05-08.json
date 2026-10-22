@@ -8,7 +8,7 @@
   "chapter": "05",
   "confidence": 63,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: the stage-deciding document (the Council's final report on dhs.gov) was not opened by the fetch tool in this or earlier checks, and an archived copy was blocked, so the record stays medium and below 79. Its contents rest on CRS Insight IN12693 (re-opened and confirmed on 2026-10-19), CRS In Focus IF13302 and NACo; figures reported by an external retrieval are not counted. The absence of implementing action since May 2026 rests on a limited search. Confidence unchanged at 63.",
+  "confidence_reason": "Rule applied: the stage-deciding document (the Council's final report on dhs.gov) was not opened by the fetch tool in this or earlier checks, and an archived copy was blocked, so the record stays medium and below 79. Its contents rest on CRS Insight IN12693 (re-opened and confirmed on 2026-10-19), CRS In Focus IF13302 and NACo; figures reported by an external retrieval are not counted. The absence of implementing action since May 2026 rests on a limited search. A further attempt on 2026-10-22 (dhs.gov, an archived copy and a law-firm copy) also failed, so the report remains unread. Confidence unchanged at 63.",
   "durability": {
     "level": "low",
     "why": "The current steps are executive orders, a council report and agency grant decisions that a later administration could reverse, and no statute has changed."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-19",
       "note": "Re-check of the FEMA Review Council final report: the dhs.gov PDF and the FEMA press release returned client errors and an archived copy on web.archive.org was blocked, so the report remains unread. CRS Insight IN12693 and CRS In Focus IF13302 were re-read and are consistent with stage proposed. Details from an external retrieval (per capita reset, cost-share range, implementation table) are recorded in uncertainties as unverified, and a garbled sentence in the uncertainties was repaired. No source or timeline changes; stage proposed and progress 20 unchanged; confidence 63 unchanged."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Re-check of the FEMA Review Council final report: the dhs.gov PDF and a law-firm copy returned client errors and an archived copy on web.archive.org was blocked, so the report stays unread. Further retrieval-only details (implementation table, nonbinding framing, comment close date) were added to the uncertainties as unverified; no stage, progress, source, timeline or confidence change (63)."
     }
   ],
   "id": "c05-08",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-22",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -75,7 +79,7 @@
     "mandate_check": "verified",
     "mandate_note": "Printed page 134 suggests moving FEMA to Interior; page 135 lists privatizing the NFIP and shifting costs to states; page 153 asks FEMA to raise the per capita indicator or use a deductible and Congress to set a 25 to 75 percent federal share; page 154 asks to wind down the NFIP and end most preparedness grants.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-22",
     "reviewer": "Y2",
     "source_checks": [
       {
@@ -107,6 +111,21 @@
         "note": "Client error through the fetch tool.",
         "result": "unreachable",
         "url": "https://www.fema.gov/press-release/20260507/fema-review-council-releases-final-report"
+      },
+      {
+        "note": "Client error through the fetch tool in two rounds on 2026-10-22; against the current stage (proposed) the report is the plan itself, but it could not be checked.",
+        "result": "unreachable",
+        "url": "https://www.dhs.gov/sites/default/files/2026-05/26_0507_fema%20review%20council_final%20report.pdf"
+      },
+      {
+        "note": "Archived copy blocked by the fetch tool on 2026-10-22; nothing checked against stage proposed.",
+        "result": "unreachable",
+        "url": "https://web.archive.org/web/2026/https://www.dhs.gov/sites/default/files/2026-05/26_0507_fema%20review%20council_final%20report.pdf"
+      },
+      {
+        "note": "Law-firm copy returned a client error on 2026-10-22; nothing checked against stage proposed.",
+        "result": "unreachable",
+        "url": "https://www.eversheds-sutherland.com/dfsmedia/5773992fa8424b37ace0cac119d920b9/35403-10061/26-0507-fema-review-council-final-report"
       }
     ]
   },
@@ -302,6 +321,6 @@
   ],
   "title": "Shift disaster costs to states; wind down NFIP and most FEMA preparedness grants",
   "tracked": true,
-  "uncertainties": "The Council's final report (dhs.gov PDF) could not be opened in the latest check either: the dhs.gov address returned a client error through the fetch tool, an archived copy on web.archive.org was blocked, and the FEMA press release of 2026-05-07 also failed to load. The report text therefore remains unread. Its contents come from two Congressional Research Service products that were re-opened and read (the Insight IN12693 and the In Focus IF13302 of 2026-08-28 on the NFIP recommendations), plus NACo and a Maryland counties summary, which differ in detail (for example NACo's estimate of about 16 fewer major declarations a year and a 150,000 dollar individual payment are NACo's figures). An external retrieval reported page-level details from a browser copy of the report (a ten-recommendation structure with an implementation table indicating that the parametric Public Assistance replacement, the single Individual Assistance payment, the Hazard Mitigation Grant Program replacement, NFIP reform and the FEMA transformation need legislation, a per capita indicator reset from 1.94 to 2.99 dollars, a federal share of 50 to 75 percent tied to state performance, and no recommendation to abolish FEMA or leave DHS). These details are known only through that external retrieval and are not stated as verified; the CRS products opened in this run are consistent with the general direction (sliding cost shares, lump-sum state grants, a voluntary NFIP take-out program, legislation needed for much of it, a two to three year phased rollout) but do not carry those figures. CRS cites a news report that the Council backed off proposed staffing cuts, which was not verified; an earlier lead that FEMA lost about one-fifth of its staff by July 2025 also remains unverified. Whether any executive order, rule or guidance has implemented the report since 2026-05-07 was not found in a Federal Register search of presidential documents, and the external retrieval also reported finding no implementing DHS or FEMA document; the search budget ended before checking FEMA press releases or reporting from June to October 2026, so the absence of implementing action rests on a limited search. The BRIC cancellation date (April 2025) and court order months come from one PBS report without exact days. Stage 'proposed' is a judgment: the BRIC cancellation was operative for several months before the court order, so a reader could argue for in_progress. Searches run: FEMA Review Council final report; BRIC, preparedness grants and NFIP. Plus Federal Register queries for per capita indicators and FEMA presidential documents.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "The Council's final report (dhs.gov PDF) could not be opened in the latest check either: the dhs.gov address returned a client error through the fetch tool, an archived copy on web.archive.org was blocked, and the FEMA press release of 2026-05-07 also failed to load. The report text therefore remains unread. Its contents come from two Congressional Research Service products that were re-opened and read (the Insight IN12693 and the In Focus IF13302 of 2026-08-28 on the NFIP recommendations), plus NACo and a Maryland counties summary, which differ in detail (for example NACo's estimate of about 16 fewer major declarations a year and a 150,000 dollar individual payment are NACo's figures). An external retrieval reported page-level details from a browser copy of the report (a ten-recommendation structure with an implementation table indicating that the parametric Public Assistance replacement, the single Individual Assistance payment, the Hazard Mitigation Grant Program replacement, NFIP reform and the FEMA transformation need legislation, a per capita indicator reset from 1.94 to 2.99 dollars, a federal share of 50 to 75 percent tied to state performance, and no recommendation to abolish FEMA or leave DHS). These details are known only through that external retrieval and are not stated as verified; the CRS products opened in this run are consistent with the general direction (sliding cost shares, lump-sum state grants, a voluntary NFIP take-out program, legislation needed for much of it, a two to three year phased rollout) but do not carry those figures. CRS cites a news report that the Council backed off proposed staffing cuts, which was not verified; an earlier lead that FEMA lost about one-fifth of its staff by July 2025 also remains unverified. Whether any executive order, rule or guidance has implemented the report since 2026-05-07 was not found in a Federal Register search of presidential documents, and the external retrieval also reported finding no implementing DHS or FEMA document; the search budget ended before checking FEMA press releases or reporting from June to October 2026, so the absence of implementing action rests on a limited search. The BRIC cancellation date (April 2025) and court order months come from one PBS report without exact days. Stage 'proposed' is a judgment: the BRIC cancellation was operative for several months before the court order, so a reader could argue for in_progress. Searches run: FEMA Review Council final report; BRIC, preparedness grants and NFIP. Plus Federal Register queries for per capita indicators and FEMA presidential documents. Latest check (2026-10-22): the fetch tool was asked again for the dhs.gov report PDF (client error), the archived copy on web.archive.org (blocked by the fetch tool) and a copy hosted by a law firm (client error), so after a second round the report text remains unread and nothing from the external retrieval is verified. The retrieval additionally reports, unverified, that its implementation table (about page 15) marks one recommendation as needing rulemaking with interim executive action possible and one as doable by executive order, that the report calls its recommendations nonbinding and favors legislation for durable change, that public comment on the report closed on 2026-06-08, and that a 75-page text carries no printed signer. These points are not used in the status summary.",
+  "updated_at": "2026-10-22"
 }
