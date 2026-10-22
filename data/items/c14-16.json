@@ -37,10 +37,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-references added to new layer 3 records c14-38 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Refutation check on 2026-10-22 found the CY 2026 OPPS/ASC rule still in effect, 42 CFR 419.22 unchanged since 2026-01-01, no CY 2027 final rule yet and no litigation against the phase-out; Federal Register API, eCFR and two searches."
     }
   ],
   "id": "c14-16",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -50,6 +54,44 @@
   "position": "Centers for Medicare and Medicaid Services (CMS): Medicare Regulatory Reforms",
   "progress": 70,
   "proposal": "The Mandate recommends that CMS eliminate the Medicare inpatient-only list, expand the ambulatory surgical center covered procedures list, and extend site-neutral payment so that Medicare pays the same for a service whether delivered in a physician office, clinic or hospital outpatient department.",
+  "redteam": {
+    "date": "2026-10-22",
+    "evidence": [
+      {
+        "date": "2026-10-22",
+        "note": "27 results; no CY 2027 OPPS/ASC final rule and no notice delaying or reversing the CY 2026 phase-out.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=inpatient+only+list&conditions[publication_date][gte]=2026-07-07"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "16 results; the CY 2027 final rule is not yet published; latest item is an unrelated 2026-10-20 proposed rule.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=hospital+outpatient+prospective+payment&conditions[publication_date][gte]=2026-07-08"
+      },
+      {
+        "date": "2026-10-20",
+        "note": "Proposed rule on Part D cost sharing, MA provider directories and PBM rules; does not address the inpatient only list, ASC list or site-neutral payment in the portion read.",
+        "source": "Federal Register (CMS)",
+        "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21420/medicare-program-implementation-of-sections-6219-6220-and-6224-of-the-consolidated-appropriations"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Part 419 versions dated 2025-11-25, 2026-01-01, 2026-08-04 and 2026-10-01; section 419.22 last amended 2026-01-01 and not removed.",
+        "source": "eCFR versioner",
+        "url": "https://www.ecfr.gov/api/versioner/v1/versions/title-42?part=419"
+      },
+      {
+        "date": "2019-01-23",
+        "note": "Litigation search surfaced only the 2019 hospital suit over an earlier site-neutral policy; no suit against the CY 2026 rule found.",
+        "source": "Fierce Healthcare",
+        "url": "https://www.fiercehealthcare.com/payer/38-hospitals-sue-hhs-over-site-neutral-payment-policy"
+      }
+    ],
+    "note": "The CY 2026 OPPS/ASC rule remains in effect since 2026-01-01 with no court order, delay or rescission found. The CY 2027 final rule was not published as of 2026-10-22; the 2026-07-07 proposal stays a proposal.",
+    "verdict": "holds",
+    "what_was_tested": "Federal Register API for inpatient only list since 2026-07-07 and for hospital outpatient prospective payment since 2026-07-08 (CY 2027 OPPS final rule); eCFR versioner for 42 CFR part 419; two searches for litigation and for the CY 2027 final rule."
+  },
   "related_ids": [
     "c14-38"
   ],
@@ -184,5 +226,5 @@
   "title": "Phase out the Medicare inpatient-only list and expand ASC and site-neutral payment",
   "tracked": true,
   "uncertainties": "Only about the first 100,000 characters of each long rule were read. The 2029-01-01 end date for the inpatient-only list comes from a rule summary by the American Society of Hematology (hematology.org), not from the regulation text read on federalregister.gov, which states a three-year phase-out without showing the year in the portion read; whether the full schedule is codified at 42 CFR 419.22 or set out only in preamble tables was not confirmed. Whether the CY 2027 proposals were finalized in the November 2026 cycle is not yet known. No litigation over the drug administration payment change was searched in this review.",
-  "updated_at": "2026-10-15"
+  "updated_at": "2026-10-22"
 }

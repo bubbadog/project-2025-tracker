@@ -37,10 +37,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-references added to new layer 3 records c14-50, c14-63, c18-33 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Refutation check on 2026-10-22 found EO 14182 and the 2025-07-11 OLC opinion undisturbed, with no reinstatement, court order or rider found after 2026-05-29; Federal Register API queries and two searches returned nothing new."
     }
   ],
   "id": "c14-20",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -51,6 +55,44 @@
   "position": "Life, Conscience, and Bodily Integrity: Prohibit abortion travel funding",
   "progress": 70,
   "proposal": "The Mandate recommends that HHS withdraw Medicaid guidance and any Section 1115 waivers issued under the August 2022 executive order on reproductive healthcare access, and that DOJ's Office of Legal Counsel withdraw its 2022 opinion reading the Hyde Amendment as not covering travel to obtain abortions. It also recommends an HHS audit of Hyde compliance, including post-Dobbs executive actions.",
+  "redteam": {
+    "date": "2026-10-22",
+    "evidence": [
+      {
+        "date": "2026-10-22",
+        "note": "4 results (a CMS Medicaid sex-rejecting procedures rule, the FY 2027 IPPS rule, an IRS notice, the OMB proposed rule); none reinstates abortion travel funding or revokes EO 14182.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Hyde+Amendment&conditions[publication_date][gte]=2026-05-29"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Latest items are January 2026 HHS rescissions and the 2026-05-29 OMB proposed rule; no revocation or court-ordered change.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Executive+Order+14182&conditions[publication_date][gte]=2026-01-01"
+      },
+      {
+        "date": "2026-05-29",
+        "note": "Proposed rule (not final) listing a cost-principle section on abortion; remains a proposal.",
+        "source": "Federal Register (OMB)",
+        "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
+      },
+      {
+        "date": "2026-09-01",
+        "note": "Advocacy factsheet (month only) describes the administration's Hyde-based restrictions as in place; no court order, reinstatement or appropriations rider mentioned. Lead only.",
+        "source": "National Women's Law Center",
+        "url": "https://nwlc.org/wp-content/uploads/2026/09/Hyde-Amendment-Anniversary-Factsheet.pdf"
+      },
+      {
+        "date": "2025-07-11",
+        "note": "Search for reversal surfaced only this opinion again; no later OLC document or court ruling disturbing it found.",
+        "source": "DOJ Office of Legal Counsel",
+        "url": "https://www.justice.gov/olc/media/1408241/dl"
+      }
+    ],
+    "note": "No reinstatement, court order or appropriations change affecting EO 14182 or the OLC Hyde opinion was found after 2026-05-29. Withdrawal of CMS guidance and waivers and the audit results remain unconfirmed, as already recorded.",
+    "verdict": "holds",
+    "what_was_tested": "Federal Register API for Hyde Amendment since 2026-05-29 and Executive Order 14182 since 2026-01-01; searches for reinstatement, court orders, appropriations riders and CMS guidance or waiver withdrawal; read of a 2026-09 advocacy factsheet."
+  },
   "related_ids": [
     "c04-15",
     "c14-07",
@@ -198,5 +240,5 @@
   "title": "Withdraw Biden-era abortion travel funding actions and the OLC Hyde opinion",
   "tracked": true,
   "uncertainties": "No published results of an HHS Hyde compliance audit were found, and no CMS Medicaid guidance or Section 1115 approval for abortion travel was found either to have been issued or withdrawn. The HHS review announcement is known from a news report rather than an HHS release. OCR rescissions in January 2026 cite the executive order but are tracked in another record. The text of proposed 2 CFR 200.477 could not be read: the Federal Register full-text, plain-text and GovInfo copies all end, as fetched, in the subpart C discussion. Only the section's title (Abortion) and the comment deadline are confirmed on the Federal Register page. A law-firm article says the section would make the costs of elective abortions unallowable under federal awards, and a link to Executive Order 14182 appears only in an advocacy group's comment letter; neither was confirmed in primary text. The proposal is not final.",
-  "updated_at": "2026-10-15"
+  "updated_at": "2026-10-22"
 }
