@@ -31,6 +31,8 @@ jobs:
           TRACKER_FORBIDDEN_WORDS: ${{ secrets.TRACKER_FORBIDDEN_WORDS }}
         run: python3 scripts/validate.py --strict
       - run: python3 scripts/build_snapshot.py
+      - name: Check the page script parses (a syntax error blanks the site)
+        run: node -e "const s=require('fs').readFileSync('site/index.html','utf8');const m=s.match(/<script>([\\s\\S]*?)<\\/script>/);if(!m)throw new Error('no script block');new Function(m[1]);console.log('script parses')"
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
