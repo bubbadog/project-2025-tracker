@@ -44,7 +44,7 @@ The required checks can only be attached after each check has run at least once 
 
 ## 4. Checks
 
-`check.yml` runs on every push to `main` and every pull request: `validate` (every record against `scripts/validate.py --strict`), then `build` (snapshot assembled, page parsed), then `ui` (Playwright opens every record and checks every link; a failure now fails the run. Owner decision 2026-10-22: make it a required check; the owner adds `ui` to the pull request ruleset in Settings, then the file is updated to match. Until then the ruleset file lists only `validate` and `build`, matching the live ruleset). `build` also parses the page script, and `deploy-pages` repeats that parse before publishing.
+`check.yml` runs on every push to `main` and every pull request: `validate` (every record against `scripts/validate.py --strict`), then `build` (snapshot assembled, page parsed), then `ui` (Playwright opens every record and checks every link; a failure now fails the run. Required since 2026-10-22: the pull request ruleset requires `validate`, `build` and `ui` (GitHub Actions source), and the ruleset file matches). `build` also parses the page script, and `deploy-pages` repeats that parse before publishing.
 
 `rulesets.yml` runs weekly on Mondays, on demand, and on any pull request that touches `.github/rulesets/` or the checker.
 
