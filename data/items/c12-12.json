@@ -2,12 +2,18 @@
   "agency": "FERC",
   "blockers": [
     "FERC retained the rule and is implementing it through compliance dates",
-    "Pending court review"
+    "Pending Fourth Circuit review of the consolidated petitions (lead No. 24-1650, Appalachian Voices v. FERC)"
   ],
   "chapter": "12",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked and Order No. 1920-B read on federalregister.gov, confirming it sustains the rule's outcome without amending the regulations; a search found no later revision. This call is not evenly balanced; diverged follows from test (b), since FERC's post-January 2025 rehearing order affirmatively kept the rule the text asked it to change.",
+  "confidence_reason": "Rule applied: high only when the stage-deciding primary document was opened and read and nothing material rests on secondary reports. The stage-deciding document, Order No. 1920-B on federalregister.gov, was read in an earlier pass and confirms FERC sustained the rule (diverged under test (b)); in this pass the Tenth Circuit transfer order (govinfo) and the Fourth Circuit consolidation entry (Justia) were re-read, but the 2026-09-15 argument and the absence of a decision rest on a party filing and an external retrieval, so the value stays at 78.",
+  "court_status": {
+    "basis": "Latest opened court document: the Tenth Circuit's 2025-02-27 order transferring a petition on Order No. 1920-A to the Fourth Circuit, where petitions on Order Nos. 1920 and 1920-A are consolidated under lead No. 24-1650 (consolidation also shown on the Justia docket for No. 24-1991). A party filing of 2026-09-25 on pjm.com reports that the consolidated petitions were argued on 2026-09-15 and remain pending; no court document dating the argument or showing a decision was opened.",
+    "date": "2025-02-27",
+    "state": "pending",
+    "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca10-25-09524/pdf/USCOURTS-ca10-25-09524-0.pdf"
+  },
   "durability": {
     "level": "medium",
     "why": "The rule stands as a final rule and is under judicial review, so future commissions could revise it by rulemaking."
@@ -37,10 +43,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c12-22, c12-24 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Court-record pass: Fourth Circuit consolidation of the petitions under lead No. 24-1650 (Justia docket for No. 24-1991) and the Tenth Circuit's 2025-02-27 transfer order (govinfo) were opened and added to the timeline; court_status added as pending, dated 2025-02-27, with the 2026-09-15 argument stated as reported in a party filing. Briefs on archive.org could not be opened. Stage diverged, progress 0 and confidence 78 unchanged."
     }
   ],
   "id": "c12-12",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -66,12 +76,14 @@
       "second review: kept diverged 0; Order No. 1920-B is an affirmative post-period decision to keep the rule, which meets test (b) rather than not_started.",
       "second review: operative ask: FERC should change course on its transmission planning and interconnection rulemakings, or issue a new rulemaking, so that planning is resource neutral, costs are not shifted to customers who do not benefit, and cost allocation does not subsidize generators such as renewables (pages 405 to 406).",
       "second review: rule applied: Diverged (0): test (b) after 2025-01-20 FERC acted on the rule rather than leaving it untouched, issuing Order No. 1920-B on rehearing (published 2025-04-28), which addressed rehearing arguments, did not change the outcome and sustained the cost allocation and state-role requirements, and it continues to administer compliance; a decision on rehearing that keeps the rule is materially opposite to changing course, not merely incomplete. Test (a) no revision is in effect; test (c) no congressional action required.",
-      "second review: not evenly balanced"
+      "second review: not evenly balanced",
+      "court_status added (the record had none): pending, dated 2025-02-27 from the last opened court document; the 2026-09-15 argument is stated in the basis as reported in the PJM party filing.",
+      "Harvard tracker source date 'undated' set to 2025-04-01 (first of the month of its last noted update, the record's convention for partial dates) to fit the schema; the page could not be re-opened in this pass."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 405 to 406 ask FERC to change course on its transmission rulemakings or issue a new one for resource neutrality, no cost shifts to non-beneficiaries and no generator subsidy. Paraphrase accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
+    "reviewed_at": "2026-10-22",
     "reviewer": "Y12a, U13-5",
     "second_review": {
       "balanced": false,
@@ -111,6 +123,16 @@
         "note": "Order No. 1920-B, 90 FR 17692, order on rehearing and clarification of 1920-A; modifies discussion without changing the outcome; does not amend the regulations; sustains state cost allocation provisions; clarifies unenrolled non-jurisdictional providers.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/04/28/2025-06941/building-for-the-future-through-electric-regional-transmission-planning-and-cost-allocation"
+      },
+      {
+        "note": "Re-read: consistent with diverged; FERC's orders are under consolidated Fourth Circuit review with no vacatur or revision; supports court_status pending as of 2025-02-27.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca10-25-09524/pdf/USCOURTS-ca10-25-09524-0.pdf"
+      },
+      {
+        "note": "Re-read: shows consolidation of No. 24-1991 with lead No. 24-1650 and abeyance; no argument or merits ruling; consistent with diverged and pending.",
+        "result": "supports",
+        "url": "https://dockets.justia.com/docket/circuit-courts/ca4/24-1991"
       }
     ]
   },
@@ -173,16 +195,44 @@
       "url": "https://www.pjm.com/-/media/DotCom/documents/ferc/filings/2026/20260925-rm21-17-000.pdf"
     },
     {
-      "date": "undated",
+      "date": "2025-04-01",
       "kind": "tracker",
       "publisher": "Harvard Environmental and Energy Law Program",
       "title": "Regional Transmission Planning Rule tracker",
       "url": "https://eelp.law.harvard.edu/tracker/regional-transmission-planning-rule/"
+    },
+    {
+      "date": "2025-02-27",
+      "kind": "court",
+      "publisher": "U.S. Court of Appeals for the Tenth Circuit (govinfo)",
+      "title": "American Electric Power Service Corp. v. FERC, No. 25-9524 (10th Cir. Feb. 27, 2025), order transferring petition to the Fourth Circuit",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca10-25-09524/pdf/USCOURTS-ca10-25-09524-0.pdf"
+    },
+    {
+      "date": "2024-10-09",
+      "kind": "court",
+      "publisher": "U.S. Court of Appeals for the Fourth Circuit (docket on dockets.justia.com)",
+      "title": "Commonwealth of Kentucky v. FERC, No. 24-1991 (4th Cir.), docket (Filing 6, order of 2024-10-09 consolidating with No. 24-1650)",
+      "url": "https://dockets.justia.com/docket/circuit-courts/ca4/24-1991"
     }
   ],
   "stage": "diverged",
-  "status_summary": "FERC did not change course on its long-term regional transmission planning and cost allocation rule (Order No. 1920, issued in 2024). On 2025-04-11 it issued Order No. 1920-B, published 2025-04-28, which addressed rehearing and sustained the rule's key requirements. FERC has since extended compliance dates for several regions; its schedule page updated 2026-08-19 lists first compliance filings from December 2025 through June 2027. In a 2026-09-25 filing, PJM's transmission owners and state entities proposed filing dates of 2026-11-19 and 2026-12-22 for cost allocation, and noted that Fourth Circuit petitions on the rule were argued on 2026-09-15 and remain pending.",
+  "status_summary": "FERC did not change course on its long-term regional transmission planning and cost allocation rule (Order No. 1920, issued in 2024); on 2025-04-11 it issued Order No. 1920-B, published 2025-04-28, which addressed rehearing and sustained the rule's key requirements. FERC has since extended compliance dates for several regions; its schedule page updated 2026-08-19 lists first compliance filings from December 2025 through June 2027. Petitions for review of the orders are consolidated in the Fourth Circuit under lead No. 24-1650, including a petition the Tenth Circuit transferred there on 2025-02-27. In a 2026-09-25 filing, PJM's transmission owners and state entities proposed filing dates of 2026-11-19 and 2026-12-22 for cost allocation, and noted that the Fourth Circuit petitions were argued on 2026-09-15 and remain pending.",
   "timeline": [
+    {
+      "date": "2024-10-09",
+      "event": "The Fourth Circuit consolidates No. 24-1991 (Commonwealth of Kentucky v. FERC, a petition for review of FERC's transmission planning orders transferred from the Sixth Circuit) with lead case No. 24-1650 (Appalachian Voices v. FERC) and places it in abeyance.",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the Fourth Circuit (docket on Justia)",
+      "url": "https://dockets.justia.com/docket/circuit-courts/ca4/24-1991"
+    },
+    {
+      "date": "2025-02-27",
+      "event": "The Tenth Circuit (No. 25-9524) grants a motion, which FERC agreed to, transferring a petition for review of FERC's orders of 2024-11-21 and 2025-01-23, including Order No. 1920-A, to the Fourth Circuit, noting that petitions on Order Nos. 1920 and 1920-A were already consolidated there under lead No. 24-1650.",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the Tenth Circuit (govinfo)",
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca10-25-09524/pdf/USCOURTS-ca10-25-09524-0.pdf"
+    },
     {
       "date": "2025-04-11",
       "event": "FERC issued Order No. 1920-B on rehearing, sustaining the transmission planning rule; published in the Federal Register on 2025-04-28.",
@@ -207,6 +257,6 @@
   ],
   "title": "Change course on FERC's regional transmission planning and cost allocation rule",
   "tracked": true,
-  "uncertainties": "Court status is taken from a party filing on pjm.com; the Fourth Circuit docket was not opened. The Federal Register text of Order No. 1920-B, as loaded, did not show the commissioner roster or any separate statements. A news search on 2026-10-13 found no FERC action in 2025 or 2026 to reopen or revise the rule. The Harvard tracker page has no update after April 2025. The Mandate's text on National Interest Electric Transmission Corridors is not tracked here. FERC is an independent commission; the record reports alignment only.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Court status after 2025-02-27 is taken from a party filing on pjm.com; the Fourth Circuit merits docket for lead No. 24-1650 was not opened. A Justia docket for member case No. 24-1991 (last retrieved by Justia in October 2024) and the Tenth Circuit transfer order of 2025-02-27 on govinfo were read and confirm consolidated Fourth Circuit review under that lead number. Copies of the briefs on archive.org (FERC's brief of 2026-01-05, the petitioners' final brief of 2026-03-13), a 2025-07-01 briefing motion and a state amicus brief could not be opened; the 2026-09-15 oral argument and the absence of a decision rest on the PJM filing and an external retrieval, not on an opened court document. The lists of consolidated case numbers differ between filings (the Justia docket and a 2026-02-04 amicus brief do not match), and the variation was not reconciled. The Federal Register text of Order No. 1920-B, as loaded, did not show the commissioner roster or any separate statements. A news search on 2026-10-13 found no FERC action in 2025 or 2026 to reopen or revise the rule. The Harvard tracker page has no update after April 2025 (its source date uses the first of that month) and could not be re-opened in this pass. The Mandate's text on National Interest Electric Transmission Corridors is not tracked here. FERC is an independent commission; the record reports alignment only.",
+  "updated_at": "2026-10-22"
 }
