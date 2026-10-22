@@ -5,9 +5,9 @@
     "Congressional tax-writing process not started"
   ],
   "chapter": "26",
-  "confidence": 66,
+  "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "Not_started rests on five documented checks: (1) Federal Register API queries for border adjustment and destination-based terms found only a USTR notice on the EU carbon measure (supports); (2) Unified Agenda: the Treasury rule list on reginfo.gov was read in full on 2026-10-19 with no matching entry (supports, weakly informative because the tax needs legislation); (3) congress.gov and GovInfo search with U.S. Code notes for Public Law 119-21 found no border-adjusted tax bill or provision (supports); (4) Treasury press releases showed nothing (supports); (5) one news search found only advocacy (supports). The JEC hearing page was read. Set at 66 because the agenda is weakly informative and the enacted text was read only through Code notes.",
+  "confidence_reason": "Rule applied: an absence-based not_started rating with a documented, dated five-part check may sit up to 70, and a fact known only through an external retrieval caps at 79. Not_started rests on five checks recorded with dates in source_checks: (1) Federal Register API queries for border adjustment and destination-based terms found only a USTR notice on the EU carbon measure (2026-10-18); (2) the Treasury Unified Agenda rule list on reginfo.gov, read in full on 2026-10-19, with no matching entry (weakly informative because the tax needs legislation); (3) congress.gov and GovInfo search with U.S. Code notes for Public Law 119-21 (2026-10-18), refreshed on 2026-10-22 by an external retrieval of Congress.gov whose six candidate bills were opened on govinfo.gov and found to be related carbon, pollution or methane measures, three of them re-opened in review; (4) Treasury press releases (2026-10-18); (5) one news search that found only advocacy (2026-10-18). Raised from 66 to 68; held below 70 because the bill search itself cannot be reproduced, the relevance reading rests on bill titles, and Public Law 119-21 was read only through Code notes.",
   "durability": {
     "level": "low",
     "why": "No operative measure exists; interest could change with tariff litigation."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-19",
       "note": "Independent review read the Treasury Unified Agenda rule list on reginfo.gov and found no border adjustment entry; not_started kept and confidence raised from 65 to 66."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Follow-up check of congressional action: an external retrieval of Congress.gov and web searches found no bill for a general destination-based border adjustment tax; six related bills (carbon, pollution and methane border measures, plus one whose content is unconfirmed) had their govinfo.gov status records opened and all remain in committee. The Clean Competition Act bills were added as sources and the status summary now distinguishes them. Not_started kept; confidence raised from 66 to 68."
     }
   ],
   "id": "c26-17",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -68,7 +72,7 @@
     "mandate_check": "confirmed",
     "mandate_note": "Pages 782 to 783, reciprocal trade discussion (Navarro): the 2017 House border adjustment tax denied deductions for imports and exempted export income; a conservative Administration might look at such a tax as part of its trade agenda. Paraphrase accurate.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-22",
     "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
@@ -121,6 +125,54 @@
         "note": "Treasury list headed 'Agency Rule List - 2026' (216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages): no entry on a border adjustment or destination-based cash flow tax. Weakly informative: such a tax needs legislation.",
         "result": "supports",
         "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against not_started: carbon border adjustment bill, referred to Senate Finance 2025-12-17, no further action; related, not a general border adjustment tax. Re-opened in review on 2026-10-22: Sen. Whitehouse, introduced and referred to Finance 2025-12-17, 5 original cosponsors, official title a carbon border adjustment based on carbon intensity, no later action, record updated 2026-03-19; confirms.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s3523.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against not_started: House companion, referred 2025-12-17 to three committees, no further action; related only. Re-opened in review on 2026-10-22: Rep. DelBene, referred 2025-12-17 to Ways and Means, Energy and Commerce and Foreign Affairs, 6 cosponsors (one added 2026-01-16), no later action; confirms.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6787.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against not_started: pollution-intensity import fee, referred to Senate Finance 2025-04-08, no further action; related only.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1325.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against not_started: methane border adjustment, referred to Ways and Means 2025-01-16, no further action; related only.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr480.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against not_started: greenhouse gas emissions tax bill, referred 2025-05-13, no further action; related only.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3338.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against not_started: omnibus tax-policy-area bill referred to 21 committees, last action 2026-01-15; the status record carries no text, so whether it holds any border provision could not be checked here. Re-opened in review on 2026-10-22: title To advance sensible priorities, Rep. Fitzpatrick, introduced 2025-12-11, 21 committees, latest action 2026-01-15 subcommittee referral, no cosponsors listed, no text or summary; content unconfirmed.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6636.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "External retrieval of 2026-10-22: 20 Congress.gov and web queries (not reproducible here; not cited as a source) found no bill generally denying a deduction for imports and exempting export income, only related carbon, pollution and methane border bills. Against not_started: supports. Refreshes part 3 of the five-part check.",
+        "result": "supports",
+        "url": "https://www.congress.gov/"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Not re-opened on 2026-10-22 (researcher's permission request unanswered; not re-fetched in review per the brief). The record's reading of 2026-10-14 (hearing postponed) stands.",
+        "result": "unreachable",
+        "url": "https://www.jec.senate.gov/public/index.cfm/2026/3/evaluating-the-u-s-competitiveness-and-investment-advantages-of-a-destination-based-cash-flow-tax-dbcft"
       }
     ]
   },
@@ -166,13 +218,27 @@
       "publisher": "Bloomberg Tax",
       "title": "Border tax to get hearing after Supreme Court tariff ruling",
       "url": "https://news.bloombergtax.com/daily-tax-report/border-tax-to-get-hearing-after-supreme-court-tariff-ruling"
+    },
+    {
+      "date": "2025-12-17",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "S. 3523, Clean Competition Act (119th Congress), bill status record",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s3523.xml"
+    },
+    {
+      "date": "2025-12-17",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "H.R. 6787, Clean Competition Act (119th Congress), bill status record",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6787.xml"
     }
   ],
   "stage": "not_started",
-  "status_summary": "No border adjustment was found in an enacted law, an introduced bill or an administration proposal. The Joint Economic Committee scheduled a hearing for 2026-03-04 on a destination-based cash flow tax, a form of border-adjusted tax, after the Supreme Court's tariff ruling; the committee's page lists it as postponed with no new date. The administration's trade agenda has relied on tariffs under executive and trade-statute authority (see c26-01).",
+  "status_summary": "No border adjustment of the recommended kind, one denying a deduction for imports and exempting export income, was found in an enacted law, an introduced bill or an administration proposal; the Clean Competition Act (S. 3523 and H.R. 6787), introduced and referred to committee on 2025-12-17, would create a carbon border adjustment based on carbon intensity, a different measure. The Joint Economic Committee scheduled a hearing for 2026-03-04 on a destination-based cash flow tax, a form of border-adjusted tax, after the Supreme Court's tariff ruling; the committee's page lists it as postponed with no new date. The administration's trade agenda has relied on tariffs under executive and trade-statute authority (see c26-01).",
   "timeline": [],
   "title": "Consider a border adjustment tax as part of the trade agenda",
   "tracked": true,
-  "uncertainties": "No border adjustment was found in an enacted law, an introduced bill or an administration proposal. The Joint Economic Committee hearing set for 2026-03-04 on a destination-based cash flow tax is listed as postponed, and a member's February 2026 advocacy is not an action. Public Law 119-21 was read only through U.S. Code notes, and congress.gov search could not be opened. The only Federal Register border adjustment item concerns the EU carbon measure. The Treasury Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists no such rulemaking; the tax would need legislation, so the agenda is a weak test. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "No border adjustment was found in an enacted law, an introduced bill or an administration proposal that matches the recommendation. The Joint Economic Committee hearing set for 2026-03-04 on a destination-based cash flow tax is listed as postponed, and a member's February 2026 advocacy is not an action. An external retrieval of Congress.gov and web searches (20 queries, run 2026-10-22; it cannot be reproduced here) found no bill that generally denies a deduction for imports and exempts export income. It found related bills, six of which had their status records opened on govinfo.gov: the Clean Competition Act (S. 3523 and H.R. 6787), the Foreign Pollution Fee Act of 2025 (S. 1325), the Methane Border Adjustment Mechanism Act (H.R. 480), the MARKET CHOICE Act (H.R. 3338) and H.R. 6636. Each was referred to committee and shows no later floor or committee action. The titles of the first five describe carbon, pollution, methane or greenhouse gas measures, a different design from a general border adjustment tax; the status records carry no bill text, so this reading rests on titles. H.R. 6636 is titled only To advance sensible priorities, was introduced 2025-12-11 and referred to 21 committees, and its status record carries no text or summary, so its content is unconfirmed. These bills are treated as related context and do not move the stage. The external retrieval also reports no White House, Treasury or Federal Register proposal for a general border adjustment tax. Public Law 119-21 was read only through U.S. Code notes, and the congress.gov search could not be opened here. The only Federal Register border adjustment item concerns the EU carbon measure. The Treasury Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026') lists no such rulemaking; the tax would need legislation, so the agenda is a weak test. Checked systematically on 2026-10-19; external retrieval results and bill status records added 2026-10-22.",
+  "updated_at": "2026-10-22"
 }

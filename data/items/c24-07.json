@@ -4,9 +4,9 @@
     "Congress has not taken up monetary-rule legislation; Fed retains discretion"
   ],
   "chapter": "24",
-  "confidence": 66,
+  "confidence": 70,
   "confidence_label": "medium",
-  "confidence_reason": "Not_started rests on the FOMC statement read on the Fed site and five documented checks: (1) Federal Register API queries for monetary rule (zero) and monetary policy rule at the Board found no rule action (supports); (2) Unified Agenda: the Federal Reserve rule list on reginfo.gov was read in full on 2026-10-19 with no monetary rule entry (supports, weakly informative because strategy is set by statement or statute); (3) congress.gov and GovInfo search and U.S. Code notes found no bill or law mandating a rule (supports); (4) Board press releases showed nothing (supports); (5) one news search found only commentary (supports). Set at 66 because the agenda is weakly informative and the bill search rests on title matching.",
+  "confidence_reason": "Rule applied: an absence-based not_started rating with a documented, dated five-part check may sit up to 70, and a fact known only through an external retrieval caps at 79. Not_started rests on the FOMC statement read on the Fed site and five checks recorded with dates in source_checks: (1) Federal Register API queries for monetary rule (zero) and monetary policy rule at the Board found no rule action (2026-10-18); (2) the Federal Reserve rule list on reginfo.gov, read in full on 2026-10-19, with no monetary rule entry (weakly informative because strategy is set by statement or statute); (3) congress.gov and GovInfo search and U.S. Code notes (2026-10-18), refreshed on 2026-10-22 by an external retrieval of Congress.gov covering rule, dual mandate, commodity standard and free banking bills, whose one related bill (H.R. 5396) was opened on govinfo.gov and re-opened in review; (4) Board press releases (2026-10-18); (5) one news search that found only commentary (2026-10-18). Raised from 66 to the 70 ceiling; not higher because the bill search cannot be reproduced and the excluded bills were not opened.",
   "durability": {
     "level": "high",
     "why": "No operative change exists; a discretionary framework is the status quo."
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-19",
       "note": "Independent review read the Federal Reserve Unified Agenda rule list on reginfo.gov and found no monetary rule entry; not_started kept and confidence raised from 65 to 66."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Follow-up check of congressional and Federal Reserve action: an external retrieval of Congress.gov and web searches found no bill imposing a monetary policy rule, a commodity or gold standard, or free banking, and no Federal Reserve adoption of one. One related bill, H.R. 5396 (removes maximum employment from the Fed's goals), reported by the House Financial Services Committee on 2026-06-24, was opened on govinfo.gov and added as a source and one status summary sentence; it sets no rule. Not_started kept; confidence raised from 66 to 70."
     }
   ],
   "id": "c24-07",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "direct",
   "mechanism": "legislation",
@@ -70,7 +74,7 @@
     "mandate_check": "corrected",
     "mandate_note": "Pages 735-740, Monetary Rule Reform Options and Minimum Effective Reforms. The chapter frames these as a menu with free banking first and a K-percent rule as possibly most feasible, leaving the choice to lawmaking; proposal reworded to say so, page cites added, and the inflation and growth targeting option named correctly. Title shortened.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-22",
     "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
@@ -128,6 +132,24 @@
         "note": "Federal Reserve list headed 'Agency Rule List - 2026' (agency named Federal Reserve System, 13 rules on capital, stress capital buffer, supervision ratings, reputation risk, GENIUS Act, CRA and data standards, read to the footer by the reviewer on 2026-10-19): no monetary policy rule, money growth target, commodity money or free banking entry. Weakly informative: monetary strategy is set by FOMC statement or statute.",
         "result": "supports",
         "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=7100"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against not_started: bill reported from committee 2026-06-24 but it ends the maximum employment goal and imposes no rule, commodity standard or free banking; supports the absence of a matching bill, and shows related legislative activity. Re-opened in review on 2026-10-22: Rep. Hill, introduced 2025-09-16, 2 original cosponsors, markup and ordered reported (amended) 30 to 21 on 2026-05-13, reported 2026-06-24 (H. Rept. 119-710), Union Calendar No. 616; CRS summary limited to removing maximum employment; no rule, gold or commodity standard or free banking; not passed either chamber. Confirms.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5396.xml"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "Against not_started: the 2025-08-22 FOMC release keeps the congressionally assigned goals and mentions no policy rule; the page does not print the statement text. Researcher's reading of 2026-10-22; not re-fetched in review.",
+        "result": "supports",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250822a.htm"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "External retrieval of 2026-10-22: 22 Congress.gov and web queries (not reproducible here; not cited as a source) found no 119th Congress bill imposing a monetary policy rule, a gold or commodity standard or free banking; one related dual-mandate bill (H.R. 5396). Against not_started: supports. Refreshes part 3 of the five-part check.",
+        "result": "supports",
+        "url": "https://www.congress.gov/"
       }
     ]
   },
@@ -187,10 +209,17 @@
       "publisher": "Federal Reserve Board",
       "title": "FOMC reaffirms its Statement on Longer-Run Goals and Monetary Policy Strategy",
       "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128b.htm"
+    },
+    {
+      "date": "2026-06-24",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "H.R. 5396, Price Stability Act of 2026 (119th Congress), bill status record",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5396.xml"
     }
   ],
   "stage": "not_started",
-  "status_summary": "No bill establishing free banking, commodity-backed money, a K-percent rule or another statutory policy rule was found in the 119th Congress. The FOMC's Statement on Longer-Run Goals and Monetary Policy Strategy, revised 2025-08-22 and reaffirmed unchanged on 2026-01-28, keeps a 2 percent inflation goal, names the federal funds rate as the primary policy tool, contains no averaging language and references no policy or money growth rule. The gold-related bills seen (H.R. 3795 and S. 3218, Gold Reserve Transparency Act of 2025) concern reserve transparency, not a gold standard.",
+  "status_summary": "No bill establishing free banking, commodity-backed money, a K-percent rule or another statutory policy rule was found in the 119th Congress. The FOMC's Statement on Longer-Run Goals and Monetary Policy Strategy, revised 2025-08-22 and reaffirmed unchanged on 2026-01-28, keeps a 2 percent inflation goal, names the federal funds rate as the primary policy tool, contains no averaging language and references no policy or money growth rule. The gold-related bills seen (H.R. 3795 and S. 3218, Gold Reserve Transparency Act of 2025) concern reserve transparency, not a gold standard. A different measure, H.R. 5396 (Price Stability Act of 2026), would remove maximum employment from the goals of monetary policy and sets no rule, commodity standard or free banking; the House Financial Services Committee ordered it reported on 2026-05-13 and reported it on 2026-06-24 (H. Rept. 119-710), and its status record shows no floor action.",
   "timeline": [
     {
       "date": "2025-08-22",
@@ -209,6 +238,6 @@
   ],
   "title": "Replace discretionary Fed policy with a monetary rule, such as a K-percent rule",
   "tracked": true,
-  "uncertainties": "No bill establishing free banking, commodity-backed money, a K-percent rule or another statutory policy rule was found; congress.gov search could not be opened and the bill search rests on title matching, so a bill under another name could be missed. The FOMC statement revised 2025-08-22 and reaffirmed 2026-01-28 references no policy or money growth rule. H.R. 3795 and S. 3218 were seen only on tracker pages. The Federal Reserve Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026', 13 rules) lists no monetary rule entry; strategy is set by statement or statute, so the agenda is a weak test. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "No bill establishing free banking, commodity-backed money, a K-percent rule or another statutory policy rule was found. An external retrieval of Congress.gov and web searches (22 queries, run 2026-10-22; it cannot be reproduced here) covered K-percent and Taylor-type rule bills, the dual mandate, gold or commodity standards and free banking in the 119th Congress, and found one related bill: H.R. 5396, which would remove maximum employment from the statutory goals of monetary policy. Its status record, opened on govinfo.gov, shows it ordered reported 30 to 21 on 2026-05-13, reported on 2026-06-24 and placed on the Union Calendar, and not law; it imposes no rule on the conduct of policy, so it is treated as related and does not move the stage. The external retrieval excluded the Gold Reserve Transparency Act bills (H.R. 3795, S. 3218), bills to abolish the Federal Reserve Board (H.R. 1846, S. 869) and H.R. 4975 (a removal procedure for the Chairman tied to benchmarks) as not matching; these were not opened, and H.R. 3795 and S. 3218 were seen only on tracker pages. It also found no Federal Reserve adoption of such a rule. The FOMC statement revised 2025-08-22 and reaffirmed 2026-01-28 references no policy or money growth rule; the 2025-08-22 release page itself does not print the statement text. The Federal Reserve Unified Agenda rule list on reginfo.gov (headed 'Agency Rule List - 2026', 13 rules) lists no monetary rule entry; strategy is set by statement or statute, so the agenda is a weak test. The congress.gov search could not be opened here, so a bill under another name remains possible. Checked systematically on 2026-10-19; external retrieval results added 2026-10-22.",
+  "updated_at": "2026-10-22"
 }

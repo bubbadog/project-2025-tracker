@@ -8,7 +8,7 @@
   "chapter": "12",
   "confidence": 68,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked and FERC's order at 196 FERC para. 61,245 (2026-09-29) re-read in this review, supporting the finding that dispatchable valuation was declined; the proposed stage itself rests on the 2025 conference notice and on a limited search for broader market-design action.",
+  "confidence_reason": "Rule applied: high requires the stage-deciding primary text to be opened and read, and a fact known only through the external retrieval or a secondary account caps the record at 79. FERC's order at 196 FERC para. 61,245 (2026-09-29) supports the finding that dispatchable valuation was declined, and the 2025-10-23 section 403 letter and FERC docket RM26-4-000 page were re-read on 2026-10-22 as related context; the proposed stage itself rests on the 2025 conference notice and on the absence of broader market design action in limited searches and an external retrieval, and the 2026-06-18 orders are known only through a law-firm account, so confidence stays 68, medium.",
   "durability": {
     "level": "medium",
     "why": "FERC orders can be revised by later commissions and are subject to rehearing and court review, but tariff changes bind RTOs until altered."
@@ -34,10 +34,14 @@
     {
       "date": "2026-10-16",
       "note": "Independent review re-read the 2026-09-29 FERC order on the pjm.com copy, which supports the record; proposed 10 and medium confidence kept and the December 2025 order description completed from ferc.gov."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Congress search pass: the Secretary of Energy's section 403 letter of 2025-10-23 on large loads, the FERC docket page (RM26-4-000) and a law-firm account of FERC's 2026-06-18 show cause orders were read, confirmed in review, added as sources and recorded in the uncertainties as related context; they do not reexamine RTOs or value dispatchable resources. An external retrieval found no FERC proceeding on the RTO premise or capacity market valuation of dispatchable resources beyond the 2025 conference. The Akin Gump source date was completed as 2025-06-25. Stage, progress and confidence (68) unchanged."
     }
   ],
   "id": "c12-22",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -70,18 +74,49 @@
     },
     "flags": [
       "Accepted researcher's fuller description of the December 2025 order and its ferc.gov PDF as a source.",
-      "FERC citations written with 'para.' in place of the pilcrow sign; restore the symbol if the site prefers it."
+      "FERC citations written with 'para.' in place of the pilcrow sign; restore the symbol if the site prefers it.",
+      "2026-10-22: section 403 large load directive (RM26-4-000) and the 2026-06-18 show cause orders (EL26-67 to EL26-72) recorded in uncertainties as related context, not events; the Troutman source carries its printed publication date 2026-07-01 with the orders' date in its title; the hydropower docket number and docket-to-operator mapping left out as unconfirmed. Proposed 10 kept."
     ],
     "mandate_check": "ok",
     "mandate_note": "Pages 404 and 405 ask FERC to reexamine the RTO premise, require valuation of dispatchable resources with three named options, pass renewable benefits to customers, end undue discrimination by subsidized resources and affirm state choice on RTO membership with possible non-RTO pools; the proposal paraphrases this accurately.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
+    "reviewed_at": "2026-10-22",
     "reviewer": "P16-1",
     "source_checks": [
       {
         "note": "196 FERC para. 61,245; acceptance, suspension to 2027-02-28, paper hearing topics, EL26-108, and dispatchable valuation request declined.",
         "result": "supports",
         "url": "https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf"
+      },
+      {
+        "note": "Re-fetched 2026-10-22: docket RM26-4-000 page states the 2025-10-23 section 403 directive to consider an ANOPR on loads above 20 MW, links a notice extending the comment period and reports no final rule or order; no capacity market or state RTO choice content. Stated against the proposed stage: related context; neither supports nor contradicts proposed.",
+        "result": "partial",
+        "url": "https://www.ferc.gov/rm26-4"
+      },
+      {
+        "note": "Re-fetched 2026-10-22: letter of 2025-10-23 from the Secretary of Energy under section 403 (42 U.S.C. 7173) directing FERC to begin a rulemaking on interconnection of loads above 20 MW, final action requested by 2026-04-30, no docket number printed; no mention of RTOs or capacity markets; dispatchable appears only for curtailable hybrid facilities. Stated against the proposed stage: related context; neither supports nor contradicts proposed.",
+        "result": "partial",
+        "url": "https://www.energy.gov/sites/default/files/2025-10/403%20Large%20Loads%20Letter.pdf"
+      },
+      {
+        "note": "Re-fetched 2026-10-22: law-firm account published 2026-07-01 of six section 206 show cause orders of 2026-06-18 (EL26-67-000 to EL26-72-000), one per RTO or ISO and its transmission owners, on large and co-located load tariff provisions; 60-day responses, 30-day resource adequacy reports; no docket-to-operator mapping; no capacity market, dispatchable valuation or RTO reexamination content. Stated against the proposed stage: related secondary context only.",
+        "result": "partial",
+        "url": "https://www.troutmanenergyreport.com/2026/07/ferc-orders-regional-grid-operators-to-justify-or-reform-tariff-provisions-for-interconnection-of-large-loads/"
+      },
+      {
+        "note": "Re-fetched 2026-10-22: FR Doc. 2025-17044 (90 FR 42963, 2025-09-05) prints a 2025-08-29 section 403 letter proposing termination of the gas certificate policy statement proceeding (PL18-1-000, PL18-1-001); no large load, RTO or capacity market content. Not cited as a source; neither supports nor contradicts the proposed stage.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2025-09-05/html/2025-17044.htm"
+      },
+      {
+        "note": "Re-fetched 2026-10-22 to complete a partial source date: the post is dated 2025-06-25 and describes the 2025-06-04 and 2025-06-05 conference. Consistent with the proposed stage (information gathering only).",
+        "result": "supports",
+        "url": "https://www.akingump.com/en/insights/blogs/speaking-energy/ferc-holds-technical-conference-to-explore-resource-adequacy-challenges"
+      },
+      {
+        "note": "External retrieval of 2026-10-22: searches of Congress.gov, FERC and DOE sources for a FERC proceeding on whether RTOs serve the public interest or a capacity market change valuing dispatchable resources found none beyond docket AD25-7. Recorded as an external retrieval, not cited as a source; consistent with the proposed stage.",
+        "result": "supports",
+        "url": "https://www.congress.gov/"
       }
     ],
     "stage_change_reason": "The September 2026 order declines added dispatchable valuation and neither FERC order reexamines the RTO model or state choice; proposed at 10 rests only on the 2025 resource adequacy conference opening the capacity market question, a judgment already flagged, with not_started defensible."
@@ -123,7 +158,7 @@
       "url": "https://www.federalregister.gov/documents/2025/06/06/2025-10353/meeting-the-challenge-of-resource-adequacy-in-regional-transmission-organization-and-independent"
     },
     {
-      "date": "2025-06",
+      "date": "2025-06-25",
       "kind": "news",
       "publisher": "Akin Gump",
       "title": "FERC Holds Technical Conference to Explore Resource Adequacy Challenges",
@@ -149,6 +184,27 @@
       "publisher": "FERC",
       "title": "Order on Show Cause Proceeding, PJM Interconnection, L.L.C., 193 FERC para. 61,217 (EL25-49)",
       "url": "https://www.ferc.gov/sites/default/files/2025-12/E-1%20EL25-49-000.pdf"
+    },
+    {
+      "date": "2025-10-23",
+      "kind": "primary",
+      "publisher": "FERC",
+      "title": "Interconnection of Large Loads to the Interstate Transmission System (Docket RM26-4-000)",
+      "url": "https://www.ferc.gov/rm26-4"
+    },
+    {
+      "date": "2025-10-23",
+      "kind": "primary",
+      "publisher": "U.S. Department of Energy",
+      "title": "Section 403 letter to FERC with ANOPR on interconnection of large loads",
+      "url": "https://www.energy.gov/sites/default/files/2025-10/403%20Large%20Loads%20Letter.pdf"
+    },
+    {
+      "date": "2026-07-01",
+      "kind": "news",
+      "publisher": "Troutman Energy Report",
+      "title": "FERC orders regional grid operators to justify or reform tariff provisions for interconnection of large loads (account of the 2026-06-18 orders)",
+      "url": "https://www.troutmanenergyreport.com/2026/07/ferc-orders-regional-grid-operators-to-justify-or-reform-tariff-provisions-for-interconnection-of-large-loads/"
     }
   ],
   "stage": "proposed",
@@ -178,6 +234,6 @@
   ],
   "title": "Reexamine RTO premise, value dispatchable resources, let states decide on RTO membership",
   "tracked": true,
-  "uncertainties": "The December 2025 order was read only through its introduction (ordering paragraphs truncated), so compliance deadlines come from the introduction and the FERC news release. The 2026-09-29 order was read from a copy hosted on pjm.com, not FERC eLibrary, and its later pages were truncated. No FERC action on states choosing RTO membership, on non-RTO pools, or on any rulemaking reexamining RTOs was found; FERC, PJM, Federal Register and law-firm sources were searched. DOE section 403 directives on large loads were seen only through law-firm headlines and are not treated as events here. The FERC September 2026 commission meeting summary listed no RTO market design item beyond tariff matters. Overlap with c12-07 on the PJM backstop is intentional; this record stays on market design.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The December 2025 order was read only through its introduction (ordering paragraphs truncated), so compliance deadlines come from the introduction and the FERC news release. The 2026-09-29 order was read from a copy hosted on pjm.com, not FERC eLibrary, and its later pages were truncated. No FERC action on states choosing RTO membership, on non-RTO pools, or on any rulemaking reexamining RTOs was found; FERC, PJM, Federal Register and law-firm sources were searched, and an external retrieval of 2026-10-22 searched Congress.gov, FERC and DOE sources for a FERC proceeding on whether RTOs serve the public interest or a capacity market change to value dispatchable resources and found none beyond the 2025 resource adequacy conference (docket AD25-7), which gathered information and adopted no rule change. Related large load actions read on 2026-10-22: a letter of 2025-10-23 from the Secretary of Energy to FERC under section 403 of the DOE Organization Act (DOE letter on energy.gov) directed FERC to begin a rulemaking, with an attached advance notice of proposed rulemaking on interconnecting loads above 20 MW, and asked for final action by 2026-04-30; FERC opened docket RM26-4-000 (ferc.gov), whose page reports an extended comment period and no final rule. A law-firm account published 2026-07-01 (troutmanenergyreport.com) reports that on 2026-06-18 FERC issued six show cause orders (dockets EL26-67-000 through EL26-72-000) to the RTOs and ISOs and their transmission owners, preliminarily finding their tariffs lack clear large and co-located load provisions and requiring resource adequacy informational reports within 30 days; it does not say which docket belongs to which operator. These actions bear on RTO tariffs but not on the Mandate's premise of reexamining RTOs, on valuing dispatchable resources in capacity markets or on state choice of RTO membership, so they are related context and not events or stage drivers. The letter mentions dispatchable resources only as curtailable hybrid facilities whose interconnection studies would be expedited. Two other section 403 letters of 2025 were not about large loads: 2025-08-29 on the gas certificate policy statement (Dockets PL18-1-000 and PL18-1-001, Federal Register notice of 2025-09-05, read on govinfo.gov) and 2025-10-23 on hydropower preliminary permits (docket number not confirmed). The DOE Secretary's section 403 directive is counted here only as context; overlap with c12-07 on the PJM backstop is intentional, and this record stays on market design.",
+  "updated_at": "2026-10-22"
 }

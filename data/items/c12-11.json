@@ -2,13 +2,13 @@
   "agency": "DOE/NNSA",
   "blockers": [
     "Energy Secretary statements limiting scope to non-explosive tests",
-    "Congressional opposition from Nevada delegation",
+    "Congressional opposition from the Nevada delegation, including four unenacted bills introduced 2025-10-30 to 2025-11-07 that would bar or condition explosive testing",
     "Regulatory and logistical lead times of 24 to 36 months"
   ],
   "chapter": "12",
   "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "CRS IF11662 and the AIP report were read and a Federal Register query returned nothing; the presidential statement rests on press accounts of a social media post and the stage rests on the absence of a formal readiness directive from limited searching, so confidence is lowered within medium.",
+  "confidence_reason": "Rule applied: high requires the stage-deciding primary text to be opened and read, and a fact known only through the external retrieval caps the record at 79. No single deciding document exists: the proposed stage rests on press accounts of the President's post, the Energy Secretary's statements, CRS IF11662 and the absence of a readiness directive in a Federal Register query and an external retrieval's searches. The four related bills were confirmed on govinfo.gov bill status records on 2026-10-22 but do not decide the stage, so confidence stays 64, medium.",
   "durability": {
     "level": "low",
     "why": "The step is a public statement without an implementing order, and the program office has said no technical need for explosive testing exists."
@@ -42,10 +42,14 @@
     {
       "date": "2026-10-16",
       "note": "Independent review after the primary-source lift: CRS IF11662 on everycrsreport.com, the AIP FYI report and a Federal Register API query were read; two non-action entries left the timeline; proposed 12 kept; confidence 72 to 64."
+    },
+    {
+      "date": "2026-10-22",
+      "note": "Congress search pass: four related bills (H.R. 5894, S. 3090, H.R. 5951, S. 3106) were read on govinfo.gov bill status records, re-checked in review, added as sources and recorded in the uncertainties as context opposite to the recommendation; none had committee action or became law. An external retrieval found no NNSA directive, budget action or defense authorization provision shortening test readiness. Stage, progress and confidence (64) unchanged."
     }
   ],
   "id": "c12-11",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-22",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -72,12 +76,13 @@
     "flags": [
       "proposed 12 kept: the willingness-to-test signal was given publicly, but no readiness directive to NNSA was found; in_progress at the low end could be argued only if a directive surfaces.",
       "Removed a CRS analysis entry and a members' letter from the timeline; the President's post now cites AIP, which dates it and names the addressee.",
-      "Confidence lowered from 72 to 64: no single deciding document exists and the stage rests on absence of a directive."
+      "Confidence lowered from 72 to 64: no single deciding document exists and the stage rests on absence of a directive.",
+      "2026-10-22: four unenacted bills to bar or condition explosive testing recorded in uncertainties as opposing context, not as timeline events; they do not support diverged. Proposed 12 kept."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 399 checked; paraphrase of the treaty, signaling and test readiness recommendation is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
+    "reviewed_at": "2026-10-22",
     "reviewer": "P16L-1",
     "source_checks": [
       {
@@ -94,6 +99,31 @@
         "note": "Dated 2025-11-05; post of about 2025-10-29 said the Department of War was instructed to begin testing on an equal basis; Energy Secretary described system tests, not nuclear explosions; no written order. Now the timeline source for the post.",
         "result": "supports",
         "url": "https://www.aip.org/fyi/trump-order-to-start-nuclear-testing-raises-questions-for-doe"
+      },
+      {
+        "note": "Re-fetched 2026-10-22: RESTRAIN Act, sponsor Rep. Titus, introduced 2025-10-31, referred to House Armed Services, latest action sponsor remarks 2025-11-19, 29 cosponsors (latest 2026-09-24), not enacted. Stated against the proposed stage: related context opposite to the recommendation; neither supports nor contradicts proposed.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5894.xml"
+      },
+      {
+        "note": "Re-fetched 2026-10-22: No Nuclear Testing Act of 2025, sponsor Sen. Markey, introduced and referred to Senate Armed Services 2025-10-30 (latest action), 8 cosponsors, would bar funds for an explosive test, not enacted. Stated against the proposed stage: related context opposite to the recommendation; neither supports nor contradicts proposed.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s3090.xml"
+      },
+      {
+        "note": "Re-fetched 2026-10-22: No Nuclear Testing Without Approval Act, sponsor Rep. Horsford, introduced 2025-11-07, referred to Armed Services and Rules (latest action), 3 cosponsors (added 2025-11-07, 2025-12-16, 2026-08-17), identical to S. 3106, not enacted. Stated against the proposed stage: related context; neither supports nor contradicts proposed.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5951.xml"
+      },
+      {
+        "note": "Re-fetched 2026-10-22: sponsor Sen. Cortez Masto, introduced and referred to Senate Armed Services 2025-11-05 (latest action), 5 cosponsors, would require congressional approval before explosive testing resumes, not enacted. Stated against the proposed stage: related context; neither supports nor contradicts proposed.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s3106.xml"
+      },
+      {
+        "note": "External retrieval of 2026-10-22: searches of Congress.gov and agency sources for an NNSA readiness directive, a budget action or a defense authorization provision shortening test readiness returned nothing. Recorded as an external retrieval, not cited as a source; consistent with the proposed stage, though absence does not rule out an unpublished directive.",
+        "result": "supports",
+        "url": "https://www.congress.gov/"
       }
     ]
   },
@@ -168,6 +198,34 @@
       "publisher": "American Institute of Physics (FYI)",
       "title": "Trump order to start nuclear testing raises questions for DOE",
       "url": "https://www.aip.org/fyi/trump-order-to-start-nuclear-testing-raises-questions-for-doe"
+    },
+    {
+      "date": "2025-10-31",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "Bill status: H.R. 5894, RESTRAIN Act (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5894.xml"
+    },
+    {
+      "date": "2025-10-30",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "Bill status: S. 3090, No Nuclear Testing Act of 2025 (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s3090.xml"
+    },
+    {
+      "date": "2025-11-07",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "Bill status: H.R. 5951, No Nuclear Testing Without Approval Act (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr5951.xml"
+    },
+    {
+      "date": "2025-11-05",
+      "kind": "primary",
+      "publisher": "Library of Congress via GovInfo",
+      "title": "Bill status: S. 3106, No Nuclear Testing Without Approval Act of 2025 (119th Congress)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s3106.xml"
     }
   ],
   "stage": "proposed",
@@ -204,6 +262,6 @@
   ],
   "title": "Direct NNSA to nuclear test readiness and signal willingness to test",
   "tracked": true,
-  "uncertainties": "The President's social media post was not retrieved; its date (about 2025-10-29) is inferred from press accounts, and an AIP report quotes it as an instruction to the Department of War. The CRS report of 2025-12-16 was read in full and identifies no executive order or other binding directive resulting from the statements; it links a Reuters report of 2025-10-30 whose text was not read. A Federal Register query on 2026-10-17 for the term nuclear weapons testing since 2025-10-01 returned no documents, which does not rule out a non-published directive. The readiness element overlaps the existing DoD-chapter record c04-06, which tracks restoring test readiness; this record also covers the treaty and signaling elements. A House bill to bar explosive tests was reported introduced in late October 2025; it was not located and is not treated as an event. Independent review of 2026-10-16: the CRS report of 2025-12-16 (no formal order identified, readiness goal 24 to 36 months, treaty signed but not ratified) and the Nevada delegation letter of 2025-11-03 asking that the directive be withdrawn were moved here from the timeline, as an analysis and a members' letter rather than government actions; both remain cited sources. The Federal Register query was re-run and again returned no documents.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The President's social media post was not retrieved; its date (about 2025-10-29) is inferred from press accounts, and an AIP report quotes it as an instruction to the Department of War. The CRS report of 2025-12-16 was read in full and identifies no executive order or other binding directive resulting from the statements; it links a Reuters report of 2025-10-30 whose text was not read. A Federal Register query on 2026-10-17 for the term nuclear weapons testing since 2025-10-01 returned no documents, which does not rule out a non-published directive. The readiness element overlaps the existing DoD-chapter record c04-06, which tracks restoring test readiness; this record also covers the treaty and signaling elements. Related bills, read on govinfo.gov bill status records on 2026-10-22: H.R. 5894 (the RESTRAIN Act, introduced 2025-10-31, 29 cosponsors, latest action sponsor remarks on 2025-11-19) would amend the Atomic Energy Defense Act to prohibit explosive nuclear testing by the United States, and S. 3090 (introduced 2025-10-30, 8 cosponsors) would bar the use of funds for an explosive nuclear weapons test; H.R. 5951 (introduced 2025-11-07, 3 cosponsors) and the identical S. 3106 (introduced 2025-11-05, 5 cosponsors) would require congressional approval before explosive testing resumes. All four were referred to committee, and none has had committee action or been enacted. These bills run opposite to the recommended willingness to test, so they are treated as related context and not as steps toward it; because none is law, they do not support a diverged stage. An external retrieval of 2026-10-22 searched Congress.gov and agency sources for a directive to NNSA, a budget action or a defense authorization provision shortening test readiness and found none; its description of a 24 to 36 month readiness posture matches the existing CRS source, but its agency items carried no links and were not re-opened, and its further funding details are not relied on. The FY2026 and FY2027 defense authorization texts were not read in full, so a readiness provision cannot be ruled out. Independent review of 2026-10-16: the CRS report of 2025-12-16 (no formal order identified, readiness goal 24 to 36 months, treaty signed but not ratified) and the Nevada delegation letter of 2025-11-03 asking that the directive be withdrawn were moved here from the timeline, as an analysis and a members' letter rather than government actions; both remain cited sources.",
+  "updated_at": "2026-10-22"
 }
