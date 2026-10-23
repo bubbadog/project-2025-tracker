@@ -7,7 +7,7 @@
   "chapter": "12",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text on printed pages 389 and 390 re-read. Executive Order 14162 (carried from earlier review), the 2026-01-07 memorandum on the Federal Register and UN depositary notification C.N.102.2026 were read; the 2025-03-04 board withdrawal, the most direct action on the loss and damage fund, rests on a law school tracker and an ASIL note, and the letter itself was not opened. Rule applied: implemented (65 to 90) at 80 because refusal to fund and exit from the fund board and the convention are operative executive actions, reversible and without evidence of the recommended diplomatic effort to persuade other countries; medium because the fund-specific step rests on secondary sources.",
+  "confidence_reason": "Chapter text on printed pages 389 and 390 re-read. Executive Order 14162 (carried from earlier review), the 2026-01-07 memorandum on the Federal Register and UN depositary notification C.N.102.2026 were read; the 2025-03-04 board withdrawal, the most direct action on the loss and damage fund, rests on a law school tracker and two news reports (E&E News and a PTI wire report), and the letter itself was not opened. Rule applied: implemented (65 to 90) at 80 because refusal to fund and exit from the fund board and the convention are operative executive actions, reversible and without evidence of the recommended diplomatic effort to persuade other countries; medium because the fund-specific step rests on secondary sources.",
   "durability": {
     "level": "medium",
     "why": "Withdrawal rests on executive action and could be reversed by a later administration."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-19",
       "note": "Freshness pass: added the UN depositary notification recording the UNFCCC withdrawal as effected 2026-02-27 and taking effect 2027-02-27, consistent with the record on the Paris Agreement withdrawal, which is now cross-referenced; the 2025-03-04 fund board letter still rests on secondary accounts; red-team check holds. Independent review (AI) opened the notification and set confidence 72."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: a note from the American Society of International Law, a professional association, was removed from sources; the board-withdrawal letter's March 4 date and Treasury origin are now backed by an E&E News report of 2025-03-10 and a PTI wire report of 2025-03-07, both added as sources. The undated law school tracker page now carries a null date. Confidence unchanged at 72 (the letter itself and any official record were still not read); stage and progress unchanged."
     }
   ],
   "id": "c12-14",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -90,7 +94,7 @@
     "mandate_check": "pages re-read",
     "mandate_note": "Printed page 389 asks DOE's Office of International Affairs to oppose climate reparations, saying a fund run by a non-U.S. organization should not be supported in any form; page 390 says the President should refuse such payments under an unratified treaty and the office should encourage other countries to reconsider theirs. Proposal and direct match confirmed.",
     "model": "claude-opus-4",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent review (AI)",
     "source_checks": [
       {
@@ -117,6 +121,31 @@
         "note": "Fetched: FY2027 national security and State appropriations bill passed the House 2026-07-15, 217 to 209; received in the Senate 2026-07-29; not enacted.",
         "result": "supports",
         "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr8595.xml"
+      },
+      {
+        "note": "Against the current stage (implemented): opened by the researcher and re-opened 2026-10-23. E&E News, 2025-03-10: the letter is dated March 4 and was sent by a Treasury Department official on the fund board, with the exit effective immediately; no mention of an alternate or replacement. Added as a source.",
+        "result": "supports",
+        "url": "https://www.eenews.net/articles/us-quits-loss-and-damage-fund/"
+      },
+      {
+        "note": "Against the current stage (implemented): opened by the researcher and re-opened 2026-10-23. PTI wire, New Delhi, 2025-03-07: letter written on behalf of the Treasury Department to the fund's developed-country co-chair; the US board member and alternate step down and will not be replaced by a US representative; no letter date. Added as a source.",
+        "result": "supports",
+        "url": "https://www.theweek.in/wire-updates/national/2025/03/07/del35-climate-us-withdrawal.html"
+      },
+      {
+        "note": "Opened by the researcher, not re-opened. Carbon Brief daily brief of 2025-03-10 confirms the US letter confirming withdrawal from the board; gives no letter date or sender; says it is unclear whether this is a full pull-out from the fund. Not added as a source.",
+        "result": "partial",
+        "url": "https://www.carbonbrief.org/daily-brief/us-quits-board-of-un-climate-damage-fund-letter-shows"
+      },
+      {
+        "note": "Opened by the researcher, not re-opened. JURIST, 2025-03-09: letter from the US Treasury Department made public on a Friday; no letter date or replacement statement. Not added as a source.",
+        "result": "partial",
+        "url": "https://www.jurist.org/news/2025/03/us-withdraws-from-board-of-un-climate-damage-fund/"
+      },
+      {
+        "note": "Fetch blocked in the researcher's pass; removed from sources as a professional association's page under the lead-only rule.",
+        "result": "unreachable",
+        "url": "https://asil.org/ilib/us-withdraws-climate-damage-fund/"
       }
     ]
   },
@@ -158,7 +187,7 @@
       "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02010/putting-america-first-in-international-environmental-agreements"
     },
     {
-      "date": "undated",
+      "date": null,
       "kind": "tracker",
       "publisher": "Columbia Law School Sabin Center",
       "title": "Trump Administration Withdraws from United Nations Fund for Responding to Loss and Damage",
@@ -179,11 +208,18 @@
       "url": "https://treaties.un.org/doc/Publication/CN/2026/CN.102.2026-Eng.pdf"
     },
     {
-      "date": "2025-03-11",
+      "date": "2025-03-10",
       "kind": "news",
-      "publisher": "American Society of International Law",
-      "title": "US Withdraws from Climate Damage Fund",
-      "url": "https://asil.org/ilib/us-withdraws-climate-damage-fund/"
+      "publisher": "E&E News",
+      "title": "US quits loss and damage fund",
+      "url": "https://www.eenews.net/articles/us-quits-loss-and-damage-fund/"
+    },
+    {
+      "date": "2025-03-07",
+      "kind": "news",
+      "publisher": "PTI (via The Week)",
+      "title": "US exits fund to compensate loss and damage in poor nations due to climate change",
+      "url": "https://www.theweek.in/wire-updates/national/2025/03/07/del35-climate-us-withdrawal.html"
     }
   ],
   "stage": "implemented",
@@ -220,6 +256,6 @@
   ],
   "title": "Refuse climate reparations and exit the UN loss and damage fund",
   "tracked": true,
-  "uncertainties": "The board withdrawal letter is documented by a Columbia Law School tracker page (undated, which links the letter through an archive service that refused automated fetching) and an American Society of International Law note dated 2025-03-11 that attributes the transmission to the Treasury Department; neither the letter nor an official State, Treasury or fund secretariat document was read. The 2026 memorandum does not name the loss and damage fund. Whether any US pledge to the fund was paid was not checked. A House Appropriations Democratic summary says the final FY2026 State and foreign operations bill dropped the House ban on funding loss and damage compensation, and a similar summary says the House FY2027 bill (H.R. 8595, passed the House 2026-07-15, received in the Senate 2026-07-29) bars it; the text of the engrossed H.R. 8595 was searched in part and the provision was not located, and neither bill is shown as enacted with such a rider. No fund board decision on US membership was found. The Federal Register search for loss and damage after 2026-01-08 returned only unrelated documents.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "The board withdrawal letter is documented by a Columbia Law School tracker page (undated, which links the letter through an archive service that refused automated fetching) an E&E News report of 2025-03-10 that dates the letter March 4 and names a Treasury Department official on the fund board as its sender, and a PTI wire report of 2025-03-07 that describes the letter as sent on behalf of the Treasury Department and saying the board member and alternate are stepping down, not to be replaced by a US representative; neither the letter nor an official State, Treasury or fund secretariat document was read. The 2026 memorandum does not name the loss and damage fund. Whether any US pledge to the fund was paid was not checked. A House Appropriations Democratic summary says the final FY2026 State and foreign operations bill dropped the House ban on funding loss and damage compensation, and a similar summary says the House FY2027 bill (H.R. 8595, passed the House 2026-07-15, received in the Senate 2026-07-29) bars it; the text of the engrossed H.R. 8595 was searched in part and the provision was not located, and neither bill is shown as enacted with such a rider. No fund board decision on US membership was found. The Federal Register search for loss and damage after 2026-01-08 returned only unrelated documents.",
+  "updated_at": "2026-10-23"
 }

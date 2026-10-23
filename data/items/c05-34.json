@@ -37,10 +37,14 @@
     {
       "date": "2026-10-18",
       "note": "Independent review (primary-source lift) re-read the DHS FY2027 Budget Overview through its aila.org hosted copy, CRS R48979 on everycrsreport.com and a Federal Register API query; dhs.gov stayed blocked. No stage change (proposed 10); confidence 45 to 56."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: the DHS FY2027 budget overview scan is retitled as a copy hosted by AILA, with DHS as publisher and a null date since the document prints none; the copy was re-opened in review and its FPS line confirmed. One search for an official dhs.gov copy found none. Confidence 56 unchanged. No change of stage or progress."
     }
   ],
   "id": "c05-34",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -77,7 +81,7 @@
     "mandate_check": "not_checked",
     "mandate_note": "Per the record's pages and proposal fields: have FPS report to the Secretary rather than through the Management Directorate with information-sharing agreements, merge Partnership and Engagement into Public Affairs, move appropriations staff from the CFO to Legislative Affairs, and have component public and legislative affairs staff report to headquarters. Chapter text not available this run; pages not re-checked.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
@@ -94,6 +98,16 @@
         "note": "Fetched 2026-10-18 (reviewer's own term variant): one OPM SES notice, unrelated; no FPS delegation or office merger.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Federal+Protective+Service%22+%22Office+of+the+Secretary%22&conditions[publication_date][gte]=2025-01-20&per_page=20&order=newest"
+      },
+      {
+        "note": "Re-opened 2026-10-23. Homeland Security Fiscal Year 2027 Budget Overview with DHS's own header, no calendar date printed; FPS appears in the Office of the Secretary and Executive Management table (1,565 FTE; about 2.03 billion dollars for FY2027) with no statement on FPS reporting to the Secretary. Consistent with the current stage (proposed). Third-party copy of an official document, retitled; cap 79 applies.",
+        "result": "supports",
+        "url": "https://assets.aila.org/files/ab8304de-937e-48e9-a2d3-bd6a20ef6803/26040604.pdf"
+      },
+      {
+        "note": "Offered by search again in the researcher's pass; CRS analysis of the FY2027 request, independent of the hosted copy for the FPS funding and consolidation figures; describes no FPS reporting-line change, consistent with proposed.",
+        "result": "partial",
+        "url": "https://www.everycrsreport.com/reports/R48979.html"
       }
     ]
   },
@@ -141,10 +155,10 @@
       "url": "https://www.everycrsreport.com/reports/R48979.html"
     },
     {
-      "date": "undated",
+      "date": null,
       "kind": "primary",
-      "publisher": "Department of Homeland Security (hosted by AILA)",
-      "title": "DHS Fiscal Year 2027 President's Budget Overview (undated; copy hosted by AILA)",
+      "publisher": "Department of Homeland Security (copy hosted by AILA)",
+      "title": "DHS Fiscal Year 2027 President's Budget Overview (undated) (copy hosted by AILA)",
       "url": "https://assets.aila.org/files/ab8304de-937e-48e9-a2d3-bd6a20ef6803/26040604.pdf"
     },
     {
@@ -169,5 +183,5 @@
   "title": "Put FPS under the Secretary and merge DHS headquarters communications and budget offices",
   "tracked": true,
   "uncertainties": "The budget overview copy, hosted by aila.org and carrying DHS's own Fiscal Year 2027 Budget Overview header, prints no date and was read through that hosted copy because dhs.gov is blocked; it has an FPS table line (1,565 FTE and about 2.03 billion dollars for FY2027) and no narrative on FPS reporting. It was re-read in review on 2026-10-18. CRS R48979 was read in part through a summarizing tool; the Management Directorate detail sections and the appendix were not reached. The 2026-04-03 date is that of the Defense One report on the request, as in c05-14; the request's own release date was not pinned. Moving FPS with the Management Directorate into the Office of the Secretary and Executive Management could be read as bringing FPS closer to the Secretary, but no source says FPS would report to the Secretary. The office merger and reporting-line items for Partnership and Engagement, Public Affairs and Legislative Affairs were not found in the two budget documents or in a Federal Register API query (review: one unrelated OPM notice), which is absence of evidence; the December 2025 Council notice was still issued by the Office of Partnership and Engagement. The Intelligence and Analysis, CRCL and Privacy items are covered by c05-14 and c05-15.",
-  "updated_at": "2026-10-18"
+  "updated_at": "2026-10-23"
 }

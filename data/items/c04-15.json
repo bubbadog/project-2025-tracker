@@ -42,10 +42,14 @@
     {
       "date": "2026-10-19",
       "note": "Primary-source review opened the 2025-03-17 Air Force memorandum as a 2-page copy on af.mil (added as a source), confirming the end of leave and travel reimbursement for elective abortion and continued ART access. The 2025-03-17 event was replaced by one citing that copy without the 21-day and closest-facility details, which the copy does not contain; the OUSD(P&R) memorandum text could not be verified. Stage implemented 75 and confidence 78 unchanged."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: the 2025-01-30 timeline event and its source, an advocacy-group summary, were removed; the event was replaced by a 2025-01-29 event citing the AP report as published by News4JAX (opened, published 2025-01-31, signing day given as Wednesday, so the date is an inference from the weekday), and the 2025-01-30 date was moved to uncertainties as an unverified lead. Stage implemented 75, progress 75 and confidence 78 unchanged."
     }
   ],
   "id": "c04-15",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -108,12 +112,12 @@
     "flags": [
       "Stage kept at implemented 75; in_progress at the top of the band is the alternative if the Army and Navy implementing documents, which were not read, differ.",
       "Cannot reach high: the stage-deciding memoranda are on a host the research tools cannot open, and the 2025-01-29 DOD memorandum was not located on a reachable primary host.",
-      "Timeline entries of 2025-01-30, 2025-01-31 and 2025-06-12 rest on news or advocacy sources and are kept as kind news."
+      "Timeline entries of 2025-01-29, 2025-01-31 and 2025-06-12 rest on news sources and are kept as kind news."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 104 (item 7) says public money should not be used for transgender surgeries or to facilitate abortion for service members; the paraphrase fits.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
@@ -135,6 +139,21 @@
         "note": "2026-10-19: fetch error again for the researcher; the af.mil copy opened instead. Not re-fetched by the reviewer.",
         "result": "unreachable",
         "url": "https://www.airforcemedicine.af.mil/Portals/1/Documents/Reproductive-Health/Tab%201%20-%20SecAF%20Memorandum%20for%20Non-Covered%20Reproductive%20Health%20Care%20sig%20Ashworth%2017%20Mar%2025%20(002).pdf"
+      },
+      {
+        "note": "2026-10-23 lead-only pass: fetch blocked for the first-round researcher; not re-fetched, since the same AP report opened on News4JAX. Stage implemented 75 does not depend on it.",
+        "result": "unreachable",
+        "url": "https://www.nbcnewyork.com/news/national-international/pentagon-strips-travel-reimbursement-abortions-fertility-treatment/6130808/"
+      },
+      {
+        "note": "2026-10-23: advocacy summary, a lead only; removed from sources and the timeline. Stage implemented 75 does not rest on it.",
+        "result": "unreachable",
+        "url": "https://reproductiverights.org/news/dod-continues-rescission-of-biden-era-protections-for-abortion-care/"
+      },
+      {
+        "note": "2026-10-23: opened by the second-round researcher and re-opened by the reviewer; AP report by-lined 2025-01-31 says a memo signed on Wednesday by the director of the Pentagon's human resources department ends reimbursement for out-of-state travel for abortion and fertility treatment, rescinding the October 2022 policy. Supports the travel rescission behind implemented 75; gives no calendar date for the signing.",
+        "result": "supports",
+        "url": "https://www.news4jax.com/health/2025/01/31/pentagon-strips-travel-reimbursement-for-troops-seeking-abortions-fertility-treatment/"
       }
     ]
   },
@@ -167,13 +186,6 @@
       "url": "https://365.military.com/daily-news/2025/01/31/travel-reimbursements-troops-get-abortions-fertility-treatments-nixed-pentagon.html"
     },
     {
-      "date": "2025-02-03",
-      "kind": "news",
-      "publisher": "Center for Reproductive Rights",
-      "title": "DOD continues rescission of Biden-era protections for abortion care",
-      "url": "https://reproductiverights.org/news/dod-continues-rescission-of-biden-era-protections-for-abortion-care/"
-    },
-    {
       "date": "2025-01-31",
       "kind": "news",
       "publisher": "NBC New York (AP)",
@@ -200,6 +212,13 @@
       "publisher": "Department of the Air Force (af.mil)",
       "title": "Non-Covered Assisted Reproductive Technology (Acting Secretary of the Air Force memorandum, 2-page copy without attachments)",
       "url": "https://www.af.mil/Portals/1/documents/2025SAF/Non_Covered_Assisted_Reproductive_Technology.pdf"
+    },
+    {
+      "date": "2025-01-31",
+      "kind": "news",
+      "publisher": "News4JAX (Associated Press)",
+      "title": "Pentagon strips travel reimbursement for troops seeking abortions, fertility treatment",
+      "url": "https://www.news4jax.com/health/2025/01/31/pentagon-strips-travel-reimbursement-for-troops-seeking-abortions-fertility-treatment/"
     }
   ],
   "stage": "implemented",
@@ -213,11 +232,11 @@
       "url": "https://www.federalregister.gov/documents/2025/01/31/2025-02175/enforcing-the-hyde-amendment"
     },
     {
-      "date": "2025-01-30",
-      "event": "DOD rescinds its travel reimbursement policy for reproductive health care, which had covered abortion travel.",
+      "date": "2025-01-29",
+      "event": "The Associated Press reports (published 2025-01-31) that a Defense Department memorandum signed on the Wednesday of that week (2025-01-29 by inference from the weekday; the report gives no calendar date) by the director of the Pentagon's human resources department ends reimbursement for service members' out-of-state travel for reproductive health care, including abortion and fertility treatment, rescinding the October 2022 policy.",
       "kind": "news",
-      "source": "Center for Reproductive Rights",
-      "url": "https://reproductiverights.org/news/dod-continues-rescission-of-biden-era-protections-for-abortion-care/"
+      "source": "News4JAX (Associated Press)",
+      "url": "https://www.news4jax.com/health/2025/01/31/pentagon-strips-travel-reimbursement-for-troops-seeking-abortions-fertility-treatment/"
     },
     {
       "date": "2025-01-31",
@@ -250,6 +269,6 @@
   ],
   "title": "End DOD funding of travel and leave for service member abortions",
   "tracked": true,
-  "uncertainties": "The Air Force memorandum of 2025-03-17 was opened on 2026-10-19 as a 2-page copy on af.mil (by the researcher, confirmed by the reviewer); it confirms its date, signer, references to EO 14182 and the OUSD(P&R) memorandum of 2025-02-03, the rescission of the 2023-02-27 Air Force memorandum, the end of administrative leave and travel reimbursement for elective abortion, and continued ART access. The 11-page file on the Air Force Medicine site, which also bundles the OUSD(P&R) memorandum, could not be opened, and the copy of the OUSD(P&R) memorandum on the war.gov host was blocked. Details reported from the earlier browser retrieval and not found in the opened copy are not verified: the 21-day limit on administrative absence per request, the closest-capable-facility limit on ART travel, and the OUSD(P&R) memorandum's rescission of the 2023-02-16 memorandum and Joint Travel Regulations paragraph 033113. This memorandum is the Air Force implementation: the Army and Navy implementing documents were not read. The 2025-01-29 memorandum reported by AP, which ended the October 2022 travel reimbursement policy, was not read, so the travel rescission date of 2025-01-30 still rests on the Center for Reproductive Rights and news reports. The earlier conflict between sources on fertility care is resolved for the Air Force: its memorandum keeps ART access and travel allowances while ending leave and travel reimbursement for elective abortion; whether fertility travel went unreimbursed for a period before the ART provisions took effect was not determined. The Military.com article carries no date in its text; the date is from its URL. Whether military health coverage of abortion under existing law changed was not examined.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "The Air Force memorandum of 2025-03-17 was opened on 2026-10-19 as a 2-page copy on af.mil (by the researcher, confirmed by the reviewer); it confirms its date, signer, references to EO 14182 and the OUSD(P&R) memorandum of 2025-02-03, the rescission of the 2023-02-27 Air Force memorandum, the end of administrative leave and travel reimbursement for elective abortion, and continued ART access. The 11-page file on the Air Force Medicine site, which also bundles the OUSD(P&R) memorandum, could not be opened, and the copy of the OUSD(P&R) memorandum on the war.gov host was blocked. Details reported from the earlier browser retrieval and not found in the opened copy are not verified: the 21-day limit on administrative absence per request, the closest-capable-facility limit on ART travel, and the OUSD(P&R) memorandum's rescission of the 2023-02-16 memorandum and Joint Travel Regulations paragraph 033113. This memorandum is the Air Force implementation: the Army and Navy implementing documents were not read. The 2025-01-29 memorandum reported by AP, which ended the October 2022 travel reimbursement policy, was not read; its signing date of 2025-01-29 is inferred from the AP report published 2025-01-31, which says only that it was signed on a Wednesday, and the rescission date of 2025-01-30 reported by the Center for Reproductive Rights (reproductiverights.org, an advocacy group) is an unverified lead at low confidence, not confirmed by an official document. The earlier conflict between sources on fertility care is resolved for the Air Force: its memorandum keeps ART access and travel allowances while ending leave and travel reimbursement for elective abortion; whether fertility travel went unreimbursed for a period before the ART provisions took effect was not determined. The Military.com article carries no date in its text; the date is from its URL. Whether military health coverage of abortion under existing law changed was not examined.",
+  "updated_at": "2026-10-23"
 }

@@ -40,10 +40,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift review re-read the HHS restructuring release on hhs.gov, ran a Federal Register API check on the two posts, and read a news report of the 2026-04-07 D.R.I. order, which was added as a court event with court_status pending. No stage change (proposed 5); confidence unchanged at 58."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: the 2026-06-09 House committee event and its advocacy-group source were removed; the committee action is now shown by the House Appropriations Committee release (opened: approved 34 to 28) and CRS report R49344 (opened: reported 2026-06-11 as H.R. 9260), neither of which addresses the Administration for a Healthy America, so the statement that the bill again leaves it unfunded was restated as an unverified lead from advocacy-group summaries. Stage proposed 5, progress 5, court status and confidence 58 unchanged."
     }
   ],
   "id": "c14-64",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -73,7 +77,7 @@
     "mandate_check": "not_checked",
     "mandate_note": "Per the record's pages and proposal fields, pages 489 to 490 ask to merge the Assistant Secretary for Health and Surgeon General into one four-star Surgeon General post, make the principal deputy a three-star Deputy Surgeon General, restructure the Commissioned Corps toward rapid deployment, and have Congress consider consolidating legislation; the chapter text was not available this run.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
@@ -90,6 +94,26 @@
         "note": "Run 2026-10-18: one unrelated standards of conduct rule (2025-08-22); no notice merging the posts.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Surgeon+General%22+%22Assistant+Secretary+for+Health%22+reorganization&conditions[publication_date][gte]=2025-01-20&per_page=20"
+      },
+      {
+        "note": "2026-10-23 lead-only pass: advocacy-group report, not opened; removed with its 2026-06-09 event. Not a basis for proposed 5.",
+        "result": "unreachable",
+        "url": "https://ncuih.org/2026/06/11/house-appropriations-committee-advances-labor-health-and-human-services-spending-bill-protects-key-indian-country-programs/"
+      },
+      {
+        "note": "2026-10-23: opened by the second-round researcher and re-opened by the reviewer; release dated 2026-06-09, bill approved 34 to 28; no mention of the Administration for a Healthy America or HHS reorganization. Consistent with proposed 5 (no merger of the posts); does not settle the funding clause.",
+        "result": "partial",
+        "url": "https://appropriations.house.gov/news/press-releases/committee-approves-fy27-labor-health-and-human-services-and-education"
+      },
+      {
+        "note": "2026-10-23: opened by the second-round researcher and re-opened by the reviewer; R49344 dated 2026-09-08; committee vote 34-28 on 2026-06-09, reported 2026-06-11 as H.R. 9260 (H.Rept. 119-696); does not mention the Administration for a Healthy America. Consistent with proposed 5.",
+        "result": "partial",
+        "url": "https://www.everycrsreport.com/reports/R49344.html"
+      },
+      {
+        "note": "2026-10-23: opened by the second-round researcher only; advocacy-group summary saying the House bill does not create the Administration for a Healthy America. Lead only, not cited.",
+        "result": "partial",
+        "url": "https://www.addictionpolicy.org/post/summary-of-fy27-house-labor-hhs-appropriations-bill"
       }
     ]
   },
@@ -137,13 +161,6 @@
       "url": "https://rollcall.com/2025/08/18/trumps-health-agency-streamlining-goals-hit-roadblock/"
     },
     {
-      "date": "2026-06-11",
-      "kind": "news",
-      "publisher": "National Council of Urban Indian Health",
-      "title": "House Appropriations Committee advances Labor-HHS spending bill",
-      "url": "https://ncuih.org/2026/06/11/house-appropriations-committee-advances-labor-health-and-human-services-spending-bill-protects-key-indian-country-programs/"
-    },
-    {
       "date": "2026-03-25",
       "kind": "news",
       "publisher": "OPB",
@@ -163,10 +180,24 @@
       "publisher": "Healthcare Finance News",
       "title": "States' lawsuit against HHS cuts moves forward after court win",
       "url": "https://www.healthcarefinancenews.com/news/states-lawsuit-against-hhs-cuts-moves-forward-after-court-win"
+    },
+    {
+      "date": "2026-06-09",
+      "kind": "primary",
+      "publisher": "House Committee on Appropriations",
+      "title": "Committee Approves FY27 Labor, Health and Human Services, and Education Appropriations Bill",
+      "url": "https://appropriations.house.gov/news/press-releases/committee-approves-fy27-labor-health-and-human-services-and-education"
+    },
+    {
+      "date": "2026-09-08",
+      "kind": "primary",
+      "publisher": "Congressional Research Service (everycrsreport.com)",
+      "title": "Status of FY2027 Labor, Health and Human Services, and Education Appropriations: In Brief (R49344)",
+      "url": "https://www.everycrsreport.com/reports/R49344.html"
     }
   ],
   "stage": "proposed",
-  "status_summary": "On 2025-03-27 HHS announced a restructuring that would combine OASH with HRSA, SAMHSA, ATSDR and NIOSH into a new Administration for a Healthy America and consolidate redundant units; the release does not mention the Surgeon General or the Commissioned Corps. As of August 2025 Congress had not created or funded the new agency and a federal court had temporarily blocked parts of the reorganization, and a House Appropriations Committee bill advanced on 2026-06-09 again did not fund it. No step merging the Assistant Secretary for Health and Surgeon General posts or restructuring the Commissioned Corps was found.",
+  "status_summary": "On 2025-03-27 HHS announced a restructuring that would combine OASH with HRSA, SAMHSA, ATSDR and NIOSH into a new Administration for a Healthy America and consolidate redundant units; the release does not mention the Surgeon General or the Commissioned Corps. As of August 2025 Congress had not created or funded the new agency and a federal court had temporarily blocked parts of the reorganization, and the House Appropriations Committee approved its FY 2027 Labor-HHS-Education bill 34 to 28 on 2026-06-09; that this bill again does not create or fund the new agency is an unverified lead from advocacy-group summaries, since the committee release and a CRS report do not address it. No step merging the Assistant Secretary for Health and Surgeon General posts or restructuring the Commissioned Corps was found.",
   "timeline": [
     {
       "date": "2025-03-27",
@@ -184,14 +215,21 @@
     },
     {
       "date": "2026-06-09",
-      "event": "The House Appropriations Committee passed its FY 2027 Labor-HHS bill without funding the Administration for a Healthy America.",
-      "kind": "news",
-      "source": "NCUIH report on House Appropriations Committee action",
-      "url": "https://ncuih.org/2026/06/11/house-appropriations-committee-advances-labor-health-and-human-services-spending-bill-protects-key-indian-country-programs/"
+      "event": "The House Appropriations Committee approved its FY 2027 Labor-HHS-Education bill, 34 to 28; the committee release does not mention the Administration for a Healthy America or an HHS reorganization.",
+      "kind": "primary",
+      "source": "House Committee on Appropriations",
+      "url": "https://appropriations.house.gov/news/press-releases/committee-approves-fy27-labor-health-and-human-services-and-education"
+    },
+    {
+      "date": "2026-06-11",
+      "event": "The committee reported the bill as H.R. 9260 (H.Rept. 119-696), per a CRS report that does not say how the bill treats the Administration for a Healthy America.",
+      "kind": "primary",
+      "source": "Congressional Research Service",
+      "url": "https://www.everycrsreport.com/reports/R49344.html"
     }
   ],
   "title": "Combine the Assistant Secretary for Health and Surgeon General into one four-star post",
   "tracked": true,
-  "uncertainties": "The HHS release of 2025-03-27 (titled HHS Announces Transformation to Make America Healthy Again) was re-read in review: it folds OASH, HRSA, SAMHSA, ATSDR and NIOSH into a proposed Administration for a Healthy America and does not mention the Surgeon General or the Commissioned Corps. A law-firm summary of the FY 2027 budget (2026-04) shows the consolidation proposed again. A news report of 2026-04-10, read in review, states that a District of Rhode Island judge denied HHS's motion to dismiss on 2026-04-07 in the suit by 19 states and the District of Columbia over the restructuring, after an earlier preliminary injunction and a denied stay request; the court order and docket were not opened (courtlistener.com refuses automated fetches) and the suit concerns the reorganization, not the Surgeon General merger. A Federal Register API search in review for Surgeon General, Assistant Secretary for Health and reorganization since 2025-01-20 returned one unrelated standards of conduct rule; no statement of organization merging the posts was found. The House committee action of 2026-06-09 rests on a stakeholder report and was not checked against committee documents. A Surgeon General nomination is an appointment to the existing post, not a merger. The record rests largely on absence of an action; the Unified Agenda, Congress and news checks of a full systematic review were not run.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The HHS release of 2025-03-27 (titled HHS Announces Transformation to Make America Healthy Again) was re-read in review: it folds OASH, HRSA, SAMHSA, ATSDR and NIOSH into a proposed Administration for a Healthy America and does not mention the Surgeon General or the Commissioned Corps. A law-firm summary of the FY 2027 budget (2026-04) shows the consolidation proposed again. A news report of 2026-04-10, read in review, states that a District of Rhode Island judge denied HHS's motion to dismiss on 2026-04-07 in the suit by 19 states and the District of Columbia over the restructuring, after an earlier preliminary injunction and a denied stay request; the court order and docket were not opened (courtlistener.com refuses automated fetches) and the suit concerns the reorganization, not the Surgeon General merger. A Federal Register API search in review for Surgeon General, Assistant Secretary for Health and reorganization since 2025-01-20 returned one unrelated standards of conduct rule; no statement of organization merging the posts was found. The House committee approval of 2026-06-09 (34 to 28) and the reporting of the bill on 2026-06-11 as H.R. 9260 (H.Rept. 119-696) are confirmed by the committee release and CRS report R49344, neither of which mentions the Administration for a Healthy America; the statement that the bill does not create or fund it comes only from summaries by the National Council of Urban Indian Health and the Addiction Policy Forum, both advocacy groups, and is an unverified lead at low confidence; the bill text and committee report were not read. A Surgeon General nomination is an appointment to the existing post, not a merger. The record rests largely on absence of an action; the Unified Agenda, Congress and news checks of a full systematic review were not run.",
+  "updated_at": "2026-10-23"
 }

@@ -29,10 +29,14 @@
     {
       "date": "2026-10-21",
       "note": "Freshness check: added GAO decision B-337604 of 2025-12-16 (read on gao.gov and in the Congressional Record on govinfo.gov), which found the 2025-06-06 notice to be a rule subject to Congressional Review Act submission; NTIA's 2026-08-25 approval release was re-read on ntia.gov; durability reasoning updated for the unsubmitted rule. Stage and progress unchanged (implemented, 80); confidence from 82 to 80; independent review Y5."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: removed a broadband policy institute summary from sources; the point that other uses of savings will come in later guidance now rests on the text of the supplemental deployment notice (state-hosted copy, re-opened; its source date set to null because the copy prints no issue date). Confidence, stage and progress unchanged."
     }
   ],
   "id": "c21-05",
-  "last_checked": "2026-10-21",
+  "last_checked": "2026-10-23",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_action",
@@ -85,7 +89,7 @@
     "mandate_check": "verified",
     "mandate_note": "Page 688 recommends reevaluating broadband grant programs and, where possible, setting administration priorities in each grant's structure, with infrastructure for 5G adoption in rural and exurban areas first; the paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-21",
+    "reviewed_at": "2026-10-23",
     "reviewer": "Y5",
     "source_checks": [
       {
@@ -107,6 +111,16 @@
         "note": "Congressional Record of 2025-12-17 prints the GAO letter at a senator's request; no joint resolution of disapproval mentioned; corroborates the GAO finding without changing the stage.",
         "result": "partial",
         "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgS8828.htm"
+      },
+      {
+        "note": "Opened and confirmed on 2026-10-23: state-hosted copy of the NTIA Supplemental Deployment Policy Notice, no printed issue date; background section says other uses of BEAD funding will be addressed in subsequent guidance; lets states serve remaining unserved locations through a second Benefit of the Bargain round and a Supplemental Deployment Plan. Supports stage implemented.",
+        "result": "supports",
+        "url": "https://www.in.gov/indianabroadband/files/BEAD_Supplemental_Deployment_Policy_Notice.pdf"
+      },
+      {
+        "note": "Researcher check (not re-opened in review): NTIA release of 2026-09-03 cites about 21 billion dollars in savings under the Supplemental Deployment Policy Notice; does not mention later guidance. Supports stage implemented.",
+        "result": "supports",
+        "url": "https://www.ntia.gov/press-release/2026/ntia-empowers-states-use-bead-savings-location-true-ensuring-universal-broadband-availability-across"
       }
     ]
   },
@@ -166,18 +180,11 @@
       "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgS8828.htm"
     },
     {
-      "date": "2026-09-03",
+      "date": null,
       "kind": "primary",
       "publisher": "Indiana Broadband Office (state-hosted copy of NTIA notice; mirror)",
       "title": "BEAD Supplemental Deployment Policy Notice",
       "url": "https://www.in.gov/indianabroadband/files/BEAD_Supplemental_Deployment_Policy_Notice.pdf"
-    },
-    {
-      "date": "2026-09-03",
-      "kind": "news",
-      "publisher": "Benton Institute for Broadband & Society",
-      "title": "NTIA Opens a Second Round of BEAD Funding for Locations the Program Missed the First Time",
-      "url": "https://www.benton.org/blog/ntia-opens-second-round-bead-funding-locations-program-missed-first-time"
     }
   ],
   "stage": "implemented",
@@ -221,6 +228,6 @@
   ],
   "title": "Reset NTIA broadband grant priorities toward rural deployment",
   "tracked": true,
-  "uncertainties": "Pass 5: the notice PDF itself was read (through a tool summary with section and page references), so the requirement changes are confirmed from the primary document; the later claims still rest on NTIA statements plus one opinion piece; no litigation or delay was found in one search, but no court docket was checked. The $21 billion savings figure is NTIA's. NTIA's national technology mix was not published in the releases read; an opinion piece in February 2026 reported large low-earth-orbit satellite allocations (about 472,600 locations for Starlink and about 415,000 for Amazon Leo), which bears on how closely the program matches the Mandate's 5G-first emphasis. Other NTIA items in the chapter (spectrum leasing, FirstNet review, online speech review) and other broadband grant programs such as digital equity grants were not assessed. Freshness check on 2026-10-21: a Federal Register search of NTIA documents from 2026-09-03 found nothing on BEAD, and the NTIA press-release index could not be fetched. The 2026-09-03 supplemental deployment notice was read through a state-hosted copy without an issue date and a Benton summary, which says other uses of the savings will come in later guidance. GAO decision B-337604 (2025-12-16) found the 2025-06-06 notice to be a rule subject to the Congressional Review Act and stated that NTIA had not submitted a CRA report; no later submission and no joint resolution of disapproval were located in web searches. The Act provides that a rule cannot take effect before submission but bars judicial review of omissions under it, so the formal legal status of the notice is unresolved; the stage rests on the final proposal approvals and on the notice having been applied in practice, which the GAO finding does not undo, while a later submission would open a disapproval window, which bears on durability. No court challenge to the notice, the final proposal approvals or the supplemental notice was located; no docket was checked.",
-  "updated_at": "2026-10-21"
+  "uncertainties": "Pass 5: the notice PDF itself was read (through a tool summary with section and page references), so the requirement changes are confirmed from the primary document; the later claims still rest on NTIA statements plus one opinion piece; no litigation or delay was found in one search, but no court docket was checked. The $21 billion savings figure is NTIA's. NTIA's national technology mix was not published in the releases read; an opinion piece in February 2026 reported large low-earth-orbit satellite allocations (about 472,600 locations for Starlink and about 415,000 for Amazon Leo), which bears on how closely the program matches the Mandate's 5G-first emphasis. Other NTIA items in the chapter (spectrum leasing, FirstNet review, online speech review) and other broadband grant programs such as digital equity grants were not assessed. Freshness check on 2026-10-21: a Federal Register search of NTIA documents from 2026-09-03 found nothing on BEAD, and the NTIA press-release index could not be fetched. The 2026-09-03 supplemental deployment notice was read through a state-hosted copy without an issue date, which states in its background section that other uses of BEAD funding will be addressed in subsequent guidance. GAO decision B-337604 (2025-12-16) found the 2025-06-06 notice to be a rule subject to the Congressional Review Act and stated that NTIA had not submitted a CRA report; no later submission and no joint resolution of disapproval were located in web searches. The Act provides that a rule cannot take effect before submission but bars judicial review of omissions under it, so the formal legal status of the notice is unresolved; the stage rests on the final proposal approvals and on the notice having been applied in practice, which the GAO finding does not undo, while a later submission would open a disapproval window, which bears on durability. No court challenge to the notice, the final proposal approvals or the supplemental notice was located; no docket was checked.",
+  "updated_at": "2026-10-23"
 }

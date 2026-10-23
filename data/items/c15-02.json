@@ -20,10 +20,14 @@
     {
       "date": "2026-10-13",
       "note": "Checked the Federal Register for a HUD final rule on mixed-status verification (none through 2026-10-13); added HUD's 2026-06-22 information collection notice and the DHS public charge final rule of 2026-07-20 as context. Stage unchanged."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: removed two housing association pages from sources. A second-round check of the Federal Register document confirmed the 2026-02-19 public inspection date, so that event is kept and reworded as a public inspection filing; the comment-close event now cites the Federal Register document, and the affected-household estimates are restated from Stateline coverage of HUD's figures. Confidence, stage and progress unchanged."
     }
   ],
   "id": "c15-02",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-23",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -48,7 +52,7 @@
     "mandate_check": "verified",
     "mandate_note": "p.509 asks HUD to restart the 2019 mixed-status rule and to align with DHS public charge reforms, so the DHS rule is in scope as a related step.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
+    "reviewed_at": "2026-10-23",
     "reviewer": "U13-2",
     "source_checks": [
       {
@@ -60,6 +64,21 @@
         "note": "Fetched: DHS final rule 91 FR 45324, effective 2026-09-18, rescinds the 2022 public charge regulations, totality of circumstances, means-tested benefits considered; impact analysis mentions mixed-status households.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/07/20/2026-14539/public-charge-ground-of-inadmissibility"
+      },
+      {
+        "note": "Opened and confirmed on 2026-10-23: public inspection 2026-02-19 at 8:45 a.m., published 2026-02-20 at 91 FR 8151, comments due 2026-04-21 and no longer accepted, docket FR-6524-P-01 (HUD-2026-0199), RIN 2501-AE16. Supports stage proposed.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/02/20/2026-03405/housing-and-community-development-act-of-1980-verification-of-eligible-status"
+      },
+      {
+        "note": "Opened and confirmed on 2026-10-23: dated 2026-02-24; comment period through April 21; estimates of about 24,000 people (HUD Secretary), about 25,000 households (earlier HUD analyses) and 80,000 people (Center on Budget and Policy Priorities). Consistent with stage proposed.",
+        "result": "supports",
+        "url": "https://stateline.org/2026/02/24/hud-reintroduces-proposed-rule-targeting-rental-aid-for-mixed-status-immigrant-households/"
+      },
+      {
+        "note": "Researcher check (not re-opened in review): law-firm alert says HUD proposed the rule on February 20 with an April 21 comment deadline. Consistent with stage proposed.",
+        "result": "supports",
+        "url": "https://infobytes.orrick.com/2026-02-26/hud-moves-to-shift-housing-assistance-from-mixed-status-to-fully-eligible-households/"
       }
     ]
   },
@@ -99,20 +118,6 @@
       "url": "https://www.federalregister.gov/documents/2025/02/25/2025-03137/ending-taxpayer-subsidization-of-open-borders"
     },
     {
-      "date": "2026-02-23",
-      "kind": "tracker",
-      "publisher": "National Low Income Housing Coalition",
-      "title": "HUD Publishes Mixed-Status Families Proposed Rule, Comments Due April 21",
-      "url": "https://nlihc.org/resource/hud-publishes-mixed-status-families-proposed-rule-comments-due-april-21-keep-families"
-    },
-    {
-      "date": "2026-02-19",
-      "kind": "news",
-      "publisher": "NAHRO",
-      "title": "HUD Publishes 2026 Version of Mixed Status Proposed Rule",
-      "url": "https://www.nahro.org/news/hud-publishes-2026-version-of-mixed-status-proposed-rule"
-    },
-    {
       "date": "2026-06-22",
       "kind": "primary",
       "publisher": "Department of Housing and Urban Development",
@@ -125,6 +130,13 @@
       "publisher": "Department of Homeland Security",
       "title": "Public Charge Ground of Inadmissibility (final rule)",
       "url": "https://www.federalregister.gov/documents/2026/07/20/2026-14539/public-charge-ground-of-inadmissibility"
+    },
+    {
+      "date": "2026-02-24",
+      "kind": "news",
+      "publisher": "Stateline",
+      "title": "HUD reintroduces proposed rule targeting rental aid for mixed-status immigrant households",
+      "url": "https://stateline.org/2026/02/24/hud-reintroduces-proposed-rule-targeting-rental-aid-for-mixed-status-immigrant-households/"
     }
   ],
   "stage": "proposed",
@@ -146,10 +158,10 @@
     },
     {
       "date": "2026-02-19",
-      "event": "HUD posts a pre-publication copy of the proposed rule 'Housing and Community Development Act of 1980: Verification of Eligible Status'.",
-      "kind": "news",
-      "source": "NAHRO",
-      "url": "https://www.nahro.org/news/hud-publishes-2026-version-of-mixed-status-proposed-rule"
+      "event": "The proposed rule 'Housing and Community Development Act of 1980: Verification of Eligible Status' is placed on public inspection at the Federal Register (8:45 a.m.), the day before publication.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/02/20/2026-03405/housing-and-community-development-act-of-1980-verification-of-eligible-status"
     },
     {
       "date": "2026-02-20",
@@ -160,10 +172,10 @@
     },
     {
       "date": "2026-04-21",
-      "event": "Comment period closes. Housing and immigrant-advocacy groups filed opposing comments; no final rule or lawsuit found afterward.",
-      "kind": "tracker",
-      "source": "NLIHC",
-      "url": "https://nlihc.org/resource/hud-publishes-mixed-status-families-proposed-rule-comments-due-april-21-keep-families"
+      "event": "Comment period closes (comments due 2026-04-21 per the Federal Register document and Stateline); no final rule or lawsuit found afterward.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/02/20/2026-03405/housing-and-community-development-act-of-1980-verification-of-eligible-status"
     },
     {
       "date": "2026-06-22",
@@ -182,6 +194,6 @@
   ],
   "title": "Bar noncitizens, including mixed-status families, from federally assisted housing",
   "tracked": true,
-  "uncertainties": "Estimates of affected households (about 80,000 people per an advocacy group's 2025 analysis) are from advocacy sources, not HUD; HUD's own estimates are in the Federal Register text. A Federal Register API query for HUD documents on the proposed rule's title after 2026-04-01 returned none, and a query for HUD documents on noncitizens after 2026-04-22 returned only the 2026-06-22 information collection notice and a 2026-09-30 Privacy Act notice for a HUD data system (which lists citizenship fields and does not describe a new verification process). One general web search (2026-10-13) found only commentary and comment letters from the proposal period; no final rule, OMB review notice, lawsuit or congressional action was found, but a lawsuit would not necessarily appear in those results. The DHS public charge final rule was read only in its first part (the housing assistance section was cut off), so how it treats HUD programs was not verified. Whether a final rule that ends proration fits Section 214 is a legal question not resolved (inference from the statute as described in HUD's proposal).",
-  "updated_at": "2026-10-13"
+  "uncertainties": "Stateline (2026-02-24) reports that HUD's Secretary wrote that about 24,000 people in HUD-assisted housing are likely ineligible and cites HUD's earlier analyses at about 25,000 mixed-status households; it also cites a figure of 80,000 people from the Center on Budget and Policy Priorities, which is not a HUD estimate. HUD's own estimates in the Federal Register text were not read in this review (the regulatory impact sections fell beyond the portion read). A Federal Register API query for HUD documents on the proposed rule's title after 2026-04-01 returned none, and a query for HUD documents on noncitizens after 2026-04-22 returned only the 2026-06-22 information collection notice and a 2026-09-30 Privacy Act notice for a HUD data system (which lists citizenship fields and does not describe a new verification process). One general web search (2026-10-13) found only commentary and comment letters from the proposal period; no final rule, OMB review notice, lawsuit or congressional action was found, but a lawsuit would not necessarily appear in those results. The DHS public charge final rule was read only in its first part (the housing assistance section was cut off), so how it treats HUD programs was not verified. Whether a final rule that ends proration fits Section 214 is a legal question not resolved (inference from the statute as described in HUD's proposal).",
+  "updated_at": "2026-10-23"
 }

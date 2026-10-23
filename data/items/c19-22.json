@@ -5,9 +5,9 @@
     "Rescission would need a new rulemaking, and FRA has defended the rule"
   ],
   "chapter": "19",
-  "confidence": 70,
+  "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "The Eleventh Circuit opinion (amicus-hosted copy) and the FRA Federal Register notice were fetched and read; absence of a rescission step rests on Federal Register API queries without a Unified Agenda check.",
+  "confidence_reason": "The Eleventh Circuit opinion, opened on the court's own site on 2026-10-23 after an earlier reading of an amicus-hosted copy, and the FRA Federal Register notice were read; absence of a rescission step rests on Federal Register API queries without a Unified Agenda check. Rule applied: confidence may rise by at most 2 when an opened primary source replaces a secondary one, so it rose from 70 to 72 and stays medium.",
   "court_status": {
     "basis": "The Eleventh Circuit's published opinion of 2026-08-11 (No. 24-11076, consolidated) denied all petitions for review and left the 2024 crew size rule in place, with one judge dissenting; a trade report of 2026-09-25 says railroad groups sought rehearing en banc, which was not confirmed from the docket.",
     "date": "2026-08-11",
@@ -39,10 +39,14 @@
     {
       "date": "2026-10-18",
       "note": "Validation fix: court_status gained the date (2026-08-11) and URL of the Eleventh Circuit opinion already in the timeline; state and basis unchanged."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: the opinion hosted by the U.S. Chamber of Commerce was retitled as a hosted copy and kept as a secondary source; the Eleventh Circuit's own copy of the 2026-08-11 opinion was opened and added as the court source, and the 2026-08-11 event now cites it; the Chamber's case page, which no event relied on, was removed. Stage diverged 0 and progress 0 unchanged; confidence 70 to 72 under the rule allowing a rise of at most 2 when an opened primary source replaces a secondary one; court status left as recorded."
     }
   ],
   "id": "c19-22",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -80,7 +84,7 @@
     "mandate_check": "ok",
     "mandate_note": "Page 636 says FRA bases decisions on politics rather than safety, that waiver decisions belong with its Safety Board with appeal to the Administrator, and that FRA should review proceedings it cannot justify, naming the crew size proposal as not safety-based and designed to bar crews of fewer than two where there is no operational need. Reading this as a call to withdraw or not keep the two-person requirement is a fair inference and is stated as such in the proposal.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
+    "reviewed_at": "2026-10-23",
     "reviewer": "V1-1016",
     "source_checks": [
       {
@@ -102,6 +106,21 @@
         "note": "2026-07-27 report of supplemental briefing; indicates the government was still defending the rule.",
         "result": "partial",
         "url": "https://www.mlex.com/employment-authority/labor/articles/2506321/railroads-feds-spar-over-train-crew-size-rule-in-11th-circ-"
+      },
+      {
+        "note": "2026-10-23 lead-only pass: not re-opened; copy of the court's opinion hosted by an amicus, retitled as a copy and kept as a secondary source now that the court's own copy opened. Supports diverged 0 (FRA defended the rule; petitions denied 2 to 1 on 2026-08-11).",
+        "result": "supports",
+        "url": "https://www.uschamber.com/assets/documents/Opinion-Florida-East-Coast-Railway-LLC-v.-FRA-Eleventh-Circuit.pdf"
+      },
+      {
+        "note": "2026-10-23: trade-association litigation case page, not opened; no event relied on it; removed under the lead-only rule. Not a basis for diverged 0.",
+        "result": "unreachable",
+        "url": "https://www.uschamber.com/cases/administrative-law-and-government-litigation/florida-east-coast-railway-llc-v-federal-railroad-administration"
+      },
+      {
+        "note": "2026-10-23: found by reviewer search and opened on the Eleventh Circuit site; published opinion filed 2026-08-11 in No. 24-11076 and consolidated cases, panel Rosenbaum (author), Branch and Kidd, petitions for review denied, FRA and DOT respondents defending the 2024 rule, dissent noted. Supports diverged 0.",
+        "result": "supports",
+        "url": "https://media.ca11.uscourts.gov/opinions/pub/files/202411076.pdf"
       }
     ],
     "stage_change_reason": "Changed from not_started to diverged: the Eleventh Circuit opinion of 2026-08-11 shows FRA defended the crew size rule as respondent, and FRA continues to administer it, which is an affirmative course opposite to the text's call; no rescission step exists. Confidence raised because the opinion was read."
@@ -139,7 +158,7 @@
       "date": "2026-08-11",
       "kind": "court",
       "publisher": "U.S. Court of Appeals for the Eleventh Circuit (copy hosted by the U.S. Chamber of Commerce)",
-      "title": "Florida East Coast Railway LLC v. Federal Railroad Administration, No. 24-11076 (11th Cir. 2026), opinion",
+      "title": "Florida East Coast Railway LLC v. Federal Railroad Administration, No. 24-11076 (11th Cir. 2026), opinion (copy hosted by uschamber.com)",
       "url": "https://www.uschamber.com/assets/documents/Opinion-Florida-East-Coast-Railway-LLC-v.-FRA-Eleventh-Circuit.pdf"
     },
     {
@@ -164,18 +183,18 @@
       "url": "https://www.freightwaves.com/news/federal-court-upholds-challenge-to-fras-two-person-rail-crew-rule"
     },
     {
-      "date": "2026-08-11",
-      "kind": "tracker",
-      "publisher": "U.S. Chamber of Commerce",
-      "title": "Florida East Coast Railway LLC v. Federal Railroad Administration (case page)",
-      "url": "https://www.uschamber.com/cases/administrative-law-and-government-litigation/florida-east-coast-railway-llc-v-federal-railroad-administration"
-    },
-    {
       "date": "2026-09-25",
       "kind": "news",
       "publisher": "MLex / Law360",
       "title": "Rail Industry Wants Full 11th Circ. To Review FRA Rule",
       "url": "https://www.mlex.com/employment-authority/labor/articles/2529902/rail-industry-wants-full-11th-circ-to-review-fra-rule"
+    },
+    {
+      "date": "2026-08-11",
+      "kind": "court",
+      "publisher": "U.S. Court of Appeals for the Eleventh Circuit",
+      "title": "Florida East Coast Railway LLC v. Federal Railroad Administration, No. 24-11076 and consolidated cases (11th Cir. 2026), published opinion",
+      "url": "https://media.ca11.uscourts.gov/opinions/pub/files/202411076.pdf"
     }
   ],
   "stage": "diverged",
@@ -192,12 +211,12 @@
       "date": "2026-08-11",
       "event": "The Eleventh Circuit, in a published 2 to 1 opinion in Florida East Coast Railway LLC v. FRA (No. 24-11076 and consolidated cases), denied the railroads' petitions for review of the 2024 crew size rule, with FRA defending the rule as respondent.",
       "kind": "court",
-      "source": "U.S. Court of Appeals for the Eleventh Circuit (opinion copy hosted by the U.S. Chamber of Commerce)",
-      "url": "https://www.uschamber.com/assets/documents/Opinion-Florida-East-Coast-Railway-LLC-v.-FRA-Eleventh-Circuit.pdf"
+      "source": "U.S. Court of Appeals for the Eleventh Circuit",
+      "url": "https://media.ca11.uscourts.gov/opinions/pub/files/202411076.pdf"
     }
   ],
   "title": "Reconsider FRA two-person crew rule; keep waiver decisions with the Safety Board",
   "tracked": true,
-  "uncertainties": "The opinion was read from a copy hosted by an amicus party (the U.S. Chamber of Commerce), not from the court's site; the dissent's text was not in the portion read. A trade report of 2026-09-25 says railroad industry groups petitioned for rehearing en banc; the docket was not checked, so the rehearing status is unknown. Searches performed: two web searches (crew size litigation; Eleventh Circuit decision and opinion source) and Federal Register API queries (train crew; Train Crew Size Safety Requirements; crew size with FRA since 2025-01-20), which returned only engineer and conductor certification rules and no crew size amendment. A DOT deregulatory list and the Unified Agenda were not checked, and FRA decisions on special approval petitions are docketed outside the Federal Register. Diverged rests on FRA keeping and defending the rule; a reader who requires an affirmative new policy act could stage this not_started.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The opinion was first read from a copy hosted by an amicus party (the U.S. Chamber of Commerce) and on 2026-10-23 was opened on the Eleventh Circuit's own site (media.ca11.uscourts.gov), which confirms the 2026-08-11 filing date, the panel and the denial of the petitions; the dissent's text was not in the portion read. A trade report of 2026-09-25 says railroad industry groups petitioned for rehearing en banc; the docket was not checked, so the rehearing status is unknown. Searches performed: two web searches (crew size litigation; Eleventh Circuit decision and opinion source) and Federal Register API queries (train crew; Train Crew Size Safety Requirements; crew size with FRA since 2025-01-20), which returned only engineer and conductor certification rules and no crew size amendment. A DOT deregulatory list and the Unified Agenda were not checked, and FRA decisions on special approval petitions are docketed outside the Federal Register. Diverged rests on FRA keeping and defending the rule; a reader who requires an affirmative new policy act could stage this not_started.",
+  "updated_at": "2026-10-23"
 }
