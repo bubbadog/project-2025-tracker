@@ -5,9 +5,9 @@
     "Congress continued to fund the Global Environment Facility."
   ],
   "chapter": "09",
-  "confidence": 76,
+  "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "The deciding Federal Register documents, Executive Order 14162 and the memorandum of 2026-01-07, were fetched and read in full in review on 2026-10-18 and match the record. The Treasury and World Bank items rest on news reports and an IMF-hosted statement, the GEF figure on a CRS report copy, and Division F of P.L. 119-75 could not be read, so the implemented call on the remaining elements is not fully grounded in primary text.",
+  "confidence_reason": "Pages 257 to 258 were rechecked and the October 2026 Treasury statement report and a bill tracker for the enactment date were read on 2026-10-23; the deciding Federal Register documents were read in full in the 2026-10-18 review, but the Treasury, World Bank and GEF items rest on news, an IMF-hosted statement and CRS, and Division F of P.L. 119-75 could not be read.",
   "durability": {
     "level": "medium",
     "why": "Rests on executive orders and board positions that a later administration could reverse, while the EXIM loan decision is a single transaction."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift with independent AI review: Implemented 65 confirmed against EO 14162 and the 2026 withdrawal memorandum; World Bank row reworded; confidence 68 to 76."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Refutation check and independent review on 2026-10-23 found no reversal of the climate-finance and international-organization steps, recorded a Treasury statement reported 2026-10-15 on upstream oil and gas as context, recast the appropriations entry as the 2026-02-03 enactment, and moved three statement or report entries out of the timeline (miningweekly.com, thelobbynews.com); stage unchanged."
     }
   ],
   "id": "c09-10",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -51,6 +55,32 @@
   "position": "Climate Change (fossil fuel and funding limits)",
   "progress": 65,
   "proposal": "The Mandate recommends that foreign aid stop opposing fossil fuel development in developing countries and instead support responsible management of oil and gas reserves as a route out of poverty. It also recommends narrowly limiting funding to traditional climate mitigation, directing resources to resilience for the most vulnerable countries, and ending collaboration with and funding of foundations, companies, international institutions and NGOs that advocate climate policy.",
+  "redteam": {
+    "date": "2026-10-23",
+    "evidence": [
+      {
+        "date": "2026-10-15",
+        "note": "Treasury continues pressing the World Bank to allow upstream oil and gas financing; consistent with the record, no response reported.",
+        "source": "Mining Weekly",
+        "url": "https://www.miningweekly.com/article/bessent-calls-for-world-bank-reforms-including-upstream-oil-and-gas-financing-2026-10-15"
+      },
+      {
+        "date": "2026-01-16",
+        "note": "Withdrawal memorandum remains the operative document; no later superseding Federal Register document found.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/01/16/2026-00976/withdrawing-the-united-states-from-international-organizations-conventions-and-treaties-that-are"
+      },
+      {
+        "date": "2025-01-30",
+        "note": "EO 14162 text; no revocation or amendment found.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02010/putting-america-first-in-international-environmental-agreements"
+      }
+    ],
+    "note": "No reversal, injunction or superseding action found; the Federal Register query returned nothing on financing. The stage stays at the bottom of the implemented band because the fossil fuel guidance rescission and affirmative aid-program support remain unverified. A Treasury push on upstream gas is the only new development and is a position, not an event.",
+    "verdict": "holds",
+    "what_was_tested": "Searched the Federal Register API for fossil fuel financing documents after 2026-07-16; searched for a rescission of 2021 Treasury and interagency fossil fuel financing guidance; searched for DFC oil and gas financing in 2026; searched for World Bank and Treasury developments on upstream gas after the latest timeline date; looked for reversal or court action on EO 14162 and the withdrawal memorandum."
+  },
   "related_ids": [
     "c09-03",
     "c09-08"
@@ -64,18 +94,17 @@
   "research_agent": "N09a",
   "review": {
     "flags": [
-      "Researcher's re-dating of the EO 14162 and withdrawal-memorandum rows to their signing dates (2025-01-20 and 2026-01-07) accepted; both confirmed on the Federal Register.",
-      "The 2025-06-12 row was reworded to describe the World Bank board decision rather than the news report itself; it remains dated by the report because the source gives no decision date.",
-      "Added the NPR report of 2025-07-01 as a source for the status_summary statement that USAID no longer exists.",
-      "Stage kept at implemented 65 (band floor); the defensible alternative is in_progress 55, because the affirmative oil and gas support in aid programs and the rescission of fossil fuel financing guidance were not found and GEF funding continues.",
-      "No court_status: no court event is in the timeline.",
-      "Confidence raised from 68 to 76."
+      "two Treasury position statements (2025-04-23 speech, April 2025 IMFC statement) and the CRS report entry removed from the timeline and described in uncertainties",
+      "House summary entry recast as the 2026-02-03 enactment of P.L. 119-75, date from a tracker",
+      "October 2026 Treasury statement accepted as context only, not an event",
+      "stage implemented 65 unchanged; alternative in_progress 55 as named in the earlier review",
+      "confidence lowered from 76 to 74 because the timeline now rests on fewer primary actions and the enactment date is from a tracker"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 257 asks USAID to end its opposition to fossil fuels in developing countries, support responsible oil and gas management, rescind climate policies including the 2022 to 2030 climate strategy and narrowly limit funding to traditional mitigation; page 258 adds resilience for vulnerable countries and an end to collaboration with and funding of climate-advocacy groups. The paraphrase fits; the climate strategy element is tracked in c09-03.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V2",
+    "mandate_note": "Pages 257 and 258 ask USAID to end its opposition to fossil fuels in developing countries, support responsible oil and gas management, narrowly limit funding to traditional mitigation, focus resources on resilience of the most vulnerable countries and end collaboration with and funding of climate-advocacy groups; the paraphrase fits.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-23",
+    "reviewer": "independent review",
     "second_review": {
       "balanced": false,
       "date": "2026-10-13",
@@ -86,69 +115,19 @@
     },
     "source_checks": [
       {
-        "note": "EO 14162 confirmed (signed 2025-01-20, published 2025-01-30); Sec. 3(e) revokes the International Climate Finance Plan, Sec. 3(g) sets energy engagement priorities; names no other guidance.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02010/putting-america-first-in-international-environmental-agreements"
-      },
-      {
-        "note": "EXIM board approved nearly $5 billion for Mozambique LNG on 2025-03-14.",
-        "result": "supports",
-        "url": "https://www.engineeringnews.co.za/article/us-approves-5bn-loan-to-totalenergies-for-mozambique-gas-project-2025-03-14"
-      },
-      {
-        "note": "Speech of 2025-04-23; gas not named in the article, so the timeline wording was narrowed.",
-        "result": "supports",
-        "url": "https://www.eenews.net/articles/bessent-accuses-world-bank-and-imf-of-climate-mission-creep"
-      },
-      {
-        "note": "Statement No. 51-23 by the Treasury Secretary, April 2025; all-of-the-above energy including gas; welcomes end of nuclear ban.",
-        "result": "supports",
-        "url": "https://meetings.imf.org/-/media/AMSM/Files/SM2025/IMFC/united-states.ashx"
-      },
-      {
-        "note": "Board ended nuclear ban; no agreement on upstream gas; US pushed to end ban.",
-        "result": "supports",
-        "url": "https://www.engineeringnews.co.za/article/world-bank-to-end-ban-on-nuclear-energy-projects-still-debating-upstream-gas-2025-06-12"
-      },
-      {
-        "note": "Memorandum signed 2026-01-07, published 2026-01-16; 66 bodies including UNFCCC, IPCC and IRENA; ceasing funding for UN entities to the extent permitted by law.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/01/16/2026-00976/withdrawing-the-united-states-from-international-organizations-conventions-and-treaties-that-are"
-      },
-      {
-        "note": "GEF $150.20 million enacted FY2026; zero for Clean Technology Fund.",
-        "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2026-07-15_R48624_48cf729af75f7e8e8c710d63e39078520bd54f59.html"
-      },
-      {
-        "note": "Says the final bill eliminates funding for climate executive orders and mandates; no figures; undated. Added by the reviewer.",
+        "note": "Dated 2026-10-15; Treasury statement to the Bank and Fund steering committees asking to end the upstream oil and gas ban; a position only, consistent with but not deciding implemented.",
         "result": "partial",
-        "url": "https://appropriations.house.gov/sites/evo-subsites/republicans-appropriations.house.gov/files/evo-media-document/final-fy26-nsrp-minibus-summary.pdf"
+        "url": "https://www.miningweekly.com/article/bessent-calls-for-world-bank-reforms-including-upstream-oil-and-gas-financing-2026-10-15"
       },
       {
-        "note": "Not opened by the reviewer; the primary memorandum was read instead.",
-        "result": "unreachable",
-        "url": "https://www.jurist.org/news/2026/01/trump-orders-us-withdrawal-from-66-international-organizations-including-un-climate-bodies/"
+        "note": "Tracker: H.R. 7148 became P.L. 119-75 on 2026-02-03 and includes the FY2026 National Security and State act; dates the enactment event only.",
+        "result": "partial",
+        "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/7148"
       },
       {
-        "note": "Dated 2025-12-18; DFC reauthorization in the FY2026 NDAA; energy appears only as a sector exempt from the high-income country limit, with no oil, gas or climate provision, so it does not establish affirmative fossil fuel support.",
-        "result": "does_not_support",
-        "url": "https://www.dfc.gov/media/press-releases/dfc-secures-expanded-authorities-fy26-ndaa-signed-law"
-      },
-      {
-        "note": "EO 14162 signed 2025-01-20, published 2025-01-30, 90 FR 8455; Sec. 3(c) ends UNFCCC financial commitments, 3(e) revokes the International Climate Finance Plan, 3(f) agency reports including USAID, DFC and EXIM, 3(g) energy engagement priorities; no fossil fuel financing guidance or climate advocacy funding provision. Checked 2026-10-18.",
+        "note": "Not refetched; relied on the 2026-10-18 full reading: Sec. 3(e) revokes the International Climate Finance Plan; anchors the operative cessation element.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02010/putting-america-first-in-international-environmental-agreements"
-      },
-      {
-        "note": "Signed 2026-01-07, published 2026-01-16, 91 FR 2281; 35 non-UN and 31 UN bodies including UNFCCC, IPCC and IRENA; UN funding ceases to the extent permitted by law. Checked 2026-10-18.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/01/16/2026-00976/withdrawing-the-united-states-from-international-organizations-conventions-and-treaties-that-are"
-      },
-      {
-        "note": "NPR, 2025-07-01: USAID officially shut down and its remaining operations merged into State. Checked 2026-10-18.",
-        "result": "supports",
-        "url": "https://www.wwno.org/npr-news/2025-07-01/usaid-officially-shuts-down-and-merges-remaining-operations-with-state-department"
       }
     ]
   },
@@ -251,10 +230,24 @@
       "publisher": "NPR via WWNO",
       "title": "USAID officially shuts down and merges remaining operations with State Department",
       "url": "https://www.wwno.org/npr-news/2025-07-01/usaid-officially-shuts-down-and-merges-remaining-operations-with-state-department"
+    },
+    {
+      "date": "2026-10-15",
+      "kind": "news",
+      "publisher": "Mining Weekly",
+      "title": "Bessent calls for World Bank reforms including upstream oil and gas financing",
+      "url": "https://www.miningweekly.com/article/bessent-calls-for-world-bank-reforms-including-upstream-oil-and-gas-financing-2026-10-15"
+    },
+    {
+      "date": "2026-02-03",
+      "kind": "tracker",
+      "publisher": "The Lobby News",
+      "title": "H.R. 7148, Consolidated Appropriations Act, 2026 (bill tracker)",
+      "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/7148"
     }
   ],
   "stage": "implemented",
-  "status_summary": "USAID no longer exists, so the outcome is judged in State, Treasury and the wider executive branch, where the cessation elements of the text are operative but the affirmative support for oil and gas in aid programs was not found. Executive Order 14162 (signed 2025-01-20) revoked the US International Climate Finance Plan, ended UNFCCC financial commitments and directed that foreign energy engagement prioritize economic efficiency and American prosperity, and a memorandum of 2026-01-07 directed withdrawal from bodies including the UNFCCC, the IPCC and the International Renewable Energy Agency, ceasing funding to the extent permitted by law. The Treasury Secretary urged the World Bank in April 2025 to adopt an all-of-the-above energy approach that includes gas rather than climate finance targets, and the EXIM board, an export credit agency rather than an aid agency, approved a loan of nearly $5 billion for the Mozambique LNG project on 2025-03-14. The FY2026 law still funds the Global Environment Facility at $150.2 million, and the rescission of the 2021 interim guidance on overseas fossil fuel financing was not verified, so the record is held at the bottom of the implemented band.",
+  "status_summary": "USAID no longer exists, so the outcome is judged in State, Treasury and the wider executive branch, where the cessation elements of the text are operative but affirmative support for oil and gas in aid programs was not found. Executive Order 14162 (signed 2025-01-20) revoked the US International Climate Finance Plan, ended UNFCCC financial commitments and set economic efficiency and American prosperity as priorities for foreign energy engagement, and a memorandum of 2026-01-07 directed withdrawal from bodies including the UNFCCC, the IPCC and the International Renewable Energy Agency, ceasing funding to the extent permitted by law. The EXIM board, an export credit agency rather than an aid agency, approved a loan of nearly $5 billion for the Mozambique LNG project on 2025-03-14, and Treasury has urged the World Bank since April 2025, most recently in a statement reported on 2026-10-15, to finance gas and upstream oil and gas projects. The FY2026 appropriations law enacted 2026-02-03 still funds the Global Environment Facility at $150.2 million per CRS, and rescission of the 2021 guidance on overseas fossil fuel financing was not verified, so the record is held at the bottom of the implemented band.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -269,20 +262,6 @@
       "kind": "news",
       "source": "Engineering News",
       "url": "https://www.engineeringnews.co.za/article/us-approves-5bn-loan-to-totalenergies-for-mozambique-gas-project-2025-03-14"
-    },
-    {
-      "date": "2025-04-23",
-      "event": "The Treasury Secretary urged the World Bank to expand energy access with technologies that sustain growth rather than meet climate finance targets, and said climate work is outside the IMF's mission.",
-      "kind": "news",
-      "source": "E&E News",
-      "url": "https://www.eenews.net/articles/bessent-accuses-world-bank-and-imf-of-climate-mission-creep"
-    },
-    {
-      "date": "2025-04-25",
-      "event": "The US statement to the IMF's policy committee (meeting of 2025-04-24 to 2025-04-25) called for an all-of-the-above approach to energy at the World Bank that includes gas and welcomed the plan to lift its nuclear ban.",
-      "kind": "primary",
-      "source": "International Monetary Fund (IMFC statements)",
-      "url": "https://meetings.imf.org/-/media/AMSM/Files/SM2025/IMFC/united-states.ashx"
     },
     {
       "date": "2025-06-12",
@@ -300,21 +279,14 @@
     },
     {
       "date": "2026-02-03",
-      "event": "The House Appropriations Committee's undated summary of the final FY2026 bill (enacted as P.L. 119-75) says it eliminates funding for the prior administration's climate executive orders and climate change mandates.",
+      "event": "The Consolidated Appropriations Act, 2026 (P.L. 119-75), including the FY2026 National Security, Department of State and Related Programs act, was enacted; the House Appropriations Committee summary says it eliminates funding for the prior administration's climate executive orders and climate change mandates.",
       "kind": "primary",
       "source": "House Appropriations Committee",
       "url": "https://appropriations.house.gov/sites/evo-subsites/republicans-appropriations.house.gov/files/evo-media-document/final-fy26-nsrp-minibus-summary.pdf"
-    },
-    {
-      "date": "2026-07-15",
-      "event": "CRS reported FY2026 enacted funding for the Global Environment Facility of $150.2 million.",
-      "kind": "primary",
-      "source": "Congressional Research Service (copy at EveryCRSReport)",
-      "url": "https://www.everycrsreport.com/files/2026-07-15_R48624_48cf729af75f7e8e8c710d63e39078520bd54f59.html"
     }
   ],
   "title": "Stop opposing fossil fuel development abroad and narrow climate funding in foreign aid",
   "tracked": true,
-  "uncertainties": "The rescission of the 2021 interim guidance on international public financing of fossil fuel projects and of Treasury's multilateral development bank energy guidance was not confirmed: the researcher's searches and one reviewer search returned only 2021 coverage of the guidance. EO 14162 does not name those documents. The IMFC statement prints only April 2025; the date 2025-04-25 is taken from the meeting dates on the statement. The House committee summary prints no date and is dated here to the law's enactment; it gives no figures for the climate eliminations, and CRS lists zero FY2026 funding for the Clean Technology Fund and for Tropical Forest and Coral Reef Conservation without explanation. A search for DFC financing of oil or gas projects in 2025 or 2026 returned only older financings. EXIM is an export credit agency, so its LNG loan is a parallel step, not foreign aid. Whether specific climate-advocacy NGOs and foundations lost funding was not separately verified; the withdrawal memorandum covers international bodies only. Mandate text on the Climate Strategy 2022 to 2030 and Paris-related programs is tracked in c09-03. Division F of P.L. 119-75 could not be read: the GovInfo HTML ends within Division A, Title VIII (Sec. 8072) and does not reach Division F, so the Global Environment Facility line was confirmed only through the CRS report and any climate-order funding limit only through the House committee summary. EO 14162 was read in full on the Federal Register and contains no provision on fossil fuel financing guidance or on funding climate-advocacy organizations.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The rescission of the 2021 interim guidance on international public financing of fossil fuel projects and of Treasury's multilateral development bank energy guidance was not confirmed: the researcher's searches and one reviewer search returned only 2021 coverage of the guidance. EO 14162 does not name those documents. The House committee summary prints no date and is dated here to the law's enactment on 2026-02-03, a date taken from a bill tracker (thelobbynews.com) and not confirmed on congress.gov; it gives no figures for the climate eliminations, and CRS lists zero FY2026 funding for the Clean Technology Fund and for Tropical Forest and Coral Reef Conservation without explanation. A search for DFC financing of oil or gas projects in 2025 or 2026 returned only older financings. EXIM is an export credit agency, so its LNG loan is a parallel step, not foreign aid. Whether specific climate-advocacy NGOs and foundations lost funding was not separately verified; the withdrawal memorandum covers international bodies only. Mandate text on the Climate Strategy 2022 to 2030 and Paris-related programs is tracked in c09-03. Division F of P.L. 119-75 could not be read: the GovInfo HTML ends within Division A, Title VIII (Sec. 8072) and does not reach Division F, so the Global Environment Facility line was confirmed only through the CRS report and any climate-order funding limit only through the House committee summary. EO 14162 was read in full on the Federal Register and contains no provision on fossil fuel financing guidance or on funding climate-advocacy organizations. Treasury positions at the multilateral development banks are kept as context rather than timeline events because they are statements, not actions: a speech of 2025-04-23 urging the World Bank to move away from climate finance targets, a US statement to the IMF policy committee in April 2025 (dated 2025-04-25 from its meeting dates) calling for an all-of-the-above energy approach including gas, and a statement to the World Bank and IMF steering committees reported on 2026-10-15 asking the Bank to end its ban on upstream oil and gas financing, with no Bank response reported. The CRS report of 2026-07-15 is likewise kept as the source for the Global Environment Facility figure rather than as an event. The 2025-06-12 entry is a World Bank board action, dated by the news report, that the US had pressed for. The rescission of the 2021 interim guidance and of Treasury's multilateral development bank energy guidance was searched again on 2026-10-23 and still not confirmed, and a search for DFC oil and gas financing returned only older financings.",
+  "updated_at": "2026-10-23"
 }

@@ -7,7 +7,7 @@
   "chapter": "22",
   "confidence": 63,
   "confidence_label": "medium",
-  "confidence_reason": "Not_started rests on five documented checks and the GENIUS Act status record and OCC proposal: (1) Federal Register API queries found the March 2026 OCC chartering rule, adjacent and without an equity trade (partial); (2) Unified Agenda: the Treasury (OCC), FDIC and NCUA rule lists on reginfo.gov were read in full on 2026-10-19 and three licensing or chartering entries opened; none creates the recommended charter (partial; informative for OCC chartering rules, though a new charter type may need legislation); (3) congress.gov and GovInfo search found no charter-for-capital bill or law (supports); (4) Treasury releases showed nothing while the OCC newsroom could not be fetched (partial); (5) one news search found only older fintech charter coverage (supports). Set at 63 because of the partial checks and the adjacent chartering actions.",
+  "confidence_reason": "Not_started rests on the documented systematic checks of 2026-10-18 and 2026-10-19 (Federal Register, Unified Agenda, congress.gov and GovInfo, Treasury releases, news) listed in the earlier review; page 705 was rechecked and the OCC final rule of 2026-10-23 was read in part on 2026-10-23, and it creates no general charter, so the rating stays at 63 within the cap of 70.",
   "durability": {
     "level": "low",
     "why": "No action toward the recommended charter exists to assess."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-19",
       "note": "Independent review read the Treasury, FDIC and NCUA Unified Agenda rule lists and three licensing and chartering entries on reginfo.gov; not_started kept and confidence raised from 60 to 63."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "News sweep and independent review on 2026-10-23 added the OCC final rule of 2026-10-23 implementing the GENIUS Act, read in part on federalregister.gov; not_started kept because the license remains single-purpose."
     }
   ],
   "id": "c22-23",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -68,12 +72,18 @@
       "result": "does_not_support",
       "url": "https://www.federalregister.gov/documents/2026/03/02/2026-04089/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the"
     },
-    "flags": [],
-    "mandate_check": "ok",
-    "mandate_note": "Page 705 says policymakers should create new charters for financial firms that eliminate activity restrictions and reduce regulation in exchange for straightforward higher equity or risk-retention standards, replacing regulation with competition and market discipline. The paraphrase and page are correct.",
+    "flags": [
+      "new 2026-10-23 final rule accepted as a parallel event",
+      "status_summary updated to report finalization",
+      "stage not_started 0 unchanged; alternative proposed at the low end if the stablecoin regime is treated as a parallel new charter",
+      "earlier source_checks retained to document the systematic check behind the 63 rating",
+      "mandate_check relabeled from ok to verified"
+    ],
+    "mandate_check": "verified",
+    "mandate_note": "Page 705 says policymakers should create new charters for financial firms that eliminate activity restrictions and reduce regulation in exchange for straightforward higher equity or risk-retention standards; the paraphrase and page are correct.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
-    "reviewer": "independent AI reviewer (absence checks)",
+    "reviewed_at": "2026-10-23",
+    "reviewer": "independent review",
     "source_checks": [
       {
         "note": "Public Law 119-27 signed 2025-07-18; capital, liquidity and reserve rules; a parallel license, not the recommended charter.",
@@ -160,6 +170,11 @@
         "note": "Detail page read: NPRM 07/00/2026; simplifies chartering of new federal credit unions to improve applications and reduce processing time; no activity or capital trade.",
         "result": "partial",
         "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=3133-AF71"
+      },
+      {
+        "note": "Final rule 91 FR 67000, RIN 1557-AF41, published 2026-10-23, effective 2027-01-18; single-purpose issuer framework with permitted and prohibited activities and capital backstops; no general charter; consistent with not_started (parallel only). Regulatory text of the activity sections not reached.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21706/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the"
       }
     ],
     "stage_change_reason": "Stage changed from proposed 10 to not_started 0: the stablecoin and trust charter paths limit permitted activities rather than trading broader activities for higher equity, so they are not a step toward the recommended charter."
@@ -213,10 +228,17 @@
       "publisher": "Steptoe",
       "title": "OCC Conditionally Approves Five National Trust Bank Charter Applications",
       "url": "https://www.steptoe.com/en/news-publications/occ-conditionally-approves-five-national-trust-bank-charter-applications.html"
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Implementing the GENIUS Act for the Issuance of Stablecoins by Entities Subject to OCC Jurisdiction (final rule, 91 FR 67000)",
+      "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21706/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the"
     }
   ],
   "stage": "not_started",
-  "status_summary": "No charter that removes activity restrictions in exchange for higher equity or risk retention was found. The new licensing paths created since 2025 run the other way on activities: the GENIUS Act (Public Law 119-27, signed 2025-07-18) set up a federal framework for payment stablecoin issuers with capital, liquidity and reserve requirements, and the OCC's implementing proposal of 2026-03-02 limits approved issuers to stablecoin issuance, redemption, reserve management, custody and directly supporting activities. These are narrow, single-purpose licenses, not the general charter the text describes.",
+  "status_summary": "No charter that removes activity restrictions in exchange for higher equity or risk retention was found. The new licensing paths created since 2025 run the other way on activities: the GENIUS Act (Public Law 119-27, signed 2025-07-18) set up a federal framework for payment stablecoin issuers with capital, liquidity and reserve requirements, and the OCC's proposal of 2026-03-02 confined approved issuers to stablecoin issuance, redemption, reserve management, custody and directly supporting activities. The OCC finalized that framework on 2026-10-23 (91 FR 67000, effective 2027-01-18) with permitted and prohibited activity provisions and capital requirements, so it remains a narrow, single-purpose license rather than the general charter the text describes.",
   "timeline": [
     {
       "date": "2025-07-18",
@@ -231,10 +253,17 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/03/02/2026-04089/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the"
+    },
+    {
+      "date": "2026-10-23",
+      "event": "The OCC publishes its final rule implementing the GENIUS Act for payment stablecoin issuers under its jurisdiction (91 FR 67000, RIN 1557-AF41, effective 2027-01-18), adding 12 CFR part 15 with permitted and prohibited activity provisions, reserve, redemption, custody and application rules, and capital and operational backstop requirements. Listed as a parallel, not as progress.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21706/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the"
     }
   ],
   "title": "Create new financial charters with fewer activity limits for higher equity standards",
   "tracked": true,
-  "uncertainties": "No charter that removes activity restrictions in return for higher equity or risk retention was found. The GENIUS Act and the OCC's 2026 proposal create a narrow stablecoin license, and the March 2026 OCC chartering rule widens activity for trust-limited national banks without a capital trade; both are treated as adjacent. The OCC newsroom could not be read, and reported conditional trust charter approvals of 2025-12-12 were not confirmed from the OCC. The Unified Agenda rule lists on reginfo.gov for Treasury (including the OCC), the FDIC and the NCUA (headed 'Agency Rule List - 2026') list licensing and de novo chartering procedure changes and no new charter type. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "No charter that removes activity restrictions in return for higher equity or risk retention was found. The GENIUS Act and the OCC's 2026 proposal create a narrow stablecoin license, and the March 2026 OCC chartering rule widens activity for trust-limited national banks without a capital trade; both are treated as adjacent. The OCC newsroom could not be read, and reported conditional trust charter approvals of 2025-12-12 were not confirmed from the OCC. The Unified Agenda rule lists on reginfo.gov for Treasury (including the OCC), the FDIC and the NCUA (headed 'Agency Rule List - 2026') list licensing and de novo chartering procedure changes and no new charter type. Checked systematically on 2026-10-19. The OCC final rule of 2026-10-23 was read on the Federal Register only in part: the preamble confirms sections on permitted activities, prohibited activities and capital, but the regulatory text of those sections fell beyond the portion read, so the claim that the final rule keeps issuers to stablecoin activities rests on the proposal and the preamble.",
+  "updated_at": "2026-10-23"
 }

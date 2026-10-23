@@ -6,7 +6,7 @@
   "chapter": "06",
   "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; Diplomatic Note EXEC 2025-08 of 2025-01-24 was read on a non-government mirror and corroborated by the HHS Office of Global Affairs readout of 2026-08-13, and the HHS and State joint statement of 2026-08-12 was read on hhs.gov; the Commission-related elements rest on absence of evidence, so the rating stays medium.",
+  "confidence_reason": "Page 192 was rechecked and the HHS September 2026 readout was read on hhs.gov on 2026-10-23, with the January 2025 note and August 2026 statement read in earlier reviews; the rejoin note rests on a non-government mirror and the Commission-related elements rest on absence of evidence, so the rating stays medium.",
   "durability": {
     "level": "medium",
     "why": "Participation in the Declaration and the report format are executive choices that a later administration could reverse, though the secretariat role signals an institutional commitment."
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-16",
       "note": "Independent review: the 2025-01-24 diplomatic note (non-government mirror) and the 2026-08-12 joint statement on hhs.gov were reread, and an HHS Office of Global Affairs readout corroborating the January 2025 rejoining was added; secretariat wording changed to return framing; stage unchanged."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Refutation check and independent review on 2026-10-23 found the Geneva Consensus Declaration steps still in effect, added the 2026-09-23 expansion to 46 signatories reported on hhs.gov, moved a 2025 analysis from the timeline to uncertainties, and found no adoption of the unalienable-rights report; stage unchanged."
     }
   ],
   "id": "c06-17",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -49,6 +53,38 @@
   "position": "Human rights, international organizations (Geneva Consensus Declaration; Commission on Unalienable Rights)",
   "progress": 65,
   "proposal": "The Mandate says all US foreign policy engagements produced or expanded under the previous two Democratic administrations should be aligned with the Geneva Consensus Declaration and with the report of the US Commission on Unalienable Rights, and that the commission's work should be the basis for structural and policy changes at State. It says US multilateral engagements should be reevaluated in light of that report, and initiatives promoting controversial social policies should be halted and rolled back.",
+  "redteam": {
+    "date": "2026-10-23",
+    "evidence": [
+      {
+        "date": "2026-08-12",
+        "note": "Statement unrevised since publication; no reversal.",
+        "source": "HHS",
+        "url": "https://www.hhs.gov/press-room/united-states-geneva-consensus-declaration-secretariat.html"
+      },
+      {
+        "date": "2026-09-24",
+        "note": "US continues to run the secretariat; three new signatories, 46 total.",
+        "source": "HHS Office of Global Affairs",
+        "url": "https://www.hhs.gov/about/agencies/oga/news-events/readout-un-geneva-consensus-declaration-side-event-09-24-2026/index.html"
+      },
+      {
+        "date": "2026-08-13",
+        "note": "Argentina signed on 2026-08-10; the readout dates the US assumption of the secretariat to June 2026.",
+        "source": "HHS Office of Global Affairs",
+        "url": "https://www.hhs.gov/about/agencies/oga/news-events/readout-argentina-signs-geneva-consensus-declaration/index.html"
+      },
+      {
+        "date": "2026-01-27",
+        "note": "State rule implementing the Mexico City Policy award term, a related foreign-policy alignment step covered mainly elsewhere.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/01/27/2026-01519/protecting-life-in-foreign-assistance"
+      }
+    ],
+    "note": "No rescission, court action or narrowing found. The report-adoption element remains unevidenced: searches returned only 2019-2020 coverage of the Commission, no current State document.",
+    "verdict": "holds",
+    "what_was_tested": "Searched the Federal Register API for Geneva Consensus Declaration documents; read the HHS secretariat statement for revisions; searched for developments after 2026-08-12 and for any adoption or rescission of the Commission on Unalienable Rights report."
+  },
   "related_ids": [
     "c06-03",
     "c09-03",
@@ -72,29 +108,26 @@
       "url": "https://www.theiwh.org/wp-content/uploads/2025/01/Diplomatic-Note-Rejoining-the-Geneva-Consensus-Declaration-Coalition-EXEC-2025-08.pdf"
     },
     "flags": [
-      "Rejoin note rests on a non-government mirror; corroborated at month level by hhs.gov.",
-      "Secretariat start: readout says June 2026, statement dated 2026-08-12."
+      "new 2026-09-23 event accepted, reworded to name the US secretariat as the actor and to omit the private host",
+      "Just Security analysis removed from the timeline (analysis of a plan, not an action) and described in uncertainties",
+      "stage implemented 65 unchanged; alternative in_progress if the Commission elements are weighted equally; redteam holds confirmed",
+      "mandate_check relabeled from ok to verified"
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Printed page 192 recommends aligning foreign policy engagements expanded under the two prior Democratic administrations with the Geneva Consensus Declaration and the Commission on Unalienable Rights report, using that report as the basis for structural and policy change at State, reevaluating multilateral engagements and halting initiatives promoting controversial policies; the record's paraphrase matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "P16-2",
+    "mandate_check": "verified",
+    "mandate_note": "Printed page 192 recommends aligning engagements expanded under the two prior Democratic administrations with the Geneva Consensus Declaration and the Commission on Unalienable Rights report, using that report as the basis for structural and policy change, and building on the Declaration coalition; the paraphrase matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-23",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "Sender, number EXEC 2025-08, date 2025-01-24 and rejoin statement confirmed; non-government host, no signatory shown.",
+        "note": "Three new signatories, 46 total; secretariat run by HHS and State; page date 2026-09-24, dateline 2026-09-23; shows the Declaration element still operative.",
         "result": "supports",
-        "url": "https://www.theiwh.org/wp-content/uploads/2025/01/Diplomatic-Note-Rejoining-the-Geneva-Consensus-Declaration-Coalition-EXEC-2025-08.pdf"
+        "url": "https://www.hhs.gov/about/agencies/oga/news-events/readout-un-geneva-consensus-declaration-side-event-09-24-2026/index.html"
       },
       {
-        "note": "Joint statement dated 2026-08-12; uses return framing and thanks Hungary; HHS Office of Global Affairs; joint with State.",
+        "note": "Not refetched; relied on the researcher's 2026-10-23 reading and the 2026-10-16 review: secretariat returned to the US, joint HHS and State.",
         "result": "supports",
         "url": "https://www.hhs.gov/press-room/united-states-geneva-consensus-declaration-secretariat.html"
-      },
-      {
-        "note": "Government page stating the United States rejoined in January 2025; also dates the secretariat assumption to June 2026.",
-        "result": "supports",
-        "url": "https://www.hhs.gov/about/agencies/oga/news-events/readout-argentina-signs-geneva-consensus-declaration/index.html"
       }
     ],
     "stage_change_reason": "The rejoining and the secretariat role are operative, reversible executive actions covering the Declaration element only; no adoption of the Commission report as a basis for State restructuring was found, so implemented at the low end of the band stands."
@@ -179,10 +212,17 @@
       "publisher": "HHS Office of Global Affairs",
       "title": "Readout: Argentina Signs Geneva Consensus Declaration",
       "url": "https://www.hhs.gov/about/agencies/oga/news-events/readout-argentina-signs-geneva-consensus-declaration/index.html"
+    },
+    {
+      "date": "2026-09-24",
+      "kind": "primary",
+      "publisher": "HHS Office of Global Affairs",
+      "title": "Readout: UN Geneva Consensus Declaration side event",
+      "url": "https://www.hhs.gov/about/agencies/oga/news-events/readout-un-geneva-consensus-declaration-side-event-09-24-2026/index.html"
     }
   ],
   "stage": "implemented",
-  "status_summary": "The US Mission to the UN informed the Declaration's coalition by diplomatic note dated 2025-01-24 that the United States rejoins the Geneva Consensus Declaration, and on 2026-08-12 the Secretaries of Health and Human Services and of State announced that the secretariat was returning to the United States after Hungary's stewardship, housed in the HHS Office of Global Affairs and run jointly by HHS and State. State released scaled-back 2024 country human rights reports on 2025-08-12, and a June 2025 analysis described a reorganization proposal to create an Office of Natural Rights within a restructured human rights bureau. Related rollbacks of gender, equity and abortion-related foreign assistance and withdrawals from UN bodies are covered in c09-03, c09-04 and c06-03 and are not restated. No document adopting the Commission on Unalienable Rights report as policy was found.",
+  "status_summary": "The US Mission to the UN informed the Declaration's coalition by diplomatic note dated 2025-01-24 that the United States rejoins the Geneva Consensus Declaration, and on 2026-08-12 the Secretaries of Health and Human Services and of State announced that the secretariat was returning to the United States, housed in the HHS Office of Global Affairs and run jointly by HHS and State. Under that secretariat, three more countries joined on 2026-09-23, bringing the total to 46 signatories. State released scaled-back 2024 country human rights reports on 2025-08-12; related rollbacks of gender, equity and abortion-related foreign assistance and withdrawals from UN bodies are covered in c09-03, c09-04 and c06-03. No document adopting the Commission on Unalienable Rights report as policy was found.",
   "timeline": [
     {
       "date": "2025-01-24",
@@ -190,13 +230,6 @@
       "kind": "primary",
       "source": "US Mission to the UN (diplomatic note, hosted by the Institute for Women's Health)",
       "url": "https://www.theiwh.org/wp-content/uploads/2025/01/Diplomatic-Note-Rejoining-the-Geneva-Consensus-Declaration-Coalition-EXEC-2025-08.pdf"
-    },
-    {
-      "date": "2025-06-06",
-      "event": "A Just Security analysis described State's reorganization plan for the human rights bureau as proposing an Office of Natural Rights, under a deputy assistant secretary for democracy and Western values, grounded in traditional Western conceptions of core freedoms.",
-      "kind": "news",
-      "source": "Just Security",
-      "url": "https://www.justsecurity.org/114200/state-department-reorganization-human-rights/"
     },
     {
       "date": "2025-08-12",
@@ -211,10 +244,17 @@
       "kind": "primary",
       "source": "HHS",
       "url": "https://www.hhs.gov/press-room/united-states-geneva-consensus-declaration-secretariat.html"
+    },
+    {
+      "date": "2026-09-23",
+      "event": "The US-run Geneva Consensus Declaration secretariat, housed in the HHS Office of Global Affairs and operated jointly with State, reported that Honduras, Trinidad and Tobago and Algeria joined the Declaration at a side event during the UN General Assembly high-level week, bringing the total to 46 signatories.",
+      "kind": "primary",
+      "source": "HHS Office of Global Affairs",
+      "url": "https://www.hhs.gov/about/agencies/oga/news-events/readout-un-geneva-consensus-declaration-side-event-09-24-2026/index.html"
     }
   ],
   "title": "Align foreign policy with the Geneva Consensus Declaration and unalienable-rights report",
   "tracked": true,
-  "uncertainties": "The diplomatic note was read as hosted by a private organization that led the Declaration's drafting, not on a government site; its content matches an HHS Office of Global Affairs readout of 2026-08-13 stating that the United States rejoined in January 2025, though that readout gives no day. The same readout dates the US assumption of the secretariat to June 2026, while the joint statement announcing it is dated 2026-08-12; the record uses the statement date. State Department pages could not be read directly. The Office of Natural Rights was described as a proposal in June 2025, and whether it was created was not confirmed. The Commission on Unalienable Rights report was not found cited in any current State document, and none of the fetched sources mention it. The CRS summary of the country reports describes the removed sections but does not link them to the Commission. Inference: implemented reflects the Declaration steps and the related rollbacks recorded elsewhere; the Commission-based structural changes the text asks for are not shown.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The diplomatic note was read as hosted by a private organization that led the Declaration's drafting, not on a government site; its content matches an HHS Office of Global Affairs readout of 2026-08-13 stating that the United States rejoined in January 2025, though that readout gives no day. The same readout dates the US assumption of the secretariat to June 2026, while the joint statement announcing it is dated 2026-08-12; the record uses the statement date. The September 2026 readout carries a 2026-09-24 page date and a 2026-09-23 New York dateline; the event uses the dateline, and the side event was hosted by a civil society coalition rather than by the government. State Department pages could not be read directly. A June 2025 Just Security analysis described a State reorganization proposal for an Office of Natural Rights within a restructured human rights bureau; as an analysis of a plan it is kept as a source, not an event, and whether the office was created was not confirmed. The Commission on Unalienable Rights report was not found cited in any current State document, and none of the fetched sources mention it. The CRS summary of the country reports describes the removed sections but does not link them to the Commission. Inference: implemented reflects the Declaration steps and the related rollbacks recorded elsewhere; the Commission-based structural changes the text asks for are not shown.",
+  "updated_at": "2026-10-23"
 }

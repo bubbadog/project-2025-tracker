@@ -7,7 +7,7 @@
   "chapter": "05",
   "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Chapter text checked; the interim final rule, premium processing rule, naturalization fee proposal and FY2027 notice were fetched and read on the Federal Register.",
+  "confidence_reason": "Page 146 was rechecked, and the H-1B fee proposal and the EB-5 final rule were fetched and read on the Federal Register on 2026-10-23, alongside the rules read in the earlier review; the court docket after February 2026 is unknown.",
   "court_status": {
     "basis": "Derived from the latest court event: the stay of the annual asylum fee was lifted and the injunction request denied, while the case remained pending.",
     "date": "2026-02-02",
@@ -35,10 +35,14 @@
     {
       "date": "2026-10-11",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Checked on 2026-10-23 for developments after 2026-10-01; independent review confirmed on the Federal Register and added the proposed H-1B petition fee of 2026-08-25 and the final EB-5 fee rule of 2026-09-30, with no comprehensive USCIS fee rule found."
     }
   ],
   "id": "c05-21",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -64,40 +68,31 @@
   "research_agent": "N05a",
   "review": {
     "flags": [
-      "progress lowered 55 to 45 (general fee increase and wider waiver limits only proposed; no premium processing expansion)",
-      "added H.R. 1 enactment event",
-      "added N-400 fee increase from the proposal"
+      "both new events accepted; EB-5 event reworded to reflect the fee study basis",
+      "OPT and CBP items kept out of the timeline as non-USCIS",
+      "stage and progress unchanged at in_progress 45; alternative 50 if the EB-5 rule is counted once effective",
+      "court_status unchanged (pending)"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 146 says USCIS should stay fee-funded, file a fee rule at once raising all fees for inflation and cost, sharply limit fee waivers and add an asylum fee, that Congress should allow a 10 percent across-the-board increase, and that premium processing should expand. The proposal matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
-    "reviewer": "Y7",
+    "mandate_note": "Page 146 supports the fee-funded model, an immediate rule raising all fees for inflation and cost, sharp limits on fee waivers, an asylum fee, a congressional 10 percent across-the-board allowance and expanded premium processing; the proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-23",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "IFR published 2026-04-29, effective 2026-05-29; P.L. 119-21 signed 2025-07-04; 100 dollar minimum asylum fee and annual fee; no waivers or reductions; CPI-U adjustment.",
+        "note": "Final fee-study rule for one category, effective 2026-11-30; consistent with in_progress but does not raise all fees; form fee table not readable.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/09/30/2026-20016/us-citizenship-and-immigration-services-employment-based-immigrant-visa-fifth-preference-eb-5-fee"
+      },
+      {
+        "note": "Proposed rule 91 FR 54817; 103,265 dollar fee under INA 286(m) cost recovery; proposal only, so it supports in_progress only as a pending step.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/08/25/2026-17324/fee-for-certain-h-1b-petitions"
+      },
+      {
+        "note": "Not refetched; relied on the 2026-10-11 review reading of the operative asylum fees with no waivers, which anchors in_progress.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/04/29/2026-08333/uscis-immigration-fees-and-related-procedures-required-by-hr1-reconciliation-bill"
-      },
-      {
-        "note": "Final rule 2026-01-12, effective 2026-03-01; 5.72 percent inflation increase; no new forms or classifications.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/01/12/2026-00321/adjustment-to-premium-processing-fees"
-      },
-      {
-        "note": "Proposed rule 2026-06-23; ends N-400 and N-336 waivers and N-400 reduced fee; N-400 760 to 1,330 dollars paper; comments to 2026-08-24.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12542/naturalization-application-fee-adjustments"
-      },
-      {
-        "note": "Notice 2026-10-01, effective 2026-10-16; annual asylum fee 102 to 105 dollars.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/10/01/2026-20187/fiscal-year-2027-inflation-adjustment-to-hr-1-immigration-fees"
-      },
-      {
-        "note": "Stay under 5 U.S.C. 705 on 2025-10-30; stay lifted and renewed TRO/PI denied 2026-02-02; motion to dismiss 2026-02-17.",
-        "result": "supports",
-        "url": "https://clearinghouse.net/case/47060/"
       }
     ]
   },
@@ -170,10 +165,31 @@
       "publisher": "WRAL",
       "title": "Federal judge halts asylum application fee",
       "url": "https://www.wral.com/federal-judge-halts-asylum-application-fee/22222514/"
+    },
+    {
+      "date": "2026-08-25",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Fee for Certain H-1B Petitions (proposed rule)",
+      "url": "https://www.federalregister.gov/documents/2026/08/25/2026-17324/fee-for-certain-h-1b-petitions"
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "USCIS Employment-Based Immigrant Visa, Fifth Preference (EB-5) Fee Rule",
+      "url": "https://www.federalregister.gov/documents/2026/09/30/2026-20016/us-citizenship-and-immigration-services-employment-based-immigrant-visa-fifth-preference-eb-5-fee"
+    },
+    {
+      "date": "2026-10-08",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Optional Practical Training Fees (proposed rule)",
+      "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20660/optional-practical-training-fees"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "H.R. 1 (Public Law 119-21, signed 2025-07-04) set new immigration fees, and a USCIS interim final rule published 2026-04-29 (effective 2026-05-29) codifies a minimum 100 dollar asylum application fee, a 100 dollar annual fee while an asylum application is pending, and a rule that these fees cannot be waived or reduced; the fees adjust for inflation each fiscal year, with FY2027 amounts published 2026-10-01. A court in Maryland stayed the annual asylum fee guidance on 2025-10-30 and lifted the stay on 2026-02-02, and that case is ongoing. A rule published 2026-01-12 raised premium processing fees by 5.72 percent for inflation from 2026-03-01 without adding forms, and a proposal of 2026-06-23 would raise the naturalization fee and end fee waivers and the reduced fee for it. A comprehensive USCIS fee rule raising all fees was not found.",
+  "status_summary": "H.R. 1 (Public Law 119-21, signed 2025-07-04) set new immigration fees, and a USCIS interim final rule published 2026-04-29 (effective 2026-05-29) codifies a minimum 100 dollar asylum application fee, a 100 dollar annual fee while an asylum application is pending, and a rule that these fees cannot be waived or reduced; FY2027 inflation amounts published 2026-10-01 raised the annual asylum fee to 105 dollars from 2026-10-16. A court in Maryland stayed the annual asylum fee guidance on 2025-10-30 and lifted the stay on 2026-02-02, and that case is ongoing. A rule published 2026-01-12 raised premium processing fees by 5.72 percent for inflation without adding forms, a proposal of 2026-06-23 would raise the naturalization fee and end its waivers and reduced fee, a proposal of 2026-08-25 would add an H-1B petition fee, and a final EB-5 fee rule of 2026-09-30 takes effect 2026-11-30. A comprehensive rule raising all USCIS fees was not found.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -232,6 +248,20 @@
       "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12542/naturalization-application-fee-adjustments"
     },
     {
+      "date": "2026-08-25",
+      "event": "USCIS proposed a new 103,265 dollar fee on H-1B cap-subject petitions, payable at filing in addition to other fees and based on its cost-recovery fee authority; comments closed 2026-09-24 and a correction followed on 2026-09-10.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/08/25/2026-17324/fee-for-certain-h-1b-petitions"
+    },
+    {
+      "date": "2026-09-30",
+      "event": "USCIS published a final EB-5 fee rule based on a revised fee study, effective 2026-11-30, raising the Integrity Fund fees for inflation (Form I-526E from 1,000 to 1,100 dollars; regional center fees from 10,000 to 11,000 dollars, or 20,000 to 22,000 dollars for certain centers) and adding a 75 dollar technology fee for Forms I-526 and I-526E; it makes no premium processing changes.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/09/30/2026-20016/us-citizenship-and-immigration-services-employment-based-immigrant-visa-fifth-preference-eb-5-fee"
+    },
+    {
       "date": "2026-10-01",
       "event": "USCIS published FY2027 inflation adjustments to H.R. 1 immigration fees, effective 2026-10-16, raising the annual asylum fee to 105 dollars and leaving the initial asylum fee at 100 dollars.",
       "kind": "primary",
@@ -241,6 +271,6 @@
   ],
   "title": "Raise USCIS fees, limit waivers, add an asylum fee, expand premium processing",
   "tracked": true,
-  "uncertainties": "The interim final rule was read in large part, but the amounts of some H.R. 1 fees (parole, special immigrant juvenile, TPS work permits) were taken from the FY2027 notice rather than the rule. The Clearinghouse page shows no docket entries after 2026-02-20, so later rulings, including on a pending motion to dismiss, are unknown. A 2024 USCIS fee rule predates the period and was not reviewed. The Mandate's request for fees tied to cost is only partly matched because the fees found are statutory minimums, inflation adjustments and one proposed naturalization fee increase. Progress was lowered from 55 to 45 because the general fee increase and the waiver limits beyond H.R. 1 fees are only proposed and premium processing was not expanded.",
-  "updated_at": "2026-10-11"
+  "uncertainties": "The interim final rule was read in large part, but the amounts of some H.R. 1 fees (parole, special immigrant juvenile, TPS work permits) were taken from the FY2027 notice rather than the rule. The Clearinghouse page shows no docket entries after 2026-02-20, so later rulings, including on a motion to dismiss filed 2026-02-17, are unknown. A 2024 USCIS fee rule predates the period and was not reviewed. The final EB-5 rule's fee table is an image, so its form fee amounts for Forms I-526, I-526E, I-829 and I-956 were not confirmed; the rule is final but not yet effective. The H-1B fee proposal would recover costs of several agencies, not only USCIS, and was read only in part. An Immigration and Customs Enforcement proposal of 2026-10-08 for Optional Practical Training fees charged to schools and a CBP rule of 2026-08-10 on a statutory biometric fee are not USCIS fee rules and were not counted. No final rule on the naturalization proposal and no new premium processing rule after 2026-01-12 were found in the Federal Register through 2026-10-23. The Mandate's request for fees tied to cost is only partly matched because the fees found are statutory minimums, inflation adjustments, one category-specific final rule and proposals. Progress stays at 45 because the general fee increase and the waiver limits beyond H.R. 1 fees are only proposed and premium processing was not expanded.",
+  "updated_at": "2026-10-23"
 }

@@ -3,12 +3,13 @@
   "blockers": [
     "The 2026-02-20 Supreme Court ruling removed the emergency-powers basis for the reciprocal tariffs.",
     "A law-firm analysis said stacking the Section 122 surcharge on MFN rates could exceed the agreed caps for the EU and UK.",
-    "Digital services tax disputes: a tariff on UK imports over the UK digital services tax was proposed on 2026-04-23, per a law-firm tracker, and was not reported as implemented."
+    "Digital services tax disputes: a tariff on UK imports over the UK digital services tax was proposed on 2026-04-23, per a law-firm tracker, and was not reported as implemented.",
+    "A suit by 25 states at the Court of International Trade, filed about 2026-08-03, challenges the Section 301 duties that now set the EU and UK rates; no ruling was reported."
   ],
   "chapter": "06",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; EO 14309, the US-EU joint statement, the Section 301 notice (in full), the EU regulation (in full) and the Supreme Court syllabus and judgment lines were read, and the 2025-09-25 notice was read to 100,000 of 138,516 characters; the Section 122 interval and stacking concern still rest on law-firm summaries, so confidence stays medium.",
+  "confidence_reason": "Pages 187 to 188 were rechecked, and on 2026-10-23 the July 2026 Section 301 memorandum and the August 2026 UK pharmaceutical notice were read on the Federal Register; the state lawsuit rests on one news report and the Section 122 interval and stacking concern still rest on law-firm summaries, so confidence stays medium.",
   "court_status": {
     "basis": "The Supreme Court held 6-3 that IEEPA does not authorize tariffs, affirming the Federal Circuit in No. 25-250 and vacating the district court judgment in No. 24-1287 with instructions to dismiss; this removed the emergency-powers basis for the reciprocal tariff rates in the EU and UK arrangements, which law-firm summaries say were replaced by Section 122 and then Section 301 tariffs, while the Section 232 elements were not affected.",
     "date": "2026-02-20",
@@ -44,10 +45,14 @@
     {
       "date": "2026-10-16",
       "note": "Independent review after the primary-source lift: the Supreme Court judgment on supremecourt.gov, the Federal Register notices of 2025-09-25 and 2026-07-28, Executive Order 14309 and Regulation (EU) 2026/1455 on eur-lex.europa.eu were read, law-firm wording was moved out of the timeline, implemented 65 was kept and confidence rose from 68 to 72."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Refutation check and independent review on 2026-10-23 found no injunction or rescission of the US-EU and US-UK tariff arrangements, added the 2026-07-23 Section 301 memorandum and the 2026-08-04 UK pharmaceutical tariff cut from the Federal Register, and recorded a pending 25-state challenge at the Court of International Trade reported by supplychaindive.com; stage unchanged."
     }
   ],
   "id": "c06-16",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -58,6 +63,38 @@
   "position": "Europe (Other International Engagements)",
   "progress": 65,
   "proposal": "The Mandate says the US should undertake a comprehensive review of trade arrangements between the EU and the United States to ensure US businesses are treated fairly and to build productive reciprocity. It adds that trade with the post-Brexit United Kingdom needs urgent development before London slips back into the EU's orbit.",
+  "redteam": {
+    "date": "2026-10-23",
+    "evidence": [
+      {
+        "date": "2026-07-28",
+        "note": "Presidential action confirms the EU tariff is set so the total reaches 10 percent where the MFN rate is lower; no rescission found.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15274/actions-by-the-united-states-in-the-investigations-under-section-301-of-the-trade-act-of-1974-of-the"
+      },
+      {
+        "date": "2026-08-04",
+        "note": "25 states sued at the Court of International Trade; no injunction, stay or ruling reported.",
+        "source": "Supply Chain Dive",
+        "url": "https://supplychaindive.com/news/25-states-sue-trump-over-section-301-forced-labor-tariffs/826908"
+      },
+      {
+        "date": "2026-08-04",
+        "note": "UK pharmaceutical tariff reduced to 0 percent, extending the UK arrangement.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/08/04/2026-15799/notice-of-reduction-of-tariffs-on-patented-pharmaceuticals-and-pharmaceutical-ingredients-for"
+      },
+      {
+        "date": "2026-08-11",
+        "note": "Section 232 proclamation keeps the UK at 10 percent and the EU at a combined 15 percent, consistent with the deals.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/08/11/2026-16400/adjusting-imports-of-polysilicon-and-its-derivatives-into-the-united-states"
+      }
+    ],
+    "note": "No injunction, stay, vacatur or rescission of the Section 301 duties, the EU-UK arrangements or the 2025 implementing actions was found. The tariff basis is under a pending state challenge, so durability is lower; the stage is unchanged. A docket mirror was not located.",
+    "verdict": "weakened",
+    "what_was_tested": "Searched the Federal Register API for EU, UK and Section 301 documents after 2026-07-24; searched for court challenges, injunctions or stays against the Section 301 duties; checked for later US-UK or US-EU trade actions."
+  },
   "related_ids": [
     "c26-05",
     "c06-07"
@@ -71,39 +108,31 @@
   "research_agent": "N06a",
   "review": {
     "flags": [
-      "Both replacement events (Federal Register notice of 2025-09-25 and Regulation (EU) 2026/1455) confirmed against the documents; law-firm attributions moved out of timeline event text into uncertainties.",
-      "court_status vacated kept: the latest court event is the 2026-02-20 judgment."
+      "UK pharmaceutical event accepted with agency corrected to Commerce BIS and effective date added",
+      "2026-07-23 Section 301 memorandum added as an event from the researcher's evidence",
+      "state lawsuit kept in uncertainties and blockers, not as a court event; court_status vacated unchanged; alternative pending if the suit is treated as the latest court event",
+      "stage implemented 65 unchanged; redteam verdict weakened confirmed (durability only)"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Pages 187 and 188 say the US should undertake a comprehensive review of EU-US trade arrangements to assure fair treatment of US businesses and productive reciprocity, and that trade with the post-Brexit UK needs urgent development. The paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "P16L-2",
+    "mandate_note": "Pages 187 and 188 call for a comprehensive review of EU-US trade arrangements to assure fair treatment and productive reciprocity, and urgent development of trade with the post-Brexit UK; the paraphrase is accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-23",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "Decided 2026-02-20; IEEPA does not authorize tariffs; No. 25-250 affirmed, No. 24-1287 vacated and remanded with instructions to dismiss; 6-3; syllabus and judgment lines read, not the full opinion.",
+        "note": "Memorandum of 2026-07-23, 91 FR 47717; EU combined 10 percent or zero where MFN is 10 percent or more; UK flat 10 percent; operative tariff terms consistent with implemented.",
         "result": "supports",
-        "url": "https://www.supremecourt.gov/opinions/25pdf/24-1287_4gcj.pdf"
+        "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15274/actions-by-the-united-states-in-the-investigations-under-section-301-of-the-trade-act-of-1974-of-the"
       },
       {
-        "note": "EO 14309 signed 2025-06-16, 90 FR 26419; IEEPA and Section 232 among authorities; 100,000-vehicle quota at 10 percent, aerospace relief, future steel and aluminum quotas.",
+        "note": "BIS notice, 91 FR 49406, UK patented pharmaceuticals 10 to 0 percent effective 2026-07-31 under Proclamation 11020; an operative step in the UK arrangement.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/06/23/2025-11473/implementing-the-general-terms-of-the-united-states-of-america-united-kingdom-economic-prosperity"
+        "url": "https://www.federalregister.gov/documents/2026/08/04/2026-15799/notice-of-reduction-of-tariffs-on-patented-pharmaceuticals-and-pharmaceutical-ingredients-for"
       },
       {
-        "note": "90 FR 46136, ITA and USTR, effective 2025-09-25 with autos from 2025-08-01 and aircraft from 2025-09-01; relies on EO 14346; read to 100,000 of 138,516 characters.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/09/25/2025-18660/implementing-certain-tariff-related-elements-of-the-us-eu-framework-on-an-agreement-on-reciprocal"
-      },
-      {
-        "note": "91 FR 47318, read in full: duties from 2026-07-24; EU 10 percent net of MFN, UK flat 10 percent; no mention of Section 122.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15181/notice-of-actions-in-section-301-investigations-of-acts-policies-and-practices-of-various-economies"
-      },
-      {
-        "note": "Full text: Art. 1 zero duties, Art. 2 tariff quotas, Art. 3 suspension tied to the 2025-08-21 joint statement, applies 2026-07-01 to 2029-12-31; recitals refer to the 15 percent ceiling and the Section 122 surcharge.",
-        "result": "supports",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32026R1455"
+        "note": "Report of 2026-08-04 on a 25-state CIT suit filed Monday (2026-08-03 inferred); no injunction; supports the stage with lower durability.",
+        "result": "partial",
+        "url": "https://supplychaindive.com/news/25-states-sue-trump-over-section-301-forced-labor-tariffs/826908"
       }
     ]
   },
@@ -211,10 +240,31 @@
       "publisher": "EUR-Lex",
       "title": "Regulation (EU) 2026/1455 (adjustment of customs duties on imports of certain US goods)",
       "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1455"
+    },
+    {
+      "date": "2026-08-04",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Notice of Reduction of Tariffs on Patented Pharmaceuticals and Pharmaceutical Ingredients for the United Kingdom",
+      "url": "https://www.federalregister.gov/documents/2026/08/04/2026-15799/notice-of-reduction-of-tariffs-on-patented-pharmaceuticals-and-pharmaceutical-ingredients-for"
+    },
+    {
+      "date": "2026-08-04",
+      "kind": "news",
+      "publisher": "Supply Chain Dive",
+      "title": "25 states sue over Section 301 forced labor tariffs",
+      "url": "https://supplychaindive.com/news/25-states-sue-trump-over-section-301-forced-labor-tariffs/826908"
+    },
+    {
+      "date": "2026-07-28",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Actions by the United States in the Section 301 investigations (presidential document)",
+      "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15274/actions-by-the-united-states-in-the-investigations-under-section-301-of-the-trade-act-of-1974-of-the"
     }
   ],
   "stage": "implemented",
-  "status_summary": "A presidential memorandum of 2025-01-20 directed Commerce and USTR to review trade deficits, unfair foreign trade practices and existing trade agreements and report by 2025-04-01; it applies to all major partners and does not name the EU or UK. The US and UK announced the Economic Prosperity Deal general terms on 2025-05-08, and Executive Order 14309 (signed 2025-06-16) implemented auto, aerospace and steel and aluminum provisions. The US and EU issued a joint statement on a framework on 2025-08-21, which describes itself as a first step and uses non-binding language, and a Federal Register notice of 2025-09-25 implemented its tariff elements. The Supreme Court held on 2026-02-20 that the emergency-powers statute does not authorize tariffs; a law firm reports a 10 percent Section 122 surcharge from 2026-02-24; EU Regulation 2026/1455 applies from 2026-07-01; and a Federal Register notice (91 FR 47318) applies Section 301 duties from 2026-07-24 at 10 percent net of most-favored-nation rates for the EU and a flat 10 percent for the UK. The approach is a government-wide, tariff-driven review followed by deals, not an EU-specific review.",
+  "status_summary": "A presidential memorandum of 2025-01-20 directed Commerce and USTR to review trade deficits, unfair foreign trade practices and existing trade agreements; it applies to all major partners and does not name the EU or UK. Executive Order 14309 (signed 2025-06-16) implemented the US-UK Economic Prosperity Deal's auto, aerospace and metals terms, and a US-EU joint statement of 2025-08-21, which calls itself a first step, had its tariff elements implemented by a Federal Register notice of 2025-09-25. After the Supreme Court held on 2026-02-20 that the emergency-powers statute does not authorize tariffs, a presidential memorandum of 2026-07-23 set Section 301 duties from 2026-07-24 at a combined 10 percent for most EU goods and a flat 10 percent for the UK, EU Regulation 2026/1455 has applied EU duty concessions on US goods since 2026-07-01, and a Commerce notice of 2026-08-04 cut the tariff on patented UK pharmaceuticals to zero. The approach is a government-wide, tariff-driven review followed by deals, not an EU-specific review, and 25 states have challenged the Section 301 duties in court.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -266,15 +316,29 @@
       "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1455"
     },
     {
+      "date": "2026-07-23",
+      "event": "A presidential memorandum to the Trade Representative in the Section 301 forced-labor investigations (published 2026-07-28 at 91 FR 47717) sets the EU Section 301 duty so that it and the most-favored-nation rate combine to 10 percent, with no added duty where that rate is 10 percent or more, and sets a flat 10 percent for the UK.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15274/actions-by-the-united-states-in-the-investigations-under-section-301-of-the-trade-act-of-1974-of-the"
+    },
+    {
       "date": "2026-07-24",
       "event": "Additional duties under Section 301 apply from 2026-07-24 per the USTR Federal Register notice of 2026-07-28 (91 FR 47318), which concludes forced-labor investigations of 60 economies: the EU rate is set so the most-favored-nation duty plus the Section 301 duty equals 10 percent, and the UK faces a flat 10 percent.",
       "kind": "primary",
       "source": "Federal Register (USTR)",
       "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15181/notice-of-actions-in-section-301-investigations-of-acts-policies-and-practices-of-various-economies"
+    },
+    {
+      "date": "2026-08-04",
+      "event": "A Commerce Bureau of Industry and Security notice (91 FR 49406) lowers the US tariff on patented pharmaceuticals and pharmaceutical ingredients from the UK from 10 percent to 0 percent under Proclamation 11020, effective for goods entered from 2026-07-31, citing the US-UK pharmaceutical pricing arrangement.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/08/04/2026-15799/notice-of-reduction-of-tariffs-on-patented-pharmaceuticals-and-pharmaceutical-ingredients-for"
     }
   ],
   "title": "Review US-EU trade for fairness and reciprocity; develop trade with the post-Brexit UK",
   "tracked": true,
-  "uncertainties": "The Supreme Court opinion (Learning Resources v. Trump, Nos. 24-1287 and 25-250, 6-3 as to the judgment) was read on supremecourt.gov: the Court affirmed in No. 25-250 and vacated and remanded No. 24-1287 with instructions to dismiss for lack of jurisdiction. The Section 301 notice was read in full in review (108,716 characters) and does not mention Section 122 or Proclamation 11012; a law-firm summary says the Section 301 duties replaced the expiring Section 122 surcharge. The Section 122 surcharge, the stacking concern and the UK digital services tax proposal rest on law-firm trackers, not on primary documents. The April 2025 reports produced under the trade memorandum were not read, so how far they addressed EU arrangements specifically is unknown. The date of the UK White House fact sheet is approximate. The EU regulation was read in full (EUR-Lex HTML) in review; its recitals refer to a temporary US import surcharge under Section 122 proclaimed on 2026-02-20, which is consistent with the law-firm reports. Most EU products facing a 15 percent US rate from July 2026 rests on a law-firm tracker. Inference: match was changed to partial because the Mandate asks for a fairness and reciprocity review and closer UK trade, which the memorandum's review and the resulting deals address in substance, though by tariff leverage and not by an EU-specific review. The trade-promotion-authority and wider agreements framework is covered in c26-05.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The Supreme Court opinion (Learning Resources v. Trump, Nos. 24-1287 and 25-250, 6-3 as to the judgment) was read on supremecourt.gov: the Court affirmed in No. 25-250 and vacated and remanded No. 24-1287 with instructions to dismiss for lack of jurisdiction. The Section 301 notice was read in full in review (108,716 characters) and does not mention Section 122 or Proclamation 11012; a law-firm summary says the Section 301 duties replaced the expiring Section 122 surcharge. The Section 122 surcharge, the stacking concern and the UK digital services tax proposal rest on law-firm trackers, not on primary documents. The April 2025 reports produced under the trade memorandum were not read, so how far they addressed EU arrangements specifically is unknown. The date of the UK White House fact sheet is approximate. The EU regulation was read in full (EUR-Lex HTML) in review; its recitals refer to a temporary US import surcharge under Section 122 proclaimed on 2026-02-20, which is consistent with the law-firm reports. Most EU products facing a 15 percent US rate from July 2026 rests on a law-firm tracker. Inference: match was changed to partial because the Mandate asks for a fairness and reciprocity review and closer UK trade, which the memorandum's review and the resulting deals address in substance, though by tariff leverage and not by an EU-specific review. The trade-promotion-authority and wider agreements framework is covered in c26-05. A coalition of 25 states filed suit at the Court of International Trade on or about 2026-08-03 (the filing day is inferred from a news report of 2026-08-04) against the Section 301 forced-labor tariffs that now set the EU and UK rates, seeking a ruling of unlawfulness and refunds; no injunction or ruling was reported, the docket itself was not read, and the filing is not entered as a court event or reflected in court_status. The 2026-08-04 UK pharmaceutical notice was issued under Proclamation 11020 of 2026-04-02 and a US-UK pharmaceutical pricing arrangement announced the same day; the proclamation and the arrangement were not read.",
+  "updated_at": "2026-10-23"
 }
