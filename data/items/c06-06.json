@@ -48,10 +48,14 @@
     {
       "date": "2026-10-20",
       "note": "Independent AI review: the 2026-10-16 implementing order was read on whitehouse.gov and matches the event (Russia-related duties and sanctions waived, no Iran-specific measure); the event was kept as context and its clause removed from the Iran-focused status summary; stage implemented kept at 70; confidence 80 to 80."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: the 2026-06-17 memorandum event no longer attributes the signing to an encyclopedia (Wikipedia); it now cites a Reuters report carried by Al-Monitor (signed 2026-06-17 by the two presidents, after a digital signing the previous Sunday, per one U.S. official) and the memorandum text published by Axios, both opened and added as sources. The Iran Watch copy of the text stays as a source. Uncertainties note how the text was obtained and the waiver-duration conflict. Three timeline sources missing from the source list (Al Jazeera, Washington Examiner, NewKerala) were added; the Washington Examiner address now resolves to its home page and the NewKerala page could not be opened. Stage implemented 70 and confidence 80 unchanged."
     }
   ],
   "id": "c06-06",
-  "last_checked": "2026-10-20",
+  "last_checked": "2026-10-23",
   "layer": 2,
   "match": "direct",
   "mechanism": "mixed",
@@ -138,18 +142,49 @@
     "flags": [
       "the 2026-10-16 order is Russia-focused and kept only as context for the law that extended the Iran Sanctions Act; it could be moved to a Russia sanctions record",
       "stage-deciding NSPM-2, Treasury release and Public Law 119-111 were read in the 2026-10-18 review, not re-read here",
-      "nuclear, regional-partner, public diplomacy and Israel elements still not assessed"
+      "nuclear, regional-partner, public diplomacy and Israel elements still not assessed",
+      "Three timeline sources (Al Jazeera, Washington Examiner, NewKerala) were missing from the source list and were added on 2026-10-23; the Washington Examiner address now resolves to the home page and the NewKerala page was not opened, so their titles are descriptive."
     ],
     "mandate_check": "not_checked",
     "mandate_note": "Pages 180-181 and 185 were checked in the 2026-10-18 review; not re-read in this review.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-20",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent AI reviewer",
     "source_checks": [
       {
         "note": "Order dated 2026-10-16 implementing Public Law 119-111: delegations in section 5, duty increases in section 2 tied to purchases on or after 2026-10-18, section 4 waivers of those duties and most sanctions until further determination; no Iran-specific provision, so it neither adds to nor subtracts from the Iran stage (checked 2026-10-20).",
         "result": "partial",
         "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
+      },
+      {
+        "note": "Opened by the researcher and re-opened on 2026-10-23: Reuters report dated 2026-06-17 says the two presidents signed the memorandum that Wednesday, after a digital signing by the Vice President and Iran's chief negotiator on the Sunday before; one unnamed U.S. official. Replaces the encyclopedia attribution for the memorandum event; context only for the implemented stage.",
+        "result": "supports",
+        "url": "https://www.al-monitor.com/originals/2026/06/iran-mou-was-signed-wednesday-trump-and-iran-president-us-official-says"
+      },
+      {
+        "note": "Opened by the researcher and re-opened on 2026-10-23: text read to reporters by a senior administration official, published 2026-06-17; confirms the waiver, frozen-funds, no-new-sanctions, blockade and sanctions-schedule provisions; states no signing date; its 60-day waiver summary conflicts with paragraph 10. Context only for the implemented stage.",
+        "result": "partial",
+        "url": "https://axios.com/2026/06/17/read-full-us-iran-deal-memorandum-understanding"
+      },
+      {
+        "note": "Opened by the researcher, not re-opened: law-firm note of 2026-06-18 says the US announced the memorandum on 2026-06-17 and the signed text was not formally published by the U.S. Government; no signing date. Corroborates; not cited. No bearing on the implemented stage.",
+        "result": "partial",
+        "url": "https://www.clydeco.com/en/insights/2026/06/sanctions-impact-u-s-and-iran-enter-into-mou-expre"
+      },
+      {
+        "note": "Researcher's fetch timed out and it was not retried; title and date (2026-08-17) confirmed from a search result on 2026-10-23. Cited for the 2026-07-07 event, unchanged; context only for the implemented stage.",
+        "result": "unreachable",
+        "url": "https://aljazeera.com/news/2026/8/17/us-iran-memorandum-of-understanding-expires-how-and-why-it-fell-apart"
+      },
+      {
+        "note": "Opened on 2026-10-23: the address resolves to the Washington Examiner home page, not the article, so the 2026-07-13 blockade restart could not be re-read. Context only for the implemented stage.",
+        "result": "unreachable",
+        "url": "https://www.washingtonexaminer.com/?p=4645709"
+      },
+      {
+        "note": "Fetch on 2026-10-23 was not permitted in time; not retried. Cited for the 2026-09-22 talks event, unchanged; context only for the implemented stage.",
+        "result": "unreachable",
+        "url": "https://www.newkerala.com/news/a/steve-witkoff-says-us-iran-talks-promising-constructive-as-408.htm"
       }
     ]
   },
@@ -235,6 +270,41 @@
       "publisher": "White House",
       "title": "Implementing the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026 (executive order)",
       "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
+    },
+    {
+      "date": "2026-06-17",
+      "kind": "news",
+      "publisher": "Reuters via Al-Monitor",
+      "title": "Iran MOU was signed on Wednesday by Trump and Iran president, U.S. official says",
+      "url": "https://www.al-monitor.com/originals/2026/06/iran-mou-was-signed-wednesday-trump-and-iran-president-us-official-says"
+    },
+    {
+      "date": "2026-06-17",
+      "kind": "news",
+      "publisher": "Axios",
+      "title": "READ: Full text of U.S.-Iran memorandum of understanding",
+      "url": "https://axios.com/2026/06/17/read-full-us-iran-deal-memorandum-understanding"
+    },
+    {
+      "date": "2026-08-17",
+      "kind": "news",
+      "publisher": "Al Jazeera",
+      "title": "US-Iran Memorandum of Understanding expires: How and why it fell apart",
+      "url": "https://aljazeera.com/news/2026/8/17/us-iran-memorandum-of-understanding-expires-how-and-why-it-fell-apart"
+    },
+    {
+      "date": "2026-07-13",
+      "kind": "news",
+      "publisher": "Washington Examiner",
+      "title": "Report that the President announced a restart of the US blockade of Iranian ports (headline not retrieved)",
+      "url": "https://www.washingtonexaminer.com/?p=4645709"
+    },
+    {
+      "date": "2026-09-23",
+      "kind": "news",
+      "publisher": "NewKerala (wire report)",
+      "title": "Report that Steve Witkoff called the 2026-09-22 US-Iran talks promising and constructive (headline not retrieved)",
+      "url": "https://www.newkerala.com/news/a/steve-witkoff-says-us-iran-talks-promising-constructive-as-408.htm"
     }
   ],
   "stage": "implemented",
@@ -277,10 +347,10 @@
     },
     {
       "date": "2026-06-17",
-      "event": "The US and Iran sign the Islamabad memorandum of understanding, per Wikipedia and Al Jazeera. Its posted text commits the US to oil export waivers, usable frozen funds, no new sanctions during talks and a phased end to the naval blockade, with sanctions ending on an agreed schedule under a final deal.",
+      "event": "The US and Iran sign the Islamabad memorandum of understanding: Reuters, citing one unnamed U.S. official, reports that the President and Iran's president signed it on 2026-06-17 after a digital signing by the Vice President and Iran's chief negotiator the previous Sunday. The text read to reporters by a senior administration official and published by Axios commits the US to oil export waivers, usable frozen funds, no new sanctions pending a final deal and a phased end to the naval blockade, with sanctions ending on a schedule to be set in a final deal.",
       "kind": "news",
-      "source": "Iran Watch (memorandum text)",
-      "url": "https://www.iranwatch.org/library/governments/iran/president/islamabad-memorandum-understanding-between-islamic-republic-iran-united-states-america"
+      "source": "Reuters via Al-Monitor; Axios (memorandum text)",
+      "url": "https://www.al-monitor.com/originals/2026/06/iran-mou-was-signed-wednesday-trump-and-iran-president-us-official-says"
     },
     {
       "date": "2026-07-07",
@@ -334,6 +404,6 @@
   ],
   "title": "Reinstate and expand Iran sanctions and deny Iran nuclear capability",
   "tracked": true,
-  "uncertainties": "The 2026 war, blockade and memorandum context rests on press reports (Michigan Public, Axios, Al Jazeera, Washington Examiner) and on a memorandum text posted by Iran Watch, a non-government site; whether Treasury issued any oil waivers during June and July 2026 was not established. The UN snapback date rests on a DLA Piper analysis dated only to October 2025. NSPM-2, Executive Orders 14382 and 14389, the 2026-10-01 Treasury release and Public Law 119-111 were read on primary hosts; Executive Order 14382 required later Commerce and State findings and a presidential decision before any duty applied, and no such decision was found before Executive Order 14389 ended the duties, so the tariff track appears not to have become operative. Public diplomacy, regional security assistance and Israel-related Mandate elements were not researched, and a final nuclear outcome was not found. The outcome of the 2026-09-22 talks and any follow-up meeting were not found. The implementing executive order of 2026-10-16 was read on whitehouse.gov; its Federal Register number and citation were not yet available on 2026-10-20. Review 2026-10-20: the implementing order is recorded only because it implements the law that extended the Iran Sanctions Act; its operative provisions concern Russia, so it is not reflected in the status summary.",
-  "updated_at": "2026-10-20"
+  "uncertainties": "The 2026 war, blockade and memorandum context rests on press reports (Michigan Public, Axios, Al Jazeera, Washington Examiner) and on a memorandum text read to reporters by a senior administration official and published by Axios, which notes that the printed text had not been released, and also posted by Iran Watch, a non-government site; the 2026-06-17 signing rests on a Reuters report citing one unnamed U.S. official, and the Axios summary gives a 60-day waiver period while the text it publishes runs the waivers until sanctions end; whether Treasury issued any oil waivers during June and July 2026 was not established. The UN snapback date rests on a DLA Piper analysis dated only to October 2025. NSPM-2, Executive Orders 14382 and 14389, the 2026-10-01 Treasury release and Public Law 119-111 were read on primary hosts; Executive Order 14382 required later Commerce and State findings and a presidential decision before any duty applied, and no such decision was found before Executive Order 14389 ended the duties, so the tariff track appears not to have become operative. Public diplomacy, regional security assistance and Israel-related Mandate elements were not researched, and a final nuclear outcome was not found. The outcome of the 2026-09-22 talks and any follow-up meeting were not found. The implementing executive order of 2026-10-16 was read on whitehouse.gov; its Federal Register number and citation were not yet available on 2026-10-20. Review 2026-10-20: the implementing order is recorded only because it implements the law that extended the Iran Sanctions Act; its operative provisions concern Russia, so it is not reflected in the status summary. Review 2026-10-23: the Washington Examiner address cited for the 2026-07-13 blockade restart resolved to the site's home page, and the NewKerala wire report for the 2026-09-22 talks could not be opened, so neither was re-read; both were added to the source list, where they had been missing, under descriptive titles.",
+  "updated_at": "2026-10-23"
 }

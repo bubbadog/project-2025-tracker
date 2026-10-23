@@ -32,10 +32,14 @@
     {
       "date": "2026-10-17",
       "note": "Independent review read CBP bulletin CSMS 69519766 on content.govdelivery.com and the GovInfo bill status records for S. 2043 and H.R. 3940, confirming the waiver extension through 2026-11-15 and no action on the repeal bills, removed four non-government timeline events, and moved confidence from 72 to 80; the stage stayed in_progress at 25."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: a fuel-distributors trade association page (NEFI) was removed from sources. The 2026-04-24 waiver extension now cites a Bloomberg News report carried by Transport Topics, which gives a different stated reason (supply disruption from the Iran war and early timing so the industry could secure vessels) than the association's account of new supply data; that account and the association's letter of 2026-04-23 moved to uncertainties as unverified leads. Cato stays as a think-tank source. A MARAD page already cited by the 2026-09-29 event but missing from the source list was added under a descriptive title. Stage in_progress 25 and confidence 80 unchanged."
     }
   ],
   "id": "c26-07",
-  "last_checked": "2026-10-17",
+  "last_checked": "2026-10-23",
   "layer": 2,
   "match": "partial",
   "mechanism": "mixed",
@@ -62,12 +66,13 @@
     },
     "flags": [
       "removed four non-government timeline events (Cato report, NEFI letter, House member letter, AJOT report)",
-      "waiver ends 2026-11-15; recheck after that date"
+      "waiver ends 2026-11-15; recheck after that date",
+      "The 2026-09-29 event's MARAD page was missing from the source list; it was added on 2026-10-23 with a descriptive title because the page could not be re-opened."
     ],
     "mandate_check": "ok",
     "mandate_note": "Page 801 lists repeal of the Jones Act; page 809 describes the law's requirements and costs and recommends unilateral exemptions wherever allowed, as in hurricane seasons, while working with Congress on repeal; page 810 repeats repeal. The proposal is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-17",
+    "reviewed_at": "2026-10-23",
     "reviewer": "P17-F",
     "source_checks": [
       {
@@ -79,6 +84,26 @@
         "note": "H.R. 3940 (Rep. McClintock): referred to Transportation and Infrastructure 2025-06-12 and to its Coast Guard and Maritime Transportation Subcommittee 2025-06-13; no later action.",
         "result": "supports",
         "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3940.xml"
+      },
+      {
+        "note": "Opened by the researcher and re-opened on 2026-10-23: Bloomberg News story republished by Transport Topics on 2026-04-24: 90-day extension moving expiry from May 17 to mid-August, issued three weeks early so the industry could secure vessels, tied to Iran war supply disruption; no mention of new data on faster supply. Supports the exemption half of the recommendation being partly operative; consistent with stage in_progress 25.",
+        "result": "supports",
+        "url": "https://www.ttnews.com/articles/white-house-extend-jones-act"
+      },
+      {
+        "note": "Opened by the researcher: World Oil copy of the same Bloomberg story (2026-04-24), adding the original list of about 659 products, not reduced by the extension. Corroborates; not cited.",
+        "result": "supports",
+        "url": "https://worldoil.com/news/2026/4/24/white-house-extends-jones-act-waiver-to-ease-u-s-oil-supply-crunch/"
+      },
+      {
+        "note": "Researcher's fetch timed out; not retried. Trade-association page, now a lead only and removed from sources; its stated reason for the extension is held as an unverified lead. No effect on stage in_progress.",
+        "result": "unreachable",
+        "url": "https://nefi.com/news-publications/recent-news/jones-act-waiver-extended-90-days-nefis-push-for-permanent-reform-continues"
+      },
+      {
+        "note": "Fetch on 2026-10-23 was not permitted in time; not retried. The page was already cited for the 2026-09-29 event but missing from sources; added under a descriptive title. Consistent with stage in_progress 25 as earlier reviewed.",
+        "result": "unreachable",
+        "url": "https://www.maritime.dot.gov/ports/domestic-shipping/september-2026-reports-august-17-2026-jones-act-extension"
       }
     ],
     "stage_change_reason": "Stage in_progress kept at 25: the exemption half is partly operative through a temporary national-defense waiver extended through 2026-11-15 (CBP bulletin), while the repeal half has only introduced bills; formally underway and partly operative fits in_progress at the low end."
@@ -102,13 +127,6 @@
       "publisher": "Cato Institute",
       "title": "Latest Waiver Is Another Indictment of the Jones Act",
       "url": "https://www.cato.org/node/119043.md"
-    },
-    {
-      "date": "2026-04-24",
-      "kind": "news",
-      "publisher": "NEFI",
-      "title": "Jones Act Waiver Extended 90 Days; NEFI's Push for Permanent Reform Continues",
-      "url": "https://nefi.com/news-publications/recent-news/jones-act-waiver-extended-90-days-nefis-push-for-permanent-reform-continues"
     },
     {
       "date": "2026-07-01",
@@ -172,10 +190,24 @@
       "publisher": "GovInfo",
       "title": "H.R. 3940 (119th Congress) bill status",
       "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3940.xml"
+    },
+    {
+      "date": "2026-04-24",
+      "kind": "news",
+      "publisher": "Transport Topics (Bloomberg News)",
+      "title": "White House Extends Jones Act for 90 Days to Ease Oil Crunch",
+      "url": "https://www.ttnews.com/articles/white-house-extend-jones-act"
+    },
+    {
+      "date": null,
+      "kind": "primary",
+      "publisher": "Maritime Administration",
+      "title": "September 2026 waiver-voyage reports under the August 17, 2026 Jones Act extension (title from the page address)",
+      "url": "https://www.maritime.dot.gov/ports/domestic-shipping/september-2026-reports-august-17-2026-jones-act-extension"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The first half of the recommendation, exemptions where allowed, is partly met by a temporary waiver; the repeal half has not advanced. The White House announced a Jones Act waiver in March 2026 that lets foreign-flag vessels carry oil, fuel and fertilizer between U.S. ports, with the administration saying it would reduce short-term disruption in the oil market (Cato, 2026-03-18; Argus describes the issue date as 17 March and links it to a U.S.-Iran war). The waiver was extended by 90 days on 2026-04-24 (NEFI) and again: a CBP bulletin of 2026-08-13 (CSMS 69519766) says DHS approved, at the Department of War's request, a second 90-day extension effective 2026-08-17 covering products loaded before 23:59 ET on 2026-11-15, with a vessel availability request and a post-voyage report to MARAD required; trade press reports the covered product list cut from more than 600 tariff codes in April to 237 (AJOT, 2026-08-18). MARAD's domestic shipping page confirms waiver dates of 2026-03-17, 2026-05-18 and 2026-08-17 and waiver-voyage reports through October 2026. On repeal, Sen. Lee and Rep. McClintock introduced the Open America's Waters Act (S. 2043 and H.R. 3940) on 2025-06-12; GovInfo bill status shows referral to committee with no later action, no administration proposal was found, and the law remains in force. NEFI and 14 other trade associations wrote to congressional leaders on 2026-04-23 urging permanent reform, and 52 House Republicans, including the Speaker, signed a 2026-06-30 letter urging that the waiver not be renewed (Argus). No waiver document appears in a Federal Register search for the Jones Act since 2025-01-20.",
+  "status_summary": "The first half of the recommendation, exemptions where allowed, is partly met by a temporary waiver; the repeal half has not advanced. The White House announced a Jones Act waiver in March 2026 that lets foreign-flag vessels carry oil, fuel and fertilizer between U.S. ports, with the administration saying it would reduce short-term disruption in the oil market (Cato, 2026-03-18; Argus describes the issue date as 17 March and links it to a U.S.-Iran war). The waiver was extended by 90 days on 2026-04-24 (Bloomberg News via Transport Topics) and again: a CBP bulletin of 2026-08-13 (CSMS 69519766) says DHS approved, at the Department of War's request, a second 90-day extension effective 2026-08-17 covering products loaded before 23:59 ET on 2026-11-15, with a vessel availability request and a post-voyage report to MARAD required; trade press reports the covered product list cut from more than 600 tariff codes in April to 237 (AJOT, 2026-08-18). MARAD's domestic shipping page confirms waiver dates of 2026-03-17, 2026-05-18 and 2026-08-17 and waiver-voyage reports through October 2026. On repeal, Sen. Lee and Rep. McClintock introduced the Open America's Waters Act (S. 2043 and H.R. 3940) on 2025-06-12; GovInfo bill status shows referral to committee with no later action, no administration proposal was found, and the law remains in force. 52 House Republicans, including the Speaker, signed a 2026-06-30 letter urging that the waiver not be renewed (Argus). No waiver document appears in a Federal Register search for the Jones Act since 2025-01-20.",
   "timeline": [
     {
       "date": "2025-06-12",
@@ -193,10 +225,10 @@
     },
     {
       "date": "2026-04-24",
-      "event": "The White House announces a 90-day extension of the waiver, moving expiry from May 17 to mid-August, citing new data that more supply reached U.S. ports faster.",
+      "event": "The White House announces a 90-day extension of the waiver, moving expiry from May 17 to mid-August, three weeks before the 2026-05-17 expiry and citing supply disruption from the Iran war, with the early timing meant to give the maritime industry time to secure vessels (Bloomberg News).",
       "kind": "news",
-      "source": "NEFI",
-      "url": "https://nefi.com/news-publications/recent-news/jones-act-waiver-extended-90-days-nefis-push-for-permanent-reform-continues"
+      "source": "Transport Topics (Bloomberg News)",
+      "url": "https://www.ttnews.com/articles/white-house-extend-jones-act"
     },
     {
       "date": "2026-08-13",
@@ -215,6 +247,6 @@
   ],
   "title": "Repeal the Jones Act and use waivers and exemptions in the meantime",
   "tracked": true,
-  "uncertainties": "A CBP bulletin (content.govdelivery.com, 2026-08-13) confirms the issuing route (DHS approval at the Department of War's request), the 2026-08-17 effective date and the 2026-11-15 loading deadline; it requires requests to explain how each voyage serves national defense and cites 46 U.S.C. 501(c) for post-voyage reports, which is consistent with a national defense waiver under 46 U.S.C. 501(a), but the waiver's own text was not read and the product list spreadsheet was not opened. A Seafarers union post (2026-09-01) dates the second extension's issuance to 2026-08-10, which differs from the bulletin date (likely issuance versus guidance). MARAD's domestic shipping page confirms waiver dates (2026-03-17, 2026-05-18 and 2026-08-17) and voyage reports through September 2026; its 2026-05-18 extension date differs from a trade association's report of a White House announcement on 2026-04-24 (announcement versus effective date). No extension past 2026-11-15, termination or litigation was found through 2026-10-13 in one search. Repeal bills S. 2043 and H.R. 3940: GovInfo bill status, read in review on 2026-10-17, shows S. 2043 referred to Senate Commerce, Science, and Transportation (2025-06-12) and H.R. 3940 referred to House Transportation and Infrastructure (2025-06-12) and its Coast Guard and Maritime Transportation Subcommittee (2025-06-13), with no later action and no cosponsors; other Jones Act bills may exist. Cato, NEFI, AJOT and the Seafarers union take sides on Jones Act reform, and their characterizations of the waiver's effects are not adopted. The CBP bulletin, re-read in full on 2026-10-17, does not name the covered products or their count (they are in an attached spreadsheet that was not opened), so the oil, fuel and fertilizer scope and the 237-code figure rest on Cato, Argus and AJOT. Member and trade association letters are described in the summary as context and are not timeline actions.",
-  "updated_at": "2026-10-17"
+  "uncertainties": "A CBP bulletin (content.govdelivery.com, 2026-08-13) confirms the issuing route (DHS approval at the Department of War's request), the 2026-08-17 effective date and the 2026-11-15 loading deadline; it requires requests to explain how each voyage serves national defense and cites 46 U.S.C. 501(c) for post-voyage reports, which is consistent with a national defense waiver under 46 U.S.C. 501(a), but the waiver's own text was not read and the product list spreadsheet was not opened. A Seafarers union post (2026-09-01) dates the second extension's issuance to 2026-08-10, which differs from the bulletin date (likely issuance versus guidance). MARAD's domestic shipping page confirms waiver dates (2026-03-17, 2026-05-18 and 2026-08-17) and voyage reports through September 2026; its 2026-05-18 extension date differs from the Bloomberg News report of a White House announcement on 2026-04-24 (announcement versus effective date). No extension past 2026-11-15, termination or litigation was found through 2026-10-13 in one search. Repeal bills S. 2043 and H.R. 3940: GovInfo bill status, read in review on 2026-10-17, shows S. 2043 referred to Senate Commerce, Science, and Transportation (2025-06-12) and H.R. 3940 referred to House Transportation and Infrastructure (2025-06-12) and its Coast Guard and Maritime Transportation Subcommittee (2025-06-13), with no later action and no cosponsors; other Jones Act bills may exist. Cato, AJOT and the Seafarers union take sides on Jones Act reform, and their characterizations of the waiver's effects are not adopted. A trade association (NEFI, nefi.com) reports that it and 14 other trade associations wrote to congressional leaders on 2026-04-23 urging permanent reform, and that the White House cited new data showing more supply reached U.S. ports faster when it extended the waiver; both are unverified leads at low confidence, not confirmed by an official document or news report (Bloomberg News gives a different reason: supply disruption from the Iran war and time for the industry to secure vessels). The CBP bulletin, re-read in full on 2026-10-17, does not name the covered products or their count (they are in an attached spreadsheet that was not opened), so the oil, fuel and fertilizer scope and the 237-code figure rest on Cato, Argus and AJOT. The member letter of 2026-06-30 is described in the summary as context and is not a timeline action. The MARAD page of September 2026 waiver-voyage reports cited for the 2026-09-29 event was missing from the source list and was added on 2026-10-23 under a descriptive title; it could not be re-opened then.",
+  "updated_at": "2026-10-23"
 }

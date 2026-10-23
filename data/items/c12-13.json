@@ -6,9 +6,9 @@
     "The OMB financial assistance rule is proposed, not final"
   ],
   "chapter": "12",
-  "confidence": 80,
-  "confidence_label": "high",
-  "confidence_reason": "Chapter text on printed page 370 re-read. Stage-deciding primary sources are the executive orders in the Federal Register and the DOE counsel memorandum, carried from earlier review; this pass read the Fourth Circuit opinion (copy with the court's caption and filing header) and the OMB proposed rule. Rule applied: implemented (65 to 90) because DOE suspended Justice40 and community benefit work and removed the terms from awards under orders that remain in force, but the action is executive, reversible and short of the employee-management element; court_status is pending because a vacated preliminary injunction leaves the orders in force with the case on remand.",
+  "confidence": 79,
+  "confidence_label": "medium",
+  "confidence_reason": "Rule applied: a copy of an official document hosted by an advocacy group caps confidence at 79 when it is the deciding document; the Fourth Circuit opinion that decides the pending court status was read only in the copy hosted by Democracy Forward (the court's own copy was not reached), with the disposition corroborated by a law firm commentary. Chapter text on printed page 370 re-read. Stage-deciding primary sources are the executive orders in the Federal Register and the DOE counsel memorandum, carried from earlier review, plus the OMB proposed rule. Implemented (65 to 90) because DOE suspended Justice40 and community benefit work and removed the terms from awards under orders that remain in force, but the action is executive, reversible and short of the employee-management element; court_status is pending because a vacated preliminary injunction leaves the orders in force with the case on remand. Confidence 80 to 79.",
   "court_status": {
     "basis": "The Fourth Circuit vacated the preliminary injunction on 2026-02-06 in No. 25-1189 and remanded; Executive Orders 14151 and 14173 remain in force while the case continues in the District of Maryland.",
     "date": "2026-02-06",
@@ -44,10 +44,14 @@
     {
       "date": "2026-10-19",
       "note": "Freshness pass: added the Fourth Circuit decision of 2026-02-06 vacating the preliminary injunction against parts of Executive Orders 14151 and 14173 and remanding, and the OMB proposed federal financial assistance regulation of 2026-05-29 in which DOE participates; no order or appropriations language restoring the programs found; court_status set to pending; red-team check holds. Independent review (AI) confirmed the opinion on a Democracy Forward mirror carrying the court's caption and docket header, reworded the OMB event to the preamble and set confidence 80."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source review: the Fourth Circuit opinion of 2026-02-06 is a copy hosted by an advocacy group; it was retitled as a hosted copy and kept as a court source, and a law firm commentary of 2026-02-10 (re-opened at review) was added confirming the date, vacatur and remand. The official court copy was not reached, so confidence is capped at 79 (80 to 79) under the rule for copies that decide the record. Stage and progress unchanged."
     }
   ],
   "id": "c12-13",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "direct",
   "mechanism": "executive_order",
@@ -107,7 +111,7 @@
     "mandate_check": "pages re-read",
     "mandate_note": "Printed page 370 asks DOE to stop using energy policy for politicized social agendas, naming energy justice, Justice40 and DEI, to focus on abundant, affordable, reliable and secure energy, and to treat employees fairly by talent, skills and hard work. Proposal and direct match confirmed.",
     "model": "claude-opus-4",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent review (AI)",
     "source_checks": [
       {
@@ -119,6 +123,16 @@
         "note": "Fetched: OMB proposed rule, 91 FR 32198, 2026-05-29, comments to 2026-07-13; DOE listed (RIN 1991-AC21; 2 CFR 901, 902, 910). Preamble supports eliminating unlawful DEI mandates and identity-based preferences and barring unlawful discrimination; adds sections 200.218 and 200.219. Does not use the phrase remaining DEI elements; event reworded to the preamble. Regulatory text not read in full.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
+      },
+      {
+        "note": "Opened by the researcher and re-opened 2026-10-23. Against court_status pending: Proskauer Rose post dated 2026-02-10 says the Fourth Circuit decided NADOHE v. Trump on 2026-02-06, vacated the nationwide preliminary injunction and remanded to the District of Maryland; no case number stated.",
+        "result": "supports",
+        "url": "https://www.lawandtheworkplace.com/2026/02/fourth-circuit-allows-dei-related-executive-orders-to-proceed/"
+      },
+      {
+        "note": "Guessed official court URL; the researcher's fetch was blocked and it did not appear in a 2026-10-23 search, so it was not retried. The opinion copy hosted by Democracy Forward remains the only text read.",
+        "result": "unreachable",
+        "url": "https://www.ca4.uscourts.gov/opinions/251189.P.pdf"
       }
     ]
   },
@@ -212,7 +226,7 @@
       "date": "2026-02-06",
       "kind": "court",
       "publisher": "Democracy Forward (mirror of Fourth Circuit opinion)",
-      "title": "National Association of Diversity Officers in Higher Education v. Trump, No. 25-1189 (4th Cir. Feb. 6, 2026), opinion",
+      "title": "National Association of Diversity Officers in Higher Education v. Trump, No. 25-1189 (4th Cir. Feb. 6, 2026), opinion (copy hosted by Democracy Forward)",
       "url": "https://democracyforward.org/wp-content/uploads/2026/01/NADOHE-Order.pdf"
     },
     {
@@ -221,6 +235,13 @@
       "publisher": "Federal Register",
       "title": "Regulation for Federal Financial Assistance (proposed rule)",
       "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
+    },
+    {
+      "date": "2026-02-10",
+      "kind": "news",
+      "publisher": "Proskauer Rose LLP (Law and the Workplace blog)",
+      "title": "Fourth Circuit allows DEI-related executive orders to proceed",
+      "url": "https://www.lawandtheworkplace.com/2026/02/fourth-circuit-allows-dei-related-executive-orders-to-proceed/"
     }
   ],
   "stage": "implemented",
@@ -299,6 +320,6 @@
   ],
   "title": "End DOE energy justice, Justice40 and DEI programs",
   "tracked": true,
-  "uncertainties": "The fair-treatment-of-employees element was not separately checked. The effect of the Fourth Circuit ruling and remand on individual DOE awards was not traced, and the opinion was read through a copy hosted by Democracy Forward, an advocacy group, rather than on the court's own site; the copy carries the Fourth Circuit caption, case number 25-1189, the panel and the court's filing header (Doc. 106, filed 2026-02-06) on each page. The organization chart shows offices at a high level and does not by itself confirm abolition of sub-offices; the DOE organization chart page was marked as updated 2026-08-03 and still listed no energy justice office, but the dated chart file behind that update was not located. The FY2026 Energy and Water appropriations act (Public Law 119-74, 2026-01-23) was reported by CRS not to carry the House-passed ban on DEI funding, and no appropriations language restoring or mandating these programs was found. A Federal Register search of Energy Department documents from 2025-11-20 onward for environmental justice, community benefits plan and DEI terms returned no results. The regulatory text of the OMB proposed rule, including the DOE-specific changes, was not read in full; the description rests on the preamble, which does not mention Justice40 or environmental justice in the portion read.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "The fair-treatment-of-employees element was not separately checked. The effect of the Fourth Circuit ruling and remand on individual DOE awards was not traced, and the opinion was read through a copy hosted by Democracy Forward, an advocacy group, rather than on the court's own site (the court's page was not reached); a law firm commentary of 2026-02-10 confirms the 2026-02-06 decision date, the vacatur of the preliminary injunction and the remand to the District of Maryland; the copy carries the Fourth Circuit caption, case number 25-1189, the panel and the court's filing header (Doc. 106, filed 2026-02-06) on each page. The organization chart shows offices at a high level and does not by itself confirm abolition of sub-offices; the DOE organization chart page was marked as updated 2026-08-03 and still listed no energy justice office, but the dated chart file behind that update was not located. The FY2026 Energy and Water appropriations act (Public Law 119-74, 2026-01-23) was reported by CRS not to carry the House-passed ban on DEI funding, and no appropriations language restoring or mandating these programs was found. A Federal Register search of Energy Department documents from 2025-11-20 onward for environmental justice, community benefits plan and DEI terms returned no results. The regulatory text of the OMB proposed rule, including the DOE-specific changes, was not read in full; the description rests on the preamble, which does not mention Justice40 or environmental justice in the portion read.",
+  "updated_at": "2026-10-23"
 }

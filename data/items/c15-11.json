@@ -32,10 +32,14 @@
     {
       "date": "2026-10-19",
       "note": "Systematic absence review: five checks documented (Federal Register, the HUD Unified Agenda on reginfo.gov, govinfo.gov, hud.gov and a news search), not_started kept and confidence raised to 60 with the hud.gov page unreachable."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: removed a housing association news item; the FY2027 budget event now cites CRS report R48927 for the 2026-04-03 submission and the HUD justification for the 63.0 million dollar request, and notes the CRS figure of about 43 million dollars for the same account, which was not reconciled. The undated justification now carries a null date. Confidence, stage and progress unchanged."
     }
   ],
   "id": "c15-11",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "parallel",
   "mechanism": "agency_action",
@@ -57,7 +61,7 @@
     "mandate_check": "verified",
     "mandate_note": "Bullet on page 509 matches the paraphrase.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
@@ -99,6 +103,21 @@
         "note": "News web search on HUD PD&R grant suspension or cancellation returned only grant-listing pages and no reporting of a suspension. Primary document HUD Evaluation Policy (91 FR 60638, 2026-09-24) reaffirms external research awards, consistent with no suspension.",
         "result": "partial",
         "url": "https://www.federalregister.gov/documents/2026/09/24/2026-19528/hud-evaluation-policy"
+      },
+      {
+        "note": "Opened and confirmed on 2026-10-23: request of 63 million dollars for Research and Technology against 122.5 million enacted for FY2026 (59.5 million decrease), mainly by reducing survey sample sizes; 50 percent partner match for research partnerships; no grant suspension; no printed date. Consistent with stage not_started.",
+        "result": "supports",
+        "url": "https://www.hud.gov/sites/dfiles/CFO/documents/2027_CJ_Program_PDR.pdf"
+      },
+      {
+        "note": "Opened and confirmed on 2026-10-23: request submitted 2026-04-03; Research and Technology shown at 123 million enacted and 43 million requested (down 80 million, 65 percent), differing from the HUD justification; nothing on suspending external research grants. Consistent with stage not_started.",
+        "result": "partial",
+        "url": "https://www.everycrsreport.com/files/2026-04-30_R48927_c91a8d9ad32492c3c02250b542547e4dfe142226.html"
+      },
+      {
+        "note": "Researcher check (not re-opened in review): trade-press report confirms the 2026-04-03 release date but does not mention research funding. Consistent with stage not_started.",
+        "result": "partial",
+        "url": "https://www.novoco.com/news/trump-administration-releases-fy-2027-budget-request"
       }
     ]
   },
@@ -133,18 +152,11 @@
   },
   "sources": [
     {
-      "date": "undated",
+      "date": null,
       "kind": "primary",
       "publisher": "HUD",
       "title": "FY2027 Congressional Justification, Policy Development and Research",
       "url": "https://www.hud.gov/sites/dfiles/CFO/documents/2027_CJ_Program_PDR.pdf"
-    },
-    {
-      "date": "2026-04-03",
-      "kind": "news",
-      "publisher": "NAHRO",
-      "title": "HUD releases FY 2027 budget proposal",
-      "url": "https://www.nahro.org/news/hud-releases-fy-2027-budget-proposal-insufficient-rental-assistance-increases-paired-with-devasting-cuts-to-community-development-programs"
     },
     {
       "date": "2026-09-24",
@@ -152,6 +164,13 @@
       "publisher": "Federal Register (HUD)",
       "title": "HUD Evaluation Policy",
       "url": "https://www.federalregister.gov/documents/2026/09/24/2026-19528/hud-evaluation-policy"
+    },
+    {
+      "date": "2026-04-30",
+      "kind": "primary",
+      "publisher": "Congressional Research Service",
+      "title": "Department of Housing and Urban Development (HUD) FY2027 Budget Request: In Brief (CRS R48927)",
+      "url": "https://www.everycrsreport.com/files/2026-04-30_R48927_c91a8d9ad32492c3c02250b542547e4dfe142226.html"
     }
   ],
   "stage": "not_started",
@@ -159,14 +178,14 @@
   "timeline": [
     {
       "date": "2026-04-03",
-      "event": "HUD's FY2027 budget request was released, proposing PD&R research and technology funding of $63.0 million.",
-      "kind": "news",
-      "source": "NAHRO",
-      "url": "https://www.nahro.org/news/hud-releases-fy-2027-budget-proposal-insufficient-rental-assistance-increases-paired-with-devasting-cuts-to-community-development-programs"
+      "event": "The Administration submitted its FY2027 budget request to Congress on 2026-04-03 (per CRS). HUD's congressional justification proposes PD&R research and technology funding of $63.0 million, down from $122.5 million enacted for FY2026; the CRS table for the same account shows about $43 million.",
+      "kind": "primary",
+      "source": "Congressional Research Service; HUD",
+      "url": "https://www.everycrsreport.com/files/2026-04-30_R48927_c91a8d9ad32492c3c02250b542547e4dfe142226.html"
     }
   ],
   "title": "Suspend PD&R external research grants and narrow the office to data and surveys",
   "tracked": true,
-  "uncertainties": "The HUD rule list on reginfo.gov (labeled Agency Rule List - 2026, 54 rules) lists no rulemaking on PD&R research or evaluation grants; RIN 2529-AB11 rescinds a fair housing data collection requirement and is not the recommended action. HUD's Evaluation Policy notice (2026-09-24) states that most research and evaluation is done through competitively awarded external grants and contracts. The FY2027 PD&R justification carries no printed date, and the hud.gov PD&R page could not be fetched. One early 2025 union estimate of staffing reductions is not counted. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "The HUD rule list on reginfo.gov (labeled Agency Rule List - 2026, 54 rules) lists no rulemaking on PD&R research or evaluation grants; RIN 2529-AB11 rescinds a fair housing data collection requirement and is not the recommended action. HUD's Evaluation Policy notice (2026-09-24) states that most research and evaluation is done through competitively awarded external grants and contracts. The FY2027 PD&R justification carries no printed date, and the hud.gov PD&R page could not be fetched. The justification (re-opened in this review) gives $63.0 million for the Research and Technology account, 59.5 million dollars below the FY2026 enacted level, while CRS report R48927 shows the account falling by about 80 million dollars (65 percent) to about $43 million; the difference was not reconciled. One early 2025 union estimate of staffing reductions is not counted. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-23"
 }

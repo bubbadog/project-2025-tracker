@@ -33,10 +33,14 @@
     {
       "date": "2026-10-19",
       "note": "Freshness pass: no later USDA memo, rule, statute or order found; the 2025-07-02 stipulation is now described as dismissing only the count against USDA, with the case continuing against other federal defendants (filing of 2026-07-23); H.R. 8781, reported 2026-09-08, added as a source; red-team check holds. Independent review (AI) opened the court filings and the govinfo record and kept implemented 70 at confidence 82."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: removed a trade association summary of the USDA rescission from sources and its timeline event; a second-round search replaced it with a Civil Eats news report of 2025-07-14 (as a reporting event on that date) and added a New York State Education Department copy of the 2025-07-07 USDA memo. The USDA memo on usda.gov remains the source for the rescission. Confidence, stage and progress unchanged."
     }
   ],
   "id": "c11-21",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -90,7 +94,7 @@
     "mandate_check": "pages re-read",
     "mandate_note": "Page 337: prohibit USDA or any other federal agency from withholding services from federal or state agencies, including K-12 schools, that choose not to replace sex with SOGI in administering Title IX; cites the May 2022 USDA policy, the 22-state lawsuit and 2022 legislation. Proposal paraphrase and direct match confirmed.",
     "model": "claude-opus-4",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent review (AI)",
     "source_checks": [
       {
@@ -127,6 +131,16 @@
         "note": "H.R. 8781 reported in House 2026-09-08, H. Rept. 119-798, Education and Workforce Committee; metadata only, no mention of school meals or withholding. Supports the uncertainty wording, not a stage change.",
         "result": "partial",
         "url": "https://www.govinfo.gov/app/details/BILLS-119hr8781rh"
+      },
+      {
+        "note": "Opened and confirmed on 2026-10-23: dated 2025-07-14; reports the USDA guidance posted 2025-07-07 rescinded, effective immediately, the requirement to prohibit gender identity and sexual orientation discrimination in federal meal programs, citing litigation risk. Consistent with stage implemented.",
+        "result": "supports",
+        "url": "https://civileats.com/2025/07/14/usda-scraps-lgbtq-discrimination-protections-in-school-meal-programs/"
+      },
+      {
+        "note": "Researcher check (not re-opened in review): state-agency copy of the 2025-07-07 FNS memo signed by the FNS Administrator; matches the usda.gov memo already in sources. Consistent with stage implemented.",
+        "result": "supports",
+        "url": "https://www.cn.nysed.gov/sites/cn/files/cnbostockpolicyrecission.pdf"
       }
     ]
   },
@@ -168,13 +182,6 @@
       "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.cn-bostock-policy-recission-070725.pdf"
     },
     {
-      "date": "2025-07-07",
-      "kind": "news",
-      "publisher": "National CACFP Sponsors Association",
-      "title": "USDA rescinds guidance on interpretation of discrimination based on sex",
-      "url": "https://www.cacfp.org/2025/07/07/usda-rescinds-guidance-on-interpretation-of-discrimination-based-on-sex/"
-    },
-    {
       "date": "2026-02-20",
       "kind": "primary",
       "publisher": "USDA Food and Nutrition Service (fna.usda.gov)",
@@ -208,6 +215,20 @@
       "publisher": "GovInfo",
       "title": "H.R. 8781, Title IX Clarification Act of 2026, reported in House (govinfo)",
       "url": "https://www.govinfo.gov/app/details/BILLS-119hr8781rh"
+    },
+    {
+      "date": "2025-07-14",
+      "kind": "news",
+      "publisher": "Civil Eats",
+      "title": "USDA Scraps LGBTQ Discrimination Protections in School Meal Programs",
+      "url": "https://civileats.com/2025/07/14/usda-scraps-lgbtq-discrimination-protections-in-school-meal-programs/"
+    },
+    {
+      "date": "2025-07-07",
+      "kind": "primary",
+      "publisher": "USDA Food and Nutrition Service",
+      "title": "Guidance on the Interpretation of Discrimination Based on Sex in USDA Child Nutrition Programs (memo) (copy hosted by the New York State Education Department)",
+      "url": "https://www.cn.nysed.gov/sites/cn/files/cnbostockpolicyrecission.pdf"
     }
   ],
   "stage": "implemented",
@@ -242,15 +263,15 @@
       "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.cn-bostock-policy-recission-070725.pdf"
     },
     {
-      "date": "2025-07-07",
-      "event": "The National CACFP Sponsors Association reported the rescission to program operators.",
+      "date": "2025-07-14",
+      "event": "Civil Eats reports that the USDA guidance posted 2025-07-07 for state school meal administrators rescinded, effective immediately, the earlier requirement to prohibit discrimination based on gender identity and sexual orientation in federal meal programs, citing litigation risk.",
       "kind": "news",
-      "source": "National CACFP Sponsors Association",
-      "url": "https://www.cacfp.org/2025/07/07/usda-rescinds-guidance-on-interpretation-of-discrimination-based-on-sex/"
+      "source": "Civil Eats",
+      "url": "https://civileats.com/2025/07/14/usda-scraps-lgbtq-discrimination-protections-in-school-meal-programs/"
     }
   ],
   "title": "Bar agencies from withholding school meal funds over SOGI readings of Title IX",
   "tracked": true,
   "uncertainties": "The USDA memo was read in full on usda.gov; it has no memo code. The FNS guidance page shows a last-updated date of 2026-02-20, which may reflect later edits and is not used as an event. Executive Order 14168 is cited in the memo and is covered in c11-06; its directive to agencies to rescind inconsistent guidance is a government-wide policy but not a specific bar on funding withholding. The outcome of the 22-state attorneys general lawsuit filed in 2022 and the 2022 House bill were not checked. The Maine episode concerns athletics policy rather than the Mandate's SOGI reading of Title IX and is listed for context only; the TRO date was not stated in the source. Whether other agencies (HHS, DOJ) retain comparable policies was not checked. Freshness check of 2026-10-19: no later USDA memo, proposed or final rule, statute or court order concerning the 2025-07-07 rescission was found; the USDA guidance page still carries only the title and a link to the memo (updated 2026-02-20). A Federal Register API search for Bostock and school nutrition since 2025-07-01 returned two unrelated documents (an HHS Medicaid rule and a proposed government-wide federal financial assistance rule, 2026-05-29); the latter was not read and its bearing on school meal funds is unknown. H.R. 8781, the Title IX Clarification Act of 2026, was reported by the House Committee on Education and Workforce on 2026-09-08 (H. Rept. 119-798); its govinfo record does not mention school meals or withholding of funds and the bill text was not read, so it is not counted as the recommended bar on withholding; a Senate bill of the same name noted by the researcher was not checked in review. The Supreme Court decision in West Virginia v. B.P.J. (2026-06-30) is cited in the 2026-07-23 Rapides Parish filing; it is a sports case and was not read here. No appropriations provision barring withholding of school meal funds was located.",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-10-23"
 }

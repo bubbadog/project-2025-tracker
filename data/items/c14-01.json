@@ -2,7 +2,7 @@
   "agency": "HHS (CDC)",
   "blockers": [
     "New York v. Kennedy (D.R.I. No. 25-cv-196, Judge DuBose): 2025-07-01 preliminary injunction against parts of the March 2025 restructuring, the government's appeal dismissed voluntarily in late 2025, and the case proceeding after the 2026-04-07 denial of dismissal.",
-    "Congress did not create the Administration for a Healthy America in the fiscal year 2026 appropriation, and reporting says it rejected major CDC restructuring",
+    "Congress did not fund the Administration for a Healthy America in the fiscal year 2026 appropriation (Fierce Healthcare, 2026-04-03), and a Holland & Knight alert says the proposed HHS reorganization was not included in the final funding package",
     "A split would require legislation; no bill to split CDC was found"
   ],
   "chapter": "14",
@@ -43,10 +43,14 @@
     {
       "date": "2026-10-19",
       "note": "Systematic absence check completed with the HHS Unified Agenda list read directly on reginfo.gov and a Federal Register spot-check on federalregister.gov; diverged kept; confidence 58 to 60."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: an advocacy coalition update was removed as a source. The FY2026 appropriations point is now cited to the Senate Appropriations Committee majority release (re-opened in review), which dates the House's final passage to 2026-02-03, so that event moved from 2026-01-22, and to a Fierce Healthcare report and a Holland & Knight alert on AHA not being funded; the coalition's claim on rejected CDC restructuring and its earlier House date are unverified leads. The proposed move of the National Center for Health Statistics is stated as an unverified lead from an association post at low confidence. Confidence 60 unchanged. No change of stage or progress."
     }
   ],
   "id": "c14-01",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-23",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -65,8 +69,8 @@
     "Legislation or reorganization creating a separate agency limited to publishing epidemiological data, with a legal duty to publish all state-sourced data",
     "A separate public health agency with confined authority to make policy recommendations",
     "Statutory definition and limits on CDC's legal authorities",
-    "Congressional action on the Administration for a Healthy America, which was not created in the fiscal year 2026 appropriation and is requested again for fiscal year 2027",
-    "Congressional action on the proposal, found only in a statistical-community report, to move the National Center for Health Statistics from CDC to a new Office of Strategy; the HHS justification and the Budget in Brief's Office of Strategy chapter could not be read."
+    "Congressional action on the Administration for a Healthy America, which was not funded in the fiscal year 2026 appropriation and is requested again for fiscal year 2027",
+    "Congressional action on the proposal, found only in an unverified association post, to move the National Center for Health Statistics from CDC to a new Office of Strategy; the HHS justification and the Budget in Brief's Office of Strategy chapter could not be read."
   ],
   "requires_congress": "yes",
   "research_agent": "A10",
@@ -74,12 +78,13 @@
     "alternative": "Proposed 5 with a partial match on S. 999 (limits CDC authorities), or not_started 0 if the 2025 reorganization is read as orthogonal rather than opposite.",
     "flags": [
       "History notes of 2026-10-07 and 2026-10-08 lack a closing period; the 2026-10-08 note ends with bare host names in parentheses where links were stripped.",
-      "court_status state is stayed, but the case record shows a preliminary injunction (2025-07-01) still in force and a denied motion to dismiss (2026-04-07); enjoined or pending would fit better."
+      "court_status state is stayed, but the case record shows a preliminary injunction (2025-07-01) still in force and a denied motion to dismiss (2026-04-07); enjoined or pending would fit better.",
+      "2026-10-23: the FY2026 House passage event moved from 2026-01-22 to 2026-02-03, the date the Senate Appropriations Committee majority release gives for the House's final passage; the earlier date and the restructuring claim are unverified leads from an advocacy coalition."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 452 to 453 say CDC's legal authorities should be clearly defined and limited and that CDC should be split into two entities with a firewall: a national epidemiological agency obliged to publish state data and a separate public health agency with sharply limited policy-recommendation authority. The paraphrase is accurate.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent AI reviewer (absence checks)",
     "source_checks": [
       {
@@ -133,6 +138,31 @@
         "note": "Reviewer spot-check of check 1 on 2026-10-19: three CDC documents, the 2026-09-09 NCIRD reorganization notice and two information collection notices; none divides CDC.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=reorganization&conditions[agencies][]=centers-for-disease-control-and-prevention&conditions[publication_date][gte]=2025-01-20&order=newest"
+      },
+      {
+        "note": "Opened by the researcher and re-opened 2026-10-23. Release dated 2026-02-03: the House passed the FY2026 Labor-HHS-Education bill that day 217 to 214, the Senate had passed it 71 to 29, and it goes to the President; nothing on AHA, CDC restructuring or HHS reorganization. Dates the appropriation only; does not bear on the stage (diverged) beyond that.",
+        "result": "partial",
+        "url": "https://www.appropriations.senate.gov/news/majority/congress-approves-fy-2026-labor-hhs-education-appropriations-bill"
+      },
+      {
+        "note": "Opened by the researcher and re-opened 2026-10-23. Fierce Healthcare, 2026-04-03: Congress did not grant the request to fund AHA for FY2026; nothing on NCHS or an Office of Strategy. Consistent with diverged; no split of CDC into data and policy agencies.",
+        "result": "supports",
+        "url": "https://www.fiercehealthcare.com/providers/white-house-floats-125-budget-cut-hhs-fy2027-reiterates-reorganization-plan"
+      },
+      {
+        "note": "Opened by the researcher. Law-firm alert dated 2026-04-13: the proposed HHS reorganization was not included in the final FY2026 funding package; the FY2027 request cuts CDC by 484 million dollars and moves some CDC functions to AHA; nothing on NCHS. Consistent with diverged.",
+        "result": "supports",
+        "url": "https://www.hklaw.com/en/insights/publications/2026/04/fy-2027-hhs-budget-signals-structural-shift"
+      },
+      {
+        "note": "Opened by the researcher. CDC chapter (p. 21) refers readers to the Office of Strategy chapter for NCHS; Office of Strategy table visible only in aggregate; no NCHS dollar figure or explicit move statement in the text read. Consistent with diverged; leaves the NCHS move an unverified lead.",
+        "result": "partial",
+        "url": "https://www.hhs.gov/sites/default/files/fy-2027-budget-in-brief.pdf"
+      },
+      {
+        "note": "Advocacy coalition update (lead only under the owner rule of 2026-10-23); not re-opened and removed as a source. Its House-passage date and restructuring claim are now unverified leads in the uncertainties. Stage diverged unaffected.",
+        "result": "unreachable",
+        "url": "https://ncsddc.org/federal-policy-update-january-23-2026/"
       }
     ]
   },
@@ -196,13 +226,6 @@
       "url": "https://news.bloomberglaw.com/health-law-and-business/pi-2"
     },
     {
-      "date": "2026-01-23",
-      "kind": "news",
-      "publisher": "NCSD",
-      "title": "Federal Policy Update, January 23, 2026 (FY2026 Labor-HHS agreement)",
-      "url": "https://ncsddc.org/federal-policy-update-january-23-2026/"
-    },
-    {
       "date": "2026-02-03",
       "kind": "primary",
       "publisher": "GovInfo",
@@ -243,10 +266,31 @@
       "publisher": "U.S. Government Publishing Office",
       "title": "S. 999, Public Health Improvement Act (bill status)",
       "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s999.xml"
+    },
+    {
+      "date": "2026-02-03",
+      "kind": "primary",
+      "publisher": "U.S. Senate Committee on Appropriations (majority)",
+      "title": "Congress Approves FY 2026 Labor, HHS, Education Appropriations Bill",
+      "url": "https://www.appropriations.senate.gov/news/majority/congress-approves-fy-2026-labor-hhs-education-appropriations-bill"
+    },
+    {
+      "date": "2026-04-03",
+      "kind": "news",
+      "publisher": "Fierce Healthcare",
+      "title": "White House floats 12.5% budget cut for HHS in FY2027, reiterates reorganization plan",
+      "url": "https://www.fiercehealthcare.com/providers/white-house-floats-125-budget-cut-hhs-fy2027-reiterates-reorganization-plan"
+    },
+    {
+      "date": "2026-04-13",
+      "kind": "news",
+      "publisher": "Holland & Knight",
+      "title": "FY 2027 HHS Budget Signals Structural Shift, Targeted Cuts and Increased Oversight",
+      "url": "https://www.hklaw.com/en/insights/publications/2026/04/fy-2027-hhs-budget-signals-structural-shift"
     }
   ],
   "stage": "diverged",
-  "status_summary": "No proposal to split CDC into separate data-publishing and public health policy agencies was found as of 2026-10-08. HHS announced a different restructuring on 2025-03-27: about 10,000 job cuts department-wide, a proposed Administration for a Healthy America (AHA) combining several agencies, and the preparedness office (ASPR) moving into CDC; CDC's chief operating officer put the net CDC staff reduction at 24 percent by June 2025. Nineteen states and the District of Columbia challenged the restructuring in New York v. Kennedy (D.R.I., Judge DuBose), and on 2025-07-01 the court granted a preliminary injunction, finding the states likely to succeed on claims that HHS acted arbitrarily and capriciously and contrary to law in disrupting congressionally mandated functions; the First Circuit denied the government's emergency stay request on 2025-09-17, the government voluntarily dismissed its appeal about six weeks later, and on 2026-04-07 the court denied a motion to dismiss the amended complaint. Congress did not create AHA in the fiscal year 2026 Labor-HHS appropriation (Division B of Public Law 119-75, approved 2026-02-03; House passage 2026-01-22), and trade-group reporting on the conference agreement says it rejected major restructuring at CDC. The fiscal year 2027 request (Budget in Brief released 2026-04-03) repeats the approach: CDC budget authority of $5.280 billion versus $5.764 billion for fiscal year 2026 (a $484 million reduction), a new National Center for Chemicals and Toxins inside CDC, several CDC programs moved to AHA, and a cross-reference in the CDC chapter to the Office of Strategy chapter for the National Center for Health Statistics. A statistical-community post of 2026-04-03 quoting HHS's justification reports that the request proposes moving the National Center for Health Statistics from CDC to a to-be-created Office of Strategy, continuing a planned reorganization, with $175 million proposed for the center; that is the only element found that points toward separating a data function from CDC, and it is a budget proposal that does not create an agency with a legal duty to publish state-sourced data. Erica Schwartz was confirmed as CDC director on 2026-08-05.",
+  "status_summary": "No proposal to split CDC into separate data-publishing and public health policy agencies was found as of 2026-10-08. HHS announced a different restructuring on 2025-03-27: about 10,000 job cuts department-wide, a proposed Administration for a Healthy America (AHA) combining several agencies, and the preparedness office (ASPR) moving into CDC; CDC's chief operating officer put the net CDC staff reduction at 24 percent by June 2025. Nineteen states and the District of Columbia challenged the restructuring in New York v. Kennedy (D.R.I., Judge DuBose), and on 2025-07-01 the court granted a preliminary injunction, finding the states likely to succeed on claims that HHS acted arbitrarily and capriciously and contrary to law in disrupting congressionally mandated functions; the First Circuit denied the government's emergency stay request on 2025-09-17, the government voluntarily dismissed its appeal about six weeks later, and on 2026-04-07 the court denied a motion to dismiss the amended complaint. Congress did not fund AHA in the fiscal year 2026 Labor-HHS appropriation (Division B of Public Law 119-75, approved 2026-02-03, the day the House passed it 217 to 214 after Senate passage 71 to 29, per the Senate Appropriations Committee majority), as Fierce Healthcare reported on 2026-04-03, and a Holland & Knight alert says the proposed HHS reorganization was not included in the final funding package. The fiscal year 2027 request (Budget in Brief released 2026-04-03) repeats the approach: CDC budget authority of $5.280 billion versus $5.764 billion for fiscal year 2026 (a $484 million reduction), a new National Center for Chemicals and Toxins inside CDC, several CDC programs moved to AHA, and a cross-reference in the CDC chapter to the Office of Strategy chapter for the National Center for Health Statistics. The CDC chapter of the Budget in Brief refers readers to the Office of Strategy chapter for the National Center for Health Statistics, and an unverified lead from a post by the American Statistical Association (an association page, 2026-04-03) says HHS's justification proposes moving the center from CDC to a to-be-created Office of Strategy with $175 million, at low confidence because the Budget in Brief text read gave no center-level breakdown; this is the only element found that points toward separating a data function from CDC, and it is a budget proposal that does not create an agency with a legal duty to publish state-sourced data. Erica Schwartz was confirmed as CDC director on 2026-08-05.",
   "timeline": [
     {
       "date": "2025-03-12",
@@ -277,22 +321,22 @@
       "url": "https://www.govinfo.gov/content/pkg/USCOURTS-rid-1_25-cv-00196/pdf/USCOURTS-rid-1_25-cv-00196-0.pdf"
     },
     {
-      "date": "2026-01-22",
-      "event": "House passes the final FY2026 Labor-HHS agreement; reporting says it does not establish the Administration for a Healthy America and rejects major restructuring at CDC, HRSA, NIH and SAMHSA.",
-      "kind": "news",
-      "source": "NCSD",
-      "url": "https://ncsddc.org/federal-policy-update-january-23-2026/"
+      "date": "2026-02-03",
+      "event": "The House passes the final FY2026 Labor-HHS bill 217 to 214, after Senate passage 71 to 29, sending it to the President, per the Senate Appropriations Committee majority release of the same day; Fierce Healthcare later reported that Congress did not grant the request to fund the Administration for a Healthy America for FY2026.",
+      "kind": "primary",
+      "source": "U.S. Senate Committee on Appropriations (majority); Fierce Healthcare",
+      "url": "https://www.appropriations.senate.gov/news/majority/congress-approves-fy-2026-labor-hhs-education-appropriations-bill"
     },
     {
       "date": "2026-02-03",
-      "event": "The Consolidated Appropriations Act, 2026 (Public Law 119-75, H.R. 7148) is approved on 2026-02-03; Division B is the Departments of Labor, Health and Human Services, and Education appropriations act. The text of Division B could not be read; the statements that it does not establish AHA or fund major CDC restructuring rest on the trade-group report of 2026-01-22.",
+      "event": "The Consolidated Appropriations Act, 2026 (Public Law 119-75, H.R. 7148) is approved on 2026-02-03; Division B is the Departments of Labor, Health and Human Services, and Education appropriations act. The text of Division B could not be read; the statement that it does not fund AHA rests on a Fierce Healthcare report of 2026-04-03 and a Holland & Knight alert of 2026-04-13.",
       "kind": "primary",
       "source": "GovInfo (Public Law 119-75)",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
     },
     {
       "date": "2026-04-03",
-      "event": "HHS's fiscal year 2027 Budget in Brief (release date per a law firm alert) proposes CDC budget authority of $5.280 billion (down $484 million from $5.764 billion), a National Center for Chemicals and Toxins in CDC, and moving CDC injury prevention, birth defects, chronic disease and HIV programs to the Administration for a Healthy America; the CDC chapter refers readers to the Office of Strategy chapter for the National Center for Health Statistics. The statistical community's post of the same date (American Statistical Association) quotes HHS's justification as proposing to move the National Center for Health Statistics from CDC to the to-be-created Office of Strategy, with $175.3 million proposed; the Office of Strategy chapter itself could not be read.",
+      "event": "HHS's fiscal year 2027 Budget in Brief (release date per a law firm alert) proposes CDC budget authority of $5.280 billion (down $484 million from $5.764 billion), a National Center for Chemicals and Toxins in CDC, and moving CDC injury prevention, birth defects, chronic disease and HIV programs to the Administration for a Healthy America; the CDC chapter refers readers to the Office of Strategy chapter for the National Center for Health Statistics. An unverified lead from a post by the American Statistical Association (an association page) says HHS's justification proposes moving the center to the to-be-created Office of Strategy with $175.3 million, at low confidence; the Office of Strategy chapter text read gave no center-level breakdown.",
       "kind": "primary",
       "source": "HHS",
       "url": "https://www.hhs.gov/sites/default/files/fy-2027-budget-in-brief.pdf"
@@ -314,6 +358,6 @@
   ],
   "title": "Split CDC into a data-publishing agency and a separate public health policy agency",
   "tracked": true,
-  "uncertainties": "No proposal to split CDC into a data-publishing agency and a separate policy agency was found. The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) has five CDC entries, none on such a split, though a split would need legislation or a reorganization. The fiscal year 2027 request reportedly moves the National Center for Health Statistics to a new Office of Strategy; that rests on one statistical-community post. S. 999, in committee since 2025-03-12, would limit CDC authorities without creating a data agency. The 2025-07-01 injunction scope was not confirmed from its operative paragraphs. Diverged versus not_started is a judgment call. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "No proposal to split CDC into a data-publishing agency and a separate policy agency was found. The HHS Unified Agenda rule list on reginfo.gov (Agency Rule List - 2026) has five CDC entries, none on such a split, though a split would need legislation or a reorganization. The fiscal year 2027 request reportedly moves the National Center for Health Statistics to a new Office of Strategy; that rests on an unverified lead from one American Statistical Association post (low confidence); the Budget in Brief itself says only that the center is covered in the Office of Strategy chapter. The January 2026 claim that the final bill rejected major restructuring at CDC, HRSA, NIH and SAMHSA, and that the House passed the final agreement on 2026-01-22, is an unverified lead from an update by the National Coalition of STD Directors (an advocacy coalition), not confirmed by an official or news source; the Senate Appropriations Committee majority release dates the House's final passage of the bill to 2026-02-03. S. 999, in committee since 2025-03-12, would limit CDC authorities without creating a data agency. The 2025-07-01 injunction scope was not confirmed from its operative paragraphs. Diverged versus not_started is a judgment call. Checked systematically on 2026-10-19.",
+  "updated_at": "2026-10-23"
 }

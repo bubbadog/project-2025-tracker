@@ -2,13 +2,13 @@
   "agency": "Agency for International Development (Latin America and the Caribbean)",
   "blockers": [
     "USAID no longer exists as a separate agency.",
-    "Congress sets regional appropriations; WOLA questioned whether funds appropriated for democracy programs would be implemented.",
+    "Congress sets regional appropriations; whether funds appropriated for democracy programs will be implemented is an unverified lead from an advocacy group (the Washington Office on Latin America), at low confidence.",
     "State staffing and data gaps documented by GAO in 2026."
   ],
   "chapter": "09",
-  "confidence": 50,
+  "confidence": 46,
   "confidence_label": "low",
-  "confidence_reason": "The National Security Strategy and the FY2026 appropriations bill status were read on primary hosts, but the program terminations rest on news and advocacy reporting and the State five-year strategy was read only through a news summary; no primary document on the Latin America portfolio was reached, so confidence stays low.",
+  "confidence_reason": "Rule applied: a deciding fact that became an unverified lead lowers confidence. The National Security Strategy and the FY2026 appropriations bill status were read on primary hosts and the global program terminations rest on AP; the Latin America cut estimate and the State strategic plan's regional aid target, which supported the regional reading, are now unverified leads (advocacy group, newsletter copy on an association host, and an outlet of uncertain standing), and the democracy grant figure rests on a senator's statement. No primary document on the Latin America portfolio was reached, so confidence falls from 50 to 46 and stays low.",
   "durability": {
     "level": "medium",
     "why": "The terminations are hard to reverse in the short term, but the new priorities rest on a State strategy and annual appropriations rather than law."
@@ -34,10 +34,14 @@
     {
       "date": "2026-10-18",
       "note": "Independent review (primary-source lift) re-read the National Security Strategy on whitehouse.gov and the H.R. 7148 BILLSTATUS file on govinfo.gov, which was added as a source. No stage change (in_progress 25); confidence unchanged at 50."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source review: an advocacy group analysis (WOLA) and a Devex newsletter copy hosted by an alumni association were removed from sources and the timeline. The democracy grant cancellation figure now cites a Senate release of 2025-09-03 recording a senator's statement at a hearing (re-opened at review). A replacement report on the State strategic plan from an outlet of uncertain standing was not cited; the plan's regional aid target, the newsletter's partner-selection details and the 84 percent Latin America estimate are held as unverified leads at low confidence. Confidence 50 to 46 because the regional evidence became unverified leads; stage and progress unchanged."
     }
   ],
   "id": "c09-18",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -69,7 +73,7 @@
     "mandate_check": "not_checked",
     "mandate_note": "Per the record's pages (277 to 278) and proposal fields: reassess all Latin America aid programs and end those without results, focus USAID on free-market fundamentals, challenge socialist ideas, fund private-sector partnerships and pro-market civil society, and commit to shifting the regional portfolio to local organizations by 2030. Chapter text not available this run; pages not re-checked.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
@@ -86,6 +90,21 @@
         "note": "Not re-fetched in review; the stage-deciding 2025-03-10 announcement rests on this wire report because state.gov pages for it could not be opened by the researcher.",
         "result": "unreachable",
         "url": "https://abcnews.go.com/amp/US/wireStory/secretary-state-rubio-purge-usaid-programs-complete-83-119628492"
+      },
+      {
+        "note": "Opened by the researcher and re-opened 2026-10-23. Against in_progress 25: release dated 2025-09-03 records Senator Murphy telling the DRL assistant secretary nominee at a Foreign Relations nominations hearing that 389 of DRL's 391 democracy promotion grants were canceled; a statement, not an agency figure; no Latin America breakdown.",
+        "result": "partial",
+        "url": "https://www.murphy.senate.gov/newsroom/press-releases/murphy-questions-state-department-nominees-on-trump-administrations-gag-orders-banning-comments-on-election-integrity-freedom-of-assembly-defense-of-human-rights"
+      },
+      {
+        "note": "Opened by the researcher, not re-opened. Against in_progress 25: describes the State 2026 to 2030 plan with at least 40 percent of aid for the Western Hemisphere and East Asia combined; outlet of uncertain standing, so not cited; the fact is held as an unverified lead.",
+        "result": "partial",
+        "url": "https://harici.com.tr/en/state-department-outlines-aggressive-donroe-doctrine-and-america-first-overhaul-for-2026-2030/"
+      },
+      {
+        "note": "Search result for a September 2025 report that State was told to end nearly all pro-democracy programs; the researcher could not fetch it.",
+        "result": "unreachable",
+        "url": "https://www.aol.com/news/us-state-department-told-terminate-130030065.html"
       }
     ]
   },
@@ -119,20 +138,6 @@
     "weight": 1.5
   },
   "sources": [
-    {
-      "date": "2026-01-16",
-      "kind": "tracker",
-      "publisher": "Washington Office on Latin America",
-      "title": "El objetivo de la administracion Trump de dominar America Latina: balance del ano (WOLA)",
-      "url": "https://www.wola.org/es/analysis/el-objetivo-de-la-administracion-trump-de-dominar-america-latina-balance-del-ano/"
-    },
-    {
-      "date": "2026-01-29",
-      "kind": "news",
-      "publisher": "Devex (copy hosted by USAID Alumni Association)",
-      "title": "US aid focus on Western Hemisphere (Devex Newswire, copy hosted by USAID Alumni Association)",
-      "url": "https://usaidalumni.org/wp-content/uploads/2026/01/US-aid-focus-on-Western-Hemisphere.-By-Anna-Gawel-Devex-Newswire-29-Jan-2026.pdf"
-    },
     {
       "date": "2025-12-04",
       "kind": "primary",
@@ -174,10 +179,17 @@
       "publisher": "GovInfo",
       "title": "Consolidated Appropriations Act, 2026 (H.R. 7148), bill status",
       "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7148.xml"
+    },
+    {
+      "date": "2025-09-03",
+      "kind": "primary",
+      "publisher": "Office of Senator Chris Murphy",
+      "title": "Murphy Questions State Department Nominees on Trump Administration's Gag Orders Banning Comments on Election Integrity, Freedom of Assembly, Defense of Human Rights",
+      "url": "https://www.murphy.senate.gov/newsroom/press-releases/murphy-questions-state-department-nominees-on-trump-administrations-gag-orders-banning-comments-on-election-integrity-freedom-of-assembly-defense-of-human-rights"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "In the successor structure the reassess-and-terminate element happened through the global review rather than a results-based regional one: the Secretary of State announced on 2025-03-10 that about 5,200 of 6,200 USAID programs (about 83 percent) were eliminated, WOLA, an advocacy group, estimated from a March 2025 memo to Congress that more than 84 percent of USAID assistance to Latin America and the Caribbean was cut, and USAID's remaining operations merged into State on 2025-07-01. For the positive agenda, State's five-year strategy, as reported by Devex on 2026-01-29, gives the Western Hemisphere and East Asia about 40 percent of foreign assistance, shifts from grant aid toward trade and private-sector growth and selects partners partly by security, migration and voting alignment, and the National Security Strategy released 2025-12-04 calls for commercial diplomacy and for tying aid terms to winding down adversary influence. Against the text, WOLA reports that State's democracy bureau cancelled 389 of 391 democracy grants, which runs against support for pro-market and democratic civil society, and no 2030 localization commitment, free-market reform program or America Crece successor was found. The stage is in_progress at the low end because the terminations are operative and the regional reorientation is stated in strategy, while the text's positive program elements are not shown.",
+  "status_summary": "In the successor structure the reassess-and-terminate element happened through the global review rather than a results-based regional one: the Secretary of State announced on 2025-03-10 that about 5,200 of 6,200 USAID programs (about 83 percent) were eliminated (a global figure; no regional breakdown for Latin America was confirmed), and USAID's remaining operations merged into State on 2025-07-01. For the positive agenda, the National Security Strategy released 2025-12-04 calls for commercial diplomacy and for tying aid terms to winding down adversary influence; State's 2026 to 2030 strategic plan was not read, and reported regional aid targets in it remain unverified. Against the text, a U.S. senator stated at a hearing on 2025-09-03 that State's democracy bureau had cancelled 389 of 391 democracy grants (a statement not independently verified), which runs against support for pro-market and democratic civil society, and no 2030 localization commitment, free-market reform program or America Crece successor was found. The stage is in_progress at the low end because the terminations are operative and the regional reorientation is stated in strategy, while the text's positive program elements are not shown.",
   "timeline": [
     {
       "date": "2025-03-10",
@@ -194,29 +206,22 @@
       "url": "https://www.wwno.org/npr-news/2025-07-01/usaid-officially-shuts-down-and-merges-remaining-operations-with-state-department"
     },
     {
+      "date": "2025-09-03",
+      "event": "At a Senate Foreign Relations Committee nominations hearing, Senator Chris Murphy tells the nominee for Assistant Secretary for Democracy, Human Rights, and Labor that 389 of the bureau's 391 democracy promotion grants have been canceled (the senator's statement, per his office's release of that date; not independently verified).",
+      "kind": "primary",
+      "source": "Office of Senator Chris Murphy",
+      "url": "https://www.murphy.senate.gov/newsroom/press-releases/murphy-questions-state-department-nominees-on-trump-administrations-gag-orders-banning-comments-on-election-integrity-freedom-of-assembly-defense-of-human-rights"
+    },
+    {
       "date": "2025-12-04",
       "event": "The White House released the National Security Strategy (cover dated November 2025), whose Western Hemisphere section calls for commercial diplomacy, DFC and other financing for US investment, and aid terms contingent on winding down adversary influence.",
       "kind": "primary",
       "source": "White House",
       "url": "https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Security-Strategy.pdf"
-    },
-    {
-      "date": "2026-01-16",
-      "event": "WOLA reported its estimate, based on a March 2025 memo to Congress, that more than 84 percent of USAID aid to Latin America and the Caribbean was eliminated, and, citing a Senate source, that State's democracy bureau cancelled 389 of 391 democracy grants; it also noted a 20 billion dollar financial rescue for Argentina (outside aid appropriations).",
-      "kind": "tracker",
-      "source": "Washington Office on Latin America",
-      "url": "https://www.wola.org/es/analysis/el-objetivo-de-la-administracion-trump-de-dominar-america-latina-balance-del-ano/"
-    },
-    {
-      "date": "2026-01-29",
-      "event": "Devex reported that State's five-year strategy would give the Western Hemisphere and East Asia together about 40 percent of foreign assistance, shift from grant aid toward trade and private-sector growth, and select partners by security ties, migration cooperation and voting alignment; the strategy gives no dollar amounts.",
-      "kind": "news",
-      "source": "Devex (copy hosted by USAID Alumni Association)",
-      "url": "https://usaidalumni.org/wp-content/uploads/2026/01/US-aid-focus-on-Western-Hemisphere.-By-Anna-Gawel-Devex-Newswire-29-Jan-2026.pdf"
     }
   ],
   "title": "Reassess Latin America aid, end failed programs, back free markets and localize by 2030",
   "tracked": true,
-  "uncertainties": "The 84 percent figure for Latin America is WOLA's estimate from a memo to Congress that was not read; the 83 percent figure is global and computed from AP program counts. The State five-year strategy was read only through a Devex newsletter copy, not the State document, and state.gov is blocked from this environment. The National Security Strategy was read directly by the researcher and again in review on 2026-10-18 (cover November 2025; release date 2025-12-04 from Lawfare); its Western Hemisphere section supports commercial diplomacy and aid terms tied to winding down adversary influence and does not use the term localization. The Consolidated Appropriations Act, 2026 (Public Law 119-75, enacted 2026-02-03) was confirmed on its govinfo.gov BILLSTATUS record (re-read in review) only; its foreign operations text was not opened, and the WOLA account of its democracy and Central America provisions is advocacy-source. No revival of America Crece, 2030 localization commitment or pro-market civil society funding line was found. Executive Order 14217 is background only. A CRS search returned only a pre-2025 report (R48266) with no usable figures. Judgment: in_progress 25 kept over diverged or proposed.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "Unverified lead, low confidence: the Washington Office on Latin America (an advocacy group) estimates from a March 2025 memo to Congress, which was not read, that more than 84 percent of USAID assistance to Latin America and the Caribbean was cut; no news report or official document with a regional figure was found in three searches. The 83 percent figure is global and computed from AP program counts. The 389 of 391 grant figure is a senator's statement recorded in his office's release, not an agency figure. Unverified lead, low confidence: the State 2026 to 2030 strategic plan was not read (state.gov is blocked from this environment). A Devex Newswire issue of 2026-01-29 (copy hosted by the USAID Alumni Association) reported that it gives the Western Hemisphere and East Asia together about 40 percent of foreign assistance, shifts from grant aid toward trade and private-sector growth and selects partners partly by security ties, migration cooperation and voting alignment, with no dollar amounts; a 2026-01-19 report on harici.com.tr, an outlet of uncertain standing, describes a target of at least 40 percent for the two regions combined. Neither account was confirmed against the plan or a reputable news report, so no event or stage finding rests on them. The National Security Strategy was read directly by the researcher and again in review on 2026-10-18 (cover November 2025; release date 2025-12-04 from Lawfare); its Western Hemisphere section supports commercial diplomacy and aid terms tied to winding down adversary influence and does not use the term localization. The Consolidated Appropriations Act, 2026 (Public Law 119-75, enacted 2026-02-03) was confirmed on its govinfo.gov BILLSTATUS record (re-read in review) only; its foreign operations text was not opened, and an advocacy-group (WOLA) account of its democracy and Central America provisions is an unverified lead at low confidence. No revival of America Crece, 2030 localization commitment or pro-market civil society funding line was found. Executive Order 14217 is background only. A CRS search returned only a pre-2025 report (R48266) with no usable figures. Judgment: in_progress 25 kept over diverged or proposed.",
+  "updated_at": "2026-10-23"
 }

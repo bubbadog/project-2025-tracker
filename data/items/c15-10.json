@@ -36,10 +36,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift review read both HUD guidance withdrawal notices in full on federalregister.gov and ran a Federal Register API check for later rounds (none). No stage change (implemented 65); confidence unchanged at 78."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: the 2025-09-17 memo event, which cited a trade-association article, was replaced by an event citing a copy of the FHEO memo hosted by animallaw.info (opened: dated 2025-09-17, nine documents withdrawn under EO 14192 and EO 14219); a trade-association page that corroborates the date was not cited, and the uncertainties now note the copy and the nine-versus-eight count. Stage implemented 65, progress 65 and confidence 78 unchanged."
     }
   ],
   "id": "c15-10",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -66,7 +70,7 @@
     "mandate_check": "not_checked",
     "mandate_note": "Per the record's proposal field, page 508 recommends that the Office of the Secretary or the Office of General Counsel review all subregulatory guidance issued outside the APA process; the chapter text was not available this run.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "second_review": {
       "balanced": true,
@@ -91,6 +95,21 @@
         "note": "Run 2026-10-18: five HUD documents since 2026-04-01; the only guidance withdrawal notices are the 2026-04-06 and 2026-07-17 notices; the others are waiver and demonstration notices.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=withdrawal+guidance&conditions[agencies][]=housing-and-urban-development-department&conditions[publication_date][gte]=2026-04-01&per_page=20&order=newest"
+      },
+      {
+        "note": "2026-10-23 lead-only pass: trade-association article, not opened; removed with its 2025-09-17 event. Not a basis for implemented 65.",
+        "result": "unreachable",
+        "url": "https://leadingage.org/hud-withdraws-wide-ranging-fair-housing-policies/"
+      },
+      {
+        "note": "2026-10-23: opened by the second-round researcher and re-opened by the reviewer; FHEO memo dated 2025-09-17, signed by the Principal Deputy Assistant Secretary, cites EO 14192 and EO 14219, applies a three-part test and withdraws nine documents. A copy, not the hud.gov original; supports the fair housing round behind implemented 65.",
+        "result": "supports",
+        "url": "https://www.animallaw.info/sites/default/files/Notice%20of%20the%20Withdrawal%20of%20FHEO%20Guidance%20Documents%202025_0.pdf"
+      },
+      {
+        "note": "2026-10-23: opened by the second-round researcher only; trade-association page confirming the memo circulated on 2025-09-17, no count. Lead only, not cited.",
+        "result": "partial",
+        "url": "https://www.nar.realtor/washington-report/hud-withdraws-fair-housing-guidance-documents"
       }
     ]
   },
@@ -146,13 +165,6 @@
       "url": "https://infobytes.orrick.com/2026-04-10/hud-withdraws-eight-fair-housing-guidance-documents-as-part-of-deregulatory-review/"
     },
     {
-      "date": "2025-09-23",
-      "kind": "news",
-      "publisher": "LeadingAge",
-      "title": "HUD withdraws wide-ranging fair housing policies",
-      "url": "https://leadingage.org/hud-withdraws-wide-ranging-fair-housing-policies/"
-    },
-    {
       "date": "2025-02-28",
       "kind": "news",
       "publisher": "HousingWire",
@@ -165,6 +177,13 @@
       "publisher": "Federal Register / HUD",
       "title": "Notice of the Withdrawal of OGC Guidance Documents (91 FR 44867, Docket FR-6617-N-01)",
       "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14432/notice-of-the-withdrawal-of-ogc-guidance-documents"
+    },
+    {
+      "date": "2025-09-17",
+      "kind": "primary",
+      "publisher": "HUD Office of Fair Housing and Equal Opportunity",
+      "title": "Notice of the Withdrawal of FHEO Guidance Documents (memo of 2025-09-17) (copy hosted by animallaw.info)",
+      "url": "https://www.animallaw.info/sites/default/files/Notice%20of%20the%20Withdrawal%20of%20FHEO%20Guidance%20Documents%202025_0.pdf"
     }
   ],
   "stage": "implemented",
@@ -179,10 +198,10 @@
     },
     {
       "date": "2025-09-17",
-      "event": "An HUD fair housing office memo withdrew nine fair housing guidance documents.",
-      "kind": "news",
-      "source": "LeadingAge",
-      "url": "https://leadingage.org/hud-withdraws-wide-ranging-fair-housing-policies/"
+      "event": "HUD's Office of Fair Housing and Equal Opportunity, in a memo signed by its Principal Deputy Assistant Secretary citing Executive Orders 14192 and 14219, withdrew nine fair housing guidance documents (including items on limited English proficiency, assistance animals, criminal records, source of income and digital advertising), each found to fail at least one of three criteria; the memo says the withdrawals are not necessarily final.",
+      "kind": "primary",
+      "source": "HUD Office of Fair Housing and Equal Opportunity (copy hosted by animallaw.info)",
+      "url": "https://www.animallaw.info/sites/default/files/Notice%20of%20the%20Withdrawal%20of%20FHEO%20Guidance%20Documents%202025_0.pdf"
     },
     {
       "date": "2026-04-06",
@@ -201,6 +220,6 @@
   ],
   "title": "Review and withdraw HUD subregulatory guidance issued outside notice and comment",
   "tracked": true,
-  "uncertainties": "Both notices carry effective dates in September 2025, earlier than publication, because they formalize withdrawals made earlier. Both were read in full on federalregister.gov in review: the July 2026 notice (91 FR 44867) states that HUD is undertaking a comprehensive review of its sub-regulatory guidance, and the April 2026 notice (91 FR 17291) applies a three-part test (statutorily prescribed, consistent with statute or regulation, reduces compliance burdens) and says FHEO is still reviewing its guidance. A Federal Register API query of HUD documents since 2026-04-01, run in review on 2026-10-18, found only these two guidance withdrawal notices; no rounds from single family, public housing or community development offices were documented, and no inventory of reviewed guidance has been published. The memo of 2025-09-17 and the April 2026 notice overlap almost entirely.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "Both notices carry effective dates in September 2025, earlier than publication, because they formalize withdrawals made earlier. Both were read in full on federalregister.gov in review: the July 2026 notice (91 FR 44867) states that HUD is undertaking a comprehensive review of its sub-regulatory guidance, and the April 2026 notice (91 FR 17291) applies a three-part test (statutorily prescribed, consistent with statute or regulation, reduces compliance burdens) and says FHEO is still reviewing its guidance. A Federal Register API query of HUD documents since 2026-04-01, run in review on 2026-10-18, found only these two guidance withdrawal notices; no rounds from single family, public housing or community development offices were documented, and no inventory of reviewed guidance has been published. The memo of 2025-09-17 was read as a copy hosted by animallaw.info (an academic animal-law center), not on hud.gov; it lists nine documents against eight in the April 2026 notice, and the two overlap almost entirely.",
+  "updated_at": "2026-10-23"
 }

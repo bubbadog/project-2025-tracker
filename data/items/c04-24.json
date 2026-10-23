@@ -37,10 +37,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift with independent AI review: Pay-raise item read through EO 14368 and CRS and added to the timeline; in_progress 40 kept at medium because the appropriation provisions remain unread."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: removed two association articles from sources; the 2026-04-01 spouse employment memo event now cites the official Defense Civilian Personnel Advisory Service message that disseminates the memo (2026-04-14), and its wording follows that message on the 18-month pilot. Confidence, stage and progress unchanged."
     }
   ],
   "id": "c04-24",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -72,7 +76,7 @@
     "mandate_check": "confirmed",
     "mandate_note": "p. 104, under Value the military family: support legislation raising wages and family allowances for active-duty enlisted personnel so none rely on food stamps or public housing aid; improve base housing and consider families in change-of-station moves; improve spouse employment and protections including licensing reform, and expand childcare. Proposal matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-23",
     "reviewer": "V3",
     "source_checks": [
       {
@@ -124,6 +128,16 @@
         "note": "Amendment note: Pub. L. 119-60 substituted $300 for $250 in the minimum family separation allowance. Checked 2026-10-18.",
         "result": "supports",
         "url": "https://www.law.cornell.edu/uscode/text/37/427"
+      },
+      {
+        "note": "Opened and confirmed on 2026-10-23: DCPAS Message 2026070 dated 2026-04-14 disseminates the Under Secretary of War for Personnel and Readiness memo dated 2026-04-01; an 18-month exception to policy suspends the time limits on military spouse preference. Supports the in_progress stage item on spouse employment.",
+        "result": "supports",
+        "url": "https://www.dcpas.osd.mil/sites/default/files/2026-05/dcpas_message_2026070_-_maximum_use_of_military_spouse_employment_flexibilities.pdf"
+      },
+      {
+        "note": "Researcher check (not re-opened in review): news report dated 2026-04-09 describes the memo and spouse hiring changes but gives no memo date or pilot details; not used as a source. Consistent with stage in_progress.",
+        "result": "partial",
+        "url": "https://www.stripes.com/theaters/europe/2026-04-09/pentagon-boosts-military-spouse-hiring-21325421.html"
       }
     ]
   },
@@ -171,13 +185,6 @@
       "url": "https://panetta.house.gov/media/press-releases/rep-panetta-secures-defense-priorities-ndaa-including-pay-increase-support"
     },
     {
-      "date": "2025-12-10",
-      "kind": "news",
-      "publisher": "MOAA",
-      "title": "What's In the FY 2026 NDAA ... and What's Next",
-      "url": "https://www.moaa.org/content/publications-and-media/news-articles/2025-news-articles/advocacy/whats-in-the-fy-2026-ndaa-and-whats-next/"
-    },
-    {
       "date": "2025-12-18",
       "kind": "primary",
       "publisher": "GovInfo",
@@ -190,13 +197,6 @@
       "publisher": "Congressional Research Service",
       "title": "FY2027 NDAA: Military Basic Pay Raise Proposal (CRS IN12706)",
       "url": "https://www.everycrsreport.com/files/2026-07-14_IN12706_10a92657a90c147b048e338ce271aada919c3f7d.html"
-    },
-    {
-      "date": "2026-04-10",
-      "kind": "news",
-      "publisher": "MOAA",
-      "title": "Pentagon Memo Stresses 'Maximum Use' of Spouse Employment Tools",
-      "url": "https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/family/pentagon-memo-stresses-maximum-use-of-spouse-employment-tools/"
     },
     {
       "date": "2026-08-06",
@@ -246,6 +246,13 @@
       "publisher": "Federal Register",
       "title": "Adjustments of Certain Rates of Pay (Executive Order 14368)",
       "url": "https://www.federalregister.gov/documents/2025/12/23/2025-23844/adjustments-of-certain-rates-of-pay"
+    },
+    {
+      "date": "2026-04-14",
+      "kind": "primary",
+      "publisher": "Defense Civilian Personnel Advisory Service",
+      "title": "DCPAS Message 2026070: Maximum Use of Military Spouse Employment Flexibilities (disseminating the 2026-04-01 memo of the Under Secretary of War for Personnel and Readiness)",
+      "url": "https://www.dcpas.osd.mil/sites/default/files/2026-05/dcpas_message_2026070_-_maximum_use_of_military_spouse_employment_flexibilities.pdf"
     }
   ],
   "stage": "in_progress",
@@ -274,10 +281,10 @@
     },
     {
       "date": "2026-04-01",
-      "event": "The Under Secretary of War for Personnel and Readiness issued a memo directing fuller use of military spouse employment flexibilities, including a pilot letting spouses accept federal jobs before arriving at a new duty station.",
-      "kind": "news",
-      "source": "MOAA",
-      "url": "https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/family/pentagon-memo-stresses-maximum-use-of-spouse-employment-tools/"
+      "event": "The Under Secretary of War for Personnel and Readiness issued a memo directing fuller use of military spouse employment flexibilities, including an 18-month pilot suspending the time limits on military spouse preference so spouses may use it before or after relocation (disseminated by the Defense Civilian Personnel Advisory Service on 2026-04-14).",
+      "kind": "primary",
+      "source": "Defense Civilian Personnel Advisory Service",
+      "url": "https://www.dcpas.osd.mil/sites/default/files/2026-05/dcpas_message_2026070_-_maximum_use_of_military_spouse_employment_flexibilities.pdf"
     },
     {
       "date": "2026-08-03",
@@ -289,6 +296,6 @@
   ],
   "title": "Raise enlisted pay and allowances, improve housing, spouse jobs and childcare",
   "tracked": true,
-  "uncertainties": "Section text of Public Law 119-60 is not in the GovInfo HTML copy (the page holds only the table of contents and front matter), so section contents rest on section titles, a House member's release, Military Times and MOAA; the exact BAS mechanics and the BAH terms were not read. The 3.8 percent raise is the formula-based raise for all members; whether it counts as increasing wages in the Mandate's sense is a judgment call. A Marine Corps message reproduced on an unofficial mirror says the $300 family separation allowance applies retroactively to 2025-12-18; it was not used as a source. The FY2025 NDAA (Public Law 118-159) targeted junior enlisted raises predate the period. CRS does not break out child care or spouse items within Sec. 20001 of Public Law 119-21. The April 2026 memo was read only through MOAA. Spouse licensing and childcare capacity expansion were not found as new actions. The FY2027 request (7 percent for E-1 to E-5 per CRS) is not enacted. Pass 6 check: the BILLSTATUS record for S. 1071 confirms Public Law 119-60, signed 2025-12-18, after a 77-20 Senate vote on 2025-12-17. The GovInfo HTML of the law holds only the table of contents and the start of Division A within its first 128,000 characters, so Title VI text was not reached. U.S. Code editorial notes at law.cornell.edu confirm Sec. 621 (subsistence rate formula) and Sec. 622 (minimum family separation allowance $250 to $300, 37 U.S.C. 427). The note for 37 U.S.C. 403 cites only Sec. 611(e) of the law (extension of two temporary housing allowance provisions to 2026-12-31) and none for Sec. 624, so the Sec. 624 content and the Sec. 641 content remain based on section titles. The Federal Register API confirmed Executive Order 14417 (signed 2026-08-03, published 2026-08-06, 91 FR 51059). The 3.8 percent figure is taken from CRS IN12706 (Table 1), since the Executive Order 14368 pay schedule is an image not readable in the Federal Register page text; the order confirms the uniformed services schedule and its 2026-01-01 effective date. The FY2026 appropriation pay provisions were not read. Whether a FY2027 NDAA was enacted after CRS's 2026-07-14 status (House versions backing 7 percent for E-1 to E-5, Senate committee version 3.6 percent) was not checked.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "Section text of Public Law 119-60 is not in the GovInfo HTML copy (the page holds only the table of contents and front matter), so section contents rest on section titles, a House member's release and Military Times; the exact BAS mechanics and the BAH terms were not read. The 3.8 percent raise is the formula-based raise for all members; whether it counts as increasing wages in the Mandate's sense is a judgment call. A Marine Corps message reproduced on an unofficial mirror says the $300 family separation allowance applies retroactively to 2025-12-18; it was not used as a source. The FY2025 NDAA (Public Law 118-159) targeted junior enlisted raises predate the period. CRS does not break out child care or spouse items within Sec. 20001 of Public Law 119-21. The April 2026 memo was read through the Defense Civilian Personnel Advisory Service message that disseminates it (Message 2026070, 2026-04-14), not as the signed memo itself. Spouse licensing and childcare capacity expansion were not found as new actions. The FY2027 request (7 percent for E-1 to E-5 per CRS) is not enacted. Pass 6 check: the BILLSTATUS record for S. 1071 confirms Public Law 119-60, signed 2025-12-18, after a 77-20 Senate vote on 2025-12-17. The GovInfo HTML of the law holds only the table of contents and the start of Division A within its first 128,000 characters, so Title VI text was not reached. U.S. Code editorial notes at law.cornell.edu confirm Sec. 621 (subsistence rate formula) and Sec. 622 (minimum family separation allowance $250 to $300, 37 U.S.C. 427). The note for 37 U.S.C. 403 cites only Sec. 611(e) of the law (extension of two temporary housing allowance provisions to 2026-12-31) and none for Sec. 624, so the Sec. 624 content and the Sec. 641 content remain based on section titles. The Federal Register API confirmed Executive Order 14417 (signed 2026-08-03, published 2026-08-06, 91 FR 51059). The 3.8 percent figure is taken from CRS IN12706 (Table 1), since the Executive Order 14368 pay schedule is an image not readable in the Federal Register page text; the order confirms the uniformed services schedule and its 2026-01-01 effective date. The FY2026 appropriation pay provisions were not read. Whether a FY2027 NDAA was enacted after CRS's 2026-07-14 status (House versions backing 7 percent for E-1 to E-5, Senate committee version 3.6 percent) was not checked.",
+  "updated_at": "2026-10-23"
 }

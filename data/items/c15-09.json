@@ -43,10 +43,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift review read both HUD guidance withdrawal notices (2026-04-06 and 2026-07-17) on federalregister.gov and ran a Federal Register API check for later withdrawal rounds (none); neither notice mentions a task force. No stage change (implemented 65); confidence unchanged at 60."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: two trade-association summaries were removed; the 2025-09-17 guidance withdrawal now cites the HUD memorandum itself (a copy hosted by a law-firm blog) and the 2025-04-14 dissolution of the restraining order cites the First Circuit's 2025-11-18 judgment recounting it, both re-opened in review. That judgment's remand of the appeal was added as a court event. Confidence 60 unchanged. No change of stage or progress."
     }
   ],
   "id": "c15-09",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -77,7 +81,7 @@
     "mandate_check": "not_checked",
     "mandate_note": "Per the record's proposal field, page 508 (with pages 503 and 515) recommends that the HUD Secretary form a task force of political appointees to identify and reverse prior-administration actions advancing what the document calls progressive ideology; the chapter text was not available this run.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "second_review": {
       "balanced": false,
@@ -102,6 +106,26 @@
         "note": "Run 2026-10-18: five HUD documents since 2026-04-01; the only guidance withdrawal notices are the 2026-04-06 and 2026-07-17 notices; the others are waiver and demonstration notices.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=withdrawal+guidance&conditions[agencies][]=housing-and-urban-development-department&conditions[publication_date][gte]=2026-04-01&per_page=20&order=newest"
+      },
+      {
+        "note": "Opened by the researcher and re-opened 2026-10-23. First Circuit judgment entered 2025-11-18 in No. 25-1368: recounts the 2025-04-14 dissolution of the 2025-03-26 TRO under Department of Education v. California (claims likely belonging in the Court of Federal Claims); construes the plaintiffs' 2025-09-05 letter as an unopposed motion to remand and grants remand. Consistent with court status dismissed (later voluntary dismissal) and stage implemented (grant terminations stood).",
+        "result": "supports",
+        "url": "https://www.courtlistener.com/opinion/10738404/massachusetts-fair-housing-center-v-dept-of-housing-and-urban-development/"
+      },
+      {
+        "note": "Opened by the researcher and re-opened 2026-10-23. HUD memorandum dated 2025-09-17, signed by the Principal Deputy Assistant Secretary for FHEO, withdrawing nine FHEO guidance documents issued 2007-01-22 to 2024-04-29. Supports the guidance-withdrawal reversals the stage (implemented) relies on; says nothing on a task force. Third-party copy of an official document.",
+        "result": "supports",
+        "url": "https://www.consumerfinancialserviceslawmonitor.com/wp-content/uploads/sites/880/2025/09/HUD-memo-Notice-of-Withdrawal-of-FHEO-Guidance-Documents-9.17.2025.pdf"
+      },
+      {
+        "note": "Association summary page (lead only under the owner rule of 2026-10-23); not opened; removed after the HUD memorandum copy was found.",
+        "result": "unreachable",
+        "url": "https://leadingage.org/hud-withdraws-wide-ranging-fair-housing-policies/"
+      },
+      {
+        "note": "Association summary page (lead only under the owner rule of 2026-10-23); not opened; removed after the First Circuit judgment was found.",
+        "result": "unreachable",
+        "url": "https://www.nar.realtor/washington-report/judge-allows-hud-to-cancel-fair-housing-grants"
       }
     ]
   },
@@ -157,13 +181,6 @@
       "url": "https://www.housingwire.com/articles/federal-judge-temporarily-cancels-hud-cuts-fair-housing-grants/"
     },
     {
-      "date": "2025-09-23",
-      "kind": "news",
-      "publisher": "LeadingAge",
-      "title": "HUD withdraws wide-ranging fair housing policies",
-      "url": "https://leadingage.org/hud-withdraws-wide-ranging-fair-housing-policies/"
-    },
-    {
       "date": "2026-07-17",
       "kind": "primary",
       "publisher": "Federal Register / HUD",
@@ -171,18 +188,11 @@
       "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-17/html/2026-14432.htm"
     },
     {
-      "date": "undated",
+      "date": null,
       "kind": "court",
       "publisher": "Civil Rights Litigation Clearinghouse",
       "title": "Case: Massachusetts Fair Housing Center v. Department of Housing and Urban Development",
       "url": "https://clearinghouse.net/case/46219/"
-    },
-    {
-      "date": "2025-04-18",
-      "kind": "news",
-      "publisher": "National Association of Realtors",
-      "title": "Judge allows HUD to cancel fair housing grants",
-      "url": "https://www.nar.realtor/washington-report/judge-allows-hud-to-cancel-fair-housing-grants"
     },
     {
       "date": "2026-04-06",
@@ -204,6 +214,20 @@
       "publisher": "Federal Register / HUD",
       "title": "Notice of the Withdrawal of OGC Guidance Documents (91 FR 44867, Docket FR-6617-N-01)",
       "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14432/notice-of-the-withdrawal-of-ogc-guidance-documents"
+    },
+    {
+      "date": "2025-11-18",
+      "kind": "court",
+      "publisher": "U.S. Court of Appeals for the First Circuit (via CourtListener)",
+      "title": "Massachusetts Fair Housing Center v. Department of Housing and Urban Development, No. 25-1368, judgment (1st Cir. 2025-11-18)",
+      "url": "https://www.courtlistener.com/opinion/10738404/massachusetts-fair-housing-center-v-dept-of-housing-and-urban-development/"
+    },
+    {
+      "date": "2025-09-17",
+      "kind": "primary",
+      "publisher": "U.S. Department of Housing and Urban Development (copy hosted by a law-firm blog)",
+      "title": "Notice of the Withdrawal of FHEO Guidance Documents, HUD memorandum of 2025-09-17 (copy hosted by consumerfinancialserviceslawmonitor.com, a law-firm blog)",
+      "url": "https://www.consumerfinancialserviceslawmonitor.com/wp-content/uploads/sites/880/2025/09/HUD-memo-Notice-of-Withdrawal-of-FHEO-Guidance-Documents-9.17.2025.pdf"
     }
   ],
   "stage": "implemented",
@@ -232,17 +256,24 @@
     },
     {
       "date": "2025-04-14",
-      "event": "The court dissolved the temporary restraining order, citing the Supreme Court stay in Department of Education v. California and Court of Federal Claims jurisdiction.",
+      "event": "The district court dissolved the 2025-03-26 temporary restraining order, citing the Supreme Court stay in Department of Education v. California and concluding the grant-termination claims likely belonged in the Court of Federal Claims.",
       "kind": "court",
-      "source": "National Association of Realtors",
-      "url": "https://www.nar.realtor/washington-report/judge-allows-hud-to-cancel-fair-housing-grants"
+      "source": "U.S. Court of Appeals for the First Circuit, judgment of 2025-11-18 (No. 25-1368), recounting the dissolution",
+      "url": "https://www.courtlistener.com/opinion/10738404/massachusetts-fair-housing-center-v-dept-of-housing-and-urban-development/"
     },
     {
       "date": "2025-09-17",
-      "event": "HUD issued a memo withdrawing nine fair housing guidance documents dated 2007 to 2024.",
-      "kind": "news",
-      "source": "LeadingAge",
-      "url": "https://leadingage.org/hud-withdraws-wide-ranging-fair-housing-policies/"
+      "event": "HUD's Principal Deputy Assistant Secretary for Fair Housing and Equal Opportunity issued a memo to FHEO staff, Fair Housing Assistance Program agencies and Fair Housing Initiatives Program grantees withdrawing nine fair housing guidance documents dated 2007 to 2024.",
+      "kind": "primary",
+      "source": "HUD memorandum of 2025-09-17 (copy hosted by a law-firm blog)",
+      "url": "https://www.consumerfinancialserviceslawmonitor.com/wp-content/uploads/sites/880/2025/09/HUD-memo-Notice-of-Withdrawal-of-FHEO-Guidance-Documents-9.17.2025.pdf"
+    },
+    {
+      "date": "2025-11-18",
+      "event": "The First Circuit (No. 25-1368) treated the plaintiffs' letter as an unopposed motion to remand and remanded the case so the parties could litigate the effect of the Supreme Court's 2025-08-21 order in National Institutes of Health v. American Public Health Association, expressing no view on the merits.",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the First Circuit (via CourtListener)",
+      "url": "https://www.courtlistener.com/opinion/10738404/massachusetts-fair-housing-center-v-dept-of-housing-and-urban-development/"
     },
     {
       "date": "2025-12-22",
@@ -268,6 +299,6 @@
   ],
   "title": "Create a HUD task force to reverse Biden-era progressive-ideology actions",
   "tracked": true,
-  "uncertainties": "The task force's charter and membership were not found in any primary HUD document; the HUD task force reported by news outlets in February 2025 was set up under the government efficiency order to review spending, its members are not named, and it is not described as limited to political appointees or as charged with reversing ideology-based actions. The stage therefore rests on operative reversals by other instruments; several of those reversals (AFFH, PAVE, climate initiatives, guidance withdrawals) are tracked as their own records (c15-01, c15-05, c15-06, c15-10), so this record overlaps them. The AFFH interim final rule event is copied from the verified sibling record c15-01. Both guidance withdrawal notices (2026-04-06 and 2026-07-17) were read in full on federalregister.gov in review; neither mentions a task force. A Federal Register API query of HUD documents since 2026-04-01, run in review on 2026-10-18, found no guidance withdrawal notice after 2026-07-17. The temporary restraining order date (2025-03-26) and the 2025-12-22 dismissal come from a docket summary on clearinghouse.net; the court docket itself could not be opened. The 2025-09-17 memo and the 2026-04-06 notice cover largely the same documents.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The task force's charter and membership were not found in any primary HUD document; the HUD task force reported by news outlets in February 2025 was set up under the government efficiency order to review spending, its members are not named, and it is not described as limited to political appointees or as charged with reversing ideology-based actions. The stage therefore rests on operative reversals by other instruments; several of those reversals (AFFH, PAVE, climate initiatives, guidance withdrawals) are tracked as their own records (c15-01, c15-05, c15-06, c15-10), so this record overlaps them. The AFFH interim final rule event is copied from the verified sibling record c15-01. Both guidance withdrawal notices (2026-04-06 and 2026-07-17) were read in full on federalregister.gov in review; neither mentions a task force. A Federal Register API query of HUD documents since 2026-04-01, run in review on 2026-10-18, found no guidance withdrawal notice after 2026-07-17. The temporary restraining order date (2025-03-26) and the 2025-12-22 dismissal come from a docket summary on clearinghouse.net, and the 2025-04-14 dissolution is recounted in the First Circuit's 2025-11-18 judgment; the district court docket itself could not be opened. The 2025-09-17 memo was read as a copy hosted by a law-firm blog; no hud.gov copy was found in one search. The 2025-09-17 memo and the 2026-04-06 notice cover largely the same documents.",
+  "updated_at": "2026-10-23"
 }

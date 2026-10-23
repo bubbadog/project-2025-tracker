@@ -6,12 +6,12 @@
   "chapter": "10",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Chapter page 309 was checked; the stage-deciding 2025-2030 Dietary Guidelines document was read in full on the HHS and USDA site on 2026-10-18, with the Scientific Foundation report and the H.R. 8578 status and text on govinfo.gov. The lawsuit rests on the plaintiff's release and secondary summaries, which does not affect the stage.",
+  "confidence_reason": "Chapter page 309 was checked; the stage-deciding 2025-2030 Dietary Guidelines document was read in full on the HHS and USDA site on 2026-10-18, with the Scientific Foundation report and the H.R. 8578 status and text on govinfo.gov. The lawsuit rests on two news reports and a law-firm alert, which does not affect the stage.",
   "court_status": {
-    "basis": "Complaint filed in the US District Court for the District of Columbia on 2026-08-19 under the Federal Advisory Committee Act, per the plaintiff's release; no docket, ruling or agency response was found.",
+    "basis": "Complaint filed in the US District Court for the District of Columbia on 2026-08-19 under the Federal Advisory Committee Act, per news reports by STAT and Bloomberg Government (both 2026-08-19); no docket, ruling or agency response was found.",
     "date": "2026-08-19",
     "state": "pending",
-    "url": "https://www.pcrm.org/es/node/164866"
+    "url": "https://statnews.com/2026/08/19/physician-group-sues-trump-administration-over-dietary-guidelines-food-pyramid-hhs-usda"
   },
   "durability": {
     "level": "low",
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source review on 2026-10-18 read the 2025-2030 guidelines and Scientific Foundation report on realfood.gov, the H.R. 8578 status and text on govinfo.gov and the plaintiff's release on pcrm.org, corrected the bill and report descriptions, set court status to pending, confirmed implemented 65 and raised confidence from 72 to 80."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: the plaintiff's own release was removed as a source and the lawsuit and its court status are now cited to news reports (STAT and Bloomberg Government, both 2026-08-19, re-opened in review), with the Administrative Procedure Act claim one of them reports noted; an unused bill tracker was removed. An unconfirmed case number was not adopted. Confidence 80 unchanged. No change of stage or progress."
     }
   ],
   "id": "c10-04",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-23",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_action",
@@ -80,12 +84,13 @@
       "court_status set to pending on the 2026-08-19 complaint per the plaintiff's release; the complaint PDF host refused fetching.",
       "The 2026-08-19 suit timeline event remains kind news because no docket was found.",
       "Alternative stage: in_progress 50 if the absence of codification and the pending suit are weighed more heavily.",
-      "Confidence moved from 72 to 80."
+      "Confidence moved from 72 to 80.",
+      "2026-10-23: the plaintiff's release was removed as a source and the court status now cites a STAT report; the bill tracker (The Lobby News), unused by any event, was removed as an aggregator."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 309 recommends working with lawmakers to repeal the Dietary Guidelines and, at a minimum, reforming them through a more transparent process that weighs the science without overstating it, keeps them focused on nutrition rather than unrelated issues such as the environment, and codifies the reforms in law. The proposal paraphrase is accurate.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
@@ -112,6 +117,26 @@
         "note": "Read 2026-10-18: plaintiff release dated 2026-08-19, D.D.C., Federal Advisory Committee Act claim, seeks withdrawal; no case number.",
         "result": "supports",
         "url": "https://www.pcrm.org/es/node/164866"
+      },
+      {
+        "note": "Opened by the researcher and re-opened 2026-10-23. STAT, 2026-08-19: the Physicians Committee for Responsible Medicine sued HHS and USDA in the U.S. District Court for the District of Columbia (filed Wednesday), under the Federal Advisory Committee Act, asking that the guidelines be withdrawn and a FACA-compliant process begun; no case number or ruling. Supports court status pending and the blocker; says nothing against the stage (implemented).",
+        "result": "supports",
+        "url": "https://statnews.com/2026/08/19/physician-group-sues-trump-administration-over-dietary-guidelines-food-pyramid-hhs-usda"
+      },
+      {
+        "note": "Opened by the researcher and re-opened 2026-10-23. Bloomberg Government, 2026-08-19: complaint filed 2026-08-19 in D.D.C. with FACA and APA claims, seeking withdrawal of the guidelines and a bar on their future use; prints case number 1:26-cv-0291, which was not confirmed against a docket and is not used. Supports pending; does not bear on the stage (implemented).",
+        "result": "supports",
+        "url": "https://news.bgov.com/health-law-and-business/rfk-jrs-flipped-food-pyramid-violated-law-doctor-lawsuit-says"
+      },
+      {
+        "note": "Plaintiff's own release (a litigant's page, lead only under the owner rule of 2026-10-23); not re-opened and removed as a source; the lawsuit and court status now cite news reports.",
+        "result": "unreachable",
+        "url": "https://www.pcrm.org/es/node/164866"
+      },
+      {
+        "note": "Bill tracker aggregator (lead only); not opened in this pass and removed as a source. No event used it; H.R. 8578 status and text rest on govinfo.gov. Stage implemented unaffected.",
+        "result": "unreachable",
+        "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/8578"
       }
     ]
   },
@@ -173,13 +198,6 @@
     },
     {
       "date": "2026-04-29",
-      "kind": "tracker",
-      "publisher": "The Lobby News",
-      "title": "H.R. 8578, Food Reform for Effective and Sustainable Health Act of 2026",
-      "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/8578"
-    },
-    {
-      "date": "2026-04-29",
       "kind": "primary",
       "publisher": "U.S. Government Publishing Office",
       "title": "H.R. 8578, FRESH Act of 2026 (bill status)",
@@ -195,13 +213,20 @@
     {
       "date": "2026-08-19",
       "kind": "news",
-      "publisher": "Physicians Committee for Responsible Medicine",
-      "title": "Physicians Committee sues HHS and USDA over 2025-2030 Dietary Guidelines (plaintiff release)",
-      "url": "https://www.pcrm.org/es/node/164866"
+      "publisher": "STAT",
+      "title": "Physician group sues Trump administration over dietary guidelines process",
+      "url": "https://statnews.com/2026/08/19/physician-group-sues-trump-administration-over-dietary-guidelines-food-pyramid-hhs-usda"
+    },
+    {
+      "date": "2026-08-19",
+      "kind": "news",
+      "publisher": "Bloomberg Government",
+      "title": "RFK Jr.'s Flipped Food Pyramid Violated Law, Doctor Lawsuit Says",
+      "url": "https://news.bgov.com/health-law-and-business/rfk-jrs-flipped-food-pyramid-violated-law-doctor-lawsuit-says"
     }
   ],
   "stage": "implemented",
-  "status_summary": "HHS and USDA issued the 2025-2030 Dietary Guidelines in January 2026; the guidelines are signed by both Secretaries, and the bill status and text of H.R. 8578 give the issue date as 2026-01-07. The guidelines document runs about ten pages, prioritizes protein, recommends full-fat dairy without added sugar, advises sharply limiting highly processed foods and added sugar, and does not mention environmental sustainability, which matches the chapter's minimum reform option of keeping the guidelines focused on nutrition. The supplemental Scientific Foundation report states that the agencies chose not to adopt the 2025 advisory committee report as the basis and instead relied on reviews compiled by an NIH researcher with NIH-coordinated external peer review, while still scoring each advisory committee recommendation as implemented or not. H.R. 8578, the FRESH Act, introduced 2026-04-29 and referred to the House Agriculture Committee with no later action, would bar modifying the 2025-2030 edition except as the statute allows and make future editions take effect only if approved by Congress by law; no repeal bill was found. On 2026-08-19 the Physicians Committee for Responsible Medicine sued HHS and USDA in the US District Court for the District of Columbia under the Federal Advisory Committee Act, seeking withdrawal of the guidelines; no ruling was found.",
+  "status_summary": "HHS and USDA issued the 2025-2030 Dietary Guidelines in January 2026; the guidelines are signed by both Secretaries, and the bill status and text of H.R. 8578 give the issue date as 2026-01-07. The guidelines document runs about ten pages, prioritizes protein, recommends full-fat dairy without added sugar, advises sharply limiting highly processed foods and added sugar, and does not mention environmental sustainability, which matches the chapter's minimum reform option of keeping the guidelines focused on nutrition. The supplemental Scientific Foundation report states that the agencies chose not to adopt the 2025 advisory committee report as the basis and instead relied on reviews compiled by an NIH researcher with NIH-coordinated external peer review, while still scoring each advisory committee recommendation as implemented or not. H.R. 8578, the FRESH Act, introduced 2026-04-29 and referred to the House Agriculture Committee with no later action, would bar modifying the 2025-2030 edition except as the statute allows and make future editions take effect only if approved by Congress by law; no repeal bill was found. On 2026-08-19 the Physicians Committee for Responsible Medicine sued HHS and USDA in the US District Court for the District of Columbia under the Federal Advisory Committee Act (one news report also cites the Administrative Procedure Act), seeking withdrawal of the guidelines; no ruling was found.",
   "timeline": [
     {
       "date": "2026-01-07",
@@ -241,6 +266,6 @@
   ],
   "title": "Repeal or reform the Dietary Guidelines for Americans",
   "tracked": true,
-  "uncertainties": "Characterizations of the new process by outside experts were not reviewed. The guidelines document prints only January 2026; the 2026-01-07 date comes from the H.R. 8578 text and the briefing linked on the program website. The 2026-01-28 date for the Scientific Foundation report is inferred from an appendices file name; the report prints no date. Federal program alignment (for example school meal standards) was not checked. The chapter asks for transparency; whether the process meets that standard is a judgment this tracker does not make. A Federal Register search found no notice of the 2025-2030 edition. The lawsuit is known from the plaintiff's release and law-firm and trade summaries; the complaint could not be fetched, and no docket, case number, ruling or agency response was found. H.R. 8578 status and text were read on govinfo.gov.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "Characterizations of the new process by outside experts were not reviewed. The guidelines document prints only January 2026; the 2026-01-07 date comes from the H.R. 8578 text and the briefing linked on the program website. The 2026-01-28 date for the Scientific Foundation report is inferred from an appendices file name; the report prints no date. Federal program alignment (for example school meal standards) was not checked. The chapter asks for transparency; whether the process meets that standard is a judgment this tracker does not make. A Federal Register search found no notice of the 2025-2030 edition. The lawsuit is known from news reports (STAT and Bloomberg Government, both dated 2026-08-19) and a law-firm alert; the complaint was not read, and no docket, ruling or agency response was found. One report prints a case number that could not be confirmed against a docket and is not used here. H.R. 8578 status and text were read on govinfo.gov.",
+  "updated_at": "2026-10-23"
 }

@@ -7,7 +7,7 @@
   "chapter": "14",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Document text on page 464 checked and the deciding CY 2026 final rule fetched on the Federal Register, confirming the effective date, the phase-out, ASC additions and the drug administration policy; the 2029 end date rests on a professional society's rule summary. This call is not evenly balanced; implemented follows from the rule that an ask operative in substance through a final, effective agency rule but short of the full recommendation is implemented, and the in_progress rule for final rules applies only before they take effect.",
+  "confidence_reason": "Document text on page 464 checked and the deciding CY 2026 final rule fetched on the Federal Register, confirming the effective date, the phase-out, ASC additions and the drug administration policy; the 2029 end date given by a professional society's rule summary is an unverified lead and is not used. This call is not evenly balanced; implemented follows from the rule that an ask operative in substance through a final, effective agency rule but short of the full recommendation is implemented, and the in_progress rule for final rules applies only before they take effect.",
   "durability": {
     "level": "medium",
     "why": "Annual payment rules can revise the phase-out schedule and site-neutral policy, and hospital groups oppose site-neutral cuts; no litigation was examined in this review."
@@ -41,10 +41,14 @@
     {
       "date": "2026-10-22",
       "note": "Refutation check on 2026-10-22 found the CY 2026 OPPS/ASC rule still in effect, 42 CFR 419.22 unchanged since 2026-01-01, no CY 2027 final rule yet and no litigation against the phase-out; Federal Register API, eCFR and two searches."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: a professional society's rule summary (American Society of Hematology) was removed from sources; the 2029-01-01 end date for the inpatient-only list that it supplied was not found in the final rule text, the CMS fact sheet or the proposed rule as read, so it moved to uncertainties as an unverified lead at low confidence and the status text now states only the three-year phase-out begun in CY 2026. The CMS fact sheet of 2025-11-21 was opened and added as a primary source, and the ASC addition count was reconciled to its figure of 289, noting that an earlier reading of the rule gave 276. Stage implemented 70 and confidence 80 unchanged."
     }
   ],
   "id": "c14-16",
-  "last_checked": "2026-10-22",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -96,7 +100,7 @@
     "c14-38"
   ],
   "remaining": [
-    "Complete the scheduled elimination of the inpatient-only list (by 2029-01-01 per the CY 2026 rule as summarized)",
+    "Complete the scheduled elimination of the inpatient-only list (three-year phase-out begun in CY 2026; the end year is not stated in the rule text read)",
     "Finalize the CY 2027 rule",
     "Extend site-neutral payment to additional settings beyond drug administration and selected imaging"
   ],
@@ -113,7 +117,7 @@
     "mandate_check": "verified",
     "mandate_note": "Page 464 says regulations should advance site neutrality by eliminating the inpatient-only list and expanding the ASC covered procedures list, that Medicare should pay the same for a service across office, clinic and hospital settings, and that CMS should extend site-neutral payment to more settings; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
+    "reviewed_at": "2026-10-23",
     "reviewer": "Y14a, U13-4",
     "second_review": {
       "balanced": false,
@@ -143,6 +147,21 @@
         "note": "Dated 2025-12-03; states the full list is eliminated by 2029-01-01 under the finalized phase-out.",
         "result": "supports",
         "url": "https://www.hematology.org/advocacy/federal-rule-summaries/cy-2026-hospital-outpatient-prospective-payment-system-final-rule-summary"
+      },
+      {
+        "note": "Opened by the researcher and re-opened on 2026-10-23: CMS fact sheet of 2025-11-21: inpatient-only list phased out over three years beginning with 285 mostly musculoskeletal procedures in CY 2026, no end year; 289 procedures added to the ASC covered procedures list and 271 former inpatient-only codes added; physician fee schedule equivalent rate for drug administration at excepted off-campus departments; 290 million dollar OPPS savings estimate. Supports the implemented stage (final, effective policy).",
+        "result": "supports",
+        "url": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-2026-hospital-outpatient-prospective-payment-system-opps-ambulatory-surgical-center"
+      },
+      {
+        "note": "Re-opened by the researcher on 2026-10-23 to the end of the page text: confirms the three-year phase-out beginning with the removal of 285 services; no end year or 2029 in the text served. Supports the implemented stage but not the 2029 date.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/11/25/2025-20907/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment"
+      },
+      {
+        "note": "Opened by the researcher (first 100,000 of about 125,000 characters): proposes removing 637 more services; no schedule or end year in the portion read. Consistent with the implemented stage.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment"
       }
     ]
   },
@@ -191,15 +210,15 @@
       "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment"
     },
     {
-      "date": "2025-12-03",
-      "kind": "tracker",
-      "publisher": "American Society of Hematology",
-      "title": "CY 2026 Hospital Outpatient Prospective Payment System final rule summary",
-      "url": "https://www.hematology.org/advocacy/federal-rule-summaries/cy-2026-hospital-outpatient-prospective-payment-system-final-rule-summary"
+      "date": "2025-11-21",
+      "kind": "primary",
+      "publisher": "Centers for Medicare & Medicaid Services",
+      "title": "Calendar Year 2026 Hospital Outpatient Prospective Payment System (OPPS) and Ambulatory Surgical Center Final Rule (CMS-1834-FC) fact sheet",
+      "url": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-2026-hospital-outpatient-prospective-payment-system-opps-ambulatory-surgical-center"
     }
   ],
   "stage": "implemented",
-  "status_summary": "The CY 2026 outpatient payment final rule, published 2025-11-25 and effective 2026-01-01, finalizes a three-year phase-out of the inpatient-only list, with the full list eliminated by 2029-01-01 according to a rule summary, and removes 285 services in the first year; it adds 276 procedures to the ASC covered procedures list plus 271 codes leaving the inpatient-only list, and pays the physician fee schedule equivalent rate for drug administration at excepted off-campus hospital departments, exempting rural sole community hospitals. The CY 2027 proposed rule of 2026-07-07 would remove 637 more services from the list, add 618 ASC codes, and apply the equivalent rate to imaging without contrast at those departments. The stage is implemented because the elimination policy, ASC expansion and site-neutral extension are operative through a final rule, while the list remains in place until the phase-out ends and site-neutral payment so far reaches only selected services.",
+  "status_summary": "The CY 2026 outpatient payment final rule, published 2025-11-25 and effective 2026-01-01, finalizes a three-year phase-out of the inpatient-only list, (the end year is not stated in the rule text or the CMS fact sheet as read), and removes 285 services in the first year; it adds 289 procedures to the ASC covered procedures list according to the CMS fact sheet of 2025-11-21 (an earlier reading of the rule text gave 276) plus 271 codes leaving the inpatient-only list, and pays the physician fee schedule equivalent rate for drug administration at excepted off-campus hospital departments, exempting rural sole community hospitals. The CY 2027 proposed rule of 2026-07-07 would remove 637 more services from the list, add 618 ASC codes, and apply the equivalent rate to imaging without contrast at those departments. The stage is implemented because the elimination policy, ASC expansion and site-neutral extension are operative through a final rule, while the list remains in place until the phase-out ends and site-neutral payment so far reaches only selected services.",
   "timeline": [
     {
       "date": "2025-11-25",
@@ -225,6 +244,6 @@
   ],
   "title": "Phase out the Medicare inpatient-only list and expand ASC and site-neutral payment",
   "tracked": true,
-  "uncertainties": "Only about the first 100,000 characters of each long rule were read. The 2029-01-01 end date for the inpatient-only list comes from a rule summary by the American Society of Hematology (hematology.org), not from the regulation text read on federalregister.gov, which states a three-year phase-out without showing the year in the portion read; whether the full schedule is codified at 42 CFR 419.22 or set out only in preamble tables was not confirmed. Whether the CY 2027 proposals were finalized in the November 2026 cycle is not yet known. No litigation over the drug administration payment change was searched in this review.",
-  "updated_at": "2026-10-22"
+  "uncertainties": "Only about the first 100,000 characters of the CY 2027 proposed rule were read; the page text of the CY 2026 final rule was read to its end on 2026-10-23. A full-elimination date of 2029-01-01 for the inpatient-only list appears only in a rule summary by the American Society of Hematology (hematology.org), an unverified lead at low confidence; the final rule text on federalregister.gov, the CMS fact sheet of 2025-11-21 and the CY 2027 proposed rule (first 100,000 characters) state a three-year phase-out beginning with 285 services in CY 2026 but no end year, and (inference) a three-year schedule from CY 2026 would end around the start of 2029; the CMS fact sheet counts 289 procedures added to the ASC covered procedures list, where an earlier reading of the rule text gave 276, and does not say how that count relates to the 271 former inpatient-only codes it also lists as added; whether the full schedule is codified at 42 CFR 419.22 or set out only in preamble tables was not confirmed. Whether the CY 2027 proposals were finalized in the November 2026 cycle is not yet known. No litigation over the drug administration payment change was searched in this review.",
+  "updated_at": "2026-10-23"
 }

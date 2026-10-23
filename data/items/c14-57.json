@@ -6,9 +6,9 @@
   "chapter": "14",
   "confidence": 76,
   "confidence_label": "medium",
-  "confidence_reason": "Both withdrawal documents were fetched in an earlier review, and the deciding 2025-08-13 E.D. Pa. order was read through its disposition as a court PDF hosted by the Georgetown Law Litigation Tracker (reasoning pages not reviewed individually). The Third Circuit argument of 2026-07-07 rests on a Deseret News report and a Becket release, both opened on 2026-10-18; the appeal docket, the appellate caption and the court's opinion archive were not read, so a recent ruling or stay cannot be excluded.",
+  "confidence_reason": "Both withdrawal documents were fetched in an earlier review, and the deciding 2025-08-13 E.D. Pa. order was read through its disposition as a court PDF hosted by the Georgetown Law Litigation Tracker (reasoning pages not reviewed individually). The Third Circuit argument of 2026-07-07 rests on news reports (a National Catholic Register (CNA) report re-opened on 2026-10-23 and a Deseret News report opened on 2026-10-18); the appeal docket, the appellate caption and the court's opinion archive were not read, so a recent ruling or stay cannot be excluded.",
   "court_status": {
-    "basis": "The district court vacated the religious and moral exemption rules on 2025-08-13 (order read as a PDF via the Georgetown tracker: vacatur on arbitrary and capricious grounds before Chief Judge Beetlestone, no stay language in the excerpt read). The Third Circuit heard the appeal on 2026-07-07 per two news reports and a Becket release; no appellate ruling or stay of the vacatur was found as of 2026-10-18. State remains vacated until an appellate ruling.",
+    "basis": "The district court vacated the religious and moral exemption rules on 2025-08-13 (order read as a PDF via the Georgetown tracker: vacatur on arbitrary and capricious grounds before Chief Judge Beetlestone, no stay language in the excerpt read). The Third Circuit heard the appeal on 2026-07-07 per news reports; no appellate ruling or stay of the vacatur was found as of 2026-10-18. State remains vacated until an appellate ruling.",
     "date": "2025-08-13",
     "state": "vacated",
     "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2023/04/COMMONWEALTH-OF-PENNSYLVANIA_2025.08.13_ORDER-ON-MOTIONS-FOR-SUMMARY-JUDGMENT.pdf"
@@ -38,10 +38,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift with independent AI review: Third Circuit argument retained as a court event on news and party-release sourcing; court_status stays vacated with the appeal pending."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: the intervenor counsel's two press releases were removed as sources; the appeal (filed 2025-12-12) and the 2026-07-07 Third Circuit argument are now cited to news reports (OSV News and a National Catholic Register (CNA) report, both re-opened in review), and the argument event and summary now say federal counsel defended the exemptions rather than asked for reversal. A Washington Examiner link that resolved to an unrelated page was removed. Confidence 76 unchanged. No change of stage or progress."
     }
   ],
   "id": "c14-57",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -69,12 +73,13 @@
       "Third Circuit argument of 2026-07-07 kept as a timeline event and changed from kind news to kind court: holding oral argument is an action of the court, and the date is given by both the Deseret News report and the Becket release; the appeal docket was not read.",
       "Removed the superseded uncertainties sentence saying the appeal was not a timeline event.",
       "court_status kept vacated (2025-08-13): the latest court event, the 2026-07-07 argument, left the vacatur in place; pending is the defensible alternative if the state is read from the appeal stage rather than from the operative order.",
-      "Confidence 75 to 76 (medium): deciding order read through its disposition; appeal status rests on news and a party release."
+      "Confidence 75 to 76 (medium): deciding order read through its disposition; appeal status rests on news and a party release.",
+      "2026-10-23: the litigant counsel's releases were removed; the appeal and the 2026-07-07 argument now rest on news reports (OSV News, National Catholic Register (CNA), Deseret News). The Washington Examiner link resolved to the site's home page and was removed. The appellate docket is still unread."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 483 to 484 ask HHS to rescind the 2023 proposed rule on religious and moral exemptions to the contraceptive mandate if finalized and to avoid further rulemaking that curtails existing exemptions, under a heading calling for the Trump exemptions to be restored.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-23",
     "reviewer": "V5",
     "source_checks": [
       {
@@ -101,6 +106,36 @@
         "note": "Undated release announcing Third Circuit argument on 2026-07-07 in Philadelphia; does not say who filed the appeal; checked 2026-10-18.",
         "result": "supports",
         "url": "https://becketfund.org/media/little-sisters-of-the-poor-back-in-court/"
+      },
+      {
+        "note": "Opened by the researcher and re-opened 2026-10-23. Report of 2026-07-08: argument held 2026-07-07 in the Third Circuit on the Little Sisters' appeal; Justice Department counsel argued for the exemptions and said the court could strike one line of the rule rather than the whole rule; no panel questions on the 2017 expansion reported; no ruling. Consistent with court state vacated and stage blocked.",
+        "result": "supports",
+        "url": "https://www.ncregister.com/cna/little-sisters-argue-contraception-mandate-case-before-3rd-circuit-as-long-fight-continues"
+      },
+      {
+        "note": "Opened by the researcher and re-opened 2026-10-23. OSV News, 2025-12-15: the Little Sisters of the Poor filed the appeal on 2025-12-12 in the Third Circuit; does not say whether the federal government appealed. Consistent with blocked; replaces the counsel's release for the appeal fact.",
+        "result": "supports",
+        "url": "https://www.osvnews.com/little-sisters-of-the-poor-again-appeal-for-protection-from-contraceptive-rule/"
+      },
+      {
+        "note": "Opened by the researcher (returned an unrelated 2026-08-04 article) and re-opened 2026-10-23 (returned the site's home page). Does not concern the Third Circuit argument; removed from sources. No bearing on the stage (blocked).",
+        "result": "does_not_support",
+        "url": "https://www.washingtonexaminer.com/?p=4639756"
+      },
+      {
+        "note": "Release by the intervenor's counsel (a litigant's own page, lead only); not opened in this pass and removed. The argument date now rests on news reports.",
+        "result": "unreachable",
+        "url": "https://becketfund.org/media/little-sisters-of-the-poor-back-in-court/"
+      },
+      {
+        "note": "Release by the intervenor's counsel (a litigant's own page, lead only); not opened in this pass and removed. The appeal now rests on the OSV News report.",
+        "result": "unreachable",
+        "url": "https://becketfund.org/media/little-sisters-of-the-poor-appeal-decision/"
+      },
+      {
+        "note": "Not re-opened in this pass; copy of the 2025-08-13 district court order hosted by an academic litigation tracker, kept under the rule for academic litigation databases. Supports vacated and blocked as read on 2026-10-18.",
+        "result": "supports",
+        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2023/04/COMMONWEALTH-OF-PENNSYLVANIA_2025.08.13_ORDER-ON-MOTIONS-FOR-SUMMARY-JUDGMENT.pdf"
       }
     ]
   },
@@ -164,34 +199,27 @@
     {
       "date": "2026-07-07",
       "kind": "news",
-      "publisher": "Washington Examiner",
-      "title": "Appeals court scrutinizes religious exemptions in Little Sisters contraception fight",
-      "url": "https://www.washingtonexaminer.com/?p=4639756"
-    },
-    {
-      "date": "2025",
-      "kind": "news",
-      "publisher": "Becket",
-      "title": "Little Sisters of the Poor appeal decision (press release)",
-      "url": "https://becketfund.org/media/little-sisters-of-the-poor-appeal-decision/"
-    },
-    {
-      "date": "2026-07",
-      "kind": "news",
-      "publisher": "Becket",
-      "title": "Little Sisters of the Poor back in court (press release)",
-      "url": "https://becketfund.org/media/little-sisters-of-the-poor-back-in-court/"
-    },
-    {
-      "date": "2026-07-07",
-      "kind": "news",
       "publisher": "Deseret News",
       "title": "Little Sisters of the Poor, Supreme Court and religious exemptions (argument report)",
       "url": "https://www.deseret.com/faith/2026/07/07/little-sisters-of-the-poor-supreme-court-religious-exemptions/"
+    },
+    {
+      "date": "2026-07-08",
+      "kind": "news",
+      "publisher": "National Catholic Register (CNA)",
+      "title": "Little Sisters argue contraception mandate case before 3rd Circuit as long fight continues",
+      "url": "https://www.ncregister.com/cna/little-sisters-argue-contraception-mandate-case-before-3rd-circuit-as-long-fight-continues"
+    },
+    {
+      "date": "2025-12-15",
+      "kind": "news",
+      "publisher": "OSV News",
+      "title": "Little Sisters of the Poor again appeal for protection from contraceptive rule",
+      "url": "https://www.osvnews.com/little-sisters-of-the-poor-again-appeal-for-protection-from-contraceptive-rule/"
     }
   ],
   "stage": "blocked",
-  "status_summary": "The rescission the Mandate asks for was satisfied before 2025-01-20: the February 2023 proposed rule was withdrawn in a document published 2024-12-30, and a later October 2024 proposal on contraceptive coverage was withdrawn on 2025-01-15. No rulemaking curtailing the exemptions was found since 2025-01-20. On 2025-08-13 the Eastern District of Pennsylvania, in a case where the federal defendants and an intervenor defended the rules, vacated the Trump-era religious and moral exemption rules as arbitrary and capricious; an appeal is pending in the Third Circuit, which heard argument on 2026-07-07, with the federal government's counsel asking for reversal; no appellate ruling was found as of 2026-10-18.",
+  "status_summary": "The rescission the Mandate asks for was satisfied before 2025-01-20: the February 2023 proposed rule was withdrawn in a document published 2024-12-30, and a later October 2024 proposal on contraceptive coverage was withdrawn on 2025-01-15. No rulemaking curtailing the exemptions was found since 2025-01-20. On 2025-08-13 the Eastern District of Pennsylvania, in a case where the federal defendants and an intervenor defended the rules, vacated the Trump-era religious and moral exemption rules as arbitrary and capricious; an appeal is pending in the Third Circuit, which heard argument on 2026-07-07, with the federal government's counsel defending the exemptions; no appellate ruling was found as of 2026-10-18.",
   "timeline": [
     {
       "date": "2025-08-13",
@@ -202,14 +230,14 @@
     },
     {
       "date": "2026-07-07",
-      "event": "The Third Circuit hears argument in the appeal of the 2025-08-13 vacatur; a news report says counsel for the federal government asked the court to reverse and says the panel questioned the 2017 expansion of the exemptions; no ruling is reported.",
+      "event": "The Third Circuit hears argument in the appeal of the 2025-08-13 vacatur; a news report says counsel for the federal government defended the exemptions, arguing that if the court found them too broad it could strike one line of the rule rather than the whole rule; no ruling is reported.",
       "kind": "court",
-      "source": "Deseret News (report of the argument); Becket release giving the argument date and court",
-      "url": "https://www.deseret.com/faith/2026/07/07/little-sisters-of-the-poor-supreme-court-religious-exemptions/"
+      "source": "National Catholic Register, CNA (report of the argument); Deseret News",
+      "url": "https://www.ncregister.com/cna/little-sisters-argue-contraception-mandate-case-before-3rd-circuit-as-long-fight-continues"
     }
   ],
   "title": "Keep contraceptive mandate religious and moral exemptions; rescind 2023 proposal",
   "tracked": true,
-  "uncertainties": "Both withdrawal documents were opened on federalregister.gov in review: the 2024-12-30 document withdraws the February 2023 proposed rules (effective 2024-12-23), and the 2025-01-15 document withdraws the October 2024 proposed rules on contraceptive coverage. Both predate or fall at the edge of the period and are not counted as events; the 2025-01-15 withdrawal was signed 2025-01-13 under the prior administration. The 2025-08-13 district court order was read through a university litigation tracker copy. A news report says the intervenor would appeal and its counsel's release confirms an appeal; whether the federal government also appealed was not found. The Third Circuit argument rests on a news report and a party release rather than the court's docket or calendar, and any ruling was not verified. The stage reflects that the exemptions the Mandate seeks to keep were vacated during the period while the rescission it requested had already occurred before the period. Primary-source lift 2026-10-18: the district court order was read as a PDF hosted by the Georgetown tracker (vacatur; judgment for defendants on statutory authority and notice-and-comment claims; other claims dismissed at plaintiffs' request). The Third Circuit argument date of 2026-07-07 is given by a Deseret News report and a Becket release; the Washington Examiner report is consistent with it. The Deseret report says counsel for the federal government asked for reversal, which indicates the government also participates in the appeal, but the appeal docket number and the identity of every appellant were not found. No Third Circuit opinion was found; the court's own opinion archive was not searched directly (one web search only), so a very recent ruling cannot be excluded. Whether any stay of the vacatur was sought or granted was not found.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "Both withdrawal documents were opened on federalregister.gov in review: the 2024-12-30 document withdraws the February 2023 proposed rules (effective 2024-12-23), and the 2025-01-15 document withdraws the October 2024 proposed rules on contraceptive coverage. Both predate or fall at the edge of the period and are not counted as events; the 2025-01-15 withdrawal was signed 2025-01-13 under the prior administration. The 2025-08-13 district court order was read through a university litigation tracker copy. A news report (OSV News, 2025-12-15) says the intervenor, the Little Sisters of the Poor, filed the appeal on 2025-12-12; whether the federal government also appealed was not found, though a National Catholic Register (CNA) report says its counsel argued in support of the exemptions on 2026-07-07. The Third Circuit argument rests on news reports rather than the court's docket or calendar, and any ruling was not verified. The stage reflects that the exemptions the Mandate seeks to keep were vacated during the period while the rescission it requested had already occurred before the period. Primary-source lift 2026-10-18: the district court order was read as a PDF hosted by the Georgetown tracker (vacatur; judgment for defendants on statutory authority and notice-and-comment claims; other claims dismissed at plaintiffs' request). The Third Circuit argument date of 2026-07-07 is given by a National Catholic Register (CNA) report of 2026-07-08 and a Deseret News report; the Washington Examiner link formerly listed for the argument returned an unrelated page when opened and was removed. The reports say counsel for the federal government defended the exemptions at the argument, which indicates the government also participates in the appeal, but the appeal docket number and the identity of every appellant were not found. No Third Circuit opinion was found; the court's own opinion archive was not searched directly (one web search only), so a very recent ruling cannot be excluded. Whether any stay of the vacatur was sought or granted was not found.",
+  "updated_at": "2026-10-23"
 }

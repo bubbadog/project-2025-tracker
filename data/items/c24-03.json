@@ -33,10 +33,14 @@
     {
       "date": "2026-10-18",
       "note": "Independent review read the executive order on whitehouse.gov, the H.R. 6644 BILLSTATUS on govinfo.gov and the committee section-by-section; replaced the news-dated 2026-06-01 passage event with the 2026-06-22 Senate and 2026-06-23 House votes and the 2026-06-29 presentment, and confirmed enactment without signature. No stage change (implemented 85, direct); confidence 78 to 78."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: the GENIUS Act event and the note on its date and number previously rested on an encyclopedia page and now cite the enrolled Public Law 119-27 on GovInfo (read in full, no mention of a central bank digital currency) and a White House statement of 2025-07-18. Confidence, stage and progress unchanged."
     }
   ],
   "id": "c24-03",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-23",
   "layer": 1,
   "match": "direct",
   "mechanism": "executive_order",
@@ -97,7 +101,7 @@
     "mandate_check": "not_checked",
     "mandate_note": "Chapter text not available in this run. Per the record, the chapter recommends preventing a central bank digital currency on surveillance and control grounds; the proposal field matches that paraphrase.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-18",
+    "reviewed_at": "2026-10-23",
     "reviewer": "independent AI reviewer (primary-source lift)",
     "source_checks": [
       {
@@ -119,6 +123,16 @@
         "note": "2026-10-18: not reopened; the researcher reports the fetch truncates before Title XI, so Sec. 1101 operative text remains unread.",
         "result": "unreachable",
         "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ101/html/PLAW-119publ101.htm"
+      },
+      {
+        "note": "Opened and confirmed on 2026-10-23: statement dated 2025-07-18 that the President signed S. 1582, the GENIUS Act. Context only; does not bear on stage implemented.",
+        "result": "supports",
+        "url": "https://www.whitehouse.gov/briefings-statements/2025/07/the-president-signed-into-law-s-1582"
+      },
+      {
+        "note": "Opened and confirmed on 2026-10-23 (read in two portions): Public Law 119-27, S. 1582, GENIUS Act, enacted 2025-07-18; neither central bank digital currency nor CBDC appears in the text. Context only; stage implemented rests on the executive order and Public Law 119-101.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ27/html/PLAW-119publ27.htm"
       }
     ]
   },
@@ -204,6 +218,20 @@
       "publisher": "GovInfo",
       "title": "H.R. 1919 bill status (BILLSTATUS XML)",
       "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1919.xml"
+    },
+    {
+      "date": "2025-07-18",
+      "kind": "primary",
+      "publisher": "The White House",
+      "title": "The President Signed into Law S. 1582 (GENIUS Act)",
+      "url": "https://www.whitehouse.gov/briefings-statements/2025/07/the-president-signed-into-law-s-1582"
+    },
+    {
+      "date": "2025-07-18",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Public Law 119-27, Guiding and Establishing National Innovation for U.S. Stablecoins Act (GENIUS Act)",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ27/html/PLAW-119publ27.htm"
     }
   ],
   "stage": "implemented",
@@ -225,10 +253,10 @@
     },
     {
       "date": "2025-07-18",
-      "event": "GENIUS Act signed (Public Law 119-27), creating a federal framework for payment stablecoins; it does not itself create or bar a CBDC per the summary read.",
-      "kind": "tracker",
-      "source": "Wikipedia",
-      "url": "https://en.wikipedia.org/wiki/GENIUS_Act"
+      "event": "GENIUS Act (S. 1582) signed on 2025-07-18 (Public Law 119-27), creating a federal framework for payment stablecoins; the enrolled text on GovInfo does not mention a central bank digital currency, so it neither creates nor bars one.",
+      "kind": "primary",
+      "source": "GovInfo (Public Law 119-27); The White House",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ27/html/PLAW-119publ27.htm"
     },
     {
       "date": "2026-06-22",
@@ -268,6 +296,6 @@
   ],
   "title": "Prevent the creation of a central bank digital currency",
   "tracked": true,
-  "uncertainties": "The executive order (Sec. 5), the H.R. 6644 BILLSTATUS record and the House Financial Services Committee section-by-section were read in this review on whitehouse.gov, govinfo.gov and financialservices.house.gov; the enrolled-law header, number, date and table of contents (Title XI, Sec. 1101) were read on govinfo.gov in an earlier pass. The operative text of Sec. 1101 was not reachable because the fetch tool truncates large GovInfo documents before Title XI and congress.gov refuses fetches, so the scope (directly or through intermediaries), the digital asset definition and exemptions rest on the Duke blog and law-firm analyses, and the 2030-12-31 sunset on the committee summary. BILLSTATUS confirms the final vote order (Senate 2026-06-22, House 2026-06-23) and that the bill was sent to the Archivist unsigned on 2026-07-11, which replaces an earlier news-dated passage event and a trade report giving a day earlier. H.R. 1919 status rests on its BILLSTATUS record as read by the researcher. The GENIUS Act date and number come from a Wikipedia summary. The Federal Reserve CBDC page shows a 2022 update date; whether the Fed has formally ended CBDC research was not verified. The chapter's other monetary options (free banking, commodity-backed money, a commission on alternatives to the Fed, limits on lender of last resort) were not researched.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The executive order (Sec. 5), the H.R. 6644 BILLSTATUS record and the House Financial Services Committee section-by-section were read in this review on whitehouse.gov, govinfo.gov and financialservices.house.gov; the enrolled-law header, number, date and table of contents (Title XI, Sec. 1101) were read on govinfo.gov in an earlier pass. The operative text of Sec. 1101 was not reachable because the fetch tool truncates large GovInfo documents before Title XI and congress.gov refuses fetches, so the scope (directly or through intermediaries), the digital asset definition and exemptions rest on the Duke blog and law-firm analyses, and the 2030-12-31 sunset on the committee summary. BILLSTATUS confirms the final vote order (Senate 2026-06-22, House 2026-06-23) and that the bill was sent to the Archivist unsigned on 2026-07-11, which replaces an earlier news-dated passage event and a trade report giving a day earlier. H.R. 1919 status rests on its BILLSTATUS record as read by the researcher. The GENIUS Act date (2025-07-18) and number (Public Law 119-27) are confirmed by a White House statement and by the enrolled law on GovInfo, whose full text was read and does not mention a central bank digital currency. The Federal Reserve CBDC page shows a 2022 update date; whether the Fed has formally ended CBDC research was not verified. The chapter's other monetary options (free banking, commodity-backed money, a commission on alternatives to the Fed, limits on lender of last resort) were not researched.",
+  "updated_at": "2026-10-23"
 }

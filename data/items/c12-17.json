@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c12-23, c12-26, c12-34 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: the proposed removal of the American Nuclear Society source and its 2025-11-20 event was not applied, since that news service counts as trade press; the DOE organization chart dated 2025-11-20 (opened, primary) and a Holland & Knight alert of 2025-11-26 (opened, CESER under the Under Secretary of Energy) were added as sources and events, and the uncertainties now say what the chart text does and does not show. Stage in_progress 45, progress 45 and confidence 85 unchanged."
     }
   ],
   "id": "c12-17",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "partial",
   "mechanism": "executive_order",
@@ -70,7 +74,7 @@
     "mandate_check": "verified",
     "mandate_note": "Pages 368, 373, 374 and 402 checked; paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
+    "reviewed_at": "2026-10-23",
     "reviewer": "Y12a",
     "source_checks": [
       {
@@ -102,6 +106,21 @@
         "note": "CESER unchanged in the reorganization.",
         "result": "supports",
         "url": "https://www.ans.org/news/article-7582/the-doe-reorganizations-impact-on-nuclear/"
+      },
+      {
+        "note": "2026-10-23 lead-only pass: not re-opened; the first-round proposal to remove it was not applied because the American Nuclear Society's news service counts as trade press under the coordinator's ruling. Still supports the structural context of in_progress 45 (CESER not elevated).",
+        "result": "supports",
+        "url": "https://www.ans.org/news/article-7582/the-doe-reorganizations-impact-on-nuclear/"
+      },
+      {
+        "note": "2026-10-23: opened by the second-round researcher and re-opened by the reviewer; chart headed Updated November 20, 2025 lists CESER; reporting lines and the head's title are not readable in the extracted text. Consistent with in_progress 45 (no Assistant Secretary shown).",
+        "result": "supports",
+        "url": "https://www.energy.gov/sites/default/files/2025-11/Organization-Chart-11.20.2025-2.pdf"
+      },
+      {
+        "note": "2026-10-23: opened by the second-round researcher and re-opened by the reviewer; dated 2025-11-26; DOE announced the restructuring on 2025-11-20 and CESER is listed under the Under Secretary of Energy (S3); no change, elevation or Assistant Secretary mentioned. Consistent with in_progress 45.",
+        "result": "supports",
+        "url": "https://www.hklaw.com/en/insights/publications/2025/11/doe-releases-updated-agency-structure-and-organization-chart"
       }
     ]
   },
@@ -169,6 +188,20 @@
       "publisher": "ExecutiveGov",
       "title": "Andrew McClure named DOE cybersecurity, energy security director",
       "url": "https://www.executivegov.com/articles/andrew-mcclure-doe-cybersecurity-energy-security"
+    },
+    {
+      "date": "2025-11-20",
+      "kind": "primary",
+      "publisher": "U.S. Department of Energy",
+      "title": "Department of Energy Organization Chart (updated November 20, 2025)",
+      "url": "https://www.energy.gov/sites/default/files/2025-11/Organization-Chart-11.20.2025-2.pdf"
+    },
+    {
+      "date": "2025-11-26",
+      "kind": "news",
+      "publisher": "Holland & Knight",
+      "title": "DOE releases updated agency structure and organization chart",
+      "url": "https://www.hklaw.com/en/insights/publications/2025/11/doe-releases-updated-agency-structure-and-organization-chart"
     }
   ],
   "stage": "in_progress",
@@ -189,6 +222,20 @@
       "url": "https://www.ans.org/news/article-7582/the-doe-reorganizations-impact-on-nuclear/"
     },
     {
+      "date": "2025-11-20",
+      "event": "DOE published an organization chart headed Updated November 20, 2025, which lists the Office of Cybersecurity, Energy Security, and Emergency Response (CESER) as an office of the department.",
+      "kind": "primary",
+      "source": "U.S. Department of Energy",
+      "url": "https://www.energy.gov/sites/default/files/2025-11/Organization-Chart-11.20.2025-2.pdf"
+    },
+    {
+      "date": "2025-11-20",
+      "event": "A law firm alert of 2025-11-26 reports that DOE announced a restructuring and released the new chart on 2025-11-20, listing CESER among the offices under the Under Secretary of Energy (S3); it describes no change to CESER.",
+      "kind": "news",
+      "source": "Holland & Knight",
+      "url": "https://www.hklaw.com/en/insights/publications/2025/11/doe-releases-updated-agency-structure-and-organization-chart"
+    },
+    {
       "date": "2026-07-31",
       "event": "Trade press reported DOE named a new Director of CESER; the title is Director, not Assistant Secretary.",
       "kind": "news",
@@ -205,6 +252,6 @@
   ],
   "title": "Reissue the bulk-power system security order and refocus CESER on grid security",
   "tracked": true,
-  "uncertainties": "The Baker McKenzie summary (a law firm page) labels the order 14420 while the Federal Register document and its API both give 14421; the Federal Register number is used. The order text does not cite the 2020 order by number. Placement of the Strategic Petroleum Reserve and 202(c) authority within DOE was not rechecked.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The Baker McKenzie summary (a law firm page) labels the order 14420 while the Federal Register document and its API both give 14421; the Federal Register number is used. The order text does not cite the 2020 order by number. Placement of the Strategic Petroleum Reserve and 202(c) authority within DOE was not rechecked. The DOE chart of 2025-11-20 was opened only as extracted text that loses its reporting lines: it confirms CESER as an office but not to whom it reports; the placement under the Under Secretary of Energy comes from a Holland & Knight alert, and the statement that CESER was left unchanged comes from American Nuclear Society trade press.",
+  "updated_at": "2026-10-23"
 }

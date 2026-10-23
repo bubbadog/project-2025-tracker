@@ -2,7 +2,7 @@
   "agency": "ED (OCR) / DOJ",
   "blockers": [
     "Statute: OCR is established in the Department of Education Organization Act, and the earlier record cites the Congressional Research Service view that the Economy Act may not support transfers of statutory functions (not re-verified).",
-    "Congressional opposition: a 2026-09-30 letter from 139 organizations urges appropriators to block the move, and the FY2026 appropriations law (Pub. L. 119-75) limits ED fund transfers according to that letter; the Senate HELP amendment to bar the OCR move failed on 2026-07-30.",
+    "Congressional opposition: the Senate HELP amendment to bar the OCR move failed on 2026-07-30; a coalition letter of 2026-09-30 urging appropriators to block the move is an unverified lead from a National Women's Law Center page, at low confidence.",
     "Capacity concerns raised by the National Center for Youth Law, school boards and others about DOJ handling OCR's complaint volume (over 23,000 complaints in FY2025, per K-12 Dive)."
   ],
   "chapter": "11",
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-17",
       "note": "Independent review on 2026-10-17 re-read ED's DOJ partnership release in full on ed.gov, could not open the partnership fact sheet, removed four report-publication timeline entries and raised confidence from 64 to 70 with stage kept at proposed 15 under the parallel-step rule."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Lead-only source pass: two sources on lead-only hosts (a school administrators association blog and a coalition letter hosted by the National Women's Law Center) were removed; no timeline event or court status cited them. Facts known only from that letter (a 2026-06-15 signing date, an appropriations transfer limit and a stated intention to delegate OCR enforcement to DOJ) are now unverified leads at low confidence, and the status summary no longer relies on it. The law text and a CRS report were opened but did not reach the Education provisions. Confidence unchanged at 70; stage and progress unchanged."
     }
   ],
   "id": "c11-07",
-  "last_checked": "2026-10-17",
+  "last_checked": "2026-10-23",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_action",
@@ -79,13 +83,38 @@
     "mandate_check": "ok",
     "mandate_note": "Page 330 says OCR should move to DOJ, with civil rights enforced through DOJ and the federal courts and OCR at DOJ enforcing only through litigation, and that ED civil rights attorneys would join DOJ; page 327 says OSERS disability-discrimination enforcement assets should move to DOJ with OCR. The paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-17",
+    "reviewed_at": "2026-10-23",
     "reviewer": "P17-D",
     "source_checks": [
       {
         "note": "Fetch error; not added as a source because its content was not read.",
         "result": "unreachable",
         "url": "https://www.ed.gov/media/document/fact-sheet-department-of-education-and-department-of-justice-civil-rights-partnership-114237.pdf"
+      },
+      {
+        "note": "Opened by the researcher: law-firm alert says ED announced four interagency agreements on 2026-06-16 including the DOJ civil rights partnership; no signing date. Not added as a source.",
+        "result": "partial",
+        "url": "https://www.nixonpeabody.com/-/media/files/alerts/2026/06/ed_agency_agreements_update_alert.pdf"
+      },
+      {
+        "note": "Against the current stage (proposed): opened by the researcher and re-opened 2026-10-23. Published 2026-06-26; gives the announcement date 2026-06-16 only and no signing date.",
+        "result": "partial",
+        "url": "https://www.littler.com/news-analysis/asap/new-doe-doj-interagency-agreement-meaningful-shift-civil-rights-enforcement"
+      },
+      {
+        "note": "Opened by the researcher: reports the Democratic amendment to block the OCR transfer was rejected in the HELP committee 12-11; supports the failed 2026-07-30 amendment and the proposed stage (OCR not moved). Not added as a source.",
+        "result": "supports",
+        "url": "https://www.highereddive.com/news/interagency-agreements-committee-oks-bill-to-block-4-education-department/826676/"
+      },
+      {
+        "note": "Opened by the researcher twice (offsets 0 and 100000): the fetched text covered only Division A (Defense) and did not reach the Education title, so the reported transfer limit was neither confirmed nor refuted; the current stage (proposed) does not depend on it.",
+        "result": "does_not_support",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
+      },
+      {
+        "note": "Opened by the researcher: CRS report on FY2026 Labor-HHS-Education appropriations; the visible portion did not include the discussion of ED interagency agreements, so no transfer limit was confirmed; the current stage (proposed) does not depend on it.",
+        "result": "does_not_support",
+        "url": "https://www.everycrsreport.com/reports/R48970.html"
       }
     ],
     "stage_change_reason": "proposed 15 kept: moving OCR out of ED requires amending its organic statute, so the June 2026 ED and DOJ interagency agreement, which keeps statutory authority at ED and does not limit enforcement to litigation, is an executive step toward a congressional change and counts as parallel at most, which caps it at proposed; no operation of referrals was documented in any event."
@@ -125,13 +154,6 @@
       "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-announces-additional-partnerships-strengthen-coordination-individuals-disabilities-programs-bolster-civil-rights"
     },
     {
-      "date": "2026-06-16",
-      "kind": "news",
-      "publisher": "AASA",
-      "title": "OSERS and OCR will move out of ED",
-      "url": "https://www.aasa.org/resources/blog/osers-and-ocr-will-move-out-of-ed"
-    },
-    {
       "date": "2026-06-18",
       "kind": "news",
       "publisher": "K-12 Dive",
@@ -165,17 +187,10 @@
       "publisher": "Government Executive",
       "title": "Education Department shutdown plans face new hurdle",
       "url": "https://www.govexec.com/management/2026/09/education-department-shutdown-plans-face-new-hurdle/416003/"
-    },
-    {
-      "date": "2026-09-30",
-      "kind": "news",
-      "publisher": "NWLC Action Fund",
-      "title": "Letter to appropriators on moving OCR to DOJ",
-      "url": "https://nwlc.org/wp-content/uploads/2026/09/OCR_Approps-Letter-093026.pdf"
     }
   ],
   "stage": "proposed",
-  "status_summary": "As of 2026-10-08 OCR remains part of ED, and the June 2026 arrangement with DOJ is announced but not shown to be operating at scale. ED's release (last-reviewed date 2026-06-16) announced agreements with the Department of Justice on civil rights enforcement, student privacy protection, and training and advisory services drawn from DOJ's school desegregation role; for civil rights enforcement it says the two agencies will combine capacities to evaluate, investigate and resolve civil rights complaints, that ED keeps all its statutory authorities and functions, and that enforcement continues without interruption. K-12 Dive and Littler, reading the agreement, report that OCR will refer complaints to DOJ's Civil Rights Division to evaluate, investigate and resolve, and may resolve complaints based on DOJ's proposed findings; the NWLC letter dates the civil rights agreement 2026-06-15. Education Week (2026-07-27) reports that OCR will reimburse DOJ for these services, that the agreement does not say whether staff will transfer, and that no referrals or counts had been reported. K-12 Dive reports ED keeps leadership of OCR, the choice between administrative enforcement and DOJ referral, mediation, settlements, guidance and the Civil Rights Data Collection; officials said staffing and workload division would be worked out over the coming weeks. A 2026-09-15 Government Executive report does not list OCR among offices being reassigned and says laid-off OCR staff were asked to return and attorneys are being hired, and a 2026-09-30 letter from 139 organizations says the administration has declared an intention to delegate OCR enforcement to DOJ. This differs from the Mandate's design of moving OCR itself to DOJ and limiting enforcement to litigation.",
+  "status_summary": "As of 2026-10-08 OCR remains part of ED, and the June 2026 arrangement with DOJ is announced but not shown to be operating at scale. ED's release (last-reviewed date 2026-06-16) announced agreements with the Department of Justice on civil rights enforcement, student privacy protection, and training and advisory services drawn from DOJ's school desegregation role; for civil rights enforcement it says the two agencies will combine capacities to evaluate, investigate and resolve civil rights complaints, that ED keeps all its statutory authorities and functions, and that enforcement continues without interruption. K-12 Dive and Littler, reading the agreement, report that OCR will refer complaints to DOJ's Civil Rights Division to evaluate, investigate and resolve, and may resolve complaints based on DOJ's proposed findings; Littler gives only the 2026-06-16 announcement date. Education Week (2026-07-27) reports that OCR will reimburse DOJ for these services, that the agreement does not say whether staff will transfer, and that no referrals or counts had been reported. K-12 Dive reports ED keeps leadership of OCR, the choice between administrative enforcement and DOJ referral, mediation, settlements, guidance and the Civil Rights Data Collection; officials said staffing and workload division would be worked out over the coming weeks. A 2026-09-15 Government Executive report does not list OCR among offices being reassigned and says laid-off OCR staff were asked to return and attorneys are being hired. This differs from the Mandate's design of moving OCR itself to DOJ and limiting enforcement to litigation.",
   "timeline": [
     {
       "date": "2025-10-01",
@@ -208,6 +223,6 @@
   ],
   "title": "Move the Office for Civil Rights to DOJ with litigation-only enforcement",
   "tracked": true,
-  "uncertainties": "The agreement text and the joint ED and DOJ fact sheet were not retrieved (the ed.gov agreement PDF returned HTTP 403 to an earlier researcher, and a civil rights partnership fact sheet on ed.gov located by search returned a fetch error to two researchers and in this review; ED's release mentions the fact sheet but its page text carries no link). ED's release was read through a fetch summary and has no printed release date; its last-reviewed date of 2026-06-16 matches the Education Week and K-12 Dive announcement date. The specific mechanics (referral of complaints, ED's retained choice of enforcement path, reimbursement) rest on K-12 Dive, Littler and Education Week, which read the agreement; ED's own release says only that the agencies combine capacities and that ED keeps its statutory authorities. No ED or DOJ release dated after 2026-06-16 on implementation was found, and no report of referrals in practice was found as of the Education Week piece of 2026-07-27. Sources differ on the signing date (June 15 per the NWLC letter, June 16 announcement). Which complaint types go to DOJ was not specified. Whether any OCR staff have been detailed to DOJ was not found. The 2025 OCR regional office closures and court cases over OCR layoffs were not researched by name. The Mandate's related recommendation to put OCR's Case Processing Manual through notice and comment (p. 357) was not checked. Month-only dates are approximate (first of month used). The stage stays proposed because the signed arrangement keeps statutory authority at ED and no operation of the referral process is documented; it could move to in_progress if referral or staff transfer is shown. The Civil Rights Division home page lists a joint ED and DOJ letter dated 2026-10-05 to state attorneys general on parents' rights; it was not opened and is not described as an OCR referral. Under the review rubric, an executive interagency arrangement toward a transfer that requires amending the Department of Education Organization Act is a parallel step, so even documented referrals would not by themselves lift the stage above proposed.",
-  "updated_at": "2026-10-17"
+  "uncertainties": "The agreement text and the joint ED and DOJ fact sheet were not retrieved (the ed.gov agreement PDF returned HTTP 403 to an earlier researcher, and a civil rights partnership fact sheet on ed.gov located by search returned a fetch error to two researchers and in this review; ED's release mentions the fact sheet but its page text carries no link). ED's release was read through a fetch summary and has no printed release date; its last-reviewed date of 2026-06-16 matches the Education Week and K-12 Dive announcement date. The specific mechanics (referral of complaints, ED's retained choice of enforcement path, reimbursement) rest on K-12 Dive, Littler and Education Week, which read the agreement; ED's own release says only that the agencies combine capacities and that ED keeps its statutory authorities. No ED or DOJ release dated after 2026-06-16 on implementation was found, and no report of referrals in practice was found as of the Education Week piece of 2026-07-27. A signing date of June 15 appears only in a letter hosted by the National Women's Law Center, an advocacy group, and is an unverified lead at low confidence; Littler gives only the 2026-06-16 announcement date, which matches the last-reviewed date on ED's release. The same 2026-09-30 letter from 139 organizations is the only source for statements that the FY2026 appropriations law (Pub. L. 119-75) limits ED fund transfers and that the administration intends to delegate OCR enforcement to DOJ; these are unverified leads at low confidence, and the portions of the law text on govinfo.gov and of a CRS report on its Labor-HHS-Education division that were opened did not reach the Education provisions, so the transfer-limit claim was neither confirmed nor refuted. Which complaint types go to DOJ was not specified. Whether any OCR staff have been detailed to DOJ was not found. The 2025 OCR regional office closures and court cases over OCR layoffs were not researched by name. The Mandate's related recommendation to put OCR's Case Processing Manual through notice and comment (p. 357) was not checked. Month-only dates are approximate (first of month used). The stage stays proposed because the signed arrangement keeps statutory authority at ED and no operation of the referral process is documented; it could move to in_progress if referral or staff transfer is shown. The Civil Rights Division home page lists a joint ED and DOJ letter dated 2026-10-05 to state attorneys general on parents' rights; it was not opened and is not described as an OCR referral. Under the review rubric, an executive interagency arrangement toward a transfer that requires amending the Department of Education Organization Act is a parallel step, so even documented referrals would not by themselves lift the stage above proposed.",
+  "updated_at": "2026-10-23"
 }
