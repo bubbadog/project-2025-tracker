@@ -2,13 +2,13 @@
   "agency": "FCC",
   "blockers": [
     "Expected court challenges, including an appeal Free Press says it plans to file",
-    "A dissenting commissioner's argument, as reported, that the 2004 statute leaves only Congress able to change the cap; the Chairman cited a 2002 D.C. Circuit decision for the opposite view",
-    "A petition to the FCC for reconsideration, stay and injunction filed in early October 2026, with a court stay request announced if the FCC does not grant relief"
+    "A dissenting commissioner's argument that the 2004 statute leaves only Congress able to change the cap; the Chairman cited a 2002 D.C. Circuit decision for the opposite view",
+    "A stay petition filed with the FCC on 2026-10-02, whose filers say they will seek review in a court of appeals after Federal Register publication"
   ],
   "chapter": "28",
-  "confidence": 82,
+  "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Rule applied: a final rule not yet effective is in_progress (25 to 60). The FCC release, which decides the stage (adopted 2026-08-06, no effective date), and the Gomez dissent were opened and read by the reviewer, and an earlier Federal Register check found no publication; progress stays 40 because only one of many ownership rules has been acted on and the broader rules review is partial. The order text and its effective-date clause were not read, and trade reports conflict on publication timing.",
+  "confidence_reason": "Pages 856 to 857 were checked against the chapter text, and on 2026-10-23 the Federal Register docket search, the 2026-09-10 rule and the stay petition copy were fetched and read; the FCC release deciding the stage was read in the earlier review, while the order text and its effective-date clause remain unread.",
   "durability": {
     "level": "medium",
     "why": "A final Commission order needs a new rulemaking to reverse, but its legal basis is contested and a court could vacate it."
@@ -24,7 +24,7 @@
     },
     {
       "date": "2026-10-08",
-      "note": "Primary-source check: the deciding document was located and read, and an independent reviewer re-rated the record (confidence 72 to 82). The 2026-08-06 vote is now backed by the FCC news release at (docs.fcc.gov) and the dissent at (docs.fcc.gov) the order text (FCC-26-53A1.pdf, HTTP 403) and its effective date were not read, so the"
+      "note": "Primary-source check: the deciding document was located and read, and an independent reviewer re-rated the record (confidence 72 to 82). The 2026-08-06 vote is now backed by the FCC news release at (docs.fcc.gov) and the dissent at (docs.fcc.gov) the order text (FCC-26-53A1.pdf, HTTP 403) and its effective date were not read, so the (this entry was cut short when written and was closed on 2026-10-23)."
     },
     {
       "date": "2026-10-11",
@@ -41,10 +41,14 @@
     {
       "date": "2026-10-15",
       "note": "Uncertainties reworded from first person to the impersonal register (what was and was not verified); no change of substance."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Checked on 2026-10-23 for developments after 2026-10-02; independent review confirmed no Federal Register publication of the ownership cap order and no court petition, added a 2026-09-10 Delete, Delete, Delete rule, and moved a trade report and the private stay petition from the timeline to sources (Federal Register API, thedesk.net)."
     }
   ],
   "id": "c28-06",
-  "last_checked": "2026-10-11",
+  "last_checked": "2026-10-23",
   "layer": 2,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -59,7 +63,7 @@
     "c28-10"
   ],
   "remaining": [
-    "Federal Register publication of the Report and Order and its effective date (none found as of 2026-10-11; trade reports say 60 days after publication)",
+    "Federal Register publication of the Report and Order and its effective date (none found as of 2026-10-23; the stay petition says 60 days after publication)",
     "Resolution of expected court challenges to the FCC's authority to repeal the cap",
     "Action on other media ownership rules, such as the local ownership rules (none found in Federal Register searches)",
     "A broader top-to-bottom rules review, beyond the deletions of obsolete provisions published so far"
@@ -68,37 +72,32 @@
   "research_agent": "D9",
   "review": {
     "flags": [
-      "chapter 28 text not on disk; mandate_check and mandate_note kept from the earlier review",
-      "order text (FCC 26-53) not read; effective-date clause unverified",
-      "publication and petition dates conflict across trade reports; kept in uncertainties",
-      "reconsideration and stay petition pending; no court case filed, so no court_status",
-      "est_completion basis relabeled as an inference"
+      "NewscastStudio report and the private stay petition removed from the timeline (not government or court actions); both kept as sources and described in uncertainties",
+      "Free Press appeal statement trimmed from the 2026-08-06 event",
+      "confidence lowered from 82 to 80 because the deciding FCC release was not refetched",
+      "stage and progress unchanged at in_progress 40; alternative proposed if the order is treated as not yet operative in any part",
+      "an earlier history entry of 2026-10-08 is truncated mid-sentence and names a file; history is outside this output"
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 856 opens the bullet on correcting the FCC's regulatory trajectory; page 857 says changed market conditions favor eliminating many heavy-handed rules, naming many media ownership rules and the FCC's universal service requirements, and calls for a top-to-bottom review rescinding cumbersome or outdated rules. The record's 'some universal service requirements' softens the text, which does not limit the universal service point, so the proposal is reworded.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
-    "reviewer": "Y9",
+    "mandate_check": "verified",
+    "mandate_note": "Chapter text is now available: pages 856 and 857 support eliminating many heavy-handed rules including many media ownership rules and the universal service requirements, and a top-to-bottom review rescinding cumbersome or outdated rules; the proposal as worded in the earlier correction matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-23",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "Federal Register query on 2026-10-08 returns only the 2026-08-03 Sunshine Act notice; no published final rule repealing the cap, consistent with the order not yet in effect.",
+        "note": "Zero documents for the docket after 2026-08-06, consistent with an adopted order not yet in effect (in_progress).",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=federal-communications-commission&conditions[term]=%22national%20television%20multiple%20ownership%22&conditions[publication_date][gte]=2026-08-01&order=newest"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%2217-318%22&conditions[publication_date][gte]=2026-08-06&per_page=20"
       },
       {
-        "note": "Opened by this reviewer: news release dated 2026-08-06; Report and Order FCC 26-53, MB Docket 17-318; Carr and Trusty approving, Gomez dissenting; repeal of the 39 percent national cap in favor of case-by-case review; no effective date stated.",
+        "note": "Dated 2026-10-02; ten associations seek a stay; says the order was released 2026-10-01 and takes effect 60 days after publication; no court petition filed; consistent with in_progress.",
         "result": "supports",
-        "url": "https://docs.fcc.gov/public/attachments/DOC-424076A1.pdf"
+        "url": "https://thedesk.net/wp-content/uploads/2026/10/2026-10-FCC-petition-national-ownership-cap-broadband-assns.pdf"
       },
       {
-        "note": "Opened by this reviewer: Commissioner Gomez dissent on FCC 26-53 (MB Docket 17-318, Report and Order of 2026-08-06); argues only Congress can raise or eliminate the cap; no effective date stated.",
-        "result": "supports",
-        "url": "https://docs.fcc.gov/public/attachments/DOC-424076A3.pdf"
-      },
-      {
-        "note": "Opened by this reviewer: dated 2026-10-07; ten cable organizations petitioned the FCC on 2026-10-02 for reconsideration, stay and injunction; will seek a judicial stay if the FCC does not rule by Federal Register publication; says the order was published 2026-10-02 citing an FCC document and takes effect 60 days later; no court case filed.",
-        "result": "supports",
-        "url": "https://www.lightreading.com/video-broadcast/cable-orgs-say-they-ll-sue-to-block-fcc-s-repeal-of-broadcast-ownership-rule"
+        "note": "Final rule FCC 26-56, 91 FR 57513, effective 2026-10-13, in GN Docket 25-133; supports the rules-review strand only.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/09/10/2026-18478/telecommunications-relay-service-ascii-format-requirement"
       }
     ]
   },
@@ -184,10 +183,24 @@
       "publisher": "Light Reading",
       "title": "Cable orgs say they'll sue to block FCC's repeal of broadcast TV ownership cap",
       "url": "https://www.lightreading.com/video-broadcast/cable-orgs-say-they-ll-sue-to-block-fcc-s-repeal-of-broadcast-ownership-rule"
+    },
+    {
+      "date": "2026-09-10",
+      "kind": "primary",
+      "publisher": "Federal Register (FCC)",
+      "title": "Telecommunications Relay Service ASCII Format Requirement",
+      "url": "https://www.federalregister.gov/documents/2026/09/10/2026-18478/telecommunications-relay-service-ascii-format-requirement"
+    },
+    {
+      "date": "2026-10-02",
+      "kind": "tracker",
+      "publisher": "The Desk (copy of FCC filing)",
+      "title": "Petition for stay, MB Docket 17-318 (ten state and regional cable associations)",
+      "url": "https://thedesk.net/wp-content/uploads/2026/10/2026-10-FCC-petition-national-ownership-cap-broadband-assns.pdf"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The FCC has acted on one media ownership rule, the 39 percent national television ownership cap, but the order is not shown to be in effect. On 2026-08-06 the Commission voted 2-1 to repeal the cap in favor of case-by-case review of transactions, through Report and Order FCC 26-53 in MB Docket 17-318; the FCC's own release gives no effective date. Trade press accounts tie the effective date to publication but differ on whether and when publication occurred, and a Federal Register search for FCC rules after 2026-08-07 found no publication of the order. In early October 2026 a group of state and regional cable associations asked the FCC to reconsider, stay and enjoin the repeal pending judicial review, and said they would seek a court stay if the FCC does not act; no court case was reported filed. Commissioner Gomez dissented, saying only Congress can change the cap, and Free Press has said it plans to appeal. On the wider rules review, the FCC has run a Delete, Delete, Delete proceeding that has published a series of rules removing outdated regulations since 2025-08-04, including one on 2026-06-22; no action on other media ownership rules was found.",
+  "status_summary": "The FCC has acted on one media ownership rule, the 39 percent national television ownership cap, but the order is not shown to be in effect. On 2026-08-06 the Commission voted 2-1 to repeal the cap in favor of case-by-case review of transactions, through Report and Order FCC 26-53 in MB Docket 17-318; the FCC's own release gives no effective date, and a stay petition filed with the FCC on 2026-10-02 by ten state and regional cable associations says the order takes effect 60 days after Federal Register publication. As of 2026-10-23 a Federal Register search on the docket found no publication of the order, and no court petition was found. On the wider rules review, the FCC's Delete, Delete, Delete proceeding has published a series of rules removing outdated regulations since 2025-08-04, including on 2026-06-22 and 2026-09-10; no action on other media ownership rules was found.",
   "timeline": [
     {
       "date": "2025-07-08",
@@ -226,28 +239,21 @@
     },
     {
       "date": "2026-08-06",
-      "event": "The FCC adopts, by a 2-1 vote (Chairman Carr and Commissioner Trusty in favor, Commissioner Gomez dissenting), Report and Order FCC 26-53 in MB Docket 17-318 repealing the 39 percent national television multiple ownership rule and replacing it with case-by-case review in which the agency approves deals that serve the public interest; the FCC's news release calls it the first change to the rule in over 20 years and states no effective date. Commissioner Gomez's dissent argues that the Consolidated Appropriations Act of 2004 fixed the cap in statute so only Congress can change it. Free Press says it plans to appeal (per Axios).",
+      "event": "The FCC adopts, by a 2-1 vote (Chairman Carr and Commissioner Trusty in favor, Commissioner Gomez dissenting), Report and Order FCC 26-53 in MB Docket 17-318 repealing the 39 percent national television multiple ownership rule and replacing it with case-by-case review of transactions; the FCC's news release calls it the first change to the rule in over 20 years and states no effective date, and Commissioner Gomez's dissent argues that the Consolidated Appropriations Act of 2004 fixed the cap in statute so only Congress can change it.",
       "kind": "primary",
       "source": "Federal Communications Commission",
       "url": "https://docs.fcc.gov/public/attachments/DOC-424076A1.pdf"
     },
     {
-      "date": "2026-08-06",
-      "event": "NewscastStudio reports the order takes effect after Federal Register publication, that Gomez argued only Congress can change the cap, and that Carr expects a court challenge.",
-      "kind": "news",
-      "source": "NewscastStudio",
-      "url": "https://www.newscaststudio.com/2026/08/06/fcc-repeals-39-national-ownership-cap-opens-door-to-case-by-case-review/"
-    },
-    {
-      "date": "2026-10-02",
-      "event": "Ten state and regional cable associations file a petition with the FCC asking it to reconsider the repeal and to stay and enjoin it pending judicial review; they say they will treat a lack of FCC action by the Federal Register publication date as a denial and seek a stay from a federal appeals court.",
-      "kind": "news",
-      "source": "Light Reading",
-      "url": "https://www.lightreading.com/video-broadcast/cable-orgs-say-they-ll-sue-to-block-fcc-s-repeal-of-broadcast-ownership-rule"
+      "date": "2026-09-10",
+      "event": "The FCC publishes a final rule in its Delete, Delete, Delete proceeding (FCC 26-56, GN Docket 25-133) removing the ASCII format requirement and definition for text-telephone relay services, effective 2026-10-13.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/09/10/2026-18478/telecommunications-relay-service-ascii-format-requirement"
     }
   ],
   "title": "Eliminate dated FCC media ownership rules and review FCC rules for repeal",
   "tracked": true,
-  "uncertainties": "The FCC news release of 2026-08-06 was opened by direct fetch this pass and confirms the action, vote, order number, docket and the absence of an effective date. The Commissioner Gomez statement was opened and read by the independent reviewer; it is a dissent and says only Congress can raise or remove the cap. The adopted Report and Order text itself was not read, so the case-by-case test, any treatment of the UHF discount and the effective-date clause are unverified. Reports conflict on timing: one trade outlet says the order was published on 2026-10-01 and another (Light Reading, citing an FCC document) says 2026-10-02 with effect 60 days later; these may refer to the FCC release of the full text rather than the Federal Register, which could not be confirmed. A Federal Register query for FCC rules published after 2026-08-07 mentioning ownership returned only an unrelated FM auction notice, so the order appeared unpublished, but the index may lag. Inference: if publication were on 2026-10-02 the effective date would fall about 2026-12-01, but no Federal Register date is established. The petition filing date is reported as 2026-10-02 (a Friday) by Light Reading and as a Tuesday of that week by another outlet, so the exact day is uncertain. No court filing was found. No Federal Register document on local ownership rules or the top-four prohibition was found; a Unified Agenda entry for broadcast ownership rules (Federal Register 2026-08-14) was seen but not read in detail. Other Delete, Delete, Delete deletions were seen but not individually checked. The Mandate's universal service point on p.857 is not assessed here.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The FCC news release of 2026-08-06 confirms the action, vote, order number, docket and the absence of an effective date; the Commissioner Gomez statement is a dissent saying only Congress can raise or remove the cap. The adopted Report and Order text itself was not read, so the case-by-case test, any treatment of the UHF discount and the effective-date clause are unverified. The stay petition (read in a copy hosted by a trade outlet) is dated 2026-10-02, cites 5 U.S.C. 705, asks the FCC to rule by the publication date and states that the full order was released on 2026-10-01; that release date rests on the petition alone and is not entered as an event. The petition is a private filing in the FCC docket, and trade reports of the vote and of the petition (NewscastStudio, Light Reading) are kept as sources rather than events; Free Press's stated plan to appeal was reported by Axios. A Federal Register API search on docket 17-318 after 2026-08-06 returned no documents, and a search of FCC rules from 2026-08-07 to 2026-10-19 found no ownership rule, but the index may lag. The petition also cites a pending D.C. Circuit case on a separate Media Bureau merger order and a California federal merger case; they concern a transaction, not the cap repeal, and were not reviewed. A 2026-09-03 correction in the Delete, Delete, Delete series and several broadcast channel allotment rules were seen but not treated as events. No Federal Register document on local ownership rules or the top-four prohibition was found. The Mandate's universal service point on p.857 is not assessed here.",
+  "updated_at": "2026-10-23"
 }

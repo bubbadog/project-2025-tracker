@@ -4,9 +4,9 @@
     "Statutory responsibility for the award remains with Commerce"
   ],
   "chapter": "21",
-  "confidence": 80,
+  "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Mandate text checked and the NIST primary release read; stage depends on treating finalized agreements as operative.",
+  "confidence_reason": "Page 686 was rechecked, and on 2026-10-23 the NIST overseers minutes of June 2026 and the July 2026 finalists announcement were fetched and read, confirming the partners ran the 2026 cycle; appropriations language was not checked.",
   "durability": {
     "level": "medium",
     "why": "Agreements with outside partners can be altered, but unwinding would require rebuilding federal staffing."
@@ -32,10 +32,14 @@
     {
       "date": "2026-10-16",
       "note": "Cross-reference added to new layer 3 record c21-21 written in the second enumeration pass; no change to the status."
+    },
+    {
+      "date": "2026-10-23",
+      "note": "Refutation check and independent review on 2026-10-23 confirmed that the partners ran the 2026 Baldrige award cycle, citing nist.gov overseers minutes and baldrigefoundation.org announcements, and raised progress within the implemented band from 65 to 70."
     }
   ],
   "id": "c21-10",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-23",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -43,14 +47,53 @@
     686
   ],
   "position": "National Institute of Standards and Technology",
-  "progress": 65,
+  "progress": 70,
   "proposal": "The Mandate recommends transferring the Baldrige Performance Excellence Program at NIST entirely to the Baldrige Award Foundation, to be run by non-government staff on fees. It argues the management-improvement function is better done by the private sector and the program still costs taxpayers.",
+  "redteam": {
+    "date": "2026-10-23",
+    "evidence": [
+      {
+        "date": "2025-12-11",
+        "note": "Announcement of finalized agreements; NIST completes the 2025 cycle, partners take the 2026 cycle; NIST keeps statutory responsibility.",
+        "source": "NIST",
+        "url": "https://www.nist.gov/node/1900811"
+      },
+      {
+        "date": "2026-03-19",
+        "note": "Alliance administers the 2026 award for Commerce and NIST.",
+        "source": "Baldrige Foundation",
+        "url": "https://baldrigefoundation.org/news-resources/press-releases.html/article/2026/03/19/announcing-2026-baldrige-award-intent-to-apply-now-open-"
+      },
+      {
+        "date": "2026-07-10",
+        "note": "2026 cycle in progress with 13 finalists, run by the Alliance for NIST.",
+        "source": "Baldrige Foundation",
+        "url": "https://baldrigefoundation.org/news-resources/press-releases.html/article/2026/07/10/13-finalists-to-receive-site-visits-for-2026-baldrige-award"
+      },
+      {
+        "date": "2026-06-11",
+        "note": "Minutes confirm the transition under a memorandum of agreement; partners split functions; risks flagged.",
+        "source": "NIST",
+        "url": "https://www.nist.gov/document/baldrige-overseers-june-2026-minutes"
+      },
+      {
+        "date": "2026-04-02",
+        "note": "Meeting notice lists Alliance and Foundation updates; no reversal.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/04/02/2026-06419/board-of-overseers-of-the-malcolm-baldrige-national-quality-award"
+      }
+    ],
+    "note": "The transfer was carried out for the 2026 cycle: the Alliance administers the award process on behalf of NIST and the Foundation holds the conference, framework and fellows, while NIST keeps statutory duties. No rescission, injunction or reversal was found; appropriations language was not searched. Independent review raised progress within the implemented band from 65 to 70 on the confirmed operation.",
+    "verdict": "holds",
+    "what_was_tested": "Searched the Federal Register API for Baldrige documents after 2025-12-01; read the NIST announcement; searched for evidence that the 2026 cycle was run by the partners; read the June 2026 overseers minutes and the April 2026 meeting notice."
+  },
   "related_ids": [
     "c21-07",
     "c21-21"
   ],
   "remaining": [
-    "Completion of the first full cycle run by the partners",
+    "Completion of the first full award cycle run by the partners",
+    "Whether federal appropriations for the program end, as the June 2026 overseers minutes anticipate",
     "Whether NIST responsibility under 15 U.S.C. 3711a is ever shed"
   ],
   "requires_congress": "no",
@@ -58,23 +101,31 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: moved from in_progress 55 to implemented 65 because operations transfer under finalized agreements from the 2026 cycle; in_progress (55-60) remains defensible because NIST keeps statutory responsibility and a second partner is involved"
+      "progress raised from 65 to 70 within implemented because operation by the partners is confirmed; alternative stays 65",
+      "the two Alliance announcements kept as sources, not timeline events (private administrators' acts)",
+      "personal names in the minutes not carried into the record",
+      "redteam holds confirmed"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 686, NIST list: transfer the Baldrige program, to be entirely handed over to the Baldrige Award Foundation and run by non-government staff via fees. Paraphrase accurate (the Mandate spells it Baldridge).",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y21c",
+    "mandate_check": "verified",
+    "mandate_note": "Page 686 recommends transferring the program entirely to the Baldrige Award Foundation, run by non-government staff via fees, because the function suits the private sector and still costs taxpayers; the paraphrase is accurate (the text spells it Baldridge).",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-23",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "Release 2025-12-11, updated 2026-01-16; agreements finalized; partners named; NIST retains ultimate responsibility under 15 U.S.C. 3711a; begins 2026 cycle.",
+        "note": "Meeting 2026-06-11; memorandum transfers award process, framework, conference and fellows to the Alliance and Foundation; reduced fees; appropriations loss anticipated; NIST keeps statutory duties; supports implemented short of full transfer.",
         "result": "supports",
-        "url": "https://www.nist.gov/node/1900811"
+        "url": "https://www.nist.gov/document/baldrige-overseers-june-2026-minutes"
       },
       {
-        "note": "Dated 2025-12-16; same terms; no split of functions between partners.",
+        "note": "2026-07-10; 13 finalists; award administered by the Alliance on behalf of NIST; Foundation hosts the 2027 conference; shows the transfer is operative.",
         "result": "supports",
-        "url": "https://www.qualitymag.com/articles/99297-department-of-commerce-announces-transition-of-baldrige-performance-excellence-program"
+        "url": "https://baldrigefoundation.org/news-resources/press-releases.html/article/2026/07/10/13-finalists-to-receive-site-visits-for-2026-baldrige-award"
+      },
+      {
+        "note": "Not refetched; relied on the researcher's 2026-10-23 reading and the earlier review: finalized agreements, 2026 cycle start, NIST retains responsibility.",
+        "result": "supports",
+        "url": "https://www.nist.gov/node/1900811"
       }
     ]
   },
@@ -120,10 +171,38 @@
       "publisher": "Quality Magazine",
       "title": "Department of Commerce announces transition of Baldrige Performance Excellence Program",
       "url": "https://www.qualitymag.com/articles/99297-department-of-commerce-announces-transition-of-baldrige-performance-excellence-program"
+    },
+    {
+      "date": "2026-03-19",
+      "kind": "primary",
+      "publisher": "Baldrige Foundation",
+      "title": "Announcing 2026 Baldrige Award intent to apply now open",
+      "url": "https://baldrigefoundation.org/news-resources/press-releases.html/article/2026/03/19/announcing-2026-baldrige-award-intent-to-apply-now-open-"
+    },
+    {
+      "date": "2026-07-10",
+      "kind": "primary",
+      "publisher": "Baldrige Foundation",
+      "title": "13 finalists to receive site visits for 2026 Baldrige Award",
+      "url": "https://baldrigefoundation.org/news-resources/press-releases.html/article/2026/07/10/13-finalists-to-receive-site-visits-for-2026-baldrige-award"
+    },
+    {
+      "date": "2026-06-11",
+      "kind": "primary",
+      "publisher": "NIST",
+      "title": "Baldrige Board of Overseers June 2026 minutes",
+      "url": "https://www.nist.gov/document/baldrige-overseers-june-2026-minutes"
+    },
+    {
+      "date": "2026-04-02",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Board of Overseers of the Malcolm Baldrige National Quality Award (meeting notice)",
+      "url": "https://www.federalregister.gov/documents/2026/04/02/2026-06419/board-of-overseers-of-the-malcolm-baldrige-national-quality-award"
     }
   ],
   "stage": "implemented",
-  "status_summary": "NIST released a statement dated 2025-12-11 (updated 2026-01-16) saying the Department of Commerce had finalized agreements to transfer management and operations of the Baldrige Award process, the Quest for Excellence conference, framework revisions and the Executive Fellows Program to the Alliance for Performance Excellence and the Baldrige Foundation, starting with the 2026 award cycle. NIST and Commerce keep ultimate responsibility for the Excellence Framework, the award process and other requirements under 15 U.S.C. 3711a, so the handover is to two partners and is not complete.",
+  "status_summary": "NIST released a statement dated 2025-12-11 (updated 2026-01-16) saying the Department of Commerce had finalized agreements to transfer management and operations of the Baldrige Award process, the Quest for Excellence conference, framework revisions and the Executive Fellows Program to the Alliance for Performance Excellence and the Baldrige Foundation, starting with the 2026 award cycle. The 2026 cycle has run under that arrangement: the Alliance, administering the award on behalf of NIST, opened intent-to-apply on 2026-03-19 and named 13 finalists on 2026-07-10, and minutes of the Baldrige Board of Overseers meeting of 2026-06-11 describe the memorandum, a reduced applicant fee and an expected loss of federal appropriations. NIST and Commerce keep ultimate responsibility under 15 U.S.C. 3711a, and the handover is split between two partners rather than made wholly to the Foundation.",
   "timeline": [
     {
       "date": "2025-12-11",
@@ -135,6 +214,6 @@
   ],
   "title": "Hand the Baldrige Performance Excellence Program to the Baldrige Foundation",
   "tracked": true,
-  "uncertainties": "The NIST page states its release date and an update date in the page text; the news article is dated 2025-12-16. Neither source says which partner takes which function. Whether the 2026 cycle is in fact being run by the partners, and whether federal funding and fee arrangements changed, were not checked; the stage relies on the finalized agreements and their stated start.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The NIST page states its release date and an update date in the page text; a news article is dated 2025-12-16. Operation of the 2026 cycle by the partners rests on Alliance announcements published on the Baldrige Foundation site and on NIST's June 2026 overseers minutes; the Alliance's own site was not read. These partner announcements are acts of private administrators under the agreement, so they are cited as sources rather than entered as government actions in the timeline. The minutes call the instrument both a memorandum of agreement and a memorandum of understanding, mention a reduced applicant fee without amounts, and record that federal appropriations are expected to be lost and that the model carries risks; they do not list the duties NIST keeps. The minutes were signed on 2026-07-10 and the meeting date matches the April 2026 Federal Register notice. The handover is split, with the award process going to the Alliance and the conference, framework and fellows to the Foundation, so it is not wholly to the Foundation as the Mandate text asks. Appropriations language for FY2026 or FY2027 was not checked. Inference: progress of 70 reflects confirmed operation by non-government staff on fees, short of full transfer.",
+  "updated_at": "2026-10-23"
 }
