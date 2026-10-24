@@ -7,7 +7,7 @@
   "chapter": "10",
   "confidence": 85,
   "confidence_label": "high",
-  "confidence_reason": "Mandate text checked; the stage-deciding facts (CRS primer, FAS program page and funding notice, FY2027 budget notes, enrolled law table of contents) were fetched and read; the law's section body was cut short on GovInfo.",
+  "confidence_reason": "Mandate text checked; the stage-deciding facts (CRS primer, FAS program page and funding notice, FY2027 budget notes, enrolled law table of contents) were fetched and read in earlier reviews, and the House passage of H.R. 7567 was read in GovInfo BILLSTATUS this run. The Senate committee vote rests on news reports and does not decide the stage.",
   "durability": {
     "level": "medium",
     "why": "The added funding is statutory, but the 2026 farm bill could change its level."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-24",
+      "note": "Added the House passage of H.R. 7567 on 2026-04-30 (GovInfo BILLSTATUS) and the Senate Agriculture Committee vote of 2026-09-16 on the Agricultural Act of 2026 (The National News Desk, Drovers, Feedstuffs), which was reported to raise MAP and FMD funding; stage diverged 0 unchanged."
     }
   ],
   "id": "c10-15",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-24",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -54,44 +58,35 @@
   "research_agent": "N10",
   "review": {
     "flags": [
-      "added the funding notice as a primary source for the CCC Charter Act authority",
-      "added an FY2027 budget notes timeline event"
+      "Senate committee event dated by the vote (2026-09-16), led by The National News Desk with trade press as secondary; agriculture.senate.gov not opened.",
+      "Bill name corrected to Agricultural Act of 2026 per two of three reports.",
+      "Searches used this record: 1."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Pages 306 to 307 confirmed: FAS should focus on removing foreign barriers rather than export promotion, and USDA should work with Congress to repeal MAP and similar market development programs.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9b",
+    "mandate_note": "Existing verified value kept; the proposal text is unchanged and the recommendation text was not re-read this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-24",
+    "reviewer": "independent reviewer",
     "source_checks": [
       {
-        "note": "IF12155 updated 2026-04-21: P.L. 119-21 adds $285 million a year from FY2027 (7 U.S.C. 5623a); H.R. 7567 would set $500 million in FY2027 and repeal the P.L. 119-21 program.",
+        "note": "Read: passed House 2026-04-30, 224 to 200 (roll no. 154), motion to recommit failed 211 to 214; received in Senate 2026-05-19; no later Senate action in the part read. Supports diverged (funding kept and raised).",
         "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2026-04-21_IF12155_60c6bb150448ffa77db6c878d9f72f1df9792e83.pdf"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7567.xml"
       },
       {
-        "note": "Enrolled law table of contents lists Sec. 10602 Supplemental agricultural trade promotion program; body text cut off before that section.",
+        "note": "The National News Desk, 2026-09-16: Senate Agriculture Committee advanced the Agricultural Act of 2026 by 12 to 11 on 2026-09-16; no MAP or FMD detail.",
         "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+        "url": "https://komonews.com/news/nation-world/mcconnell-returns-to-back-senate-farm-bill-as-panel-advances-it-on-party-line-vote"
       },
       {
-        "note": "$285 million awards announced 2025-11-20; deadline 2026-01-23; no authority cited on the page.",
-        "result": "supports",
-        "url": "https://www.fas.usda.gov/programs/america-first-trade-promotion-program"
+        "note": "Drovers, 2026-09-16: committee passed the bill 12 to 11; no MAP or FMD detail.",
+        "result": "partial",
+        "url": "https://www.drovers.com/farm-bill-clears-senate-ag-committee-mcconnells-vote"
       },
       {
-        "note": "Funding notice cites CCC Charter Act, 15 U.S.C. 714c(f); $285,000,000; deadline 2026-01-23.",
+        "note": "Feedstuffs, 2026-06-23: Senate draft 'more than doubles funding for the Foreign Market Development and Market Access Programs'; no amounts. Consistent with diverged.",
         "result": "supports",
-        "url": "https://files.simpler.grants.gov/opportunities/06f0ec84-e04b-4258-bc33-1634d1209b42/attachments/79f28621-e947-4ecf-848c-440781edc066/2026_AFTPP_NOFO_FINAL.pdf"
-      },
-      {
-        "note": "Eliminates McGovern-Dole and Food for Peace; no MAP or FMD cut; $268.755 million supplemental line.",
-        "result": "supports",
-        "url": "https://www.usda.gov/sites/default/files/documents/FY-2027-Chapter-35-FAS.pdf"
-      },
-      {
-        "note": "2026-06-10: FY2027 MAP, FMD, EMP, TASC and QSP applications open.",
-        "result": "supports",
-        "url": "https://www.producemarketguide.com/news/ag-secretary-rollins-announces-fy27-funding-programs-open-global-markets"
+        "url": "https://www.feedstuffs.com/policy/boozman-releases-senate-farm-bill-text"
       }
     ]
   },
@@ -166,10 +161,38 @@
       "publisher": "U.S. Government Publishing Office",
       "title": "Public Law 119-21 (reconciliation act signed 2025-07-04), enrolled text",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+    },
+    {
+      "date": "2026-05-19",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 7567 (119th Congress) bill status, GovInfo BILLSTATUS XML",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7567.xml"
+    },
+    {
+      "date": "2026-09-16",
+      "kind": "news",
+      "publisher": "The National News Desk (KOMO News)",
+      "title": "Senate farm bill clears key hurdle in razor-thin vote, aided by McConnell's return",
+      "url": "https://komonews.com/news/nation-world/mcconnell-returns-to-back-senate-farm-bill-as-panel-advances-it-on-party-line-vote"
+    },
+    {
+      "date": "2026-09-16",
+      "kind": "news",
+      "publisher": "Drovers",
+      "title": "Farm Bill Clears Senate Ag Committee with McConnell's Vote",
+      "url": "https://www.drovers.com/farm-bill-clears-senate-ag-committee-mcconnells-vote"
+    },
+    {
+      "date": "2026-06-23",
+      "kind": "news",
+      "publisher": "Feedstuffs",
+      "title": "Boozman releases Senate farm bill text",
+      "url": "https://www.feedstuffs.com/policy/boozman-releases-senate-farm-bill-text"
     }
   ],
   "stage": "diverged",
-  "status_summary": "Trade promotion funding has expanded, the opposite of the recommended repeal. Public Law 119-21 (2025-07-04) contains a section 10602 supplemental agricultural trade promotion program, which CRS reports provides $285 million a year in CCC funding from FY2027, and USDA separately made $285 million available for an America First Trade Promotion Program under the CCC Charter Act, announced on 2025-11-20 with applications due 2026-01-23. USDA opened FY2027 applications for the Market Access Program, the Foreign Market Development Program and other export programs on 2026-06-10, and CRS reports that the House farm bill (H.R. 7567) would raise mandatory trade promotion funding to $500 million in FY2027 while repealing the supplemental program. The FY2027 FAS budget notes propose ending McGovern-Dole and Food for Peace food aid, not MAP or FMD. No proposal to repeal MAP was found.",
+  "status_summary": "Trade promotion funding has expanded, the opposite of the recommended repeal: Public Law 119-21 (2025-07-04) contains a section 10602 supplemental agricultural trade promotion program, which CRS reports provides $285 million a year in CCC funding from FY2027, and USDA separately made $285 million available for an America First Trade Promotion Program under the CCC Charter Act, announced on 2025-11-20. USDA opened FY2027 applications for the Market Access Program, the Foreign Market Development Program and other export programs on 2026-06-10, and the FY2027 FAS budget notes propose ending McGovern-Dole and Food for Peace food aid, not MAP or FMD. The House passed H.R. 7567 on 2026-04-30 (224 to 200), which CRS reports would raise mandatory trade promotion funding to $500 million in FY2027 while repealing the supplemental program, and the Senate Agriculture Committee advanced its Agricultural Act of 2026 by 12 to 11 on 2026-09-16, a bill whose June draft was reported to more than double MAP and FMD funding. No proposal to repeal MAP was found.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -200,15 +223,29 @@
       "url": "https://www.everycrsreport.com/files/2026-04-21_IF12155_60c6bb150448ffa77db6c878d9f72f1df9792e83.pdf"
     },
     {
+      "date": "2026-04-30",
+      "event": "The House passed H.R. 7567, the Farm, Food, and National Security Act of 2026, by 224 to 200 (roll call 154); the bill was received in the Senate on 2026-05-19.",
+      "kind": "primary",
+      "source": "GovInfo (BILLSTATUS)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7567.xml"
+    },
+    {
       "date": "2026-06-10",
       "event": "USDA opened FY2027 applications for the Market Access Program, Foreign Market Development Program and other export development programs.",
       "kind": "news",
       "source": "Produce Market Guide",
       "url": "https://www.producemarketguide.com/news/ag-secretary-rollins-announces-fy27-funding-programs-open-global-markets"
+    },
+    {
+      "date": "2026-09-16",
+      "event": "The Senate Agriculture Committee voted 12 to 11 to advance its farm bill, the Agricultural Act of 2026, whose draft text released in June was reported to more than double Market Access Program and Foreign Market Development Program funding.",
+      "kind": "news",
+      "source": "The National News Desk (via KOMO News); Drovers; Feedstuffs",
+      "url": "https://komonews.com/news/nation-world/mcconnell-returns-to-back-senate-farm-bill-as-panel-advances-it-on-party-line-vote"
     }
   ],
   "title": "Focus FAS on trade barriers and repeal export promotion programs such as MAP",
   "tracked": true,
-  "uncertainties": "The section 10602 heading was confirmed in the enrolled law's table of contents on GovInfo, but the GovInfo page was cut short before the section body, so the $285 million amount and FY2027 start come from the CRS primer. The FY2027 FAS notes show a $285 million transfer, about $16.2 million in sequestration and a $268.8 million appropriation line, which reconciles the two figures. The CRS primer gives MAP and FMD floors of $200 million and $34.5 million a year through FY2026; the FY2027 level was not found. The America First program date of 2025-11-20 is the award-funding announcement shown on the FAS program page; the program was first announced in September 2025 as part of a three-point trade plan, and the funding notice carries no posting date. Whether FAS increased work on sanitary and phytosanitary and other trade barriers (the Mandate's positive recommendation) was not measured. The House farm bill trade provisions come from CRS, not bill text. Related to c10-03 (farm subsidies and CCC).",
-  "updated_at": "2026-10-12"
+  "uncertainties": "The section 10602 heading was confirmed in the enrolled law's table of contents on GovInfo, but the GovInfo page was cut short before the section body, so the $285 million amount and FY2027 start come from the CRS primer. The FY2027 FAS notes show a $285 million transfer, about $16.2 million in sequestration and a $268.8 million appropriation line, which reconciles the two figures. The CRS primer gives MAP and FMD floors of $200 million and $34.5 million a year through FY2026; the FY2027 level was not found. The America First program date of 2025-11-20 is the award-funding announcement shown on the FAS program page; the program was first announced in September 2025 as part of a three-point trade plan, and the funding notice carries no posting date. Whether FAS increased work on sanitary and phytosanitary and other trade barriers (the Mandate's positive recommendation) was not measured. The House farm bill trade provisions come from CRS, not bill text. Related to c10-03 (farm subsidies and CCC). The House vote on H.R. 7567 was read in GovInfo BILLSTATUS (latest action shown: received in the Senate 2026-05-19; record updated 2026-09-25, the final part of the file not read). The Senate committee vote of 12 to 11 on 2026-09-16 comes from news reports (The National News Desk, Drovers), not from the committee's site, and the Senate draft's MAP and FMD increase comes from a Feedstuffs summary that gives no amounts; the Senate bill number and text were not read. Trade press reported the House passing an FY2027 agriculture appropriations bill 213 to 210 in early June 2026; its bill number and its MAP and FAS lines were not found, and no FAS reorganization was found.",
+  "updated_at": "2026-10-24"
 }

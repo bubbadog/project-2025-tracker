@@ -4,14 +4,14 @@
     "Plaintiff-specific injunction in the Fourth Circuit case; further religious-liberty challenges."
   ],
   "chapter": "05",
-  "confidence": 76,
+  "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: implemented (65 to 90) because the rescission is operative nationally and limited only for named plaintiffs by an affirmed preliminary injunction; progress 85 kept, short of 90 because the rescission is a departmental memorandum rather than the executive order the page 152 item names and is reversible. The stage-deciding DHS memorandum was opened by the fetch tool (by the researcher and confirmed by the reviewer) only on a third-party copy hosted by nafsa.org, while the official dhs.gov copy remains unopened, so confidence stays at or below 79; the ICE follow-on memorandum was opened on ice.gov. Court events rest on sources read in earlier reviews and not re-opened in this check. Confidence 72 to 76.",
+  "confidence_reason": "The three stage-relevant court documents were read on court hosts this run (Fourth Circuit opinion of 2026-08-18, D.C. Circuit opinion of 2026-10-20 and the District of Massachusetts preliminary injunction of 2026-02-13), and the ICE memorandum was read on ice.gov in an earlier review. The stage-deciding DHS rescission memorandum has been read only on a copy hosted by nafsa.org, with the D.C. Circuit opinion confirming its date and signer, and progress within the implemented band rests on a judgment about plaintiff-specific injunctions, so the record stays medium.",
   "court_status": {
-    "basis": "Derived from the latest court event: the Fourth Circuit affirmed a preliminary injunction that bars enforcement under the new policy at the plaintiffs' houses of worship only; the rescission otherwise remains in effect, and the D.C. Circuit appeal is pending.",
-    "date": "2026-08-18",
+    "basis": "Partial and plaintiff-specific: preliminary injunctions from the District of Maryland (affirmed by the Fourth Circuit on 2026-08-18) and the District of Massachusetts (2026-02-13, on appeal) bar warrantless enforcement at the plaintiffs' places of worship only; the D.C. Circuit on 2026-10-20 reversed the denial of relief to the Mennonite plaintiffs and remanded without entering an injunction. The rescission has not been vacated and remains in effect generally.",
+    "date": "2026-10-20",
     "state": "enjoined",
-    "url": "https://www.jurist.org/news/2026/08/us-appeals-court-affirms-injunction-blocking-immigration-enforcement-at-houses-of-worship/"
+    "url": "https://media.cadc.uscourts.gov/opinions/docs/2026/10/25-5209-2199126.pdf"
   },
   "durability": {
     "level": "low",
@@ -50,10 +50,14 @@
     {
       "date": "2026-10-19",
       "note": "DHS memorandum of 2025-01-20 re-read from an opened copy hosted by nafsa.org (the dhs.gov copy returned an error); the dhs.gov URL stays the primary citation and the nafsa.org copy was added as a source. The ICE memorandum of 2025-01-31 was opened on ice.gov and added as a source and timeline event. Match stays direct; stage implemented and progress 85 unchanged; confidence 72 to 76."
+    },
+    {
+      "date": "2026-10-24",
+      "note": "Added the District of Massachusetts preliminary injunction of 2026-02-13 (read on CourtListener) and the D.C. Circuit decision of 2026-10-20 reversing and remanding in Mennonite Church USA v. DHS (read on the court's site), re-cited the Fourth Circuit event to its opinion, updated court status and lowered progress from 85 to 80 within the implemented stage."
     }
   ],
   "id": "c05-16",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-24",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -62,8 +66,46 @@
     152
   ],
   "position": "ICE, Needed Reforms; Executive Orders, Enforcement",
-  "progress": 85,
+  "progress": 80,
   "proposal": "The Mandate says all ICE memoranda identifying sensitive zones where ICE personnel may not operate should be rescinded, leaving field officers to use their own judgment, and lists among recommended executive orders one rescinding all memoranda that limit immigration enforcement, including those on sensitive zones.",
+  "redteam": {
+    "date": "2026-10-24",
+    "evidence": [
+      {
+        "date": "2026-10-20",
+        "note": "Opinion read: reversed denial of preliminary injunction in Mennonite Church USA v. DHS, No. 25-5209, and remanded; associational standing likely; Pan for the court, Rao dissenting; no injunction entered.",
+        "source": "U.S. Court of Appeals for the D.C. Circuit",
+        "url": "https://media.cadc.uscourts.gov/opinions/docs/2026/10/25-5209-2199126.pdf"
+      },
+      {
+        "date": "2026-02-13",
+        "note": "Preliminary injunction read: eight plaintiff organizations and member congregations; warrantless enforcement in or within 100 feet of protected sites barred absent exigent circumstances; warrants excepted; not nationwide.",
+        "source": "U.S. District Court for the District of Massachusetts (via CourtListener)",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.287352/gov.uscourts.mad.287352.75.0.pdf"
+      },
+      {
+        "date": "2026-08-18",
+        "note": "Opinion read: affirmed a preliminary injunction limited to plaintiffs' places of worship, with warrant-based arrests permitted.",
+        "source": "U.S. Court of Appeals for the Fourth Circuit",
+        "url": "https://www.ca4.uscourts.gov/opinions/251512.P.pdf"
+      },
+      {
+        "date": "2026-02-17",
+        "note": "D. Mass. injunction limited to eight plaintiffs; memo not voided; APA claims rejected.",
+        "source": "Courthouse News Service",
+        "url": "https://courthousenews.com/massachusetts-judge-pauses-ice-policy-allowing-enforcement-in-churches/"
+      },
+      {
+        "date": "2026-06-23",
+        "note": "N.D. Cal. vacated ICE courthouse-arrest policies nationwide in Sequen v. Albarran; different policies from the protected-areas memorandum.",
+        "source": "Bloomberg Law",
+        "url": "https://news.bloomberglaw.com/ip-law/ice-courthouse-arrests-blocked-nationwide-by-california-judge"
+      }
+    ],
+    "note": "Plaintiff-specific injunctions now cover the member congregations of eight Massachusetts plaintiff organizations as well as the Fourth Circuit plaintiffs, and the D.C. Circuit has revived a third request, but none vacates or enjoins the rescission generally; the stage holds and progress was lowered from 85 to 80 to reflect the growing carve-outs.",
+    "verdict": "weakened",
+    "what_was_tested": "Searches for court orders restricting enforcement at churches, schools or courthouses, Fourth Circuit and D.C. Circuit developments in 2026, reissued DHS guidance and legislation."
+  },
   "related_ids": [
     "c05-04",
     "c05-10",
@@ -71,56 +113,55 @@
   ],
   "remaining": [
     "Older ICE-level sensitive-location memoranda (as distinct from the DHS memorandum of 2021 and the ICE memorandum of 2025-01-31) were not enumerated.",
-    "Outcome of the D.C. Circuit appeal and of the merits proceedings in the Quaker case."
+    "District court action on remand of the Mennonite Church USA preliminary injunction motion (D.D.C. No. 1:25-cv-00403) after the D.C. Circuit decision of 2026-10-20.",
+    "First Circuit appeals of the Massachusetts injunction (Nos. 26-1396 and 26-1493) and the pending cross motions for summary judgment there; merits proceedings in the Quaker case."
   ],
   "requires_congress": "no",
   "research_agent": "N05a",
   "review": {
     "flags": [
-      "DHS memorandum read only through browser retrieval",
-      "rescission names the 2021 DHS memorandum, reaching ICE memoranda indirectly (inference)",
-      "court_status enjoined for named plaintiffs only; matches the latest court event"
+      "Both court events re-sourced from news reports to the court documents themselves (D.C. Circuit opinion; D. Mass. ECF 75 on CourtListener); the Massachusetts date is now read from the order, not inferred.",
+      "Fourth Circuit event re-cited from Jurist to the ca4.uscourts.gov opinion.",
+      "Progress lowered from 85 to 80 within implemented: plaintiff-specific injunctions now cover thousands of member congregations.",
+      "court_status date and url moved to the D.C. Circuit opinion, state kept enjoined with a partial, plaintiff-specific basis.",
+      "D.C. Circuit decision described as a reversal and remand, not an injunction; the proposal's 'revived their request' wording kept accurate.",
+      "Bloomberg Law and ASIL not added as sources: court documents replace them."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Printed page 142 says all ICE memoranda identifying sensitive zones should be rescinded and officers in the field trusted to use judgment; page 152 item 4 lists rescinding all memoranda limiting immigration enforcement, including those on sensitive zones. The proposal matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-19",
-    "reviewer": "Y9",
+    "mandate_note": "Existing verified value kept; the proposal text is unchanged and the recommendation text was not re-read this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-24",
+    "reviewer": "independent reviewer",
     "source_checks": [
       {
-        "note": "Memo dated 2025-01-20; PI denied 2025-04-11 for lack of standing; appeal 25-5209 pending; updated 2026-07-15.",
+        "note": "Read: decided 2026-10-20, argued 2026-02-05; reverses denial of preliminary injunction and remands for further consideration; no injunction entered; describes the Huffman rescission memo of 2025-01-20 and the ICE memo eleven days later. Consistent with implemented 80 and court_status enjoined (partial).",
         "result": "supports",
-        "url": "https://clearinghouse.net/case/46097/"
+        "url": "https://media.cadc.uscourts.gov/opinions/docs/2026/10/25-5209-2199126.pdf"
       },
       {
-        "note": "Fourth Circuit affirmed on Tuesday 2026-08-18; injunction limited to named plaintiffs; district court declined nationwide relief.",
+        "note": "Read: ECF 75, filed and dated 2026-02-13 (2:30 p.m.), Judge Saylor; eight plaintiff organizations and members; exigent-circumstances and warrant exceptions; effective on bond and site lists. Plaintiff-limited, consistent with implemented 80.",
         "result": "supports",
-        "url": "https://www.jurist.org/news/2026/08/us-appeals-court-affirms-injunction-blocking-immigration-enforcement-at-houses-of-worship/"
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.287352/gov.uscourts.mad.287352.75.0.pdf"
       },
       {
-        "note": "Opinion No. 25-1512 decided 2026-08-18, argued 2026-05-06; plaintiffs Quaker meetings, Sikh Temple Sacramento, Cooperative Baptist Fellowship.",
+        "note": "Read: No. 25-1512 decided 2026-08-18, affirmed; injunction limited to plaintiffs' places of worship; warrant-based arrests not barred; nationwide relief denial not appealed.",
         "result": "supports",
-        "url": "https://www.leagle.com/decision/infco20260818152"
+        "url": "https://www.ca4.uscourts.gov/opinions/251512.P.pdf"
       },
       {
-        "note": "Fetch error on one attempt by this reviewer (no HTTP 429); content was read through a browser retrieval supplied to the project: dated 2025-01-20, signed by the Acting Secretary, rescinds the 2021-10-27 protected areas memorandum and leaves officers to use discretion.",
-        "result": "unreachable",
-        "url": "https://www.dhs.gov/sites/default/files/2025-03/25_0120_S1_enforcement-actions-in-near-protected-areas.pdf"
+        "note": "Docket page 2 read: notice of appeal 2026-04-14 (First Circuit No. 26-1396), cross-appeal 2026-04-27 (No. 26-1493), summary judgment motions June and July 2026; entries 74 and 75 not shown on the pages read.",
+        "result": "partial",
+        "url": "https://www.courtlistener.com/docket/70939776/new-england-synod-evangelical-lutheran-church-in-america-v-department-of/"
       },
       {
-        "note": "Client error through the fetch tool; the memorandum text was read on a copy hosted elsewhere.",
-        "result": "unreachable",
-        "url": "https://www.dhs.gov/sites/default/files/2025-03/25_0120_S1_enforcement-actions-in-near-protected-areas.pdf"
+        "note": "Published 2026-02-17: order issued 'late Friday'; consistent with the 2026-02-13 order date read on CourtListener.",
+        "result": "supports",
+        "url": "https://courthousenews.com/massachusetts-judge-pauses-ice-policy-allowing-enforcement-in-churches/"
       },
       {
-        "note": "Opened. Rescinds the 2021 memorandum effective immediately and leaves discretion to officers; supports implemented. Re-opened by the reviewer on 2026-10-19: date, Acting Secretary signature, rescission of the 2021-10-27 memorandum effective immediately, no bright-line rules, optional further guidance and the no-rights paragraph confirmed.",
+        "note": "Not re-opened this run; read in the 2026-10-19 review. Date and signer now corroborated by the D.C. Circuit opinion.",
         "result": "supports",
         "url": "https://nafsa.org/sites/default/files/media/document/BenjamineHuffmanProtectedAreasMemo_20250120.pdf"
-      },
-      {
-        "note": "Opened. ICE-level memorandum applying the rescission and setting case-by-case discretion; supports implemented, with the caveat that it defines protected areas rather than abolishing the concept. Re-opened by the reviewer on 2026-10-19: dated 2025-01-31, issued by the Acting Director; protected areas listed in a footnote; case-by-case decisions by assistant field office directors and assistant special agents in charge; counsel consultation required for public demonstration sites.",
-        "result": "supports",
-        "url": "https://ice.gov/doclib/foia/policy/CommonSenseEnforcementActInNearProtectedAreas.pdf"
       }
     ]
   },
@@ -179,10 +220,45 @@
       "publisher": "U.S. Immigration and Customs Enforcement",
       "title": "Common Sense Enforcement Actions in or Near Protected Areas (ICE memorandum, 2025-01-31)",
       "url": "https://ice.gov/doclib/foia/policy/CommonSenseEnforcementActInNearProtectedAreas.pdf"
+    },
+    {
+      "date": "2026-10-20",
+      "kind": "court",
+      "publisher": "U.S. Court of Appeals for the D.C. Circuit",
+      "title": "Mennonite Church USA v. DHS, No. 25-5209 (D.C. Cir. 2026-10-20), opinion",
+      "url": "https://media.cadc.uscourts.gov/opinions/docs/2026/10/25-5209-2199126.pdf"
+    },
+    {
+      "date": "2026-02-13",
+      "kind": "court",
+      "publisher": "U.S. District Court for the District of Massachusetts (via CourtListener)",
+      "title": "New England Synod, Evangelical Lutheran Church in America v. DHS, No. 4:25-cv-40102 (D. Mass.), Preliminary Injunction, ECF 75",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.287352/gov.uscourts.mad.287352.75.0.pdf"
+    },
+    {
+      "date": "2026-08-18",
+      "kind": "court",
+      "publisher": "U.S. Court of Appeals for the Fourth Circuit",
+      "title": "Philadelphia Yearly Meeting v. DHS, No. 25-1512 (4th Cir. 2026-08-18), opinion",
+      "url": "https://www.ca4.uscourts.gov/opinions/251512.P.pdf"
+    },
+    {
+      "date": "2026-02-17",
+      "kind": "news",
+      "publisher": "Courthouse News Service",
+      "title": "Massachusetts judge pauses ICE policy allowing enforcement in churches",
+      "url": "https://courthousenews.com/massachusetts-judge-pauses-ice-policy-allowing-enforcement-in-churches/"
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "court",
+      "publisher": "CourtListener",
+      "title": "New England Synod, Evangelical Lutheran Church in America v. DHS (docket)",
+      "url": "https://www.courtlistener.com/docket/70939776/new-england-synod-evangelical-lutheran-church-in-america-v-department-of/"
     }
   ],
   "stage": "implemented",
-  "status_summary": "A DHS memorandum dated 2025-01-20 and signed by the Acting Secretary rescinded the 2021-10-27 guidelines on enforcement actions in or near protected areas such as houses of worship, schools and hospitals, effective immediately, and called for officer discretion in place of fixed rules. An ICE memorandum dated 2025-01-31 followed; it notes the rescission, sets no fixed rules and assigns case-by-case decisions on enforcement in or near protected areas to field supervisors. Courts have since limited the policy only for particular plaintiffs: on 2026-08-18 the Fourth Circuit affirmed a preliminary injunction covering several Quaker meetings, Sikh Temple Sacramento and Cooperative Baptist Fellowship congregations (Philadelphia Yearly Meeting v. DHS, No. 25-1512), while the District of Columbia court denied a similar request from Mennonite Church USA and other religious groups on 2025-04-11 for lack of standing, with an appeal pending (D.C. Cir. No. 25-5209). The Maryland district court had declined to extend the Quaker injunction nationwide, so the rescission is operative in general.",
+  "status_summary": "A DHS memorandum dated 2025-01-20 and signed by the Acting Secretary rescinded the 2021-10-27 guidelines on enforcement actions in or near protected areas such as houses of worship, schools and hospitals, effective immediately, and an ICE memorandum dated 2025-01-31 followed with no fixed rules and case-by-case decisions by field supervisors. Courts have limited the policy only for particular plaintiffs: the District of Massachusetts on 2026-02-13 enjoined warrantless enforcement at the religious sites of eight plaintiff organizations and their member congregations (appeals pending in the First Circuit), and the Fourth Circuit on 2026-08-18 affirmed a Maryland injunction covering several Quaker, Sikh and Baptist plaintiffs (No. 25-1512). On 2026-10-20 the D.C. Circuit reversed the denial of a preliminary injunction to Mennonite Church USA and other religious groups and remanded the request (No. 25-5209) without entering one. None of these orders vacates the rescission or reaches arrests under warrants, so the rescission remains operative in general.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -206,15 +282,29 @@
       "url": "https://clearinghouse.net/case/46097/"
     },
     {
-      "date": "2026-08-18",
-      "event": "The Fourth Circuit affirmed a preliminary injunction limiting enforcement at the plaintiffs' congregations, holding they were likely to succeed under the Religious Freedom Restoration Act; the district court had declined to make the injunction nationwide.",
+      "date": "2026-02-13",
+      "event": "The District of Massachusetts entered a preliminary injunction in New England Synod, Evangelical Lutheran Church in America v. DHS (No. 4:25-cv-40102) barring, absent exigent circumstances, warrantless immigration enforcement in or within 100 feet of protected religious sites of eight plaintiff organizations and their member congregations, and checkpoints aimed at people traveling to or from them; arrests and searches under administrative or judicial warrants are not restricted, the injunction controls over inconsistent parts of the 2025 policy, and the accompanying memorandum found the policy was not final agency action under the Administrative Procedure Act.",
       "kind": "court",
-      "source": "Jurist",
-      "url": "https://www.jurist.org/news/2026/08/us-appeals-court-affirms-injunction-blocking-immigration-enforcement-at-houses-of-worship/"
+      "source": "U.S. District Court for the District of Massachusetts (via CourtListener)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.287352/gov.uscourts.mad.287352.75.0.pdf"
+    },
+    {
+      "date": "2026-08-18",
+      "event": "The Fourth Circuit affirmed a preliminary injunction in Philadelphia Yearly Meeting v. DHS (No. 25-1512) on Religious Freedom Restoration Act grounds; it requires DHS to follow the 2021 policy for enforcement in or near the plaintiffs' places of worship only, does not bar warrant-based arrests, and leaves in place the district court's denial of nationwide relief.",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the Fourth Circuit",
+      "url": "https://www.ca4.uscourts.gov/opinions/251512.P.pdf"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "A divided D.C. Circuit panel in Mennonite Church USA v. DHS (No. 25-5209) reversed the district court's denial of a preliminary injunction, holding that the plaintiffs likely have associational standing to challenge the 2025-01-20 rescission memorandum, and remanded for further consideration of the motion; the court did not itself enter an injunction (Judge Pan for the court, Judge Rao dissenting).",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the D.C. Circuit",
+      "url": "https://media.cadc.uscourts.gov/opinions/docs/2026/10/25-5209-2199126.pdf"
     }
   ],
   "title": "Rescind ICE memoranda that designate sensitive zones where enforcement is limited",
   "tracked": true,
-  "uncertainties": "The DHS memorandum was re-read in the latest check from an opened copy hosted on nafsa.org (a scanned copy whose header lines render jumbled, so the sender and recipient lines were reconstructed from layout); the copy on dhs.gov returned a client error through the fetch tool, a copy on archive.org redirected to a storage host that could not be fetched, and a law-firm copy returned no text. The memorandum is dated 2025-01-20, is effective immediately, rescinds the 2021-10-27 DHS memorandum on protected areas, leaves officers to use discretion and common sense without bright-line rules, invites but does not require further guidance from the ICE Director and CBP Commissioner, and states that it creates no enforceable rights. It names the 2021 DHS memorandum rather than earlier ICE memoranda, so the rescission reaches older ICE sensitive-location guidance only indirectly (inference). An ICE memorandum dated 2025-01-31 was opened on ice.gov: it recites that the 2021 guidelines were replaced, sets no fixed rules, treats schools, hospitals, places of worship and sites of public demonstrations as protected areas for ICE purposes, assigns case-by-case decisions to assistant field office directors and assistant special agents in charge, and requires consultation with agency counsel before enforcement at a site of a public demonstration. Whether that ICE-level text counts as a rescission of all ICE sensitive-zone memoranda, as the Mandate asks, or as a replacement framework is a judgment that was not resolved; no other ICE memoranda were enumerated, and no CBP follow-on guidance was found. The February 2025 date of the district court injunction in the Quaker case is from the Jurist article and was not checked against the order. The D.C. Circuit appeal status comes from a docket summary updated 2026-07-15. The court sources were not re-opened in the latest check. Whether a single executive order rescinding all enforcement-limiting memoranda was issued was not checked; the rescission found is a departmental memorandum.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "The DHS memorandum was re-read in the latest check from an opened copy hosted on nafsa.org (a scanned copy whose header lines render jumbled, so the sender and recipient lines were reconstructed from layout); the copy on dhs.gov returned a client error through the fetch tool, a copy on archive.org redirected to a storage host that could not be fetched, and a law-firm copy returned no text. The memorandum is dated 2025-01-20, is effective immediately, rescinds the 2021-10-27 DHS memorandum on protected areas, leaves officers to use discretion and common sense without bright-line rules, invites but does not require further guidance from the ICE Director and CBP Commissioner, and states that it creates no enforceable rights. It names the 2021 DHS memorandum rather than earlier ICE memoranda, so the rescission reaches older ICE sensitive-location guidance only indirectly (inference). An ICE memorandum dated 2025-01-31 was opened on ice.gov: it recites that the 2021 guidelines were replaced, sets no fixed rules, treats schools, hospitals, places of worship and sites of public demonstrations as protected areas for ICE purposes, assigns case-by-case decisions to assistant field office directors and assistant special agents in charge, and requires consultation with agency counsel before enforcement at a site of a public demonstration. Whether that ICE-level text counts as a rescission of all ICE sensitive-zone memoranda, as the Mandate asks, or as a replacement framework is a judgment that was not resolved; no other ICE memoranda were enumerated, and no CBP follow-on guidance was found. The February 2025 date of the district court injunction in the Quaker case is from the Jurist article and was not checked against the order. On 2026-10-24 three court documents were read on court-controlled hosts: the Fourth Circuit opinion of 2026-08-18 (ca4.uscourts.gov), the D.C. Circuit opinion of 2026-10-20 (media.cadc.uscourts.gov), which also describes the 2025-01-20 rescission memorandum as issued by the Acting DHS Secretary, and the District of Massachusetts preliminary injunction of 2026-02-13 (ECF 75, read on storage.courtlistener.com); the Massachusetts memorandum (ECF 74) was read only in part on a copy hosted by courthousenews.com. The Massachusetts injunction takes effect for each protected site once a bond is posted and site lists are filed (plaintiffs filed lists on 2026-02-27 and 2026-03-06, per a Civil Rights Litigation Clearinghouse case summary). The CourtListener docket shows a government notice of appeal on 2026-04-14 (First Circuit No. 26-1396), a plaintiffs' cross-appeal on 2026-04-27 (No. 26-1493) and cross motions for summary judgment filed in June and July 2026; the outcome of those appeals was not found. The D.C. Circuit remanded without entering an injunction, so the Mennonite plaintiffs had no relief in place as of 2026-10-24. A nationwide vacatur of ICE courthouse-arrest policies reported in June 2026 (Sequen v. Albarran, N.D. Cal., per Bloomberg Law) concerns different policies and was not treated as affecting this record. Whether a single executive order rescinding all enforcement-limiting memoranda was issued was not checked; the rescission found is a departmental memorandum.",
+  "updated_at": "2026-10-24"
 }

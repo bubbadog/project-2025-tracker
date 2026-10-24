@@ -6,7 +6,7 @@
   "chapter": "07",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Text checked and both stage-deciding executive orders were read on the Federal Register; the remaining judgment concerns how far the directed report counts as the review the text asks for.",
+  "confidence_reason": "Text checked; both stage-deciding executive orders were read on the Federal Register in earlier reviews and OMB Memorandum M-26-15 was read in full on whitehouse.gov this run. The remaining judgment concerns how far the directed NSA report counts as the review the text asks for.",
   "durability": {
     "level": "medium",
     "why": "The orders are executive actions that a later President could amend, although cryptographic migration deadlines are likely to persist across administrations."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-24",
+      "note": "Added OMB Memorandum M-26-15 of 2026-06-24 (read on whitehouse.gov), which implements Executive Order 14412 for systems other than national security systems; stage unchanged."
     }
   ],
   "id": "c07-18",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-24",
   "layer": 3,
   "match": "partial",
   "mechanism": "executive_order",
@@ -56,30 +60,24 @@
   "research_agent": "N07a",
   "review": {
     "flags": [
-      "progress lowered from 35 to 25",
-      "EO numbers, dates and content confirmed on the Federal Register",
-      "leadership page wording corrected"
+      "Event text tightened to list the memorandum's phases as written; the proposal's 'final migration of remaining systems in 2035' is the memorandum's Phase 5 'Full Migration'.",
+      "Stage kept in_progress 25."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Pages 227 to 228 ask that the IC CIO be a primary member of the DNI staff with the ODNI General Counsel, IC CFO and ODNI COO, that immediate reviews of post-quantum progress at least for IC and Defense systems be required, and that the national security memorandum's 2035 goal be revised; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y8b",
+    "mandate_note": "Existing verified value kept; the proposal text is unchanged and the recommendation text was not re-read this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-24",
+    "reviewer": "independent reviewer",
     "source_checks": [
       {
-        "note": "EO 14412, signed 2026-06-22, 91 FR 38483, published 2026-06-25; HVA and high-impact PQC deadlines 2030-12-31 and 2031-12-31 excluding NSS; NSA NSS status report within 180 days then annually; no NSM-10 or 2035.",
+        "note": "Read: M-26-15 dated 2026-06-24, signed by the OMB Director; five phases to 2035, 2030-12-31 objective, plans in 120 days; 'does not apply to national security systems'; NSM-10 cited only in a footnote; no IC, NSA or CNSS mention. Consistent with in_progress 25 for civilian systems; does not reach the IC and Defense review.",
+        "result": "partial",
+        "url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf"
+      },
+      {
+        "note": "Stage-deciding order; read in the 2026-10-12 review (NSA report within 180 days; 2030 and 2031 deadlines excluding NSS). Not re-read this run.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12909/securing-the-nation-against-advanced-cryptographic-attacks"
-      },
-      {
-        "note": "EO 14413, signed 2026-06-22, 91 FR 38487; Sec. 4(f) DNI and Secretary of War task; report within one year.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12910/ushering-in-the-next-frontier-of-quantum-innovation"
-      },
-      {
-        "note": "IC CIO Douglas Cossa listed under ODNI Officials after the COO and IC CFO; no principal-staff label; General Counsel not listed; metadata date 2026-09-29.",
-        "result": "partial",
-        "url": "https://www.odni.gov/leadership/"
       }
     ]
   },
@@ -117,10 +115,24 @@
       "publisher": "Office of the Director of National Intelligence",
       "title": "ODNI leadership (page dated 2026-09-29 in its metadata)",
       "url": "https://www.odni.gov/leadership/"
+    },
+    {
+      "date": "2026-06-24",
+      "kind": "primary",
+      "publisher": "Office of Management and Budget (whitehouse.gov)",
+      "title": "OMB Memorandum M-26-15, Execution of the Migration to Post-Quantum Cryptography",
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf"
+    },
+    {
+      "date": "2026-06-22",
+      "kind": "primary",
+      "publisher": "The White House",
+      "title": "Securing the Nation Against Advanced Cryptographic Attacks (EO 14412), White House page",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Executive Order 14412 (signed 2026-06-22, published 2026-06-25) directs OMB guidance requiring agencies to move high-value assets and high-impact systems, excluding national security systems, to post-quantum cryptography for key establishment by 2030-12-31 and for digital signatures by 2031-12-31, and directs the NSA Director, as National Manager for National Security Systems, to report to the President through the Committee on National Security Systems within 180 days (about 2026-12-19) and annually on migration status for national security systems. The order does not mention National Security Memorandum 10 or its 2035 goal and does not use the term intelligence community; Executive Order 14413 of the same date has the DNI and the Secretary of War identify national security implications of commercial quantum computing, including for post-quantum migration, with a report due within a year. ODNI's leadership page lists the IC Chief Information Officer among ODNI officials immediately after the Chief Operating Officer and the IC Chief Financial Officer, without a principal-staff label and without showing when that placement began.",
+  "status_summary": "Executive Order 14412 (signed 2026-06-22, published 2026-06-25) directs OMB guidance requiring agencies to move high-value assets and high-impact systems, excluding national security systems, to post-quantum cryptography for key establishment by 2030-12-31 and for digital signatures by 2031-12-31, and directs the NSA Director, as National Manager for National Security Systems, to report through the Committee on National Security Systems within 180 days (about 2026-12-19) and annually on migration status for national security systems. OMB's implementing Memorandum M-26-15 (2026-06-24) sets a five-phase schedule ending with full migration in 2035, a 2030-12-31 objective and agency plans due within 120 days, and does not apply to national security systems. Neither the order nor the memorandum revises National Security Memorandum 10's 2035 goal or names the intelligence community; Executive Order 14413 of the same date has the DNI and the Secretary of War identify national security implications of commercial quantum computing, including for post-quantum migration, with a report due within a year. ODNI's leadership page lists the IC Chief Information Officer among ODNI officials immediately after the Chief Operating Officer and the IC Chief Financial Officer, without a principal-staff label and without showing when that placement began.",
   "timeline": [
     {
       "date": "2026-06-22",
@@ -135,10 +147,17 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12910/ushering-in-the-next-frontier-of-quantum-innovation"
+    },
+    {
+      "date": "2026-06-24",
+      "event": "OMB issues Memorandum M-26-15, Execution of the Migration to Post-Quantum Cryptography, implementing Executive Order 14412: it sets five phases (planning 2026 to 2027, pilots 2027 to 2028, prioritized migration 2028 to 2030, signature migration 2031, full migration 2035), asks agencies to mitigate as much quantum risk as feasible by 2030-12-31, requires agency migration plans within 120 days and states that it does not apply to national security systems.",
+      "kind": "primary",
+      "source": "Office of Management and Budget (whitehouse.gov)",
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf"
     }
   ],
   "title": "Make the IC CIO a DNI primary staff member; review post-quantum progress; revise 2035 goal",
   "tracked": true,
-  "uncertainties": "Both orders were read on the Federal Register; neither mentions NSM-10 or 2035. EO 14412's 2030 and 2031 deadlines for non-national-security systems are earlier than the 2035 goal, which is in line with the text's call to revise the goal, but the order does not revise the memorandum itself (an inference). Whether the NSA status report amounts to the Mandate's immediate review of IC and Defense progress is a judgment: it is a first report due six months after the order and about two years into the term. The leadership page does not label principal staff and does not list the General Counsel; the IC CIO's placement there may predate 2025, so it is not counted as an action. The cybersecurity order published in the Federal Register on 2025-06-11 was not checked for post-quantum text. Progress was lowered from 35 to 25 because the operative steps so far are directives and deadlines, with the review report not yet due.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "Both orders were read on the Federal Register; neither mentions NSM-10 or 2035. EO 14412's 2030 and 2031 deadlines for non-national-security systems are earlier than the 2035 goal, which is in line with the text's call to revise the goal, but the order does not revise the memorandum itself (an inference). Whether the NSA status report amounts to the Mandate's immediate review of IC and Defense progress is a judgment: it is a first report due six months after the order and about two years into the term. The leadership page does not label principal staff and does not list the General Counsel; the IC CIO's placement there may predate 2025, so it is not counted as an action. The cybersecurity order published in the Federal Register on 2025-06-11 was not checked for post-quantum text. Progress was lowered from 35 to 25 because the operative steps so far are directives and deadlines, with the review report not yet due. OMB Memorandum M-26-15 (2026-06-24) was read on whitehouse.gov; it excludes national security systems, mentions NSM-10 only in a footnote defining high-impact systems and names the Department of War only for shared cloud migration work, so it does not revise the 2035 goal for intelligence community or Defense systems. No ODNI, NSA or CNSS public action on national security system migration after June 2026 was found, and dni.gov was not reachable. Whether agencies submitted plans by the deadline of about 2026-10-22 was not found.",
+  "updated_at": "2026-10-24"
 }

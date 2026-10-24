@@ -7,7 +7,7 @@
   "chapter": "09",
   "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Text checked; bill text, introduction and committee action were confirmed in GovInfo, the House committee repository and CBO, but the operative logo change rests on one news report of an official's statement.",
+  "confidence_reason": "Text checked; bill text, introduction and the 44 to 1 committee vote were confirmed on GovInfo (bill text and BILLSTATUS, read this run), the House committee repository and CBO, but the operative logo change that holds the stage rests on one news report of an official's statement.",
   "durability": {
     "level": "medium",
     "why": "A statute would be durable if enacted; the existing logo change and manual rules are internal and reversible."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-24",
+      "note": "Confirmed on GovInfo BILLSTATUS that H.R. 7633 had no action after its 2026-03-26 committee vote of 44 to 1, replaced the tracker source for that tally with the GovInfo record and found no State branding rule since April 2026; stage unchanged."
     }
   ],
   "id": "c09-14",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-24",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -55,50 +59,24 @@
   "research_agent": "N09a",
   "review": {
     "flags": [
-      "progress lowered from 30 to 25",
-      "judgment call: in_progress 25 rests on an operative logo change that may cover only State's own branding; proposed 20 on the committee-reported bill is the alternative",
-      "bill status now confirmed on GovInfo, House committee repository and CBO; vote tally still tracker-only"
+      "Tracker source (The Lobby News) removed: the 44 to 1 tally is now confirmed by GovInfo BILLSTATUS; 2026-03-26 event text updated.",
+      "Judgment call kept: in_progress 25 rests on a news-reported logo change; proposed 20 on the bill alone remains the alternative."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Printed page 270 recommends building on the ADS Chapter 320 branding policy to force full credit to the American people, a political appointee Senior Advisor for Brand Management enforcing branding on every grant, cooperative agreement and contract, and LPA liaison with USAGM. Paraphrase accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9c",
+    "mandate_note": "Existing verified value kept; the proposal text is unchanged and the recommendation text was not re-read this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-24",
+    "reviewer": "independent reviewer",
     "source_checks": [
       {
-        "note": "Dated 2025-07-02; official's statement on single flag-based logo for offices, embassies, bureaus and programs incl. former USAID ones; deadline Oct. 1; partners not addressed.",
+        "note": "Read: latest action 2026-03-26, ordered reported in the nature of a substitute by yeas and nays 44 to 1; no floor action; record updated 2026-09-10. Confirms the bill remains at committee stage; the in_progress 25 rests on the separate logo change.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7633.xml"
+      },
+      {
+        "note": "Not re-read this run; checked 2026-10-12: official's statement on a single flag-based logo for State offices and programs, partners not addressed.",
         "result": "partial",
         "url": "https://www.foxnews.com/politics/state-department-unveils-patriotic-america-first-rebrand-part-sweeping-makeover.amp"
-      },
-      {
-        "note": "Estimate dated 2026-04-09; HFAC ordered reported 2026-03-26; no vote count.",
-        "result": "supports",
-        "url": "https://www.cbo.gov/system/files/2026-04/hr7633.pdf"
-      },
-      {
-        "note": "Introduced 2026-02-20, referred to House Foreign Affairs; only IH version listed. Added by the reviewer.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/app/details/BILLS-119hr7633ih"
-      },
-      {
-        "note": "Bill text: new FAA section 641A, flag as sole visual brand on tangible items, exceptions, security waiver, regulations. Added by the reviewer.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr7633ih/html/BILLS-119hr7633ih.htm"
-      },
-      {
-        "note": "Markup of 2026-03-26 lists H.R. 7633 with a substitute amendment and a vote to report as amended; tally not readable. Added by the reviewer.",
-        "result": "supports",
-        "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=118999"
-      },
-      {
-        "note": "Not opened by the reviewer; tracker kept only for the 44 to 1 tally.",
-        "result": "partial",
-        "url": "https://thelobbynews.com/congress/bills/119/house-bill/7633/text-viewer"
-      },
-      {
-        "note": "Not opened by the reviewer; used only for background on pre-2025 rules.",
-        "result": "unreachable",
-        "url": "https://fam.state.gov/fam/10FAM/10FAM0410.html"
       }
     ]
   },
@@ -190,10 +168,10 @@
     },
     {
       "date": "2026-03-26",
-      "kind": "tracker",
-      "publisher": "The Lobby News",
-      "title": "H.R. 7633, American Assistance Visibility Act (tracker page; vote tally only)",
-      "url": "https://thelobbynews.com/congress/bills/119/house-bill/7633/text-viewer"
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 7633 (119th Congress) bill status, GovInfo BILLSTATUS XML",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr7633.xml"
     }
   ],
   "stage": "in_progress",
@@ -222,7 +200,7 @@
     },
     {
       "date": "2026-03-26",
-      "event": "The House Foreign Affairs Committee marked up H.R. 7633 and held a vote to report it as amended; CBO states the committee ordered it reported on that date, and a tracker site gives the vote as 44 to 1.",
+      "event": "The House Foreign Affairs Committee marked up H.R. 7633 and ordered it reported in the nature of a substitute by a recorded vote of 44 to 1 (GovInfo bill status); CBO also states the committee ordered it reported on that date.",
       "kind": "primary",
       "source": "House Committee Repository (docs.house.gov)",
       "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=118999"
@@ -237,6 +215,6 @@
   ],
   "title": "Enforce US branding on all foreign aid and credit the American people",
   "tracked": true,
-  "uncertainties": "The Fox report relays a State official's description of a logo consolidation for State offices, embassies, bureaus and programs and does not say whether implementing partners must use the new brand; no State guidance document was read. The Foreign Affairs Manual page shows 2018 dates and says USAID programs had separate rules, so it shows only that State partner-marking rules existed before 2025. The 2020 branding order was revoked by Executive Order 14029 in May 2021; no 2025 or 2026 order replacing it was found. Bill introduction and text were confirmed on GovInfo and the committee markup on the House committee repository; congress.gov could not be read, the committee's vote record PDF has no machine-readable text, and the 44 to 1 tally comes only from a tracker site. The bill covers tangible items and outreach products and does not name grants, contracts or cooperative agreements. FY2026 appropriations branding provisions were searched in committee summaries and a CRS report, and none was found. Searches found nothing on a Senior Advisor for Brand Management or on Agency for Global Media coordination. The stage is a judgment call: the logo change is operative but may cover only State's own branding, so proposed 20 on the bill alone is the alternative.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "The Fox report relays a State official's description of a logo consolidation for State offices, embassies, bureaus and programs and does not say whether implementing partners must use the new brand; no State guidance document was read. The Foreign Affairs Manual page shows 2018 dates and says USAID programs had separate rules, so it shows only that State partner-marking rules existed before 2025. The 2020 branding order was revoked by Executive Order 14029 in May 2021; no 2025 or 2026 order replacing it was found. Bill introduction and text were confirmed on GovInfo and the committee markup on the House committee repository; congress.gov could not be read, and the 44 to 1 committee tally is confirmed by GovInfo BILLSTATUS, which on 2026-10-24 listed 2026-03-26 as the latest action (record updated 2026-09-10). The bill covers tangible items and outreach products and does not name grants, contracts or cooperative agreements. FY2026 appropriations branding provisions were searched in committee summaries and a CRS report, and none was found. Searches found nothing on a Senior Advisor for Brand Management or on Agency for Global Media coordination. The stage is a judgment call: the logo change is operative but may cover only State's own branding, so proposed 20 on the bill alone is the alternative. A House Rules Committee amendment submission attributed to Rep. Shreve and dated 2026-06-22 (to Rules Committee Print 119-33) would add the same section 641A and apply flag rules to implementing partners; it was not opened by the reviewer, and whether it was made in order or adopted was not found. No State Department branding rule or guidance after April 2026 and no related Federal Register document were found, and the primary State document behind the 2025 logo report was not located.",
+  "updated_at": "2026-10-24"
 }

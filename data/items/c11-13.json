@@ -7,7 +7,7 @@
   "chapter": "11",
   "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Text checked; EO 14282 read on the Federal Register, ED releases, CRS In Focus, House sponsor release and the April 2026 Federal Register notice fetched; investigation dates rest on one secondary summary.",
+  "confidence_reason": "Text checked; Executive Order 14282 was read on the Federal Register in an earlier review, and this run the Harvard investigation notice (FSA Partners), the Penn release (ed.gov), the State Department letter of 2026-07-14 and the GovInfo BILLSTATUS record for H.R. 1048 were read. The Penn and Berkeley dates rest on a law-firm summary and the Duke and University of North Dakota date on news reports, because the ED release could not be opened.",
   "durability": {
     "level": "medium",
     "why": "The enforcement actions and order are reversible by a later administration, while the House-passed bill would be durable if enacted."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-12",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-24",
+      "note": "Re-dated the Duke and University of North Dakota Section 117 investigations to 2026-09-15 from Valley News Live and North Dakota Monitor reports (the ed.gov release could not be opened), re-cited the Harvard investigation to the ED notice on fsapartners.ed.gov, and added the Penn release, a State Department letter and the GovInfo BILLSTATUS record for H.R. 1048; stage unchanged."
     }
   ],
   "id": "c11-13",
-  "last_checked": "2026-10-12",
+  "last_checked": "2026-10-24",
   "layer": 3,
   "match": "direct",
   "mechanism": "mixed",
@@ -55,55 +59,51 @@
   "research_agent": "N11",
   "review": {
     "flags": [
-      "Harvard event and Duke/UND report added for consistency with c00-14",
-      "Berkeley event re-cited to dated secondary source",
-      "portal source date set to last-reviewed date"
+      "Duke and University of North Dakota event re-dated from the 2026-09-17 press report to 2026-09-15 by inference from two local reports (the ED release could not be opened); inference stated in the event text and uncertainties.",
+      "Harvard event re-cited to the primary OGC notice.",
+      "ED press release for Duke and UND not added to sources because it could not be read.",
+      "Uncertainties rewritten to remove resolved points (whether Duke and UND reviews are Section 117 investigations; tracker-only Harvard date)."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Pages 355 to 356 recommend reversing non-enforcement of Section 117 ($250,000 threshold), investigating and referring to DOJ, and working with Congress to tie reporting to Title IV and VI participation; paraphrase and pages accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-12",
-    "reviewer": "Y9e",
+    "mandate_note": "Existing verified value kept; the proposal text is unchanged and the recommendation text was not re-read this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-24",
+    "reviewer": "independent reviewer",
     "source_checks": [
       {
-        "note": "EO 14282 signed 2025-04-23, published 2025-04-28 at 90 FR 17541; Secs. 2 and 3 confirmed.",
+        "note": "Read: dated 2025-04-17, OGC Chief Investigative Counsel to Harvard's president; cites 20 U.S.C. 1011f; records within 30 calendar days. Supports in_progress 45 (enforcement under way).",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/04/28/2025-07379/transparency-regarding-foreign-influence-at-american-universities"
+        "url": "https://fsapartners.ed.gov/sites/default/files/2025-05/NoticeofSec.117InvestigationHarvardApril172025.pdf"
       },
       {
-        "note": "OGC move and Berkeley investigation; no date on page.",
+        "note": "Read: Penn investigation by OGC, no disclosures before February 2019; records within 30 days; page undated.",
         "result": "supports",
-        "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-returns-section-117-foreign-funding-enforcement-office-of-general-counsel-announces-investigation-uc-berkeley"
+        "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-opens-foreign-funding-investigation-university-of-pennsylvania-after-discovering-inaccurate-and-untimely-foreign-financial"
       },
       {
-        "note": "Portal to launch 2026-01-02; DOJ enforcement warning; page last reviewed 2025-12-01.",
-        "result": "supports",
-        "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-announces-new-and-improved-portal-universities-report-foreign-funding"
+        "note": "ed.gov returned a client error and the proxy refused the connection; the University of North Dakota Section 117 notice PDF on ed.gov was also unreachable. Not cited as a source.",
+        "result": "unreachable",
+        "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-and-us-department-of-state-open-foreign-funding-investigations-duke-university-and-university-of-north-dakota"
       },
       {
-        "note": "Four investigations, portal January 2026, ED-State agreement 2026-02-20, H.R. 1048 no Senate action.",
+        "note": "Published 2026-09-16 4:56 pm CDT: ED and State 'announced Tuesday' Section 117 investigations; 30-day records window; quotes the Under Secretaries of Education and State.",
         "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2026-03-25_IF12927_f09ef72db77bea9f3dc622b77fe2a88d658e4e84.pdf"
+        "url": "https://www.valleynewslive.com/2026/09/16/federal-government-opens-foreign-funding-investigation-into-university-north-dakota/"
       },
       {
-        "note": "H.R. 1048 passed 241 to 169 on 2025-03-27; Title IV penalty.",
-        "result": "supports",
-        "url": "https://baumgartner.house.gov/2025/03/27/baumgartners-deterrent-act-passes-house-combat-foreign-influence-us-colleges"
-      },
-      {
-        "note": "Harvard 2025-04-17, Penn 2025-05-08, OGC move 2025-04-25.",
-        "result": "supports",
-        "url": "https://www.ecampusnews.com/campus-leadership/2025/07/23/federal-efforts-foreign-financial-contributions-higher-education/"
-      },
-      {
-        "note": "PRA notice 2026-04-15 confirmed via API.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/04/15/2026-07304/agency-information-collection-activities-comment-request-foreign-gifts-and-contracts-disclosures"
-      },
-      {
-        "note": "Added; dated 2026-09-17; body text partly unavailable, legal basis not stated.",
+        "note": "North Dakota Monitor, 2026-09-17: says the announcement came Wednesday and the letter to UND is dated Tuesday; 71 transactions of about $98 million reported since July 2020. Date discrepancy recorded in uncertainties.",
         "result": "partial",
-        "url": "https://www.jns.org/news/u-s-news/trump-admin-probing-duke-university-of-north-dakota-over-funding-disclosures-related-to-china"
+        "url": "https://www.newsfromthestates.com/node/428093"
+      },
+      {
+        "note": "Read: dated 2026-07-14; partnership dated 2026-02-23; neither announces nor waives enforcement. Background only.",
+        "result": "partial",
+        "url": "https://www.state.gov/releases/under-secretary-for-public-diplomacy-and-public-affairs/2026/07/letter-from-under-secretary-sarah-b-rogers-to-the-governing-boards-of-r-1-american-institutions-of-higher-education-and-affiliates"
+      },
+      {
+        "note": "Read: passed House 241 to 169 (roll 83) on 2025-03-27; referred to Senate HELP 2025-03-31, latest action; S. 1296 referred to HELP 2025-04-03. Supports that the aid-eligibility link is not law.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1048.xml"
       }
     ]
   },
@@ -192,10 +192,52 @@
       "publisher": "JNS",
       "title": "Trump admin probing Duke University, University of North Dakota over funding disclosures related to China",
       "url": "https://www.jns.org/news/u-s-news/trump-admin-probing-duke-university-of-north-dakota-over-funding-disclosures-related-to-china"
+    },
+    {
+      "date": "2026-09-16",
+      "kind": "news",
+      "publisher": "Valley News Live",
+      "title": "Federal government opens foreign funding investigation into University of North Dakota",
+      "url": "https://www.valleynewslive.com/2026/09/16/federal-government-opens-foreign-funding-investigation-into-university-north-dakota/"
+    },
+    {
+      "date": "2026-09-17",
+      "kind": "news",
+      "publisher": "North Dakota Monitor (States Newsroom)",
+      "title": "Federal agencies investigate University of North Dakota for reporting of foreign funding (North Dakota Monitor, republished by News From The States)",
+      "url": "https://www.newsfromthestates.com/node/428093"
+    },
+    {
+      "date": "2025-04-17",
+      "kind": "primary",
+      "publisher": "U.S. Department of Education (FSA Partners)",
+      "title": "Notice of Section 117 investigation to Harvard University (Office of the General Counsel)",
+      "url": "https://fsapartners.ed.gov/sites/default/files/2025-05/NoticeofSec.117InvestigationHarvardApril172025.pdf"
+    },
+    {
+      "date": "2025-05-08",
+      "kind": "primary",
+      "publisher": "U.S. Department of Education",
+      "title": "U.S. Department of Education Opens Foreign Funding Investigation into University of Pennsylvania After Discovering Inaccurate and Untimely Foreign Financial Disclosures",
+      "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-opens-foreign-funding-investigation-university-of-pennsylvania-after-discovering-inaccurate-and-untimely-foreign-financial"
+    },
+    {
+      "date": "2026-07-14",
+      "kind": "primary",
+      "publisher": "U.S. Department of State",
+      "title": "Letter from Under Secretary Sarah B. Rogers to the Governing Boards of R-1 American Institutions of Higher Education and Affiliates",
+      "url": "https://www.state.gov/releases/under-secretary-for-public-diplomacy-and-public-affairs/2026/07/letter-from-under-secretary-sarah-b-rogers-to-the-governing-boards-of-r-1-american-institutions-of-higher-education-and-affiliates"
+    },
+    {
+      "date": "2025-03-31",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 1048 (119th Congress) bill status, GovInfo BILLSTATUS XML",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1048.xml"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The executive parts are under way. Executive Order 14282 (signed 2025-04-23) directs the Education Secretary to enforce Section 117, conduct audits and investigations and seek enforcement through the Attorney General, and makes compliance a condition for federal grants. ED returned enforcement to its Office of General Counsel and opened investigations of Harvard (2025-04-17), UC Berkeley (announced 2025-04-25) and Penn (2025-05-08); CRS counted four investigations as of March 2026, and a press report of 2026-09-17 describes reviews of Duke and the University of North Dakota. ED opened a new reporting portal in January 2026 and signed an agreement with the State Department on 2026-02-20 to administer reporting and civil investigations. The statutory link to aid eligibility is not law: the DETERRENT Act (H.R. 1048) passed the House 241 to 169 on 2025-03-27 with no reported Senate action, and no DOJ referral was found.",
+  "status_summary": "The executive parts are under way. Executive Order 14282 (signed 2025-04-23) directs the Education Secretary to enforce Section 117, conduct audits and investigations and seek enforcement through the Attorney General, and makes compliance a condition for federal grants; ED returned enforcement to its Office of General Counsel and opened investigations of Harvard (notice dated 2025-04-17), UC Berkeley (announced 2025-04-25) and Penn (2025-05-08), and CRS counted four investigations as of March 2026. ED opened a new reporting portal in January 2026, agreed in February 2026 that the State Department would administer reporting and civil investigations, and with State opened investigations of Duke University and the University of North Dakota in mid-September 2026 (reported as 2026-09-15). The statutory link to aid eligibility is not law: the DETERRENT Act (H.R. 1048) passed the House 241 to 169 on 2025-03-27 and was referred to the Senate HELP Committee on 2025-03-31 with no further action recorded, and no DOJ referral was found.",
   "timeline": [
     {
       "date": "2025-03-27",
@@ -206,10 +248,10 @@
     },
     {
       "date": "2025-04-17",
-      "event": "ED opened a Section 117 investigation of Harvard University.",
-      "kind": "news",
-      "source": "eCampus News (Hunton Andrews Kurth)",
-      "url": "https://www.ecampusnews.com/campus-leadership/2025/07/23/federal-efforts-foreign-financial-contributions-higher-education/"
+      "event": "ED's Office of the General Counsel sent Harvard University a notice of a Section 117 investigation (20 U.S.C. 1011f) with records requests due within 30 calendar days.",
+      "kind": "primary",
+      "source": "U.S. Department of Education (FSA Partners)",
+      "url": "https://fsapartners.ed.gov/sites/default/files/2025-05/NoticeofSec.117InvestigationHarvardApril172025.pdf"
     },
     {
       "date": "2025-04-23",
@@ -227,7 +269,7 @@
     },
     {
       "date": "2025-05-08",
-      "event": "ED opened a Section 117 investigation of the University of Pennsylvania.",
+      "event": "ED opened a Section 117 investigation of the University of Pennsylvania, citing inaccurate and untimely foreign disclosures and requesting records within 30 days (ED release undated; date from a law-firm summary).",
       "kind": "news",
       "source": "eCampus News (Hunton Andrews Kurth)",
       "url": "https://www.ecampusnews.com/campus-leadership/2025/07/23/federal-efforts-foreign-financial-contributions-higher-education/"
@@ -254,15 +296,15 @@
       "url": "https://www.federalregister.gov/documents/2026/04/15/2026-07304/agency-information-collection-activities-comment-request-foreign-gifts-and-contracts-disclosures"
     },
     {
-      "date": "2026-09-17",
-      "event": "A press report said the administration was probing Duke University and the University of North Dakota over China-related funding disclosures, quoting a State Department official that reviews found gaps.",
+      "date": "2026-09-15",
+      "event": "The Education Department, with the State Department, opened Section 117 foreign funding investigations of Duke University and the University of North Dakota, citing untimely and incomplete disclosures and requesting records within 30 days; the date is inferred from news reports (the notice to the University of North Dakota is reported as dated Tuesday 2026-09-15, and one report places the announcement on that Tuesday, another on Wednesday 2026-09-16), because the ED release and notice could not be opened.",
       "kind": "news",
-      "source": "JNS",
-      "url": "https://www.jns.org/news/u-s-news/trump-admin-probing-duke-university-of-north-dakota-over-funding-disclosures-related-to-china"
+      "source": "Valley News Live; North Dakota Monitor",
+      "url": "https://www.valleynewslive.com/2026/09/16/federal-government-opens-foreign-funding-investigation-into-university-north-dakota/"
     }
   ],
   "title": "Enforce HEA Section 117 foreign gift reporting, refer violators to DOJ, tie it to aid",
   "tracked": true,
-  "uncertainties": "The Harvard (2025-04-17) and Penn (2025-05-08) dates come from a law-firm summary in eCampus News; the ED Berkeley release has no publication date and says only that Harvard came a week earlier, so the Berkeley event is cited to the same summary and the ED page supports its content. The ED portal announcement page carries only a last-reviewed date of 2025-12-01 and announced the 2026-01-02 opening in advance. CRS reports four investigations without naming them. The Duke and North Dakota report does not say whether those reviews are formal Section 117 investigations or which agency leads them. No DOJ referral or civil action was found in the CRS paper or the sources read. Senate status of H.R. 1048 rests on the CRS paper (referred, no further action); congress.gov could not be fetched. Facts are consistent with Foreword record c00-14, which covers the same enforcement actions.",
-  "updated_at": "2026-10-12"
+  "uncertainties": "The Harvard notice of 2025-04-17 was read on the FSA Partners site. The Penn release on ed.gov carries no date, so the 2025-05-08 date comes from a law-firm summary in eCampus News; the ED Berkeley release has no publication date and says only that Harvard came a week earlier, so the Berkeley event is cited to the same summary and the ED page supports its content. The ED portal announcement page carries only a last-reviewed date of 2025-12-01 and announced the 2026-01-02 opening in advance. CRS reports four investigations without naming them. The Duke and University of North Dakota investigations are dated 2026-09-15 by inference: the ED press release and the Section 117 notice to the University of North Dakota on ed.gov could not be opened this run (ed.gov refused the connection), Valley News Live (published 2026-09-16) says the agencies announced the investigations on Tuesday, and North Dakota Monitor (published 2026-09-17) says the announcement came Wednesday and the notice letter is dated Tuesday; a JNS report of 2026-09-17 also covers them. The 30-day records window would have closed around mid-October 2026, and no outcome was found. A State Department letter of 2026-07-14 to university governing boards dates the ED and State partnership to 2026-02-23, where the CRS paper gives 2026-02-20, and states that it neither announces nor waives any enforcement action. GovInfo BILLSTATUS shows H.R. 1048 passed the House 241 to 169 on 2025-03-27 and was referred to Senate HELP on 2025-03-31 with no later action, and the Senate companion S. 1296 was referred to HELP on 2025-04-03; congress.gov could not be fetched. A Federal Register search for foreign gifts since 2026-09-01 reportedly found no Section 117 rule, and no DOJ referral or civil action was found in the CRS paper or the sources read. Facts are consistent with Foreword record c00-14, which covers the same enforcement actions.",
+  "updated_at": "2026-10-24"
 }
