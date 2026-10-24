@@ -5,9 +5,9 @@
     "A negotiated truce through 2027-01-10, a Board of Trade and a Board of Investment, and a planned follow-on negotiation, all of which point away from decoupling"
   ],
   "chapter": "26",
-  "confidence": 63,
+  "confidence": 64,
   "confidence_label": "medium",
-  "confidence_reason": "Primary White House documents and the USTR Federal Register record support a negotiated, managed-trade posture rather than decoupling. Five documented checks: (1) a Federal Register search of USTR China documents found Section 301 actions and a June 2026 managed-trade comment request (partial, consistent with diverged); (2) Unified Agenda: the Commerce, Treasury, DHS and USTR rule lists on reginfo.gov were read on 2026-10-19 and two entries opened; planned de minimis and outbound investment rules touch single package items (partial; informative for the rule-based items, not for tariff or negotiating posture); (3) congress.gov and GovInfo search with the STOP China Act bill status read found only referred bills (partial); (4) USTR and Treasury newsrooms showed no decoupling action (supports); (5) one news search showed truce coverage (supports). Set at 63 because several package items remain unverified and the stage rests on a judgment about posture.",
+  "confidence_reason": "Primary White House documents, the USTR Federal Register record and the public inspection PDF of the 2026-10-23 USTR notice (which ties the proposed further suspension to continued negotiation with China) support a negotiated, managed-trade posture rather than decoupling. Earlier systematic checks of the Federal Register, the Unified Agenda, bill status and agency newsrooms found no decoupling package. Kept medium because several package items remain unverified, the tariff rates and truce extension rest on a law-firm alert and news reports, and the stage rests on a judgment about posture.",
   "durability": {
     "level": "low",
     "why": "The arrangements are executive and diplomatic understandings with short suspensions that either side can renew or end."
@@ -40,10 +40,18 @@
     {
       "date": "2026-10-23",
       "note": "Source list completed: 2 document(s) that timeline events already cited were opened and added to sources (The White House); no change to stage, events or confidence."
+    },
+    {
+      "date": "2026-10-24",
+      "note": "Added the 2026-10-23 USTR public inspection notice proposing a further suspension of the Section 301 maritime fees and duties through 2027-01-09 (read on public-inspection.federalregister.gov), labeled as proposed; stage unchanged."
+    },
+    {
+      "date": "2026-10-24",
+      "note": "Source list completed: 1 document(s) that timeline events already cited were opened on 2026-10-24 and added to sources (Business Standard (Bloomberg)); each page states the fact its event describes; no change to stage, events or confidence."
     }
   ],
   "id": "c26-02",
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-10-24",
   "layer": 1,
   "match": "partial",
   "mechanism": "executive_order",
@@ -86,88 +94,20 @@
   "research_agent": "A15",
   "review": {
     "alternative": "Partial or in_progress is defensible if the carried-out package items (de minimis, drone listings, outbound investment statute) are weighed over the negotiating posture.",
-    "flags": [],
+    "flags": [
+      "Event kept as an agency action: a published request for comments proposing a further suspension, labeled as proposed and dated by the filing date.",
+      "Status summary condensed to four sentences with the new filing added; no fact removed except the 2025-09-30 TikTok order detail, which stays in the timeline."
+    ],
     "mandate_check": "verified",
-    "mandate_note": "Navarro's essay (position correct) frames the decouple-or-negotiate choice on page 783, concludes on page 787 that negotiation is futile and decoupling is better, and lists the package on pages 789 to 790; the paraphrase matches, and the split of investment, pension and listing items into c26-06 is consistent with page 789.",
+    "mandate_note": "Existing verified value kept; the proposal text is unchanged and the recommendation text was not re-read this run.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
-    "reviewer": "independent AI reviewer (absence checks)",
+    "reviewed_at": "2026-10-24",
+    "reviewer": "independent reviewer",
     "source_checks": [
       {
-        "note": "Alert dated 2026-09-24: Section 122 tariffs expired 2026-07-24, most Chinese goods face a 12.5 percent forced-labor Section 301 tariff, the Board of Trade is described by USTR as operational while the Board of Investment is stalled, Bessent and He Lifeng agreed to extend the truce through 2027-01-10, and an excess-capacity Section 301 action is under consideration; Xi met the President on 2026-09-23 with a state dinner set for 2026-09-24.",
+        "note": "Read: USTR proposes to further suspend the maritime Section 301 fees (Annexes I to III) and Annex V.A duties from 2026-11-10 through 2027-01-09 'to allow for further negotiation with China'; current suspension ends 2026-11-09; comments 2026-10-23 to 2026-10-30; filed 2026-10-23 8:45 am; signed by the USTR General Counsel without a stated date. Supports diverged (negotiated posture).",
         "result": "supports",
-        "url": "https://www.bhfs.com/insight/updated-expectations-for-the-trump-xi-september-meeting/"
-      },
-      {
-        "note": "Systematic check 1: USTR, 'China tariffs Section 301', since 2025-01-20: 20 documents including Phase One compliance investigation (2025-10-28), semiconductor action (2025-12-29), forced-labor Section 301 actions (2026-06-05, 2026-07-28), Section 301 continuation (2026-10-07) and a request for comments on a reciprocal managed-trade mechanism with China (2026-06-05). These are already within the managed-trade posture the record describes; none is an across-the-board decoupling package. checked 2026-10-18",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=China+tariffs+Section+301&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=trade-representative-office-of-united-states"
-      },
-      {
-        "note": "Systematic check 2: Unified Agenda landing page loaded (2026 Regulatory Plan and Unified Agenda) but agency listings are script-driven and could not be browsed; the API listing was used. checked 2026-10-18",
-        "result": "partial",
-        "url": "https://www.reginfo.gov/public/do/eAgendaMain"
-      },
-      {
-        "note": "Systematic check 3: One WebSearch on China decoupling bills returned S. 321, S. 1711 (STOP China Act), H.R. 7121 and H.R. 2246 by title only; BILLSTATUS not opened, so passage status not confirmed. checked 2026-10-18",
-        "result": "partial",
-        "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1711"
-      },
-      {
-        "note": "Systematic check 4: USTR newest releases (to 2026-10-13): 2026-09-27 statement on U.S.-China Board of Trade recommendations; no decoupling action. Treasury newsroom (to 2026-10-16) showed no China decoupling item. checked 2026-10-18",
-        "result": "supports",
-        "url": "https://ustr.gov/about-us/policy-offices/press-office/press-releases"
-      },
-      {
-        "note": "Systematic check 5: One WebSearch on China decoupling and tariffs, October 2026: results are trade-truce and extension coverage; none shows decoupling. checked 2026-10-18",
-        "result": "supports",
-        "url": "https://www.ttnews.com/articles/trump-xi-trade-truce"
-      },
-      {
-        "note": "Reviewer re-check, 2026-10-18: bill status read: STOP China Act, introduced 2025-05-12 with 10 cosponsors, referred to Senate Banking, no further action; bars DOT-funded purchases of rolling stock and bus fueling or charging equipment from entities tied to China, North Korea, Russia or Iran, with USTR to list covered entities; a narrow procurement item, introduced only.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s1711.xml"
-      },
-      {
-        "note": "Reviewer re-check, 2026-10-18: USTR, China tariffs Section 301, since 2025-01-20: 20 notices including the 2026-06-05 request for comments on a reciprocal managed-trade mechanism and a U.S.-China Board of Trade, maritime action suspension of 2025-11-13 and continuation of the 2018 actions on 2026-10-07; consistent with a managed-trade posture; confirms the researcher's result.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=China+tariffs+Section+301&conditions[publication_date][gte]=2025-01-20&per_page=20&conditions[agencies][]=trade-representative-office-of-united-states"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Commerce list headed 'Agency Rule List - 2026' (176 rules, including 17 BIS and 2 ITA entries, read to the footer by the reviewer on 2026-10-19): no decoupling rule; ITA 0625-AB30 (Section 232 automobile parts tariff inclusions process) is not China-specific and no BIS title names China.",
-        "result": "supports",
-        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=0600"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Treasury list headed 'Agency Rule List - 2026' (216 rows, read by the reviewer on 2026-10-19 to the footer across two fetch pages): 1505-AC94 (outbound investment under the COINS Act, NPRM 09/00/2026) bears on the investment item tracked in c26-06.",
-        "result": "partial",
-        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1500"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "DHS list headed 'Agency Rule List - 2026' (agency named Department of Homeland Security, 59 rules, read to the footer by the reviewer on 2026-10-19): 1685-AA38 Low-Value Shipments (Proposed Rule Stage) bears on the de minimis item.",
-        "result": "partial",
-        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=1600"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Detail page read: DHS/CUSTREV, NPRM 09/00/2026; would implement the indefinite suspension of the de minimis exemption for goods of $800 or less, change electronic filing for informal entries of $2,500 or less, add a mail informal entry type and set new bonding rules; one package item, a planned rule and not an operative action.",
-        "result": "partial",
-        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1685-AA38"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Detail page read: Proposed Rule Stage, NPRM 09/00/2026, authority 50 U.S.C. 4581-4589; implements the COINS Act enacted in the FY2026 NDAA; names countries of concern without naming China; a planned rule.",
-        "result": "partial",
-        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1505-AC94"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "USTR code 3290 page read by the reviewer: heading 'Agency Rule List - 2026', no agency named and zero rules; USTR trade actions do not appear in the agenda, so this list is not informative.",
-        "result": "supports",
-        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=3290"
+        "url": "https://public-inspection.federalregister.gov/2026-21755.pdf"
       }
     ]
   },
@@ -257,10 +197,24 @@
       "publisher": "The White House",
       "title": "Fact Sheet: President Donald J. Trump Strikes Deal on Economic and Trade Relations with China",
       "url": "https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-strikes-deal-on-economic-and-trade-relations-with-china/"
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "primary",
+      "publisher": "Federal Register (public inspection)",
+      "title": "Request for Comments on Further Suspension of Section 301 Action: China's Targeting of the Maritime, Logistics, and Shipbuilding Sectors for Dominance (public inspection PDF)",
+      "url": "https://public-inspection.federalregister.gov/2026-21755.pdf"
+    },
+    {
+      "date": "2025-05-31",
+      "kind": "news",
+      "publisher": "Business Standard (Bloomberg)",
+      "title": "Chinese students at US colleges will be 'fine', says Donald Trump (Bloomberg report)",
+      "url": "https://www.business-standard.com/world-news/chinese-students-at-us-colleges-will-be-fine-says-donald-trump-125053100134_1.html"
     }
   ],
   "stage": "diverged",
-  "status_summary": "The administration raised tariffs on Chinese goods sharply in 2025 (a reciprocal rate of 125 percent from 2025-04-09) but then negotiated rather than decoupled: a 2025-11-01 arrangement cut the fentanyl-related tariff by 10 points and suspended port fees and an export-control rule for a year in exchange for rare earth and soybean commitments, and a May 2026 state visit chartered a U.S.-China Board of Trade and a Board of Investment and secured purchase commitments (200 Boeing aircraft, at least $17 billion a year of farm goods in 2026 to 2028). After the Supreme Court ruling, Executive Order 14389 (2026-02-20) ended the IEEPA duties, leaving Section 232 and Section 301 duties in place and the suspension of duty-free de minimis treatment unaffected. A law-firm alert dated 2026-09-24 reports that the Section 122 surcharge expired on 2026-07-24, that most Chinese goods now face a 12.5 percent forced-labor Section 301 tariff, that the Board of Investment remains stalled, and that the Treasury Secretary and China's Vice Premier agreed to extend the trade truce through 2027-01-10, during a state visit by Xi Jinping that began 2026-09-23. On apps, the President delayed enforcement of the 2024 divest-or-ban law through 2025, an order published 2025-09-30 described a qualified divestiture, and a TikTok U.S. joint venture closed on 2026-01-22 with the parent company keeping a stake of nearly 20 percent, rather than the ban the chapter recommends. On visas, the Secretary of State announced a plan in May 2025 to revoke visas of some Chinese students, while the President said the same week that Chinese students would be fine. Procurement bans, supply-chain reduction and the WeChat question were not verified.",
+  "status_summary": "The administration raised tariffs on Chinese goods sharply in 2025 (a reciprocal rate of 125 percent from 2025-04-09) but then negotiated rather than decoupled: a 2025-11-01 arrangement cut the fentanyl-related tariff by 10 points and suspended port fees and an export-control rule for a year in exchange for rare earth and soybean commitments, and a May 2026 state visit chartered a U.S.-China Board of Trade and a Board of Investment and secured purchase commitments (200 Boeing aircraft, at least $17 billion a year of farm goods in 2026 to 2028). After the Supreme Court ruling, Executive Order 14389 (2026-02-20) ended the IEEPA duties, leaving Section 232 and Section 301 duties and the de minimis suspension in place; a law-firm alert dated 2026-09-24 reports a 12.5 percent forced-labor Section 301 tariff on most Chinese goods, a stalled Board of Investment and a truce extension through 2027-01-10 agreed during Xi Jinping's state visit, and on 2026-10-23 USTR filed a notice proposing to extend the suspension of the Section 301 maritime port fees and Annex V.A duties, now ending 2026-11-09, through 2027-01-09 to allow further negotiation (comments due 2026-10-30; not yet in effect). On apps, enforcement of the 2024 divest-or-ban law was delayed and a TikTok U.S. joint venture closed on 2026-01-22 with the parent company keeping a stake of nearly 20 percent, rather than the ban the chapter recommends; on visas, the Secretary of State announced a plan in May 2025 to revoke visas of some Chinese students while the President said the same week that Chinese students would be fine. Procurement bans, supply-chain reduction and the WeChat question were not verified.",
   "timeline": [
     {
       "date": "2025-04-09",
@@ -317,10 +271,17 @@
       "kind": "news",
       "source": "Brownstein Hyatt Farber Schreck; Reuters via ARY News",
       "url": "https://www.bhfs.com/insight/updated-expectations-for-the-trump-xi-september-meeting/"
+    },
+    {
+      "date": "2026-10-23",
+      "event": "USTR files for public inspection a request for comments (FR Doc 2026-21755, docket USTR-2026-0694; scheduled for publication 2026-10-26) proposing to further suspend, from 2026-11-10 through 2027-01-09, the Section 301 maritime, logistics and shipbuilding responsive actions (fees on maritime transport services under Annexes I to III of the 2025-04-23 notice as modified on 2025-10-16, and the Annex V.A duties), whose current suspension ends 2026-11-09, to allow further negotiation with China; the extension is proposed only and comments are due 2026-10-30.",
+      "kind": "primary",
+      "source": "Federal Register (public inspection)",
+      "url": "https://public-inspection.federalregister.gov/2026-21755.pdf"
     }
   ],
   "title": "Decouple economically from China with broad tariffs, app and drone bans, and fewer visas",
   "tracked": true,
-  "uncertainties": "The diverged label rests on the chapter's core claim (negotiation is futile, so decouple) set against a negotiated, managed-trade posture, including 2025 and 2026 truce arrangements; several package items were carried out in some form elsewhere, so a partial reading is defensible. The 12.5 percent forced-labor Section 301 rate and the 2026-07-24 expiry of the Section 122 surcharge come from one law-firm alert, the truce extension from secondary reports, and the TikTok terms were not read from a primary document. Procurement bans, WeChat, supply-chain measures and 2026 visa policy were not verified. Unified Agenda lists on reginfo.gov (headed 'Agency Rule List - 2026') show planned de minimis (1685-AA38) and outbound investment (1505-AC94) rules only. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-23"
+  "uncertainties": "The diverged label rests on the chapter's core claim (negotiation is futile, so decouple) set against a negotiated, managed-trade posture, including 2025 and 2026 truce arrangements; several package items were carried out in some form elsewhere, so a partial reading is defensible. The 12.5 percent forced-labor Section 301 rate and the 2026-07-24 expiry of the Section 122 surcharge come from one law-firm alert, the truce extension from secondary reports, and the TikTok terms were not read from a primary document. Procurement bans, WeChat, supply-chain measures and 2026 visa policy were not verified. Unified Agenda lists on reginfo.gov (headed 'Agency Rule List - 2026') show planned de minimis (1685-AA38) and outbound investment (1505-AC94) rules only. Checked systematically on 2026-10-19. The USTR notice filed 2026-10-23 (FR Doc 2026-21755) was read in the public inspection PDF on public-inspection.federalregister.gov; it only proposes the further suspension through 2027-01-09, which is not in effect until USTR acts after the 2026-10-30 comment deadline. The truce end date of 2027-01-10 reported on 2026-09-24 and the notice's end date of 2027-01-09 (11:59 p.m. Eastern) differ by one day and were not reconciled. No Bureau of Industry and Security extension of the suspended affiliates export-control rule (suspension ending 2026-11-09) was found in a Federal Register API listing as of 2026-10-24.",
+  "updated_at": "2026-10-24"
 }
