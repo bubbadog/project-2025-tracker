@@ -36,10 +36,14 @@
     {
       "date": "2026-10-18",
       "note": "Independent review re-read the 2025-03-14 delegation rule on federalregister.gov and confirmed the CFR paragraph, release numbers, effective date and rationale; the researcher read the 2026-07-20 rule in full. No stage change (implemented 70, partial); confidence 76 to 80."
+    },
+    {
+      "date": "2026-10-24",
+      "note": "A red-team check on 2026-10-24 found no redelegation, litigation or reversal of the SEC formal-order delegation rule, and the stage was left unchanged."
     }
   ],
   "id": "c27-08",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-24",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -49,6 +53,32 @@
   "position": "SEC Administration",
   "progress": 70,
   "proposal": "The Mandate recommends that the SEC stop delegating to staff the decision to initiate an enforcement case, and that the Chairman, possibly with GAO, study whether other delegations to staff should be narrowed or made to expire.",
+  "redteam": {
+    "date": "2026-10-24",
+    "evidence": [
+      {
+        "date": "2026-10-24",
+        "note": "Five SEC documents; delegations concern Investment Management, Reg NMS exemptions and OCC filings; none restores Enforcement formal-order authority.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=%22delegation%20of%20authority%22&conditions%5Bagencies%5D%5B%5D=securities-and-exchange-commission&conditions%5Bpublication_date%5D%5Bgte%5D=2025-03-15"
+      },
+      {
+        "date": "2026-10-24",
+        "note": "Two unrelated SEC notices only.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=%22formal%20order%22&conditions%5Bagencies%5D%5B%5D=securities-and-exchange-commission&conditions%5Bpublication_date%5D%5Bgte%5D=2025-03-15"
+      },
+      {
+        "date": "2025-03-18",
+        "note": "Only coverage found concerns the original rescission; no later redelegation reported.",
+        "source": "Cooley (law firm)",
+        "url": "https://investigations.cooley.com/2025/03/18/sec-now-requires-commission-approval-for-subpoenas-but-says-it-is-not-walking-away-from-enforcement/"
+      }
+    ],
+    "note": "No refuting evidence; the rule remains in force.",
+    "verdict": "holds",
+    "what_was_tested": "Federal Register API for SEC 'formal order' and 'delegation of authority' documents since 2025-03-15; web search for redelegation or litigation."
+  },
   "related_ids": [
     "c27-10"
   ],
@@ -145,6 +175,6 @@
   ],
   "title": "End staff delegation of the decision to open SEC enforcement cases; study delegations",
   "tracked": true,
-  "uncertainties": "The 2025-03-14 rule (90 FR 12105) was re-read in this review on federalregister.gov through a summarizing fetch tool; it removes and reserves 17 CFR 200.30-4(a)(13) (Release Nos. 33-11366, 34-102552, IA-6862, IC-35492) and recalls that the 2009 delegation was first made for one year to allow Commission review before being extended in 2010, which is history rather than a new study. The 2026-07-20 rule (91 FR 45187) was read in full by the researcher. The rule does not say whether the decision to file an enforcement action was ever delegated; that filing an action requires a Commission vote is from general knowledge, so the formal-order delegation is treated as the delegated decision the Mandate targets, a judgment call. No internal delegation review or GAO study of SEC delegations was found on sec.gov or federalregister.gov; the absence is not proof none exists.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The 2025-03-14 rule (90 FR 12105) was re-read in this review on federalregister.gov through a summarizing fetch tool; it removes and reserves 17 CFR 200.30-4(a)(13) (Release Nos. 33-11366, 34-102552, IA-6862, IC-35492) and recalls that the 2009 delegation was first made for one year to allow Commission review before being extended in 2010, which is history rather than a new study. The 2026-07-20 rule (91 FR 45187) was read in full by the researcher. The rule does not say whether the decision to file an enforcement action was ever delegated; that filing an action requires a Commission vote is from general knowledge, so the formal-order delegation is treated as the delegated decision the Mandate targets, a judgment call. No internal delegation review or GAO study of SEC delegations was found on sec.gov or federalregister.gov; the absence is not proof none exists. A refutation check on 2026-10-24 using the Federal Register API for SEC documents mentioning 'formal order' or 'delegation of authority' since 2025-03-15 found no document redelegating formal-order authority to staff; no litigation over the 2025-03-14 rule was found.",
+  "updated_at": "2026-10-24"
 }
