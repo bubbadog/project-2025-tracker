@@ -161,6 +161,13 @@ def validate_item(it: dict, fname: str, rep: Report, today: str, ids: set[str]) 
             rep.warn(f"{where}: timeline kind {e.get('kind')!r} not in the allowed set")
         if not e.get("event"):
             rep.err(f"{where}: timeline entry without an event description")
+    source_urls = {s.get("url") for s in (it.get("sources") or []) if isinstance(s, dict)}
+    for e in it.get("timeline") or []:
+        if isinstance(e, dict) and e.get("url") and e["url"] not in source_urls:
+            rep.warn(f"{where}: timeline event {e.get('date')} cites a URL that is not listed in sources")
+    cs = it.get("court_status")
+    if isinstance(cs, dict) and cs.get("url") and cs["url"] not in source_urls:
+        rep.warn(f"{where}: court_status cites a URL that is not listed in sources")
     for s in it.get("sources") or []:
         if not isinstance(s, dict):
             rep.err(f"{where}: source is not an object")
