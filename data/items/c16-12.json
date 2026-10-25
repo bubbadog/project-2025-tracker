@@ -8,7 +8,7 @@
   "chapter": "16",
   "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Text checked; the stage-deciding enactment was confirmed on GovInfo bill status (public law number and roll calls) and the Chaco notice on blm.gov.",
+  "confidence_reason": "Chapter page 523 was re-read; the Boundary Waters enactment rests on GovInfo bill status and a White House page, the Chaco step on a BLM release, and the 2025-07-17 Interior memorandum was read on doi.gov this run.",
   "durability": {
     "level": "medium",
     "why": "The Boundary Waters reversal is statutory and bars a similar future withdrawal, while the Chaco and Thompson Divide steps are administrative and reversible."
@@ -30,10 +30,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Freshness check on 2026-10-25 queried the Federal Register API for the three withdrawals and found no new Interior order or notice, added the Federal Register public land order for the Thompson Divide and an Interior memo of 2025-07-17 on the Twin Metals leases; stage in_progress 45 unchanged."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Independent review on 2026-10-25 re-read chapter page 523 and the 2025-07-17 Interior memorandum on doi.gov, confirmed it as a dated action on the Twin Metals leases, removed an aggregator source and kept in_progress 45."
     }
   ],
   "id": "c16-12",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-25",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -55,60 +63,30 @@
   "research_agent": "N16",
   "review": {
     "flags": [
-      "judgment call: in_progress 45 bundles one withdrawal reversed by statute, one proposed revocation and one with no action",
-      "proposal_changed: the text conditions the request on the withdrawals not being complete",
-      "Earthjustice item replaced by GovInfo bill status and a Senate page"
+      "Judgment call: in_progress 45 bundles one withdrawal reversed by statute, one proposed revocation and one with no action.",
+      "The Senate Democrats wrap-up page is a party caucus page; the Senate vote also rests on GovInfo bill status, which is the stronger source.",
+      "Blocker naming the Minnesota executive order rests on an unverified lead."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 523 asks to abandon the three withdrawals if not yet completed and meanwhile to revisit leases and permits; the earlier paraphrase implied reversing completed withdrawals, so the proposal was corrected.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y16a",
+    "mandate_check": "verified",
+    "mandate_note": "pages re-read 2026-10-25: page 523 asks to abandon the Thompson Divide, Chaco buffer and Boundary Waters withdrawals if not completed and meanwhile to revisit associated energy and mineral leases and permits with state officials; the proposal is accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-25",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Public Law 119-85 (2026-04-27); House 214-208 on 2026-01-21 (roll 38); Senate passage 50-49 on 2026-04-16 (roll 84).",
+        "note": "Deputy Secretary memorandum of 2025-07-17 to the Acting Solicitor: withdraws M-37072, reinstates M-37049 on the Twin Metals leases MNES-01352 and MNES-01353, binding on all bureaus; does not itself reinstate the leases. A dated government action bearing on the lease-revisit element; consistent with in_progress 45.",
+        "result": "supports",
+        "url": "https://www.doi.gov/sites/default/files/documents/2025-07/2025-07-17-memo-reinstating-m-37049.pdf"
+      },
+      {
+        "note": "Prior check stands: Public Law 119-85 disapproving the Boundary Waters withdrawal; not re-fetched this run.",
         "result": "supports",
         "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hjres/BILLSTATUS-119hjres140.xml"
       },
       {
-        "note": "Signed 2026-04-27; disapproves 2023 BLM order withdrawing about 225,504 acres; no public law number on page.",
-        "result": "supports",
-        "url": "https://www.whitehouse.gov/briefings-statements/2026/04/congressional-bill-h-j-res-140-signed-into-law/"
-      },
-      {
-        "note": "Senate Democrats wrap-up records H.J.Res. 140 passed 50-49 on 2026-04-16.",
-        "result": "supports",
-        "url": "https://www.democrats.senate.gov/2026/04/16/wrap-up-for-thursday-april-16-2026"
-      },
-      {
-        "note": "Vote menu text truncated in the fetch tool before the April votes; roll call taken from GovInfo bill status instead.",
-        "result": "unreachable",
-        "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm"
-      },
-      {
-        "note": "2026-07-15 release; PLO 7923, 336,404 acres, full revocation as proposed action, comments close 2026-07-29; no final decision.",
-        "result": "supports",
-        "url": "https://www.blm.gov/press-release/blm-seeks-input-proposed-withdrawal-revocation-near-chaco-culture-national-historical"
-      },
-      {
-        "note": "2025-02-12 report that the Thompson Divide withdrawal could be reconsidered; no action named.",
-        "result": "supports",
-        "url": "https://crestedbuttenews.com/?p=45065"
-      },
-      {
-        "note": "Undated report that the Thompson Divide withdrawal (221,898 acres, 20 years) was finalized in April 2024; no later action.",
+        "note": "Context only: the Thompson Divide withdrawal was completed in 2024, before the period; no later action found. Kept in sources and uncertainties, not the timeline.",
         "result": "partial",
-        "url": "https://coloradosun.com/?p=378797"
-      },
-      {
-        "note": "FR API 2026-10-13: zero documents since 2025-01-20.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Thompson+Divide%22"
-      },
-      {
-        "note": "State order signed 2026-08-18; says Interior moved to restore Twin Metals leases, no date.",
-        "result": "partial",
-        "url": "https://hoodline.com/2026/08/walz-freezes-mining-near-boundary-waters-setting-up-fight-with-gop/"
+        "url": "https://www.federalregister.gov/documents/2024/04/08/2024-07384/public-land-order-no-7939-thompson-divide-withdrawal-colorado"
       }
     ]
   },
@@ -171,23 +149,37 @@
       "url": "https://www.blm.gov/press-release/blm-seeks-input-proposed-withdrawal-revocation-near-chaco-culture-national-historical"
     },
     {
-      "date": "2026-08",
-      "kind": "news",
-      "publisher": "Hoodline",
-      "title": "Walz freezes mining near Boundary Waters, setting up fight with GOP",
-      "url": "https://hoodline.com/2026/08/walz-freezes-mining-near-boundary-waters-setting-up-fight-with-gop/"
-    },
-    {
       "date": "2025-02-12",
       "kind": "news",
       "publisher": "Crested Butte News",
       "title": "Thompson Divide mineral withdrawal could be under scrutiny, but Red Lady protected",
       "url": "https://crestedbuttenews.com/?p=45065"
+    },
+    {
+      "date": "2025-07-17",
+      "kind": "primary",
+      "publisher": "Department of the Interior",
+      "title": "Memorandum reinstating Solicitor Opinion M-37049 and withdrawing M-37072 (Twin Metals leases)",
+      "url": "https://www.doi.gov/sites/default/files/documents/2025-07/2025-07-17-memo-reinstating-m-37049.pdf"
+    },
+    {
+      "date": "2024-04-08",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Public Land Order No. 7939; Thompson Divide Withdrawal, Colorado",
+      "url": "https://www.federalregister.gov/documents/2024/04/08/2024-07384/public-land-order-no-7939-thompson-divide-withdrawal-colorado"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "All three withdrawals had been completed before 2025, so the Mandate's conditional request is matched only by later reversals. For the Boundary Waters, the House (2026-01-21, 214 to 208) and Senate (2026-04-16, 50 to 49) passed H.J.Res. 140, which the President signed on 2026-04-27 as Public Law 119-85, disapproving the 20-year withdrawal of about 225,504 acres. For Chaco, BLM took comment through 2026-07-29 on an assessment proposing full revocation of the 336,404 acre buffer withdrawal, with no final decision found. No federal action on the Thompson Divide withdrawal was found, though a February 2025 report said it could be reconsidered.",
+  "status_summary": "All three withdrawals had been completed before 2025, so the Mandate's conditional request is matched only by later reversals. For the Boundary Waters, the House (2026-01-21, 214 to 208) and Senate (2026-04-16, 50 to 49) passed H.J.Res. 140, which the President signed on 2026-04-27 as Public Law 119-85, disapproving the 20-year withdrawal of about 225,504 acres. For Chaco, BLM took comment through 2026-07-29 on an assessment proposing full revocation of the 336,404 acre buffer withdrawal, with no final decision found. No federal action on the Thompson Divide withdrawal (Public Land Order 7939, published 2024-04-08) was found, though a February 2025 report said it could be reconsidered. For the Boundary Waters leases, an Interior memo of 2025-07-17 reinstated a Solicitor opinion favorable to the Twin Metals lease renewals.",
   "timeline": [
+    {
+      "date": "2025-07-17",
+      "event": "The Interior Deputy Secretary, by memorandum to the Acting Solicitor, withdrew Solicitor Opinion M-37072 and reinstated M-37049, the earlier opinion supporting renewal of the Twin Metals mineral leases (MNES-01352 and MNES-01353) near the Boundary Waters, and directed all bureaus to treat M-37049 as binding; the memo does not itself reinstate or renew a lease.",
+      "kind": "primary",
+      "source": "Department of the Interior",
+      "url": "https://www.doi.gov/sites/default/files/documents/2025-07/2025-07-17-memo-reinstating-m-37049.pdf"
+    },
     {
       "date": "2026-01-21",
       "event": "House passed H.J.Res. 140, the Congressional Review Act resolution disapproving Public Land Order 7917 (Boundary Waters area withdrawal), 214 to 208.",
@@ -219,6 +211,6 @@
   ],
   "title": "Reverse mineral withdrawals at Thompson Divide, Chaco and the Boundary Waters",
   "tracked": true,
-  "uncertainties": "The 'completed' reading of the withdrawals relies on the Chaco and Boundary Waters sources describing them as 20-year orders and on a Colorado report that the Thompson Divide withdrawal was finalized in 2024. A Federal Register API search for Thompson Divide since 2025-01-20 returned no documents. A news report says Interior moved to restore the Twin Metals federal leases, but no dated primary record was found, so lease actions are not counted.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The 'completed' reading of the withdrawals relies on the Chaco and Boundary Waters sources describing them as 20-year orders and on Public Land Order 7939 (Federal Register, 2024-04-08), which withdrew the Thompson Divide. Federal Register API queries on 2026-10-25 for Thompson Divide (since 2025-01-20), Chaco (since 2026-07-01) and Boundary Waters (since 2026-04-01) returned no Interior revocation, public land order or notice on any of the three after the dates already recorded, and the BLM Chaco page of 2026-07-15 gives no decision date. The 2025-07-17 Interior memo concerns the legal opinion governing the Twin Metals lease renewals; a news report says Interior moved to restore the leases, but no dated primary record of a lease reinstatement was found, so lease actions are not counted. The Minnesota executive order of 2026-08-18 rests only on a hoodline.com report, an aggregator treated as an unverified lead, so that source was removed on 2026-10-25; the state order itself was not read. Public Land Order 7939 (Thompson Divide, 2024-04-08) predates 2025-01-20 and is context only, not a timeline event.",
+  "updated_at": "2026-10-25"
 }
