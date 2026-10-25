@@ -4,7 +4,7 @@
   "chapter": "20",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "Ordinary scale: the stage-deciding primary documents were read in review (VA's 2026-06-24 written statement to the House Veterans' Affairs Subcommittee on Oversight and Investigations, the department.va.gov staff office page and the OSP Assistant Secretary's biography); the chapter text was checked at an earlier review (page 654). Five checks were also documented: Federal Register API (supports, no notice), VA Unified Agenda (supports, not expected for an internal change), congress.gov and govinfo.gov search (supports), VA pages (does_not_support) and the statement (does_not_support). No order, notice or effective date was found, so confidence is 72.",
+  "confidence_reason": "Chapter page 654 was re-read and the VA offices page, the Assistant Secretary biography and the 2026-06-24 VA statement were read this run; no order or effective date of the separation was found, so the record stays medium.",
   "durability": {
     "level": "low",
     "why": "Internal organization can be redrawn by later leadership."
@@ -34,10 +34,18 @@
     {
       "date": "2026-10-19",
       "note": "Coordinating session red-team: source check results restated relative to the current stage. The stage-deciding documents had been marked as not supporting because they were first recorded during a no-action absence check. No change to stage, progress or confidence."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Refutation check on 2026-10-25 found no reversal and no order or Federal Register notice effecting the separation, while the department.va.gov offices page still lists the two offices separately and an Air Force Times report of 2026-06-25 expected the reorganization to finish by October."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Independent review on 2026-10-25 re-read chapter page 654, the VA offices page and staff biography on department.va.gov and the VA statement on docs.house.gov, replaced the testimony event with the December 2025 appointment and kept implemented 75."
     }
   ],
   "id": "c20-16",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-25",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -47,6 +55,44 @@
   "position": "VA Secretary",
   "progress": 75,
   "proposal": "The Mandate recommends considering decoupling the Office of Human Resources and Administration from the Office of Security and Preparedness, which were combined to free an Assistant Secretary position after the Office of Accountability and Whistleblower Protection was created, arguing that dissimilar functions make the combined organization hard to staff (p. 654).",
+  "redteam": {
+    "date": "2026-10-25",
+    "evidence": [
+      {
+        "date": "2026-10-25",
+        "note": "26 VA documents, none an organization notice or order effecting a separation; the 2026-01-15 Privacy Act notice mentions the office only in a safeguards passage.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Operations%2C+Security%2C+and+Preparedness%22&conditions[agencies][]=veterans-affairs-department&order=newest"
+      },
+      {
+        "date": "2026-10-25",
+        "note": "Only Performance Review Board and Executive Order 12171 notices; no reorganization notice.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Human+Resources+and+Administration%22&conditions[agencies][]=veterans-affairs-department&conditions[publication_date][gte]=2025-06-01&order=newest"
+      },
+      {
+        "date": "2026-06-24",
+        "note": "Says VA is still completing a reorganization giving the security office its own Assistant Secretary; cites no directive, memo or effective date.",
+        "source": "House Veterans' Affairs Committee (VA statement)",
+        "url": "https://docs.house.gov/meetings/VR/VR08/20260624/119398/HHRG-119-VR08-Wstate-NealR-20260624.pdf"
+      },
+      {
+        "date": "2026-10-25",
+        "note": "Lists the human resources and administration office and the operations, security and preparedness office as separate staff offices with separate named leaders.",
+        "source": "Department of Veterans Affairs",
+        "url": "https://department.va.gov/administrations-and-offices/"
+      },
+      {
+        "date": "2026-06-25",
+        "note": "Reports the police consolidation under the security office and an expected completion by October; names no order.",
+        "source": "Air Force Times",
+        "url": "https://www.airforcetimes.com/veterans/2026/06/25/following-reports-of-staff-shortages-and-safety-concerns-va-to-centralize-its-police-force/"
+      }
+    ],
+    "note": "No reversal found and VA's own offices page shows the two offices separate, but no primary instrument or effective date was found and the reorganization was described as incomplete and targeted for October. Stage implemented 75 kept as operative in substance; the open question is lodged in uncertainties.",
+    "verdict": "weakened",
+    "what_was_tested": "Federal Register API for VA documents naming the two offices; web searches for a VA order, announcement or chart effecting the separation; the 2026-06-24 statement re-read for an instrument or date; the VA offices page; a news report on the police consolidation."
+  },
   "related_ids": [
     "c20-08"
   ],
@@ -65,57 +111,30 @@
       "url": "https://docs.house.gov/meetings/VR/VR00/20260211/118948/HHRG-119-VR00-Wstate-CollinsD-20260211.pdf"
     },
     "flags": [
-      "Stage change: not_started 0 to implemented 75 on the VA statement of 2026-06-24 and VA staff office pages.",
-      "Blocker ('A separate Assistant Secretary position may require statutory authority'), remaining ('Any decision to split the offices...') and est_completion basis ('no related action was found') are now outdated and should be revised by the coordinator.",
-      "durability 'low' still fits; motive differs from the Mandate's (VA Police chain of command versus staffing), which the record should report without implying causation.",
-      "Researcher's note gives the OSP page last-updated date as 2026-08-12; the page the reviewer opened shows 2026-01-12."
+      "implemented 75 kept: two separate offices with separately appointed Assistant Secretaries are operative in substance and the recommendation only asks VA to consider decoupling. Alternative: in_progress 50, because VA described the reorganization as still being completed and no instrument or effective date was found.",
+      "Whether the Assistant Secretary appointment was Senate-confirmed or acting is not stated on the VA page.",
+      "Motive differs from the Mandate's (VA Police chain of command versus staffing); alignment only."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 654 recommends considering decoupling HRA and the Office of Security and Preparedness, which were combined to free a Senate-confirmed position after Congress created the whistleblower office without a new Assistant Secretary, because their functions are dissimilar. The paraphrase is accurate.",
+    "mandate_check": "verified",
+    "mandate_note": "pages re-read 2026-10-25: the recommendation is on page 654 (the HRA section begins on page 651) and asks VA to consider decoupling HRA and the Office of Security and Preparedness because their functions are dissimilar; the proposal is accurate and pages [654] is correct.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
-    "reviewer": "independent AI reviewer (absence checks)",
+    "reviewed_at": "2026-10-25",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): supports became partial. Draft reading relied on; no mention of HRA or OSP changes.",
-        "result": "partial",
-        "url": "https://docs.house.gov/meetings/VR/VR00/20260211/118948/HHRG-119-VR00-Wstate-CollinsD-20260211.pdf"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): supports became partial. Queries since 2025-01-20, VA: 'Human Resources and Administration': 5 documents (Performance Review Board notices; EO 12171 suspension order 2025-04-17 and rescission 2025-11-13); 'Security and Preparedness': 2 documents (the 2025-04-17 order; Privacy Act notice 2026-01-15); none on separating the offices.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"Human%20Resources%20and%20Administration\"&conditions[publication_date][gte]=2025-01-20&conditions[agencies][]=veterans-affairs-department&per_page=20"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): supports became partial. Agency named: Department of Veterans Affairs; Agency Rule List - 2026; 62 rules; none on VA organization or staff offices. An internal reorganization would not appear as a rule. Reviewer reopened the list on 2026-10-19 and confirmed the heading and the RINs and titles named. An internal reorganization would not appear as a rule.",
-        "result": "partial",
-        "url": "https://www.reginfo.gov/public/do/eAgendaMain?operation=OPERATION_GET_AGENCY_RULE_LIST&currentPub=true&agencyCode=&showStage=active&agencyCd=2900"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): supports became partial. Results (S.423 PRO Veterans Act, S.1591, appropriations H.R.7148) not identified as concerning the offices' structure; no bill action needed for this recommendation. Reviewer opened the S. 423 bill status (PRO Veterans Act of 2025, P.L. 119-33, 2025-08-14): it does not mention either office.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/BILLSTATUS-119s423/xml/BILLSTATUS-119s423.xml"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): does not support became supports. VA staff office page (read 2026-10-19) lists the Office of Human Resources and Administration (Mark R. Engelbaum) and the Office of Operations, Security, and Preparedness (Reginald G. A. Neal) as separate offices; OSP page (last updated 2026-08-12) shows its own Assistant Secretary. Staff biography states Neal was appointed December 2025 as Assistant Secretary for OSP. Some page URLs still carry the combined name. Reviewer reopened the page on 2026-10-19 and confirmed both offices listed separately (HRA led by Mark R. Engelbaum; OSP led by Reginald G. A. Neal). The OSP office page seen by the reviewer shows 'Last updated January 12, 2026', not 2026-08-12.",
+        "note": "VA administrations and offices page (last updated 2026-02-25) lists HRA and OSP as separate staff offices with separate named leaders. Establishes the separation as operative in substance; supports implemented 75.",
         "result": "supports",
         "url": "https://department.va.gov/administrations-and-offices/"
       },
       {
-        "date": "2026-10-19",
-        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): does not support became supports. Written statement of VA's Assistant Secretary for OSP, House hearing of 2026-06-24: 'We are completing a reorganization that gives the VA's Office of Operations, Security, and Preparedness its own Assistant Secretary'; Mark Engelbaum is separately Assistant Secretary for Human Resources and Administration. Senate Veterans' Affairs hearing page (2026-05-13) likewise lists the two Assistant Secretaries separately. The effective date and any order or Federal Register notice of the separation were not found. Reviewer opened the statement on 2026-10-19 (hearing 'Failure at the Front Gate: Examining VA Police and Security Deficiencies', Subcommittee on Oversight and Investigations) and confirmed the quoted sentence; the stated reason is a unified VA Police chain of command.",
+        "note": "VA biography (updated 2025-12-08): appointed by the President in December 2025 as Assistant Secretary for Operations, Security, and Preparedness; no exact day and no confirmation status stated. Supports implemented 75 as the dated action.",
         "result": "supports",
-        "url": "https://docs.house.gov/meetings/VR/VR08/20260624/119398/HHRG-119-VR08-Wstate-NealR-20260624.pdf"
+        "url": "https://department.va.gov/staff-biographies/reginald-g-a-neal/"
       },
       {
-        "date": "2026-10-19",
-        "note": "Result relabeled 2026-10-19 by the coordinating session relative to the current stage (first recorded as an absence check, where the result described the no-action finding): does not support became partial. Reviewer opened the biography (published 2025-12-08): Reginald G. A. Neal was appointed by the President in December 2025 as Assistant Secretary for Operations, Security, and Preparedness. It does not describe the separation from HRA.",
+        "note": "VA written statement of 2026-06-24: VA is completing a reorganization giving OSP its own Assistant Secretary for a unified VA Police chain of command; cites no directive, memo or effective date. Consistent with the separation but describes the wider reorganization as still in progress.",
         "result": "partial",
-        "url": "https://department.va.gov/staff-biographies/reginald-g-a-neal/"
+        "url": "https://docs.house.gov/meetings/VR/VR08/20260624/119398/HHRG-119-VR08-Wstate-NealR-20260624.pdf"
       }
     ]
   },
@@ -170,7 +189,7 @@
       "url": "https://docs.house.gov/meetings/VR/VR08/20260624/119398/HHRG-119-VR08-Wstate-NealR-20260624.pdf"
     },
     {
-      "date": "2026-10-19",
+      "date": "2026-02-25",
       "kind": "primary",
       "publisher": "Department of Veterans Affairs",
       "title": "VA administrations and offices",
@@ -182,21 +201,28 @@
       "publisher": "Department of Veterans Affairs",
       "title": "Reginald G. A. Neal, staff biography",
       "url": "https://department.va.gov/staff-biographies/reginald-g-a-neal/"
+    },
+    {
+      "date": "2026-06-25",
+      "kind": "news",
+      "publisher": "Air Force Times",
+      "title": "Following reports of staff shortages and safety concerns, VA to centralize its police force",
+      "url": "https://www.airforcetimes.com/veterans/2026/06/25/following-reports-of-staff-shortages-and-safety-concerns-va-to-centralize-its-police-force/"
     }
   ],
   "stage": "implemented",
-  "status_summary": "VA now lists the Office of Human Resources and Administration and the Office of Operations, Security, and Preparedness as separate staff offices with separate leaders. The President appointed Reginald G. A. Neal in December 2025 as Assistant Secretary for Operations, Security, and Preparedness, and in a written statement to a House Veterans' Affairs subcommittee on 2026-06-24 he said VA is completing a reorganization that gives that office its own Assistant Secretary, with Mark Engelbaum serving as Assistant Secretary for Human Resources and Administration. The statement ties the change to a unified chain of command for VA Police. No order or Federal Register notice of the separation and no effective date were found.",
+  "status_summary": "VA lists the Office of Human Resources and Administration and the Office of Operations, Security, and Preparedness as separate staff offices with separate leaders (page last updated 2026-02-25), and its biography of Reginald G. A. Neal says the President appointed him Assistant Secretary for Operations, Security, and Preparedness in December 2025, while Mark Engelbaum serves as Assistant Secretary for Human Resources and Administration. In a written statement to a House Veterans' Affairs subcommittee on 2026-06-24, VA said it is completing a reorganization that gives the security office its own Assistant Secretary and a unified chain of command for VA Police. No order, Federal Register notice or effective date of the separation was found, so the record treats the separation as operative in substance through the separate offices and appointments, with the wider reorganization still described as in progress.",
   "timeline": [
     {
-      "date": "2026-06-24",
-      "event": "VA's Assistant Secretary for Operations, Security, and Preparedness stated in written testimony to the House Veterans' Affairs Subcommittee on Oversight and Investigations that VA is completing a reorganization giving the Office of Operations, Security, and Preparedness its own Assistant Secretary, separate from the Assistant Secretary for Human Resources and Administration.",
+      "date": "2025-12-01",
+      "event": "The President appointed an Assistant Secretary for Operations, Security, and Preparedness, a post held separately from the Assistant Secretary for Human Resources and Administration (month-only date: December 2025, per the VA biography).",
       "kind": "primary",
-      "source": "House Veterans' Affairs Committee (VA written statement)",
-      "url": "https://docs.house.gov/meetings/VR/VR08/20260624/119398/HHRG-119-VR08-Wstate-NealR-20260624.pdf"
+      "source": "Department of Veterans Affairs (staff biography)",
+      "url": "https://department.va.gov/staff-biographies/reginald-g-a-neal/"
     }
   ],
   "title": "Consider separating VA's HR and Administration office from Security and Preparedness",
   "tracked": true,
-  "uncertainties": "The VA rule list on reginfo.gov (labeled Agency Rule List - 2026, 62 rules) lists no rulemaking on staff office structure, which would be internal. The separation rests on VA pages and a 2026-06-24 VA statement to Congress; no order, Federal Register notice or effective date was found, and the statement describes the reorganization as being completed. VA's stated purpose is a unified VA Police chain of command, not the staffing rationale the Mandate gives; the record reports alignment only. Some VA URLs still carry the combined office name. Whether the second Assistant Secretary position needed statutory change was not checked. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "The VA rule list on reginfo.gov (labeled Agency Rule List - 2026, 62 rules) lists no rulemaking on staff office structure, which would be internal. The separation rests on VA pages and a 2026-06-24 VA statement to Congress; no order, Federal Register notice or effective date was found, and the statement describes the reorganization as being completed. VA's stated purpose is a unified VA Police chain of command, not the staffing rationale the Mandate gives; the record reports alignment only. Some VA URLs still carry the combined office name. Whether the second Assistant Secretary position needed statutory change was not checked. Checked systematically on 2026-10-19. Refutation check on 2026-10-25: a news report dated 2026-06-25 (Air Force Times) says the police consolidation under the Office of Operations, Security, and Preparedness was announced that week and that officials expected the reorganization to be completed by October; it names no memo or order, so the effective date of the separation remains unknown and the reorganization may still have been in progress at the 2026-10-25 check. The department.va.gov offices page, fetched again, lists the Office of Human Resources and Administration and the Office of Operations, Security, and Preparedness as separate entries with separate named leaders. Federal Register API queries for VA documents naming either office (since 2025-06 and all years) returned no organizational notice or order; a 2026-01-15 Privacy Act notice mentions the security office only in passing. Review 2026-10-25: the 2026-06-24 VA written statement was moved out of the timeline because testimony describing a reorganization is not itself a government action; it stays in sources and supports the separate Assistant Secretary posts. The appointment event uses a month-only date from the VA biography (updated 2025-12-08), which does not say whether the appointment was Senate-confirmed or acting.",
+  "updated_at": "2026-10-25"
 }

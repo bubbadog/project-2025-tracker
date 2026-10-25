@@ -7,7 +7,7 @@
   "chapter": "13",
   "confidence": 84,
   "confidence_label": "high",
-  "confidence_reason": "Document text checked and the stage-deciding proposed rule was read on federalregister.gov; no final rule found.",
+  "confidence_reason": "Chapter text checked earlier; the proposed rule on federalregister.gov and the EPA rule page (read this run) establish the proposal, and a Federal Register query found no final rule.",
   "durability": {
     "level": "medium",
     "why": "Final rule would be reversible by later rulemaking and reviewable in court; the stringency of the NOx standard itself is not being reopened."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Freshness check on 2026-10-25 queried the Federal Register API and read the EPA rule page, which lists July 2026 hearings and shows no final rule; stage proposed 20 unchanged."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Independent review on 2026-10-25 read the EPA rule page on epa.gov and a Federal Register query showing no final rule, moved two announcements out of the timeline and kept proposed 20."
     }
   ],
   "id": "c13-13",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-25",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -52,27 +60,24 @@
   "requires_congress": "no",
   "research_agent": "N13",
   "review": {
-    "flags": [],
+    "flags": [
+      "A final rule could still issue before model year 2027 production; if not finalized, the 2023 rule's model year 2027 requirements apply from 2027-01-01 per a trade report."
+    ],
     "mandate_check": "verified",
-    "mandate_note": "Page 426 checked; the Cleaner Trucks Initiative reconsideration recommendation is accurately paraphrased.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y13a",
+    "mandate_note": "proposal text unchanged this run; prior check stands",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-25",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Proposed rule 91 FR 43154: standards not reopened; MY2026 warranty periods kept; useful life delayed to MY2030; nonconformance penalties; notifications replace derates; up to 6,000 dollars per diesel vehicle warranty savings; recounts the 2025-03-12 announcement; comments to 2026-08-29.",
+        "note": "EPA rule page (last updated 2026-08-31): proposal announced 2026-07-09, published 2026-07-14, virtual hearings 2026-07-29 and 2026-07-30, comments closed 2026-08-29, docket EPA-HQ-OAR-2026-0728; no final rule. Supports proposed 20.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/07/14/2026-14112/amendments-and-nonconformance-penalties-for-model-year-2027-and-later-heavy-duty-highway-engines-and"
+        "url": "https://www.epa.gov/regulations-emissions-vehicles-and-engines/proposed-rule-amendments-and-nonconformance-penalties"
       },
       {
-        "note": "Published 2026-07-09, updated 2026-07-13; source date corrected to 2026-07-09.",
+        "note": "Federal Register API query (EPA, nonconformance penalties, newest first) on 2026-10-25: newest document is the 2026-07-14 proposed rule; no final rule. The absence of a final rule decides that the stage stays proposed.",
         "result": "supports",
-        "url": "https://www.ttnews.com/articles/epa-trucks-emissions-warranty"
-      },
-      {
-        "note": "Query: EPA, heavy-duty nonconformance penalties, from 2026-07-15. No later documents, so no final rule as of 2026-10-13.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=nonconformance+penalties&conditions%5Bagencies%5D%5B%5D=environmental-protection-agency&order=newest"
       }
     ]
   },
@@ -119,35 +124,42 @@
       "publisher": "Transport Topics",
       "title": "EPA proposes cost-saving revision to 2027 truck emission rule",
       "url": "https://www.ttnews.com/articles/epa-trucks-emissions-warranty"
-    }
-  ],
-  "stage": "proposed",
-  "status_summary": "On 2025-03-12 the EPA Administrator announced that EPA would reevaluate its 2023 heavy-duty nitrogen oxide final rule, according to the later proposal. On 2026-07-14 EPA published a proposed rule for model year 2027 and later heavy-duty engines that does not reopen the NOx, particulate, hydrocarbon and carbon monoxide standards but would keep model year 2026 warranty periods, delay the longer useful life periods to model year 2030, create nonconformance penalties for certain diesel engines, and replace engine power derates with visible or audible notifications for urea system inducements. EPA estimated warranty savings of up to 6,000 dollars per diesel vehicle. Comments closed 2026-08-29, and no final rule was found in the Federal Register through 2026-10-13.",
-  "timeline": [
-    {
-      "date": "2025-03-12",
-      "event": "The EPA Administrator announced that EPA would reevaluate the 2023 heavy-duty NOx final rule, as recounted in the 2026 proposal.",
-      "kind": "primary",
-      "source": "Federal Register",
-      "url": "https://www.federalregister.gov/documents/2026/07/14/2026-14112/amendments-and-nonconformance-penalties-for-model-year-2027-and-later-heavy-duty-highway-engines-and"
     },
     {
       "date": "2026-07-09",
-      "event": "EPA announced the proposal, according to Transport Topics, with comments due 2026-08-29.",
-      "kind": "news",
-      "source": "Transport Topics",
-      "url": "https://www.ttnews.com/articles/epa-trucks-emissions-warranty"
+      "kind": "primary",
+      "publisher": "EPA",
+      "title": "Proposed Rule: Amendments and Nonconformance Penalties (EPA rule page)",
+      "url": "https://www.epa.gov/regulations-emissions-vehicles-and-engines/proposed-rule-amendments-and-nonconformance-penalties"
     },
+    {
+      "date": "2026-10-07",
+      "kind": "news",
+      "publisher": "FleetOwner",
+      "title": "The Great EPA27 Engine Pivot: OEMs, fleets shuffle plans due to last-minute regulation changes",
+      "url": "https://www.fleetowner.com/emissions-efficiency/article/55410129/epa-2027-engine-strategies-how-truck-oems-plan-for-low-nox-regs"
+    }
+  ],
+  "stage": "proposed",
+  "status_summary": "On 2025-03-12 the EPA Administrator announced that EPA would reevaluate its 2023 heavy-duty nitrogen oxide final rule, according to the later proposal. On 2026-07-14 EPA published a proposed rule for model year 2027 and later heavy-duty engines that does not reopen the NOx, particulate, hydrocarbon and carbon monoxide standards but would keep model year 2026 warranty periods, delay the longer useful life periods to model year 2030, create nonconformance penalties for certain diesel engines, and replace engine power derates with visible or audible notifications for urea system inducements. EPA estimated warranty savings of up to 6,000 dollars per diesel vehicle. EPA held virtual public hearings on 2026-07-29 and 2026-07-30, comments closed 2026-08-29, and no final rule was found in the Federal Register through 2026-10-25.",
+  "timeline": [
     {
       "date": "2026-07-14",
       "event": "EPA published a proposed rule amending compliance provisions, warranty and useful life periods, nonconformance penalties and inducement rules for model year 2027 and later heavy-duty engines.",
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/07/14/2026-14112/amendments-and-nonconformance-penalties-for-model-year-2027-and-later-heavy-duty-highway-engines-and"
+    },
+    {
+      "date": "2026-07-29",
+      "event": "EPA held virtual public hearings on the proposal on 2026-07-29 and 2026-07-30, per the EPA rule page.",
+      "kind": "primary",
+      "source": "EPA",
+      "url": "https://www.epa.gov/regulations-emissions-vehicles-and-engines/proposed-rule-amendments-and-nonconformance-penalties"
     }
   ],
   "title": "Reconsider the heavy-duty truck NOx rule to cut cost and compliance burden",
   "tracked": true,
-  "uncertainties": "The proposal leaves the numeric NOx standards intact, so alignment with the document is on cost and burden only. A Federal Register API search on 2026-10-13 found no final rule; a final action could still appear before model year 2027 production.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The proposal leaves the numeric NOx standards intact, so alignment with the document is on cost and burden only. Federal Register API queries on 2026-10-25 (EPA, heavy-duty engines, nonconformance penalties, since 2026-07-15) found no final rule; the EPA rule page and an industry trade report of 2026-10-07 (docket EPA-HQ-OAR-2026-0728) both describe the proposal as still pending, with no stated final-rule date. The trade report states that if the amendments are not finalized, the 2023 rule's model year 2027 requirements apply from 2027-01-01. A final action could still appear before model year 2027 production. Two announcements were moved out of the timeline on 2026-10-25 because announcements are not counted as events: the Administrator's 2025-03-12 statement that EPA would reevaluate the 2023 rule (as recounted in the proposal) and EPA's 2026-07-09 announcement of the proposal (Transport Topics); both remain in sources.",
+  "updated_at": "2026-10-25"
 }

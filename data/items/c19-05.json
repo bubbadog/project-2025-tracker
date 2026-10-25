@@ -7,7 +7,7 @@
   "chapter": "19",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Document text read in this review (printed pages 624 and 625 excerpt) and the proposal matches. The stage-deciding primary sources were fetched: NHTSA's 2026-07-31 AV Framework notice (earlier review) and the Zoox exemption grant (91 FR 48494, read in this review), plus the House committee page on H.R. 7390. FMVSS proposals were seen in listings and NHTSA's summary rather than read individually, and FMCSA has no decision found.",
+  "confidence_reason": "Chapter pages 624 and 625 were checked earlier, the Zoox exemption and AV Framework notice decide the stage, and the FMVSS No. 108 proposal was read on federalregister.gov this run; FMCSA has no decision found.",
   "durability": {
     "level": "low",
     "why": "Guidance, exemptions, order amendments and proposed rules can be reversed by a later administration; final FMVSS and FMCSA rules would be medium durability."
@@ -32,10 +32,18 @@
     {
       "date": "2026-10-16",
       "note": "Cross-reference added to new layer 3 record c19-20 written in the second enumeration pass; no change to the status."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Federal Register page for the NHTSA FMVSS 108 proposed rule on ADS-equipped vehicles (91 FR 67243, filed 2026-10-23 for publication 2026-10-26) was read and added as a proposal event."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Independent review on 2026-10-25 read the NHTSA FMVSS No. 108 proposed rule on federalregister.gov, corrected its source date and kept in_progress 40 because a proposal does not change the stage."
     }
   ],
   "id": "c19-05",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-10-25",
   "layer": 2,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -49,7 +57,7 @@
     "c19-20"
   ],
   "remaining": [
-    "Final rules updating FMVSS Nos. 102, 103, 104, 110 and 135 and other standards; the March to June 2026 documents are proposals and no final rule has been published.",
+    "Final rules updating FMVSS Nos. 102, 103, 104, 108, 110 and 135 and other standards; the March to June 2026 documents and the FMVSS No. 108 proposal filed 2026-10-23 are proposals and no final rule has been published.",
     "A performance-based rule for automated vehicle operations or ADS requirements; NHTSA announced such a rulemaking in March 2026 but no proposal was identified.",
     "Reversal of the compulsory Standing General Order crash reporting; NHTSA streamlined it and is developing a rule to codify it instead.",
     "FMCSA rule changes or decisions that allow drivers to be removed from commercial motor vehicles; only a pending Aurora exemption application and waivers were found, and the outcome of the application was not located.",
@@ -59,26 +67,24 @@
   "research_agent": "D7",
   "review": {
     "flags": [
-      "Progress 35 to 40 accepted: the Zoox grant is an operative, first-of-its-kind deployment exemption under the AV Framework process, inside the in_progress band; it is a single-company exemption rather than a standards update, so a larger move is not supported",
-      "Standing General Order kept and to be codified, opposite to the Mandate's reversal ask (carried over)",
-      "FMCSA Aurora exemption decision not found",
-      "Stale uncertainty sentence saying no web sources were used corrected"
+      "Standing General Order still kept and to be codified, opposite to the Mandate's reversal ask.",
+      "FMCSA Aurora exemption decision still not found."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Excerpt of printed pages 624 and 625 read on 2026-10-15: page 625 asks NHTSA to remove barriers by updating vehicle standards and publishing performance-based rules for automated vehicle operations, FMCSA to align rules with AV 3.0 guidance so drivers can be removed from commercial vehicles, and DOT to reverse the Standing General Order on crash data. The record's proposal matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "independent",
+    "mandate_note": "proposal text unchanged this run; prior check stands",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-25",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Notice of grant, 91 FR 48494, published 2026-07-31: Zoox exempted from parts of FMVSS 103, 104, 108, 111, 135, 201, 205, 208 through 2028-07-31, up to 2,500 vehicles per 12 months, under 30113(b)(3)(B)(iv); first passenger-carrying ADS vehicle exempted under the general authority.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/07/31/2026-15485/zoox-grant-of-temporary-exemption-from-portions-of-various-requirements-of-the-federal-motor-vehicle"
+        "note": "Proposed rule, 91 FR 67243, doc 2026-21794, docket NHTSA-2026-1519, RIN 2127-AM70; public inspection 2026-10-23, comments due 2026-11-25; limits control and telltale requirements to vehicles with manual controls and allows optional cyan ADS marker lamps. A proposal, consistent with in_progress 40 without raising it; no mention of the Standing General Order in the part read.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21794/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-108-to-accommodate-ads-equipped"
       },
       {
-        "note": "Dated 2026-02-10: subcommittee forwarded 12 bills including H.R. 7390 SELF DRIVE Act by a 12 to 11 roll call.",
+        "note": "Prior check stands: the operative Zoox exemption grounds progress 40; not re-fetched this run.",
         "result": "supports",
-        "url": "https://republicans-energycommerce.house.gov/posts/cmt-subcommittee-forwards-motor-vehicle-safety-and-automotive-leadership-bills-to-full-committee"
+        "url": "https://www.federalregister.gov/documents/2026/07/31/2026-15485/zoox-grant-of-temporary-exemption-from-portions-of-various-requirements-of-the-federal-motor-vehicle"
       }
     ]
   },
@@ -164,10 +170,17 @@
       "publisher": "Federal Register",
       "title": "AV Framework Updates, Extension of Comment Period",
       "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17741/av-framework-updates-and-request-for-comments-on-interim-guidance-extension-of-comment-period"
+    },
+    {
+      "date": "2026-10-23",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles (proposed rule, 91 FR 67243; filed for public inspection 2026-10-23, publication scheduled 2026-10-26)",
+      "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21794/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-108-to-accommodate-ads-equipped"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "DOT and NHTSA announced an AV Framework on 2025-04-24 and have since acted on parts of the NHTSA recommendation but not on the Standing General Order reversal. NHTSA streamlined crash reporting under the order, extended its exemption program to U.S.-built vehicles, proposed amendments to FMVSS Nos. 102, 103, 104, 110 and 135 for vehicles without manual controls (March to June 2026), withdrew the AV STEP proposal on 2026-06-26, and on 2026-07-31 granted Zoox a temporary exemption to deploy an ADS-equipped vehicle commercially. The Standing General Order remains in force and NHTSA says it is developing a rule to codify it, which differs from the Mandate's call to reverse it; a Federal Register query found no final rule on automated driving systems since August 2026. In Congress the SELF DRIVE Act (H.R. 7390) was forwarded by a House subcommittee on 2026-02-10 and has shown no later action; for trucking, no FMCSA rulemaking was found, only a pending Aurora exemption application.",
+  "status_summary": "DOT and NHTSA announced an AV Framework on 2025-04-24 and have since acted on parts of the NHTSA recommendation but not on the Standing General Order reversal. NHTSA streamlined crash reporting under the order, extended its exemption program to U.S.-built vehicles, proposed amendments to FMVSS Nos. 102, 103, 104, 110 and 135 for vehicles without manual controls (March to June 2026), filed on 2026-10-23 a further proposal to adapt FMVSS No. 108 lighting rules to ADS-equipped vehicles (publication scheduled 2026-10-26), withdrew the AV STEP proposal on 2026-06-26, and on 2026-07-31 granted Zoox a temporary exemption to deploy an ADS-equipped vehicle commercially. The Standing General Order remains in force and NHTSA says it is developing a rule to codify it, which differs from the Mandate's call to reverse it; a Federal Register query found no final rule on automated driving systems since August 2026. In Congress the SELF DRIVE Act (H.R. 7390) was forwarded by a House subcommittee on 2026-02-10 and has shown no later action; for trucking, no FMCSA rulemaking was found, only a pending Aurora exemption application.",
   "timeline": [
     {
       "date": "2025-04-24",
@@ -238,10 +251,17 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17741/av-framework-updates-and-request-for-comments-on-interim-guidance-extension-of-comment-period"
+    },
+    {
+      "date": "2026-10-23",
+      "event": "NHTSA files for public inspection a proposed rule (filed 2026-10-23, scheduled for Federal Register publication 2026-10-26) (91 FR 67243, docket NHTSA-2026-1519, RIN 2127-AM70) modernizing FMVSS No. 108 for ADS-equipped vehicles: control and telltale requirements would apply only to vehicles with manual driving controls, and optional cyan ADS marker lamps would be allowed; comments due 2026-11-25.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21794/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-108-to-accommodate-ads-equipped"
     }
   ],
   "title": "Update vehicle and trucking rules for automated vehicles; end mandatory crash reporting",
   "tracked": true,
-  "uncertainties": "Most sources are Federal Register documents read through summaries; the H.R. 7390 step rests on a House committee page. The FMVSS Nos. 103, 104, 110 and 135 proposals and the 2026-08-31 comment extension were seen in a Federal Register listing and NHTSA's own summary but not read individually. The effective June 2025 date for the third amended order comes from the AV Framework notice; the May 2026 notice did not state it. The seven investigations and seven recalls NHTSA attributes to the order (June 2025 to July 2026) were not used. FMCSA's decision on the Aurora application, the status of the waiver after 2026-07-09, and any FMCSA rulemaking on automated trucks were not found (a short Federal Register query for FMCSA documents mentioning 'automated' returned only the application). The match with the Mandate is partial because the Mandate asked for the Standing General Order to be reversed, not streamlined. Update 2026-10-15: the Federal Register query (NHTSA, automated driving systems, rules since 2025-01-20) returned only unrelated final rules (SAFE Vehicles Rule III, event data recorders, seat belt reminders), so no ADS final rule was found. The H.R. 7390 status comes from a committee press page and a bill tracker (congress.gov could not be fetched). Progress moved from 35 to 40 as an inference because the Zoox grant is an operative commercial-deployment exemption; the FMCSA Aurora decision was not rechecked.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "Most sources are Federal Register documents read through summaries; the H.R. 7390 step rests on a House committee page. The FMVSS Nos. 103, 104, 110 and 135 proposals and the 2026-08-31 comment extension were seen in a Federal Register listing and NHTSA's own summary but not read individually. The effective June 2025 date for the third amended order comes from the AV Framework notice; the May 2026 notice did not state it. The seven investigations and seven recalls NHTSA attributes to the order (June 2025 to July 2026) were not used. FMCSA's decision on the Aurora application, the status of the waiver after 2026-07-09, and any FMCSA rulemaking on automated trucks were not found (a short Federal Register query for FMCSA documents mentioning 'automated' returned only the application). The match with the Mandate is partial because the Mandate asked for the Standing General Order to be reversed, not streamlined. Update 2026-10-15: the Federal Register query (NHTSA, automated driving systems, rules since 2025-01-20) returned only unrelated final rules (SAFE Vehicles Rule III, event data recorders, seat belt reminders), so no ADS final rule was found. The H.R. 7390 status comes from a committee press page and a bill tracker (congress.gov could not be fetched). Progress moved from 35 to 40 as an inference because the Zoox grant is an operative commercial-deployment exemption; the FMCSA Aurora decision was not rechecked. The FMVSS 108 proposal was read only through the first 100,000 characters of the Federal Register page; it is a proposal, so no stage change.",
+  "updated_at": "2026-10-25"
 }

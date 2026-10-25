@@ -34,10 +34,14 @@
     {
       "date": "2026-10-13",
       "note": "Second independent review on 2026-10-13 kept implemented 65 because the binding Solicitor opinion on doi.gov makes the incidental take position operative in substance; a Federal Register and Unified Agenda check found no codifying rule."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Refutation check on 2026-10-25 using the Federal Register API and web search found no litigation, rescission or new incidental take rule, and the 2026-10-01 FWS bird list proposal was read and is not an incidental take action."
     }
   ],
   "id": "c16-09",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-25",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -47,6 +51,38 @@
   "position": "Administration Priorities: Rulemaking",
   "progress": 65,
   "proposal": "The Mandate recommends rescinding the Biden-era rules on the Migratory Bird Treaty Act and reinstating the Trump-era rules, meaning the reading that the Act does not prohibit accidental or incidental killing of birds. It lists this among policy reversals that require rulemaking.",
+  "redteam": {
+    "date": "2026-10-25",
+    "evidence": [
+      {
+        "date": "2026-10-25",
+        "note": "Newest FWS documents on the subject show no incidental take rule, proposed rule or rescission after the 2025-04-21 withdrawal notice.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=migratory+bird+incidental+take&conditions[agencies][]=fish-and-wildlife-service&order=newest"
+      },
+      {
+        "date": "2026-10-01",
+        "note": "Proposed revision of the protected bird list (adds 32 species, removes 7; comments to 2026-11-30). The text read did not mention incidental take or M-37085, so it is not an incidental-take action and does not alter the stage.",
+        "source": "Federal Register (FWS)",
+        "url": "https://www.federalregister.gov/documents/2026/10/01/2026-20123/general-provisions-revised-list-of-birds-protected-by-the-migratory-bird-treaty-act"
+      },
+      {
+        "date": "2022-03-01",
+        "note": "Page last updated 2022 and covers only the 2017-2021 cases; no 2025-2026 suit against M-37085 shown.",
+        "source": "NRDC court page (lead only)",
+        "url": "https://www.nrdc.org/court-battles/migratory-bird-treaty-act"
+      },
+      {
+        "date": "2025-07-29",
+        "note": "Web search for litigation or a codifying rule returned no new result.",
+        "source": "Harvard EELP tracker (lead only)",
+        "url": "https://eelp.law.harvard.edu/tracker/migratory-bird-treaty-act/"
+      }
+    ],
+    "note": "No injunction, vacatur, rescission or superseding rule found. The opinion remains a reversible Solicitor instrument; the 2026-10-01 bird list proposal is unrelated to incidental take. A suit not yet reported cannot be excluded.",
+    "verdict": "holds",
+    "what_was_tested": "Federal Register API for later FWS documents on migratory birds and incidental take; the 2026-10-01 FWS proposed revised list of protected birds; news and web search for litigation against M-37085 or a new incidental take rule; NRDC court page for 2025-2026 suits."
+  },
   "related_ids": [],
   "remaining": [
     "A codified rule reflecting the incidental take position, if the Mandate's rulemaking wording is read literally",
@@ -197,5 +233,5 @@
   "title": "Reinstate the Trump-era Migratory Bird Treaty Act incidental take position",
   "tracked": true,
   "uncertainties": "A Federal Register API search on 2026-10-13 of documents since 2025-01-20 mentioning incidental take of migratory birds found no rule reinstating the January 2021 incidental take regulation or rescinding the October 2021 revocation; the Unified Agenda entry for migratory bird and eagle permit deregulatory actions (reginfo.gov) concerns general permits and depredation orders, not the scope of incidental take. No lawsuit against M-37085 was found in a news search or in the Harvard tracker, which is used only as a lead and was last updated in July 2025. The FWS presentation is undated beyond May 2026 and gives no dates for the steps it lists.",
-  "updated_at": "2026-10-13"
+  "updated_at": "2026-10-25"
 }

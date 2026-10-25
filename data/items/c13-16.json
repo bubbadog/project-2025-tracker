@@ -7,7 +7,7 @@
   "chapter": "13",
   "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Document text checked; the Federal Register deadline rules and the EPA announcement were read.",
+  "confidence_reason": "Chapter text checked earlier; the two Federal Register deadline rules establish the operative delay, and the EPA release and a Federal Register query read this run confirm that the rescission is only announced.",
   "durability": {
     "level": "medium",
     "why": "A delay is temporary and rescission would need notice-and-comment rulemaking subject to court review."
@@ -29,10 +29,18 @@
     {
       "date": "2026-10-13",
       "note": "Significance scored blind by two AI raters from the recommendation text only."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Freshness check on 2026-10-25 queried the Federal Register API and read the EPA release (updated 2026-10-22), found no published Super Emitter rescission proposal, and moved the 2026-10-07 announcement out of the timeline into the uncertainties; stage in_progress 30 unchanged."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Independent review on 2026-10-25 read the EPA release on epa.gov and a Federal Register query finding no proposed rescission, confirmed the two deadline rules still support in_progress 30, and accepted removal of the announcement from the timeline."
     }
   ],
   "id": "c13-16",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-25",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -53,38 +61,28 @@
   "research_agent": "N13",
   "review": {
     "flags": [
-      "judgment call: in_progress at 30 rests on the operative delay of the program; proposed would also be defensible because the rescission itself is only announced"
+      "Judgment call: in_progress 30 rests on the two operative deadline rules (2025-07-31 and 2025-12-03), which remain on the timeline; proposed would also be defensible because the rescission itself is only announced."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 424 checked; the third-party authority recommendation and its Super-Emitter example are accurately paraphrased.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y13a",
+    "mandate_note": "proposal text unchanged this run; prior check stands",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-25",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Final rule 90 FR 55671 effective 2025-12-03 kept the 2027-01-22 date; the date was first set by the July 2025 interim final rule, so the summary was corrected.",
+        "note": "EPA release of 2026-10-07 (updated 2026-10-22): EPA will propose to rescind the Super Emitter Program; the proposal is described as days away. An announcement, kept in uncertainties; it does not decide the stage.",
         "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2025/12/03/2025-21788/oil-and-natural-gas-sector-climate-review-extension-of-deadlines-in-standards-of-performance-for-new"
-      },
-      {
-        "note": "Interim final rule delayed the Super Emitter Program deadline to 2027-01-22 (as described in the December rule).",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/07/31/2025-14531/extension-of-deadlines-in-standards-of-performance-for-new-reconstructed-and-modified-sources-and"
-      },
-      {
-        "note": "EPA release dated 2026-10-07: EPA will propose to rescind the program, days not weeks away, second part of its reconsideration of the 2024 oil and gas rules.",
-        "result": "supports",
         "url": "https://www.epa.gov/newsreleases/administrator-zeldin-announces-epa-days-away-unveiling-next-oil-gas-proposal"
       },
       {
-        "note": "Reuters report (not AP) of the 2026-10-07 announcement.",
+        "note": "Federal Register API query on 2026-10-25: newest documents are an unrelated 2026-04-09 technical reconsideration rule (flaring and monitoring) and the 2025-12-03 and 2025-07-31 deadline rules that delay the program to 2027-01-22; no proposed rescission. The operative delay supports in_progress 30.",
         "result": "supports",
-        "url": "https://kfgo.com/2026/10/07/epa-says-will-soon-act-to-rescind-biden-policy-targeting-methane-leaks/"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=super-emitter&order=newest"
       },
       {
-        "note": "Query: EPA, super-emitter, from 2025-01-20. Three results; no rescission proposal.",
+        "note": "Prior check stands: final deadline rule keeping the 2027-01-22 start; not re-fetched this run.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json"
+        "url": "https://www.federalregister.gov/documents/2025/12/03/2025-21788/oil-and-natural-gas-sector-climate-review-extension-of-deadlines-in-standards-of-performance-for-new"
       }
     ]
   },
@@ -145,10 +143,17 @@
       "publisher": "Reuters via KFGO",
       "title": "US will rescind policy targeting oil and gas industry methane leaks (Reuters via KFGO)",
       "url": "https://kfgo.com/2026/10/07/epa-says-will-soon-act-to-rescind-biden-policy-targeting-methane-leaks/"
+    },
+    {
+      "date": "2026-10-13",
+      "kind": "news",
+      "publisher": "Oil & Gas Journal",
+      "title": "US EPA plans further rollback of oil, gas methane rules",
+      "url": "https://www.ogj.com/general-interest/government/news/55411684/us-epa-plans-further-rollback-of-oil-gas-methane-rules"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "An interim final rule published 2025-07-31 delayed the Super Emitter Program implementation deadline to 2027-01-22, and a final rule published and effective 2025-12-03 kept that date, citing unanticipated difficulties in implementing the novel program. On 2026-10-07 EPA announced that it would propose to rescind the Super Emitter Program, which lets third parties report large methane releases that operators must investigate, as the second part of its reconsideration of the 2024 oil and gas rules, with the proposal described as days away. No proposed rescission was found in the Federal Register as of 2026-10-13.",
+  "status_summary": "An interim final rule published 2025-07-31 delayed the Super Emitter Program implementation deadline to 2027-01-22, and a final rule published and effective 2025-12-03 kept that date, citing unanticipated difficulties in implementing the novel program. On 2026-10-07 EPA announced that it would propose to rescind the Super Emitter Program, which lets third parties report large methane releases that operators must investigate, as the second part of its reconsideration of the 2024 oil and gas rules, with the proposal described as days away. No proposed rescission was found in the Federal Register through 2026-10-25, although the EPA release (updated 2026-10-22) still described it as coming in days.",
   "timeline": [
     {
       "date": "2025-07-31",
@@ -163,17 +168,10 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2025/12/03/2025-21788/oil-and-natural-gas-sector-climate-review-extension-of-deadlines-in-standards-of-performance-for-new"
-    },
-    {
-      "date": "2026-10-07",
-      "event": "EPA announced that it would soon propose to rescind the Super Emitter Program.",
-      "kind": "primary",
-      "source": "EPA",
-      "url": "https://www.epa.gov/newsreleases/administrator-zeldin-announces-epa-days-away-unveiling-next-oil-gas-proposal"
     }
   ],
   "title": "Remove oil and gas rule provisions that let third parties trigger super-emitter responses",
   "tracked": true,
-  "uncertainties": "A Federal Register API search for super-emitter on 2026-10-13 found only the two deadline rules and an unrelated April 2026 technical amendment; the announced rescission proposal had not been published. The wire report that reported the announcement is from Reuters, not the Associated Press as first recorded.",
-  "updated_at": "2026-10-13"
+  "uncertainties": "The 2026-10-07 EPA release and the wire and trade reports (Reuters via KFGO; Oil & Gas Journal, 2026-10-13) announce a coming proposal; an announcement is not counted as a timeline event. Federal Register API queries on 2026-10-25 (super emitter; oil and natural gas sector; methane, EPA, since 2026-10-07 or 2026-10-08) found no proposed rescission, only the two deadline rules and unrelated documents. The EPA release was last updated 2026-10-22 and still said the proposal was days away, and the trade report says the regulatory text had not been released. The wire report was from Reuters, not the Associated Press.",
+  "updated_at": "2026-10-25"
 }

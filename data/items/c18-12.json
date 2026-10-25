@@ -1,10 +1,18 @@
 {
   "agency": "DOL (Employment and Training Administration)",
-  "blockers": [],
+  "blockers": [
+    "A pending APA challenge in D.D.C. (AFSCME v. Department of Labor, No. 1:26-cv-03162) seeks vacatur of the final rule; no interim relief was found."
+  ],
   "chapter": "18",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked at page 606; the final rule was read on federalregister.gov for its summary, dates section (effective 2026-10-19) and preamble through the comment discussion in section I, which state that 20 CFR 652.215 is removed in its entirety and that the regulatory text is finalized as proposed; the amendatory instruction, authority citation and signature block were not read because every rendition fetched on 2026-10-19 (document page, text, HTML and XML full text, read at successive offsets) ended mid-preamble before them, so the rating is held at medium.",
+  "confidence_reason": "Chapter page 606 was re-read and the final rule, DOL notice TEN 02-26 and the complaint copy hosted by citizen.org were read this run; the rule's amendatory instruction was again not reached and the court filing is a third-party copy, so the record stays medium at 78.",
+  "court_status": {
+    "basis": "Complaint filed 2026-09-10 in D.D.C. (No. 1:26-cv-03162) seeking vacatur and an injunction; no stay, injunction or ruling was found as of 2026-10-25, so the final rule took effect 2026-10-19 and remains in force while the case is pending.",
+    "date": "2026-09-10",
+    "state": "pending",
+    "url": "https://www.citizen.org/wp-content/uploads/1-Complaint-22.pdf"
+  },
   "durability": {
     "level": "medium",
     "why": "The 2023 rule was reversed by rulemaking, so a later administration could reinstate it; the final rule rests in part on a statutory-authority reading that a statute would settle."
@@ -34,10 +42,18 @@
     {
       "date": "2026-10-19",
       "note": "Independent review on 2026-10-19 re-read the final rule on federalregister.gov, including its text, HTML and XML full-text renditions at successive offsets, confirmed its 91 FR 54024 citation and 2026-10-19 effective date, ran a Federal Register API query for later Labor Department documents and one news search for a court order (none found), and moved the stage from in_progress 55 to implemented 80 with confidence set to medium 78 because every rendition ended before the amendatory text."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Refutation check on 2026-10-25 found, through a complaint copy hosted by citizen.org, a pending D.D.C. challenge to the Wagner-Peyser staffing rule with no stay or injunction, and the Federal Register API showed no correction or delay notice."
+    },
+    {
+      "date": "2026-10-25",
+      "note": "Independent review on 2026-10-25 re-read chapter page 606, the Federal Register final rule, DOL notice TEN 02-26 on dol.gov and the complaint copy hosted by citizen.org, kept implemented 80 with court_status pending, and added the DOL notice as a source."
     }
   ],
   "id": "c18-12",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-25",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -47,6 +63,38 @@
   "position": "Wagner-Peyser Staffing Flexibility",
   "progress": 80,
   "proposal": "The Mandate recommends that DOL repromulgate the first-term staffing flexibility rule so state agencies can use contractors or other staff rather than only state employees for Wagner-Peyser Employment Service work, and that Congress codify it. It adds that the federal government should not force a state to use non-union or union labor for these positions.",
+  "redteam": {
+    "date": "2026-10-25",
+    "evidence": [
+      {
+        "date": "2026-10-25",
+        "note": "Only the 2026-08-20 final rule and unrelated notices; no correction, delay or stay notice.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Employment+Service%22&conditions[agencies][]=employment-and-training-administration&conditions[publication_date][gte]=2026-08-01&order=newest"
+      },
+      {
+        "date": "2026-09-10",
+        "note": "AFSCME v. DOL, D.D.C. 1:26-cv-03162, challenges 91 FR 54024 under the APA; seeks vacatur and injunction; no section 705 stay requested.",
+        "source": "Complaint copy hosted by citizen.org",
+        "url": "https://www.citizen.org/wp-content/uploads/1-Complaint-22.pdf"
+      },
+      {
+        "date": "2026-08-20",
+        "note": "Confirms the rule removes 20 CFR 652.215 and takes effect 2026-10-19; states may change staffing models via State Plan modification.",
+        "source": "DOL ETA TEN 02-26",
+        "url": "https://www.dol.gov/sites/dolgov/files/ETA/advisories/TEN/2026/TEN%2002-26/TEN%2002-26%20%28Accessible%20PDF3%29.pdf"
+      },
+      {
+        "date": "2026-10-25",
+        "note": "Case listed as open in district court; no injunction reported.",
+        "source": "Public Citizen litigation page (lead only)",
+        "url": "https://www.citizen.org/litigation/afscme-v-department-of-labor/"
+      }
+    ],
+    "note": "A pending district court suit seeks vacatur, which weakens durability, but no stay, injunction or vacatur exists and the rule took effect as scheduled. Stage implemented 80 is kept; court_status pending.",
+    "verdict": "weakened",
+    "what_was_tested": "Federal Register API for ETA and Wagner-Peyser documents after 2026-08-20 (corrections, delays); web searches for court challenges, stays and Congressional Review Act action; DOL notice TEN 02-26; the complaint."
+  },
   "related_ids": [
     "c18-34"
   ],
@@ -59,62 +107,35 @@
   "review": {
     "alternative": "Implemented at 85 is also defensible, since the agency step is complete and only congressional codification remains.",
     "flags": [
-      "Stage moved from in_progress 55 to implemented 80 on the rule's effective date; remaining should drop 'Rule takes effect 2026-10-19' and keep only codification by Congress.",
-      "Confidence lowered from 85 to 78 (medium): the operative amendatory instruction was not read verbatim; the removal of 652.215 rests on the summary and preamble statements. A reader who reaches the amendatory text could restore high.",
-      "est_completion (window 2026-Q4, basis the effective date) is now stale for the full recommendation, which also asks Congress to codify; the coordinator may set it to unknown.",
-      "The Mandate's line that the federal government should not force a state to use non-union or union labor is not addressed in the rule beyond the preamble statement that it does not alter existing State collective bargaining agreements.",
-      "No first-person wording found in public fields; no truncated history note found."
+      "implemented 80 holds: the rule is final, effective 2026-10-19 and not stayed; a complaint alone has no effect on the action, so court_status pending fits the rule. Alternative: implemented 85 since only congressional codification remains.",
+      "The amendatory instruction of the final rule is still unread; confidence stays medium.",
+      "Docket status after the complaint (any preliminary injunction motion) not verified."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 606 checked: under Wagner-Peyser Staffing Flexibility, DOL should repromulgate the Trump-era staffing flexibility rule and Congress should codify it; the federal government should not force a state to use non-union or union labor. Proposal wording tightened. No existing record covers it.",
+    "mandate_check": "verified",
+    "mandate_note": "pages re-read 2026-10-25: page 606 asks DOL to repromulgate the first-term staffing flexibility rule and Congress to codify it, and says the federal government should not force a state to use union or non-union labor; the proposal is accurate.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-19",
-    "reviewer": "independent AI reviewer (watch check)",
+    "reviewed_at": "2026-10-25",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Final rule published 2026-08-20 at 91 FR 54024, effective 2026-10-19, removes the state merit staff requirement in 20 CFR part 652.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-16982.json"
-      },
-      {
-        "note": "Proposed rule published 2025-07-01 to remove the state merit staff requirement.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2025-12275.json"
-      },
-      {
-        "note": "Final rule published and effective 2026-01-21 delaying the 2023 rule's compliance date from 2026-01-22 to 2027-01-21.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-01117.json"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "Rule page shows 91 FR 54024-54052, doc 2026-16982, RIN 1205-AC22, docket ETA-2025-0005, 20 CFR 652; DATES: effective October 19, 2026; summary and preamble read through the comment discussion (section I.2.a): all paragraphs of 652.215 removed and regulatory text finalized as proposed; the amendatory instruction and signature block were not reached because the page text ended mid-preamble; no correction or stay shown.",
+        "note": "Final rule 91 FR 54024, effective 2026-10-19, removes 20 CFR 652.215; API record shows no corrections. Page text again ended before the amendatory instruction at offsets 100,000 and 138,000. Supports implemented 80.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/08/20/2026-16982/wagner-peyser-act-employment-service-staffing"
       },
       {
-        "date": "2026-10-19",
-        "note": "API record re-read: effective_on 2026-10-19, citation 91 FR 54024, type Rule, corrections list empty.",
+        "note": "DOL TEN 02-26 of 2026-08-20: the rule removes all paragraphs of 652.215, effective 2026-10-19; states may choose and change their staffing model through a State Plan modification. Corroborates implemented 80.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-16982.json"
+        "url": "https://www.dol.gov/sites/dolgov/files/ETA/advisories/TEN/2026/TEN%2002-26/TEN%2002-26%20%28Accessible%20PDF3%29.pdf"
       },
       {
-        "date": "2026-10-19",
-        "note": "Full-text renditions read at successive offsets (text file from 120,000 and 133,000; HTML and XML from 100,000); each ended mid-preamble in the comment discussion, before the amendatory instruction for 652.215 and the signature block; the text repeats that the regulatory text is finalized as proposed.",
+        "note": "Complaint copy hosted by citizen.org (counsel for the plaintiff): AFSCME v. DOL, D.D.C. 1:26-cv-03162, filed 2026-09-10; APA claims; seeks vacatur and injunction, no section 705 stay. Supports court_status pending; it does not change the operative rule, so implemented 80 holds.",
+        "result": "supports",
+        "url": "https://www.citizen.org/wp-content/uploads/1-Complaint-22.pdf"
+      },
+      {
+        "note": "Govinfo PDF of the final rule; the fetch ended at page 54036 before the amendatory text; page 54026 states 652.215 is removed in full.",
         "result": "partial",
-        "url": "https://www.federalregister.gov/documents/full_text/text/2026/08/20/2026-16982.txt"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "One result: 2026-19836, an ETA information collection notice published 2026-09-29 that lists Wagner-Peyser among covered programs; no delay, stay, correction or withdrawal of the staffing final rule.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=Wagner-Peyser&conditions[agencies][]=labor-department&conditions[publication_date][gte]=2026-08-21&per_page=20"
-      },
-      {
-        "date": "2026-10-19",
-        "note": "One news search for a lawsuit, injunction or stay on the 2026 rule surfaced only the 2020 AFSCME challenge to the first-term rule and pages on the 2026-01-21 compliance-date delay; no court order on the 2026 rule found.",
-        "result": "supports",
-        "url": "https://www.citizen.org/litigation/afscme-v-department-of-labor/"
+        "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-20/pdf/2026-16982.pdf"
       }
     ]
   },
@@ -167,10 +188,24 @@
       "publisher": "Federal Register (DOL)",
       "title": "Wagner-Peyser Act Staffing, Delay of Merit Staffing Compliance Date",
       "url": "https://www.federalregister.gov/documents/2026/01/21/2026-01117/wagner-peyser-act-staffing-delay-of-merit-staffing-compliance-date"
+    },
+    {
+      "date": "2026-09-10",
+      "kind": "court",
+      "publisher": "Public Citizen (copy of court filing)",
+      "title": "Complaint, AFSCME v. Department of Labor, D.D.C. No. 1:26-cv-03162 (copy hosted by citizen.org)",
+      "url": "https://www.citizen.org/wp-content/uploads/1-Complaint-22.pdf"
+    },
+    {
+      "date": "2026-08-20",
+      "kind": "primary",
+      "publisher": "Department of Labor, Employment and Training Administration",
+      "title": "Training and Employment Notice 02-26, Announcing the Publication of the Wagner-Peyser Act Employment Service Staffing Final Rule",
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/advisories/TEN/2026/TEN%2002-26/TEN%2002-26%20%28Accessible%20PDF3%29.pdf"
     }
   ],
   "stage": "implemented",
-  "status_summary": "ETA proposed on 2025-07-01 to remove the requirement that states use state merit staff for Wagner-Peyser Employment Service work, and on 2026-01-21 it delayed the 2023 rule's compliance date by one year to 2027-01-21. A final rule published 2026-08-20 (91 FR 54024) removes the merit-staffing provision in 20 CFR 652.215 so that each state may choose its staffing model, and it took effect on 2026-10-19. No court order, stay or later Federal Register document affecting the rule was found as of 2026-10-19, and codification by Congress was not found.",
+  "status_summary": "ETA proposed on 2025-07-01 to remove the requirement that states use state merit staff for Wagner-Peyser Employment Service work, and on 2026-01-21 it delayed the 2023 rule's compliance date by one year to 2027-01-21. A final rule published 2026-08-20 (91 FR 54024) removes the merit-staffing provision in 20 CFR 652.215 so that each state may choose its staffing model, and it took effect on 2026-10-19. On 2026-09-10 AFSCME sued in the U.S. District Court for the District of Columbia seeking vacatur of the rule and an injunction; no stay, injunction, ruling or later Federal Register document affecting the rule was found as of 2026-10-25, and codification by Congress was not found.",
   "timeline": [
     {
       "date": "2025-07-01",
@@ -194,6 +229,13 @@
       "url": "https://www.federalregister.gov/documents/2026/08/20/2026-16982/wagner-peyser-act-employment-service-staffing"
     },
     {
+      "date": "2026-09-10",
+      "event": "AFSCME filed a complaint in the U.S. District Court for the District of Columbia (No. 1:26-cv-03162) against the Labor Department, claiming under the Administrative Procedure Act that the final rule is contrary to law and arbitrary, and seeking vacatur and an injunction against its implementation; the complaint does not request a stay under section 705.",
+      "kind": "court",
+      "source": "Complaint, AFSCME v. Department of Labor (copy hosted by citizen.org)",
+      "url": "https://www.citizen.org/wp-content/uploads/1-Complaint-22.pdf"
+    },
+    {
       "date": "2026-10-19",
       "event": "The ETA final rule Wagner-Peyser Act Employment Service Staffing (91 FR 54024) took effect on the date it set, removing the state merit staff requirement in 20 CFR 652.215.",
       "kind": "primary",
@@ -203,6 +245,6 @@
   ],
   "title": "Drop the state merit-staffing requirement for Wagner-Peyser Employment Service",
   "tracked": true,
-  "uncertainties": "The final rule was read on federalregister.gov for its summary, dates section and preamble, which state that 20 CFR 652.215 is removed in its entirety as proposed; the amendatory instruction itself was not reached because the document page and the text, HTML and XML full-text renditions all ended mid-preamble before it. A check for a court order on 2026-10-19, through a Federal Register API query for Labor Department Wagner-Peyser documents published since 2026-08-21 (one unrelated information collection notice) and one news search (only the 2020 challenge to the first-term rule), found no stay or injunction; a filing not yet reported cannot be excluded. No bill codifying the rule was searched for.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "The final rule was read on federalregister.gov for its summary, dates section and preamble, which state that 20 CFR 652.215 is removed in its entirety as proposed; the amendatory instruction itself was not reached because the document page and the text, HTML and XML full-text renditions all ended mid-preamble before it. A check for a court order on 2026-10-19, through a Federal Register API query for Labor Department Wagner-Peyser documents published since 2026-08-21 (one unrelated information collection notice) and one news search (only the 2020 challenge to the first-term rule), found no stay or injunction; a filing not yet reported cannot be excluded. No bill codifying the rule was searched for. Refutation check on 2026-10-25: a complaint challenging the final rule was filed on 2026-09-10 in the D.D.C. (copy of the filing hosted by citizen.org, a litigant counsel host, medium confidence); a Federal Register API query for Employment and Training Administration documents since 2026-08-01 showed no correction or delay notice, and no stay, injunction or ruling was found. The complaint seeks vacatur and an injunction but no section 705 stay; whether a preliminary injunction motion has been filed was not verified. A court docket for the case was not located. Review 2026-10-25: DOL Training and Employment Notice 02-26 (2026-08-20) states that the final rule removes all paragraphs of 20 CFR 652.215 and takes effect 2026-10-19, which corroborates the preamble on a primary DOL host; the amendatory instruction itself was again not reached on federalregister.gov or the govinfo PDF, both of which end before it in the fetch tool. A docket mirror was not reached (a clearinghouse.net page, a lead only, failed to load), so whether a preliminary injunction or summary judgment motion has been filed is not known.",
+  "updated_at": "2026-10-25"
 }
