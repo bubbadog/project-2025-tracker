@@ -83,6 +83,10 @@ class Report:
     def __init__(self) -> None:
         self.errors: list[str] = []
         self.warnings: list[str] = []
+        self.notices: list[str] = []  # informational; never fail the build, even with --strict
+
+    def notice(self, msg: str) -> None:
+        self.notices.append(msg)
 
     def err(self, msg: str) -> None:
         self.errors.append(msg)
@@ -168,6 +172,14 @@ def validate_item(it: dict, fname: str, rep: Report, today: str, ids: set[str]) 
     cs = it.get("court_status")
     if isinstance(cs, dict) and cs.get("url") and cs["url"] not in source_urls:
         rep.warn(f"{where}: court_status cites a URL that is not listed in sources")
+    # Query URLs recorded in red-team evidence or review.source_checks should be percent-encoded
+    # (brackets, quotes and spaces); the page renders them as links. Informational only.
+    for coll, entries in (("redteam.evidence", (it.get("redteam") or {}).get("evidence") or []),
+                          ("review.source_checks", (it.get("review") or {}).get("source_checks") or [])):
+        for ent in entries:
+            u = ent.get("url") if isinstance(ent, dict) else None
+            if isinstance(u, str) and any(ch in u for ch in "[]\" "):
+                rep.notice(f"{where}: {coll} URL has unencoded brackets, quotes or spaces")
     for s in it.get("sources") or []:
         if not isinstance(s, dict):
             rep.err(f"{where}: source is not an object")
@@ -245,6 +257,7 @@ def load_schema_validator():
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--strict", action="store_true", help="treat warnings as errors")
+    ap.add_argument("--notices", action="store_true", help="list informational notices (never affect the exit status)")
     args = ap.parse_args()
     rep = Report()
     today = dt.date.today().isoformat()
@@ -312,6 +325,11 @@ def main() -> int:
         if any(ch in rtext for ch in DASHES) or forbidden_hit(rtext):
             rep.err(f"runs/{fname}: dash or personal identifier found")
 
+    if rep.notices:
+        print(f"NOTICE {len(rep.notices)} evidence or source-check URL(s) with unencoded characters (informational; run with --notices to list)")
+        if getattr(args, "notices", False):
+            for n in rep.notices:
+                print(f"NOTICE {n}")
     for w in rep.warnings:
         print(f"WARN {w}")
     for e in rep.errors:
