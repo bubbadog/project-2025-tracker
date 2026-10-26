@@ -40,7 +40,7 @@ def build() -> dict:
     meta["license"] = {
         "data": "CC-BY-NC-SA-4.0",
         "data_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-        "data_note": "Versions from 2026-10-26; versions 2026-10-13 to 2026-10-25 are CC-BY-4.0. Attribute as Project 2025: Mandate for Leadership Tracker with a link and the snapshot date; keep statuses, confidence, sources and dates as published; share alike; commercial or unattributed use needs written permission.",
+        "data_note": "Versions from 2026-10-26; versions 2026-10-13 to 2026-10-25 are CC-BY-4.0. Attribute as Project 2025: Mandate for Leadership Tracker with a link and the snapshot date; state whether you changed anything and do not present a changed status, rating, source or date as the tracker's finding; share alike; commercial use, use that cannot carry the credit, or use under other terms needs written permission.",
         "code": "Apache-2.0",
     }
     return {"meta": meta, "chapters": chapters, "items": items, "runs": runs}
