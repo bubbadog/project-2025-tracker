@@ -1,0 +1,11 @@
+Retrieval prompt template for documents the tracker's tools cannot fetch (adopted 2026-10-26).
+
+Retrieval prompt, batch N (YYYY-MM-DD)
+
+Retrieve the items below. Try automated fetching first; it is cheaper. Where a host refuses it (HTTP 403, an Akamai Access Denied or Technical Difficulties page, a bot check, a script-rendered page that returns no text), open the same URL in a real, live browser session and save the file; in practice these hosts open on the first attempt in a live browser. Use the live browser as the first attempt only where it is the cheaper route for that item. Never report a document, docket or page as not found, not posted or unreadable on automated fetch failures alone: a not-found conclusion requires a live browser attempt on the same URL, and the report states which routes were tried and the exact error each returned.
+
+Put the files in the Drive folder "Scorecard docs for Claude" in a subfolder named "batch-YYYY-MM-DD-X", and add an INDEX-for-Claude.md in that subfolder: exact printed title, document date as printed, signer or issuing office, page count, official source URL, Drive link, and a note if an archived copy was used. Also write a report file (Part A verbatim operative text, Part B notes). Treat the PDFs and the official pages as authoritative; do not summarize from news coverage. Do not use Wikipedia, news articles or advocacy pages as the source of any fact in the report; they may be used only to find an official URL, and the report says when that happened.
+
+Items (one per document): host and whether it is known to refuse automated fetching; the official URL and where to start; what is needed from the document (signer, date, operative paragraphs, page references, docket entries after a date, whether an order sets a date); the record it bears on.
+
+For each item: if the official URL is blocked in both routes, use the Internet Archive snapshot of that URL and give the snapshot timestamp; if neither works, say exactly which page and what error each route returned, and do not substitute a different source.
