@@ -1,0 +1,48 @@
+name: Request a data license
+description: Ask for permission to use the tracker's data beyond the CC BY-NC-SA 4.0 terms (commercial use, or use that cannot carry the credit).
+title: "[data license] "
+labels: ["data-license"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The records and text of Project 2025: Mandate for Leadership Tracker are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (see LICENSE-DATA). Non-commercial use with credit, a link and the snapshot date needs no request. Use this form for anything else. Requests are usually answered within a day or two. Note that issues on this repository are public; put only what you are comfortable publishing here.
+  - type: input
+    id: who
+    attributes:
+      label: Who is asking
+      description: Organization or publication, and your role. A contact route the maintainer can reply to (a GitHub handle is enough).
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: Requested use
+      description: What you will do with the data, where it will appear, for how long, and whether money changes hands (subscription, advertising, paid report, product).
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: What you need beyond the standard terms
+      options:
+        - Commercial use
+        - Use without the attribution and link
+        - Use without sharing adaptations under the same license
+        - More than one of these
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Data use statement
+      description: Tick each line to confirm it. This is the short agreement the maintainer relies on when granting permission.
+      options:
+        - label: I will use the data for the purpose described above and not to publish a copy or substitute of the tracker site.
+          required: true
+        - label: 'Every use will credit "Project 2025: Mandate for Leadership Tracker" with a link to the site and the date of the snapshot used.'
+          required: true
+        - label: 'I will not remove, alter or misattribute statuses, confidence ratings, sources or dates, and I will date any excerpt I publish.'
+          required: true
+        - label: I understand that commercial use needs written permission from the project, and that permission can be withdrawn on notice for a breach of these terms.
+          required: true

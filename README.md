@@ -66,7 +66,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md). The short version: report an error or s
 ## Licenses
 
 - Code (`scripts/`, `site/`, `tools/`, workflows): [Apache License 2.0](LICENSE).
-- Data and documentation (`data/`, `docs/`): [Creative Commons Attribution 4.0 International](LICENSE-DATA). Attribute as "Project 2025: Mandate for Leadership Tracker" with a link to this repository.
+- Data and documentation (`data/`, `docs/`): [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](LICENSE-DATA) for versions from 2026-10-26 (versions from 2026-10-13 through 2026-10-25 stay under CC BY 4.0). Attribute as "Project 2025: Mandate for Leadership Tracker" with a link to the site and the snapshot date; keep statuses, confidence ratings, sources and dates as published; share adaptations under the same license. Commercial use or use without attribution needs written permission: open a "Request a data license" issue.
 - The document being tracked is the Heritage Foundation's. This repository holds paraphrases and page citations, never the document text. Page links open the scan preserved at the Internet Archive.
 
 Not affiliated with the Heritage Foundation or any campaign, party, or government body. "Project 2025" and "Mandate for Leadership" are used to identify the document being tracked.

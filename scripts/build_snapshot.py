@@ -37,6 +37,12 @@ def build() -> dict:
     runs = load_dir(os.path.join(DATA, "runs"))
     items.sort(key=lambda i: i["id"])
     runs.sort(key=lambda r: (r.get("date", ""), r.get("id", "")))
+    meta["license"] = {
+        "data": "CC-BY-NC-SA-4.0",
+        "data_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "data_note": "Versions from 2026-10-26; versions 2026-10-13 to 2026-10-25 are CC-BY-4.0. Attribute as Project 2025: Mandate for Leadership Tracker with a link and the snapshot date; keep statuses, confidence, sources and dates as published; share alike; commercial or unattributed use needs written permission.",
+        "code": "Apache-2.0",
+    }
     return {"meta": meta, "chapters": chapters, "items": items, "runs": runs}
 
 
