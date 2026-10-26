@@ -44,6 +44,8 @@ Research and review are done by AI models, and every claim is linked to its sour
 
 - **High** (80 to 100): the document text and a primary source were both checked.
 - **Medium** (55 to 79): the text was checked and a reputable secondary source or part of the primary record supports the status.
+
+What counts as the primary source opened (decided 2026-10-22 to 2026-10-26): the document on its official host; a copy of it retrieved from that host and supplied to the project, or an Internet Archive snapshot of the official address, with the record saying how the copy was obtained; an official agency page that itself states the deciding fact (an agency page stating that a memorandum was rescinded, for example); a court filing or an agency document filed as a court exhibit, read on the court's site or on CourtListener; and the U.S. Code as reproduced by Cornell's Legal Information Institute. A copy posted only by an advocacy group, a union, a litigant or its counsel, a newsletter or an aggregator keeps the rating at 79 or below until the document is read on one of those hosts. Research institutions, including university litigation trackers, are sources, except a page on which the institution is itself a party or amicus.
 - **Low** (21 to 54): the status rests on sources the reviewer could not open, on a single secondary source, or on finding no evidence in a limited search.
 - **Unverified** (0 to 20): not yet reviewed.
 
