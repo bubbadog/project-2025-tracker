@@ -5,9 +5,9 @@
     "Congress continued to fund the Global Environment Facility."
   ],
   "chapter": "09",
-  "confidence": 74,
+  "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "Pages 257 to 258 were rechecked and the October 2026 Treasury statement report and a bill tracker for the enactment date were read on 2026-10-23; the deciding Federal Register documents were read in full in the 2026-10-18 review, but the Treasury, World Bank and GEF items rest on news, an IMF-hosted statement and CRS, and Division F of P.L. 119-75 could not be read.",
+  "confidence_reason": "Pages 257 to 258 were rechecked in earlier review and the deciding Federal Register documents (EO 14162 and the 2026-01-07 withdrawal memorandum) were read in full. On 2026-10-26 the GovInfo slip law for Public Law 119-75 was opened; its header dates enactment to 2026-02-03 and names H.R. 7148, so the enactment date no longer rests on a bill tracker. The retrieved text again ended within Division A (Sec. 8042), so Division F and its Global Environment Facility and climate provisions are still known only through the CRS report and the House committee summary; a Treasury search found no rescission of the 2021 fossil fuel financing guidance; and the Treasury, World Bank and GEF items still rest on news, an IMF-hosted statement and CRS, so the record stays medium. Confidence 74 to 75.",
   "durability": {
     "level": "medium",
     "why": "Rests on executive orders and board positions that a later administration could reverse, while the EXIM loan decision is a single transaction."
@@ -41,10 +41,14 @@
     {
       "date": "2026-10-23",
       "note": "Refutation check and independent review on 2026-10-23 found no reversal of the climate-finance and international-organization steps, recorded a Treasury statement reported 2026-10-15 on upstream oil and gas as context, recast the appropriations entry as the 2026-02-03 enactment, and moved three statement or report entries out of the timeline (miningweekly.com, thelobbynews.com); stage unchanged."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 the research pass read the GovInfo slip law header for Public Law 119-75, confirming enactment on 2026-02-03, and an OMB statement of policy on H.R. 7148 on whitehouse.gov; Division F was still not reached and confidence moved from 74 to 75. No change of stage or progress."
     }
   ],
   "id": "c09-10",
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-10-26",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -98,13 +102,16 @@
       "House summary entry recast as the 2026-02-03 enactment of P.L. 119-75, date from a tracker",
       "October 2026 Treasury statement accepted as context only, not an event",
       "stage implemented 65 unchanged; alternative in_progress 55 as named in the earlier review",
-      "confidence lowered from 76 to 74 because the timeline now rests on fewer primary actions and the enactment date is from a tracker"
+      "confidence lowered from 76 to 74 because the timeline now rests on fewer primary actions and the enactment date is from a tracker",
+      "Calibration pass 2026-10-26: The Lobby News bill tracker (thelobbynews.com) may now be dropped from sources, since GovInfo gives the enactment date; the output format has no removal field, so this is left to the maintainer.",
+      "Calibration pass 2026-10-26: Division F remains the main gap (shared with c09-01); try the govinfo PDF of PLAW-119publ75 or the division text files linked from the rules.house.gov bill page.",
+      "Calibration pass 2026-10-26: The two retrievals of the GovInfo HTML ended at different sections (Sec. 8072 and Sec. 8042); the truncation point is a retrieval artifact."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 257 and 258 ask USAID to end its opposition to fossil fuels in developing countries, support responsible oil and gas management, narrowly limit funding to traditional mitigation, focus resources on resilience of the most vulnerable countries and end collaboration with and funding of climate-advocacy groups; the paraphrase fits.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-23",
-    "reviewer": "independent review",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "second_review": {
       "balanced": false,
       "date": "2026-10-13",
@@ -128,6 +135,16 @@
         "note": "Not refetched; relied on the 2026-10-18 full reading: Sec. 3(e) revokes the International Climate Finance Plan; anchors the operative cessation element.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02010/putting-america-first-in-international-environmental-agreements"
+      },
+      {
+        "note": "2026-10-26: The slip law header reads Feb. 3, 2026, H.R. 7148; the retrieved text ended in Division A, Title VIII, Sec. 8042, before Division F.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
+      },
+      {
+        "note": "2026-10-26: The undated Statement of Administration Policy covers the Senate amendment to H.R. 7148, including National Security, Department of State, and Related Programs appropriations for FY2026, and mentions no climate provisions; not added as a source.",
+        "result": "partial",
+        "url": "https://www.whitehouse.gov/wp-content/uploads/2026/01/Senate-Amendment-to-HR-7148.pdf"
       }
     ]
   },
@@ -244,6 +261,13 @@
       "publisher": "The Lobby News",
       "title": "H.R. 7148, Consolidated Appropriations Act, 2026 (bill tracker)",
       "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/7148"
+    },
+    {
+      "date": "2026-02-03",
+      "kind": "primary",
+      "publisher": "GovInfo (U.S. Government Publishing Office)",
+      "title": "Public Law 119-75, Consolidated Appropriations Act, 2026 (slip law; enacted 2026-02-03)",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
     }
   ],
   "stage": "implemented",
@@ -287,6 +311,6 @@
   ],
   "title": "Stop opposing fossil fuel development abroad and narrow climate funding in foreign aid",
   "tracked": true,
-  "uncertainties": "The rescission of the 2021 interim guidance on international public financing of fossil fuel projects and of Treasury's multilateral development bank energy guidance was not confirmed: the researcher's searches and one reviewer search returned only 2021 coverage of the guidance. EO 14162 does not name those documents. The House committee summary prints no date and is dated here to the law's enactment on 2026-02-03, a date taken from a bill tracker (thelobbynews.com) and not confirmed on congress.gov; it gives no figures for the climate eliminations, and CRS lists zero FY2026 funding for the Clean Technology Fund and for Tropical Forest and Coral Reef Conservation without explanation. A search for DFC financing of oil or gas projects in 2025 or 2026 returned only older financings. EXIM is an export credit agency, so its LNG loan is a parallel step, not foreign aid. Whether specific climate-advocacy NGOs and foundations lost funding was not separately verified; the withdrawal memorandum covers international bodies only. Mandate text on the Climate Strategy 2022 to 2030 and Paris-related programs is tracked in c09-03. Division F of P.L. 119-75 could not be read: the GovInfo HTML ends within Division A, Title VIII (Sec. 8072) and does not reach Division F, so the Global Environment Facility line was confirmed only through the CRS report and any climate-order funding limit only through the House committee summary. EO 14162 was read in full on the Federal Register and contains no provision on fossil fuel financing guidance or on funding climate-advocacy organizations. Treasury positions at the multilateral development banks are kept as context rather than timeline events because they are statements, not actions: a speech of 2025-04-23 urging the World Bank to move away from climate finance targets, a US statement to the IMF policy committee in April 2025 (dated 2025-04-25 from its meeting dates) calling for an all-of-the-above energy approach including gas, and a statement to the World Bank and IMF steering committees reported on 2026-10-15 asking the Bank to end its ban on upstream oil and gas financing, with no Bank response reported. The CRS report of 2026-07-15 is likewise kept as the source for the Global Environment Facility figure rather than as an event. The 2025-06-12 entry is a World Bank board action, dated by the news report, that the US had pressed for. The rescission of the 2021 interim guidance and of Treasury's multilateral development bank energy guidance was searched again on 2026-10-23 and still not confirmed, and a search for DFC oil and gas financing returned only older financings.",
-  "updated_at": "2026-10-23"
+  "uncertainties": "The rescission of the 2021 interim guidance on international public financing of fossil fuel projects and of Treasury's multilateral development bank energy guidance was not confirmed: the researcher's searches and one reviewer search returned only 2021 coverage of the guidance. EO 14162 does not name those documents. The House committee summary prints no date and is dated here to the law's enactment on 2026-02-03; that enactment date was confirmed on 2026-10-26 on the GovInfo slip law header for Public Law 119-75 (H.R. 7148), so it no longer rests on the bill tracker (thelobbynews.com). The summary gives no figures for the climate eliminations, and CRS lists zero FY2026 funding for the Clean Technology Fund and for Tropical Forest and Coral Reef Conservation without explanation. A search for DFC financing of oil or gas projects in 2025 or 2026 returned only older financings. EXIM is an export credit agency, so its LNG loan is a parallel step, not foreign aid. Whether specific climate-advocacy NGOs and foundations lost funding was not separately verified; the withdrawal memorandum covers international bodies only. Mandate text on the Climate Strategy 2022 to 2030 and Paris-related programs is tracked in c09-03. Division F of P.L. 119-75 could not be read: the GovInfo HTML, as retrieved in two reviews, ended within Division A, Title VIII (at Sec. 8072 in one retrieval and Sec. 8042 on 2026-10-26) and did not reach Division F, and no division-level text was found on rules.house.gov, appropriations.senate.gov or congress.gov, so the Global Environment Facility line was confirmed only through the CRS report and any climate-order funding limit only through the House committee summary. An OMB Statement of Administration Policy on the Senate amendment to H.R. 7148 (whitehouse.gov, no date printed) was read on 2026-10-26 and mentions no climate provisions. EO 14162 was read in full on the Federal Register and contains no provision on fossil fuel financing guidance or on funding climate-advocacy organizations. Treasury positions at the multilateral development banks are kept as context rather than timeline events because they are statements, not actions: a speech of 2025-04-23 urging the World Bank to move away from climate finance targets, a US statement to the IMF policy committee in April 2025 (dated 2025-04-25 from its meeting dates) calling for an all-of-the-above energy approach including gas, and a statement to the World Bank and IMF steering committees reported on 2026-10-15 asking the Bank to end its ban on upstream oil and gas financing, with no Bank response reported. The CRS report of 2026-07-15 is likewise kept as the source for the Global Environment Facility figure rather than as an event. The 2025-06-12 entry is a World Bank board action, dated by the news report, that the US had pressed for. The rescission of the 2021 interim guidance and of Treasury's multilateral development bank energy guidance was searched again on 2026-10-23 and 2026-10-26 and still not confirmed, and a search for DFC oil and gas financing returned only older financings.",
+  "updated_at": "2026-10-26"
 }

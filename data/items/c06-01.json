@@ -7,7 +7,7 @@
   "chapter": "06",
   "confidence": 72,
   "confidence_label": "medium",
-  "confidence_reason": "The chapter text (pp. 173-174) was checked and the S.Res. 817 text (govinfo.gov) and the committee minority release were fetched and read; the stage rests mainly on the 2025 departures and recalls, which are documented only in AP and Federal News Network reports because no primary record was found and state.gov was unreachable, so the record stays medium.",
+  "confidence_reason": "The chapter text (pp. 173 to 174) was checked and the S.Res. 817 text and the committee minority release were read in earlier reviews. On 2026-10-26 the Congressional Record of 2026-08-07 (pages S4540 to S4542) was read on govinfo.gov; it names the nominees confirmed en bloc and records the 51 to 47 result of Rollcall Vote No. 225, a step already documented by S.Res. 817 and the Senate roll call page. The stage rests mainly on the January 2025 departures and the December 2025 recalls, which still rest on AP and Federal News Network reports, so the new reading does not touch the blocker and confidence stays at 72 rather than the 73 proposed.",
   "durability": {
     "level": "low",
     "why": "Ambassadors and political appointees serve at the President's pleasure, so a later administration can replace them at will."
@@ -28,10 +28,14 @@
     {
       "date": "2026-10-23",
       "note": "Lead-only source pass: the 2026-07-06 timeline event and its source (an aggregator article relaying association tracker data) and the AFSA tracker source were removed; the vacancy and appointment-mix figures were restated in the summary, uncertainties and remaining work as an unverified low-confidence lead, and the remaining-work item now cites the Reuters report of more than 100 vacancies. No replacement was found. The source entry for the existing 2025-09-11 timeline event (Indiana Public Media, NPR), missing from the source list, was added. Stage implemented 70, progress 70 and confidence 72 unchanged."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 the Congressional Record of 2026-08-07 (S4540 to S4542) was read on govinfo.gov, confirming the en bloc ambassador confirmations already documented; confidence stayed at 72. No change of stage or progress."
     }
   ],
   "id": "c06-01",
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-10-26",
   "layer": 1,
   "match": "direct",
   "mechanism": "appointment",
@@ -82,13 +86,15 @@
     "flags": [
       "record's earlier timeline said the unanimous consent request was only asked; the release reports it succeeded on 2026-09-30",
       "2025 departures and December 2025 recalls have no primary document; state.gov unreachable",
-      "alternative defensible: in_progress at 55-60 given that more than half of ambassador posts remained vacant in mid-2026"
+      "alternative defensible: in_progress at 55-60 given that more than half of ambassador posts remained vacant in mid-2026",
+      "Calibration pass 2026-10-26: The research pass proposed +1; not given because the Congressional Record duplicates the documented confirmation step and does not address the blocker (2025 departures and recalls).",
+      "Calibration pass 2026-10-26: The Congressional Record for 2026-09-30 could be opened to confirm the unanimous consent confirmations of 10 career ambassadors and remove the date inference."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Pages 173-174 recommend placing political appointees in non-confirmed senior posts from the first day, increasing political appointees, accepting all political ambassadors' resignations, quickly reviewing career ambassadors with immediate recall where policy changes or hostility is shown, no preset mix of ambassador types, and close presidential associates at key posts; the record's proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-23",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "S.Res. 817, submitted 2026-07-23, agreed 2026-07-30; 74 numbered nominations, 11 Ambassador Extraordinary and Plenipotentiary posts (Cyprus, Norway, Tanzania, Albania, Australia, Belize, Cambodia, Equatorial Guinea, Moldova, Brazil, The Gambia) and 6 other ambassador-rank entries.",
@@ -109,6 +115,11 @@
         "note": "2026-10-23: aggregator article relaying AFSA data, not opened; removed with its 2026-07-06 event under the lead-only rule. Stage implemented 70 rests on the news reports of the 2025 departures and recalls and the Senate records of 2026.",
         "result": "unreachable",
         "url": "https://news.ballotpedia.org/2026/07/06/second-trump-administration-has-seen-historically-high-ambassador-vacancies-and-political-appointments/"
+      },
+      {
+        "note": "2026-10-26: Congressional Record pages S4540 to S4542 list the nominations considered en bloc, including ambassadors to Cyprus, Norway, Tanzania, Albania, Australia, Belize and Brazil, and record Rollcall Vote No. 225 at 51 to 47; this restates a step already documented.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/link/crec/172/s/4540"
       }
     ]
   },
@@ -174,6 +185,13 @@
       "publisher": "Indiana Public Media (NPR)",
       "title": "Senate Republicans turn to nuclear option to speed confirmation of Trump nominees",
       "url": "https://www.ipm.org/2025-09-11/senate-republicans-turn-to-nuclear-option-to-speed-confirmation-of-trump-nominees"
+    },
+    {
+      "date": "2026-08-07",
+      "kind": "primary",
+      "publisher": "GovInfo (U.S. Government Publishing Office)",
+      "title": "Congressional Record, Senate, 2026-08-07, pages S4540 to S4542 (en bloc nominations under S.Res. 817, Rollcall Vote No. 225 Ex.)",
+      "url": "https://www.govinfo.gov/link/crec/172/s/4540"
     }
   ],
   "stage": "implemented",
@@ -231,6 +249,6 @@
   ],
   "title": "Reset the ambassador corps and State leadership with new political appointees",
   "tracked": true,
-  "uncertainties": "No primary government document was found for the January 2025 departures or the December 2025 recalls; State declined to confirm names, the AP report relies on unnamed officials, and state.gov could not be reached. The confirmation step is documented on primary hosts: the text of S.Res. 817 on govinfo.gov lists 74 nominations, including 11 ambassadors and 6 other ambassador-rank posts, and Senate roll call vote 225 records the 2026-08-07 en bloc confirmation at 51 to 47. The AFSA tracker page (afsa.org, a professional association) was read only through a summarizing fetch; its counts are approximate and stand as an unverified lead at low confidence, and the Ballotpedia article of 2026-07-06 that repeats them, an aggregator, was not kept as a source; a search on 2026-10-23 found no wire or official report of the same counts. A Senate Foreign Relations Committee minority release dated 2026-10-01 reports that 10 career ambassador nominees were discharged and confirmed by unanimous consent on the preceding Wednesday evening, and states that only 13 career ambassadors had been confirmed, over 100 posts were empty and more than 30 career ambassadors were recalled; this is a partisan statement, the confirmation date is inferred from the release's wording, and the Senate record of that unanimous consent action was not opened. Whether ambassadors were told to resign before 2025-01-20, as the Mandate asked, was not verified.",
-  "updated_at": "2026-10-23"
+  "uncertainties": "No primary government document was found for the January 2025 departures or the December 2025 recalls; State declined to confirm names, the AP report relies on unnamed officials, and state.gov could not be reached; searches on 2026-10-26 restricted to state.gov, afsa.org and congress.gov returned only wire-service reprints of the December 2025 recall story. The confirmation step is documented on primary hosts: the text of S.Res. 817 on govinfo.gov lists 74 nominations, including 11 ambassadors and 6 other ambassador-rank posts, Senate roll call vote 225 records the 2026-08-07 en bloc confirmation at 51 to 47, and the Congressional Record of 2026-08-07 (pages S4540 to S4542, read on govinfo.gov on 2026-10-26) lists the nominees by name and post. The AFSA tracker page (afsa.org, a professional association) was read only through a summarizing fetch; its counts are approximate and stand as an unverified lead at low confidence, and the Ballotpedia article of 2026-07-06 that repeats them, an aggregator, was not kept as a source; a search on 2026-10-23 found no wire or official report of the same counts. A Senate Foreign Relations Committee minority release dated 2026-10-01 reports that 10 career ambassador nominees were discharged and confirmed by unanimous consent on the preceding Wednesday evening, and states that only 13 career ambassadors had been confirmed, over 100 posts were empty and more than 30 career ambassadors were recalled; this is a partisan statement, the confirmation date is inferred from the release's wording, and the Senate record of that unanimous consent action was not opened. Whether ambassadors were told to resign before 2025-01-20, as the Mandate asked, was not verified.",
+  "updated_at": "2026-10-26"
 }

@@ -6,7 +6,7 @@
   "chapter": "18",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter page 606 was re-read and the final rule, DOL notice TEN 02-26 and the complaint copy hosted by citizen.org were read this run; the rule's amendatory instruction was again not reached and the court filing is a third-party copy, so the record stays medium at 78.",
+  "confidence_reason": "Chapter page 606 was re-read and the final rule, DOL notice TEN 02-26 and the complaint copy hosted by citizen.org were read in earlier reviews. On 2026-10-26 the Legal Information Institute pages for 20 CFR 652.215 and part 652 subpart C were opened; they link an amendment to the section published at 91 FR 54052 on 2026-08-20 but still display the section text, with a source credit ending at 91 FR 2488 of 2026-01-21, so they neither confirm the codified removal nor show the amendatory instruction, and the Institute is a qualifying host only for U.S. Code text. The Clearinghouse case page failed to load and no court docket was found, so the court filing still rests on a counsel-hosted copy and confidence stays at 78.",
   "court_status": {
     "basis": "Complaint filed 2026-09-10 in D.D.C. (No. 1:26-cv-03162) seeking vacatur and an injunction; no stay, injunction or ruling was found as of 2026-10-25, so the final rule took effect 2026-10-19 and remains in force while the case is pending.",
     "date": "2026-09-10",
@@ -50,10 +50,14 @@
     {
       "date": "2026-10-25",
       "note": "Independent review on 2026-10-25 re-read chapter page 606, the Federal Register final rule, DOL notice TEN 02-26 on dol.gov and the complaint copy hosted by citizen.org, kept implemented 80 with court_status pending, and added the DOL notice as a source."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 the Legal Information Institute pages for 20 CFR 652.215 and subpart C were opened and still showed the section with a link to the 2026-08-20 amendment, and the Clearinghouse case page failed to load; confidence stayed at 78. No change of stage or progress."
     }
   ],
   "id": "c18-12",
-  "last_checked": "2026-10-25",
+  "last_checked": "2026-10-26",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -109,13 +113,17 @@
     "flags": [
       "implemented 80 holds: the rule is final, effective 2026-10-19 and not stayed; a complaint alone has no effect on the action, so court_status pending fits the rule. Alternative: implemented 85 since only congressional codification remains.",
       "The amendatory instruction of the final rule is still unread; confidence stays medium.",
-      "Docket status after the complaint (any preliminary injunction motion) not verified."
+      "Docket status after the complaint (any preliminary injunction motion) not verified.",
+      "Calibration pass 2026-10-26: The LII page proposed as a source was not added: it displays superseded text and the Institute qualifies only for U.S. Code text.",
+      "Calibration pass 2026-10-26: Opening 20 CFR part 652 on ecfr.gov, or the govinfo page image of 91 FR 54052, would likely clear the amendatory-instruction blocker.",
+      "Calibration pass 2026-10-26: court_status rests on a citizen.org copy of the complaint, a counsel host that never qualifies; the Clearinghouse page qualifies under the host ruling and should be retried for docket facts (No. 1:26-cv-03162).",
+      "Calibration pass 2026-10-26: The phrase calling the Clearinghouse page a lead only was removed from the uncertainties to match the host ruling."
     ],
     "mandate_check": "verified",
     "mandate_note": "pages re-read 2026-10-25: page 606 asks DOL to repromulgate the first-term staffing flexibility rule and Congress to codify it, and says the federal government should not force a state to use union or non-union labor; the proposal is accurate.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-25",
-    "reviewer": "independent AI reviewer",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "Final rule 91 FR 54024, effective 2026-10-19, removes 20 CFR 652.215; API record shows no corrections. Page text again ended before the amendatory instruction at offsets 100,000 and 138,000. Supports implemented 80.",
@@ -136,6 +144,16 @@
         "note": "Govinfo PDF of the final rule; the fetch ended at page 54036 before the amendatory text; page 54026 states 652.215 is removed in full.",
         "result": "partial",
         "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-20/pdf/2026-16982.pdf"
+      },
+      {
+        "note": "2026-10-26: LII page still shows 20 CFR 652.215 with source credit 88 FR 82726 as amended at 91 FR 2488, and links to an amendment published at 91 FR 54052 on 2026-08-20.",
+        "result": "partial",
+        "url": "https://www.law.cornell.edu/cfr/text/20/652.215"
+      },
+      {
+        "note": "2026-10-26: Subpart C table of contents still lists 652.215, Staffing models for Employment Service delivery.",
+        "result": "partial",
+        "url": "https://law.cornell.edu/cfr/text/20/part-652/subpart-C"
       }
     ]
   },
@@ -245,6 +263,6 @@
   ],
   "title": "Drop the state merit-staffing requirement for Wagner-Peyser Employment Service",
   "tracked": true,
-  "uncertainties": "The final rule was read on federalregister.gov for its summary, dates section and preamble, which state that 20 CFR 652.215 is removed in its entirety as proposed; the amendatory instruction itself was not reached because the document page and the text, HTML and XML full-text renditions all ended mid-preamble before it. A check for a court order on 2026-10-19, through a Federal Register API query for Labor Department Wagner-Peyser documents published since 2026-08-21 (one unrelated information collection notice) and one news search (only the 2020 challenge to the first-term rule), found no stay or injunction; a filing not yet reported cannot be excluded. No bill codifying the rule was searched for. Refutation check on 2026-10-25: a complaint challenging the final rule was filed on 2026-09-10 in the D.D.C. (copy of the filing hosted by citizen.org, a litigant counsel host, medium confidence); a Federal Register API query for Employment and Training Administration documents since 2026-08-01 showed no correction or delay notice, and no stay, injunction or ruling was found. The complaint seeks vacatur and an injunction but no section 705 stay; whether a preliminary injunction motion has been filed was not verified. A court docket for the case was not located. Review 2026-10-25: DOL Training and Employment Notice 02-26 (2026-08-20) states that the final rule removes all paragraphs of 20 CFR 652.215 and takes effect 2026-10-19, which corroborates the preamble on a primary DOL host; the amendatory instruction itself was again not reached on federalregister.gov or the govinfo PDF, both of which end before it in the fetch tool. A docket mirror was not reached (a clearinghouse.net page, a lead only, failed to load), so whether a preliminary injunction or summary judgment motion has been filed is not known.",
-  "updated_at": "2026-10-25"
+  "uncertainties": "The final rule was read on federalregister.gov for its summary, dates section and preamble, which state that 20 CFR 652.215 is removed in its entirety as proposed; the amendatory instruction itself was not reached because the document page and the text, HTML and XML full-text renditions all ended mid-preamble before it. A check for a court order on 2026-10-19, through a Federal Register API query for Labor Department Wagner-Peyser documents published since 2026-08-21 (one unrelated information collection notice) and one news search (only the 2020 challenge to the first-term rule), found no stay or injunction; a filing not yet reported cannot be excluded. No bill codifying the rule was searched for. Refutation check on 2026-10-25: a complaint challenging the final rule was filed on 2026-09-10 in the D.D.C. (copy of the filing hosted by citizen.org, a litigant counsel host, medium confidence); a Federal Register API query for Employment and Training Administration documents since 2026-08-01 showed no correction or delay notice, and no stay, injunction or ruling was found. The complaint seeks vacatur and an injunction but no section 705 stay; whether a preliminary injunction motion has been filed was not verified. A court docket for the case was not located. Review 2026-10-25: DOL Training and Employment Notice 02-26 (2026-08-20) states that the final rule removes all paragraphs of 20 CFR 652.215 and takes effect 2026-10-19, which corroborates the preamble on a primary DOL host; the amendatory instruction itself was again not reached on federalregister.gov or the govinfo PDF, both of which end before it in retrieval. A docket mirror was not reached (the Clearinghouse case page failed to load on 2026-10-25 and again on 2026-10-26, and no CourtListener or Justia docket appeared in search results on 2026-10-26), so whether a preliminary injunction or summary judgment motion has been filed is not known. On 2026-10-26 the Legal Information Institute's pages for 20 CFR 652.215 and part 652 subpart C still showed the section, with a link to an amendment published at 91 FR 54052 on 2026-08-20 (the page where the final rule's amendatory text begins) and a source credit ending at 91 FR 2488 (2026-01-21), so the codified removal after the 2026-10-19 effective date is not confirmed in a CFR rendering; the eCFR was not opened.",
+  "updated_at": "2026-10-26"
 }

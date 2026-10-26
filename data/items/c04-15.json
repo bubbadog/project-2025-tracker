@@ -2,9 +2,9 @@
   "agency": "DOD",
   "blockers": [],
   "chapter": "04",
-  "confidence": 78,
+  "confidence": 79,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: high requires the stage-deciding primary document to be opened and read, and a document known only through the external retrieval caps the record at 79. The Air Force memorandum of 2025-03-17 was opened on af.mil on 2026-10-19 (by the researcher, confirmed by the reviewer) and supports implemented 75 for the Department of the Air Force, and EO 14182 was read on federalregister.gov, but the department-wide OUSD(P&R) memorandum of 2025-02-03 is still known only through the external retrieval, EO 14182 does not name DOD, and the Army and Navy documents were not read, so confidence stays 78.",
+  "confidence_reason": "Rule applied: high requires the stage-deciding primary document to be opened and read. The department-wide OUSD(P&R) memorandum of 2025-02-03 was again not opened, but on 2026-10-26 three official documents that cite it by title and date were read: the Defense Travel Management Office's JTR change UTD for MAP 08-25(I) of 2025-02-04 on af.mil, which states that the memorandum rescinded the 2023-02-16 memorandum; MARADMIN 132/25 of 2025-03-17 on marines.mil, which carries the 21-day limit per request and the closest-available-facility limit for ART travel; and Coast Guard ALCOAST 087/25 of 2025-02-25 on uscg.mil, which cites the memorandum and EO 14182 in removing administrative absence for non-covered reproductive health care. CRS Insight IN12512 on congress.gov dates to 2025-01-29 the JTR update removing the travel allowances. The Air Force memorandum of 2025-03-17 and EO 14182 were read earlier. Because the memorandum itself is still known only through documents that cite it and the Army and Navy (other than Marine Corps) documents were not read, confidence rises from 78 to 79 and stays medium.",
   "durability": {
     "level": "low",
     "why": "The change rests on departmental memoranda and an executive order that a later Administration could reverse, as the 2022 policy was itself created by memo."
@@ -46,10 +46,14 @@
     {
       "date": "2026-10-23",
       "note": "Lead-only source pass: the 2025-01-30 timeline event and its source, an advocacy-group summary, were removed; the event was replaced by a 2025-01-29 event citing the AP report as published by News4JAX (opened, published 2025-01-31, signing day given as Wednesday, so the date is an inference from the weekday), and the 2025-01-30 date was moved to uncertainties as an unverified lead. Stage implemented 75, progress 75 and confidence 78 unchanged."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 a DTMO JTR change on af.mil, MARADMIN 132/25 on marines.mil, ALCOAST 087/25 on uscg.mil, CRS Insight IN12512 on congress.gov and an undated af.mil article were read, all citing or describing the OUSD(P&R) memorandum of 2025-02-03, which itself was not opened; confidence moved from 78 to 79. No change of stage or progress."
     }
   ],
   "id": "c04-15",
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-10-26",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -112,13 +116,17 @@
     "flags": [
       "Stage kept at implemented 75; in_progress at the top of the band is the alternative if the Army and Navy implementing documents, which were not read, differ.",
       "Cannot reach high: the stage-deciding memoranda are on a host the research tools cannot open, and the 2025-01-29 DOD memorandum was not located on a reachable primary host.",
-      "Timeline entries of 2025-01-29, 2025-01-31 and 2025-06-12 rest on news sources and are kept as kind news."
+      "Timeline entries of 2025-01-29, 2025-01-31 and 2025-06-12 rest on news sources and are kept as kind news.",
+      "Calibration pass 2026-10-26: Judgment call: the DTMO JTR change is an official DOD document stating that the OUSD(P&R) memorandum rescinded the 2023-02-16 memorandum, which could support lifting the cap under the official-page exception; held at 79 because the memorandum itself and the 2025-01-29 JTR update were not opened. Opening the media.defense.gov JTR updates linked by CRS would likely clear the cap.",
+      "Calibration pass 2026-10-26: The undated af.mil article was not added as a source because it has no date; add it if a publication date is found. Its paragraph number (033013) differs from the 033113 in the earlier retrieval; recheck.",
+      "Calibration pass 2026-10-26: ALCOAST 087/25 is a Coast Guard (DHS) message, not a DOD component's implementation; it was added as corroboration only.",
+      "Calibration pass 2026-10-26: The timeline entry of 2025-01-29 can cite CRS IN12512 for the date; it should not claim the memorandum was read."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 104 (item 7) says public money should not be used for transgender surgeries or to facilitate abortion for service members; the paraphrase fits.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-23",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "90 FR 8751 to 8752, doc 2025-02175, signed 2025-01-24; states the Hyde policy, revokes EO 14076 and 14079, directs OMB guidance; does not mention DOD or travel.",
@@ -154,6 +162,31 @@
         "note": "2026-10-23: opened by the second-round researcher and re-opened by the reviewer; AP report by-lined 2025-01-31 says a memo signed on Wednesday by the director of the Pentagon's human resources department ends reimbursement for out-of-state travel for abortion and fertility treatment, rescinding the October 2022 policy. Supports the travel rescission behind implemented 75; gives no calendar date for the signing.",
         "result": "supports",
         "url": "https://www.news4jax.com/health/2025/01/31/pentagon-strips-travel-reimbursement-for-troops-seeking-abortions-fertility-treatment/"
+      },
+      {
+        "note": "2026-10-26: DTMO JTR change of 2025-02-04 cites the USD(P&R) memorandum Non-Covered Assisted Reproductive Technology of 2025-02-03, states it rescinded the 2023-02-16 memorandum and is not an elimination of ART access, and says the changes appear in the 2025-03-01 JTR.",
+        "result": "supports",
+        "url": "https://www.af.mil/Portals/1/documents/2025SAF/13_-_Atch_2a_-_UTD_for_MAP_08-25(I)_Reestablish_Travel_for_Non-Covered_Assisted_Reproductive_Technology_(ART).pdf"
+      },
+      {
+        "note": "2026-10-26: MARADMIN 132/25 of 2025-03-17 cites the OUSD(P&R) memorandum of 2025-02-03, limits NCART permissive TAD to 21 days per request and limits reimbursement to the closest available facility.",
+        "result": "partial",
+        "url": "https://www.marines.mil/News/Messages/Messages-Display/Article/4122239/non-covered-assisted-reproductive-technology-art-permissive-temporary-additiona/"
+      },
+      {
+        "note": "2026-10-26: ALCOAST 087/25 of 2025-02-25 cites EO 14182 and the USD(P&R) memorandum of 2025-02-03, removes administrative absence for non-covered reproductive health care and reestablishes it for non-covered ART.",
+        "result": "partial",
+        "url": "https://dcms.uscg.mil/Portals/10/CG-1/PPC/087-25_ALCOAST.pdf"
+      },
+      {
+        "note": "2026-10-26: CRS Insight of 2025-02-24 describes a 2025-01-29 JTR update removing travel and transportation allowances established under the prior administration and a 2025-02-04 update reestablishing them for non-covered ART.",
+        "result": "partial",
+        "url": "https://www.congress.gov/crs_external_products/IN/PDF/IN12512/IN12512.2.pdf"
+      },
+      {
+        "note": "2026-10-26: Undated af.mil article says the Department of the Air Force released a memorandum on Jan. 29 removing JTR paragraph 033013 (as printed) under the Hyde Amendment order; the memorandum itself was not linked in the text.",
+        "result": "partial",
+        "url": "https://www.af.mil/News/Article-Display/Article/4050086/department-of-the-air-force-releases-memorandum-on-remove-travel-for-non-covere"
       }
     ]
   },
@@ -219,6 +252,34 @@
       "publisher": "News4JAX (Associated Press)",
       "title": "Pentagon strips travel reimbursement for troops seeking abortions, fertility treatment",
       "url": "https://www.news4jax.com/health/2025/01/31/pentagon-strips-travel-reimbursement-for-troops-seeking-abortions-fertility-treatment/"
+    },
+    {
+      "date": "2025-02-04",
+      "kind": "primary",
+      "publisher": "Defense Travel Management Office, Per Diem, Travel, and Transportation Allowance Committee (copy on af.mil)",
+      "title": "UTD for MAP 08-25(I), Reestablish Travel for Non-Covered Assisted Reproductive Technology (ART), Joint Travel Regulations change",
+      "url": "https://www.af.mil/Portals/1/documents/2025SAF/13_-_Atch_2a_-_UTD_for_MAP_08-25(I)_Reestablish_Travel_for_Non-Covered_Assisted_Reproductive_Technology_(ART).pdf"
+    },
+    {
+      "date": "2025-03-17",
+      "kind": "primary",
+      "publisher": "U.S. Marine Corps",
+      "title": "MARADMIN 132/25, Non-Covered Assisted Reproductive Technology (NCART) Permissive Temporary Additional Duty and Travel Allowances",
+      "url": "https://www.marines.mil/News/Messages/Messages-Display/Article/4122239/non-covered-assisted-reproductive-technology-art-permissive-temporary-additiona/"
+    },
+    {
+      "date": "2025-02-25",
+      "kind": "primary",
+      "publisher": "U.S. Coast Guard",
+      "title": "ALCOAST 087/25, Update to Administrative Absence for Non-Covered Assisted Reproductive Technology (ART) and Command Pregnancy Notification in Accordance with the Hyde Amendment",
+      "url": "https://dcms.uscg.mil/Portals/10/CG-1/PPC/087-25_ALCOAST.pdf"
+    },
+    {
+      "date": "2025-02-24",
+      "kind": "primary",
+      "publisher": "Congressional Research Service (congress.gov)",
+      "title": "DOD Policy Changes: Reproductive Health Benefits (CRS Insight IN12512, version 2)",
+      "url": "https://www.congress.gov/crs_external_products/IN/PDF/IN12512/IN12512.2.pdf"
     }
   ],
   "stage": "implemented",
@@ -269,6 +330,6 @@
   ],
   "title": "End DOD funding of travel and leave for service member abortions",
   "tracked": true,
-  "uncertainties": "The Air Force memorandum of 2025-03-17 was opened on 2026-10-19 as a 2-page copy on af.mil (by the researcher, confirmed by the reviewer); it confirms its date, signer, references to EO 14182 and the OUSD(P&R) memorandum of 2025-02-03, the rescission of the 2023-02-27 Air Force memorandum, the end of administrative leave and travel reimbursement for elective abortion, and continued ART access. The 11-page file on the Air Force Medicine site, which also bundles the OUSD(P&R) memorandum, could not be opened, and the copy of the OUSD(P&R) memorandum on the war.gov host was blocked. Details reported from the earlier browser retrieval and not found in the opened copy are not verified: the 21-day limit on administrative absence per request, the closest-capable-facility limit on ART travel, and the OUSD(P&R) memorandum's rescission of the 2023-02-16 memorandum and Joint Travel Regulations paragraph 033113. This memorandum is the Air Force implementation: the Army and Navy implementing documents were not read. The 2025-01-29 memorandum reported by AP, which ended the October 2022 travel reimbursement policy, was not read; its signing date of 2025-01-29 is inferred from the AP report published 2025-01-31, which says only that it was signed on a Wednesday, and the rescission date of 2025-01-30 reported by the Center for Reproductive Rights (reproductiverights.org, an advocacy group) is an unverified lead at low confidence, not confirmed by an official document. The earlier conflict between sources on fertility care is resolved for the Air Force: its memorandum keeps ART access and travel allowances while ending leave and travel reimbursement for elective abortion; whether fertility travel went unreimbursed for a period before the ART provisions took effect was not determined. The Military.com article carries no date in its text; the date is from its URL. Whether military health coverage of abortion under existing law changed was not examined.",
-  "updated_at": "2026-10-23"
+  "uncertainties": "The Air Force memorandum of 2025-03-17 was opened on 2026-10-19 as a 2-page copy on af.mil (by the researcher, confirmed by the reviewer); it confirms its date, signer, references to EO 14182 and the OUSD(P&R) memorandum of 2025-02-03, the rescission of the 2023-02-27 Air Force memorandum, the end of administrative leave and travel reimbursement for elective abortion, and continued ART access. The 11-page file on the Air Force Medicine site, which also bundles the OUSD(P&R) memorandum, could not be opened (it failed again on 2026-10-26), and the copy of the OUSD(P&R) memorandum on the war.gov host was blocked, so the memorandum itself has not been read. Its rescission of the 2023-02-16 memorandum is stated in the Defense Travel Management Office's JTR change UTD for MAP 08-25(I) of 2025-02-04 (copy on af.mil), which also says the change is not an elimination of access to non-covered ART and that the changes were published in the 2025-03-01 JTR edition. The 21-day limit per request and the closest-available-facility limit on ART travel are confirmed for the Marine Corps by MARADMIN 132/25 (marines.mil, 2025-03-17). The rescission of JTR paragraph 033113 was not confirmed in any opened document; an undated af.mil news article on a Department of the Air Force memorandum of Jan. 29 prints the paragraph as 033013. Coast Guard ALCOAST 087/25 (uscg.mil, 2025-02-25) cites EO 14182 and the OUSD(P&R) memorandum in removing administrative absence for non-covered reproductive health care and reestablishing it for non-covered ART; the Coast Guard is part of DHS, not DOD, so the message shows the memorandum's reach rather than a DOD component's implementation. The Air Force and Marine Corps implementations are documented; the Army and Navy (other than Marine Corps) implementing documents were not read. CRS Insight IN12512 (congress.gov, 2025-02-24) dates to 2025-01-29 the JTR update removing travel and transportation allowances established under the prior administration, and to 2025-02-04 the update reestablishing them for lawfully available non-covered ART; the JTR updates themselves, which CRS links on media.defense.gov, were not opened. The 2025-01-29 memorandum reported by AP, which ended the October 2022 travel reimbursement policy, was not read; the 2025-01-29 date now rests on CRS rather than on inference from the AP report's weekday, and the rescission date of 2025-01-30 reported by the Center for Reproductive Rights (reproductiverights.org, an advocacy group) is an unverified lead at low confidence, not confirmed by an official document. The earlier conflict between sources on fertility care is resolved: the Air Force memorandum, the JTR change of 2025-02-04 and MARADMIN 132/25 keep ART access and travel allowances while leave and travel reimbursement for elective abortion ended; CRS indicates ART travel allowances were removed on 2025-01-29 and reestablished on 2025-02-04, and whether any fertility travel went unreimbursed in that interval was not determined. The Military.com article carries no date in its text; the date is from its URL. Whether military health coverage of abortion under existing law changed was not examined.",
+  "updated_at": "2026-10-26"
 }

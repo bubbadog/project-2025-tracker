@@ -4,7 +4,7 @@
   "chapter": "05",
   "confidence": 79,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked (page 138). The charter renewal notice (90 FR 11749, Doc. 2025-03856) was read in full on federalregister.gov, and the 2025-01-20 termination memo was read in full from a third-party copy (iptp-production.s3.amazonaws.com) on 2026-10-18 and re-opened in review on 2026-10-22; no official dhs.gov copy was found. Rule applied: the removal step rests only on a third-party copy of the deciding memo, which keeps the record at or below 79, so confidence moves from 80 to 79; the full replacement of members rests on the memo plus the swearing-in notice, with no roster read.",
+  "confidence_reason": "Chapter text was checked (page 138) and the charter renewal and meeting notices were read on federalregister.gov in earlier reviews. On 2026-10-26 a letter of 2025-01-29 from the Ranking Member of the Senate Homeland Security and Governmental Affairs Committee was read on hsgac.senate.gov; it states that the Acting Secretary terminated all DHS advisory committee memberships on 2025-01-20 and lists the Homeland Security Advisory Council among the affected committees, which corroborates the deciding fact on an official host but is a congressional letter, not the DHS memo or a DHS page. The memo was still read only in the third-party copy and the 22-name roster only in a KELOLAND (Nexstar) report of a 2025-06-24 DHS release, so the cap at 79 holds and confidence is unchanged.",
   "durability": {
     "level": "low",
     "why": "Advisory committee membership is set by the Secretary and can change at any time."
@@ -42,6 +42,10 @@
     {
       "date": "2026-10-26",
       "note": "Refutation check: The Council was reconstituted under a renewed charter and meeting in December 2025, and no later termination or change was found. Red-team verdict holds; stage and progress unchanged."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 a Senate HSGAC minority letter of 2025-01-29 was read on hsgac.senate.gov, the dhs.gov Council members page was opened and a KELOLAND report of the 2025-06-24 appointments was read; confidence stayed at 79. No change of stage or progress."
     }
   ],
   "id": "c05-27",
@@ -94,13 +98,16 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Implemented 78 kept; completed 100 is defensible if the memo plus the swearing-in are accepted as full replacement without a roster."
+      "Implemented 78 kept; completed 100 is defensible if the memo plus the swearing-in are accepted as full replacement without a roster.",
+      "Calibration pass 2026-10-26: The HSGAC letter is from the committee's minority Ranking Member and characterizes the DHS action; it corroborates but is not the deciding document.",
+      "Calibration pass 2026-10-26: Suggested timeline addition: 2025-06-24 DHS announced 22 Council appointments (McMaster Chair, Gruters Vice Chair), sourced to a news report of the DHS release; maintainer to decide whether a news-only event is acceptable.",
+      "Calibration pass 2026-10-26: An official dhs.gov copy of the 2025-01-20 memo or the 2025-06-24 release would lift the cap; neither surfaced in searches."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 138 asks the Secretary to plan to remove all current members of the Homeland Security Advisory Committee quickly and replace them as soon as feasible. The proposal matches; the text uses Committee for the body chartered as the Council.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-22",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "90 FR 11749, Doc. 2025-03856, Docket DHS-2025-0007; charter renewed effective 2025-03-05 to 2027-03-05; membership 40 to 35; three-year terms; Chair and Vice Chair replace co-chairs.",
@@ -131,6 +138,21 @@
         "note": "Opened by the researcher only, not re-opened in review: a Reuters report republished 2025-01-21 on a market-news site gives the memo's date, signatory and scope but not the reapplication point or the Council by name. Corroboration only; not added to sources.",
         "result": "partial",
         "url": "https://uk.marketscreener.com/news/latest/US-Department-of-Homeland-Security-firing-all-advisory-committee-members-letter-says-48828013/"
+      },
+      {
+        "note": "2026-10-26: Letter of 2025-01-29 states that on 2025-01-20 Acting Secretary Huffman terminated all current memberships on DHS advisory committees; its table lists the Homeland Security Advisory Council under 6 U.S.C. 451.",
+        "result": "supports",
+        "url": "https://www.hsgac.senate.gov/wp-content/uploads/20250129-DHS-FACA-Disbandment-Letter-v5.pdf"
+      },
+      {
+        "note": "2026-10-26: Page titled Homeland Security Advisory Council Members, last updated 2025-01-24; the text returned contained no roster, chair or vice chair.",
+        "result": "partial",
+        "url": "https://dhs.gov/homeland-security-advisory-council-members"
+      },
+      {
+        "note": "2025-06-25: Report of a 2025-06-24 DHS release lists 22 Council appointees with Henry McMaster as Chair and Joseph Gruters as Vice Chair.",
+        "result": "partial",
+        "url": "https://digital-release.keloland.com/news/local-news/trump-noem-appoint-lewandowski-kirby-to-advisory-council"
       }
     ]
   },
@@ -204,6 +226,20 @@
       "publisher": "Department of Homeland Security (Federal Register)",
       "title": "Homeland Security Advisory Council; Notice of Meeting (date change)",
       "url": "https://www.federalregister.gov/documents/2025/06/26/2025-11757/homeland-security-advisory-council-notice-of-meeting"
+    },
+    {
+      "date": "2025-01-29",
+      "kind": "primary",
+      "publisher": "Senate Committee on Homeland Security and Governmental Affairs",
+      "title": "Letter from Ranking Member Gary C. Peters to Secretary Kristi Noem on the termination of DHS advisory committee memberships",
+      "url": "https://www.hsgac.senate.gov/wp-content/uploads/20250129-DHS-FACA-Disbandment-Letter-v5.pdf"
+    },
+    {
+      "date": "2025-06-25",
+      "kind": "news",
+      "publisher": "KELOLAND (Nexstar)",
+      "title": "Trump, Noem appoint Lewandowski, Kirby to advisory council",
+      "url": "https://digital-release.keloland.com/news/local-news/trump-noem-appoint-lewandowski-kirby-to-advisory-council"
     }
   ],
   "stage": "implemented",
@@ -233,6 +269,6 @@
   ],
   "title": "Remove all members of the Homeland Security Advisory Council and replace them",
   "tracked": true,
-  "uncertainties": "The January memo does not name the Homeland Security Advisory Council; its coverage of the Council rests on the memo's wording that it applies to all DHS advisory committees, and the Council is chartered as one. The March 2025 termination notice (eight committees) does not list the Council, consistent with the Council being kept and reconstituted rather than terminated. The meeting notices do not list members or name the new Chair and Vice Chair, a notice published 2025-06-26 (90 FR 27330) moved the meeting from 2025-06-30 to 2025-07-02 without restating the agenda, and it was not verified that the meeting occurred as noticed. The Mandate text uses the word Committee; the body is called Council. The memo copy was read through a third-party host, not dhs.gov, and a search of dhs.gov on 2026-10-22 found no official copy. A DHS release of 2025-06-24 announcing appointments to the Council could not be fetched from dhs.gov on 2026-10-18, so no roster was read. Searched 2026-10-26 for Council terminations, resignations or charter changes after 2025-12-10 and found nothing; a Federal Register query for 2026 notices returned no Council notice.",
+  "uncertainties": "The January memo does not name the Homeland Security Advisory Council; its coverage of the Council rests on the memo's wording that it applies to all DHS advisory committees, and the Council is chartered as one. A letter of 2025-01-29 from Ranking Member Gary C. Peters of the Senate Homeland Security and Governmental Affairs Committee, read on hsgac.senate.gov on 2026-10-26, states that the Acting Secretary terminated all current memberships on DHS advisory committees on 2025-01-20, and its attached table lists the Council under 6 U.S.C. 451. The March 2025 termination notice (eight committees) does not list the Council, consistent with the Council being kept and reconstituted rather than terminated. The meeting notices do not list members or name the new Chair and Vice Chair, a notice published 2025-06-26 (90 FR 27330) moved the meeting from 2025-06-30 to 2025-07-02 without restating the agenda, and it was not verified that the meeting occurred as noticed. The Mandate text uses the word Committee; the body is called Council. The memo copy was read through a third-party host, not dhs.gov, and searches of dhs.gov on 2026-10-22 and 2026-10-26 found no official copy. The DHS release of 2025-06-24 announcing appointments to the Council was still not fetched from dhs.gov; a KELOLAND (Nexstar) report of 2025-06-25 citing it lists 22 appointees with Henry McMaster as Chair and Joseph Gruters as Vice Chair, and the dhs.gov Council members page (last updated 2025-01-24) returned no roster text. Searched 2026-10-26 for Council terminations, resignations or charter changes after 2025-12-10 and found nothing; a Federal Register query for 2026 notices returned no Council notice.",
   "updated_at": "2026-10-26"
 }

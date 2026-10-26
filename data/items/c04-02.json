@@ -2,9 +2,9 @@
   "agency": "DOD",
   "blockers": [],
   "chapter": "04",
-  "confidence": 78,
+  "confidence": 79,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: high requires the stage-deciding primary record to be opened and read; the operative documents that were opened (Executive Order 14184 on govinfo, the 2026-03-23 Army article, and on 2026-10-19 the 2026-05-07 memorandum on media.defense.gov, opened by the researcher and confirmed by the reviewer) support implementation in substance, but none addresses how rank is restored or whether back pay is paid, which rests on news reports, and return counts differ between reports, so confidence stays medium at 78.",
+  "confidence_reason": "Rule applied: high requires the stage-deciding primary record to be opened and read. Executive Order 14184 (govinfo), the 2026-03-23 Army article and the 2026-05-07 memorandum (media.defense.gov) were read in earlier review. On 2026-10-26 the Navy's MyNavy HR reinstatement page and the Air Force release of 2025-04-07 were read on official .mil hosts: they state that correction boards may order restoration of rank and credit for lost service time and that reinstated members may receive back pay, benefits and bonuses subject to required offsets, with DFAS computing the package. They describe the process, not results: whether back pay has been paid in full and how many have returned still rest on Military Times reports, which differ, so the record stays at the top of the medium band. Confidence 78 to 79.",
   "durability": {
     "level": "low",
     "why": "The program rests on an executive order and DOD memoranda that a later administration could end or narrow."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-19",
       "note": "Primary-source review opened the 2026-05-07 Secretary of War memorandum on media.defense.gov and a copy attached to a Federal Circuit filing (added as a court source); the memorandum extends the program one year and directs correction boards, and is silent on rank and back pay. The 2026-05-08 timeline event was replaced by a 2026-05-07 event; stage implemented 65 and confidence 78 unchanged."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 the research pass read the Navy MyNavy HR reinstatement page, the Air Force release of 2025-04-07 and a DOD News article of 2025-04-24 on official .mil hosts, which describe rank restoration and back pay subject to offsets but report no results; confidence moved from 78 to 79. No change of stage or progress."
     }
   ],
   "id": "c04-02",
-  "last_checked": "2026-10-19",
+  "last_checked": "2026-10-26",
   "layer": 1,
   "match": "direct",
   "mechanism": "executive_order",
@@ -83,13 +87,16 @@
     "flags": [
       "counts differ across reports",
       "rank restoration in practice not verified",
-      "related Coast Guard re-onboarding recommendation in chapter 05, page 156 (Coast Guard counts are included here)"
+      "related Coast Guard re-onboarding recommendation in chapter 05, page 156 (Coast Guard counts are included here)",
+      "Calibration pass 2026-10-26: The Navy page prints no date; the source carries the date read (2026-10-26) with a title note. Confirm this convention or use null.",
+      "Calibration pass 2026-10-26: The 2025-04-24 memorandum date (DOD News) is one day after the 2025-04-23 outreach announcement in the status summary; check whether these are the same action and whether the timeline should carry the 2025-04-24 memorandum.",
+      "Calibration pass 2026-10-26: The pages describe policy, not payment; the record should not be lifted to high on them. A DFAS or service-level count of completed back pay packages would be the deciding document."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 103 (item 3 under the politicization heading) recommends reinstating members discharged for not receiving the COVID vaccine, restoring their appropriate rank, and providing back pay; the paraphrase matches.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-19",
-    "reviewer": "R02",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "Army article dated 2026-03-23 confirms the extension of the return window to 2027-04-01 and the cut in service obligation from four years to two; it does not address rank restoration, back pay, or how many have returned.",
@@ -110,6 +117,21 @@
         "note": "2026-10-19: opened by the researcher and the reviewer; Federal Circuit notice of supplemental authority (No. 2025-1363) whose Exhibit A reproduces the same memorandum; no filing date shown in the document. Same limits on rank and back pay as against implemented 65.",
         "result": "partial",
         "url": "https://kneselaw.com/docs/2026-0526%20Petitioner%27s%20Notice%20of%20Suppl%20Authority.pdf"
+      },
+      {
+        "note": "2026-10-26: The undated Navy page says involuntarily separated sailors may be eligible for back pay, benefits, bonus payments or other compensation subject to required offsets, with DFAS to determine the package within 90 days, and that voluntary separations receive no back pay; it gives no counts.",
+        "result": "partial",
+        "url": "https://www.mynavyhr.navy.mil/Career-Management/Personnel-Conduct-Sep/Sailor-Reinstatement/index.html"
+      },
+      {
+        "note": "2026-10-26: The release says correction boards may order restoration of rank and credit for lost service time, with a four-year commitment and 60 days to accept after a compensation estimate; it reports no outcomes.",
+        "result": "partial",
+        "url": "https://www.af.mil/News/Article-Display/Article/4147424/air-force-personnel-involuntarily-discharged-over-vaccine-mandate-offered-reins/"
+      },
+      {
+        "note": "2026-10-26: The article says the defense secretary signed a memorandum that day (2025-04-24) ordering additional remedies; it does not mention back pay, rank or counts.",
+        "result": "partial",
+        "url": "https://www.jbsa.mil/News/News/Article/4164873/defense-secretary-orders-additional-remedies-more-clarity-on-covid-19-reinstate"
       }
     ]
   },
@@ -182,6 +204,27 @@
       "publisher": "Military Times",
       "title": "Trump promised redemption for troops who refused COVID shots. A year later, many are still waiting.",
       "url": "https://www.militarytimes.com/news/your-military/2026/07/23/trump-promised-redemption-for-troops-who-refused-covid-shots-a-year-later-many-are-still-waiting/"
+    },
+    {
+      "date": "2026-10-26",
+      "kind": "primary",
+      "publisher": "U.S. Navy, MyNavy HR",
+      "title": "Reinstatement for COVID-19 Vaccine Mandate-Related Separations (undated page; date read used)",
+      "url": "https://www.mynavyhr.navy.mil/Career-Management/Personnel-Conduct-Sep/Sailor-Reinstatement/index.html"
+    },
+    {
+      "date": "2025-04-07",
+      "kind": "primary",
+      "publisher": "U.S. Air Force",
+      "title": "Air Force personnel involuntarily discharged over vaccine mandate offered reinstatement",
+      "url": "https://www.af.mil/News/Article-Display/Article/4147424/air-force-personnel-involuntarily-discharged-over-vaccine-mandate-offered-reins/"
+    },
+    {
+      "date": "2025-04-24",
+      "kind": "primary",
+      "publisher": "DOD News (jbsa.mil)",
+      "title": "Defense secretary orders additional remedies, more clarity on COVID-19 reinstatements",
+      "url": "https://www.jbsa.mil/News/News/Article/4164873/defense-secretary-orders-additional-remedies-more-clarity-on-covid-19-reinstate"
     }
   ],
   "stage": "implemented",
@@ -239,6 +282,6 @@
   ],
   "title": "Reinstate members discharged over the COVID-19 vaccine, with rank and back pay",
   "tracked": true,
-  "uncertainties": "Counts differ between Military Times reports (about 230 rejoined on 2026-07-16 versus about 200 troops plus 85 Coast Guard members a week later); they were not reconciled. No primary document confirms how rank restoration works in practice or whether any back pay has been paid in full. The May 2026 memorandum was opened on media.defense.gov as extracted text with a garbled date stamp, read as 2026-05-07 (the URL path shows 2026-05-08, and a second copy attached to a Federal Circuit filing on kneselaw.com shows the same stamp); it does not mention rank, back pay or a calendar end date and describes the extension only as one year, so its end date relative to the 2027-04-01 window was not determined. The filing date of that court copy is taken from its file name because the document shows none, and the filing, an appeal in which the memorandum is offered as supplemental authority, was not read beyond the exhibit. The 2025-06-30 return count comes from a search-result headline and snippet that was not opened. The Military.com and Military Times pieces are news reports; no court challenge to this program itself was found. Update 2026-10-15: one search for post-July figures returned only earlier reports.",
-  "updated_at": "2026-10-19"
+  "uncertainties": "Counts differ between Military Times reports (about 230 rejoined on 2026-07-16 versus about 200 troops plus 85 Coast Guard members a week later); they were not reconciled. Official Navy and Air Force pages read on 2026-10-26 describe the remedies: the Air Force release of 2025-04-07 (af.mil) says the Boards for Correction of Military Records may order restoration of rank and credit for lost service time, with a four-year service commitment (later cut to two years by the 2026-03-23 extension) and 60 days to accept after a compensation estimate, and the Navy's MyNavy HR reinstatement page (no date printed) says involuntarily separated members may be eligible for back pay, benefits, bonus payments or other compensation subject to required offsets, with DFAS to determine the back pay package within 90 days of submission, and that voluntary separations receive no back pay. Neither page gives a count of reinstated members or says whether rank has been restored or back pay paid in any case, so whether back pay has been paid in full rests on news reports. A DOD News article of 2025-04-24 posted on jbsa.mil reports that the Secretary signed a memorandum ordering additional remedies that day, one day after the 2025-04-23 outreach announcement; it does not mention back pay, rank or counts, and the memorandum itself was not opened. The May 2026 memorandum was opened on media.defense.gov as extracted text with a garbled date stamp, read as 2026-05-07 (the URL path shows 2026-05-08, and a second copy attached to a Federal Circuit filing on kneselaw.com shows the same stamp); it does not mention rank, back pay or a calendar end date and describes the extension only as one year, so its end date relative to the 2027-04-01 window was not determined. The filing date of that court copy is taken from its file name because the document shows none, and the filing, an appeal in which the memorandum is offered as supplemental authority, was not read beyond the exhibit. The 2025-06-30 return count comes from a search-result headline and snippet that was not opened. The Military.com and Military Times pieces are news reports; no court challenge to this program itself was found. Update 2026-10-15: one search for post-July figures returned only earlier reports.",
+  "updated_at": "2026-10-26"
 }
