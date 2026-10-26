@@ -38,10 +38,14 @@
     {
       "date": "2026-10-22",
       "note": "Source cleanup: the third-party copy of the 2025-01-20 DHS memorandum was kept, re-opened in review and retitled to name its host; a search of official DHS pages found no original. Because the removal step rests only on that copy, confidence moves from 80 to 79 (medium). Stage implemented and progress 78 unchanged."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "Refutation check: The Council was reconstituted under a renewed charter and meeting in December 2025, and no later termination or change was found. Red-team verdict holds; stage and progress unchanged."
     }
   ],
   "id": "c05-27",
-  "last_checked": "2026-10-22",
+  "last_checked": "2026-10-26",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -51,6 +55,32 @@
   "position": "Office of the Secretary (SEC)",
   "progress": 78,
   "proposal": "The Mandate recommends that the Secretary plan to remove every current member of the Homeland Security Advisory Committee quickly and replace them as soon as feasible.",
+  "redteam": {
+    "date": "2026-10-26",
+    "evidence": [
+      {
+        "date": "2025-03-11",
+        "note": "Re-read: 90 FR 11749, charter effective 2025-03-05 through 2027-03-05, membership 40 to 35, three-year terms, Chair and Vice Chair.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2025/03/11/2025-03856/notice-of-committee-charter-renewal-homeland-security-advisory-council"
+      },
+      {
+        "date": "2025-12-03",
+        "note": "Re-read: 90 FR 55753, Council meeting 2025-12-10, new taskings on the agenda; no members named.",
+        "source": "Federal Register",
+        "url": "https://www.federalregister.gov/documents/2025/12/03/2025-21800/notice-of-partially-closed-federal-advisory-committee-meeting"
+      },
+      {
+        "date": "2025-06-27",
+        "note": "News report of new Council appointments announced the preceding Tuesday (chair and vice chair and 20 members named); no removal of the new members mentioned.",
+        "source": "ExecutiveGov",
+        "url": "https://executivegov.com/articles/dhs-homeland-security-advisory-council-hsac-members-henry-mcmaster"
+      }
+    ],
+    "note": "The Council was reconstituted under a renewed charter and meeting in December 2025, and no later termination or change was found. The DHS leadership change reported in March 2026 did not surface any Council action. The residual weakness is unchanged: the removal step rests on a memo that does not name the Council and is read through a hosted copy.",
+    "verdict": "holds",
+    "what_was_tested": "Re-read the 2025-03-11 charter renewal and 2025-12-03 meeting notices and searched for later terminations, resignations or charter changes of the Council."
+  },
   "related_ids": [
     "c05-09",
     "c05-34"
@@ -203,6 +233,6 @@
   ],
   "title": "Remove all members of the Homeland Security Advisory Council and replace them",
   "tracked": true,
-  "uncertainties": "The January memo does not name the Homeland Security Advisory Council; its coverage of the Council rests on the memo's wording that it applies to all DHS advisory committees, and the Council is chartered as one. The March 2025 termination notice (eight committees) does not list the Council, consistent with the Council being kept and reconstituted rather than terminated. The meeting notices do not list members or name the new Chair and Vice Chair, a notice published 2025-06-26 (90 FR 27330) moved the meeting from 2025-06-30 to 2025-07-02 without restating the agenda, and it was not verified that the meeting occurred as noticed. The Mandate text uses the word Committee; the body is called Council. The memo copy was read through a third-party host, not dhs.gov, and a search of dhs.gov on 2026-10-22 found no official copy. A DHS release of 2025-06-24 announcing appointments to the Council could not be fetched from dhs.gov on 2026-10-18, so no roster was read.",
-  "updated_at": "2026-10-22"
+  "uncertainties": "The January memo does not name the Homeland Security Advisory Council; its coverage of the Council rests on the memo's wording that it applies to all DHS advisory committees, and the Council is chartered as one. The March 2025 termination notice (eight committees) does not list the Council, consistent with the Council being kept and reconstituted rather than terminated. The meeting notices do not list members or name the new Chair and Vice Chair, a notice published 2025-06-26 (90 FR 27330) moved the meeting from 2025-06-30 to 2025-07-02 without restating the agenda, and it was not verified that the meeting occurred as noticed. The Mandate text uses the word Committee; the body is called Council. The memo copy was read through a third-party host, not dhs.gov, and a search of dhs.gov on 2026-10-22 found no official copy. A DHS release of 2025-06-24 announcing appointments to the Council could not be fetched from dhs.gov on 2026-10-18, so no roster was read. Searched 2026-10-26 for Council terminations, resignations or charter changes after 2025-12-10 and found nothing; a Federal Register query for 2026 notices returned no Council notice.",
+  "updated_at": "2026-10-26"
 }
