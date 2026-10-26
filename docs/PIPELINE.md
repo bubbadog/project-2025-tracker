@@ -4,12 +4,13 @@ How the record is produced and kept current, and how it reaches this repository 
 
 ## 1. The runs
 
-Two scheduled AI sessions do the research (since 2026-10-19; before that, four). Each starts from nothing, reads the standing guidance and the work queue, does its mandate, writes to the working database with version-pinned writes, refreshes the published snapshot, and sends the maintainer a private digest. The full prompts are in [prompts/](prompts/), with only the maintainer's name removed; they are the specification of the process and change by pull request like everything else.
+Two scheduled AI sessions do the research (since 2026-10-19; before that, four) and a third, since 2026-10-26, reviews and exports. Each starts from nothing, reads the standing guidance and the work queue, does its mandate, writes to the working database with version-pinned writes, refreshes the published snapshot, and sends the maintainer a private digest. The full prompts are in [prompts/](prompts/), with only the maintainer's name removed; they are the specification of the process and change by pull request like everything else.
 
 | Run | Schedule (Pacific) | Mandate | Prompt |
 | --- | --- | --- | --- |
 | Daily | Every day, 4:47 am | Owner requests and verified leads; a daily news sweep (about 40 searches plus Federal Register API queries for everything published since the last run) mapped to records; a rotation of about 10 records (about 6 with the oldest evidence, so that no record goes more than 90 days without a dated check, and about 4 refutation checks on records counted as in effect); independent review of everything that changed; a small backlog slice when budget remains, including a Sunday probe of hosts that refused earlier fetches; on Sundays the digest nominates the week's most consequential change for the maintainer to verify by hand on its primary source | [daily.txt](prompts/daily.txt) |
 | Significance | Sunday, 3:31 am | Fills missing per-rater scores from the stored sheet or fresh blind raters; recomputes the weighted share, the bootstrap band, rater agreement and the sensitivity table | [significance-weekly.txt](prompts/significance-weekly.txt) |
+| Review and export | Every day, about 8:03 am | Pulls what the daily run wrote, red-teams it against the committed record (`scripts/review_run.py`), fixes missing history notes from the run log, validates, builds, runs the UI test, writes the log row and pushes to this repository when the quality standards hold; sends the maintainer a digest of anything that blocked the export and every stage change, confidence label move and court-status change. Added 2026-10-26 | [review.txt](prompts/review.txt) |
 
 From 2026-10-07 to 2026-10-19 the work ran in four sessions while the document was being read in full: an update run on Tuesday and Thursday mornings ([update-tuesday-thursday.txt](prompts/update-tuesday-thursday.txt)), a freshness pass on Monday, Wednesday and Friday mornings ([freshness-mon-wed-fri.txt](prompts/freshness-mon-wed-fri.txt)), two nightly firings that enumerated every chapter and then lifted records to their primary documents and ran the systematic absence checks ([nightly-enumeration.txt](prompts/nightly-enumeration.txt)), and the Sunday significance run. With the enumeration, the lift and the absence checks complete, the first three were consolidated into the daily run. Their prompts stay here as the record of how the existing records were produced.
 
@@ -19,15 +20,15 @@ Standing documents the runs read first, which are private and not in this reposi
 
 ## 2. From the database to this repository
 
-The runs write to a working database (the artifact's database). The repository is the published, versioned copy, and `main` is what the site shows. The path between them:
+The runs write to a working database (the artifact's database). The repository is the published, versioned copy, and `main` is what the site shows. Nothing moves from the database to the repository without a review. The path between them, since 2026-10-26:
 
-1. The run finishes its writes and its snapshot refresh.
-2. It dumps `items`, `meta/state`, `meta/chapters`, `meta/sig_raters` and `runs` to a directory and runs `python3 scripts/import_dump.py DUMP_DIR` in a fresh clone of this repository. The script writes only public documents, in canonical form, so the diff is only what changed.
-3. It runs `python3 scripts/validate.py --strict`. A failure is fixed in the database first (the database is upstream), then re-exported.
-4. It commits on a branch `run/<date>-<kind>` with the GitHub noreply identity, signs off, pushes, and opens a pull request whose body is the run's digest minus anything private.
-5. The run polls the check runs; when `validate` and `build` have passed it merges its own pull request by squash, and `deploy-pages.yml` publishes the result. If a check fails, the pull request stays open and the digest says so. The maintainer reads the digest and can revert by pull request.
+1. The daily run finishes its writes, its run log and its mirror refresh. It does not push here.
+2. The review session clones this repository, dumps the run log, every record the run touched and `meta/state` (and `meta/sig_raters` or `meta/chapters` when they changed) to a directory, and runs `python3 scripts/review_run.py DUMP_DIR --date DATE`. The script compares each record with the committed one and reports blocking findings (a stage or progress change without a same-day independent review, a lost field, a lead-only host used as a source, an event or court-status URL missing from the sources, a dash, a personal identifier or a model name in public text), fixable findings (a changed record without a dated history note, which `--fix` composes from the run log) and informational lines.
+3. With no blocking finding, it runs `python3 scripts/import_dump.py DUMP_DIR` (public documents only, canonical form), `python3 scripts/validate.py --strict`, `python3 scripts/build_snapshot.py` and the UI test, adds the log row to MAINTAINING.md, commits with the project identity and pushes to `main` (the repository admin's bypass; the required checks still run and `deploy-pages.yml` publishes only when they pass). It then writes any fix it made back to the database with version-pinned writes, so the two copies match.
+4. A blocking finding leaves the repository untouched; the finding goes to the maintainer in the digest, who decides it, corrects the database and exports by hand with the same scripts.
+5. The maintainer's own pass later in the day reads the digest, spot-checks a changed record against its source and records the red-team result in MAINTAINING.md.
 
-If two exports ever overlap (a run and a maintainer's change), the second to open its pull request rebases on `main` first, and the pull-request ruleset's strict status checks refuse a merge from a stale branch, so the second export always includes the first's.
+If a push to `main` is refused, the session pushes to `review/<date>` and opens a pull request instead; the pull-request ruleset's strict status checks refuse a merge from a stale branch, so a later export always includes an earlier one.
 
 ## 3. Checks on every change
 
@@ -56,7 +57,7 @@ Run by the maintainer or a session after each scheduled run (find and fix, then 
 9. For an enumeration run: every new record carries a review dated that day and a significance block with per-rater scores; every record that overlaps a tracked one carries `related_ids` with the reverse link present; `meta/state` counts match.
 10. Fix what fails with pinned writes, add a history note on each corrected record, re-export, and record the check.
 
-In the repository, steps 3, 4, 6 and 9 are what `scripts/validate.py` automates; the rest need a reader.
+In the repository, steps 3, 4, 6 and 9 are what `scripts/validate.py` automates on the committed record, and `scripts/review_run.py` applies steps 2, 3, 4, 6 and the lead-only host and history-note rules to a dump before it is imported; steps 5, 7 and 8 still need a reader, which is why the maintainer's pass follows the automated one.
 
 ## 6. Limits of the pipeline (stated, not hidden)
 
