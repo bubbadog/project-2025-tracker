@@ -6,13 +6,13 @@
   "chapter": "24",
   "confidence": 85,
   "confidence_label": "high",
-  "confidence_reason": "Document pages 733 to 735 checked; the new primary source (FOMC minutes on federalreserve.gov) was fetched and read for the pause wording; earlier stage-deciding Fed releases were verified in prior runs.",
+  "confidence_reason": "Document pages 733 to 735 were re-read and match the proposal. The stage-deciding Fed documents (FOMC statement of 2025-10-29, implementation note of 2025-12-10 and minutes of the September 2026 meeting) were fetched and read on federalreserve.gov on 2026-10-26, and the balance sheet figures were refreshed from the current H.4.1 release. The task force outcome and any congressional action rest on absence from the sources reviewed.",
   "durability": {
     "level": "low",
     "why": "Balance sheet policy is set by FOMC votes that can change at any meeting."
   },
   "est_completion": {
-    "basis": "Inference: the FOMC ended runoff on 2025-12-01 and began Treasury bill purchases on 2025-12-11, the opposite direction, and total assets were about $6.74 trillion on 2026-09-30. Driving step: the Balance Sheet Policy task force announced on 2026-07-09 (no report yet), a future FOMC decision, and Congress for limits on purchases or interest on reserves, for which no bill appears in the record. Completion as specified is judged unlikely by 2029-01-20.",
+    "basis": "Inference: the FOMC ended runoff on 2025-12-01 and began Treasury bill purchases on 2025-12-11, the opposite direction, and total assets were about $6.75 trillion on 2026-10-21. Driving step: the Balance Sheet Policy task force announced on 2026-07-09 (no report yet), a future FOMC decision, and Congress for limits on purchases or interest on reserves, for which no bill appears in the record. Completion as specified is judged unlikely by 2029-01-20.",
     "window": "unlikely this term"
   },
   "history": [
@@ -27,10 +27,14 @@
     {
       "date": "2026-10-14",
       "note": "Cross-reference added to new layer 3 record(s) c24-05, c24-06, c24-07 from the fuller reading of chapters 24 to 27."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "Freshness check: searched Federal Reserve press releases through 2026-10-16 and found no balance sheet, task force or interest-on-reserves action after the 2026-10-07 minutes. Removed the H.4.1 data-release entry from the timeline (a statistical release, not an action; the figures remain in the summary and the H.4.1 page stays in sources). Stage re-derived from the rubric: remains diverged, progress 0. Independent review: replaced the 2026-09-30 balance sheet figures, no longer shown on the rolling H.4.1 page, with the 2026-10-21 figures from the release of 2026-10-22 in the summary, sources and estimate basis; stage confirmed diverged 0; confidence 85 unchanged."
     }
   ],
   "id": "c24-02",
-  "last_checked": "2026-10-13",
+  "last_checked": "2026-10-26",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_action",
@@ -57,18 +61,34 @@
   "research_agent": "A15",
   "review": {
     "flags": [
-      "Removed 'for now' and 'no other change' framing; event now states what the minutes say, including that purchases are decided monthly, to avoid reading the pause as a wind-down."
+      "H.4.1 link is a rolling page; summary figures now dated 2026-10-21 and will drift again.",
+      "FOMC meeting of 2026-10-27 to 2026-10-28 is imminent; next run should check it."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Pages 733 to 735 ask Congress to limit Fed purchases, the Fed to wind its balance sheet down toward pre-2008 levels, purchases to be limited to Treasuries with MBS run off, and an end to interest on excess reserves; the proposal paraphrase fits.",
+    "mandate_note": "Pages 733 to 735 ask Congress to limit Fed balance sheet purchases and the Fed to wind holdings down toward pre-2008 levels, limit future purchases to Treasuries (no mortgage-backed, corporate or municipal debt, with MBS sold or run off), and stop paying interest on excess reserves in favor of a pre-2008 open-market-operations system; paraphrase and pages fit.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "U13-3",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "Looked for pause wording: desk had paused reserve management purchases, pace not on a preset course and set monthly, ample reserves reaffirmed, rollover and agency-into-bills reinvestment continue. No start date or duration given; page updated 2026-10-07.",
+        "note": "Fetched 2026-10-26: Committee decided to conclude the reduction of aggregate securities holdings on December 1.",
+        "result": "supports",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm"
+      },
+      {
+        "note": "Fetched 2026-10-26: reserve management purchases of Treasury bills (and Treasuries up to 3 years if needed) from 2025-12-11 to keep reserves ample; agency principal reinvested in Treasury bills; IORB 3.65 percent.",
+        "result": "supports",
+        "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20251210a1.pdf"
+      },
+      {
+        "note": "Fetched 2026-10-26: desk had paused reserve management purchases, pace not on a preset course and set monthly; ample-reserves policy continues; IORB raised to 3.90 percent effective 2026-09-17; page last updated 2026-10-07.",
         "result": "supports",
         "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm"
+      },
+      {
+        "note": "Fetched 2026-10-26: rolling page now shows the week ended 2026-10-21 (released 2026-10-22): total assets about $6.754 trillion, Treasuries about $4.573 trillion, MBS about $1.895 trillion. The 2026-09-30 figures previously in the summary are no longer on this page, so the summary was updated.",
+        "result": "supports",
+        "url": "https://www.federalreserve.gov/releases/h41/current/"
       }
     ]
   },
@@ -133,10 +153,10 @@
       "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260709a.htm"
     },
     {
-      "date": "2026-10-01",
+      "date": "2026-10-22",
       "kind": "primary",
       "publisher": "Federal Reserve Board",
-      "title": "Factors Affecting Reserve Balances, H.4.1 (release of October 1, 2026)",
+      "title": "Factors Affecting Reserve Balances, H.4.1 (release of October 22, 2026, rolling current page)",
       "url": "https://www.federalreserve.gov/releases/h41/current/"
     },
     {
@@ -148,7 +168,7 @@
     }
   ],
   "stage": "diverged",
-  "status_summary": "The Fed's main operative decisions in the period ran opposite to a wind-down. On 2025-10-29 the FOMC announced it would stop reducing its securities holdings on 2025-12-01, and on 2025-12-10 it began reserve management purchases of Treasury bills (from 2025-12-11) to keep reserves ample. Two elements match the chapter: paydowns of agency mortgage-backed securities are reinvested into Treasury bills, so those holdings run off without replacement, and reserve management purchases are limited to Treasury securities. Total assets were about $6.74 trillion on 2026-09-30 (Treasuries $4.56 trillion, mortgage-backed securities $1.90 trillion), compared with the chapter's figure of nearly $9 trillion, and the Fed still pays interest on reserve balances (3.90 percent from 2026-09-17). On 2026-07-09 the Fed announced a balance sheet policy task force; the minutes of the September 2026 meeting, released 2026-10-07, report that the trading desk had paused reserve management purchases and will set their pace month by month to keep reserves ample, and that the Committee reaffirmed its ample-reserves approach, so the framework has not changed toward the recommendation.",
+  "status_summary": "The Fed's main operative decisions in the period ran opposite to a wind-down. On 2025-10-29 the FOMC announced it would stop reducing its securities holdings on 2025-12-01, and on 2025-12-10 it began reserve management purchases of Treasury bills (from 2025-12-11) to keep reserves ample. Two elements match the chapter: paydowns of agency mortgage-backed securities are reinvested into Treasury bills, so those holdings run off without replacement, and reserve management purchases are limited to Treasury securities. Total assets were about $6.75 trillion on 2026-10-21 (Treasuries $4.57 trillion, mortgage-backed securities $1.90 trillion, per the H.4.1 release of 2026-10-22), compared with the chapter's figure of nearly $9 trillion, and the Fed still pays interest on reserve balances (3.90 percent from 2026-09-17). On 2026-07-09 the Fed announced a balance sheet policy task force; the minutes of the September 2026 meeting, released 2026-10-07, report that the trading desk had paused reserve management purchases and will set their pace month by month to keep reserves ample, and that the Committee reaffirmed its ample-reserves approach, so the framework has not changed toward the recommendation.",
   "timeline": [
     {
       "date": "2025-10-29",
@@ -179,13 +199,6 @@
       "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260916a1.pdf"
     },
     {
-      "date": "2026-09-30",
-      "event": "H.4.1 release of 2026-10-01 shows total assets of about $6.74 trillion, Treasury securities $4.56 trillion, mortgage-backed securities $1.90 trillion and reserve balances $2.95 trillion.",
-      "kind": "primary",
-      "source": "Federal Reserve Board",
-      "url": "https://www.federalreserve.gov/releases/h41/current/"
-    },
-    {
       "date": "2026-10-07",
       "event": "Minutes of the 2026-09-15 to 2026-09-16 FOMC meeting are released. They report that the trading desk had paused reserve management purchases in light of money market conditions and reserve forecasts, that the pace of such purchases is not on a preset course and will be decided monthly to keep reserves ample, that maturing Treasury principal continues to be rolled over and agency principal is reinvested in Treasury bills, and that the Committee reaffirmed its ample-reserves approach.",
       "kind": "primary",
@@ -195,6 +208,6 @@
   ],
   "title": "Shrink the Fed balance sheet, hold only Treasuries, and end interest on reserves",
   "tracked": true,
-  "uncertainties": "The balance sheet size at the start of the period (January 2025) was not verified, so the share of the decline from the chapter's roughly $9 trillion that occurred before 2025 is not stated; the H.4.1 link is the rolling current release and will change. The stage reflects the October 2025 end of runoff and the December 2025 purchases, which run opposite to the chapter's wind-down, while the shift of mortgage paydowns into Treasury bills and the July 2026 task force point partly the other way. The September 2026 minutes do not state when the pause in reserve management purchases began or how long it will last; it is a desk decision within an unchanged ample-reserves framework, not a wind-down, and the standing directive still authorizes such purchases. The Fed press-release index showed no balance sheet announcement between 2026-09-16 and 2026-10-13 (checked 2026-10-13); the next meeting (2026-10-27 to 2026-10-28) falls after the research date.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "The balance sheet size at the start of the period (January 2025) was not verified, so the share of the decline from the chapter's roughly $9 trillion that occurred before 2025 is not stated; the H.4.1 link is the rolling current release and will change. The stage reflects the October 2025 end of runoff and the December 2025 purchases, which run opposite to the chapter's wind-down, while the shift of mortgage paydowns into Treasury bills and the July 2026 task force point partly the other way. The September 2026 minutes do not state when the pause in reserve management purchases began or how long it will last; it is a desk decision within an unchanged ample-reserves framework, not a wind-down, and the standing directive still authorizes such purchases. The Fed press-release index showed no balance sheet announcement between 2026-09-16 and 2026-10-16 (rechecked 2026-10-26: releases after the 2026-10-07 minutes concern enforcement actions, the Survey of Consumer Finances and discount rate minutes only); the next FOMC meeting (2026-10-27 to 2026-10-28) is a future date, not an event.",
+  "updated_at": "2026-10-26"
 }

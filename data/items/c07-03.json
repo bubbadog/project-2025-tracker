@@ -4,7 +4,7 @@
   "chapter": "07",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "The Mandate text, the DOJ news-media rule and the CIA retraction announcement were read and match the record; the clearance executive order was confirmed in the Federal Register in an earlier review. The August 2025 revocation of 37 clearances rests on news reports, and the audit, Hatch Act, training and pension items were not found.",
+  "confidence_reason": "Document pages 213, 214, 216, 220 and 221 were re-read and match. EO 14152 and the 28 CFR 50.10 final rule were read on federalregister.gov and the CIA retraction announcement of 2026-02-20 on cia.gov on 2026-10-26; these decide the in_progress stage. The 2025-08-19 revocation of 37 clearances rests on two news reports, and the absence of the audit, Hatch Act, training and pension steps rests on limited searching.",
   "durability": {
     "level": "low",
     "why": "Clearance decisions, declassification releases, a Justice Department media policy and the retraction of analytic products are executive actions that a later administration can reverse, reissue or revisit; the 28 CFR 50.10 rule can be amended by DOJ without Congress."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c07-20 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "Freshness check: no new federal action found after 2026-02-20 and no primary ODNI document for the 2025-08-19 revocations. Cleanup: removed the 2025-09-25 news-report entry (a media report, not a government action) and its source, and removed the Reporters Committee analysis (advocacy host, lead only) from sources and from the 2025-04-25 event text. Stage re-derived: in_progress 60 unchanged. Independent review: reworded the 2025-08-19 revocation event to match its sources (Defense One does not mention leaking), added a CNN report of 2025-08-19 that dates the memo and its stated grounds, corrected the Defense One date to 2025-08-21, and recorded the EO 14152 count of 50 individuals as confirmed; stage confirmed in_progress 60; confidence 80 unchanged."
     }
   ],
   "id": "c07-03",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-26",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -66,25 +70,34 @@
   "research_agent": "A06",
   "review": {
     "flags": [
-      "August 2025 clearance revocations rest on news; no ODNI release located",
-      "implemented also defensible for the clearance and leak-policy parts",
-      "absence of audit, Hatch Act and training steps rests on a limited search"
+      "2025-08-19 revocations rest on news; DNI memo not located.",
+      "Absence of audit, Hatch Act, NIU course and pension steps rests on limited searching."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Printed pages 213 and 214 call for a DNI and Attorney General audit of past politicization, revoking clearances of former senior officials who discuss their work publicly without approval, firing or referring leakers, rescinding Garland-era limits on leak investigations and a National Intelligence University neutrality course; page 216 adds Hatch Act coverage for former officials with clearances; pages 220 and 221 ask the DNI to act on the IC Analytic Ombudsman's report.",
+    "mandate_note": "Pages 213 and 214 ask for a DNI and Attorney General audit of past politicization, revocation of clearances of former senior officials who speak publicly without approval, firing or referral of leakers with pension loss, rescission of Garland leak-investigation guidance and a National Intelligence University neutrality course; page 216 adds Hatch Act coverage for former officials with clearances; pages 220 and 221 ask the DNI to act on the IC Analytic Ombudsman's findings. Paraphrase and pages fit.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y2",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "DOJ final rule, 90 FR 18785, published and effective 2025-05-02 (signed 2025-04-25): the preamble says the Attorney General's 2025-04-25 memorandum revoked the Garland memorandum of 2021-07-19, and the rule rescinds the 2022 amendments to 28 CFR 50.10 and adopts a modified version of the 2014 regulations.",
+        "note": "Fetched 2026-10-26: EO 14152, 90 FR 8343, signed 2025-01-20, published 2025-01-29; section 3(a) revokes clearances of 49 named signatories and Bolton; section 3(b) requires a 90-day DNI report.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/05/02/2025-07566/policy-regarding-obtaining-information-from-or-records-of-members-of-the-news-media-and-regarding"
+        "url": "https://www.federalregister.gov/documents/2025/01/29/2025-01954/holding-former-government-officials-accountable-for-election-interference-and-improper-disclosure-of"
       },
       {
-        "note": "CIA announcement of 2026-02-20: Director Ratcliffe ordered 19 finished products retracted or substantively revised for falling short of tradecraft and political-independence standards, after a PIAB review of hundreds of reports and an internal review led by Deputy Director Ellis; no mention of the IC Analytic Ombudsman.",
+        "note": "Fetched 2026-10-26: 2026-02-20; 19 products retracted or substantively revised; PIAB review and internal review led by the Deputy Director; no mention of the 2016 assessment or the Analytic Ombudsman.",
         "result": "supports",
         "url": "https://www.cia.gov/stories/story/dcia-retracts-biased-intelligence-products-to-reinforce-cia-analytic-objectivity/"
+      },
+      {
+        "note": "Fetched 2026-10-26: CNN report of 2025-08-19; DNI memo circulated Monday revoked clearances of at least 37 officials, citing politicization, failures to protect classified information and unprofessional tradecraft; no specific evidence cited.",
+        "result": "supports",
+        "url": "https://kvia.com/news/2025/08/19/tulsi-gabbard-revokes-security-clearances-of-37-current-and-former-national-security-officials/"
+      },
+      {
+        "note": "Fetched 2026-10-26: article dated 2025-08-21 reports the revocation announced on Tuesday, saying without evidence that the officials politicized their roles; does not mention leaking.",
+        "result": "partial",
+        "url": "https://www.defenseone.com/policy/2025/08/odni-shrink-further-under-new-reorganization-plan/407618/"
       }
     ]
   },
@@ -123,10 +136,10 @@
       "url": "https://www.cia.gov/stories/story/dcia-retracts-biased-intelligence-products-to-reinforce-cia-analytic-objectivity/"
     },
     {
-      "date": "2025-08-20",
+      "date": "2025-08-21",
       "kind": "news",
       "publisher": "Defense One",
-      "title": "Defense One report on the ODNI reorganization plan and clearance revocations",
+      "title": "ODNI to shrink further under new reorganization plan (Defense One; reports the 37 clearance revocations)",
       "url": "https://www.defenseone.com/policy/2025/08/odni-shrink-further-under-new-reorganization-plan/407618/"
     },
     {
@@ -144,18 +157,11 @@
       "url": "https://www.cia.gov/stories/story/department-of-justice-cia-transmit-declassified-durham-documents/"
     },
     {
-      "date": "2025-05-01",
+      "date": "2025-08-19",
       "kind": "news",
-      "publisher": "Reporters Committee for Freedom of the Press",
-      "title": "DOJ rescinds news media guidelines: analysis",
-      "url": "https://www.rcfp.org/doj-rescinds-news-media-guidelines-analysis/"
-    },
-    {
-      "date": "2025-09-25",
-      "kind": "news",
-      "publisher": "NBC Bay Area (NBC News)",
-      "title": "Tulsi Gabbard may have undermined John Brennan probe (NBC News)",
-      "url": "https://www.nbcbayarea.com/news/national-international/tulsi-gabbard-may-have-undermined-john-brennan-probe/3954369/?amp=1"
+      "publisher": "CNN via KVIA",
+      "title": "Tulsi Gabbard revokes security clearances of 37 current and former national security officials",
+      "url": "https://kvia.com/news/2025/08/19/tulsi-gabbard-revokes-security-clearances-of-37-current-and-former-national-security-officials/"
     }
   ],
   "stage": "in_progress",
@@ -170,7 +176,7 @@
     },
     {
       "date": "2025-04-25",
-      "event": "Attorney General Bondi issues a memorandum revoking Attorney General Garland's July 19, 2021 memorandum limiting compulsory process against journalists; the preamble of the Justice Department's later rule says the 2022 amendments to 28 CFR 50.10 unduly hindered efforts to subpoena journalists who coordinated with federal employees to leak protected materials. The policy keeps Attorney General approval and a last-resort standard, per RCFP's analysis.",
+      "event": "Attorney General Bondi issues a memorandum revoking Attorney General Garland's July 19, 2021 memorandum limiting compulsory process against journalists; the preamble of the Justice Department's later rule says the 2022 amendments to 28 CFR 50.10 unduly hindered efforts to subpoena journalists who coordinated with federal employees to leak protected materials.",
       "kind": "primary",
       "source": "Federal Register (preamble of 90 FR 18785)",
       "url": "https://www.federalregister.gov/documents/2025/05/02/2025-07566/policy-regarding-obtaining-information-from-or-records-of-members-of-the-news-media-and-regarding"
@@ -198,17 +204,10 @@
     },
     {
       "date": "2025-08-19",
-      "event": "DNI Gabbard revokes the security clearances of 37 current and former intelligence and national security officials, accusing them of politicizing or leaking intelligence or other misconduct; Defense One reported that no supporting evidence was presented.",
+      "event": "DNI Gabbard confirms that she has revoked the security clearances of at least 37 current and former national security officials through a DNI memo circulated to intelligence agencies the previous day; the memo cited politicization or weaponization of intelligence, failures to protect classified information and unprofessional tradecraft. CNN and Defense One reported that no specific evidence was cited.",
       "kind": "news",
-      "source": "Defense One",
-      "url": "https://www.defenseone.com/policy/2025/08/odni-shrink-further-under-new-reorganization-plan/407618/"
-    },
-    {
-      "date": "2025-09-25",
-      "event": "NBC News reports that the Justice Department is conducting a criminal investigation of former CIA Director John Brennan and quotes two senior administration officials as saying Gabbard's August revocations may have complicated the case; ODNI denied it failed to coordinate.",
-      "kind": "news",
-      "source": "NBC News",
-      "url": "https://www.nbcbayarea.com/news/national-international/tulsi-gabbard-may-have-undermined-john-brennan-probe/3954369/?amp=1"
+      "source": "CNN via KVIA",
+      "url": "https://kvia.com/news/2025/08/19/tulsi-gabbard-revokes-security-clearances-of-37-current-and-former-national-security-officials/"
     },
     {
       "date": "2026-02-20",
@@ -220,6 +219,6 @@
   ],
   "title": "Revoke clearances, pursue leaks, and correct politicized intelligence analysis",
   "tracked": true,
-  "uncertainties": "The Attorney General's 2025-04-25 memorandum itself was not read; its date and effect are taken from the preamble of the Justice Department's final rule (90 FR 18785), which does not give it a formal title. The CIA announcements of 2025-07-02, 2025-07-31 and 2026-02-20 were read on cia.gov. ODNI's newsroom listing for August 2025 (pages covering 2025-07-22 to 2025-08-20) shows no release about the clearance revocations, so the 37-person revocation of 2025-08-19 still rests on news reports and the ODNI announcement was not located. The NBC News account of the Brennan investigation (2025-09-25) rests on unnamed administration officials. The number of individuals named in EO 14152 (49 letter signatories plus Bolton, per the reviewer's reading of the order) was not independently counted. Any court challenge to clearance revocations was not found. DOJ leak prosecutions, referrals by ODNI or CIA, and leak-related firings in 2025 and 2026 were not sourced and are left out. The ODNI report 'Personnel Vetting Trust Determinations' (2026-06-08) was not reviewed. The CIA retraction page says nothing about the IC Analytic Ombudsman, and no public report under the 90-day provision of EO 14152 was found.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The Attorney General's 2025-04-25 memorandum itself was not read; its date and effect are taken from the preamble of the Justice Department's final rule (90 FR 18785), which does not give it a formal title. The CIA announcements of 2025-07-02, 2025-07-31 and 2026-02-20 were read on cia.gov. ODNI's newsroom listing for August 2025 (pages covering 2025-07-22 to 2025-08-20) shows no release about the clearance revocations, so the 37-person revocation of 2025-08-19 still rests on news reports (CNN and Defense One) and the DNI memo itself was not located. A 2025-09-25 NBC News report of a Justice Department investigation of a former CIA director rested on unnamed administration officials and is not treated as an event. EO 14152 section 3(a) names 50 individuals (49 letter signatories plus Bolton), confirmed on federalregister.gov on 2026-10-26. Any court challenge to clearance revocations was not found. DOJ leak prosecutions, referrals by ODNI or CIA, and leak-related firings in 2025 and 2026 were not sourced and are left out. The ODNI report 'Personnel Vetting Trust Determinations' (2026-06-08) was not reviewed. The CIA retraction page says nothing about the IC Analytic Ombudsman, and no public report under the 90-day provision of EO 14152 was found. Rechecked 2026-10-26: searches found no new executive order, rule or DNI or CIA action on clearances, leaks or analytic politicization after the CIA announcement of 2026-02-20, and no primary ODNI page for the 2025-08-19 revocations (the announcement is known only from news reports). A news report (AOL, dated 2025-10-07) describes a DNI memo asking agencies to study polygraph feasibility and to add leak questions to screening; its issue date is not stated, so it is an unverified lead and not an event. The Reporters Committee for Freedom of the Press analysis, an advocacy source, was removed as a source and no claim rests on it.",
+  "updated_at": "2026-10-26"
 }
