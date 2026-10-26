@@ -43,7 +43,7 @@ Then open the pull request on GitHub and fill in the template. One record or one
 
 Commits are signed off (`git commit -s`), which adds a `Signed-off-by:` line. It states that you wrote the change or have the right to submit it under the project's licenses, per the [Developer Certificate of Origin](https://developercertificate.org/). You can sign off with the GitHub noreply address (`username@users.noreply.github.com`) if you prefer not to publish an email address.
 
-By contributing you agree that code is licensed under Apache-2.0 and data and documentation under CC BY 4.0, as described in the README.
+By contributing you agree that code is licensed under Apache-2.0 and data and documentation under CC BY-NC-SA 4.0 (CC BY 4.0 for versions before 2026-10-26), as described in the README.
 
 ## Running the checks locally
 

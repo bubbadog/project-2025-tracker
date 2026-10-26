@@ -63,7 +63,7 @@ Constraints already known (Decision): every answer cites record ids and source U
 
 The licenses are chosen so that nothing here closes a door later (not legal advice):
 
-- Code under Apache-2.0 and data under CC BY 4.0 let anyone, including the maintainer, use the work commercially with attribution. The maintainer can also offer the same work under other terms (dual licensing) for code the maintainer wrote; contributions arrive under the same licenses with a sign-off, so the project can always be redistributed as it is.
+- Code under Apache-2.0 and data under CC BY 4.0 let anyone, including the maintainer, use the work commercially with attribution. Changed 2026-10-26: data and documentation versions from that date are under CC BY-NC-SA 4.0, so a copy of the tracker must credit the project, stay non-commercial and share alike, and other uses go through a "Request a data license" issue; the earlier versions stay under CC BY 4.0, which cannot be withdrawn. There is no download gate: the page loads the whole dataset in the browser and the records are in this repository, so a gate would only inconvenience honest users. The maintainer can also offer the same work under other terms (dual licensing) for code the maintainer wrote; contributions arrive under the same licenses with a sign-off, so the project can always be redistributed as it is.
 - What can be charged for is service, not the data: an API with uptime and support, the assistant, a newsletter, sponsorship, donations. The record itself stays free, which is also what makes it credible.
 - Any paid tier must not change the record. The headline and the data are identical for paying and non-paying readers.
 
