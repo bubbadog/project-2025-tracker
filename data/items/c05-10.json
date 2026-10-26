@@ -5,9 +5,9 @@
     "Funding sits inside a broader ICE appropriation; Section 202 of Public Law 119-98 gives no 287(g)-specific amount"
   ],
   "chapter": "05",
-  "confidence": 72,
+  "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text (pp. 141 and 153) checked; Executive Order 14159 read in full on the Federal Register and Section 202 of Public Law 119-98 read on GovInfo. The stage depends on the growth in agreements, which rests on news reports relaying ICE tracker data because ICE's page could not be opened. Rule applied: a fact known only through secondary reports caps the record at 79, so confidence stays medium at 72.",
+  "confidence_reason": "Chapter text (pp. 141 and 153) checked; Executive Order 14159 was read in full on the Federal Register and Section 202 of Public Law 119-98 on GovInfo in earlier reviews. On 2026-10-26 ICE's 287(g) participating agencies page was opened, but the copy returned gave figures as of 2025-02-15 (60 jail enforcement, 75 warrant service officer and 2 task force agencies), an official early 2025 baseline rather than the 2026 counts, and a release of 2025-09-02 from a senator's office on senate.gov confirmed the reimbursement program's terms. The 2026 agreement counts, which decide the stage, still rest on news reports citing ICE's tracker, so the finding is partial and confidence rises from 72 to 74 within medium.",
   "durability": {
     "level": "medium",
     "why": "Agreements are voluntary arrangements that DHS could end or let lapse, but thousands are signed and statutory funding in the reconciliation law would outlast a policy change."
@@ -48,10 +48,14 @@
     {
       "date": "2026-10-23",
       "note": "Lead-only source pass: two advocacy-group (FWD.us) sources and their events were removed. The reimbursement program is now an event dated 2025-09-02 from a Gov1 report (2025-09-05), without the startup-costs item, and a Stateline report (2026-03-03) citing ICE's dashboard adds an event of 1,493 active agreements in 40 states as of 2026-03-02. Stateline attributes the January 2025 baseline of about 135 and the 1,372 count of 2026-01-26 to FWD.us, so both are unverified leads in uncertainties. The Dallas blocker now cites two NBC DFW reports showing the police chief declined the offer and council members backed him on 2025-11-06. Stage implemented 65 and confidence 72 unchanged."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 ICE's 287(g) pages were opened on ice.gov (the copy returned gave 2025-02-15 figures) and a senator's release of 2025-09-02 on the reimbursement program was read on senate.gov; confidence moved from 72 to 74. No change of stage or progress."
     }
   ],
   "id": "c05-10",
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-10-26",
   "layer": 2,
   "match": "partial",
   "mechanism": "mixed",
@@ -109,13 +113,16 @@
     "flags": [
       "progress lowered from 70 to 65: the program is operative and funded but neither of the Mandate's two specific instruments was found",
       "in_progress at the top of its band is also defensible because the specific asks are absent",
-      "agreement counts relayed by news outlets; ICE page unreachable"
+      "agreement counts relayed by news outlets; ICE page unreachable",
+      "Calibration pass 2026-10-26: The ICE page's date (2025-02-15) is the as-of date of figures in an apparently cached copy, not a publication date; recheck the live page for 2026 counts, which would decide the stage.",
+      "Calibration pass 2026-10-26: The senate.gov release is a senator's office statement on an official host, not the DHS announcement; it corroborates the program terms only.",
+      "Calibration pass 2026-10-26: The ICE baseline counts agencies, while the 2026 figures count agreements; avoid treating them as one series."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 141 asks that ICE stop ignoring criminal aliens identified through 287(g) partners, with Congress ultimately to act and ICE meanwhile directed to take custody of those with felony, violent-crime, DUI, prior-removal or similar records; page 153 asks for a memo barring denial of 287(g) access to an applying jurisdiction without good cause. The proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-23",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "90 FR 8443, FR Doc. 2025-02006, signed 2025-01-20, published 2025-01-29; Section 11 directs DHS to pursue 287(g) agreements or other means for qualified state and local officers; no custody direction and no good-cause access rule.",
@@ -166,6 +173,21 @@
         "note": "Opened by the researcher: the 135 and 1,372 figures are FWD.us's own analysis, so the report is not independent confirmation of the 2026-01-26 count. Not cited.",
         "result": "does_not_support",
         "url": "https://justthenews.com/government/federal-agencies/enforcement-agreements-between-ice-local-police-climbed-950-trumps"
+      },
+      {
+        "note": "2026-10-26: Copy returned states that as of 2025-02-15 ICE had 287(g) jail enforcement agreements with 60 agencies in 16 states, plus 75 warrant service officer and 2 task force agencies; no 2026 figures.",
+        "result": "partial",
+        "url": "https://www.ice.gov/identify-and-arrest/287g"
+      },
+      {
+        "note": "2026-10-26: Overview page links to the list of participating agencies and gives no counts.",
+        "result": "partial",
+        "url": "https://www.ice.gov/287g"
+      },
+      {
+        "note": "2026-10-26: Release of 2025-09-02 states ICE will fully reimburse annual salary and benefits of each eligible trained 287(g) officer, effective 2025-10-01, with per-officer award tiers of 1,000, 750 and 500 dollars.",
+        "result": "supports",
+        "url": "https://www.lgraham.senate.gov/public/index.cfm/2025/9/graham-applauds-trump-administration-s-new-reimbursement-opportunities-for-state-and-local-law-enforcement-partnering-with-ice"
       }
     ]
   },
@@ -251,6 +273,20 @@
       "publisher": "NBC DFW",
       "title": "Dallas City Council agrees with Chief Comeaux's decision not to participate in 287(g) agreement",
       "url": "https://www.nbcdfw.com/news/local/dallas-city-council-chief-comeauxs-287g-agreement/3942066/"
+    },
+    {
+      "date": "2025-02-15",
+      "kind": "primary",
+      "publisher": "U.S. Immigration and Customs Enforcement",
+      "title": "Delegation of Immigration Authority Section 287(g) Immigration and Nationality Act (participating agencies page; copy read carried figures as of 2025-02-15)",
+      "url": "https://www.ice.gov/identify-and-arrest/287g"
+    },
+    {
+      "date": "2025-09-02",
+      "kind": "primary",
+      "publisher": "Office of Senator Lindsey Graham",
+      "title": "Graham Applauds Trump Administration's New Reimbursement Opportunities for State and Local Law Enforcement Partnering with ICE",
+      "url": "https://www.lgraham.senate.gov/public/index.cfm/2025/9/graham-applauds-trump-administration-s-new-reimbursement-opportunities-for-state-and-local-law-enforcement-partnering-with-ice"
     }
   ],
   "stage": "implemented",
@@ -308,6 +344,6 @@
   ],
   "title": "Expand 287(g) partnerships with local police and bar denials of access without cause",
   "tracked": true,
-  "uncertainties": "ICE's own 287(g) pages could not be fetched (access blocked again in this review), so the 2,365 and 2,510 figures come from news reports that cite ICE's tracker, and the earlier count of 1,493 active agreements as of 2026-03-02 comes from a Stateline report citing ICE's dashboard; a baseline of about 135 agreements in January 2025 and a count of 1,372 as of 2026-01-26 come from an advocacy-group analysis (FWD.us), which Stateline relays with attribution, and are unverified leads at low confidence; the counts use different methods (agreements versus agencies, active versus signed), so they should not be compared closely. Executive Order 14159 was read in full on the Federal Register and contains no good-cause access rule and no custody direction tied to 287(g) partners. No DHS or ICE memo was found on good-cause denial of access, or any custody policy for aliens identified by partners; the absence is not proof that neither exists. The text of Public Law 119-98 Section 202 was read on GovInfo and ties 287(g) only to a listed purpose of the ICE appropriation. The September 2025 reimbursement program is described in a Gov1 report of 2025-09-05; its text does not date the DHS announcement, which is dated 2025-09-02 from the address of the DHS release that the report links; the DHS release and ICE pages could not be opened, and the report mentions no startup costs and does not name the 287(g) model beyond trained task force officers. The match is partial because the program grew far beyond what the Mandate specified while its two particular asks were not found. A NewsNation report (page metadata dated 2026-06-03) citing ICE data gives 1,891 agreements as of an unstated Tuesday, consistent with the growth trend; it is not dated precisely enough for a timeline entry.",
-  "updated_at": "2026-10-23"
+  "uncertainties": "ICE's 287(g) participating agencies page was opened on 2026-10-26, but the copy returned gave figures as of 2025-02-15 (60 jail enforcement model agencies in 16 states, 75 warrant service officer agencies in 11 states, 2 task force model agencies in 2 states, 39 pending applications), which suggests a cached rendering; whether the live page shows 2026 figures was not determined, and the ICE overview page gave no counts. The 2,365 and 2,510 figures therefore still come from news reports that cite ICE's tracker, and the earlier count of 1,493 active agreements as of 2026-03-02 comes from a Stateline report citing ICE's dashboard. A baseline of about 135 agreements in January 2025 and a count of 1,372 as of 2026-01-26 come from an advocacy-group analysis (FWD.us), which Stateline relays with attribution; the ICE figures as of 2025-02-15 sum to 137 agencies, consistent with that baseline, while the 2026-01-26 count remains an unverified lead at low confidence. The counts use different methods (agencies versus agreements, active versus signed), so they should not be compared closely. An ICE fact sheet and a 2020 ICE release that also opened carried older figures (42 agencies; 139 agencies in 24 states) and are not used. Executive Order 14159 was read in full on the Federal Register and contains no good-cause access rule and no custody direction tied to 287(g) partners. No DHS or ICE memo was found on good-cause denial of access, or any custody policy for aliens identified by partners; the absence is not proof that neither exists. The text of Public Law 119-98 Section 202 was read on GovInfo and ties 287(g) only to a listed purpose of the ICE appropriation. The September 2025 reimbursement program is described in a Gov1 report of 2025-09-05 and in a release of 2025-09-02 from the office of Senator Lindsey Graham on senate.gov, which states that ICE will fully reimburse participating agencies for the annual salary and benefits of each eligible trained 287(g) officer, gives an effective date of 2025-10-01 and award tiers of 1,000, 750 and 500 dollars per officer, and mentions no startup costs; the DHS release of 2025-09-02 itself did not appear in search results and was not opened. The match is partial because the program grew far beyond what the Mandate specified while its two particular asks were not found. A NewsNation report (page metadata dated 2026-06-03) citing ICE data gives 1,891 agreements as of an unstated Tuesday, consistent with the growth trend; it is not dated precisely enough for a timeline entry.",
+  "updated_at": "2026-10-26"
 }

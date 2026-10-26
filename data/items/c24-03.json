@@ -6,9 +6,9 @@
     "The executive order covers agencies and could be revoked."
   ],
   "chapter": "24",
-  "confidence": 78,
-  "confidence_label": "medium",
-  "confidence_reason": "The executive order, the H.R. 6644 legislative history and the committee section-by-section were read in this review, and the public law number, date and section in an earlier pass on govinfo.gov; the operative text of Sec. 1101 remains unread, so its scope and sunset rest on the committee summary and secondary analyses.",
+  "confidence": 84,
+  "confidence_label": "high",
+  "confidence_reason": "The executive order, the H.R. 6644 legislative history and the committee section-by-section were read in earlier reviews, and the public law header, number, date and table of contents on govinfo.gov. On 2026-10-26 the operative text of Sec. 1101 was read as codified at 12 U.S.C. 423 on the Cornell Legal Information Institute, a qualifying host for U.S. Code text, with a source credit of Pub. L. 119-101, title XI, sec. 1101, July 11, 2026, 140 Stat. 983: subsection (b) bars the Board of Governors and the Federal reserve banks from issuing or creating a central bank digital currency or substantially similar digital asset, directly or indirectly through a financial institution or other intermediary; subsection (c) excepts open, permissionless and private dollar-denominated currency; subsection (d) ends the section on 2030-12-31; and subsection (e) bars issuance absent an Act of Congress. The stage-deciding statute is now read on a qualifying host, so confidence rises from 78 to 84; the Statutes at Large text itself was not opened.",
   "durability": {
     "level": "medium",
     "why": "The bar is now a statute as well as an executive order, which a later administration cannot undo alone, but the statutory bar expires on 2030-12-31 and its definition may leave some designs outside it."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-23",
       "note": "Lead-only source pass: the GENIUS Act event and the note on its date and number previously rested on an encyclopedia page and now cite the enrolled Public Law 119-27 on GovInfo (read in full, no mention of a central bank digital currency) and a White House statement of 2025-07-18. Confidence, stage and progress unchanged."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 the codified text of Sec. 1101 of Public Law 119-101 was read as 12 U.S.C. 423 on the Cornell Legal Information Institute, confirming the CBDC prohibition, its scope and its 2030-12-31 sunset; confidence moved from 78 to 84. No change of stage or progress."
     }
   ],
   "id": "c24-03",
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-10-26",
   "layer": 1,
   "match": "direct",
   "mechanism": "executive_order",
@@ -96,13 +100,16 @@
     "flags": [
       "No stage change: implemented 85, direct.",
       "Timeline corrected: 2026-06-01 news event removed; 2026-06-22, 2026-06-23 and 2026-06-29 BILLSTATUS events added.",
-      "Defensible alternative: implemented 75 to 80, since the statutory bar is Fed-only and expires 2030-12-31 and its operative text is unread."
+      "Defensible alternative: implemented 75 to 80, since the statutory bar is Fed-only and expires 2030-12-31 and its operative text is unread.",
+      "Calibration pass 2026-10-26: The research quote joins subsections (b) and (d) with an ellipsis; the reading relies on the LII rendering, and Title 12 is not positive law, so the Statutes at Large text (140 Stat. 983) remains the legal evidence. Verify on uscode.house.gov or govinfo when reachable.",
+      "Calibration pass 2026-10-26: The status summary can now cite the code text for the 2030-12-31 sunset instead of the committee summary.",
+      "Calibration pass 2026-10-26: Reading question for the maintainer: subsection (e) bars issuance absent an Act of Congress while subsection (d) ends the section on 2030-12-31; whether (e) survives the sunset was not examined."
     ],
     "mandate_check": "not_checked",
     "mandate_note": "Chapter text not available in this run. Per the record, the chapter recommends preventing a central bank digital currency on surveillance and control grounds; the proposal field matches that paraphrase.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-23",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "2026-10-18: signed 2025-01-23; Sec. 5 bars agency action to establish, issue or promote a CBDC unless required by law and directs termination of ongoing plans. Supports the executive part of the stage.",
@@ -133,6 +140,11 @@
         "note": "Opened and confirmed on 2026-10-23 (read in two portions): Public Law 119-27, S. 1582, GENIUS Act, enacted 2025-07-18; neither central bank digital currency nor CBDC appears in the text. Context only; stage implemented rests on the executive order and Public Law 119-101.",
         "result": "supports",
         "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ27/html/PLAW-119publ27.htm"
+      },
+      {
+        "note": "2026-10-26: 12 U.S.C. 423(b) bars the Board and Federal reserve banks from issuing or creating a central bank digital currency, directly or through intermediaries, (c) excepts open, permissionless and private currency, and (d) ends the section on 2030-12-31; source credit Pub. L. 119-101, sec. 1101.",
+        "result": "supports",
+        "url": "https://www.law.cornell.edu/uscode/text/12/423"
       }
     ]
   },
@@ -232,6 +244,13 @@
       "publisher": "GovInfo",
       "title": "Public Law 119-27, Guiding and Establishing National Innovation for U.S. Stablecoins Act (GENIUS Act)",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ27/html/PLAW-119publ27.htm"
+    },
+    {
+      "date": "2026-07-11",
+      "kind": "primary",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "title": "12 U.S.C. 423, Central bank digital currency (Federal Reserve Act section 16A, added by Pub. L. 119-101, title XI, sec. 1101, 140 Stat. 983; page undated, enactment date used)",
+      "url": "https://www.law.cornell.edu/uscode/text/12/423"
     }
   ],
   "stage": "implemented",
@@ -296,6 +315,6 @@
   ],
   "title": "Prevent the creation of a central bank digital currency",
   "tracked": true,
-  "uncertainties": "The executive order (Sec. 5), the H.R. 6644 BILLSTATUS record and the House Financial Services Committee section-by-section were read in this review on whitehouse.gov, govinfo.gov and financialservices.house.gov; the enrolled-law header, number, date and table of contents (Title XI, Sec. 1101) were read on govinfo.gov in an earlier pass. The operative text of Sec. 1101 was not reachable because the fetch tool truncates large GovInfo documents before Title XI and congress.gov refuses fetches, so the scope (directly or through intermediaries), the digital asset definition and exemptions rest on the Duke blog and law-firm analyses, and the 2030-12-31 sunset on the committee summary. BILLSTATUS confirms the final vote order (Senate 2026-06-22, House 2026-06-23) and that the bill was sent to the Archivist unsigned on 2026-07-11, which replaces an earlier news-dated passage event and a trade report giving a day earlier. H.R. 1919 status rests on its BILLSTATUS record as read by the researcher. The GENIUS Act date (2025-07-18) and number (Public Law 119-27) are confirmed by a White House statement and by the enrolled law on GovInfo, whose full text was read and does not mention a central bank digital currency. The Federal Reserve CBDC page shows a 2022 update date; whether the Fed has formally ended CBDC research was not verified. The chapter's other monetary options (free banking, commodity-backed money, a commission on alternatives to the Fed, limits on lender of last resort) were not researched.",
-  "updated_at": "2026-10-23"
+  "uncertainties": "The executive order (Sec. 5), the H.R. 6644 BILLSTATUS record and the House Financial Services Committee section-by-section were read on whitehouse.gov, govinfo.gov and financialservices.house.gov; the enrolled-law header, number, date and table of contents (Title XI, Sec. 1101) were read on govinfo.gov in an earlier pass. The operative text of Sec. 1101 was read on 2026-10-26 as codified at 12 U.S.C. 423 on the Cornell Legal Information Institute (source credit Pub. L. 119-101, title XI, sec. 1101, 140 Stat. 983): it covers the Board and the Federal reserve banks directly or indirectly through a financial institution or other intermediary, defines digital asset by reference to 12 U.S.C. 5901, excepts open, permissionless and private dollar-denominated currency, and ceases to be effective on 2030-12-31, so the Duke blog, law-firm analyses and committee summary are no longer the only basis for scope and sunset. The Statutes at Large text was not opened because the govinfo.gov law text is truncated before Title XI in retrieval, congress.gov refuses fetches and the uscode.house.gov page returned a server error on one attempt. BILLSTATUS confirms the final vote order (Senate 2026-06-22, House 2026-06-23) and that the bill was sent to the Archivist unsigned on 2026-07-11, which replaces an earlier news-dated passage event and a trade report giving a day earlier. H.R. 1919 status rests on its BILLSTATUS record as read by the researcher. The GENIUS Act date (2025-07-18) and number (Public Law 119-27) are confirmed by a White House statement and by the enrolled law on GovInfo, whose full text was read and does not mention a central bank digital currency. The Federal Reserve CBDC page shows a 2022 update date; whether the Fed has formally ended CBDC research was not verified. The chapter's other monetary options (free banking, commodity-backed money, a commission on alternatives to the Fed, limits on lender of last resort) were not researched.",
+  "updated_at": "2026-10-26"
 }

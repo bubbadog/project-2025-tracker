@@ -4,9 +4,9 @@
     "The Court denied the abeyance motion in three of the four cases (Nos. 23-1229, 24-7 and 23-1067) on 2025-02-06"
   ],
   "chapter": "01",
-  "confidence": 70,
+  "confidence": 71,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked at page 28; the Skrmetti letter and the four supremecourt.gov dockets were fetched and read in this review and confirm the early position changes, but the Counsel's own review, which the text describes, is undocumented, so the implemented stage rests on the visible outcome as a proxy.",
+  "confidence_reason": "Chapter text was checked at page 28. The Skrmetti letter and the four supremecourt.gov dockets were read in earlier review and confirm the early position changes. On 2026-10-26 the 2025-01-24 abeyance motion in No. 24-413 was read on supremecourt.gov; it is signed by Acting Solicitor General Sarah M. Harris and attributes the request to the Acting Secretary of Education's decision to reassess the borrower-defense regulations, and it does not mention the White House Counsel. The Counsel's own review, which the text describes, remains undocumented, so the implemented stage still rests on the visible outcome as a proxy and the record stays medium. Confidence 70 to 71.",
   "durability": {
     "level": "medium",
     "why": "Litigation positions are set by the Justice Department and can be reversed by a later administration, but court rulings such as Skrmetti remain precedent."
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-17",
       "note": "Independent review read the Skrmetti letter and the dockets for Nos. 24-413, 23-1229, 24-7 and 23-1067 on supremecourt.gov, corrected the abeyance outcome to denials in three of four cases, replaced news-sourced events with docket events, kept implemented 65 and moved confidence from 55 to 70."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 the research pass read the 2025-01-24 abeyance motion in No. 24-413 on supremecourt.gov, which credits the Acting Secretary of Education and names no White House Counsel role; confidence moved from 70 to 71. No change of stage or progress."
     }
   ],
   "id": "c01-06",
-  "last_checked": "2026-10-17",
+  "last_checked": "2026-10-26",
   "layer": 3,
   "match": "partial",
   "mechanism": "litigation",
@@ -90,13 +94,16 @@
       "URL rule: the four docket URLs came from the researcher's file and were fetched successfully on supremecourt.gov in this review, so they are accepted.",
       "Corrected the abeyance outcome: denied in three of four cases, not only Calumet; blockers updated.",
       "Replaced the SCOTUSblog-sourced 2025-01-24, 2025-02-06 and 2025-08-11 events with docket-sourced events; removed the 2026-08-10 news-report event (source kept, noted in uncertainties).",
-      "No court_status set: the court events are rulings in the government's own cases on abeyance and merits, not challenges to the recommendation's implementation."
+      "No court_status set: the court events are rulings in the government's own cases on abeyance and merits, not challenges to the recommendation's implementation.",
+      "Calibration pass 2026-10-26: Date rule applied literally: the motion prints only January 2025, so the source carries 2025-01-01 with a first-of-month note, although the supremecourt.gov docket entry already in the record shows filing on 2025-01-24; the maintainer may prefer 2025-01-24 with a note that the day comes from the docket.",
+      "Calibration pass 2026-10-26: The blocker (no record of the Counsel's own review) is not cleared; the +1 reflects one primary filing read, not the deciding fact.",
+      "Calibration pass 2026-10-26: Three of the four 2025-01-24 motions (Nos. 23-1229, 24-7, 23-1067) remain unopened."
     ],
     "mandate_check": "ok",
     "mandate_note": "Page 28 says the Counsel must quickly learn the significant litigation across the executive branch and be ready at the outset to recommend to the President whether to reconsider or reverse the prior Administration's positions, usually after consulting new Justice Department leadership, including during the transition. The paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-17",
-    "reviewer": "P17-A",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "Abeyance motion 2025-01-24 granted 2025-02-06; resume briefing granted 2025-06-23; stipulation 2025-08-08; dismissed under Rule 46 on 2025-08-11.",
@@ -117,6 +124,11 @@
         "note": "Federal respondents' abeyance motion 2025-01-24 denied 2025-02-06, Justice Alito not participating; argued 2025-03-25.",
         "result": "supports",
         "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-1067.html"
+      },
+      {
+        "note": "2026-10-26: The motion, signed by Acting Solicitor General Sarah M. Harris, asks the Court to hold briefing in abeyance because the Acting Secretary of Education has determined that the Department should reassess its borrower-defense regulations; it does not mention the White House Counsel.",
+        "result": "partial",
+        "url": "https://www.supremecourt.gov/DocketPDF/24/24-413/340126/20250124145104041_24-413%20CCST%20Motion%20FINAL.pdf"
       }
     ],
     "stage_change_reason": "No change: Justice Department filings show prior litigation positions reconsidered and reversed at the outset of the Administration (operative in substance), while the Counsel's own role is undocumented, so implemented at the band floor of 65 with a partial match."
@@ -235,6 +247,13 @@
       "publisher": "U.S. Supreme Court docket",
       "title": "Docket No. 23-1067, Oklahoma v. EPA",
       "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/23-1067.html"
+    },
+    {
+      "date": "2025-01-24",
+      "kind": "court",
+      "publisher": "U.S. Supreme Court docket",
+      "title": "Motion to Hold the Briefing Schedule in Abeyance, No. 24-413 (Acting Solicitor General)",
+      "url": "https://www.supremecourt.gov/DocketPDF/24/24-413/340126/20250124145104041_24-413%20CCST%20Motion%20FINAL.pdf"
     }
   ],
   "stage": "implemented",
@@ -278,6 +297,6 @@
   ],
   "title": "Have the Counsel review pending litigation and recommend reversing prior positions",
   "tracked": true,
-  "uncertainties": "The Skrmetti letter (signed by Deputy Solicitor General Curtis E. Gannon, the Acting Solicitor General being recused) and the supremecourt.gov docket pages for Nos. 24-413, 23-1229, 24-7 and 23-1067 were read in review; the text of the 2025-01-24 motions themselves was not opened. The Skrmetti decision date and vote rest on the SCOTUSblog case file. The record covers a few Supreme Court cases from the first weeks; lower-court position changes were not surveyed. A 2026-08-10 news report (Reuters via NY Daily Record) of a change of White House Counsel effective 2026-09-01 is context only and says nothing of the office's litigation role. Nothing found shows what the White House Counsel recommended or when, so the match is partial and progress is held at the low end of implemented (inference): the outcome the chapter describes is visible, the Counsel's process is not. Court outcomes after the pause are context, not outcomes of the recommendation.",
-  "updated_at": "2026-10-17"
+  "uncertainties": "The Skrmetti letter (signed by Deputy Solicitor General Curtis E. Gannon, the Acting Solicitor General being recused) and the supremecourt.gov docket pages for Nos. 24-413, 23-1229, 24-7 and 23-1067 were read in review. Of the 2025-01-24 motions, only the motion in No. 24-413 was read (on supremecourt.gov, 2026-10-26): it prints only January 2025 as its date (the day comes from the docket entry), credits the Acting Secretary of Education's reassessment of the borrower-defense regulations and names no White House Counsel involvement; the motions in Nos. 23-1229, 24-7 and 23-1067 were not opened. No supremecourt.gov copy of the Skrmetti opinion surfaced in search results, so the Skrmetti decision date and vote still rest on the SCOTUSblog case file. The record covers a few Supreme Court cases from the first weeks; lower-court position changes were not surveyed. A 2026-08-10 news report (Reuters via NY Daily Record) of a change of White House Counsel effective 2026-09-01 is context only and says nothing of the office's litigation role. Nothing found shows what the White House Counsel recommended or when; two searches for a White House Counsel memorandum or review returned only commentary and law-firm alerts, so the match is partial and progress is held at the low end of implemented (inference): the outcome the chapter describes is visible, the Counsel's process is not. Court outcomes after the pause are context, not outcomes of the recommendation.",
+  "updated_at": "2026-10-26"
 }

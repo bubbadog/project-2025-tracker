@@ -7,7 +7,7 @@
   "chapter": "06",
   "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "Proclamation 10998 was read in the Federal Register text (effective 2026-01-01, sections 2 to 5 country lists, five countries cited for refusing returns, section 7 review, authority under INA 212(f) and 215(a) with no 243(d) citation), the Medani order of 2026-08-28 was read including the decretal pages, and the Federal Register API records for Proclamation 10998 and the visa bond final rule were fetched. The absence of any formal 243(d) sanction rests on a limited Federal Register search, the State diversity visa notice is ambiguous, and later Medani proceedings were not checked, so the record stays medium.",
+  "confidence_reason": "Proclamation 10998 was read in the Federal Register text, the Medani order of 2026-08-28 was read in a copy on a news host, and the Federal Register API records were fetched in earlier reviews. On 2026-10-26 9 FAM 601.12 was read on fam.state.gov (changed 2023-12-08); it sets the procedure for discontinuing visa issuance under INA 243(d) by Secretary's order communicated by cable, but names no country and no order, so it does not show an invocation in 2025 or 2026. No copy of the Medani order was found on CourtListener or the court's site. The absence of a 243(d) sanction and the court posture are unchanged, so the record stays medium at 75.",
   "court_status": {
     "basis": "Medani v. Trump (N.D. Cal., ECF No. 83, order read, pp. 21-23) granted in part a preliminary injunction motion whose operative remedy is a temporary vacatur under APA section 706(2) of the State diversity visa pause, the State 75-country pause and the USCIS hold pending further litigation; the 2026-08-21 S.D.N.Y. vacatur of the 75-country pause (CLINIC v. Rubio) also stands. Neither order reaches the entry proclamations or INA 243(d); the joint status report was due 2026-09-18 and later proceedings were not checked.",
     "date": "2026-08-28",
@@ -38,10 +38,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift with independent AI review: Stage implemented 65 and court_status vacated confirmed against Proclamation 10998 and the Medani order; event text cleaned; confidence 62 to 75."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 9 FAM 601.12 was read on fam.state.gov, which describes the 243(d) procedure but shows no 2025 or 2026 invocation; confidence stayed at 75. No change of stage or progress."
     }
   ],
   "id": "c06-05",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-26",
   "layer": 1,
   "match": "parallel",
   "mechanism": "mixed",
@@ -94,13 +98,15 @@
       "Removed process commentary and an unconfirmed tier list from the 2026-08-03 event; the final rule abstract gives bonds of up to 20,000 dollars.",
       "Removed a quoted phrase from the 2026-08-28 event.",
       "The removed VisaVerge item (a claimed 243(d) use against Cuban officials) and the Manifest Law blog item stay out of the timeline: neither cites a government document, so neither is a usable source for a government action.",
-      "Confidence 62 to 75: the deciding proclamation and court order were read."
+      "Confidence 62 to 75: the deciding proclamation and court order were read.",
+      "Calibration pass 2026-10-26: Under the host ruling the Clearinghouse qualifies for docket facts; the Medani v. Trump Clearinghouse page surfaced in search but was not opened. Opening it next pass could confirm post-2026-09-18 proceedings and let court_status rest on a qualifying host instead of courthousenews.com.",
+      "Calibration pass 2026-10-26: 9 FAM 601.12 predates 2025 and is procedural background; kept as a source because it explains why no Federal Register notice of a 243(d) sanction would be expected."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 177 asks for strict visa reciprocity with real-time updates and quick, full 243(d) sanctions against countries refusing returns; page 178 asks State to evaluate the Diversity Visa, F and J programs for security; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V9",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "Updated 2026-08-31; says the December 2025 DV pause is no longer in effect as of 2026-08-28 per Medani; the same page also carries text pausing all DV issuance, relationship unclear.",
@@ -126,6 +132,11 @@
         "note": "Visa Bond Program final rule, 91 FR 48757, published and effective 2026-08-03; bonds of up to 20,000 dollars; makes the 2025-08-20 pilot permanent; country criteria not in the abstract. Checked 2026-10-18.",
         "result": "supports",
         "url": "https://www.federalregister.gov/api/v1/documents/2026-15726.json"
+      },
+      {
+        "note": "2026-10-26: 9 FAM 601.12 (changed 2023-12-08) sets the procedure for discontinuing visa issuance under INA 243(d) in cases covered by the Secretary's order, communicated by cable; it names no country or order.",
+        "result": "partial",
+        "url": "https://fam.state.gov/FAM/09FAM/09FAM060112.html"
       }
     ]
   },
@@ -232,6 +243,13 @@
       "publisher": "Greenberg Traurig",
       "title": "State Department Updates Diversity Immigrant Visa Processing Following Federal Court Decisions",
       "url": "https://www.gtlaw-insidebusinessimmigration.com/department-of-state/state-department-updates-diversity-immigrant-visa-processing-following-federal-court-decisions/"
+    },
+    {
+      "date": "2023-12-08",
+      "kind": "primary",
+      "publisher": "U.S. Department of State, Foreign Affairs Manual",
+      "title": "9 FAM 601.12, Discontinuation of Visa Issuance under INA 243(d) (CT:VISA-1878)",
+      "url": "https://fam.state.gov/FAM/09FAM/09FAM060112.html"
     }
   ],
   "stage": "implemented",
@@ -303,6 +321,6 @@
   ],
   "title": "Enforce visa reciprocity and INA 243(d) sanctions and review sensitive visa programs",
   "tracked": true,
-  "uncertainties": "No actual State or DHS invocation of INA 243(d) was verified; the Federal Register record of EO 14159 section 13 is the only primary document on 243(d), and the February 2026 use against Cuban officials comes from a secondary immigration-news site that cites no government source. Reciprocity-schedule changes and student-visa vetting changes were not researched, nor were court challenges to the proclamations. The 19 and 20 country counts are this tracker's tally from the proclamation text (Turkmenistan counted among the partial group; Laos and Sierra Leone moved from partial to full). The 75-country pause dates (announced 2026-01-14, effective 2026-01-21) come from the S.D.N.Y. opinion (mirror on media.nilc.org); State's 2026-08-28 filing in that case was not located, and the report that the pause ended rests on a law-firm blog. The State diversity visa notice, read through an automated summary, both says the December 2025 pause ended on 2026-08-28 and retains text announcing a pause on all diversity visa issuances (interviews continue, no visas issued) tied to a screening review; whether that text is the original December 2025 notice left on the page or a new pause was not resolved. The Medani order is a temporary vacatur with a joint status report due 2026-09-18; later proceedings were not checked. The December 2025 pause start date (a law firm gives 2025-12-23) was not confirmed on a State page. The Federal Register API (EO 14159, Proclamations 10949 and 10998, the diversity visa final rule 91 FR 11891 and the visa bond final rule 91 FR 48757) confirmed numbers, signing and publication dates; a Federal Register search for notices citing section 243(d) returned only EO 14159 and an unrelated DHS proposed rule. The Medani order PDF was read and gives two start dates for the December 2025 diversity visa pause (2025-12-20 and 2025-12-23) and two for the 75-country pause. Two reports are not government actions and appear only as sources: VisaVerge (February 2026, a claimed 243(d) use against Cuban officials with no government citation) and the Manifest Law blog (2026-08-28 to 2026-08-31, on State's compliance and a worldwide immigrant visa appointment pause).",
-  "updated_at": "2026-10-18"
+  "uncertainties": "No actual State or DHS invocation of INA 243(d) was verified; the Federal Register record of EO 14159 section 13 is the only primary document on 243(d), and the February 2026 use against Cuban officials comes from a secondary immigration-news site that cites no government source. 9 FAM 601.12 (fam.state.gov, changed 2023-12-08), read on 2026-10-26, provides that 243(d) discontinuations are made by Secretary's order and communicated by cable, so (inference) a sanction would not necessarily appear in the Federal Register; it names no sanctioned country. Reciprocity-schedule changes and student-visa vetting changes were not researched, nor were court challenges to the proclamations. The 19 and 20 country counts are this tracker's tally from the proclamation text (Turkmenistan counted among the partial group; Laos and Sierra Leone moved from partial to full). The 75-country pause dates (announced 2026-01-14, effective 2026-01-21) come from the S.D.N.Y. opinion (mirror on media.nilc.org); State's 2026-08-28 filing in that case was not located, and the report that the pause ended rests on a law-firm blog. The State diversity visa notice, read through an automated summary, both says the December 2025 pause ended on 2026-08-28 and retains text announcing a pause on all diversity visa issuances (interviews continue, no visas issued) tied to a screening review; whether that text is the original December 2025 notice left on the page or a new pause was not resolved. The Medani order is a temporary vacatur with a joint status report due 2026-09-18; later proceedings were not checked. The Medani order was read only in a copy on courthousenews.com; searches on 2026-10-26 found no copy on CourtListener or the court's site, and a Clearinghouse case page that appeared in results was not opened. The December 2025 pause start date (a law firm gives 2025-12-23) was not confirmed on a State page. The Federal Register API (EO 14159, Proclamations 10949 and 10998, the diversity visa final rule 91 FR 11891 and the visa bond final rule 91 FR 48757) confirmed numbers, signing and publication dates; a Federal Register search for notices citing section 243(d) returned only EO 14159 and an unrelated DHS proposed rule. The Medani order PDF was read and gives two start dates for the December 2025 diversity visa pause (2025-12-20 and 2025-12-23) and two for the 75-country pause. Two reports are not government actions and appear only as sources: VisaVerge (February 2026, a claimed 243(d) use against Cuban officials with no government citation) and the Manifest Law blog (2026-08-28 to 2026-08-31, on State's compliance and a worldwide immigrant visa appointment pause).",
+  "updated_at": "2026-10-26"
 }

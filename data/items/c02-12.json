@@ -4,7 +4,7 @@
   "chapter": "02",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: a stage-deciding fact known only through the external retrieval caps the record at 79. EO 14192 Section 6(c) and IRS rulemaking documents applying the 2025-07-04 agreement (91 FR 11003 and the 2025-12-15 proposed rule on govinfo.gov) were read on official hosts, and GAO-26-108115 (files.gao.gov, 2026-07-21), opened by the researcher and confirmed in review, corroborates the 45-day and 10-business-day periods, the June 2023 end of review, its July 2025 reinstatement and the agreement date. The agreement is a scan with no text layer, so its triggers, exclusions and supersession terms still rest on a browser retrieval; confidence rises from 76 to 78.",
+  "confidence_reason": "Rule applied: a stage-deciding fact known only through the external retrieval caps the record at 79. EO 14192 Section 6(c), the IRS rulemaking documents citing the 2025-07-04 agreement (91 FR 11003 and the 2025-12-15 proposed rule on govinfo.gov) and GAO-26-108115 were read on official hosts in earlier reviews. On 2026-10-26 a further search found no readable official copy of the 2025 agreement; the Treasury Tax Regulatory Process page lists it only as a link, and the 2018 agreement was read on the White House archive (trumpwhitehouse.archives.gov), where paragraph 1 sets the three triggers including the 100 million dollar non-revenue threshold, paragraph 4 the 45-day and 10-business-day periods and paragraph 6 the supersession of the 1983 agreement. Those 2018 terms match what the retrieval reports for the 2025 text, but the 2025 agreement itself still was not read, so confidence stays at 78.",
   "durability": {
     "level": "medium",
     "why": "A memorandum of agreement between two agencies, reversed once in 2023 and reinstated in 2025, so it can change with administrations."
@@ -46,6 +46,10 @@
     {
       "date": "2026-10-26",
       "note": "Refutation check: No rescission, amendment or successor agreement found as of 2026-10-26. Red-team verdict holds; stage and progress unchanged."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 the research pass read the 2018 Treasury and OMB agreement on the White House archive and the Treasury Tax Regulatory Process page, and found no readable official copy of the 2025 agreement; confidence stayed at 78. No change of stage or progress."
     }
   ],
   "id": "c02-12",
@@ -92,13 +96,16 @@
     "flags": [
       "2025 agreement terms still not readable from the document; confidence held at medium",
       "progress kept at 85; the researcher's 80 is also defensible but unreadability bears on confidence rather than stage",
-      "completed is not supported because the arrangement is a reversible interagency agreement with limited triggers"
+      "completed is not supported because the arrangement is a reversible interagency agreement with limited triggers",
+      "Calibration pass 2026-10-26: The 2018 terms matching the retrieval's account of the 2025 terms does not verify the 2025 text; it is also consistent with the retrieval echoing 2018 language. Keep the cap until the 2025 scan is read (for example by OCR of the home.treasury.gov PDF).",
+      "Calibration pass 2026-10-26: The home.treasury.gov 2025 PDF was not refetched in this pass because its URL appeared only inside a fetched page; a manual OCR of the scan would clear the blocker.",
+      "Calibration pass 2026-10-26: The Tax Notes reprint appears in source_checks only because the finding read it; it is a third-party copy and should not become a source. Drop the check if source_checks must reference record sources."
     ],
     "mandate_check": "confirmed",
     "mandate_note": "Page 49 says the President should keep EO 12866 and that the Administration should maintain the recent extension of its review standards to Treasury regulatory actions. The proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-22",
-    "reviewer": "independent AI reviewer (primary-source lift)",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "EO 14192, 90 FR 9065, FR Doc. 2025-02345, signed 2025-01-31; Section 6(c) directs the Treasury Secretary and OMB Director to reinstate the 2018-04-11 Treasury and OMB agreement on tax regulation review.",
@@ -134,6 +141,21 @@
         "note": "2026-10-22: the researcher's fetch again returned only the date line (scanned file, no text layer); terms not verified against the current implemented stage. Not re-fetched in review because it was marked unreachable.",
         "result": "unreachable",
         "url": "https://home.treasury.gov/system/files/131/2025-MOA-EO12866.pdf"
+      },
+      {
+        "note": "2026-10-26: The page says the listed memoranda of agreement address the terms by which OIRA will review tax regulations and links the 2025 agreement without stating its terms.",
+        "result": "partial",
+        "url": "https://home.treasury.gov/policy-issues/tax-policy/tax-regulatory-process"
+      },
+      {
+        "note": "2026-10-26: The 2018 agreement sets three review triggers including a 100 million dollar annual non-revenue effect (paragraph 1), 45-day and 10-business-day review periods (paragraph 4) and supersession of the 1983 agreement (paragraph 6); it is the 2018 text, not the 2025 text.",
+        "result": "partial",
+        "url": "https://trumpwhitehouse.archives.gov/wp-content/uploads/2018/04/OIRA-TreasuryMOA_4.11.18.pdf"
+      },
+      {
+        "note": "2026-10-26: A Tax Notes reprint of the 2018 agreement shows the novel legal or policy issues trigger at paragraph 1(b); it is a third-party copy and was not added as a source.",
+        "result": "partial",
+        "url": "https://taxnotes.com/lr/resolve/source-document/27ytb"
       }
     ]
   },
@@ -206,6 +228,13 @@
       "publisher": "Federal Register (govinfo.gov)",
       "title": "IRS proposed rule, Income of Foreign Governments and of International Organizations (cites the 2025-07-04 agreement)",
       "url": "https://www.govinfo.gov/content/pkg/FR-2025-12-15/html/2025-22775.htm"
+    },
+    {
+      "date": "2018-04-11",
+      "kind": "primary",
+      "publisher": "Office of Management and Budget and Department of the Treasury (White House archive)",
+      "title": "Memorandum of Agreement, Review of Tax Regulations under Executive Order 12866 (2018 agreement)",
+      "url": "https://trumpwhitehouse.archives.gov/wp-content/uploads/2018/04/OIRA-TreasuryMOA_4.11.18.pdf"
     }
   ],
   "stage": "implemented",
@@ -249,6 +278,6 @@
   ],
   "title": "Keep Treasury tax regulations under OIRA review",
   "tracked": true,
-  "uncertainties": "The 2025 agreement itself was not opened in readable form: the Treasury file is a scan, a direct fetch on 2026-10-22 again returned only its date line, and no archive copy was found. Its terms rest on the browser retrieval supplied to the project, except for features corroborated by a GAO report of 2026-07-21 opened on files.gao.gov: a general 45-day OIRA review period under the 2018 and 2025 agreements, a 10-business-day period for regulations implementing the 2017 and 2025 tax laws (the retrieval-based wording names only H.R. 1), and the end of OIRA review in June 2023 and its reinstatement by an agreement in July 2025. Footnotes in that report cite the agreement dated 2025-07-04 and the 2023 agreement dated 2023-06-09, and an IRS proposed rule of 2025-12-15 opened on govinfo.gov also confirms the 2025 agreement's date and its use. GAO describes the three review triggers and the 100 million dollar threshold as terms of the 2018 agreement and does not restate them for the 2025 agreement, so the retrieval remains the only reading of those terms in the 2025 text; the listed exclusions, the supersession and rescission paragraph and the signers were not corroborated. The typed name of the Treasury signer is partly illegible in the scan, so signers are not recorded. The 2018 and 2025 agreements were not compared term by term, so the record cannot say that the 2018 agreement was reinstated as such. The recommendation text describes the 2018 agreement and gives no thresholds of its own. Review is limited to actions meeting the three triggers and excludes listed categories, which is narrower than review of every tax regulatory action. The proportion of tax rules actually sent to OIRA was not measured.",
+  "uncertainties": "The 2025 agreement itself was not opened in readable form: the Treasury file is a scan, a direct fetch on 2026-10-22 again returned only its date line, no archive copy was found, and a further search on 2026-10-26 found no readable official copy; the Treasury Tax Regulatory Process page lists the 2025 agreement only as a link without terms. Its terms rest on the browser retrieval supplied to the project, except for features corroborated by a GAO report of 2026-07-21 opened on files.gao.gov: a general 45-day OIRA review period under the 2018 and 2025 agreements, a 10-business-day period for regulations implementing the 2017 and 2025 tax laws (the retrieval-based wording names only H.R. 1), and the end of OIRA review in June 2023 and its reinstatement by an agreement in July 2025. Footnotes in that report cite the agreement dated 2025-07-04 and the 2023 agreement dated 2023-06-09, and an IRS proposed rule of 2025-12-15 opened on govinfo.gov also confirms the 2025 agreement's date and its use. GAO describes the three review triggers and the 100 million dollar threshold as terms of the 2018 agreement and does not restate them for the 2025 agreement, so the retrieval remains the only reading of those terms in the 2025 text; the listed exclusions, the supersession and rescission paragraph and the signers were not corroborated. The 2018 agreement was read on 2026-10-26 on the White House archive (trumpwhitehouse.archives.gov): paragraph 1 sets the three triggers, including an annual non-revenue effect of 100 million dollars or more measured against a no-action baseline, paragraph 4 the 45-day and 10-business-day review periods, and paragraph 6 the supersession of the 1983 agreement. Those terms match the terms the retrieval reports for the 2025 agreement, but no term-by-term comparison with the 2025 text is possible until that text is read, so the record cannot say that the 2018 agreement was reinstated as such; the match is also consistent with the retrieval having carried 2018 language into its account of the 2025 text (inference). The typed name of the Treasury signer of the 2025 agreement is partly illegible in the scan, so signers are not recorded; the archive copy of the 2018 agreement and a Tax Notes reprint disagreed on which signer held which office, so the 2018 signers are not recorded either. The recommendation text describes the 2018 agreement and gives no thresholds of its own. Review is limited to actions meeting the three triggers and excludes listed categories, which is narrower than review of every tax regulatory action. The proportion of tax rules actually sent to OIRA was not measured.",
   "updated_at": "2026-10-26"
 }

@@ -7,9 +7,9 @@
     "A suit by 25 states at the Court of International Trade, filed about 2026-08-03, challenges the Section 301 duties that now set the EU and UK rates; no ruling was reported."
   ],
   "chapter": "06",
-  "confidence": 72,
+  "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "Pages 187 to 188 were rechecked, and on 2026-10-23 the July 2026 Section 301 memorandum and the August 2026 UK pharmaceutical notice were read on the Federal Register; the state lawsuit rests on one news report and the Section 122 interval and stacking concern still rest on law-firm summaries, so confidence stays medium.",
+  "confidence_reason": "Pages 187 to 188 were rechecked in earlier review, and the July 2026 Section 301 memorandum and the August 2026 UK pharmaceutical notice were read on the Federal Register. On 2026-10-26 the 25-state Section 301 suit was confirmed on official state hosts: the New York Governor's release of 2026-08-03 (governor.ny.gov) and the Oregon Department of Justice federal litigation tracker, a state attorney general's site, which records the filing on 2026-08-03 and a Court of International Trade order of 2026-08-19 staying the states' case pending a sample case (the order itself was not read). A CIT judgment of 2026-05-07 declaring Proclamation 11012 invalid as contrary to law was read in a RECAP copy. Proclamation 11012 itself, its dates, the stacking concern and the April 2025 trade reports still rest on law-firm summaries or were not read, so confidence stays medium. Confidence 72 to 75.",
   "court_status": {
     "basis": "The Supreme Court held 6-3 that IEEPA does not authorize tariffs, affirming the Federal Circuit in No. 25-250 and vacating the district court judgment in No. 24-1287 with instructions to dismiss; this removed the emergency-powers basis for the reciprocal tariff rates in the EU and UK arrangements, which law-firm summaries say were replaced by Section 122 and then Section 301 tariffs, while the Section 232 elements were not affected.",
     "date": "2026-02-20",
@@ -49,10 +49,14 @@
     {
       "date": "2026-10-23",
       "note": "Refutation check and independent review on 2026-10-23 found no injunction or rescission of the US-EU and US-UK tariff arrangements, added the 2026-07-23 Section 301 memorandum and the 2026-08-04 UK pharmaceutical tariff cut from the Federal Register, and recorded a pending 25-state challenge at the Court of International Trade reported by supplychaindive.com; stage unchanged."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 the research pass read the New York Governor's release and the Oregon DOJ litigation tracker on the 25-state Section 301 suit, a CIT judgment of 2026-05-07 on Proclamation 11012 in a RECAP copy and a law-firm summary; confidence moved from 72 to 75. No change of stage or progress."
     }
   ],
   "id": "c06-16",
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-10-26",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -111,13 +115,17 @@
       "UK pharmaceutical event accepted with agency corrected to Commerce BIS and effective date added",
       "2026-07-23 Section 301 memorandum added as an event from the researcher's evidence",
       "state lawsuit kept in uncertainties and blockers, not as a court event; court_status vacated unchanged; alternative pending if the suit is treated as the latest court event",
-      "stage implemented 65 unchanged; redteam verdict weakened confirmed (durability only)"
+      "stage implemented 65 unchanged; redteam verdict weakened confirmed (durability only)",
+      "Calibration pass 2026-10-26: Two different Oregon cases appear: Oregon v. United States (No. 26-01472, Section 122 judgment of 2026-05-07) and Oregon v. Trump (Section 301 suit filed 2026-08-03). Keep them distinct in the timeline.",
+      "Calibration pass 2026-10-26: The finding says the 2026-05-07 judgment's relief runs to the State of Washington and the importer plaintiffs in a case captioned State of Oregon; the quoted text does not show this. Recheck the judgment before entering it.",
+      "Calibration pass 2026-10-26: Suggested timeline additions from the finding: 2026-05-07 CIT judgment on Proclamation 11012; 2026-08-03 state suit and 2026-08-19 stay (Oregon DOJ). Not applied here.",
+      "Calibration pass 2026-10-26: court_status left unchanged: the Section 301 rates were not disturbed by any ruling read. The Oregon DOJ page links a complaint PDF that was not opened."
     ],
     "mandate_check": "verified",
     "mandate_note": "Pages 187 and 188 call for a comprehensive review of EU-US trade arrangements to assure fair treatment and productive reciprocity, and urgent development of trade with the post-Brexit UK; the paraphrase is accurate.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-23",
-    "reviewer": "independent review",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "Memorandum of 2026-07-23, 91 FR 47717; EU combined 10 percent or zero where MFN is 10 percent or more; UK flat 10 percent; operative tariff terms consistent with implemented.",
@@ -133,6 +141,26 @@
         "note": "Report of 2026-08-04 on a 25-state CIT suit filed Monday (2026-08-03 inferred); no injunction; supports the stage with lower durability.",
         "result": "partial",
         "url": "https://supplychaindive.com/news/25-states-sue-trump-over-section-301-forced-labor-tariffs/826908"
+      },
+      {
+        "note": "2026-10-26: The release announces that New York joined a coalition of 24 other states in a suit asking the Court of International Trade to declare the latest tariffs illegal.",
+        "result": "supports",
+        "url": "https://governor.ny.gov/news/governor-hochul-and-attorney-general-james-announce-lawsuit-against-trump-administration-stop"
+      },
+      {
+        "note": "2026-10-26: The Oregon DOJ tracker records the states' case filed on 2026-08-03 and a status entry of 2026-08-19 that the court issued an order staying the states' case.",
+        "result": "supports",
+        "url": "https://www.doj.state.or.us/oregon-department-of-justice/federal-oversight/federal-litigation-tracker/tariffs-oregon-v-trump-court-of-international-trade-2/"
+      },
+      {
+        "note": "2026-10-26: The CIT judgment of 2026-05-07, signed by Chief Judge Barnett and Judge Kelly, declares Proclamation 11012 invalid as contrary to law; it concerns the Section 122 surcharge, not the Section 301 duties now in force.",
+        "result": "partial",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.cit.19694/gov.uscourts.cit.19694.39.0_3.pdf"
+      },
+      {
+        "note": "2026-10-26: The law-firm summary gives Proclamation 11012 as issued 2026-02-20, effective 2026-02-24 and expiring 2026-07-24, and says collection from non-plaintiff importers would continue.",
+        "result": "partial",
+        "url": "https://www.hklaw.com/en/insights/publications/2026/05/us-court-of-international-trade-invalidates-the-administrations"
       }
     ]
   },
@@ -240,7 +268,7 @@
     },
     {
       "date": "2026-07-23",
-      "kind": "tracker",
+      "kind": "news",
       "publisher": "Holland & Knight",
       "title": "And the (Tariff) Beat Goes On: New Section 301 Forced-Labor Tariffs Imposed on 60 Countries",
       "url": "https://www.hklaw.com/en/insights/publications/2026/07/and-the-tariff-beat-goes-on"
@@ -279,6 +307,34 @@
       "publisher": "Federal Register",
       "title": "Actions by the United States in the Section 301 investigations (presidential document)",
       "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15274/actions-by-the-united-states-in-the-investigations-under-section-301-of-the-trade-act-of-1974-of-the"
+    },
+    {
+      "date": "2026-08-03",
+      "kind": "primary",
+      "publisher": "Office of the Governor of New York State",
+      "title": "Governor Hochul and Attorney General James Announce Lawsuit Against Trump Administration to Stop Latest Round of Illegal Tariffs",
+      "url": "https://governor.ny.gov/news/governor-hochul-and-attorney-general-james-announce-lawsuit-against-trump-administration-stop"
+    },
+    {
+      "date": "2026-09-17",
+      "kind": "primary",
+      "publisher": "Oregon Department of Justice",
+      "title": "Tariffs (Oregon v. Trump, Court of International Trade), federal litigation tracker entry",
+      "url": "https://www.doj.state.or.us/oregon-department-of-justice/federal-oversight/federal-litigation-tracker/tariffs-oregon-v-trump-court-of-international-trade-2/"
+    },
+    {
+      "date": "2026-05-07",
+      "kind": "court",
+      "publisher": "U.S. Court of International Trade (RECAP copy on courtlistener.com)",
+      "title": "Judgment, Oregon v. United States (No. 26-01472) and Burlap and Barrel v. United States (No. 26-01606), Court of International Trade",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.cit.19694/gov.uscourts.cit.19694.39.0_3.pdf"
+    },
+    {
+      "date": "2026-05-08",
+      "kind": "news",
+      "publisher": "Holland & Knight",
+      "title": "U.S. Court of International Trade Invalidates the Administration's Section 122 Tariffs",
+      "url": "https://www.hklaw.com/en/insights/publications/2026/05/us-court-of-international-trade-invalidates-the-administrations"
     }
   ],
   "stage": "implemented",
@@ -357,6 +413,6 @@
   ],
   "title": "Review US-EU trade for fairness and reciprocity; develop trade with the post-Brexit UK",
   "tracked": true,
-  "uncertainties": "The Supreme Court opinion (Learning Resources v. Trump, Nos. 24-1287 and 25-250, 6-3 as to the judgment) was read on supremecourt.gov: the Court affirmed in No. 25-250 and vacated and remanded No. 24-1287 with instructions to dismiss for lack of jurisdiction. The Section 301 notice was read in full in review (108,716 characters) and does not mention Section 122 or Proclamation 11012; a law-firm summary says the Section 301 duties replaced the expiring Section 122 surcharge. The Section 122 surcharge, the stacking concern and the UK digital services tax proposal rest on law-firm trackers, not on primary documents. The April 2025 reports produced under the trade memorandum were not read, so how far they addressed EU arrangements specifically is unknown. The date of the UK White House fact sheet is approximate. The EU regulation was read in full (EUR-Lex HTML) in review; its recitals refer to a temporary US import surcharge under Section 122 proclaimed on 2026-02-20, which is consistent with the law-firm reports. Most EU products facing a 15 percent US rate from July 2026 rests on a law-firm tracker. Inference: match was changed to partial because the Mandate asks for a fairness and reciprocity review and closer UK trade, which the memorandum's review and the resulting deals address in substance, though by tariff leverage and not by an EU-specific review. The trade-promotion-authority and wider agreements framework is covered in c26-05. A coalition of 25 states filed suit at the Court of International Trade on or about 2026-08-03 (the filing day is inferred from a news report of 2026-08-04) against the Section 301 forced-labor tariffs that now set the EU and UK rates, seeking a ruling of unlawfulness and refunds; no injunction or ruling was reported, the docket itself was not read, and the filing is not entered as a court event or reflected in court_status. The 2026-08-04 UK pharmaceutical notice was issued under Proclamation 11020 of 2026-04-02 and a US-UK pharmaceutical pricing arrangement announced the same day; the proclamation and the arrangement were not read.",
-  "updated_at": "2026-10-23"
+  "uncertainties": "The Supreme Court opinion (Learning Resources v. Trump, Nos. 24-1287 and 25-250, 6-3 as to the judgment) was read on supremecourt.gov: the Court affirmed in No. 25-250 and vacated and remanded No. 24-1287 with instructions to dismiss for lack of jurisdiction. The Section 301 notice was read in full in review (108,716 characters) and does not mention Section 122 or Proclamation 11012; a law-firm summary says the Section 301 duties replaced the expiring Section 122 surcharge. Proclamation 11012 itself was not read (two searches found no federalregister.gov link). A Court of International Trade judgment of 2026-05-07 in State of Oregon v. United States (No. 26-01472) and Burlap and Barrel, Inc. v. United States (No. 26-01606), signed by Chief Judge Barnett and Judge Kelly and read in a RECAP copy on courtlistener.com on 2026-10-26, declares Proclamation 11012 invalid as contrary to law; per the research pass it permanently enjoins the surcharge as to the State of Washington and the importer plaintiffs, with refunds with interest. The accompanying opinion and any appeal were not read. The proclamation's issuance on 2026-02-20, effective date of 2026-02-24 and expiry on 2026-07-24, and continued collection from non-plaintiff importers after the judgment, rest on a Holland & Knight summary of 2026-05-08. The stacking concern and the UK digital services tax proposal rest on law-firm trackers, not on primary documents. The April 2025 reports produced under the trade memorandum were not read, so how far they addressed EU arrangements specifically is unknown. The date of the UK White House fact sheet is approximate. The EU regulation was read in full (EUR-Lex HTML) in review; its recitals refer to a temporary US import surcharge under Section 122 proclaimed on 2026-02-20, which is consistent with the law-firm reports. Most EU products facing a 15 percent US rate from July 2026 rests on a law-firm tracker. Inference: match was changed to partial because the Mandate asks for a fairness and reciprocity review and closer UK trade, which the memorandum's review and the resulting deals address in substance, though by tariff leverage and not by an EU-specific review. The trade-promotion-authority and wider agreements framework is covered in c26-05. A coalition of 25 states (New York joining 24 others, per the New York Governor's release of 2026-08-03) filed suit at the Court of International Trade on 2026-08-03 against the Section 301 forced-labor tariffs that now set the EU and UK rates, asking the court to declare them illegal and seeking refunds; the Oregon Department of Justice federal litigation tracker records the filing that day and a court order of 2026-08-19 staying the states' case while the court adjudicates a sample case. The stay order, the complaint and the docket were not read, no injunction or merits ruling was found, and the suit is not reflected in court_status. The 2026-08-04 UK pharmaceutical notice was issued under Proclamation 11020 of 2026-04-02 and a US-UK pharmaceutical pricing arrangement announced the same day; the proclamation and the arrangement were not read.",
+  "updated_at": "2026-10-26"
 }

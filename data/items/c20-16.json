@@ -2,9 +2,9 @@
   "agency": "VA",
   "blockers": [],
   "chapter": "20",
-  "confidence": 72,
+  "confidence": 75,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter page 654 was re-read and the VA offices page, the Assistant Secretary biography and the 2026-06-24 VA statement were read this run; no order or effective date of the separation was found, so the record stays medium.",
+  "confidence_reason": "Chapter page 654 was re-read and the VA offices page, the Assistant Secretary biography and the 2026-06-24 VA statement were read in earlier runs. On 2026-10-26 the VA Office of Inspector General audit report 25-00523-82 of 2026-06-10 was read on vaoig.gov; it states that the Secretary directed consolidation of VA police under a unified command structure in April 2025 and later established the Office of Operations, Security, and Preparedness as a stand-alone organization, and it lists the Human Resources and Administration office and OSP as separate responsible offices. This is independent official confirmation that the separation exists, but the report gives no order, memorandum or effective date, so the record stays medium. Confidence 72 to 75.",
   "durability": {
     "level": "low",
     "why": "Internal organization can be redrawn by later leadership."
@@ -42,10 +42,14 @@
     {
       "date": "2026-10-25",
       "note": "Independent review on 2026-10-25 re-read chapter page 654, the VA offices page and staff biography on department.va.gov and the VA statement on docs.house.gov, replaced the testimony event with the December 2025 appointment and kept implemented 75."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 the research pass read VA OIG audit report 25-00523-82 on vaoig.gov, which states that OSP was established as a stand-alone organization but gives no order or effective date; confidence moved from 72 to 75 rather than the proposed 76. No change of stage or progress."
     }
   ],
   "id": "c20-16",
-  "last_checked": "2026-10-25",
+  "last_checked": "2026-10-26",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -113,13 +117,16 @@
     "flags": [
       "implemented 75 kept: two separate offices with separately appointed Assistant Secretaries are operative in substance and the recommendation only asks VA to consider decoupling. Alternative: in_progress 50, because VA described the reorganization as still being completed and no instrument or effective date was found.",
       "Whether the Assistant Secretary appointment was Senate-confirmed or acting is not stated on the VA page.",
-      "Motive differs from the Mandate's (VA Police chain of command versus staffing); alignment only."
+      "Motive differs from the Mandate's (VA Police chain of command versus staffing); alignment only.",
+      "Calibration pass 2026-10-26: Proposed 76 reduced to 75: a 'partly' finding moves at most a few points, and the OIG report confirms the separation's existence but not the blocker (order or effective date).",
+      "Calibration pass 2026-10-26: Date discrepancy to resolve: OIG places the police consolidation directive in April 2025, while Air Force Times (2026-06-25) describes the consolidation as announced in June 2026.",
+      "Calibration pass 2026-10-26: The OIG report may cite the Secretary's directive by name or date in its body or footnotes; reading the full PDF could supply the order the record lacks."
     ],
     "mandate_check": "verified",
     "mandate_note": "pages re-read 2026-10-25: the recommendation is on page 654 (the HRA section begins on page 651) and asks VA to consider decoupling HRA and the Office of Security and Preparedness because their functions are dissimilar; the proposal is accurate and pages [654] is correct.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-25",
-    "reviewer": "independent AI reviewer",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "VA administrations and offices page (last updated 2026-02-25) lists HRA and OSP as separate staff offices with separate named leaders. Establishes the separation as operative in substance; supports implemented 75.",
@@ -135,6 +142,11 @@
         "note": "VA written statement of 2026-06-24: VA is completing a reorganization giving OSP its own Assistant Secretary for a unified VA Police chain of command; cites no directive, memo or effective date. Consistent with the separation but describes the wider reorganization as still in progress.",
         "result": "partial",
         "url": "https://docs.house.gov/meetings/VR/VR08/20260624/119398/HHRG-119-VR08-Wstate-NealR-20260624.pdf"
+      },
+      {
+        "note": "2026-10-26: The OIG report says the Secretary directed consolidation of VA police under a unified command structure in April 2025 and later established the Office of Operations, Security, and Preparedness as a stand-alone organization; it gives no order or effective date.",
+        "result": "supports",
+        "url": "https://vaoig.gov/node/22860"
       }
     ]
   },
@@ -208,6 +220,13 @@
       "publisher": "Air Force Times",
       "title": "Following reports of staff shortages and safety concerns, VA to centralize its police force",
       "url": "https://www.airforcetimes.com/veterans/2026/06/25/following-reports-of-staff-shortages-and-safety-concerns-va-to-centralize-its-police-force/"
+    },
+    {
+      "date": "2026-06-10",
+      "kind": "primary",
+      "publisher": "Department of Veterans Affairs, Office of Inspector General",
+      "title": "Audit of VA's Police Staffing Decision Tool (Report 25-00523-82)",
+      "url": "https://vaoig.gov/node/22860"
     }
   ],
   "stage": "implemented",
@@ -223,6 +242,6 @@
   ],
   "title": "Consider separating VA's HR and Administration office from Security and Preparedness",
   "tracked": true,
-  "uncertainties": "The VA rule list on reginfo.gov (labeled Agency Rule List - 2026, 62 rules) lists no rulemaking on staff office structure, which would be internal. The separation rests on VA pages and a 2026-06-24 VA statement to Congress; no order, Federal Register notice or effective date was found, and the statement describes the reorganization as being completed. VA's stated purpose is a unified VA Police chain of command, not the staffing rationale the Mandate gives; the record reports alignment only. Some VA URLs still carry the combined office name. Whether the second Assistant Secretary position needed statutory change was not checked. Checked systematically on 2026-10-19. Refutation check on 2026-10-25: a news report dated 2026-06-25 (Air Force Times) says the police consolidation under the Office of Operations, Security, and Preparedness was announced that week and that officials expected the reorganization to be completed by October; it names no memo or order, so the effective date of the separation remains unknown and the reorganization may still have been in progress at the 2026-10-25 check. The department.va.gov offices page, fetched again, lists the Office of Human Resources and Administration and the Office of Operations, Security, and Preparedness as separate entries with separate named leaders. Federal Register API queries for VA documents naming either office (since 2025-06 and all years) returned no organizational notice or order; a 2026-01-15 Privacy Act notice mentions the security office only in passing. Review 2026-10-25: the 2026-06-24 VA written statement was moved out of the timeline because testimony describing a reorganization is not itself a government action; it stays in sources and supports the separate Assistant Secretary posts. The appointment event uses a month-only date from the VA biography (updated 2025-12-08), which does not say whether the appointment was Senate-confirmed or acting.",
-  "updated_at": "2026-10-25"
+  "uncertainties": "The VA rule list on reginfo.gov (labeled Agency Rule List - 2026, 62 rules) lists no rulemaking on staff office structure, which would be internal. The separation rests on VA pages, a 2026-06-24 VA statement to Congress and a VA OIG audit report of 2026-06-10 (No. 25-00523-82, read on vaoig.gov on 2026-10-26), which states that the Secretary directed consolidation of VA police under a unified command structure in April 2025 and later established the Office of Operations, Security, and Preparedness as a stand-alone organization, and which lists the Human Resources and Administration office and OSP as separate responsible offices; no order, Federal Register notice or effective date was found, and the 2026-06-24 statement describes the reorganization as being completed. VA's stated purpose is a unified VA Police chain of command, not the staffing rationale the Mandate gives; the record reports alignment only. Some VA URLs still carry the combined office name. Whether the second Assistant Secretary position needed statutory change was not checked. Checked systematically on 2026-10-19. Refutation check on 2026-10-25: a news report dated 2026-06-25 (Air Force Times) says the police consolidation under the Office of Operations, Security, and Preparedness was announced that week and that officials expected the reorganization to be completed by October; it names no memo or order, so the effective date of the separation remains unknown and the reorganization may still have been in progress at the 2026-10-25 check. The OIG report dates the consolidation directive to April 2025, while the Air Force Times report describes an announcement in the week of 2026-06-25; the two were not reconciled (they may describe a directive and a later implementation step). The department.va.gov offices page, fetched again, lists the Office of Human Resources and Administration and the Office of Operations, Security, and Preparedness as separate entries with separate named leaders. Federal Register API queries for VA documents naming either office (since 2025-06 and all years) returned no organizational notice or order; a 2026-01-15 Privacy Act notice mentions the security office only in passing. Review 2026-10-25: the 2026-06-24 VA written statement was moved out of the timeline because testimony describing a reorganization is not itself a government action; it stays in sources and supports the separate Assistant Secretary posts. The appointment event uses a month-only date from the VA biography (updated 2025-12-08), which does not say whether the appointment was Senate-confirmed or acting.",
+  "updated_at": "2026-10-26"
 }

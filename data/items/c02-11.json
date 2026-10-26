@@ -2,9 +2,9 @@
   "agency": "OMB (Made in America Office)",
   "blockers": [],
   "chapter": "02",
-  "confidence": 68,
+  "confidence": 71,
   "confidence_label": "medium",
-  "confidence_reason": "The FAR rule text was fetched and read and its references to the Made in America Office confirmed; EO 14392 and the undated madeinamerica.gov page were read; the office's continuation rests on that undated site and on no revocation found, and no primary evidence of strengthening was found.",
+  "confidence_reason": "The FAR rule text, EO 14392 and the undated madeinamerica.gov page were read in earlier reviews. On 2026-10-26 a Federal Transit Administration waiver notice of 2026-06-30 (91 FR 39665) was read on federalregister.gov; it states that the proposed waiver was submitted to the Made in America Office at OMB for publication, so the office's operation in 2026 now rests on a dated primary document rather than only on the undated site. No revocation of EO 14005 and no primary evidence of strengthening the office were found, so the finding is partial and the record moves three points within medium rather than the four proposed.",
   "durability": {
     "level": "medium",
     "why": "Buy American requirements rest partly on statute, though the office and waiver practice are executive choices."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift with independent AI review: FAR rule references to the office confirmed and the summary corrected to the preamble wording; stage unchanged."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 an FTA Buy America waiver notice of 2026-06-30 was read on federalregister.gov, documenting the Made in America Office's operation in 2026; confidence moved from 68 to 71. No change of stage or progress."
     }
   ],
   "id": "c02-11",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-26",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -93,13 +97,16 @@
       "Red-team evidence objects well-formed; three entries were not opened and are context only",
       "Adjusted the new source's title and publisher to show the page is undated and the office sits in OMB",
       "V6: confirmed the FAR rule's references to the office in the Federal Register text; corrected the section cite from II.A to I.A and stated that the consultation step sits in the preamble and was dropped from the regulatory text.",
-      "Judgment call: implemented 65 kept because the office operates; in_progress 50 would be defensible because strengthening is unverified and the FAR rule was proposed before 2025-01-20."
+      "Judgment call: implemented 65 kept because the office operates; in_progress 50 would be defensible because strengthening is unverified and the FAR rule was proposed before 2025-01-20.",
+      "Calibration pass 2026-10-26: Cut the proposed +4 to +3 under the rule that a partial finding moves a record by at most a few points.",
+      "Calibration pass 2026-10-26: The source list holds two madeinamerica.gov entries (with and without trailing slash, dated 2026-10-10 and 2026-10-13); maintainer may merge them.",
+      "Calibration pass 2026-10-26: Strengthening of the office remains the open question; an OMB memorandum or budget document naming the office would be the deciding evidence."
     ],
     "mandate_check": "verified",
     "mandate_note": "Page 49 says the Made in America Office, created under the prior administration on earlier groundwork, should be continued and further strengthened; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V6",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "GSA-run site; agencies submit waivers to the OMB Made in America Office for review; FAQ names the current President's Made in America policies; no executive order number cited; undated.",
@@ -110,6 +117,11 @@
         "note": "Full text: 90 FR 20220, effective 2025-06-11, proposed at 89 FR 84505 on 2024-10-23; 39 articles remain; sec. I.A names the Director of OMB's Made in America Office as a consultee in procedures for future list changes, which the Councils intend to follow though proposed paragraph (b) was dropped from the FAR text; sec. IV describes the office sharing market research and giving waiver feedback (checked 2026-10-18).",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/full_text/text/2025/05/12/2025-08022.txt"
+      },
+      {
+        "note": "2026-10-26: FTA notice states the proposed waiver was submitted to the Made in America Office at OMB for publication under section 70914(c)(1) of the Build America, Buy America Act; it says nothing about strengthening the office.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2026/06/30/2026-13165/notice-of-proposed-buy-america-waiver-for-north-county-transit-district-dmu-replacement-parts-and"
       }
     ]
   },
@@ -161,6 +173,13 @@
       "publisher": "Federal Register",
       "title": "Federal Register API search results for Made in America Office, 2025-01-20 onward",
       "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22Made+in+America+Office%22&conditions[publication_date][gte]=2025-01-20&order=newest"
+    },
+    {
+      "date": "2026-06-30",
+      "kind": "primary",
+      "publisher": "Federal Register (Federal Transit Administration)",
+      "title": "Notice of Proposed Buy America Waiver for North County Transit District DMU Replacement Parts and Request for Comment (91 FR 39665)",
+      "url": "https://www.federalregister.gov/documents/2026/06/30/2026-13165/notice-of-proposed-buy-america-waiver-for-north-county-transit-district-dmu-replacement-parts-and"
     }
   ],
   "stage": "implemented",
@@ -183,6 +202,6 @@
   ],
   "title": "Continue and strengthen the Made in America Office's Buy American work",
   "tracked": true,
-  "uncertainties": "The madeinamerica.gov page is undated; the date shown for that source is the access date. Whether EO 14005 remains in force was not confirmed beyond finding no revocation in the Federal Register API (nine documents from 2025-01-20 mention the office, mostly waiver notices and the FAR overhaul proposal, none revoking it) and the site still operating. EO 14392 does not name the office, so it is not evidence of strengthening the office itself. The FAR overhaul proposal of 2026-09-18 and waiver notices were not opened. A 2025-2026 OMB memo on domestic preferences was not found. Match is partial because the office's own strengthening is unverified. The FAR rule was proposed on 2024-10-23, before 2025-01-20, and finalized on 2025-05-12; the office consultation appears only in its preamble, not in the FAR text.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "The madeinamerica.gov page is undated; the date shown for that source is the access date. A Federal Transit Administration notice of proposed Buy America waiver published 2026-06-30 (91 FR 39665), read on federalregister.gov on 2026-10-26, states that FTA submitted the proposed waiver to the Made in America Office at OMB for publication, which shows the office receiving waivers in 2026 and supports continuation but not strengthening. Whether EO 14005 remains in force was not confirmed beyond finding no revocation in the Federal Register API (nine documents from 2025-01-20 mention the office, mostly waiver notices and the FAR overhaul proposal, none revoking it), no revocation or amendment in a further federalregister.gov search on 2026-10-26, and the site still operating; the absence of a search hit is not confirmation that the order is in force. EO 14392 does not name the office, so it is not evidence of strengthening the office itself. The FAR overhaul proposal of 2026-09-18 was not opened, and of the waiver notices only the 2026-06-30 FTA notice was opened. A 2025 or 2026 OMB memo on domestic preferences was not found; a whitehouse.gov search on 2026-10-26 returned only the 2021 and 2022 memoranda (M-21-26, M-22-11). Match is partial because the office's own strengthening is unverified. The FAR rule was proposed on 2024-10-23, before 2025-01-20, and finalized on 2025-05-12; the office consultation appears only in its preamble, not in the FAR text.",
+  "updated_at": "2026-10-26"
 }

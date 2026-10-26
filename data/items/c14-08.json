@@ -7,9 +7,9 @@
     "Hospital condition of participation rule not yet final"
   ],
   "chapter": "14",
-  "confidence": 78,
-  "confidence_label": "medium",
-  "confidence_reason": "Document text checked in earlier reviews (pages 474, 475, 491, 495 and 496). CMS-2451-F was confirmed on its Federal Register API record (91 FR 52406, effective 2026-10-13, no corrections), and its operative sections were read in the draft pass with the last part of the web text cut off. The two D.N.H. orders in Goe v. HHS (2026-10-05 and 2026-10-06) were opened and read as court documents hosted by the Georgetown Law Litigation Tracker. Not read: the D.N.H. and D. Mass. dockets, the government's 2026-10-15 response, and any event after 2026-10-06; the absence of an injunction after that date rests on searches and the scheduled 2026-10-30 hearing.",
+  "confidence": 80,
+  "confidence_label": "high",
+  "confidence_reason": "Rule applied: under the project's host ruling, the Georgetown Law Litigation Tracker qualifies for court documents and docket facts. Document text was checked in earlier reviews (pages 474, 475, 491, 495 and 496), CMS-2451-F was read on federalregister.gov through its operative provisions (91 FR 52406, effective 2026-10-13), and the two D.N.H. orders of 2026-10-05 and 2026-10-06 in Goe v. HHS were read on the tracker. On 2026-10-26 the tracker page for Goe v. HHS, last updated 2026-10-23, was re-read: it lists the defendants' responses of 2026-10-15 and the plaintiffs' replies of 2026-10-22, shows briefing ongoing with a preliminary injunction hearing set for 2026-10-30, and shows no ruling, injunction or stay; the HHS guidance portal entry for the rule was read on hhs.gov. The rule's final portion after the severability discussion, the 2026-10-15 and 2026-10-22 filings and the D. Mass. docket remain unread, and the absence of relief in the multistate suit rests on searches, so the record enters the high band at its floor. Confidence 78 to 80.",
   "court_status": {
     "basis": "Latest court event in the timeline: the D.N.H. scheduling order of 2026-10-06 in Goe v. HHS (No. 26-cv-803), which follows the 2026-10-05 denial of temporary restraining order relief, grants no interim relief, and sets a preliminary injunction hearing for 2026-10-30 with the plaintiffs' reply due 2026-10-22. Both orders were read as PDFs hosted by the Georgetown Law Litigation Tracker, not from the court docket. The multistate suit (State of Illinois v. HHS, D. Mass., filed 2026-09-02) has no ruling found. The rule took effect 2026-10-13 and no injunction, stay or vacatur was found.",
     "date": "2026-10-06",
@@ -52,10 +52,14 @@
     {
       "date": "2026-10-18",
       "note": "Primary-source lift with independent AI review: Goe v. HHS orders confirmed as court documents; court_status stays pending at the 2026-10-06 scheduling order, and the 2026-10-05 event wording was corrected."
+    },
+    {
+      "date": "2026-10-26",
+      "note": "On 2026-10-26 the research pass re-read the Georgetown Law Litigation Tracker page for Goe v. HHS (updated 2026-10-23), which shows briefing ongoing and no ruling, and read the HHS guidance portal entry for CMS-2451-F; confidence moved from 78 to 80. No change of stage or progress."
     }
   ],
   "id": "c14-08",
-  "last_checked": "2026-10-18",
+  "last_checked": "2026-10-26",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -143,13 +147,17 @@
       "Corrected the 2026-10-05 event: the order leaves the defendants' response on its existing 2026-10-15 date rather than setting it.",
       "Superseded tracker-only wording about the 2026-10-05 order in uncertainties replaced with a pointer to the later reading.",
       "Confidence 68 to 78 (medium): court orders and the rule record read; dockets and post-2026-10-06 events not read.",
-      "Removed a clause about a news report's publication from the 2026-10-01 court event."
+      "Removed a clause about a news report's publication from the 2026-10-01 court event.",
+      "Calibration pass 2026-10-26: Recheck on or after 2026-10-30: the D.N.H. preliminary injunction hearing in Goe v. HHS could change court_status and the stage.",
+      "Calibration pass 2026-10-26: The tracker source already in the record carries the date 2026-10-07; the maintainer should update it to 2026-10-23 (not re-added here, per the tracker rule).",
+      "Calibration pass 2026-10-26: court_status left unchanged: party filings of 2026-10-15 and 2026-10-22 are not court events; the latest court event is still the 2026-10-06 scheduling order.",
+      "Calibration pass 2026-10-26: The 'cleared' label is overstated: the rule's final portion and the D. Mass. docket remain unread. 80 is accepted because the stage-deciding rule and the court orders are read on qualifying hosts."
     ],
     "mandate_check": "pages re-read",
     "mandate_note": "Page 474 asks CMS to reissue a stronger coverage determination on gender reassignment surgery; page 491 asks HHS to withdraw support for gender transition interventions; pages 495 and 496 ask OCR to remove gender identity guidance including the May 2021 notice, to state that it will not enforce gender identity discrimination bans under Section 1557, and to propose restoring the 2020 regulation; the CHIP redefinition point appears on page 475. The proposal paraphrase is faithful; the Medicaid funding rule is a partial match.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-18",
-    "reviewer": "V5",
+    "reviewed_at": "2026-10-26",
+    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
     "source_checks": [
       {
         "note": "Opened 2026-10-16 (found by a search on 2026-10-16 for state lawsuits over the CMS Medicaid and CHIP rule): caption D. Mass. No. 26-cv-14051, State of Illinois and 21 other plaintiffs v. HHS, Kennedy, CMS and Oz, filed 2026-09-02, challenging the rule at 91 FR 52406; prayer seeks declaration, vacatur and an injunction in plaintiff states.",
@@ -190,6 +198,16 @@
         "note": "Endorsed order entered 2026-10-06: objection due 2026-10-15, reply 2026-10-22, preliminary injunction hearing 2026-10-30 at 10:00; no interim relief; the excerpt carries no caption but refers to the earlier TRO denial; checked 2026-10-18.",
         "result": "supports",
         "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2026/10/Goe_2026.10.06_SCHEDULING-ORDER.pdf"
+      },
+      {
+        "note": "2026-10-26: The tracker page (last updated 2026-10-23) lists defendants' responses of 2026-10-15 and plaintiffs' replies of 2026-10-22, gives the status as briefing ongoing with a hearing set for 2026-10-30, and shows no ruling, injunction or stay.",
+        "result": "supports",
+        "url": "https://litigationtracker.law.georgetown.edu/litigation/goe-et-al-v-department-of-health-and-human-services-et-al/"
+      },
+      {
+        "note": "2026-10-26: The HHS guidance portal entry says the final rule prohibits the use of federal Medicaid dollars to fund sex-rejecting procedures for individuals under 18; it states no effective date, stay or litigation.",
+        "result": "supports",
+        "url": "https://www.hhs.gov/guidance/document/final-rule-prohibition-federal-medicaid-and-chip-funding-sex-rejecting-procedures"
       }
     ]
   },
@@ -304,6 +322,13 @@
       "publisher": "U.S. District Court, D.N.H. (via Georgetown Law Litigation Tracker)",
       "title": "Goe v. HHS, Scheduling Order",
       "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2026/10/Goe_2026.10.06_SCHEDULING-ORDER.pdf"
+    },
+    {
+      "date": "2026-08-11",
+      "kind": "primary",
+      "publisher": "U.S. Department of Health and Human Services",
+      "title": "Final Rule: Prohibition on Federal Medicaid and CHIP Funding for Sex Rejecting Procedures Furnished to Children and Youth (CMS-2451-F), guidance portal entry",
+      "url": "https://www.hhs.gov/guidance/document/final-rule-prohibition-federal-medicaid-and-chip-funding-sex-rejecting-procedures"
     }
   ],
   "stage": "implemented",
@@ -396,6 +421,6 @@
   ],
   "title": "Reverse Section 1557 gender identity rule; end federal funding of youth gender transition",
   "tracked": true,
-  "uncertainties": "Checked 2026-10-14: searches and a litigation tracker page found no injunction, stay or ruling on the merits in the multistate D. Mass. suit; a news report (NHPR, 2026-10-02) says that suit does not seek emergency relief. The D. Mass. docket itself was not reachable. The separate New Hampshire suit: plaintiffs' counsel (ACLU of New Hampshire) lists it as Goe v. HHS, D.N.H. No. 1:26-cv-00803, filed 2026-10-01, with no orders shown as of that page's 2026-10-01 update; a litigation tracker (a lead, not a cited source, not verified against the court record) lists expedited preliminary injunction motion filed 2026-10-01, an order on 2026-10-05, a scheduling order 2026-10-06, and the government response due 2026-10-15, with no grant of relief shown (both orders were later read; see the primary-source lift note below). A Federal Register search from 2026-08-14 for the rule's terms returned no delay or stay document. Appeal status of Tennessee v. Kennedy rests on a clearinghouse page that shows no appeal of the 2025-10-22 judgment (updated 2026-06-23, docket excerpt incomplete). The hospital condition of participation final rule: none found in the Federal Register through 2026-10-13; mid-July 2026 trade reporting says it was under OMB review and that a separate Oregon court had enjoined CMS from implementing the proposal, not independently verified. The Marketplace essential health benefit exclusion (2025-06-25 rule) is known only from its abstract. Several states said they will continue coverage with state funds, so practical effect varies by state. HHS uses the term 'sex-rejecting procedures'; the Mandate uses different terminology. Reviewer check 2026-10-14: two news searches and the Federal Register record (effective 2026-10-13, no corrections, no related delay or stay document) found no injunction or stay; the D.N.H. and D. Mass. dockets were not readable. Freshness pass of 2026-10-16: the Federal Register API for the rule's terms from 2026-08-14 returned only two information-collection notices (a Medicaid and CHIP state plan template and a HRSA reporting instrument), no delay, stay, correction or hospital condition of participation final rule. The Georgetown litigation tracker page for Goe v. HHS (last updated 2026-10-07; judge listed as Steven J. McAuliffe) still lists the 2026-10-05 order of undetermined content, the 2026-10-06 scheduling order and the government response due 2026-10-15, with no ruling shown; the plaintiffs' counsel page showed only the complaint and no orders, and no news of a ruling after 2026-10-15 was found in three searches. The government's response filed on or about 2026-10-15 was not located. Independent review 2026-10-16: the complaint in the multistate case, hosted by the Georgetown tracker, is captioned State of Illinois v. U.S. Department of Health and Human Services, D. Mass. No. 26-cv-14051, and seeks a declaration, vacatur and an injunction in the plaintiff states; no separate preliminary relief motion was found, which is consistent with the NHPR report. A case number and a partial summary judgment motion attributed earlier in this pass to the multistate suit were removed: the case number came from search-result titles only, and the National Health Law Program amicus page concerns Massachusetts v. Oz, a different suit over an interim final rule on the Medicaid medically frail exemption. Two news searches on 2026-10-16 found no ruling in either case. No injunction, stay or merits ruling was found in either case. Primary-source lift 2026-10-18: the two D.N.H. orders (2026-10-05 and 2026-10-06) were read as PDFs hosted by the Georgetown tracker, and the earlier tracker-only description of the 2026-10-05 order of undetermined content is resolved as a denial of temporary restraining order relief. The government response of 2026-10-15 was listed by the tracker but its text was not read. The final 31,853 characters of the rule's web text (after the severability discussion) were not read; the operative provisions and the 42 CFR 441 Subpart N sections were read. The D. Mass. docket was not reachable. One news search that surfaced a 2020 HHS-rule injunction story (a different matter) was disregarded.",
-  "updated_at": "2026-10-18"
+  "uncertainties": "Checked 2026-10-14: searches and a litigation tracker page found no injunction, stay or ruling on the merits in the multistate D. Mass. suit; a news report (NHPR, 2026-10-02) says that suit does not seek emergency relief. The D. Mass. docket itself was not reachable. The separate New Hampshire suit: plaintiffs' counsel (ACLU of New Hampshire) lists it as Goe v. HHS, D.N.H. No. 1:26-cv-00803, filed 2026-10-01, with no orders shown as of that page's 2026-10-01 update; the Georgetown Law Litigation Tracker lists an expedited preliminary injunction motion filed 2026-10-01, an order on 2026-10-05, a scheduling order 2026-10-06, and the government response due 2026-10-15 (both orders were later read; see the primary-source lift note below). A Federal Register search from 2026-08-14 for the rule's terms returned no delay or stay document. Appeal status of Tennessee v. Kennedy rests on a clearinghouse page that shows no appeal of the 2025-10-22 judgment (updated 2026-06-23, docket excerpt incomplete). The hospital condition of participation final rule: none found in the Federal Register through 2026-10-13; mid-July 2026 trade reporting says it was under OMB review and that a separate Oregon court had enjoined CMS from implementing the proposal, not independently verified. The Marketplace essential health benefit exclusion (2025-06-25 rule) is known only from its abstract. Several states said they will continue coverage with state funds, so practical effect varies by state. HHS uses the term 'sex-rejecting procedures'; the Mandate uses different terminology. Reviewer check 2026-10-14: two news searches and the Federal Register record (effective 2026-10-13, no corrections, no related delay or stay document) found no injunction or stay; the D.N.H. and D. Mass. dockets were not readable. Freshness pass of 2026-10-16: the Federal Register API for the rule's terms from 2026-08-14 returned only two information-collection notices (a Medicaid and CHIP state plan template and a HRSA reporting instrument), no delay, stay, correction or hospital condition of participation final rule. The Georgetown litigation tracker page for Goe v. HHS (then last updated 2026-10-07; judge listed as Steven J. McAuliffe) listed the 2026-10-05 order of undetermined content, the 2026-10-06 scheduling order and the government response due 2026-10-15, with no ruling shown; the plaintiffs' counsel page showed only the complaint and no orders. Independent review 2026-10-16: the complaint in the multistate case, hosted by the Georgetown tracker, is captioned State of Illinois v. U.S. Department of Health and Human Services, D. Mass. No. 26-cv-14051, and seeks a declaration, vacatur and an injunction in the plaintiff states; no separate preliminary relief motion was found, which is consistent with the NHPR report. A case number and a partial summary judgment motion attributed earlier in this pass to the multistate suit were removed: the case number came from search-result titles only, and the National Health Law Program amicus page concerns Massachusetts v. Oz, a different suit over an interim final rule on the Medicaid medically frail exemption. Two news searches on 2026-10-16 found no ruling in either case. Primary-source lift 2026-10-18: the two D.N.H. orders (2026-10-05 and 2026-10-06) were read as PDFs hosted by the Georgetown tracker, and the earlier tracker-only description of the 2026-10-05 order of undetermined content is resolved as a denial of temporary restraining order relief. The final 31,853 characters of the rule's web text (after the severability discussion) were not read; the operative provisions and the 42 CFR 441 Subpart N sections were read. One news search that surfaced a 2020 HHS-rule injunction story (a different matter) was disregarded. Review of 2026-10-26: the Georgetown tracker page for Goe v. HHS, last updated 2026-10-23, lists the defendants' responses of 2026-10-15 and the plaintiffs' replies of 2026-10-22 on the preliminary injunction and pseudonymity motions, shows briefing ongoing with the preliminary injunction hearing set for 2026-10-30, and shows no ruling, injunction or stay; the filings themselves were not opened, and no CourtListener docket for the case was found in one search. The HHS guidance portal entry for the rule (hhs.gov, 2026-08-11) summarizes the prohibition on federal Medicaid funding for these procedures for people under 18 and states no effective date, stay or litigation. No injunction, stay or merits ruling was found in either case as of 2026-10-26; the court status should be rechecked after the 2026-10-30 hearing.",
+  "updated_at": "2026-10-26"
 }
