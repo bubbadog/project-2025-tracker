@@ -6,7 +6,7 @@
   "chapter": "15",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Document text was checked in an earlier review and both withdrawal notices (91 FR 17291 and 91 FR 44867) were read in full on federalregister.gov. On 2026-10-26 four searches of hud.gov and federalregister.gov for a HUD-hosted copy of the 2025-09-17 FHEO memo, a further withdrawal notice from another program office or a HUD release on the sub-regulatory review returned only the two known notices and trade-association summaries, so nothing new was opened and the balance between operative in substance and formally underway is unchanged.",
+  "confidence_reason": "Document text was checked in an earlier review and both withdrawal notices (91 FR 17291 and 91 FR 44867) were read in full on federalregister.gov. On 2026-10-26 four searches of hud.gov and federalregister.gov for a HUD-hosted copy of the 2025-09-17 FHEO memo, a further withdrawal notice from another program office or a HUD release on the sub-regulatory review returned only the two known notices and trade-association summaries, so nothing new was opened and the balance between operative in substance and formally underway is unchanged. Review of 2026-10-27: the State of Illinois v. HUD complaint (RECAP copy) and Clearinghouse docket summary were read and show no challenge or ruling reaching the withdrawals; nothing changes the balance, so confidence 78 holds.",
   "durability": {
     "level": "medium",
     "why": "Guidance withdrawals can be reversed by reissuing guidance."
@@ -44,10 +44,14 @@
     {
       "date": "2026-10-26",
       "note": "On 2026-10-26 four searches of hud.gov and federalregister.gov for the 2025-09-17 FHEO memo, further withdrawal notices or a release on the review found nothing new, and no document was opened; confidence stayed at 78. No change of stage or progress."
+    },
+    {
+      "date": "2026-10-27",
+      "note": "independent review; State of Illinois v. HUD (N.D. Cal.) complaint read on CourtListener RECAP and docket on the Clearinghouse; it does not target the guidance withdrawals and is listed as dismissed on 2026-09-02; redteam holds; stage implemented 65 held; confidence 78 held."
     }
   ],
   "id": "c15-10",
-  "last_checked": "2026-10-26",
+  "last_checked": "2026-10-27",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -57,6 +61,32 @@
   "position": "First-Day and First-Year Administrative Reforms",
   "progress": 65,
   "proposal": "The Mandate recommends that the Office of the Secretary or the Office of General Counsel conduct a thorough review of all subregulatory guidance issued outside the Administrative Procedure Act process, as the starting point for its other first-year reversals. It treats such guidance as a channel for policy changes that bypass public comment.",
+  "redteam": {
+    "date": "2026-10-27",
+    "evidence": [
+      {
+        "date": "2026-03-16",
+        "note": "Challenges the FHAP substantial-equivalence and reimbursement change and Attachment F conditions (15 states and D.C. per the complaint); the withdrawal memo is described in paragraph 54(c) as a component but is not a challenged provision.",
+        "source": "N.D. Cal. complaint",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465945/gov.uscourts.cand.465945.1.0.pdf"
+      },
+      {
+        "date": "2026-10-26",
+        "note": "No merits ruling; joint stipulation of dismissal without prejudice (ECF 93) dated 2026-09-02 and closing date 2026-09-02 listed, not confirmed on the docket excerpt.",
+        "source": "Civil Rights Litigation Clearinghouse",
+        "url": "https://clearinghouse.net/case/47908"
+      },
+      {
+        "date": "2026-10-27",
+        "note": "No further HUD guidance withdrawal notice between 2026-07-18 and 2026-10-27 (first page of 63).",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=housing-and-urban-development-department&conditions%5Bpublication_date%5D%5Bgte%5D=2026-07-18&per_page=40"
+      }
+    ],
+    "note": "No refutation found. Stage stays implemented (65): two rounds of withdrawals are operative, but no inventory of the comprehensive review exists and no rounds from other offices were found. The primary hud.gov copy of the 2025-09-17 memo remains unlocated (animallaw.info copy in use). The state suit, listed by the Clearinghouse as voluntarily dismissed without prejudice on 2026-09-02, never sought relief aimed at the withdrawals.",
+    "verdict": "holds",
+    "what_was_tested": "Searched for litigation, injunction or vacatur against the HUD guidance withdrawals (2025-09-17 memo, 91 FR 17291, 91 FR 44867) and for further withdrawal notices; fetched the related state attorneys general complaint and docket summary."
+  },
   "related_ids": [
     "c15-01"
   ],
@@ -68,16 +98,17 @@
   "research_agent": "N15",
   "review": {
     "flags": [
-      "No stage change: implemented 65, direct.",
-      "Alternative: in_progress 50, because documented results cover only the fair housing and general counsel offices; the call is evenly balanced.",
-      "Calibration pass 2026-10-26: No document was read; the record is unchanged apart from the search note.",
-      "Calibration pass 2026-10-26: animallaw.info is hosted by an academic center (Michigan State University College of Law); maintainer may consider whether it counts as a law school host for the memo copy, which could bear on the memo but not on the balance that keeps the record medium."
+      "Mandate text not re-read this run; prior check status (not_checked, per proposal field) kept.",
+      "Researcher's plaintiff count corrected from 16 states to 15 states and D.C. per the complaint caption list.",
+      "Redteam note corrected: the state suit is listed as dismissed on 2026-09-02, not pending.",
+      "No court_status set: the state suit does not challenge the withdrawals and is not a timeline event.",
+      "Stage implemented 65 held; in_progress 50 remains the balanced alternative."
     ],
     "mandate_check": "not_checked",
     "mandate_note": "Per the record's proposal field, page 508 recommends that the Office of the Secretary or the Office of General Counsel review all subregulatory guidance issued outside the APA process; the chapter text was not available this run.",
-    "model": "claude-opus",
-    "reviewed_at": "2026-10-26",
-    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
+    "model": "claude-opus-5-5",
+    "reviewed_at": "2026-10-27",
+    "reviewer": "R-2026-10-27",
     "second_review": {
       "balanced": true,
       "date": "2026-10-13",
@@ -88,34 +119,19 @@
     },
     "source_checks": [
       {
-        "note": "Read 2026-10-18: 91 FR 44867, Docket FR-6617-N-01, withdraws 13 OGC guidance documents effective 2025-09-25 under EO 14192 and EO 14219 and states HUD is undertaking a comprehensive review of its sub-regulatory guidance; no task force is mentioned. Supports implemented at the band floor with a direct match: the review is stated and results are operative.",
+        "note": "N.D. Cal. No. 3:26-cv-02262, filed 2026-03-16; eight counts aimed at the FHAP enforcement-policy change and Attachment F; the 2025-09-17 memo is context only (para. 54(c)). No threat to the withdrawals behind implemented 65. Plaintiff count is 15 states and D.C. (researcher said 16 states, from the Clearinghouse).",
+        "result": "supports",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465945/gov.uscourts.cand.465945.1.0.pdf"
+      },
+      {
+        "note": "No ruling; stipulated dismissal without prejudice (ECF 93) listed for 2026-09-02, unconfirmed; internally inconsistent status field. Does not bear on the stage.",
+        "result": "partial",
+        "url": "https://clearinghouse.net/case/47908"
+      },
+      {
+        "note": "Not re-opened this run; earlier full read carried forward (13 OGC withdrawals effective 2025-09-25, comprehensive review stated).",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14432/notice-of-the-withdrawal-of-ogc-guidance-documents"
-      },
-      {
-        "note": "Read in full 2026-10-18: 91 FR 17291, FHEO withdraws eight documents effective 2025-09-17 under a three-part test, cites EO 14192 and EO 14219, describes a comprehensive review and says FHEO is still reviewing its guidance; no task force is mentioned.",
-        "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/04/06/2026-06624/notification-of-withdrawal-of-fair-housing-and-equal-opportunity-guidance-documents"
-      },
-      {
-        "note": "Run 2026-10-18: five HUD documents since 2026-04-01; the only guidance withdrawal notices are the 2026-04-06 and 2026-07-17 notices; the others are waiver and demonstration notices.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=withdrawal+guidance&conditions[agencies][]=housing-and-urban-development-department&conditions[publication_date][gte]=2026-04-01&per_page=20&order=newest"
-      },
-      {
-        "note": "2026-10-23 lead-only pass: trade-association article, not opened; removed with its 2025-09-17 event. Not a basis for implemented 65.",
-        "result": "unreachable",
-        "url": "https://leadingage.org/hud-withdraws-wide-ranging-fair-housing-policies/"
-      },
-      {
-        "note": "2026-10-23: opened by the second-round researcher and re-opened by the reviewer; FHEO memo dated 2025-09-17, signed by the Principal Deputy Assistant Secretary, cites EO 14192 and EO 14219, applies a three-part test and withdraws nine documents. A copy, not the hud.gov original; supports the fair housing round behind implemented 65.",
-        "result": "supports",
-        "url": "https://www.animallaw.info/sites/default/files/Notice%20of%20the%20Withdrawal%20of%20FHEO%20Guidance%20Documents%202025_0.pdf"
-      },
-      {
-        "note": "2026-10-23: opened by the second-round researcher only; trade-association page confirming the memo circulated on 2025-09-17, no count. Lead only, not cited.",
-        "result": "partial",
-        "url": "https://www.nar.realtor/washington-report/hud-withdraws-fair-housing-guidance-documents"
       }
     ]
   },
@@ -190,6 +206,20 @@
       "publisher": "HUD Office of Fair Housing and Equal Opportunity",
       "title": "Notice of the Withdrawal of FHEO Guidance Documents (memo of 2025-09-17) (copy hosted by animallaw.info)",
       "url": "https://www.animallaw.info/sites/default/files/Notice%20of%20the%20Withdrawal%20of%20FHEO%20Guidance%20Documents%202025_0.pdf"
+    },
+    {
+      "date": "2026-03-16",
+      "kind": "court",
+      "publisher": "U.S. District Court, N.D. Cal. (RECAP copy on CourtListener)",
+      "title": "State of Illinois v. HUD, complaint (N.D. Cal. No. 3:26-cv-02262, Doc. 1)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.465945/gov.uscourts.cand.465945.1.0.pdf"
+    },
+    {
+      "date": "2026-10-26",
+      "kind": "tracker",
+      "publisher": "Civil Rights Litigation Clearinghouse",
+      "title": "Case: State of Illinois v. U.S. Department of Housing and Urban Development (N.D. Cal. No. 3:26-cv-02262)",
+      "url": "https://clearinghouse.net/case/47908"
     }
   ],
   "stage": "implemented",
@@ -226,6 +256,6 @@
   ],
   "title": "Review and withdraw HUD subregulatory guidance issued outside notice and comment",
   "tracked": true,
-  "uncertainties": "Both notices carry effective dates in September 2025, earlier than publication, because they formalize withdrawals made earlier. Both were read in full on federalregister.gov in review: the July 2026 notice (91 FR 44867) states that HUD is undertaking a comprehensive review of its sub-regulatory guidance, and the April 2026 notice (91 FR 17291) applies a three-part test (statutorily prescribed, consistent with statute or regulation, reduces compliance burdens) and says FHEO is still reviewing its guidance. A Federal Register API query of HUD documents since 2026-04-01, run in review on 2026-10-18, found only these two guidance withdrawal notices; no rounds from single family, public housing or community development offices were documented, and no inventory of reviewed guidance has been published. Searches on 2026-10-26 restricted to hud.gov and federalregister.gov found no HUD-hosted copy of the 2025-09-17 memo, no further withdrawal notice and no HUD release describing the comprehensive review; the only official texts remain the two Federal Register notices. The memo of 2025-09-17 was read as a copy hosted by animallaw.info (an academic animal-law center), not on hud.gov; it lists nine documents against eight in the April 2026 notice, and the two overlap almost entirely.",
-  "updated_at": "2026-10-26"
+  "uncertainties": "Both notices carry effective dates in September 2025, earlier than publication, because they formalize withdrawals made earlier. Both were read in full on federalregister.gov in review: the July 2026 notice (91 FR 44867) states that HUD is undertaking a comprehensive review of its sub-regulatory guidance, and the April 2026 notice (91 FR 17291) applies a three-part test (statutorily prescribed, consistent with statute or regulation, reduces compliance burdens) and says FHEO is still reviewing its guidance. A Federal Register API query of HUD documents since 2026-04-01, run in review on 2026-10-18, found only these two guidance withdrawal notices; no rounds from single family, public housing or community development offices were documented, and no inventory of reviewed guidance has been published. Searches on 2026-10-26 restricted to hud.gov and federalregister.gov found no HUD-hosted copy of the 2025-09-17 memo, no further withdrawal notice and no HUD release describing the comprehensive review; the only official texts remain the two Federal Register notices. The memo of 2025-09-17 was read as a copy hosted by animallaw.info (an academic animal-law center), not on hud.gov; it lists nine documents against eight in the April 2026 notice, and the two overlap almost entirely. Review of 2026-10-27: State of Illinois v. HUD, No. 3:26-cv-02262 (N.D. Cal., Judge Chhabria), filed 2026-03-16 by 15 states and the District of Columbia per the complaint (the Clearinghouse page says sixteen states and D.C.), challenges the Fair Housing Assistance Program guidance package of September 2025 (changes to substantial equivalence and reimbursement, and Attachment F grant conditions). The complaint, read on a RECAP copy, lists the 2025-09-17 FHEO withdrawal memo in paragraph 54(c) as one of three documents in the package but challenges it in no count and does not name it in the prayer for relief. The Clearinghouse page lists a joint stipulation of dismissal without prejudice (ECF 93) dated 2026-09-02 and a closing date of 2026-09-02, with no relief granted, while its summary still says ongoing; the stipulation itself was not read. The case does not change this record's stage, so no court_status is set. A Federal Register API query of HUD documents since 2026-07-18 (first page) showed no further guidance withdrawal notice.",
+  "updated_at": "2026-10-27"
 }
