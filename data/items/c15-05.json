@@ -36,10 +36,14 @@
     {
       "date": "2026-10-23",
       "note": "Lead-only source pass: a trade association's summary page (National Association of Realtors) was removed from sources; no timeline event, status sentence or blocker relied on it, and the stage rests on HUD and Federal Register documents. No new source was proposed, so no source check was added. Confidence unchanged at 82; stage and progress unchanged."
+    },
+    {
+      "date": "2026-10-27",
+      "note": "refutation check (holds); no injunction, rescission or reversal found, stage held."
     }
   ],
   "id": "c15-05",
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-10-27",
   "layer": 3,
   "match": "direct",
   "mechanism": "agency_action",
@@ -50,6 +54,32 @@
   "position": "First-Day and First-Year Administrative Reforms",
   "progress": 80,
   "proposal": "The Mandate recommends that HUD immediately end the policies adopted under the Property Appraisal and Valuation Equity (PAVE) effort and reverse other actions it sees as undermining the integrity of real estate appraisals. It frames the PAVE work as duplicative of existing federal data collection and as introducing arbitrary procedures into appraisals.",
+  "redteam": {
+    "date": "2026-10-27",
+    "evidence": [
+      {
+        "date": "2026-10-27",
+        "note": "HUD documents 2026-07-18 to 2026-10-27 (first page of 63): no appraisal-equity, PAVE or guidance reversal notice.",
+        "source": "Federal Register API",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bagencies%5D%5B%5D=housing-and-urban-development-department&conditions%5Bpublication_date%5D%5Bgte%5D=2026-07-18&per_page=40"
+      },
+      {
+        "date": "2025-07-10",
+        "note": "Coverage of the 2025-07-10 dissolution of PAVE-created policies; no later reversal reported in search results.",
+        "source": "American Banker (trade press)",
+        "url": "https://www.americanbanker.com/news/hud-dissolves-policies-created-by-pave-task-force"
+      },
+      {
+        "date": "2025-07-10",
+        "note": "Primary document for the termination of PAVE-era policies (already in the record).",
+        "source": "HUD release",
+        "url": "https://www.hud.gov/news/hud-no-25-092"
+      }
+    ],
+    "note": "No refutation found. Stage stays implemented because the changes are letters and withdrawals rather than rulemaking and are reversible.",
+    "verdict": "holds",
+    "what_was_tested": "Searched for a court challenge, injunction, reinstatement or reversal of ML 2025-08 and the 2025-07-10 termination of PAVE-era letters, and queried the Federal Register for HUD documents since 2026-07-18 for any contrary or follow-on appraisal action."
+  },
   "related_ids": [
     "c15-01"
   ],
@@ -189,5 +219,5 @@
   "title": "End the Biden-era PAVE appraisal-equity policies",
   "tracked": true,
   "uncertainties": "Mortgagee Letter 2025-08 and the HUD release of 2025-07-10 were read in full on hud.gov in review, and the 2026 OGC notice was read on govinfo.gov by the researcher; mortgagee letters are not published in the Federal Register. The release describes the task force as effectively disbanded in its headline but does not state a formal dissolution. The HUD superseded-documents page lists ML 2024-07 and ML 2021-27 as superseded but gives no supersession dates and omits ML 2024-16. The 2026 OGC notice does not mention PAVE, so it is recorded as a related guidance withdrawal. Whether Handbook 4000.1 was formally updated was not checked. The Mandate recommendation also covers other appraisal-integrity actions beyond PAVE, which were not separately searched. Law-firm and trade-press accounts (Orrick, HousingWire) are consistent with the HUD documents.",
-  "updated_at": "2026-10-23"
+  "updated_at": "2026-10-27"
 }

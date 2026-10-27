@@ -2,17 +2,18 @@
   "agency": "USDA (FNS) / HHS (CMS) / Treasury / Congress",
   "blockers": [
     "Marriage-penalty reform requires legislation across many programs, and none had passed as of the sources read",
-    "Litigation over early termination of SNAP waivers produced a USDA reversal on 2026-02-26 per Ballotpedia"
+    "Litigation over early termination of SNAP waivers ended with a stipulated dismissal on 2026-03-02 (case closed 2026-03-03)",
+    "A 26-plaintiff state challenge to the Medicaid community engagement interim final rule (Massachusetts v. Oz) is pending after a preliminary injunction was denied on 2026-07-29"
   ],
   "chapter": "00",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "The printed page 4 text was checked, and the USDA implementation memos, the CMS interim final rule and the coalition letter were fetched and read. The absence of enacted marriage-penalty changes rests on a limited search.",
+  "confidence_reason": "The printed page 4 text was checked in a prior review, and the USDA implementation memos, the CMS interim final rule and the coalition letter were fetched and read earlier. On 2026-10-27 the D.R.I. order (ECF 19) was read on CourtListener and the D.R.I. and D. Mass. dockets on the Civil Rights Litigation Clearinghouse; the lead-only Ballotpedia source was removed. The absence of enacted marriage-penalty changes still rests on a limited search.",
   "court_status": {
-    "basis": "Derived from the only court event in the timeline, a temporary restraining order of 2025-10-31 against early termination of SNAP waivers, as reported by Ballotpedia News; USDA guidance of 2026-02-26 kept the waivers to their original end dates. The order concerns waiver timing, not the statutory work requirements, which remain in effect.",
-    "date": "2025-10-31",
-    "state": "enjoined",
-    "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
+    "basis": "Latest court event: the 2026-07-29 denial without prejudice of a preliminary injunction against the CMS community engagement interim final rule in Massachusetts v. Oz (D. Mass.), which leaves the rule in effect while the merits case continues. The earlier D.R.I. waiver case (temporary restraining order 2025-10-31) was dismissed on stipulation and closed 2026-03-03; neither case restrains the statutory work requirements.",
+    "date": "2026-07-29",
+    "state": "pending",
+    "url": "https://clearinghouse.net/case/48333/"
   },
   "durability": {
     "level": "high",
@@ -35,10 +36,14 @@
     {
       "date": "2026-10-09",
       "note": "Cross-referenced to the chapter objectives this recommendation overlaps (a Foreword restatement; excluded from any full-set headline by design)."
+    },
+    {
+      "date": "2026-10-27",
+      "note": "independent review; Ballotpedia removed as lead-only; D.R.I. order read on CourtListener and dismissal read on the Clearinghouse; Massachusetts v. Oz preliminary injunction denial (2026-07-29, Clearinghouse) added; court_status moved from enjoined to pending; stage in_progress 50 held; confidence 80 held."
     }
   ],
   "id": "c00-10",
-  "last_checked": "2026-10-09",
+  "last_checked": "2026-10-27",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -68,44 +73,37 @@
   ],
   "review": {
     "flags": [
-      "court event marked as court; court_status added",
-      "stage confirmed"
+      "Mandate text not re-read this run; prior verified check (printed page 4) kept.",
+      "Ballotpedia removed (lead-only host); the 2026-02-26 USDA guidance claim it alone supported was taken out of the timeline and blockers.",
+      "Researcher missed Massachusetts v. Oz (D. Mass.), the 2026-07-29 preliminary injunction denial against the Medicaid community engagement rule (also in sibling c14-05); added and court_status re-derived to pending from it.",
+      "Dismissal event reworded: the Clearinghouse gives the stipulation date as 2026-03-02 and the mootness ground as benefit reinstatement, not only waiver expiry.",
+      "Stage in_progress 50 held."
     ],
     "mandate_check": "verified",
     "mandate_note": "Printed page 4 lists eliminating marriage penalties in federal welfare programs and the tax code and installing work requirements for food stamps as long-standing goals; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-09",
-    "reviewer": "Y3",
+    "model": "claude-opus-5-5",
+    "reviewed_at": "2026-10-27",
+    "reviewer": "R-2026-10-27",
     "source_checks": [
       {
-        "note": "Memo dated 2025-09-04; section 10102 changes effective on enactment 2025-07-04.",
+        "note": "ECF 19, 2025-11-01, Chief Judge McConnell: TRO mainly on SNAP contingency-fund payments; paragraph 7 bars early termination of ABAWD waivers. Supports the event as reworded; does not bear on the statutory work requirements, so in_progress holds.",
         "result": "supports",
-        "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-implementation.pdf"
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.rid.60750/gov.uscourts.rid.60750.19.0_5.pdf"
       },
       {
-        "note": "Dated 2025-10-03; time limit to age 64, child exception under 14, removed 2023 exceptions.",
+        "note": "D.R.I. No. 1:25-cv-00569: TROs 2025-10-31, 2025-11-01, 2025-11-06; no preliminary injunction; joint stipulation of dismissal ECF 53 on 2026-03-02; closed 2026-03-03. No mention of USDA guidance of 2026-02-26.",
         "result": "supports",
-        "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-abawd-exceptions-implementation.pdf"
+        "url": "https://clearinghouse.net/case/47097/"
       },
       {
-        "note": "Interim final rule 2026-06-03, effective 2026-07-31, ages 19 to 64, 80 hours, states by 2027-01-01.",
+        "note": "D. Mass. No. 1:26-cv-12962: filed 2026-06-29 by 25 states and D.C. against the community engagement IFR; preliminary injunction denied without prejudice 2026-07-29 (ECF 94). Rule stays in effect, consistent with the work-requirement half being operative.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/06/03/2026-11094/medicaid-program-community-engagement-requirement-for-certain-individuals"
+        "url": "https://clearinghouse.net/case/48333/"
       },
       {
-        "note": "Coalition letter of 2026-01-06 to the Speaker; treats marriage penalties as unaddressed.",
-        "result": "supports",
-        "url": "https://grothman.house.gov/uploadedfiles/2026_marriage_penalties_letter_to_speaker.docx.pdf"
-      },
-      {
-        "note": "Rhode Island TRO 2025-10-31; USDA guidance 2026-02-26.",
-        "result": "supports",
+        "note": "Lead-only host (Ballotpedia); not opened (redirect page per researcher) and removed from sources; its 2026-02-26 guidance claim moved to uncertainties as an unverified lead.",
+        "result": "does_not_support",
         "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
-      },
-      {
-        "note": "Bill would double the SALT cap for joint filers; no bill number or sponsor given.",
-        "result": "supports",
-        "url": "https://www.thinkadvisor.com/2026/07/13/new-bill-eliminates-salt-cap-marriage-penalty/"
       }
     ]
   },
@@ -144,13 +142,6 @@
       "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-abawd-exceptions-implementation.pdf"
     },
     {
-      "date": "2026-04-02",
-      "kind": "news",
-      "publisher": "Ballotpedia News",
-      "title": "USDA guidance in response to litigation reinstates SNAP benefits for some ABAWDs",
-      "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
-    },
-    {
       "date": "2026-01-06",
       "kind": "primary",
       "publisher": "Coalition letter hosted by Rep. Grothman",
@@ -170,10 +161,31 @@
       "publisher": "ThinkAdvisor",
       "title": "New bill eliminates SALT cap marriage penalty",
       "url": "https://www.thinkadvisor.com/2026/07/13/new-bill-eliminates-salt-cap-marriage-penalty/"
+    },
+    {
+      "date": "2025-11-01",
+      "kind": "court",
+      "publisher": "U.S. District Court, D.R.I.",
+      "title": "Rhode Island State Council of Churches v. Rollins, order (ECF 19)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.rid.60750/gov.uscourts.rid.60750.19.0_5.pdf"
+    },
+    {
+      "date": "2026-03-03",
+      "kind": "tracker",
+      "publisher": "Civil Rights Litigation Clearinghouse",
+      "title": "Case: Rhode Island State Council of Churches v. Rollins",
+      "url": "https://clearinghouse.net/case/47097/"
+    },
+    {
+      "date": "2026-10-26",
+      "kind": "tracker",
+      "publisher": "Civil Rights Litigation Clearinghouse",
+      "title": "Case: Commonwealth of Massachusetts v. Oz (D. Mass. No. 1:26-cv-12962)",
+      "url": "https://clearinghouse.net/case/48333/"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The work-requirement half is law and operative: Public Law 119-21 (signed 2025-07-04) raised the SNAP time-limit age for adults without dependents to 64, narrowed the child exemption to children under 14, removed exemptions for veterans, homeless people and former foster youth, and limited area waivers, effective on enactment, with USDA guidance in September and October 2025. The same law also requires Medicaid community engagement (80 hours a month) for expansion adults, implemented by a CMS interim final rule published 2026-06-03 (effective 2026-07-31; states must comply by 2027-01-01). The marriage-penalty half is not addressed in the sources read: a coalition letter to the House Speaker on 2026-01-06 treats welfare marriage-penalty reform as a future reconciliation goal, and a July 2026 report describes a bill to remove a marriage penalty in the state and local tax deduction cap, which is a proposal, not law.",
+  "status_summary": "The work-requirement half is law and operative: Public Law 119-21 (signed 2025-07-04) raised the SNAP time-limit age for adults without dependents to 64, narrowed the child exemption to children under 14, removed exemptions for veterans, homeless people and former foster youth, and limited area waivers, effective on enactment, with USDA guidance in September and October 2025. The same law also requires Medicaid community engagement (80 hours a month) for expansion adults, implemented by a CMS interim final rule published 2026-06-03 (effective 2026-07-31; states must comply by 2027-01-01). The marriage-penalty half is not addressed in the sources read: a coalition letter to the House Speaker on 2026-01-06 treats welfare marriage-penalty reform as a future reconciliation goal, and a July 2026 report describes a bill to remove a marriage penalty in the state and local tax deduction cap, which is a proposal, not law. The interim final rule is challenged by 25 states and the District of Columbia in Massachusetts v. Oz (D. Mass.), where a preliminary injunction was denied without prejudice on 2026-07-29, so the rule remains in effect. A Rhode Island temporary restraining order of 2025-10-31 against early termination of SNAP time-limit waivers ended with a stipulated dismissal in March 2026 and did not reach the statutory requirements.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -198,10 +210,10 @@
     },
     {
       "date": "2025-10-31",
-      "event": "The U.S. District Court for the District of Rhode Island issues a temporary restraining order halting USDA's planned early termination of certain SNAP time-limit waivers; USDA guidance of 2026-02-26 later keeps the affected waivers through their original end dates.",
+      "event": "The U.S. District Court for the District of Rhode Island (Rhode Island State Council of Churches v. Rollins, No. 1:25-cv-00569, Chief Judge McConnell) grants a temporary restraining order orally on 2025-10-31, written on 2025-11-01 (ECF 19); besides requiring SNAP benefit payments from contingency funds during the shutdown, paragraph 7 enjoins USDA from terminating able-bodied adults without dependents (ABAWD) waivers early on the ground that they were approved for lack of sufficient jobs.",
       "kind": "court",
-      "source": "Ballotpedia News",
-      "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
+      "source": "U.S. District Court, D.R.I. (order, via CourtListener)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.rid.60750/gov.uscourts.rid.60750.19.0_5.pdf"
     },
     {
       "date": "2026-01-06",
@@ -209,6 +221,13 @@
       "kind": "primary",
       "source": "Coalition letter hosted by Rep. Grothman",
       "url": "https://grothman.house.gov/uploadedfiles/2026_marriage_penalties_letter_to_speaker.docx.pdf"
+    },
+    {
+      "date": "2026-03-03",
+      "event": "The parties' joint stipulation of dismissal (ECF 53, filed 2026-03-02) ends Rhode Island State Council of Churches v. Rollins, and the case closes on 2026-03-03; the Civil Rights Litigation Clearinghouse summary describes the dismissal as moot and notes that the waivers at issue expired 2026-03-01.",
+      "kind": "court",
+      "source": "Civil Rights Litigation Clearinghouse",
+      "url": "https://clearinghouse.net/case/47097/"
     },
     {
       "date": "2026-06-03",
@@ -223,10 +242,17 @@
       "kind": "news",
       "source": "ThinkAdvisor",
       "url": "https://www.thinkadvisor.com/2026/07/13/new-bill-eliminates-salt-cap-marriage-penalty/"
+    },
+    {
+      "date": "2026-07-29",
+      "event": "In Commonwealth of Massachusetts v. Oz (D. Mass. No. 1:26-cv-12962, Judge Stearns), brought on 2026-06-29 by 25 states and the District of Columbia against the CMS community engagement interim final rule's narrowed exemptions, the court denies a preliminary injunction without prejudice for lack of irreparable harm, noting the federal government's representation that it will fund 90 percent of state system costs, and states it intends to reach the merits by 2027-01-01; the rule remains in effect.",
+      "kind": "court",
+      "source": "Civil Rights Litigation Clearinghouse",
+      "url": "https://clearinghouse.net/case/48333/"
     }
   ],
   "title": "Eliminate marriage penalties in welfare and taxes; add work requirements for food stamps",
   "tracked": true,
-  "uncertainties": "The statute text of Public Law 119-21 was not read directly for this record; SNAP changes come from the USDA memo and the Medicaid section number from the c14-05 record and the CMS rule. Whether the law changed any marriage penalties inside the tax code (for example in deductions, credits or phase-outs) was not systematically examined: a limited search found only advocacy briefs, a coalition letter and one trade-press bill report, none of which show an enacted elimination, so the absence of change is an inference from limited evidence. The Foreword's phrase food stamps maps to SNAP. The Ballotpedia item is a secondary summary. Related records c10-01 and c14-05 have more detail on each program. The SNAP time limit now reaches adults through age 64, per the USDA October 2025 guidance. The Rhode Island order was read only through a secondary summary.",
-  "updated_at": "2026-10-09"
+  "uncertainties": "The statute text of Public Law 119-21 was not read directly for this record; SNAP changes come from the USDA memo and the Medicaid section number from the c14-05 record and the CMS rule. Whether the law changed any marriage penalties inside the tax code (for example in deductions, credits or phase-outs) was not systematically examined: a limited search found only advocacy briefs, a coalition letter and one trade-press bill report, none of which show an enacted elimination, so the absence of change is an inference from limited evidence. The Foreword's phrase food stamps maps to SNAP. Related records c10-01 and c14-05 have more detail on each program. The SNAP time limit now reaches adults through age 64, per the USDA October 2025 guidance. The Rhode Island order of 2025-11-01 (ECF 19) was read on CourtListener and the docket history on the Clearinghouse; the Clearinghouse lists only temporary restraining orders, no preliminary injunction. Review of 2026-10-27: Ballotpedia News is a lead-only host and was removed as a source; its report that USDA guidance of 2026-02-26 kept the affected ABAWD waivers through their original end dates is an unverified lead, and the Clearinghouse page does not mention that guidance. The Clearinghouse summary gives the mootness ground as full reinstatement of SNAP benefits on 2025-11-12, while also noting waiver expiry on 2026-03-01; the stipulation itself was not read. The Massachusetts v. Oz denial was read on the Clearinghouse docket summary, not on the order (ECF 94), and sibling record c14-05 carries the same event; no later ruling there was found.",
+  "updated_at": "2026-10-27"
 }
