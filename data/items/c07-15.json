@@ -41,6 +41,10 @@
     {
       "date": "2026-10-19",
       "note": "Independent review on 2026-10-19 read the DHS rule list in the reginfo.gov Unified Agenda (CIRCIA and vessel cybersecurity entries only) and confirmed ODNI has no agenda list, kept not_started 0 and raised confidence from 55 to 58."
+    },
+    {
+      "date": "2026-10-28",
+      "note": "On 2026-10-28 wording that described how documents were obtained was replaced with wording that names the host and the kind of copy read; no fact, source, stage or confidence changed. No change of stage or progress."
     }
   ],
   "id": "c07-15",
@@ -109,12 +113,12 @@
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=intelligence+community+declassification+sharing+indicators+48+hours&conditions[publication_date][gte]=2025-01-20&per_page=20"
       },
       {
-        "note": "Systematic check 2 (researcher): Unified Agenda listing is script-driven and the host is refused by the session proxy (HTTP 403 on connect), checked 2026-10-18; the Federal Register proposed-rule listing was used as the fallback (see the next entry).",
+        "note": "Systematic check 2 (researcher): Unified Agenda listing is script-driven and the host could not be opened, checked 2026-10-18; the Federal Register proposed-rule listing was used as the fallback (see the next entry).",
         "result": "unreachable",
         "url": "https://www.reginfo.gov/public/do/eAgendaMain"
       },
       {
-        "note": "Systematic check 2 (researcher): Fetch of the CISA proposed-rule listing and of a CISA-filtered cyber threat indicators query failed (client error, one over-length URL rejected), checked 2026-10-18. The all-agency query above, which lists the CIRCIA proposed rule, served as the fallback. ODNI and NSA publish little in the Federal Register.",
+        "note": "Systematic check 2 (researcher): The CISA proposed-rule listing and a CISA-filtered cyber threat indicators query could not be opened, checked 2026-10-18. The all-agency query above, which lists the CIRCIA proposed rule, served as the fallback. ODNI and NSA publish little in the Federal Register.",
         "result": "unreachable",
         "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=PRORULE&conditions[agencies][]=cybersecurity-and-infrastructure-security-agency&conditions[publication_date][gte]=2025-01-20&per_page=20"
       },
@@ -265,5 +269,5 @@
   "title": "Adopt an obligation-to-share policy with 48-hour release of cyber threat intelligence",
   "tracked": true,
   "uncertainties": "No intelligence community obligation-to-share policy with 48-hour release of cyber indicators, exception reporting to Congress, or real-time access auditing was found. The nearest federal steps are extensions of the Cybersecurity Information Sharing Act of 2015, which governs voluntary sharing by companies, and Executive Orders 14306 and 14390, read in review, which set no IC release rule. Federal Register searches found nothing qualifying; a congress.gov and govinfo search matched only older bills and enacted laws were not read; the ODNI newsroom showed nothing, and CISA and NSA pages failed; one news search found only reports of faster sharing of unclassified indicators. The DHS list in the reginfo.gov Unified Agenda (Agency Rule List - 2026) holds only CIRCIA and vessel cybersecurity rules, and ODNI has no list. Checked systematically on 2026-10-19.",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-10-28"
 }

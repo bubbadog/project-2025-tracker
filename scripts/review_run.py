@@ -44,6 +44,15 @@ PUBLIC_EXCLUDE = {"review", "history", "redteam"}
 MINOR = {"history", "related_ids", "updated_at", "last_checked"}
 DASHES = ("—", "–")
 MODEL_WORDS = ("Claude", "Opus", "Sonnet", "Fable", "Muse ", "ChatGPT", "Perplexity")
+# Retrieval-method wording (owner decision 2026-10-28): public text says what was read and where
+# (host, kind of copy, date), never how (tools, browsers, proxies, tool errors). Narrow phrases only,
+# so records about browsers, proxy voting or tunnels are not caught.
+METHOD_RE = re.compile(
+    r"\b(browser retrieval|owner browser|in a browser|automated fetch\w*|automated access|fetch tools?|"
+    r"page fetch tool|research tools?|refuses? (?:automated|fetch)\w*|refused fetch\w*|blocked to automated|"
+    r"client[_ ]error|proxy (?:refused|error|returned)|tunnel failure)\b",
+    re.I,
+)
 # Hosts that are leads, never sources (owner decision 2026-10-23). Research institutions,
 # think tanks, trade press and law firms are not on this list on purpose.
 LEAD_HOSTS = (
@@ -124,6 +133,9 @@ def main() -> int:
         if words and re.search(r"\b(" + "|".join(re.escape(w.lower()) for w in words) + r")\b", pub, re.I):
             # same matcher as validate.py: whole words, any case ("adjusting" is not a hit)
             blocking.append(f"{k}: personal identifier in public text")
+        m = METHOD_RE.search(pub)
+        if m:
+            blocking.append(f"{k}: retrieval-method wording in public text ('{m.group(0)}')")
         for w in MODEL_WORDS:
             if re.search(r"\b" + re.escape(w.strip()) + r"\b", pub):
                 blocking.append(f"{k}: model or tool name '{w.strip()}' in public text")
