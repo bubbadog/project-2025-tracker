@@ -5,14 +5,14 @@
     "Statutory limits on eliminating agencies created by Congress"
   ],
   "chapter": "00",
-  "confidence": 68,
+  "confidence": 70,
   "confidence_label": "medium",
-  "confidence_reason": "Built from three sibling records with read primary sources; every event matches c03-01, c03-06 or c03-09; the combined stage is a judgment at the top of the band.",
+  "confidence_reason": "A composite of three detailed records; the OPM rules were confirmed through the Federal Register API and the sibling court sources were opened, but the stage is a judgment across records and the litigation outcome is open.",
   "court_status": {
-    "basis": "The Supreme Court stayed an injunction against Executive Order 14210 pending appeal; suits over Schedule Policy/Career placements remain pending.",
-    "date": "2025-07-08",
-    "state": "stayed",
-    "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24a1174.html"
+    "basis": "Derived from the latest court event across the detailed records: an amended complaint against the 2026-06-03 Schedule Policy/Career placement order was reported on 2026-06-25 in D.D.C. (c03-01), with no merits ruling or injunction found. Earlier, the Supreme Court stayed the injunction against Executive Order 14210 on 2025-07-08, and on 2026-01-02 the Ninth Circuit dismissed the government's appeal of a narrower shutdown-period reduction-in-force injunction that lapsed on 2026-01-30 (c03-06). The tracked actions are operative with litigation pending.",
+    "date": "2026-06-25",
+    "state": "pending",
+    "url": "https://news.bgov.com/daily-labor-report/groups-revive-challenge-to-trumps-at-will-civil-service-order"
   },
   "durability": {
     "level": "low",
@@ -35,10 +35,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-28",
+      "note": "Moved an OPM departure statistic and a press status report out of the timeline, added the 2026-09-18 and 2026-10-19 OPM rules, and updated the court status to pending using the Ninth Circuit dismissal and amended complaint verified in sibling records c03-06 and c03-01."
     }
   ],
   "id": "c00-18",
-  "last_checked": "2026-10-14",
+  "last_checked": "2026-10-28",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -72,17 +76,36 @@
   ],
   "review": {
     "flags": [
-      "restates_ids c03-01 (Schedule F), c03-06 (workforce size and RIFs) and c03-09 (cutting duplicated functions) confirmed; c03-09 is now in the folder and its stage (in_progress 30) and events match the draft.",
-      "Stage kept at in_progress 60; implemented 65 is defensible given the two implemented 75 firing-side records.",
-      "Noted the narrower 2025-12-17 RIF injunction recorded in c03-06; court_status kept as stayed for the Supreme Court order in this timeline.",
-      "No new fetches: all events are copies of sibling-record events with the same URLs."
+      "court_status updated from stayed to pending from sibling records",
+      "composite stage is a judgment"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 8 to 9, under Promise #2: a conservative President must end the abuses of presidential power it describes and remove the career and political bureaucrats who fuel them; the book lays out how to fire supposedly un-fireable bureaucrats and shutter wasteful and corrupt bureaus and offices. Paraphrase, pages and position confirmed.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y5",
-    "source_checks": []
+    "mandate_check": "verified",
+    "mandate_note": "The prior review of 2026-10-14 confirmed the paraphrase against pages 8 to 9; the proposal and pages fields are consistent with it, and the chapter text was not re-read.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-28",
+    "reviewer": "independent AI reviewer",
+    "source_checks": [
+      {
+        "note": "API record: OPM final rule, published 2026-10-19, 91 FR 65924, effective 2026-11-18; clarifies administrative leave for deferred resignation programs and RIF notice periods.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21320/administrative-leave-for-workforce-realignment-and-other-purposes"
+      },
+      {
+        "note": "API record: OPM proposed rule, 91 FR 59076, published 2026-09-18, comments close 2026-11-17, aligning excepted-service rules with Schedules Policy/Career and G.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19222/employment-in-the-excepted-service"
+      },
+      {
+        "note": "Ninth Circuit order of 2026-01-02 in No. 25-7998 granting the appellants' motion to dismiss under FRAP 42(b); order constitutes the mandate.",
+        "result": "supports",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.457131/gov.uscourts.cand.457131.149.0.pdf"
+      },
+      {
+        "note": "Report of 2026-06-25: GAP and NARFE filed an amended complaint in D.D.C. against the 2026-06-03 order; filing date not given.",
+        "result": "supports",
+        "url": "https://news.bgov.com/daily-labor-report/groups-revive-challenge-to-trumps-at-will-civil-service-order"
+      }
+    ]
   },
   "significance": {
     "B": 3,
@@ -175,10 +198,45 @@
       "publisher": "Federal Register / OPM",
       "title": "Reduction in Force (final rule)",
       "url": "https://www.federalregister.gov/documents/2026/08/03/2026-15665/reduction-in-force"
+    },
+    {
+      "date": "2026-07-06",
+      "kind": "news",
+      "publisher": "Federal News Network",
+      "title": "Federal employees face reality of Schedule Policy/Career",
+      "url": "https://federalnewsnetwork.com/workforce/2026/07/federal-employees-face-reality-of-schedule-policy-career/"
+    },
+    {
+      "date": "2026-09-18",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Employment in the Excepted Service",
+      "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19222/employment-in-the-excepted-service"
+    },
+    {
+      "date": "2026-10-19",
+      "kind": "primary",
+      "publisher": "Federal Register (OPM)",
+      "title": "Administrative Leave for Workforce Realignment and Other Purposes (final rule, 91 FR 65924)",
+      "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21320/administrative-leave-for-workforce-realignment-and-other-purposes"
+    },
+    {
+      "date": "2026-01-02",
+      "kind": "court",
+      "publisher": "U.S. Court of Appeals for the Ninth Circuit (copy on storage.courtlistener.com)",
+      "title": "Order granting motion to dismiss appeal, No. 25-7998 (9th Cir. Jan. 2, 2026), filed as Doc. 149 in AFGE v. OMB, No. 3:25-cv-08302-SI (N.D. Cal.)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.457131/gov.uscourts.cand.457131.149.0.pdf"
+    },
+    {
+      "date": "2026-06-25",
+      "kind": "news",
+      "publisher": "Bloomberg Government (Daily Labor Report)",
+      "title": "Groups Revive Challenge to Trump's At-Will Civil Service Order",
+      "url": "https://news.bgov.com/daily-labor-report/groups-revive-challenge-to-trumps-at-will-civil-service-order"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The removal tools the Foreword describes are in place: Schedule Policy/Career was reinstated by order on 2025-01-20, made at-will by OPM's final rule of 2026-02-06 and applied to listed positions by Executive Order 14410 of 2026-06-03 (see c03-01), and workforce reduction orders and an OPM reduction-in-force rule followed (see c03-06). Shuttering offices has begun with orders eliminating the non-statutory functions of eleven named entities in 2025 (see c03-09), while litigation over the placements is pending. The stage is derived from the three detailed records.",
+  "status_summary": "The removal tools the Foreword describes are in place: Schedule Policy/Career was reinstated by order on 2025-01-20, made at-will by OPM's final rule of 2026-02-06 and applied to listed positions by Executive Order 14410 of 2026-06-03 (see c03-01), and workforce reduction orders, an OPM reduction-in-force rule effective for notices on or after 2026-09-02 and an OPM administrative leave final rule published 2026-10-19 followed (see c03-06). Shuttering offices has begun with orders eliminating the non-statutory functions of eleven named entities in 2025 (see c03-09), while Federal News Network reported three lawsuits over the placements pending in July 2026 with no court rulings. The Supreme Court stayed an injunction against Executive Order 14210 on 2025-07-08, and an amended complaint against the placement order was reported on 2026-06-25; the stage is derived from the three detailed records.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -216,11 +274,11 @@
       "url": "https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24a1174.html"
     },
     {
-      "date": "2025-12-31",
-      "event": "OPM states that about 317,000 federal employees would leave in 2025, over 90 percent through voluntary programs.",
-      "kind": "primary",
-      "source": "OPM",
-      "url": "https://www.opm.gov/news/news-releases/under-president-trump-opm-delivers-a-more-accountable-and-effective-federal-workforce/"
+      "date": "2026-01-02",
+      "event": "The Ninth Circuit grants the government's motion to dismiss its own appeal (No. 25-7998) of the N.D. Cal. preliminary injunction of 2025-12-17 in AFGE v. OMB on shutdown-period reductions in force, by a clerk's order that constitutes the mandate (see c03-06).",
+      "kind": "court",
+      "source": "U.S. Court of Appeals for the Ninth Circuit (copy on storage.courtlistener.com)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.457131/gov.uscourts.cand.457131.149.0.pdf"
     },
     {
       "date": "2026-02-06",
@@ -237,15 +295,36 @@
       "url": "https://www.whitehouse.gov/presidential-actions/2026/06/implementing-schedule-policy-career-in-the-excepted-service/"
     },
     {
+      "date": "2026-06-25",
+      "event": "Bloomberg Government reports that the Government Accountability Project and the National Active and Retired Federal Employees Association have filed an amended complaint in the U.S. District Court for the District of Columbia challenging the 2026-06-03 placement order (about 8,000 employees) as exceeding presidential authority and violating the Civil Service Reform Act; the report gives no filing date (see c03-01).",
+      "kind": "news",
+      "source": "Bloomberg Government",
+      "url": "https://news.bgov.com/daily-labor-report/groups-revive-challenge-to-trumps-at-will-civil-service-order"
+    },
+    {
       "date": "2026-08-03",
       "event": "OPM final rule on reductions in force published (91 FR 49178), effective for notices issued on or after 2026-09-02.",
       "kind": "primary",
       "source": "Federal Register / OPM",
       "url": "https://www.federalregister.gov/documents/2026/08/03/2026-15665/reduction-in-force"
+    },
+    {
+      "date": "2026-09-18",
+      "event": "OPM proposes a rule, Employment in the Excepted Service (comments due 2026-11-17), updating excepted-service regulations to cover Schedule Policy/Career and Schedule G.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19222/employment-in-the-excepted-service"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "OPM publishes the final rule Administrative Leave for Workforce Realignment and Other Purposes (91 FR 65924, effective 2026-11-18), which clarifies when administrative leave may be used for deferred resignation programs and other workforce realignment and when it may be granted during a reduction-in-force notice period.",
+      "kind": "primary",
+      "source": "Federal Register (OPM)",
+      "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21320/administrative-leave-for-workforce-realignment-and-other-purposes"
     }
   ],
   "title": "Fire un-fireable career bureaucrats and shutter wasteful federal bureaus and offices",
   "tracked": true,
-  "uncertainties": "Stage derivation: c03-01 is implemented 75, c03-06 is implemented 75, c03-09 is in_progress 30. The two firing-side records would support implemented, but the Foreword also asks to shutter bureaus and the detailed record on cutting duplicated functions is only in_progress 30, so the combined stage is in_progress 60, the top of the band. Implemented 65 is defensible. c03-07 (political appointees) was left out of restates_ids because the sentence is about removing bureaucrats, and appears in related_ids and in c00-20. The copy of c03-09 was not in the folder; its stage comes from the existing listing and the two entity-closing orders were read on federalregister.gov in this run. The number of employees affected by Executive Order 14410 comes from press reports cited in c03-01, not from the order. The figure that about 317,000 federal employees would leave in 2025 is OPM's statement and includes voluntary departures, which are not removals. The Supreme Court stay is recorded as the court status; other suits are pending without rulings in the reports reviewed. c03-06 also records a narrower 2025-12-17 district court injunction on shutdown-period reductions in force (running through 2026-01-30), which is not repeated here; the court status reflects the Supreme Court stay of the broader injunction against Executive Order 14210.",
-  "updated_at": "2026-10-14"
+  "uncertainties": "Stage derivation: c03-01 is implemented 75, c03-06 is implemented 75, c03-09 is in_progress 30. The two firing-side records would support implemented, but the Foreword also asks to shutter bureaus and the detailed record on cutting duplicated functions is only in_progress 30, so the combined stage is in_progress 60, the top of the band. Implemented 65 is defensible. c03-07 (political appointees) was left out of restates_ids because the sentence is about removing bureaucrats, and appears in related_ids and in c00-20. The copy of c03-09 was not in the folder; its stage comes from the existing listing and the two entity-closing orders were read on federalregister.gov in this run. The number of employees affected by Executive Order 14410 comes from press reports cited in c03-01, not from the order. OPM's year-end 2025 statement that about 317,000 federal employees would leave in 2025 (over 90 percent through voluntary programs) is a statistical claim, not a government action, so it was moved out of the timeline; it includes voluntary departures, which are not removals. Searches on 2026-10-28 found no new ruling on Schedule Policy/Career placements or reduction-in-force plans. In review the court status was updated from the 2025-07-08 Supreme Court stay to pending, following the later court events verified in c03-06 (Ninth Circuit dismissal of 2026-01-02) and c03-01 (amended complaint reported 2026-06-25); the amended complaint's filing date is not stated in the report. A Federal News Network report of 2026-07-06 (close to 8,000 employees notified, three pending suits, no rulings) is a status report and is kept as a source rather than a timeline event. c03-06 also records the 2025-12-17 district court injunction on shutdown-period reductions in force (running through 2026-01-30), which is not repeated here.",
+  "updated_at": "2026-10-28"
 }
