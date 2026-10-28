@@ -57,6 +57,7 @@ METHOD_RE = re.compile(
 # think tanks, trade press and law firms are not on this list on purpose.
 LEAD_HOSTS = (
     "wikipedia.org", "substack.com", "ballotpedia.org", "citizen.org", "aclu.org", "acludc.org",
+    "aclu-nh.org", "acluva.org", "riaclu.org",
     "democracyforward.org", "lawyerscommittee.org", "nwlc.org", "naacpldf.org", "splcenter.org",
     "afge.org", "aflcio.org", "afscme.org", "nteu.org", "youthlaw.org", "immpolicytracking.org",
     "fwd.us", "edgi.org", "nrdc.org", "sierraclub.org", "earthjustice.org", "heritage.org",
