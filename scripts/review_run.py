@@ -121,10 +121,9 @@ def main() -> int:
             if d in pub:
                 blocking.append(f"{k}: dash in public text")
                 break
-        for w in words:
-            if w and w in pub:
-                blocking.append(f"{k}: personal identifier in public text")
-                break
+        if words and re.search(r"\b(" + "|".join(re.escape(w.lower()) for w in words) + r")\b", pub, re.I):
+            # same matcher as validate.py: whole words, any case ("adjusting" is not a hit)
+            blocking.append(f"{k}: personal identifier in public text")
         for w in MODEL_WORDS:
             if re.search(r"\b" + re.escape(w.strip()) + r"\b", pub):
                 blocking.append(f"{k}: model or tool name '{w.strip()}' in public text")
