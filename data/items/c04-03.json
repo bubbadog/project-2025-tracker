@@ -4,7 +4,7 @@
   "chapter": "04",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Rule applied: implemented (65 to 90) because DEI offices and positions are abolished and teaching bans are operative by executive action, short of the full recommendation since tenure ends only for new appointments and no change to instructor contracting rules was found; progress 72 kept. Chapter text checked; the GAO report, which decides the stage on DEI offices and staff, was opened by the reviewer, and the executive order was confirmed in the Federal Register in earlier passes. The tenure directive was read only through the browser retrieval, and the 2025-01-29 memo rests on press reports.",
+  "confidence_reason": "GAO's report confirming the abolition or restructuring of all 41 remaining DEI positions was opened and read, and Executive Order 14185 is in the Federal Register; the academy curriculum and tenure items rest partly on press reports.",
   "durability": {
     "level": "low",
     "why": "The actions rest on an executive order and Secretary of Defense memos that a later administration could rescind, although the abolished positions would take time to rebuild."
@@ -45,10 +45,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-references added to new layer 3 records c18-31 (second pass over chapters 14 to 18)."
+    },
+    {
+      "date": "2026-10-28",
+      "note": "Refutation check found no rescission or court order against the DOD DEI office abolition or training bans; a 2025 library book ruling is recorded as an unverified lead."
     }
   ],
   "id": "c04-03",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-28",
   "layer": 1,
   "match": "direct",
   "mechanism": "executive_order",
@@ -60,19 +64,24 @@
   "progress": 72,
   "proposal": "The Mandate recommends eliminating what it calls Marxist indoctrination and critical race theory programs, abolishing newly created diversity, equity, and inclusion (DEI) offices and staff, and auditing service academy courses, ending academic tenure there, and holding academy instructors to the same rules as other DOD contractor personnel.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-28",
     "evidence": [
       {
-        "date": "2026-09-29",
-        "kind": "news",
-        "note": "Reports a 2026-09-29 Hegseth memo ending new civilian tenured appointments at the service academies, existing tenure reportedly kept; no mention of DEI or a formal curriculum review.",
-        "source": "AP via ABC News",
-        "url": "https://abcnews.com/amp/Business/wireStory/military-academies-give-tenure-civilian-faculty-hegseth-136870939"
+        "date": "2025-02-03",
+        "note": "Executive Order 14185 text; a Federal Register search for the title since 2026-01-01 returned 28 documents, none an order rescinding or superseding it (items included a DOD Title VI nondiscrimination rule of 2026-07-24, not read).",
+        "source": "federalregister.gov",
+        "url": "https://www.federalregister.gov/documents/2025/02/03/2025-02181/restoring-americas-fighting-force"
+      },
+      {
+        "date": "2025-10-22",
+        "note": "Reports that Judge Patricia Giles temporarily blocked removal of equality and diversity books from military school libraries, with no court or case named; a low-reliability outlet used as a lead only. It concerns library books, not DEI offices or academy training.",
+        "source": "The Daily Beast (news)",
+        "url": "https://www.thedailybeast.com/pentagon-pete-takes-a-hit-in-woke-war-as-judge-overturns-dei-ban"
       }
     ],
-    "note": "A September 2026 memo on academy faculty tenure now covers a part of the Mandate the record called unverified; no reversal found.",
+    "note": "No injunction, rescission or reversal of the DEI office abolition or training bans found. The only court action surfaced concerns library book removals (2025), outside the DEI office and training items; the book-removal item in the 2025-04-01 timeline event may be affected and was not traced.",
     "verdict": "holds",
-    "what_was_tested": "Searched for 2026 developments on service academy curricula and faculty tenure, the parts the record called unverified."
+    "what_was_tested": "Searched for court orders, rescissions or Federal Register actions after 2026-09-29 affecting DOD DEI office abolition, DEI training bans or service academy policies."
   },
   "related_ids": [
     "c00-01",
@@ -92,26 +101,25 @@
   "research_agent": "A03",
   "review": {
     "flags": [
-      "2026-09-29 release read only through browser retrieval; release undated, date per AP",
-      "existing tenure kept per AP only",
-      "academy audit findings not located",
-      "possible overlap with c00-01"
+      "academy tenure only ended for new appointments",
+      "library book ruling untraced",
+      "status_summary exceeds four sentences (pre-existing, not changed in this run)"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Printed page 103 item 4 calls for ending Marxist indoctrination and divisive critical race theory programs and abolishing new DEI offices and staff; page 104 item 6 calls for auditing academy courses, ending tenure for academic professionals and applying DOD contractor rules to academy instructors.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-11",
-    "reviewer": "Y9",
+    "mandate_note": "The prior review of 2026-10-11 verified the paraphrase against pages 103 and 104; the proposal and pages fields are consistent with it, and the chapter text was not re-read.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-28",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Fetch error on one attempt by this reviewer (no HTTP 429); content was read through a browser retrieval supplied to the project: the Military Departments are directed to stop appointing civilian faculty to tenured positions at the service academies, effective immediately; no date shown.",
-        "result": "unreachable",
-        "url": "https://www.war.gov/News/Releases/Release/Article/4613993/secretary-of-war-pete-hegseth-signs-directive-halting-tenured-civilian-position/"
-      },
-      {
-        "note": "Re-opened by this reviewer: released 2025-04-17; DOD abolished or restructured all 41 remaining civilian and military positions with primary DEI duties, disbanded a DEI advisory committee and set up a task force to oversee abolishing DEI offices.",
+        "note": "GAO-25-107397 of 2025-04-17: DOD abolished or restructured all 41 remaining positions with primary DEI duties, disbanded a DEI advisory committee and started a task force.",
         "result": "supports",
         "url": "https://www.gao.gov/products/gao-25-107397"
+      },
+      {
+        "note": "2025-10-22 report of a temporary order on military school library books; no court or case named; does not affect the DEI office abolition.",
+        "result": "does_not_support",
+        "url": "https://www.thedailybeast.com/pentagon-pete-takes-a-hit-in-woke-war-as-judge-overturns-dei-ban"
       }
     ]
   },
@@ -233,6 +241,6 @@
   ],
   "title": "Abolish DOD diversity offices and end DEI and critical race theory training",
   "tracked": true,
-  "uncertainties": "The Department of War release was read through a browser retrieval supplied to the project; direct fetches by the research tools and by the independent reviewer failed (no HTTP 429). The release shows no date, so 2026-09-29 comes from the AP report and the memo header seen in a search result. The release says the change is effective immediately and does not mention existing tenured faculty; that point rests on AP. The 2026-09-29 academies memo was not opened. The Secretary of Defense memo PDF of 2025-01-29 returned an access error, so its contents come from Higher Ed Dive reporting; the Higher Ed Dive date is inferred from the memo date. The White House page does not show an order number (it is EO 14185 per the Federal Register), whose text does not mention critical race theory. No published findings were found from the academy curriculum reviews, no task force reports and no NDAA language codifying the DEI bans; absence is not confirmed. The 2025 library removals are as reported by AP, and whether books were later returned was not checked.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The Department of War release was read through a browser retrieval supplied to the project; direct fetches by the research tools and by the independent reviewer failed (no HTTP 429). The release shows no date, so 2026-09-29 comes from the AP report and the memo header seen in a search result. The release says the change is effective immediately and does not mention existing tenured faculty; that point rests on AP. The 2026-09-29 academies memo was not opened. The Secretary of Defense memo PDF of 2025-01-29 returned an access error, so its contents come from Higher Ed Dive reporting; the Higher Ed Dive date is inferred from the memo date. The White House page does not show an order number (it is EO 14185 per the Federal Register), whose text does not mention critical race theory. No published findings were found from the academy curriculum reviews, no task force reports and no NDAA language codifying the DEI bans; absence is not confirmed. The 2025 library removals are as reported by AP, and whether books were later returned was not checked. Refutation check 2026-10-28: a Daily Beast report of 2025-10-22 describes a judge temporarily blocking removal of diversity-related books from military school libraries; the report names Judge Patricia Giles but not the court or case, and whether it concerns the Naval Academy library or Defense Department schools was not established; the outlet is not a sufficient source and the report is an unverified lead. A search for NDAA codification of DEI bans returned only advocacy-group statements (naacpldf.org, advancingjustice-aajc.org), used as unverified leads that the FY2026 NDAA contains anti-DEI provisions; the enacted text was not read.",
+  "updated_at": "2026-10-28"
 }

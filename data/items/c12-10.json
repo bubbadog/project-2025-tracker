@@ -7,7 +7,7 @@
   "chapter": "12",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: high confidence needs the stage-deciding primary text opened and read on a qualifying host, and a fact known only through a CRS report for an uncodified appropriation caps the record at 79. On 2026-10-26 CRS In Focus IF12084 (version 13, 2025-09-19) was read on congress.gov; it states that the FY2025 reconciliation law included 2 billion dollars for DOD to accelerate the missile and 400 million dollars for NNSA to accelerate the warhead. An undated House Armed Services Committee reconciliation overview naming section 20008 with 15 billion dollars for nuclear deterrence, without an SLCM-N line, was also read. Neither is the enacted text of Public Law 119-21, and the enacted text of section 3112 of Public Law 119-60 was again not reached on a government host, so SLCM-N funding still rests on CRS and confidence stays at 78.",
+  "confidence_reason": "The NNSA baseline release was opened and read and the statutory capacity text rests on the Law Revision Counsel's code page; pit counts are classified and the SLCM-N funding outlook rests on trade press.",
   "durability": {
     "level": "high",
     "why": "Pit production at two sites and the cruise missile program rest on statute and multi-year appropriations, so they tend to persist across administrations."
@@ -57,10 +57,14 @@
     {
       "date": "2026-10-26",
       "note": "On 2026-10-26 CRS IF12084 (version 13) was read on congress.gov and an undated House Armed Services Committee reconciliation overview was read; the enacted texts of P.L. 119-21 and section 3112 of P.L. 119-60 were not reached, and confidence stayed at 78. No change of stage or progress."
+    },
+    {
+      "date": "2026-10-28",
+      "note": "Refutation check found no reversal of the pit production or SLCM-N actions; an advocacy-group copy of the statute was dropped from the sources and the paywalled Navy funding detail was marked unconfirmed."
     }
   ],
   "id": "c12-10",
-  "last_checked": "2026-10-26",
+  "last_checked": "2026-10-28",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -73,6 +77,26 @@
   "position": "National Nuclear Security Administration (NNSA)",
   "progress": 65,
   "proposal": "The Mandate recommends that NNSA make new warhead design and deployment a top priority, with new warheads for each leg of the triad, plutonium pit production in quantity at two sites (Los Alamos and Savannah River), and, if possible, reversal of the earlier decisions to retire the B83 bomb and cancel the nuclear sea-launched cruise missile. It also calls for directing funds toward accelerated warhead development, drawing first on DOE non-nuclear programs.",
+  "redteam": {
+    "date": "2026-10-28",
+    "evidence": [
+      {
+        "date": "2026-10-16",
+        "note": "Savannah River baseline signed 2026-10-15 with full construction start authorized; already in the record, no later contrary action found.",
+        "source": "energy.gov (NNSA)",
+        "url": "https://www.energy.gov/nnsa/articles/nnsa-baselines-savannah-river-plutonium-processing-facility"
+      },
+      {
+        "date": "2026-05-19",
+        "note": "Senator Deb Fischer criticized the FY2027 budget request for omitting SLCM-N funding and warned of risk to a congressionally mandated requirement; the rest of the article is paywalled. A funding gap risk, not a cancellation.",
+        "source": "Exchange Monitor (trade press)",
+        "url": "https://www.exchangemonitor.com/fischer-criticizes-lack-of-slcm-n-funding-discourages-reconciliation-process/"
+      }
+    ],
+    "note": "No injunction, rescission or cancellation found for the pit sites or SLCM-N. The FY2027 request omitting SLCM-N funds is a possible future weakening of the cruise missile limb only; the two-site and warhead limbs are unaffected.",
+    "verdict": "holds",
+    "what_was_tested": "Searched for litigation, cancellation or funding reversals affecting the pit production two-site posture and the nuclear sea-launched cruise missile after the 2026-10-15 Savannah River baseline."
+  },
   "related_ids": [
     "c04-06",
     "c12-11",
@@ -94,17 +118,15 @@
       "url": "https://lasg.org/budget/NDAA-FY2026_18Dec2025-pgs.pdf"
     },
     "flags": [
-      "Mirror decision: the lasg.org file is the enacted slip-law text, not a summary, and may be cited as a labeled copy beside the govinfo citation; per the rubric a mirror caps the record at medium.",
-      "Host bolding appears in adjacent Sec. 3111 material; it does not affect Sec. 3112.",
-      "Calibration pass 2026-10-26: The HASC overview proposed as a source was dropped because it has no date; it adds only a section number (20008) without an SLCM-N line.",
-      "Calibration pass 2026-10-26: The new CRS source is an earlier version (2025-09-19) of IF12084 already listed from everycrsreport.com (2026-01-08); kept because congress.gov is the official host.",
-      "Calibration pass 2026-10-26: Enacted text of P.L. 119-21 section 20008 on govinfo.gov would clear the SLCM-N cap; try the PDF or Statutes at Large page images."
+      "two source entries carry no date (DOE hearing presentation, 10 U.S.C. 6128 page)",
+      "B83 retirement reversal not found",
+      "SLCM-N absent from FY2027 request"
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Printed pages 372 and 398 to 400 recommend making new warhead design a top priority, developing new warheads for each triad leg, producing pits in quantity, keeping two pit sites at Los Alamos and Savannah River, reversing the B83 retirement and SLCM cancellation where possible, and redirecting DOE non-nuclear funds toward accelerated warhead work; the proposal paraphrases this accurately.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-26",
-    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
+    "mandate_check": "verified",
+    "mandate_note": "The prior review of 2026-10-26 found the paraphrase accurate against pages 372 and 398 to 400; the proposal and pages fields are consistent with it, and the chapter text was not re-read.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-28",
+    "reviewer": "independent AI reviewer",
     "second_review": {
       "balanced": true,
       "date": "2026-10-13",
@@ -115,64 +137,14 @@
     },
     "source_checks": [
       {
-        "note": "Reproduction of GPO slip-law pages 139 Stat. 1462-1463 of Public Law 119-60 (typesetting lines, running heads, marginal notes); Sec. 3112 new subsection (f) Capacity, 30 at Los Alamos, 50 at Savannah River, no deadline. Acceptable as a cited copy of the enacted text, labeled as a non-government host; govinfo remains the canonical citation for the law.",
-        "result": "supports",
-        "url": "https://lasg.org/budget/NDAA-FY2026_18Dec2025-pgs.pdf"
-      },
-      {
-        "note": "Server error on fetch.",
-        "result": "unreachable",
-        "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section2538a&num=0&edition=prelim"
-      },
-      {
-        "note": "Code text not yet updated: latest amendment listed is Pub. L. 118-31; neither confirms nor contradicts Sec. 3112.",
-        "result": "does_not_support",
-        "url": "https://www.law.cornell.edu/uscode/text/50/2538a"
-      },
-      {
-        "note": "Against implemented 65: researcher-opened on 2026-10-22; the table of contents lists section 3112 on plutonium pit production capacity in Division C, Title XXXI, Subtitle B; the body text stops in Division A and was not reached.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
-      },
-      {
-        "note": "Against implemented 65: tried once in review on 2026-10-22; the page returned a Title 10 personnel table of contents rather than section 6128, so the restatement and the subsection (a) schedule were not confirmed (the researcher's earlier attempts were rate limited).",
-        "result": "unreachable",
-        "url": "https://www.law.cornell.edu/uscode/text/10/6128"
-      },
-      {
-        "note": "Against implemented 65: researcher fetch failed with a client error.",
-        "result": "unreachable",
-        "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title50/chapter42/subchapter2/partA&edition=prelim"
-      },
-      {
-        "note": "Opened by the researcher and re-opened on 2026-10-23: heading Plutonium pit production capacity; subsection (f) requires capability for no fewer than 30 war reserve pits annually at Los Alamos and 50 at the Savannah River facility, with no separate date; subsection (a) keeps minimums of 30 during 2026 and 80 during 2030; source credit Pub. L. 119-60 secs. 3111 and 3112, 139 Stat. 1363, 1461, 1462; notes record the repeal of 50 U.S.C. 2538a. Page current through Public Law 119-120. Supports the statutory capacity element of the implemented stage on an official host.",
-        "result": "supports",
-        "url": "https://uscode.house.gov/us/usc/119-120/t10/s6128/"
-      },
-      {
-        "note": "Opened by the researcher and re-opened on 2026-10-23: NNSA release dated 2026-10-16: CD-2/3 performance baseline for the main processing building signed Thursday 2026-10-15 with full start of construction authorized; Savannah River to join Los Alamos as a second pit site once built; no cost or schedule figures. Supports the two-site posture behind the implemented stage; does not confirm the 2031 to 2035 completion window.",
+        "note": "Release dated 2026-10-16: CD-2/3 for the Savannah River main processing building signed 2026-10-15 with full start of construction authorized; no cost or completion date.",
         "result": "supports",
         "url": "https://www.energy.gov/nnsa/articles/nnsa-baselines-savannah-river-plutonium-processing-facility"
       },
       {
-        "note": "Not opened by the researcher; per the coordinator's decision the Arms Control Association item is now an unverified lead and was removed from sources. Its completion window and 2028 acceleration statements are held in uncertainties. No bearing on the implemented stage.",
-        "result": "unreachable",
-        "url": "https://www.armscontrol.org/act/2026-09/news/scientists-find-plutonium-pits-are-aging-slowly"
-      },
-      {
-        "note": "Researcher's fetch returned a server error; same NNSA release as the opened energy.gov address. Not cited.",
-        "result": "unreachable",
-        "url": "https://www.energy.gov/node/4860794"
-      },
-      {
-        "note": "2026-10-26: CRS IF12084 version 13 states the FY2025 reconciliation legislation included 2 billion dollars for DOD to accelerate the missile and 400 million dollars for NNSA to accelerate the warhead; it gives no section number.",
+        "note": "Visible text (2026-05-19) confirms criticism of the FY2027 request for omitting SLCM-N funding; the Navy funding detail is paywalled.",
         "result": "partial",
-        "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF12084/IF12084.13.pdf"
-      },
-      {
-        "note": "2026-10-26: Undated HASC and SASC reconciliation overview lists Sec. 20008 with 15 billion dollars for nuclear deterrence and no SLCM-N line; not added as a source because undated.",
-        "result": "partial",
-        "url": "https://armedservices.house.gov/UploadedFiles/OBBB_HASC_and_SASC_Defense_Legislation_Summary.pdf"
+        "url": "https://www.exchangemonitor.com/fischer-criticizes-lack-of-slcm-n-funding-discourages-reconciliation-process/"
       }
     ],
     "stage_change_reason": "Sec. 3112 codifies the two-site pit capacity the text asks for and SLCM-N funding is enacted per CRS, so the posture and funding elements are operative; quantity production is years away and the B83 item is unaddressed, so the record stays at the low end of implemented, still evenly balanced with in_progress as earlier reviews noted."
@@ -243,13 +215,6 @@
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm"
     },
     {
-      "date": "2025-12-18",
-      "kind": "primary",
-      "publisher": "Los Alamos Study Group (non-government host copy of GPO slip-law pages)",
-      "title": "Public Law 119-60, Section 3112 (slip-law pages, 139 Stat. 1462-1463) (copy hosted by lasg.org)",
-      "url": "https://lasg.org/budget/NDAA-FY2026_18Dec2025-pgs.pdf"
-    },
-    {
       "date": null,
       "kind": "primary",
       "publisher": "Office of the Law Revision Counsel, U.S. House of Representatives",
@@ -269,6 +234,13 @@
       "publisher": "Congressional Research Service (congress.gov)",
       "title": "Nuclear-Armed Sea-Launched Cruise Missile (SLCM-N), CRS In Focus IF12084, version 13",
       "url": "https://www.congress.gov/crs_external_products/IF/PDF/IF12084/IF12084.13.pdf"
+    },
+    {
+      "date": "2026-05-19",
+      "kind": "news",
+      "publisher": "Exchange Monitor",
+      "title": "Fischer criticizes lack of SLCM-N funding, discourages reconciliation process",
+      "url": "https://www.exchangemonitor.com/fischer-criticizes-lack-of-slcm-n-funding-discourages-reconciliation-process/"
     }
   ],
   "stage": "implemented",
@@ -312,6 +284,6 @@
   ],
   "title": "Fund new warheads, keep two plutonium pit sites, revive sea-launched cruise missile",
   "tracked": true,
-  "uncertainties": "Pit counts are classified, so progress rests on official statements relayed by trade press. The text of Section 3112 of Public Law 119-60 was read in an earlier review only in a reproduction of the GPO slip-law pages (139 Stat. 1462-1463) hosted by the Los Alamos Study Group, a non-government site. On 2026-10-22 the govinfo.gov HTML of the law was opened again: its table of contents lists section 3112 (plutonium pit production capacity) in Division C, Title XXXI, Subtitle B, but the readable text stops in Division A, so the operative wording still was not compared against a government-hosted body text; the uscode.house.gov page failed, and the law.cornell.edu page for 10 U.S.C. 6128, tried once in review, returned a Title 10 personnel table of contents instead of the section. The Office of the Law Revision Counsel's page for 10 U.S.C. 6128 (uscode.house.gov, current through Public Law 119-120, opened 2026-10-23; the code text, not the enrolled law) shows that the capacity provision now sits in subsection (f), with no fewer than 30 war reserve pits annually at Los Alamos and no fewer than 50 at Savannah River, and its source credit cites Public Law 119-60 sections 3111 and 3112 (139 Stat. 1363, 1461 and 1462); its notes say the section 3112 amendment was directed to section 4219 of the Atomic Energy Defense Act and executed to 10 U.S.C. 6128, and that similar provisions were in 50 U.S.C. 2538a until section 3111 repealed it, so the reference to 50 U.S.C. 2538a is the earlier codification. Subsection (a) of 10 U.S.C. 6128 keeps minimums of 30 pits during 2026 and 80 pits during 2030, so the statement that no deadline applies holds only for the capacity subsection, and (inference) the 2028 working target for 30 pits a year at Los Alamos sits behind a 2026 statutory minimum. CRS IF12084 version 13 (congress.gov, 2025-09-19, read on 2026-10-26) gives the same SLCM-N amounts as the 2026-01-08 copy and places them in the FY2025 reconciliation law without a section number; an undated House Armed Services Committee reconciliation overview, read on 2026-10-26 and not kept as a source because it is undated, attributes 15 billion dollars for nuclear deterrence to section 20008 with no SLCM-N line; the enacted text of that section was not read, and searches on 2026-10-26 found no govinfo.gov or congress.gov text of Public Law 119-21 or of section 3112 of Public Law 119-60. The DOE hearing presentation (energy.gov) says a court settlement requires a record of decision on a set schedule; that litigation was not traced. A search for any decision to keep the B83 found nothing conclusive. An advocacy group's summary of the conference text, used as a lead only, also describes 210 million dollars for the cruise missile and 50 million dollars for its warhead and continued W93 and W87-1 funding; those amounts were not checked in the enacted text. The Los Alamos production report (Exchange Monitor, 2026-01-29) is a report of status, not a government action, and is kept as a source rather than a timeline event. Unverified leads from Arms Control Today (a publication of the Arms Control Association, September 2026, day not given), held at low confidence until an official document or news report confirms them: that construction of the Savannah River facility is at an early stage with completion expected between late 2031 and mid-2035; that officials said Los Alamos output could be accelerated by 2028; and that an internal review of pit plans was requested in the FY2026 appropriations act. NNSA's release of 2026-10-16 on the Savannah River baseline gives no cost or completion dates. Much of the two-site posture and warhead work predates 2025-01-20 and continues; the record reports alignment, not new causation. Overlaps the DoD-chapter record c04-06 on pits and the cruise missile.",
-  "updated_at": "2026-10-26"
+  "uncertainties": "Pit counts are classified, so progress rests on official statements relayed by trade press. The text of Section 3112 of Public Law 119-60 was read in an earlier review only in a reproduction of the GPO slip-law pages (139 Stat. 1462-1463) hosted by the Los Alamos Study Group, an advocacy group whose host is lead-only, so that copy was dropped from the sources in review on 2026-10-28; the provision now rests on the Law Revision Counsel's code text described below. On 2026-10-22 the govinfo.gov HTML of the law was opened again: its table of contents lists section 3112 (plutonium pit production capacity) in Division C, Title XXXI, Subtitle B, but the readable text stops in Division A, so the operative wording still was not compared against a government-hosted body text; the uscode.house.gov page failed, and the law.cornell.edu page for 10 U.S.C. 6128, tried once in review, returned a Title 10 personnel table of contents instead of the section. The Office of the Law Revision Counsel's page for 10 U.S.C. 6128 (uscode.house.gov, current through Public Law 119-120, opened 2026-10-23; the code text, not the enrolled law) shows that the capacity provision now sits in subsection (f), with no fewer than 30 war reserve pits annually at Los Alamos and no fewer than 50 at Savannah River, and its source credit cites Public Law 119-60 sections 3111 and 3112 (139 Stat. 1363, 1461 and 1462); its notes say the section 3112 amendment was directed to section 4219 of the Atomic Energy Defense Act and executed to 10 U.S.C. 6128, and that similar provisions were in 50 U.S.C. 2538a until section 3111 repealed it, so the reference to 50 U.S.C. 2538a is the earlier codification. Subsection (a) of 10 U.S.C. 6128 keeps minimums of 30 pits during 2026 and 80 pits during 2030, so the statement that no deadline applies holds only for the capacity subsection, and (inference) the 2028 working target for 30 pits a year at Los Alamos sits behind a 2026 statutory minimum. CRS IF12084 version 13 (congress.gov, 2025-09-19, read on 2026-10-26) gives the same SLCM-N amounts as the 2026-01-08 copy and places them in the FY2025 reconciliation law without a section number; an undated House Armed Services Committee reconciliation overview, read on 2026-10-26 and not kept as a source because it is undated, attributes 15 billion dollars for nuclear deterrence to section 20008 with no SLCM-N line; the enacted text of that section was not read, and searches on 2026-10-26 found no govinfo.gov or congress.gov text of Public Law 119-21 or of section 3112 of Public Law 119-60. The DOE hearing presentation (energy.gov) says a court settlement requires a record of decision on a set schedule; that litigation was not traced. A search for any decision to keep the B83 found nothing conclusive. An advocacy group's summary of the conference text, used as a lead only, also describes 210 million dollars for the cruise missile and 50 million dollars for its warhead and continued W93 and W87-1 funding; those amounts were not checked in the enacted text. The Los Alamos production report (Exchange Monitor, 2026-01-29) is a report of status, not a government action, and is kept as a source rather than a timeline event. Unverified leads from Arms Control Today (a publication of the Arms Control Association, September 2026, day not given), held at low confidence until an official document or news report confirms them: that construction of the Savannah River facility is at an early stage with completion expected between late 2031 and mid-2035; that officials said Los Alamos output could be accelerated by 2028; and that an internal review of pit plans was requested in the FY2026 appropriations act. NNSA's release of 2026-10-16 on the Savannah River baseline gives no cost or completion dates. Much of the two-site posture and warhead work predates 2025-01-20 and continues; the record reports alignment, not new causation. Overlaps the DoD-chapter record c04-06 on pits and the cruise missile. Refutation check 2026-10-28: Exchange Monitor (2026-05-19) reports that a senator criticized the FY2027 budget request for omitting SLCM-N funding; a summary seen by the researchers adds that the Acting Navy Secretary said FY2026 and reconciliation funds cover near-term execution, but that passage is behind a paywall and was not confirmed in review. This is funding context, not a government action, and no cancellation was found. A court settlement and record of decision schedule for the pit EIS was again not traced.",
+  "updated_at": "2026-10-28"
 }

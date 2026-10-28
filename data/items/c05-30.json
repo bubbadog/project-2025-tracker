@@ -1,13 +1,13 @@
 {
   "agency": "Executive Office for Immigration Review (DOJ) and ICE",
   "blockers": [
-    "Fifth Circuit appeal by the denied intervenors (reported by an advocacy advisory; the district court found they lack standing)",
+    "Fifth Circuit appeal No. 26-10794 by the denied intervenors and their Supreme Court stay application No. 26A500 (the district court found they lack standing)",
     "The consent judgment's reach beyond administrative closure, including termination, is contested among practitioners"
   ],
   "chapter": "05",
   "confidence": 78,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: the court status is decided by the consent judgment (ECF 5), read on storage.courtlistener.com, with the intervention denial (ECF 23) on Justia, and PM 25-29 was read earlier on justice.gov. On 2026-10-26 the Supreme Court docket for No. 26A500 was read on supremecourt.gov: the denied movants applied on 2026-10-09 for a stay from Fifth Circuit No. 26-10794, responses were filed 2026-10-22 and a reply 2026-10-23, and no order had issued, so the appeal now rests on a court docket rather than an advocacy advisory and the consent judgment remains in force. The Fifth Circuit's own stay denial is known only through a SCOTUSblog report, and the implemented stage is a judgment on a partial match (the Mandate names ICE, while the actions found are EOIR's and a court's, and no written ICE policy was found), so confidence stays medium. Confidence 76 to 78.",
+  "confidence_reason": "The consent judgment, the intervention ruling, the Supreme Court docket and the federal respondents' opposition were read on court-hosted copies; the match is partial because the Mandate names ICE while the actions are by EOIR and a court.",
   "court_status": {
     "basis": "The Order and Final Judgment (ECF 5), read on a CourtListener copy, declares the 2024 EOIR docket management rule contrary to law and vacates it; it also permanently enjoins enforcement of the rule and any future rule allowing administrative closure absent express statutory authority, and the original parties waived appeal. The 2026-08-21 denial of intervention (ECF 23, Justia) leaves the judgment in place. The denied movants appealed (Fifth Circuit No. 26-10794); a Fifth Circuit stay denial is reported by SCOTUSblog and its order was not opened, and their application to the Supreme Court for a stay (No. 26A500), filed 2026-10-09 and fully briefed by 2026-10-23, was undecided on the supremecourt.gov docket read on 2026-10-26.",
     "date": "2026-06-22",
@@ -59,10 +59,14 @@
     {
       "date": "2026-10-26",
       "note": "On 2026-10-26 the research pass read the Supreme Court docket for No. 26A500 on supremecourt.gov and a SCOTUSblog report, which place the denied movants' appeal at Fifth Circuit No. 26-10794 with a stay application pending; confidence moved from 76 to 78. No change of stage or progress."
+    },
+    {
+      "date": "2026-10-28",
+      "note": "Refutation check found no stay or reversal of the consent judgment; the Supreme Court docket for No. 26A500 showed no order, and the appeal is now cited from the Supreme Court docket rather than an advocacy advisory."
     }
   ],
   "id": "c05-30",
-  "last_checked": "2026-10-26",
+  "last_checked": "2026-10-28",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -73,13 +77,33 @@
   "position": "U.S. Immigration and Customs Enforcement (ICE)",
   "progress": 70,
   "proposal": "The Mandate recommends that ICE stop closing out pending immigration cases that were prepared for removal processing or hearings, and apply the Immigration and Nationality Act as written. In its legislative and subregulatory lists it asks that ICE's widespread use of termination and administrative closure of cases in immigration court end.",
+  "redteam": {
+    "date": "2026-10-28",
+    "evidence": [
+      {
+        "date": "2026-10-26",
+        "note": "Docket lists the stay application (2026-10-09), responses (2026-10-22) and applicants' reply (2026-10-23); no order and no later entry on the page as created 2026-10-26.",
+        "source": "supremecourt.gov",
+        "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26A500.html"
+      },
+      {
+        "date": "2026-10-22",
+        "note": "States the rule has been vacated since 2026-06-22, that the Fifth Circuit denied the applicants' motion to stay the consent judgment and for summary reversal (date not given), and that the intervention appeal remains pending.",
+        "source": "supremecourt.gov (federal respondents' opposition)",
+        "url": "https://www.supremecourt.gov/DocketPDF/26/26A500/430411/20261022155018963_Admin%20Closure-SCOTUS%20Opp%20to%20Stay-FINAL.pdf"
+      }
+    ],
+    "note": "No stay, reversal or superseding rule found; the consent judgment remains operative and the only pending challenge is by denied intervenors. The EOIR-side implementation (PM 25-29) is unchanged. A Supreme Court stay would change the court status and could weaken the stage.",
+    "verdict": "holds",
+    "what_was_tested": "Checked the Supreme Court docket for No. 26A500 and the federal respondents' opposition for any stay, vacatur of the consent judgment, or Fifth Circuit relief after 2026-10-23."
+  },
   "related_ids": [
     "c05-04",
     "c05-05",
     "c05-35"
   ],
   "remaining": [
-    "Fifth Circuit decision on the denied intervenors' appeal",
+    "Fifth Circuit decision on the denied intervenors' appeal (No. 26-10794) and Supreme Court action on stay application No. 26A500",
     "The interim final rule DOJ has signaled on closure and termination authority (not published as of the September 2026 advisory)",
     "A written ICE or OPLA policy ending ICE's own widespread use of termination and administrative closure, the actor the Mandate names (not found; the advisory reports DHS counsel moving to recalendar closed cases)",
     "Attorney General decisions on closure (none found; the BIA decisions found are not Attorney General rulings)"
@@ -89,53 +113,24 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Stage implemented 70 and match partial kept: the immigration-judge closure authority is ended by memo and judgment, while ICE's own practice (the Mandate's named actor) has no written policy found; in_progress 55 remains the other defensible call.",
-      "court_status vacated (2026-06-22) kept: the later 2026-08-21 intervention denial does not change the judgment, and the order text was not opened.",
-      "Calibration pass 2026-10-26: court_status is replaced only to update its basis text (the appeal no longer rests on an advocacy advisory); state, date and url are unchanged. The current object uses the key 'state', which is kept, although the instructions name 'status'.",
-      "Calibration pass 2026-10-26: No. 26A500 was fully briefed on 2026-10-23; recheck for a Supreme Court order soon, since a stay would change court_status.",
-      "Calibration pass 2026-10-26: The status summary still says the appeal is reported by an advocacy advisory; it should cite Fifth Circuit No. 26-10794 and the pending application.",
-      "Calibration pass 2026-10-26: The Fifth Circuit order denying a stay was not found on a court host."
+      "actor named in the Mandate (ICE) differs from the actors that acted (EOIR, court)",
+      "Supreme Court stay application pending"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 141 (ICE, Needed Reforms) asks the administration to order ICE to stop closing out pending immigration cases and apply the INA as written; page 152 (subregulatory list) asks to end ICE's widespread use of termination and administrative closure in immigration court. Proposal is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-26",
-    "reviewer": "independent AI reviewer (calibration pass on in-effect records)",
+    "mandate_check": "verified",
+    "mandate_note": "The prior review of 2026-10-26 confirmed the paraphrase against pages 141 and 152; the proposal and pages fields are consistent with it, and the chapter text was not re-read.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-28",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "PM 25-29 of 2025-04-18 (Acting Director, effective same day) cancels DM 22-03, says no statute authorizes administrative closure, says EOIR will not defend the 2024 rule, and says the rule stays binding until rescinded, enjoined or vacated.",
-        "result": "supports",
-        "url": "https://www.justice.gov/eoir/media/1397161/dl"
-      },
-      {
-        "note": "ECF 1 to 5, all 2026-06-22, Chief Judge O'Connor; ECF 5 Order and Final Judgment declares the 2024 rule in excess of statutory authority and contrary to law. Docket text does not itself say vacated or enjoined; no intervention or appeal entries; last updated 2026-07-26.",
-        "result": "partial",
-        "url": "https://clearinghouse.net/case/48322/"
-      },
-      {
-        "note": "Advisory (September 2026, no day): judgment vacates the rule, permanently enjoins DOJ from closure rules without express statutory basis, appeal waived; intervention motion of 2026-08-07 denied 2026-08-21 and appealed; DOJ has signaled an interim final rule; PM 25-27 of 2025-03-21.",
-        "result": "supports",
-        "url": "https://www.ilrc.org/sites/default/files/2026-09/09-26%20TX%20v%20DOJ.pdf"
-      },
-      {
-        "note": "Opened by the researcher and re-opened in review: paragraphs 2 to 4 enjoin enforcement, bar future closure rules without express statutory authority and vacate the rule; paragraph 5 records the parties' waiver of appeal. Supports the implemented stage (70) and the vacated court state.",
-        "result": "supports",
-        "url": "https://storage.courtlistener.com/recap/gov.uscourts.txnd.421878/gov.uscourts.txnd.421878.5.0.pdf"
-      },
-      {
-        "note": "Opened by the researcher and re-opened in review: intervention denied 2026-08-21 for lack of Article III standing; nunc pro tunc motion granted; the opinion does not report an appeal. Supports the implemented stage; the Fifth Circuit appeal remains advisory-sourced.",
-        "result": "supports",
-        "url": "https://law.justia.com/cases/federal/district-courts/texas/txndce/7:2026cv00070/421878/23/"
-      },
-      {
-        "note": "2026-10-26: The docket shows an application for a stay from Fifth Circuit No. 26-10794 submitted to Justice Alito on 2026-10-09, responses filed 2026-10-22, the applicants' reply filed 2026-10-23 and no disposition.",
+        "note": "Application 2026-10-09, response requested 2026-10-15, responses 2026-10-22, reply 2026-10-23; no order; consistent with the vacatur remaining in effect.",
         "result": "supports",
         "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26A500.html"
       },
       {
-        "note": "2026-10-26: SCOTUSblog reports that the Fifth Circuit turned down the challengers' request to block the consent judgment, without giving a date or order number.",
-        "result": "partial",
-        "url": "https://scotusblog.com/2026/10/challengers-ask-court-to-pause-agreement-between-texas-and-the-doj-on-deportation-proceedings"
+        "note": "Federal respondents' opposition: rule vacated since 2026-06-22; Fifth Circuit denied stay and summary reversal and district court denied a stay (dates not given); intervention appeal pending; intervention motion filed 2026-08-07.",
+        "result": "supports",
+        "url": "https://www.supremecourt.gov/DocketPDF/26/26A500/430411/20261022155018963_Admin%20Closure-SCOTUS%20Opp%20to%20Stay-FINAL.pdf"
       }
     ]
   },
@@ -230,10 +225,17 @@
       "publisher": "SCOTUSblog",
       "title": "Challengers ask court to pause agreement between Texas and the DOJ on deportation proceedings",
       "url": "https://scotusblog.com/2026/10/challengers-ask-court-to-pause-agreement-between-texas-and-the-doj-on-deportation-proceedings"
+    },
+    {
+      "date": "2026-10-22",
+      "kind": "court",
+      "publisher": "Supreme Court of the United States (filing by federal respondents)",
+      "title": "Federal respondents' opposition to application for stay, No. 26A500",
+      "url": "https://www.supremecourt.gov/DocketPDF/26/26A500/430411/20261022155018963_Admin%20Closure-SCOTUS%20Opp%20to%20Stay-FINAL.pdf"
     }
   ],
   "stage": "implemented",
-  "status_summary": "On 2025-03-21 EOIR reinstated its 2019 policy on status dockets (PM 25-27), and on 2025-04-18 its Acting Director issued PM 25-29, rescinding the 2021 memo on administrative closure and stating that no statute authorizes it, while noting the 2024 rule stayed binding until rescinded or vacated. On 2026-06-22 the Northern District of Texas entered a consent judgment in Texas v. DOJ declaring the 2024 EOIR docket rule in excess of statutory authority and contrary to law, vacating it, permanently enjoining its enforcement and enjoining future regulations allowing administrative closure without express statutory authorization, with the parties waiving appeal. On 2026-08-21 the court denied a motion by three cities and a legal services group to intervene, finding they lacked standing; an advocacy advisory reports they appealed to the Fifth Circuit. The actions limit immigration judges' closure authority; ICE's own use of termination and closure motions was not shown to have changed by a written policy.",
+  "status_summary": "On 2025-03-21 EOIR reinstated its 2019 policy on status dockets (PM 25-27), and on 2025-04-18 its Acting Director issued PM 25-29, rescinding the 2021 memo on administrative closure and stating that no statute authorizes it, while noting the 2024 rule stayed binding until rescinded or vacated. On 2026-06-22 the Northern District of Texas entered a consent judgment in Texas v. DOJ declaring the 2024 EOIR docket rule in excess of statutory authority and contrary to law, vacating it, permanently enjoining its enforcement and enjoining future regulations allowing administrative closure without express statutory authorization, with the parties waiving appeal. On 2026-08-21 the court denied a motion by three cities and a legal services group to intervene, finding they lacked standing; they appealed to the Fifth Circuit (No. 26-10794), which per the federal respondents' brief denied a stay, and their stay application to the Supreme Court (No. 26A500, filed 2026-10-09) had no order as of the docket read on 2026-10-28. The actions limit immigration judges' closure authority; ICE's own use of termination and closure motions was not shown to have changed by a written policy.",
   "timeline": [
     {
       "date": "2025-04-18",
@@ -259,6 +261,6 @@
   ],
   "title": "End administrative closure and termination of pending immigration cases",
   "tracked": true,
-  "uncertainties": "The Mandate's pages 141 and 152 address ICE's use of closure and termination, while the actions found are by EOIR and a court, which control the immigration judge's authority; the record is therefore a partial match. The Order and Final Judgment (ECF 5) and the 2026-08-21 Opinion and Order (ECF 23) were opened and read on court copies (storage.courtlistener.com and law.justia.com), so the vacatur, the injunctions on enforcement and on future closure rules without express statutory authority, and the appeal waiver are read from the judgment itself. The text of ECF 5 as read did not show the signing judge's name; the name comes from ECF 23 and the case-tracking docket. ECF 23 does not report an appeal. The appeal is Fifth Circuit No. 26-10794, as shown on the Supreme Court docket for No. 26A500 read on supremecourt.gov on 2026-10-26: the City of Baltimore, Columbus, New Haven and Centro Legal de la Raza applied on 2026-10-09 for a stay, a response was requested on 2026-10-15, the federal respondents and Texas responded on 2026-10-22, the applicants replied on 2026-10-23, and no order had issued as of 2026-10-26. The Fifth Circuit's denial of a stay is reported by SCOTUSblog (2026-10-15) without a date or order number, and its order was not opened (no ca5.uscourts.gov order surfaced in search); a reported district court stay denial rests on an external retrieval and was not opened. A September 2026 advocacy advisory (no day given; dated to the first of the month in the sources) first reported the appeal. PM 25-29 was not re-read in this pass. The 2026 BIA interim final rule does not change closure rules per the portion read earlier; a Federal Register search of EOIR rules since 2025-01-20 found no rule on administrative closure or termination. PM 25-27 is cited from the advisory only. The EOIR policy memorandum list page failed to load earlier, so other memos since 2025-01-20 may exist. Whether the Attorney General acted was not found. The vacatur follows a suit by Texas that DOJ did not defend.",
-  "updated_at": "2026-10-26"
+  "uncertainties": "The Mandate's pages 141 and 152 address ICE's use of closure and termination, while the actions found are by EOIR and a court, which control the immigration judge's authority; the record is therefore a partial match. The Order and Final Judgment (ECF 5) and the 2026-08-21 Opinion and Order (ECF 23) were opened and read on court copies (storage.courtlistener.com and law.justia.com), so the vacatur, the injunctions on enforcement and on future closure rules without express statutory authority, and the appeal waiver are read from the judgment itself. The text of ECF 5 as read did not show the signing judge's name; the name comes from ECF 23 and the case-tracking docket. ECF 23 does not report an appeal. The appeal is Fifth Circuit No. 26-10794, as shown on the Supreme Court docket for No. 26A500 read on supremecourt.gov on 2026-10-26: the City of Baltimore, Columbus, New Haven and Centro Legal de la Raza applied on 2026-10-09 for a stay, a response was requested on 2026-10-15, the federal respondents and Texas responded on 2026-10-22, the applicants replied on 2026-10-23, and no order had issued as of 2026-10-26. The Fifth Circuit's denial of a stay is reported by SCOTUSblog (2026-10-15) without a date or order number, and its order was not opened (no ca5.uscourts.gov order surfaced in search); a reported district court stay denial rests on an external retrieval and was not opened. A September 2026 advocacy advisory first reported the appeal; it is a lead only and is not cited as a source. PM 25-29 was not re-read in this pass. The 2026 BIA interim final rule does not change closure rules per the portion read earlier; a Federal Register search of EOIR rules since 2025-01-20 found no rule on administrative closure or termination. PM 25-27 is cited from the advisory only. The EOIR policy memorandum list page failed to load earlier, so other memos since 2025-01-20 may exist. Whether the Attorney General acted was not found. The vacatur follows a suit by Texas that DOJ did not defend. On 2026-10-28 the federal respondents' opposition (supremecourt.gov, 2026-10-22) was read: it reports that the Fifth Circuit denied the applicants' motion to stay the consent judgment and for summary reversal of the intervention order, and that the district court denied a stay; neither order is dated in the brief, and the intervention motion is dated 2026-08-07 there. The Supreme Court docket was re-read in review on 2026-10-28 and showed no order or entry after 2026-10-23 (the page states it was created 2026-10-26).",
+  "updated_at": "2026-10-28"
 }

@@ -7,9 +7,9 @@
     "Vendor dependence: the program runs on the 2018 Cerner contract, now held by Oracle Health, per Nextgov."
   ],
   "chapter": "20",
-  "confidence": 80,
+  "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "VA's deployment schedule, read for this review, confirms that rollouts resumed in 2026 with 17 sites live and sets the 2031 target. The GAO testimonies on the missing independent assessment were not reopened here, and the cost estimate and funding condition rest on news reports.",
+  "confidence_reason": "VA's 2026-10-26 release, the stage-deciding source for the latest go-lives, was opened and read, and Nextgov/FCW agrees; the GAO testimonies were not reopened and the cost and funding-condition figures rest on news reports.",
   "durability": {
     "level": "medium",
     "why": "Sites already live and a multi-year vendor contract make a reversal costly, but the pace depends on VA leadership and annual appropriations, and the program was paused once before in April 2023."
@@ -34,10 +34,14 @@
     {
       "date": "2026-10-26",
       "note": "Watch item check: no VA release or report confirming or postponing the 2026-10-24 Alaska and Cleveland electronic health record go-lives; uncertainties updated. No change of stage or confidence."
+    },
+    {
+      "date": "2026-10-28",
+      "note": "VA's release and Nextgov/FCW of 2026-10-26 report the Cleveland and Anchorage go-lives on the Saturday before (dated 2026-10-24 by calendar inference), completing 13 sites for 2026; stale watch-item text and the remaining item were updated."
     }
   ],
   "id": "c20-05",
-  "last_checked": "2026-10-26",
+  "last_checked": "2026-10-28",
   "layer": 2,
   "match": "partial",
   "mechanism": "agency_action",
@@ -48,7 +52,7 @@
   "progress": 35,
   "proposal": "The Mandate recommends a high-priority assessment of the delays and functionality problems that have held up the VA's new electronic health record, and treats its timely implementation, paced alongside the Defense Department's parallel effort, as central to VA health care innovation over the next 20 years. It describes the rollout as held back by technical delays, safety concerns raised by local staff, and facility infrastructure not yet modernized for the new system.",
   "remaining": [
-    "Go-lives at Alaska and Cleveland (scheduled 2026-10-24) and at 26 sites in 2027.",
+    "Go-lives at 26 medical centers in 2027, starting with four Wisconsin and Michigan sites in January 2027 per VA's 2026-10-26 release.",
     "Deployment at all 170 medical centers and associated clinics, which VA schedules for November 2031.",
     "An assessment of the delays and functionality problems of the kind the Mandate describes; none was found from VA, and GAO's testimony of 2026-09-02 says VA has not reinstated an independent operational assessment and has not produced an updated life cycle cost estimate.",
     "Evidence that the safety, usability and infrastructure concerns the Mandate cites have been resolved at live sites; this was not independently assessed."
@@ -57,20 +61,25 @@
   "research_agent": "D7",
   "review": {
     "flags": [
+      "go-live date 2026-10-24 inferred from a release that says Saturday",
       "$37 billion estimate and 30 percent funding condition rest on Nextgov",
-      "Michigan restart was planned before 2025-01-20",
       "assessment component has no VA action"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 648 recommends a high-priority assessment of the delays and functionality problems in the VA electronic health record transition, calls timely implementation in step with DOD central to VA health care, and cites technical delays, local safety concerns and unmodernized infrastructure; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-08",
-    "reviewer": "Y4",
+    "mandate_note": "The prior review of 2026-10-08 verified the paraphrase against page 648; the proposal and pages fields are consistent with it, and the chapter text was not re-read.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-28",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Schedule last updated 2026-09-15: six earlier live sites plus Michigan (2026-04-11, four sites), Ohio/Kentucky (2026-06-06, four sites) and Indiana (2026-08-22, three sites); Alaska and Cleveland on 2026-10-24; 26 medical centers in 2027; all 170 by November 2031.",
+        "note": "Release dated 2026-10-26: deployment on Saturday at Cleveland and Anchorage with 16 clinics, more than 163,000 veterans, 13 hospitals in 2026, 26 medical centers planned for 2027 with four in January; no calendar date for the go-live.",
         "result": "supports",
-        "url": "https://digital.va.gov/ehr-modernization/ehr-deployment-schedule/"
+        "url": "https://news.va.gov/press-room/va-deploys-electronic-health-record-system-to-hospitals-in-cleveland-anchorage/"
+      },
+      {
+        "note": "Nextgov/FCW of 2026-10-26 reports the same go-lives on Saturday and the 13-site 2026 total; also mentions a contract extension and a subpoena vote without dates.",
+        "result": "supports",
+        "url": "https://www.nextgov.com/modernization/2026/10/va-completes-2026-ehr-system-deployments-final-two-site-go-lives/416823/"
       }
     ]
   },
@@ -142,10 +151,24 @@
       "publisher": "U.S. Government Accountability Office",
       "title": "VA Electronic Health Record Modernization: Actions Needed to Sustain Accelerated System Deployments (GAO-26-109393)",
       "url": "https://files.gao.gov/reports/GAO-26-109393/index.html"
+    },
+    {
+      "date": "2026-10-26",
+      "kind": "primary",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "title": "VA deploys electronic health record system to hospitals in Cleveland, Anchorage",
+      "url": "https://news.va.gov/press-room/va-deploys-electronic-health-record-system-to-hospitals-in-cleveland-anchorage/"
+    },
+    {
+      "date": "2026-10-26",
+      "kind": "news",
+      "publisher": "Nextgov/FCW",
+      "title": "VA completes 2026 EHR system deployments with final two site go-lives",
+      "url": "https://www.nextgov.com/modernization/2026/10/va-completes-2026-ehr-system-deployments-final-two-site-go-lives/416823/"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "VA has resumed new-site deployments of the Oracle Health system after the April 2023 pause and added sites beyond the plan it inherited. VA's deployment schedule (updated 2026-09-15) lists 17 live sites: the six live before 2026, four Michigan sites (2026-04-11), four Ohio and Kentucky sites (2026-06-06) and three Indiana sites (2026-08-22). It schedules Alaska and Cleveland for 2026-10-24, 26 sites in 2027, and all 170 medical centers by November 2031. GAO testimony of 2026-09-02 says VA has not instituted an independent operational assessment of the system or produced an updated life cycle cost estimate, and no VA-published assessment of the delays and functionality problems was found; VA officials and press accounts describe program changes such as fewer internal committees, a single group working with the vendor, more staff and more training. Nextgov reported in April 2026 a cost estimate of roughly $37 billion given to lawmakers, with Congress making 30 percent of FY2026 funds contingent on performance metrics and deployment data.",
+  "status_summary": "VA has resumed new-site deployments of the Oracle Health system after the April 2023 pause and added sites beyond the plan it inherited: its deployment schedule (updated 2026-09-15) lists 17 live sites, namely six live before 2026, four Michigan sites (2026-04-11), four Ohio and Kentucky sites (2026-06-06) and three Indiana sites (2026-08-22), and targets all 170 medical centers by November 2031. VA's 2026-10-26 news release states that the system was deployed on the Saturday before (2026-10-24 by calendar inference) at the Louis Stokes Cleveland VA Medical Center and the Alaska VA Healthcare System, completing 13 hospitals for 2026, with 26 medical centers planned for 2027. GAO testimony of 2026-09-02 says VA has not instituted an independent operational assessment of the system or produced an updated life cycle cost estimate, and no VA-published assessment of the delays and functionality problems was found; VA officials and press accounts describe program changes such as fewer internal committees, a single group working with the vendor, more staff and more training. Nextgov reported in April 2026 a cost estimate of roughly $37 billion given to lawmakers, with Congress making 30 percent of FY2026 funds contingent on performance metrics and deployment data.",
   "timeline": [
     {
       "date": "2025-03-06",
@@ -216,10 +239,17 @@
       "kind": "primary",
       "source": "VA EHR Modernization",
       "url": "https://digital.va.gov/ehr-modernization/ehr-deployment-schedule/"
+    },
+    {
+      "date": "2026-10-24",
+      "event": "VA deploys the Oracle Health electronic health record at the Louis Stokes Cleveland VA Medical Center and the Alaska VA Healthcare System in Anchorage, with 16 associated standalone clinics; VA's release of 2026-10-26 says only that the deployment took place on Saturday, so the date 2026-10-24 is inferred from the calendar and the schedule. The release says the two sites serve more than 163,000 veterans and bring the 2026 total to 13 hospitals, and lists four Wisconsin and Michigan sites for January 2027 and 26 medical centers across 2027.",
+      "kind": "primary",
+      "source": "VA News",
+      "url": "https://news.va.gov/press-room/va-deploys-electronic-health-record-system-to-hospitals-in-cleveland-anchorage/"
     }
   ],
   "title": "Assess VA electronic health record delays and push timely rollout of the new system",
   "tracked": true,
-  "uncertainties": "The stage rests mainly on VA's own schedule page and news listing; the news listing's page metadata shows an old last-updated date that conflicts with its 2024 to 2026 entries, and the schedule may have changed since its 2026-09-15 update. The Michigan restart was planned in December 2024, before this administration, so only the added sites and management changes are attributable to current decisions. Whether VA ran an internal assessment of delays and functionality problems is unknown; Military Times reported none in March 2025, and none was found since. Pass 5: two GAO testimonies (GAO-26-108812 and GAO-26-109393) were read through a tool summary of the report pages; VA OIG findings on functionality and patient safety were not reviewed. Cost figures conflict across sources (about $10 billion at contract signing in 2018, over $16 billion later, about $37 billion in the April 2026 estimate, and Collins described it as a $10 billion project in March 2025). The Nextgov April 2026 article date (given as 2026-04-01) is approximate. Coordination with the Defense Department, which Nextgov says finished its own rollout in 2024, was not researched further. The progress figure of 35 reflects 17 of about 170 medical centers live plus the scheduled pipeline, and is a judgment. One web search and several Federal Register and VA page fetches were used; a Federal Register query for electronic health record documents from VA returned no deployment documents. Cost figures conflict: GAO says VA had not produced an updated life cycle cost estimate as of December 2025 and cites a 2022 estimate of $49.8 billion, while Nextgov (2026-04) reports a roughly $37 billion estimate given to lawmakers; the two were not reconciled. The 30 percent FY2026 funding condition rests on Nextgov and MeriTalk reporting, not on the appropriations law text, which was not located. As of 2026-10-25 no VA release or news report was found confirming that the Alaska and Cleveland go-lives scheduled for 2026-10-24 occurred or were postponed; the VA schedule page read still showed its 2026-09-15 content and its news listing ended 2026-08-24. Searched 2026-10-26: VA's deployment schedule page still shows its 2026-09-15 update with Alaska and Cleveland listed as scheduled for 2026-10-24 and no postponement note; a news search found no report confirming that either go-live occurred or was delayed, so no event is added.",
-  "updated_at": "2026-10-26"
+  "uncertainties": "The stage rests mainly on VA's own schedule page and news listing; the news listing's page metadata shows an old last-updated date that conflicts with its 2024 to 2026 entries, and the schedule may have changed since its 2026-09-15 update. The Michigan restart was planned in December 2024, before this administration, so only the added sites and management changes are attributable to current decisions. Whether VA ran an internal assessment of delays and functionality problems is unknown; Military Times reported none in March 2025, and none was found since. Pass 5: two GAO testimonies (GAO-26-108812 and GAO-26-109393) were read through a tool summary of the report pages; VA OIG findings on functionality and patient safety were not reviewed. Cost figures conflict across sources (about $10 billion at contract signing in 2018, over $16 billion later, about $37 billion in the April 2026 estimate, and Collins described it as a $10 billion project in March 2025). The Nextgov April 2026 article date (given as 2026-04-01) is approximate. Coordination with the Defense Department, which Nextgov says finished its own rollout in 2024, was not researched further. The progress figure of 35 reflects 19 of about 170 medical centers live after the October 2026 go-lives plus the scheduled pipeline, and is a judgment. One web search and several Federal Register and VA page fetches were used; a Federal Register query for electronic health record documents from VA returned no deployment documents. Cost figures conflict: GAO says VA had not produced an updated life cycle cost estimate as of December 2025 and cites a 2022 estimate of $49.8 billion, while Nextgov (2026-04) reports a roughly $37 billion estimate given to lawmakers; the two were not reconciled. The 30 percent FY2026 funding condition rests on Nextgov and MeriTalk reporting, not on the appropriations law text, which was not located. Pass 6: VA's release and Nextgov/FCW give the Cleveland and Anchorage go-live only as the Saturday before 2026-10-26, so 2026-10-24 is inferred from the calendar and the schedule; the VA schedule page was not re-read after the go-live. Nextgov/FCW (2026-10-26) also reports a contract extension with a 17 billion dollar ceiling and a 19 to 0 House Veterans' Affairs Committee vote to subpoena Oracle executives, both without exact dates; they are not added as events.",
+  "updated_at": "2026-10-28"
 }

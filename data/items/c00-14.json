@@ -8,7 +8,7 @@
   "chapter": "00",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "The printed page 13 text was checked and Executive Order 14282, the sponsor release on the DETERRENT Act and the House committee release were fetched and read. Later Education Department steps rest on a fetched law-firm summary and news reports.",
+  "confidence_reason": "Executive Order 14282 was confirmed through the Federal Register API and the Education Department announcement and CRS report were opened and read; the Duke and North Dakota investigations rest on news reports, with no agency release found.",
   "durability": {
     "level": "medium",
     "why": "Section 117 is a statute and the portal and interagency agreement are agency actions; the executive order and enforcement priorities can be changed by a later administration."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-09",
       "note": "Cross-referenced to the chapter objectives this recommendation overlaps (a Foreword restatement; excluded from any full-set headline by design)."
+    },
+    {
+      "date": "2026-10-28",
+      "note": "The portal and State Department agreement events now rest on the Education Department announcement and a CRS report rather than a law-firm summary, and the Duke and North Dakota investigations are dated 2026-09-15 by inference from a local report saying Tuesday."
     }
   ],
   "id": "c00-14",
-  "last_checked": "2026-10-09",
+  "last_checked": "2026-10-28",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -65,45 +69,34 @@
   ],
   "review": {
     "flags": [
-      "Berkeley date corrected",
-      "sibling related_ids removed (not in index)",
-      "stage confirmed"
+      "2026-09-15 date inferred from a report saying Tuesday",
+      "no university has lost funding, accreditation or a charter"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Printed page 13 says universities taking money from the CCP should lose accreditation, charters and eligibility for federal funds; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-09",
-    "reviewer": "Y3",
+    "mandate_note": "The prior review of 2026-10-09 verified the paraphrase against printed page 13; the proposal and pages fields are consistent with it, and the chapter text was not re-read.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-28",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "House passage 2025-03-27, 241 to 169; thresholds and Title IV penalties.",
-        "result": "supports",
-        "url": "https://baumgartner.house.gov/?p=326"
-      },
-      {
-        "note": "Executive Order 14282 signed 2025-04-23; Section 117 enforcement, False Claims Act materiality, grant bar; no accreditation.",
+        "note": "Read through the Federal Register API document endpoint: Executive Order 14282, signed 2025-04-23, published 2025-04-28 at 90 FR 17541.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2025/04/28/2025-07379/transparency-regarding-foreign-influence-at-american-universities"
       },
       {
-        "note": "Announced Friday 2025-04-25 U.S. time; $220 million figure; university denial. Event date corrected.",
+        "note": "Undated release: portal launches 2026-01-02, four Section 117 investigations named, warning of Justice Department enforcement.",
         "result": "supports",
-        "url": "https://www.business-standard.com/world-news/trump-admin-opens-investigation-into-uc-berkeley-over-foreign-funding-125042600053_1.html"
+        "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-announces-new-and-improved-portal-universities-report-foreign-funding"
       },
       {
-        "note": "Portal 2026-01-02; 11 data elements and about 8,300 transactions 2026-02-11; State agreement 2026-02-20; grant language not amended; HELP has not scheduled a vote.",
+        "note": "CRS: Education and State interagency agreement signed 2026-02-20; portal launched January 2026; four investigations opened by the current administration.",
         "result": "supports",
-        "url": "https://www.debevoise.com/insights/publications/2026/04/recent-developments-in-requirements-for-disclosure"
+        "url": "https://www.everycrsreport.com/files/2026-03-25_IF12927_f09ef72db77bea9f3dc622b77fe2a88d658e4e84.pdf"
       },
       {
-        "note": "2026-08-03 data release; no universities named; no penalties.",
+        "note": "Report dated 2026-09-16: Education and State Departments announced on Tuesday investigations of UND and Duke, records due in 30 days, no penalties.",
         "result": "supports",
-        "url": "https://chinaselectcommittee.house.gov/media/press-releases/moolenaar-trump-admin-shines-light-on-ccp-linked-funding-on-us-campuses"
-      },
-      {
-        "note": "Dated 2026-09-17; State Department under secretary quoted on gaps; no scope or penalties given.",
-        "result": "partial",
-        "url": "https://www.jns.org/news/u-s-news/trump-admin-probing-duke-university-of-north-dakota-over-funding-disclosures-related-to-china"
+        "url": "https://www.valleynewslive.com/2026/09/16/federal-government-opens-foreign-funding-investigation-into-university-north-dakota/"
       }
     ]
   },
@@ -161,10 +154,31 @@
       "publisher": "Jewish News Syndicate",
       "title": "Trump admin probing Duke, University of North Dakota over funding disclosures related to China",
       "url": "https://www.jns.org/news/u-s-news/trump-admin-probing-duke-university-of-north-dakota-over-funding-disclosures-related-to-china"
+    },
+    {
+      "date": "2026-01-02",
+      "kind": "primary",
+      "publisher": "U.S. Department of Education",
+      "title": "U.S. Department of Education announces new and improved portal for universities to report foreign funding",
+      "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-announces-new-and-improved-portal-universities-report-foreign-funding"
+    },
+    {
+      "date": "2026-03-25",
+      "kind": "primary",
+      "publisher": "Congressional Research Service",
+      "title": "Section 117 of the Higher Education Act: Reporting of Foreign Gifts and Contracts",
+      "url": "https://www.everycrsreport.com/files/2026-03-25_IF12927_f09ef72db77bea9f3dc622b77fe2a88d658e4e84.pdf"
+    },
+    {
+      "date": "2026-09-16",
+      "kind": "news",
+      "publisher": "Valley News Live",
+      "title": "Federal government opens foreign funding investigation into University of North Dakota",
+      "url": "https://www.valleynewslive.com/2026/09/16/federal-government-opens-foreign-funding-investigation-into-university-north-dakota/"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The measures found target foreign-gift disclosure rather than a funding or accreditation cutoff. Executive Order 14282 (signed 2025-04-23) directs the Education Secretary to enforce Section 117 of the Higher Education Act, requires that Section 117 compliance certification be material for False Claims Act purposes, and bars federal grants to noncompliant institutions. The Education Department opened a Section 117 investigation of UC Berkeley on 2025-04-25, relaunched its reporting portal on 2026-01-02, signed an enforcement agreement with the State Department on 2026-02-20, published new data on 2026-08-03, and was reported on 2026-09-17 to be probing Duke University and the University of North Dakota, with a State Department official saying reviews found gaps in their disclosures. The House passed the DETERRENT Act (H.R. 1048) on 2025-03-27 (241 to 169) to lower the reporting threshold to $50,000 and add Title IV funding penalties; it has not passed the Senate. No source found shows a university losing accreditation, a charter or federal funding for taking Chinese party money.",
+  "status_summary": "The measures found target foreign-gift disclosure rather than a funding or accreditation cutoff: Executive Order 14282 (signed 2025-04-23) directs the Education Secretary to enforce Section 117 of the Higher Education Act, requires that Section 117 compliance certification be material for False Claims Act purposes, and bars federal grants to noncompliant institutions. The Education Department opened a Section 117 investigation of UC Berkeley on 2025-04-25, relaunched its reporting portal on 2026-01-02, signed an enforcement agreement with the State Department on 2026-02-20, published new data on 2026-08-03, and with the State Department opened Section 117 investigations of Duke University and the University of North Dakota, announced on 2026-09-15 per a local news report. The House passed the DETERRENT Act (H.R. 1048) on 2025-03-27 (241 to 169) to lower the reporting threshold to $50,000 and add Title IV funding penalties; it has not passed the Senate, and no source found shows a university losing accreditation, a charter or federal funding for taking Chinese party money.",
   "timeline": [
     {
       "date": "2025-03-27",
@@ -189,10 +203,24 @@
     },
     {
       "date": "2026-01-02",
-      "event": "The Education Department launches an updated Section 117 reporting portal; on 2026-02-11 it announces 11 new data elements and published data on about 8,300 transactions worth over $5.2 billion, and on 2026-02-20 it signs an interagency agreement with the State Department to oversee reporting, enforcement and compliance.",
+      "event": "The Education Department's updated Section 117 reporting portal at ForeignFundingHigherEd.gov opens on the launch date given in an undated Education Department announcement (CRS confirms a January 2026 launch); the announcement warns that noncompliant institutions risk Justice Department enforcement and lists four Section 117 investigations (Harvard, Pennsylvania, Michigan, UC Berkeley).",
+      "kind": "primary",
+      "source": "U.S. Department of Education",
+      "url": "https://www.ed.gov/about/news/press-release/us-department-of-education-announces-new-and-improved-portal-universities-report-foreign-funding"
+    },
+    {
+      "date": "2026-02-11",
+      "event": "Per a law-firm summary, the Education Department announces 11 new data elements and publishes data on about 8,300 transactions worth over $5.2 billion.",
       "kind": "news",
       "source": "Debevoise and Plimpton",
       "url": "https://www.debevoise.com/insights/publications/2026/04/recent-developments-in-requirements-for-disclosure"
+    },
+    {
+      "date": "2026-02-20",
+      "event": "The Education Department and the State Department enter an interagency agreement under which State carries out several Section 117 tasks in coordination with and at the direction of Education.",
+      "kind": "primary",
+      "source": "Congressional Research Service",
+      "url": "https://www.everycrsreport.com/files/2026-03-25_IF12927_f09ef72db77bea9f3dc622b77fe2a88d658e4e84.pdf"
     },
     {
       "date": "2026-08-03",
@@ -202,15 +230,15 @@
       "url": "https://chinaselectcommittee.house.gov/media/press-releases/moolenaar-trump-admin-shines-light-on-ccp-linked-funding-on-us-campuses"
     },
     {
-      "date": "2026-09-17",
-      "event": "Press report that the administration is probing Duke University and the University of North Dakota over China-related funding disclosures, quoting a State Department official that reviews found real gaps; the page read shows no penalties.",
+      "date": "2026-09-15",
+      "event": "The Education and State Departments open Section 117 investigations of Duke University and the University of North Dakota over alleged late, incomplete or inaccurate disclosures, with records due within 30 days; a local news report dated 2026-09-16 says the announcement was made on Tuesday, so the date is inferred from the calendar, and it mentions no penalties.",
       "kind": "news",
-      "source": "Jewish News Syndicate",
-      "url": "https://www.jns.org/news/u-s-news/trump-admin-probing-duke-university-of-north-dakota-over-funding-disclosures-related-to-china"
+      "source": "Valley News Live",
+      "url": "https://www.valleynewslive.com/2026/09/16/federal-government-opens-foreign-funding-investigation-into-university-north-dakota/"
     }
   ],
   "title": "Cut universities taking Chinese Communist Party money from accreditation and funds",
   "tracked": true,
-  "uncertainties": "The Foreword's three penalties (accreditation, charters, federal funds) are not all reachable by federal action; the sources show only disclosure enforcement and investigations, and the grant bar in Executive Order 14282 applies to disclosure noncompliance rather than to accepting Chinese party money. The Berkeley investigation was announced on Friday 2025-04-25 (U.S. time) per a report dated the next day. The Duke and North Dakota report gives no detail on the scope of the probe or any penalty, and no Education or State Department release on it was found. The Debevoise alert is a law-firm summary of Education Department actions, not the Department documents; it dates the State Department agreement 2026-02-20 while its linked file name refers to 2026-02-23. The House bill's penalty terms are from the sponsor's press release, not the bill text. Whether any institution has lost Title IV eligibility or grants over Section 117 was searched only in a limited way and none was found. Related records c11-10 (accreditation) and c21-03 carry adjacent material.",
-  "updated_at": "2026-10-09"
+  "uncertainties": "The Foreword's three penalties (accreditation, charters, federal funds) are not all reachable by federal action; the sources show only disclosure enforcement and investigations, and the grant bar in Executive Order 14282 applies to disclosure noncompliance rather than to accepting Chinese party money. The Berkeley investigation was announced on Friday 2025-04-25 (U.S. time) per a report dated the next day. The Duke and North Dakota investigations are read through Valley News Live and Jewish News Syndicate reports; the Education and State Department releases themselves were not found and no penalty is reported. The 2026-02-11 data announcement rests on the Debevoise law-firm summary only; the ed.gov portal announcement states no date of its own, and the State Department agreement date of 2026-02-20 is from the Congressional Research Service. A Senate search in October 2026 found no new action on the DETERRENT Act. The House bill's penalty terms are from the sponsor's press release, not the bill text. Whether any institution has lost Title IV eligibility or grants over Section 117 was searched only in a limited way and none was found. Related records c11-10 (accreditation) and c21-03 carry adjacent material.",
+  "updated_at": "2026-10-28"
 }
