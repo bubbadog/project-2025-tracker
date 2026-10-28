@@ -8,9 +8,9 @@
   "chapter": "07",
   "confidence": 60,
   "confidence_label": "medium",
-  "confidence_reason": "Five checks were documented: (1) Federal Register API with a variant, supports (only notices continuing the framework); (2) Unified Agenda Commerce list, 176 rules read on 2026-10-19, supports, with ODNI and NSA having no agenda list (not applicable for the intelligence part); (3) congress.gov and govinfo search, supports; (4) dni.gov, unreachable; (5) one news search, supports. On 2026-10-26 the D.C. Circuit's order of 2026-08-05 in LeBlanc v. PCLOB was read in a copy hosted by Wolters Kluwer CCH, a third-party host; it concerns related litigation over board removals, not the step the Mandate describes, so it did not bear on the stage. Confidence stayed at 60, under the 65 to 68 ceiling, because the agency host was unreachable and a classified review could not be excluded.",
+  "confidence_reason": "Systematic absence checks documented through 2026-10-19 (Federal Register API queries with a term variant, the Commerce list in the reginfo.gov Unified Agenda with 176 rules, a congress.gov and govinfo search, and one news search) supported the absence of any study or suspension of Executive Order 14086, while dni.gov was unreachable and ODNI and NSA had no agenda list. RECAP copies of the D.C. Circuit's orders of 2026-08-05 and 2026-09-18 in LeBlanc v. PCLOB were read on 2026-10-26, and on 2026-10-28 the court's Oral Argument Calendar was read on the court's own host and the CourtListener docket was re-read, adding the merits panel for the 2026-11-17 argument. That litigation concerns board removals, not the step the Mandate describes, so it did not bear on the stage. Confidence stayed at 60, under the 65 to 68 ceiling, because the agency host was unreachable and a classified review or private diplomatic message could not be excluded.",
   "court_status": {
-    "basis": "LeBlanc v. PCLOB, D.C. Cir. No. 25-5197: the district court's order of 2025-05-21 declaring the removals of board members LeBlanc and Felten null and void remains stayed pending appeal under the D.C. Circuit's order of 2025-07-01 (Katsas, Rao and Walker, read on the court's site); an en banc petition against that stay was denied on 2025-07-18 per the docket. The government's appeal is pending: held in abeyance from 2025-10-01 pending Trump v. Slaughter, returned to the active docket by order of 2026-08-05 (RECAP copy), briefed through 2026-09-11, and scheduled for oral argument on 2026-11-17 at 9:30 a.m. by clerk's order of 2026-09-18 (RECAP copy of the filed order); no merits decision was found.",
+    "basis": "LeBlanc v. PCLOB, D.C. Cir. No. 25-5197: the district court's order of 2025-05-21 declaring the removals of board members LeBlanc and Felten null and void remains stayed pending appeal under the D.C. Circuit's order of 2025-07-01 (Katsas, Rao and Walker, read on the court's site); an en banc petition against that stay was denied on 2025-07-18 per the docket. The government's appeal is pending: held in abeyance from 2025-10-01 pending Trump v. Slaughter, returned to the active docket by order of 2026-08-05 (RECAP copy), briefed through 2026-09-11, and scheduled for oral argument on 2026-11-17 at 9:30 a.m. by clerk's order of 2026-09-18 (RECAP copy of the filed order). The court's Oral Argument Calendar, read on the court's host as of 2026-10-28, lists the case for that sitting in USCA Courtroom 31 before Judges Henderson, Pillard and Edwards, together with 25-5268 Todd Harper v. Scott Bessent and 25-5185 United States Institute of Peace v. Kenneth Jackson; no merits decision was found.",
     "date": "2026-09-18",
     "state": "stayed",
     "url": "https://storage.courtlistener.com/recap/gov.uscourts.cadc.42097/gov.uscourts.cadc.42097.1208889852.0.pdf"
@@ -63,10 +63,14 @@
     {
       "date": "2026-10-26",
       "note": "On 2026-10-26 the LeBlanc v. PCLOB docket and RECAP copies of the orders of 2026-08-05 and 2026-09-18 were read: oral argument is scheduled for 2026-11-17 at 9:30 a.m., and the appeal was held in abeyance from 2025-10-01 pending Trump v. Slaughter; the 2026-08-05 event was re-pointed to the RECAP copy, two events and three sources were added, the court status (stayed) now carries the argument date, and the blocker was reworded. No change of stage, progress or confidence."
+    },
+    {
+      "date": "2026-10-28",
+      "note": "On 2026-10-28 the D.C. Circuit's Oral Argument Calendar was read on the court's host and the LeBlanc v. PCLOB docket was re-read on CourtListener (no entry after 2026-09-18); the calendar was added as a source, the merits panel (Judges Henderson, Pillard and Edwards) was added to the court_status basis and the status summary, no timeline event was added, and confidence was held at 60. No change of stage or progress."
     }
   ],
   "id": "c07-06",
-  "last_checked": "2026-10-26",
+  "last_checked": "2026-10-28",
   "layer": 2,
   "match": "partial",
   "mechanism": "executive_order",
@@ -93,13 +97,19 @@
       "Documents pass 2 2026-10-26: last_checked and updated_at should move to 2026-10-26.",
       "Documents pass 2 2026-10-26: Maintainer decision: court_status state stayed (reinstatement order stayed pending appeal since 2025-07-01), with the pending appeal and its 2026-08-05 scheduling order recorded in the basis.",
       "Leads check 2026-10-26: The amicus page's two claims (2026-11-17 argument; Trump v. Slaughter link) are now confirmed by court documents; the 2025-10-01 abeyance event rests on the docket entry text, not the order PDF.",
-      "Leads check 2026-10-26: The CCH source entry is kept as a matching copy; the 2026-08-05 event and court_status now rest on RECAP copies."
+      "Leads check 2026-10-26: The CCH source entry is kept as a matching copy; the 2026-08-05 event and court_status now rest on RECAP copies.",
+      "Owner pass 2026-10-28: No timeline event added: the date the calendar first showed the panel is unknown, and a check is not an event.",
+      "Owner pass 2026-10-28: The calendar is a live page; its source entry carries the as-of date printed on it (2026-10-28), and the docket should be re-checked after the 2026-11-17 argument.",
+      "Owner pass 2026-10-28: The calendar prints the caption shortened as Travis LeBlanc v. United States Privacy and Civil Liberties; the record keeps the full caption from the docket.",
+      "Owner pass 2026-10-28: Confidence held at 60: the panel is context for related litigation over board removals, not the stage-deciding fact.",
+      "Owner pass 2026-10-28: Two documents-pass flags of 2026-10-26 (that the blocker should drop the 2026-11-17 date, and that court_status might be pending) are superseded by the clerk's order of 2026-09-18 and the maintainer's stayed decision; the maintainer may prune them.",
+      "Owner pass 2026-10-28: The blockers entry could add the panel; blockers are outside this output."
     ],
     "mandate_check": "not_checked",
     "mandate_note": "Pages 225 and 226, as described in the record, recommend an immediate study of how Executive Order 14086 is implemented, suspension of provisions that unduly burden intelligence collection, and a message to European governments that continued intelligence sharing depends on resolving the data-transfer issue within two years. The chapter text was not available to this reviewer; the proposal field is consistent with the title and pages.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-26",
-    "reviewer": "independent AI reviewer (official and court documents retrieved 2026-10-26, batch 2)",
+    "reviewed_at": "2026-10-28",
+    "reviewer": "independent AI reviewer (court and State Department documents read 2026-10-28)",
     "source_checks": [
       {
         "note": "2026-10-18: check 1 rerun by the reviewer with a separate term variant. Terms \"Data Privacy Framework\" and \"signals intelligence\", all document types since 2025-01-20: 0 documents. Researcher's variant result: supports; term \"Executive Order 14086\", all types since 2025-01-20: 4 documents, all Commerce information-collection notices on the Data Privacy Framework program (2026-02-23 two notices, 2026-06-01, 2026-06-02), which continue the framework. A presidential-documents query on \"signals intelligence\" returned 1 unrelated document (Addressing Threats to the United States by the Government of Cuba, 2026-02-03, 2026-02-02250).",
@@ -155,6 +165,16 @@
       },
       {
         "note": "2026-10-26: Docket last updated 2026-10-19 shows the 2025-07-18 en banc denial, the 2025-10-01 abeyance order pending Trump v. Slaughter (No. 25-332), the 2026-08-05 return to the active docket, the four supplemental and response briefs filed 2026-08-21 and 2026-09-11, and the 2026-09-18 clerk's order scheduling argument for 2026-11-17.",
+        "result": "supports",
+        "url": "https://www.courtlistener.com/docket/70398849/travis-leblanc-v-united-states-privacy-and-civil-liberties-oversig/"
+      },
+      {
+        "note": "2026-10-28: Entire Term view of the Oral Argument Calendar for 07/01/2026 through 06/30/2027, as of 10/28/2026; the sitting of Tuesday, November 17, 2026, 9:30 A.M., USCA Courtroom 31, before Judges Henderson, Pillard and Edwards lists 25-5268 Todd Harper v. Scott Bessent, 25-5185 United States Institute of Peace v. Kenneth Jackson and 25-5197 Travis LeBlanc v. United States Privacy and Civil Liberties. Confirms the argument date and time and names the panel; the Future Dates view shows the same sitting.",
+        "result": "supports",
+        "url": "https://media.cadc.uscourts.gov/calendar/calendar.php?cal=EntireTerm"
+      },
+      {
+        "note": "2026-10-28: Docket still shows a last update of 2026-10-19 and a last known filing of 2026-09-18, the clerk's order scheduling argument; no later entry, so no panel order or merits decision appears there.",
         "result": "supports",
         "url": "https://www.courtlistener.com/docket/70398849/travis-leblanc-v-united-states-privacy-and-civil-liberties-oversig/"
       }
@@ -270,10 +290,17 @@
       "publisher": "CourtListener (RECAP docket)",
       "title": "Travis LeBlanc v. United States Privacy and Civil Liberties Oversight Board, No. 25-5197 (D.C. Cir.), docket (last updated 2026-10-19)",
       "url": "https://www.courtlistener.com/docket/70398849/travis-leblanc-v-united-states-privacy-and-civil-liberties-oversig/"
+    },
+    {
+      "date": "2026-10-28",
+      "kind": "court",
+      "publisher": "U.S. Court of Appeals for the District of Columbia Circuit",
+      "title": "D.C. Circuit Oral Argument Calendar, term 2026-07-01 to 2027-06-30 (as of 2026-10-28)",
+      "url": "https://media.cadc.uscourts.gov/calendar/calendar.php?cal=EntireTerm"
     }
   ],
   "stage": "not_started",
-  "status_summary": "No presidential order, memorandum or study revoking, suspending, amending or reviewing Executive Order 14086 was found as of 2026-10-18; Federal Register queries returned only Commerce information-collection notices of 2026-02-23 and 2026-06-01 that continue the Data Privacy Framework, and the Berkeley Technology Law Journal (2026-02-26) reports no action to revoke or alter the order. The order's machinery has continued to operate: PCLOB reported on 2025-09-25 that intelligence community elements had updated their policies to comply, and said on 2025-11-13 that the redress mechanism had one qualifying complaint pending. Related events are not the step the Mandate describes: three Democratic PCLOB members were removed on 2025-01-22 (a district court's reinstatement of two was stayed by the D.C. Circuit on 2025-07-01, and that court, which had held the appeal in abeyance from 2025-10-01 pending Trump v. Slaughter, returned it to its active docket on 2026-08-05 and by clerk's order of 2026-09-18 set oral argument for 2026-11-17), and CRS reports that FISA Section 702 lapsed under its sunset on 2026-06-12 with collection continuing under existing certifications. No public US message to European governments tying intelligence sharing to the data-transfer issue was found, and in the EU the General Court dismissed the Latombe challenge on 2025-09-03, which Latombe appealed on 2025-10-31.",
+  "status_summary": "No presidential order, memorandum or study revoking, suspending, amending or reviewing Executive Order 14086 was found as of 2026-10-18; Federal Register queries returned only Commerce information-collection notices of 2026-02-23 and 2026-06-01 that continue the Data Privacy Framework, and the Berkeley Technology Law Journal (2026-02-26) reports no action to revoke or alter the order. The order's machinery has continued to operate: PCLOB reported on 2025-09-25 that intelligence community elements had updated their policies to comply, and said on 2025-11-13 that the redress mechanism had one qualifying complaint pending. Related events are not the step the Mandate describes: three Democratic PCLOB members were removed on 2025-01-22 (a district court's reinstatement of two was stayed by the D.C. Circuit on 2025-07-01, and that court, which had held the appeal in abeyance from 2025-10-01 pending Trump v. Slaughter, returned it to its active docket on 2026-08-05 and by clerk's order of 2026-09-18 set oral argument for 2026-11-17, before Judges Henderson, Pillard and Edwards per its calendar), and CRS reports that FISA Section 702 lapsed under its sunset on 2026-06-12 with collection continuing under existing certifications. No public US message to European governments tying intelligence sharing to the data-transfer issue was found, and in the EU the General Court dismissed the Latombe challenge on 2025-09-03, which Latombe appealed on 2025-10-31.",
   "timeline": [
     {
       "date": "2025-01-22",
@@ -362,6 +389,6 @@
   ],
   "title": "Study and suspend burdensome parts of EO 14086 and press the EU on data flows",
   "tracked": true,
-  "uncertainties": "No presidential order, memorandum or study revoking, suspending, amending or reviewing Executive Order 14086 was found; Commerce information-collection notices of 2026 continue the Data Privacy Framework, and PCLOB reported in 2025 that agencies had updated policies to comply. Federal Register searches found nothing qualifying; a congress.gov and govinfo search found no related bill; dni.gov is blocked; one news search returned commentary only. The Commerce list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 176 rules) holds no related entry, and ODNI and NSA have no agenda list. A classified review or a private diplomatic message to European governments could exist without public record. The PCLOB removals and the Section 702 lapse are related context only. Checked systematically on 2026-10-19. The LeBlanc v. PCLOB (No. 25-5197) docket on CourtListener (last updated 2026-10-19) and two filed orders in RECAP copies were read on 2026-10-26: the per curiam order of 2026-08-05 (Katsas, Rao and Childs; USCA Document #2186750; its text matches the copy hosted by Wolters Kluwer CCH read earlier the same day) returned the case to the active docket and set supplemental briefs for 2026-08-21 and response briefs for 2026-09-11, all four of which the docket shows filed on those dates; the clerk's order of 2026-09-18 (USCA Document #2193973) set oral argument for 2026-11-17 at 9:30 a.m. The docket also records the 2025-10-01 abeyance order pending Trump v. Slaughter and the 2025-07-18 en banc denial of the petition against the stay; the Brennan Center case page's 2026-11-17 date and its reference to Trump v. Slaughter, earlier carried as unverified leads, are confirmed by those court documents and rest on them now. The 2025-10-01 and 2025-07-18 orders themselves were not opened; their terms are taken from the docket entries. No court-hosted copy of any of these orders was found in the court's public orders indexes.",
-  "updated_at": "2026-10-26"
+  "uncertainties": "No presidential order, memorandum or study revoking, suspending, amending or reviewing Executive Order 14086 was found; Commerce information-collection notices of 2026 continue the Data Privacy Framework, and PCLOB reported in 2025 that agencies had updated policies to comply. Federal Register searches found nothing qualifying; a congress.gov and govinfo search found no related bill; dni.gov is blocked; one news search returned commentary only. The Commerce list in the reginfo.gov Unified Agenda (Agency Rule List - 2026, 176 rules) holds no related entry, and ODNI and NSA have no agenda list. A classified review or a private diplomatic message to European governments could exist without public record. The PCLOB removals and the Section 702 lapse are related context only. Checked systematically on 2026-10-19. The LeBlanc v. PCLOB (No. 25-5197) docket on CourtListener (last updated 2026-10-19) and two filed orders in RECAP copies were read on 2026-10-26: the per curiam order of 2026-08-05 (Katsas, Rao and Childs; USCA Document #2186750; its text matches the copy hosted by Wolters Kluwer CCH read earlier the same day) returned the case to the active docket and set supplemental briefs for 2026-08-21 and response briefs for 2026-09-11, all four of which the docket shows filed on those dates; the clerk's order of 2026-09-18 (USCA Document #2193973) set oral argument for 2026-11-17 at 9:30 a.m. The docket also records the 2025-10-01 abeyance order pending Trump v. Slaughter and the 2025-07-18 en banc denial of the petition against the stay; the Brennan Center case page's 2026-11-17 date and its reference to Trump v. Slaughter, earlier carried as unverified leads, are confirmed by those court documents and rest on them now. The 2025-10-01 and 2025-07-18 orders themselves were not opened; their terms are taken from the docket entries. No court-hosted copy of any of these orders was found in the court's public orders indexes. The D.C. Circuit's Oral Argument Calendar (Entire Term view, on the court's own host) was read as of 2026-10-28 and lists the 2026-11-17 9:30 a.m. sitting in USCA Courtroom 31 before Judges Henderson, Pillard and Edwards, with Nos. 25-5268 and 25-5185 in the same sitting; the calendar is a live page that can change, and the date on which it first showed the panel is not known. The CourtListener docket, re-read on 2026-10-28, still showed a last update of 2026-10-19 and no entry after the 2026-09-18 clerk's order.",
+  "updated_at": "2026-10-28"
 }
