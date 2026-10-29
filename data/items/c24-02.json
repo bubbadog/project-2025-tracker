@@ -4,9 +4,9 @@
     "FOMC decisions on balance sheet size are made by the committee; statutory limits would need Congress; the new balance sheet task force reports to the FOMC and had not reported in the sources reviewed"
   ],
   "chapter": "24",
-  "confidence": 85,
+  "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Document pages 733 to 735 were re-read and match the proposal. The stage-deciding Fed documents (FOMC statement of 2025-10-29, implementation note of 2025-12-10 and minutes of the September 2026 meeting) were fetched and read on federalreserve.gov on 2026-10-26, and the balance sheet figures were refreshed from the current H.4.1 release. The task force outcome and any congressional action rest on absence from the sources reviewed.",
+  "confidence_reason": "Pages 733 to 735 were re-read in the 2026-10-26 review and match the proposal; the stage-deciding Fed documents (2025-10-29 statement, 2025-12-10 implementation note, September 2026 minutes) were read on federalreserve.gov on 2026-10-26; the 2026-10-28 meeting details in the uncertainties were read by the researcher but not opened in this review, and they record no balance sheet change.",
   "durability": {
     "level": "low",
     "why": "Balance sheet policy is set by FOMC votes that can change at any meeting."
@@ -31,10 +31,14 @@
     {
       "date": "2026-10-26",
       "note": "Freshness check: searched Federal Reserve press releases through 2026-10-16 and found no balance sheet, task force or interest-on-reserves action after the 2026-10-07 minutes. Removed the H.4.1 data-release entry from the timeline (a statistical release, not an action; the figures remain in the summary and the H.4.1 page stays in sources). Stage re-derived from the rubric: remains diverged, progress 0. Independent review: replaced the 2026-09-30 balance sheet figures, no longer shown on the rolling H.4.1 page, with the 2026-10-21 figures from the release of 2026-10-22 in the summary, sources and estimate basis; stage confirmed diverged 0; confidence 85 unchanged."
+    },
+    {
+      "date": "2026-10-29",
+      "note": "2026-10-29: Read the 2026-10-28 FOMC statement and implementation note: rate range held, interest on reserve balances unchanged at 3.90 percent, rollover, reinvestment and purchase directives unchanged; recorded in uncertainties only; stage diverged unchanged. Independent review checked the uncertainties wording; the meeting documents were not cited by address and were not opened in review."
     }
   ],
   "id": "c24-02",
-  "last_checked": "2026-10-26",
+  "last_checked": "2026-10-29",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_action",
@@ -61,34 +65,28 @@
   "research_agent": "A15",
   "review": {
     "flags": [
-      "H.4.1 link is a rolling page; summary figures now dated 2026-10-21 and will drift again.",
-      "FOMC meeting of 2026-10-27 to 2026-10-28 is imminent; next run should check it."
+      "The 2026-10-28 FOMC statement is described in the uncertainties without a cited URL; a later run could add it to sources if a balance sheet change is ever recorded. The vote count and IORB figures were not independently confirmed in this review."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Pages 733 to 735 ask Congress to limit Fed balance sheet purchases and the Fed to wind holdings down toward pre-2008 levels, limit future purchases to Treasuries (no mortgage-backed, corporate or municipal debt, with MBS sold or run off), and stop paying interest on excess reserves in favor of a pre-2008 open-market-operations system; paraphrase and pages fit.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-26",
-    "reviewer": "independent review",
+    "mandate_note": "The 2026-10-26 review re-read pages 733 to 735 and found the paraphrase and pages fit; proposal unchanged and the new meeting information does not alter its reading, so the prior verification stands.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-29",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Fetched 2026-10-26: Committee decided to conclude the reduction of aggregate securities holdings on December 1.",
+        "note": "Not re-fetched; prior review (2026-10-26) read the decision to conclude runoff on 2025-12-01, which with the reserve management purchases supports diverged 0.",
         "result": "supports",
         "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm"
       },
       {
-        "note": "Fetched 2026-10-26: reserve management purchases of Treasury bills (and Treasuries up to 3 years if needed) from 2025-12-11 to keep reserves ample; agency principal reinvested in Treasury bills; IORB 3.65 percent.",
+        "note": "Not re-fetched; prior review read the 2025-12-10 implementation note directing Treasury bill purchases to keep reserves ample, opposite to the wind-down; supports diverged 0.",
         "result": "supports",
         "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20251210a1.pdf"
       },
       {
-        "note": "Fetched 2026-10-26: desk had paused reserve management purchases, pace not on a preset course and set monthly; ample-reserves policy continues; IORB raised to 3.90 percent effective 2026-09-17; page last updated 2026-10-07.",
+        "note": "Not re-fetched; prior review read the September 2026 minutes describing a pause in reserve management purchases within an unchanged ample-reserves framework; consistent with diverged 0.",
         "result": "supports",
         "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm"
-      },
-      {
-        "note": "Fetched 2026-10-26: rolling page now shows the week ended 2026-10-21 (released 2026-10-22): total assets about $6.754 trillion, Treasuries about $4.573 trillion, MBS about $1.895 trillion. The 2026-09-30 figures previously in the summary are no longer on this page, so the summary was updated.",
-        "result": "supports",
-        "url": "https://www.federalreserve.gov/releases/h41/current/"
       }
     ]
   },
@@ -208,6 +206,6 @@
   ],
   "title": "Shrink the Fed balance sheet, hold only Treasuries, and end interest on reserves",
   "tracked": true,
-  "uncertainties": "The balance sheet size at the start of the period (January 2025) was not verified, so the share of the decline from the chapter's roughly $9 trillion that occurred before 2025 is not stated; the H.4.1 link is the rolling current release and will change. The stage reflects the October 2025 end of runoff and the December 2025 purchases, which run opposite to the chapter's wind-down, while the shift of mortgage paydowns into Treasury bills and the July 2026 task force point partly the other way. The September 2026 minutes do not state when the pause in reserve management purchases began or how long it will last; it is a desk decision within an unchanged ample-reserves framework, not a wind-down, and the standing directive still authorizes such purchases. The Fed press-release index showed no balance sheet announcement between 2026-09-16 and 2026-10-16 (rechecked 2026-10-26: releases after the 2026-10-07 minutes concern enforcement actions, the Survey of Consumer Finances and discount rate minutes only); the next FOMC meeting (2026-10-27 to 2026-10-28) is a future date, not an event.",
-  "updated_at": "2026-10-26"
+  "uncertainties": "The balance sheet size at the start of the period (January 2025) was not verified, so the share of the decline from the chapter's roughly $9 trillion that occurred before 2025 is not stated; the H.4.1 link is the rolling current release and will change. The stage reflects the October 2025 end of runoff and the December 2025 purchases, which run opposite to the chapter's wind-down, while the shift of mortgage paydowns into Treasury bills and the July 2026 task force point partly the other way. The September 2026 minutes do not state when the pause in reserve management purchases began or how long it will last; it is a desk decision within an unchanged ample-reserves framework, not a wind-down, and the standing directive still authorizes such purchases. The Fed press-release index showed no balance sheet announcement between 2026-09-16 and 2026-10-16 (rechecked 2026-10-26: releases after the 2026-10-07 minutes concern enforcement actions, the Survey of Consumer Finances and discount rate minutes only); the FOMC statement and implementation note of 2026-10-28 (federalreserve.gov, read 2026-10-29) held the federal funds target range at 3-3/4 to 4 percent on a 10 to 2 vote (two members preferred an increase), kept interest on reserve balances at 3.90 percent, and kept the directive to roll over Treasury principal, reinvest agency principal into Treasury bills and buy Treasury bills when appropriate to maintain ample reserves; the statement refers to ample reserves in the banking system. No balance sheet decision changed, so the meeting is recorded here and not as a timeline event, and the stage stays diverged.",
+  "updated_at": "2026-10-29"
 }
