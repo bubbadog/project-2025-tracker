@@ -5,9 +5,9 @@
     "Separation of titles would require a different legislative vehicle"
   ],
   "chapter": "10",
-  "confidence": 80,
-  "confidence_label": "high",
-  "confidence_reason": "Text checked; the public law table of contents, the CRS report, the Rules Committee page and the Statement of Administration Policy were fetched and read on primary pages.",
+  "confidence": 74,
+  "confidence_label": "medium",
+  "confidence_reason": "Chapter pages 297 and 298 confirmed in an earlier review; the enacted law and House bill rest on govinfo and CRS sources read earlier, the 2026-07-31 Senate committee release was read on agriculture.senate.gov and the 2026-09-16 committee vote on a reputable syndicated news report in this review; the Senate bill text itself and Senate records were not read, and diverged remains a judgment call against a partial open-process match.",
   "durability": {
     "level": "medium",
     "why": "Statutes, once enacted, last until amended, but the process and structure of a pending bill can still change in the Senate."
@@ -29,10 +29,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-29",
+      "note": "2026-10-29 freshness: added the Senate Agriculture Committee release (2026-07-31) and committee vote 12-11 (2026-09-16); independent review removed the 2026-09-30 extension-expiry event and its source because the host is a lead-only aggregator, moved its facts to the uncertainties as an unverified lead, moved a reading note out of the 2026-07-31 event, and named the wire publisher; stage diverged unchanged."
     }
   ],
   "id": "c10-17",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-29",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -57,35 +61,34 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "requires_congress changed from yes to partial: the recommendation asks the White House and USDA to press Congress, while separation itself needs legislation.",
-      "Duplicate check: kept, not dropped. c10-02 mentions separate consideration of farm and nutrition legislation only within its description of an ideal USDA; this record carries the open-process element and the separate-timelines element, so the overlap is partial and c10-02 stays in related_ids.",
-      "Judgment call: diverged 0 is kept; proposed 5 or not_started would also be defensible because the House markup and structured rule partly match the open-process element."
+      "AgroLatam judged lead-only (aggregated synthesis); one search did not surface a qualifying post-2026-09-30 source for the lapse or the 2026-09-24 calendar placement.",
+      "Sibling c10-02 labels the same syndicated story as Associated Press; the okcfox.com copy carries a The National News Desk byline."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Pages 297 and 298 say the White House and USDA should make clear to Congress that the farm bill, including subsidy reform, must go through an open process with time for markup and changes outside the Agriculture Committee, and that agricultural programs should be legislated separately from nutrition programs on different reauthorization timelines.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y1",
+    "mandate_check": "verified",
+    "mandate_note": "The prior review confirmed pages 297 and 298 (open process with markup and outside amendments; separate agriculture and nutrition legislation on different timelines); proposal and pages unchanged and the Senate activity does not alter the reading, so the prior verification stands.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-29",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Approved 2025-07-04; Title I has Subtitle A Nutrition, Subtitle C Commodities and Subtitle E Crop Insurance in one title. Checked 2026-10-15.",
+        "note": "Senate committee release of 2026-07-31: Chairman Boozman released revised text of the Agricultural Act of 2026 and set a 2026-08-06 markup; mentions SNAP integrity timing. Consistent with diverged 0 (combined bill moving forward); title-by-title summary not included on the page.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+        "url": "https://www.agriculture.senate.gov/newsroom/rep/press/release/chairman-boozman-releases-updated-farm-bill-20-text-announces-business-meeting"
       },
       {
-        "note": "Introduced 2026-02-13; ordered reported 34-17 on 2026-03-05; 57 of 371 amendments made in order; passed 224-200 on 2026-04-30; nutrition and commodity titles generally run through 2031; no Senate markup. Checked 2026-10-15.",
+        "note": "The National News Desk report (2026-09-16) on okcfox.com: committee advanced the Agricultural Act of 2026 12-11 on party lines; bill covers nutrition programs including SNAP; Senate passage, reconciliation with the House bill and signature remain. Supports diverged 0 on the separation element.",
         "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2026-06-11_R48918_fc499188d5b59772cb420bb04f7cc5a5e380ea18.html"
+        "url": "https://okcfox.com/news/nation-world/mcconnell-returns-to-back-senate-farm-bill-as-panel-advances-it-on-party-line-vote"
       },
       {
-        "note": "H. Res. 1224 reported 2026-04-28, structured rule for H.R. 7567, adopted 216-210 on 2026-04-29. Checked 2026-10-15.",
-        "result": "supports",
-        "url": "https://rules.house.gov/bill/119/hr-7567"
+        "note": "agrolatam.com (2026-10-02): reports the 2018 extension expired 2026-09-30 and the Senate bill was placed on the calendar 2026-09-24; the piece synthesizes other outlets, so the host is treated as a lead-only aggregator; removed from sources and timeline, facts kept as an unverified lead.",
+        "result": "partial",
+        "url": "https://www.agrolatam.com/usa/news/farm-bill-expired-us-farmers-usda-programs-2026/"
       },
       {
-        "note": "SAP dated 2026-04-27 supports swift passage; silent on process and on separating nutrition. Checked 2026-10-15.",
-        "result": "supports",
-        "url": "https://www.whitehouse.gov/wp-content/uploads/2026/05/SAP-HR7567.pdf"
+        "note": "California Ag Today (2026-09-10): extension set to expire 2026-09-30 and Senate bill stalled in committee in August; predates the expiry and the committee vote, so it cannot confirm the lapse; not added to sources.",
+        "result": "partial",
+        "url": "https://www.aginfo.net/report/66253/California-Ag-Today/Three-Extensions-One-More-Deadline-"
       }
     ]
   },
@@ -166,10 +169,24 @@
       "publisher": "Farm Progress",
       "title": "Farm bill saga fraught with obstacles",
       "url": "https://www.farmprogress.com/farm-policy/farm-bill-saga-fraught-with-obstacles"
+    },
+    {
+      "date": "2026-07-31",
+      "kind": "primary",
+      "publisher": "Senate Committee on Agriculture, Nutrition, and Forestry",
+      "title": "Chairman Boozman Releases Updated Farm Bill 2.0 Text, Announces Business Meeting",
+      "url": "https://www.agriculture.senate.gov/newsroom/rep/press/release/chairman-boozman-releases-updated-farm-bill-20-text-announces-business-meeting"
+    },
+    {
+      "date": "2026-09-16",
+      "kind": "news",
+      "publisher": "The National News Desk (via KOKH FOX 25)",
+      "title": "Senate farm bill clears key hurdle in razor-thin vote, aided by McConnell's return",
+      "url": "https://okcfox.com/news/nation-world/mcconnell-returns-to-back-senate-farm-bill-as-panel-advances-it-on-party-line-vote"
     }
   ],
   "stage": "diverged",
-  "status_summary": "Public Law 119-21, enacted 2025-07-04 through budget reconciliation, changed SNAP (Title I, Subtitle A) together with commodity and crop insurance programs (Subtitles C and E) in one act (govinfo). H.R. 7567, introduced 2026-02-13, keeps a nutrition title alongside the commodity title, with both running generally through 2031, so the two subjects were not separated (govinfo; CRS). The bill had a committee markup (ordered reported 34-17 on 2026-03-05) and a structured rule adopted 216-210 on 2026-04-29 that made 57 of 371 submitted amendments in order before House passage 224-200 on 2026-04-30 (CRS; House Rules Committee), and a 2026-04-27 Statement of Administration Policy supported swift passage without addressing process or separation (whitehouse.gov).",
+  "status_summary": "Public Law 119-21, enacted 2025-07-04 through budget reconciliation, changed SNAP (Title I, Subtitle A) together with commodity and crop insurance programs (Subtitles C and E) in one act (govinfo). H.R. 7567, introduced 2026-02-13, keeps a nutrition title alongside the commodity title, with both running generally through 2031, so the two subjects were not separated (govinfo; CRS). The bill had a committee markup (ordered reported 34-17 on 2026-03-05) and a structured rule adopted 216-210 on 2026-04-29 that made 57 of 371 submitted amendments in order before House passage 224-200 on 2026-04-30 (CRS; House Rules Committee), and a 2026-04-27 Statement of Administration Policy supported swift passage without addressing process or separation (whitehouse.gov). After House passage, the Senate Agriculture Committee released updated text of the Agricultural Act of 2026 on 2026-07-31 and advanced it 12-11 on 2026-09-16 with nutrition programs including SNAP still in the bill, leaving Senate passage and reconciliation with the House bill outstanding (Senate committee release; The National News Desk).",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -212,10 +229,24 @@
       "kind": "primary",
       "source": "CRS",
       "url": "https://www.everycrsreport.com/files/2026-06-11_R48918_fc499188d5b59772cb420bb04f7cc5a5e380ea18.html"
+    },
+    {
+      "date": "2026-07-31",
+      "event": "Senate Agriculture Committee Chairman John Boozman releases updated text of the Agricultural Act of 2026 (Farm Bill 2.0) and announces a business meeting for 2026-08-06 to mark it up; the release describes a longer timeline for states to restore SNAP benefit integrity.",
+      "kind": "primary",
+      "source": "Senate Committee on Agriculture, Nutrition, and Forestry",
+      "url": "https://www.agriculture.senate.gov/newsroom/rep/press/release/chairman-boozman-releases-updated-farm-bill-20-text-announces-business-meeting"
+    },
+    {
+      "date": "2026-09-16",
+      "event": "The Senate Agriculture Committee advances the Agricultural Act of 2026, 12-11 on party lines; per the report the bill covers nutrition programs including SNAP, so nutrition and farm programs remain in one bill, and it still needs Senate passage, reconciliation with the House bill and the President's signature.",
+      "kind": "news",
+      "source": "The National News Desk (via KOKH FOX 25)",
+      "url": "https://okcfox.com/news/nation-world/mcconnell-returns-to-back-senate-farm-bill-as-panel-advances-it-on-party-line-vote"
     }
   ],
   "title": "Insist on an open farm bill process and separate farm from nutrition reauthorization",
   "tracked": true,
-  "uncertainties": "Judged diverged because the enacted reconciliation route combined nutrition and commodity changes and the pending bill keeps one nutrition title on the same 2031 horizon, which runs opposite to the recommended separation, and the administration's statement supported the combined bill. The committee markup and a structured floor rule with amendments made in order are consistent with part of the open-process element, so whether the whole record is diverged or proposed is a judgment call. A news report indicates Senate Agriculture Committee deliberations in August 2026 ended without a bill; the exact date was not printed, so it is not a timeline event, and CRS (June 2026) reports no Senate markup in the 119th Congress. CRS does not discuss separation explicitly. The separation element also appears in c10-02 as part of the Mandate's description of an ideal USDA; this record carries the process and timeline elements on pages 297 and 298.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "Judged diverged because the enacted reconciliation route combined nutrition and commodity changes and the pending bill keeps one nutrition title on the same 2031 horizon, which runs opposite to the recommended separation, and the administration's statement supported the combined bill. The committee markup and a structured floor rule with amendments made in order are consistent with part of the open-process element, so whether the whole record is diverged or proposed is a judgment call. A news report indicates Senate Agriculture Committee deliberations in August 2026 ended without a bill; the exact date was not printed, so it is not a timeline event, and CRS (June 2026) reports no Senate markup in the 119th Congress. CRS does not discuss separation explicitly. The separation element also appears in c10-02 as part of the Mandate's description of an ideal USDA; this record carries the process and timeline elements on pages 297 and 298. Update 2026-10-29: the Senate committee vote was read through a The National News Desk report syndicated on okcfox.com, not through Senate or congress.gov records, which were not opened; the bill's title-by-title summary linked from the 2026-07-31 Senate committee release was not read, so how SNAP is organized in the Senate text was not confirmed from the bill itself. A California Ag Today report on aginfo.net (2026-09-10) and the sibling record's news source said the 2018 farm bill extension was set to expire 2026-09-30. An article on agrolatam.com (2026-10-02), a synthesis of other outlets' reporting and treated as an unverified lead, reports that the extension lapsed on 2026-09-30 without a replacement or new extension, that the Senate bill was reported and placed on the calendar on 2026-09-24, and that the chambers had not reconciled their bills; these points were not confirmed on a qualifying source in this review, and a lapse of authority is not itself a government action. No enacted farm bill or new extension was identified. Stage unchanged because the Senate bill also combines nutrition with farm programs.",
+  "updated_at": "2026-10-29"
 }
