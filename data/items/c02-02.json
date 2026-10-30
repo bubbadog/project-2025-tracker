@@ -2,9 +2,9 @@
   "agency": "OMB / OIRA",
   "blockers": [],
   "chapter": "02",
-  "confidence": 84,
+  "confidence": 86,
   "confidence_label": "high",
-  "confidence_reason": "EO 14215 and OMB memorandum M-25-24 were read and match the summary, and the Trump v. Slaughter date and holding were confirmed in the slip opinion. The volume of independent-agency rules actually reviewed by OIRA was not verified.",
+  "confidence_reason": "The text of page 49 was checked, and EO 14215 (the stage-deciding source) was read on govinfo.gov along with the Supreme Court slip opinion. How many independent-agency actions OIRA has actually reviewed is not documented in the sources.",
   "durability": {
     "level": "low",
     "why": "The requirement rests on an executive order and OMB guidance that a later President could rescind, even though Trump v. Slaughter is a durable holding on removal power."
@@ -21,10 +21,14 @@
     {
       "date": "2026-10-15",
       "note": "Refutation check (update run): Federal Register documents from 2026-08 to 2026-10-15 show SEC, CFTC, NRC, EEOC and STB rules reviewed under EO 14215. No court limit or carve-out found. Unchanged. Stage unchanged at implemented 90; no review needed because only uncertainties and red-team findings changed."
+    },
+    {
+      "date": "2026-10-30",
+      "note": "Independent review on 2026-10-30 confirmed EO 14215 on govinfo.gov and the Trump v. Slaughter slip opinion on supremecourt.gov, kept the stage at implemented, and moved the Slaughter decision from the timeline to context."
     }
   ],
   "id": "c02-02",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-30",
   "layer": 1,
   "match": "direct",
   "mechanism": "executive_order",
@@ -72,35 +76,36 @@
     "c02-12"
   ],
   "remaining": [
-    "Verification of how many independent-agency actions have actually been reviewed by OIRA (not found)",
-    "The Mandate's related steps on EO 12866 maintenance, OIRA funding and regulatory advance teams were not assessed here"
+    "A count of independent-agency actions actually reviewed by OIRA has not been compiled in the sources reviewed.",
+    "The Mandate's related steps on EO 12866 maintenance, OIRA funding and regulatory advance teams are not assessed in this record."
   ],
   "requires_congress": "no",
   "research_agent": "A01",
   "review": {
     "flags": [
+      "Trump v. Slaughter removed from the timeline as context not bearing on OIRA review; court_status null removed",
       "possible overlap with c17-02 and c30-01"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 49 says the President should keep EO 12866 as the basis of OIRA review and that regulatory analysis and OIRA review should also be required of historically independent agencies, citing an OLC finding; paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R01",
+    "mandate_note": "Page 49 says the President should keep EO 12866 as the basis of OIRA review and that regulatory analysis and OIRA review should also be required of historically independent agencies, citing an Office of Legal Counsel opinion; the paraphrase and page are accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-30",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "EO 14215 signed 2025-02-18, 90 FR 10447: all agencies including independent ones must submit significant regulatory actions to OIRA; EO 12866's agency definition rewritten to include the FEC; Federal Reserve monetary policy excluded; submissions start within 60 days or on completion of OMB guidance.",
+        "note": "EO 14215, signed 2025-02-18, 90 FR 10447: independent regulatory agencies must submit proposed and final significant regulatory actions to OIRA before publication; EO 12866 agency definition amended to include the FEC; Federal Reserve monetary policy excluded. Supports implemented.",
         "result": "supports",
         "url": "https://govinfo.gov/content/pkg/FR-2025-02-24/pdf/2025-03063.pdf"
       },
       {
-        "note": "M-25-24 dated 2025-04-17 (acting OIRA Administrator): full EO 12866 compliance by 2025-04-21, covering rules and guidance documents; agencies should plan for up to 90 days of review; lists SEC, FCC, FTC, NLRB and others.",
-        "result": "supports",
-        "url": "https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-24-Interim-Guidance-Implementing-Section-3-of-Executive-Order-14215-Titled-Ensuring-Accountability-for-All-Agencies.pdf"
+        "note": "Trump v. Slaughter, No. 25-332, decided 2026-06-29, opinion by Chief Justice Roberts: FTC for-cause removal protection unconstitutional, any remainder of Humphrey's Executor overruled, Federal Reserve status not decided. Context only; the portion read does not address OIRA review or EO 14215, so it does not decide the stage.",
+        "result": "partial",
+        "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r62_g314.pdf"
       },
       {
-        "note": "Trump v. Slaughter, No. 25-332, decided 2026-06-29, 6-3: FTC for-cause removal protection unconstitutional; Federal Reserve status expressly not resolved (fetched for c03-07).",
+        "note": "M-25-24, 2025-04-17, signed by the Acting Administrator of OIRA: independent agencies to begin full EO 12866 compliance no later than 2025-04-21, guidance documents covered, up to 90 days of review presumed; lists the SEC, FCC, FTC, NLRB and others. Supports implemented.",
         "result": "supports",
-        "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r62_g314.pdf"
+        "url": "https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-24-Interim-Guidance-Implementing-Section-3-of-Executive-Order-14215-Titled-Ensuring-Accountability-for-All-Agencies.pdf"
       }
     ]
   },
@@ -170,6 +175,13 @@
       "publisher": "Faegre Drinker",
       "title": "Supreme Court Decides Trump v. Slaughter",
       "url": "https://www.faegredrinker.com/en/insights/publications/2026/6/supreme-court-decides-trump-v-slaughter"
+    },
+    {
+      "date": "2026-06-29",
+      "kind": "court",
+      "publisher": "Supreme Court of the United States",
+      "title": "Trump v. Slaughter, No. 25-332 (slip opinion)",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r62_g314.pdf"
     }
   ],
   "stage": "implemented",
@@ -195,17 +207,10 @@
       "kind": "news",
       "source": "Communications Daily",
       "url": "https://communicationsdaily.com/news/2025/05/13/path-for-fcc-in-the-oira-review-process-seems-unclear-and-cumbersome-2505090004"
-    },
-    {
-      "date": "2026-06-29",
-      "event": "The Supreme Court decides Trump v. Slaughter 6-3, holding the FTC's for-cause removal protection unconstitutional and overruling Humphrey's Executor in substance; the Federal Reserve is treated separately.",
-      "kind": "news",
-      "source": "Venable",
-      "url": "https://www.venable.com/insights/publications/2026/06/supreme-court-overrules-humphreys-executor"
     }
   ],
   "title": "Require OIRA review of rules from historically independent agencies",
   "tracked": true,
-  "uncertainties": "Checked on 2026-10-15: no ruling limiting EO 14215 surfaced in one general search; the Federal Register API listing was read only for its first page of 46 matches. The volume of independent-agency rules actually reviewed was not measured. The Gibson Dunn URL date was not confirmed.",
-  "updated_at": "2026-10-08"
+  "uncertainties": "The Supreme Court decided Trump v. Slaughter (No. 25-332) on 2026-06-29; the slip opinion on supremecourt.gov was read except for its closing pages, and the portion read does not mention OIRA review or EO 14215, so the decision is treated as context rather than a step on this recommendation. Sources reviewed on 2026-10-15 and 2026-10-30 showed no ruling, lawsuit outcome or rescission limiting EO 14215; only 2025 law-firm and press commentary appeared. The Federal Register listing of documents citing the order was read only for its first page of 46 matches, and the volume of independent-agency rules actually reviewed was not measured. The Gibson Dunn page date was not confirmed.",
+  "updated_at": "2026-10-30"
 }

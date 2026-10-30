@@ -1,13 +1,13 @@
 {
   "agency": "EPA",
   "blockers": [
-    "No final rule published as of 2026-10-07; the agenda's July 2026 target was missed",
+    "No final rule published as of 2026-10-30; the agenda's July 2026 target was missed",
     "Likely legal challenge from states and Tribes over the narrowed scope once final (inference, no suit exists yet)"
   ],
   "chapter": "13",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "The Mandate text was checked, and the Federal Register confirms the January 2026 proposal and shows no final EPA rule since. The reviewer did not read the proposal's substantive provisions or the Unified Agenda target date.",
+  "confidence_reason": "Page 429 was checked, and the stage-deciding Federal Register listings and EPA program page were read on 2026-10-30 and show only the January 2026 proposal. The proposal's treatment of speculative future harm was not read.",
   "durability": {
     "level": "medium",
     "why": "A final rule would need a new rulemaking to reverse, but the proposal revises the 2023 rule and would likely face challenge."
@@ -24,10 +24,14 @@
     {
       "date": "2026-10-15",
       "note": "Cross-reference added to the layer 3 second-pass record(s) c13-27 written in the 2026-10-15 enumeration run."
+    },
+    {
+      "date": "2026-10-30",
+      "note": "Independent review on 2026-10-30 confirmed on federalregister.gov and epa.gov that only the January 2026 proposal exists and kept the stage at proposed."
     }
   ],
   "id": "c13-09",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-30",
   "layer": 2,
   "match": "direct",
   "mechanism": "agency_rule",
@@ -42,37 +46,36 @@
   ],
   "remaining": [
     "Finalize the section 401 rule (the agenda's July 2026 target has passed with no final rule published)",
-    "Confirm the final text excludes speculative analysis of future potential harm, as the Mandate specifies (not found in the part of the proposal read)",
+    "Confirm the final text excludes speculative analysis of future potential harm, as the Mandate specifies (not addressed in the part of the proposal read)",
     "Address any litigation over a final rule"
   ],
   "requires_congress": "no",
   "research_agent": "D5",
   "review": {
     "flags": [
-      "proposal's substantive provisions (sections cited, Tribal provisions) not re-read by reviewer",
-      "Unified Agenda July 2026 target not verified",
-      "title said 'short timeline', which the Mandate's 401 bullet does not specify"
+      "Page last-updated date moved from status_summary to uncertainties",
+      "Unified Agenda target date not re-verified"
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 429 lists, among new Office of Water rules, a section 401 certification rule to limit unnecessary delay through a discharge-only approach (point sources into navigable waters), review of only water quality factors tied to specific CWA sections, and exclusion of speculative analysis of future harm; the same page ties repeal and reissuance of Biden-era rules to their outcome and to Supreme Court action. It does not specify a short timeline for 401 reviews (the time-limit bullet concerns section 308).",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "W4",
+    "mandate_note": "Page 429 lists a section 401 certification rule that limits unnecessary delay through a discharge-only approach (point sources into navigable waters), review of only water quality factors tied to specific Clean Water Act sections, and exclusion of speculative analysis of future harm, and ties repeal and reissuance of Biden-era rules to their outcome and Supreme Court action. The paraphrase and page are accurate.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-30",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Document 2026-00754, Updating the Water Quality Certification Regulations, is a proposed rule whose comment deadline is 2026-02-17, matching the record.",
+        "note": "One match since 2026-02-01, the Unified Agenda introduction of 2026-08-14; no final rule. Supports proposed.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-17114,2026-00754,2025-23452,2026-16134,2026-09383.json?fields%5B%5D=dates"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=%22Updating%20the%20Water%20Quality%20Certification%22&conditions%5Bpublication_date%5D%5Bgte%5D=2026-02-01"
       },
       {
-        "note": "Zero EPA documents mentioning water quality certification published from 2026-01-16 through today, so no final section 401 rule has been published.",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22water+quality+certification%22&conditions[agencies][]=environmental-protection-agency&conditions[publication_date][gte]=2026-01-16&order=newest&per_page=20"
-      },
-      {
-        "note": "The proposal's abstract describes updating procedural and substantive section 401 requirements for discharges into waters of the United States but does not itself confirm the point-source limit, the list of CWA sections or the request-contents change; the 2025-07-07 notice abstract confirms listening sessions on the 2023 rule's scope.",
+        "note": "First page of 253 matches since 2026-06-01 shows only Federal Energy Regulatory Commission notices; consistent with proposed but not exhaustive.",
         "result": "partial",
-        "url": "https://www.federalregister.gov/api/v1/documents/2026-00754,2025-12564,2025-02006,2025-07789,2025-15344,2026-10817.json?fields%5B%5D=abstract"
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=water%20quality%20certification&conditions%5Bpublication_date%5D%5Bgte%5D=2026-06-01"
+      },
+      {
+        "note": "Program page (last updated 2026-10-21) describes the January 2026 proposal and the comment period closing 2026-02-17, with no final rule. Supports proposed and the 2026-02-17 timeline event.",
+        "result": "supports",
+        "url": "https://www.epa.gov/cwa-401"
       }
     ]
   },
@@ -104,10 +107,10 @@
       "url": "https://www.federalregister.gov/documents/2025/07/07/2025-12564/establishment-of-public-docket-and-listening-sessions-on-implementation-challenges-associated-with"
     },
     {
-      "date": "2026-07-29",
+      "date": "2026-10-21",
       "kind": "primary",
       "publisher": "U.S. EPA",
-      "title": "Clean Water Act Section 401 (EPA program page)",
+      "title": "Clean Water Act Section 401 (EPA program page, last updated 2026-10-21)",
       "url": "https://www.epa.gov/cwa-401"
     },
     {
@@ -119,7 +122,7 @@
     }
   ],
   "stage": "proposed",
-  "status_summary": "EPA proposed to revise its section 401 certification regulations on 2026-01-15 (91 FR 2008), after taking input through a docket and listening sessions announced 2025-07-07. The proposal limits certification review to discharges from point sources into waters of the United States instead of the 2023 rule's activity-wide approach, ties conditions to water quality requirements under Clean Water Act sections 301, 302, 303, 306 and 307 and appropriate State or Tribal requirements, sets one list of required request contents so the reasonable-period clock starts when it is received (the statute caps it at one year), and drops the Tribal treatment-as-a-state provisions from part 121. Comments closed 2026-02-17. A Unified Agenda entry for the rule lists a final rule target of July 2026, but no final rule appeared in the Federal Register through 2026-10-07 and EPA's section 401 page, updated 2026-07-29, mentions none. The portion of the proposal read did not address the Mandate's exclusion of speculative future harm.",
+  "status_summary": "EPA proposed to revise its section 401 certification regulations on 2026-01-15 (91 FR 2008), after taking input through a docket and listening sessions announced 2025-07-07. The proposal limits certification review to discharges from point sources into waters of the United States instead of the 2023 rule's activity-wide approach, ties conditions to water quality requirements under Clean Water Act sections 301, 302, 303, 306 and 307 and appropriate State or Tribal requirements, sets one list of required request contents so the reasonable-period clock starts when it is received (the statute caps it at one year), and drops the Tribal treatment-as-a-state provisions from part 121. Comments closed 2026-02-17. A Unified Agenda entry for the rule lists a final rule target of July 2026, but no final rule has been published in the Federal Register as of 2026-10-30, and EPA's section 401 program page describes the proposal and mentions no final rule.",
   "timeline": [
     {
       "date": "2025-07-07",
@@ -141,17 +144,10 @@
       "kind": "primary",
       "source": "U.S. EPA",
       "url": "https://www.epa.gov/cwa-401"
-    },
-    {
-      "date": "2026-07-29",
-      "event": "EPA's section 401 page, last updated this date, describes the January 2026 proposal and the closed comment period and mentions no final rule or expected date.",
-      "kind": "primary",
-      "source": "U.S. EPA",
-      "url": "https://www.epa.gov/cwa-401"
     }
   ],
   "title": "Issue a Clean Water Act section 401 certification rule limited to discharges",
   "tracked": true,
-  "uncertainties": "The Federal Register proposal was read through a summarizing fetch of the first 100,000 characters plus a second pass; the parts on decision contents, modifications and any treatment of speculative future harm were not read, so how closely the proposal tracks the Mandate's exclusion of speculative harm is unknown. Federal Register queries for 'water quality certification' (EPA agency filter, since 2025-01-20) show only the 2025-07-07 notice and the 2026-01-15 proposal besides unrelated items, so a final rule is not published; one could be at OMB review or signed but unpublished, which was not checked. The Unified Agenda page was read through a summarizing fetch (edition labeled 2026, publication ID 202510; it also lists a Spring 2025 edition); its July 2026 final rule target has passed. The agenda edition's own publication date was not shown, so the source date given is the date of the latest completed timetable entry (the proposal). The Mandate ties reissuance to the outcome of other regulations and Supreme Court action; whether the 2023 rule was itself challenged was not examined. No news search was run on this objective.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The Federal Register proposal was read in part; its sections on decision contents, modifications and any treatment of speculative future harm were not read, so how closely it tracks the Mandate's exclusion of speculative harm is unknown. Federal Register listings read on 2026-10-30 show no EPA final rule: documents titled Updating the Water Quality Certification published since 2026-02-01 consist only of the Unified Agenda introduction (2026-08-14), and other water quality certification documents since 2026-06-01 are Federal Energy Regulatory Commission reasonable-period notices. A final rule could be under OMB review or signed but unpublished, which was not checked. The Unified Agenda entry on reginfo.gov (publication ID 202510) lists a July 2026 final rule target that has passed; whether the agenda edition introduced on 2026-08-14 revised that date was not read, and the source date given is the date of the latest completed timetable entry (the proposal). EPA's section 401 page on epa.gov, read on 2026-10-30 and showing a last-updated date of 2026-10-21, describes only the proposal (it dates the announcement 2026-01-13, two days before Federal Register publication). The Mandate ties reissuance to the outcome of other regulations and Supreme Court action; whether the 2023 rule was itself challenged was not examined. Commentary reviewed on 2026-10-30 reported no final 2026 rule.",
+  "updated_at": "2026-10-30"
 }
