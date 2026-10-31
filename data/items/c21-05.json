@@ -4,7 +4,7 @@
   "chapter": "21",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "NTIA's 2026-08-25 release, re-read for this review, confirms approval of all 56 final proposals, the restructuring notice itself was read in an earlier review, and GAO decision B-337604 was read on gao.gov and in the Congressional Record. Savings figures are NTIA's, the supplemental notice was read only through a state-hosted copy, and the unresolved Congressional Review Act status adds legal uncertainty.",
+  "confidence_reason": "The NTIA approval release and GAO decision B-337604 were read on primary hosts; the stage weighs completed approvals against GAO's finding that the notice is an unsubmitted rule, which leaves its formal effectiveness open.",
   "durability": {
     "level": "medium",
     "why": "The policy notice is guidance that GAO found to be a rule never submitted under the Congressional Review Act, so its formal status is unresolved and a later submission would open a disapproval window; but approved final proposals and subgrant agreements create commitments with states and providers that a later administration could not undo quickly."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-23",
       "note": "Lead-only source pass: removed a broadband policy institute summary from sources; the point that other uses of savings will come in later guidance now rests on the text of the supplemental deployment notice (state-hosted copy, re-opened; its source date set to null because the copy prints no issue date). Confidence, stage and progress unchanged."
+    },
+    {
+      "date": "2026-10-31",
+      "note": "2026-10-31 review: red-team check found no injunction, vacatur, rescission or reversal of the BEAD Restructuring Policy Notice and no Congressional Review Act submission; stage unchanged at implemented 80 and confidence unchanged at 80."
     }
   ],
   "id": "c21-05",
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-10-31",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_action",
@@ -47,26 +51,30 @@
   "progress": 80,
   "proposal": "The Mandate recommends that NTIA reevaluate its broadband grant programs and, where possible, set administration priorities in how each grant is structured, with widespread infrastructure deployment for 5G adoption in rural and exurban areas as the first priority.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-31",
     "evidence": [
       {
-        "date": "2026-08-25",
-        "kind": "primary",
-        "note": "NTIA states it approved the last of 56 BEAD final proposals; the release gives no national technology breakdown or construction schedule and does not mention 5G.",
-        "source": "NTIA",
-        "url": "https://www.ntia.gov/press-release/2026/closing-digital-divide-once-and-all-ntia-announces-all-56-bead-final-proposals-now-approved"
+        "date": "2026-03-10",
+        "note": "Letter says NTIA had not responded to a 2025-11-25 letter; does not report a CRA submission.",
+        "source": "House Energy and Commerce Committee Democrats",
+        "url": "https://democrats-energycommerce.house.gov/sites/evo-subsites/democrats-energycommerce.house.gov/files/evo-media-document/bead-follow-up-letter-3.10.26.pdf"
       },
       {
-        "date": "2026-02-11",
-        "kind": "news",
-        "note": "Opinion piece reporting that, with 50 of 56 final proposals approved, Starlink held about 472,600 BEAD eligible locations and Amazon Leo about 415,000; it gives no overall technology shares.",
-        "source": "Fierce Network (opinion)",
-        "url": "https://www.fierce-network.com/broadband/opinion-weve-given-huge-hunks-bead-satellite-now-what"
+        "date": "2025-12-16",
+        "note": "Decision B-337604: the notice is a rule subject to CRA submission; NTIA had not submitted it.",
+        "source": "GAO",
+        "url": "https://www.gao.gov/products/b-337604"
+      },
+      {
+        "date": "2026-08-25",
+        "note": "All 56 final proposals approved under the restructured process; no rescission.",
+        "source": "NTIA",
+        "url": "https://www.ntia.gov/press-release/2026/closing-digital-divide-once-and-all-ntia-announces-all-56-bead-final-proposals-now-approved"
       }
     ],
-    "note": "No injunction or reversal found; all 56 final proposals are approved, and the match to the Mandate's 5G-first emphasis remains partial, as the record states.",
+    "note": "No court challenge, vacatur, rescission or reversal turned up in two searches (litigation, CRA) and the letter; no docket was checked. The unsubmitted-rule question from GAO remains unresolved but is already recorded and has not stopped approvals. Stage implemented unchanged.",
     "verdict": "holds",
-    "what_was_tested": "Whether the BEAD reset was enjoined, delayed or reversed, and what technology mix it produced, by reading NTIA's 2026-08-25 release and searching for litigation, delay and technology-share reporting."
+    "what_was_tested": "Whether the 2025-06-06 BEAD Restructuring Policy Notice has been enjoined, vacated, rescinded or reversed, or is not yet effective (GAO found it a rule subject to Congressional Review Act submission), by searching for litigation, CRA submission or disapproval, and later NTIA reversals, and reading a congressional letter of 2026-03-10."
   },
   "related_ids": [
     "c28-10"
@@ -81,46 +89,24 @@
   "research_agent": "A14",
   "review": {
     "flags": [
-      "GAO found the notice a rule not submitted under the CRA; stage kept because approvals are complete and the notice has been applied, with the risk placed in durability",
-      "alternative: progress at the low end of implemented if the notice's formal effectiveness is weighted",
-      "5G emphasis not central to the reset",
-      "savings figures are NTIA's own"
+      "No CRA submission or court challenge found through 2026-10-31; dockets not checked.",
+      "Source date for the state-hosted supplemental notice set to 2026-09-03, the date the record gives for the notice (the copy itself is undated); process wording in uncertainties replaced."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Page 688 recommends reevaluating broadband grant programs and, where possible, setting administration priorities in each grant's structure, with infrastructure for 5G adoption in rural and exurban areas first; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-23",
-    "reviewer": "Y5",
+    "mandate_check": "not_checked",
+    "mandate_note": "Page 688 (reevaluate broadband grants, set administration priorities including 5G infrastructure) was verified in an earlier review; proposal unchanged in this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-31",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Release dated 2026-08-25: NTIA approved the last BEAD final proposal, completing all 56; Virginia example cites more than 85,000 locations and more than $930 million in savings; no national technology mix given.",
+        "note": "Release of 2026-08-25: approval of all 56 BEAD final proposals completed; no rescission or litigation mentioned. Supports implemented 80.",
         "result": "supports",
         "url": "https://www.ntia.gov/press-release/2026/closing-digital-divide-once-and-all-ntia-announces-all-56-bead-final-proposals-now-approved"
       },
       {
-        "note": "Re-read 2026-10-21: release dated 2026-08-25 states approval of all 56 final proposals; no mention of the CRA, GAO or 5G; supports implemented.",
-        "result": "supports",
-        "url": "https://www.ntia.gov/press-release/2026/closing-digital-divide-once-and-all-ntia-announces-all-56-bead-final-proposals-now-approved"
-      },
-      {
-        "note": "Decision B-337604 (2025-12-16) finds the notice a rule subject to CRA submission and notes NTIA did not submit it; does not reverse the approvals, so implemented stands, but it raises an unresolved question on the notice's formal effect.",
+        "note": "Decision of 2025-12-16: the restructuring notice is a rule under the CRA and must be submitted before it can take effect. Supports the durability risk recorded; does not reverse the approvals.",
         "result": "partial",
         "url": "https://www.gao.gov/products/b-337604"
-      },
-      {
-        "note": "Congressional Record of 2025-12-17 prints the GAO letter at a senator's request; no joint resolution of disapproval mentioned; corroborates the GAO finding without changing the stage.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgS8828.htm"
-      },
-      {
-        "note": "Opened and confirmed on 2026-10-23: state-hosted copy of the NTIA Supplemental Deployment Policy Notice, no printed issue date; background section says other uses of BEAD funding will be addressed in subsequent guidance; lets states serve remaining unserved locations through a second Benefit of the Bargain round and a Supplemental Deployment Plan. Supports stage implemented.",
-        "result": "supports",
-        "url": "https://www.in.gov/indianabroadband/files/BEAD_Supplemental_Deployment_Policy_Notice.pdf"
-      },
-      {
-        "note": "Researcher check (not re-opened in review): NTIA release of 2026-09-03 cites about 21 billion dollars in savings under the Supplemental Deployment Policy Notice; does not mention later guidance. Supports stage implemented.",
-        "result": "supports",
-        "url": "https://www.ntia.gov/press-release/2026/ntia-empowers-states-use-bead-savings-location-true-ensuring-universal-broadband-availability-across"
       }
     ]
   },
@@ -180,7 +166,7 @@
       "url": "https://www.govinfo.gov/content/pkg/CREC-2025-12-17/html/CREC-2025-12-17-pt1-PgS8828.htm"
     },
     {
-      "date": null,
+      "date": "2026-09-03",
       "kind": "primary",
       "publisher": "Indiana Broadband Office (state-hosted copy of NTIA notice; mirror)",
       "title": "BEAD Supplemental Deployment Policy Notice",
@@ -228,6 +214,6 @@
   ],
   "title": "Reset NTIA broadband grant priorities toward rural deployment",
   "tracked": true,
-  "uncertainties": "Pass 5: the notice PDF itself was read (through a tool summary with section and page references), so the requirement changes are confirmed from the primary document; the later claims still rest on NTIA statements plus one opinion piece; no litigation or delay was found in one search, but no court docket was checked. The $21 billion savings figure is NTIA's. NTIA's national technology mix was not published in the releases read; an opinion piece in February 2026 reported large low-earth-orbit satellite allocations (about 472,600 locations for Starlink and about 415,000 for Amazon Leo), which bears on how closely the program matches the Mandate's 5G-first emphasis. Other NTIA items in the chapter (spectrum leasing, FirstNet review, online speech review) and other broadband grant programs such as digital equity grants were not assessed. Freshness check on 2026-10-21: a Federal Register search of NTIA documents from 2026-09-03 found nothing on BEAD, and the NTIA press-release index could not be fetched. The 2026-09-03 supplemental deployment notice was read through a state-hosted copy without an issue date, which states in its background section that other uses of BEAD funding will be addressed in subsequent guidance. GAO decision B-337604 (2025-12-16) found the 2025-06-06 notice to be a rule subject to the Congressional Review Act and stated that NTIA had not submitted a CRA report; no later submission and no joint resolution of disapproval were located in web searches. The Act provides that a rule cannot take effect before submission but bars judicial review of omissions under it, so the formal legal status of the notice is unresolved; the stage rests on the final proposal approvals and on the notice having been applied in practice, which the GAO finding does not undo, while a later submission would open a disapproval window, which bears on durability. No court challenge to the notice, the final proposal approvals or the supplemental notice was located; no docket was checked.",
-  "updated_at": "2026-10-23"
+  "uncertainties": "Pass 5: the notice PDF itself was read (in summary form with section and page references), so the requirement changes are confirmed from the primary document; the later claims still rest on NTIA statements plus one opinion piece; no litigation or delay was found in one search, but no court docket was checked. The $21 billion savings figure is NTIA's. NTIA's national technology mix was not published in the releases read; an opinion piece in February 2026 reported large low-earth-orbit satellite allocations (about 472,600 locations for Starlink and about 415,000 for Amazon Leo), which bears on how closely the program matches the Mandate's 5G-first emphasis. Other NTIA items in the chapter (spectrum leasing, FirstNet review, online speech review) and other broadband grant programs such as digital equity grants were not assessed. Freshness check on 2026-10-21: a Federal Register search of NTIA documents from 2026-09-03 found nothing on BEAD, and the NTIA press-release index could not be opened on ntia.gov in that check. The 2026-09-03 supplemental deployment notice was read through a state-hosted copy without an issue date, which states in its background section that other uses of BEAD funding will be addressed in subsequent guidance. GAO decision B-337604 (2025-12-16) found the 2025-06-06 notice to be a rule subject to the Congressional Review Act and stated that NTIA had not submitted a CRA report; no later submission and no joint resolution of disapproval were located in web searches. The Act provides that a rule cannot take effect before submission but bars judicial review of omissions under it, so the formal legal status of the notice is unresolved; the stage rests on the final proposal approvals and on the notice having been applied in practice, which the GAO finding does not undo, while a later submission would open a disapproval window, which bears on durability. No court challenge to the notice, the final proposal approvals or the supplemental notice was located; no docket was checked.",
+  "updated_at": "2026-10-31"
 }
