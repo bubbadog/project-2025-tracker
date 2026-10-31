@@ -7,7 +7,13 @@
   "chapter": "10",
   "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "The statutory SNAP changes and effective dates were confirmed in the USDA implementation memo, a Federal Register search confirmed that no categorical eligibility rule has been published as of 2026-10-07, and the waiver litigation was confirmed in a secondary report. The participation figures were not checked.",
+  "confidence_reason": "The FNS ABAWD implementation memorandum was read and confirms the statutory changes in effect since 2025-07-04, and the waiver litigation now rests on a university litigation tracker; the categorical eligibility rule remains unpublished and its status is less certain.",
+  "court_status": {
+    "basis": "Latest court event found: Rhode Island State Council of Churches v. Rollins (D.R.I., No. 1:25-cv-00569), in which a 2025-10-31 temporary restraining order required USDA to honor existing SNAP work-requirement waivers, was dismissed as moot by joint stipulation after those waivers expired on 2026-03-01. No order enjoining the statutory age, exemption or waiver-threshold changes was found.",
+    "date": "2026-03-02",
+    "state": "dismissed",
+    "url": "https://clearinghouse.net/case/47097/"
+  },
   "durability": {
     "level": "high",
     "why": "The work-requirement, waiver, Thrifty Food Plan and utility allowance changes are in statute, so reversal would need legislation; the pending categorical eligibility rule would be a regulation and easier to undo."
@@ -32,10 +38,14 @@
     {
       "date": "2026-10-23",
       "note": "Lead-only source pass: the 2025-11-01 hold-harmless event cited an association timeline (NGA); it now cites the FNS questions-and-answers memo of 2025-11-14, opened on 2026-10-23, and is limited to the two provisions that memo covers. No change of stage or confidence; wording checked by an independent review on the same day."
+    },
+    {
+      "date": "2026-10-31",
+      "note": "2026-10-31 review: waiver litigation re-sourced to a university litigation tracker (temporary restraining order of 2025-10-31, dismissal as moot of 2026-03-02, court_status added as dismissed), lead-only items moved to uncertainties and an unrelated uncertainties text restored; stage unchanged at implemented 75 and confidence unchanged at 82."
     }
   ],
   "id": "c10-01",
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-10-31",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -48,26 +58,30 @@
   "progress": 75,
   "proposal": "The Mandate recommends re-implementing and tightening SNAP work requirements, mainly by limiting state waivers for able-bodied adults without dependents and clarifying the general work requirement. It also recommends narrowing broad-based categorical eligibility, re-evaluating the 2021 Thrifty Food Plan increase, and ending the heat-and-eat utility allowance practice.",
   "redteam": {
-    "date": "2026-10-07",
+    "date": "2026-10-31",
     "evidence": [
       {
-        "date": "2026-10-07",
-        "kind": "primary",
-        "note": "Query for FNS documents mentioning categorical eligibility since 2025-10-01 returned one item, a 2026-05-18 information-collection notice, and no proposed or final rule.",
-        "source": "Federal Register API",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22categorical+eligibility%22&conditions[agencies][]=food-and-nutrition-service&conditions[publication_date][gte]=2025-10-01&order=newest&per_page=20"
+        "date": "2026-09-21",
+        "note": "D. Or. (Judge Kasubhai) held USDA's implementation deadline for other eligibility-calculation changes unlawful and that USDA guidance improperly excluded certain lawful permanent residents; the article does not mention the age 18-64 work requirement.",
+        "source": "Supermarket News",
+        "url": "https://www.supermarketnews.com/food-accessibility/federal-judge-rules-against-some-snap-restrictions"
       },
       {
-        "date": "2026-05-18",
-        "kind": "primary",
-        "note": "Paperwork Reduction Act notice for the quality control worksheet; mentions categorical eligibility only as a form field, not a rule.",
-        "source": "Federal Register",
-        "url": "https://www.federalregister.gov/documents/2026/05/18/2026-09935/agency-information-collection-activities-proposed-collection-comment-request-supplemental-nutrition"
+        "date": "2026-09-21",
+        "note": "Says the ruling makes permanent a December 2025 preliminary injunction on noncitizen eligibility guidance and the backdated penalty deadline; does not mention work requirements.",
+        "source": "Michigan Attorney General (party-state release; lead only)",
+        "url": "https://www.michigan.gov/ag/news/press-releases/2026/09/21/attorney-general-nessel-permanently-blocks-unlawful-snap-eligibility-guidance"
+      },
+      {
+        "date": "2026-10-31",
+        "note": "Rhode Island waiver litigation ended by joint stipulation of dismissal as moot (2026-03-02) after the waivers expired 2026-03-01; it never reached the statutory age or exemption rules.",
+        "source": "Civil Rights Litigation Clearinghouse",
+        "url": "https://clearinghouse.net/case/47097/"
       }
     ],
-    "note": "The statutory SNAP changes stand and no categorical eligibility rule has been published as of 2026-10-07; a web search for one returned only 2019 coverage.",
+    "note": "No order was found enjoining the age 18-64 time limit, narrowed exemptions or waiver limits; state agencies' notices describe them as effective. The Oregon ruling touches the penalty-timing deadline for some H.R. 1 changes, so the hold-harmless fact in the record may be affected (not established; the pages read do not say). Note a 2026-06-05 D. Mass. injunction against separate USDA grant conditions (per CiberCuba, a secondary report) is unrelated to this action.",
     "verdict": "holds",
-    "what_was_tested": "Re-ran a Federal Register query on 2026-10-07 for any Food and Nutrition Service categorical eligibility proposal and searched the web for a published rule, to see whether the pending piece had moved or the statutory changes had been blocked."
+    "what_was_tested": "Whether the Public Law 119-21 SNAP work-requirement, exemption and waiver changes (ages 18 to 64, child exemption under 14, removal of veteran/homeless/former foster youth exemptions) were enjoined, vacated, rescinded or not yet effective, including any September 2026 court rulings."
   },
   "related_ids": [
     "c00-10",
@@ -85,28 +99,31 @@
   "research_agent": "A07",
   "review": {
     "flags": [
-      "participation data not fetched"
+      "Uncertainties text had been overwritten with text from another record (c03-01, Schedule Policy/Career); restored from the stored version and the new checks appended.",
+      "Ballotpedia removed from sources and timeline; 2025-10-31 TRO re-sourced to the Civil Rights Litigation Clearinghouse; the 2026-02-26 USDA guidance event replaced with the 2026-03-02 dismissal and the guidance moved to uncertainties as a lead.",
+      "2025-10-03 event no longer attributes the waiver-termination announcement to the FNS memo, which does not mention waivers.",
+      "court_status added (dismissed, 2026-03-02)."
     ],
-    "mandate_check": "verified",
-    "mandate_note": "Pages 299 to 301 contain the SNAP reform list: re-implement ABAWD work requirements and limit waivers, clarify the general work requirement, reform broad-based categorical eligibility, re-evaluate the Thrifty Food Plan, and eliminate the LIHEAP-linked heat-and-eat practice; the paraphrase is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-07",
-    "reviewer": "R04",
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 299 to 301 (SNAP work requirements, waivers, categorical eligibility, Thrifty Food Plan, heat-and-eat) were verified in the 2026-10-07 review; proposal unchanged in this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-31",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "FNS memo dated 2025-09-04 confirms the P.L. 119-21 changes: time-limit exception age raised to 65, child exception limited to under 14, veteran, homeless and former foster youth exceptions removed, waivers only at 10 percent unemployment (Alaska and Hawaii rules separate), cost-neutral Thrifty Food Plan, and automatic heating and cooling SUA via LIHEAP limited to elderly or disabled households; most provisions effective on enactment, with a 120-day QC hold-harmless.",
+        "note": "FNS memo of 2025-10-03: ages 18 to 64, caregiver exception under 14, veteran, homeless and former foster youth exceptions removed, effective 2025-07-04. Supports implemented 75. Does not mention waivers; the event text was corrected.",
         "result": "supports",
-        "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-implementation.pdf"
+        "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-abawd-exceptions-implementation.pdf"
       },
       {
-        "note": "Federal Register search run on 2026-10-07 returns only two information-collection notices and no proposed or final categorical eligibility rule, consistent with the claim that the draft rule has not been published.",
+        "note": "Rhode Island State Council of Churches v. Rollins, No. 1:25-cv-00569 (D.R.I.): TRO granted 2025-10-31 requiring USDA to honor existing waivers; waivers expired 2026-03-01; joint stipulation of dismissal as moot 2026-03-02. Replaces the lead-only source for the waiver litigation; supports court_status dismissed.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22categorical+eligibility%22&conditions[agencies][]=food-and-nutrition-service&conditions[publication_date][gte]=2025-01-20"
+        "url": "https://clearinghouse.net/case/47097/"
       },
       {
-        "note": "Ballotpedia confirms RI Council of Churches v. Rollins (D.R.I.), filed 2025-10-30 by eight cities and other groups; a TRO on 2025-10-31 paused the early termination of insufficient-jobs waivers set for 2025-11-02; USDA guidance of 2026-02-26 reinstated the waivers through their original expiration dates.",
-        "result": "supports",
-        "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
+        "note": "Plaintiffs' TRO motion filed 2025-10-30: sought a stay of the early termination of ABAWD waivers effective 2025-11-02. A party filing, used only for the requested relief and the termination date.",
+        "result": "partial",
+        "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/164839.pdf"
       }
     ]
   },
@@ -171,22 +188,29 @@
       "url": "https://www.fna.usda.gov/sites/default/files/resource-files/snap-4fymonthly-9.pdf"
     },
     {
-      "date": "2026-04-02",
-      "kind": "news",
-      "publisher": "Ballotpedia News",
-      "title": "USDA guidance in response to litigation reinstates SNAP benefits for some ABAWDs",
-      "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
-    },
-    {
       "date": "2025-11-14",
       "kind": "primary",
       "publisher": "USDA Food and Nutrition Service",
       "title": "Supplemental Nutrition Assistance Program (SNAP) Questions and Answers on Quality Control (QC) Variance Exclusion",
       "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-qas-variance-exclusion.pdf"
+    },
+    {
+      "date": "2026-10-31",
+      "kind": "tracker",
+      "publisher": "Civil Rights Litigation Clearinghouse (University of Michigan Law)",
+      "title": "Case: Rhode Island State Council of Churches v. Rollins",
+      "url": "https://clearinghouse.net/case/47097/"
+    },
+    {
+      "date": "2025-10-30",
+      "kind": "court",
+      "publisher": "U.S. District Court for the District of Rhode Island via Civil Rights Litigation Clearinghouse",
+      "title": "Rhode Island State Council of Churches v. Rollins, No. 1:25-cv-00569 (D.R.I.), plaintiffs' motion for temporary restraining order (filed 2025-10-30)",
+      "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/164839.pdf"
     }
   ],
   "stage": "implemented",
-  "status_summary": "Public Law 119-21 (signed 2025-07-04) extended the time limit on benefits for adults without dependents to ages 18 through 64, narrowed the child-based exemption to children under 14, removed the exemptions for veterans, people experiencing homelessness and former foster youth, and limited area waivers to unemployment of 10 percent or higher (with separate Alaska and Hawaii rules). The law also requires future Thrifty Food Plan re-evaluations to be cost neutral and limits the automatic heating and cooling utility allowance tied to energy assistance to households with an elderly or disabled member. USDA issued implementing memos in September and October 2025, and the hold-harmless period for state error rates ended 2025-11-01. A USDA draft rule to narrow broad-based categorical eligibility reached OMB on 2025-10-24, and no published proposal was found in the sources reviewed (which run through June 2026). USDA data show about 41.2 million participants in September 2025 and about 36.4 million in June 2026 (preliminary); the data do not establish the cause of the change.",
+  "status_summary": "Public Law 119-21 (signed 2025-07-04) extended the time limit on benefits for adults without dependents to ages 18 through 64, narrowed the child-based exemption to children under 14, removed the exemptions for veterans, people experiencing homelessness and former foster youth, and limited area waivers to unemployment of 10 percent or higher (with separate Alaska and Hawaii rules). The law also requires future Thrifty Food Plan re-evaluations to be cost neutral and limits the automatic heating and cooling utility allowance tied to energy assistance to households with an elderly or disabled member. USDA issued implementing memos in September and October 2025, and the hold-harmless period for state error rates ended 2025-11-01. A federal court in Rhode Island ordered USDA on 2025-10-31 to honor existing work-requirement waivers that USDA had moved to end early; that case was dismissed as moot in March 2026 after the waivers expired on 2026-03-01. A USDA draft rule to narrow broad-based categorical eligibility reached OMB on 2025-10-24, and no published proposal was found in the sources reviewed (which run through June 2026). USDA data show about 41.2 million participants in September 2025 and about 36.4 million in June 2026 (preliminary); the data do not establish the cause of the change.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -204,7 +228,7 @@
     },
     {
       "date": "2025-10-03",
-      "event": "FNS issues guidance on the revised adult exemptions (ages 18 to 64, child exemption under 14, removal of veteran, homeless and former foster youth exemptions). USDA also announces it will end waivers granted under a provision the law repealed.",
+      "event": "FNS issues an implementation memorandum on the revised ABAWD exceptions: time limit extended to ages 18 to 64, caregiver exception limited to children under 14, and the exceptions for veterans, people experiencing homelessness and former foster youth removed, effective on enactment (2025-07-04) and applied immediately at application and recertification.",
       "kind": "primary",
       "source": "USDA Food and Nutrition Service",
       "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-abawd-exceptions-implementation.pdf"
@@ -218,10 +242,10 @@
     },
     {
       "date": "2025-10-31",
-      "event": "A federal district court in Rhode Island issues a temporary restraining order that pauses the early termination of the waivers, in a suit by eight cities and other groups.",
-      "kind": "news",
-      "source": "Ballotpedia News",
-      "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
+      "event": "In Rhode Island State Council of Churches v. Rollins (D.R.I., No. 1:25-cv-00569, Chief Judge John J. McConnell Jr.), brought by cities, faith-based and nonprofit groups, SNAP recipients and retailers, the court grants a temporary restraining order at a hearing and orders USDA to honor existing waivers of certain SNAP work requirements (written order ECF 19 dated 2025-11-01); the plaintiffs' motion of 2025-10-30 had sought to stay USDA's early termination of ABAWD waivers, effective 2025-11-02.",
+      "kind": "court",
+      "source": "Civil Rights Litigation Clearinghouse",
+      "url": "https://clearinghouse.net/case/47097/"
     },
     {
       "date": "2025-11-01",
@@ -231,11 +255,11 @@
       "url": "https://www.usda.gov/sites/default/files/guidance-documents/fns.snap-obbb-qas-variance-exclusion.pdf"
     },
     {
-      "date": "2026-02-26",
-      "event": "USDA guidance reverses the early waiver terminations; the affected waivers stay in effect through their original end dates, citing the litigation.",
-      "kind": "news",
-      "source": "Ballotpedia News",
-      "url": "https://news.ballotpedia.org/2026/04/02/usda-guidance-in-response-to-litigation-reinstates-snap-benefits-for-some-abawds/"
+      "date": "2026-03-02",
+      "event": "The parties in Rhode Island State Council of Churches v. Rollins (D.R.I., No. 1:25-cv-00569) file a joint stipulation of dismissal as moot after the waivers at issue expired on 2026-03-01; the Clearinghouse lists the case as closed on 2026-03-03.",
+      "kind": "tracker",
+      "source": "Civil Rights Litigation Clearinghouse",
+      "url": "https://clearinghouse.net/case/47097/"
     },
     {
       "date": "2026-06-01",
@@ -247,6 +271,6 @@
   ],
   "title": "Tighten SNAP work requirements, categorical eligibility and utility allowances",
   "tracked": true,
-  "uncertainties": "Whether the categorical eligibility proposal has been published after June 2026 was not confirmed; a Federal Register search for FNS proposed and final rules since 2025-01-20 found none on categorical eligibility, and the OMB review entry is the only primary evidence. The Ballotpedia item and the NGA timeline are secondary summaries. The participation change is shown from USDA data without a causal finding; a local news article attributing it to rules effective 2026-02-01 was not verified and was not used. The shutdown-era benefit litigation and state-level implementation differences were not examined in detail. Because the Mandate proposed a regulatory path and the change came through a reconciliation law with a wider scope (ages to 64), the match is rated partial. A National Governors Association timeline lists five H.R. 1 SNAP provisions under the hold-harmless period and an FNS memo of 2025-09-04; only sections 10102 and 10103 are confirmed by the FNS memo opened on 2026-10-23, and the rest is an unverified lead.",
-  "updated_at": "2026-10-23"
+  "uncertainties": "Whether the categorical eligibility proposal has been published after June 2026 was not confirmed; a Federal Register search for FNS proposed and final rules since 2025-01-20 found none on categorical eligibility, and the OMB review entry is the only primary evidence. The NGA timeline is a secondary summary. The participation change is shown from USDA data without a causal finding; a local news article attributing it to rules effective 2026-02-01 was not verified and was not used. The shutdown-era benefit litigation and state-level implementation differences were not examined in detail. Because the Mandate proposed a regulatory path and the change came through a reconciliation law with a wider scope (ages to 64), the match is rated partial. A National Governors Association timeline lists five H.R. 1 SNAP provisions under the hold-harmless period and an FNS memo of 2025-09-04; only sections 10102 and 10103 are confirmed by the FNS memo opened on 2026-10-23, and the rest is an unverified lead. A Ballotpedia News item (2026-04-02), an unverified lead, reports that USDA guidance of 2026-02-26 reversed the early waiver terminations and let the affected waivers run to their original end dates; the Clearinghouse page for the Rhode Island case does not mention that guidance, and no USDA copy was found, so it is not a timeline event. Earlier text tied USDA's announcement of early waiver terminations to the 2025-10-03 memo, which does not mention waivers; the termination date of 2025-11-02 rests on the plaintiffs' motion. Checked 2026-10-31: a District of Oregon ruling of mid-September 2026 (22 states and the District of Columbia; Judge Kasubhai) held USDA's implementation deadline for some H.R. 1 eligibility-calculation changes unlawful and set aside guidance excluding certain lawful permanent residents, per Supermarket News; the reports read do not say whether it reaches the work-requirement provisions or the 2025-11-01 end of the quality-control hold-harmless period, and the ruling itself was not read.",
+  "updated_at": "2026-10-31"
 }

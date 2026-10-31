@@ -6,9 +6,9 @@
     "Implementation depends on DOE determinations not yet issued"
   ],
   "chapter": "12",
-  "confidence": 85,
+  "confidence": 86,
   "confidence_label": "high",
-  "confidence_reason": "Mandate text checked; the executive order, Order No. 912 and the CIP-014-4 order were all fetched from primary hosts and read.",
+  "confidence_reason": "Mandate text was checked in an earlier review; the executive order, Order No. 912, the CIP-014-4 order and the DOE request for information were read on primary hosts.",
   "durability": {
     "level": "medium",
     "why": "The emergency order and DOE rules can be revoked or changed by a future administration, while FERC-approved reliability standards persist until revised."
@@ -30,10 +30,14 @@
     {
       "date": "2026-10-15",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-10-31",
+      "note": "2026-10-31 review: confirmed DOE's 2026-09-09 request for information under Executive Order 14421 (91 FR 57322, responses due 2026-10-09) and its 2026-10-06 FAQ; stage unchanged at in_progress 30 and confidence moved from 85 to 86."
     }
   ],
   "id": "c12-23",
-  "last_checked": "2026-10-15",
+  "last_checked": "2026-10-31",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -58,40 +62,24 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "Progress lowered from 35 to 30 within in_progress because no prohibition under Executive Order 14421 is yet operative and CIP-014-4 is final but not effective until 2028.",
-      "Pages corrected from [374, 402] to [402]; the page 374 element (reinstating the 2020 order) is tracked in c12-17.",
-      "Lead for c12-17: Executive Order 14421 of 2026-08-26 is the reissued bulk-power system order; confirm c12-17 records it."
+      "Event wording corrected to cite 91 FR 57322 and the document's response deadline; the earlier statement that the Federal Register page could not be opened was removed because the record was read in this review.",
+      "Status summary reordered chronologically."
     ],
-    "mandate_check": "corrected",
-    "mandate_note": "Page 402 asks FERC and NERC to strengthen grid security against cyber and physical threats, giving as examples a ban on Chinese-made components, investment in transformers and hardening of substations, and says DOE should lead in identifying and addressing grid threats. The page 374 reference to the 2020 executive order belongs to c12-17 and was removed from this record.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-15",
-    "reviewer": "Y3",
+    "mandate_check": "not_checked",
+    "mandate_note": "Page 402 was checked in the 2026-10-15 review (FERC and NERC grid security, with a ban on Chinese equipment given as an example); proposal and pages unchanged in this run.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-10-31",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Federal Register API confirms EO 14421, signed 2026-08-26, published 2026-08-31, document 2026-17843 (checked 2026-10-15).",
+        "note": "Federal Register record: DOE notice, request for information, published 2026-09-09 at 91 FR 57322, RIN 1901-AB79; responses due 2026-10-09 per the document text. Consistent with in_progress: information gathering only, nothing operative.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=14421&conditions[presidential_document_type]=executive_order&conditions[publication_date][gte]=2026-01-01"
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-18370.json"
       },
       {
-        "note": "Order text: prohibition depends on Secretary findings on covered foreign entities and undue risk, no country named, rules within 120 days, no mention of EO 13920 (checked 2026-10-15).",
+        "note": "FAQ updated 2026-10-06: responses due 2026-10-09 under docket DOE-HQ-2026-1123; designates no additional country, person, equipment or vendor; prohibitions require Secretary findings. Supports in_progress with no prohibition yet operative.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17843/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system"
-      },
-      {
-        "note": "Order No. 912 confirmed on GovInfo: RM24-4 and RM20-19, issued 2025-09-18, effective 2025-11-24, 18-month NERC directive, declines country-of-origin requirement, terminates RM20-19 (checked 2026-10-15).",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/FR-2025-09-23/pdf/2025-18394.pdf"
-      },
-      {
-        "note": "FERC order in RD26-9 of 2026-09-10 approves CIP-014-4, effective 2028-10-01; replaces the law-firm source (checked 2026-10-15).",
-        "result": "supports",
-        "url": "https://public-inspection.federalregister.gov/2026-18868.pdf"
-      },
-      {
-        "note": "FERC meeting summary item E-1 confirms CIP-014-4 approval on 2026-09-10 (checked 2026-10-15).",
-        "result": "supports",
-        "url": "https://ferc.gov/news-events/news/summaries-september-2026-commission-meeting"
+        "url": "https://www.energy.gov/sites/default/files/2026-10/Bulk%20Power%20System%20EO%20and%20DOE%20RFI%20FAQs.pdf"
       }
     ]
   },
@@ -165,10 +153,24 @@
       "publisher": "FERC",
       "title": "Summaries, September 2026 Commission Meeting",
       "url": "https://ferc.gov/news-events/news/summaries-september-2026-commission-meeting"
+    },
+    {
+      "date": "2026-09-09",
+      "kind": "primary",
+      "publisher": "Federal Register (Department of Energy)",
+      "title": "Securing the United States Bulk-Power System (request for information, FR Doc. 2026-18370, 91 FR 57322)",
+      "url": "https://www.federalregister.gov/documents/2026/09/09/2026-18370/securing-the-united-states-bulk-power-system"
+    },
+    {
+      "date": "2026-10-06",
+      "kind": "primary",
+      "publisher": "U.S. Department of Energy",
+      "title": "Bulk-Power System Executive Order and DOE RFI: Frequently Asked Questions",
+      "url": "https://www.energy.gov/sites/default/files/2026-10/Bulk%20Power%20System%20EO%20and%20DOE%20RFI%20FAQs.pdf"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "On 2025-09-18 FERC issued Order No. 912, directing NERC to develop supply chain risk management standards within 18 months, while declining to add country-of-origin restrictions and terminating its 2020 inquiry on equipment from entities identified as security risks. On 2026-08-26 Executive Order 14421 declared a national emergency over foreign-produced bulk-power system equipment; it prohibits covered transactions once the Secretary of Energy finds a link to a covered foreign entity and undue risk, names no country, and directs implementing rules within 120 days. On 2026-09-10 FERC approved NERC's revised physical security standard CIP-014-4 for transmission stations and substations, effective 2028-10-01.",
+  "status_summary": "On 2025-09-18 FERC issued Order No. 912, directing NERC to develop supply chain risk management standards within 18 months, while declining to add country-of-origin restrictions and terminating its 2020 inquiry on equipment from entities identified as security risks. On 2026-08-26 Executive Order 14421 declared a national emergency over foreign-produced bulk-power system equipment; it prohibits covered transactions once the Secretary of Energy finds a link to a covered foreign entity and undue risk, names no country, and directs implementing rules within 120 days. On 2026-09-09 DOE published a request for information on implementing the order (responses due 2026-10-09); DOE's FAQ page, updated 2026-10-06, designates no additional country, person, equipment or vendor as covered. On 2026-09-10 FERC approved NERC's revised physical security standard CIP-014-4 for transmission stations and substations, effective 2028-10-01.",
   "timeline": [
     {
       "date": "2025-09-18",
@@ -185,6 +187,13 @@
       "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17843/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system"
     },
     {
+      "date": "2026-09-09",
+      "event": "DOE published a request for information, Securing the United States Bulk-Power System (FR Doc. 2026-18370, 91 FR 57322; docket DOE-HQ-2026-1123; RIN 1901-AB79), seeking input on implementing Executive Order 14421 (covered equipment, foreign-entity risk criteria, existing equipment, mitigation, licensing, domestic manufacturing and federal procurement); written responses due 2026-10-09.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/09/09/2026-18370/securing-the-united-states-bulk-power-system"
+    },
+    {
       "date": "2026-09-10",
       "event": "FERC issued an order (docket RD26-9) approving NERC's revised physical security reliability standard CIP-014-4 for transmission stations and substations, retiring CIP-014-3, effective 2028-10-01.",
       "kind": "primary",
@@ -194,6 +203,6 @@
   ],
   "title": "Bar Chinese-made components from the bulk power system and harden substations",
   "tracked": true,
-  "uncertainties": "The executive order was read in the unofficial federalregister.gov rendition; it does not mention Executive Order 13920, FERC or NERC, and names no country, so whether China is covered depends on later Secretary findings. No Commerce ICTS rule on grid equipment was found. Whether DOE has issued any finding or rule under the order was not checked. Transformer investment and any January 2026 DOE action on inverters or transformers were not found in a limited search (federalregister.gov, ferc.gov, law-firm sites). The executive order is also the reissued bulk-power order tracked in c12-17.",
-  "updated_at": "2026-10-15"
+  "uncertainties": "The executive order was read in the unofficial federalregister.gov rendition; it does not mention Executive Order 13920, FERC or NERC, and names no country, so whether China is covered depends on later Secretary findings. No Commerce ICTS rule on grid equipment was found. Transformer investment and any January 2026 DOE action on inverters or transformers were not found in a limited search (federalregister.gov, ferc.gov, law-firm sites). The executive order is also the reissued bulk-power order tracked in c12-17. As of 2026-10-31 no Secretary finding, designation or DOE implementing rule under the order was found; the 120-day rule deadline falls about 2026-12-24 (inference from the order date). The Federal Register record for the request for information shows no structured comment-close date and a docket identifier formatted differently from the one in the document and the DOE FAQ (DOE-HQ-2026-1123), which this record uses.",
+  "updated_at": "2026-10-31"
 }
