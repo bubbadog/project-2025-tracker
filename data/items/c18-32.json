@@ -4,9 +4,9 @@
     "The Title VII clarifications require Congress"
   ],
   "chapter": "18",
-  "confidence": 72,
+  "confidence": 70,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter page 586 checked and Executive Orders 14291 (90 FR 19417) and 14202 (90 FR 9365) were read in review and contain no employer directive; the stage rests on an absence that was checked only through Federal Register searches, and contractor-rule and EEOC accommodation documents were not reviewed.",
+  "confidence_reason": "Chapter text on page 586 was checked and the DOJ release on the Commission report was read, but the stage rests on the absence of an order, and the related executive orders were read in an earlier review rather than this one.",
   "durability": {
     "level": "low",
     "why": "Executive orders and commissions can be revoked or may expire; the Task Force terminates in about February 2027 unless extended."
@@ -32,10 +32,18 @@
     {
       "date": "2026-10-16",
       "note": "Independent review re-read Executive Orders 14291 and 14202 on federalregister.gov and found a 2026-08-07 Religious Liberty Commission meeting notice; stage proposed 15 unchanged; confidence 66 to 72."
+    },
+    {
+      "date": "2026-11-01",
+      "note": "Freshness check: added the 2026-06-26 delivery of the Religious Liberty Commission final draft report (DOJ release); no executive order on religious employers found; stage unchanged."
+    },
+    {
+      "date": "2026-11-01",
+      "note": "Independent review: stage proposed 15 kept; Commission report event reworded to describe the release contents; uncertainties wording on earlier reviews corrected; confidence 72 to 70 with the chapter text on page 586 checked; the stage rests on an absence."
     }
   ],
   "id": "c18-32",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-11-01",
   "layer": 3,
   "match": "parallel",
   "mechanism": "executive_order",
@@ -63,29 +71,23 @@
       "url": "https://www.federalregister.gov/documents/2025/05/07/2025-08134/establishment-of-the-religious-liberty-commission"
     },
     "flags": [
-      "Confirmation that the cited orders do not contain the employer directive; stage kept.",
-      "Uncertainties reworded to name the orders re-read in this review and to note that congressional bills were not searched."
+      "Stage proposed 15 kept; not_started remains a defensible alternative because no order contains the employer directive."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 586 asks for an executive order stating that religious employers may run their businesses by their beliefs notwithstanding general nondiscrimination laws and supporting religious employers and employees as federal contractors and program participants, plus congressional clarification of Title VII religious organization exemptions and of undue hardship as significant difficulty or expense; the paraphrase fits.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "P16-4",
+    "mandate_check": "verified",
+    "mandate_note": "Page 586 recommends an executive order making clear that religious employers may run their businesses by their religious beliefs notwithstanding general nondiscrimination laws and supporting religious employers and employees as federal contractors and in federal activities; the record's paraphrase of that part fits. The Title VII exemption and undue hardship part of the paraphrase was not among the passages checked in this review and rests on the earlier review.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-11-01",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "90 FR 19417; employers among members and report topics only; no directive; terminates 2026-07-04 unless extended.",
-        "result": "does_not_support",
-        "url": "https://www.federalregister.gov/documents/2025/05/07/2025-08134/establishment-of-the-religious-liberty-commission"
-      },
-      {
-        "note": "90 FR 9365; task force reviews Labor and EEOC activity; no employer or contractor directive.",
+        "note": "Release 26-713 dated 2026-06-26 (updated 2026-07-01): final draft report with 12 recommendations; none addresses religious employers, nondiscrimination law, Title VII or federal contractors; final report described as forthcoming. Consistent with proposed, advisory steps only.",
         "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2025/02/12/2025-02611/eradicating-anti-christian-bias"
+        "url": "https://www.justice.gov/opa/pr/president-trumps-religious-liberty-commission-delivers-historic-report-draft"
       },
       {
-        "note": "Commission meeting notice published 2026-08-07 (FR Doc. 2026-16178).",
-        "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=%22religious+liberty+commission%22&conditions[publication_date][gte]=2026-06-01&order=newest&per_page=20"
+        "note": "Not re-fetched in this review; the 2026-10-16 review found no employer directive in EO 14291.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/documents/2025/05/07/2025-08134/establishment-of-the-religious-liberty-commission"
       }
     ],
     "stage_change_reason": "No order contains the employer directive; the related orders create advisory bodies and state a funding-equality policy for faith-based entities, which is parallel to part of the recommendation; proposed at 15 is kept, with not_started a defensible alternative if EO 14205 is judged outside the federal programs clause."
@@ -139,6 +141,13 @@
       "publisher": "Federal Register",
       "title": "Executive Order 14291, Establishment of the Religious Liberty Commission",
       "url": "https://www.federalregister.gov/documents/2025/05/07/2025-08134/establishment-of-the-religious-liberty-commission"
+    },
+    {
+      "date": "2026-06-26",
+      "kind": "primary",
+      "publisher": "U.S. Department of Justice",
+      "title": "President Trump's Religious Liberty Commission delivers historic report draft",
+      "url": "https://www.justice.gov/opa/pr/president-trumps-religious-liberty-commission-delivers-historic-report-draft"
     }
   ],
   "stage": "proposed",
@@ -164,10 +173,17 @@
       "kind": "primary",
       "source": "Federal Register (Presidential Document)",
       "url": "https://www.federalregister.gov/documents/2025/05/07/2025-08134/establishment-of-the-religious-liberty-commission"
+    },
+    {
+      "date": "2026-06-26",
+      "event": "The Religious Liberty Commission presented the President with a final draft report containing 12 recommendations (DOJ press release 26-713); none of the recommendations listed in the release addresses religious employers or federal contractors under nondiscrimination law, and the release does not mention Title VII.",
+      "kind": "primary",
+      "source": "U.S. Department of Justice",
+      "url": "https://www.justice.gov/opa/pr/president-trumps-religious-liberty-commission-delivers-historic-report-draft"
     }
   ],
   "title": "Issue an executive order protecting religious employers and employees",
   "tracked": true,
-  "uncertainties": "Executive Orders 14202 and 14291 were re-read on the Federal Register host in this review and Executive Order 14205 in an earlier review. The Religious Liberty Commission was set to end 2026-07-04 unless extended; a Federal Register meeting notice published 2026-08-07 indicates it continued, but no extension order was read, and its report and the Task Force report were not located. Federal Register searches covered presidential documents on religious liberty and faith since 2025-01-20. Federal contractor religious exemption changes tied to the rescission of the contractor equal opportunity regulations were not checked, nor were EEOC religious accommodation documents or congressional bills on Title VII exemptions or undue hardship.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "Executive Orders 14202 and 14291 were re-read on federalregister.gov in the 2026-10-16 review and Executive Order 14205 in an earlier review. The Religious Liberty Commission was set to end 2026-07-04 unless extended; a Federal Register meeting notice published 2026-08-07 indicates it continued, but no extension order was read, and its report and the Task Force report were not located. Federal Register searches covered presidential documents on religious liberty and faith since 2025-01-20. Federal contractor religious exemption changes tied to the rescission of the contractor equal opportunity regulations were not checked, nor were EEOC religious accommodation documents or congressional bills on Title VII exemptions or undue hardship. The Commission's report is described by DOJ as a final draft; no date for a final version or for any follow-on executive order was given, and the report text itself was not read (the content summary comes from the DOJ release). The 2026-07-04 end date and any extension order remain unverified.",
+  "updated_at": "2026-11-01"
 }
