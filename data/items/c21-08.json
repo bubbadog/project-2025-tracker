@@ -7,7 +7,7 @@
   "chapter": "21",
   "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "Mandate text checked; the three USPTO memoranda and the introduced bill were opened and read on primary pages; stage depends partly on judging the weight of guidance.",
+  "confidence_reason": "Mandate page 685 checked; the stage-deciding MPEP advance notice of 2025-12-05 was re-read on uspto.gov, and the Senate hearing page and the introduced S. 1546 were read on primary hosts. The bill link for the hearing rests on one news report and the bills' later status was not retrieved.",
   "durability": {
     "level": "low",
     "why": "Examination guidance and manual text can be revised by a later Director, and courts are not bound by it."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-16",
       "note": "Cross-reference added to new layer 3 record c21-24 written in the second enumeration pass; no change to the status."
+    },
+    {
+      "date": "2026-11-02",
+      "note": "2026-11-02 freshness check and independent review: added the 2026-07-14 Senate Judiciary Committee patent eligibility hearing (senate.gov host, which names no bill, with the bill link attributed to Tech Times) and the Senate bill S. 1546 (govinfo.gov host); stage and progress unchanged."
     }
   ],
   "id": "c21-08",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-11-02",
   "layer": 3,
   "match": "partial",
   "mechanism": "agency_action",
@@ -58,44 +62,35 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "judgment call: in_progress 40 kept; implemented (65) is defensible if the MPEP revision is treated as the internal reform asked for, and proposed (20) if only the bill is counted",
-      "Replaced law-firm sourcing with the USPTO primary memoranda; added H.R. 3152 as a timeline event"
+      "The researcher's timeline event attributed the bill link to the senate.gov page, which names no bill; the link now sits in status_summary attributed to Tech Times.",
+      "Added S. 1546 (Senate companion) from GovInfo as source and event; summary now names both bills.",
+      "in_progress 40 kept: a hearing is not a legislative advance."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 685, U.S. Patent and Trademark Office list: re-examine Section 101 eligibility and support internal and/or legislative reforms for quantum computing, 5G and AI. Paraphrase accurate.",
+    "mandate_check": "verified",
+    "mandate_note": "Printed page 685 (U.S. Patent and Trademark Office list) asks political leadership to re-examine Section 101 eligibility requirements and support internal and/or legislative reforms for critical and emerging technologies such as quantum computing, 5G and artificial intelligence. The proposal paraphrase is accurate.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-13",
-    "reviewer": "Y21a",
+    "reviewed_at": "2026-11-02",
+    "reviewer": "daily-2026-11-02-R",
     "source_checks": [
       {
-        "note": "Memorandum dated 2025-12-04 from the Director to the examining corps on eligibility declarations; says it creates no new practice.",
-        "result": "supports",
-        "url": "https://www.uspto.gov/sites/default/files/documents/smeds-corps.pdf"
-      },
-      {
-        "note": "Companion memorandum dated 2025-12-04 to applicants and practitioners.",
-        "result": "supports",
-        "url": "https://www.uspto.gov/sites/default/files/documents/smeds-applicants-practitioners.pdf"
-      },
-      {
-        "note": "Dated 2025-12-05, Deputy Commissioner for Patents; MPEP 2106.04 and 2106.05 revised, effective on issuance.",
+        "note": "Dated 2025-12-05, Deputy Commissioner for Patents; revises MPEP 2106.04(d), 2106.04(d)(1), 2106.05(a) and 2106.05(f), effective on issuance. Operative internal change supports in_progress.",
         "result": "supports",
         "url": "https://www.uspto.gov/sites/default/files/documents/memo-desjardins.pdf"
       },
       {
-        "note": "H.R. 3152, introduced 2025-05-01, referred to Judiciary; rewrites Section 101.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr3152ih/html/BILLS-119hr3152ih.htm"
+        "note": "Confirms a full-committee hearing on 2026-07-14 at 10:15 a.m., Hart 216, four witnesses (Iancu, Lee, Leonard, Peschin). Names no bill; event text corrected to remove the bill link from this source. Consistent with in_progress (no legislative advance).",
+        "result": "partial",
+        "url": "https://www.judiciary.senate.gov/committee-activity/hearings/from-genes-to-machines-the-patent-eligibility-debate"
       },
       {
-        "note": "HTML version of the law-firm summary, dated 2025-12-09; used to locate the USPTO memoranda. The PDF URL previously cited was replaced by the HTML page.",
-        "result": "supports",
-        "url": "https://www.haynesboone.com/news/alerts/usptos-new-subject-matter-eligibility-guidance-and-best-practices"
+        "note": "News report describes the hearing as the first full-committee hearing on the Patent Eligibility Restoration Act (Tillis and Coons) and a possible precursor to markup; no markup or vote reported. Supports only the attributed bill link.",
+        "result": "partial",
+        "url": "https://www.techtimes.com/articles/320440/20260714/senate-patent-hearing-puts-software-gene-ai-patents-crossroads-before-tillis-exits.htm"
       },
       {
-        "note": "Federal Register API query of USPTO proposed rules since 2025-01-20 on inter partes review confirmed Board practice proposals published 2025-10-17; context only.",
+        "note": "S. 1546, Patent Eligibility Restoration Act of 2025, introduced 2025-05-01 by Mr. Tillis with Mr. Coons, referred to Judiciary. Introduced only, consistent with in_progress resting on the MPEP change.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/10/17/2025-19580/revision-to-rules-of-practice-before-the-patent-trial-and-appeal-board"
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1546is/html/BILLS-119s1546is.htm"
       }
     ]
   },
@@ -162,10 +157,31 @@
       "publisher": "Haynes Boone",
       "title": "USPTO's new subject matter eligibility guidance and best practices",
       "url": "https://www.haynesboone.com/news/alerts/usptos-new-subject-matter-eligibility-guidance-and-best-practices"
+    },
+    {
+      "date": "2026-07-14",
+      "kind": "primary",
+      "publisher": "U.S. Senate Committee on the Judiciary",
+      "title": "From Genes to Machines: The Patent Eligibility Debate (Senate Judiciary Committee hearing)",
+      "url": "https://www.judiciary.senate.gov/committee-activity/hearings/from-genes-to-machines-the-patent-eligibility-debate"
+    },
+    {
+      "date": "2026-07-14",
+      "kind": "news",
+      "publisher": "Tech Times",
+      "title": "Senate patent hearing puts software, gene, AI patents at a crossroads before Tillis exits",
+      "url": "https://www.techtimes.com/articles/320440/20260714/senate-patent-hearing-puts-software-gene-ai-patents-crossroads-before-tillis-exits.htm"
+    },
+    {
+      "date": "2025-05-01",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Patent Eligibility Restoration Act of 2025 (S. 1546, introduced)",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1546is/html/BILLS-119s1546is.htm"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "On 2025-12-04 the USPTO Director issued a memorandum to the examining corps on subject matter eligibility declarations and a companion memorandum to applicants on best practices for filing them; the corps memorandum says it creates no new practice. On 2025-12-05 the Deputy Commissioner for Patents issued an advance notice revising MPEP sections 2106.04 and 2106.05 to incorporate the precedential Ex Parte Desjardins decision, effective on issuance. The Patent Eligibility Restoration Act of 2025 (H.R. 3152), which would rewrite Section 101, was introduced on 2025-05-01 and referred to the House Judiciary Committee. The statutory text of Section 101 is unchanged.",
+  "status_summary": "On 2025-12-04 the USPTO Director issued a memorandum to the examining corps on subject matter eligibility declarations and a companion memorandum to applicants on best practices for filing them; the corps memorandum says it creates no new practice. On 2025-12-05 the Deputy Commissioner for Patents issued an advance notice revising MPEP sections 2106.04 and 2106.05 to incorporate the precedential Ex Parte Desjardins decision, effective on issuance. The Patent Eligibility Restoration Act of 2025, which would rewrite Section 101, was introduced on 2025-05-01 in the House (H.R. 3152) and in the Senate (S. 1546, Senators Tillis and Coons), each referred to its Judiciary Committee. The statutory text of Section 101 is unchanged. On 2026-07-14 the Senate Judiciary Committee held a full-committee hearing on patent eligibility; the committee page names no bill, and Tech Times describes the hearing as one on the Senate bill and as a possible precursor to a markup. No committee vote or floor action was found.",
   "timeline": [
     {
       "date": "2025-05-01",
@@ -173,6 +189,13 @@
       "kind": "primary",
       "source": "GovInfo",
       "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr3152ih/html/BILLS-119hr3152ih.htm"
+    },
+    {
+      "date": "2025-05-01",
+      "event": "The Patent Eligibility Restoration Act of 2025 (S. 1546) was introduced in the Senate by Senator Tillis with Senator Coons and referred to the Committee on the Judiciary.",
+      "kind": "primary",
+      "source": "GovInfo",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119s1546is/html/BILLS-119s1546is.htm"
     },
     {
       "date": "2025-12-04",
@@ -187,10 +210,17 @@
       "kind": "primary",
       "source": "USPTO",
       "url": "https://www.uspto.gov/sites/default/files/documents/memo-desjardins.pdf"
+    },
+    {
+      "date": "2026-07-14",
+      "event": "The Senate Judiciary Committee held a full-committee hearing titled \"From Genes to Machines: The Patent Eligibility Debate\" at 10:15 a.m. in Hart Senate Office Building Room 216, with four listed witnesses, including a former USPTO Director; the committee page names no bill.",
+      "kind": "primary",
+      "source": "U.S. Senate Committee on the Judiciary",
+      "url": "https://www.judiciary.senate.gov/committee-activity/hearings/from-genes-to-machines-the-patent-eligibility-debate"
     }
   ],
   "title": "Re-examine Section 101 patent eligibility for emerging technologies",
   "tracked": true,
-  "uncertainties": "The corps memorandum states that it does not create new practice, so its weight as reform is limited; the MPEP revision is the operative change. A Senate companion bill appeared in search results but was not opened, and the House bill's later status was not checked. The Mandate also asks for a balanced approach to the Patent Trial and Appeal Board; the USPTO published proposed rules on Board practice on 2025-10-17 (Federal Register), which this record does not assess. Other 2025 eligibility guidance, such as any earlier memoranda on artificial intelligence claims, was not reviewed.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The corps memorandum states that it does not create new practice, so its weight as reform is limited; the MPEP revision is the operative change. The Senate hearing of 2026-07-14 is listed on the committee page, which names no bill; the link to the Patent Eligibility Restoration Act rests on Tech Times coverage. The Senate bill (S. 1546) was read in its introduced text on GovInfo, but the later status of S. 1546 and H.R. 3152 was not retrieved from congress.gov, and searches through 2026-11-02 found no markup or vote. The Mandate also asks for a balanced approach to the Patent Trial and Appeal Board; the USPTO published proposed rules on Board practice on 2025-10-17 (Federal Register), which this record does not assess. Other 2025 eligibility guidance, such as any earlier memoranda on artificial intelligence claims, was not reviewed. Searches through 2026-11-02 found no USPTO eligibility guidance issued after the December 2025 memoranda, though law-firm commentary on those memoranda continued into 2026.",
+  "updated_at": "2026-11-02"
 }
