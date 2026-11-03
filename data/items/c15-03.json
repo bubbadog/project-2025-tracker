@@ -8,7 +8,7 @@
   "chapter": "15",
   "confidence": 79,
   "confidence_label": "medium",
-  "confidence_reason": "Rule applied: the court status is decided by the First Circuit's 2026-09-24 judgment, which was opened and read only on a copy posted by plaintiffs' counsel, so the record is capped at 79. The 2026-09-16 stay order (Justia) and the 2026-08-07 district order (govinfo and an attorney-general copy) were opened and re-opened in review, and HUD's program page confirms the reopened notice with no FY2026 awards; the stage (in_progress 40) rests on the notice being operative with no rule or statute. Confidence 74 to 79.",
+  "confidence_reason": "Pages 509 and 516 were checked against the chapter text; HUD's competition page on hud.gov and the Federal Register API record of the 2026-11-03 waiver notice were read in this review; the court status rests on the First Circuit judgment read earlier only on a copy posted by plaintiffs' counsel, which keeps the record below high.",
   "court_status": {
     "basis": "The First Circuit's judgment of 2026-09-24 vacated the district court's 2026-08-07 judgment setting aside the FY2026 notice because plaintiffs were construed to have waived the notice-and-comment claim on which it rested; it is not a ruling on the merits. It followed a 2026-09-16 stay order finding HUD likely to succeed on that claim. Plaintiffs' remaining claims are fully briefed in the district court with no ruling found. The judgment was read on a copy posted by plaintiffs' counsel.",
     "date": "2026-09-24",
@@ -43,10 +43,14 @@
     {
       "date": "2026-10-23",
       "note": "Lead-only source pass: the 2026-04-01 event no longer says HUD abandoned its appeal; it now records the First Circuit's denial that day of HUD's stay motion (opinion in Nos. 26-1217 and 26-1218, copy hosted by justsecurity.org, with a JURIST report of 2026-04-02), and the abandonment reported by the California Attorney General moved to uncertainties as an unverified lead. A plaintiff's blog post was removed; the plaintiffs' emergency motion is now cited directly as a filing copy hosted by endhomelessness.org, with its event re-dated to the filing date of 2026-09-21, and the counsel-hosted copy of the 2026-09-24 judgment was retitled as hosted by riaclu.org. The California Attorney General and San Francisco City Attorney releases stay as official sources. Stage in_progress 40 and confidence 79 (capped) unchanged."
+    },
+    {
+      "date": "2026-11-03",
+      "note": "HUD notice of waiver of the 30-day application period for the FY2026 CoC NOFO (91 FR 69267) was added; stage unchanged. Independent review confirmed in_progress 40 and the 2026-11-03 HUD waiver notice (Federal Register API), re-read HUD's competition page showing no FY2026 awards, and corrected a source title."
     }
   ],
   "id": "c15-03",
-  "last_checked": "2026-10-23",
+  "last_checked": "2026-11-03",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -70,92 +74,30 @@
   "research_agent": "A11",
   "review": {
     "flags": [
-      "2026-09-24 First Circuit judgment (vacated and remanded) added from the district docket mirror and the plaintiffs' motion; the judgment text itself is unread and should be fetched",
-      "court_status corrected from upheld (2026-08-07) to pending (2026-09-24 vacatur and remand); the 2026-08-07 ruling set the notice aside, so upheld was wrong",
-      "H.R. 9170 committee-reported bill rejected as an event (funding level does not bear on Housing First conditions) and moved to uncertainties",
-      "2026-04-01 timeline event says HUD abandoned its appeal; city and news sources describe a First Circuit denial that day",
-      "summary trimmed from 9 to 4 sentences"
+      "source title for the HUD competition page corrected (it carried an event sentence as its title)",
+      "uncertainties check-diary wording replaced",
+      "2026-12-01 award deadline is the next watch item"
     ],
-    "mandate_check": "not_checked",
-    "mandate_note": "The recommendation text was taken from the record's proposal and pages (pp. 509 and 516: end Housing First directives for Continuum of Care grantees through regulation and guidance, seek statutory authority, shift toward transitional housing) since the chapter text was not opened in this review; the 2026-10-08 review verified the paraphrase.",
+    "mandate_check": "verified",
+    "mandate_note": "Page 509 calls for ending Housing First policies to prioritize mental health and substance abuse before permanent interventions; note 37 on p.516 asks HUD to act through regulation and guidance and to seek statutory authority, including restrictions on local Housing First policies where HUD funds are used, and note 38 favors transitional housing. The proposal matches.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-23",
-    "reviewer": "independent",
+    "reviewed_at": "2026-11-03",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "Fetched 2026-10-22: stay 2026-09-16, notice reopened 2026-09-18 with a 2026-09-30 deadline, July 2026 modification; no FY2026 awards listed. Supports a formally underway, partly operative notice (in_progress).",
+        "note": "FY2026 NOFO reopened 2026-09-18 with a 2026-09-30 deadline after the 2026-09-16 stay; no FY2026 awards listed; supports in_progress (notice operative, no rule or statute).",
         "result": "supports",
         "url": "https://www.hud.gov/hud-partners/coc-program-competition"
       },
       {
-        "note": "District docket mirror: ECF 46 stay 2026-09-16; ECF 48 First Circuit judgment 2026-09-24 (Montecalvo, Aframe, Dunlap), text 'Vacated and Remanded', Nos. 26-1922 and 26-1923; ECF 49 mandate 2026-09-28; status conference 2026-09-29 setting briefs 9/30, 10/7, 10/14; ECF 54 notice 2026-10-16. Tracker-hosted copy of docket text; supports the notice being operative with claims pending (in_progress).",
+        "note": "Notice of waiver, 91 FR 69267, FR-6570-N-02, Secretary through the Deputy Secretary waives the HUD Reform Act section 102(a) 30-day period for NOFO CPD-2600-DC-0025 reopened 2026-09-18; procedural, no stage effect.",
         "result": "supports",
-        "url": "https://clearinghouse.net/case/48360/"
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-22417.json"
       },
       {
-        "note": "Plaintiffs' emergency motion dated 2026-09-21 (No. 26-1923; parallel 26-1922): asks summary vacatur of the 11386b(d) set-aside ruling, remand for remaining NOFO claims, immediate mandate; offers to drop the 11386b(d) claim given HUD's 2026-09-11 notice (91 FR 57901); cites the 2026-12-01 award deadline. Explains the content of the 2026-09-24 judgment.",
-        "result": "supports",
-        "url": "https://endhomelessness.org/wp-content/uploads/2026/09/2026.09.21-Emergency-Motion-for-Summary-Vacatur-and-Remand.pdf"
-      },
-      {
-        "note": "Not refetched; relied on the 2026-10-08 review's reading (notice terms, set-aside, scoring, stay). The IN12709 landing page fetched 2026-10-22 shows no version after 2026-09-18.",
-        "result": "supports",
-        "url": "https://www.everycrsreport.com/files/2026-09-18_IN12709_0955e2327c158a22f774a854854a58c5620c2c96.html"
-      },
-      {
-        "note": "Context only: House FY2027 THUD Homeless Assistance Grants $4,161 million vs $4,417 million FY2026 and $4,024 million request; no Housing First or treatment language described.",
-        "result": "partial",
-        "url": "https://www.everycrsreport.com/reports/R49341.html"
-      },
-      {
-        "note": "2026-04-01 release: First Circuit left in place the preliminary order on the FY2025 notice (1:25-cv-00636). Bears on earlier timeline wording, not the current stage.",
-        "result": "partial",
-        "url": "https://www.sf.gov/news-appeals-court-rejects-trump-administration-attack-on-funding-for-solutions-to-homelessness"
-      },
-      {
-        "note": "Opened by the researcher and re-opened in review: ECF 41 of 2026-08-07 sets aside the 2026 NOFO in its entirety for lack of notice and comment under 42 U.S.C. 11386b(d)(2)(C), denies a permanent injunction and leaves the other challenges undecided; background to the stay and vacatur, consistent with in_progress.",
-        "result": "supports",
-        "url": "https://ag.ny.gov/sites/default/files/decisions/washington-et-al-v-department-of-housing-and-urban-development-et-al-decision-2026.pdf"
-      },
-      {
-        "note": "Opened by the researcher and re-opened in review: stay pending appeal granted 2026-09-16, HUD likely to succeed on the bonus-or-incentive question, irreparable injury tied to the 2026-12-01 award deadline; supports the notice being operative (in_progress).",
-        "result": "supports",
-        "url": "https://cases.justia.com/federal/appellate-courts/ca1/26-1923/26-1923-2026-09-16.pdf?ts=1789590604"
-      },
-      {
-        "note": "Opened by the researcher and re-opened in review (counsel-hosted copy): judgment of 2026-09-24 vacating and remanding on plaintiffs' waiver of the notice-and-comment claim, estoppel, expected dismissal with prejudice, mandate at 5:00 p.m. on the day of entry; supports the notice being operative with other claims pending (in_progress).",
+        "note": "Not reopened in this review; read earlier as vacatur and remand on waiver, which supports court_status pending.",
         "result": "supports",
         "url": "https://www.riaclu.org/app/uploads/2026/07/Remand-Order-%E2%80%93-NAEH-v.-HUD.pdf"
-      },
-      {
-        "note": "Opened by the researcher on 2026-10-22, not re-fetched in review: reopening on 2026-09-18, deadline 2026-09-30, no FY2026 awards; supports in_progress. The page does not mention the 2026-09-24 judgment or state the 2026-12-01 date.",
-        "result": "supports",
-        "url": "https://www.hud.gov/hud-partners/coc-program-competition"
-      },
-      {
-        "note": "Opened by the researcher and re-opened on 2026-10-23: First Circuit opinion filed 2026-04-01 (Nos. 26-1217 and 26-1218; Gelpi, Montecalvo, Rikelman; by Judge Rikelman) denying HUD's stay motion in its appeal of the denial of its motion to dissolve the December 2025 preliminary injunctions; HUD did not appeal the 2025-12-23 orders. Supports replacing the abandonment event; concerns the FY2025 notice, so it does not move stage in_progress 40.",
-        "result": "supports",
-        "url": "https://www.justsecurity.org/wp-content/uploads/2026/04/National-Alliance-to-End-Homelessness-v.-HUD-First-Circuit-Apr.-1-Order.pdf"
-      },
-      {
-        "note": "Opened by the researcher and re-opened on 2026-10-23: JURIST of 2026-04-02 reports the First Circuit denied HUD's stay request on Wednesday (2026-04-01) and that HUD had not announced whether it would appeal; no abandonment stated. Context for the FY2025 litigation; no effect on stage in_progress 40.",
-        "result": "supports",
-        "url": "https://www.jurist.org/news/2026/04/us-appeals-court-denies-push-to-reallocate-homelessness-funds/"
-      },
-      {
-        "note": "Opened by the researcher and re-opened on 2026-10-23: plaintiffs' emergency motion in No. 26-1923 dated 2026-09-21 seeking summary vacatur and remand, immediate mandate, or expedited decision before 2026-12-01, and offering to forgo the 11386b(d) claim; says HUD will endeavor to award by 2026-12-01. A filing copy hosted by a plaintiff. Consistent with stage in_progress 40 (notice operative, claims pending).",
-        "result": "supports",
-        "url": "https://endhomelessness.org/wp-content/uploads/2026/09/2026.09.21-Emergency-Motion-for-Summary-Vacatur-and-Remand.pdf"
-      },
-      {
-        "note": "Opened by the researcher: a plaintiff's staff blog of 2026-09-22 describing the stay, the reopened notice and the emergency motion; a litigant's own page, now a lead only and removed from sources. No effect on the stage.",
-        "result": "partial",
-        "url": "https://endhomelessness.org/blog/update-on-the-2026-coc-nofo/"
-      },
-      {
-        "note": "Opened by the researcher: California Attorney General release of 2026-06-29 on the supplemental complaint over the FY2026 notice; says HUD abandoned its appeal in April 2026 and does not mention a January 2026 reopening. Kept as an official state source under the coordinator's decision; the abandonment is held as an unverified lead because no court document or news report confirms it. No effect on stage in_progress 40.",
-        "result": "partial",
-        "url": "https://oag.ca.gov/node/625631"
       }
     ]
   },
@@ -240,10 +182,10 @@
       "url": "https://www.leagle.com/decision/infco20260916112"
     },
     {
-      "date": "2026-09-16",
+      "date": "2026-09-18",
       "kind": "primary",
-      "publisher": "HUD; Congressional Research Service",
-      "title": "A First Circuit panel (Nos. 26-1922 and 26-1923, consolidated) grants HUD a stay",
+      "publisher": "HUD",
+      "title": "Continuum of Care Program Competition (FY2026 NOFO reopening and First Circuit stay)",
       "url": "https://www.hud.gov/hud-partners/coc-program-competition"
     },
     {
@@ -336,10 +278,17 @@
       "publisher": "JURIST",
       "title": "US appeals court denies push to reallocate homelessness funds",
       "url": "https://www.jurist.org/news/2026/04/us-appeals-court-denies-push-to-reallocate-homelessness-funds/"
+    },
+    {
+      "date": "2026-11-03",
+      "kind": "primary",
+      "publisher": "Federal Register / HUD",
+      "title": "30-Day Notice Waiver for Continuum of Care Program (CoC); Notice of Waiver",
+      "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22417/30-day-notice-waiver-for-continuum-of-care-program-coc-notice-of-waiver"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Executive Order 14321 (2025-07-24) directed HUD and HHS to end support for Housing First policies and to raise treatment requirements, and HUD has pursued this through Continuum of Care funding notices rather than a change to 24 CFR part 578 or a statute. After the Rhode Island district court vacated HUD's November and December 2025 notices on 2026-06-29 (per its later opinion), HUD's FY2026 notice of 2026-06-01 offered about $4.04 billion, set aside about $1.3 billion for new transitional-housing and services-only projects and added scoring points for treatment and required supportive services, according to the Congressional Research Service. The district court set that notice aside on 2026-08-07 for lack of notice and comment; the First Circuit stayed that ruling on 2026-09-16, HUD reopened the notice on 2026-09-18 with applications due 2026-09-30, and on 2026-09-24 the First Circuit vacated the district court judgment and remanded after construing plaintiffs to have waived the notice-and-comment claim, without ruling on the merits. Plaintiffs' other claims remain pending in the district court, and HUD's program page listed no FY2026 awards when checked on 2026-10-22.",
+  "status_summary": "Executive Order 14321 (2025-07-24) directed HUD and HHS to end support for Housing First policies and to raise treatment requirements, and HUD has pursued this through Continuum of Care funding notices rather than a change to 24 CFR part 578 or a statute. After the Rhode Island district court vacated HUD's November and December 2025 notices on 2026-06-29 (per its later opinion), HUD's FY2026 notice of 2026-06-01 offered about $4.04 billion, set aside about $1.3 billion for new transitional-housing and services-only projects and added scoring points for treatment and required supportive services, according to the Congressional Research Service. The district court set that notice aside on 2026-08-07 for lack of notice and comment; the First Circuit stayed that ruling on 2026-09-16, HUD reopened the notice on 2026-09-18 with applications due 2026-09-30, and on 2026-09-24 the First Circuit vacated the district court judgment and remanded after construing plaintiffs to have waived the notice-and-comment claim, without ruling on the merits. On 2026-11-03 HUD published a notice of waiver (91 FR 69267) of the 30-day minimum application period for the FY2026 notice that reopened on 2026-09-18. Plaintiffs' other claims remain pending in the district court, and HUD's competition page lists no FY2026 awards as of 2026-11-03.",
   "timeline": [
     {
       "date": "2025-07-24",
@@ -417,10 +366,17 @@
       "kind": "court",
       "source": "U.S. Court of Appeals for the First Circuit (copy hosted by riaclu.org)",
       "url": "https://www.riaclu.org/app/uploads/2026/07/Remand-Order-%E2%80%93-NAEH-v.-HUD.pdf"
+    },
+    {
+      "date": "2026-11-03",
+      "event": "HUD publishes a notice of waiver (91 FR 69267, FR Doc. 2026-22417) in which the Secretary, through the Deputy Secretary, waives the 30-day minimum application period under section 102(a) of the HUD Reform Act for the FY2026 Continuum of Care NOFO (CPD-2600-DC-0025), which reopened for applications on 2026-09-18.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22417/30-day-notice-waiver-for-continuum-of-care-program-coc-notice-of-waiver"
     }
   ],
   "title": "End Housing First requirements and shift homelessness funding toward treatment first",
   "tracked": true,
-  "uncertainties": "Sources conflict on what HUD did in December 2025: a law-firm summary says a preliminary injunction required HUD to keep the prior-year NOFO and HUD reopened it in January 2026 (the California Attorney General's press release of 2026-06-29 does not state this), while Smart Cities Dive describes a December reissue with similar policy changes and Maryland Matters reports a new NOFO on 2025-12-19; the Rhode Island court's 2026-08-07 opinion says its 2026-06-29 order vacated both the November and December 2025 notices, but the 2025 and June 2026 orders themselves were not read. The First Circuit's opinion of 2026-04-01 (Nos. 26-1217 and 26-1218, read on a copy hosted by justsecurity.org) denies HUD's motion for a stay pending its appeal of the district court's refusal to dissolve the December 2025 preliminary injunctions and notes that HUD did not appeal the 2025-12-23 injunction orders themselves; JURIST (2026-04-02), the San Francisco City Attorney (2026-04-01) and Scotsman Guide describe the same denial, and JURIST says HUD had not announced whether it would appeal further. The California Attorney General's press release of 2026-06-29 says HUD abandoned that appeal in April 2026; no court document or news report confirming the abandonment was found, so it is an unverified lead at low confidence. The 2026-08-07 district order (on govinfo and in a copy posted by the New York Attorney General), the 2026-09-16 First Circuit stay order (Justia) and the 2026-09-24 First Circuit judgment (a copy posted by plaintiffs' counsel, the ACLU of Rhode Island) were opened and read; no copy of the judgment on a court site, govinfo or courtlistener was located. The judgment rests on waiver by plaintiffs and does not decide the merits of the set-aside; the stay order's merits view is preliminary. The judgment states the mandate issues on 2026-09-24, while the district docket as mirrored by the Civil Rights Litigation Clearinghouse lists a mandate entry on 2026-09-28; the later date was not checked against an opened copy and may be a docketing date. The 2026-12-01 award deadline comes from the stay order, not from HUD's program page, which states no award date. The district court's 2026-09-29 briefing schedule and 2026-10-16 notice (ECF 54) are known only from the docket mirror, the supplemental briefs were not read, and no district court ruling on the remaining claims was found as of 2026-10-22. A separate HUD Federal Register notice on incentivized homelessness-reduction activities (comments due 2026-10-13) was not read. No rule change to 24 CFR part 578 and no statute was located. As context only, the House Appropriations Committee reported the FY2027 THUD bill (H.R. 9170) on 2026-06-05 with about $4.16 billion for Homeless Assistance Grants, against $4.42 billion enacted for FY2026 and a $4.02 billion request (CRS); CRS describes no Housing First or treatment conditions, the bill's homeless assistance paragraph was not read, and the bill has not passed the House.",
-  "updated_at": "2026-10-23"
+  "uncertainties": "Sources conflict on what HUD did in December 2025: a law-firm summary says a preliminary injunction required HUD to keep the prior-year NOFO and HUD reopened it in January 2026 (the California Attorney General's press release of 2026-06-29 does not state this), while Smart Cities Dive describes a December reissue with similar policy changes and Maryland Matters reports a new NOFO on 2025-12-19; the Rhode Island court's 2026-08-07 opinion says its 2026-06-29 order vacated both the November and December 2025 notices, but the 2025 and June 2026 orders themselves were not read. The First Circuit's opinion of 2026-04-01 (Nos. 26-1217 and 26-1218, read on a copy hosted by justsecurity.org) denies HUD's motion for a stay pending its appeal of the district court's refusal to dissolve the December 2025 preliminary injunctions and notes that HUD did not appeal the 2025-12-23 injunction orders themselves; JURIST (2026-04-02), the San Francisco City Attorney (2026-04-01) and Scotsman Guide describe the same denial, and JURIST says HUD had not announced whether it would appeal further. The California Attorney General's press release of 2026-06-29 says HUD abandoned that appeal in April 2026; no court document or news report confirming the abandonment was found, so it is an unverified lead at low confidence. The 2026-08-07 district order (on govinfo and in a copy posted by the New York Attorney General), the 2026-09-16 First Circuit stay order (Justia) and the 2026-09-24 First Circuit judgment (a copy posted by plaintiffs' counsel, the ACLU of Rhode Island) were opened and read; no copy of the judgment on a court site, govinfo or courtlistener was located. The judgment rests on waiver by plaintiffs and does not decide the merits of the set-aside; the stay order's merits view is preliminary. The judgment states the mandate issues on 2026-09-24, while the district docket as mirrored by the Civil Rights Litigation Clearinghouse lists a mandate entry on 2026-09-28; the later date was not checked against an opened copy and may be a docketing date. The 2026-12-01 award deadline comes from the stay order, not from HUD's program page, which states no award date. The district court's 2026-09-29 briefing schedule and 2026-10-16 notice (ECF 54) are known only from the docket mirror, the supplemental briefs were not read, and no district court ruling on the remaining claims was found as of 2026-10-22. A separate HUD Federal Register notice on incentivized homelessness-reduction activities (comments due 2026-10-13) was not read. No rule change to 24 CFR part 578 and no statute was located. As context only, the House Appropriations Committee reported the FY2027 THUD bill (H.R. 9170) on 2026-06-05 with about $4.16 billion for Homeless Assistance Grants, against $4.42 billion enacted for FY2026 and a $4.02 billion request (CRS); CRS describes no Housing First or treatment conditions, the bill's homeless assistance paragraph was not read, and the bill has not passed the House. The 2026-11-03 waiver notice (91 FR 69267-69268, FR-6570-N-02, docket HUD-2025-0704) was read in its Federal Register API record only; its full text was not read for any Housing First or treatment content, and it names no signer by name or signing date in that record. It addresses the shortened application period of the reopened notice and shows no change in the notice's substance. HUD's competition page, read on hud.gov on 2026-11-03, still lists no FY2026 awards.",
+  "updated_at": "2026-11-03"
 }

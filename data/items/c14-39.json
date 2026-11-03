@@ -7,7 +7,7 @@
   "chapter": "14",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Chapter page 467 checked and the stage-deciding CMCS Informational Bulletin of 2025-11-18 was read in review, with the CMS legislation overview slide and SMD #26-001; together they confirm the enacted sections and their future effective dates; the statute body itself was not readable.",
+  "confidence_reason": "Page 467 was checked against the chapter text; the medicaid.gov guidance page listing implementation documents and the HHS release of 2025-07-17 were read in this review, and the stage-deciding CMS informational bulletin of 2025-11-18 on the enacted sections was read in an earlier review; the statute body itself was not readable on govinfo.gov.",
   "durability": {
     "level": "high",
     "why": "The core provisions are in statute and would need an act of Congress to change."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-16",
       "note": "Independent review read the CMS informational bulletin of 2025-11-18, the CMS legislation overview slide and State Medicaid Director Letter #26-001 on medicaid.gov; section 71106 wording corrected to restricted waivers; progress lowered from 40 to 30 within in_progress; confidence 75 to 80."
+    },
+    {
+      "date": "2026-11-03",
+      "note": "Freshness check added the 2025-07-17 HHS duplicate-enrollment announcement and a CMS section 71107 slide deck posted 2026-04-03 (medicaid.gov); no new rule found and stage unchanged. Independent review kept in_progress 30, verified the new HHS 2025-07-17 and CMS 2026-04-03 events on hhs.gov and medicaid.gov, and moved a page-check clause from the timeline to uncertainties."
     }
   ],
   "id": "c14-39",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-11-03",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -69,32 +73,28 @@
       "url": "https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf"
     },
     "flags": [
-      "Progress lowered from 40 to 30 within in_progress: nothing operative before 2027-01-01 and three incentive asks plus managed care reform show no action.",
-      "Section 71106 wording corrected per the CMS bulletin: restricted good-faith waiver authority, not a non-waivable penalty; the 3 percent threshold predates the law.",
-      "Researcher's 2025-11-18 bulletin timeline event not accepted: a summary of an enacted law is a report, not a separate action; the bulletin is accepted as a source. SMD #26-001 event accepted as implementation guidance.",
-      "Existing source entry for the CMS legislation overview slide is marked undated; the title slide is dated 2025-11-18.",
-      "Overlap with c14-05 on robust eligibility determinations remains noted."
+      "clause describing a page check removed from the 2026-04-03 event (checks are not events) and kept in uncertainties"
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 467 asks to make program integrity a state responsibility with incentives (enhanced contingency fee, 90/10 IT match for fraud and eligibility systems, positive-return programs without waivers), to hold states accountable for improper eligibility determinations, require more robust determinations, strengthen asset tests, and oversee and reform managed care; the paraphrase fits.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "P16-4",
+    "mandate_check": "verified",
+    "mandate_note": "Page 467 recommends an enhanced contingency fee, the 90/10 IT match for fraud and eligibility systems, positive-return programs without waivers, holding states accountable for improper eligibility determinations, more robust determinations, stronger asset tests and managed care oversight and reform; the proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-11-03",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "Dated 2025-11-18; 71103 to 71106 summaries and dates; 71106 restricts good-faith waivers from FY 2030 and the 3 percent threshold predates the law; no contingency fee or 90/10 fraud-system match.",
+        "note": "Lists the section 71107 overview slide deck (04/03/2026) and SMD #26-001 (03/06/2026); no guidance for 71103 to 71106 or 71108. Enacted provisions not yet operative keep in_progress 30.",
+        "result": "supports",
+        "url": "https://www.medicaid.gov/resources-for-states/working-families-tax-cut-legislation"
+      },
+      {
+        "note": "2025-07-17: about 2.8 million potentially duplicate enrollments; CMS to send states lists to recheck eligibility; supports the new event.",
+        "result": "supports",
+        "url": "https://www.hhs.gov/press-room/cms-doge-identify-wasteful-duplicate-medicaid-enrollments.html"
+      },
+      {
+        "note": "Not reopened in this review; earlier review read it as describing sections 71103 to 71106 with effective dates from 2027.",
         "result": "supports",
         "url": "https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf"
-      },
-      {
-        "note": "Title slide dated 2025-11-18; start dates 71103 (2027-01-01 and 2029-10-01), 71104 (2027-01-01), 71105 (2028-01-01), 71106 (2029-10-01), 71107 (2027-01-01), 71108 (2028-01-01).",
-        "result": "supports",
-        "url": "https://www.medicaid.gov/medicaid/downloads/wftc-legsltn-overview-slide.pdf"
-      },
-      {
-        "note": "Dated 2026-03-06; section 71107 six-month renewals for renewals on or after 2027-01-01.",
-        "result": "supports",
-        "url": "https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf"
       }
     ],
     "stage_change_reason": "Stage kept, progress lowered from 40 to 30. The eligibility and asset-test provisions are enacted and have drawn CMS guidance, which is formally underway, but none is operative before 2027-01-01 (the 71106 disallowance change starts FY 2030), and the three incentive asks and managed care reform show no action; an enacted but not yet effective law sits at the low end of in_progress, as a final rule not yet effective would."
@@ -162,10 +162,24 @@
       "publisher": "Medicaid.gov, CMS",
       "title": "State Medicaid Director Letter #26-001: Implementation of Eligibility Redeterminations (Section 71107)",
       "url": "https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf"
+    },
+    {
+      "date": "2025-07-17",
+      "kind": "primary",
+      "publisher": "U.S. Department of Health and Human Services",
+      "title": "CMS and DOGE identify wasteful duplicate Medicaid enrollments",
+      "url": "https://www.hhs.gov/press-room/cms-doge-identify-wasteful-duplicate-medicaid-enrollments.html"
+    },
+    {
+      "date": "2026-04-03",
+      "kind": "primary",
+      "publisher": "Medicaid.gov (CMS)",
+      "title": "Working Families Tax Cut Legislation (CMS guidance page)",
+      "url": "https://www.medicaid.gov/resources-for-states/working-families-tax-cut-legislation"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Public Law 119-21, approved 2025-07-04, added Medicaid provisions that align with parts of this recommendation: address verification from 2027-01-01 and a federal duplicate-enrollment check from 2029-10-01 (section 71103), quarterly death file checks for enrollees from 2027-01-01 and for providers from 2028-01-01 (sections 71104 and 71105), a requirement from fiscal year 2030 that the Secretary issue eligibility-related disallowances for state error rates above 3 percent, with the Secretary's good-faith waiver authority restricted (section 71106), six-month redeterminations for the expansion adult group from 2027-01-01 (section 71107) and a $1 million home equity cap for long-term care eligibility from 2028-01-01 (section 71108). These are enacted and have drawn CMS guidance (an informational bulletin of 2025-11-18 and a State Medicaid Director Letter of 2026-03-06), but none is operative before 2027-01-01. No enhanced contingency fee, expanded 90/10 match for fraud systems or waiver-free positive-return programs was found, and the managed care provisions found are limited to a duty for plans to send address data to states (section 71103) and a bar on plans determining community engagement compliance (section 71119).",
+  "status_summary": "Public Law 119-21, approved 2025-07-04, added Medicaid provisions that align with parts of this recommendation: address verification from 2027-01-01 and a federal duplicate-enrollment check from 2029-10-01 (section 71103), quarterly death file checks for enrollees from 2027-01-01 and for providers from 2028-01-01 (sections 71104 and 71105), a requirement from fiscal year 2030 that the Secretary issue eligibility-related disallowances for state error rates above 3 percent, with the Secretary's good-faith waiver authority restricted (section 71106), six-month redeterminations for the expansion adult group from 2027-01-01 (section 71107) and a $1 million home equity cap for long-term care eligibility from 2028-01-01 (section 71108). These are enacted and have drawn CMS guidance (an informational bulletin of 2025-11-18 and a State Medicaid Director Letter of 2026-03-06), but none is operative before 2027-01-01. No enhanced contingency fee, expanded 90/10 match for fraud systems or waiver-free positive-return programs was found, and the managed care provisions found are limited to a duty for plans to send address data to states (section 71103) and a bar on plans determining community engagement compliance (section 71119). Separately, HHS announced on 2025-07-17 a CMS review of duplicate Medicaid and CHIP enrollment across states and Exchanges, with state lists for eligibility rechecks; this administrative step predates and is distinct from the enacted statutory checks.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -175,15 +189,29 @@
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
     },
     {
+      "date": "2025-07-17",
+      "event": "HHS announced that CMS identified about 2.8 million people enrolled in Medicaid or CHIP in more than one state or in both Medicaid/CHIP and a subsidized Exchange plan, and that CMS would give states lists to recheck eligibility.",
+      "kind": "primary",
+      "source": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/press-room/cms-doge-identify-wasteful-duplicate-medicaid-enrollments.html"
+    },
+    {
       "date": "2026-03-06",
       "event": "CMS issues State Medicaid Director Letter #26-001 on six-month eligibility renewals for the adult expansion group (section 71107), for renewals on or after 2027-01-01.",
       "kind": "primary",
       "source": "Medicaid.gov, CMS",
       "url": "https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf"
+    },
+    {
+      "date": "2026-04-03",
+      "event": "CMS posted an overview slide deck on implementing section 71107 (eligibility redeterminations), summarizing State Medicaid Director Letter #26-001, on its guidance page for the 2025 reconciliation law.",
+      "kind": "primary",
+      "source": "Medicaid.gov (CMS)",
+      "url": "https://www.medicaid.gov/resources-for-states/working-families-tax-cut-legislation"
     }
   ],
   "title": "Medicaid program integrity: contingency fees, improper eligibility penalties, asset tests",
   "tracked": true,
-  "uncertainties": "Mandate text on page 467 was checked. Sections 71103 to 71106 were read in the CMS informational bulletin of 2025-11-18 and sections 71103 to 71108 in the CMS legislation overview slide on the medicaid.gov host; section 71107 was read in State Medicaid Director Letter #26-001. The GovInfo body text of Public Law 119-21 is truncated before Subtitle B, so the statutory text, including the $1 million home equity amount (taken from the MACPAC September 2025 summary), was not read. The CMS bulletin states that the 3 percent error-rate threshold existed in prior law and that section 71106 restricts rather than removes the Secretary's waiver authority. No enhanced contingency fee or 90/10 match for fraud systems appears in the CMS summaries; this is an absence in summaries, not a check of the statute. Federal Register queries for implementing rules on these sections were not run. Work requirements and cost sharing are covered in c14-05, whose proposal also includes more robust eligibility determinations, so this record overlaps c14-05 on that one item.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "Mandate text on page 467 was checked. Sections 71103 to 71106 were read in the CMS informational bulletin of 2025-11-18 and sections 71103 to 71108 in the CMS legislation overview slide on the medicaid.gov host; section 71107 was read in State Medicaid Director Letter #26-001. The GovInfo body text of Public Law 119-21 is truncated before Subtitle B, so the statutory text, including the $1 million home equity amount (taken from the MACPAC September 2025 summary), was not read. The CMS bulletin states that the 3 percent error-rate threshold existed in prior law and that section 71106 restricts rather than removes the Secretary's waiver authority. No enhanced contingency fee or 90/10 match for fraud systems appears in the CMS summaries; this is an absence in summaries, not a check of the statute. A Federal Register API search of CMS documents published since 2026-04-01 (run 2026-11-03) returned a proposed rule on indirect hold harmless thresholds, the CY 2027 physician fee schedule proposed rule, an information collection notice and the community engagement rule (Doc. 2026-11094), none of which implements sections 71103 to 71106 or 71108 on its face from the titles; their texts were not read. The medicaid.gov guidance page, read on 2026-11-03, lists guidance for section 71107 (letter of 2026-03-06 and slide deck posted 2026-04-03) and for other sections of the law (71109, 71115 to 71118, 71401), but none for sections 71103 to 71106 or 71108. The HHS press release of 2025-07-17 was read; later state results of the duplicate-enrollment rechecks were not found. Work requirements and cost sharing are covered in c14-05, whose proposal also includes more robust eligibility determinations, so this record overlaps c14-05 on that one item.",
+  "updated_at": "2026-11-03"
 }
