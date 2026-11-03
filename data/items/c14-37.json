@@ -7,7 +7,7 @@
   "chapter": "14",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Chapter pages checked and the stage-deciding H.R. 3467 bill status (GovInfo BILLSTATUS) was read in review and shows no action beyond introduction, referral and sponsor remarks; H.R. 6114 bill status also read; the CMS rule was not re-read and the bill search was limited.",
+  "confidence_reason": "Pages 464 and 465 were checked against the chapter text; the H.R. 9544 introduced text and bill status on govinfo.gov were read in this review, and the stage-deciding H.R. 3467 bill status was read in an earlier review showing no action beyond introduction and referral; the CY 2027 rule was not re-read and the bill search was limited.",
   "durability": {
     "level": "low",
     "why": "The rule-level changes can be reversed by later rulemaking; the legislative items have no enacted form."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-28",
       "note": "On 2026-10-28 wording that described how documents were obtained was replaced with wording that names the host and the kind of copy read; no fact, source, stage or confidence changed. No change of stage or progress."
+    },
+    {
+      "date": "2026-11-03",
+      "note": "Freshness check added H.R. 9544 (introduced 2026-06-30, risk adjustment and benchmark changes, no default enrollment) from govinfo.gov; the other bills show no new action and stage is unchanged. Independent review confirmed proposed 10 and verified the new H.R. 9544 event and its bill status on govinfo.gov; no field changes."
     }
   ],
   "id": "c14-37",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-11-03",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -72,25 +76,28 @@
       "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3467.xml"
     },
     "flags": [
-      "Accepted the researcher's bill-status wording edit and added a sentence on H.R. 6114, which was already a record source but absent from the summary.",
-      "The existing H.R. 6114 source uses a congress.gov URL that could not be opened in this review; the GovInfo bill status is added alongside it.",
-      "Uncertainties rewritten to drop the role-labeled search tally and keep what was and was not verified."
+      "H.R. 9544 verified as related context; it does not move the stage"
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Pages 464 and 465 present, under legislative proposals, Medicare Advantage reforms: default enrollment, direct beneficiary control of Medicare dollars, less micromanagement of plans, competitive bidding in place of the formula, a reconfigured risk adjustment model and fewer limits on drug, hospice and medical savings account benefits; the paraphrase fits.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "P16-4",
+    "mandate_check": "verified",
+    "mandate_note": "Pages 464 and 465 list legislative proposals: make Medicare Advantage the default, give beneficiaries direct control of Medicare dollars, remove policies that micromanage plans, replace the formula payment model with competitive bidding, reconfigure risk adjustment, and remove limits on drug, hospice and medical savings account benefits; the proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-11-03",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "Introduced and referred 2025-05-15; sponsor remarks 2025-06-03; no committee action.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3467.xml"
+        "note": "Save MEDICARE Act of 2026: excludes chart review and health risk assessment diagnoses, favorable selection benchmark adjustment, RADV timelines, mostly from 2028; no default enrollment, competitive bidding or MSA provision. Touches risk adjustment in a different direction; does not raise the stage.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr9544ih/xml/BILLS-119hr9544ih.xml"
       },
       {
-        "note": "Introduced 2025-11-18; bars HHS funds for making Medicare Advantage the default; referral only; runs opposite to the recommendation.",
+        "note": "Introduced 2026-06-30 (Rep. Doggett), referred to three committees, VA Health Subcommittee referral 2026-07-17; 52 cosponsors; no further action.",
         "result": "supports",
-        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6114.xml"
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9544.xml"
+      },
+      {
+        "note": "Not reopened in this review; earlier review read it as introduction, referral and sponsor remarks only, which keeps proposed 10.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3467.xml"
       }
     ],
     "stage_change_reason": "The recommendation is legislative; the one aligned bill (H.R. 3467) has only introduction, referral and sponsor remarks recorded, which is the low end of proposed. CMS rule-level changes are parallel and do not raise the stage."
@@ -165,10 +172,24 @@
       "publisher": "GovInfo",
       "title": "H.R. 3467, bill status (GovInfo BILLSTATUS XML)",
       "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3467.xml"
+    },
+    {
+      "date": "2026-06-30",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "H.R. 9544 (119th Congress), introduced text, Save MEDICARE Act of 2026",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr9544ih/xml/BILLS-119hr9544ih.xml"
+    },
+    {
+      "date": "2026-07-17",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "BILLSTATUS H.R. 9544",
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr9544.xml"
     }
   ],
   "stage": "proposed",
-  "status_summary": "H.R. 3467, introduced 2025-05-15 and referred to Ways and Means and Energy and Commerce, would from 2028 automatically enroll eligible beneficiaries in the lowest-premium Medicare Advantage plan, change the benchmark and risk adjustment and address hospice; bill status on GovInfo lists only introduction, referral and sponsor remarks in the Congressional Record on 2025-06-03, with no committee action recorded. H.R. 6114, introduced 2025-11-18, would instead bar HHS from using previously appropriated funds to make Medicare Advantage the default, and also shows referral only. CMS separately issued the CY 2027 Medicare Advantage final rule (published 2026-04-06, effective 2026-06-01), which rescinds several plan requirements, and the CY 2027 rate announcement, which keeps the 2024 risk model; these administrative steps do not count toward a legislative recommendation. No bill replacing the payment formula with competitive bidding or giving beneficiaries direct control of Medicare dollars was found.",
+  "status_summary": "H.R. 3467, introduced 2025-05-15 and referred to Ways and Means and Energy and Commerce, would from 2028 automatically enroll eligible beneficiaries in the lowest-premium Medicare Advantage plan, change the benchmark and risk adjustment and address hospice; bill status on GovInfo lists only introduction, referral and sponsor remarks in the Congressional Record on 2025-06-03, with no committee action recorded. H.R. 6114, introduced 2025-11-18, would instead bar HHS from using previously appropriated funds to make Medicare Advantage the default, and also shows referral only. H.R. 9544, introduced 2026-06-30, would instead revise Medicare Advantage risk adjustment and benchmarks from 2028 and has no default enrollment provision; bill status lists referral to committees and a 2026-07-17 subcommittee referral. CMS separately issued the CY 2027 Medicare Advantage final rule (published 2026-04-06, effective 2026-06-01), which rescinds several plan requirements, and the CY 2027 rate announcement, which keeps the 2024 risk model; these administrative steps do not count toward a legislative recommendation. No bill replacing the payment formula with competitive bidding or giving beneficiaries direct control of Medicare dollars was found.",
   "timeline": [
     {
       "date": "2025-05-15",
@@ -190,10 +211,17 @@
       "kind": "primary",
       "source": "CMS",
       "url": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement"
+    },
+    {
+      "date": "2026-06-30",
+      "event": "H.R. 9544, the Save MEDICARE Act of 2026, was introduced and referred to Ways and Means, Energy and Commerce and Veterans' Affairs; from 2028 it would exclude chart review and health risk assessment diagnoses from risk adjustment, add a favorable-selection adjustment to benchmarks and set RADV timelines, and it contains no default enrollment provision.",
+      "kind": "primary",
+      "source": "GovInfo",
+      "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr9544ih/xml/BILLS-119hr9544ih.xml"
     }
   ],
   "title": "Make Medicare Advantage the default; competitive bidding and new risk adjustment",
   "tracked": true,
-  "uncertainties": "Mandate text on pages 464 and 465 was checked. H.R. 3467 text was read on GovInfo in earlier passes and its bill status in this review; it contains no medical savings account provision and does not amend the bidding process directly. The CY 2027 final rule page was truncated and its hospice, medical savings account and bidding content was not read. The bill search for competitive bidding or direct beneficiary spending control was limited, so a related bill could exist. Related record c14-17 covers RADV audits.",
-  "updated_at": "2026-10-28"
+  "uncertainties": "Mandate text on pages 464 and 465 was checked. H.R. 3467 text was read on GovInfo in earlier passes and its bill status in this review; it contains no medical savings account provision and does not amend the bidding process directly. The CY 2027 final rule page was truncated and its hospice, medical savings account and bidding content was not read. The bill search for competitive bidding or direct beneficiary spending control was limited, so a related bill could exist. Related record c14-17 covers RADV audits. H.R. 9544 touches the risk adjustment item but would lower or tighten Medicare Advantage payment rather than reconfigure it toward the Mandate's proposal (inference), so it is recorded without changing the stage. The bill status records for H.R. 3467 (latest action 2025-06-03) and H.R. 6114 (referral 2025-11-18) were re-opened on 2026-11-03 and show no further action. Two further searches (2026-11-03) for default enrollment or competitive bidding bills and for CMS Medicare Advantage rules after April 2026 found only coverage of the CY 2027 rule and rate notice already cited.",
+  "updated_at": "2026-11-03"
 }

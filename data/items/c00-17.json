@@ -7,9 +7,9 @@
   "chapter": "00",
   "confidence": 70,
   "confidence_label": "medium",
-  "confidence_reason": "Built from three detailed sibling records whose primary sources were read; reviewer confirmed EO 14183 on the Federal Register API and compared every event with c04-01, c04-03 and c04-08; the combination is a judgment.",
+  "confidence_reason": "Page 9 was checked against the chapter text and the Supreme Court docket for No. 26-272 on supremecourt.gov was read in this review; the stage is a judgment combining three detailed records (c04-03, c04-01, c04-08) whose primary sources were read in their own reviews.",
   "court_status": {
-    "basis": "The Supreme Court stayed the Shilling injunction on 2025-05-06, so the policy is enforced; the D.C. Circuit narrowed the Talbott injunction to named currently serving plaintiffs on 2026-06-01, and the government certiorari petition (No. 26-272) filed 2026-08-27 is pending, as recorded in c04-01.",
+    "basis": "The Supreme Court stayed the Shilling injunction on 2025-05-06, so the policy is enforced; the D.C. Circuit narrowed the Talbott injunction to named currently serving plaintiffs on 2026-06-01, and the government certiorari petition (No. 26-272) filed 2026-08-27 is pending (respondents' brief in opposition submitted 2026-11-02, no conference distribution or Court action), as recorded in c04-01.",
     "date": "2026-08-27",
     "state": "pending",
     "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-272.html"
@@ -35,10 +35,14 @@
     {
       "date": "2026-10-14",
       "note": "Significance scored blind by two AI raters from the recommendation text only; the two agreed within the adjudication threshold, so no third rater was needed."
+    },
+    {
+      "date": "2026-11-03",
+      "note": "Supreme Court docket No. 26-272 on supremecourt.gov shows the respondents' brief in opposition filed 2026-11-02; petition still pending. Independent review kept in_progress 55, matched the Talbott certiorari entries to c04-01 after reading the supremecourt.gov docket, and restored the court status date to the pending petition."
     }
   ],
   "id": "c00-17",
-  "last_checked": "2026-10-29",
+  "last_checked": "2026-11-03",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -70,22 +74,19 @@
   ],
   "review": {
     "flags": [
-      "restates_ids c04-03, c04-01, c04-08 confirmed: each covers one clause of the sentence (DEI, transgender service, China priority).",
-      "Stage kept at in_progress 55 (restated records implemented 72, implemented 70, in_progress 45); implemented 65 is defensible if the China ranking is given less weight.",
-      "Added the 2026-06-01 D.C. Circuit decision and the 2026-08-27 certiorari petition from c04-01 and changed court_status from stayed to pending to match c04-01.",
-      "NDAA event now says what the cited sections do, per c04-08.",
-      "All other events and sources match c04-03, c04-01 and c04-08; EO 14183 is cited by c04-01 through GovInfo and here through the Federal Register, both valid."
+      "same treatment as c04-01: brief in opposition folded into the 2026-08-27 event and court_status date restored to 2026-08-27",
+      "stage derived from c04-03, c04-01 and c04-08; implemented 65 remains a defensible alternative"
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 9, under Promise #2: the next conservative President must end the Left's social experimentation with the military, restore warfighting as its sole mission, and set defeating the threat of the CCP as its highest priority. Paraphrase, page and position confirmed.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-14",
-    "reviewer": "Y5",
+    "mandate_check": "verified",
+    "mandate_note": "Page 9 says the next conservative President must end social experimentation with the military, restore warfighting as its sole mission and make defeating the Chinese Communist Party threat its highest priority; the proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-11-03",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "EO 14183, Prioritizing Military Excellence and Readiness, signed 2025-01-27, published 2025-02-03 at 90 FR 8757 (checked 2026-10-14)",
+        "note": "Petition pending; brief in opposition submitted 2026-11-02; no distribution or Court action. Transgender service element remains operative, consistent with in_progress 55.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents/2025-02178.json"
+        "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-272.html"
       }
     ]
   },
@@ -190,7 +191,7 @@
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Two of the three parts the Foreword paragraph restates are operative: DEI offices and training were ordered abolished on 2025-01-27 and GAO later counted all 41 remaining DEI positions as abolished or restructured (see c04-03), and the transgender service policy has been enforced since the Supreme Court stayed the Shilling injunction on 2025-05-06, while the D.C. Circuit on 2026-06-01 left the Talbott injunction in place for the named currently serving plaintiffs and the government petitioned for certiorari on 2026-08-27 (see c04-01). The China priority is only partly aligned: the 2026 National Defense Strategy ranks China second to homeland defense (see c04-08). No record tracks the sole-mission framing as such, so the stage is derived from the three detailed records.",
+  "status_summary": "Two of the three parts the Foreword paragraph restates are operative: DEI offices and training were ordered abolished on 2025-01-27 and GAO later counted all 41 remaining DEI positions as abolished or restructured (see c04-03), and the transgender service policy has been enforced since the Supreme Court stayed the Shilling injunction on 2025-05-06, while the D.C. Circuit on 2026-06-01 left the Talbott injunction in place for the named currently serving plaintiffs and the government petitioned for certiorari on 2026-08-27 and respondents' brief in opposition was submitted on 2026-11-02 (see c04-01). The China priority is only partly aligned: the 2026 National Defense Strategy ranks China second to homeland defense (see c04-08). No record tracks the sole-mission framing as such, so the stage is derived from the three detailed records.",
   "timeline": [
     {
       "date": "2025-01-27",
@@ -250,7 +251,7 @@
     },
     {
       "date": "2026-08-27",
-      "event": "The Solicitor General files a petition for a writ of certiorari in United States v. Talbott (No. 26-272) seeking review of the D.C. Circuit's 2026-06-01 decision; the case is docketed 2026-09-01. Respondents' time to respond is extended to 2026-11-02 (order of 2026-09-25), and amicus briefs supporting the government were filed 2026-10-01. The docket shows no ruling. Stars and Stripes reports that a two-week trial is set for January 2027.",
+      "event": "The Solicitor General files a petition for a writ of certiorari in United States v. Talbott (No. 26-272) seeking review of the D.C. Circuit's 2026-06-01 decision; the case is docketed 2026-09-01. Respondents' time to respond is extended to 2026-11-02 (order of 2026-09-25), amicus briefs supporting the government were filed 2026-10-01, and respondents' brief in opposition is entered as submitted on 2026-11-02. The docket shows no distribution for conference and no ruling. Stars and Stripes reports that a two-week trial is set for January 2027.",
       "kind": "court",
       "source": "Supreme Court of the United States (docket No. 26-272)",
       "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-272.html"
@@ -266,5 +267,5 @@
   "title": "End social experimentation in the military; make warfighting and China the priority",
   "tracked": true,
   "uncertainties": "Stage derivation: c04-03 is implemented 72, c04-01 is implemented 70 and c04-08 is in_progress 45. Because the Foreword sentence bundles all three and the China element sits below the others (the 2026 strategy ranks homeland defense above China, which differs from the Mandate's order), the combined stage is in_progress 55, inside the band. Implemented 65 is defensible if the sole-mission wording is read mainly as the DEI and transgender items. The sole-mission statement is broad and no separate measure of it was found; this record does not assess other military policies. The 2026 court events were copied from c04-01, which cites the D.C. Circuit opinion and the Supreme Court docket for No. 26-272. The source for the Secretary of War directive is undated on its page. The court status follows c04-01 (pending certiorari petition); the policy operates during the appeals except as to the named Talbott plaintiffs.",
-  "updated_at": "2026-10-14"
+  "updated_at": "2026-11-03"
 }
