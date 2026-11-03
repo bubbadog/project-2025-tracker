@@ -7,7 +7,7 @@
   "chapter": "27",
   "confidence": 74,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text at pages 830 to 831 checked. The registered offering proposal (91 FR 31022) was fetched and read in part on federalregister.gov in this review (the unread tail cannot change its status as a proposal), the CAT concept release page and SEC release 2026-96 were re-read, and a Federal Register query found no final capital formation rule since 2026-06-01; the operative CAT steps (2025-02-10 exemption, 2026-03-27 plan amendment) were read in earlier reviews and the absence of Regulation A, CF, finder and Rule 144 action rests on limited listings.",
+  "confidence_reason": "Pages 830 and 831 were checked against the chapter text; the Federal Register API record of the FINRA exam notice (91 FR 63335) and the correction notice text on govinfo.gov were read in this review; the stage rests on the CAT steps and the May 2026 proposals, which were read in earlier reviews and not reopened here.",
   "durability": {
     "level": "medium",
     "why": "Final SEC rules last until a later Commission amends them, while the CAT cost changes are plan amendments and exemptions that are easier to reverse."
@@ -36,10 +36,14 @@
     {
       "date": "2026-10-24",
       "note": "Source list completed: 2 document(s) that timeline events already cited were opened on 2026-10-24 and added to sources (U.S. Securities and Exchange Commission); each page states the fact its event describes; no change to stage or confidence."
+    },
+    {
+      "date": "2026-11-03",
+      "note": "Federal Register publication of the SEC accredited investor exam notice (91 FR 63335, 2026-10-05) was added, with a 2026-11-03 correction noted; stage unchanged. Independent review confirmed in_progress 28, verified the 2026-10-05 FINRA exam notice on the Federal Register API and found the 2026-11-03 correction changes only comment-submission instructions (govinfo.gov)."
     }
   ],
   "id": "c27-04",
-  "last_checked": "2026-10-24",
+  "last_checked": "2026-11-03",
   "layer": 1,
   "match": "partial",
   "mechanism": "agency_rule",
@@ -74,29 +78,29 @@
       "url": "https://www.federalregister.gov/documents/2026/05/26/2026-10373/registered-offering-reform"
     },
     "flags": [
-      "in_progress 28 rests on operative CAT cost steps plus pending proposals; proposed (about 20) is a defensible alternative",
-      "CAT concept release Federal Register date not verified"
+      "correction notice substance verified on govinfo.gov and uncertainties updated",
+      "no final SEC capital formation rule found in the record's sources"
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Pages 830 to 831 recommend simplifying Regulation A and Regulation CF with blue sky preemption for Regulation A offerings, broadening or eliminating the accredited investor limit (and allowing self-certification), exempting micro-offerings and small finders, permanent emerging growth company relief, blue sky preemption for exchange-traded and reporting securities, terminating the CAT and replacing Rule 144 with a current-information approach; the proposal is accurate, with self-certification folded into the accredited investor item.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-17",
-    "reviewer": "P17-F",
+    "mandate_check": "verified",
+    "mandate_note": "Pages 830 and 831 list simplifying Regulation A and CF with blue sky preemption, widening or dropping the accredited investor limit, micro-offering and finder exemptions, permanent EGC relief, terminating the CAT and replacing Rule 144; the proposal matches.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-11-03",
+    "reviewer": "independent review",
     "source_checks": [
       {
-        "note": "Eight SEC final rules since 2026-06-01, all technical or administrative; none adopts the May 2026 proposals.",
+        "note": "Notice and request for comment, 91 FR 63335-63344, 2026-10-05, Release No. 33-11445, File No. 4-931, comments close 2026-12-04; a request for comment only, consistent with in_progress resting on proposals and CAT cost steps.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=securities-and-exchange-commission&conditions[type][]=RULE&conditions[publication_date][gte]=2026-06-01&order=newest&per_page=30"
+        "url": "https://www.federalregister.gov/api/v1/documents/2026-20310.json"
       },
       {
-        "note": "Concept release (34-105251, S7-2026-12) seeking comment before any rulemaking; 60-day comment period after FR publication; no termination proposed.",
+        "note": "Correction replaces only the ADDRESSES section and changes no dates; does not affect the stage.",
+        "result": "partial",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/C1-2026-20310.pdf"
+      },
+      {
+        "note": "Not reopened in this review; earlier reviews read it as a concept release proposing no termination, which keeps the CAT item short of the recommendation.",
         "result": "supports",
         "url": "https://www.sec.gov/newsroom/press-releases/2026-37-sec-seeks-public-comment-consolidated-audit-trail-other-audit-trails-data-sources"
-      },
-      {
-        "note": "Accredited investor items are requests for comment alongside adviser and fund rule proposals; carried from the researcher's full read and consistent with the record.",
-        "result": "supports",
-        "url": "https://www.sec.gov/newsroom/press-releases/2026-96-sec-proposes-amendments-expand-responsible-retailization-private-markets"
       }
     ],
     "stage_change_reason": "Stage in_progress kept at 28: the CAT exemption and cost-reducing plan amendment are operative partial steps, and the offering, reporting and filer-status rules are formal proposals with comments closed; nothing is final and the CAT is not terminated, so the record sits at the low end of in_progress."
@@ -188,10 +192,24 @@
       "publisher": "U.S. Securities and Exchange Commission",
       "title": "SEC Approves Amendment to NMS Plan to Further Reduce the Costs of the Consolidated Audit Trail (press release 2026-31)",
       "url": "https://www.sec.gov/newsroom/press-releases/2026-31-sec-approves-amendment-nms-plan-further-reduce-costs-consolidated-audit-trail"
+    },
+    {
+      "date": "2026-10-05",
+      "kind": "primary",
+      "publisher": "Federal Register / SEC",
+      "title": "Potential Designation of Passage of an Accredited Investor Exam To Be Developed by FINRA as Qualifying Natural Persons for Accredited Investor Status",
+      "url": "https://www.federalregister.gov/documents/2026/10/05/2026-20310/potential-designation-of-passage-of-an-accredited-investor-exam-to-be-developed-by-finra-as"
+    },
+    {
+      "date": "2026-11-03",
+      "kind": "primary",
+      "publisher": "Federal Register / SEC",
+      "title": "Potential Designation of Passage of an Accredited Investor Exam (correction, 91 FR 69282)",
+      "url": "https://www.federalregister.gov/documents/2026/11/03/C1-2026-20310/potential-designation-of-passage-of-an-accredited-investor-exam-to-be-developed-by-finra-as"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "SEC action so far is mostly proposals. In May 2026 the SEC proposed registered offering reform (91 FR 31022, published 2026-05-26: broader Form S-3 shelf eligibility and, through a definition of qualified purchaser, preemption of state registration for all registered offerings, not only exchange-listed ones), optional semiannual reporting, and simplified filer categories with wider scaled disclosure; a law-firm alert dated 2026-09-01 reports that all comment periods had closed and that final rules were expected soon, with no adoption reported; Federal Register listings of SEC final rules published from 2026-06-01 through 2026-10-17 show only technical and administrative rules. On 2026-09-30 the SEC requested comment on possible new routes to accredited investor status (a FINRA-developed exam and certain professional credentials), without proposing rule text for them. On the Consolidated Audit Trail it exempted certain personal-data reporting (2025-02-10), approved an amendment to cut its costs (2026-03-27) and issued a concept release on its future (2026-04-16, Release No. 34-105251), which seeks comment before any rulemaking and proposes no termination; the CAT remains in operation. Changes to Regulation A, Regulation CF, micro-offerings, finders and Rule 144 were not found in the sources reviewed.",
+  "status_summary": "SEC action so far is mostly proposals. In May 2026 the SEC proposed registered offering reform (91 FR 31022, published 2026-05-26: broader Form S-3 shelf eligibility and, through a definition of qualified purchaser, preemption of state registration for all registered offerings, not only exchange-listed ones), optional semiannual reporting, and simplified filer categories with wider scaled disclosure; a law-firm alert dated 2026-09-01 reports that all comment periods had closed and that final rules were expected soon, with no adoption reported; Federal Register listings of SEC final rules published from 2026-06-01 through 2026-10-17 show only technical and administrative rules. On 2026-09-30 the SEC requested comment on possible new routes to accredited investor status (a FINRA-developed exam and certain professional credentials), without proposing rule text for them; the FINRA exam notice was published in the Federal Register on 2026-10-05 (91 FR 63335) with comments due 2026-12-04. On the Consolidated Audit Trail it exempted certain personal-data reporting (2025-02-10), approved an amendment to cut its costs (2026-03-27) and issued a concept release on its future (2026-04-16, Release No. 34-105251), which seeks comment before any rulemaking and proposes no termination; the CAT remains in operation. Changes to Regulation A, Regulation CF, micro-offerings, finders and Rule 144 were not found in the sources reviewed.",
   "timeline": [
     {
       "date": "2025-02-10",
@@ -241,10 +259,17 @@
       "kind": "primary",
       "source": "SEC",
       "url": "https://www.sec.gov/newsroom/press-releases/2026-96-sec-proposes-amendments-expand-responsible-retailization-private-markets"
+    },
+    {
+      "date": "2026-10-05",
+      "event": "The SEC publishes in the Federal Register a notice and request for comment (91 FR 63335, FR Doc. 2026-20310) on a possible order designating passage of an accredited investor exam developed by FINRA as a way for natural persons to qualify as accredited investors; comments are due 2026-12-04. The notice does not itself make any designation.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/10/05/2026-20310/potential-designation-of-passage-of-an-accredited-investor-exam-to-be-developed-by-finra-as"
     }
   ],
   "title": "Reduce SEC barriers to capital formation and terminate the Consolidated Audit Trail",
   "tracked": true,
-  "uncertainties": "The registered offering proposal (91 FR 31022) was read in review on 2026-10-17 through about 100,000 of 115,000 characters on federalregister.gov, covering its summary and main proposals; the semiannual reporting and filer-status proposals were read only as titles and summaries. The Federal Register lists of SEC proposed and final rules since 2025-01-20 (first 40 each) showed no Regulation A, Regulation CF, accredited investor, micro-offering, finder or Rule 144 rulemaking, but SEC staff statements, exemptive orders or items on the Unified Agenda were not checked. The SEC's digital asset actions (Mandate p. 835) are not covered here. Progress is a judgment call: proposals are not final, and only the CAT exemption and cost amendment are operative. A Federal Register query for SEC final rules published since 2026-06-01, run 2026-10-17, returned eight technical or administrative items (EDGAR Filer Manual, quorum requirement, Form PF compliance date, governance technical amendments, delegations, FDTA data standards, Form X-17A-5, a correction) and no final offering, reporting or filer-status rule. The CAT concept release (Release No. 34-105251) seeks comment on basic aspects of the CAT, including what the release calls its existential aspects, but proposes no rule; its 2026-04-20 Federal Register date was not verified in this review. The 2026-09-30 accredited investor items are requests for comment whose comment periods run from a later Federal Register publication.",
-  "updated_at": "2026-10-24"
+  "uncertainties": "The registered offering proposal (91 FR 31022) was read in review on 2026-10-17 through about 100,000 of 115,000 characters on federalregister.gov, covering its summary and main proposals; the semiannual reporting and filer-status proposals were read only as titles and summaries. The Federal Register lists of SEC proposed and final rules since 2025-01-20 (first 40 each) showed no Regulation A, Regulation CF, accredited investor, micro-offering, finder or Rule 144 rulemaking, but SEC staff statements, exemptive orders or items on the Unified Agenda were not checked. The SEC's digital asset actions (Mandate p. 835) are not covered here. Progress is a judgment call: proposals are not final, and only the CAT exemption and cost amendment are operative. A Federal Register query for SEC final rules published since 2026-06-01, run 2026-10-17, returned eight technical or administrative items (EDGAR Filer Manual, quorum requirement, Form PF compliance date, governance technical amendments, delegations, FDTA data standards, Form X-17A-5, a correction) and no final offering, reporting or filer-status rule. The CAT concept release (Release No. 34-105251) seeks comment on basic aspects of the CAT, including what the release calls its existential aspects, but proposes no rule; its 2026-04-20 Federal Register date was not verified in this review. The 2026-09-30 accredited investor items are requests for comment whose comment periods run from a later Federal Register publication. A correction document to the FINRA exam notice (FR Doc. C1-2026-20310, 91 FR 69282, published 2026-11-03) was read on govinfo.gov: it replaces the ADDRESSES section (comment submission instructions for File No. 4-931) and changes no dates, so the 2026-12-04 comment deadline stands; it is a clerical correction and is not entered as an event.",
+  "updated_at": "2026-11-03"
 }
