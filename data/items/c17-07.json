@@ -7,7 +7,13 @@
   "chapter": "17",
   "confidence": 82,
   "confidence_label": "high",
-  "confidence_reason": "The primary 2025-01-24 FACE Act charging memorandum and DOJ's release on the Edna Mahan termination were fetched and read, and the Attorney General's memoranda and the desegregation release were read in an earlier review. The share of all decrees reviewed is unknown and the Edna Mahan court order itself was not read. Rule applied: high because the stage-deciding primary texts (the Pardon Attorney page and the 2025-01-24 memorandum on justice.gov) were opened and read; the 2026-04-14 report is known only through DOJ's release and NPR and does not decide the stage.",
+  "confidence_reason": "Rule applied: high only when the stage-deciding primary document was opened and read in the review. The 2025-01-24 FACE Act charging memorandum was re-read on justice.gov in this review and supports the operative FACE Act strand; the 2026-09-30 dismissal of DOJ's West Orange suit, read in a court-header copy on a news site, affects one enforcement case and not the stage. The share of decrees reviewed is unknown and the Edna Mahan order and the 2026-04-14 report were not read, so confidence stays at 82.",
+  "court_status": {
+    "basis": "Latest court event: on 2026-09-30 the District of New Jersey dismissed without prejudice, as to six moving defendants, the government's own FACE Act suit over the West Orange synagogue protest (Civil No. 25-cv-16049), with leave to amend within 30 days of the accompanying order; the dismissed government action is that one DOJ enforcement suit, not a challenge to DOJ policy. It does not reach the 2025 charging memorandum, the pardons or the consent decree terminations, which earlier courts approved on motions DOJ joined or supported (New Orleans 2025-11-19, Newark 2025-11-20, Edna Mahan 2026-07-15). Whether an amended complaint was filed was not verified.",
+    "date": "2026-09-30",
+    "state": "dismissed",
+    "url": "https://newjerseymonitor.com/wp-content/uploads/2026/10/9-30-26-US-v.-West-Orange-protesters.pdf"
+  },
   "durability": {
     "level": "low",
     "why": "Enforcement posture, memos, and the choice to drop or bring cases can be reversed by a later administration, though pardons and final court dismissals are lasting for the individuals and cases concerned."
@@ -40,10 +46,14 @@
     {
       "date": "2026-10-22",
       "note": "Source cleanup: the April 2026 Justice Department report on FACE Act enforcement is now read through the Department's release of 2026-04-14 and an NPR report (both re-opened in review) instead of an encyclopedia article, which was removed; a dated event and a status sentence were added, and the report itself stays unread. Stage implemented, progress 65 and confidence 82 unchanged."
+    },
+    {
+      "date": "2026-11-04",
+      "note": "Refutation check: a District of New Jersey opinion of 2026-09-30, read in a copy hosted by newjerseymonitor.com that carries the court's caption and filing header, dismissed without prejudice DOJ's West Orange synagogue FACE Act suit; added as a timeline event, a status sentence and court_status dismissed, with the basis stating that the dismissed action is the government's own suit and does not reach the charging policy or decree terminations. Independent review re-read the 2025-01-24 charging memorandum on justice.gov. Verdict holds; stage implemented, progress 65 and confidence 82 unchanged."
     }
   ],
   "id": "c17-07",
-  "last_checked": "2026-10-22",
+  "last_checked": "2026-11-04",
   "layer": 1,
   "match": "direct",
   "mechanism": "agency_action",
@@ -56,33 +66,24 @@
   "progress": 65,
   "proposal": "The Mandate recommends a review of existing DOJ policies, investigations, and cases, citing FACE Act prosecutions of abortion protesters as a prime example, and seeking to terminate unnecessary or outdated consent decrees and settlements, intervening where long-running decrees bind parties, and barring settlement payments to third parties.",
   "redteam": {
-    "date": "2026-10-08",
+    "date": "2026-11-04",
     "evidence": [
       {
-        "date": "2025-11-19",
-        "kind": "primary",
-        "note": "Court ended the New Orleans police decree on a joint DOJ-city motion.",
-        "source": "U.S. Department of Justice",
-        "url": "https://www.justice.gov/opa/pr/federal-court-terminates-consent-decree-regarding-new-orleans-police-department-after"
+        "date": "2026-09-30",
+        "note": "Opinion of Judge Katharine S. Hayden in United States v. Party for Socialism and Liberation New Jersey, No. 25-cv-16049 (D.N.J.): all six motions to dismiss granted; the FACE Act claim is dismissed without prejudice and the government may file an amended complaint within 30 days.",
+        "source": "U.S. District Court for the District of New Jersey (copy hosted by newjerseymonitor.com)",
+        "url": "https://newjerseymonitor.com/wp-content/uploads/2026/10/9-30-26-US-v.-West-Orange-protesters.pdf"
       },
       {
-        "date": "2025-11-21",
-        "kind": "primary",
-        "note": "Court ended the Newark police decree; DOJ supported the city's motion.",
+        "date": "2025-01-24",
+        "note": "FACE Act charging policy memorandum previously read on justice.gov; no rescission or court order against it was found.",
         "source": "U.S. Department of Justice",
-        "url": "https://www.justice.gov/opa/pr/federal-court-terminates-newark-police-departments-consent-decree-after-successful-reforms"
-      },
-      {
-        "date": "2026-01-11",
-        "kind": "news",
-        "note": "Search result: another decades-old Louisiana school desegregation order ended with the administration's participation; snippet only.",
-        "source": "WCAX (AP)",
-        "url": "https://www.wcax.com/2026/01/11/trump-officials-louisiana-put-an-end-another-decades-old-school-desegregation-order"
+        "url": "https://www.justice.gov/media/1386461/dl"
       }
     ],
-    "note": "No injunction, reversal or rescission of the DOJ FACE Act policy or the consent decree review was found, and no post-2026-09-24 development surfaced. Note the earlier summary line saying no long-standing court-entered police decree was terminated was wrong; corrected in the patch (it strengthens the in-effect status).",
+    "note": "No injunction, reversal or rescission of the FACE Act charging policy, the 2025-02-05 memoranda or the consent decree terminations was found, and no new decree termination after 2026-07-15 surfaced. The one new court action is the dismissal without prejudice of a DOJ house-of-worship FACE Act suit, which narrows that strand but does not touch the elements on which the implemented stage rests. The outcome of any amended complaint was not found.",
     "verdict": "holds",
-    "what_was_tested": "Searched for reversal or court blocking of FACE Act scale-back, of DOJ consent decree terminations and school desegregation case dismissals, and for developments after 2026-09-24."
+    "what_was_tested": "Searched for reversal, injunction or court rulings against the FACE Act scale-back, the consent decree terminations and the desegregation dismissals after 2026-10-22, and for rulings in the FACE Act cases DOJ has brought."
   },
   "related_ids": [
     "c17-13"
@@ -97,41 +98,26 @@
   "research_agent": "A12",
   "review": {
     "flags": [
-      "remaining item said no court-entered police decree termination was found, which contradicted the New Orleans and Newark events; corrected",
-      "uncertainties said three house-of-worship cases; only two are cited, corrected",
-      "summary trimmed from 6 long sentences to 3",
-      "2025-01-23 event reworded: the charging-policy date now rests on the DOJ memo rather than a Wikipedia summary"
+      "Court-opinion copy relabeled as hosted by newjerseymonitor.com in the timeline, sources and redteam evidence, with docket number and document number added.",
+      "court_status dismissed kept: it accurately describes the court's effect on the government's own enforcement suit; basis now says so and notes the earlier court-approved decree terminations.",
+      "Status summary sentence and uncertainties note added for the dismissal.",
+      "Retrieval-method wording in uncertainties on the 2025-02-05 memoranda replaced with the host and kind of copy."
     ],
     "mandate_check": "not_checked",
-    "mandate_note": "The recommendation text was taken from the record's proposal and pages (pp. 546, 557 to 558: review DOJ policies and cases with FACE Act prosecutions as a prime example, terminate unnecessary consent decrees, bar third-party settlement payments) since the chapter text was not opened in this review; the 2026-10-08 review verified the paraphrase.",
+    "mandate_note": "Pages 546, 557 and 558 were verified in the 2026-10-08 review; the new court event does not depend on the mandate wording and the chapter was not re-read.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-22",
-    "reviewer": "independent",
+    "reviewed_at": "2026-11-04",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Memo titled FACE Act Charging Policy, dated January 24, 2025, Office of the Associate Attorney General, to the Civil Rights Division: dismiss with prejudice U.S. v. Connolly (E.D. Pa.), U.S. v. Zastrow (M.D. Fla.) and U.S. v. Citizens for a Pro-Life Society (N.D. Ohio); new abortion-related actions only in extraordinary circumstances; AAG for Civil Rights authorization required. Supports the operative FACE Act strand.",
+        "note": "Re-read 2026-11-04: FACE Act Charging Policy, 2025-01-24, Office of the Associate Attorney General; dismissal with prejudice of Connolly (E.D. Pa.), Zastrow (M.D. Fla.) and Citizens for a Pro-Life Society (N.D. Ohio); new abortion-related actions only in extraordinary circumstances or with significant aggravating factors, with Civil Rights Division AAG authorization. Supports implemented 65.",
         "result": "supports",
         "url": "https://www.justice.gov/media/1386461/dl"
       },
       {
-        "note": "Release dated 2026-07-16: D.N.J. terminated the 2021 decree yesterday on a joint DOJ and New Jersey motion; no case caption given. Supports decree terminations under way.",
-        "result": "supports",
-        "url": "https://www.justice.gov/usao-nj/pr/federal-court-terminates-consent-decree-regarding-edna-mahan-correctional-facility-after"
-      },
-      {
-        "note": "Not refetched; relied on the 2026-10-08 review's reading (more than 50 desegregation cases dismissed, others case by case).",
-        "result": "supports",
-        "url": "https://www.justice.gov/opa/pr/justice-department-ends-over-50-half-century-old-desegregation-cases-throughout-united"
-      },
-      {
-        "note": "Opened by the researcher and re-opened in review on 2026-10-22: DOJ release of 2026-04-14 on the Weaponization Working Group report (links the report PDF and exhibits, not opened); restates the 2025-01-23 pardons, the dismissal with prejudice of Connolly, Zastrow and Citizens for a Pro-Life Society, and the extraordinary-circumstances directive. Consistent with the implemented stage.",
-        "result": "supports",
-        "url": "https://www.justice.gov/opa/pr/justice-department-reveals-biden-administrations-weaponization-federal-law-against-pro-life"
-      },
-      {
-        "note": "Opened by the researcher and re-opened in review on 2026-10-22: NPR story of 2026-04-14 carried by a public broadcaster; reports the report's release, at least four firings, and that two outside groups dispute its findings. Consistent with the implemented stage.",
-        "result": "supports",
-        "url": "https://www.gpb.org/news/2026/04/14/justice-department-says-biden-doj-weaponized-law-go-after-anti-abortion-activists"
+        "note": "Third-party copy with ECF header (Case 2:25-cv-16049-KSH-JRA, Document 113, filed 09/30/26, 31 pages) and the D.N.J. caption; opinion of Judge Hayden grants all six motions to dismiss the single FACE Act count without prejudice, leave to amend within 30 days of the accompanying order (not included). Supports the event and court_status; does not bear on the implemented stage.",
+        "result": "partial",
+        "url": "https://newjerseymonitor.com/wp-content/uploads/2026/10/9-30-26-US-v.-West-Orange-protesters.pdf"
       }
     ]
   },
@@ -270,10 +256,17 @@
       "publisher": "NPR (via Georgia Public Broadcasting)",
       "title": "Justice Department says Biden DOJ weaponized law to go after anti-abortion activists",
       "url": "https://www.gpb.org/news/2026/04/14/justice-department-says-biden-doj-weaponized-law-go-after-anti-abortion-activists"
+    },
+    {
+      "date": "2026-09-30",
+      "kind": "court",
+      "publisher": "U.S. District Court for the District of New Jersey (copy hosted by newjerseymonitor.com)",
+      "title": "Opinion, United States v. Party for Socialism and Liberation New Jersey, et al., Civil No. 25-cv-16049 (KSH) (JRA), Document 113 (D.N.J. filed 2026-09-30) (copy hosted by newjerseymonitor.com)",
+      "url": "https://newjerseymonitor.com/wp-content/uploads/2026/10/9-30-26-US-v.-West-Orange-protesters.pdf"
     }
   ],
   "stage": "implemented",
-  "status_summary": "On the FACE Act, the President pardoned 24 individuals in five clinic-access cases on 2025-01-23 (DOJ Office of the Pardon Attorney), and a DOJ memorandum of 2025-01-24 directed dismissal of three pending cases and limited new abortion-related FACE Act actions to extraordinary circumstances with Civil Rights Division approval, while DOJ has continued to bring FACE Act cases over protests at houses of worship (2025-09-29 and 2026-02-27). On settlements and decrees, Attorney General memoranda of 2025-02-05 reinstated the bar on improper third-party settlement payments and directed components to review consent decrees and settlement agreements, and on 2025-05-21 DOJ moved to dismiss its Louisville police suit and to quash a proposed Minneapolis decree. Federal courts terminated the New Orleans and Newark police consent decrees (DOJ releases of 2025-11-19 and 2025-11-21) and the Edna Mahan Correctional Facility decree on 2026-07-15, each on motions DOJ joined or supported, and on 2026-09-24 DOJ announced it was ending more than 50 school desegregation cases through case-by-case review. On 2026-04-14 DOJ released a report of its Weaponization Working Group on FACE Act enforcement under the prior administration, whose findings outside groups dispute (NPR).",
+  "status_summary": "On the FACE Act, the President pardoned 24 individuals in five clinic-access cases on 2025-01-23 (DOJ Office of the Pardon Attorney), and a DOJ memorandum of 2025-01-24 directed dismissal of three pending cases and limited new abortion-related FACE Act actions to extraordinary circumstances with Civil Rights Division approval, while DOJ has continued to bring FACE Act cases over protests at houses of worship (2025-09-29 and 2026-02-27). On settlements and decrees, Attorney General memoranda of 2025-02-05 reinstated the bar on improper third-party settlement payments and directed components to review consent decrees and settlement agreements, and on 2025-05-21 DOJ moved to dismiss its Louisville police suit and to quash a proposed Minneapolis decree. Federal courts terminated the New Orleans and Newark police consent decrees (DOJ releases of 2025-11-19 and 2025-11-21) and the Edna Mahan Correctional Facility decree on 2026-07-15, each on motions DOJ joined or supported, and on 2026-09-24 DOJ announced it was ending more than 50 school desegregation cases through case-by-case review. On 2026-04-14 DOJ released a report of its Weaponization Working Group on FACE Act enforcement under the prior administration, whose findings outside groups dispute (NPR). On 2026-09-30 the District of New Jersey dismissed without prejudice, with leave to amend, DOJ's West Orange synagogue FACE Act suit, a ruling on one house-of-worship case that leaves the charging policy and decree terminations unaffected.",
   "timeline": [
     {
       "date": "2025-01-23",
@@ -351,10 +344,17 @@
       "kind": "primary",
       "source": "DOJ",
       "url": "https://www.justice.gov/opa/pr/justice-department-ends-over-50-half-century-old-desegregation-cases-throughout-united"
+    },
+    {
+      "date": "2026-09-30",
+      "event": "The U.S. District Court for the District of New Jersey (Judge Katharine S. Hayden) grants all six motions to dismiss in United States v. Party for Socialism and Liberation New Jersey, et al. (Civil No. 25-cv-16049, Document 113), the West Orange synagogue FACE Act suit, dismissing the single FACE Act count without prejudice as to each moving defendant and allowing the government to file an amended complaint within 30 days of the accompanying order.",
+      "kind": "court",
+      "source": "U.S. District Court for the District of New Jersey (copy hosted by newjerseymonitor.com)",
+      "url": "https://newjerseymonitor.com/wp-content/uploads/2026/10/9-30-26-US-v.-West-Orange-protesters.pdf"
     }
   ],
   "title": "End unnecessary consent decrees and review FACE Act cases and other legacy matters",
   "tracked": true,
-  "uncertainties": "A 2026-04-14 report of the DOJ Weaponization Working Group on FACE Act enforcement was read through the Department's news release of that date and an NPR story carried by a public broadcaster; the report itself was not opened, and its findings are the Department's own characterization, which advocacy groups dispute. The FACE Act pardon is confirmed by DOJ's Pardon Attorney page and warrant (24 unique individuals; NPR said 23). The 2025-01-24 charging policy memorandum was read on justice.gov; it is signed by the Chief of Staff to the Attorney General exercising the authority of the Acting Associate Attorney General, and the signer's name was not legible in the text read. The two 2025-02-05 Attorney General memoranda were read through fetch summaries of justice.gov files; the Weaponization Working Group description still rests on Lawfare. The outcome of the Louisville and Minneapolis motions was not found. Other police, jail, housing or voting decrees were not checked, so the share of decrees ended is unknown. The description of FACE Act use at houses of worship is limited to the two cases cited. The Edna Mahan termination was read from a U.S. Attorney release that gives no case caption or docket number; the court order was not read. Federal Register consent decree notices since 2026-09-24 were environmental lodging notices, and no court ruling on the desegregation dismissals was found.",
-  "updated_at": "2026-10-22"
+  "uncertainties": "A 2026-04-14 report of the DOJ Weaponization Working Group on FACE Act enforcement was read through the Department's news release of that date and an NPR story carried by a public broadcaster; the report itself was not opened, and its findings are the Department's own characterization, which advocacy groups dispute. The FACE Act pardon is confirmed by DOJ's Pardon Attorney page and warrant (24 unique individuals; NPR said 23). The 2025-01-24 charging policy memorandum was read on justice.gov; it is signed by the Chief of Staff to the Attorney General exercising the authority of the Acting Associate Attorney General, and the signer's name was not legible in the text read. The two 2025-02-05 Attorney General memoranda were read in summary form from the files on justice.gov; the Weaponization Working Group description still rests on Lawfare. The outcome of the Louisville and Minneapolis motions was not found. Other police, jail, housing or voting decrees were not checked, so the share of decrees ended is unknown. The description of FACE Act use at houses of worship is limited to the two cases cited. The Edna Mahan termination was read from a U.S. Attorney release that gives no case caption or docket number; the court order was not read. Federal Register consent decree notices since 2026-09-24 were environmental lodging notices, and no court ruling on the desegregation dismissals was found. The 2026-09-30 opinion in the West Orange case (Civil No. 25-cv-16049, Document 113) was read in a copy hosted by newjerseymonitor.com that carries the court's caption and filing header; the accompanying order was not read, and whether the government filed an amended complaint within the 30 days allowed was not verified.",
+  "updated_at": "2026-11-04"
 }
