@@ -7,7 +7,7 @@
   "chapter": "04",
   "confidence": 62,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked; Public Law 119-75 (H.R. 7148) was re-read in part and confirms the act, date and defense division but not the program lines, which rest on the Senate Appropriations Committee release and trade press; the B-21 statute section and the pass-through element were not confirmed.",
+  "confidence_reason": "Public Law 119-103 was read on govinfo.gov in this review and confirms the continuing resolution's general terms, which do not bear on the stage. The stage rests on Public Law 119-75 and the Senate Appropriations Committee release, which were not re-read in this review; the program lines rest on that release and trade press, and the B-21 statute section and the pass-through element were not confirmed, so confidence stays medium at 62.",
   "durability": {
     "level": "medium",
     "why": "Appropriations are annual and the largest B-21 and F-47 funding rests on one-time or yearly decisions."
@@ -37,10 +37,14 @@
     {
       "date": "2026-10-16",
       "note": "Independent review re-read Public Law 119-75 and tried P.L. 119-21 on govinfo.gov; the act number, date and defense division were confirmed but program lines were not in the readable text; in_progress 30 and medium confidence kept."
+    },
+    {
+      "date": "2026-11-04",
+      "note": "Freshness check: Public Law 119-103 (fiscal 2027 continuing resolution, approved 2026-09-02) was read on govinfo.gov; its general production-rate and multiyear limits for the Defense Department name no Air Force program, so independent review recorded them in uncertainties as funding context rather than as a timeline event or blocker. No fiscal 2027 defense appropriations act was found. Stage in_progress, progress 30 and confidence 62 unchanged."
     }
   ],
   "id": "c04-18",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-11-04",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -72,23 +76,19 @@
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
     },
     "flags": [
-      "Accepted researcher edit naming Public Law 119-75 and its Division A, which removes the inference noted in uncertainties."
+      "Continuing resolution timeline event, blocker and status sentence removed: the section 102 limits are standard continuing-resolution terms applying to all Defense Department programs, which standing guidance treats as funding context for uncertainties.",
+      "P.L. 119-103 kept in sources as read material."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Pages 113 and 114 call for ending pass-through funding, 5 percent annual real growth in the Air Force budget, 60 to 80 F-35A a year, capacity for 15 to 18 B-21 a year, and growing the EC-37B fleet from 10 to 20; the proposal paraphrases these accurately.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "P16-1",
+    "mandate_check": "not_checked",
+    "mandate_note": "Pages 113 and 114 were checked in the 2026-10-16 review; the funding-context change does not depend on the mandate wording and the chapter was not re-read.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-11-04",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Act, number, short title, marginal date and Division A confirmed; no program lines in text read.",
+        "note": "P.L. 119-103 (H.R. 6500), Continuing Appropriations and Extensions Act, 2027, approved 2026-09-02; section 101 continues fiscal 2026 rates, section 102(a) bars new production, production-rate increases and new starts for the Defense Department, section 102(b) bars new economic-order-quantity multiyear procurements, section 106 runs to 2026-12-11; no F-35, B-21 or EA-37B provision and no Air Force anomaly. Consistent with in_progress 30 but not an action on the recommendation.",
         "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
-      },
-      {
-        "note": "P.L. 119-21 enacted 2025-07-04 confirmed; text ends in Title I, B-21 line not reached.",
-        "result": "partial",
-        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"
+        "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm"
       }
     ],
     "stage_change_reason": "Enacted FY2026 appropriations add funds for F-35A and two EA-37B, and reconciliation funding is reported to speed B-21 production, but quantities remain below the Mandate's targets and pass-through funding and real growth are unaddressed; the act read confirms the vehicle and nothing contradicts a low in_progress stage."
@@ -187,6 +187,13 @@
       "publisher": "GovInfo",
       "title": "Public Law 119-75, Consolidated Appropriations Act, 2026 (H.R. 7148)",
       "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm"
+    },
+    {
+      "date": "2026-09-02",
+      "kind": "primary",
+      "publisher": "GovInfo",
+      "title": "Public Law 119-103, Continuing Appropriations and Extensions Act, 2027 (H.R. 6500)",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ103/html/PLAW-119publ103.htm"
     }
   ],
   "stage": "in_progress",
@@ -237,6 +244,6 @@
   ],
   "title": "Air Force: end pass-through budgeting, grow 5 percent real, buy more F-35A, B-21, EC-37B",
   "tracked": true,
-  "uncertainties": "The Senate committee release gives the F-35A line as a dollar increase, not an aircraft count, so the number of F-35A funded in FY2026 was not confirmed (TWZ says 47 F-35 of all types were funded). The govinfo text of Public Law 119-75 truncates within Division A and shows Air Force aircraft procurement only as a lump sum, so the 402, 500 and 474 million dollar figures rest on the Senate Appropriations Committee release. The 4.5 billion dollar B-21 figure comes from Exchange Monitor citing the contractor and was not traced to a section of P.L. 119-21, whose govinfo text truncates before Title II. TWZ notes the FY2027 budget documents appear to show a year-over-year cut of more than 4.2 billion dollars to B-21 procurement. Pass-through funding was not mentioned in the sources or the portion of the act read, and no 5 percent real growth calculation was done: the roughly 90 billion increase is a nominal figure including proposed mandatory funds, and the FY2027 request is not enacted. The EC-37B fleet count could not be compared.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "The Senate committee release gives the F-35A line as a dollar increase, not an aircraft count, so the number of F-35A funded in FY2026 was not confirmed (TWZ says 47 F-35 of all types were funded). The govinfo text of Public Law 119-75 truncates within Division A and shows Air Force aircraft procurement only as a lump sum, so the 402, 500 and 474 million dollar figures rest on the Senate Appropriations Committee release. The 4.5 billion dollar B-21 figure comes from Exchange Monitor citing the contractor and was not traced to a section of P.L. 119-21, whose govinfo text truncates before Title II. TWZ notes the FY2027 budget documents appear to show a year-over-year cut of more than 4.2 billion dollars to B-21 procurement. Pass-through funding was not mentioned in the sources or the portion of the act read, and no 5 percent real growth calculation was done: the roughly 90 billion increase is a nominal figure including proposed mandatory funds, and the FY2027 request is not enacted. The EC-37B fleet count could not be compared. Funding context: fiscal 2027 began under the Continuing Appropriations and Extensions Act, 2027 (Public Law 119-103, H.R. 6500, approved 2026-09-02, read on govinfo.gov), which funds activities at fiscal 2026 rates until 2026-12-11 or earlier enactment of appropriations; its section 102(a) bars new production of items not funded in fiscal 2026 and production-rate increases above fiscal 2026 levels for the Defense Department, and section 102(b) bars new multiyear procurements using advance procurement for economic order quantity. These are general continuing-resolution terms that name no Air Force program, so they are treated as funding context rather than as an action on the recommendation; no fiscal 2027 defense appropriations act was found.",
+  "updated_at": "2026-11-04"
 }
