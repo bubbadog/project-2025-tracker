@@ -10,9 +10,9 @@
   "chapter": "03",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Rule applied: high only when the stage-deciding primary document was opened and read on an official host. The stage-deciding OPM RIF rule was read on federalregister.gov in earlier passes, and the court events added here (the Ninth Circuit dismissal order on the courtlistener storage host and the appeal docket on Justia) were re-read and do not change the stage; the absence of an injunction against the RIF rule still rests on a litigation tracker, so confidence stays at 80.",
+  "confidence_reason": "Rule applied: high only when the stage-deciding primary document was opened and read in the review. The OPM Reduction in Force final rule (91 FR 49178, effective 2026-09-02) was re-read on federalregister.gov in this review and supports implemented: retention standing within each tenure group is set by performance credit plus veterans' preference points, with tenure subgroup and service date only as tie-breakers. The reported settlement of the shutdown-RIF claims is unconfirmed by a court order and does not reach the RIF rule; the absence of an injunction against the rule still rests on news and tracker searches, so confidence stays at 80.",
   "court_status": {
-    "basis": "Latest court event: the Ninth Circuit dismissed the government's appeal (No. 25-7998) of the N.D. Cal. preliminary injunction of 2025-12-17 in AFGE v. OMB on the government's own motion, by a clerk's order of 2026-01-02 that constitutes the mandate, after a partial administrative stay on 2025-12-23; this left the injunction, which enforced the funding-law RIF bar for shutdown-period RIFs, in place until it lapsed with that bar on 2026-01-30. The district case continues. The Supreme Court stayed the injunction against EO 14210 on 2025-07-08, and no injunction against the OPM RIF rule effective 2026-09-02 was reported as of 2026-10-05, so the tracked actions are operative with litigation pending.",
+    "basis": "Latest court event: the Ninth Circuit dismissed the government's appeal (No. 25-7998) of the N.D. Cal. preliminary injunction of 2025-12-17 in AFGE v. OMB on the government's own motion, by a clerk's order of 2026-01-02 that constitutes the mandate, after a partial administrative stay on 2025-12-23; this left the injunction, which enforced the funding-law RIF bar for shutdown-period RIFs, in place until it lapsed with that bar on 2026-01-30. The district case continues: a settlement agreement on the shutdown-RIF claims was reported on 2026-09-25 as filed by the parties (MLex), but no court order approving it, holding the case in abeyance or dismissing it was confirmed, and the Civil Rights Litigation Clearinghouse page (docket updated 2026-11-04) lists the case as ongoing. The Supreme Court stayed the injunction against EO 14210 on 2025-07-08, and no injunction against the OPM RIF rule effective 2026-09-02 was reported as of 2026-10-05, so the tracked actions are operative with litigation pending.",
     "date": "2026-01-02",
     "state": "pending",
     "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.457131/gov.uscourts.cand.457131.149.0.pdf"
@@ -61,10 +61,14 @@
     {
       "date": "2026-11-02",
       "note": "Red-team check on 2026-11-02: status holds; no injunction or rescission of the OPM RIF rule found, and pending union suits target other OPM rules (FedManager, Federal News Network). Review: the FedTools lawsuits tracker entry (2026-10-05) removed from sources under the lead-only host rule; it stays named in uncertainties as a secondary tracker and nothing in the record rests on it."
+    },
+    {
+      "date": "2026-11-04",
+      "note": "Settlement of the AFGE v. OMB shutdown-RIF claims (reported 2026-09-25 by Federal News Network and MLex as an agreement filed by the parties) recorded in uncertainties and court_status rather than as a timeline event, because no confirmable signing or filing date or court order was found; the Federal News Network page could not be opened on federalnewsnetwork.com in this review. Independent review re-read the OPM Reduction in Force final rule on federalregister.gov; court_status stays pending; stage implemented 75 and confidence 80 unchanged."
     }
   ],
   "id": "c03-06",
-  "last_checked": "2026-11-02",
+  "last_checked": "2026-11-04",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -122,42 +126,35 @@
   "research_agent": "A02",
   "review": {
     "flags": [
-      "court_status corrected from enjoined to pending: the only injunction lapsed on 2026-01-30 and never reached the RIF rule",
-      "H.R. 6500 signing re-dated from 2026-09-03 (news article date) to 2026-09-02 (bill status record)",
-      "2026-10-05 tracker check removed from the timeline",
-      "alternative considered: implemented 70, as no RIFs under the new rule are documented yet",
-      "court_status date moved from 2025-12-17 to 2026-01-02 (Ninth Circuit dismissal order, opened); state stays pending because the district case continues. The unsigned 2026-09-23 settlement copy is not used."
+      "Settlement timeline event (dated by a news report's publication date, sourced to an unopened page) removed; settlement moved to uncertainties and court_status basis.",
+      "Federal News Network settlement article removed from sources (not opened in this review).",
+      "Uncertainties sentence on the unsigned 2026-09-23 agreement copy, dropped by the draft, restored verbatim."
     ],
     "mandate_check": "not_checked",
-    "mandate_note": "Pages 78 and 79 were checked in the 2026-10-08 review; not re-read in this review.",
+    "mandate_note": "Pages 78 and 79 were checked in the 2026-10-08 review; the mandate wording does not bear on today's change and was not re-read.",
     "model": "claude-opus",
-    "reviewed_at": "2026-10-22",
+    "reviewed_at": "2026-11-04",
     "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "91 FR 49178, effective 2026-09-02: performance credit from the last three ratings plus veterans' preference points sets retention standing within tenure group, with tenure subgroup and then service computation date as tie-breakers; a correcting amendment of 2026-09-15 is listed (checked 2026-10-20).",
+        "note": "Re-read 2026-11-04: OPM, 91 FR 49178, published 2026-08-03, effective 2026-09-02; performance credit from the three most recent ratings plus veterans' preference points ranks employees within tenure group, tenure subgroup and service computation date break ties; correcting amendment 2026-18800 of 2026-09-15 listed. Supports implemented 75.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/08/03/2026-15665/reduction-in-force"
       },
       {
-        "note": "91 FR 65924, final rule published 2026-10-19, effective 2026-11-18: administrative leave for deferred resignation agreements, 12-week limit per workforce realignment instance absent joint OPM and OMB approval, optional leave during RIF notice periods, agency discretion on resignation withdrawals; peripheral to the stage (checked 2026-10-20).",
+        "note": "Could not be opened on federalnewsnetwork.com in this review; its report is not used as an event source.",
+        "result": "unreachable",
+        "url": "https://federalnewsnetwork.com/litigation/2026/09/trump-administration-settles-with-unions-over-shutdown-rif-challenge/"
+      },
+      {
+        "note": "Public summary dated 2026-09-25: unions and DOJ agreed to settle per an agreement filed by the parties in No. 3:25-cv-08302 (N.D. Cal.); no filing date, court approval, dismissal or abeyance stated. Consistent with court_status pending; does not bear on the RIF rule.",
         "result": "partial",
-        "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21320/administrative-leave-for-workforce-realignment-and-other-purposes"
+        "url": "https://www.mlex.com/employment-authority/labor/articles/2530324/unions-feds-settle-suit-over-gov-t-shutdown-layoffs"
       },
       {
-        "note": "H.R. 6500 signed 2026-09-02 and became Public Law 119-103; consistent with no RIF bar for fiscal 2027 to date (checked 2026-10-20).",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr6500.xml"
-      },
-      {
-        "note": "Re-read: supports implemented and court_status pending; the appeal ended by voluntary dismissal without a merits ruling, and no order restrains the OPM RIF rule or the hiring limits.",
-        "result": "supports",
-        "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.457131/gov.uscourts.cand.457131.149.0.pdf"
-      },
-      {
-        "note": "Re-read: shows the 2025-12-23 partial administrative stay of subsection 3(d), the 2025-12-31 motion and the 2026-01-02 dismissal; consistent with implemented.",
-        "result": "supports",
-        "url": "https://dockets.justia.com/docket/circuit-courts/ca9/25-7998"
+        "note": "Case listed as ongoing; docket updated 2026-11-04; summary covers events through January 2026 only and reports no settlement order. Consistent with pending.",
+        "result": "partial",
+        "url": "https://clearinghouse.net/case/47020/"
       }
     ]
   },
@@ -437,6 +434,6 @@
   ],
   "title": "Control workforce size through hiring limits and RIFs ranked by performance first",
   "tracked": true,
-  "uncertainties": "Workforce totals (2,020,230; 317,000 departures; 154,000 deferred resignations; 68,000 hires) are OPM's own figures with no independent baseline checked. The Mandate cautions against buyouts, while the administration used a Deferred Resignation Program; this is a difference in approach, not a judgment on costs. The January 2025 hiring freeze memorandum was not read. The November 2025 RIF bar was read in Public Law 119-37 (section 120) and in OPM's implementing memo; the December 2025 N.D. Cal. injunction was read through the Civil Rights Litigation Clearinghouse summary and Maryland Matters, not the order itself, and its decretal terms beyond subsection 3(d) (described on the appeal docket) were not read. The Ninth Circuit's course was read in this pass: the appeal docket on Justia (last retrieved by Justia on 2026-01-02, captioned with AFSCME as lead appellee) shows the 2025-12-23 partial administrative stay and the 2025-12-31 motion to dismiss, and the 2026-01-02 dismissal order was read on the courtlistener storage host; the dismissal gives no reasons. Copies of the stay order and the motion on mirror domains that an external retrieval located were rejected and not opened, and later district court entries were not read. A settlement agreement in AFGE v. OMB dated 2026-09-23 was found only in a copy with blank signature lines, so its execution was not verified and it is not used; as described, it concerns the rescinded shutdown RIF memo and contingency plans and does not reach the OPM RIF rule. The OPM final RIF rule was re-read in the Federal Register (91 FR 49178, effective 2026-09-02; corrected 2026-08-25 at 91 FR 54794 per OPM's memo) and its appeal forum in OPM's memo of 2026-09-02, but the Federal Register text past the first 100,000 characters (including the appeals discussion) was not read, and a correcting amendment published 2026-09-15 (document 2026-18800) was not reviewed. Litigation status as of 2026-10-05 comes from a secondary tracker. The bill status record shows H.R. 6500 signed on 2026-09-02 as Public Law 119-103; the absence of a RIF provision rests on a text search of the enrolled bill. The administrative leave final rule of 2026-10-19 was read through its first 100,000 characters; it codifies the leave mechanics used in the 2025 Deferred Resignation Program and does not change the retention or hiring rules that decide the stage. A search of news and litigation trackers through 2026-11-02 found no injunction, vacatur or rescission of the OPM Reduction in Force final rule (effective 2026-09-02) and no suit specifically challenging it; the union suit found in N.D. Cal. targets OPM's suitability and performance-management rules. The current continuing appropriations law funds agencies only through 2026-12-11, so a successor funding law could add a RIF restriction.",
-  "updated_at": "2026-11-02"
+  "uncertainties": "Workforce totals (2,020,230; 317,000 departures; 154,000 deferred resignations; 68,000 hires) are OPM's own figures with no independent baseline checked. The Mandate cautions against buyouts, while the administration used a Deferred Resignation Program; this is a difference in approach, not a judgment on costs. The January 2025 hiring freeze memorandum was not read. The November 2025 RIF bar was read in Public Law 119-37 (section 120) and in OPM's implementing memo; the December 2025 N.D. Cal. injunction was read through the Civil Rights Litigation Clearinghouse summary and Maryland Matters, not the order itself, and its decretal terms beyond subsection 3(d) (described on the appeal docket) were not read. The Ninth Circuit's course was read in this pass: the appeal docket on Justia (last retrieved by Justia on 2026-01-02, captioned with AFSCME as lead appellee) shows the 2025-12-23 partial administrative stay and the 2025-12-31 motion to dismiss, and the 2026-01-02 dismissal order was read on the courtlistener storage host; the dismissal gives no reasons. Copies of the stay order and the motion on mirror domains that an external retrieval located were rejected and not opened, and later district court entries were not read. A settlement agreement in AFGE v. OMB dated 2026-09-23 was found only in a copy with blank signature lines, so its execution was not verified and it is not used; as described, it concerns the rescinded shutdown RIF memo and contingency plans and does not reach the OPM RIF rule. The OPM final RIF rule was re-read in the Federal Register (91 FR 49178, effective 2026-09-02; corrected 2026-08-25 at 91 FR 54794 per OPM's memo) and its appeal forum in OPM's memo of 2026-09-02, but the Federal Register text past the first 100,000 characters (including the appeals discussion) was not read, and a correcting amendment published 2026-09-15 (document 2026-18800) was not reviewed. Litigation status as of 2026-10-05 comes from a secondary tracker. The bill status record shows H.R. 6500 signed on 2026-09-02 as Public Law 119-103; the absence of a RIF provision rests on a text search of the enrolled bill. The administrative leave final rule of 2026-10-19 was read through its first 100,000 characters; it codifies the leave mechanics used in the 2025 Deferred Resignation Program and does not change the retention or hiring rules that decide the stage. A search of news and litigation trackers through 2026-11-02 found no injunction, vacatur or rescission of the OPM Reduction in Force final rule (effective 2026-09-02) and no suit specifically challenging it; the union suit found in N.D. Cal. targets OPM's suitability and performance-management rules. The current continuing appropriations law funds agencies only through 2026-12-11, so a successor funding law could add a RIF restriction. Settlement of the shutdown-RIF claims (2026-11-04 review): Federal News Network (2026-09-25) reported a settlement naming AFGE, NFFE and NTEU, but its page could not be opened on federalnewsnetwork.com in this review; an MLex report of 2026-09-25 (read in its public summary on mlex.com) says the unions and the Justice Department agreed to settle according to an agreement filed by the parties in No. 3:25-cv-08302 (N.D. Cal.), without stating a filing date or court approval. The unsigned agreement copy on the Courthouse News host, dated 2026-09-23 and captioned AFGE v. OMB, No. 3:25-cv-08302-SI (N.D. Cal.), describes rescission of the shutdown RIF guidance, 30-day obligations, an abeyance motion, and a dismissal with prejudice due on the earlier of 2026-12-31 or enactment of fiscal 2027 appropriations; its signature lines are blank and the abeyance and dismissal orders are unsigned. Because no confirmable date for the government's signing or filing, and no court order, was found, the settlement is not entered as a timeline event. The Civil Rights Litigation Clearinghouse page (docket updated 2026-11-04) lists the case as ongoing and summarizes no entry after January 2026. The agreement concerns the rescinded shutdown RIF memo and contingency plans and does not reach the OPM RIF rule, EO 14210 or EO 14356; a later dismissal would end the district case without changing the stage.",
+  "updated_at": "2026-11-04"
 }

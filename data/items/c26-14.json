@@ -7,7 +7,7 @@
   "chapter": "26",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Chapter page 789 checked; the stage-deciding document, IRS Notice 2026-16 on section 168(n) as added by Public Law 119-21 section 70307, was fetched and read in this review and supports an operative general incentive; the statute's own text was not read and the match rests on a judgment about general versus China-specific incentives.",
+  "confidence_reason": "Rule applied: high only when the stage-deciding primary document was opened and read in the review. IRS Notice 2026-16 on section 168(n), added by Public Law 119-21 section 70307, was re-read on irs.gov in this review and supports an operative general incentive (100 percent allowance, construction after 2025-01-19 and before 2029-01-01, no China or relocation condition), and Proclamation 11045 was read on federalregister.gov. The statute's own text was not read and the partial match rests on a judgment about general versus China-specific incentives, so confidence stays at 80.",
   "durability": {
     "level": "medium",
     "why": "Statutory expensing is law, but it phases out for construction starting after 2028."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-16",
       "note": "Independent review (primary-source lift): IRS Notice 2026-16 on irs.gov was re-read and supports in_progress 30; the proclamation signing and effective dates were added from the researcher's federalregister.gov read; confidence raised to 80."
+    },
+    {
+      "date": "2026-11-04",
+      "note": "Freshness check: Proclamation 11045 (aluminum, signed 2026-07-20, 91 FR 46635) read on federalregister.gov; it adds a tariff-based onshoring plan incentive for primary aluminum, general to all sources and not tied to China. Added to the timeline and status summary; no China-specific relocation incentive found; stage in_progress and progress 30 unchanged."
     }
   ],
   "id": "c26-14",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-11-04",
   "layer": 3,
   "match": "partial",
   "mechanism": "legislation",
@@ -67,18 +71,24 @@
       "url": "https://www.irs.gov/pub/irs-drop/n-26-16.pdf"
     },
     "flags": [
-      "Researcher status edit on Proclamation 11020 accepted on the researcher's federalregister.gov read; the proclamation was not re-read in this review."
+      "Uncertainties sentence on the three earlier searches restored verbatim; the 2026-11-04 search and Proclamation 11045 note appended.",
+      "Retrieval wording 'unofficial rendering' simplified to the host read."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Printed page 789 lists, among policy options for the China package, significant financial and tax incentives for American companies seeking to onshore production from China; the proposal matches.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "P16-3",
+    "mandate_check": "not_checked",
+    "mandate_note": "Printed page 789 was checked in the 2026-10-16 review; the new event does not change what the recommendation asks and the chapter was not re-read.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-11-04",
+    "reviewer": "independent AI reviewer",
     "source_checks": [
       {
-        "note": "Section 168(n) via sec. 70307; construction and placed-in-service windows match the record; 100 percent allowance; comments by 2026-04-20; no issuance date; no China or relocation condition.",
+        "note": "Re-read 2026-11-04: section 168(n) via section 70307 of P.L. 119-21; qualified production property, construction after 2025-01-19 and before 2029-01-01, placed in service after 2025-07-04 and before 2031-01-01, 100 percent allowance, no China or relocation condition, no issuance date. Supports in_progress 30 as a partial match.",
         "result": "supports",
         "url": "https://www.irs.gov/pub/irs-drop/n-26-16.pdf"
+      },
+      {
+        "note": "Proclamation 11045, signed 2026-07-20, 91 FR 46635, published 2026-07-23; approved onshoring plans for U.S. primary aluminum capacity with construction starting by 2029-01-20 allow imports at half the Section 232 duty; no effective date stated; no mention of China. Consistent with in_progress 30 and the event text.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/2026/07/23/2026-14990/further-strengthening-actions-taken-to-adjust-imports-of-aluminum-into-the-united-states"
       }
     ],
     "stage_change_reason": "An enacted and operative depreciation incentive for domestic production exists, but it is general rather than tied to relocation from China, so partial alignment at low in_progress stays; a parallel reading is also defensible."
@@ -139,10 +149,17 @@
       "publisher": "Covington & Burling",
       "title": "Key Provisions of the One Big Beautiful Bill Act",
       "url": "https://www.cov.com/en/news-and-insights/insights/2025/07/key-provisions-of-the-one-big-beautiful-bill-act"
+    },
+    {
+      "date": "2026-07-23",
+      "kind": "primary",
+      "publisher": "Federal Register",
+      "title": "Proclamation 11045, Further Strengthening Actions Taken To Adjust Imports of Aluminum Into the United States (91 FR 46635)",
+      "url": "https://www.federalregister.gov/documents/2026/07/23/2026-14990/further-strengthening-actions-taken-to-adjust-imports-of-aluminum-into-the-united-states"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "Public Law 119-21 (H.R. 1), approved 2025-07-04, added section 168(n) to the tax code through its section 70307, allowing a 100 percent depreciation deduction for qualified production property: the portion of nonresidential real property used as an integral part of manufacturing, production or refining, with construction beginning after 2025-01-19 and before 2029-01-01 and placed in service in the United States or a territory after 2025-07-04 and before 2031-01-01. IRS Notice 2026-16 gives interim guidance and invited comments by 2026-04-20; it sets no China-specific or relocation condition. Separately, Proclamation 11020, signed 2026-04-02 and published 2026-04-09, sets a 20 percent rate (rising to 100 percent on 2030-04-02) for companies with approved onshoring plans, effective 2026-07-31 for listed companies and 2026-09-29 for others, but it is a tariff measure covering all source countries.",
+  "status_summary": "Public Law 119-21 (H.R. 1), approved 2025-07-04, added section 168(n) to the tax code through its section 70307, allowing a 100 percent depreciation deduction for qualified production property: the portion of nonresidential real property used as an integral part of manufacturing, production or refining, with construction beginning after 2025-01-19 and before 2029-01-01 and placed in service in the United States or a territory after 2025-07-04 and before 2031-01-01. IRS Notice 2026-16 gives interim guidance and invited comments by 2026-04-20; it sets no China-specific or relocation condition. Separately, Proclamation 11020, signed 2026-04-02 and published 2026-04-09, sets a 20 percent rate (rising to 100 percent on 2030-04-02) for companies with approved onshoring plans, effective 2026-07-31 for listed companies and 2026-09-29 for others, but it is a tariff measure covering all source countries. Proclamation 11045 (signed 2026-07-20) similarly halves the Section 232 aluminum duty for companies with approved plans to build or expand U.S. primary aluminum capacity, also without a China condition.",
   "timeline": [
     {
       "date": "2025-07-04",
@@ -157,10 +174,17 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/04/09/2026-06956/adjusting-imports-of-pharmaceuticals-and-pharmaceutical-ingredients-into-the-united-states"
+    },
+    {
+      "date": "2026-07-20",
+      "event": "Proclamation 11045, Further Strengthening Actions Taken To Adjust Imports of Aluminum Into the United States, was signed (published 2026-07-23, 91 FR 46635); companies with Commerce-approved onshoring plans that commit to build, refurbish or expand a U.S. primary aluminum facility, with construction starting by 2029-01-20, may import primary aluminum at half the applicable Section 232 duty. The text does not mention China or relocation from China.",
+      "kind": "primary",
+      "source": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/07/23/2026-14990/further-strengthening-actions-taken-to-adjust-imports-of-aluminum-into-the-united-states"
     }
   ],
   "title": "Give tax and financial incentives to companies onshoring production from China",
   "tracked": true,
-  "uncertainties": "Section 70307 was not read in the statute itself: the govinfo.gov HTML of Public Law 119-21 is cut off before Title VII and the Cornell LII page for 26 U.S.C. 168 did not return subsection (n); the property rules and dates come from IRS Notice 2026-16, which describes the statute. The notice prints no issuance date, so it is not placed on the timeline. Proclamation 11020 was read as a summary; its timeline entry uses the publication date, and the signing date is 2026-04-02. The permanent 100 percent bonus depreciation provision is described in a law-firm summary only. No program tied to moving production from China was found in three earlier searches. The tax incentive is general to domestic production rather than targeted at relocation from China; it is treated as a partial match because companies moving production from China qualify, though a reader could treat it as a parallel program.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "Section 70307 was not read in the statute itself: the govinfo.gov HTML of Public Law 119-21 is cut off before Title VII and the Cornell LII page for 26 U.S.C. 168 did not return subsection (n); the property rules and dates come from IRS Notice 2026-16, which describes the statute. The notice prints no issuance date, so it is not placed on the timeline. Proclamation 11020 was read as a summary; its timeline entry uses the publication date, and the signing date is 2026-04-02. The permanent 100 percent bonus depreciation provision is described in a law-firm summary only. No program tied to moving production from China was found in three earlier searches. The tax incentive is general to domestic production rather than targeted at relocation from China; it is treated as a partial match because companies moving production from China qualify, though a reader could treat it as a parallel program. A further search on 2026-11-04 (bills, executive actions and tax incentives through October 2026) also found no program tied to relocation from China. Proclamation 11045 was read on federalregister.gov; it states no effective date and names no China condition.",
+  "updated_at": "2026-11-04"
 }
