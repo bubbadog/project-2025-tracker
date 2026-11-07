@@ -2,17 +2,18 @@
   "agency": "Federal Emergency Management Agency",
   "blockers": [
     "Washington's ruling is limited to that state's award",
-    "Other jurisdictions' suits are pending or unreported in the sources read"
+    "Other jurisdictions' suits are pending or unreported in the sources read",
+    "Northern District of Illinois preliminary injunction (2025-11-03) bars eliminating the Shelter and Services Program or withholding its FY2023 and FY2024 funding on the grounds DHS gave, and is not limited to the plaintiffs"
   ],
   "chapter": "05",
-  "confidence": 58,
+  "confidence": 70,
   "confidence_label": "medium",
-  "confidence_reason": "Executive Order 14159, the FEMA termination letter to one grantee and the bill status files were read; the February 2025 clawback, the New York ruling and the Washington judgment rest on news reports and a case-tracking docket summary, not the orders, and no program-wide FEMA notice was found, so confidence stays medium.",
+  "confidence_reason": "The recommendation text, the injunction order, the ruling on its scope and the first enforcement order were read from court copies and the bill status was confirmed on govinfo.gov; the second enforcement order, the New York ruling and the February 2025 clawback rest on a docket summary or news reports, and the blocked stage is a judgment because the request is addressed to Congress.",
   "court_status": {
-    "basis": "The Western District of Washington set aside the Shelter and Services Program termination policy and the termination of Washington's award as applied to Washington only (summary judgment and judgment entered 2026-05-26, per a case-tracking docket summary and news reports); no appeal was found in the sources read, and the New York City suit's outcome was not found.",
-    "date": "2026-05-26",
-    "state": "vacated",
-    "url": "https://clearinghouse.net/case/46830/"
+    "basis": "The Northern District of Illinois preliminarily enjoined DHS and FEMA from eliminating the Shelter and Services Program as created in the FY2023 and FY2024 appropriations and from withholding that funding on the grounds in the 2025 letters (order of 2025-11-03, not limited to the plaintiffs per the 2025-11-13 ruling), and enforcement orders of 2026-02-09 and 2026-05-08 directed processing of pre-termination reimbursement requests, the latter for non-party grantees; the Western District of Washington separately set aside the termination policy as applied to Washington on 2026-05-26. No appeal was shown on the docket summaries read.",
+    "date": "2025-11-03",
+    "state": "enjoined",
+    "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/164897.pdf"
   },
   "durability": {
     "level": "low",
@@ -47,10 +48,14 @@
     {
       "date": "2026-10-16",
       "note": "Independent review after the primary-source lift: Executive Order 14159 on federalregister.gov, the FEMA letter on a county host, the Washington docket summary on a case-tracking host and the BILLSTATUS files for S. 771 and H.R. 1668 on govinfo.gov were read; in_progress 35 kept; confidence 58 kept."
+    },
+    {
+      "date": "2026-11-06",
+      "note": "Freshness check: added the City of Chicago v. DHS preliminary injunction (2025-10-31) and enforcement orders (2026-02-09, 2026-05-08) from a court opinion copy and a case-tracking docket summary; stage moved from in_progress to blocked, progress kept at 35; no appeal and no bill action found. Independent review on 2026-11-06 read the injunction order, the ruling on its scope and the first enforcement order from court copies on a case-tracking host, corrected the description of the injunction (not limited to the plaintiffs), added the 2025-11-03 and 2025-11-13 orders, re-sourced the 2026-02-09 order to the court copy, accepted blocked 35 and set confidence 70."
     }
   ],
   "id": "c05-29",
-  "last_checked": "2026-10-16",
+  "last_checked": "2026-11-06",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -75,39 +80,44 @@
   "restates_ids": [],
   "review": {
     "flags": [
-      "in_progress 35 with match partial kept, though the rubric's rule that executive steps toward a request to Congress are parallel at proposed or below makes proposed 15 to 20 the other defensible call; the higher band rests on the page 151 executive-order element and the operative EO 14159 pause and SSP terminations.",
-      "Timeline reordered by date (the 2025-04-01 FEMA letter had been placed before the 2025-03-05 ruling); bill event now cites GovInfo BILLSTATUS."
+      "Stage blocked 35 is a judgment call: the request is addressed to Congress and the injunction covers only FY2023 and FY2024 program funding; in_progress 35 with court_status enjoined is the alternative reading.",
+      "The proposal described the injunction as limited to three plaintiffs; corrected from the court orders (Dkt. 59 and 67)."
     ],
-    "mandate_check": "confirmed",
-    "mandate_note": "Page 149 (legislative priorities, NGOs and processing): Congress should halt funds to NGOs that process and transport illegal aliens into and through the country, and redirect those funds and the DHS joint processing centers to border security, detention and immigration court space. Page 151 also lists, among executive orders, prohibiting funds for travel into the interior. Proposal is accurate.",
-    "model": "Claude Opus",
-    "reviewed_at": "2026-10-16",
-    "reviewer": "P16L-1",
+    "mandate_check": "verified",
+    "mandate_note": "Page 149 (legislative proposals, NGOs and processing): Congress should halt funds to NGOs that process and transport illegal aliens into and through the country and redirect the money and the DHS joint processing centers to border security, detention and immigration court space; page 151 lists among executive orders a bar on funds for travel into the interior, and page 154 calls for ending DHS grants including those supplementing migrant shelters. Proposal is accurate. Earlier review (2026-10-16) kept in_progress 35 and flagged proposed 15 to 20 as the other defensible call. This review accepts blocked 35: the Shelter and Services Program is the main federal channel the recommendation targets, the injunction reaches it as a whole (Dkt. 67 refused to limit it to the plaintiffs), and the legislative path has not moved since 2025-02-27.",
+    "model": "claude-opus",
+    "reviewed_at": "2026-11-06",
+    "reviewer": "independent reviewer (AI)",
     "source_checks": [
       {
-        "note": "EO 14159 section 19: review and audit NGO funding agreements serving removable or illegal aliens, pause payments pending review, terminate unlawful or wasteful agreements, exclude from budget requests, seek recoupment.",
+        "note": "Dkt. 59, 2025-11-03: enjoins eliminating or terminating the program as created in the 2023 and 2024 appropriations and withholding FY2023 and FY2024 funding for the reasons in the 2025 letters; supports blocked.",
         "result": "supports",
-        "url": "https://www.federalregister.gov/documents/2025/01/29/2025-02006/protecting-the-american-people-against-invasion"
+        "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/164897.pdf"
       },
       {
-        "note": "County memo of 2025-04-03 attaching the FEMA letter of 2025-04-01 terminating three SSP awards (about 52.6 million dollars) under 2 CFR 200.340(a)(2), after a 2025-03-11 letter barring new costs.",
+        "note": "Dkt. 67, 2025-11-13: motion to limit the injunction to the three plaintiffs denied under 5 U.S.C. 705; corrects the proposal's description of relief limited to three plaintiffs.",
         "result": "supports",
-        "url": "https://content.civicplus.com/api/assets/95b00c76-b940-4909-b5e2-c0d854c33c46"
+        "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/167831.pdf"
       },
       {
-        "note": "No. 2:25-cv-01401, filed 2025-07-25, Judge Rothstein; ECF 33 and 34 of 2026-05-26 set aside the SSP termination policy and the termination as applied to Washington, no payment ordered; no notice of appeal listed; updated 2026-07-22.",
-        "result": "supports",
-        "url": "https://clearinghouse.net/case/46830/"
+        "note": "Dkt. 58 opinion of 2025-10-31: freeze grounds arbitrary and capricious; past terminations and money claims left to the Court of Federal Claims; the decretal terms are in the separate order, not this text.",
+        "result": "partial",
+        "url": "https://www.courthousenews.com/wp-content/uploads/2025/11/fema-cant-freeze-migrant-sheltering-funds.pdf"
       },
       {
-        "note": "S. 771 introduced and referred 2025-02-27; no later action.",
+        "note": "Dkt. 86, 2026-02-09: processing of pre-termination reimbursement requests due 2026-02-23; covers the plaintiffs.",
+        "result": "supports",
+        "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/167832.pdf"
+      },
+      {
+        "note": "Docket summary: lists Dkt. 101 of 2026-05-08 extending enforcement to non-party grantees, latest entry 2026-05-11, no appeal; the order itself was not opened.",
+        "result": "partial",
+        "url": "https://clearinghouse.net/case/46791/"
+      },
+      {
+        "note": "S. 771: introduced and referred 2025-02-27, no later action (record updated 2026-04-13); consistent with a stalled legislative path.",
         "result": "supports",
         "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119s771.xml"
-      },
-      {
-        "note": "H.R. 1668 introduced and referred 2025-02-27; no later action.",
-        "result": "supports",
-        "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1668.xml"
       }
     ]
   },
@@ -209,10 +219,45 @@
       "publisher": "GovInfo",
       "title": "BILLSTATUS for H.R. 1668 (119th Congress)",
       "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr1668.xml"
+    },
+    {
+      "date": "2025-10-31",
+      "kind": "court",
+      "publisher": "U.S. District Court, N.D. Illinois (via Courthouse News)",
+      "title": "City of Chicago v. DHS, No. 1:25-cv-05463, Memorandum Opinion and Order granting preliminary injunction",
+      "url": "https://www.courthousenews.com/wp-content/uploads/2025/11/fema-cant-freeze-migrant-sheltering-funds.pdf"
+    },
+    {
+      "date": "2026-05-08",
+      "kind": "tracker",
+      "publisher": "Civil Rights Litigation Clearinghouse",
+      "title": "City of Chicago v. Department of Homeland Security (SSP Case)",
+      "url": "https://clearinghouse.net/case/46791/"
+    },
+    {
+      "date": "2025-11-03",
+      "kind": "court",
+      "publisher": "U.S. District Court, N.D. Illinois (via Civil Rights Litigation Clearinghouse)",
+      "title": "City of Chicago v. DHS, No. 1:25-cv-05463, Order granting preliminary injunction (Dkt. 59)",
+      "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/164897.pdf"
+    },
+    {
+      "date": "2025-11-13",
+      "kind": "court",
+      "publisher": "U.S. District Court, N.D. Illinois (via Civil Rights Litigation Clearinghouse)",
+      "title": "City of Chicago v. DHS, No. 1:25-cv-05463, Memorandum Opinion and Order denying motion to clarify (Dkt. 67)",
+      "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/167831.pdf"
+    },
+    {
+      "date": "2026-02-09",
+      "kind": "court",
+      "publisher": "U.S. District Court, N.D. Illinois (via Civil Rights Litigation Clearinghouse)",
+      "title": "City of Chicago v. DHS, No. 1:25-cv-05463, Memorandum Opinion and Order on motion to enforce (Dkt. 86)",
+      "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/167832.pdf"
     }
   ],
-  "stage": "in_progress",
-  "status_summary": "Executive Order 14159 (signed 2025-01-20), section 19, paused and ordered review of federal funding agreements with nongovernmental organizations that support removable aliens, and in February 2025 FEMA clawed back more than 80 million dollars from New York City under the Shelter and Services Program, which reimburses non-federal entities for sheltering noncitizens released from DHS custody; on 2025-04-01 FEMA terminated three Pima County awards under the program for no longer matching DHS priorities; a Manhattan judge declined on 2025-03-05 to order that money returned immediately. Bills to end the program and rescind its balances (S. 771 and H.R. 1668) were introduced on 2025-02-27; no enactment was found. On 2026-05-26 the Western District of Washington set aside the termination as applied to Washington and required FEMA to consider its reimbursement requests, without ordering payment. The redirect of the money to border and detention uses was not traced.",
+  "stage": "blocked",
+  "status_summary": "Executive Order 14159 (signed 2025-01-20), section 19, paused and ordered review of federal funding agreements with nongovernmental organizations that support removable aliens, and in February 2025 FEMA clawed back more than 80 million dollars from New York City under the Shelter and Services Program, which reimburses non-federal entities for sheltering noncitizens released from DHS custody; on 2025-04-01 FEMA terminated three Pima County awards under the program; a Manhattan judge declined on 2025-03-05 to order the New York money returned immediately. Bills to end the program and rescind its balances (S. 771 and H.R. 1668) were introduced on 2025-02-27 and have had no further action. In City of Chicago et al. v. DHS, the Northern District of Illinois on 2025-11-03 enjoined eliminating the program or withholding its FY2023 and FY2024 funding on the grounds DHS gave, ruled on 2025-11-13 that the injunction is not limited to the plaintiffs, and on 2026-02-09 ordered processing of reimbursement requests submitted before termination; on 2026-05-26 the Western District of Washington set aside the termination as applied to Washington. The redirect of the money to border and detention uses was not traced.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -250,6 +295,41 @@
       "url": "https://clearinghouse.net/case/46830/"
     },
     {
+      "date": "2025-10-31",
+      "event": "In City of Chicago et al. v. Department of Homeland Security, No. 1:25-cv-05463 (N.D. Ill., Judge Kennelly), the court issued a memorandum opinion (Dkt. 58) granting in part the preliminary injunction sought by Chicago, Denver and Pima County, finding the freeze of Shelter and Services Program funding on the grounds in the 2025-03-11 and 2025-04-01 letters arbitrary and capricious; claims to undo past grant terminations or recover money past due were left to the Court of Federal Claims.",
+      "kind": "court",
+      "source": "Court memorandum opinion and order (Dkt. 58), hosted by Courthouse News",
+      "url": "https://www.courthousenews.com/wp-content/uploads/2025/11/fema-cant-freeze-migrant-sheltering-funds.pdf"
+    },
+    {
+      "date": "2025-11-03",
+      "event": "The Northern District of Illinois entered the preliminary injunction order (Dkt. 59), enjoining DHS and FEMA from eliminating or terminating the Shelter and Services Program as created in the 2023 and 2024 DHS appropriations and from withholding FY2023 and FY2024 program funding for the reasons in the 2025-03-11 and 2025-04-01 letters, until further order.",
+      "kind": "court",
+      "source": "Court order (Dkt. 59), hosted by the Civil Rights Litigation Clearinghouse",
+      "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/164897.pdf"
+    },
+    {
+      "date": "2025-11-13",
+      "event": "The Northern District of Illinois denied the government's motion to clarify that the preliminary injunction covers only the three plaintiffs (Dkt. 67), holding that the court may stay the challenged agency actions under 5 U.S.C. 705 and need not limit relief to the plaintiffs.",
+      "kind": "court",
+      "source": "Court memorandum opinion and order (Dkt. 67), hosted by the Civil Rights Litigation Clearinghouse",
+      "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/167831.pdf"
+    },
+    {
+      "date": "2026-02-09",
+      "event": "The Northern District of Illinois granted in part the plaintiffs' motion to enforce the preliminary injunction (Dkt. 86), directing DHS and FEMA to process by 2026-02-23 all Shelter and Services Program reimbursement requests submitted before a grant was terminated, without relying on the reasons in the 2025 letters.",
+      "kind": "court",
+      "source": "Court memorandum opinion and order (Dkt. 86), hosted by the Civil Rights Litigation Clearinghouse",
+      "url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/167832.pdf"
+    },
+    {
+      "date": "2026-05-08",
+      "event": "The Northern District of Illinois granted the plaintiffs' second motion to enforce as to reimbursement claims from non-party Shelter and Services Program grantees (Dkt. 101), with compliance due 2026-05-22, according to a case-tracking docket summary; the order itself was not opened.",
+      "kind": "court",
+      "source": "Civil Rights Litigation Clearinghouse",
+      "url": "https://clearinghouse.net/case/46791/"
+    },
+    {
       "date": "2026-05-26",
       "event": "Judge Rothstein granted Washington summary judgment in part on its Administrative Procedure Act claims (ECF 33) and entered judgment (ECF 34), holding the program termination policy contrary to law and arbitrary and capricious and setting it aside, with the termination of Washington's award, as applied to Washington; FEMA may not refuse to consider its reimbursement requests on the grounds held unlawful, and no payment was ordered.",
       "kind": "court",
@@ -259,6 +339,6 @@
   ],
   "title": "End federal funding of NGOs that process, house or transport illegal aliens",
   "tracked": true,
-  "uncertainties": "No FEMA or Federal Register document on the program-wide termination was opened (a Federal Register search for the program name since 2025-01-20 returned nothing, and the FEMA program page failed to load). The February 2025 clawback is taken from news reports without a day; the 2025-04-01 termination is read from a county-hosted copy of a FEMA letter to one grantee, not a program-wide notice. The Washington ruling and judgment (ECF 33 and 34, Judge Rothstein) were read as docket summaries on a case-tracking host, whose docket excerpt was last updated 2026-07-22 and shows no notice of appeal; the orders themselves were not opened because the court docket host was inaccessible. The New York ruling comes from an AP report. The New York clawback was explained by FEMA as a gang concern at a shelter, so it may not be a general policy step. Whether FY2026 appropriations funded or rescinded the program, and whether the money was redirected to detention uses (one news item suggests so; the page could not be opened), were not checked. The 2025 DHS and FEMA grant conditions on immigration cooperation and their litigation are covered in c05-19. Independent review of 2026-10-16: the GovInfo BILLSTATUS files show both bills only introduced and referred on 2025-02-27.",
-  "updated_at": "2026-10-16"
+  "uncertainties": "No FEMA or Federal Register document on the program-wide termination was opened (a Federal Register search for the program name since 2025-01-20 returned nothing, and the FEMA program page could not be opened on fema.gov in this review). The February 2025 clawback is taken from news reports without a day; the 2025-04-01 termination is read from a county-hosted copy of a FEMA letter to one grantee, not a program-wide notice. The Washington ruling and judgment (ECF 33 and 34, Judge Rothstein) were read as docket summaries on a case-tracking host, whose docket excerpt was last updated 2026-07-22 and shows no notice of appeal; the orders themselves could not be opened on the court docket host in this review. The New York ruling comes from an AP report. The New York clawback was explained by FEMA as a gang concern at a shelter, so it may not be a general policy step. Whether FY2026 appropriations funded or rescinded the program, and whether the money was redirected to detention uses (one news item suggests so; the page could not be opened), were not checked. The 2025 DHS and FEMA grant conditions on immigration cooperation and their litigation are covered in c05-19. Independent review of 2026-10-16: the GovInfo BILLSTATUS files show both bills only introduced and referred on 2025-02-27. Update 2026-11-06: the Northern District of Illinois opinion was read from a copy hosted by Courthouse News, and the injunction order (Dkt. 59), the ruling denying the motion to limit it to the plaintiffs (Dkt. 67) and the first enforcement order (Dkt. 86) from court copies hosted by the Civil Rights Litigation Clearinghouse; the second enforcement order of 2026-05-08 rests only on the docket summary on that host, whose latest entry is dated 2026-05-11 and shows no appeal (a letter from a U.S. senator of 2026-07-13 on senate.gov dates that order 2026-05-07), and whether DHS complied with the 2026-05-22 deadline is not known (a Senate letter of 2026-07-13 asks for a status report). The stage moves to blocked because the injunction reaches the program as a whole, not only the plaintiffs, and the bills have not moved; the injunction covers only FY2023 and FY2024 program funding, does not reach other nongovernmental funding paused under Executive Order 14159, and leaves past terminations to the Court of Federal Claims, so progress earned is kept at 35. Whether DHS has complied with the enforcement orders and whether later fiscal years funded the program were not established. A search found a trade report of 2026-05-14 that the administration dropped appeals of rulings on FEMA grant immigration-cooperation conditions, which concern c05-19 and not this program. No new activity on S. 771 or H.R. 1668 (BILLSTATUS shows introduction and referral only) and no Federal Register document on the program since 2025-01-20 was found.",
+  "updated_at": "2026-11-06"
 }
