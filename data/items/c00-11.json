@@ -7,11 +7,11 @@
   "chapter": "00",
   "confidence": 81,
   "confidence_label": "high",
-  "confidence_reason": "The Supreme Court docket for No. 26-239 and the Clearinghouse case page were opened and read, and the operative proclamations are primary documents in the record. On 2026-10-28 the DHS release of 2026-10-16 announcing preliminary fiscal year 2026 border data was read on dhs.gov, so the fiscal-year figures now rest on the agency's own release rather than a wire report. The border figures remain the agency's preliminary claims, not checked against CBP data tables, and the D.C. Circuit orders were read through the Clearinghouse case page rather than the opinions. Confidence 80 to 81.",
+  "confidence_reason": "The Supreme Court docket for No. 26-239 and the Clearinghouse case page were opened and read, and the operative proclamations are primary documents in the record. On 2026-10-28 the DHS release of 2026-10-16 announcing preliminary fiscal year 2026 border data was read on dhs.gov, so the fiscal-year figures now rest on the agency's own release rather than a wire report. The border figures remain the agency's preliminary claims, not checked against CBP data tables, and the D.C. Circuit orders were read through the Clearinghouse case page rather than the opinions. Confidence 80 to 81. On 2026-11-10 the Supreme Court docket for No. 26-239 was re-read on supremecourt.gov.",
   "court_status": {
-    "basis": "Derived from the latest court event: the D.C. Circuit's 2026-04-24 affirmance is stayed pending the government's certiorari petition filed 2026-08-24.",
-    "date": "2026-08-24",
-    "state": "stayed",
+    "basis": "Latest court event: the D.C. Circuit's 2026-04-24 affirmance of the ruling against the asylum restriction has its mandate stayed while the government's certiorari petition (No. 26-239, filed 2026-08-24) is pending; the Supreme Court docket shows the petition distributed on 2026-11-09 for the 2026-11-13 conference with no disposition. Because the stay keeps the ruling against the government action from taking effect, the effect on the action is pending.",
+    "date": "2026-11-09",
+    "state": "pending",
     "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-239.html"
   },
   "durability": {
@@ -59,10 +59,14 @@
     {
       "date": "2026-10-30",
       "note": "Refutation check on 2026-10-30 read the Supreme Court docket for No. 26-239 and found no ruling and no lifting of the D.C. Circuit mandate stay after the latest event; verdict holds, recorded in redteam."
+    },
+    {
+      "date": "2026-11-10",
+      "note": "The Supreme Court docket shows the certiorari petition in No. 26-239 redistributed on 2026-11-09 for the 2026-11-13 conference; stage and progress are unchanged. Independent review: the Supreme Court docket was re-read and supports the added entry; court_status was changed from stayed to pending because the stayed appellate mandate leaves the asylum restriction in operation pending certiorari, and confidence stays at 81."
     }
   ],
   "id": "c00-11",
-  "last_checked": "2026-11-06",
+  "last_checked": "2026-11-10",
   "layer": 3,
   "match": "partial",
   "mechanism": "mixed",
@@ -102,7 +106,7 @@
     "c17-09"
   ],
   "remaining": [
-    "Supreme Court action on the certiorari petition (conference 2026-11-06) and the mandate stay's effect on the asylum restriction",
+    "Supreme Court action on the certiorari petition (redistributed 2026-11-09 for the 2026-11-13 conference) and the mandate stay's effect on the asylum restriction",
     "Operation of Migrant Protection Protocols, which the sources read do not show running",
     "Statutory changes the Foreword's end state would require, such as restrictions on asylum law, which Congress has not enacted",
     "Interior illegal presence, which a sealed border would not itself address"
@@ -119,23 +123,15 @@
   ],
   "review": {
     "flags": [
-      "border figures are agency claims",
-      "DHS fiscal-year release not opened (fetch refused)",
-      "Batch 2026-10-28-A: border figures are agency claims (the fiscal year 2026 figures are preliminary per the DHS release)",
-      "Batch 2026-10-28-A: DHS fiscal-year release now read on dhs.gov; the IANS wire report (The Hans India) stays as a source but no longer carries the event.",
-      "Batch 2026-10-28-A: Recheck the Supreme Court docket for No. 26-239 after the 2026-11-06 conference."
+      "court_status state changed from stayed to pending: the stay of the mandate affirming a ruling against the action leaves the action operating, which the scorecard rule records as pending (consistent with c05-03).",
+      "Stage implemented 65 and confidence 81 kept."
     ],
     "mandate_check": "verified",
-    "mandate_note": "The prior review of 2026-10-11 verified the paraphrase against printed page 12; the proposal and pages fields are consistent with it, and the chapter text was not re-read.",
-    "model": "claude-opus",
-    "reviewed_at": "2026-10-28",
-    "reviewer": "independent AI reviewer (court and agency documents read 2026-10-28, batch 2026-10-28-A)",
+    "mandate_note": "Printed page 12 re-read: illegal immigration should be ended and the border sealed; the proposal paraphrase is accurate.",
+    "model": "Claude Opus",
+    "reviewed_at": "2026-11-10",
+    "reviewer": "R1",
     "source_checks": [
-      {
-        "note": "Petition filed 2026-08-24, brief in opposition 2026-09-23, reply 2026-10-06, distributed 2026-10-07 for the 2026-11-06 conference; no later entry.",
-        "result": "supports",
-        "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-239.html"
-      },
       {
         "note": "District ruling 2025-07-02, D.C. Circuit partial stay 2025-08-01, affirmance 2026-04-24, en banc denied 2026-07-23, mandate stayed 2026-07-27.",
         "result": "supports",
@@ -155,6 +151,11 @@
         "note": "2026-10-28: The release (dated 2026-10-16 by its page address) announces preliminary fiscal year 2026 DHS and CBP data: 98,708 Southwest border Border Patrol apprehensions, 379,243 nationwide encounters, zero Border Patrol releases for the fiscal year with September the 17th consecutive month of zero releases, 250 miles of new barrier since 2025-01-20 and nearly 1 million pounds of drugs seized; all are the agency's preliminary figures.",
         "result": "supports",
         "url": "https://www.dhs.gov/news/2026/10/16/under-president-trump-and-secretary-mullin-dhs-announces-lowest-fiscal-year-border"
+      },
+      {
+        "note": "Read 2026-11-10: entries of 2026-10-07 (distributed for the 2026-11-06 conference) and 2026-11-09 (distributed for the 2026-11-13 conference); no grant, denial or other disposition.",
+        "result": "supports",
+        "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-239.html"
       }
     ]
   },
@@ -307,10 +308,17 @@
       "kind": "primary",
       "source": "U.S. Department of Homeland Security",
       "url": "https://www.dhs.gov/news/2026/10/16/under-president-trump-and-secretary-mullin-dhs-announces-lowest-fiscal-year-border"
+    },
+    {
+      "date": "2026-11-09",
+      "event": "The Supreme Court Clerk redistributes the certiorari petition in No. 26-239 for the conference of 2026-11-13 instead of 2026-11-06; the docket shows no disposition.",
+      "kind": "court",
+      "source": "Supreme Court docket",
+      "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26-239.html"
     }
   ],
   "title": "End illegal immigration and seal the border rather than mitigate or reprioritize",
   "tracked": true,
-  "uncertainties": "The Foreword's end state (ended, sealed) has no measurable threshold, so the stage is a judgment. The D.C. Circuit orders were read through the Clearinghouse case page, not the opinions; whether the asylum restriction operates today rests on the mandate stay as described by SCOTUSblog. The DHS release of 2026-05-15 was read from a copy supplied to the project rather than on dhs.gov itself; its date comes from the page address, not a date line. Its release and apprehension figures are the agency's own claims and were not checked against CBP data tables. The August 2026 monthly figures rest on a Fox News report citing the agency. The fiscal-year figures were read in the DHS release on dhs.gov (dated 2026-10-16 by its page address and the page itself) and match the IANS wire report published by The Hans India; they are the agency's own preliminary figures, including the barrier mileage and drug-seizure totals, and were not checked against CBP data tables. VOZ (voz.us), a partisan outlet that carries the same fiscal-year figures, is not used as a source. A Traders Union page previously cited was removed as a general aggregator, and the nationwide August figure it carried is dropped. CBP monthly encounter totals for all periods and comparison with earlier years were not collected. Interior enforcement, detention and removals are tracked in c05-04, c05-05 and c17-09. Border wall construction is tracked in c05-02.",
-  "updated_at": "2026-10-30"
+  "uncertainties": "The Foreword's end state (ended, sealed) has no measurable threshold, so the stage is a judgment. The D.C. Circuit orders were read through the Clearinghouse case page, not the opinions; whether the asylum restriction operates today rests on the mandate stay as described by SCOTUSblog. The DHS release of 2026-05-15 was read from a copy supplied to the project rather than on dhs.gov itself; its date comes from the page address, not a date line. Its release and apprehension figures are the agency's own claims and were not checked against CBP data tables. The August 2026 monthly figures rest on a Fox News report citing the agency. The fiscal-year figures were read in the DHS release on dhs.gov (dated 2026-10-16 by its page address and the page itself) and match the IANS wire report published by The Hans India; they are the agency's own preliminary figures, including the barrier mileage and drug-seizure totals, and were not checked against CBP data tables. VOZ (voz.us), a partisan outlet that carries the same fiscal-year figures, is not used as a source. A Traders Union page previously cited was removed as a general aggregator, and the nationwide August figure it carried is dropped. CBP monthly encounter totals for all periods and comparison with earlier years were not collected. Interior enforcement, detention and removals are tracked in c05-04, c05-05 and c17-09. Border wall construction is tracked in c05-02. Checked 2026-11-10: the Supreme Court docket for No. 26-239 on supremecourt.gov shows the redistribution of 2026-11-09 and no later entry; the order list of 2026-11-09 does not mention the case.",
+  "updated_at": "2026-11-10"
 }
