@@ -7,7 +7,7 @@
   "chapter": "06",
   "confidence": 66,
   "confidence_label": "medium",
-  "confidence_reason": "Chapter text checked at page 184. The National Security Strategy, which decides the proposed stage as a stated strategy without an operative relocation program, was read in its Western Hemisphere section on whitehouse.gov in this review, and EO 14389 was read in full; the absence of a relocation program rests on limited searching and the agreement signings on secondary pages, so confidence stays medium.",
+  "confidence_reason": "Chapter text checked at page 184. The National Security Strategy, which decides the proposed stage as a stated strategy without an operative relocation program, was read in its Western Hemisphere section on whitehouse.gov in this review, and EO 14389 was read in full; the absence of a relocation program rests on limited searching and the agreement signings on secondary pages, so confidence stays medium. On 2026-11-10 the introduced text of H.R. 509 was read on govinfo.gov and the USTR release on the Ecuador agreement of 2026-03-13 was read on ustr.gov; neither is an operative relocation program, so confidence stays 66.",
   "durability": {
     "level": "low",
     "why": "Reciprocal trade agreements and tariff actions are executive instruments; the USMCA review was left open on 2026-07-01 with annual reviews to follow."
@@ -33,10 +33,14 @@
     {
       "date": "2026-10-17",
       "note": "Independent review read the National Security Strategy on whitehouse.gov and EO 14389 on federalregister.gov, expanded the summary on the strategy's nearshoring tools and the scope of the tariff order, and kept the stage at proposed 15 with confidence moving from 65 to 66."
+    },
+    {
+      "date": "2026-11-10",
+      "note": "Freshness check on 2026-11-10 added the introduced text of H.R. 509 (Western Hemisphere Nearshoring Act, introduced 2025-01-16) from govinfo.gov and the USTR release on the Ecuador reciprocal trade agreement signed 2026-03-13. No executive relocation program or enacted incentive found; stage stays proposed at 15. An independent review on 2026-11-10 confirmed the H.R. 509 text and the USTR release, noted that the bill predates the tracking window and is context only, and kept confidence at 66 (medium)."
     }
   ],
   "id": "c06-22",
-  "last_checked": "2026-10-17",
+  "last_checked": "2026-11-10",
   "layer": 3,
   "match": "parallel",
   "mechanism": "mixed",
@@ -65,19 +69,29 @@
       "url": "https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Security-Strategy.pdf"
     },
     "flags": [
-      "DFC reauthorization timeline event proposed by the researcher not accepted: the bill status and CRS pages were not read in this review and the law is not directed at this recommendation",
-      "Match parallel and proposed 15 kept; 10 also defensible"
+      "H.R. 509 was introduced on 2025-01-16, before the 2025-01-20 start of the tracking window; the event is kept as context for a bill pending in the 119th Congress and does not decide the stage.",
+      "Ecuador agreement event kept for consistency with the earlier El Salvador, Guatemala and Argentina signings; the release does not mention relocation."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 184 says the United States should do everything possible, with resources and messaging, to shift manufacturing and industry from distant points, especially the PRC, to Central and South America, citing supply-chain relief and regional growth. The proposal paraphrase matches.",
+    "mandate_check": "verified",
+    "mandate_note": "Page 184 asks the United States to do everything possible, with resources and messaging, to shift manufacturing from distant points, especially the PRC, to Central and South America; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-17",
-    "reviewer": "P17-B",
+    "reviewed_at": "2026-11-10",
+    "reviewer": "R2",
     "source_checks": [
       {
         "note": "Signed 2026-02-20, published 2026-02-25.",
         "result": "supports",
         "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03832/ending-certain-tariff-actions"
+      },
+      {
+        "note": "2026-11-10: H.R. 509, Western Hemisphere Nearshoring Act, introduced 2025-01-16 by Mr. Green of Tennessee, referred to Ways and Means and Foreign Affairs; DFC relocation financing, duty-free treatment and 75 percent expensing for relocation from China. A pending bill consistent with proposed 15.",
+        "result": "supports",
+        "url": "https://www.govinfo.gov/bulkdata/BILLS/119/1/hr/BILLS-119hr509ih.xml"
+      },
+      {
+        "note": "2026-11-10: signed 2026-03-13 by Ambassador Greer and the Ecuadorian minister; no mention of supply chains, China or relocation. Context for proposed 15.",
+        "result": "partial",
+        "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/march/ambassador-greer-signs-united-states-ecuador-agreement-reciprocal-trade"
       }
     ],
     "stage_change_reason": "proposed kept: the strategy states the nearshoring aim and trade agreements were signed, but no operative program directs resources or messaging to moving manufacturing from the PRC to Central and South America; progress 15 sits in band."
@@ -173,11 +187,32 @@
       "publisher": "Brownstein Hyatt Farber Schreck",
       "title": "White House Releases 2025 National Security Strategy",
       "url": "https://www.bhfs.com/insight/white-house-releases-2025-national-security-strategy/"
+    },
+    {
+      "date": "2025-01-16",
+      "kind": "primary",
+      "publisher": "U.S. Government Publishing Office",
+      "title": "H.R. 509, Western Hemisphere Nearshoring Act (introduced text)",
+      "url": "https://www.govinfo.gov/bulkdata/BILLS/119/1/hr/BILLS-119hr509ih.xml"
+    },
+    {
+      "date": "2026-03-13",
+      "kind": "primary",
+      "publisher": "Office of the U.S. Trade Representative",
+      "title": "Ambassador Greer Signs the United States-Ecuador Agreement on Reciprocal Trade",
+      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/march/ambassador-greer-signs-united-states-ecuador-agreement-reciprocal-trade"
     }
   ],
   "stage": "proposed",
-  "status_summary": "On 2025-11-13 the White House announced trade framework deals with Argentina, Ecuador, Guatemala and El Salvador, described as strengthening supply chains and trade partnerships in the region, and agreements were signed with El Salvador on 2026-01-29, Guatemala on 2026-01-30 and Argentina on 2026-02-05; the Argentina agreement includes steps against firms owned or controlled by foreign governments and export control cooperation without naming a country. The National Security Strategy released 2025-12-04 (dated November 2025) asks Western Hemisphere partners to help with nearshore manufacturing, seeks stronger hemispheric supply chains to reduce dependence on distant competitors, and names tariffs, reciprocal trade agreements and financing bodies such as the Development Finance Corporation as tools, without a specific relocation program. No program aimed specifically at relocating manufacturing from the PRC was found, and Executive Order 14389 of 2026-02-20 ended the IEEPA duties imposed under nine earlier orders, leaving Section 232 and Section 301 duties in place, after the Supreme Court held that IEEPA does not authorize tariffs.",
+  "status_summary": "On 2025-11-13 the White House announced trade framework deals with Argentina, Ecuador, Guatemala and El Salvador, described as strengthening supply chains and trade partnerships in the region, and agreements were signed with El Salvador on 2026-01-29, Guatemala on 2026-01-30 and Argentina on 2026-02-05; the Argentina agreement includes steps against firms owned or controlled by foreign governments and export control cooperation without naming a country. The National Security Strategy released 2025-12-04 (dated November 2025) asks Western Hemisphere partners to help with nearshore manufacturing, seeks stronger hemispheric supply chains to reduce dependence on distant competitors, and names tariffs, reciprocal trade agreements and financing bodies such as the Development Finance Corporation as tools, without a specific relocation program. No program aimed specifically at relocating manufacturing from the PRC was found, and Executive Order 14389 of 2026-02-20 ended the IEEPA duties imposed under nine earlier orders, leaving Section 232 and Section 301 duties in place, after the Supreme Court held that IEEPA does not authorize tariffs. The Ecuador agreement was signed on 2026-03-13 per the Office of the U.S. Trade Representative. H.R. 509 (introduced 2025-01-16), whose text on govinfo.gov would direct Development Finance Corporation financing, duty-free treatment and tax expensing to companies relocating manufacturing from China to Latin America and the Caribbean, matches the recommendation closely but has had no action beyond referral to committee.",
   "timeline": [
+    {
+      "date": "2025-01-16",
+      "event": "H.R. 509, the Western Hemisphere Nearshoring Act (Rep. Mark Green), is introduced and referred to the House Committees on Ways and Means and Foreign Affairs; its text would direct DFC financing and tax expensing to companies relocating manufacturing from China to Latin America and the Caribbean. No later action was found.",
+      "kind": "primary",
+      "source": "U.S. Government Publishing Office",
+      "url": "https://www.govinfo.gov/bulkdata/BILLS/119/1/hr/BILLS-119hr509ih.xml"
+    },
     {
       "date": "2025-11-13",
       "event": "The White House issued a fact sheet announcing trade framework deals with El Salvador, Argentina, Ecuador and Guatemala to strengthen supply chains and trade partnerships in the region.",
@@ -212,10 +247,17 @@
       "kind": "primary",
       "source": "Federal Register",
       "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03832/ending-certain-tariff-actions"
+    },
+    {
+      "date": "2026-03-13",
+      "event": "The U.S. Trade Representative signed the United States-Ecuador Agreement on Reciprocal Trade; the USTR release does not mention supply chains, economic security or China.",
+      "kind": "primary",
+      "source": "Office of the U.S. Trade Representative",
+      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/march/ambassador-greer-signs-united-states-ecuador-agreement-reciprocal-trade"
     }
   ],
   "title": "Re-hemisphere manufacturing: shift industry from the PRC to Central and South America",
   "tracked": true,
-  "uncertainties": "The tariff direction toward Latin America was not mapped country by country (for example Brazil or Mexico), and tariffs applied in 2025 may have cut against the recommendation before the IEEPA ruling. The fact sheet does not mention the PRC, relocation or nearshoring, and the Argentina agreement summary names no country. A tracker lists a Western Hemisphere Nearshoring Act as H.R. 509 in the 119th Congress with no action; congress.gov could not be read, so the bill is a lead only and is not used for the stage. A search for DFC or White House nearshoring initiatives returned only 2020 material and think-tank pieces. The USMCA joint review outcome (left open on 2026-07-01, triggering annual reviews) is reported from a law firm alert. In this review the National Security Strategy (Western Hemisphere section) and EO 14389 (91 FR 9437) were read on whitehouse.gov and federalregister.gov. The 2025 reauthorization of the Development Finance Corporation in P.L. 119-60, reported by CRS and the researcher, is a general finance tool that does not target the Western Hemisphere or manufacturing relocation, and its enrolled text was not read, so it is not counted. The trade agreement signing dates rest on law-firm and accounting-firm pages, not on USTR.",
-  "updated_at": "2026-10-17"
+  "uncertainties": "The tariff direction toward Latin America was not mapped country by country (for example Brazil or Mexico), and tariffs applied in 2025 may have cut against the recommendation before the IEEPA ruling. The fact sheet does not mention the PRC, relocation or nearshoring, and the Argentina agreement summary names no country. A tracker lists a Western Hemisphere Nearshoring Act as H.R. 509 in the 119th Congress with no action; congress.gov could not be read, so the bill is a lead only and is not used for the stage. A search for DFC or White House nearshoring initiatives returned only 2020 material and think-tank pieces. The USMCA joint review outcome (left open on 2026-07-01, triggering annual reviews) is reported from a law firm alert. In this review the National Security Strategy (Western Hemisphere section) and EO 14389 (91 FR 9437) were read on whitehouse.gov and federalregister.gov. The 2025 reauthorization of the Development Finance Corporation in P.L. 119-60, reported by CRS and the researcher, is a general finance tool that does not target the Western Hemisphere or manufacturing relocation, and its enrolled text was not read, so it is not counted. The trade agreement signing dates rest on law-firm and accounting-firm pages, not on USTR. H.R. 509 was read in introduced form on govinfo.gov (bill text); its later status was not confirmed on a congress.gov-derived source and the earlier reliance on a tracker for its status is superseded only as to its content. A search of 2026-11-10 for executive relocation programs found only think-tank and advocacy material and no agency program.",
+  "updated_at": "2026-11-10"
 }

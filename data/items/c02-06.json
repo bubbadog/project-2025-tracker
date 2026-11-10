@@ -4,7 +4,7 @@
   "chapter": "02",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "The revocation of EO 14020 and the dissolution of the Gender Policy Council were confirmed in the Federal Register text of EO 14168. The absence of a life and family coordinator rests on the White House staff reports to Congress of July 2025 and July 2026 (titles only) and a limited search, which affects the progress figure rather than the stage. Rule applied: high (80) because the stage-deciding text, EO 14168, was opened and read on federalregister.gov; the staff reports are primary but list titles only.",
+  "confidence_reason": "Chapter text on printed page 62 checked. The stage-deciding text, Executive Order 14168 (signed 2025-01-20, 90 FR 8615), was read on federalregister.gov in this review: section 7(b) rescinds Executive Order 14020 and dissolves the White House Gender Policy Council, although the Federal Register disposition list omits EO 14020. The absence of a life and family coordinator rests on the White House staff reports (titles only) and limited searching, which bears on progress rather than stage, so confidence stays 80.",
   "durability": {
     "level": "low",
     "why": "The council was created and abolished by executive order, so a later President can recreate it."
@@ -25,10 +25,14 @@
     {
       "date": "2026-10-22",
       "note": "Source cleanup: the finding that no life and family coordinator was located was re-sourced from an encyclopedia appointment list to the White House annual staff reports to Congress as of 2025-07-01 and 2026-07-01, which give titles only and were re-opened in review; the encyclopedia source was removed. Stage implemented, progress 68 and confidence 80 unchanged."
+    },
+    {
+      "date": "2026-11-10",
+      "note": "Refutation check on 2026-11-10 found no revival of the Gender Policy Council and no life and family coordinator post. Verdict holds for the revocation; stage and progress unchanged. An independent review on 2026-11-10 re-read the section of Executive Order 14168 that dissolves the Gender Policy Council, found no correction needed and kept confidence at 80 (high)."
     }
   ],
   "id": "c02-06",
-  "last_checked": "2026-10-22",
+  "last_checked": "2026-11-10",
   "layer": 1,
   "match": "partial",
   "mechanism": "executive_order",
@@ -39,19 +43,18 @@
   "progress": 68,
   "proposal": "The Mandate says the President should immediately revoke Executive Order 14020 and every policy, including subregulatory guidance, tied to the White House Gender Policy Council, and appoint a Special Assistant to the President or higher to coordinate life and family priorities with the Domestic Policy Council.",
   "redteam": {
-    "date": "2026-10-12",
+    "date": "2026-11-10",
     "evidence": [
       {
         "date": "2025-01-30",
-        "kind": "primary",
-        "note": "EO 14168, Defending Women From Gender Ideology Extremism and Restoring Biological Truth to the Federal Government",
+        "note": "Executive Order 14168; no later order revoking or amending section 7 found.",
         "source": "Federal Register",
         "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02090/defending-women-from-gender-ideology-extremism-and-restoring-biological-truth-to-the-federal"
       }
     ],
-    "note": "Searches surfaced no such post or office; the Federal Register shows no Council documents after the revocation. Absence is not proof.",
-    "verdict": "weakened",
-    "what_was_tested": "Re-searched for a life and family coordinator or office at Special Assistant rank or higher, and for any new White House family-policy office, and checked the Federal Register for any Gender Policy Council document after January 2025."
+    "note": "The first recommendation (revoking the Council order) holds; the second (a life and family coordinator) remains unfound, so the record stays at its partial stage.",
+    "verdict": "holds",
+    "what_was_tested": "Searched for any reconstitution of the Gender Policy Council, any order reversing Executive Order 14168 section 7, and any life and family coordinator post at Special Assistant rank or higher."
   },
   "remaining": [
     "Appointment or designation of a life and family coordinator at Special Assistant rank or higher working with the Domestic Policy Council (not found)",
@@ -61,14 +64,14 @@
   "research_agent": "A01",
   "review": {
     "flags": [
-      "coordinator absence from limited search (Wikipedia list)",
-      "Federal Register metadata omits EO 14020 from the rescinded list although the order text includes it"
+      "Redteam verdict moved from weakened (2026-10-12) to holds; the earlier weakened verdict concerned the unfound coordinator, which still bears on progress (68), not on the stage.",
+      "Wikipedia source check restated as partial: lead-only host, not relied on."
     ],
     "mandate_check": "verified",
-    "mandate_note": "Page 62 asks the President to immediately revoke EO 14020 and every policy, including subregulatory guidance, tied to the Gender Policy Council, and to appoint a Special Assistant to the President or higher to coordinate life and family priorities with the Domestic Policy Council; the paraphrase is accurate.",
+    "mandate_note": "Page 62 asks for immediate revocation of EO 14020 and related Gender Policy Council policies and for a Special Assistant-rank or higher life and family coordinator working with the Domestic Policy Council; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-22",
-    "reviewer": "V1",
+    "reviewed_at": "2026-11-10",
+    "reviewer": "R2",
     "source_checks": [
       {
         "note": "EO 14168 (signed 2025-01-20, 90 FR 8615): Sec. 7(b) rescinds EOs 13988, 14004, 14020, 14021 and 14075 and dissolves the Gender Policy Council; Sec. 7(c) lists Education, DOJ and EEOC guidance to rescind. The Federal Register's EO notes list only four rescinded orders, omitting 14020, but the order text includes it. The order creates no life and family post.",
@@ -76,8 +79,8 @@
         "url": "https://www.federalregister.gov/documents/2025/01/30/2025-02090/defending-women-from-gender-ideology-extremism-and-restoring-biological-truth-to-the-federal"
       },
       {
-        "note": "Red-team evidence checked: Domestic Policy Council director and White House Faith Office posts are listed, and no position title mentions life or family. A Wikipedia list is not a complete staff record.",
-        "result": "supports",
+        "note": "Red-team evidence checked: Domestic Policy Council director and White House Faith Office posts are listed, and no position title mentions life or family. A Wikipedia list is not a complete staff record. Lead-only host; not relied on for any fact in the record.",
+        "result": "partial",
         "url": "https://en.wikipedia.org/wiki/Executive_Office_appointments_of_the_second_Trump_administration"
       },
       {
@@ -94,6 +97,16 @@
         "note": "Opened by the researcher: index page that links the 2026 staff report; not cited as a source.",
         "result": "supports",
         "url": "https://www.whitehouse.gov/disclosures"
+      },
+      {
+        "note": "2026-11-10: section 7(b) rescinds listed orders and dissolves the Gender Policy Council established by EO 14020; implemented 68 holds for the revocation element.",
+        "result": "supports",
+        "url": "https://www.federalregister.gov/documents/full_text/text/2025/01/30/2025-02090.txt"
+      },
+      {
+        "note": "2026-11-10: EO 14168, signed 2025-01-20, published 2025-01-30, 90 FR 8615; the disposition list names EO 13988, 14004, 14021 and 14075 but not 14020, which the order text itself covers.",
+        "result": "partial",
+        "url": "https://www.federalregister.gov/api/v1/documents/2025-02090.json"
       }
     ]
   },
@@ -171,6 +184,6 @@
   ],
   "title": "Revoke the Gender Policy Council order and create a life and family coordinator",
   "tracked": true,
-  "uncertainties": "Only the Federal Register text of EO 14168 was read for the revocation. A limited search and the White House's annual reports to Congress on White House staff (as of 2025-07-01 and 2026-07-01) show no position titled for life or family; the White House Faith Office exists but has a different remit. The reports give job titles only, so a coordinator holding a general Domestic Policy title would not show, and absence from the lists is not proof that no such role exists. Lawsuits against EO 14168 concern its other provisions, not the council's dissolution.",
-  "updated_at": "2026-10-22"
+  "uncertainties": "Only the Federal Register text of EO 14168 was read for the revocation. A limited search and the White House's annual reports to Congress on White House staff (as of 2025-07-01 and 2026-07-01) show no position titled for life or family; the White House Faith Office exists but has a different remit. The reports give job titles only, so a coordinator holding a general Domestic Policy title would not show, and absence from the lists is not proof that no such role exists. Lawsuits against EO 14168 concern its other provisions, not the council's dissolution. Searches on 2026-11-10 for a life and family coordinator or a revived Gender Policy Council found no such post or order; a search result list contained only news and reference pages. Absence is not proof.",
+  "updated_at": "2026-11-10"
 }
