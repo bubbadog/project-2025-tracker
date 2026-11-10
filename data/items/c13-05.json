@@ -7,7 +7,7 @@
   "chapter": "13",
   "confidence": 80,
   "confidence_label": "high",
-  "confidence_reason": "Chapter text at pages 422, 433 and 436 to 439 checked; EPA's 2026-04-27 Deputy Administrator memorandum implementing Executive Order 14303 was read in full on epa.gov in this review, and both EPA advisory board releases were re-read there. The January 2025 reset rests on NPR, and social cost of carbon guidance and linear no-threshold actions remain unverified without changing the stage.",
+  "confidence_reason": "Chapter text at pages 422, 433 and 436 to 439 checked; EPA's 2026-04-27 Deputy Administrator memorandum implementing Executive Order 14303 was read in full on epa.gov in this review, and both EPA advisory board releases were re-read there. The January 2025 reset rests on NPR, and social cost of carbon guidance and linear no-threshold actions remain unverified without changing the stage. On 2026-11-10 CRS R49292 (updated 2026-10-21) and the House subcommittee markup summary were read; they confirm H.R. 9171 as reported on 2026-06-05 and unenacted, which does not change the stage, so confidence stays 80.",
   "durability": {
     "level": "low",
     "why": "The operative steps found are an executive order, an agency memorandum and advisory committee appointments, which a later administration can reverse quickly; staff reductions are harder to reverse."
@@ -40,10 +40,14 @@
     {
       "date": "2026-10-28",
       "note": "On 2026-10-28 wording that described how documents were obtained was replaced with wording that names the host and the kind of copy read; no fact, source, stage or confidence changed. No change of stage or progress."
+    },
+    {
+      "date": "2026-11-10",
+      "note": "Freshness check on 2026-11-10 added the House Appropriations Committee's FY2027 Interior and Environment bill (H.R. 9171, reported 2026-06-05), which bars use of the social cost of carbon but is not enacted, and confirmed through a CRS overview that a stopgap funds EPA through 2026-12-11. No EPA action ending IRIS or addressing linear no-threshold was found; stage stays in_progress at 55. An independent review on 2026-11-10 confirmed the H.R. 9171 committee report date in the CRS overview, corrected the House summary source to the subcommittee markup summary dated 2026-05-20 and adjusted the related wording, and kept confidence at 80 (high)."
     }
   ],
   "id": "c13-05",
-  "last_checked": "2026-10-17",
+  "last_checked": "2026-11-10",
   "layer": 1,
   "match": "partial",
   "mechanism": "mixed",
@@ -85,16 +89,13 @@
       "url": "https://www.epa.gov/system/files/documents/2026-08/future-development-and-use-of-risk-assessments.pdf"
     },
     "flags": [
-      "Names of the private-individual advisory committee chairs removed from timeline text",
-      "IRIS web-page update event removed as a page check, not an action",
-      "Science Advisory Board charter renewal of 2025-09-09 added as a dated agency action",
-      "2025-01-28 reset kept: an agency action, with the date inferred from the NPR report's weekday"
+      "House summary source corrected: it is the subcommittee markup summary dated 2026-05-20, not a summary dated 2026-06-05; event, status_summary and uncertainties wording adjusted to match."
     ],
-    "mandate_check": "ok",
-    "mandate_note": "Page 422 calls for resetting science advisory boards; pages 433 and 436 call for ending IRIS and unauthorized inputs such as the social cost of carbon and proprietary models; pages 437 to 439 call for suspending and reviewing advisory bodies, avoiding black-box models, moving away from linear no-threshold defaults, and for Congress to reform the Science Advisory Board and deny funds to unauthorized science activities. The paraphrase fits.",
+    "mandate_check": "verified",
+    "mandate_note": "Pages 422, 433 and 436 to 439 ask to eliminate IRIS, suspend and review EPA advisory bodies for independence and balance, reject precautionary default models such as linear no-threshold, end use of the social cost of carbon and proprietary models, reform the Science Advisory Board and refuse funds for unauthorized programs like IRIS; the paraphrase fits.",
     "model": "Claude Opus",
-    "reviewed_at": "2026-10-17",
-    "reviewer": "P17-E",
+    "reviewed_at": "2026-11-10",
+    "reviewer": "R2",
     "source_checks": [
       {
         "note": "2026-04-17: chair and 36 members, 19 dual appointments, charter renewed 2025-09-09, nominations from 2025-05-01; prior members not addressed.",
@@ -105,6 +106,16 @@
         "note": "2026-03-09: chair and six members, 2026 to 2028, two from state agencies, charter renewed 2025-08-11.",
         "result": "supports",
         "url": "https://www.epa.gov/newsreleases/administrator-zeldin-announces-selection-members-clean-air-scientific-advisory"
+      },
+      {
+        "note": "2026-11-10: R49292 updated 2026-10-21; H.R. 9171 reported 2026-06-05 (H.Rept. 119-687), EPA 7.04 billion dollars; P.L. 119-103 through 2026-12-11; social cost of carbon not mentioned in the portion read. Consistent with in_progress 55.",
+        "result": "supports",
+        "url": "https://www.everycrsreport.com/files/2026-10-21_R49292_bfd3ba78b460c7241162661110ab1cc6e1fd19bc.html"
+      },
+      {
+        "note": "2026-11-10: subcommittee markup summary updated 2026-05-20, not a full committee summary; EPA 7.04 billion dollars; lists a prohibition on use of the social cost of carbon; no mention of IRIS or the Science Advisory Board.",
+        "result": "partial",
+        "url": "https://appropriations.house.gov/sites/evo-subsites/republicans-appropriations.house.gov/files/evo-media-document/fy27-interior-bill-summary-subcommittee.pdf"
       }
     ],
     "stage_change_reason": "No change: advisory boards were reconstituted and the risk assessment memo is operative, while IRIS is retained and linear no-threshold and social cost of carbon actions are unshown, which fits partly operative; in_progress 55 kept within band."
@@ -202,10 +213,24 @@
       "publisher": "U.S. EPA",
       "title": "Integrated Risk Information System (IRIS) page",
       "url": "https://www.epa.gov/iris"
+    },
+    {
+      "date": "2026-05-20",
+      "kind": "primary",
+      "publisher": "House Committee on Appropriations",
+      "title": "FY27 Interior and Environment Appropriations bill, Subcommittee Markup summary (House Appropriations Committee)",
+      "url": "https://appropriations.house.gov/sites/evo-subsites/republicans-appropriations.house.gov/files/evo-media-document/fy27-interior-bill-summary-subcommittee.pdf"
+    },
+    {
+      "date": "2026-10-21",
+      "kind": "primary",
+      "publisher": "Congressional Research Service",
+      "title": "Interior, Environment, and Related Agencies: Overview of FY2027 Appropriations (CRS R49292)",
+      "url": "https://www.everycrsreport.com/files/2026-10-21_R49292_bfd3ba78b460c7241162661110ab1cc6e1fd19bc.html"
     }
   ],
   "stage": "in_progress",
-  "status_summary": "The science-related steps are partly in place, with the Mandate's IRIS elimination and default-model recommendations only partly matched. On 2025-01-20 Executive Order 14154 disbanded the interagency working group on the social cost of greenhouse gases and withdrew its estimates. In late January 2025 EPA's acting Administrator told members of the Science Advisory Board and the Clean Air Scientific Advisory Committee that both panels were being reset. EPA opened public nominations on 2025-05-01; on 2026-03-09 Administrator Zeldin announced a reconstituted Clean Air Scientific Advisory Committee (a chair and six members, serving 2026 through 2028, including two from state air agencies), and on 2026-04-17 a reconstituted Science Advisory Board (a chair and 36 members, 19 of them also serving on a subcommittee or the Clean Air committee). Executive Order 14303 (signed 2025-05-23) directs agencies to document uncertainty and use overly precautionary assumptions only where law requires or the action warrants them, and EPA's Deputy Administrator memo of 2026-04-27 implementing it moves hazard and dose-response judgments to regulatory program offices and adds a disclaimer to IRIS, but keeps existing and draft assessments public and does not end IRIS or mention linear no-threshold. EPA announced a reduction in force affecting its research office in July 2025, and the memo names the Office of Applied Science and Environmental Solutions as the lead for cross-agency risk assessment work. Legislation on the Science Advisory Board was not checked.",
+  "status_summary": "The science-related steps are partly in place, with the Mandate's IRIS elimination and default-model recommendations only partly matched. On 2025-01-20 Executive Order 14154 disbanded the interagency working group on the social cost of greenhouse gases and withdrew its estimates. In late January 2025 EPA's acting Administrator told members of the Science Advisory Board and the Clean Air Scientific Advisory Committee that both panels were being reset. EPA opened public nominations on 2025-05-01; on 2026-03-09 Administrator Zeldin announced a reconstituted Clean Air Scientific Advisory Committee (a chair and six members, serving 2026 through 2028, including two from state air agencies), and on 2026-04-17 a reconstituted Science Advisory Board (a chair and 36 members, 19 of them also serving on a subcommittee or the Clean Air committee). Executive Order 14303 (signed 2025-05-23) directs agencies to document uncertainty and use overly precautionary assumptions only where law requires or the action warrants them, and EPA's Deputy Administrator memo of 2026-04-27 implementing it moves hazard and dose-response judgments to regulatory program offices and adds a disclaimer to IRIS, but keeps existing and draft assessments public and does not end IRIS or mention linear no-threshold. EPA announced a reduction in force affecting its research office in July 2025, and the memo names the Office of Applied Science and Environmental Solutions as the lead for cross-agency risk assessment work. Legislation on the Science Advisory Board was not checked. The House Appropriations Committee reported the FY2027 Interior and Environment bill (H.R. 9171) on 2026-06-05, and its subcommittee markup summary lists a provision barring use of the social cost of carbon; it is unenacted, and a stopgap law (P.L. 119-103, signed 2026-09-02) funds EPA at FY2026 levels through 2026-12-11.",
   "timeline": [
     {
       "date": "2025-01-20",
@@ -262,10 +287,17 @@
       "kind": "primary",
       "source": "U.S. EPA",
       "url": "https://www.epa.gov/system/files/documents/2026-08/future-development-and-use-of-risk-assessments.pdf"
+    },
+    {
+      "date": "2026-06-05",
+      "event": "The House Appropriations Committee reported H.R. 9171, the FY2027 Interior and Environment appropriations bill (H.Rept. 119-687, 7.04 billion dollars for EPA), per CRS; the committee's subcommittee markup summary (updated 2026-05-20) lists a prohibition on use of the social cost of carbon and does not mention IRIS or the Science Advisory Board. No House floor or Senate action on the bill was reported.",
+      "kind": "primary",
+      "source": "Congressional Research Service",
+      "url": "https://www.everycrsreport.com/files/2026-10-21_R49292_bfd3ba78b460c7241162661110ab1cc6e1fd19bc.html"
     }
   ],
   "title": "Overhaul EPA science: end IRIS, reset advisory boards, drop precautionary defaults",
   "tracked": true,
-  "uncertainties": "The two EPA announcements (2026-03-09 and 2026-04-17) were re-read in this review; they do not say which prior members were replaced, and the Clean Air committee release lists nominations opening on 2025-05-01, before its 2025-08-11 charter renewal. The 2026-04-27 memorandum was read in full; its subject line is truncated in the PDF text and it sets no deadlines. The January 2025 reset date rests on an NPR article that gives a weekday, not a date, and a number of removed members was not reported. EPA's own pages epa.gov/sab and epa.gov/casac could not be opened in this review, so membership rosters were not read. Federal Register notices show both bodies scheduling 2026 meetings (a Science Advisory Board meeting on 2026-10-19 and Clean Air Scientific Advisory Committee meetings on nitrogen oxides). Not verified: whether EPA issued the social cost of carbon guidance required by Executive Order 14154, any EPA action on linear no-threshold or proprietary models, Science Adviser appointments, and the effect of the fiscal year 2027 request on IRIS (the Budget in Brief text read did not mention it). EPA's IRIS page metadata lists a review date later than its update date, unexplained. The IRIS web page is kept as a source, but its update date is a page check rather than an action and is not in the timeline.",
-  "updated_at": "2026-10-28"
+  "uncertainties": "The two EPA announcements (2026-03-09 and 2026-04-17) were re-read in this review; they do not say which prior members were replaced, and the Clean Air committee release lists nominations opening on 2025-05-01, before its 2025-08-11 charter renewal. The 2026-04-27 memorandum was read in full; its subject line is truncated in the PDF text and it sets no deadlines. The January 2025 reset date rests on an NPR article that gives a weekday, not a date, and a number of removed members was not reported. EPA's own pages epa.gov/sab and epa.gov/casac could not be opened in this review, so membership rosters were not read. Federal Register notices show both bodies scheduling 2026 meetings (a Science Advisory Board meeting on 2026-10-19 and Clean Air Scientific Advisory Committee meetings on nitrogen oxides). Not verified: whether EPA issued the social cost of carbon guidance required by Executive Order 14154, any EPA action on linear no-threshold or proprietary models, Science Adviser appointments, and the effect of the fiscal year 2027 request on IRIS (the Budget in Brief text read did not mention it). EPA's IRIS page metadata lists a review date later than its update date, unexplained. The IRIS web page is kept as a source, but its update date is a page check rather than an action and is not in the timeline. The social cost of carbon prohibition in H.R. 9171 rests on the House committee's subcommittee markup summary (updated 2026-05-20), which predates the full committee report; the bill text was not read, and no House floor or Senate action was found in the CRS overview of 2026-10-21. A law-firm alert of 2026-06-01 (Holland & Knight) reports no formal elimination of IRIS, no Federal Register notice and no action on linear no-threshold after the 2026-04-27 memo, which is consistent with the memo read earlier; searches of 2026-11-10 found no later EPA action ending IRIS.",
+  "updated_at": "2026-11-10"
 }
