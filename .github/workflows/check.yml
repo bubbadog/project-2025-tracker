@@ -16,6 +16,25 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+
+  author-guard:
+    # Only the automation account (and Dependabot) may open pull requests that
+    # merge here (owner rule 2026-10-31, enforced 2026-11-13). Required by the
+    # main pull-request ruleset; on pushes to main it always passes.
+    name: author-guard
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Pull request author is bubbadog-claude or Dependabot
+        env:
+          EVENT: ${{ github.event_name }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          if [ "$EVENT" != "pull_request" ]; then echo "not a pull request: pass"; exit 0; fi
+          case "$AUTHOR" in
+            bubbadog-claude|dependabot\[bot\]) echo "author $AUTHOR allowed";;
+            *) echo "::error::pull request opened by '$AUTHOR'; only bubbadog-claude (or Dependabot) may open pull requests here"; exit 1;;
+          esac
   validate:
     name: validate
     runs-on: ubuntu-latest
